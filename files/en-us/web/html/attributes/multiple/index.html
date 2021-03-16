@@ -13,21 +13,21 @@ tags:
 
 <p>Depending on the type, the form control may have a different appearance if the <code>multiple</code> attribute is set. For the file input type, the native messaging the browser provides differs. In Firefox, the file input reads "No files selected" when the attribute is present and "No file selected" when not, when no files are selected. Most browsers displaying a scrolling list box for a {{HTMLElement("select")}} control with the <code>multiple</code> attribute set versus a single line dropdown when the attribute is omitted. The {{HTMLElement("input/email", "email")}} input displays the same, but will match the {{cssxref(':invalid')}} pseudo-class if more than one comma-separated email address is included if the attribute is not present.</p>
 
-<p>When <code>multiple</code> is set on the {{HTMLElement("input/email", "email")}} input type, the user can inlclude zero (if not also <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code>), one or more comma-separated email addresses.</p>
+<p>When <code>multiple</code> is set on the {{HTMLElement("input/email", "email")}} input type, the user can include zero (if not also <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code>), one or more comma-separated email addresses.</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" <strong>multiple</strong> name="emails" id="emails"&gt;</pre>
+<pre class="brush: html">&lt;input type="email" <strong>multiple</strong> name="emails" id="emails"&gt;</pre>
 
 <p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list.</p>
 
 <p>When <code>multiple</code> is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" <strong>multiple</strong> name="uploads" id="uploads"&gt;</pre>
+<pre class="brush: html">&lt;input type="file" <strong>multiple</strong> name="uploads" id="uploads"&gt;</pre>
 
 <p>When the attribute is omitted, the user can only select a single file per <code>&lt;input&gt;</code>.</p>
 
 <p>The <code>multiple</code> attribute on the {{HTMLElement("select")}} element represents a control for selecting zero or more options from the list of options. Otherwise, the {{HTMLElement("select")}} element represents a control for selecting a single {{HTMLElement("option")}} from the list of options.</p>
 
-<pre class="brush: html notranslate">&lt;select multiple name="drawfs" id="drawfs"&gt;
+<pre class="brush: html">&lt;select multiple name="drawfs" id="drawfs"&gt;
   &lt;option&gt;Grumpy&lt;/option&gt;
   &lt;option&gt;Happy&lt;/option&gt;
   &lt;option&gt;Sleepy&lt;/option&gt;
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="email_input">email input</h3>
 
-<pre class="brush: html notranslate">&lt;label for="emails"&gt;Who do you want to email?&lt;/label&gt;
+<pre class="brush: html">&lt;label for="emails"&gt;Who do you want to email?&lt;/label&gt;
 &lt;input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64"&gt;
 
 &lt;datalist id="drawfemails"&gt;
@@ -63,7 +63,7 @@ tags:
 &lt;/datalist&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {border: red solid 3px;}</pre>
+<pre class="brush: css">input:invalid {border: red solid 3px;}</pre>
 </div>
 
 <p>If and only if the <code>multiple</code> attribute is specified, the value can be a list of properly-formed comma-separated e-mail addresses. Any trailing and leading whitespace is removed from each address in the list. If the <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code> attribute is present, at least one email address is required.</p>
@@ -76,7 +76,7 @@ tags:
 
 <p>When <code>multiple</code> is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
   &lt;p&gt;
     &lt;label for="uploads"&gt;
        Choose the images you want to upload:
@@ -102,7 +102,7 @@ tags:
 
 <p>The <code>multiple</code> attribute on the {{HTMLElement("select")}} element represents a control for selecting zero or more options from the list of options. Otherwise, the {{HTMLElement("select")}} element represents a control for selecting a single {{HTMLElement("option")}} from the list of options. The control generally has a different appearance based on the presence of the multiple attribute, with most browsers displaying a scrolling list box instead of a single line dropdown when the attribute is present.</p>
 
-<pre class="brush: html notranslate">&lt;form method="get" action="#"&gt;
+<pre class="brush: html">&lt;form method="get" action="#"&gt;
 &lt;p&gt;
  &lt;label for="dwarfs"&gt;Select the woodsmen you like:&lt;/label&gt;
   &lt;select multiple name="drawfs" id="drawfs"&gt;
@@ -136,7 +136,7 @@ tags:
 
 <p>Note the difference in appearance between the two form controls.</p>
 
-<pre class="brush: css notranslate">/* uncomment this CSS to make the multiple the same height as the single */
+<pre class="brush: css">/* uncomment this CSS to make the multiple the same height as the single */
 
 /*
 select[multiple] {

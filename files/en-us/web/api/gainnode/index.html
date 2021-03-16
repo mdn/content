@@ -14,7 +14,7 @@ tags:
 
 <p>The gain is a unitless value, changing with time, that is multiplied to each corresponding sample of all input channels. If modified, the new gain is instantly applied, causing unaesthetic 'clicks' in the resulting audio. To prevent this from happening, never change the value directly but use the exponential interpolation methods on the {{domxref("AudioParam")}} interface.</p>
 
-<p><img alt="The GainNode is increasing the gain of the output." src="https://mdn.mozillademos.org/files/5085/WebAudioGainNode.png" style="height: 116px; width: 774px;"></p>
+<p><img alt="The GainNode is increasing the gain of the output." src="webaudiogainnode.png"></p>
 
 <table class="properties">
  <tbody>
@@ -45,7 +45,7 @@ tags:
 
 <dl>
  <dt>{{domxref("GainNode.GainNode", "GainNode()")}}</dt>
- <dd>Creates a new instance of a <code>GainNode</code> object. You shouldn't manually create a gain node; instead, use the method {{domxref("AudioContext.createGain()")}}.</dd>
+ <dd>Creates a new instance of a <code>GainNode</code> object. You shouldn't manually create a gain node; instead, use the method {{domxref("BaseAudioContext.createGain")}}.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -84,13 +84,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.GainNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

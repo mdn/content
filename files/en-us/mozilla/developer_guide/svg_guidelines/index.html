@@ -53,19 +53,19 @@ tags:
 
 <p>This path: </p>
 
-<pre class="notranslate">&lt;path d=" M5,5    L1,1z "&gt;</pre>
+<pre>&lt;path d=" M5,5    L1,1z "&gt;</pre>
 
 <p>can be cut down to this:</p>
 
-<pre class="notranslate">&lt;path d="M5,5 L1,1z"&gt;</pre>
+<pre>&lt;path d="M5,5 L1,1z"&gt;</pre>
 
 <p>Similarly, this polygon:</p>
 
-<pre class="notranslate">&lt;polygon points="  0,0   4,4  4,0  "/&gt;</pre>
+<pre>&lt;polygon points="  0,0   4,4  4,0  "/&gt;</pre>
 
 <p>can be cut down to this:</p>
 
-<pre class="notranslate">&lt;polygon points="0,0 4,4 4,0"/&gt;</pre>
+<pre>&lt;polygon points="0,0 4,4 4,0"/&gt;</pre>
 
 <h4 id="Line_breaks">Line breaks</h4>
 
@@ -189,11 +189,11 @@ tags:
 
 <p>Some editors use <code>&lt;g&gt;</code> tags to do nested transforms, which is usually not needed. You can avoid this by doing basic algebra, for example:</p>
 
-<pre class="notranslate">&lt;g transform="translate(-62, -310)"&gt;&lt;shape transform="translate(60, 308)"/&gt;&lt;/g&gt;</pre>
+<pre>&lt;g transform="translate(-62, -310)"&gt;&lt;shape transform="translate(60, 308)"/&gt;&lt;/g&gt;</pre>
 
 <p>can be cut down to:</p>
 
-<pre class="notranslate">&lt;shape transform="translate(-2,-2)"/&gt;</pre>
+<pre>&lt;shape transform="translate(-2,-2)"/&gt;</pre>
 
 <p>because: -62+60 = -310+308 = -2</p>
 

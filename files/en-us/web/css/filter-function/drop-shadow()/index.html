@@ -8,7 +8,7 @@ tags:
   - Function
   - Reference
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong><code>drop-shadow()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">drop-shadow(<var>offset-x</var> <var>offset-y</var> <var>blur-radius</var> <var>color</var>)</pre>
+<pre class="brush: css">drop-shadow(<var>offset-x</var> <var>offset-y</var> <var>blur-radius</var> <var>color</var>)</pre>
 
 <p>The <code>drop-shadow()</code> function accepts a parameter of type <code>&lt;shadow&gt;</code> (defined in the {{cssxref("box-shadow")}} property), with the exception that the <code>inset</code> keyword and <code><var>spread</var></code> parameters are not allowed.</p>
 
@@ -43,13 +43,13 @@ tags:
 
 <h3 id="Setting_a_drop_shadow_using_pixel_offsets_and_blur_radius">Setting a drop shadow using pixel offsets and blur radius</h3>
 
-<pre class="brush: css notranslate">/* Black shadow with 10px blur */
+<pre class="brush: css">/* Black shadow with 10px blur */
 drop-shadow(16px 16px 10px black)
 </pre>
 
 <h3 id="Setting_a_drop_shadow_using_rem_offsets_and_blur_radius">Setting a drop shadow using rem offsets and blur radius</h3>
 
-<pre class="brush: css notranslate">/* Reddish shadow with 1rem blur */
+<pre class="brush: css">/* Reddish shadow with 1rem blur */
 drop-shadow(.5rem .5rem 1rem #e23)</pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -69,18 +69,22 @@ drop-shadow(.5rem .5rem 1rem #e23)</pre>
  </tbody>
 </table>
 
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("css.properties.filter")}}</p>
+
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{cssxref("&lt;filter-function&gt;")}}</li>
  <li>CSS {{cssxref("box-shadow")}} property</li>
- <li>{{cssxref("filter-function/blur", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
+ <li>{{cssxref("filter-function/blur()", "blur()")}}</li>
+ <li>{{cssxref("filter-function/brightness()", "brightness()")}}</li>
+ <li>{{cssxref("filter-function/contrast()", "contrast()")}}</li>
+ <li>{{cssxref("filter-function/grayscale()", "grayscale()")}}</li>
+ <li>{{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}</li>
+ <li>{{cssxref("filter-function/invert()", "invert()")}}</li>
+ <li>{{cssxref("filter-function/opacity()", "opacity()")}}</li>
+ <li>{{cssxref("filter-function/saturate()", "saturate()")}}</li>
+ <li>{{cssxref("filter-function/sepia()", "sepia()")}}</li>
 </ul>

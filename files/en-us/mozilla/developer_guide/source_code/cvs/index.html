@@ -2,7 +2,7 @@
 title: Getting Mozilla Source Code Using CVS
 slug: Mozilla/Developer_guide/Source_Code/CVS
 ---
-<div class="note">Note: This document describes how to get source code for older versions of the code, Gecko 1.9.0, Firefox 3 or earlier, and older versions of NSS and NSPR. Development for Gecko 1.9.1/Firefox 3.5 and beyond, and recent versions of NSS and NSPR, uses the <a class="internal" href="/en-US/docs/Developer_Guide/Source_Code/Mercurial" title="En/Developer Guide/Source Code/Mercurial">Mercurial</a> source code control system.</div>
+<div class="note">Note: This document describes how to get source code for older versions of the code, Gecko 1.9.0, Firefox 3 or earlier, and older versions of NSS and NSPR. Development for Gecko 1.9.1/Firefox 3.5 and beyond, and recent versions of NSS and NSPR, uses the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mercurial</a> source code control system.</div>
 
 <div class="warning">
 <p>As of July 2015, CVS services are no longer operated at Mozilla. For access to CVS Archives, please see <a href="https://web.archive.org/web/20160629020307/https://blog.mozilla.org/it/2015/07/28/vcs-decom-status/">the blog post</a> announcing the change.</p>
@@ -26,7 +26,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>The "cvsroot" (repository identification string) used for anonymous access to Mozilla CVS is</p>
 
-<pre class="eval"><a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot
+<pre class="eval">:pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot
 </pre>
 
 <p>If you are using a graphical CVS interface, use the following server data:</p>
@@ -41,7 +41,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <h3 id="Selecting_a_Project_to_Pull">Selecting a Project to Pull</h3>
 
-<p>Since several different applications are built from the same basic source code, you must choose which application to checkout on the command line using the <code>MOZ_CO_PROJECT</code> variable. This information has to be supplied when it comes to the checkout of the actual source code (see the appropriate <a href="#Checkout">checkout</a> <a href="#Checkout_2">section</a> below, according to the branch you want to checkout). The possible options include the following:</p>
+<p>Since several different applications are built from the same basic source code, you must choose which application to checkout on the command line using the <code>MOZ_CO_PROJECT</code> variable. This information has to be supplied when it comes to the checkout of the actual source code (see the appropriate <a href="#checkout">checkout</a> <a href="#checkout_2">section</a> below, according to the branch you want to checkout). The possible options include the following:</p>
 
 <dl>
  <dt>browser </dt>
@@ -66,7 +66,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>Multiple projects can be specified with commas: <code>MOZ_CO_PROJECT=suite,browser,xulrunner</code>.</p>
 
-<p><strong>Note</strong> that if you are using a custom <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you can also specify <code>MOZ_CO_PROJECT</code> there, instead of including it on the command line.</p>
+<p><strong>Note</strong> that if you are using a custom <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#using_a_.mozconfig_configuration_file">.mozconfig</a></code> file, you can also specify <code>MOZ_CO_PROJECT</code> there, instead of including it on the command line.</p>
 
 <h3 id="Checking_Out_a_New_Source_Tree">Checking Out a New Source Tree</h3>
 
@@ -78,10 +78,10 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>To check out a new source tree from scratch, get the <code>client.mk</code> file which contains makefile instructions which are used to pull the rest of the tree:</p>
 
-<pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co mozilla/client.mk
+<pre class="eval">$ cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co mozilla/client.mk
 </pre>
 
-<p>Note: if you have already set up a <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, you may also need to check out the following files:</p>
+<p>Note: if you have already set up a <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#using_a_.mozconfig_configuration_file">.mozconfig</a></code> file, you may also need to check out the following files:</p>
 
 <dl>
  <dt>Firefox </dt>
@@ -100,12 +100,12 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <p>If you want to check out the source code of a specific <a class="external" href="https://mozilla-version-control-tools.readthedocs.io/en/latest/hgmozilla/dag.html#creating-dag-branches">CVS branch</a>, use</p>
 
-<pre class="eval">$ cvs -d <a class="link-mailto" href="mailto::pserver:anonymous@cvs-mirror.mozilla.org" rel="freelink">:pserver:anonymous@cvs-mirror.mozilla.org</a>:/cvsroot co -r BRANCH mozilla/client.mk
+<pre class="eval">$ cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/cvsroot co -r BRANCH mozilla/client.mk
 </pre>
 
 <p>instead. To, for example, pull the Firefox 2.0/Thunderbird 2.0/SeaMonkey 1.1 development branch, replace BRANCH above with MOZILLA_1_8_BRANCH. For available branch tags in Mozilla, see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/CVS_Tags">CVS Tags</a>.</p>
 
-<p>The information on pulling project specific <code>.mozconfig</code> files as listed in the <a href="#Branch_HEAD">previous section</a> apply to other branches than HEAD as well of course.</p>
+<p>The information on pulling project specific <code>.mozconfig</code> files as listed in the <a href="#branch_head">previous section</a> apply to other branches than HEAD as well of course.</p>
 
 <h4 id="Checkout">Checkout</h4>
 
@@ -123,7 +123,7 @@ $ make -f client.mk checkout MOZ_CO_PROJECT=<em>option,option</em>
 
 <p>If you want to check out the source code as it was at a specific time you can use the MOZ_CO_DATE variable. For example <code>MOZ_CO_DATE="20 Oct 2006 17:00 PDT"</code>.</p>
 
-<p>This can either be added to your <code><a href="/en/Configuring_Build_Options#Using_a_.mozconfig_Configuration_File">.mozconfig</a></code> file, or specified on the command line, such as</p>
+<p>This can either be added to your <code><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#using_a_.mozconfig_configuration_file">.mozconfig</a></code> file, or specified on the command line, such as</p>
 
 <pre class="eval">$ cd mozilla
 $ make -f client.mk checkout MOZ_CO_DATE="20 Oct 2006 17:00 PDT" MOZ_CO_PROJECT=<em>option,option</em>
@@ -167,7 +167,7 @@ $ cvs up -r BRANCH client.mk
 <pre class="eval">$ cvs diff -u8p FILENAME
 </pre>
 
-<p>See <a href="/en/Creating_a_patch">Creating a patch</a> for more information.</p>
+<p>See <a href="/en-US/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch">Creating a patch</a> for more information.</p>
 
 <h3 id="Converting_a_Downloaded_Source_Tree">Converting a Downloaded Source Tree</h3>
 

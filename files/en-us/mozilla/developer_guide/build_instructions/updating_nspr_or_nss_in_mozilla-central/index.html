@@ -6,7 +6,7 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p>The <a class="internal" href="/en/NSPR">NSPR</a> and <a class="internal" href="/en/NSS_FAQ" title="En/NSS FAQ">NSS</a> sources in <a href="/en/mozilla-central">mozilla-central</a> are maintained by the NSPR and NSS teams and always taken from exports of HG tags. Do not check in individual changes. If you check in an individual change by mistake, your change will be lost when the NSPR and NSS teams push a new HG tag to mozilla-central.</p>
+<p>The <a class="internal" href="/en-US/docs/NSPR">NSPR</a> and <a class="internal" href="/en-US/docs/Mozilla/Projects/NSS/FAQ">NSS</a> sources in <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> are maintained by the NSPR and NSS teams and always taken from exports of HG tags. Do not check in individual changes. If you check in an individual change by mistake, your change will be lost when the NSPR and NSS teams push a new HG tag to mozilla-central.</p>
 
 <p>(Because some developers might not be aware that NSPR/NSS are separately maintained and released, the Mozilla HG server rejects accidental changes/forking, if the required keywords are missing in the commit comment.)</p>
 
@@ -39,14 +39,14 @@ tags:
  <li>
   <p>Update the minimum required system NSS version in old-configure.in. This is for builds with --with-system-nss. For example, in the following, "3.16.1" would be replaced with the new NSS version.</p>
 
-  <pre><span class="a">MOZ_ARG_WITH_BOOL</span>(<a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=system">system</a>-<a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=nss">nss</a>,
-[  --<span class="a">with</span>-<a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=system">system</a>-<a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=nss">nss</a>       <a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=Use">Use</a> <a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=system">system</a> <a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=installed">installed</a> <a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=NSS">NSS</a>],
-    <span class="a">_USE_SYSTEM_NSS</span>=1 )
+  <pre class="brush: bash">MOZ_ARG_WITH_BOOL(system-nss,
+[  --with-system-nss       Use system installed NSS],
+    _USE_SYSTEM_NSS=1 )
 
-<span class="a">if</span> <a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=test">test</a> -<a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=n">n</a> "$<span class="a">_USE_SYSTEM_NSS</span>"; <a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=then">then</a>
-    <span class="a">AM_PATH_NSS</span>(3.16.1, [<span class="a">MOZ_NATIVE_NSS</span>=1], [<span class="a">AC_MSG_ERROR</span>([<a class="d" href="https://mxr.mozilla.org/mozilla-central/ident?i=you">you</a> <span class="a">don</span><span class="s">'t have NSS installed or your version is too old])])
-</span><span class="v">fi
-</span></pre>
+if test -n "$_USE_SYSTEM_NSS"; then
+    AM_PATH_NSS(3.16.1, [MOZ_NATIVE_NSS=1], [AC_MSG_ERROR([you don't have NSS installed or your version is too old])])
+fi
+</pre>
  </li>
  <li>Commit the update:
   <pre>$ hg commit -A

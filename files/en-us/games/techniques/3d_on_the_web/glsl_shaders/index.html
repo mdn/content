@@ -56,7 +56,7 @@ tags:
 
 <p>Here's the HTML structure we will use.</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;meta charset="utf-8"&gt;
@@ -101,7 +101,7 @@ tags:
 
 <p>Let's continue by writing a simple vertex shader — add the code below inside the body's first <code>&lt;script&gt;</code> tag:</p>
 
-<pre class="brush: glsl notranslate">void main() {
+<pre class="brush: glsl">void main() {
 	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
 </pre>
@@ -109,7 +109,7 @@ tags:
 <p>The resulting <code>gl_Position</code> is calculated by multiplying the model-view and the projection matrices by each vector to get the final vertex position, in each case.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
+<p><strong>Note</strong>: You can learn more about <em>model</em>, <em>view</em>, and <em>projection transformations</em> from the <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing">vertex processing paragraph</a>, and you can also check out the links at the end of this article to learn more about it.</p>
 </div>
 
 <p>Both <code>projectionMatrix</code> and <code>modelViewMatrix</code> are provided by Three.js and the vector is passed with the new 3D position, which results in the original cube moving 10 units along the <code>x</code> axis and 5 units along the <code>z</code> axis, translated via a shader. We can ignore the fourth parameter and leave it with the default <code>1.0</code> value; this is used to manipulate the clipping of the vertex position in the 3D space, but we don't need in our case.</p>
@@ -118,7 +118,7 @@ tags:
 
 <p>Now we'll add the texture shader to the code — add the code below to the body's second <code>&lt;script&gt;</code> tag:</p>
 
-<pre class="brush: glsl notranslate">void main() {
+<pre class="brush: glsl">void main() {
 	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
 </pre>
@@ -129,12 +129,12 @@ tags:
 
 <p>To actually apply the newly created shaders to the cube, comment out the <code>basicMaterial</code> definition first:</p>
 
-<pre class="brush: js notranslate">// var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+<pre class="brush: js">// var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 </pre>
 
 <p>Then, create the <a href="http://threejs.org/docs/#Reference/Materials/ShaderMaterial"><code>shaderMaterial</code></a>:</p>
 
-<pre class="brush: js notranslate">var shaderMaterial = new THREE.ShaderMaterial( {
+<pre class="brush: js">var shaderMaterial = new THREE.ShaderMaterial( {
 	vertexShader: document.getElementById( 'vertexShader' ).textContent,
 	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
 });
@@ -144,17 +144,17 @@ tags:
 
 <p>Then, in the line that defines the cube we need to replace the <code>basicMaterial</code>:</p>
 
-<pre class="brush: js notranslate">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+<pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
 </pre>
 
 <p>...with the newly created <code>shaderMaterial</code>:</p>
 
-<pre class="brush: js notranslate">var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
+<pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, shaderMaterial);
 </pre>
 
 <p>Three.js compiles and runs the shaders attached to the mesh to which this material is given. In our case the cube will have both vertex and texture shaders applied. That's it — you've just created the simplest possible shader, congratulations! Here's what the cube should look like:</p>
 
-<p><img alt="Three.js blue cube demo" src="https://end3r.github.io/MDN-Games-3D/Shaders/img/cube.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Three.js blue cube demo" src="cube.png" style="display: block; margin: 0px auto;"></p>
 
 <p>It looks exactly the same as the Three.js cube demo but the slightly different position and the same blue color are both achieved using the shader.</p>
 
@@ -162,7 +162,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"&gt;&lt;/script&gt;
+<pre class="brush: html">&lt;script src="https://end3r.github.io/MDN-Games-3D/Shaders/js/three.min.js"&gt;&lt;/script&gt;
 &lt;script id="vertexShader" type="x-shader/x-vertex"&gt;
     void main() {
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
@@ -177,7 +177,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">    var WIDTH = window.innerWidth;
+<pre class="brush: js">    var WIDTH = window.innerWidth;
     var HEIGHT = window.innerHeight;
 
     var renderer = new THREE.WebGLRenderer({antialias:true});
@@ -210,7 +210,7 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">body { margin: 0; padding: 0; font-size: 0; }
+<pre class="brush: css">body { margin: 0; padding: 0; font-size: 0; }
 canvas { width: 100%; height: 100%; }
 </pre>
 

@@ -63,7 +63,7 @@ tags:
 
 <p>Note that animations like this can cause the page to become wider than the browser window. To avoid this problem put the element to be animated in a container, and set {{cssxref("overflow")}}<code>:hidden</code> on the container.</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -89,7 +89,7 @@ tags:
 
 <p>The second (and final) keyframe occurs at 100% (using the alias <code>to</code>). The left margin is set to 0% and the width of the element is set to 100%. This causes the header to finish its animation flush against the left edge of the content area.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -104,7 +104,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>Let’s add another keyframe to the previous example’s animation. Let’s say we want the header’s font size to increase as it moves from right to left for a while, then to decrease back to its original size. That’s as simple as adding this keyframe:</p>
 
-<pre class="brush: css notranslate">75% {
+<pre class="brush: css">75% {
   font-size: 300%;
   margin-left: 25%;
   width: 150%;
@@ -113,7 +113,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>The full code now looks like this:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -137,7 +137,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -154,7 +154,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>To make the animation repeat itself, use the {{cssxref("animation-iteration-count")}} property to indicate how many times to repeat the animation. In this case, let’s use <code>infinite</code> to have the animation repeat indefinitely:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -163,7 +163,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>Adding it to the existing code:</p>
 
-<pre class="brush: css notranslate">@keyframes slidein {
+<pre class="brush: css">@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -176,7 +176,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -187,7 +187,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>That made it repeat, but it’s very odd having it jump back to the start each time it begins animating. What we really want is for it to move back and forth across the screen. That’s easily accomplished by setting {{cssxref("animation-direction")}} to <code>alternate</code>:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -197,7 +197,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>And the rest of the code:</p>
 
-<pre class="brush: css notranslate">@keyframes slidein {
+<pre class="brush: css">@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -210,7 +210,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
+<pre class="brush: html">&lt;p&gt;The Caterpillar and Alice looked at each other for some time in silence:
 at last the Caterpillar took the hookah out of its mouth, and addressed
 her in a languid, sleepy voice.&lt;/p&gt;
 </pre>
@@ -221,7 +221,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>The {{cssxref("animation")}} shorthand is useful for saving space. As an example, the rule we’ve been using through this article:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: infinite;
@@ -231,7 +231,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>Could be replaced by</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   animation: 3s infinite alternate slidein;
 }
 </pre>
@@ -246,19 +246,19 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>In this first example, we have three animation names set, but only one duration and iteration count. In this case all three animations are given the same duration and iteration count:</p>
 
-<pre class="brush: css notranslate">animation-name: fadeInOut, moveLeft300px, bounce;
+<pre class="brush: css">animation-name: fadeInOut, moveLeft300px, bounce;
 animation-duration: 3s;
 animation-iteration-count: 1;</pre>
 
 <p>In this second example, we have three values set on all three properties. In this case each animation is run with the corresponding values in the same position on each property, so for example <code>fadeInOut</code> has a duration of 2.5s and an iteration count of 2, etc.</p>
 
-<pre class="brush: css notranslate">animation-name: fadeInOut, moveLeft300px, bounce;
+<pre class="brush: css">animation-name: fadeInOut, moveLeft300px, bounce;
 animation-duration: 2.5s, 5s, 1s;
 animation-iteration-count: 2, 1, 5;</pre>
 
 <p>In this third case, there are three animations specified, but only two durations and iteration counts. In such cases where there are not enough values to give a separate value to each animation, the values cycle from start to finish. So for example, fadeInOut gets a duration of 2.5s and moveLeft300px gets a duration of 5s. We’ve now got to the end of the available duration values, so we start from the beginning again — bounce therefore gets a duration of 2.5s. The iteration counts (and any other property values you specify) will be assigned in the same way.</p>
 
-<pre class="brush: css notranslate">animation-name: fadeInOut, moveLeft300px, bounce;
+<pre class="brush: css">animation-name: fadeInOut, moveLeft300px, bounce;
 animation-duration: 2.5s, 5s;
 animation-iteration-count: 2, 1;</pre>
 
@@ -272,7 +272,7 @@ animation-iteration-count: 2, 1;</pre>
 
 <p>We start with creating the CSS for the animation. This animation will last for 3 seconds, be called “slidein”, repeat 3 times, and alternate direction each time. In the {{cssxref("@keyframes")}}, the width and margin-left are manipulated to make the element slide across the screen.</p>
 
-<pre class="brush: css notranslate">.slidein {
+<pre class="brush: css">.slidein {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: 3;
@@ -295,7 +295,7 @@ animation-iteration-count: 2, 1;</pre>
 
 <p>We’ll use JavaScript code to listen for all three possible animation events. This code configures our event listeners; we call it when the document is first loaded in order to set things up.</p>
 
-<pre class="brush: js notranslate">var element = document.getElementById("watchme");
+<pre class="brush: js">var element = document.getElementById("watchme");
 element.addEventListener("animationstart", listener, false);
 element.addEventListener("animationend", listener, false);
 element.addEventListener("animationiteration", listener, false);
@@ -311,7 +311,7 @@ element.className = "slidein";
 
 <p>The events get delivered to the <code>listener()</code> function, which is shown below.</p>
 
-<pre class="brush: js notranslate">function listener(event) {
+<pre class="brush: js">function listener(event) {
   var l = document.createElement("li");
   switch(event.type) {
     case "animationstart":
@@ -345,7 +345,7 @@ element.className = "slidein";
 
 <p>Just for the sake of completeness, here’s the HTML that displays the page content, including the list into which the script inserts information about the received events:</p>
 
-<pre class="brush: html notranslate">&lt;h1 id="watchme"&gt;Watch me move&lt;/h1&gt;
+<pre class="brush: html">&lt;h1 id="watchme"&gt;Watch me move&lt;/h1&gt;
 &lt;p&gt;
   This example shows how to use CSS animations to make &lt;code&gt;H1&lt;/code&gt;
   elements move across the page.
@@ -370,6 +370,6 @@ element.className = "slidein";
 
 <ul>
  <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
- <li><a href="/en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support" title="en/CSS/CSS animations/Detecting CSS animation support">Detecting CSS animation support</a></li>
+ <li><a href="/en-US/docs/CSS/CSS_animations/Detecting_CSS_animation_support">Detecting CSS animation support</a></li>
  <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
 </ul>

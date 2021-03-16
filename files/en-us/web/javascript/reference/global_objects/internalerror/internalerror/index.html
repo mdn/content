@@ -2,35 +2,38 @@
 title: InternalError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 tags:
-  - Constructor
-  - InternalError
-  - JavaScript
-  - Reference
+- Constructor
+- InternalError
+- JavaScript
+- Reference
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
-<p>The <strong><code>InternalError()</code></strong> constructor creates an error that indicates an error that occurred internally in the JavaScript engine. For example: "<strong>InternalError</strong>: too much recursion".</p>
+<p>The <strong><code>InternalError()</code></strong> constructor creates an error that
+  indicates an error that occurred internally in the JavaScript engine. For example:
+  "<strong>InternalError</strong>: too much recursion".</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+<pre
+  class="brush: js">new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>message</var></code> {{optional_inline}}</dt>
- <dd>Human-readable description of the error.</dd>
- <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
- <dd>The name of the file containing the code that caused the exception</dd>
- <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
- <dd>The line number of the code that caused the exception</dd>
+  <dt><code><var>message</var></code> {{optional_inline}}</dt>
+  <dd>Human-readable description of the error.</dd>
+  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
+  <dd>The name of the file containing the code that caused the exception</dd>
+  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
+  <dd>The line number of the code that caused the exception</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Creating_a_new_InternalError">Creating a new InternalError</h3>
 
-<pre class="brush: js notranslate">new InternalError("Engine failure");
+<pre class="brush: js">new InternalError("Engine failure");
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -39,13 +42,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.InternalError.InternalError")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Error")}}</li>
+  <li>{{jsxref("Error")}}</li>
 </ul>

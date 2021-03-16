@@ -11,54 +11,67 @@ tags:
 ---
 <div>{{ApiRef("Window")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Window.confirm()</strong></code> method displays a modal dialog with an optional message and two buttons: OK and Cancel.</span></p>
+<p><span class="seoSummary">The <code><strong>Window.confirm()</strong></code> method
+    displays a modal dialog with an optional message and two buttons: OK and
+    Cancel.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>result</em> = window.confirm(<em>message</em>);</pre>
+<pre
+  class="brush: js"><em>result</em> = window.confirm(<em>message</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>message</code></dt>
- <dd>A string you want to display in the alert dialog.</dd>
+  <dt><code>message</code></dt>
+  <dd>A string you want to display in the alert dialog.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A boolean indicating whether OK (<code>true</code>) or Cancel (<code>false</code>) was selected. If a browser is ignoring in-page dialogs, then the returned value is always <code>false</code>.</p>
+<p>A boolean indicating whether OK (<code>true</code>) or Cancel (<code>false</code>) was
+  selected. If a browser is ignoring in-page dialogs, then the returned value is always
+  <code>false</code>.</p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">if (window.confirm("Do you really want to leave?")) {
+<pre class="brush: js">if (window.confirm("Do you really want to leave?")) {
   window.open("exit.html", "Thanks for Visiting!");
 }
 </pre>
 
 <p>Produces:</p>
 
-<p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
-  </p>
+<p><img alt="firefox confirm"
+    src="firefoxcomfirmdialog_zpsf00ec381.png"><br>
+   </p>
 
 <h2 id="Notes">Notes</h2>
 
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span> Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed. For this reason, you should not overuse any function that creates a dialog box (or modal window). Regardless, there are good reasons to <a href="https://alistapart.com/article/neveruseawarning/">avoid using dialog boxes for confirmation</a>.</p>
+<p><span class="comment">The following text is shared between this article,
+    DOM:window.prompt and DOM:window.alert</span> Dialog boxes are modal windows — they
+  prevent the user from accessing the rest of the program's interface until the dialog box
+  is closed. For this reason, you should not overuse any function that creates a dialog
+  box (or modal window). Regardless, there are good reasons to <a
+    href="https://alistapart.com/article/neveruseawarning/">avoid using dialog boxes for
+    confirmation</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm', 'confirm()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm',
+        'confirm()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -68,6 +81,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("window.alert()")}}</li>
- <li>{{domxref("window.prompt()")}}</li>
+  <li>{{domxref("window.alert()")}}</li>
+  <li>{{domxref("window.prompt()")}}</li>
 </ul>

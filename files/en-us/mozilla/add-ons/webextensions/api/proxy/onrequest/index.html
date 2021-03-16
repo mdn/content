@@ -27,11 +27,11 @@ tags:
 
 <p>When the event is fired, the listener is called with an object containing information about the request. The listener returns a {{WebExtAPIRef("proxy.ProxyInfo")}} object representing a proxy to use (or an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects, enabling the browser to fail over if a proxy is unreachable).</p>
 
-<p>To use <code>proxy.onRequest</code>, an extension must have the "proxy" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> and the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the URLs of the requests that it intercepts, which means that the match patterns in the <code>filter</code> argument must be a subset of the extension's host permissions.</p>
+<p>To use <code>proxy.onRequest</code>, an extension must have the "proxy" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for the URLs of the requests that it intercepts, which means that the match patterns in the <code>filter</code> argument must be a subset of the extension's host permissions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.proxy.onRequest.addListener(
+<pre class="brush:js">browser.proxy.onRequest.addListener(
   listener,             //  function
   filter,               //  object
   extraInfoSpec         //  optional array of strings

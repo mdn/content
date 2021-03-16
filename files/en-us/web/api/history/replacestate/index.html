@@ -11,58 +11,85 @@ tags:
 ---
 <div>{{APIRef("History API")}}</div>
 
-<p>The <strong><code>History.replaceState()</code></strong> method modifies the current history entry, replacing it with the <code>stateObj</code>, <code>title</code>, and <code>URL</code> passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.</p>
+<p>The <strong><code>History.replaceState()</code></strong> method modifies the current
+  history entry, replacing it with the <code>stateObj</code>, <code>title</code>, and
+  <code>URL</code> passed in the method parameters. This method is particularly useful
+  when you want to update the state object or URL of the current history entry in response
+  to some user action.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">history.replaceState(<em>stateObj</em>, <em>title</em>, [<em>url</em>])</pre>
+<pre
+  class="brush: js">history.replaceState(<em>stateObj</em>, <em>title</em>, [<em>url</em>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>stateObj</code></dt>
- <dd>The state object is a JavaScript object which is associated with the history entry passed to the <code>replaceState</code> method. The state object can be <code>null</code>.</dd>
- <dt><code>title</code></dt>
- <dd><a href="https://github.com/whatwg/html/issues/2174">Most browsers currently ignore this parameter</a>, although they may use it in the future. Passing the empty string here should be safe against future changes to the method. Alternatively, you could pass a short title for the state.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd>The URL of the history entry. The new URL must be of the same origin as the current URL; otherwise replaceState throws an exception.</dd>
+  <dt><code>stateObj</code></dt>
+  <dd>The state object is a JavaScript object which is associated with the history entry
+    passed to the <code>replaceState</code> method. The state object can be
+    <code>null</code>.</dd>
+  <dt><code>title</code></dt>
+  <dd><a href="https://github.com/whatwg/html/issues/2174">Most browsers currently ignore
+      this parameter</a>, although they may use it in the future. Passing the empty string
+    here should be safe against future changes to the method. Alternatively, you could
+    pass a short title for the state.</dd>
+  <dt><code>url</code> {{optional_inline}}</dt>
+  <dd>The URL of the history entry. The new URL must be of the same origin as the current
+    URL; otherwise replaceState throws an exception.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Suppose https://www.mozilla.org/foo.html executes the following JavaScript:</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">const </span>stateObj <span class="operator token">=</span> <span class="punctuation token">{</span> foo<span class="punctuation token">:</span> '<span class="string token">bar'</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
-history<span class="punctuation token">.</span><span class="function token">pushState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">''</span><span class="punctuation token">,</span> '<span class="string token">bar.html'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre
+  class="brush: js line-numbers language-js">const stateObj = { foo: 'bar' };
+history.pushState(stateObj, '', 'bar.html');</pre>
 
-<p>The explanation of these two lines above can be found in the <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API#Example_of_pushState_method">Example of <code>pushState()</code> method</a> section of the <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a> article. Then suppose <span class="nowiki">https://www.mozilla.org/bar.html</span> executes the following JavaScript:</p>
+<p>The explanation of these two lines above can be found in the <a
+    href="/en-US/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method">Example
+    of <code>pushState()</code> method</a> section of the <a
+    href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the
+    History API</a> article. Then suppose
+    <code>https://www.mozilla.org/bar.html</code> executes the following
+  JavaScript:</p>
 
-<pre class="brush: js line-numbers language-js notranslate"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">replaceState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">''</span><span class="punctuation token">,</span> '<span class="string token">bar2.html'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre
+  class="brush: js line-numbers language-js">history.replaceState(stateObj, '', 'bar2.html');</pre>
 
-<p>This will cause the URL bar to display <span class="nowiki">https://www.mozilla.org/bar2.html</span>, but won't cause the browser to load <code>bar2.html</code> or even check that <code>bar2.html</code> exists.</p>
+<p>This will cause the URL bar to display
+  <code>https://www.mozilla.org/bar2.html</code>, but won't cause the browser
+  to load <code>bar2.html</code> or even check that <code>bar2.html</code> exists.</p>
 
-<p>Suppose now that the user navigates to <span class="nowiki">https://www.microsoft.com</span>, then clicks the Back button. At this point, the URL bar will display <span class="nowiki">https://www.mozilla.org/bar2.html. If the user now clicks Back again, the URL bar will display https://www.mozilla.org/foo.html, and totally bypass bar.html.</span></p>
+<p>Suppose now that the user navigates to
+  <code>https://www.microsoft.com</code>, then clicks the Back button. At this
+  point, the URL bar will display <code>https://www.mozilla.org/bar2.html</code>.
+    If the user now clicks Back again, the URL bar will
+    display https://www.mozilla.org/foo.html, and totally bypass bar.html.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "history.html#dom-history-replacestate", "History.replaceState()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "history.html#dom-history-replacestate", "History.replaceState()")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "history.html#dom-history-replacestate",
+        "History.replaceState()")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5 W3C", "history.html#dom-history-replacestate",
+        "History.replaceState()")}}</td>
+      <td>{{Spec2("HTML5 W3C")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

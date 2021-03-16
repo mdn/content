@@ -2,49 +2,71 @@
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
 tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
+- API
+- Property
+- Reference
+- Web API
+- WebSocket
 ---
 <p>{{APIRef("Web Sockets API")}}</p>
 
-<p>The <strong><code>WebSocket.binaryType</code></strong> property returns the type of binary data being transmitted by the connection.</p>
+<p>The <strong><code>WebSocket.binaryType</code></strong> property controls the type of
+  binary data being received over the WebSocket connection.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>var binaryType</em> = aWebSocket.binaryType;</pre>
+<pre
+  class="brush: js"><em>var binaryType</em> = aWebSocket.binaryType;</pre>
 
 <h2 id="Value">Value</h2>
 
 <p>A {{DOMXref("DOMString")}}:</p>
 
 <dl>
- <dt><code>"blob"</code></dt>
- <dd>If {{domxref("Blob")}} objects are used.</dd>
- <dt><code>"arraybuffer"</code></dt>
- <dd>If {{jsxref("ArrayBuffer")}} objects are used.
+  <dt><code>"blob"</code></dt>
+  <dd>Use {{domxref("Blob")}} objects for binary data. This is the default value.</dd>
+  <dt><code>"arraybuffer"</code></dt>
+  <dd>Use {{jsxref("ArrayBuffer")}} objects for binary data.
   </dd>
 </dl>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">// Create WebSocket connection.
+const socket = new WebSocket("ws://localhost:8080");
+// Change binary type from "blob" to "arraybuffer"
+socket.binaryType = "arraybuffer";
+
+// Listen for messages
+socket.addEventListener("message", function (event) {
+    if(event.data instanceof ArrayBuffer) {
+        // binary frame
+        const view = new DataView(event.data);
+        console.log(view.getInt32(0));
+    } else {
+        // text frame
+        console.log(event.data);
+    }
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-websocket-binarytype', 'WebSocket: binaryType')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-websocket-binarytype', 'WebSocket:
+        binaryType')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

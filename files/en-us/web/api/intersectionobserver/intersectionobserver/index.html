@@ -2,63 +2,98 @@
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - Visibility
-  - Visible
+- API
+- Constructor
+- Intersection Observer API
+- IntersectionObserver
+- Reference
+- Visibility
+- Visible
 ---
 <div>{{APIRef("Intersection Observer API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>IntersectionObserver()</code></strong> constructor creates and returns a new {{domxref("IntersectionObserver")}} object.</span> The <code>rootMargin</code>, if specified, is checked to ensure it's syntactically correct, the thresholds are checked to ensure that they're all in the range 0.0 and 1.0 inclusive, and the threshold list is sorted in ascending numeric order. if the threshold list is empty, it's set to the array [0.0].</p>
+<p><span class="seoSummary">The <strong><code>IntersectionObserver()</code></strong>
+    constructor creates and returns a new {{domxref("IntersectionObserver")}}
+    object.</span> The <code>rootMargin</code>, if specified, is checked to ensure it's
+  syntactically correct, the thresholds are checked to ensure that they're all in the
+  range 0.0 and 1.0 inclusive, and the threshold list is sorted in ascending numeric
+  order. if the threshold list is empty, it's set to the array [0.0].</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>observer</em> = new IntersectionObserver(<em>callback</em>[, <em>options</em>]);</pre>
+<pre
+  class="brush: js">var <em>observer</em> = new IntersectionObserver(<em>callback</em>[, <em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>callback</code></dt>
- <dd>A function which is called when the percentage of the target element is visible crosses a threshold. The callback receives as input two parameters:
- <dl>
-  <dt><code>entries</code></dt>
-  <dd>An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold.</dd>
-  <dt><code>observer</code></dt>
-  <dd>The {{domxref("IntersectionObserver")}} for which the callback is being invoked.</dd>
- </dl>
- </dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>An optional object which customizes the observer. If <code>options</code> isn't specified, the observer uses the document's viewport as the root, with no margin, and a 0% threshold (meaning that even a one-pixel change is enough to trigger a callback). You can provide any combination of the following options:
- <dl>
-  <dt><code>root</code></dt>
-  <dd>An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor of the intended target, whose bounding rectangle will be considered the viewport. Any part of the target not visible in the visible area of the <code>root</code> is not considered visible.</dd>
-  <dt><code>rootMargin</code></dt>
-  <dd>A string which specifies a set of offsets to add to the root's {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking or growing the root for calculation purposes. The syntax is approximately the same as that for the CSS {{cssxref("margin")}} property; see {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element and root margin")}} for more information on how the margin works and the syntax. The default is "0px 0px 0px 0px".</dd>
-  <dt><code>threshold</code></dt>
-  <dd>Either a single number or an array of numbers between 0.0 and 1.0, specifying a ratio of intersection area to total bounding box area for the observed target. A value of 0.0 means that even a single visible pixel counts as the target being visible. 1.0 means that the entire target element is visible. See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} for a more in-depth description of how thresholds are used. The default is a threshold of 0.0.</dd>
- </dl>
- </dd>
+  <dt><code>callback</code></dt>
+  <dd>A function which is called when the percentage of the target element is visible
+    crosses a threshold. The callback receives as input two parameters:
+    <dl>
+      <dt><code>entries</code></dt>
+      <dd>An array of {{domxref("IntersectionObserverEntry")}} objects, each representing
+        one threshold which was crossed, either becoming more or less visible than the
+        percentage specified by that threshold.</dd>
+      <dt><code>observer</code></dt>
+      <dd>The {{domxref("IntersectionObserver")}} for which the callback is being invoked.
+      </dd>
+    </dl>
+  </dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>An optional object which customizes the observer. If <code>options</code> isn't
+    specified, the observer uses the document's viewport as the root, with no margin, and
+    a 0% threshold (meaning that even a one-pixel change is enough to trigger a callback).
+    You can provide any combination of the following options:
+    <dl>
+      <dt><code>root</code></dt>
+      <dd>An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor
+        of the intended target, whose bounding rectangle will be considered the viewport.
+        Any part of the target not visible in the visible area of the <code>root</code> is
+        not considered visible.</dd>
+      <dt><code>rootMargin</code></dt>
+      <dd>A string which specifies a set of offsets to add to the root's
+        {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking
+        or growing the root for calculation purposes. The syntax is approximately the same
+        as that for the CSS {{cssxref("margin")}} property; see
+        {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element
+        and root margin")}} for more information on how the margin works and the syntax.
+        The default is "0px 0px 0px 0px".</dd>
+      <dt><code>threshold</code></dt>
+      <dd>Either a single number or an array of numbers between 0.0 and 1.0, specifying a
+        ratio of intersection area to total bounding box area for the observed target. A
+        value of 0.0 means that even a single visible pixel counts as the target being
+        visible. 1.0 means that the entire target element is visible. See
+        {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}}
+        for a more in-depth description of how thresholds are used. The default is a
+        threshold of 0.0.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new {{domxref("IntersectionObserver")}} which can be used to watch for the visibility of a target element within the specified <code>root</code> crossing through any of the specified visibility <code>threshold</code>s. Call its {{domxref("IntersectionObserver.observe", "observe()")}} method to begin watching for the visibility changes on a given target.</p>
+<p>A new {{domxref("IntersectionObserver")}} which can be used to watch for the visibility
+  of a target element within the specified <code>root</code> crossing through any of the
+  specified visibility <code>threshold</code>s. Call its
+  {{domxref("IntersectionObserver.observe", "observe()")}} method to begin watching for
+  the visibility changes on a given target.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>SyntaxError</code></dt>
- <dd>The specified <code>rootMargin</code> is invalid.</dd>
- <dt><code>RangeError</code></dt>
- <dd>One or more of the values in <code>threshold</code> is outside the range 0.0 to 1.0.</dd>
+  <dt><code>SyntaxError</code></dt>
+  <dd>The specified <code>rootMargin</code> is invalid.</dd>
+  <dt><code>RangeError</code></dt>
+  <dd>One or more of the values in <code>threshold</code> is outside the range 0.0 to 1.0.
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example creates a new intersection observer which calls the function <code>myObserverCallback</code> every time the visible area of the element being observed changes by at least 10%.</p>
+<p>This example creates a new intersection observer which calls the function
+  <code>myObserverCallback</code> every time the visible area of the element being
+  observed changes by at least 10%.</p>
 
 <pre class="brush: js">let observer = new IntersectionObserver(myObserverCallback,
                    {threshold: 0.1});</pre>
@@ -66,22 +101,27 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver
+        constructor')}}</td>
+      <td>{{Spec2('IntersectionObserver')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("api.IntersectionObserver.IntersectionObserver")}}</p>

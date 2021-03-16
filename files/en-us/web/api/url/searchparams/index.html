@@ -2,22 +2,25 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - URL
-  - URLSearchParams
+- API
+- Property
+- Read-only
+- Reference
+- URL
+- URLSearchParams
 ---
 <div>{{APIRef("URL API")}}</div>
 
-<p>The <strong><code>searchParams</code></strong> readonly property of the {{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing access to the {{httpmethod("GET")}} decoded query arguments contained in the URL.</p>
+<p>The <strong><code>searchParams</code></strong> readonly property of the
+  {{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing
+  access to the {{httpmethod("GET")}} decoded query arguments contained in the URL.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>urlSearchParams</em> = <em>url</em>.searchParams</pre>
+<pre
+  class="brush: js">const <em>urlSearchParams</em> = <em>url</em>.searchParams</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -25,7 +28,9 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>If the URL of your page is <code>https://example.com/?name=Jonathan%20Smith&amp;age=18</code> you could parse out the <code>name</code> and <code>age</code> parameters using:</p>
+<p>If the URL of your page is
+  <code>https://example.com/?name=Jonathan%20Smith&amp;age=18</code> you could parse out
+  the <code>name</code> and <code>age</code> parameters using:</p>
 
 <pre class="brush: js">let params = (new URL(document.location)).searchParams;
 let name = params.get('name'); // is the string "Jonathan Smith".
@@ -34,18 +39,18 @@ let age = parseInt(params.get('age')); // is the number 18</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-searchparams', 'searchParams')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('URL', '#dom-url-searchparams', 'searchParams')}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

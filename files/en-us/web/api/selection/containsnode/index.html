@@ -2,29 +2,34 @@
 title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
 tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+- API
+- Experimental
+- HTML Editing
+- Method
+- Reference
+- Selection
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>Selection.containsNode()</code></strong> method indicates whether a specfied node is part of the selection.</p>
+<p>The <strong><code>Selection.containsNode()</code></strong> method indicates whether a
+  specfied node is part of the selection.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>sel</em>.containsNode(<em>node, partialContainment</em>)
+<pre class="brush: js"><em>sel</em>.containsNode(<em>node, partialContainment</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>node</code></dt>
- <dd>The node that is being looked for in the selection.</dd>
- <dt><code>partialContainment</code> {{optional_inline}}</dt>
- <dd>When <code>true</code>, <code>containsNode()</code> returns <code>true</code> when a part of the node is part of the selection. When <code>false</code>, <code>containsNode()</code> only returns <code>true</code> when the entire node is part of the selection. If not specified, the default value <code>false</code> is used.</dd>
+  <dt><code>node</code></dt>
+  <dd>The node that is being looked for in the selection.</dd>
+  <dt><code>partialContainment</code> {{optional_inline}}</dt>
+  <dd>When <code>true</code>, <code>containsNode()</code> returns <code>true</code> when a
+    part of the node is part of the selection. When <code>false</code>,
+    <code>containsNode()</code> only returns <code>true</code> when the entire node is
+    part of the selection. If not specified, the default value <code>false</code> is used.
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -33,11 +38,14 @@ tags:
 
 <p>This snippet checks whether anything inside the body element is selected.</p>
 
-<pre class="brush: js">console.log(window.getSelection().containsNode(document.body, true));</pre>
+<pre
+  class="brush: js">console.log(window.getSelection().containsNode(document.body, true));</pre>
 
 <h3 id="Find_the_hidden_word">Find the hidden word</h3>
 
-<p>In this example, a message appears when you select the secret word. It uses {{domxref("EventTarget/addEventListener", "addEventListener()")}} to check for {{domxref("Document/selectionchange_event", "selectionchange")}} events.</p>
+<p>In this example, a message appears when you select the secret word. It uses
+  {{domxref("EventTarget/addEventListener", "addEventListener()")}} to check for
+  {{domxref("Document/selectionchange_event", "selectionchange")}} events.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -65,18 +73,19 @@ document.addEventListener('selectionchange', () =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#dom-selection-containsnode', 'Selection.containsNode()')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Current</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selection API', '#dom-selection-containsnode',
+        'Selection.containsNode()')}}</td>
+      <td>{{Spec2('Selection API')}}</td>
+      <td>Current</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -86,5 +95,5 @@ document.addEventListener('selectionchange', () =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
+  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
 </ul>

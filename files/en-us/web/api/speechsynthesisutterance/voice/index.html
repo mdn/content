@@ -2,25 +2,30 @@
 title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Voice
-  - Web Speech API
-  - speech
-  - synthesis
+- API
+- Experimental
+- Property
+- Reference
+- SpeechSynthesisUtterance
+- Voice
+- Web Speech API
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>voice</code></strong> property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be used to speak the utterance.</p>
+<p>The <strong><code>voice</code></strong> property of the
+  {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be
+  used to speak the utterance.</p>
 
-<p>This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned by {{domxref("SpeechSynthesis.getVoices()")}}. If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.</p>
+<p>This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned
+  by {{domxref("SpeechSynthesis.getVoices()")}}. If not set by the time the utterance is
+  spoken, the voice used will be the most suitable default voice available for the
+  utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myVoice = speechSynthesisUtteranceInstance.voice;
+<pre class="brush: js">var myVoice = speechSynthesisUtteranceInstance.voice;
 speechSynthesisUtteranceInstance.voice = speechSynthesisVoiceInstance;
 </pre>
 
@@ -57,29 +62,27 @@ inputForm.onsubmit = function(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dom-speechsynthesisutterance-voice', 'voice')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesisutterance-voice', 'voice')}}
+      </td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesisUtterance.voice")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* Keyword values */
+<pre class="brush: css">/* Keyword values */
 transform: none;
 
 /* Function values */
@@ -58,14 +58,14 @@ transform: initial;
 transform: unset;
 </pre>
 
-<p>The <code>transform</code> property may be specified as either the keyword value <code><a href="#none">none</a></code> or as one or more <code><a href="#&lt;transform-function&gt;">&lt;transform-function&gt;</a></code> values.</p>
+<p>The <code>transform</code> property may be specified as either the keyword value <code><a href="#none">none</a></code> or as one or more <code><a href="#transform-function">&lt;transform-function&gt;</a></code> values.</p>
 
 <p>If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="&lt;transform-function&gt;">{{cssxref("&lt;transform-function&gt;")}}</dt>
+ <dt id="transform-function">{{cssxref("&lt;transform-function&gt;")}}</dt>
  <dd>One or more of the <a href="/en-US/docs/Web/CSS/transform-function">CSS transform functions</a> to be applied. The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left.</dd>
  <dt id="none"><code>none</code></dt>
  <dd>Specifies that no transform should be applied.</dd>
@@ -73,7 +73,7 @@ transform: unset;
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferrably site-wide.</p>
+<p>Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.</p>
 
 <p>Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> that will turn off animations if the user has reduced animation specified in their system preferences.</p>
 
@@ -90,7 +90,7 @@ transform: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -98,11 +98,11 @@ transform: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;Transformed element&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;Transformed element&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   border: solid red;
   transform: translate(30px, 20px) rotate(20deg);
   width: 140px;

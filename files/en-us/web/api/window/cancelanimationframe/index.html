@@ -2,28 +2,31 @@
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 tags:
-  - API
-  - Animation
-  - DOM
-  - Experimental
-  - Method
-  - Reference
-  - Window
+- API
+- Animation
+- DOM
+- Experimental
+- Method
+- Reference
+- Window
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>window.cancelAnimationFrame()</strong></code> method cancels an animation frame request previously scheduled through a call to {{domxref("window.requestAnimationFrame()")}}.</p>
+<p>The <code><strong>window.cancelAnimationFrame()</strong></code> method cancels an
+  animation frame request previously scheduled through a call to
+  {{domxref("window.requestAnimationFrame()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">window.cancelAnimationFrame(<em>requestID</em>);
+<pre class="brush: js">window.cancelAnimationFrame(<em>requestID</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>requestID</code></dt>
- <dd>The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}} that requested the callback.</dd>
+  <dt><code>requestID</code></dt>
+  <dd>The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}}
+    that requested the callback.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -53,30 +56,29 @@ cancelAnimationFrame(myReq);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#animationframeprovider-cancelanimationframe','cancelAnimationFrame()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML
+        WHATWG','#animationframeprovider-cancelanimationframe','cancelAnimationFrame()')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Window.cancelAnimationFrame")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("window.mozAnimationStartTime")}}</li>
- <li>{{domxref("window.requestAnimationFrame()")}}</li>
+  <li>{{domxref("window.mozAnimationStartTime")}}</li>
+  <li>{{domxref("window.requestAnimationFrame()")}}</li>
 </ul>

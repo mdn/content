@@ -63,18 +63,18 @@ tags:
 
 <p>Change the <code>import</code> statement at the top of <code>Todo.js</code> so that it includes <code>useRef</code>:</p>
 
-<pre class="brush: js notranslate">import React, { useRef, useState } from "react";</pre>
+<pre class="brush: js">import React, { useRef, useState } from "react";</pre>
 
 <p>Then, create two new constants beneath the hooks in your <code>Todo()</code> function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.</p>
 
-<pre class="brush: js notranslate">const editFieldRef = useRef(null);
+<pre class="brush: js">const editFieldRef = useRef(null);
 const editButtonRef = useRef(null);</pre>
 
 <p>These refs have a default value of <code>null</code> because they will not have value until we attach them to their respective elements. To do that, we'll add an attribute of <code>ref</code> to each element, and set their values to the appropriately named <code>ref</code> objects.</p>
 
 <p>The textbox <code>&lt;input&gt;</code> in your editing template should be updated like this:</p>
 
-<pre class="brush: js notranslate">&lt;input
+<pre class="brush: js">&lt;input
   id={props.id}
   className="todo-text"
   type="text"
@@ -85,7 +85,7 @@ const editButtonRef = useRef(null);</pre>
 
 <p>The "Edit" button in your view template should read like this:</p>
 
-<pre class="brush: js notranslate">&lt;button
+<pre class="brush: js">&lt;button
   type="button"
   className="btn"
   onClick={() =&gt; setEditing(true)}
@@ -100,21 +100,21 @@ const editButtonRef = useRef(null);</pre>
 
 <p>Change the import statement of <code>Todo.js</code> again to add <code>useEffect</code>:</p>
 
-<pre class="brush: js notranslate">import React, { useEffect, useRef, useState } from "react";</pre>
+<pre class="brush: js">import React, { useEffect, useRef, useState } from "react";</pre>
 
 <p><code>useEffect()</code> takes a function as an argument; this function is executed after the component renders. Let's see this in action; put the following <code>useEffect()</code> call just above the <code>return</code> statement in the body of <code>Todo()</code>, and pass into it a function that logs the words "side effect" to your console:</p>
 
-<pre class="brush: js notranslate">useEffect(() =&gt; {
+<pre class="brush: js">useEffect(() =&gt; {
   console.log("side effect");
 });</pre>
 
 <p>To illustrate the difference between the main render process and code run inside <code>useEffect()</code>, add another log – put this one below the previous addition:</p>
 
-<pre class="brush: js notranslate">console.log("main render");</pre>
+<pre class="brush: js">console.log("main render");</pre>
 
 <p>Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.</p>
 
-<pre class="notranslate">main render (3)                                     Todo.js:100
+<pre>main render (3)                                     Todo.js:100
 side effect (3)                                     Todo.js:98</pre>
 
 <p>That's it for our experimentation for now. Delete <code>console.log("main render")</code> now, and lets move on to implementing our focus management.</p>
@@ -125,7 +125,7 @@ side effect (3)                                     Todo.js:98</pre>
 
 <p>Update your existing <code>useEffect()</code> hook so that it reads like this:</p>
 
-<pre class="brush: js notranslate">useEffect(() =&gt; {
+<pre class="brush: js">useEffect(() =&gt; {
   if (isEditing) {
     editFieldRef.current.focus();
   }
@@ -139,7 +139,7 @@ side effect (3)                                     Todo.js:98</pre>
 
 <p>At first glance, getting React to move focus back to our "Edit" button when the edit is saved or cancelled appears deceptively easy. Surely we could add a condition to our <code>useEffect</code> to focus on the edit button if <code>isEditing</code> is <code>false</code>? Let's try it now — update your <code>useEffect()</code> call like so:</p>
 
-<pre class="brush: js notranslate">useEffect(() =&gt; {
+<pre class="brush: js">useEffect(() =&gt; {
   if (isEditing) {
     editFieldRef.current.focus();
   } else {
@@ -157,7 +157,7 @@ side effect (3)                                     Todo.js:98</pre>
 
 <p>In order to meet our refined criteria, we need to know not just the value of <code>isEditing</code>, but also <em>when that value has changed</em>. In order to do that, we need to be able to read the previous value of the <code>isEditing</code> constant. Using pseudocode, our logic should be something like this:</p>
 
-<pre class="notranslate">if (wasNotEditingBefore &amp;&amp; isEditingNow) {
+<pre>if (wasNotEditingBefore &amp;&amp; isEditingNow) {
   focusOnEditField()
 }
 if (wasEditingBefore &amp;&amp; isNotEditingNow) {
@@ -168,7 +168,7 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>Paste the following code near the top of <code>Todo.js</code>, above your <code>Todo()</code> function.</p>
 
-<pre class="brush: js notranslate">function usePrevious(value) {
+<pre class="brush: js">function usePrevious(value) {
   const ref = useRef();
   useEffect(() =&gt; {
     ref.current = value;
@@ -178,11 +178,11 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>Now we'll define a <code>wasEditing</code> constant beneath the hooks at the top of <code>Todo()</code>. We want this constant to track the previous value of <code>isEditing</code>, so we call <code>usePrevious</code> with <code>isEditing</code> as an argument:</p>
 
-<pre class="brush: js notranslate">const wasEditing = usePrevious(isEditing);</pre>
+<pre class="brush: js">const wasEditing = usePrevious(isEditing);</pre>
 
 <p>With this constant, we can update our <code>useEffect()</code> hook to implement the pseudocode we discussed before — update it as follows:</p>
 
-<pre class="brush: js notranslate">useEffect(() =&gt; {
+<pre class="brush: js">useEffect(() =&gt; {
   if (!wasEditing &amp;&amp; isEditing) {
     editFieldRef.current.focus();
   }
@@ -208,11 +208,11 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>Import the <code>useRef()</code> and <code>useEffect()</code> hooks into <code>App.js</code> — you'll need them both below:</p>
 
-<pre class="brush: js notranslate">import React, { useState, useRef, useEffect } from "react";</pre>
+<pre class="brush: js">import React, { useState, useRef, useEffect } from "react";</pre>
 
 <p>Then declare a new ref inside the <code>App()</code> function. Just above the <code>return</code> statement is a good place:</p>
 
-<pre class="brush: js notranslate">const listHeadingRef = useRef(null);</pre>
+<pre class="brush: js">const listHeadingRef = useRef(null);</pre>
 
 <h3 id="Prepare_the_heading">Prepare the heading</h3>
 
@@ -220,7 +220,7 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>Let's add the <code>tabindex</code> attribute — written as <code>tabIndex</code> in JSX — to the heading above our list of tasks, along with our <code>headingRef</code>:</p>
 
-<pre class="brush: js notranslate">&lt;h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}&gt;
+<pre class="brush: js">&lt;h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}&gt;
   {headingText}
 &lt;/h2&gt;</pre>
 
@@ -232,7 +232,7 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>We want to focus on the element associated with our ref (via the <code>ref</code> attribute) only when our user deletes a task from their list. That's going to require the <code>usePrevious()</code> hook we already used earlier on. Add it to the top of your <code>App.js</code> file, just below the imports:</p>
 
-<pre class="brush: js notranslate">function usePrevious(value) {
+<pre class="brush: js">function usePrevious(value) {
   const ref = useRef();
   useEffect(() =&gt; {
     ref.current = value;
@@ -242,7 +242,7 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>Now add the following, above the <code>return</code> statement inside the <code>App()</code> function:</p>
 
-<pre class="brush: js notranslate">const prevTaskLength = usePrevious(tasks.length);</pre>
+<pre class="brush: js">const prevTaskLength = usePrevious(tasks.length);</pre>
 
 <p>Here we are invoking <code>usePrevious()</code> to track the length of the tasks state, like so:</p>
 
@@ -256,7 +256,7 @@ if (wasEditingBefore &amp;&amp; isNotEditingNow) {
 
 <p>Add the following into the body of your <code>App()</code> function, just below your previous additions:</p>
 
-<pre class="brush: js notranslate">useEffect(() =&gt; {
+<pre class="brush: js">useEffect(() =&gt; {
   if (tasks.length - prevTaskLength === -1) {
     listHeadingRef.current.focus();
   }

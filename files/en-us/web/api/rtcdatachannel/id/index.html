@@ -2,34 +2,47 @@
 title: RTCDataChannel.id
 slug: Web/API/RTCDataChannel/id
 tags:
-  - Experimental
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - id
+- Experimental
+- Property
+- RTCDataChannel
+- Read-only
+- Reference
+- WebRTC
+- id
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property <code><strong>id</strong></code> returns an ID number (between 0 and 65,534) which uniquely identifies the {{domxref("RTCDataChannel")}}.</span> This ID is set at the time the data channel is created, either by the user agent (if {{domxref("RTCDataChannel.negotiated")}} is <code>false</code>) or by the site or app script (if <code>negotiated</code> is <code>true</code>).</p>
+<p><span class="seoSummary">The read-only <code>RTCDataChannel</code> property
+    <code><strong>id</strong></code> returns an ID number (between 0 and 65,534) which
+    uniquely identifies the {{domxref("RTCDataChannel")}}.</span> This ID is set at the
+  time the data channel is created, either by the user agent (if
+  {{domxref("RTCDataChannel.negotiated")}} is <code>false</code>) or by the site or app
+  script (if <code>negotiated</code> is <code>true</code>).</p>
 
-<p>Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical maximum of 65,534 data channels on it, although the actual maximum may vary from browser to browser.</p>
+<p>Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical maximum of
+  65,534 data channels on it, although the actual maximum may vary from browser to
+  browser.</p>
 
 <div class="note">
-<p>In early versions of the WebRTC specification, this property's name was {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to be updated.</p>
+  <p>In early versions of the WebRTC specification, this property's name was
+    {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
+    be updated.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>id</em> = <em>aDataChannel</em>.id;
+<pre class="brush: js">var <em>id</em> = <em>aDataChannel</em>.id;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An <code>unsigned short</code> value (that is, an integer between 0 and 65,535) which uniquely identifies the data channel.</p>
+<p>An <code>unsigned short</code> value (that is, an integer between 0 and 65,535) which
+  uniquely identifies the data channel.</p>
 
-<p>While the {{domxref("RTCDataChannel.label", "label")}} property doesn't have to be unique, this ID number is guaranteed to be unique among all data channels. Additionally, known implementations of WebRTC use the same ID on both peers. A unique ID makes it easier for your code to do its own out-of-band data channel-related signaling.</p>
+<p>While the {{domxref("RTCDataChannel.label", "label")}} property doesn't have to be
+  unique, this ID number is guaranteed to be unique among all data channels. Additionally,
+  known implementations of WebRTC use the same ID on both peers. A unique ID makes it
+  easier for your code to do its own out-of-band data channel-related signaling.</p>
 
 <p>This can be also useful for logging and debugging purposes.</p>
 
@@ -43,20 +56,20 @@ console.log("Channel id: " + dc.id);</code></pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-id', 'RTCDataChannel.id') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcdatachannel-id', 'RTCDataChannel.id') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -66,7 +79,7 @@ console.log("Channel id: " + dc.id);</code></pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>{{domxref("RTCDataChannel")}}</li>
- <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li>{{domxref("RTCDataChannel")}}</li>
+  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
 </ul>

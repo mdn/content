@@ -19,47 +19,64 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>querySelector()</strong></code> method of the {{domxref("Element")}} interface returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors.</p>
+<p>The <code><strong>querySelector()</strong></code> method of the {{domxref("Element")}}
+  interface returns the first element that is a descendant of the element on which it is
+  invoked that matches the specified group of selectors.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>element</var> = <em>baseElement</em>.querySelector(<em>selector</em>s);
+<pre class="brush: js"><var>element</var> = <em>baseElement</em>.querySelector(<em>selector</em>s);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>selectors</code></dt>
- <dd>A group of <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a> to match the descendant elements of the {{domxref("Element")}} <code>baseElement</code> against; this must be valid CSS syntax, or a <code>SyntaxError</code> exception will occur. The first element found which matches this group of selectors is returned.</dd>
+  <dt><code>selectors</code></dt>
+  <dd>A group of <a
+      href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">selectors</a> to match
+    the descendant elements of the {{domxref("Element")}} <code>baseElement</code>
+    against; this must be valid CSS syntax, or a <code>SyntaxError</code> exception will
+    occur. The first element found which matches this group of selectors is returned.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The first descendant element of <code>baseElement</code> which matches the specified group of <code>selectors</code>. The entire hierarchy of elements is considered when matching, including those outside the set of elements including <code>baseElement</code> and its descendants; in other words, <code>selectors</code> is first applied to the whole document, not the <code>baseElement</code>, to generate an initial list of potential elements. The resulting elements are then examined to see if they are descendants of <code>baseElement</code>. The first match of those remaining elements is returned by the <code>querySelector()</code> method.</p>
+<p>The first descendant element of <code>baseElement</code> which matches the specified
+  group of <code>selectors</code>. The entire hierarchy of elements is considered when
+  matching, including those outside the set of elements including <code>baseElement</code>
+  and its descendants; in other words, <code>selectors</code> is first applied to the
+  whole document, not the <code>baseElement</code>, to generate an initial list of
+  potential elements. The resulting elements are then examined to see if they are
+  descendants of <code>baseElement</code>. The first match of those remaining elements is
+  returned by the <code>querySelector()</code> method.</p>
 
 <p>If no matches are found, the returned value is <code>null</code>.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt><code>SyntaxError</code></dt>
- <dd>The specified <code>selectors</code> are invalid.</dd>
+  <dt><code>SyntaxError</code></dt>
+  <dd>The specified <code>selectors</code> are invalid.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Let's consider a few examples.</p>
 
-<h3 id="Find_a_specific_element_with_specific_values_of_an_attribute">Find a specific element with specific values of an attribute</h3>
+<h3 id="Find_a_specific_element_with_specific_values_of_an_attribute">Find a specific
+  element with specific values of an attribute</h3>
 
-<p>In this first example, the first {{HTMLElement("style")}} element which either has no type or has type "text/css" in the HTML document body is returned:</p>
+<p>In this first example, the first {{HTMLElement("style")}} element which either has no
+  type or has type "text/css" in the HTML document body is returned:</p>
 
 <pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
 </pre>
 
 <h3 id="The_entire_hierarchy_counts">The entire hierarchy counts</h3>
 
-<p>This example demonstrates that the hierarchy of the entire document is considered when applying <code>selectors</code>, so that levels outside the specified <code>baseElement</code> are still considered when locating matches.</p>
+<p>This example demonstrates that the hierarchy of the entire document is considered when
+  applying <code>selectors</code>, so that levels outside the specified
+  <code>baseElement</code> are still considered when locating matches.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -88,39 +105,46 @@ document.getElementById("output").innerHTML =
 
 <p>{{ EmbedLiveSample('The_entire_hierarchy_counts', 600, 160) }}</p>
 
-<p>Notice how the <code>"div span"</code> selector still successfully matches the {{HTMLElement("span")}} element, even though the <code>baseElement</code>'s child nodes do not include the {{domxref("div")}} element (it is still part of the specified selector).</p>
+<p>Notice how the <code>"div span"</code> selector still successfully matches the
+  {{HTMLElement("span")}} element, even though the <code>baseElement</code>'s child nodes
+  do not include the {{domxref("div")}} element (it is still part of the specified
+  selector).</p>
 
 <h3 id="More_examples">More examples</h3>
 
-<p>See {{domxref("Document.querySelector()")}} for additional examples of the proper format for the <code>selectors</code>.</p>
+<p>See {{domxref("Document.querySelector()")}} for additional examples of the proper
+  format for the <code>selectors</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}
+      </td>
+      <td>{{Spec2('Selectors API Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}
+      </td>
+      <td>{{Spec2('Selectors API Level 1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -130,13 +154,22 @@ document.getElementById("output").innerHTML =
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>
- <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a> in the CSS Guide</li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Attribute selectors</a> in the MDN Learning Area</li>
- <li>{{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}</li>
- <li>{{domxref("ParentNode.querySelector()")}} and {{domxref("ParentNode.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
- <li>Other methods that take selectors: {{domxref("element.closest()")}} and {{domxref("element.matches()")}}.</li>
+  <li><a
+      href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating
+      DOM elements using selectors</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a> in the CSS
+    Guide</li>
+  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute
+      selectors</a> in the MDN Learning Area</li>
+  <li>{{domxref("Element.querySelectorAll()")}}</li>
+  <li>{{domxref("Document.querySelector()")}} and
+    {{domxref("Document.querySelectorAll()")}}</li>
+  <li>{{domxref("DocumentFragment.querySelector()")}} and
+    {{domxref("DocumentFragment.querySelectorAll()")}}</li>
+  <li>{{domxref("ParentNode.querySelector()")}} and
+    {{domxref("ParentNode.querySelectorAll()")}}</li>
+  <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for
+      querySelector</a></li>
+  <li>Other methods that take selectors: {{domxref("element.closest()")}} and
+    {{domxref("element.matches()")}}.</li>
 </ul>

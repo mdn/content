@@ -9,25 +9,33 @@ tags:
   - stream
   - write
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>truncate()</code></strong> method of the {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with the stream to be the specified size in bytes.</p>
+<p class="summary">The <strong><code>truncate()</code></strong> method of the
+  {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with
+  the stream to be the specified size in bytes.</p>
 
-<p>If the size specified is larger than the current file size this pads the file with <code>null</code> bytes, otherwise it truncates the file.</p>
+<p>If the size specified is larger than the current file size this pads the file with
+  <code>null</code> bytes, otherwise it truncates the file.</p>
 
-<p>The file cursor is also updated when <code>truncate()</code> is called. If the offset is smaller than the size, it remains unchanged. If the offset is larger than size, the offset is set to that size. This ensures that subsequent writes do not error.</p>
+<p>The file cursor is also updated when <code>truncate()</code> is called. If the offset
+  is smaller than the size, it remains unchanged. If the offset is larger than size, the
+  offset is set to that size. This ensures that subsequent writes do not error.</p>
 
-<p>No changes are written to the actual file on disk until the stream has been closed. Changes are typically written to a temporary file instead.</p>
+<p>No changes are written to the actual file on disk until the stream has been closed.
+  Changes are typically written to a temporary file instead.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">FileSystemWritableFileStream.truncate().then(...);</pre>
+<pre
+  class="brush: js">FileSystemWritableFileStream.truncate().then(...);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>size</dt>
- <dd>An <code>unsigned long</code> of the amount of bytes to resize the stream to.</dd>
+  <dt>size</dt>
+  <dd>An <code>unsigned long</code> of the amount of bytes to resize the stream to.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -37,32 +45,33 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>NotAllowedError</dt>
- <dd>If the {{domxref('PermissionState')}} is not 'granted'.</dd>
- <dt>TypeError</dt>
- <dd>If the size is undefined or not an unsigned long.</dd>
+  <dt>NotAllowedError</dt>
+  <dd>If the {{domxref('PermissionState')}} is not 'granted'.</dd>
+  <dt>TypeError</dt>
+  <dd>If the size is undefined or not an unsigned long.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// todo
+<pre class="brush: js">// todo
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API','#api-filesystemwritablefilestream-truncate','truncate')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System Access
+        API','#api-filesystemwritablefilestream-truncate','truncate')}}</td>
+      <td>{{Spec2('File System Access API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -72,6 +81,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

@@ -2,50 +2,63 @@
 title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
 tags:
-  - API
-  - Constructor
-  - DOM Events
-  - ProgressEvent
+- API
+- Constructor
+- DOM Events
+- ProgressEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>The <code><strong>ProgressEvent()</strong></code> constructor returns a newly created {{domxref("ProgressEvent")}}, representing the current completion of a long process.</p>
+<p>The <code><strong>ProgressEvent()</strong></code> constructor returns a newly created
+  {{domxref("ProgressEvent")}}, representing the current completion of a long process.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>progressEvent</em> = new ProgressEvent(<em>type<code>, </code></em>{lengthComputable: <em>aBooleanValue</em>, loaded: <code><em>aNumber</em>, total:<em> aNumber</em></code>});
+<pre class="brush: js"><em>progressEvent</em> = new ProgressEvent(<em>type<code>, </code></em>{lengthComputable: <em>aBooleanValue</em>, loaded: <code><em>aNumber</em>, total:<em> aNumber</em></code>});
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
-<p><em>The <code>ProgressEvent()</code> constructor also inherits arguments from {{domxref("Event.Event", "Event()")}}.</em></p>
+<p><em>The <code>ProgressEvent()</code> constructor also inherits arguments from
+    {{domxref("Event.Event", "Event()")}}.</em></p>
 
 <dl>
- <dt><em>type</em></dt>
- <dd>Is a {{domxref("DOMString")}} representing the name of the type of the <code>ProgressEvent</code>. It is case-sensitive.</dd>
- <dt><code>lengthComputable</code> {{optional_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not. It defaults to <code>false</code>.</dd>
- <dt><code>loaded</code> {{optional_inline}}</dt>
- <dd>Is an <code>unsigned long long</code> representing the amount of work already performed by the underlying process. The ratio of work done can be calculated with the property and <code>ProgressEvent.total</code>. When downloading a resource using HTTP, this only represent the part of the content itself, not headers and other overhead. It defaults to <code>0</code>.</dd>
- <dt><code>total</code> {{optional_inline}}</dt>
- <dd>Is an <code>unsigned long long</code> representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this only represent the content itself, not headers and other overhead. It defaults to <code>0</code>.</dd>
+  <dt><em>type</em></dt>
+  <dd>Is a {{domxref("DOMString")}} representing the name of the type of the
+    <code>ProgressEvent</code>. It is case-sensitive.</dd>
+  <dt><code>lengthComputable</code> {{optional_inline}}</dt>
+  <dd>Is a {{domxref("Boolean")}} flag indicating if the total work to be done, and the
+    amount of work already done, by the underlying process is calculable. In other words,
+    it tells if the progress is measurable or not. It defaults to <code>false</code>.</dd>
+  <dt><code>loaded</code> {{optional_inline}}</dt>
+  <dd>Is an <code>unsigned long long</code> representing the amount of work already
+    performed by the underlying process. The ratio of work done can be calculated with the
+    property and <code>ProgressEvent.total</code>. When downloading a resource using HTTP,
+    this only represent the part of the content itself, not headers and other overhead. It
+    defaults to <code>0</code>.</dd>
+  <dt><code>total</code> {{optional_inline}}</dt>
+  <dd>Is an <code>unsigned long long</code> representing the total amount of work that the
+    underlying process is in the progress of performing. When downloading a resource using
+    HTTP, this only represent the content itself, not headers and other overhead. It
+    defaults to <code>0</code>.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#dom-progressevent-progressevent', 'ProgressEvent()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('XMLHttpRequest', '#dom-progressevent-progressevent',
+        'ProgressEvent()')}}</td>
+      <td>{{Spec2('XMLHttpRequest')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,5 +68,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("ProgressEvent")}} interface it belongs to.</li>
+  <li>The {{domxref("ProgressEvent")}} interface it belongs to.</li>
 </ul>

@@ -82,7 +82,11 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("open")}}</dt>
- <dd>This Boolean attribute indicates whether or not the details — that is, the contents of the <code>&lt;details&gt;</code> element — are currently visible. The default, <code>false</code>, means the details are not visible.</dd>
+ <dd>
+ <p>This Boolean attribute indicates whether or not the details — that is, the contents of the <code>&lt;details&gt;</code> element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible. </p>
+ 
+ <p class="note"><strong>Note:</strong> You have to remove this attribute entirely to make the details hidden. <code>open="false"</code> makes the details visible because this attribute is Boolean.</p>
+</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -175,9 +179,14 @@ details &gt; p {
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
-</pre>
+
+details[open] > summary {
+  background-color: #ccf;
+}</pre>
 
 <p>This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.</p>
+
+<p>The selector <code>details[open]</code> can be used to style the element which is open.</p>
 
 <h4 id="HTML">HTML</h4>
 

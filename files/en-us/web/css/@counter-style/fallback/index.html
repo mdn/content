@@ -9,13 +9,13 @@ tags:
   - CSS Descriptor
   - Reference
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p><span class="seoSummary">The <strong><code>fallback</code></strong> descriptor can be used to specify a counter style to fall back to if the current counter style cannot create a marker representation for a particular counter value.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* Keyword values */
+<pre class="brush: css">/* Keyword values */
 fallback: lower-alpha;
 fallback: custom-gangnam-style;
 </pre>
@@ -37,7 +37,7 @@ fallback: custom-gangnam-style;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -45,19 +45,17 @@ fallback: custom-gangnam-style;
 
 <h4 id="HTML">HTML</h4>
 
-<div id="htmlOutputWrapper">
-<pre class="brush: html notranslate" id="htmlOutput"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"list"</span><span class="tag">&gt;</span><span class="pln">
-  </span><span class="tag">&lt;li&gt;</span><span class="pln">One</span><span class="tag">&lt;/li&gt;</span><span class="pln">
-  </span><span class="tag">&lt;li&gt;</span><span class="pln">Two</span><span class="tag">&lt;/li&gt;</span><span class="pln">
-  </span><span class="tag">&lt;li&gt;</span><span class="pln">Three</span><span class="tag">&lt;/li&gt;</span><span class="pln">
-  </span><span class="tag">&lt;li&gt;</span><span class="pln">Four</span><span class="tag">&lt;/li&gt;</span><span class="pln">
-  </span><span class="tag">&lt;li&gt;</span><span class="pln">Five</span><span class="tag">&lt;/li&gt;</span><span class="pln">
-</span><span class="tag">&lt;/ul&gt;</span></pre>
-</div>
+<pre class="brush: html">&lt;ul class="list"&gt;
+  &lt;li&gt;One&lt;/li&gt;
+  &lt;li&gt;Two&lt;/li&gt;
+  &lt;li&gt;Three&lt;/li&gt;
+  &lt;li&gt;Four&lt;/li&gt;
+  &lt;li&gt;Five&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">@counter-style fallback-example {
+<pre class="brush: css">@counter-style fallback-example {
   system: fixed; symbols: "\24B6" "\24B7" "\24B8";
   fallback: upper-alpha;
 }

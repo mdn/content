@@ -15,23 +15,23 @@ tags:
 <h2 id="In_this_article">In this article</h2>
 
 <ul>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Indentation_spacing_size">Indentation, spacing, size</a>
+ <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation_spacing_size">Indentation, spacing, size</a>
 
   <ul>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Indentation">Indentation</a></li>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Code_line_length">Code line length</a></li>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Code_block_height">Code block height</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#indentation">Indentation</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_line_length">Code line length</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#code_block_height">Code block height</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Guidelines_for_displaying_examples">Guidelines for displaying examples</a>
+ <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#guidelines_for_displaying_examples">Guidelines for displaying examples</a>
   <ul>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Size_of_rendered_example">Size of rendered example</a></li>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Use_of_images_and_other_media">Use of images and other media</a></li>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Use_of_color">Use of color</a></li>
-   <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Highlight_good_and_bad_practice_examples">Highlight good and bad practice examples</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#size_of_rendered_example">Size of rendered example</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_images_and_other_media">Use of images and other media</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#use_of_color">Use of color</a></li>
+   <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#highlight_good_and_bad_practice_examples">Highlight good and bad practice examples</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General#Writing_syntax_sections_on_reference_pages">Writing syntax sections on reference pages</a></li>
+ <li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/General#writing_syntax_sections_on_reference_pages">Writing syntax sections on reference pages</a></li>
 </ul>
 
 <h2 id="Indentation_spacing_size">Indentation, spacing, size</h2>
@@ -40,11 +40,11 @@ tags:
 
 <p>All code should use 2 spaces for indentation, for example:</p>
 
-<pre class="brush: html example-good notranslate">&lt;div&gt;
+<pre class="brush: html example-good">&lt;div&gt;
   &lt;p&gt;This is my paragraph.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js example-good notranslate">function myFunc() {
+<pre class="brush: js example-good">function myFunc() {
   if(thingy) {
     console.log('Yup, that worked.');
   }
@@ -56,18 +56,18 @@ tags:
 
 <p>For example, this is not great:</p>
 
-<pre class="brush: js example-bad notranslate">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';</pre>
+<pre class="brush: js example-bad">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';</pre>
 
 <p>This is better, but somewhat awkward:</p>
 
-<pre class="brush: js notranslate">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
+<pre class="brush: js">let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
 + 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
 + 'had met its demise while staring point blank down the cavernous barrel of '
 + 'this awesome prowling machine.';</pre>
 
 <p>Even better is to use a template literal:</p>
 
-<pre class="brush: js example-good notranslate">let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
+<pre class="brush: js example-good">let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
   matter may have nestled its way into his mighty throat. Many a fat alley rat
   had met its demise while staring point blank down the cavernous barrel of
   this awesome prowling machine.`;</pre>
@@ -105,23 +105,23 @@ tags:
 
 <p>Prefer to use keywords for primary and other "basic" colors, for example:</p>
 
-<pre class="brush: css example-good notranslate">color: black;
+<pre class="brush: css example-good">color: black;
 color: white;
 color: red;</pre>
 
 <p>Use rgb() for more complex colors (including semi-transparent ones):</p>
 
-<pre class="brush: css example-good notranslate">color: rgb(0, 0, 0, 0.5);
+<pre class="brush: css example-good">color: rgb(0, 0, 0, 0.5);
 color: rgb(248, 242, 230);</pre>
 
 <p>If you have to use hex colors, then use lower-case:</p>
 
-<pre class="brush: css example-good notranslate">color: #058ed9;
+<pre class="brush: css example-good">color: #058ed9;
 color: #a39a92;</pre>
 
 <p>and use the short form where relevant:</p>
 
-<pre class="brush: css example-good notranslate">color: #ff0;
+<pre class="brush: css example-good">color: #ff0;
 color: #fff;</pre>
 
 <p>The <a href="https://github.com/mdn/mdn-minimalist/blob/main/sass/vars/_color-palette.scss">sass/vars/_color-palette.scss</a> file in the <a href="https://github.com/mdn/mdn-minimalist">mdn-minimalist</a> repository has a set of useful colors that complement the overall MDN design.</p>
@@ -132,23 +132,23 @@ color: #fff;</pre>
 
 <p>To do this, you first use the MDN editor controls to put your code block in a <code>&lt;pre&gt;</code> block and give it appropriate syntax highlighting. The source of the code will look something like this:</p>
 
-<pre class="notranslate">&lt;pre class="brush: js"&gt;
+<pre class="brush: js">
 function myFunc() {
   console.log('Hello!');
 };&lt;/pre&gt;</pre>
 
 <p>To make it into a good example, you insert <code>example-good</code> just before the closing quote of the <code>class</code> attribute:</p>
 
-<pre class="notranslate">&lt;pre class="brush: js example-good"&gt;
+<pre class="brush: html">&lt;pre class="brush: js example-good"&gt;
   ...</pre>
 
 <p>To make it into a bad example, you insert <code>example-bad</code> just before the closing quote of the <code>class</code> attribute:</p>
 
-<pre class="notranslate">&lt;pre class="brush: js example-bad"&gt;
+<pre class="brush: html">&lt;pre class="brush: js example-bad"&gt;
   ...</pre>
 
 <p>We would like to encourage you to use these. You don't need to use these everywhere — only when you are specifically calling out good and bad practices in your code.</p>
 
 <h2 id="Writing_syntax_sections_on_reference_pages">Writing syntax sections on reference pages</h2>
 
-<p>MDN reference pages include Syntax sections that show unambiguously what the syntax of a feature can/should be, for example a JavaScript method, CSS property, HTML element, etc. Guidelines for writing these are given on the <a href="/en-US/docs/MDN/Contribute/Structures/Syntax_sections">Syntax sections</a> document.</p>
+<p>MDN reference pages include Syntax sections that show unambiguously what the syntax of a feature can/should be, for example a JavaScript method, CSS property, HTML element, etc. Guidelines for writing these are given on the <a href="/en-US/docs/MDN/Structures/Syntax_sections">Syntax sections</a> document.</p>

@@ -14,20 +14,23 @@ tags:
 
 <p>Stops a timer that was previously started by calling {{domxref("console.time()")}}.</p>
 
-<p>See <a href="/en-US/docs/Web/API/console#Timers">Timers</a> in the documentation for details and examples.</p>
+<p>See <a href="/en-US/docs/Web/API/Console#timers">Timers</a> in the documentation for
+	details and examples.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">console.timeEnd(<em>label</em>);
+<pre class="brush: js">console.timeEnd(<em>label</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code>label</code></dt>
-	<dd>The name of the timer to stop. Once stopped, the elapsed time is automatically displayed in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> along with an indicator that the time has ended.</dd>
+	<dd>The name of the timer to stop. Once stopped, the elapsed time is automatically
+		displayed in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> along
+		with an indicator that the time has ended.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -39,11 +42,18 @@ alert("Do a bunch of other stuff...");
 console.timeEnd("answer time");
 </pre>
 
-<p>The output from the example above shows the time taken by the user to dismiss the first alert box, followed by the time it took for the user to dismiss the second alert:</p>
+<p>The output from the example above shows the time taken by the user to dismiss the first
+	alert box, followed by the time it took for the user to dismiss the second alert:</p>
 
-<p><img alt="timerresult.png" class="default internal" src="https://mdn.mozillademos.org/files/16741/timer_output.png" style="border: 1px solid black; display: block; height: 354px; margin: 0px auto; width: 537px;"></p>
+<p><img class="default internal"
+		src="timer_output.png"
+		style="border: 1px solid black; display: block; margin: 0px auto;">
+</p>
 
-<p>Notice that the timer's name is displayed when the timer value is logged using <code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd() has the additional information, "timer ended" to make it obvious that the timer is no longer tracking time.</p>
+<p>Notice that the timer's name is displayed when the timer value is logged using
+	<code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd()
+	has the additional information, "timer ended" to make it obvious that the timer is no
+	longer tracking time.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -68,11 +78,12 @@ console.timeEnd("answer time");
 
 <div>
 
-<p>{{Compat("api.Console.timeEnd")}}</p>
+	<p>{{Compat("api.Console.timeEnd")}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+	<li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
+			documentation: Console</a></li>
 </ul>

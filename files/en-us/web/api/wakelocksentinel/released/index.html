@@ -2,28 +2,36 @@
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
 tags:
-  - Property
-  - Read-only
-  - Screen Wake Lock API
-  - WakeLockSentinel
+- Property
+- Read-only
+- Screen Wake Lock API
+- WakeLockSentinel
 ---
 <div>{{draft}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The read-only <strong><code>released</code></strong> property of the {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether a {{domxref("WakeLockSentinel")}} has been released yet.</p>
+<p class="summary">The read-only <strong><code>released</code></strong> property of the
+	{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
+	a {{domxref("WakeLockSentinel")}} has been released yet.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>released</var> = <em>sentinel</em>.released;</pre>
+<pre
+	class="brush: js">var <var>released</var> = <em>sentinel</em>.released;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}}. Its value is <code>false</code> until the {{domxref("WakeLockSentinel")}} has been released (either through a call to {{domxref("WakeLockSentinel.release()")}} or because the lock has been released automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been emitted, after which it becomes <code>true</code> and no longer changes.</p>
+<p>A {{jsxref("Boolean")}}. Its value is <code>false</code> until the
+	{{domxref("WakeLockSentinel")}} has been released (either through a call to
+	{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
+	automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been
+	emitted, after which it becomes <code>true</code> and no longer changes.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example shows how <strong><code>released</code></strong>'s value changes within a {{domxref("WakeLockSentinel")}}'s life cycle.</p>
+<p>This example shows how <strong><code>released</code></strong>'s value changes within a
+	{{domxref("WakeLockSentinel")}}'s life cycle.</p>
 
-<pre class="brush: js notranslate">const sentinel = await navigator.wakeLock.request('screen');
+<pre class="brush: js">const sentinel = await navigator.wakeLock.request('screen');
 console.log(sentinel.released);  // Logs "false"
 
 sentinel.onrelease = () =&gt; {
@@ -43,7 +51,8 @@ await sentinel.release();
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Screen Wake Lock','#dom-wakelocksentinel-released','released')}}</td>
+			<td>{{SpecName('Screen Wake
+				Lock','#dom-wakelocksentinel-released','released')}}</td>
 			<td>{{Spec2('Screen Wake Lock')}}</td>
 			<td>Initial definition.</td>
 		</tr>

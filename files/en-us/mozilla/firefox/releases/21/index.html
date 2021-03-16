@@ -22,7 +22,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/E4X">E4X</a>, an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ({{bug("788293")}}).</li>
- <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/parseInt">parseInt</a> no longer treats strings with leading "0" as octal ({{bug("786135")}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt</a> no longer treats strings with leading "0" as octal ({{bug("786135")}}).</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
@@ -31,7 +31,7 @@ tags:
  <li>The <code>none</code> value of {{cssxref("user-select", "-moz-user-select")}} has now the same behavior than the <code>-moz-none</code> value, aligning Gecko on WebKit (Chrome, Safari), Presto (Opera) and Trident (Internet Explorer) ({{bug("816298")}}).</li>
  <li>On XHTML content, the <code>auto</code> value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ({{bug("702121")}}).</li>
  <li>An <code>auto</code> value has been added to the CSS {{cssxref("-moz-orient")}} property. The <code>auto</code> value is equivalent to <code>horizontal</code> when applied to {{HTMLElement("meter")}} and {{HTMLElement("progress")}} ({{bug("835883")}}).</li>
- <li>The media query <a href="/en-US/docs/Web/Guide/CSS/Media_queries#-moz-windows-glass"><code>-moz-windows-glass</code></a> has been added on Windows 7 and earlier Windows system ({{bug("816803")}}).</li>
+ <li>The media query <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-glass"><code>-moz-windows-glass</code></a> has been added on Windows 7 and earlier Windows system ({{bug("816803")}}).</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -44,11 +44,11 @@ tags:
  <li>Some new keyCodes for volume control are supported ({{bug("674739")}}).</li>
  <li>Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ({{bug("833719")}}).</li>
  <li>Various keyCode values for OEM specific keys on Windows are now supported again ({{bug("833719")}}).</li>
- <li>The function <a href="/en-US/docs/DOM/window.crypto.getRandomValues"><code>window.crypto.getRandomValues</code></a> has been implemented ({{bug("440046")}}).</li>
+ <li>The function <a href="/en-US/docs/Web/API/Crypto/getRandomValues"><code>window.crypto.getRandomValues</code></a> has been implemented ({{bug("440046")}}).</li>
  <li>The methods {{domxref("NodeIterator.expandEntityReferences()")}} and {{domxref("TreeWalker.expandEntityReferences()")}}, no more in the latest DOM spec, has been removed ({{bug("672190")}}).</li>
  <li>CSSOM: the method {{domxref("CSSKeyframesRule")}}<code>.insertRule</code> has been removed to {{domxref("CSSKeyframesRule")}}<code>.appendRule</code> to match a spec change ({{bug("841896")}}).</li>
  <li>CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is now thrown ({{bug("765599")}}).</li>
- <li>Until now, when the same headers were repeatedly set with <a href="/en-US/docs/Web/API/XMLHttpRequest#setRequestHeader"><code>XMLHttpRequest.setRequestHeader</code></a>, the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ({{bug("819051")}}).</li>
+ <li>Until now, when the same headers were repeatedly set with <a href="/en-US/docs/Web/API/XMLHttpRequest#setrequestheader"><code>XMLHttpRequest.setRequestHeader</code></a>, the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ({{bug("819051")}}).</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -63,7 +63,7 @@ tags:
 <ul>
  <li>We continue to update our CSP implementation to match the CSP 1.0 spec, which reached Candidate Recommendation:
   <ul>
-   <li>Support for the spec-compliant <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>Content-Security-Policy</code> HTTP header (in addition to the experimental </span></span><span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>X-Content-Security-Policy</code>) has been added ({{bug("783049")}}). <strong>Note</strong>: the patch for this new header landed in Firefox 21, it is disabled on builds</span></span> ({{bug("842657")}}).</li>
+   <li>Support for the spec-compliant <code>Content-Security-Policy</code> HTTP header (in addition to the experimental <code>X-Content-Security-Policy</code>) has been added ({{bug("783049")}}). <strong>Note</strong>: the patch for this new header landed in Firefox 21, it is disabled on builds ({{bug("842657")}}).</li>
   </ul>
  </li>
 </ul>
@@ -71,7 +71,7 @@ tags:
 <h3 id="Worker">Worker</h3>
 
 <ul>
- <li>The functions {{domxref("window.URL.createObjectURL", "URL.createObjectURL")}} and {{domxref("window.URL.revokeObjectURL", "URL.revokeObjectURL")}} are now included in the set of <a href="/en-US/docs/DOM/Worker/Functions_available_to_workers">functions available to workers</a>.</li>
+ <li>The functions {{domxref("URL/createObjectURL", "URL.createObjectURL")}} and {{domxref("URL/revokeObjectURL", "URL.revokeObjectURL")}} are now included in the set of <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">functions available to workers</a>.</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>

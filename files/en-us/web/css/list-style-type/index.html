@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Partial list of types */
+<pre class="brush:css no-line-numbers">/* Partial list of types */
 list-style-type: disc;
 list-style-type: circle;
 list-style-type: square;
@@ -47,9 +47,9 @@ list-style-type: unset;
 <p>The list-style-type property may be defined as any one of:</p>
 
 <ul>
- <li>a <code><a href="#&lt;custom-ident&gt;">&lt;custom-ident&gt;</a></code> value</li>
+ <li>a <code><a href="#custom-ident">&lt;custom-ident&gt;</a></code> value</li>
  <li>a <code><a href="#symbols()">symbols()</a></code> value</li>
- <li>a <code><a href="#&lt;string&gt;">&lt;string&gt;</a></code> value</li>
+ <li>a <code><a href="#string">&lt;string&gt;</a></code> value</li>
  <li>the keyword <code><a href="#none">none</a></code>.</li>
 </ul>
 
@@ -63,11 +63,11 @@ list-style-type: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><a id="&lt;custom-ident&gt;">{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</a></dt>
+ <dt><a id="custom-ident">{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</a></dt>
  <dd>A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:</dd>
  <dt><a id="symbols()">{{cssxref("symbols()")}}</a></dt>
  <dd>Defines an anonymous style of the list.</dd>
- <dt><a id="&lt;string&gt;">{{cssxref("&lt;string&gt;")}}</a></dt>
+ <dt><a id="string">{{cssxref("&lt;string&gt;")}}</a></dt>
  <dd>The specified string will be used as the item's marker.</dd>
  <dt><a id="none"><code>none</code></a></dt>
  <dd>No item marker is shown.</dd>
@@ -502,7 +502,7 @@ list-style-type: unset;
 
 <p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code> value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/en-US/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style: none;
 }
 
@@ -524,7 +524,7 @@ ul li::before {
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -532,7 +532,7 @@ ul li::before {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">List 1
+<pre class="brush: html">List 1
 &lt;ol class="normal"&gt;
   &lt;li&gt;Hello&lt;/li&gt;
   &lt;li&gt;World&lt;/li&gt;
@@ -549,7 +549,7 @@ List 2
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">ol.normal {
+<pre class="brush: css">ol.normal {
   list-style-type: upper-alpha;
 }
 

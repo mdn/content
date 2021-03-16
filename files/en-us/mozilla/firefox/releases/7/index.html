@@ -25,14 +25,14 @@ tags:
 <ul>
  <li>As part of the <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
  <li>Specifying invalid values when calling <code>setTransform()</code>, <code>bezierCurveTo()</code>, or <code>arcTo()</code> no longer throws an exception; these calls are now correctly silently ignored.</li>
- <li>The <a href="/en/DOM/CanvasRenderingContext2D#isPointInPath()"><code>isPointInPath()</code></a> method now correctly considers the transformation matrix when comparing the specified point to the current path.</li>
+ <li>The <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#ispointinpath()"><code>isPointInPath()</code></a> method now correctly considers the transformation matrix when comparing the specified point to the current path.</li>
  <li>Calling <code>strokeRect()</code> with a zero width and height now correctly does nothing.</li>
- <li>Calling <a href="/en/DOM/CanvasRenderingContext2D#drawImage()"><code>drawImage()</code></a> with a zero width or height {{ HTMLElement("canvas") }} now throws <code>INVALID_STATE_ERR</code>.</li>
- <li>Calling <a href="/en/DOM/CanvasRenderingContext2D#drawImage()"><code>drawImage()</code></a> with non-finite coordinates no longer throws an exception.</li>
+ <li>Calling <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#drawimage()"><code>drawImage()</code></a> with a zero width or height {{ HTMLElement("canvas") }} now throws <code>INVALID_STATE_ERR</code>.</li>
+ <li>Calling <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#drawimage()"><code>drawImage()</code></a> with non-finite coordinates no longer throws an exception.</li>
  <li><code>toDataURL()</code> method now accepts a second argument to control JPEG quality.</li>
  <li>Support for the non-standard <code>globalCompositeOperation</code> operations <code>clear</code> and <code>over</code> has been removed.</li>
- <li><a href="/en/Canvas_tutorial/Applying_styles_and_colors#Shadows">Shadows</a> are now only drawn for <code>source-over</code> compositing operations.</li>
- <li>You can now configure the fill rule used by canvas by setting the <code>mozFillRule </code><a href="/en/DOM/CanvasRenderingContext2D#Attributes">attribute</a> on the context.</li>
+ <li><a href="/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows">Shadows</a> are now only drawn for <code>source-over</code> compositing operations.</li>
+ <li>You can now configure the fill rule used by canvas by setting the <code>mozFillRule </code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#attributes">attribute</a> on the context.</li>
  <li>Support for the experimental <code>mozDash</code>, <code>mozDashOffset</code>, <code>mozCurrentTransform</code> and <code>mozCurrentTransformInverse</code> attributes has been added.</li>
  <li>Support for the non-standard methods <code>mozDrawText()</code>, <code>mozMeasureText()</code>, <code>mozPathText()</code> and <code>mozTextAlongPath()</code> has been removed.</li>
 </ul>
@@ -41,7 +41,7 @@ tags:
 
 <ul>
  <li>{{ cssxref("text-overflow") }} is now supported.</li>
- <li>The {{ cssxref("orient", "-moz-orient") }} property has been fixed so that {{ HTMLElement("progress") }} elements that are vertically oriented have appropriate default dimensions.</li>
+ <li>The {{ cssxref("-moz-orient", "-moz-orient") }} property has been fixed so that {{ HTMLElement("progress") }} elements that are vertically oriented have appropriate default dimensions.</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
@@ -52,14 +52,14 @@ tags:
  <li>The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.</li>
  <li>Support for <a class="external" href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> fonts has been added.</li>
  <li>The <code>medium</code> line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.</li>
- <li><a href="/en/MathML/Attributes/Values#Constants_(namedspaces)">Names for negative spaces</a> are now supported.</li>
+ <li><a href="/en-US/docs/Web/MathML/Attribute/Values#constants_(namedspaces)">Names for negative spaces</a> are now supported.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
 
 <ul>
  <li>The {{ domxref("File") }} interface's non-standard methods <code>getAsBinary()</code>, <code>getAsDataURL()</code>, and <code>getAsText()</code> have been removed as well as the non-standard properties <code>fileName</code> and <code>fileSize</code> ({{bug("661876")}}).</li>
- <li>The {{ domxref("XMLHttpRequest/FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the <code>Content-Disposition</code> HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.</li>
+ <li>The {{ domxref("FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the <code>Content-Disposition</code> HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.</li>
  <li>The {{ domxref("element.dir") }} attribute now always returns its result as all lower-case, as required by the HTML specification.</li>
  <li>The {{ domxref("FileReader") }} <code>readAsArrayBuffer()</code> method is now implemented.</li>
  <li>{{ domxref("document.createEntityReference") }} has been removed. It was never properly implemented and is not implemented in most other browsers.</li>
@@ -67,7 +67,7 @@ tags:
  <li>{{ domxref("DOMTokenList.item") }} now returns <code>undefined</code> if the <code>index</code> is out of bounds, previously it returned <code>null</code>.</li>
  <li><code>Node.getFeature</code> has been removed.</li>
  <li>The <code>HTMLInsElement</code> and <code>HTMLDelElement</code> interfaces have been removed, since the {{ HTMLElement("ins") }} and {{ HTMLElement("del") }} elements actually use the {{ domxref("HTMLModElement") }} interface.</li>
- <li>In a effort to conform to the upcoming <a class="external" href="https://www.w3.org/TR/dom/">DOM4</a> specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are <a href="/en/DOM/Attr#Deprecated_properties_and_methods">now reporting warnings</a> as we work toward removing them in a later version.</li>
+ <li>In a effort to conform to the upcoming <a class="external" href="https://www.w3.org/TR/dom/">DOM4</a> specification where {{ domxref("Attr") }} do not inherit from {{ domxref("Node") }} anymore (it did in DOM Core 1, 2 and 3), many {{ domxref("Node") }} properties and methods on the {{ domxref("Attr") }} interface are <a href="/en-US/docs/Web/API/Attr#deprecated_properties_and_methods">now reporting warnings</a> as we work toward removing them in a later version.</li>
  <li>Added support for the {{ domxref("window.ondeviceorientation") }} and {{ domxref("window.ondevicemotion") }} properties on {{ domxref("window") }} objects.</li>
  <li>{{ domxref("window.resizeTo") }}, {{ domxref("window.resizeBy") }}, {{ domxref("window.moveTo") }} , and {{ domxref("window.moveBy") }} no longer apply to the main window.</li>
 </ul>
@@ -75,7 +75,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>The <code><a href="/en/JavaScript/Reference/Global_Objects/Function/arity">Function.arity</a></code> property has been removed; use <code><a href="/en/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code> instead.</li>
+ <li>The <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/arity">Function.arity</a></code> property has been removed; use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code> instead.</li>
 </ul>
 
 <h3 id="WebSockets">WebSockets</h3>
@@ -96,7 +96,7 @@ tags:
 <h3 id="Web_timing">Web timing</h3>
 
 <ul>
- <li>Initial implementation of the <a href="/en/Navigation_timing">Navigation Timing</a> specification which provides data that can be used to measure the performance of a website.</li>
+ <li>Initial implementation of the <a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing</a> specification which provides data that can be used to measure the performance of a website.</li>
 </ul>
 
 <h3 id="XML">XML</h3>
@@ -108,9 +108,9 @@ tags:
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 
-<p>These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see <a href="/en/Firefox/Updating_extensions_for_Firefox_7" title="en/Firefox/Updating extensions for Firefox 7">Updating extensions for Firefox 7</a> for additional information.</p>
+<p>These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see <a href="/en-US/docs/Mozilla/Firefox/Updating_extensions_for_Firefox_7">Updating extensions for Firefox 7</a> for additional information.</p>
 
-<div class="note"><strong>Note:</strong> Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces">Binary Interfaces</a> for details.</div>
+<div class="note"><strong>Note:</strong> Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</div>
 
 <h3 id="JavaScript_code_modules">JavaScript code modules</h3>
 
@@ -123,21 +123,21 @@ tags:
 <h4 id="AddonManager.jsm">AddonManager.jsm</h4>
 
 <ul>
- <li>The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#addStartupChange()">AddonManager.addStartupChange()</a></code>, <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#removeStartupChange()">AddonManager.removeStartupChange()</a></code>, and <code><a href="/en-US/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()">AddonManager.getStartupChanges()</a></code>.</li>
+ <li>The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: <code><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#addstartupchange()">AddonManager.addStartupChange()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#removestartupchange()">AddonManager.removeStartupChange()</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#getstartupchanges()">AddonManager.getStartupChanges()</a></code>.</li>
 </ul>
 
 <h3 id="XUL">XUL</h3>
 
 <ul>
  <li>{{ xulelem("tree") }} elements can now persist the state of disclosure triangles if the nodes referenced by {{ XULAttr("datasources") }} all have unique IDs specified by "id" attributes.</li>
- <li>{{ xulelem("panel") }} elements can now be configured to <a href="/en/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background">let the user drag them by clicking anywhere on their background</a> by using the new {{ XULAttr("backdrag") }} attribute.</li>
+ <li>{{ xulelem("panel") }} elements can now be configured to <a href="/en-US/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background">let the user drag them by clicking anywhere on their background</a> by using the new {{ XULAttr("backdrag") }} attribute.</li>
 </ul>
 
 <h3 id="XPCOM">XPCOM</h3>
 
 <ul>
- <li>The new <a href="/en/Components.utils.schedulePreciseGC"><code>Components.utils.schedulePreciseGC()</code></a> method lets you schedule a thorough garbage collection cycle to occur at some point in the future when no JavaScript code is executing; a callback is executed once collection is complete.</li>
- <li>The <a href="/en/Components.utils.unload" title="Components.utils.unload"><code>Components.utils.unload()</code></a> method lets you unload JavaScript code modules previously loaded by calling <a href="/en/Components.utils.load"><code>Components.utils.load()</code></a>.</li>
+ <li>The new <a href="/en-US/docs/Components.utils.schedulePreciseGC"><code>Components.utils.schedulePreciseGC()</code></a> method lets you schedule a thorough garbage collection cycle to occur at some point in the future when no JavaScript code is executing; a callback is executed once collection is complete.</li>
+ <li>The <a href="/en-US/docs/Components.utils.unload" title="Components.utils.unload"><code>Components.utils.unload()</code></a> method lets you unload JavaScript code modules previously loaded by calling <a href="/en-US/docs/Components.utils.load"><code>Components.utils.load()</code></a>.</li>
 </ul>
 
 <h3 id="Memory_reporters">Memory reporters</h3>
@@ -147,15 +147,15 @@ tags:
 <h3 id="User_experience_changes">User experience changes</h3>
 
 <ul>
- <li>Extension options can now be <a href="/en/Extensions/Inline_Options">displayed inside the Add-on Manager</a> for both restartless and traditional extensions.</li>
- <li>The destination of downloads is now remembered on a site-by-site basis. This data can be accessed using <a href="/en/JavaScript_code_modules/DownloadLastDir.jsm">DownloadLastDir.jsm</a>.</li>
+ <li>Extension options can now be <a href="/en-US/docs/Extensions/Inline_Options">displayed inside the Add-on Manager</a> for both restartless and traditional extensions.</li>
+ <li>The destination of downloads is now remembered on a site-by-site basis. This data can be accessed using <a href="/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm">DownloadLastDir.jsm</a>.</li>
 </ul>
 
 <h3 id="Changes_to_the_build_system">Changes to the build system</h3>
 
 <ul>
  <li>The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see {{ anch("Removed interfaces") }}.</li>
- <li>You should no longer specify <code>-Zc:wchar_t-</code> when building on Windows. See the <a href="/En/Developer_Guide/Build_Instructions#Build_and_install">updated Build documentation</a> for details.</li>
+ <li>You should no longer specify <code>-Zc:wchar_t-</code> when building on Windows. See the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_and_install">updated Build documentation</a> for details.</li>
 </ul>
 
 <h3 id="Interface_changes">Interface changes</h3>

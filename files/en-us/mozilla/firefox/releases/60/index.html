@@ -12,7 +12,7 @@ tags:
 
 <h2 id="Stylo_comes_to_Firefox_for_Android_in_60">Stylo comes to Firefox for Android in 60</h2>
 
-<p><a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">Firefox's new parallel CSS engine</a> — also known as <strong>Quantum CSS</strong> or <strong>Stylo</strong> — which was <a href="/en-US/Firefox/Releases/57#Firefox_57_Firefox_Quantum">first enabled by default in Firefox 57 for desktop</a>, has now been enabled in Firefox for Android.</p>
+<p><a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">Firefox's new parallel CSS engine</a> — also known as <strong>Quantum CSS</strong> or <strong>Stylo</strong> — which was <a href="/en-US/docs/Mozilla/Firefox/Releases/57#firefox_57_firefox_quantum">first enabled by default in Firefox 57 for desktop</a>, has now been enabled in Firefox for Android.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -20,14 +20,14 @@ tags:
 
 <ul>
  <li>In the CSS Pane rules view (see <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>), the keyboard shortcuts for precise value increments (increase/decrease by 0.1) have changed from <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> to <kbd>Ctrl</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> on Linux and Windows, to avoid clashes with default OS-level shortcuts (see {{bug("1413314")}}).</li>
- <li>Also in the CSS Pane rules view, <a href="/en-US/docs/Web/CSS/Using_CSS_variables">CSS variable names</a> will now auto-complete ({{bug(1422635)}}). If you enter <code>var(</code> into a property value and then type a dash (<code>-</code>), any variables you have declared in your CSS will then appear in an autocomplete list.</li>
- <li>In <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>, a <em>Reload when...</em> dropdown has been added to allow users to enable/disable automatic page reloads when touch simulation is toggled, or simulated user agent is changed. See <a href="/en-US/docs/Tools/Responsive_Design_Mode#Controlling_page_reload_behavior">Controlling page reload behavior</a> for more details ({{bug(1428816)}}).</li>
+ <li>Also in the CSS Pane rules view, <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variable names</a> will now auto-complete ({{bug(1422635)}}). If you enter <code>var(</code> into a property value and then type a dash (<code>-</code>), any variables you have declared in your CSS will then appear in an autocomplete list.</li>
+ <li>In <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>, a <em>Reload when...</em> dropdown has been added to allow users to enable/disable automatic page reloads when touch simulation is toggled, or simulated user agent is changed. See <a href="/en-US/docs/Tools/Responsive_Design_Mode#controlling_page_reload_behavior">Controlling page reload behavior</a> for more details ({{bug(1428816)}}).</li>
  <li>The <code>view_source.tab</code> preference has been removed so you can no longer toggle <a href="/en-US/docs/Tools/View_source">View Source</a> mode between appearing in a new tab or new window. Page sources will always appear in new tabs from now on ({{bug(1418403)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
 
-<p>Pressing the Enter key in <code>designMode</code> and <code>contenteditable</code> now inserts <code>&lt;div&gt;</code> elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting <code>&lt;br&gt;</code> elements like it used to. If you want to use the old behavior on your app, you can do it with <code>document.execCommand()</code>. See <a href="/en-US/docs/Web/Guide/HTML/Editable_content#Differences_in_markup_generation">Differences in markup generation</a> for more details (also see {{bug(1430551)}}).</p>
+<p>Pressing the Enter key in <code>designMode</code> and <code>contenteditable</code> now inserts <code>&lt;div&gt;</code> elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting <code>&lt;br&gt;</code> elements like it used to. If you want to use the old behavior on your app, you can do it with <code>document.execCommand()</code>. See <a href="/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation">Differences in markup generation</a> for more details (also see {{bug(1430551)}}).</p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -69,10 +69,10 @@ tags:
  <li>The {{domxref("Document.body","body")}} property is now implemented on the {{domxref("Document")}} interface, rather than the {{domxref("HTMLDocument")}} interface ({{bug(1276438)}}).</li>
  <li>{{domxref("PerformanceResourceTiming")}} is now available in workers ({{bug(1425458)}}).</li>
  <li>The {{domxref("PerformanceObserver.takeRecords()")}} method has been implemented ({{bug(1436692)}}).</li>
- <li>The {{domxref("KeyboardEvent.keyCode")}} attribute of punctuation key becomes non-zero even if the active keyboard layout doesn't produce ASCII characters. See <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#keyCode_of_punctuation_keys_on_some_keyboard_layout">these notes for more detail</a>. Please do <strong>not</strong> use <code>KeyboardEvent.keyCode</code> in new applications — use {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} instead.</li>
+ <li>The {{domxref("KeyboardEvent.keyCode")}} attribute of punctuation key becomes non-zero even if the active keyboard layout doesn't produce ASCII characters. See <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#keycode_of_punctuation_keys_on_some_keyboard_layout">these notes for more detail</a>. Please do <strong>not</strong> use <code>KeyboardEvent.keyCode</code> in new applications — use {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} instead.</li>
  <li>The {{domxref("Animation.updatePlaybackRate()")}} method has been implemented ({{bug("1436659")}}).</li>
- <li>New rules have been included for determining <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#keyCode_of_punctuation_keys_on_some_keyboard_layout">keyCode values of punctuation keys</a> ({{bug(1036008)}}).</li>
- <li>The Gecko-only options object <code>storage</code> option of the {{domxref("IDBFactory.open()")}} method (see <a href="/en-US/docs/Web/API/IDBFactory/open#Experimental_Gecko_options_object">Experimental Gecko options object</a>) has been deprecated ({{bug(1442560)}}).</li>
+ <li>New rules have been included for determining <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#keycode_of_punctuation_keys_on_some_keyboard_layout">keyCode values of punctuation keys</a> ({{bug(1036008)}}).</li>
+ <li>The Gecko-only options object <code>storage</code> option of the {{domxref("IDBFactory.open()")}} method (see <a href="/en-US/docs/Web/API/IDBFactory/open#experimental_gecko_options_object">Experimental Gecko options object</a>) has been deprecated ({{bug(1442560)}}).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> can now be used within <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> code ({{bug(1193394)}}).</li>
 </ul>
 

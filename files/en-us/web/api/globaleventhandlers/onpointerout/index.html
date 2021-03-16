@@ -2,21 +2,23 @@
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/GlobalEventHandlers/onpointerout
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- PointerEvent
+- Property
+- Reference
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>The <strong><code>onpointerout</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("pointerout")}} events.</p>
+<p>The <strong><code>onpointerout</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{event("pointerout")}} events.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>targetElement</var>.onpointerout = <var>outHandler</var>;
+<pre class="brush: js"><var>targetElement</var>.onpointerout = <var>outHandler</var>;
 
 var <var>outHandler</var> = <var>targetElement</var>.onpointerout;
 </pre>
@@ -24,15 +26,17 @@ var <var>outHandler</var> = <var>targetElement</var>.onpointerout;
 <h3 id="Value">Value</h3>
 
 <dl>
- <dt><code>outHandler</code></dt>
- <dd>The <code>pointerout</code> event handler for element <code>targetElement</code>.</dd>
+  <dt><code>outHandler</code></dt>
+  <dd>The <code>pointerout</code> event handler for element <code>targetElement</code>.
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows two ways to use <code>onpointerout</code> to set an element's <code>pointerout</code> event handler.</p>
+<p>This example shows two ways to use <code>onpointerout</code> to set an element's
+  <code>pointerout</code> event handler.</p>
 
-<pre class="brush: js notranslate">&lt;html&gt;
+<pre class="brush: js">&lt;html&gt;
 &lt;script&gt;
 function outHandler(ev) {
   // Process the pointerout event
@@ -53,25 +57,27 @@ function init() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerout', 'onpointerout')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Non-stable version</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerout', 'onpointerout')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerout',
+        'onpointerout')}}</td>
+      <td>{{Spec2('Pointer Events 2')}}</td>
+      <td>Non-stable version</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerout',
+        'onpointerout')}}</td>
+      <td>{{Spec2('Pointer Events')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -81,6 +87,10 @@ function init() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Document/pointerout_event">Document: pointerout</a></code> event</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">HTMLElement: pointerout</a></code> event</li>
+  <li>
+    <code><a href="/en-US/docs/Web/API/Document/pointerout_event">Document: pointerout</a></code>
+    event</li>
+  <li>
+    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">HTMLElement: pointerout</a></code>
+    event</li>
 </ul>

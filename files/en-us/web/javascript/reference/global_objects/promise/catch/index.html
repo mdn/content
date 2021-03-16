@@ -2,23 +2,34 @@
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
+- ECMAScript 2015
+- JavaScript
+- Method
+- Promise
+- Prototype
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>catch()</strong></code> method returns a {{jsxref("Promise")}} and deals with rejected cases only. It behaves the same as calling {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (in fact, calling <code>obj.catch(onRejected)</code> internally calls <code>obj.then(undefined, onRejected)</code>). This means that you have to provide an <code>onRejected</code> function even if you want to fall back to an <code>undefined</code> result value - for example <code>obj.catch(() =&gt; {})</code>.</p>
+<p>The <code><strong>catch()</strong></code> method returns a {{jsxref("Promise")}} and
+  deals with rejected cases only. It behaves the same as calling {{jsxref("Promise.then",
+  "Promise.prototype.then(undefined, onRejected)")}} (in fact, calling
+  <code>obj.catch(onRejected)</code> internally calls
+  <code>obj.then(undefined, onRejected)</code>). This means that you have to provide an
+  <code>onRejected</code> function even if you want to fall back to an
+  <code>undefined</code> result value - for example <code>obj.catch(() =&gt; {})</code>.
+</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-catch.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>p</var>.catch(<var>onRejected</var>);
+<pre class="brush: js"><var>p</var>.catch(<var>onRejected</var>);
 
 p.catch(function(<var>reason</var>) {
    // rejection
@@ -28,26 +39,37 @@ p.catch(function(<var>reason</var>) {
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>onRejected</var></code></dt>
- <dd>A {{jsxref("Function")}} called when the <code>Promise</code> is rejected. This function has one argument:
- <dl>
-  <dt><code><var>reason</var></code></dt>
-  <dd>The rejection reason.</dd>
- </dl>
- The Promise returned by <code>catch()</code> is rejected if <code><var>onRejected</var></code> throws an error or returns a Promise which is itself rejected; otherwise, it is resolved.</dd>
+  <dt><code><var>onRejected</var></code></dt>
+  <dd>A {{jsxref("Function")}} called when the <code>Promise</code> is rejected. This
+    function has one argument:
+    <dl>
+      <dt><code><var>reason</var></code></dt>
+      <dd>The rejection reason.</dd>
+    </dl>
+    The Promise returned by <code>catch()</code> is rejected if
+    <code><var>onRejected</var></code> throws an error or returns a Promise which is
+    itself rejected; otherwise, it is resolved.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Internally calls <code>Promise.prototype.then</code> on the object upon which it was called, passing the parameters <code>undefined</code> and the received <code><var>onRejected</var></code> handler. Returns the value of that call, which is a {{jsxref("Promise")}}.</p>
+<p>Internally calls <code>Promise.prototype.then</code> on the object upon which it was
+  called, passing the parameters <code>undefined</code> and the received
+  <code><var>onRejected</var></code> handler. Returns the value of that call, which is a
+  {{jsxref("Promise")}}.</p>
 
 <div class="warning">
-<p>Note the examples below are throwing instances of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>. This is considered good practice in contrast to throwing Strings; otherwise, the part doing the catching would have to perform checks to see if the argument was a string or an error, and you might lose valuable information like stack traces.</p>
+  <p>Note the examples below are throwing instances of <a
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>. This is
+    considered good practice in contrast to throwing Strings; otherwise, the part doing
+    the catching would have to perform checks to see if the argument was a string or an
+    error, and you might lose valuable information like stack traces.</p>
 </div>
 
 <p><strong>Demonstration of the internal call:</strong></p>
 
-<pre class="brush: js notranslate">// overriding original Promise.prototype.then/catch just to add some logs
+<pre class="brush: js">// overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
     var originalThen = Promise.prototype.then;
     var originalCatch = Promise.prototype.catch;
@@ -73,13 +95,17 @@ Promise.resolve().catch(function XXX(){});
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>catch</code> method is used for error handling in promise composition. Since it returns a {{jsxref("Promise")}}, it <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining_after_a_catch">can be chained</a> in the same way as its sister method, {{jsxref("Promise.then", "then()")}}.</p>
+<p>The <code>catch</code> method is used for error handling in promise composition. Since
+  it returns a {{jsxref("Promise")}}, it <a
+    href="/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining_after_a_catch">can be
+    chained</a> in the same way as its sister method, {{jsxref("Promise.then",
+  "then()")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_and_chaining_the_catch_method">Using and chaining the catch method</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -109,7 +135,7 @@ p1.then(function(value) {
 
 <h3 id="Gotchas_when_throwing_errors">Gotchas when throwing errors</h3>
 
-<pre class="brush: js notranslate">// Throwing an error will call the catch method most of the time
+<pre class="brush: js">// Throwing an error will call the catch method most of the time
 var p1 = new Promise(function(resolve, reject) {
   throw new Error('Uh-oh!');
 });
@@ -141,7 +167,7 @@ p3.catch(function(e) {
 
 <h3 id="If_it_is_resolved">If it is resolved</h3>
 
-<pre class="brush: js notranslate">//Create a promise which would not call onReject
+<pre class="brush: js">//Create a promise which would not call onReject
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
@@ -161,27 +187,31 @@ p2.then(function (value) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-promise.prototype.catch',
+        'Promise.prototype.catch')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+<div class="hidden">To contribute to this compatibility data, please write a pull request
+  against this repository: <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.
+</div>
 
 <p>{{Compat("javascript.builtins.Promise.catch")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
+  <li>{{jsxref("Promise")}}</li>
+  <li>{{jsxref("Promise.prototype.then()")}}</li>
 </ul>

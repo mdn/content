@@ -2,45 +2,58 @@
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 tags:
-  - API
-  - Method
-  - Reference
-  - Référence(2)
-  - SubtleCrypto
-  - Web Crypto API
-  - encrypt
+- API
+- Method
+- Reference
+- Référence(2)
+- SubtleCrypto
+- Web Crypto API
+- encrypt
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
-<p>The <code><strong>encrypt()</strong></code> method of the {{domxref("SubtleCrypto")}} interface encrypts data.</p>
+<p>The <code><strong>encrypt()</strong></code> method of the {{domxref("SubtleCrypto")}}
+  interface encrypts data.</p>
 
-<p>It takes as its arguments a {{glossary("key")}} to encrypt with, some algorithm-specific parameters, and the data to encrypt (also known as "plaintext"). It returns a {{jsxref("Promise")}} which will be fulfilled with the encrypted data (also known as "ciphertext").</p>
+<p>It takes as its arguments a {{glossary("key")}} to encrypt with, some
+  algorithm-specific parameters, and the data to encrypt (also known as "plaintext"). It
+  returns a {{jsxref("Promise")}} which will be fulfilled with the encrypted data (also
+  known as "ciphertext").</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">const <em>result</em> = crypto.subtle.encrypt(<em>algorithm</em>, <em>key</em>, <em>data</em>);
+<pre class="brush: js">const <em>result</em> = crypto.subtle.encrypt(<em>algorithm</em>, <em>key</em>, <em>data</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><em><code>algorithm</code></em> is an object specifying the <a href="#Supported_algorithms">algorithm</a> to be used and any extra parameters if required:
+  <li><em><code>algorithm</code></em> is an object specifying the <a
+      href="#Supported_algorithms">algorithm</a> to be used and any extra parameters if
+    required:
 
-  <ul>
-   <li>To use <a href="#RSA-OAEP">RSA-OAEP</a>, pass an {{domxref("RsaOaepParams")}} object.</li>
-   <li>To use <a href="#AES-CTR">AES-CTR</a>, pass an {{domxref("AesCtrParams")}} object.</li>
-   <li>To use <a href="#AES-CBC">AES-CBC</a>, pass an {{domxref("AesCbcParams")}} object.</li>
-   <li>To use <a href="#AES-GCM">AES-GCM</a>, pass an {{domxref("AesGcmParams")}} object.<span style="display: none;"> </span></li>
-  </ul>
- </li>
- <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key to be used for encryption.</li>
- <li><em><code>data</code></em> is a {{domxref("BufferSource")}} containing the data to be encrypted (also known as the {{glossary("plaintext")}}).</li>
+    <ul>
+      <li>To use <a href="#rsa-oaep">RSA-OAEP</a>, pass an {{domxref("RsaOaepParams")}}
+        object.</li>
+      <li>To use <a href="#aes-ctr">AES-CTR</a>, pass an {{domxref("AesCtrParams")}}
+        object.</li>
+      <li>To use <a href="#aes-cbc">AES-CBC</a>, pass an {{domxref("AesCbcParams")}}
+        object.</li>
+      <li>To use <a href="#aes-gcm">AES-GCM</a>, pass an {{domxref("AesGcmParams")}}
+        object.</li>
+    </ul>
+  </li>
+  <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key to be
+    used for encryption.</li>
+  <li><em><code>data</code></em> is a {{domxref("BufferSource")}} containing the data to
+    be encrypted (also known as the {{glossary("plaintext")}}).</li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the "ciphertext".</li>
+  <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with an
+    {{jsxref("ArrayBuffer")}} containing the "ciphertext".</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -48,57 +61,87 @@ tags:
 <p>The promise is rejected when the following exceptions are encountered:</p>
 
 <dl>
- <dt>InvalidAccessError</dt>
- <dd>Raised when the requested operation is not valid for the provided key (e.g. invalid encryption algorithm, or invalid key for the specified encryption algorithm<em>)</em>.</dd>
- <dt>OperationError</dt>
- <dd>Raised when the operation failed for an operation-specific reason (e.g. algorithm parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).</dd>
+  <dt>InvalidAccessError</dt>
+  <dd>Raised when the requested operation is not valid for the provided key (e.g. invalid
+    encryption algorithm, or invalid key for the specified encryption algorithm<em>)</em>.
+  </dd>
+  <dt>OperationError</dt>
+  <dd>Raised when the operation failed for an operation-specific reason (e.g. algorithm
+    parameters of invalid sizes, or AES-GCM plaintext longer than 2³⁹−256 bytes).</dd>
 </dl>
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
-<p>The Web Crypto API provides four algorithms that support the <code>encrypt()</code> and <code>decrypt()</code> operations.</p>
+<p>The Web Crypto API provides four algorithms that support the <code>encrypt()</code> and
+  <code>decrypt()</code> operations.</p>
 
-<p>One of these algorithms — RSA-OAEP — is a {{Glossary("public-key cryptography", "public-key cryptosystem")}}.</p>
+<p>One of these algorithms — RSA-OAEP — is a {{Glossary("public-key cryptography",
+  "public-key cryptosystem")}}.</p>
 
-<p>The other three encryption algorithms here are all {{Glossary("Symmetric-key cryptography", "symmetric algorithms")}}, and they're all based on the same underlying cipher, AES (Advanced Encryption Standard). The difference between them is the {{Glossary("Block cipher mode of operation", "mode")}}. The Web Crypto API supports three different AES modes:</p>
+<p>The other three encryption algorithms here are all {{Glossary("Symmetric-key
+  cryptography", "symmetric algorithms")}}, and they're all based on the same underlying
+  cipher, AES (Advanced Encryption Standard). The difference between them is the
+  {{Glossary("Block cipher mode of operation", "mode")}}. The Web Crypto API supports
+  three different AES modes:</p>
 
 <ul>
- <li>CTR (Counter Mode)</li>
- <li>CBC (Cipher Block Chaining)</li>
- <li>GCM (Galois/Counter Mode)</li>
+  <li>CTR (Counter Mode)</li>
+  <li>CBC (Cipher Block Chaining)</li>
+  <li>GCM (Galois/Counter Mode)</li>
 </ul>
 
-<p>It's strongly recommended to use <em>authenticated encryption</em>, which includes checks that the ciphertext has not been modified by an attacker. Authentication helps protect against <em>chosen-ciphertext</em> attacks, in which an attacker can ask the system to decrypt arbitrary messages, and use the result to deduce information about the secret key. While it's possible to add authentication to CTR and CBC modes, they do not provide it by default and when implementing it manually one can easily make minor, but serious mistakes. GCM does provide built-in authentication, and for this reason it's often recommended over the other two AES modes.</p>
+<p>It's strongly recommended to use <em>authenticated encryption</em>, which includes
+  checks that the ciphertext has not been modified by an attacker. Authentication helps
+  protect against <em>chosen-ciphertext</em> attacks, in which an attacker can ask the
+  system to decrypt arbitrary messages, and use the result to deduce information about the
+  secret key. While it's possible to add authentication to CTR and CBC modes, they do not
+  provide it by default and when implementing it manually one can easily make minor, but
+  serious mistakes. GCM does provide built-in authentication, and for this reason it's
+  often recommended over the other two AES modes.</p>
 
 <h3 id="RSA-OAEP">RSA-OAEP</h3>
 
-<p>The RSA-OAEP public-key encryption system is specified in <a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>.</p>
+<p>The RSA-OAEP public-key encryption system is specified in <a
+    href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>.</p>
 
 <h3 id="AES-CTR">AES-CTR</h3>
 
-<p>This represents AES in Counter Mode, as specified in <a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a>.</p>
+<p>This represents AES in Counter Mode, as specified in <a
+    href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a>.
+</p>
 
 <h3 id="AES-CBC">AES-CBC</h3>
 
-<p>This represents AES in Cipher Block Chaining Mode, as specified in <a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a>.</p>
+<p>This represents AES in Cipher Block Chaining Mode, as specified in <a
+    href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a>.
+</p>
 
 <h3 id="AES-GCM">AES-GCM</h3>
 
-<p>This represents AES in Galois/Counter Mode, as specified in <a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST SP800-38D</a>.</p>
+<p>This represents AES in Galois/Counter Mode, as specified in <a
+    href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST SP800-38D</a>.
+</p>
 
-<p>One major difference between this mode and the others is that GCM is an "authenticated" mode, which means that it includes checks that the ciphertext has not been modified by an attacker.</p>
+<p>One major difference between this mode and the others is that GCM is an "authenticated"
+  mode, which means that it includes checks that the ciphertext has not been modified by
+  an attacker.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can <a href="https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html">try the working examples</a> out on GitHub.</p>
+  <p><strong>Note</strong>: You can <a
+      href="https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html">try
+      the working examples</a> out on GitHub.</p>
 </div>
 
 <h3 id="RSA-OAEP_2">RSA-OAEP</h3>
 
-<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts it with using RSA-OAEP. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts
+  it with using RSA-OAEP. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".rsa-oaep #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -118,9 +161,12 @@ function encryptMessage(publicKey) {
 
 <h3 id="AES-CTR_2">AES-CTR</h3>
 
-<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in CTR mode. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts
+  it using AES in CTR mode. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-ctr #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -143,7 +189,7 @@ function encryptMessage(key) {
 }
 </pre>
 
-<pre class="brush: js notranslate">let iv = new Uint8Array(16);
+<pre class="brush: js">let iv = new Uint8Array(16);
 let key = new Uint8Array(16);
 let data = new Uint8Array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
@@ -165,9 +211,12 @@ console.log(encrypted_content);</pre>
 
 <h3 id="AES-CBC_2">AES-CBC</h3>
 
-<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in CBC mode. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts
+  it using AES in CBC mode. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-cbc #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -190,9 +239,12 @@ function encryptMessage(key) {
 
 <h3 id="AES-GCM_2">AES-GCM</h3>
 
-<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in GCM mode. <a class="external external-icon" href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js" rel="noopener">See the complete code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for encryption, and encrypts
+  it using AES in GCM mode. <a class="external external-icon"
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js"
+    rel="noopener">See the complete code on GitHub.</a></p>
 
-<pre class="brush: js notranslate">function getMessageEncoding() {
+<pre class="brush: js">function getMessageEncoding() {
   const messageBox = document.querySelector(".aes-gcm #message");
   let message = messageBox.value;
   let enc = new TextEncoder();
@@ -216,18 +268,19 @@ function encryptMessage(key) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#SubtleCrypto-method-encrypt', 'SubtleCrypto.encrypt()') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{ SpecName('Web Crypto API', '#SubtleCrypto-method-encrypt',
+        'SubtleCrypto.encrypt()') }}</td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -237,9 +290,12 @@ function encryptMessage(key) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("SubtleCrypto.decrypt()")}}.</li>
- <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSAOAEP.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a> specifies CTR mode.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST SP800-38A</a> specifies CBC mode.</li>
- <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST SP800-38D</a> specifies GCM mode.</li>
+  <li>{{domxref("SubtleCrypto.decrypt()")}}.</li>
+  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSAOAEP.</li>
+  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST
+      SP800-38A</a> specifies CTR mode.</li>
+  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST
+      SP800-38A</a> specifies CBC mode.</li>
+  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST
+      SP800-38D</a> specifies GCM mode.</li>
 </ul>

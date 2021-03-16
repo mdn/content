@@ -2,29 +2,37 @@
 title: PaymentRequest.onshippingaddresschange
 slug: Web/API/PaymentRequest/onshippingaddresschange
 tags:
-  - API
-  - Event Handler
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - Property
-  - Reference
-  - Secure context
-  - onshippingaddresschange
+- API
+- Event Handler
+- Experimental
+- Payment Request
+- Payment Request API
+- Property
+- Reference
+- Secure context
+- onshippingaddresschange
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p>The <strong><code>onshippingaddresschange</code></strong> event of the {{domxref("PaymentRequest")}} interface is fired whenever the user changes their shipping address, including when an address is added by the user for the first time.</p>
+<p>The <strong><code>onshippingaddresschange</code></strong> event of the
+  {{domxref("PaymentRequest")}} interface is fired whenever the user changes their
+  shipping address, including when an address is added by the user for the first time.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>PaymentRequest.addEventListener('shippingaddresschange', shippingAddressChangeEvent =&gt; { ... });
+<pre
+  class="brush: js"><code>PaymentRequest.addEventListener('shippingaddresschange', shippingAddressChangeEvent =&gt; { ... });
 
 PaymentRequest.onshippingaddresschange = function(shippingAddressChangeEvent) { ... };</code></pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The <code>shippingaddresschange</code> event is triggered by a user-agent controlled interaction. If the address stored by the user agent changes at any time during a payment process, the event is triggered. To make sure an updated address is included when sending payment information to the server, you should add event listeners for a {{domxref('PaymentRequest')}} object after instantiation, but before the call to <code>show()</code>.</p>
+<p>The <code>shippingaddresschange</code> event is triggered by a user-agent controlled
+  interaction. If the address stored by the user agent changes at any time during a
+  payment process, the event is triggered. To make sure an updated address is included
+  when sending payment information to the server, you should add event listeners for a
+  {{domxref('PaymentRequest')}} object after instantiation, but before the call
+  to <code>show()</code>.</p>
 
 <pre>// Initialization of PaymentRequest arguments are excerpted for clarity.
 var payment = new PaymentRequest(supportedInstruments, details, options);
@@ -45,23 +53,21 @@ payment.show().then(function(paymentResponse) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment', '#onshippingaddresschange-attribute', 'onshippingaddresschange')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment', '#onshippingaddresschange-attribute',
+        'onshippingaddresschange')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentRequest.onshippingaddresschange")}}</p>
-</div>

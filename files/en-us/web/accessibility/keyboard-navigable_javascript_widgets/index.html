@@ -117,7 +117,7 @@ tags:
  <li>update the <code>tabindex</code> of the previously focused element to "-1".</li>
 </ol>
 
-<p>Here's an example of a <a class="external text" href="https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html" rel="nofollow" title="Paciello Group Tree View example">WAI-ARIA tree view</a> using this technique.</p>
+<p>Here's an example of a <a class="external text" href="https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html" rel="nofollow">WAI-ARIA tree view</a> using this technique.</p>
 
 <h5 id="Tips">Tips</h5>
 
@@ -129,13 +129,13 @@ tags:
 
 <p>Don't assume that all focus changes will come via key and mouse events: assistive technologies such as screen readers can set the focus to any focusable element. Track focus using <code>onfocus</code> and <code>onblur</code> instead.</p>
 
-<p><code>onfocus</code> and <code>onblur</code> can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the <a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">document.activeElement</a> to get the active element. You can also use <a href="/en-US/docs/Web/API/Document/hasFocus">document.hasFocus</a> to make sure if the current document focus. </p>
+<p><code>onfocus</code> and <code>onblur</code> can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the <a href="/en-US/docs/Web/API/Document/activeElement">document.activeElement</a> to get the active element. You can also use <a href="/en-US/docs/Web/API/Document/hasFocus">document.hasFocus</a> to make sure if the current document focus. </p>
 
 <h4 id="Technique_2_aria-activedescendant">Technique 2: aria-activedescendant</h4>
 
 <p>This technique involves binding a single event handler to the container widget and using the <code>aria-activedescendant</code> to track a "virtual" focus. (For more information about ARIA, see this <a class="external text" href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets" rel="nofollow">overview of accessible web applications and widgets</a>.)</p>
 
-<p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color). See the source code of this <a class="external text" href="http://www.oaa-accessibility.org/example/28/" rel="nofollow">ARIA radiogroup example</a> for a direct illustration of how this works.</p>
+<p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color).</p>
 
 <h3 id="General_Guidelines">General Guidelines</h3>
 

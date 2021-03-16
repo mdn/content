@@ -16,19 +16,19 @@ tags:
 <p><code>FinalizationRegistry</code> provides a way to request that a <em>cleanup callback</em> get called at some point when an object registered with the registry has been <em>reclaimed</em> (garbage-collected). (Cleanup callbacks are sometimes called <em>finalizers</em>.)</p>
 
 <div class="note">
-<p><strong>Note:</strong> Cleanup callbacks should not be used for essential program logic. See <a href="#Notes_on_cleanup_callbacks">Notes on cleanup callbacks</a> for details.</p>
+<p><strong>Note:</strong> Cleanup callbacks should not be used for essential program logic. See <a href="#notes_on_cleanup_callbacks">Notes on cleanup callbacks</a> for details.</p>
 </div>
 
 <p>You create the registry passing in the callback:</p>
 
-<pre class="brush: js notranslate">const registry = new FinalizationRegistry(heldValue =&gt; {
+<pre class="brush: js">const registry = new FinalizationRegistry(heldValue =&gt; {
   // ....
 });
 </pre>
 
 <p>Then you register any objects you want a cleanup callback for by calling the `register` method, passing in the object and a *held value* for it:</p>
 
-<pre class="brush: js notranslate">registry.register(theObject, "some value");
+<pre class="brush: js">registry.register(theObject, "some value");
 </pre>
 
 <p>The registry does not keep a strong reference to the object, as that would defeat the purpose (if the registry held it strongly, the object would never be reclaimed).</p>
@@ -39,14 +39,14 @@ tags:
 
 <p>It's common to use the object itself as the unregister token, which is just fine:</p>
 
-<pre class="brush: js notranslate">registry.register(theObject, "some value", theObject);
+<pre class="brush: js">registry.register(theObject, "some value", theObject);
 // ...some time later, if you don't care about `theObject` anymore...
 registry.unregister(theObject);
 </pre>
 
 <p>It doesn't have to be the same object, though; it can be a different one:</p>
 
-<pre class="brush: js notranslate">registry.register(theObject, "some value", tokenObject);
+<pre class="brush: js">registry.register(theObject, "some value", tokenObject);
 // ...some time later, if you don't care about `theObject` anymore...
 registry.unregister(tokenObject);
 </pre>
@@ -108,7 +108,7 @@ registry.unregister(tokenObject);
 
 <p>You create the registry passing in the callback:</p>
 
-<pre class="brush: js notranslate">const registry = new FinalizationRegistry(heldValue =&gt; {
+<pre class="brush: js">const registry = new FinalizationRegistry(heldValue =&gt; {
   // ....
 });
 </pre>
@@ -117,7 +117,7 @@ registry.unregister(tokenObject);
 
 <p>Then you register any objects you want a cleanup callback for by calling the `register` method, passing in the object and a *held value* for it:</p>
 
-<pre class="brush: js notranslate">registry.register(theObject, "some value");</pre>
+<pre class="brush: js">registry.register(theObject, "some value");</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

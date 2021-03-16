@@ -12,22 +12,23 @@ tags:
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Logs the current value of a timer that was previously started by calling {{domxref("console.time()")}} to the console.</p>
+<p>Logs the current value of a timer that was previously started by calling
+  {{domxref("console.time()")}} to the console.</p>
 
-<p>See <a href="/en-US/docs/Web/API/console#Timers">Timers</a> in the documentation for details and examples.</p>
+<p>See <a href="/en-US/docs/Web/API/Console#timers">Timers</a> in the documentation for
+  details and examples.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">console.timeLog(<em>label</em>);
-</pre>
+<pre class="brush: js">console.timeLog(<em>label</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>label</code></dt>
- <dd>The name of the timer to log to the console.</dd>
+  <dt><code>label</code></dt>
+  <dd>The name of the timer to log to the console.</dd>
 </dl>
 
 <h3 id="Return">Return</h3>
@@ -38,17 +39,17 @@ tags:
 
 <p>If an existing <code>label</code> is included:</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">timer name: 1242ms</span></span></span></span></pre>
+<pre>timer name: 1242ms</pre>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <p>If there is no running timer, <code>timeLog()</code> returns the warning:</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “default” doesn’t exist.</span></span></span></pre>
+<pre>Timer “default” doesn’t exist.</pre>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">If a label parameter is included, but there is no corresponding timer:</span></span></span></p>
+<p>If a label parameter is included, but there is no corresponding timer:</p>
 
-<pre> <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “timer name” doesn’t exist.</span></span></span> </pre>
+<pre> Timer “timer name” doesn’t exist. </pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -59,40 +60,44 @@ alert("Do a bunch of other stuff...");
 console.timeEnd("answer time");
 </pre>
 
-<p>The output from the example above shows the time taken by the user to dismiss the first alert box, followed by the time it took for the user to dismiss the second alert:</p>
+<p>The output from the example above shows the time taken by the user to dismiss the first
+  alert box, followed by the time it took for the user to dismiss the second alert:</p>
 
-<p><img alt="timerresult.png" class="default internal" src="https://mdn.mozillademos.org/files/16741/timer_output.png" style="border: 1px solid black; height: 354px; margin: 0px auto; width: 537px;"></p>
+<p><img class="default internal"
+    src="timer_output.png"
+    style="border: 1px solid black; margin: 0px auto;"></p>
 
-<p>Notice that the timer's name is displayed when the timer value is logged using <code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd() has the additional information, "timer ended" to make it obvious that the timer is no longer tracking time.</p>
+<p>Notice that the timer's name is displayed when the timer value is logged using
+  <code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd()
+  has the additional information, "timer ended" to make it obvious that the timer is no
+  longer tracking time.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#timelog", "console.timeLog()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Console API", "#timelog", "console.timeLog()")}}</td>
+      <td>{{Spec2("Console API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Console.timeLog")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+  <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
+      documentation: Console</a></li>
 </ul>

@@ -2,33 +2,40 @@
 title: WeakMap() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakMap
+- Constructor
+- JavaScript
+- Reference
+- WeakMap
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>WeakMap()</code> constructor</strong> creates <code>WeakMap</code> objects which are a collections of key/value pairs in which the keys are weakly referenced. The keys must be objects and the values can be arbitrary values.</p>
+<p>The <strong><code>WeakMap()</code> constructor</strong> creates <code>WeakMap</code>
+  objects which are a collections of key/value pairs in which the keys are weakly
+  referenced. The keys must be objects and the values can be arbitrary values.</p>
 
-<p>You can learn more about <code>WeakMap</code>s in the section <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap object</a> in <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections">Keyed collections</a>.</p>
+<p>You can learn more about <code>WeakMap</code>s in the section <a
+    href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap
+    object</a> in <a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections">Keyed
+    collections</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">new WeakMap([<var>iterable</var>])</pre>
+<pre class="brush: js">new WeakMap([<var>iterable</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>iterable</var></code></dt>
- <dd>Iterable is an Array or other iterable object whose elements are key-value pairs (2-element Arrays). Each key-value pair will be added to the new WeakMap. null is treated as undefined.</dd>
+  <dt><code><var>iterable</var></code></dt>
+  <dd>Iterable is an Array or other iterable object whose elements are key-value pairs
+    (2-element Arrays). Each key-value pair will be added to the new WeakMap. null is
+    treated as undefined.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_WeakMap">Using WeakMap</h3>
 
-<pre class="brush: js notranslate">const wm1 = new WeakMap(),
+<pre class="brush: js">const wm1 = new WeakMap(),
       wm2 = new WeakMap(),
       wm3 = new WeakMap();
 const o1 = {},
@@ -60,16 +67,16 @@ wm1.has(o1); // false
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap-constructor', 'WeakMap constructor')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-weakmap-constructor', 'WeakMap constructor')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,9 +86,12 @@ wm1.has(o1); // false
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object"><code>WeakMap</code> in the JavaScript guide</a></li>
- <li><a href="http://fitzgeraldnick.com/weblog/53/">Hiding Implementation Details with ECMAScript 6 WeakMaps</a></li>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
+  <li><a
+      href="/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object"><code>WeakMap</code>
+      in the JavaScript guide</a></li>
+  <li><a href="http://fitzgeraldnick.com/weblog/53/">Hiding Implementation Details with
+      ECMAScript 6 WeakMaps</a></li>
+  <li>{{jsxref("Map")}}</li>
+  <li>{{jsxref("Set")}}</li>
+  <li>{{jsxref("WeakSet")}}</li>
 </ul>

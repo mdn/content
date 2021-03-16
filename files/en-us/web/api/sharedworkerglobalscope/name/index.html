@@ -2,21 +2,25 @@
 title: SharedWorkerGlobalScope.name
 slug: Web/API/SharedWorkerGlobalScope/name
 tags:
-  - API
-  - Property
-  - Reference
-  - Référence(2)
-  - SharedWorkerGlobalScope
-  - Web Workers
-  - name
+- API
+- Property
+- Reference
+- Référence(2)
+- SharedWorkerGlobalScope
+- Web Workers
+- name
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p>The <code><strong>name</strong></code> read-only property of the {{domxref("SharedWorkerGlobalScope")}} interface returns the name that the {{domxref("SharedWorker")}} was (optionally) given when it was created. This is the name that the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor can pass to get a reference to the {{domxref("SharedWorkerGlobalScope")}}.</p>
+<p>The <code><strong>name</strong></code> read-only property of the
+  {{domxref("SharedWorkerGlobalScope")}} interface returns the name that the
+  {{domxref("SharedWorker")}} was (optionally) given when it was created. This is the name
+  that the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor can pass
+  to get a reference to the {{domxref("SharedWorkerGlobalScope")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var nameObj = self.name;</pre>
+<pre class="brush: js">var nameObj = self.name;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -26,9 +30,11 @@ tags:
 
 <p>If a shared worker is created using a constructor with a <code>name</code> option:</p>
 
-<pre class="brush: js">var myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });</pre>
+<pre
+  class="brush: js">var myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });</pre>
 
-<p>the {{domxref("SharedWorkerGlobalScope")}} will now have a name of "mySharedWorker", returnable by running</p>
+<p>the {{domxref("SharedWorkerGlobalScope")}} will now have a name of "mySharedWorker",
+  returnable by running</p>
 
 <pre class="brush: js">self.name</pre>
 
@@ -37,18 +43,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-sharedworkerglobalscope-name', 'name')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-sharedworkerglobalscope-name', 'name')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -58,5 +64,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("SharedWorkerGlobalScope")}}</li>
+  <li>{{domxref("SharedWorkerGlobalScope")}}</li>
 </ul>

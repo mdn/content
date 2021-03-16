@@ -10,7 +10,7 @@ tags:
   - offset-anchor
   - 'recipe:css-property'
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong><code>offset-anchor</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the point inside the box of an element travelling along an {{cssxref("offset-path")}} that is actually moving along the path.</p>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* Keyword values */
+<pre class="brush: css">/* Keyword values */
 offset-anchor: top;
 offset-anchor: bottom;
 offset-anchor: left;
@@ -58,7 +58,7 @@ offset-anchor: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -72,20 +72,20 @@ offset-anchor: unset;</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;section&gt;
-  &lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"offset-anchor1</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;
+<pre class="brush: html line-numbers language-html">&lt;section&gt;
+  &lt;div class="offset-anchor1"&gt;&lt;/div&gt;
 &lt;/section&gt;
 &lt;section&gt;
-</span><span class="tag token"><span class="punctuation token">  &lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"offset-anchor2</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;
+  &lt;div class="offset-anchor2"&gt;&lt;/div&gt;
 &lt;/section&gt;
 &lt;section&gt;
-</span><span class="tag token"><span class="punctuation token">  &lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"offset-anchor3</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code>
+  &lt;div class="offset-anchor3"&gt;&lt;/div&gt;
 &lt;/section&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   offset-path: path('M 0,20 L 200,20');
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;

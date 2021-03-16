@@ -2,22 +2,25 @@
 title: Window.onvrdisplaypointerrestricted
 slug: Web/API/Window/onvrdisplaypointerrestricted
 tags:
-  - Event Handler
-  - Experimental
-  - Property
-  - Reference
-  - Window
-  - onvrdisplaypointerrestricted
+- Event Handler
+- Experimental
+- Property
+- Reference
+- Window
+- onvrdisplaypointerrestricted
 ---
-<div>{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}</div>
 
-<p>The <strong><code>onvrdisplaypointerrestricted</code></strong> property of the {{domxref("Window")}} interface represents an event handler that will run when the VR display's pointer input is restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.</p>
+<p>The <strong><code>onvrdisplaypointerrestricted</code></strong> property of the
+  {{domxref("Window")}} interface represents an event handler that will run when the VR
+  display's pointer input is restricted to consumption via a <a
+    href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.</p>
 
 <p>The event object is of type {{domxref("VRDisplayEvent")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>window</em>.onvrdisplaypointerrestricted = <em>functionRef</em>;
+<pre class="brush: js"><em>window</em>.onvrdisplaypointerrestricted = <em>functionRef</em>;
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -29,18 +32,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-window-onvrdisplaypointerrestricted', 'onvrdisplaypointerrestricted')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebVR 1.1', '#dom-window-onvrdisplaypointerrestricted',
+        'onvrdisplaypointerrestricted')}}</td>
+      <td>{{Spec2('WebVR 1.1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -50,6 +54,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
+  <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
+  <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> —
+    demos, downloads, and other resources from the Mozilla VR team.</li>
 </ul>

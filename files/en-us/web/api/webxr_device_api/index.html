@@ -35,7 +35,7 @@ tags:
 
 <figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 20em; margin-bottom: 1em; margin-right: 2em; float: left;">
 <figcaption><strong>Example WebXR hardware setup</strong></figcaption>
-<img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png"></figure>
+<img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"' src="hw-setup.png"></figure>
 
 <p>While the older <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.</p>
 
@@ -64,7 +64,7 @@ tags:
  <dt>{{DOMxRef("XRSession")}}</dt>
  <dd>Provides the interface for interacting with XR hardware. Once an <code>XRSession</code> is obtained from {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}}, the session can be used to check the position and orientation of the viewer, query the device for environment information, and present the virtual or augmented world to the user.</dd>
  <dt>{{DOMxRef("XRSpace")}}</dt>
- <dd><code>XRSpace</code> is an opaque base class on which all virtual coordinate system interfaces are based. Positions in WebXR are always expressed in relation to a particular <code>XRSpace</code> at the time at which a particular {{domxref("XRFrame")}} takes place. The space's coordinate system has its origin at the a given physical position.</dd>
+ <dd><code>XRSpace</code> is an opaque base class on which all virtual coordinate system interfaces are based. Positions in WebXR are always expressed in relation to a particular <code>XRSpace</code> at the time at which a particular {{domxref("XRFrame")}} takes place. The space's coordinate system has its origin at a given physical position.</dd>
  <dt>{{DOMxRef("XRReferenceSpace")}}</dt>
  <dd>A subclass of {{domxref("XRSpace")}} which is used to identify a spatial relationship in relation to the user's physical environment. The <code>XRReferenceSpace</code> coordinate system is expected to remain unchanged through the lifespan of the {{domxref("XRSession")}}.The world has no boundaries and extends infinitely in every direction.</dd>
  <dt>{{DOMxRef("XRBoundedReferenceSpace")}}</dt>
@@ -150,7 +150,7 @@ tags:
  <dd>In this example and tutorial, we use information learned throughout the WebXR documentation to create a scene containing a rotating cube which the user can move around using both VR headset and keyboard and mouse.</dd>
  <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs">Inputs and input sources</a></dt>
  <dd>A guide to input sources and how to efficiently manage the input devices being used to control the WebXR session, and how to receive and process user inputs from those devices.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Audio_API/Targeting">Targeting and hit detection </a></dt>
+ <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Targeting">Targeting and hit detection </a></dt>
  <dd>How to use an input source's targeting ray mode and targeting ray space to display a targeting ray, identify targeted surfaces or objects, and perform related tasks.</dd>
  <dt><a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles</a></dt>
  <dd>A guide to interpreting the {{Glossary("JSON")}} data provided by the <a href="https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry">WebXR Input Profiles Registry</a>, which can be used to determine what options and controls are available on the user's available input devices.</dd>

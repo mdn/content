@@ -39,7 +39,7 @@ tags:
 
 <p>The landing page HTML of our application is defined in <code>app/templates/application.hbs</code>. This already exists, and its contents currently look like so:</p>
 
-<pre class="brush: html notranslate">\{{!-- The following component displays Ember's default welcome message. --}}
+<pre class="brush: html">\{{!-- The following component displays Ember's default welcome message. --}}
 &lt;WelcomePage /&gt;
 \{{!-- Feel free to remove this! --}}
 
@@ -50,7 +50,7 @@ tags:
 
 <p>However, we don't want this. Instead, we want it to contain the TodoMVC app structure. To start with, delete the contents of <code>application.hbs</code> and replace them with the following:</p>
 
-<pre class="brush: html notranslate">&lt;section class="todoapp"&gt;
+<pre class="brush: html">&lt;section class="todoapp"&gt;
   &lt;h1&gt;todos&lt;/h1&gt;
   &lt;input
     class="new-todo"
@@ -66,11 +66,11 @@ tags:
 
 <p>When you save <code>application.hbs</code>, the development server you started earlier will automatically rebuild the app and refresh the browser. The rendered output should now look like this:</p>
 
-<p><img alt="todo app rendered in the browser with only the new todo input field showing" src="https://mdn.mozillademos.org/files/17224/todos-initial-render.png" style="height: 684px; width: 741px;"></p>
+<p><img alt="todo app rendered in the browser with only the new todo input field showing" src="todos-initial-render.png"></p>
 
 <p>It doesn't take too much effort to get our HTML looking like a fully-featured to-do list app. Update the <code>application.hbs</code> file again so its content looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;section class="todoapp"&gt;
+<pre class="brush: html">&lt;section class="todoapp"&gt;
   &lt;h1&gt;todos&lt;/h1&gt;
   &lt;input
     class="new-todo"
@@ -143,13 +143,13 @@ tags:
 
 <p>The rendered output should now be as follows:</p>
 
-<p><img alt="todo app rendered in the browser with new todo input field and existing todos showing, - buy movie tickets and go to movie" src="https://mdn.mozillademos.org/files/17228/todos-with-todo-items.png" style="height: 684px; width: 741px;"></p>
+<p><img alt="todo app rendered in the browser with new todo input field and existing todos showing, - buy movie tickets and go to movie" src="todos-with-todo-items.png"></p>
 
 <p>This looks pretty complete, but remember that this is only a static prototype. Now we need to break up our HTML code into dynamic components; later we'll turn it into a fully interactive app.</p>
 
 <p>Looking at the code next to the rendered todo app, there are a number of ways we could decide how to break up the UI, but let's plan on splitting the HTML out into the following components:</p>
 
-<p><img alt="code screenshot annotated to show what parts of the code will go into which component" src="https://mdn.mozillademos.org/files/17227/todos-ui-component-breakdown.png" style="height: 1096px; width: 1393px;"></p>
+<p><img alt="code screenshot annotated to show what parts of the code will go into which component" src="todos-ui-component-breakdown.png"></p>
 
 <p>The component groupings are as follows:</p>
 
@@ -166,7 +166,7 @@ tags:
 
 <p>Something odd to note is that the <code>mark-all-complete</code> checkbox (marked in yellow), while in the "main" section, is rendered next to the "new-todo" input. This is because the default CSS absolutely positions the checkbox + label with negative top and left values to move it next to the input, rather than it being inside the "main" section.</p>
 
-<p><img alt="todo app looked at through devtools" src="https://mdn.mozillademos.org/files/17226/todos-devtools-view.png" style="height: 1005px; width: 1125px;"></p>
+<p><img alt="todo app looked at through devtools" src="todos-devtools-view.png"></p>
 
 <h2 id="Using_the_CLI_to_create_our_components_for_us">Using the CLI to create our components for us</h2>
 
@@ -188,11 +188,11 @@ tags:
  <li>
   <p>Enter the following command into your terminal:</p>
 
-  <pre class="brush: bash notranslate">ember generate component header</pre>
+  <pre class="brush: bash">ember generate component header</pre>
 
   <p>These will generate some new files, as shown in the resulting terminal output:</p>
 
-  <pre class="notranslate">installing component
+  <pre>installing component
   create app/components/header.hbs
   skip app/components/header.js
   tip to add a class, run `ember generate component-class header`
@@ -211,13 +211,13 @@ installing component-test
 
 <p>Before we start adding any component code, let’s create the scaffolding for the other components. Enter the following lines into your terminal, one by one:</p>
 
-<pre class="brush: bash notranslate">ember generate component todo-list
+<pre class="brush: bash">ember generate component todo-list
 ember generate component todo
 ember generate component footer</pre>
 
 <p>You’ll now see the following inside your <code>todomvc/app/components</code> directory:</p>
 
-<p><img alt="the app components directory, showing the component template files we've created" src="https://mdn.mozillademos.org/files/17229/todos-components-directory.png" style="display: block; height: 244px; margin: 0 auto; width: 285px;"></p>
+<p><img alt="the app components directory, showing the component template files we've created" src="todos-components-directory.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Now that we have all of our component structure files, we can cut and paste the HTML for each component out of the <code>application.hbs</code> file and into each of those components, and then re-write the <code>application.hbs</code> to reflect our new abstractions.</p>
 
@@ -225,7 +225,7 @@ ember generate component footer</pre>
  <li>
   <p>The <code>header.hbs</code> file should be updated to contain the following:</p>
 
-  <pre class="brush: html notranslate">&lt;input
+  <pre class="brush: html">&lt;input
   class="new-todo"
   aria-label="What needs to be done?"
   placeholder="What needs to be done?"
@@ -235,7 +235,7 @@ ember generate component footer</pre>
  <li>
   <p><code>todo-list.hbs</code> should be updated to contain this chunk of code:</p>
 
-  <pre class="brush: html notranslate">&lt;section class="main"&gt;
+  <pre class="brush: html">&lt;section class="main"&gt;
   &lt;input id="mark-all-complete" class="toggle-all" type="checkbox"&gt;
   &lt;label for="mark-all-complete"&gt;Mark all as complete&lt;/label&gt;
 
@@ -252,7 +252,7 @@ ember generate component footer</pre>
  <li>
   <p>Add the following into the <code>todo.hbs</code> file:</p>
 
-  <pre class="brush: html notranslate">&lt;li&gt;
+  <pre class="brush: html">&lt;li&gt;
   &lt;div class="view"&gt;
     &lt;input
       aria-label="Toggle the completion of this todo"
@@ -273,7 +273,7 @@ ember generate component footer</pre>
  <li>
   <p><code>footer.hbs</code> should be updated to contain the following:</p>
 
-  <pre class="brush: html notranslate">&lt;footer class="footer"&gt;
+  <pre class="brush: html">&lt;footer class="footer"&gt;
   &lt;span class="todo-count"&gt;
     &lt;strong&gt;0&lt;/strong&gt; todos left
   &lt;/span&gt;
@@ -294,7 +294,7 @@ ember generate component footer</pre>
  <li>
   <p>Finally, the contents of <code>application.hbs</code> should be updated so that they call the appropriate components, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;section class="todoapp"&gt;
+  <pre class="brush: html">&lt;section class="todoapp"&gt;
   &lt;h1&gt;todos&lt;/h1&gt;
 
   &lt;Header /&gt;
@@ -308,7 +308,7 @@ ember generate component footer</pre>
  </li>
 </ol>
 
-<p><img alt="todo app rendered in the browser with new todo input field and existing todos showing, both saying buy movie tickets" src="https://mdn.mozillademos.org/files/17225/todos-components-render.png" style="height: 676px; width: 739px;"></p>
+<p><img alt="todo app rendered in the browser with new todo input field and existing todos showing, both saying buy movie tickets" src="todos-components-render.png"></p>
 
 <p>Notice how the todo items both say "Buy Movie Tickets" — this is because the same component is being invoked twice, and the todo text is hardcoded into it. We'll look at showing different todo items in the next article!</p>
 

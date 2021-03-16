@@ -26,7 +26,7 @@ tags:
 <div class="moreinfo">Learn how to use these key values in JavaScript using <a href="/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key</a></div>
 </div>
 
-<p><a href="#Special_values">Special Values </a>| <a href="#Modifier_keys">Modifier Keys</a> | <a href="#Whitespace_keys">Whitespace Keys</a> | <a href="#Navigation_keys">Navigation Keys</a> | <a href="#Editing_keys">Editing Keys</a> | <a href="#UI_keys">UI Keys</a> | <a href="#Device_keys">Device Keys</a> | <a href="#IME_and_composition_keys">IME and Composition Keys</a> | <a href="#Function_keys">Function Keys</a> | <a href="#Phone_keys">Phone Keys</a> | <a href="#Multimedia_keys">Multimedia Keys</a> | <a href="#Audio_control_keys">Audio Control Keys</a> | <a href="#TV_control_keys">TV Control Keys</a> | <a href="#Media_controller_keys">Media Controller Keys</a> | <a href="#Speech_recognition_keys">Speech Recognition Keys</a> | <a href="#Document_keys">Document Keys</a> | <a href="#Application_selector_keys">Application Selector Keys</a> | <a href="#Browser_control_keys">Browser Control Keys</a> | <a href="#Numeric_keypad_keys">Numeric Keypad Keys</a></p>
+<p><a href="#special_values">Special Values </a>| <a href="#modifier_keys">Modifier Keys</a> | <a href="#whitespace_keys">Whitespace Keys</a> | <a href="#navigation_keys">Navigation Keys</a> | <a href="#editing_keys">Editing Keys</a> | <a href="#ui_keys">UI Keys</a> | <a href="#device_keys">Device Keys</a> | <a href="#ime_and_composition_keys">IME and Composition Keys</a> | <a href="#function_keys">Function Keys</a> | <a href="#phone_keys">Phone Keys</a> | <a href="#multimedia_keys">Multimedia Keys</a> | <a href="#audio_control_keys">Audio Control Keys</a> | <a href="#tv_control_keys">TV Control Keys</a> | <a href="#media_controller_keys">Media Controller Keys</a> | <a href="#speech_recognition_keys">Speech Recognition Keys</a> | <a href="#document_keys">Document Keys</a> | <a href="#application_selector_keys">Application Selector Keys</a> | <a href="#browser_control_keys">Browser Control Keys</a> | <a href="#numeric_keypad_keys">Numeric Keypad Keys</a></p>
 
 <h2 id="Special_values">Special values</h2>
 
@@ -234,7 +234,7 @@ tags:
  </thead>
 </table>
 
-<p>[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as <code>"OS"</code> instead of as <code>"Meta"</code>. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as <code>"OS"</code> by Firefox: <code>VK_LWIN</code> (0x5B) and <code>VK_RWIN</code> (0x5C) on Windows, and <code><code>GDK_KEY_Super_L</code> (0xFFEB)</code>, <code><code>GDK_KEY_Super_R</code> (0xFFEC)</code>, <code><code>GDK_KEY_Hyper_L</code> (0xFFED)</code>, and <code><code>GDK_KEY_Hyper_R</code> (0xFFEE)</code> on Linux.</p>
+<p>[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as <code>"OS"</code> instead of as <code>"Meta"</code>. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as <code>"OS"</code> by Firefox: <code>VK_LWIN</code> (0x5B) and <code>VK_RWIN</code> (0x5C) on Windows, and <code>GDK_KEY_Super_L</code> (0xFFEB), <code>GDK_KEY_Super_R</code> (0xFFEC), <code>GDK_KEY_Hyper_L</code> (0xFFED), and <code>GDK_KEY_Hyper_R</code> (0xFFEE) on Linux.</p>
 
 <p>[2] Internet Explorer (tested on release 9 and 11) reports <code>"Scroll"</code> instead of <code>"ScrollLock"</code> for the <kbd>Scroll Lock</kbd> key.</p>
 
@@ -268,10 +268,10 @@ tags:
    <td><code>kVK_Return</code> (0x24)<br>
     <code>kVK_ANSI_KeypadEnter</code> (0x4C)<br>
     <code>kVK_Powerbook_KeypadEnter</code> (0x34)</td>
-   <td><code><code>GDK_KEY_Return</code> (0xFF0D)</code><br>
-    <code><code>GDK_KEY_KP_Enter</code> (0xFF8D)</code><br>
-    <code><code>GDK_KEY_ISO_Enter</code> (0xFE34)</code><br>
-    <code><code>GDK_KEY_3270_Enter</code> (0xFD1E)</code><br>
+   <td><code>GDK_KEY_Return</code> (0xFF0D)<br>
+    <code>GDK_KEY_KP_Enter</code> (0xFF8D)<br>
+    <code>GDK_KEY_ISO_Enter</code> (0xFE34)<br>
+    <code>GDK_KEY_3270_Enter</code> (0xFD1E)<br>
     <code>Qt::Key_Return</code> (0x01000004)<br>
     <code>Qt::Key_Enter</code> (0x01000005)</td>
    <td><code>KEYCODE_ENTER</code> (66)<br>
@@ -283,9 +283,9 @@ tags:
    <td>The Horizontal Tab key, <kbd>Tab</kbd>.</td>
    <td><code>VK_TAB</code> (0x09)</td>
    <td><code>kVK_Tab</code> (0x30)</td>
-   <td><code><code>GDK_KEY_Tab</code> (0xFF09)</code><br>
-    <code><code>GDK_KEY_KP_Tab</code> (0xFF89)<br>
-    GDK_KEY_ISO_Left_Tab</code> (0xFE20)<br>
+   <td><code>GDK_KEY_Tab</code> (0xFF09)<br>
+    <code>GDK_KEY_KP_Tab</code> (0xFF89)<br>
+    <code>GDK_KEY_ISO_Left_Tab</code> (0xFE20)<br>
     <code>Qt::Key_Tab</code> (0x01000001)</td>
    <td><code>KEYCODE_TAB</code> (61)</td>
   </tr>

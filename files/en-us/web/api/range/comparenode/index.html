@@ -2,35 +2,42 @@
 title: Range.compareNode()
 slug: Web/API/Range/compareNode
 tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Obsolete
-  - Range
-  - Reference
-  - compareNode
+- API
+- DOM
+- DOM Reference
+- Method
+- Non-standard
+- Obsolete
+- Range
+- Reference
+- compareNode
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_Header}}{{Obsolete_Header("Gecko1.9")}}</p>
+<p>{{APIRef("DOM")}}{{Non-standard_Header}}{{deprecated_header}}</p>
 
-<p>The <strong><code>Range.compareNode()</code></strong> returns a constant indicating the position of the {{DOMxRef("Node")}}.</p>
+<p>The <strong><code>Range.compareNode()</code></strong> returns a constant indicating the
+  position of the {{DOMxRef("Node")}}.</p>
 
 <p>The possible values are:</p>
 
 <dl>
- <dt><code>NODE_BEFORE</code> (<code>0</code>)</dt>
- <dd>Node starts before the Range</dd>
- <dt><code>NODE_AFTER</code> (<code>1</code>)</dt>
- <dd>Node ends after the Range</dd>
- <dt><code>NODE_BEFORE_AND_AFTER</code> (<code>2</code>)</dt>
- <dd>Node starts before and ends after the Range</dd>
- <dt><code>NODE_INSIDE</code> (<code>3</code>)</dt>
- <dd>Node starts after and ends before the Range, i.e. the Node is completely selected by the Range.</dd>
+  <dt><code>NODE_BEFORE</code> (<code>0</code>)</dt>
+  <dd>Node starts before the Range</dd>
+  <dt><code>NODE_AFTER</code> (<code>1</code>)</dt>
+  <dd>Node ends after the Range</dd>
+  <dt><code>NODE_BEFORE_AND_AFTER</code> (<code>2</code>)</dt>
+  <dd>Node starts before and ends after the Range</dd>
+  <dt><code>NODE_INSIDE</code> (<code>3</code>)</dt>
+  <dd>Node starts after and ends before the Range, i.e. the Node is completely selected by
+    the Range.</dd>
 </dl>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> This method <a href="/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility">has been removed</a> from <a href="/en-US/docs/Mozilla/Firefox/Releases/3">Gecko 1.9</a> and will not exist in future versions of Firefox, which was the only browser implementing it; you should switch to {{DOMxRef("Range.compareBoundaryPoints()")}} as soon as possible.</p>
+  <p><strong>Warning:</strong> This method <a
+      href="/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility">has been
+      removed</a> from <a href="/en-US/docs/Mozilla/Firefox/Releases/3">Gecko 1.9</a> and
+    will not exist in future versions of Firefox, which was the only browser implementing
+    it; you should switch to {{DOMxRef("Range.compareBoundaryPoints()")}} as soon as
+    possible.</p>
 </div>
 
 <p>The following function can be used as replacement:</p>
@@ -59,14 +66,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>returnValue</em> = <em>range</em>.compareNode( <em>referenceNode</em> );
+<pre class="brush: js"><em>returnValue</em> = <em>range</em>.compareNode( <em>referenceNode</em> );
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>referenceNode</em></dt>
- <dd>The {{DOMxRef("Node")}} to compare with the <code>Range</code>.</dd>
+  <dt><em>referenceNode</em></dt>
+  <dd>The {{DOMxRef("Node")}} to compare with the <code>Range</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -78,7 +85,8 @@ returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
 
 <h2 id="Notes">Notes</h2>
 
-<p>This method is obsolete; you should use the W3C DOM {{DOMxRef("Range.compareBoundaryPoints()")}} method.</p>
+<p>This method is obsolete; you should use the W3C DOM
+  {{DOMxRef("Range.compareBoundaryPoints()")}} method.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -91,5 +99,5 @@ returnValue = range.compareNode(document.getElementsByTagName("p").item(0));
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

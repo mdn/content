@@ -47,9 +47,9 @@ slug: Mozilla/Developer_guide/Build_Instructions/Old_Thunderbird_build
 
 <div class="warning">On some types of network connections, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. (Make sure the unbundled folder's name is now "mozilla" and not "mozilla-central"). Then run "python client.py checkout"  to ensure you are up-to-date.</div>
 
-<p class="editable">The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. For more on getting the source code, see the page <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
+<p>The source code requires 3.6GB of free space or more and additionally 5GB or more for default build. For more on getting the source code, see the page <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
 
-<h2 class="editable" id="Build_configuration">Build configuration</h2>
+<h2 id="Build_configuration">Build configuration</h2>
 
 <p>To build Thunderbird, you need to add a file named <code>mozconfig</code> to the root directory of the comm-central checkout that contains the following line:</p>
 
@@ -79,7 +79,7 @@ echo 'ac_add_options --enable-application=mail' &gt; mozconfig
 
 <p>mach is our command-line tool to streamline common developer tasks. See the <a href="/en-US/docs/Mozilla/Developer_guide/mach">mach</a> article for more.</p>
 
-<p>Building can take a significant amount of time, depending on your system, OS, and chosen build options. Linux builds on a fast box may take under 15 minutes, but Windows builds on a slow box may take several hours. <strong><a href="/en-US/docs/Mozilla/Developer_guide/Mozilla_build_FAQ#Making_builds_faster" rel="internal">Tips for making builds faster</a></strong>.</p>
+<p>Building can take a significant amount of time, depending on your system, OS, and chosen build options. Linux builds on a fast box may take under 15 minutes, but Windows builds on a slow box may take several hours. <strong><a href="/en-US/docs/Mozilla/Developer_guide/Mozilla_build_FAQ#making_builds_faster" rel="internal">Tips for making builds faster</a></strong>.</p>
 
 <p><span style="line-height: 1.572;">The executable will be at the location listed under <strong>Running</strong> below.</span></p>
 

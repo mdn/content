@@ -15,7 +15,7 @@ tags:
 
 <p>The <strong><code>:not()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the <em>negation pseudo-class</em>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any element that is NOT a paragraph */
+<pre class="brush: css no-line-numbers">/* Selects any element that is NOT a paragraph */
 :not(p) {
   color: blue;
 }</pre>
@@ -30,7 +30,7 @@ tags:
 <p>The ability to list more than one selector is experimental and not yet widely supported.</p>
 </div>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Description">Description</h2>
 
@@ -42,7 +42,7 @@ tags:
  <li>This pseudo-class can increase the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
  <li><code>:not(.foo)</code> will match anything that isn't <code>.foo</code>, <em>including {{HTMLElement("html")}} and {{HTMLElement("body")}}.</em></li>
  <li>This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, <code>body :not(table) a</code> will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the <code>:not()</code> part of the selector.</li>
- <li>Using two selectors at the same time will not work. For example, <code>:not(.foo,bar)</code> is invalid. Instead, <code>:not(.foo):not(.bar)</code> should be used.</li>
+ <li>Using two selectors at the same time is not yet supported in all browsers. Example: <code>:not(.foo, .bar)</code>. For wider support you could use, <code>:not(.foo):not(.bar)</code></li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -51,7 +51,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;I am a paragraph.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;I am a paragraph.&lt;/p&gt;
 &lt;p class="fancy"&gt;I am so very fancy!&lt;/p&gt;
 &lt;div&gt;I am NOT a paragraph.&lt;/div&gt;
 &lt;h2&gt;
@@ -62,7 +62,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.fancy {
+<pre class="brush: css">.fancy {
   text-shadow: 2px 2px 3px gold;
 }
 

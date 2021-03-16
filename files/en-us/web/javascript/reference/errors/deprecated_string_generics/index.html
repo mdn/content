@@ -2,17 +2,18 @@
 title: 'Warning: String.x is deprecated; use String.prototype.x instead'
 slug: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 tags:
-  - Error
-  - JavaScript
-  - Warning
+- Error
+- JavaScript
+- Warning
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript warning about string generics occurs in Firefox versions prior to 68. String generics have been removed starting with Firefox 68.</p>
+<p>The JavaScript warning about string generics occurs in Firefox versions prior to 68.
+  String generics have been removed starting with Firefox 68.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
+<pre class="brush: js">Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
 Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
 Warning: String.concat            is deprecated; use String.prototype.concat            instead
 Warning: String.contains          is deprecated; use String.prototype.contains          instead
@@ -45,7 +46,10 @@ Warning: String.trimRight         is deprecated; use String.prototype.trimRight 
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>The non-standard generic {{jsxref("String")}} methods are deprecated and have been removed in Firefox 68 and later. String generics provide <code>String</code> instance methods on the <code>String</code> object allowing <code>String</code> methods to be applied to any object.</p>
+<p>The non-standard generic {{jsxref("String")}} methods are deprecated and have been
+  removed in Firefox 68 and later. String generics provide <code>String</code> instance
+  methods on the <code>String</code> object allowing <code>String</code> methods to be
+  applied to any object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -99,5 +103,5 @@ String(num).replace(/5/, '2');
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("String")}}</li>
+  <li>{{jsxref("String")}}</li>
 </ul>

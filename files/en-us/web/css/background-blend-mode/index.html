@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* One value */
+<pre class="brush:css no-line-numbers">/* One value */
 background-blend-mode: normal;
 
 /* Two values, one per background */
@@ -42,13 +42,13 @@ background-blend-mode: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: css notranslate">.item {
+<pre class="brush: css">.item {
     width: 300px;
     height: 300px;
     background: url('image1.png'),url('image2.png');
@@ -57,7 +57,7 @@ background-blend-mode: unset;
 
 <h3 id="Try_out_different_blend_modes">Try out different blend modes</h3>
 
-<pre class="brush: html hidden notranslate">&lt;div id="div"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div id="div"&gt;&lt;/div&gt;
 &lt;select id="select"&gt;
     &lt;option&gt;normal&lt;/option&gt;
     &lt;option&gt;multiply&lt;/option&gt;
@@ -77,14 +77,14 @@ background-blend-mode: unset;
     &lt;option&gt;luminosity&lt;/option&gt;
 &lt;/select&gt;</pre>
 
-<pre class="brush: css hidden notranslate">#div {
+<pre class="brush: css hidden">#div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: screen;
 }</pre>
 
-<pre class="brush: js hidden notranslate">document.getElementById("select").onchange = function(event) {
+<pre class="brush: js hidden">document.getElementById("select").onchange = function(event) {
     document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
 console.log(document.getElementById('div'));</pre>

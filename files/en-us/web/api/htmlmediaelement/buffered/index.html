@@ -2,26 +2,34 @@
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
 tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
+- API
+- HTML DOM
+- HTMLMediaElement
+- Property
+- Read-only
+- Web
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>HTMLMediaElement.buffered</code></strong> read-only property returns a new {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the <code>buffered</code> property is accessed.</p>
+<p>The <strong><code>HTMLMediaElement.buffered</code></strong> read-only property returns
+  a new {{domxref("TimeRanges")}} object that indicates the ranges of the media source
+  that the browser has buffered (if any) at the moment the <code>buffered</code> property
+  is accessed.</p>
 
-<div class="note"><strong>Note:</strong> This feature is not available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</div>
+<div class="note"><strong>Note:</strong> This feature is not available in <a
+    href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>timeRange</em> = <em>audioObject</em>.buffered</pre>
+<pre
+  class="brush: js">var <em>timeRange</em> = <em>audioObject</em>.buffered</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("TimeRanges")}} object. This object is <a href="/en-US/docs/Web/API/TimeRanges">normalized</a>, which means that ranges are ordered, don't overlap, aren't empty, and don't touch (adjacent ranges are folded into one bigger range).</p>
+<p>A {{domxref("TimeRanges")}} object. This object is <a
+    href="/en-US/docs/Web/API/TimeRanges">normalized</a>, which means that ranges are
+  ordered, don't overlap, aren't empty, and don't touch (adjacent ranges are folded into
+  one bigger range).</p>
 
 <h2 id="Example">Example</h2>
 
@@ -32,23 +40,25 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "embedded-content.html#media-elements", "HTMLMediaElement.buffered")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.buffered")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "embedded-content.html#media-elements",
+        "HTMLMediaElement.buffered")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change from {{SpecName('HTML5 W3C')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement",
+        "HTMLMediaElement.buffered")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -58,5 +68,5 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
+  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
 </ul>

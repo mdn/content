@@ -23,7 +23,7 @@ tags:
 <div class="note">
 <p>If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children. This is called <strong>clearfix</strong>, and one way to do it is to add <code>clear</code> to a replaced {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> on it.</p>
 
-<pre class="brush: css notranslate">#container::after {
+<pre class="brush: css">#container::after {
   content: "";
   display: block;
   clear: both;
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush: css no-line-numbers">/* Keyword values */
 clear: none;
 clear: left;
 clear: right;
@@ -70,7 +70,7 @@ clear: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -78,7 +78,7 @@ clear: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
   &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
   &lt;p class="left"&gt;This paragraph clears left.&lt;/p&gt;
@@ -87,7 +87,7 @@ clear: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.wrapper{
+<pre class="brush: css">.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -119,7 +119,7 @@ p {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
   &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
   &lt;p class="right"&gt;This paragraph clears right.&lt;/p&gt;
@@ -128,7 +128,7 @@ p {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.wrapper{
+<pre class="brush: css">.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -159,7 +159,7 @@ p {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.&lt;/p&gt;
   &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
   &lt;p class="both"&gt;This paragraph clears both.&lt;/p&gt;
@@ -168,7 +168,7 @@ p {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">.wrapper{
+<pre class="brush: css">.wrapper{
   border:1px solid black;
   padding:10px;
 }

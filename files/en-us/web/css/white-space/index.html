@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush: css no-line-numbers">/* Keyword values */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -126,19 +126,19 @@ white-space: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: css notranslate">code {
+<pre class="brush: css">code {
   white-space: pre;
 }</pre>
 
 <h3 id="Line_breaks_inside_pre_elements">Line breaks inside &lt;pre&gt; elements</h3>
 
-<pre class="brush: css notranslate">pre {
+<pre class="brush: css">pre {
   word-wrap: break-word;      /* IE 5.5-7 */
   white-space: pre-wrap;      /* Modern browsers */
 }</pre>
@@ -148,7 +148,7 @@ white-space: unset;
 <h4 id="HTML">HTML</h4>
 
 <div class="hidden" id="See_it_in_action_LiveSample">
-<pre class="brush: html notranslate">&lt;div id="css-code" class="box"&gt;
+<pre class="brush: html">&lt;div id="css-code" class="box"&gt;
   p { white-space:
   &lt;select&gt;
     &lt;option&gt;normal&lt;/option&gt;
@@ -169,7 +169,7 @@ white-space: unset;
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -193,14 +193,14 @@ white-space: unset;
   font-size: 14px;
 }</pre>
 
-<pre class="brush: js notranslate">var select  = document.querySelector("#css-code select");
+<pre class="brush: js">var select  = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
 select.addEventListener("change", function(e) {
   results.setAttribute("style", "white-space: "+e.target.value);
 })</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt; </pre>
+<pre class="brush: html">&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt; </pre>
 
 <h4 id="Result">Result</h4>
 

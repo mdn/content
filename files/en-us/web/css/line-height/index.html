@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush:css no-line-numbers">/* Keyword value */
 line-height: normal;
 
 /* Unitless values: use this number multiplied
@@ -45,9 +45,9 @@ line-height: unset;
 <p>The <code>line-height</code> property is specified as any one of the following:</p>
 
 <ul>
- <li>a <code><a href="#&lt;number&gt;">&lt;number&gt;</a></code></li>
- <li>a <code><a href="#&lt;length&gt;">&lt;length&gt;</a></code></li>
- <li>a <code><a href="#&lt;percentage&gt;">&lt;percentage&gt;</a></code></li>
+ <li>a <code><a href="#number">&lt;number&gt;</a></code></li>
+ <li>a <code><a href="#length">&lt;length&gt;</a></code></li>
+ <li>a <code><a href="#percentage">&lt;percentage&gt;</a></code></li>
  <li>the keyword <code><a href="#normal">normal</a></code>.</li>
 </ul>
 
@@ -56,11 +56,11 @@ line-height: unset;
 <dl>
  <dt><code id="normal">normal</code></dt>
  <dd>Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly <strong><code>1.2</code></strong>, depending on the element's <code>font-family</code>.</dd>
- <dt><code id="&lt;number&gt;">&lt;number&gt;</code> (unitless)</dt>
+ <dt><code id="number">&lt;number&gt;</code> (unitless)</dt>
  <dd>The used value is this unitless {{cssxref("&lt;number&gt;")}} multiplied by the element's own font size. The computed value is the same as the specified <code>&lt;number&gt;</code>. In most cases, <strong>this is the preferred way</strong> to set <code>line-height</code> and avoid unexpected results due to inheritance.</dd>
- <dt><code id="&lt;length&gt;">&lt;length&gt;</code></dt>
+ <dt><code id="length">&lt;length&gt;</code></dt>
  <dd>The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height. Values given in <strong>em</strong> units may produce unexpected results (see example below).</dd>
- <dt><code id="&lt;percentage&gt;">&lt;percentage&gt;</code></dt>
+ <dt><code id="percentage">&lt;percentage&gt;</code></dt>
  <dd>Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. <strong>Percentage</strong> values may produce unexpected results (see the second example below).</dd>
  <dt><code id="-moz-block-height">-moz-block-height</code> {{non-standard_inline}}</dt>
  <dd>Sets the line height to the content height of the current block.</dd>
@@ -78,13 +78,13 @@ line-height: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: css notranslate">/* All rules below have the same resultant line height */
+<pre class="brush: css">/* All rules below have the same resultant line height */
 
 div { line-height: 1.2;   font-size: 10pt; }   /* number/unitless */
 div { line-height: 1.2em; font-size: 10pt; }   /* length */
@@ -99,7 +99,7 @@ div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */<
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="box green"&gt;
+<pre class="brush: html">&lt;div class="box green"&gt;
  &lt;h1&gt;Avoid unexpected results by using unitless line-height.&lt;/h1&gt;
   length and percentage line-heights have poor inheritance behavior ...
 &lt;/div&gt;
@@ -114,7 +114,7 @@ div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */<
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.green {
+<pre class="brush: css">.green {
   line-height: 1.1;
   border: solid limegreen;
 }
@@ -166,10 +166,7 @@ h1 {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("css.properties.line-height")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

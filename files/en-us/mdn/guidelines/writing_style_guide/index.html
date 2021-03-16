@@ -18,8 +18,6 @@ tags:
 
 <p>The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) style guides. These should be published as subpages of the localization team's page.</p>
 
-<p>For style standards that apply to content written for sites other than MDN, refer to the <a href="https://www.mozilla.org/en-US/styleguide/">One Mozilla style guide</a>.</p>
-
 <h2 id="Basics">Basics</h2>
 
 <p>The best place to start in any extensive publishing style guide is with some very basic text standards to help keep documentation consistent. The following sections outline some of these basics to help you.</p>
@@ -53,16 +51,12 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Guide">JavaScript/Guide</a> – Main table-of-contents page</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/JavaScript_Overview">JavaScript/Guide/JavaScript Overview</a></li>
- <li><a href="/en-US/docs/JavaScript/Guide/Functions">JavaScript/Guide/Functions</a></li>
- <li><a href="/en-US/docs/JavaScript/Guide/Details_of_the_Object_Model">JavaScript/Guide/Details of the Object Model</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Introduction">JavaScript/Guide/JavaScript Overview</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">JavaScript/Guide/Functions</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">JavaScript/Guide/Details of the Object Model</a></li>
 </ul>
 
 <p>Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> Adding articles requires <a href="/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page-creation_permissions">page creation privileges</a>.</p>
-</div>
 
 <h3 id="General_article_content_guidelines">General article content guidelines</h3>
 
@@ -139,21 +133,19 @@ tags:
  <li>If the code is intricate, uses the API being documented, or is technically creative, you should provide a more detailed explanation.</li>
 </ul>
 
-<p>When using the live sample system, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.</p>
+<p>When adding <a href="/en-US/docs/MDN/Structures/Live_samples">live samples</a>, it's helpful to be aware that all of the {{HTMLElement("pre")}} blocks in the area that contains the sample are concatenated together before running the example, which lets you break any or all of the HTML, CSS, and JavaScript into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.</p>
 
 <h4 id="Overly-short_articles_are_hard_to_find">Overly-short articles are hard to find</h4>
 
 <p>If an article is "thin"—that is, too short—it may not be indexed properly (or at all) by search engines. As a rule of thumb, the article's body text should be at least 250–300 words. Don't artificially inflate a page, but treat this guideline as a minimum target length when possible.</p>
 
-<h3 id="Sections_paragraphs_and_newlines">Sections, paragraphs, and newlines</h3>
-
-<p>The <kbd>Enter</kbd> (or <kbd>Return</kbd>) key on your keyboard starts a new paragraph. To insert a newline, rather than a new paragraph (that is, to create a {{HTMLElement("br")}} instead of a {{HTMLElement("p")}}), hold down the <kbd>Shift</kbd> key while pressing <kbd>Enter</kbd>.</p>
+<h3 id="Headings">Headings</h3>
 
 <p>When a new paragraph starts a new section, a header should be added.  Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
 
-<p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page, and linking them together using the following macros: {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, and {{TemplateLink("PreviousNext")}}.</p>
+<p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page.</p>
 
-<h4 id="Heading_dos_and_donts">Heading dos and donts</h4>
+<h4 id="Heading_dos_and_donts">Heading dos and don'ts</h4>
 
 <ul>
  <li><strong>Don't create single subsections.</strong> Don't subdivide a topic into a single subtopic. It's either two subheadings or more, or none at all.</li>
@@ -208,7 +200,7 @@ tags:
 
 <p>Use the <strong>"Formatting Styles"</strong> drop-down list to apply predefined styles to selected content.</p>
 
-<div class="note">The <strong>"Note Box"</strong> style is used to call out important notes, like this one.</div>
+<div class="note notecard">The <strong>"Note Box"</strong> style is used to call out important notes, like this one.</div>
 
 <div class="warning">Similarly, the <strong>"Warning Box"</strong> style creates warning boxes like this.</div>
 
@@ -216,15 +208,15 @@ tags:
 
 <h3 id="Code_sample_style_and_formatting">Code sample style and formatting</h3>
 
-<div class="note">
-<p><strong>Note</strong>: This section deals with the styling/formatting of code as it appears on an MDN article. If you want guidelines on actually writing code examples, see our <a href="/en-US/docs/MDN/Contribute/Guidelines/Code_samples">Code sample guidelines</a>.</p>
+<div class="note notecard">
+<p><strong>Note</strong>: This section deals with the styling/formatting of code as it appears on an MDN article. If you want guidelines on actually writing code examples, see our <a href="/en-US/docs/MDN/Guidelines/Code_guidelines">Code sample guidelines</a>.</p>
 </div>
 
 <h4 id="Tabs_and_line_breaks">Tabs and line breaks</h4>
 
 <p>Use two spaces per tab in all code examples. Indent the code cleanly, with open-brace ("<code>{</code>") characters on the same line as the statement that opens the block. For example:</p>
 
-<pre class="brush: js notranslate">if (condition) {
+<pre class="brush: js">if (condition) {
   /* handle the condition */
 } else {
   /* handle the "else" case */
@@ -233,7 +225,7 @@ tags:
 
 <p>Long lines shouldn't be allowed to stretch off horizontally to the extent that they require horizontal scrolling to read. Instead, break long lines at natural breaking points. Some examples follow:</p>
 
-<pre class="brush: js notranslate">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
+<pre class="brush: js">if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
        || class.YET_ANOTHER_CONDITION ) {
   /* something */
 }
@@ -244,50 +236,13 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h4 id="Inline_code_formatting">Inline code formatting</h4>
 
-<p>Use the "Code" button (labeled with two angle brackets "<strong>&lt;&gt;</strong>") to apply inline code-style formatting to function names, variable names, and method names. (This uses the {{HTMLElement("code")}} element). For example: "the <code class="js plain">frenchText()</code> function".</p>
+<p>Use the {{HTMLElement("code")}} tags to mark up function names, variable names, and method names. For example: "the <code>frenchText()</code> function".</p>
 
 <p><strong>Method names should be followed by a pair of parentheses.</strong> For example, <code>doSomethingUseful()</code>. The parentheses help differentiate methods from other code terms.</p>
 
 <h4 id="Syntax_highlighting">Syntax highlighting</h4>
 
-<p><img alt="Screenshot of the 'Syntax Highlighter' menu." src="https://mdn.mozillademos.org/files/12682/Language%20list.png" style="border-style: solid; border-width: 1px; float: right; margin: 2px 4px;">A line or multiple lines of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Select the appropriate language from the language list button (the one with the two code blocks), as seen in the screenshot to the right. This will insert a preformatted code box with line numbers and syntax highlighting for the chosen language.</p>
-
-<div class="note">
-<p><strong>Note:</strong> <em>Do not</em> use the {{HTMLElement("code")}} element inside the {{HTMLElement("pre")}} block!</p>
-
-<p>While this structure is used on some sites, we do not do so on MDN; nesting these elements will break certain aspects of our styling.</p>
-</div>
-
-<p>The following example shows text with JavaScript formatting:</p>
-
-<div class="line number2 index1 alt1">
-<pre class="brush: js notranslate">for (let i = 0, j = 9; i &lt;= 9; i++, j--)
-  document.writeln("a[" + i + "][" + j + "]= " + a[i][j]);</pre>
-</div>
-
-<p>If no appropriate language is available, use ("No Highlight" in the language menu). This will result in code without syntax highlighting:</p>
-
-<pre class="brush: plain notranslate">x = 42;</pre>
-
-<h4 id="Syntax_definitions">Syntax definitions</h4>
-
-<p>When writing the syntax description section of a reference page, use the <em>"Syntax Box"</em> option in the <strong>"Styles"</strong> drop-down menu in the editor toolbar. This creates a specially-formatted box that is used specifically for syntax definitions, distinguishing them from other code blocks.</p>
-
-<h4 id="Blocks_not_referring_to_code">Blocks not referring to code</h4>
-
-<p>There are a some use cases where a <code>&lt;pre&gt;</code> block does not refer to code and doesn't have syntax highlighting nor line numbers. In such cases you should add a <code>&lt;pre&gt;</code> without a <code>class</code> attribute. For example, those cases include tree structures:</p>
-
-<pre class="notranslate">root/
-
-  folder1/
-    file1
-
-  folder2/
-    file2
-    file3
-</pre>
-
-<p>To create preformatted content without syntax highlighting and line numbers click the "<strong>PRE</strong>" button in the toolbar. Then start to type the text.</p>
+<p>A line or multiple lines of code should be formatted using <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting">syntax highlighting</a> rather than the {{HTMLElement("code")}} element.</p>
 
 <h4 id="Styling_mentions_of_HTML_elements">Styling mentions of HTML elements</h4>
 
@@ -299,7 +254,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>Attribute names</dt>
  <dd>Use "Inline Code" style to put attribute names in <code>code font</code>. Additionally, put them in <strong><code>bold face</code></strong> when the attribute is mentioned in association with an explanation of what it does, or the first time it is used in the article.</dd>
  <dt>Attribute definitions</dt>
- <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages easily by using the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("type","element")}}</span>) to reference attribute definitions.</dd>
+ <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages easily by using the {{TemplateLink("htmlattrxref")}} macro (e.g., \{{htmlattrxref("type","element")}}) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
  <dd>Use the "Inline Code" style to apply <code>&lt;code&gt;</code> to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample.</dd>
  <dd><strong>For example:</strong> "When the <code>type</code> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ..."</dd>
@@ -382,8 +337,8 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  </tbody>
 </table>
 
-<div class="note">
-<p>Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers won't understand the meaning, and others are often confused with one another.</p>
+<div class="note notecard">
+<p><strong>Note</strong>: Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers won't understand the meaning, and others are often confused with one another.</p>
 
 <p>Also, be sure that <em>you</em> use them correctly, if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.</p>
 </div>
@@ -434,7 +389,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Use standard English capitalization rules in body text, and capitalize "World Wide Web." It is acceptable to use lower case for "web" (used alone or as a modifier) and "internet".</p>
 
 <div class="notecard note">
-<p>This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.</p>
+<p><strong>Note</strong>: This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.</p>
 
 <p>Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.</p>
 </div>
@@ -477,47 +432,29 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <br>
  Let's take the following example:</p>
 
-<blockquote>
-<p>A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam.</p>
-</blockquote>
+<p><em>A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam.</em></p>
 
-<blockquote>
-<p>A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam.</p>
-</blockquote>
+<p><em>A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam.</em></p>
 
 <p>Both versions are gender-specific. To fix this, use gender-neutral pronouns:</p>
 
-<blockquote>
-<p>A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.</p>
-</blockquote>
+<p><em>A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.</em></p>
 
-<div class="note">
-<p>MDN allows the use of this very common syntax (which is controversial among usage authorities) to make up for the lack of a neutral gender in English.</p>
+<div class="note notecard">
+<p><strong>Note</strong>: MDN allows the use of this very common syntax (which is controversial among usage authorities) to make up for the lack of a neutral gender in English.</p>
 
 <p>The use of the third-person plural as a gender neutral pronoun (that is, using "they," "them", "their," and "theirs") is an accepted practice, commonly known as "<a href="https://en.wikipedia.org/wiki/Singular_they">singular 'they.'</a>"</p>
 </div>
 
-<p>You can use both genders:</p>
-
-<blockquote>
-<p>A confirmation dialog appears, asking the user if he or she allows the web page to make use of his/her web cam.</p>
-</blockquote>
-
 <p>Making the users plural:</p>
 
-<blockquote>
-<p>A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.</p>
-</blockquote>
+<p><em>A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.</em></p>
 
 <p>The best solution, of course, is to rewrite and eliminate the pronouns:</p>
 
-<blockquote>
-<p>A confirmation dialog appears, requesting the user's permission for web cam access.</p>
-</blockquote>
+<p><em>A confirmation dialog appears, requesting the user's permission for web cam access.</em></p>
 
-<blockquote>
-<p>A confirmation dialog box appears, which asks the user for permission to use the web cam.</p>
-</blockquote>
+<p><em>A confirmation dialog box appears, which asks the user for permission to use the web cam.</em></p>
 
 <p>This last example of dealing with the problem is arguably better. Not only is it grammatically more correct, but removes some of the complexity associated with dealing with genders across different languages that may have wildly different gender rules. This solution can make translation easier for both readers and localizers.</p>
 
@@ -577,10 +514,6 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <li><span class="incorrect"><strong>Incorrect</strong></span>: I will travel on trains, planes and automobiles.</li>
 </ul>
 
-<div class="note">
-<p>This is in contrast to the <a href="https://www.mozilla.org/en-US/styleguide/">One Mozilla style guide</a>, which specifies that the serial comma is not to be used. MDN is an exception to this rule.</p>
-</div>
-
 <h4 id="Apostrophes_and_quotation_marks">Apostrophes and quotation marks</h4>
 
 <p><strong>Do not use "curly" quotes and quotation marks.</strong> On MDN, we only use straight quotes and apostrophes.</p>
@@ -605,7 +538,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <ul>
  <li><span class="correct"><strong>Correct</strong></span>: localize, behavior</li>
- <li><span class="incorrect"><strong>Incorrect</strong></span>: localise, behavior</li>
+ <li><span class="incorrect"><strong>Incorrect</strong></span>: localise, behaviour</li>
 </ul>
 
 <h3 id="Terminology">Terminology</h3>
@@ -638,171 +571,6 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <p>While the active voice is preferred, the passive voice is also acceptable, given the informal feel of our content. Try to be consistent, though.</p>
 
-<h2 id="Wiki_markup_and_usage">Wiki markup and usage</h2>
-
-<h3 id="Links">Links</h3>
-
-<p>Links are a large part of what makes a wiki a powerful learning and teaching tool. Below you'll find some basic information, but you can find a complete guide to <a href="/en-US/docs/MDN/Contribute/Editor/Links">creating and editing links on MDN</a> in our editor guide.</p>
-
-<p>We encourage you to create appropriate links among articles; they help improve navigation and discoverability of content, and they provide important context to search engines like Google to help them provide better results. Every page should have a good set of links from words or phrases to other pages that expand upon the relevant ideas. This can be used both to define terms and to provide more in-depth or detailed documentation about a topic, or to connect to a related page that offers examples or information that may be of further interest.</p>
-
-<p>You can easily create links not only among pages on MDN (internal links) but also to pages outside MDN (external links).</p>
-
-<p>There are two ways to create links:</p>
-
-<ul>
- <li>You explicitly create a link using the Link button in the editor's toolbar—or by pressing <kbd>Ctrl</kbd>+<kbd>K</kbd> (<kbd>Cmd</kbd>+<kbd>K</kbd> on the Mac).</li>
- <li>Or, you can use MDN's powerful macro system to generate links automatically or based on an input value.</li>
-</ul>
-
-<p>When deciding what text to use as a link, there are a few guidelines you can follow:</p>
-
-<ul>
- <li><strong>Whenever a macro exists which will create the link you need, and you are able to do so, please do.</strong> <a href="/en-US/docs/MDN/Contribute/Editor/Links#Using_link_macros">Using macros to create links</a> will not only help you get it right, but will allow future improvements to MDN to automatically be applied to your link.</li>
- <li><strong>For an API name, use the entire string of the API term as written in your content.</strong> The easiest way to do this is to <a href="/en-US/docs/MDN/Contribute/Editor/Links#Linking_to_documentation_for_APIs">use the appropriate macro</a> to construct a properly-formatted link for you.</li>
- <li>To link to a page defining or discussing a particular term, use <em>only</em> the term's name for the link's text; do not include additional text in the link. For example:
-  <ul>
-   <li><span class="correct"><strong>Correct</strong></span>: You can use <a href="/en-US/docs/Web/JavaScript">JavaScript</a> code to create dynamic applications on the Web.</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: You can use <a href="/en-US/docs/Web/JavaScript">JavaScript code</a> to create dynamic applications on the Web.</li>
-  </ul>
- </li>
- <li>Otherwise, when adding a useful link to prose, try to choose an action and object phrase, such as:
-  <ul>
-   <li><span class="correct"><strong>Correct</strong></span>: If you'd like to <a href="/en-US/docs/Mozilla/Developer_guide">contribute to the Firefox project</a>, your first step is to <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">download and build Firefox</a>.</li>
-   <li><span class="incorrect"><strong>Incorrect</strong></span>: <a href="/en-US/docs/Mozilla/Developer_guide">If you'd like to contribute to the Firefox project</a>, your first step is to <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">download and build</a> Firefox.</li>
-  </ul>
- </li>
-</ul>
-
-<h4 id="URL_schemes">URL schemes</h4>
-
-<p>For security reasons, you should only create links that use the following schemes:</p>
-
-<ul>
- <li><code>http://</code></li>
- <li><code>https://</code></li>
- <li><code>ftp://</code></li>
- <li><code>mailto:</code></li>
-</ul>
-
-<p>Others may or may not work, but are not supported and will probably be removed by editorial staff.</p>
-
-<div class="note">
-<p>In particular, avoid the <code>about:</code> or <code>chrome://</code> schemes, as they will not work.</p>
-
-<p>Similarly, the <code>javascript:</code> scheme is blocked by most modern browsers, as is <code>jar:</code>.</p>
-</div>
-
-<h3 id="Page_tags">Page tags</h3>
-
-<p>Tags provide meta information about a page. They may also indicate that a page has specific improvements needed to its content. Every page in the wiki should have tags.</p>
-
-<p>You can find details on tagging in our <a href="/en-US/docs/MDN/Contribute/Howto/Tag">How to properly tag pages</a> guide.</p>
-
-<p>The tagging interface lives at the bottom of a page while you're in edit mode, and looks something like this:</p>
-
-<p><img alt="Screenshot of the UX for adding and removing tags on MDN" src="https://mdn.mozillademos.org/files/7859/tag-interface.png" style="border-style: solid; border-width: 1px; height: 167px; width: 863px;"></p>
-
-<p>To add a tag, click in the edit box at the end of the tag list and type the tag name you wish to add. Tags will autocomplete as you type. Press <kbd>Enter</kbd> (or <kbd>Return</kbd>) to submit the new tag. Each article may have as many tags as needed. For example, an article about using JavaScript in AJAX programming might have both "JavaScript" and "AJAX" as tags.</p>
-
-<p>To remove a tag, just click the little "<code>×</code>" icon in the tag.</p>
-
-<h4 id="Tagging_pages_that_need_work">Tagging pages that need work</h4>
-
-<p>In addition to using tags to track information about the documentation's quality and content, we also use them to mark articles as needing specific types of work.</p>
-
-<h4 id="Tagging_obsolete_pages">Tagging obsolete pages</h4>
-
-<p>Use the following tags for pages that are not current:</p>
-
-<dl>
- <dt>Junk</dt>
- <dd>Use for spam, pages created by mistake, or content that is so bad that it should be deleted. Pages with this tag are deleted from time to time.</dd>
- <dt>Obsolete</dt>
- <dd>
- <p>Use for content that is technically superseded, but still valid in context. For example, this might be an HTML element that is obsolete in HTML5, but still valid in HTML 4.01.</p>
-
- <p>You can also use the <span class="nowiki">{{TemplateLink("obsolete_header")}}</span> macro to put a prominent banner on the topic.</p>
- </dd>
- <dt>Archive</dt>
- <dd>
- <p>Use for content that is technically superseded and no longer useful. If possible, add a note to the topic referring readers to a more current topic.</p>
-
- <p>For example, a page that describes how to use the Mozilla CVS repository should refer readers to a current topic on using Mercurial repos. (If no corresponding current topic exists, use the <em>NeedsUpdate</em> tag, and add an explanation on the Talk page.)</p>
-
- <p>Pages with the <em>Archive</em> tag are eventually moved from the main content of MDN to the <a href="/en-US/docs/Archive">Archive</a> section.</p>
- </dd>
-</dl>
-
-<h3 id="SEO_summary">SEO summary</h3>
-
-<p>The SEO summary provides a short description of a page. It will be reported as a summary of the article to robots crawling the site, and will then appear in search results for the page. It is also used by macros that automate the construction of landing pages inside MDN itself. (In other words, it's not just for SEO.)</p>
-
-<p>By default, the first paragraph of the page is used as the SEO summary. However, you can override this behavior by marking a section with the <a href="/en-US/docs/Project:MDN/Contributing/Editor_guide/Editing#Formatting_styles">"SEO summary" style in the WYSIWYG editor</a>.</p>
-
-<h3 id="Landing_pages">Landing pages</h3>
-
-<p><strong>Landing pages</strong> are pages at the root of a topic area of the site, such as the main <a href="/en-US/docs/CSS">CSS</a> or <a href="/en-US/docs/HTML">HTML</a> pages. They have a standard format that consists of three areas:</p>
-
-<ol>
- <li>A brief overview (typically one paragraph) of what the technology is and how it's used. See {{anch("Writing a landing page overview")}} for tips.</li>
- <li>A two-column list of links with appropriate headings. See {{anch("Creating a page link list")}} for guidelines.</li>
- <li>An <strong>optional</strong> "Browser compatibility" section at the bottom of the page.</li>
-</ol>
-
-<h4 id="Creating_a_page_link_list">Creating a page link list</h4>
-
-<p>The link list section of an MDN landing page consists of two columns. These are created using the following HTML:</p>
-
-<pre class="brush: html notranslate">&lt;div class="row topicpage-table"&gt;
-  &lt;div class="section"&gt;
-    ... left column contents ...
-  &lt;/div&gt;
-  &lt;div class="section"&gt;
-    ... right column contents ...
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<p>The left column should be a list of articles, with an <code>&lt;h2&gt;</code> header at the top of the left column explaining that it's a list of articles about the topic (e.g., "Documentation and tutorials about foo"). This header should use the CSS class "Documentation".</p>
-
-<p>Below that is a <code>&lt;dl&gt;</code> list of articles with each article's link in a <code>&lt;dt&gt;</code> block and a brief one-or-two sentence summary of the article in the corresponding <code>&lt;dd&gt;</code> block.</p>
-
-<p>The right column should contain one or more of the following sections, in order:</p>
-
-<dl>
- <dt>Getting help from the community</dt>
- <dd>This should provide information on Matrix chat rooms and mailing lists available on the topic. The heading should use the class "<code>Community</code>".</dd>
- <dt>Tools</dt>
- <dd>A list of tools the user can look at to help with the use of the technology described in this section of MDN. The heading should use the class "<code>Tools</code>".</dd>
- <dt>Related topics</dt>
- <dd>A list of links to landing pages for other, related, technologies of relevance. The heading should use the class "<code>Related_Topics</code>".</dd>
-</dl>
-
-<p><strong>{{TODO("Finish this once we finalize the landing page standards")}}</strong></p>
-
-<h2 id="Using_and_inserting_images">Using and inserting images</h2>
-
-<p>It's sometimes helpful to provide an image in an article you create or modify, especially if the article is very technical.</p>
-
-<p>To include an image:</p>
-
-<ol>
- <li>Before uploading your image, please ensure that it's as small as possible by using an image optimization tool.
-  <ul>
-   <li>For bitmap images (JPG or PNG), consider a tool such as <a href="https://imageoptim.com/mac">ImageOptim</a> (macOS), <a href="https://tinypng.com/">TinyPNG</a> (web service), or <a href="https://trimage.org/">Trimage</a> (Linux).</li>
-   <li>For SVG images, use the <code><a href="https://github.com/svg/svgo">svgo</a></code> tool to optimize the SVG file before sending it. The default configuration is fine.</li>
-  </ul>
- </li>
- <li>Attach the desired image file to the article (at the bottom of every article in edit mode). If your artwork is a diagram in SVG format (which is ideal if there is text that may need to be localized), you can't upload it directly, but you can ask an MDN admin to do it for you.</li>
- <li>Click the "<strong>insert image</strong>" button in the MDN documentation WYSIWYG editor.</li>
- <li>In the WYSIWYG editor's drop-down list of attachments, select the newly created attachment that is your image.</li>
- <li>Press the <strong>OK</strong> button.</li>
-</ol>
-
-<div class="warning">
-<p><strong>Important:</strong> Remember to save any changes you've made before uploading an attachment to your article! The editor is closed during the upload process, and currently <em>does not verify</em> whether or not you wish to save your work when it does so.</p>
-</div>
-
 <h2 id="Other_references">Other references</h2>
 
 <h3 id="Preferred_style_guides">Preferred style guides</h3>
@@ -814,12 +582,6 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>For questions of spelling, please refer to <a href="http://www.dictionary.com/">Dictionary.com</a>. The spelling checker for this site uses American English. Please do not use variant spellings (e.g., use <em>color</em> rather than <em>colour</em>).</p>
 
 <p>We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please post them on the <a href="https://discourse.mozilla.org/c/mdn">MDN discussion forum</a>, so we know what should be added.</p>
-
-<h3 id="MDN-specific">MDN-specific</h3>
-
-<ul>
- <li><a href="/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros" title="Project:en/Custom_Templates">Commonly-used macros</a> on MDN, with explanations</li>
-</ul>
 
 <h3 id="Language_grammar_spelling">Language, grammar, spelling</h3>
 

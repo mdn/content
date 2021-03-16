@@ -23,14 +23,14 @@ tags:
 
 <p>When browsers receive a redirect, they immediately load the new URL provided in the <code>Location</code> header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13785/HTTPRedirect.png"></p>
+<p><img alt="" src="httpredirect.png"></p>
 
 <p>There are several types of redirects, sorted into three categories:</p>
 
 <ol>
- <li><a href="#Permanent_redirections">Permanent redirections</a></li>
- <li><a href="#Temporary_redirections">Temporary redirections</a></li>
- <li><a href="#Special_redirections">Special redirections</a></li>
+ <li><a href="#permanent_redirections">Permanent redirections</a></li>
+ <li><a href="#temporary_redirections">Temporary redirections</a></li>
+ <li><a href="#special_redirections">Special redirections</a></li>
 </ol>
 
 <h3 id="Permanent_redirections">Permanent redirections</h3>
@@ -145,7 +145,7 @@ tags:
 
 <p>HTTP redirects are the best way to create redirections, but sometimes you don't have control over the server. In that case, try a {{HTMLElement("meta")}} element with its {{htmlattrxref("http-equiv", "meta")}} attribute set to <code>Refresh</code> in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will go to the indicated URL.</p>
 
-<pre class="brush: html notranslate">&lt;head&gt;
+<pre class="brush: html">&lt;head&gt;
   &lt;meta http-equiv="Refresh" content="0; URL=https://example.com/"&gt;
 &lt;/head&gt;
 </pre>
@@ -158,7 +158,7 @@ tags:
 
 <p>Redirections in JavaScript are performed by setting a URL string to the {{domxref("window.location")}} property, loading the new page:</p>
 
-<pre class="brush: js notranslate">window.location = "https://example.com/";</pre>
+<pre class="brush: js">window.location = "https://example.com/";</pre>
 
 <p>Like HTML redirections, this can't work on all resources, and obviously, this will only work on clients that execute JavaScript. On the other hand, there are more possibilities: for example, you can trigger the redirect only if some conditions are met.</p>
 
@@ -221,7 +221,7 @@ tags:
 
 <p>The <code><a href="https://httpd.apache.org/docs/current/mod/mod_alias.html">mod_alias</a></code> module has <code>Redirect</code> and <code>RedirectMatch</code> directives that set up {{HTTPStatus("302")}} redirects by default:</p>
 
-<pre class="notranslate">&lt;VirtualHost *:443&gt;
+<pre>&lt;VirtualHost *:443&gt;
 	ServerName example.com
 	Redirect / https://www.example.com
 &lt;/VirtualHost&gt;
@@ -231,13 +231,13 @@ tags:
 
 <p><code>RedirectMatch</code> does the same, but takes a {{glossary("regular expression")}} to define a collection of affected URLs:</p>
 
-<pre class="notranslate">RedirectMatch ^/images/(.*)$ https://images.example.com/$1</pre>
+<pre>RedirectMatch ^/images/(.*)$ https://images.example.com/$1</pre>
 
 <p>All documents in the <code>images/</code> directory will redirect to a different domain.</p>
 
 <p>If you don't want a temporary redirect, an extra parameter (either the HTTP status code to use or the <code>permanent</code> keyword) can be used to set up a different redirect:</p>
 
-<pre class="notranslate">Redirect permanent / https://www.example.com
+<pre>Redirect permanent / https://www.example.com
 # …acts the same as:
 Redirect 301 / https://www.example.com
 </pre>
@@ -248,7 +248,7 @@ Redirect 301 / https://www.example.com
 
 <p>In Nginx, you create a specific server block for the content you want to redirect:</p>
 
-<pre class="notranslate">server {
+<pre>server {
 	listen 80;
 	server_name example.com;
 	return 301 $scheme://www.example.com$request_uri;
@@ -256,7 +256,7 @@ Redirect 301 / https://www.example.com
 
 <p>To apply a redirect to a directory or only certain pages, use the <code>rewrite</code> directive:</p>
 
-<pre class="notranslate">rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
+<pre>rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;
 rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 </pre>
 

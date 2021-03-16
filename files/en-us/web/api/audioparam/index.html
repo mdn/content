@@ -18,13 +18,13 @@ tags:
 <p>There are two kinds of <code>AudioParam</code>, <em>a-rate</em> and <em>k-rate</em> parameters:</p>
 
 <ul>
- <li id="a-rate">An <em>a-rate</em> <code>AudioParam</code> takes the current audio parameter value for each <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">sample frame</a> of the audio signal.</li>
+ <li id="a-rate">An <em>a-rate</em> <code>AudioParam</code> takes the current audio parameter value for each <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">sample frame</a> of the audio signal.</li>
  <li id="k-rate">A <em>k-rate</em> <code>AudioParam</code> uses the same initial audio parameter value for the whole block processed, that is 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.</li>
 </ul>
 
 <p>Each {{domxref("AudioNode")}} defines which of its parameters are <em>a-rate</em> or <em>k-rate</em> in the spec.</p>
 
-<p>Each <code>AudioParam</code> has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the <code>AudioParam.value</code> attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("AudioContext.currentTime")}}.</p>
+<p>Each <code>AudioParam</code> has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the <code>AudioParam.value</code> attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -43,7 +43,7 @@ tags:
 
 <dl>
  <dt>{{domxref("AudioParam.setValueAtTime()")}}</dt>
- <dd>Schedules an instant change to the value of the <code>AudioParam</code> at a precise time, as measured against {{domxref("AudioContext.currentTime")}}. The new value is given by the <code>value</code> parameter.</dd>
+ <dd>Schedules an instant change to the value of the <code>AudioParam</code> at a precise time, as measured against {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given by the <code>value</code> parameter.</dd>
  <dt>{{domxref("AudioParam.linearRampToValueAtTime()")}}</dt>
  <dd>Schedules a gradual linear change in the value of the <code>AudioParam</code>. The change starts at the time specified for the <em>previous</em> event, follows a linear ramp to the new value given in the <code>value</code> parameter, and reaches the new value at the time given in the <code>endTime</code> parameter.</dd>
  <dt>{{domxref("AudioParam.exponentialRampToValueAtTime()")}}</dt>
@@ -68,7 +68,7 @@ var audioCtx = new AudioContext();
 var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;</pre>
 
-<p>Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values maniuplated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.</p>
+<p>Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.</p>
 
 <pre class="brush: js">var compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
@@ -96,13 +96,10 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioParam")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

@@ -1,0 +1,124 @@
+# Note that this workflow uses `get-diff-action` which is important.
+# It gives us an environment variable called `GIT_DIFF` which is a string
+# that is a list of file paths.
+# If you want to do what this workflow does on your laptop you can simulate
+# it like this:
+#
+#    export GIT_DIFF=`git diff --name-only main... | grep 'files/' | grep '\.html$'`
+#    node content build --no-progressbar --files="${GIT_DIFF}"
+#
+# That way, you can behave on your laptop like, this action behaves here.
+
+name: PR Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: "12"
+
+      - name: Cache node_modules
+        uses: actions/cache@v2.1.4
+        id: cached-node_modules
+        with:
+          path: |
+            node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install all yarn packages
+        if: steps.cached-node_modules.outputs.cache-hit != 'true'
+        run: |
+          yarn --frozen-lockfile
+
+      - uses: technote-space/get-diff-action@v4.0.6
+        id: git_diff_content
+        with:
+          PATTERNS: files/**/*.html
+          SET_ENV_NAME: GIT_DIFF_CONTENT
+
+      - name: Build changed content
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        run: |
+          echo ${{ env.GIT_DIFF_CONTENT }}
+          export CONTENT_ROOT=$(pwd)/files
+
+          # Some day, when our number of flaws have reached 0 we'll change
+          # this to "*:error" which means the slightest flaw in the build
+          # will break the build.
+          # See https://github.com/mdn/yari/issues/715
+          export BUILD_FLAW_LEVELS="*:ignore"
+
+          # Note, it might be interesting to explore building *some*
+          # pages in a PR build if the diff doesn't have any index.html
+          # files changed.
+          # Instead of building the git diff, you build some known typical
+          # folders that you know don't take too long and do cover a lot
+          # of interesting macros etc.
+          # This way, when an edit to the source code comes in, perhaps the
+          # functional tests have a gap in them but actually building
+          # real content exposes it.
+
+          # Setting this to an empty string effectively means that the
+          # <iframe> src will end up being the relative URL of the current
+          # document as a base.
+          # I.e. like this, if the current document is '/en-US/docs/Foo':
+          #  <iframe src="/en-US/docs/Foo/_samples_/index.html">
+          # ...for example.
+          # Yes, it's potentially "insecure" because the iframe will execute
+          # whatever code is inserted into the code example. But since the
+          # whole (possible) domain for PR builds will never be somewhere
+          # where there are interesting cookies, it's a safe choice.
+          export BUILD_LIVE_SAMPLES_BASE_URL=
+
+          # In these builds we never care for or need the ability to sign in.
+          # This environment variable will disable that functionality entirely.
+          export REACT_APP_DISABLE_AUTH=true
+
+          # If we don't do this the built files will end up in
+          # `node_modules/@mdn/yari/client/build/` and we don't want that
+          # to get pushed into the cache.
+          export BUILD_OUT_ROOT=/tmp/
+
+          export BUILD_NO_PROGRESSBAR=true
+          # The reason this script isn't in `package.json` is because
+          # you don't need that script as a writer. It's only used in CI
+          # and it can't use the default CONTENT_ROOT that gets set in
+          # package.json.
+          yarn build ${{ env.GIT_DIFF_CONTENT }}
+
+      - uses: technote-space/get-diff-action@v4.0.6
+        with:
+          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
+          ABSOLUTE: true
+          SET_ENV_NAME: GIT_DIFF_FILES
+
+      - name: Check changed files
+        if: ${{ env.GIT_DIFF_FILES }}
+        run: |
+          echo ${{ env.GIT_DIFF_FILES }}
+
+          export CONTENT_ROOT=$(pwd)/files
+          yarn filecheck ${{ env.GIT_DIFF_FILES }}
+
+      - uses: technote-space/get-diff-action@v4.0.6
+        id: git_diff_redirects
+        with:
+          PATTERNS: files/**/_redirects.txt
+          SET_ENV_NAME: GIT_DIFF_REDIRECTS
+
+      - name: Validate redirects
+        if: ${{ env.GIT_DIFF_REDIRECTS }}
+        run: |
+          echo ${{ env.GIT_DIFF_REDIRECTS }}
+          yarn content validate-redirects

@@ -2,21 +2,24 @@
 title: Response.status
 slug: Web/API/Response/status
 tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - status
+- API
+- Experimental
+- Fetch
+- Property
+- Reference
+- Response
+- status
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>The <strong><code>status</code></strong> read-only property of the {{domxref("Response")}} interface contains the status code of the response (e.g., <code>200</code> for a success).</p>
+<p>The <strong><code>status</code></strong> read-only property of the
+  {{domxref("Response")}} interface contains the status code of the response (e.g.,
+  <code>200</code> for a success).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>myStatus</var> = <var>response</var>.status;</pre>
+<pre
+  class="brush: js">var <var>myStatus</var> = <var>response</var>.status;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -24,9 +27,17 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch Response example</a> (see <a href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
+<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch
+    Response example</a> (see <a
+    href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>)
+  we create a new {{domxref("Request")}} object using the
+  {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
+  fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from
+  the response using {{domxref("Body.blob")}}, create an object URL out of it using
+  {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
 
-<p>Note that at the top of the <code>fetch()</code> block we log the response <code>status</code> value to the console.</p>
+<p>Note that at the top of the <code>fetch()</code> block we log the response
+  <code>status</code> value to the console.</p>
 
 <pre class="brush: js">var myImage = document.querySelector('img');
 
@@ -43,18 +54,18 @@ fetch(myRequest).then(function(response) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response-status','status')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Fetch','#dom-response-status','status')}}</td>
+      <td>{{Spec2('Fetch')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -64,7 +75,8 @@ fetch(myRequest).then(function(response) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  </li>
+  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

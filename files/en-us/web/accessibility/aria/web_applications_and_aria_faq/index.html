@@ -8,11 +8,11 @@ tags:
 ---
 <h2 id="What_is_ARIA">What is ARIA?</h2>
 
-<p>WAI-ARIA is the <a class="external" href="https://www.w3.org/WAI/intro/aria.php">Accessible Rich Internet Applications</a> specification from the <a class="external" href="https://www.w3.org/WAI/">Web Accessibility Initiative</a> at the <a class="external" href="https://www.w3.org/">W3C</a>. ARIA provides a means to make web applications and widgets more accessible to a diverse range of users, including those who use assistive technologies such as screen readers or magnifiers.</p>
+<p>WAI-ARIA is the <a href="https://www.w3.org/WAI/intro/aria.php">Accessible Rich Internet Applications</a> specification from the <a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a> at the <a href="https://www.w3.org/">W3C</a>. ARIA provides a means to make web applications and widgets more accessible to a diverse range of users, including those who use assistive technologies such as screen readers or magnifiers.</p>
 
 <p>ARIA provides additional semantics to describe the role, state, and functionality of many familiar user interface controls, such as menus, sliders, trees, and dialogs. It also provides additional structural information, helping authors identify landmarks, regions, and grids on their pages. ARIA enables dynamic, JavaScript-driven applications and widgets to interoperate with a variety of desktop-based assistive technologies.</p>
 
-<p>For more information about how to create accessible widgets with ARIA, see the <a href="/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="en/Accessibility/An overview of accessible web applications and widgets">Overview of accessible web applications and widgets</a>.</p>
+<p>For more information about how to create accessible widgets with ARIA, see the <a href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">Overview of accessible web applications and widgets</a>.</p>
 
 <h2 id="Where_is_ARIA_Supported">Where is ARIA Supported?</h2>
 
@@ -35,7 +35,7 @@ tags:
    <td>Works with NVDA, JAWS 10+, and Orca</td>
   </tr>
   <tr>
-   <td><a class="external" href="http://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support">Chrome</a></td>
+   <td><a href="http://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support">Chrome</a></td>
    <td>Latest</td>
    <td>Screen reader support still experimental as of Chrome 15</td>
   </tr>
@@ -46,12 +46,12 @@ tags:
     Live region support requires Safari 5 with VoiceOver on iOS5 or OS X Lion</td>
   </tr>
   <tr>
-   <td><a class="external" href="http://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/">Opera</a></td>
+   <td><a href="http://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/">Opera</a></td>
    <td>9.5+</td>
    <td>Requires VoiceOver on OS X. TBD: how well does this currently work?</td>
   </tr>
   <tr>
-   <td><a class="external" href="https://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx">Internet Explorer</a></td>
+   <td><a href="https://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx">Internet Explorer</a></td>
    <td>8+</td>
    <td>Works with JAWS 10+ and NVDA. No live region support in NVDA.<br>
     IE9 support is much improved.</td>
@@ -62,8 +62,8 @@ tags:
 <p>In some cases, earlier versions may support only some features of ARIA. More detailed browser compatibility charts are available from multiple sources:</p>
 
 <ul>
- <li><a class="external" href="http://caniuse.com/wai-aria">caniuse.com</a></li>
- <li><a class="external" href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">The Paciello Group</a></li>
+ <li><a href="https://caniuse.com/wai-aria">caniuse.com</a></li>
+ <li><a href="http://www.paciellogroup.com/blog/2012/02/rough-guide-browsers-operating-systems-and-screen-reader-support/">The Paciello Group</a></li>
 </ul>
 
 <h3 id="Assistive_Technologies">Assistive Technologies</h3>
@@ -115,7 +115,7 @@ tags:
 
 <p>Note: Early versions of these tools often had partial or buggy ARIA implementations.</p>
 
-<p>For notes on JAWS support for ARIA as of JAWS 10, see this article from the Paciello Group: <a class="external" href="http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/">JAWS Support for ARIA</a>.</p>
+<p>For notes on JAWS support for ARIA as of JAWS 10, see this article from the Paciello Group: <a href="http://www.paciellogroup.com/blog/2010/10/jaws-support-for-aria/">JAWS Support for ARIA</a>.</p>
 
 <h3 id="JavaScript_Toolkits">JavaScript Toolkits</h3>
 
@@ -134,7 +134,7 @@ tags:
 <p>For more information about JavaScript toolkit accessibility:</p>
 
 <ul>
- <li>Steve Faulkner's <a class="external" href="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/">WAI-ARIA Implementation in JavaScript UI Libraries</a></li>
+ <li>Steve Faulkner's <a href="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/">WAI-ARIA Implementation in JavaScript UI Libraries</a></li>
 </ul>
 
 <h2 id="Can_you_show_me_an_example_of_ARIA_in_action">Can you show me an example of ARIA in action?</h2>
@@ -147,7 +147,7 @@ tags:
 
 <p>Along with placing them directly in the markup, ARIA attributes can be added to the element and updated dynamically using JavaScript code like this:</p>
 
-<pre class="brush: javascript">// Find the progress bar &lt;div&gt; in the DOM.
+<pre class="brush: js">// Find the progress bar &lt;div&gt; in the DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Set its ARIA roles and states, so that assistive technologies know what kind of widget it is.
@@ -175,15 +175,15 @@ function updateProgress(percentComplete) {
 
 <h3 id="What_about_validation">What about validation?</h3>
 
-<p>The new attributes introduced in ARIA, such as <strong>role</strong> and those prefixed with <strong>aria-</strong>, aren't officially part of the HTML 4 or XHTML 4 specifications. As a result, pages that include ARIA may not validate using tools such as the <a class="external" href="http://validator.w3.org/">W3C's Markup Validator</a>.</p>
+<p>The new attributes introduced in ARIA, such as <strong>role</strong> and those prefixed with <strong>aria-</strong>, aren't officially part of the HTML 4 or XHTML 4 specifications. As a result, pages that include ARIA may not validate using tools such as the <a href="http://validator.w3.org/">W3C's Markup Validator</a>.</p>
 
-<p>The first potential solution to this problem is to avoid placing ARIA roles and states in your markup directly. Instead, use JavaScript to dynamically add ARIA to your page, as shown in the answer to <a href="/#aria-in-action" title="#aria-in-action">Can you show me an example of ARIA in action?</a> above. Your page will still be theoretically invalid, but it will correctly pass all static validation checks.</p>
+<p>The first potential solution to this problem is to avoid placing ARIA roles and states in your markup directly. Instead, use JavaScript to dynamically add ARIA to your page, as shown in the answer to <a href="/#aria-in-action">Can you show me an example of ARIA in action?</a> above. Your page will still be theoretically invalid, but it will correctly pass all static validation checks.</p>
 
 <p>Another alternative is to use the HTML5 doctype, which includes built-in support for ARIA. The W3C's HTML5 validator will even find invalid uses of ARIA in HTML5 pages for you.</p>
 
 <h2 id="How_does_HTML5_relate_to_ARIA">How does HTML5 relate to ARIA?</h2>
 
-<p>HTML5 introduces a number of useful new semantic tags to HTML. A few of these tags overlap directly with roles available in ARIA, such as the new <code>&lt;progress&gt;</code> element. In cases where the browser supports an HTML5 tag that also exists in ARIA, there is usually no need to also add ARIA roles and states to the element. ARIA includes many roles, states, and properties that aren't available in HTML5, so these will continue to be useful to developers who use HTML5. For more information, Steve Faulkner has written a good <a class="external" href="http://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/">overview of the relationship between HTML5 and ARIA</a>.</p>
+<p>HTML5 introduces a number of useful new semantic tags to HTML. A few of these tags overlap directly with roles available in ARIA, such as the new <code>&lt;progress&gt;</code> element. In cases where the browser supports an HTML5 tag that also exists in ARIA, there is usually no need to also add ARIA roles and states to the element. ARIA includes many roles, states, and properties that aren't available in HTML5, so these will continue to be useful to developers who use HTML5. For more information, Steve Faulkner has written a good <a href="http://www.paciellogroup.com/blog/2010/04/html5-and-the-myth-of-wai-aria-redundance/">overview of the relationship between HTML5 and ARIA</a>.</p>
 
 <h4 id="Degrading_Gracefully_from_HTML5_to_ARIA">Degrading Gracefully from HTML5 to ARIA</h4>
 
@@ -203,7 +203,7 @@ function updateProgress(percentComplete) {
 
 <p>... and here is the JavaScript code that will ensure the progress bar still works in older browsers:</p>
 
-<pre class="brush: javascript">var progressBar = document.getElementById("progress-bar");
+<pre class="brush: js">var progressBar = document.getElementById("progress-bar");
 
 // Check to see if the browser supports the HTML5 &lt;progress&gt; tag.
 var supportsHTML5Progress = (typeof (HTMLProgressElement) !== "undefined");
@@ -258,16 +258,16 @@ initDemo();
  <li>Accessibility Inspector on OS X</li>
  <li>AccProbe on Linux</li>
  <li>Firebug's DOM Inspector</li>
- <li>The <a class="external" href="http://code.google.com/p/ainspector/">Accessibility Inspector for Firebug</a></li>
+ <li>The <a href="http://code.google.com/p/ainspector/">Accessibility Inspector for Firebug</a></li>
  <li>The Audits tab in Chrome DevTools</li>
 </ul>
 
 <p>There are several free or open source screen readers that can be used to do hands-on testing with ARIA. They include:</p>
 
 <ul>
- <li><a class="external" href="http://live.gnome.org/Orca">Orca</a> for Linux</li>
- <li><a class="external" href="http://www.nvda-project.org/">NVDA</a> for Windows</li>
- <li><a class="external" href="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> is built into OS X</li>
+ <li><a href="http://live.gnome.org/Orca">Orca</a> for Linux</li>
+ <li><a href="http://www.nvda-project.org/">NVDA</a> for Windows</li>
+ <li><a href="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> is built into OS X</li>
 </ul>
 
 <p>When you're testing with a screen reader, keep two key points in mind:</p>
@@ -280,22 +280,22 @@ initDemo();
 <p>Other helpful testing tools and techniques for ARIA-enabled applications and widgets:</p>
 
 <ul>
- <li><a class="external" href="http://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html">Yahoo!'s ARIA bookmarklets</a></li>
- <li>Fluid Project's <a class="external" href="http://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol">simple accessibility evaluation techniques</a></li>
+ <li><a href="http://yaccessibilityblog.com/library/test-aria-focus-bookmarklets.html">Yahoo!'s ARIA bookmarklets</a></li>
+ <li>Fluid Project's <a href="http://wiki.fluidproject.org/display/fluid/Simple+Accessibility+Review+Protocol">simple accessibility evaluation techniques</a></li>
 </ul>
 
 <h2 id="Where_do_ARIA_discussions_happen">Where do ARIA discussions happen?</h2>
 
 <ul>
- <li><a class="external" href="http://lists.w3.org/Archives/Public/wai-xtech/">Wai-xtech mailing list</a> -- holds discussions on ARIA specs.</li>
- <li><a class="external" href="http://groups.google.com/group/free-aria">Free-ARIA google group</a> -- for developers and users of free tools and resources.</li>
+ <li><a href="http://lists.w3.org/Archives/Public/wai-xtech/">Wai-xtech mailing list</a> -- holds discussions on ARIA specs.</li>
+ <li><a href="http://groups.google.com/group/free-aria">Free-ARIA google group</a> -- for developers and users of free tools and resources.</li>
 </ul>
 
 <h2 id="Where_can_I_learn_more_about_ARIA">Where can I learn more about ARIA?</h2>
 
 <ul>
- <li><a href="/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="en/Accessibility/An overview of accessible web applications and widgets">An overview of accessible web applications and widgets</a></li>
- <li><a href="/en/Accessibility/Accessible_forms" title="en/Accessibility/Accessible forms">Accessible forms</a></li>
- <li>The W3C's <a class="external" href="https://www.w3.org/WAI/aria/faq">WAI-ARIA Frequently Asked Questions</a></li>
- <li>WebAIM's <a class="external" href="http://webaim.org/techniques/aria/">Accessibility of Rich Internet Applications</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">An overview of accessible web applications and widgets</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Accessible forms</a></li>
+ <li>The W3C's <a href="https://www.w3.org/WAI/aria/faq">WAI-ARIA Frequently Asked Questions</a></li>
+ <li>WebAIM's <a href="http://webaim.org/techniques/aria/">Accessibility of Rich Internet Applications</a></li>
 </ul>

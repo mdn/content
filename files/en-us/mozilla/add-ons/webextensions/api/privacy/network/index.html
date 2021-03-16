@@ -35,6 +35,16 @@ tags:
   <li><code>proxy_only</code> (only connections using TURN on a TCP connection through a proxy are allowed)</li>
  </ul>
  </dd>
+ <dt><code>httpsOnlyMode</code></dt>
+<dd>
+  <p>This setting allows your extension to determine if a user has enabled
+  <a href="https://support.mozilla.org/kb/https-only-prefs"> HTTPS-Only mode</a>. This property is read-only on all platforms. Its underlying value is a string that may take one of three values:</p>
+  <ul>
+    <li><code>"always"</code>: HTTPS-Only mode is on.</li>
+    <li><code>"never"</code>: HTTPS-Only mode is off.</li>
+    <li><code>"private_browsing"</code>: HTTPS-Only mode is on in private browsing windows only.</li>
+  </ul>
+</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -42,9 +52,9 @@ tags:
 <p>{{Compat("webextensions.api.privacy.network")}}</p>
 
 <div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+<p>The "Chrome incompatibilities" section is included from <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
 
-<p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
+<p>If you need to update this content, edit <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

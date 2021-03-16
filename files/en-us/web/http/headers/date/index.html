@@ -2,19 +2,23 @@
 title: Date
 slug: Web/HTTP/Headers/Date
 tags:
-  - General Header
-  - HTTP
-  - Reference
-  - header
+- General Header
+- HTTP
+- Reference
+- header
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Date</code></strong> general HTTP header contains the date and time at which the message was originated.</p>
+<p>The <strong><code>Date</code></strong> general HTTP header contains the date and time
+	at which the message was originated.</p>
 
 <div class="notecard warning">
-<p>Note that <code>Date</code> is listed in the <a href="https://fetch.spec.whatwg.org/#forbidden-header-name" rel="nofollow noreferrer">forbidden header names</a> in the fetch spec - so this code will not send <code>Date</code> header:</p>
+	<p>Note that <code>Date</code> is listed in the <a
+			href="https://fetch.spec.whatwg.org/#forbidden-header-name"
+			rel="nofollow noreferrer">forbidden header names</a> in the fetch spec - so
+		this code will not send <code>Date</code> header:</p>
 
-<pre class="brush: js">fetch('https://httpbin.org/get', {
+	<pre class="brush: js">fetch('https://httpbin.org/get', {
     'headers': {
         'Date': (new Date()).toUTCString()
     }
@@ -36,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Date: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
+<pre class="brush: html">Date: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -47,7 +51,8 @@ tags:
 	<dt>&lt;day&gt;</dt>
 	<dd>2 digit day number, e.g. "04" or "23".</dd>
 	<dt>&lt;month&gt;</dt>
-	<dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).</dd>
+	<dd>One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
+		"Nov", "Dec" (case sensitive).</dd>
 	<dt>&lt;year&gt;</dt>
 	<dd>4 digit year number, e.g. "1990" or "2016".</dd>
 	<dt>&lt;hour&gt;</dt>
@@ -58,7 +63,8 @@ tags:
 	<dd>2 digit second number, e.g. "04" or "59".</dd>
 	<dt>GMT</dt>
 	<dd>
-	<p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.</p>
+		<p>Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local
+			time.</p>
 	</dd>
 </dl>
 
@@ -89,7 +95,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+	If you'd like to contribute to the data, please check out <a
+		href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+	and send us a pull request.</p>
 
 <p>{{Compat("http.headers.Date")}}</p>
 

@@ -18,8 +18,6 @@ tags:
 
 <p>Mixed passive/display content is content served over HTTP that is included in an HTTPS webpage, but that cannot alter other portions of the webpage. For example, an attacker could replace an image served over HTTP with an inappropriate image or message to the user. The attacker could also infer information about the user's activities by watching which images are served to the user; often images are only served on a specific page within a website. If the attacker observes HTTP requests to certain images, they could determine which webpage the user is visiting.</p>
 
-<div class="notecard note"></div>
-
 <h4 id="Passive_content_list">Passive content list</h4>
 
 <p>This section lists all types of HTTP requests which are considered passive content:</p>
@@ -85,7 +83,7 @@ tags:
 </ul>
 </div>
 
-<h2 id="Warnings_in_Firefox_Web_Console"><span>Warnings in Firefox Web Console</span></h2>
+<h2 id="Warnings_in_Firefox_Web_Console">Warnings in Firefox Web Console</h2>
 
 <p>The Firefox Web Console displays a mixed content warning message in the Net pane when a page on your website has this issue. The mixed content resource that was loaded via HTTP will show up in red, along with the text "mixed content", which links to this page.</p>
 
@@ -100,7 +98,7 @@ tags:
 <p>To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The console will display a message indicating if mixed-display content is being successfully <a href="#Upgrading_mixed-display_resources">upgraded from HTTP to HTTPS</a>  (instead of a warning about "Loading mixed (insecure) display content").</p>
+<p><strong>Note</strong>: The console will display a message indicating if mixed-display content is being successfully <a href="#upgrading_mixed-display_resources">upgraded from HTTP to HTTPS</a>  (instead of a warning about "Loading mixed (insecure) display content").</p>
 </div>
 
 <h2 id="See_also">See also</h2>

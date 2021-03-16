@@ -41,14 +41,14 @@ tags:
 
 <p>In the following snippet, the {{WebExtAPIRef("cookies.getAllCookieStores()")}} method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logStores</span><span class="punctuation token">(</span>cookieStores<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">for</span><span class="punctuation token">(</span>store <span class="keyword token">of</span> cookieStores<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Cookie store: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>store<span class="punctuation token">.</span>id<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">\n Tab IDs: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>store<span class="punctuation token">.</span>tabIds<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js">function logStores(cookieStores) {
+  for(store of cookieStores) {
+    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+  }
+}
 
-<span class="keyword token">var</span> getting <span class="operator token">=</span> browser<span class="punctuation token">.</span>cookies<span class="punctuation token">.</span><span class="function token">getAllCookieStores</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-getting<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>logStores<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+var getting = browser.cookies.getAllCookieStores();
+getting.then(logStores);</pre>
 
 <p>The following code snippet gets all cookie stores and then logs the total number of stores and how many of those stores are incognito.</p>
 

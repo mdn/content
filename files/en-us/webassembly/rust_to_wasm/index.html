@@ -40,7 +40,7 @@ tags:
 
 <p>To build the package, we need an additional tool, <code>wasm-pack</code>. This helps compile the code to WebAssembly, as well as produce the right packaging for <code>npm</code>. To download and install it, enter the following command into your terminal:</p>
 
-<pre class="brush: bash; no-line-numbers notranslate">$ cargo install wasm-pack</pre>
+<pre class="brush: bash no-line-numbers">$ cargo install wasm-pack</pre>
 
 <h3 id="Install_Node.js_and_npm">Install Node.js and npm</h3>
 
@@ -52,12 +52,12 @@ tags:
 
 <p>Enough setup; let's create a new package in Rust. Navigate to wherever you keep your personal projects, and type this:</p>
 
-<pre class="brush: bash; no-line-numbers notranslate">$ cargo new --lib hello-wasm
+<pre class="brush: bash no-line-numbers">$ cargo new --lib hello-wasm
      Created library `hello-wasm` project</pre>
 
 <p>This creates a new library in a subdirectory named <code>hello-wasm</code> with everything you need to get going:</p>
 
-<pre class="brush: none no-line-numbers notranslate">+-- Cargo.toml
+<pre class="brush: none no-line-numbers">+-- Cargo.toml
 +-- src
     +-- lib.rs</pre>
 
@@ -65,7 +65,7 @@ tags:
 
 <p>Next, Cargo has generated some Rust code for us in <code>src/lib.rs</code>:</p>
 
-<pre class="brush: rust; notranslate">#[cfg(test)]
+<pre class="brush: rust">#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
@@ -79,7 +79,7 @@ mod tests {
 
 <p>Let's put this code into <code>src/lib.rs</code> instead:</p>
 
-<pre class="brush: rust notranslate">use wasm_bindgen::prelude::*;
+<pre class="brush: rust">use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 extern {
@@ -97,7 +97,7 @@ pub fn greet(name: &amp;str) {
 
 <p>The first part looks like this:</p>
 
-<pre class="brush: rust notranslate">use wasm_bindgen::prelude::*;</pre>
+<pre class="brush: rust">use wasm_bindgen::prelude::*;</pre>
 
 <p>Libraries are called "crates" in Rust.</p>
 
@@ -115,7 +115,7 @@ pub fn greet(name: &amp;str) {
 
 <p>The next part looks like this:</p>
 
-<pre class="brush: rust; notranslate">#[wasm_bindgen]
+<pre class="brush: rust">#[wasm_bindgen]
 extern {
     pub fn alert(s: &amp;str);
 }</pre>
@@ -132,7 +132,7 @@ extern {
 
 <p>The final part is this one:</p>
 
-<pre class="brush: rust notranslate">#[wasm_bindgen]
+<pre class="brush: rust">#[wasm_bindgen]
 pub fn greet(name: &amp;str) {
     alert(&amp;format!("Hello, {}!", name));
 }</pre>
@@ -151,7 +151,7 @@ pub fn greet(name: &amp;str) {
 
 <p>To compile our code correctly, we first need to configure it with <code>Cargo.toml</code>. Open this file, and change its contents to look like this:</p>
 
-<pre class="brush: toml notranslate">[package]
+<pre class="brush: toml">[package]
 name = "hello-wasm"
 version = "0.1.0"
 authors = ["Your Name &lt;you@example.com&gt;"]
@@ -176,7 +176,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Now that we've got everything set up, let's build the package. Type this into your terminal:</p>
 
-<pre class="brush: bash no-line-numbers notranslate">$ wasm-pack build</pre>
+<pre class="brush: bash no-line-numbers">$ wasm-pack build</pre>
 
 <p>This does a number of things (and they take a lot of time, especially the first time you run <code>wasm-pack</code>). To learn about them in detail, check out <a href="https://hacks.mozilla.org/2018/04/hello-wasm-pack/">this blog post on Mozilla Hacks</a>. In short, <code>wasm-pack build</code>:</p>
 
@@ -198,7 +198,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Let's use `npm link` to make this package available to other javascript packages installed</p>
 
-<pre class="brush: bash no-line-numbers notranslate">$ cd pkg
+<pre class="brush: bash no-line-numbers">$ cd pkg
 $ npm link</pre>
 
 <p>We now have an npm package, written in Rust, but compiled to WebAssembly. It's ready for use from JavaScript, and doesn't require the user to have Rust installed; the code included was the WebAssembly code, not the Rust source.</p>
@@ -209,7 +209,7 @@ $ npm link</pre>
 
 <p>Let's move back out of the <code>pkg</code> directory, and make a new directory, <code>site</code>, to try this out in:</p>
 
-<pre class="brush: bash no-line-numbers notranslate">$ cd ../..
+<pre class="brush: bash no-line-numbers">$ cd ../..
 $ mkdir site
 $ cd site
 $ npm link hello-wasm
@@ -217,7 +217,7 @@ $ npm link hello-wasm
 
 <p>Create a new file, <code>package.json</code>, and put the following code in it:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "scripts": {
     "serve": "webpack-dev-server"
   },
@@ -231,11 +231,9 @@ $ npm link hello-wasm
   }
 }</pre>
 
-<p>Note that you need to fill in your own username, after the <code>@</code>, in the dependencies section.</p>
-
 <p>Next, we need to configure Webpack. Create <code>webpack.config.js</code> and put the following in it:</p>
 
-<pre class="brush: js notranslate">const path = require('path');
+<pre class="brush: js">const path = require('path');
 module.exports = {
   entry: "./index.js",
   output: {
@@ -247,7 +245,7 @@ module.exports = {
 
 <p>Now we need an HTML file; create <code>index.html</code> and give it the following contents:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -260,8 +258,7 @@ module.exports = {
 
 <p>Finally, create the <code>index.js</code> referenced in the HTML file and give it these contents:</p>
 
-<pre class="brush: js notranslate">const js = import("./node_modules/hello-wasm/hello_wasm.js");
-js.then(js =&gt; {
+<pre class="brush: js">import("./node_modules/hello-wasm/hello_wasm.js").then((js) =&gt; {
   js.greet("WebAssembly");
 });</pre>
 
@@ -271,7 +268,7 @@ js.then(js =&gt; {
 
 <p>We're done making files. Let's give this a shot:</p>
 
-<pre class="brush: bash no-line-numbers notranslate">$ npm install
+<pre class="brush: bash no-line-numbers">$ npm install
 $ npm run serve</pre>
 
 <p>This starts a web server. Load <a href="http://localhost:8080">http://localhost:8080</a> and an alert box appears on the screen, with <code>Hello, WebAssembly!</code> in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.</p>

@@ -8,7 +8,7 @@ tags:
   - Obsolete
   - Reference
 ---
-<div>{{APIRef("File System API")}}{{obsolete_header}}</div>
+<div>{{APIRef("File System API")}}{{deprecated_header}}</div>
 
 <p>Represents an error that occurs while using the {{domxref("FileReader")}} interface.</p>
 
@@ -16,7 +16,7 @@ tags:
 <p><strong>Note:</strong> This interface is obsolete per the latest specification. Use the new DOM4 {{domxref("DOMError")}} interface instead.</p>
 </div>
 
-<p>In the <a href="/en-US/docs/Web/API/File_System_API/Introduction">File System API</a>, a <code>FileError</code> represents error conditions that you might encounter while accessing the file system using the asynchronous API. It extends the <code>FileError</code> interface described in <a class="external" href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> and adds several new error codes.</p>
+<p>In the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a>, a <code>FileError</code> represents error conditions that you might encounter while accessing the file system using the asynchronous API. It extends the <code>FileError</code> interface described in <a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> and adds several new error codes.</p>
 
 <p><code>FileError</code> objects are passed to error callbacks. The objects have a code that shows the type of error that occurred.</p>
 
@@ -102,7 +102,7 @@ tags:
   <tr>
    <td><code><a>QUOTA_EXCEEDED_ERR</a></code></td>
    <td>10</td>
-   <td>Either there's not enough remaining storage space or the storage quota was reached and the user declined to give more space to the database. To ask for more storage, see <a class="external" href="http://code.google.com/chrome/whitepapers/storage.html">Managing HTML5 Offline Storage</a>.</td>
+   <td>Either there's not enough remaining storage space or the storage quota was reached and the user declined to give more space to the database. To ask for more storage, see <a href="http://code.google.com/chrome/whitepapers/storage.html">Managing HTML5 Offline Storage</a>.</td>
   </tr>
   <tr>
    <td><code><a>SECURITY_ERR</a></code></td>
@@ -132,7 +132,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/File_System_API/Introduction">Basic Concepts About the File System API</a></li>
+ <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></li>
  <li>{{domxref("FileReader")}}</li>
  <li>{{domxref("File")}}</li>
  <li>{{domxref("Blob")}}</li>

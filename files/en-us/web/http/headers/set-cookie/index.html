@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
+<pre class="brush: html">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Expires=&lt;date&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Max-Age=&lt;non-zero-digit&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;
@@ -130,16 +130,16 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <p><strong>Session cookies</strong> are removed when the client shuts down. Cookies are session cookies if they don't specify the <code>Expires</code> or <code>Max-Age</code> attributes.</p>
 
-<pre class="notranslate">Set-Cookie: sessionId=38afes7a8</pre>
+<pre>Set-Cookie: sessionId=38afes7a8</pre>
 
 <h3 id="Permanent_cookie">Permanent cookie</h3>
 
 <p>Instead of expiring when the client is closed, <strong>permanent cookies</strong> expire at a specific date (<code>Expires</code>) or after a specific length of time (<code>Max-Age</code>).</p>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
+<pre>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
 </pre>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Max-Age=2592000</pre>
+<pre>Set-Cookie: id=a3fWa; Max-Age=2592000</pre>
 
 <h3 id="Invalid_domains">Invalid domains</h3>
 
@@ -147,13 +147,13 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <p>The following cookie will be rejected if set by a server hosted on <code>originalcompany.com</code>:</p>
 
-<pre class="notranslate">Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk</pre>
+<pre>Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk</pre>
 
 <p>A cookie for a sub domain of the serving domain will be rejected.</p>
 
 <p>The following cookie will be rejected if set by a server hosted on <code>example.com</code>:</p>
 
-<pre class="notranslate">Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com</pre>
+<pre>Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com</pre>
 
 <h3 id="Cookie_prefixes">Cookie prefixes</h3>
 
@@ -165,7 +165,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 <p>For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.</p>
 </div>
 
-<pre class="notranslate">// Both accepted when from a secure origin (HTTPS)
+<pre>// Both accepted when from a secure origin (HTTPS)
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
 Set-Cookie: __Host-ID=123; Secure; Path=/
 

@@ -12,7 +12,7 @@ tags:
 
 <p>The CSS <strong>attribute selector</strong> matches elements based on the presence or value of a given attribute.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;a&gt; elements with a title attribute */
+<pre class="brush: css no-line-numbers">/* &lt;a&gt; elements with a title attribute */
 a[title] {
   color: purple;
 }
@@ -67,7 +67,7 @@ a[class~="logo"] {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   color: blue;
 }
 
@@ -106,7 +106,7 @@ a[href^="https"][href$=".org"] {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;a href="#internal"&gt;Internal link&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="http://example.com"&gt;Example link&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#InSensitive"&gt;Insensitive internal link&lt;/a&gt;&lt;/li&gt;
@@ -122,14 +122,14 @@ a[href^="https"][href$=".org"] {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">/* All divs with a `lang` attribute are bold. */
+<pre class="brush: css">/* All divs with a `lang` attribute are bold. */
 div[lang] {
   font-weight: bold;
 }
 
 /* All divs without a `lang` attribute are italicized. */
 div:not([lang]) {
-  <span class="st">font-style: italic;</span>
+  font-style: italic;
 }
 
 /* All divs in US English are blue. */
@@ -159,7 +159,7 @@ div[data-lang="zh-TW"] {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div lang="en-us en-gb en-au en-nz"&gt;Hello World!&lt;/div&gt;
+<pre class="brush: html">&lt;div lang="en-us en-gb en-au en-nz"&gt;Hello World!&lt;/div&gt;
 &lt;div lang="pt"&gt;Olá Mundo!&lt;/div&gt;
 &lt;div lang="zh-CN"&gt;世界您好！&lt;/div&gt;
 &lt;div lang="zh-TW"&gt;世界您好！&lt;/div&gt;
@@ -176,7 +176,7 @@ div[data-lang="zh-TW"] {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">/* List types require the case sensitive flag due to a quirk in how HTML treats the type attribute. */
+<pre class="brush: css">/* List types require the case sensitive flag due to a quirk in how HTML treats the type attribute. */
 ol[type="a"] {
   list-style-type: lower-alpha;
   background: red;
@@ -194,7 +194,7 @@ ol[type="A" s] {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol type="A"&gt;
+<pre class="brush: html;">&lt;ol type="A"&gt;
   &lt;li&gt;Example list&lt;/li&gt;
 &lt;/ol&gt;</pre>
 

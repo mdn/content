@@ -16,7 +16,7 @@ tags:
 <p>A <code>WeakRef</code> object contains a weak reference to an object, which is called its <em>target</em> or <em>referent</em>. A <em>weak reference</em> to an object is a reference that does not prevent the object from being reclaimed by the garbage collector. In contrast, a normal (or <em>strong</em>) reference keeps an object in memory. When an object no longer has any strong references to it, the JavaScript engine's garbage collector may destroy the object and reclaim its memory. If that happens, you can't get the object from a weak reference anymore.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Please see the <a href="#Avoid_where_possible">Avoid where possible</a> section below. Correct use of <code>WeakRef</code> takes careful thought, and it's best avoided if possible.</p>
+<p><strong>Note:</strong> Please see the <a href="#avoid_where_possible">Avoid where possible</a> section below. Correct use of <code>WeakRef</code> takes careful thought, and it's best avoided if possible.</p>
 </div>
 
 <h2 id="Constructor">Constructor</h2>
@@ -70,7 +70,7 @@ tags:
 
 <p>This example starts a counter shown in a DOM element, stopping when the element doesn't exist anymore:</p>
 
-<pre class="brush: js notranslate">class Counter {
+<pre class="brush: js">class Counter {
   constructor(element) {
     // Remember a weak reference to the DOM element
     this.ref = new WeakRef(element);
@@ -110,7 +110,6 @@ tags:
 }
 
 const counter = new Counter(document.getElementById("counter"));
-counter.start();
 setTimeout(() =&gt; {
   document.getElementById("counter").remove();
 }, 5000);

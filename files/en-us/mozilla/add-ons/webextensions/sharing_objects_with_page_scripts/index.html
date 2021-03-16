@@ -27,7 +27,7 @@ tags:
 </div>
 </div>
 
-<p>As the <a href="/en-US/Add-ons/WebExtensions/Content_scripts#DOM_access">content scripts guide notes</a>, content scripts don't see changes made to the DOM by scripts loaded by web pages. This means that, for example, if a web page loads a library like jQuery, content scripts won't be able to use it, and have to load their own copy. Conversely, scripts loaded by web pages can't see changes made by content scripts.</p>
+<p>As the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access">content scripts guide notes</a>, content scripts don't see changes made to the DOM by scripts loaded by web pages. This means that, for example, if a web page loads a library like jQuery, content scripts won't be able to use it, and have to load their own copy. Conversely, scripts loaded by web pages can't see changes made by content scripts.</p>
 
 <p>However, Firefox provides some APIs that enable content scripts to:</p>
 
@@ -93,8 +93,8 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre
 <p>Firefox also provides APIs enabling content scripts to make objects available to page scripts. There are several approaches here:</p>
 
 <ul>
- <li><code><a href="#exportFunction">exportFunction()</a></code>: export a function to page scripts.</li>
- <li><code><a href="#cloneInto">cloneInto()</a></code>: export an object to page scripts.</li>
+ <li><code><a href="#exportfunction">exportFunction()</a></code>: export a function to page scripts.</li>
+ <li><code><a href="#cloneinto">cloneInto()</a></code>: export an object to page scripts.</li>
  <li>constructors from the page context</li>
 </ul>
 
@@ -135,7 +135,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <ul>
  <li>execute a content script in the current tab, when the user clicks a browser action</li>
- <li>listen for messages from the content script, and display a <a href="/en-US/Add-ons/WebExtensions/API/notifications">notification</a> when the message arrives.</li>
+ <li>listen for messages from the content script, and display a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notification</a> when the message arrives.</li>
 </ul>
 
 <p>The content script looks like this:</p>
@@ -192,7 +192,7 @@ window.wrappedJSObject.messenger = cloneInto(
 
 <h3 id="Constructors_from_the_page_context">Constructors from the page context</h3>
 
-<p>On the xrayed window object pristine constructors for some built-in javascript objects such as <code>Object</code>, <code>Function</code> or <code>Proxy</code> and various DOM classes are available. <code>XMLHttpRequest</code> does not behave in this way, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch">XHR and fetch</a> section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.</p>
+<p>On the xrayed window object pristine constructors for some built-in javascript objects such as <code>Object</code>, <code>Function</code> or <code>Proxy</code> and various DOM classes are available. <code>XMLHttpRequest</code> does not behave in this way, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch">XHR and fetch</a> section for details. They will create instances belonging to the page global's object hierarchy and then return an xray wrapper.</p>
 
 <p>Since objects created this way already belong to the page and not the content script passing them back to the page will not require additional cloning or exporting.</p>
 
@@ -244,7 +244,7 @@ Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can o
   'propC', {
      get: exportFunction(function() {             // getters must be exported like regular functions
        return 'propC';
-     }
+     })
   }
 );
 

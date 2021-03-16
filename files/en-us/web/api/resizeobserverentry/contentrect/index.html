@@ -2,33 +2,51 @@
 title: ResizeObserverEntry.contentRect
 slug: Web/API/ResizeObserverEntry/contentRect
 tags:
-  - API
-  - Bounding Box
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - ResizeObserverEntry
-  - content box
-  - observers
+- API
+- Bounding Box
+- Property
+- Reference
+- Resize Observer API
+- ResizeObserver
+- ResizeObserverEntry
+- content box
+- observers
 ---
 <div>{{APIRef("Resize Observer API")}}</div>
 
-<p class="summary">The <code>contentRect</code> read-only property of the {{domxref("ResizeObserverEntry")}} interface returns a {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is better supported than {{domxref("ResizeObserverEntry.borderBoxSize")}} or {{domxref("ResizeObserverEntry.contentBoxSize")}}, but it is left over from an earlier implementation of the Resize Observer API, is still included in the spec for web compat reasons, and may be deprecated in future versions.</p>
+<p class="summary">The <code>contentRect</code> read-only property of the
+  {{domxref("ResizeObserverEntry")}} interface returns a {{domxref('DOMRectReadOnly')}}
+  object containing the new size of the observed element when the callback is run. Note
+  that this is better supported than {{domxref("ResizeObserverEntry.borderBoxSize")}} or
+  {{domxref("ResizeObserverEntry.contentBoxSize")}}, but it is left over from an earlier
+  implementation of the Resize Observer API, is still included in the spec for web compat
+  reasons, and may be deprecated in future versions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>contentRect</em> = <em>resizeObserverEntry</em>.contentRect;</pre>
+<pre
+  class="brush: js">var <em>contentRect</em> = <em>resizeObserverEntry</em>.contentRect;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref('DOMRectReadOnly')}} object containing the new size of the element indicated by the {{domxref("ResizeObserverEntry.target", "target")}} property.</p>
+<p>A {{domxref('DOMRectReadOnly')}} object containing the new size of the element
+  indicated by the {{domxref("ResizeObserverEntry.target", "target")}} property.</p>
 
-<p>If the <code>target</code> is an HTML {{domxref("Element")}}, the returned <code>contentRect</code> is the element's content box. If the <code>target</code> is an {{domxref("SVGElement")}}, the returned <code>contentRect</code> is the SVG's bounding box.</p>
+<p>If the <code>target</code> is an HTML {{domxref("Element")}}, the returned
+  <code>contentRect</code> is the element's content box. If the <code>target</code> is an
+  {{domxref("SVGElement")}}, the returned <code>contentRect</code> is the SVG's bounding
+  box.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet is taken from the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see source</a>) example. This uses a simple feature detection test to see if the browser supports the newer {{domxref("ResizeObserverEntry.contentBoxSize")}} property — if so, it uses that to get the sizing data it needs. If not, it uses <code>contentRect</code>.</p>
+<p>The following snippet is taken from the <a
+    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a>
+  (<a
+    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
+    source</a>) example. This uses a simple feature detection test to see if the browser
+  supports the newer {{domxref("ResizeObserverEntry.contentBoxSize")}} property — if so,
+  it uses that to get the sizing data it needs. If not, it uses <code>contentRect</code>.
+</p>
 
 <pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
@@ -47,20 +65,21 @@ resizeObserver.observe(divElem);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Resize Observer','#dom-resizeobserverentry-contentrect','contentRect')}}</td>
-   <td>{{Spec2('Resize Observer')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Resize
+        Observer','#dom-resizeobserverentry-contentrect','contentRect')}}</td>
+      <td>{{Spec2('Resize Observer')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

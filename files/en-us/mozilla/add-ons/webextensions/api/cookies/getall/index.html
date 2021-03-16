@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.cookies.getAll(
+<pre class="brush:js">var getting = browser.cookies.getAll(
   details                // object
 )
 </pre>
@@ -29,14 +29,14 @@ tags:
 
 <dl>
  <dt><code>details</code></dt>
- <dd>An <code>object</code> containing details that can be used to match cookies to be retrieved. Included properties are as follows (see <a href="/en-US/Add-ons/WebExtensions/API/Cookies/Cookie#Type">Cookie type</a> for more information on these):</dd>
+ <dd>An <code>object</code> containing details that can be used to match cookies to be retrieved. Included properties are as follows (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type">Cookie type</a> for more information on these):</dd>
  <dd>
  <dl class="reference-values">
   <dt><code>domain</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).</dd>
   <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated.</dd>
-  <dd>This property must be supplied if the browser has first-party isolation enabled. You can however pass <code>null</code> in this situation. If you do this, then cookies with any value for <code>firstPartyDomain</code>, as well as cookies which do not have <code>firstPartyDomain</code> set at all, will be included in the results. See <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a>.</dd>
+  <dd>This property must be supplied if the browser has first-party isolation enabled. You can however pass <code>null</code> in this situation. If you do this, then cookies with any value for <code>firstPartyDomain</code>, as well as cookies which do not have <code>firstPartyDomain</code> set at all, will be included in the results. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
   <dt><code>name</code>{{optional_inline}}</dt>
   <dd>A <code>string</code> representing a name that the cookies should have.</dd>
   <dt><code>path</code>{{optional_inline}}</dt>

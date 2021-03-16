@@ -43,8 +43,8 @@ tags:
 
 <p><strong>NOTE</strong> : We're using the <a href="http://es6-features.org/">es6</a> <strong>arrow functions</strong> syntax in the Service Worker Implementation</p>
 
-<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
+<pre class="brush: js">if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
 };</pre>
 
 <p>If the service worker API is supported in the browser, it is registered against the site using the {{domxref("ServiceWorkerContainer.register()")}} method. Its contents reside in the sw.js file, and can be executed after the registration is successful. It's the only piece of Service Worker code that sits inside the app.js file; everything else that is Service Worker-specific is written in the sw.js file itself.</p>
@@ -57,16 +57,16 @@ tags:
 
 <p>The API allows us to add event listeners for key events we are interested in — the first one is the <code>install</code> event:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
-    console.log('[Service Worker] Install');
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
+  console.log('[Service Worker] Install');
 });</pre>
 
 <p>In the <code>install</code> listener, we can initialize the cache and add files to it for offline use. Our js13kPWA app does exactly that.</p>
 
 <p>First, a variable for storing the cache name is created, and the app shell files are listed in one array.</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
-var appShellFiles = [
+<pre class="brush: js">const cacheName = 'js13kPWA-v1';
+const appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
   '/pwa-examples/js13kpwa/app.js',
@@ -89,22 +89,21 @@ var appShellFiles = [
 
 <p>Next, the links to images to be loaded along with the content from the data/games.js file are generated in the second array. After that, both arrays are merged using the {{jsxref("Array.prototype.concat()")}} function.</p>
 
-<pre class="brush: js notranslate">var gamesImages = [];
-for(var i=0; i&lt;games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+<pre class="brush: js">const gamesImages = [];
+for (let i = 0; i &lt; games.length; i++) {
+  gamesImages.push(`data/img/${games[i].slug}.jpg`);
 }
-var contentToCache = appShellFiles.concat(gamesImages);</pre>
+const contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>Then we can manage the <code>install</code> event itself:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (e) =&gt; {
   console.log('[Service Worker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then((cache) =&gt; {
-          console.log('[Service Worker] Caching all: app shell and content');
-      return cache.addAll(contentToCache);
-    })
-  );
+  e.waitUntil((async () =&gt; {
+    const cache = await caches.open(cacheName);
+    console.log('[Service Worker] Caching all: app shell and content');
+    await cache.addAll(contentToCache);
+  })());
 });</pre>
 
 <p>There are two things that need an explanation here: what {{domxref("ExtendableEvent.waitUntil")}} does, and what the {{domxref("Cache","caches")}} object is.</p>
@@ -125,27 +124,25 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>We also have a <code>fetch</code> event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. Here is a simple usage example:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
-    console.log('[Service Worker] Fetched resource '+e.request.url);
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
+  console.log(`[Service Worker] Fetched resource ${e.request.url}`);
 });</pre>
 
 <p>The response can be anything we want: the requested file, its cached copy, or a piece of JavaScript code that will do something specific — the possibilities are endless.</p>
 
 <p>In our example app, we serve content from the cache instead of the network as long as the resource is actually in the cache. We do this whether the app is online or offline. If the file is not in the cache, the app adds it there first before then serving it:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
-  e.respondWith(
-    caches.match(e.request).then((r) =&gt; {
-          console.log('[Service Worker] Fetching resource: '+e.request.url);
-      return r || fetch(e.request).then((response) =&gt; {
-                return caches.open(cacheName).then((cache) =&gt; {
-          console.log('[Service Worker] Caching new resource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
+<pre class="brush: js">self.addEventListener('fetch', (e) =&gt; {
+  e.respondWith((async () =&gt; {
+    const r = await caches.match(e.request);
+    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
+    if (r) { return r; }
+    const response = await fetch(e.request);
+    const cache = await caches.open(cacheName);
+    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
+    cache.put(e.request, response.clone());
+    return response;
+  })());
 });</pre>
 
 <p>Here, we respond to the fetch event with a function that tries to find the resource in the cache and return the response if it's there. If not, we use another fetch request to fetch it from the network, then store the response in the cache so it will be available there next time it is requested.</p>
@@ -158,20 +155,19 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>There is still one point to cover: how do you upgrade a Service Worker when a new version of the app containing new assets is available? The version number in the cache name is key to this:</p>
 
-<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';</pre>
+<pre class="brush: js">var cacheName = 'js13kPWA-v1';</pre>
 
 <p>When this updates to v2, we can then add all of our files (including our new files) to a new cache:</p>
 
-<pre class="brush: js notranslate">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+<pre class="brush: js">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
 
 // ...
 
 self.addEventListener('install', (e) =&gt; {
-  e.waitUntil(
-    caches.open('js13kPWA-v2').then((cache) =&gt; {
-      return cache.addAll(contentToCache);
-    })
-  );
+  e.waitUntil((async () =&gt; {
+    const cache = await caches.open(cacheName);
+    await cache.addAll(contentToCache);
+  })());
 });</pre>
 
 <p>A new service worker is installed in the background, and the previous one (v1) works correctly up until there are no pages using it — the new Service Worker is then activated and takes over management of the page from the old one.</p>
@@ -180,16 +176,14 @@ self.addEventListener('install', (e) =&gt; {
 
 <p>Remember the <code>activate</code> event we skipped? It can be used to clear out the old cache we don't need anymore:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('activate', (e) =&gt; {
-  e.waitUntil(
-    caches.keys().then((keyList) =&gt; {
-          return Promise.all(keyList.map((key) =&gt; {
-        if(key !== cacheName) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
+<pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
+  e.waitUntil((async () =&gt; {
+    const keyList = await caches.keys();
+    await Promise.all(keyList.map((key) =&gt; {
+      if (key === cacheName) { return; }
+      await caches.delete(key);
+    }))
+  })());
 });</pre>
 
 <p>This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">available cache space in the browser is limited</a>, so it is a good idea to clean up after ourselves.</p>

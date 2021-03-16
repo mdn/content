@@ -69,11 +69,11 @@ tags:
 
 <p>Try changing the line</p>
 
-<pre class="brush: css notranslate">font-variant-alternates: styleset(alt-a);</pre>
+<pre class="brush: css">font-variant-alternates: styleset(alt-a);</pre>
 
 <p>to</p>
 
-<pre class="brush: css notranslate">font-variant-alternates: styleset(alt-g);
+<pre class="brush: css">font-variant-alternates: styleset(alt-g);
 </pre>
 
 <p>and notice that the lower case 'a' reverts to its regular form and the lower case 'g' changes instead.</p>
@@ -157,14 +157,14 @@ tags:
 
 <p>The general syntax looks like this:</p>
 
-<pre class="brush: css notranslate">.small-caps {
+<pre class="brush: css">.small-caps {
   font-feature-settings: "smcp", "c2sc";
 }
 </pre>
 
 <p>According to the specification you can either supply just the 4-character feature code or supply a 1 following the code (for enabling that feature) or a 0 (zero) to disable it. This is helpful if you have a feature like ligatures enabled by default but you would like to turn them off, like so:</p>
 
-<pre class="brush: css notranslate">.no-ligatures {
+<pre class="brush: css">.no-ligatures {
   font-feature-settings: "liga" 0, "dlig" 0;
 }</pre>
 
@@ -181,7 +181,7 @@ tags:
 
 <p>For example, small caps can be set several ways, but if you want to ensure that no matter what the underlying capitalization is that you end up with everything in small caps, it requires 2 settings with <code>font-feature-settings</code> versus a single property value using {{cssxref("font-variant-caps")}}.</p>
 
-<pre class="brush: css notranslate">.small-caps {
+<pre class="brush: css">.small-caps {
    font-feature-settings: "smcp", "c2sc";
 }
 

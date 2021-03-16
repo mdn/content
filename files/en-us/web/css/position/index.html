@@ -6,7 +6,7 @@ tags:
   - CSS Positioning
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -29,13 +29,13 @@ tags:
  <dd>The element is positioned according to the normal flow of the document, and then offset <em>relative to itself</em> based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were <code>static</code>.</dd>
  <dd>This value creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. Its effect on <code>table-*-group</code>, <code>table-row</code>, <code>table-column</code>, <code>table-cell</code>, and <code>table-caption</code> elements is undefined.</dd>
  <dt id="absolute"><code>absolute</code></dt>
- <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a>. Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
+ <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>. Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
  <dd>This value creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. The margins of absolutely positioned boxes do not <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">collapse</a> with other margins.</dd>
  <dt id="fixed"><code>fixed</code></dt>
- <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> established by the {{glossary("viewport")}}, except when one of its ancestors has a <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see the <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with <code>perspective</code> and <code>filter</code> contributing to containing block formation.) Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
+ <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> established by the {{glossary("viewport")}}, except when one of its ancestors has a <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see the <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with <code>perspective</code> and <code>filter</code> contributing to containing block formation.) Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
  <dd>This value always creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>. In printed documents, the element is placed in the same position on <em>every page</em>.</dd>
  <dt id="sticky"><code>sticky</code></dt>
- <dd>The element is positioned according to the normal flow of the document, and then offset relative to its <em>nearest scrolling ancestor</em> and <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> (nearest block-level ancestor), including table-related elements, based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements.</dd>
+ <dd>The element is positioned according to the normal flow of the document, and then offset relative to its <em>nearest scrolling ancestor</em> and <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> (nearest block-level ancestor), including table-related elements, based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements.</dd>
  <dd>This value always creates a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a>. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when <code>overflow</code> is <code>hidden</code>, <code>scroll</code>, <code>auto</code>, or <code>overlay</code>), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavior (see the <a href="https://github.com/w3c/csswg-drafts/issues/865">GitHub issue on W3C CSSWG</a>).</dd>
 </dl>
 
@@ -46,8 +46,8 @@ tags:
 <ul>
  <li>A <strong>positioned element</strong> is an element whose <a href="/en-US/docs/Web/CSS/computed_value">computed</a> <code>position</code> value is either <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>. (In other words, it's anything except <code>static</code>.)</li>
  <li>A <strong>relatively positioned element</strong> is an element whose <a href="/en-US/docs/Web/CSS/computed_value">computed</a> <code>position</code> value is <code>relative</code>. The {{Cssxref("top")}} and {{Cssxref("bottom")}} properties specify the vertical offset from its normal position; the {{Cssxref("left")}} and {{Cssxref("right")}} properties specify the horizontal offset.</li>
- <li>An <strong>absolutely positioned element</strong> is an element whose <a href="/en-US/docs/Web/CSS/computed_value">computed</a> <code>position</code> value is <code>absolute</code> or <code>fixed</code>. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties specify offsets from the edges of the element's <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a>. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> (BFC) for its contents.</li>
- <li>A <strong>stickily positioned element</strong> is an element whose <a href="/en-US/docs/Web/CSS/computed_value">computed</a> <code>position</code> value is <code>sticky</code>. It's treated as relatively positioned until its <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> crosses a specified threshold (such as setting {{Cssxref("top")}} to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a>.</li>
+ <li>An <strong>absolutely positioned element</strong> is an element whose <a href="/en-US/docs/Web/CSS/computed_value">computed</a> <code>position</code> value is <code>absolute</code> or <code>fixed</code>. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties specify offsets from the edges of the element's <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> (BFC) for its contents.</li>
+ <li>A <strong>stickily positioned element</strong> is an element whose <a href="/en-US/docs/Web/CSS/computed_value">computed</a> <code>position</code> value is <code>sticky</code>. It's treated as relatively positioned until its <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> crosses a specified threshold (such as setting {{Cssxref("top")}} to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>.</li>
 </ul>
 
 <p>Most of the time, absolutely positioned elements that have {{Cssxref("height")}} and {{Cssxref("width")}} set to <code>auto</code> are sized so as to fit their contents. However, non-<a href="/en-US/docs/Web/CSS/Replaced_element">replaced</a>, absolutely positioned elements can be made to fill the available vertical space by specifying both {{Cssxref("top")}} and {{Cssxref("bottom")}} and leaving {{Cssxref("height")}} unspecified (that is, <code>auto</code>). They can likewise be made to fill the available horizontal space by specifying both {{Cssxref("left")}} and {{Cssxref("right")}} and leaving {{Cssxref("width")}} as <code>auto</code>.</p>
@@ -64,7 +64,7 @@ tags:
 <p>Ensure that elements positioned with an <code>absolute</code> or <code>fixed</code> value do not obscure other content when the page is zoomed to increase text size.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -78,7 +78,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -88,7 +88,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
+<pre class="brush: html">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
 &lt;div class="box" id="two"&gt;Two&lt;/div&gt;
 &lt;div class="box" id="three"&gt;Three&lt;/div&gt;
 &lt;div class="box" id="four"&gt;Four&lt;/div&gt;
@@ -96,7 +96,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">* {
+<pre class="brush: css">* {
   box-sizing: border-box;
 }
 
@@ -124,7 +124,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -136,7 +136,7 @@ tags:
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">* {
+<pre class="brush: css">* {
   box-sizing: border-box;
 }
 
@@ -170,11 +170,11 @@ span {
 
 <h3 id="Fixed_positioning">Fixed positioning</h3>
 
-<p>Fixed positioning is similar to absolute positioning, with the exception that the element's <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> is the initial containing block established by the <em>viewport</em>, unless any ancestor has <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), which then causes that ancestor to take the place of the elements <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a>. This can be used to create a "floating" element that stays in the same position regardless of scrolling. In the example below, box "One" is fixed at 80 pixels from the top of the page and 10 pixels from the left. Even after scrolling, it remains in the same place relative to the viewport.</p>
+<p>Fixed positioning is similar to absolute positioning, with the exception that the element's <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a> is the initial containing block established by the <em>viewport</em>, unless any ancestor has <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a>), which then causes that ancestor to take the place of the elements <a href="/en-US/docs/Web/CSS/Containing_block">containing block</a>. This can be used to create a "floating" element that stays in the same position regardless of scrolling. In the example below, box "One" is fixed at 80 pixels from the top of the page and 10 pixels from the left. Even after scrolling, it remains in the same place relative to the viewport.</p>
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
+<pre class="brush: html">&lt;div class="outer"&gt;
   &lt;p&gt;
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
@@ -199,7 +199,7 @@ span {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">* {
+<pre class="brush: css">* {
   box-sizing: border-box;
 }
 
@@ -233,7 +233,7 @@ span {
 
 <p>Sticky positioning can be thought of as a hybrid of relative and fixed positioning. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For instance...</p>
 
-<pre class="brush: css notranslate">#one { position: sticky; top: 10px; }</pre>
+<pre class="brush: css">#one { position: sticky; top: 10px; }</pre>
 
 <p>...would position the element with id <em>one</em> relatively until the viewport were scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.</p>
 
@@ -243,7 +243,7 @@ span {
 
 <h4 id="HTML_4">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;div&gt;
     &lt;dt&gt;A&lt;/dt&gt;
     &lt;dd&gt;Andrew W.K.&lt;/dd&gt;
@@ -277,7 +277,7 @@ span {
 
 <h4 id="CSS_4">CSS</h4>
 
-<pre class="brush: css notranslate">* {
+<pre class="brush: css">* {
   box-sizing: border-box;
 }
 

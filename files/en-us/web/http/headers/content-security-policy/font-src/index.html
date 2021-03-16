@@ -2,41 +2,44 @@
 title: 'CSP: font-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - font
-  - source
+- CSP
+- Content-Security-Policy
+- Directive
+- HTTP
+- Reference
+- Security
+- font
+- source
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>font</strong></code><strong><code>-src</code></strong> directive specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.</p>
+<p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
+  <code><strong>font</strong></code><strong><code>-src</code></strong> directive specifies
+  valid sources for fonts loaded using {{cssxref("@font-face")}}.</p>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>Yes. If this directive is absent, the user agent will look for the <code>default-src</code> directive.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>Yes. If this directive is absent, the user agent will look for the
+        <code>default-src</code> directive.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
 <p>One or more sources can be allowed for the <code>font-src</code> policy:</p>
 
-<pre class="syntaxbox">Content-Security-Policy: font-src &lt;source&gt;;
+<pre class="brush: html">Content-Security-Policy: font-src &lt;source&gt;;
 Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -67,34 +70,37 @@ Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-font-src", "font-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-font-src", "font-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{specName("CSP 3.0", "#directive-font-src", "font-src")}}</td>
+      <td>{{Spec2('CSP 3.0')}}</td>
+      <td>No changes.</td>
+    </tr>
+    <tr>
+      <td>{{specName("CSP 1.1", "#directive-font-src", "font-src")}}</td>
+      <td>{{Spec2('CSP 1.1')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("http.headers.csp.Content-Security-Policy.font-src")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{cssxref("@font-face")}}</li>
+  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
+  <li>{{cssxref("@font-face")}}</li>
 </ul>

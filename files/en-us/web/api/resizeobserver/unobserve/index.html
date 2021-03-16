@@ -2,27 +2,30 @@
 title: ResizeObserver.unobserve()
 slug: Web/API/ResizeObserver/unobserve
 tags:
-  - API
-  - Method
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - observers
-  - unobserve()
+- API
+- Method
+- Reference
+- Resize Observer API
+- ResizeObserver
+- observers
+- unobserve()
 ---
 <div>{{APIRef("Resize Observer API")}}</div>
 
-<p class="summary">The <strong><code>unobserve()</code></strong> method of the {{domxref("ResizeObserver")}} interface ends the observing of a specified {{domxref('Element')}} or {{domxref('SVGElement')}}.</p>
+<p class="summary">The <strong><code>unobserve()</code></strong> method of the
+  {{domxref("ResizeObserver")}} interface ends the observing of a specified
+  {{domxref('Element')}} or {{domxref('SVGElement')}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">void unobserve(<em>target</em>);</pre>
+<pre class="brush: js">void unobserve(<em>target</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>target</code></dt>
- <dd>A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be unobserved.</dd>
+  <dt><code>target</code></dt>
+  <dd>A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
+    unobserved.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,9 +38,13 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet is taken from the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see source</a>) example:</p>
+<p>The following snippet is taken from the <a
+    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a>
+  (<a
+    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
+    source</a>) example:</p>
 
-<pre class="brush: js notranslate">const resizeObserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
@@ -70,18 +77,19 @@ checkbox.addEventListener('change', () =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resize Observer','#dom-resizeobserver-unobserve','unobserve()')}}</td>
-   <td>{{Spec2('Resize Observer')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resize Observer','#dom-resizeobserver-unobserve','unobserve()')}}
+      </td>
+      <td>{{Spec2('Resize Observer')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Intl.RelativeTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
+<pre class="brush: js">Intl.RelativeTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>Assuming a runtime that supports Indonesian and German but not Balinese in date and time formatting, <code>supportedLocalesOf</code> returns the Indonesian and German language tags unchanged, even though <code>pinyin</code> collation is neither relevant to date and time formatting nor used with Indonesian, and a specialized German for Indonesia is unlikely to be supported. Note the specification of the "<code>lookup</code>" algorithm here — a "<code>best fit</code>" matcher might decide that Indonesian is an adequate match for Balinese since most Balinese speakers also understand Indonesian, and therefore return the Balinese language tag as well.</p>
 
-<pre class="brush: js notranslate">const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+<pre class="brush: js">const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"

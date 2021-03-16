@@ -14,13 +14,13 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>:has()</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.</span></p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;a&gt;, as long as it has an &lt;img&gt; element directly inside it  */
+<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt;, as long as it has an &lt;img&gt; element directly inside it  */
 /* Note that this is not supported in any browser yet */
 let test = document.querySelector('a:has(&gt; img)');</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Description">Description</h2>
 
@@ -32,14 +32,14 @@ let test = document.querySelector('a:has(&gt; img)');</pre>
 
 <p>The following selector matches only {{HTMLElement("a")}} elements that directly contain an {{HTMLElement("img")}} child:</p>
 
-<pre class="notranslate">a:has(&gt; img)
+<pre>a:has(&gt; img)
 </pre>
 
 <h3 id="Matching_&lt;h1&gt;_elements_that_are_followed_by_a_&lt;p&gt;">Matching &lt;h1&gt; elements that are followed by a &lt;p&gt;</h3>
 
 <p>The following selector matches {{HTMLElement("h1")}} elements only if they have a {{htmlelement("p")}} element directly following them:</p>
 
-<pre class="notranslate">h1:has(+ p)</pre>
+<pre>h1:has(+ p)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -7,7 +7,7 @@ tags:
   - Developing Mozilla
 ---
 <h3 id="Introduction">Introduction</h3>
-<p>These notes are meant to supplement the existing <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Documentation</a>. Windows Services for Unix (SFU, or Interix) is not a supported build platform, but it can be made to work with enough patience. Updating a CVS tree to the trunk takes me only 8 minutes using the Interix cvs client compared to 24 minutes for the MSYS cvs client. For a depend-only build (i.e. verifying that the previous build completed) it is roughly 20% faster than <a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">MSYS</a>. For a -j3 parallel clean build (excluding checkout and configure) it is only 3.7% faster. By comparison a -j3 SFU build is 25% faster than a -j1 SFU build.</p>
+<p>These notes are meant to supplement the existing <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows Build Documentation</a>. Windows Services for Unix (SFU, or Interix) is not a supported build platform, but it can be made to work with enough patience. Updating a CVS tree to the trunk takes me only 8 minutes using the Interix cvs client compared to 24 minutes for the MSYS cvs client. For a depend-only build (i.e. verifying that the previous build completed) it is roughly 20% faster than <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">MSYS</a>. For a -j3 parallel clean build (excluding checkout and configure) it is only 3.7% faster. By comparison a -j3 SFU build is 25% faster than a -j1 SFU build.</p>
 <h3 id="Software_Requirements">Software Requirements</h3>
 <p>The following software needs to be installed for a standard Windows build using SFU.</p>
 <h4 id="Windows_Services_for_Unix">Windows Services for Unix</h4>
@@ -99,7 +99,7 @@ set smartindent
 <ul> <li>bash (optional; does not work with DEP)</li> <li>cvs</li> <li>flip</li> <li>gmake</li> <li>libncurses</li> <li>m4_gnu</li> <li>python</li> <li>unzip</li> <li>wget</li> <li>zip</li>
 </ul>
 <p>You will also need to use pkg_add to install the autoconf-2.13 package. There is a bug in the package and it will not install the autoconf macros.</p>
-<pre class="eval"><span class="nowiki">$ cd /usr/local<br>$ wget ftp://ftp.interopsystems.com/pkgs/3.5-prev/autoconf-2.13-bin.tgz<br>$ pkg_add autoconf-2.13-bin.tgz<br>$ tar xfzP autoconf-2.13-bin.tgz</span></pre>
+<pre class="eval">$ cd /usr/local<br>$ wget ftp://ftp.interopsystems.com/pkgs/3.5-prev/autoconf-2.13-bin.tgz<br>$ pkg_add autoconf-2.13-bin.tgz<br>$ tar xfzP autoconf-2.13-bin.tgz</pre>
 <p>The autoconf macros do not work correctly with Microsoft C; (It may be possible to build a POSIX executable with gcc but you would also need to compile updated versions of some libraries such as pango.) Microsoft C requires CPP files to end with .cpp and produces output with MS-DOS line endings, so you need to delete all the .m4f files and apply the following patch:</p>
 <pre>diff -u acgeneral.m4
 --- acgeneral.m4
@@ -242,7 +242,7 @@ export LIB="C:\Program Files\Microsoft Visual Studio 9.0\VC\LIB;C:\Program Files
 export NSDISTMODE=copy
 </pre>
 <h4 id="Sample_.mozconfig">Sample .mozconfig</h4>
-<p>By default, configure will detect SFU as a flavour of NetBSD, so we need to tell it that we want a Windows build target. We have to add -NOLOGO to the flags because some of the configure tests don't expect compiler output, but the version test does. If you are using a recent SDK then you need the -NODEFAULTLIB:atlthunk to work around the #pragma in atlbase.h but older SDKs (such as the one provided with the full version of VC7.1) do not have this problem. We need to define the host compilers because otherwise configure assumes they are the same as the cross compilers. We need to define -DGETCWD_CANT_MALLOC because nsinstall expects it.</p>
+<p>By default, configure will detect SFU as a flavor of NetBSD, so we need to tell it that we want a Windows build target. We have to add -NOLOGO to the flags because some of the configure tests don't expect compiler output, but the version test does. If you are using a recent SDK then you need the -NODEFAULTLIB:atlthunk to work around the #pragma in atlbase.h but older SDKs (such as the one provided with the full version of VC7.1) do not have this problem. We need to define the host compilers because otherwise configure assumes they are the same as the cross compilers. We need to define -DGETCWD_CANT_MALLOC because nsinstall expects it.</p>
 <pre>export CROSS_COMPILE=1
 export CC=cl
 export CXX=cl

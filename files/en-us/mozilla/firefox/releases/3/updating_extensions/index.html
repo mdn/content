@@ -6,8 +6,6 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<div>{{Fx_minversion_header(3)}}</div>
-
 <p>This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.</p>
 
 <p>Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the <code>maxVersion</code> field in its install manifest, and you host your extension at <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the <code>maxVersion</code>. You can avoid having to have your extension re-reviewed this way.</p>
@@ -78,7 +76,7 @@ tags:
 
 <h3 id="Popups_.28Menus.2C_Context_Menus.2C_Tooltips_and_Panels.29">Popups (Menus, Context Menus, Tooltips and Panels)</h3>
 
-<p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/en-US/docs/XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<span id="m-showPopup"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code></span></code> has been deprecated in favor of new <code>popup.<span id="m-openPopup"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code></span></code> and <code>popup.<span id="m-openPopupAtScreen"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code></span></code>.</p>
+<p>The XUL Popup system was heavily modified in Firefox 3. The Popup system includes main menus, context menus and popup panels. A guide to <a href="/en-US/docs/XUL/PopupGuide">using Popups</a> has been created, detailing how the system works. One thing to note is that <code>popup.<a href="/en-US/docs/Mozilla/Tech/XUL/Method/showPopup">showPopup</a></code> has been deprecated in favor of new <code>popup.<a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopup">openPopup</a></code> and <code>popup.<a href="/en-US/docs/Mozilla/Tech/XUL/Method/openPopupAtScreen">openPopupAtScreen</a></code>.</p>
 
 <h3 id="Autocomplete">Autocomplete</h3>
 
@@ -160,7 +158,7 @@ tags:
 <p><em>Add simple changes you had to make while updating your extension to work with Firefox 3 here.</em></p>
 
 <ul>
- <li><code><a class="external" rel="freelink">chrome://browser/base/utilityOverlay.js</a></code> is no longer supported for security reasons. If you were previously using this, you should switch to <code><a class="external" rel="freelink">chrome://browser/content/utilityOverlay.js</a></code>.</li>
+ <li><code>chrome://browser/base/utilityOverlay.js</code> is no longer supported for security reasons. If you were previously using this, you should switch to <code>chrome://browser/content/utilityOverlay.js</code>.</li>
  <li>{{ Interface("nsIAboutModule") }} implementations are now required to support the <code>getURIFlags</code> method. See {{ Source("netwerk/protocol/about/public/nsIAboutModule.idl", "nsIAboutModule.idl") }} for documentation. This affects extensions that provide new <code>about:</code> URIs. ({{ Bug(337746) }})</li>
  <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tabbrowser">&lt;xul:tabbrowser&gt;</a></code> element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).</li>
  <li>Changes to <a href="/en-US/docs/nsISupports_proxies">nsISupports proxies</a> and possibly to threading-related interfaces need to be documented.</li>
@@ -172,7 +170,7 @@ tags:
  </li>
  <li><code>window.addEventListener("load", myFunc, true)</code> is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use <code>gBrowser.addEventListener("load", myFunc, true)</code> as described <a href="/en-US/docs/Code_snippets/Tabbed_browser#Detecting_page_load">here</a> and works in Firefox 2 as well.</li>
  <li><code>content.window.getSelection()</code> gives an object (which can be converted to a string by <code>toString()</code>), unlike the now deprecated <code>content.document.getSelection()</code> which returns a string</li>
- <li><code>event.preventBubble()</code> was deprecated in Firefox 2 and has been removed in Firefox 3. Use <a href="/en-US/docs/DOM/event.stopPropagation"><code>event.stopPropagation()</code></a>, which works in Firefox 2 as well.</li>
+ <li><code>event.preventBubble()</code> was deprecated in Firefox 2 and has been removed in Firefox 3. Use <a href="/en-US/docs/Web/API/Event/stopPropagation"><code>event.stopPropagation()</code></a>, which works in Firefox 2 as well.</li>
  <li>Timers that are initiated using <code>setTimeout()</code> are now blocked by modal windows due to the fix made for {{ Bug(52209) }}. You may use {{ Interface("nsITimer") }} instead.</li>
  <li>If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new <a href="/en-US/docs/Chrome_Registration#contentaccessible" title="Chrome_Registration#contentaccessible"><code>contentaccessible</code> flag</a>.</li>
 </ul>

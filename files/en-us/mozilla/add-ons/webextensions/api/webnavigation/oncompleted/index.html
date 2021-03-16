@@ -14,11 +14,11 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM <code><a href="/en-US/docs/Web/Events/load">load</a></code> event.</p>
+<p>Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code> event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">browser.webNavigation.onCompleted.addListener(
+<pre class="brush: js">browser.webNavigation.onCompleted.addListener(
   <var>listener</var>,                   // function
   <var>filter</var>                      // optional object
 )

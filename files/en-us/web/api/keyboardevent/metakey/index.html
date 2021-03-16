@@ -2,28 +2,34 @@
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
 tags:
-  - API
-  - DOM
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- MouseEvent
+- Property
+- Read-only
+- Reference
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p>The <strong><code>KeyboardEvent.metaKey</code></strong> read-only property returning a {{jsxref("Boolean")}} that indicates if the <kbd>Meta</kbd> key was pressed (<code>true</code>) or not (<code>false</code>) when the event occurred. Some operating systems may intercept the key so it is never detected.</p>
+<p>The <strong><code>KeyboardEvent.metaKey</code></strong> read-only property returning a
+  {{jsxref("Boolean")}} that indicates if the <kbd>Meta</kbd> key was pressed
+  (<code>true</code>) or not (<code>false</code>) when the event occurred. Some operating
+  systems may intercept the key so it is never detected.</p>
 
 <div class="note">
-<p><strong>Note:</strong> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.</p>
+  <p><strong>Note:</strong> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.
+  </p>
 </div>
 
 <div class="warning">
-<p>At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the "Meta" key. <code>KeyboardEvent.metaKey</code> is <code>false</code> when the <kbd>⊞ Windows</kbd> key is pressed.</p>
+  <p>At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the
+    "Meta" key. <code>KeyboardEvent.metaKey</code> is <code>false</code> when the <kbd>⊞
+      Windows</kbd> key is pressed.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
+<pre class="brush: js">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -32,12 +38,12 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">function ismetaKey(e) {
+<pre class="brush: js">function ismetaKey(e) {
   alert("metaKey = " + e.metaKey);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
+<pre class="brush: html">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
 </pre>
 
 <p>{{ EmbedLiveSample('Example', 400, 36) }}</p>
@@ -45,18 +51,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-metaKey','KeyboardEvent.metaKey')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3
+        Events','#widl-KeyboardEvent-metaKey','KeyboardEvent.metaKey')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -66,5 +73,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ domxref("KeyboardEvent") }}</li>
+  <li>{{ domxref("KeyboardEvent") }}</li>
 </ul>

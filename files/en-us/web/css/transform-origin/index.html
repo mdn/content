@@ -21,20 +21,20 @@ tags:
 <p>This property is applied by first translating the element by the value of the property, then applying the element's transform, then translating by the negated property value.<br>
  This means, this definition</p>
 
-<pre class="brush: css notranslate">transform-origin: -100% 50%;
+<pre class="brush: css">transform-origin: -100% 50%;
 transform: rotate(45deg);
 </pre>
 
 <p>results in the same transformation as</p>
 
-<pre class="brush: css notranslate">transform-origin: 0 0;
+<pre class="brush: css">transform-origin: 0 0;
 transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);</pre>
 
 <p>By default, the origin of a transform is <code>center</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* One-value syntax */
+<pre class="brush: css">/* One-value syntax */
 transform-origin: 2px;
 transform-origin: bottom;
 
@@ -154,7 +154,7 @@ transform-origin: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -172,11 +172,11 @@ transform-origin: unset;
    </td>
    <td>
     <div class="hidden" id="transform_none">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box1"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box1 {
 margin: 0.5em;
 width: 3em;
@@ -198,11 +198,11 @@ transform: none;
    </td>
    <td>
     <div class="hidden" id="transform_rotate_only">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box2"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box2 {
 margin: 0.5em;
 width: 3em;
@@ -225,11 +225,11 @@ transform: rotate(30deg);
    </td>
    <td>
     <div class="hidden" id="transform_rotate">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box3"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box3 {
 margin: 0.5em;
 width: 3em;
@@ -254,11 +254,11 @@ transform: rotate(30deg);
    </td>
    <td>
     <div class="hidden" id="transform_rotate_with_percentage">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box4"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box4 {
 margin: 0.5em;
 width: 3em;
@@ -283,11 +283,11 @@ transform: rotate(30deg);
    </td>
    <td>
     <div class="hidden" id="transform_rotate_with_em">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box5"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box5 {
 margin: 0.5em;
 width: 3em;
@@ -311,11 +311,11 @@ transform: rotate(30deg);
    </td>
    <td>
     <div class="hidden" id="transform_scale_only">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box6"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box6 {
 margin: 0.5em;
 width: 3em;
@@ -338,11 +338,11 @@ transform: scale(<code>1.7</code>);
    </td>
    <td>
     <div class="hidden" id="transform_scale_without_origin">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box7"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box7 {
 margin: 0.5em;
 width: 3em;
@@ -367,11 +367,11 @@ transform-origin: 0 0;
    </td>
    <td>
     <div class="hidden" id="transform_scale">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box8"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box8 {
 margin: 0.5em;
 width: 3em;
@@ -396,11 +396,11 @@ transform-origin: 100% -30%;
    </td>
    <td>
     <div class="hidden" id="transform_skew_x">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box9"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box9 {
 margin: 0.5em;
 width: 3em;
@@ -425,11 +425,11 @@ transform-origin: 100% -30%;
    </td>
    <td>
     <div class="hidden" id="transform_skew_y">
-    <pre class="brush: html notranslate">
+    <pre class="brush: html">
 &lt;div class="box10"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css notranslate">
+    <pre class="brush: css">
 .box10 {
 margin: 0.5em;
 width: 3em;
@@ -476,6 +476,6 @@ transform-origin: 100% -30%;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
  <li><a href="https://css-tricks.com/almanac/properties/t/transform-origin/">https://css-tricks.com/almanac/properties/t/transform-origin/</a></li>
 </ul>

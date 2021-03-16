@@ -11,9 +11,7 @@ tags:
 ---
 <p>{{APIRef}}</p>
 
-<div>
-<p>The <code><strong>selectionchange</strong></code> event of the <a href="/en-US/docs/Web/API/Selection_API">Selection API</a> is fired when the current text selection on a document is changed.</p>
-</div>
+<p>The <code><strong>selectionchange</strong></code> event of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is fired when the current text selection on a document is changed.</p>
 
 <table class="properties">
  <tbody>
@@ -38,7 +36,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// addEventListener version
+<pre class="brush: js">// addEventListener version
 document.addEventListener('selectionchange', () =&gt; {
   console.log(document.getSelection());
 });
@@ -76,6 +74,6 @@ document.onselectionchange = () =&gt; {
 
 <ul>
  <li>{{domxref("Document/selectstart_event", "selectstart")}}</li>
- <li>{{domxref("Document/getSelection", "Document.getSelection")}}</li>
+ <li>{{domxref("Document.getSelection()")}}</li>
  <li>{{domxref("Selection", "Selection")}}</li>
 </ul>

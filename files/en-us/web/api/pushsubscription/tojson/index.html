@@ -2,24 +2,26 @@
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
 tags:
-  - API
-  - Experimental
-  - Method
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Serializer
-  - Service Workers
-  - toJSON
+- API
+- Experimental
+- Method
+- Push
+- Push API
+- PushSubscription
+- Reference
+- Serializer
+- Service Workers
+- toJSON
 ---
 <p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
 
-<p>The <code>toJSON()</code> method of the {{domxref("PushSubscription")}} interface is a standard serializer: it returns a JSON representation of the subscription properties, providing a useful shortcut.</p>
+<p>The <code>toJSON()</code> method of the {{domxref("PushSubscription")}} interface is a
+  standard serializer: it returns a JSON representation of the subscription properties,
+  providing a useful shortcut.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">mySubscription = subscription.toJSON()</pre>
+<pre class="brush: js">mySubscription = subscription.toJSON()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -27,7 +29,8 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A JSON object. It currently only contains the subscription endpoint, as an <code>endpoint</code> member.</p>
+<p>A JSON object. It currently only contains the subscription endpoint, as an
+  <code>endpoint</code> member.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -41,23 +44,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Push API','#dom-pushsubscription-tojson','PushSubscription: toJSON')}}</td>
-			<td>{{Spec2('Push API')}}</td>
-			<td> </td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Push API','#dom-pushsubscription-tojson','PushSubscription:
+        toJSON')}}</td>
+      <td>{{Spec2('Push API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PushSubscription.toJSON")}}</p>
-</div>

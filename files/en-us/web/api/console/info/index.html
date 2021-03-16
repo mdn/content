@@ -10,46 +10,53 @@ tags:
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p><span class="seoSummary">The <strong>console.info()</strong> method outputs an informational message to the Web Console. In Firefox, a small "i" icon is displayed next to these items in the Web Console's log.</span></p>
+<p><span class="seoSummary">The <strong>console.info()</strong> method outputs an
+    informational message to the Web Console. In Firefox, a small "i" icon is displayed
+    next to these items in the Web Console's log.</span></p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">console.info(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
+<pre class="brush: js">console.info(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
 console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 </pre>
 
 <h2 id="Parameters">Parameters</h2>
 
 <dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>A list of JavaScript objects to output. The string representations of each of these objects are appended together in the order listed and output.</dd>
- <dt><code>msg</code></dt>
- <dd>A JavaScript string containing zero or more substitution strings.</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>JavaScript objects with which to replace substitution strings within <code>msg</code>. This gives you additional control over the format of the output.</dd>
+  <dt><code>obj1</code> ... <code>objN</code></dt>
+  <dd>A list of JavaScript objects to output. The string representations of each of these
+    objects are appended together in the order listed and output.</dd>
+  <dt><code>msg</code></dt>
+  <dd>A JavaScript string containing zero or more substitution strings.</dd>
+  <dt><code>subst1</code> ... <code>substN</code></dt>
+  <dd>JavaScript objects with which to replace substitution strings within
+    <code>msg</code>. This gives you additional control over the format of the output.
+  </dd>
 </dl>
 
-<p>See <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> in the documentation of {{domxref("console")}} for details.</p>
+<p>See <a href="/en-US/docs/Web/API/Console#outputting_text_to_the_console">Outputting
+    text to the console</a> in the documentation of {{domxref("console")}} for details.
+</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#info", "console.info()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Console API", "#info", "console.info()")}}</td>
+      <td>{{Spec2("Console API")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -59,6 +66,9 @@ console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a class="external" href="https://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
+  <li><a class="external"
+      href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
+      documentation: Console</a></li>
+  <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
+      the F12 Tools Console to View Errors and Status</a></li>
 </ul>

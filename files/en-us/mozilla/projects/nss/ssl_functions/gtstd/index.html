@@ -1,0 +1,191 @@
+---
+title: gtstd
+slug: Mozilla/Projects/NSS/SSL_functions/gtstd
+---
+<div class="note">
+<ul>
+	<li>This page is part of the <a href="/en-US/docs/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+</ul>
+
+<ul>
+	<li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+
+
+	</li>
+</ul>
+</div>
+
+<h1 id="Getting_Started_With_SSL">Getting Started With SSL</h1>
+
+
+
+<hr>
+<h2 id="Chapter_2_Getting_Started_With_SSL">Chapter 2<br>
+<a id="1005439"> Getting Started With SSL</a></h2>
+
+<p><a id="1006945"> This chapter describes how to set up your environment, including certificate and key databases.</a></p>
+
+<p><a id="1013252"> </a><a href="#1011970">SSL, PKCS #11, and the Default Security Databases</a><br>
+<a href="#1011987">Setting Up the Certificate and Key Databases</a><br>
+<a href="#1013274">Building NSS Programs</a></p>
+
+
+
+<h2 id="SSL_PKCS_11_and_the_Default_Security_Databases"><a id="1011970"> SSL, PKCS #11, and the Default Security Databases </a></h2>
+
+<p><a id="1011984"> The basic relationships among the NSS libraries are described in </a><a href="../../intro.html">Introduction to Network Security Services</a>. Before running the sample programs, it's important to understand the relationships between the SSL interface, the PKCS #11 interface, PKCS #11 modules, and the default Netscape security databases.</p>
+
+<p><a id="1013023"> A <strong>PKCS #11 module</strong> (also called a <strong>cryptographic module</strong>) manages cryptographic services such as encryption and decryption via the PKCS #11 interface. PKCS #11 modules can be thought of as drivers for cryptographic devices that can be implemented in either hardware or software. Netscape provides a built-in PKCS #11 module with NSS. Other kinds of PKCS #11 modules include the Netscape FORTEZZA module, used by the government, and the Litronic PKCS #11 module for smart card readers.</a></p>
+
+<p><a id="1013148"> </a><a href="#1013181">Figure 2.1</a> illustrates the relationships between NSPR, SSL, PKCS #11, and the available cryptographic modules. SSL is built on top of NSPR, which handles sockets, threads, and related low-level OS operations. On any given server or client, one or more PKCS #11 modules may be available.</p>
+
+<p><a id="1013181"> <strong>Figure 2.1    Relationships among NSS libraries, cryptographic modules, slots, and tokens</strong></a></p>
+
+<p><img src="pkcs.gif"></p>
+
+<p><a id="1015314"> As shown in the figure, SSL communicates with PKCS #11 modules through the PKCS #11 interface. Any PKCS #11 module that supports PKCS #11 can be used with the NSS libraries. Netscape software uses a file called <code>secmod.db</code> to keep track of the modules available. </a></p>
+
+<p><a id="1013163"> A PKCS #11 module always has one or more <strong>slots,</strong> which may be implemented as physical hardware slots in some form of physical reader (for example, for smart cards) or as conceptual slots in software. Each slot for a PKCS #11 module can in turn contain a <strong>token,</strong> which is the hardware or software device that actually provides cryptographic services and optionally stores certificates and keys. </a></p>
+
+<p><a id="1013114"> Netscape provides three built-in modules with NSS and with server and client products:</a></p>
+
+<ul>
+	<li><a id="1015629"> The default Netscape Internal PKCS #11 Module comes with two built-in tokens:</a>
+
+	<ul>
+		<li><a id="1015242"> The Generic Crypto Services token performs all cryptographic operations, such as encryption, decryption, and hashing.</a></li>
+		<li><a id="1015250"> The Communicator Certificate DB token handles all communication with the certificate and key database files (called <code>cert</code><em>X</em><code>.db</code> and <code>key</code><em>X</em><code>.db</code>, respectively, where<em>X</em> is a version number) that store certificates and keys.</a></li>
+	</ul>
+	</li>
+	<li><a id="1015663"> The FORTEZZA module is intended for use with FORTEZZA hardware tokens.</a></li>
+	<li><a id="1015439"> The FIPS 140-1 module is compliant with the FIPS 140-1 government standard for implementations of cryptographic modules. Many products sold to the U.S. government must comply with one or more of the FIPS standards. The FIPS 140-1 module includes a single, built-in FIPS 140-1 Certificate DB token (see </a><a href="#1013181">Figure 2.1</a>), which handles both cryptographic operations and communication with the <code>cert</code><em>X</em><code>.db</code> and <code>key</code><em>X</em><code>.db</code> files.</li>
+</ul>
+
+<p><a id="1015492"> If you are creating a server application, you must use the Certificate Database Tool, which comes with NSS, to create the <code>cert</code><em>X</em><code>.db</code> and <code>key</code><em>X</em><code>.db</code> files and populate them with the appropriate certificates and keys. </a></p>
+
+<p><a id="1014136"> If you are creating a client application, you can use either the Certificate Database Tool or the Communicator security interface to create the database files and populate them with the appropriate certificates and keys. You can use Communicator to set up client certificate databases by obtaining certificates from either a public CA or from a certificate server such as Netscape Certificate Management System. The instructions that follow assume you are using the Certificate Database Tool to set up both the server and client databases for testing purposes.</a></p>
+
+<p><a id="1015405"> You can use the Security Module Database Tool, a command-line utility that comes with NSS, to manage PKCS #11 module information within s<code>ecmod.db</code> files. The Security Module Database Tool allows you to add and delete PKCS #11 modules, change passwords, set defaults, list module contents, enable or disable slots, enable or disable FIPS-140-1 compliance, and assign default providers for cryptographic operations. </a></p>
+
+
+
+<h2 id="Setting_Up_the_Certificate_and_Key_Databases"><a id="1011987"> Setting Up the Certificate and Key Databases </a></h2>
+
+<p><a id="1011996"> Before you can run the sample programs (<code>server.c</code> and <code>client.c</code>) that come with NSS, you must set up certificate, key, and security module databases for both the client and the server and populate them with valid CA, client SSL, and server SSL certificates. The following sections decribe how to the Certificate Database Tool to perform these tasks:</a></p>
+
+<p><a id="1013227"> </a><a href="#1012301">Setting Up the CA DB and Certificate</a><br>
+<a href="#1012351">Setting Up the Server DB and Certificate</a><br>
+<a href="#1012067">Setting Up the Client DB and Certificate</a><br>
+<a href="#1012108">Verifying the Server and Client Certificates</a></p>
+
+
+
+<blockquote><strong>WARNING: </strong><a id="1012184"></a> The instructions below illustrate the use of NSS command line tools to operate a simple root Certificate Authority for test purposes only. The CA, SSL server and SSL client certificates produced by these instructions work correctly for short term testing purposes. Although it is possible to use NSS command line tools to operate a proper CA, these instructions do not provide nearly enough understanding of the many considerations required to competently operate a CA. The NSS teams <strong>strongly</strong> recommends that users should not attempt to operate a CA for use in mission critical production business uses using NSS's command line tools, nor with the simple command line test tools that come with any package of cryptographic libraries. Many who have attempted it have eventually come to regret that decision. For production deployment, the NSS team strongly recommends that you either:
+
+<ul>
+	<li>Use certificates from a competent third-party CA that is already known to your relying party software (e.g. your SSL clients), or</li>
+	<li>Use professional grade CA software, such as Red Hat's <a href="http://pki.fedoraproject.org/wiki/PKI_Main_Page">Dogtag</a> <a href="http://www.redhat.com/certificate_system/">Certificate System</a>, to set up and operate your own CA and issue your own certificates.</li>
+</ul>
+</blockquote>
+
+<p><a id="1012159"> For complete information about the command-line options used in the examples that follow, see </a><a href="../../tools/certutil.html">Using the Certificate Database Tool</a>.</p>
+
+
+
+<h3 id="Setting_Up_the_CA_DB_and_Certificate"><a id="1012301"> Setting Up the CA DB and Certificate </a></h3>
+
+<p><a id="1012312"> Set up the CA with its own separate set of databases. </a></p>
+
+<ol>
+	<li><a id="CAstep1"> Create a new certificate database in the <code>CA_db</code> directory.</a><br>
+	<a id="1012008"><code>&gt;mkdir CA_db<br>
+	&gt;certutil -N -d CA_db </code></a></li>
+	<li><a id="CAstep2"> Create the self-signed Root CA certificate, specifying the subject name for the certificate. </a><br>
+	<a id="1012041"><code>&gt;certutil -S -d CA_db -n "MyCo's Root CA" -s "CN=My CA,O=MyCo,ST=California,C=US" -t "CT,," -x -2<br>
+	Enter Password or Pin for "Communicator Certificate DB": </code></a></li>
+	<li><a id="CAstep3"> Extract the CA certificate from the CA's certificate database to a file.</a><br>
+	<a id="1012050"><code>&gt;certutil -L -d CA_db -n "MyCo's Root CA" -a -o CA_db/rootca.crt<br>
+	Enter Password or Pin for "Communicator Certificate DB": </code></a></li>
+	<li><a id="CAstep4"> Display the contents of the CA's certificate databases.</a><br>
+	<code>&gt;certutil -L -d CA_db </code></li>
+</ol>
+
+<p><a id="1012503"> The trust flag settings <code>"CTu,u,u"</code> indicate that the certificate is a CA certificate that is trusted to issue both client (<code>C</code>) and server (<code>T</code>) SSL certificates. The <code>u</code> flag indicates that the private key for the CA certificate is present in this set of databases, so the CA can issue SSL client and server certificates with these databases.</a></p>
+
+
+
+<h3 id="Setting_Up_the_Server_DB_and_Certificate"><a id="1012351"> Setting Up the Server DB and Certificate </a></h3>
+
+<p><a id="1012317"> The sections that follow describe how to set up the Server DB and certificate:</a></p>
+
+<ol>
+	<li><a id="SERVERstep1"> Create a new certificate database in the <code>server_db</code> directory.</a><br>
+	<code>&gt;mkdir server_db<br>
+	&gt;certutil -N -d server_db </code></li>
+	<li><a id="SERVERstep2"> Import the new CA certificate into the server's certificate database, and mark it trusted for issuing certificates for SSL client and server authentication. </a><br>
+	<code>&gt;certutil -A -d server_db -n "MyCo's Root CA" -t "TC,," -a -i CA_db/rootca.crt</code></li>
+	<li><a id="SERVERstep3"> Create the server certificate request, specifying the subject name for the server certificate. We make the common name (CN) be identical to the hostname of the server. Note that this step generates the server's private key, so it must be done in the server's database directory.</a><br>
+	<a id="1012057"><code>&gt;certutil -R -d server_db -s "CN=myco.mcom.org,O=MyCo,ST=California,C=US" -a -o server_db/server.req<br>
+	Enter Password or Pin for "Communicator Certificate DB": </code></a></li>
+	<li><a id="SERVERstep4"> This step simulates the CA signing and issuing a new server certificate based on the server's certificate request. The new cert is signed with the CA's private key, so this operation uses the CA's databases. This step leaves the server's new certificate in a file.</a><br>
+	<a id="1012061"><code>&gt;certutil -C -d CA_db -c "MyCo's Root CA" -a -i server_db/server.req -o server_db/server.crt -2 -6<br>
+	Enter Password or Pin for "Communicator Certificate DB": </code></a></li>
+	<li><a id="SERVERstep5"> Import (Add) the new server certificate to the server's certificate database in the <code>server_db</code> directory with the appropriate nickname. Notice that no trust is explicitly needed for this certificate.</a><br>
+	<code>&gt;certutil -A -d server_db -n myco.mcom.org -a -i server_db/server.crt -t ",," </code></li>
+	<li><a id="SERVERstep6"> Display the contents of the server's certificate databases.</a><br>
+	<code>&gt;certutil -L -d server_db </code></li>
+</ol>
+
+<p><a id="1012604"> The trust flag settings <code>"u,u,u"</code> indicate that the server's databases contain the private key for this certificate. This is necessary for the SSL server to be able to do its job. </a></p>
+
+
+
+<h3 id="Setting_Up_the_Client_DB_and_Certificate"><a id="1012067"> Setting Up the Client DB and Certificate </a></h3>
+
+<p>Setting up the client certificate database involves three stages:</p>
+
+<ol>
+	<li><a id="CLIENTstep1"> Create a new certificate database in the <code>client_db</code> directory.</a><br>
+	<code>&gt;mkdir client_db<br>
+	&gt;certutil -N -d client_db </code></li>
+	<li><a id="CLIENTstep2"> Import the new CA certificate into the client's certificate database, and mark it trusted for issuing certificates for SSL client and server authentication. </a><br>
+	<code>&gt;certutil -A -d client_db -n "MyCo's Root CA" -t "TC,," -a -i CA_db/rootca.crt</code></li>
+	<li><a id="CLIENTstep3"> Create the client certificate request, specifying the subject name for the certificate.</a><br>
+	<code>&gt;certutil -R -d client_db -s "CN=Joe Client,O=MyCo,ST=California,C=US" -a -o client_db/client.req<br>
+	Enter Password or Pin for "Communicator Certificate DB": </code></li>
+	<li><a id="CLIENTstep4"> This step simulates the CA signing and issuing a new client certificate based on the client's certificate request. The new cert is signed with the CA's private key, so this operation uses the CA's databases. This step leaves the client's new certificate in a file.</a><br>
+	<code>&gt;certutil -C -d CA_db -c "MyCo's Root CA" -a -i client_db/client.req -o client_db/client.crt -2 -6<br>
+	Enter Password or Pin for "Communicator Certificate DB": </code></li>
+	<li><a id="CLIENTstep5"> Add the new client certificate to the client's certificate database in the <code>client_db</code> directory with the appropriate nickname. Notice that no trust is required for this certificate.</a><br>
+	<code>&gt;certutil -A -d client_db -n "Joe Client" -a -i client_db/client.crt -t ",," </code></li>
+	<li><a id="CLIENTstep6"> Display the contents of the client's certificate databases.</a><br>
+	<code>&gt;certutil -L -d client_db </code></li>
+</ol>
+
+<p>The trust flag settings <code>"u,u,u"</code> indicate that the client's databases contain the private key for this certificate. This is necessary for the SSL client to be able to authenticate to the server.</p>
+
+
+
+<h3 id="Verifying_the_Server_and_Client_Certificates"><a id="1012108"> Verifying the Server and Client Certificates </a></h3>
+
+<p><a id="1012833"> When you have finished setting up the server and client certificate databases, verify that the client and server certificates are valid, as follows:</a></p>
+
+<p><a id="1012109"><code>&gt;certutil -V -d server_db -u V -n myco.mcom.org<br>
+certutil: certificate is valid </code></a></p>
+
+<p><a id="1012112"><code>&gt;certutil -V -d client_db -u C -n "Joe Client"<br>
+certutil: certificate is valid </code></a></p>
+
+<h2 id="Building_NSS_Programs"><a id="1013274"> Building NSS Programs </a></h2>
+
+<p><a id="1013279"> On Unix, use the GNU utility <code>gmake</code> to run the makefile. On Windows NT, use the <code>nmake</code> utility that comes with Visual C++.</a></p>
+
+<p><a id="1013292"> If you create your own makefiles, be sure to include the libraries in the same order that they are listed in the sample makefiles. In addition, you must use the following compiler flags:</a></p>
+
+<p><a id="1013307"> Solaris flags: </a></p>
+
+<p><a id="1013308"><code>-c -O -KPIC -DSVR4 -DSYSV -D__svr4 -D__svr4__ -DSOLARIS -D_REENTRANT -DSOLARIS2_5 -D_SVID_GETTOD -DXP_UNIX -UDEBUG -DNDEBUG </code></a></p>
+
+<p><a id="1013309"> Windows NT flags: </a></p>
+
+<p><a id="1013310"><code>-c -O2 -MD -W3 -nologo -D_X86_ -GT -DWINNT -DXP_PC -UDEBUG -U_DEBUG -DNDEBUG -DWIN32 -D_WINDOWS </code></a> <a id="1013272"></a></p>

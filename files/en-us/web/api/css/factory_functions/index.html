@@ -2,18 +2,24 @@
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
 tags:
-  - API
-  - CSS
-  - CSS API
-  - Houdini
-  - Reference
-  - factory function
+- API
+- CSS
+- CSS API
+- Houdini
+- Reference
+- factory function
 ---
-<p>{{SeeCompatTable}}<span class="seoSummary">The <strong>CSS numeric factory functions</strong></span>, such as <code>CSS.em()</code> and <code>CSS.turn()</code> <span class="seoSummary">are methods that return <a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</a> with the value being the numeric argument and the unit being the name of the method used.</span> These functions create new numeric values less verbosely than using the {{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.</p>
+<p>{{SeeCompatTable}}<span class="seoSummary">The <strong>CSS numeric factory
+			functions</strong></span>, such as <code>CSS.em()</code> and
+	<code>CSS.turn()</code> <span class="seoSummary">are methods that return <a
+			href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</a> with the value being
+		the numeric argument and the unit being the name of the method used.</span> These
+	functions create new numeric values less verbosely than using the
+	{{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">CSS.number(<var>number</var>);
+<pre class="brush: js">CSS.number(<var>number</var>);
 CSS.percent(<var>number</var>);
 
 // &lt;length&gt;
@@ -62,7 +68,8 @@ CSS.fr(<var>number</var>);</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>We use the <code>CSS.vmax()</code> numeric factory function to create a {{domxref('CSSUnitValue')}}:</p>
+<p>We use the <code>CSS.vmax()</code> numeric factory function to create a
+	{{domxref('CSSUnitValue')}}:</p>
 
 <pre class="brush: js">let height = CSS.vmax(50);
 
@@ -70,7 +77,8 @@ console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
 console.log( height.value )  // 50
 console.log( height.unit )   // vmax</pre>
 
-<p>In this example, we set the margin on our element using the<code> CSS.px()</code> factory function:</p>
+<p>In this example, we set the margin on our element using the<code> CSS.px()</code>
+	factory function:</p>
 
 <pre class="brush: js">myElement.attributeStyleMap.set('margin', CSS.px(40));
 let currentMargin = myElement.attributeStyleMap.get('margin');
@@ -86,7 +94,8 @@ console.log(currentMargin.value, currentMargin.unit); // 40, 'px'</pre>
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('CSSOM', '#numeric-factory', 'Numeric Factory Functions')}}</td>
+			<td>{{SpecName('CSSOM', '#numeric-factory', 'Numeric Factory Functions')}}
+			</td>
 			<td>{{Spec2('CSSOM')}}</td>
 			<td>Initial definition</td>
 		</tr>

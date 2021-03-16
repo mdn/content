@@ -64,7 +64,7 @@ tags:
 
 <p>You can set a default value for the input with a date inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
-<pre class="brush: html notranslate">&lt;input type="date" value="2017-06-01"&gt;</pre>
+<pre class="brush: html">&lt;input type="date" value="2017-06-01"&gt;</pre>
 
 <p>{{EmbedLiveSample('Value', 600, 40)}}</p>
 
@@ -74,7 +74,7 @@ tags:
 
 <p>You can get and set the date value in JavaScript with the input element's {{domxref("HTMLInputElement.value", "value")}} and {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} properties. For example:</p>
 
-<pre class="brush: js notranslate">var dateControl = document.querySelector('input[type="date"]');
+<pre class="brush: js">var dateControl = document.querySelector('input[type="date"]');
 dateControl.value = '2017-06-01';
 console.log(dateControl.value); // prints "2017-06-01"
 console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)</pre>
@@ -144,7 +144,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>The simplest use of <code>&lt;input type="date"&gt;</code> involves one <code>&lt;input&gt;</code> combined with its {{htmlelement("label")}}, as seen below:</p>
 
-<pre class="brush: html notranslate">&lt;form action="https://example.com"&gt;
+<pre class="brush: html">&lt;form action="https://example.com"&gt;
   &lt;label&gt;
     Enter your birthday:
     &lt;input type="date" name="bday"&gt;
@@ -161,7 +161,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates that can be chosen by the user. In the following example, we set a minimum date of <code>2017-04-01</code> and a maximum date of <code>2017-04-30</code>:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="party"&gt;Choose your preferred party date:
     &lt;input type="date" name="party" min="2017-04-01" max="2017-04-30"&gt;
   &lt;/label&gt;
@@ -169,7 +169,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>{{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}</p>
 
-<p>The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in tte picker widget.</p>
+<p>The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in the picker widget.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You <em>should</em> be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable). However, this does not seem to be in any implementation at the time of writing.</p>
@@ -189,7 +189,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>Let's look at an example of minimum and maximum dates, and also made a field required:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label&gt;
     Choose your preferred party date (required, April 1st to 20th):
     &lt;input type="date" name="party" min="2017-04-01" max="2017-04-20" required&gt;
@@ -211,7 +211,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> to add an icon next to the input, based on whether or not the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
-<pre class="brush: css notranslate">label {
+<pre class="brush: css">label {
   display: flex;
   align-items: center;
 }
@@ -253,7 +253,7 @@ input:valid+span::after {
 
 <p>One way around this is the {{htmlattrxref("pattern", "input")}} attribute on your date input. Even though the date picker doesn't use it, the text input fallback will. For example, try viewing the following in a unsupporting browser:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="bday"&gt;Enter your birthday:
     &lt;input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}"&gt;
     &lt;span class="validity"&gt;&lt;/span&gt;
@@ -268,7 +268,7 @@ input:valid+span::after {
 <p>If you submit it, you'll see that the browser displays an error and highlights the input as invalid if your entry doesn't match the pattern <code>####-##-##</code> (where <code>#</code> is a digit from 0 to 9). Of course, this doesn't stop people from entering invalid dates, or incorrect formats. So we still have a problem.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   position: relative;
 }
 
@@ -298,7 +298,7 @@ input:valid + span::after {
 
 <p>The HTML looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
     &lt;div class="nativeDatePicker"&gt;
       &lt;label for="bday"&gt;Enter your birthday:&lt;/label&gt;
       &lt;input type="date" id="bday" name="bday"&gt;
@@ -339,7 +339,7 @@ input:valid + span::after {
 <p>The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   padding-left: 5px;
 }
 
@@ -358,7 +358,7 @@ input:valid + span::after {
 
 <p>We create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>date</code>, then immediately check what its type is — unsupporting browsers will return <code>text</code>, because the <code>date</code> type falls back to type <code>text</code>. If <code>&lt;input type="date"&gt;</code> isn't supported, we hide the native picker and show the fallback ({{htmlelement("select")}}) instead.</p>
 
-<pre class="brush: js notranslate">// define variables
+<pre class="brush: js">// define variables
 var nativePicker = document.querySelector('.nativeDatePicker');
 var fallbackPicker = document.querySelector('.fallbackDatePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
@@ -508,7 +508,7 @@ daySelect.onchange = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.input.input-date")}}</p>
 

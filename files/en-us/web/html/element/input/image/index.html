@@ -221,7 +221,7 @@ tags:
 
 <p>Let's look at a basic example that includes all the essential features you'd need to use (These work exactly the same as they do on the <code>&lt;img&gt;</code> element.):</p>
 
-<pre class="brush: html notranslate">&lt;input id="image" type="image" width="100" height="30" alt="Login"
+<pre class="brush: html">&lt;input id="image" type="image" width="100" height="30" alt="Login"
        src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}</p>
@@ -237,9 +237,9 @@ tags:
 <p><code>&lt;input type="image"&gt;</code> elements — like regular <a href="/en-US/docs/Web/HTML/Element/input/submit">submit buttons</a> — can accept a number of attributes that override the default form behavior:</p>
 
 <dl>
- <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("formaction")}}</dt>
  <dd>The URI of a program that processes the information submitted by the input element; overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.</dd>
- <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("formenctype")}}</dt>
  <dd>Specifies the type of content that is used to submit the form to the server. Possible values are:
  <ul>
   <li><code>application/x-www-form-urlencoded</code>: The default value if the attribute is not specified.</li>
@@ -248,7 +248,7 @@ tags:
 
  <p>If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.</p>
  </dd>
- <dt>{{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("formmethod")}}</dt>
  <dd>Specifies the HTTP method that the browser uses to submit the form. Possible values are:
  <ul>
   <li><code>post</code>: The data from the form is included in the body of the form and is sent to the server.</li>
@@ -257,9 +257,9 @@ tags:
 
  <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.</p>
  </dd>
- <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("formnovalidate")}}</dt>
  <dd>A Boolean attribute specifying that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.</dd>
- <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}</dt>
+ <dt>{{htmlattrdef("formtarget")}}</dt>
  <dd>A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a <em>browsing context</em> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:
  <ul>
   <li>_<code>self</code>: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.</li>
@@ -294,7 +294,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;Login to your account&lt;/p&gt;
   &lt;div&gt;
     &lt;label for="userId"&gt;User ID&lt;/label&gt;
@@ -313,7 +313,7 @@ tags:
 
 <p>And now some simple CSS to make the basic elements sit more neatly:</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }
 
@@ -332,7 +332,7 @@ label {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;Login to your account&lt;/p&gt;
   &lt;div&gt;
     &lt;label for="userId"&gt;User ID&lt;/label&gt;
@@ -351,7 +351,7 @@ label {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }
 
@@ -397,7 +397,7 @@ label {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.input.input-image")}}</p>
 

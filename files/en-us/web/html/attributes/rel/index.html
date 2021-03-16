@@ -224,25 +224,24 @@ tags:
 	<dd>Indicates an alternate representation of the current document. Valid for link, a, and area, the meaning depends on the values of the other attributes.
 	<ul>
 		<li>With the <code>{{anch('stylesheet')}}</code> keyword on a <code>&lt;link&gt;</code>, it creates an alternate stylesheet.
-		<pre class="brush:html notranslate">&lt;!-- a persistent style sheet --&gt;
+		<pre class="brush:html">&lt;!-- a persistent style sheet --&gt;
 &lt;link rel="stylesheet" href="default.css"&gt;
 &lt;!-- alternate style sheets --&gt;
 &lt;link rel="alternate stylesheet" href="highcontrast.css" title="High contrast"&gt;</pre>
 		</li>
 		<li>With an <a href="hreflang">hreflang</a> attribute that differs from the document language, it indicates a translation.</li>
 		<li>With the <a href="type">type</a> attribute, it indicates that the referenced document is the same content in a different format. For example, with <code>type="application/rss+xml"</code> it creates a hyperlink referencing a syndication feed.
-		<pre class="brush:html notranslate">&lt;link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog"&gt;</pre>
+		<pre class="brush:html">&lt;link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog"&gt;</pre>
 		</li>
 		<li>Both the <a href="hreflang">hreflang</a> and <a href="type">type</a> attributes specify links to versions of the document in an alternative format and language, intended for other media:
-		<pre class="brush:html notranslate">&lt;link rel=alternate href="/fr/html/print" hreflang=fr type=text/html media=print title="French HTML (for printing)"&gt;
+		<pre class="brush:html">&lt;link rel=alternate href="/fr/html/print" hreflang=fr type=text/html media=print title="French HTML (for printing)"&gt;
 &lt;link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF"&gt;</pre>
 		</li>
 	</ul>
+  <p class="note">Note: The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p>
 	</dd>
 	<dt>{{htmlattrdef("author")}}</dt>
-	<dd>Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>author</code> keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or <code>mailto:</code>) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.
-	<p class="note">Note: The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p>
-	</dd>
+	<dd>Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>author</code> keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or <code>mailto:</code>) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.</dd>
 	<dt>{{htmlattrdef("bookmark")}}</dt>
 	<dd>Relevant as the <code>rel</code> attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements, the bookmark provides a permalink for ancestor section, which is the nearest ancestor {{htmlelement('article')}} or {{htmlelement('section')}}, if there is at least one, otherwise, the nearest heading sibling or ancestor descendant, to the next..</dd>
 	<dt>{{htmlattrdef("canonical")}}</dt>
@@ -259,7 +258,7 @@ tags:
 
 	<p>The most common use for the <code>icon</code> value is the favicon:</p>
 
-	<pre class="brush: html notranslate">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+	<pre class="brush: html">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
 
 	<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a>, and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
 
@@ -275,7 +274,7 @@ tags:
 	<dd>
 	<p>Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the <code>license</code> value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.</p>
 
-	<pre class="brush: html notranslate">&lt;link rel="license" href="#license"&gt;</pre>
+	<pre class="brush: html">&lt;link rel="license" href="#license"&gt;</pre>
 
 	<p><strong>Note:</strong> Although recognized, the synonym <code>copyright</code> is incorrect and must be avoided.</p>
 	</dd>
@@ -292,7 +291,7 @@ tags:
 	<br>
 	This is the opposite of {{anch("opener")}}.</dd>
 	<dt>{{htmlattrdef("noreferrer")}}</dt>
-	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no <code>Referer</code> header will be included), and opens the creates a top-level browsing context, as if <code>noopener</code> were also set.</dd>
+	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no <code>Referer</code> header will be included), and creates a top-level browsing context as if <code>noopener</code> were also set.</dd>
 	<dt>{{htmlattrdef("opener")}}</dt>
 	<dd>Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not anauxiliary browsing context (i.e., has "<code>_blank</code>" as <code>target</code> attribute value). Effectively, the opposite of {{anch("noopener")}}.</dd>
 	<dt>{{htmlattrdef("pingback")}}</dt>
@@ -338,7 +337,7 @@ tags:
 <dl>
 	<dt>apple-touch-icon-precomposed</dt>
 	<dd>
-	<pre class="brush: html notranslate"> &lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+	<pre class="brush: html"> &lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
   &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png"&gt;
   &lt;!-- iPhone with high-resolution Retina display: --&gt;
   &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png"&gt;

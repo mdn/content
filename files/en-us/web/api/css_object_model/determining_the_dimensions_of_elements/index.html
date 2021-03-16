@@ -20,13 +20,13 @@ tags:
 
 <p>If you need to know the total amount of space an element occupies, including the width of the visible content, scrollbars (if any), padding, and border, you want to use the {{DOMxRef("HTMLElement.offsetWidth")}} and {{DOMxRef("HTMLElement.offsetHeight")}} properties. Most of the time these are the same as width and height of {{DOMxRef("Element.getBoundingClientRect()")}}, when there aren't any transforms applied to the element. In case of transforms, the <code>offsetWidth</code> and <code>offsetHeight</code> returns the element's layout width and height, while <code>getBoundingClientRect()</code> returns the rendering width and height. As an example, if the element has <code>width: 100px;</code> and <code>transform: scale(0.5);</code> the <code>getBoundingClientRect()</code> will return 50 as the width, while <code>offsetWidth</code> will return 100.</p>
 
-<p><img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
+<p><img src="dimensions-offset.png"></p>
 
 <h2 id="What.27s_the_size_of_the_displayed_content.3F">What's the size of the displayed content?</h2>
 
 <p>If you need to know how much space the actual displayed content takes up, including padding but not including the border, margins, or scrollbars, you want to use the {{DOMxRef("Element.clientWidth")}} and {{DOMxRef("Element.clientHeight")}} properties:</p>
 
-<p><img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
+<p><img src="dimensions-client.png"></p>
 
 <h2 id="How_big_is_the_content.3F">How big is the content?</h2>
 
@@ -37,6 +37,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/cssom-view-1/">https://www.w3.org/TR/cssom-view-1/</a></li>
+ <li><a href="https://www.w3.org/TR/cssom-view-1/">https://www.w3.org/TR/cssom-view-1/</a></li>
  <li><a href="https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location</a></li>
 </ul>

@@ -2,51 +2,55 @@
 title: FontFace.FontFace()
 slug: Web/API/FontFace/FontFace
 tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - Constructor
-  - FontFace
-  - Fonts
-  - Reference
+- API
+- CSS Font Loading API
+- CSSOM
+- Constructor
+- FontFace
+- Fonts
+- Reference
 ---
 <div>{{draft}}{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>FontFace()</strong></code> constructor creates a new {{domxref("FontFace")}} object.</p>
+<p>The <code><strong>FontFace()</strong></code> constructor creates a new
+  {{domxref("FontFace")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var fontFace = new FontFace(family, source, descriptors);</pre>
+<pre
+  class="brush: js">var fontFace = new FontFace(family, source, descriptors);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>family</em></dt>
- <dd>Specifies a name that will be used as the font face value for font properties. Takes the same type of values as the {{cssxref("@font-face/font-family", "font-family")}} descriptor of {{cssxref("@font-face")}} .</dd>
- <dt><em>source</em></dt>
- <dd>The font source. This can be either:
- <ul>
-  <li>A URL</li>
-  <li>Binary font data</li>
- </ul>
- </dd>
- <dt>descriptors {{optional_inline}}</dt>
- <dd>A set of optional descriptors passed as an object. It can have the following keys:
- <ul>
-  <li><code>family</code>: Family</li>
-  <li><code>style</code>: Style</li>
-  <li><code>weight</code>: Weight</li>
-  <li><code>stretch</code>: Stretch</li>
-  <li><code>unicodeRange</code>: Unicode range</li>
-  <li><code>variant</code>: variant</li>
-  <li><code>featureSettings</code>: Feature settings</li>
- </ul>
- </dd>
+  <dt><em>family</em></dt>
+  <dd>Specifies a name that will be used as the font face value for font properties. Takes
+    the same type of values as the {{cssxref("@font-face/font-family", "font-family")}}
+    descriptor of {{cssxref("@font-face")}} .</dd>
+  <dt><em>source</em></dt>
+  <dd>The font source. This can be either:
+    <ul>
+      <li>A URL</li>
+      <li>Binary font data</li>
+    </ul>
+  </dd>
+  <dt>descriptors {{optional_inline}}</dt>
+  <dd>A set of optional descriptors passed as an object. It can have the following keys:
+    <ul>
+      <li><code>family</code>: Family</li>
+      <li><code>style</code>: Style</li>
+      <li><code>weight</code>: Weight</li>
+      <li><code>stretch</code>: Stretch</li>
+      <li><code>unicodeRange</code>: Unicode range</li>
+      <li><code>variant</code>: variant</li>
+      <li><code>featureSettings</code>: Feature settings</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">async function loadFonts() {
+<pre class="brush: js">async function loadFonts() {
     const font = new FontFace('myfont', 'url(myfont.woff)');
     // wait for font to be loaded
     await font.load();
@@ -60,18 +64,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Font Loading','#font-face-constructor','FontFace Constructor')}}</td>
-   <td>{{Spec2('CSS3 Font Loading')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Font Loading','#font-face-constructor','FontFace
+        Constructor')}}</td>
+      <td>{{Spec2('CSS3 Font Loading')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -81,5 +86,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("@font-face")}}</li>
+  <li>{{cssxref("@font-face")}}</li>
 </ul>

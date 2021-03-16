@@ -2,20 +2,21 @@
 title: Array.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 tags:
-  - Array
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-  - Reference
+- Array
+- JavaScript
+- Method
+- Non-standard
+- Prototype
+- Reference
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>The <code><strong>toSource()</strong></code> method returns a string representing the source code of the array.</p>
+<p>The <code><strong>toSource()</strong></code> method returns a string representing the
+  source code of the array.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>arr</var>.toSource()</pre>
+<pre class="brush: js"><var>arr</var>.toSource()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -26,17 +27,20 @@ tags:
 <p>The <code>toSource</code> method returns the following values:</p>
 
 <ul>
- <li>For the built-in {{jsxref("Array")}} object, <code>toSource</code> returns the following string indicating that the source code is not available:
+  <li>For the built-in {{jsxref("Array")}} object, <code>toSource</code> returns the
+    following string indicating that the source code is not available:
 
-  <pre class="brush: js">function Array() {
+    <pre class="brush: js">function Array() {
     [native code]
 }
 </pre>
- </li>
- <li>For instances of {{jsxref("Array")}}, <code>toSource</code> returns a string representing the source code.</li>
+  </li>
+  <li>For instances of {{jsxref("Array")}}, <code>toSource</code> returns a string
+    representing the source code.</li>
 </ul>
 
-<p>This method is usually called internally by JavaScript and not explicitly in code. You can call <code>toSource</code> while debugging to examine the contents of an array.</p>
+<p>This method is usually called internally by JavaScript and not explicitly in code. You
+  can call <code>toSource</code> while debugging to examine the contents of an array.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -61,6 +65,6 @@ alpha.toSource();
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
+  <li>{{jsxref("Object.prototype.toSource()")}}</li>
+  <li>{{jsxref("Array.prototype.toString()")}}</li>
 </ul>

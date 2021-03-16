@@ -2,42 +2,49 @@
 title: ReadableStreamBYOBReader.cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
 tags:
-  - API
-  - Experimental
-  - Method
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
-  - cancel
+- API
+- Experimental
+- Method
+- ReadableStreamBYOBReader
+- Reference
+- Streams
+- cancel
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>cancel()</code></strong> method of the {{domxref("ReadableStreamBYOBReader")}} interface cancels the stream, signaling a loss of interest in the stream by a consumer. The supplied <code>reason</code> parameter will be given to the underlying source, which may or may not use it.</p>
+<p class="summary">The <strong><code>cancel()</code></strong> method of the
+  {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If the reader is active, the <code>cancel()</code> method behaves the same as that for the associated stream ({{domxref("ReadableStream.cancel()")}}).</p>
+  <p><strong>Note</strong>: If the reader is active, the <code>cancel()</code> method
+    behaves the same as that for the associated stream
+    ({{domxref("ReadableStream.cancel()")}}).</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>promise</em> = <em>readableStreamBYOBReader</em>.cancel(<em>reason</em>);</pre>
+<pre
+  class="brush: js">var <em>promise</em> = <em>readableStreamBYOBReader</em>.cancel(<em>reason</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>reason</dt>
- <dd>A {{domxref("DOMString")}} providing a human-readable reason for the cancellation.</dd>
+  <dt>reason {{optional_inline}}</dt>
+  <dd>A human-readable reason for the cancellation. The underlying source may or may not use it.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code> parameter.</p>
+<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code>
+  parameter.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The source object is not a <code>ReadableStreamBYOBReader</code>, or the stream has no owner.</dd>
+  <dt>TypeError</dt>
+  <dd>The source object is not a <code>ReadableStreamBYOBReader</code>, or the stream has
+    no owner.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -47,24 +54,27 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#byob-reader-cancel","cancel()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#byob-reader-cancel","cancel()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table in this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.ReadableStreamBYOBReader.cancel")}}</p>

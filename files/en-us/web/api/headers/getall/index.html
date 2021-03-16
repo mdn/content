@@ -11,11 +11,11 @@ tags:
   - Reference
   - getAll
 ---
-<p>{{obsolete_header("gecko52")}}{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
+<p>{{deprecated_header}}{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
 
 <p>The <strong><code>getAll()</code></strong> method of the {{domxref("Headers")}} interface used to return an array of all the values of a header within a <code>Headers</code> object with a given name; in newer versions of the Fetch spec, it has been deleted, and {{domxref("Headers.get()")}} has been updated to fetch <em>all</em> header values instead of only the first one.</p>
 
-<p><span>If the requested header doesn't exist</span> in the <code>Headers</code> object, it returns an empty array.</p>
+<p>If the requested header doesn't exist in the <code>Headers</code> object, it returns an empty array.</p>
 
 <p>For security reasons, some headers can only be controller by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <dl>
  <dt><em>name</em></dt>
- <dd>The name of the HTTP header whose values you want to retrieve from the <code>Headers</code> object. <span>If the given name is not the name of an HTTP header</span><span>, this method throws a </span><span>{{jsxref("TypeError")}}.</span></dd>
+ <dd>The name of the HTTP header whose values you want to retrieve from the <code>Headers</code> object. If the given name is not the name of an HTTP header, this method throws a {{jsxref("TypeError")}}.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -63,7 +63,7 @@ myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

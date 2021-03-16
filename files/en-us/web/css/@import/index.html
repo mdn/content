@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">@import <var>url</var>;
+<pre class="brush: css">@import <var>url</var>;
 @import <var>url</var> <var>list-of-media-queries</var>;
 @import <var>url</var> supports( <var>supports-query</var> );
 @import <var>url</var> supports( <var>supports-query</var> ) <var>list-of-media-queries</var>;
@@ -24,7 +24,7 @@ tags:
 
 <dl>
  <dt><em>url</em></dt>
- <dd>Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("&lt;url&gt;")}} representing the location of the resource to import. The URL may be absolute or relative. Note that the URL for a Mozilla package need not actually specify a file; it can just specify the package name and part, and the appropriate file is chosen automatically (e.g. <code>chrome://communicator/skin/</code>). <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL">See here</a> for more information.</dd>
+ <dd>Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("&lt;url&gt;")}} representing the location of the resource to import. The URL may be absolute or relative.</dd>
  <dt><em>list-of-media-queries</em></dt>
  <dd>Is a comma-separated list of <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> conditioning the application of the CSS rules defined in the linked URL. If the browser does not support any these queries, it does not load the linked resource.</dd>
  <dt><em>supports-query</em></dt>
@@ -39,18 +39,18 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Importing_CSS_rules">Importing CSS rules</h3>
 
-<pre class="brush: css notranslate">@import 'custom.css';
+<pre class="brush: css">@import 'custom.css';
 @import url("chrome://communicator/skin/");</pre>
 
 <h3 id="Importing_CSS_rules_conditionally">Importing CSS rules conditionally</h3>
 
-<pre class="brush: css notranslate">@import url("fineprint.css") print;
+<pre class="brush: css">@import url("fineprint.css") print;
 @import url("bluish.css") speech;
 @import "common.css" screen;
 @import url('landscape.css') screen and (orientation:landscape);</pre>

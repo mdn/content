@@ -10,20 +10,40 @@ tags:
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p><span class="seoSummary">The <code><strong>Element.getElementsByTagName()</strong></code> method returns a live {{domxref("HTMLCollection")}} of elements with the given <a href="/en/DOM/element.tagName">tag name</a>.</span> All descendants of the specified element are searched, but not the element itself. The returned list is <em>live</em>, which means it updates itself with the DOM tree automatically. Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with the same element and arguments repeatedly if the DOM changes in between calls.</p>
+<p><span class="seoSummary">The
+		<code><strong>Element.getElementsByTagName()</strong></code> method returns a live
+		{{domxref("HTMLCollection")}} of elements with the given <a
+			href="/en-US/docs/Web/API/Element/tagName">tag name</a>.</span> All descendants of the
+	specified element are searched, but not the element itself. The returned list is
+	<em>live</em>, which means it updates itself with the DOM tree automatically.
+	Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with
+	the same element and arguments repeatedly if the DOM changes in between calls.</p>
 
-<p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code> lower-cases the argument before searching for it. This is undesirable when trying to match camel-cased SVG elements (such as <code><a href="/en-US/docs/Web/SVG/Element/linearGradient">&lt;linearGradient&gt;</a></code>) in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }}, which preserves the capitalization of the tag name.</p>
+<p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code>
+	lower-cases the argument before searching for it. This is undesirable when trying to
+	match camel-cased SVG elements (such as
+	<code><a href="/en-US/docs/Web/SVG/Element/linearGradient">&lt;linearGradient&gt;</a></code>)
+	in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }},
+	which preserves the capitalization of the tag name.</p>
 
-<p><code>Element.getElementsByTagName</code> is similar to {{domxref("Document.getElementsByTagName()")}}, except that it only searches for elements that are descendants of the specified element.</p>
+<p><code>Element.getElementsByTagName</code> is similar to
+	{{domxref("Document.getElementsByTagName()")}}, except that it only searches for
+	elements that are descendants of the specified element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><em>elements</em> = <em>element</em>.getElementsByTagName(<em>tagName</em>)</code></pre>
+<pre
+	class="brush: js">elements = element.getElementsByTagName(tagName)</pre>
 
 <ul>
-	<li><code>elements</code> is a <em>live</em> {{domxref("HTMLCollection")}} of elements with a matching tag name, in the order they appear. If no elements are found, the <code>HTMLCollection</code> is empty.</li>
-	<li><code>element</code> is the element from where the search starts. Only the element's descendants are included, not the element itself.</li>
-	<li><code>tagName</code> is the qualified name to look for. The special string <code>"*"</code> represents all elements. For compatibility with XHTML, lower-case should be used.</li>
+	<li><code>elements</code> is a <em>live</em> {{domxref("HTMLCollection")}} of elements
+		with a matching tag name, in the order they appear. If no elements are found, the
+		<code>HTMLCollection</code> is empty.</li>
+	<li><code>element</code> is the element from where the search starts. Only the
+		element's descendants are included, not the element itself.</li>
+	<li><code>tagName</code> is the qualified name to look for. The special string
+		<code>"*"</code> represents all elements. For compatibility with XHTML, lower-case
+		should be used.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -50,22 +70,27 @@ for (let cell of cells) {
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbytagname', 'Element.getElementsByTagName()')}}</td>
+			<td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbytagname',
+				'Element.getElementsByTagName()')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Changed the return value from {{domxref("NodeList")}} to {{domxref("HTMLCollection")}}</td>
+			<td>Changed the return value from {{domxref("NodeList")}} to
+				{{domxref("HTMLCollection")}}</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM3 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}</td>
+			<td>{{SpecName('DOM3 Core', 'core.html#ID-1938918D',
+				'Element.getElementsByTagName()')}}</td>
 			<td>{{Spec2('DOM3 Core')}}</td>
 			<td>No change from {{SpecName('DOM2 Core')}}</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Core', 'core.html#ID-1938918D', 'Element.getElementsByTagName()')}}</td>
+			<td>{{SpecName('DOM2 Core', 'core.html#ID-1938918D',
+				'Element.getElementsByTagName()')}}</td>
 			<td>{{Spec2('DOM2 Core')}}</td>
 			<td>No change from {{SpecName('DOM1')}}</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM1', 'level-one-core.html#ID-1938918D', 'Element.getElementsByTagName()')}}</td>
+			<td>{{SpecName('DOM1', 'level-one-core.html#ID-1938918D',
+				'Element.getElementsByTagName()')}}</td>
 			<td>{{Spec2('DOM1')}}</td>
 			<td>Initial definition</td>
 		</tr>

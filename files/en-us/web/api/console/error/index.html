@@ -17,28 +17,27 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">console.error(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
+<pre class="brush: js">console.error(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
 console.error(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-console.exception(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.exception(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 </pre>
-
-<div class="note">
-<p><strong>Note:</strong> <code>console.exception()</code> is an alias for <code>console.error()</code>; they are functionally identical.</p>
-</div>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code>obj1</code> ... <code>objN</code></dt>
-	<dd>A list of JavaScript objects to output. The string representations of each of these objects are appended together in the order listed and output.</dd>
+	<dd>A list of JavaScript objects to output. The string representations of each of
+		these objects are appended together in the order listed and output.</dd>
 	<dt><code>msg</code></dt>
 	<dd>A JavaScript string containing zero or more substitution strings.</dd>
 	<dt><code>subst1</code> ... <code>substN</code></dt>
-	<dd>JavaScript objects with which to replace substitution strings within <code>msg</code>. This gives you additional control over the format of the output.</dd>
+	<dd>JavaScript objects with which to replace substitution strings within
+		<code>msg</code>. This gives you additional control over the format of the output.
+	</dd>
 </dl>
 
-<p>See <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> in the documentation of {{domxref("console")}} for details.</p>
+<p>See <a href="/en-US/docs/Web/API/Console#outputting_text_to_the_console">Outputting
+		text to the console</a> in the documentation of {{domxref("console")}} for
+	details.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -63,13 +62,17 @@ console.exception(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
 
 <div>
 
-<p>{{Compat("api.Console.error")}}</p>
+	<p>{{Compat("api.Console.error")}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-	<li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
-	<li><a href="https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings">Chrome Developer Tools: Using the Console</a></li>
+	<li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
+			documentation: Console</a></li>
+	<li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools
+			Console to View Errors and Status</a></li>
+	<li><a
+			href="https://developers.google.com/web/tools/chrome-devtools/console/api#error">Chrome
+			Developer Tools: Using the Console</a></li>
 </ul>

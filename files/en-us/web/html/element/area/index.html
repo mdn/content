@@ -78,7 +78,7 @@ tags:
  <dt>{{htmlattrdef("href")}}</dt>
  <dd>The hyperlink target for the area. Its value is a valid URL. This attribute may be omitted; if so, the <code>&lt;area&gt;</code> element does not represent a hyperlink.</dd>
  <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>Indicates the language of the linked resource. Allowed values are determined by <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt" title="Tags for Identifying Languages">BCP47</a>. Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.</dd>
+ <dd>Indicates the language of the linked resource. Allowed values are determined by <a href="https://www.ietf.org/rfc/bcp/bcp47.txt" title="Tags for Identifying Languages">BCP47</a>. Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.</dd>
  <dt>{{htmlattrdef("ping")}}</dt>
  <dd>Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body <code>PING</code> will be sent by the browser (in the background). Typically used for tracking.</dd>
  <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
@@ -107,8 +107,9 @@ tags:
  </ul>
  </dd>
  <dd>Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
- <div class="note">
- <p><strong>Note:</strong> In newer browser versions (e.g. Firefox 79+) setting <code>target="_blank"</code> on <code>&lt;area&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code>rel="noopener"</code>.</p>
+ <div class="notecard note">
+ <h4>Note</h4> 
+ <p>Setting <code>target="_blank"</code> on <code>&lt;area&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> which does not set <code>window.opener</code>. See <a href="#browser_compatibility">browser compatibility</a> for support status.</p>
  </div>
  </dd>
 </dl>
@@ -120,8 +121,9 @@ tags:
  <dd>Define a names for the clickable area so that it can be scripted by older browsers.</dd>
  <dt>{{htmlattrdef("nohref")}} {{deprecated_inline}}</dt>
  <dd>Indicates that no hyperlink exists for the associated area.
- <div class="note">
- <p><strong>Note:</strong> Since HTML5, omitting the <code>href</code> attribute is sufficient.</p>
+ <div class="notecard note">
+ <h4>Note</h4>
+ <p>Since HTML5, omitting the <code>href</code> attribute is sufficient.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("tabindex")}} {{deprecated_inline}}</dt>
@@ -132,7 +134,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;map name="primary"&gt;
+<pre class="brush: html">&lt;map name="primary"&gt;
   &lt;area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left"&gt;
   &lt;area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right"&gt;
 &lt;/map&gt;

@@ -2,36 +2,47 @@
 title: Response.redirected
 slug: Web/API/Response/redirected
 tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Read-only
-  - Reference
-  - Response
-  - redirected
+- API
+- Experimental
+- Fetch
+- Property
+- Read-only
+- Reference
+- Response
+- redirected
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>The read-only <strong><code>redirected</code></strong> property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.</p>
+<p>The read-only <strong><code>redirected</code></strong> property of the
+  {{domxref("Response")}} interface indicates whether or not the response is the result of
+  a request you made which was redirected.</p>
 
 <div class="note">
-<p>Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected. Instead, you should actually instead do the filtering when you call {{domxref("GlobalFetch.fetch", "fetch()")}}. See the example {{anch("Disallowing redirects")}}, which shows this being done.</p>
+  <p>Relying on redirected to filter out redirects makes it easy for a forged redirect to
+    prevent your content from working as expected. Instead, you should actually instead do
+    the filtering when you call {{domxref("GlobalFetch.fetch", "fetch()")}}. See the
+    example {{anch("Disallowing redirects")}}, which shows this being done.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>isRedirected</em> = <var>Response</var>.redirected;</pre>
+<pre
+  class="brush: js">var <em>isRedirected</em> = <var>Response</var>.redirected;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}} which is <code>true</code> if the response indicates that your request was redirected.</p>
+<p>A {{domxref("Boolean")}} which is <code>true</code> if the response indicates that your
+  request was redirected.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Detecting_redirects">Detecting redirects</h3>
 
-<p>Checking to see if the response comes from a redirected request is as simple as checking this flag on the {{domxref("Response")}} object. In the code below, a textual message is inserted into an element when a redirect occurred during the fetch operation. Note, however, that this isn't as safe as outright rejecting redirects if they're unexpected, as described under {{anch("Disallowing redirects")}} below.</p>
+<p>Checking to see if the response comes from a redirected request is as simple as
+  checking this flag on the {{domxref("Response")}} object. In the code below, a textual
+  message is inserted into an element when a redirect occurred during the fetch operation.
+  Note, however, that this isn't as safe as outright rejecting redirects if they're
+  unexpected, as described under {{anch("Disallowing redirects")}} below.</p>
 
 <pre class="brush: js">fetch("awesome-picture.jpg").then(function(response) {
   let elem = document.getElementById("warning-message-box");
@@ -49,7 +60,10 @@ tags:
 
 <h3 id="Disallowing_redirects">Disallowing redirects</h3>
 
-<p>Because using redirected to manually filter out redirects can allow forgery of redirects, you should instead set the redirect mode to <code>"error"</code> in the <code>init</code> parameter when calling {{domxref("GlobalFetch.fetch", "fetch()")}}, like this:</p>
+<p>Because using redirected to manually filter out redirects can allow forgery of
+  redirects, you should instead set the redirect mode to <code>"error"</code> in the
+  <code>init</code> parameter when calling {{domxref("GlobalFetch.fetch", "fetch()")}},
+  like this:</p>
 
 <pre class="brush: js">fetch("awesome-picture.jpg", { redirect: "error" }).then(function(response) {
   return response.blob();
@@ -61,18 +75,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response-redirected','redirected')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Fetch','#dom-response-redirected','redirected')}}</td>
+      <td>{{Spec2('Fetch')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -82,8 +96,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+  <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
+  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  </li>
+  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

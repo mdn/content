@@ -1,0 +1,63 @@
+---
+title: BackgroundFetchManager.get()
+slug: Web/API/BackgroundFetchManager/get
+tags:
+  - API
+  - Method
+  - Reference
+  - get()
+  - BackgroundFetchManager
+  - Experimental
+  - Service Workers
+  - Fetch
+---
+<div>{{draft}}{{DefaultAPISidebar("Background Fetch")}}</div>
+
+<p class="summary">The <strong><code>get()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided <code>id</code> or {{jsxref("undefined")}} if the <code>id</code> is not found. </p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>backgroundFetchRegistration</var> = BackgroundFetchManager.get();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+<dt>id</dt>
+<dd>the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following examples shows how to use <code>get()</code> to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the <code>BackgroundFetchManager</code> object and call its <code>get()</code> method.</p>
+
+<pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
+  const bgFetch = await swReg.backgroundFetch.get('my-fetch');
+});
+my code block</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Background Fetch','#background-fetch-manager-get','get')}}</td>
+   <td>{{Spec2('Background Fetch')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchManager.get")}}</p>

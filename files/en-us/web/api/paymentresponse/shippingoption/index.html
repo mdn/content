@@ -2,27 +2,35 @@
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
 tags:
-  - API
-  - Experimental
-  - Payment Request
-  - PaymentResponse
-  - Property
-  - Reference
-  - Request Payment API
-  - Secure context
-  - shippingOption
+- API
+- Experimental
+- Payment Request
+- PaymentResponse
+- Property
+- Reference
+- Request Payment API
+- Secure context
+- shippingOption
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
 
-<p>The <strong><code>shippingOption</code></strong> read-only property of the <code>PaymentRequest</code> interface returns the ID attribute of the shipping option selected by the user. This option is only present when the <code>requestShipping</code> option is set to <code>true</code> in the {{domxref('PaymentOptions')}} object passed to the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.</p>
+<p>The <strong><code>shippingOption</code></strong> read-only property of
+  the <code>PaymentRequest</code> interface returns the ID attribute of the shipping
+  option selected by the user. This option is only present when the
+  <code>requestShipping</code> option is set to <code>true</code> in the
+  {{domxref('PaymentOptions')}} object passed to the
+  {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>var shippingOption = PaymentRequest.shippingOption;</code></pre>
+<pre
+  class="brush: js"><code>var shippingOption = PaymentRequest.shippingOption;</code></pre>
 
 <h2 id="Example">Example</h2>
 
-<p>In the example below, the {{domxref('PaymentRequest.onshippingaoptionchange')}} event is called. It calls <code>updateDetails()</code> to toggle the shipping method between "standard" and "express".</p>
+<p>In the example below, the {{domxref('PaymentRequest.onshippingaoptionchange')}} event
+  is called. It calls <code>updateDetails()</code> to toggle the shipping method between
+  "standard" and "express".</p>
 
 <pre>// Initialization of PaymentRequest arguments are excerpted for brevity.
 var payment = new PaymentRequest(supportedInstruments, details, options);
@@ -64,23 +72,20 @@ function updateDetails(details, shippingOption, resolve, reject) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentResponse.shippingOption")}}</p>
-</div>

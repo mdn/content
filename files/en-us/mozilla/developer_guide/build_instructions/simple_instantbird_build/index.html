@@ -51,11 +51,11 @@ tags:
 
 <div class="warning"><strong>Note:</strong> Unless you have a very good network connection, "hg clone" might fail because it gets interrupted. It is faster and more efficient to use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial/Bundles">Mercurial bundles</a> instead the first time you fetch the complete repo. In this case, you need a bundle for comm-central, and a bundle for mozilla-central. Unbundle mozilla-central into a "mozilla" subdirectory of your comm-central repo after unbundling comm-central. Then run <span style="color: #ffff00;">python client.py checkout</span> to ensure you are up-to-date.</div>
 
-<p class="editable">The source code requires 1.5GB of free space or more.</p>
+<p>The source code requires 1.5GB of free space or more.</p>
 
-<p class="editable">For more on getting the source code, see the page <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
+<p>For more on getting the source code, see the page <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central">Getting comm-central Source Code Using Mercurial [en-US]</a>.</p>
 
-<h2 class="editable" id="Build_configuration">Build configuration</h2>
+<h2 id="Build_configuration">Build configuration</h2>
 
 <p>By default, the build system creates a release build of Instantbird roughly equivalent to the official Instantbird release builds. If that's not exactly what you want, there are many build configuration options to choose from, although it's <strong>strongly</strong> recommended that you only use options that you fully understand. The normal way to specify build options is to place them in a file called '.mozconfig' at the root of your mozilla source tree, i.e. your comm-central repo. For example, to create a debug build instead of a release build, that file would contain:</p>
 
@@ -109,7 +109,7 @@ tags:
 
 <ul>
  <li><strong>Windows:</strong> <code>obj-.../dist/bin/instantbird.exe</code></li>
- <li><strong>Linux:</strong> <code>obj-.../dist/bin/<code>instantbird</code></code></li>
+ <li><strong>Linux:</strong> <code>obj-.../dist/bin/instantbird</code></li>
  <li><strong>OS X:</strong> <code>obj-.../dist/Instantbird.app/Contents/MacOS/instantbird</code></li>
 </ul>
 

@@ -12,14 +12,14 @@ tags:
 
 <p>You have already encountered the {{cssxref("grid-area")}} property. This is the property that can take as a value all four of the lines used to position a grid area.</p>
 
-<pre class="brush: css notranslate">.box1 {
+<pre class="brush: css">.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
 </pre>
 
 <p>What we are doing here when defining all four lines, is defining the area by specifying the lines that enclose that area.</p>
 
-<p><img alt="The Grid Area defined by lines" src="https://mdn.mozillademos.org/files/14667/4_Area.png" style="height: 354px; width: 951px;"></p>
+<p><img alt="The Grid Area defined by lines" src="4_area.png"></p>
 
 <p>We can also define an area by giving it a name and then specify the location of that area in the value of the {{cssxref("grid-template-areas")}} property. You can choose what you would like to name your area. For example, if I wish to create the layout shown below I can identify four main areas.</p>
 
@@ -30,12 +30,12 @@ tags:
  <li>the main content</li>
 </ul>
 
-<p><img alt="An image showing a simple two column layout with header and footer" src="https://mdn.mozillademos.org/files/14669/4_Layout.png" style="height: 397px; width: 900px;"></p>
+<p><img alt="An image showing a simple two column layout with header and footer" src="4_layout.png"></p>
 
 <p>With the {{cssxref("grid-area")}} property I can assign each of these areas a name. This will not yet create any layout, but we now have named areas to use in a layout.</p>
 
 <div id="Grid_Area_1">
-<pre class="brush: css notranslate">.header {
+<pre class="brush: css">.header {
     grid-area: hd;
 }
 .footer {
@@ -51,7 +51,7 @@ tags:
 
 <p>Having defined these names I then create my layout. This time, instead of placing my items using line numbers specified on the items themselves, I create the whole layout on the grid container.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -63,7 +63,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -83,7 +83,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
     &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
     &lt;div class="content"&gt;Content&lt;/div&gt;
@@ -99,7 +99,7 @@ tags:
 
 <p>We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '<code>.</code>'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.</p>
 
-<pre class="brush: css notranslate">.header {
+<pre class="brush: css">.header {
     grid-area: hd;
 }
 .footer {
@@ -114,7 +114,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -134,7 +134,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -145,7 +145,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
     &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
     &lt;div class="content"&gt;Content&lt;/div&gt;
@@ -162,7 +162,7 @@ tags:
 
 <p>The area that you create by chaining the area names must be rectangular, at this point there is no way to create an L-shaped area. The specification does note that a future level might provide this functionality. You can however span rows just as easily as columns. For example we could make our sidebar span down to the end of the footer by replacing the <code>.</code> with <code>sd</code>.</p>
 
-<pre class="brush: css notranslate">.header {
+<pre class="brush: css">.header {
     grid-area: hd;
 }
 .footer {
@@ -177,7 +177,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -197,7 +197,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -209,7 +209,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
     &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
     &lt;div class="content"&gt;Content&lt;/div&gt;
@@ -230,7 +230,7 @@ tags:
 <p>For our layout above, we might like to have a very simple layout at narrow widths, defining a single column grid and stacking up our items.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -250,7 +250,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.header {
+<pre class="brush: css">.header {
     grid-area: hd;
 }
 .footer {
@@ -277,7 +277,7 @@ tags:
 
 <p>We can then redefine that layout inside media queries to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout I keep my nine column track grid, I redefine where items are placed using <code>grid-template-areas</code>.</p>
 
-<pre class="brush: css notranslate">@media (min-width: 500px) {
+<pre class="brush: css">@media (min-width: 500px) {
     .wrapper {
         grid-template-columns: repeat(9, 1fr);
         grid-template-areas:
@@ -296,7 +296,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
     &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
     &lt;div class="content"&gt;Content&lt;/div&gt;
@@ -312,14 +312,14 @@ tags:
 
 <p>As a very simple example we can create a “media object”. This is a component with space for an image or other media on one side and content on the other. The image might be displayed on the right or left of the box.</p>
 
-<p><img alt="Images showing an example media object design" src="https://mdn.mozillademos.org/files/14671/4_Media_objects.png" style="height: 432px; width: 800px;"></p>
+<p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
 
 <p>Our grid is a two-column track grid, with the column for the image sized at <code>1fr</code> and the text <code>3fr</code>. If you wanted a fixed width image area, then you could set the image column as a pixel width, and assign the text area <code>1fr</code>. A single column track of <code>1fr</code> would then take up the rest of the space.</p>
 
 <p>We give the image area a grid area name of <code>img</code> and the text area <code>content</code>, then we can lay those out using the <code>grid-template-areas</code> property.</p>
 
 <div id="Media_1">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
     border: 2px solid #f76707;
@@ -346,7 +346,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="media"&gt;
+<pre class="brush: html">&lt;div class="media"&gt;
     &lt;div class="image"&gt;&lt;/div&gt;
     &lt;div class="text"&gt;This is a media object example.
       We can use grid-template-areas to switch around the image and text part of the media object.
@@ -361,7 +361,7 @@ tags:
 <p>We might want to be able to display our box with the image the other way around. To do this, we redefine the grid to put the <code>1fr</code> track last, and flip the values in {{cssxref("grid-template-areas")}}.</p>
 
 <div id="Media_2">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
     border: 2px solid #f76707;
@@ -393,7 +393,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="media flipped"&gt;
+<pre class="brush: html">&lt;div class="media flipped"&gt;
     &lt;div class="image"&gt;&lt;/div&gt;
     &lt;div class="text"&gt;This is a media object example.
       We can use grid-template-areas to switch around the image and text part of the media object.
@@ -427,7 +427,7 @@ tags:
 
 <p>The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template:
       "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
@@ -456,7 +456,7 @@ tags:
 
 <p>You can use this syntax in the exact same way as the {{cssxref("grid-template")}} shorthand, just be aware than when doing so you will reset the other values set by the property.</p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid: "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
     "sd sd sd main main main main main main" minmax(100px, auto)

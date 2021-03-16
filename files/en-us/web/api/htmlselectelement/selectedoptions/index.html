@@ -2,42 +2,55 @@
 title: HTMLSelectElement.selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Reference
-  - Select
-  - Web
-  - selectedOptions
+- API
+- HTML DOM
+- HTMLSelectElement
+- Options
+- Property
+- Read-only
+- Reference
+- Select
+- Web
+- selectedOptions
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>The <strong>read-only</strong> {{domxref("HTMLSelectElement")}} property <code><strong>selectedOptions</strong></code> contains a list of the {{HTMLElement("option")}} elements contained within the {{HTMLElement("select")}} element that are currently selected. The list of selected options is an {{domxref("HTMLCollection")}} object with one entry per currently selected option.</p>
+<p>The <strong>read-only</strong> {{domxref("HTMLSelectElement")}} property
+  <code><strong>selectedOptions</strong></code> contains a list of the
+  {{HTMLElement("option")}} elements contained within the {{HTMLElement("select")}}
+  element that are currently selected. The list of selected options is an
+  {{domxref("HTMLCollection")}} object with one entry per currently selected option.</p>
 
-<p>An option is considered selected if it has an {{domxref("HTMLOptionElement.selected")}} attribute.</p>
+<p>An option is considered selected if it has an {{domxref("HTMLOptionElement.selected")}}
+  attribute.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>selectedCollection</em> = <em>HTMLSelectElement</em>.selectedOptions;</pre>
+<pre
+  class="brush: js">var <em>selectedCollection</em> = <em>HTMLSelectElement</em>.selectedOptions;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An {{domxref("HTMLCollection")}} which lists every currently selected {{domxref("HTMLOptionElement")}} which is either a child of the {{domxref("HTMLSelectElement")}} or of an {{domxref("HTMLOptGroupElement")}} within the <code>&lt;select&gt;</code> element.</p>
+<p>An {{domxref("HTMLCollection")}} which lists every currently selected
+  {{domxref("HTMLOptionElement")}} which is either a child of the
+  {{domxref("HTMLSelectElement")}} or of an {{domxref("HTMLOptGroupElement")}} within the
+  <code>&lt;select&gt;</code> element.</p>
 
-<p>In other words, any option contained within the <code>&lt;select&gt;</code> element may be part of the results, but option groups are not included in the list.</p>
+<p>In other words, any option contained within the <code>&lt;select&gt;</code> element may
+  be part of the results, but option groups are not included in the list.</p>
 
-<p>If no options are currently selected, the collection is empty and returns a {{domxref("HTMLCollection.length", "length")}} of 0.</p>
+<p>If no options are currently selected, the collection is empty and returns a
+  {{domxref("HTMLCollection.length", "length")}} of 0.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, a {{HTMLElement("select")}} element with a number of options is used to let the user order various food items.</p>
+<p>In this example, a {{HTMLElement("select")}} element with a number of options is used
+  to let the user order various food items.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>The HTML that creates the selection box and the {{HTMLElement("option")}} elements representing each of the food choices looks like this:</p>
+<p>The HTML that creates the selection box and the {{HTMLElement("option")}} elements
+  representing each of the food choices looks like this:</p>
 
 <pre class="brush: html">&lt;label for="foods"&gt;What do you want to eat?&lt;/label&gt;&lt;br&gt;
 &lt;select id="foods" name="foods" size="7" multiple&gt;
@@ -54,11 +67,15 @@ tags:
 &lt;p id="output"&gt;
 &lt;/p&gt;</pre>
 
-<p>The <code>&lt;select&gt;</code> element is set to allow multiple items to be selected, and it is 7 rows tall. Note also the {{HTMLElement("button")}}, whose role it is to trigger fetching the {{domxref("HTMLCollection")}} of selected elements using the <code>selected</code> property.</p>
+<p>The <code>&lt;select&gt;</code> element is set to allow multiple items to be selected,
+  and it is 7 rows tall. Note also the {{HTMLElement("button")}}, whose role it is to
+  trigger fetching the {{domxref("HTMLCollection")}} of selected elements using the
+  <code>selected</code> property.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>The JavaScript code that establishes the event handler for the button, as well as the event handler itself, looks like this:</p>
+<p>The JavaScript code that establishes the event handler for the button, as well as the
+  event handler itself, looks like this:</p>
 
 <pre class="brush: js">let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
@@ -90,7 +107,11 @@ orderButton.addEventListener("click", function() {
   outputBox.innerHTML = output;
 }, false);</pre>
 
-<p>This script sets up a {{event("click")}} event listener on the "Order Now" button. When clicked, the event handler fetches the list of selected options using <code>selectedOptions</code>, then iterates over the options in the list. A string is constructed to list the ordered items, with logic to build the list using proper English grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).</p>
+<p>This script sets up a {{event("click")}} event listener on the "Order Now" button. When
+  clicked, the event handler fetches the list of selected options using
+  <code>selectedOptions</code>, then iterates over the options in the list. A string is
+  constructed to list the ordered items, with logic to build the list using proper English
+  grammar rules (including a {{interwiki("wikipedia", "serial comma")}}).</p>
 
 <h3 id="Result">Result</h3>
 
@@ -101,33 +122,38 @@ orderButton.addEventListener("click", function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "form-elements.html#dom-select-selectedoptions", "HTMLSelectElement.selectedOptions")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#dom-select-selectedoptions", "HTMLSelectElement.selectedOptions")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "form-elements.html#dom-select-selectedoptions",
+        "HTMLSelectElement.selectedOptions")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change from {{SpecName('HTML5 W3C')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "forms.html#dom-select-selectedoptions",
+        "HTMLSelectElement.selectedOptions")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("api.HTMLSelectElement.selectedOptions")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{SectionOnPage("/en-US/docs/Learn/HTML/Forms/The_native_form_widgets", "Drop-down content")}}</li>
+ <li>{{SectionOnPage("/en-US/docs/Learn/Forms/Other_form_controls", "Drop-down controls")}}</li>
 </ul>

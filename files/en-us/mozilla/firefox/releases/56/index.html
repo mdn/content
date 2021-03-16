@@ -6,10 +6,9 @@ tags:
   - Firefox
   - Release Notes
 ---
-<div>{{FirefoxSidebar}}</div><article class="text-content" id="wikiArticle">
+<div>{{FirefoxSidebar}}</div>
 <p class="summary">Firefox 56 was released on September 28, 2017. This article lists key changes that are useful for web developers.</p>
 
-<article class="text-content" id="wikiArticle">
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
 <h3 id="Developer_Tools">Developer Tools</h3>
@@ -55,7 +54,7 @@ tags:
  <li>The {{domxref("Gamepad.displayId")}} property has been implemented ({{bug(1375816)}}).</li>
  <li>The {{domxref("PerformanceTiming.secureConnectionStart")}} property has been implemented ({{bug(772589)}}).</li>
  <li>Firefox used to accept <code>iso-2022-jp-2</code> sequences silently when an <code>iso-2022-jp</code> {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} was instantiated, however this has now been removed to simplify the API, as no other browsers support it and no pages seem to use it. ({{bug(715833)}}).</li>
- <li>The 4ms clamping behavior of {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} has been updated to be more in line with other browsers, as described in <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Timeouts_throttled_to_%3E4ms">Timeouts throttled to &gt;=4ms</a> ({{bug(1378586)}}).</li>
+ <li>The 4ms clamping behavior of {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} has been updated to be more in line with other browsers, as described in <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#timeouts_throttled_to_%3e4ms">Timeouts throttled to &gt;=4ms</a> ({{bug(1378586)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API's</a> {{domxref("Document.onvisibilitychange")}} handler has been added ({{bug("1333912")}}).</li>
  <li>The {{domxref("Window.showModalDialog()")}} method has been removed ({{bug(981796)}}).</li>
  <li>The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ({{bug(1366361)}}).</li>
@@ -124,28 +123,28 @@ tags:
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/settings">browsingData.settings()</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies">browsingData.removeCookies() </a>are now supported on Firefox for Android</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled">browserSettings.cacheEnabled</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser_style</a> usage is changed</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides.search_provider.is_default</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides.search_provider.is_default</a></li>
  <li>contextMenus renamed to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/set">cookies.set()</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/remove">cookies.remove()</a> now work in private browsing mode</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged">devtools.panels.elements.onSelectionChanged</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged">devtools.panels.elements.onSelectionChanged</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/open">downloads.open()</a> can now only be called from a user action</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/proxy#PAC_file_environment">FindProxyForURL "DIRECT" return type no longer takes an argument</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_environment">FindProxyForURL "DIRECT" return type no longer takes an argument</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited">history.onVisited</a> now includes the page title if it is known.</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/get">management.get()</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/getAll">management.getAll()</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a> now supports the "tools_menu" context</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/OnClickData">menus.OnClickData</a> now has "linkText"</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create">menus.create()</a> now has an <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/menus#Icons">"icons" option</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create">menus.create()</a> now has an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus#icons">"icons" option</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown">notifications.onShown</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show">pageAction.show()</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide">pageAction.hide()</a> are now supported on Firefox for Android</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a> now supports "unlimitedStorage"</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/services">privacy.services</a> now includes passwordSavingEnabled</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/privacy/websites">privacy.websites.referrersEnabled</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites">privacy.websites.referrersEnabled</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol_handlers</a> now supports "gopher"</li>
  <li>proxy.<span id="compatNote_1">registerProxyScript() is renamed to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register">proxy.register()</a></span></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister">proxy.unregister()</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled">runtime.onInstalled</a> gets <code>temporary</code> flag</li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/print">tabs.print()</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings">tabs.PageSettings</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview">tabs.printPreview()</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF">tabs.saveAsPDF()</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/tabs/Tab">tabs.Tab.lastAccessed</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab">tabs.Tab.lastAccessed</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/reset">theme.reset()</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create">windows.create()</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update">windows.update()</a> now support prefacing window title</li>
 </ul>
@@ -155,9 +154,7 @@ tags:
 <ul>
  <li><a href="https://www.fxsitecompat.com/en-US/versions/56">Site Compatibility for Firefox 56</a></li>
 </ul>
-</article>
 
 <h2 id="Older_versions">Older versions</h2>
 
 <p>{{Firefox_for_developers(55)}}</p>
-</article>

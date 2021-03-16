@@ -2,60 +2,75 @@
 title: IDBObjectStore.clear()
 slug: Web/API/IDBObjectStore/clear
 tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - clear
+- API
+- Database
+- IDBObjectStore
+- IndexedDB
+- Method
+- Reference
+- Storage
+- clear
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <strong><code>clear()</code></strong> method of the {{domxref("IDBObjectStore")}} interface creates and immediately returns an {{domxref("IDBRequest")}} object, and clears this object store in a separate thread. This is for deleting all the current data out of an object store.</p>
+  <p>The <strong><code>clear()</code></strong> method of the {{domxref("IDBObjectStore")}}
+    interface creates and immediately returns an {{domxref("IDBRequest")}} object, and
+    clears this object store in a separate thread. This is for deleting all the current
+    data out of an object store.</p>
 </div>
 
-<p>Clearing an object store consists of removing all records from the object store and removing all records in indexes that reference the object store. To remove only some of the records in a store, use {{domxref("IDBObjectStore.delete")}} passing a key or {{domxref("IDBKeyRange")}}.</p>
+<p>Clearing an object store consists of removing all records from the object store and
+  removing all records in indexes that reference the object store. To remove only some of
+  the records in a store, use {{domxref("IDBObjectStore.delete")}} passing a key
+  or {{domxref("IDBKeyRange")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>request</em> = <em>objectStore</em>.clear();</pre>
+<pre
+  class="brush: js">var <em>request</em> = <em>objectStore</em>.clear();</pre>
 
 <h3 id="Returns">Returns</h3>
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.</p>
+<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
+  operation are fired.</p>
 
 <h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>ReadOnlyError</code></td>
-   <td>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
-  </tr>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.<br>
-     </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ReadOnlyError</code></td>
+      <td>The transaction associated with this operation is in read-only <a
+          href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
+    </tr>
+    <tr>
+      <td><code>TransactionInactiveError</code></td>
+      <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.<br>
+         </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we open a read/write transaction on our database and clear all the current data out of the object store using <code>clear()</code>. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In the following code snippet, we open a read/write transaction on our database and
+  clear all the current data out of the object store using <code>clear()</code>. For a
+  full working example, see our <a href="https://github.com/mdn/to-do-notifications/"
+    style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app
+    (</span><a href="https://mdn.github.io/to-do-notifications/"
+    style="line-height: 1.5;">view example live</a><span
+    style="line-height: 1.5;">.)</span></p>
 
 <pre class="brush: js">// Let us open our database
 <span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -99,40 +114,40 @@ function clearData() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-clear', 'clear()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-clear", "clear()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-clear', 'clear()')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-clear", "clear()")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBObjectStore.clear")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

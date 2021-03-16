@@ -11,15 +11,18 @@ tags:
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>The <strong><code>HTMLInputElement.select()</code></strong> method selects all the text in a {{HTMLElement("textarea")}} element or in an {{HTMLElement("input")}} element that includes a text field.</p>
+<p>The <strong><code>HTMLInputElement.select()</code></strong> method selects all the text
+	in a {{HTMLElement("textarea")}} element or in an {{HTMLElement("input")}} element
+	that includes a text field.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>element</em>.select();</pre>
+<pre class="brush: js"><em>element</em>.select();</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>Click the button in this example to select all the text in the <code>&lt;input&gt;</code> element.</p>
+<p>Click the button in this example to select all the text in the
+	<code>&lt;input&gt;</code> element.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -41,9 +44,12 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>Calling <code>element.select()</code> will not necessarily focus the input, so it is often used with {{domxref("HTMLElement.focus()")}}.</p>
+<p>Calling <code>element.select()</code> will not necessarily focus the input, so it is
+	often used with {{domxref("HTMLOrForeignElement.focus")}}.</p>
 
-<p>In browsers where it is not supported, it is possible to replace it with a call to <a href="/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange()</a> with parameters 0 and the input's value length:</p>
+<p>In browsers where it is not supported, it is possible to replace it with a call to <a
+		href="/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange()</a> with
+	parameters 0 and the input's value length:</p>
 
 <pre class="brush: html">&lt;input onClick="this.select();" value="Sample Text" /&gt;
 &lt;!-- equivalent to --&gt;
@@ -62,9 +68,10 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('HTML WHATWG', 'forms.html#dom-textarea/input-select', 'select')}}</td>
+			<td>{{SpecName('HTML WHATWG', 'forms.html#dom-textarea/input-select',
+				'select')}}</td>
 			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>

@@ -8,7 +8,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.5_release_notes
 
 <hr>
 <div id="section_1">
-<h1 class="editable" id="Introduction">Introduction</h1>
+<h1 id="Introduction">Introduction</h1>
 
 <p>Network Security Services (NSS) 3.12.5 is a patch release for NSS 3.12. The bug fixes in NSS 3.12.5 are described in the "<a href="https://dev.mozilla.jp/localmdc/localmdc_5125.html#bugsfixed">Bugs Fixed</a>" section below.</p>
 
@@ -16,7 +16,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.5_release_notes
 </div>
 
 <div id="section_2">
-<h1 class="editable" id="Distribution_Information">Distribution Information</h1>
+<h1 id="Distribution_Information">Distribution Information</h1>
 
 <p>The CVS tag for the NSS 3.12.5 release is <code>NSS_3_12_5_RTM</code>. </p>
 
@@ -39,10 +39,10 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_3">
-<h1 class="editable" id="New_in_NSS_3.12.5">New in NSS 3.12.5</h1>
+<h1 id="New_in_NSS_3.12.5">New in NSS 3.12.5</h1>
 
 <div id="section_4">
-<h3 class="editable" id="SSL3_TLS_Renegotiation_Vulnerability">SSL3 &amp; TLS Renegotiation Vulnerability</h3>
+<h3 id="SSL3_TLS_Renegotiation_Vulnerability">SSL3 &amp; TLS Renegotiation Vulnerability</h3>
 
 <p>See <a class="external" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555" rel="external nofollow" title="http://cve.mitre.org/cgi-bin/cvename.cgi? data-cke-saved-name=CVE-2009-3555 name=CVE-2009-3555">CVE-2009-3555</a> and <a class="external" href="http://www.kb.cert.org/vuls/id/120541" rel="external nofollow" title="http://www.kb.cert.org/vuls/id/120541">US-CERT VU#120541</a> for more information about this security vulnerability.</p>
 
@@ -74,7 +74,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_5">
-<h3 class="editable" id="TLS_compression">TLS compression</h3>
+<h3 id="TLS_compression">TLS compression</h3>
 
 <ul>
  <li>Enable TLS compression with:
@@ -92,7 +92,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_6">
-<h3 class="editable" id="New_context_initialization_and_shutdown_functions">New context initialization and shutdown functions</h3>
+<h3 id="New_context_initialization_and_shutdown_functions">New context initialization and shutdown functions</h3>
 
 <ul>
  <li>See nss.h for details. The 2 new functions are:
@@ -112,7 +112,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_7">
-<h3 class="editable" id="Other_new_functions">Other new functions</h3>
+<h3 id="Other_new_functions">Other new functions</h3>
 
 <ul>
  <li><em>In secmod.h:</em>
@@ -132,7 +132,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_8">
-<h3 class="editable" id="Modified_functions">Modified functions</h3>
+<h3 id="Modified_functions">Modified functions</h3>
 
 <ul>
  <li>SGN_Update (see cryptohi.h)
@@ -149,7 +149,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_9">
-<h3 class="editable" id="Deprecated_headers">Deprecated headers</h3>
+<h3 id="Deprecated_headers">Deprecated headers</h3>
 
 <ul>
  <li>The header file key.h is deprecated. Please use keyhi.h instead.</li>
@@ -157,7 +157,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_10">
-<h3 class="editable" id="Additional_documentation">Additional documentation</h3>
+<h3 id="Additional_documentation">Additional documentation</h3>
 
 <ul>
  <li><em>In pk11pub.h:</em>
@@ -176,7 +176,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_11">
-<h3 class="editable" id="Environment_variables">Environment variables</h3>
+<h3 id="Environment_variables">Environment variables</h3>
 
 <ul>
  <li>NSS_FIPS
@@ -197,7 +197,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_12">
-<h1 class="editable" id="Bugs_Fixed">Bugs Fixed</h1>
+<h1 id="Bugs_Fixed">Bugs Fixed</h1>
 
 <p>The following bugs have been fixed in NSS 3.12.5.</p>
 
@@ -221,7 +221,7 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_13">
-<h1 class="editable" id="Documentation">Documentation</h1>
+<h1 id="Documentation">Documentation</h1>
 
 <p>For a list of the primary NSS documentation pages on mozilla.org, see <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/#documentation" rel="external nofollow" title="http://www.mozilla.org/projects/security/pki/nss/#documentation">NSS Documentation</a>. New and revised documents available since the release of NSS 3.11 include the following:</p>
 
@@ -234,13 +234,13 @@ cvs co -r NSS_3_12_5_RTM NSS</div>
 </div>
 
 <div id="section_14">
-<h1 class="editable" id="Compatibility">Compatibility</h1>
+<h1 id="Compatibility">Compatibility</h1>
 
 <p>NSS 3.12.5 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.5 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html" rel="external nofollow" title="http://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
 </div>
 
 <div id="section_15">
-<h1 class="editable" id="Feedback">Feedback</h1>
+<h1 id="Feedback">Feedback</h1>
 
 <p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external nofollow" title="https://bugzilla.mozilla.org/">mozilla.org Bugzilla</a> (product NSS).</p>
 </div>

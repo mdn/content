@@ -2,18 +2,22 @@
 title: 'RangeError: radix must be an integer'
 slug: Web/JavaScript/Reference/Errors/Bad_radix
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+- Error
+- Errors
+- JavaScript
+- RangeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "radix must be an integer at least 2 and no greater than 36" occurs when the optional <code>radix</code> parameter of the {{jsxref("Number.prototype.toString()")}} or the {{jsxref("BigInt.prototype.toString()")}} method was specified and is not between 2 and 36.</p>
+<p>The JavaScript exception "radix must be an integer at least 2 and no greater than 36"
+  occurs when the optional <code>radix</code> parameter of the
+  {{jsxref("Number.prototype.toString()")}} or
+  the {{jsxref("BigInt.prototype.toString()")}} method was specified and is not between 2
+  and 36.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">RangeError: invalid argument (Edge)
+<pre class="brush: js">RangeError: invalid argument (Edge)
 RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
 RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 </pre>
@@ -24,17 +28,26 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>The optional <code>radix</code> parameter of the {{jsxref("Number.prototype.toString()")}} or the {{jsxref("BigInt.prototype.toString()")}} method was specified. Its value must be an integer (a number) between 2 and 36, specifying the base of the number system to be used for representing numeric values. For example, the decimal (base 10) number 169 is represented in hexadecimal (base 16) as A9.</p>
+<p>The optional <code>radix</code> parameter of the
+  {{jsxref("Number.prototype.toString()")}} or
+  the {{jsxref("BigInt.prototype.toString()")}} method was specified. Its value must be an
+  integer (a number) between 2 and 36, specifying the base of the number system to be used
+  for representing numeric values. For example, the decimal (base 10) number 169 is
+  represented in hexadecimal (base 16) as A9.</p>
 
-<p>Why is this parameter's value limited to 36? A radix that is larger than 10 uses alphabetical characters as digits; therefore, the radix can't be larger than 36, since the Latin alphabet (used by English and many other languages) only has 26 characters.</p>
+<p>Why is this parameter's value limited to 36? A radix that is larger than 10 uses
+  alphabetical characters as digits; therefore, the radix can't be larger than 36, since
+  the Latin alphabet (used by English and many other languages) only has 26 characters.
+</p>
 
 <p>The most common radixes:</p>
 
 <ul>
- <li>2 for <a href="https://en.wikipedia.org/wiki/Binary_number">binary numbers</a>,</li>
- <li>8 for <a href="https://en.wikipedia.org/wiki/Octal">octal numbers</a>,</li>
- <li>10 for <a href="https://en.wikipedia.org/wiki/Decimal">decimal numbers</a>,</li>
- <li>16 for <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a>.</li>
+  <li>2 for <a href="https://en.wikipedia.org/wiki/Binary_number">binary numbers</a>,</li>
+  <li>8 for <a href="https://en.wikipedia.org/wiki/Octal">octal numbers</a>,</li>
+  <li>10 for <a href="https://en.wikipedia.org/wiki/Decimal">decimal numbers</a>,</li>
+  <li>16 for <a href="https://en.wikipedia.org/wiki/Hexadecimal">hexadecimal numbers</a>.
+  </li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -60,6 +73,6 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
- <li>{{jsxref("BigInt.prototype.toString()")}}</li>
+  <li>{{jsxref("Number.prototype.toString()")}}</li>
+  <li>{{jsxref("BigInt.prototype.toString()")}}</li>
 </ul>

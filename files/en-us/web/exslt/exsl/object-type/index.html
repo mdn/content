@@ -10,11 +10,13 @@ tags:
 
 <p><code>exsl:object-type()</code> returns a string that indicates the type of the specified object.</p>
 
-<p>{{Note("Most <a href='\"en/XSLT\"'>XSLT</a> object types can be coerced into each other safely; however, certain coercsions to raise error conditions. In particular, treating something that\'s not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.")}}</p>
+<div class="notecard note">
+  <p>Note: Most <a href="/en-US/docs/Web/XSLTT">XSLT</a> object types can be coerced into each other safely; however, certain coercions to raise error conditions. In particular, treating something that\'s not a node-set as a node-set will do so. This function lets authors of named templates and extension functions easily provide flexibility in parameter values.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">exsl:object-type(<var>object</var>)
+<pre class="brush: js">exsl:object-type(<var>object</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -39,7 +41,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<p><a class="external" href="http://www.exslt.org/exsl/functions/object-type/index.html">EXSLT - EXSL:OBJECT-TYPE</a></p>
+<p><a href="http://www.exslt.org/exsl/functions/object-type/index.html">EXSLT - EXSL:OBJECT-TYPE</a></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

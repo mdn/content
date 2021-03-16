@@ -18,13 +18,13 @@ tags:
 <p><strong>Note</strong>: See <a href="https://github.com/w3c/csswg-drafts/issues/4766">https://github.com/w3c/csswg-drafts/issues/4766</a> for discussion around @viewport's removal from the standards track.</p>
 </div>
 
-<p>The <strong><code>@viewport</code></strong> <a href="/en/CSS">CSS</a> <a href="/en/CSS/At-rule">at-rule</a> lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).</p>
+<p>The <strong><code>@viewport</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).</p>
 
 <p>Lengths specified as percentages are calculated relative to the <strong>initial viewport</strong>, which is the viewport before any user agent or authored styles have had an opportunity to adjust the viewport. This is typically based on the size of the window on desktop browsers that aren't in full screen mode.</p>
 
 <p>On mobile devices (or desktop devices that are in full screen mode), the initial viewport is usually the portion of a device's screen that is available for application use. This may be either the full screen or the full screen area minus areas controlled by the operating system (such as a taskbar) or the application-available screen area (either the full screen or the screen minus any areas owned by the operating system or other applications).</p>
 
-<pre class="brush: css no-line-numbers notranslate">@viewport {
+<pre class="brush: css no-line-numbers">@viewport {
   width: 100vw; /*Sets the width of the actual viewport to the device width*/
 }
 </pre>
@@ -72,13 +72,13 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_viewport_size_zoom_and_orientation">Setting viewport size, zoom, and orientation</h3>
 
-<pre class="brush: css notranslate">@viewport {
+<pre class="brush: css">@viewport {
   min-width: 640px;
   max-width: 800px;
 }
@@ -125,5 +125,5 @@ tags:
 
 <ul>
  <li>{{HTMLElement("meta")}}, specifically <code>&lt;meta name="viewport"&gt;</code></li>
- <li><a href="/en-US/docs/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
+ <li><a href="/en-us/docs/Web/HTML/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
 </ul>

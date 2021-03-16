@@ -10,8 +10,8 @@ tags:
  These notes are for developers of screen readers. Developers should use the <a href="/en/ARIA/Live_Regions">ARIA live regions developer documentation</a>.</div>
 <p>Firefox 3 contains important improvements to the way the Mozilla engine exposes live changes in a document.</p>
 <p>These features will help screen reader developers improve the quality and performance of live region support, both for pages that are marked up with ARIA live region markup, and for pages where the author did not add any additional markup.</p>
-<p>Please read the <a class="external" href="https://www.w3.org/WAI/PF/aria/#liveregions">ARIA spec</a> or the <a href="/en/docs/AJAX:WAI_ARIA_Live_Regions">live region report</a> to learn about ARIA live region markup.</p>
-<p>As always, we're open to questions and suggestions for changes in <a class="external" href="https://www.mozilla.org/access/#community">community forums</a>.</p>
+<p>Please read the <a href="https://www.w3.org/WAI/PF/aria/#liveregions">ARIA spec</a> or the <a href="/en/docs/AJAX:WAI_ARIA_Live_Regions">live region report</a> to learn about ARIA live region markup.</p>
+<p>As always, we're open to questions and suggestions for changes in <a href="https://www.mozilla.org/access/#community">community forums</a>.</p>
 <h2 id="Events_fired_for_web_page_mutations">Events fired for web page mutations</h2>
 <table class="standard-table">
  <tbody>
@@ -52,7 +52,7 @@ tags:
   </tr>
  </tbody>
 </table>
-<p><span class="nowiki">*</span> We do not use MSAA's CREATE/DESTROY at the request of screen reader vendors, who avoid those events because they cause crashes on some important system -- SHOW/HIDE are the equivalent of those events.</p>
+<p>* We do not use MSAA's CREATE/DESTROY at the request of screen reader vendors, who avoid those events because they cause crashes on some important system -- SHOW/HIDE are the equivalent of those events.</p>
 <h2 id="Retrieving_author-supplied_ARIA_live_region_semantics_from_an_event">Retrieving author-supplied ARIA live region semantics from an event</h2>
 <p>For any mutation event in a page, the author can get the following object attributes from the event object, if they are defined on some ancestor element (closest ancestor wins):</p>
 <table class="standard-table">
@@ -66,28 +66,28 @@ tags:
   </tr>
   <tr>
    <td>container-live</td>
-   <td>"off" <span class="nowiki">|</span> "polite" <span class="nowiki">|</span> "assertive"</td>
+   <td>"off" | "polite" | "assertive"</td>
    <td>"off"</td>
    <td>Interruption policy</td>
    <td>aria-live on ancestor element</td>
   </tr>
   <tr>
    <td>container-relevant</td>
-   <td>"{{ mediawiki.external('additions') }} {{ mediawiki.external('removals') }} {{ mediawiki.external('text') }}" <span class="nowiki">|</span> "all"</td>
+   <td>"{{ mediawiki.external('additions') }} {{ mediawiki.external('removals') }} {{ mediawiki.external('text') }}" | "all"</td>
    <td>"additions text"</td>
    <td>What types of mutations are possibly relevant? See {{ mediawiki.external('#Events_fired_for_web_page_mutations the mutation events list') }} to match the type of event with this attribute's value, to determine whether the author believed the event should be presented to the user or not.</td>
    <td>aria-relevant on ancestor element</td>
   </tr>
   <tr>
    <td>container-busy</td>
-   <td>"true" <span class="nowiki">|</span> "false" <span class="nowiki">|</span> "error"</td>
+   <td>"true" | "false" | "error"</td>
    <td>"false"</td>
    <td>The current changes are not yet complete. A state change event for the A11y API's BUSY state will be fired on the container object currently marked as BUSY, once it is no longer BUSY. This is especially important in atomic regions. The entire atomic region should be presented once when it is finally no longer BUSY.</td>
    <td>aria-busy on ancestor element</td>
   </tr>
   <tr>
    <td>container-atomic</td>
-   <td>"true" <span class="nowiki">|</span> "false"</td>
+   <td>"true" | "false"</td>
    <td>"false"</td>
    <td>Is this change inside a region that should always be presented at once. If yes, member-of relation will point to the root of the region (see next section)</td>
    <td>aria-atomic on ancestor element</td>
@@ -101,7 +101,7 @@ tags:
   </tr>
   <tr>
    <td>event-from-input</td>
-   <td>"true" <span class="nowiki">|</span> "false"<br>
+   <td>"true" | "false"<br>
     (described more below)</td>
    <td>Browser could not calculate this</td>
    <td>Was the root cause of this event explicit user input?</td>

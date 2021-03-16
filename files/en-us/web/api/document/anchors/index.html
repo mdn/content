@@ -2,20 +2,22 @@
 title: Document.anchors
 slug: Web/API/Document/anchors
 tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
+- API
+- Deprecated
+- Document
+- HTML DOM
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}} {{deprecated_header()}}</div>
 
-<p>The <strong><code>anchors</code></strong> read-only property of the {{domxref("Document")}} interface returns a list of all of the anchors in the document.</p>
+<p>The <strong><code>anchors</code></strong> read-only property of the
+  {{domxref("Document")}} interface returns a list of all of the anchors in the document.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>nodeList</var> = document.anchors;
+<pre class="brush: js"><var>nodeList</var> = document.anchors;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -24,14 +26,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js notranslate">if (document.anchors.length &gt;= 5) {
+<pre class="brush:js">if (document.anchors.length &gt;= 5) {
   dump("found too many anchors");
 }
 </pre>
 
-<p>The following is an example that auto populates a Table of Contents with every anchor on the page:</p>
+<p>The following is an example that auto populates a Table of Contents with every anchor
+  on the page:</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8" /&gt;
@@ -79,30 +82,32 @@ function init() {
 
 <h2 id="Notes">Notes</h2>
 
-<p>For reasons of backwards compatibility, the returned set of anchors only contains those anchors created with the <code>name</code> attribute, not those created with the <code>id</code> attribute.</p>
+<p>For reasons of backwards compatibility, the returned set of anchors only contains those
+  anchors created with the <code>name</code> attribute, not those created with the
+  <code>id</code> attribute.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-anchors', 'Document.anchors')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Obsoleted.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-7577272', 'Document.anchors')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-document-anchors', 'Document.anchors')}}</td>
+      <td>{{ Spec2('HTML WHATWG') }}</td>
+      <td>Obsoleted.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 HTML', 'html.html#ID-7577272', 'Document.anchors')}}</td>
+      <td>{{ Spec2('DOM2 Events') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

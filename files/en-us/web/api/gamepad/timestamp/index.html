@@ -13,17 +13,25 @@ tags:
 ---
 <div>{{APIRef("Gamepad API")}}</div>
 
-<p>The <strong><code>Gamepad.timestamp</code></strong> property of the {{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.</p>
+<p>The <strong><code>Gamepad.timestamp</code></strong> property of the
+	{{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
+	representing the last time the data for this gamepad was updated.</p>
 
-<p>The idea behind this is to allow developers to determine if the <code>axes</code> and <code>button</code> data have been updated from the hardware. The value must be relative to the <code>navigationStart</code> attribute of the <code>{{domxref("PerformanceTiming")}}</code> interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values.</p>
+<p>The idea behind this is to allow developers to determine if the <code>axes</code> and
+	<code>button</code> data have been updated from the hardware. The value must be
+	relative to the <code>navigationStart</code> attribute of the
+	<code>{{domxref("PerformanceTiming")}}</code> interface. Values are monotonically
+	increasing, meaning that they can be compared to determine the ordering of updates, as
+	newer values will always be greater than or equal to older values.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This property is not currently supported anywhere.</p>
+	<p><strong>Note</strong>: This property is not currently supported anywhere.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMHighResTimeStamp</span> <span class="idlAttrName">timestamp</span>;</span></span></pre>
+<pre
+	class="brush: js"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMHighResTimeStamp</span> <span class="idlAttrName">timestamp</span>;</span></span></pre>
 
 <h2 id="Example">Example</h2>
 
@@ -44,7 +52,8 @@ console.log(gp.timestamp);</pre>
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName("Gamepad", "#dom-gamepad-timestamp", "Gamepad.timestamp")}}</td>
+			<td>{{SpecName("Gamepad", "#dom-gamepad-timestamp", "Gamepad.timestamp")}}
+			</td>
 			<td>{{Spec2("Gamepad")}}</td>
 			<td>Initial definition</td>
 		</tr>
@@ -57,4 +66,4 @@ console.log(gp.timestamp);</pre>
 
 <h2 id="See_also">See also</h2>
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>

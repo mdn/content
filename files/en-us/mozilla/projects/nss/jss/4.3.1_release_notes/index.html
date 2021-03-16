@@ -37,15 +37,9 @@ tags:
   have no effect and the application may become vulnerable to the issue.</p>
 <p>This default setting can also be changed within the application by using the following JSS methods:</p>
 <ul>
-  <li><a class=" external"
-      href="http://mxr.mozilla.org/security/search?string=enableRenegotiation&amp;case=on&amp;find=security%2F.ss&amp;findi=&amp;filter=^[^\0]*%24&amp;hitlimit=&amp;tree=security"
-      rel="external nofollow"> SSLServerSocket.enableRenegotiation(int mode)</a></li>
-  <li><a class=" external"
-      href="http://mxr.mozilla.org/security/search?string=enableRenegotiation&amp;case=on&amp;find=security%2F.ss&amp;findi=&amp;filter=^[^\0]*%24&amp;hitlimit=&amp;tree=security"
-      rel="external nofollow"> SSLSocket.enableRenegotiation(int mode)</a></li>
-  <li><a class=" external"
-      href="http://mxr.mozilla.org/security/search?string=enableRenegotiation&amp;case=on&amp;find=security%2F.ss&amp;findi=&amp;filter=^[^\0]*%24&amp;hitlimit=&amp;tree=security"
-      rel="external nofollow"> SSLSocket.enableRenegotiationDefault(int mode)</a></li>
+  <li>SSLServerSocket.enableRenegotiation(int mode)</li>
+  <li>SSLSocket.enableRenegotiation(int mode)</li>
+  <li>SSLSocket.enableRenegotiationDefault(int mode)</li>
 </ul>
 The mode of renegotiation that the peer must use can be set to the following:
 <ul>
@@ -60,15 +54,9 @@ The mode of renegotiation that the peer must use can be set to the following:
   that a key be marked for<br>  an operation before the key can be used to perform that operation;<br>  other tokens
   don't care. NSS/JSS provides a way to specify a set of<br>  flags and a corresponding mask for these flags.</p>
 <ul>
-  <li>see <a class=" external"
-      href="http://mxr.mozilla.org/security/search?string=generateECKeyPairWithOpFlags&amp;case=on&amp;find=security%2F.ss&amp;findi=&amp;filter=^[^\0]*%24&amp;hitlimit=&amp;tree=security"
-      rel="external nofollow"> generateECKeyPairWithOpFlags</a></li>
-  <li>see <a class=" external"
-      href="http://mxr.mozilla.org/security/search?string=generateRSAKeyPairWithOpFlags&amp;case=on&amp;find=security%2F.ss&amp;findi=&amp;filter=^[^\0]*%24&amp;hitlimit=&amp;tree=security"
-      rel="external nofollow"> generateRSAKeyPairWithOpFlags</a></li>
-  <li>see <a class=" external"
-      href="http://mxr.mozilla.org/security/search?string=generateDSAKeyPairWithOpFlags&amp;case=on&amp;find=security%2F.ss&amp;findi=&amp;filter=^[^\0]*%24&amp;hitlimit=&amp;tree=security"
-      rel="external nofollow"> generateDSAKeyPairWithOpFlags</a><strong><br> </strong></li>
+  <li>see generateECKeyPairWithOpFlags</li>
+  <li>see generateRSAKeyPairWithOpFlags</li>
+  <li>see generateDSAKeyPairWithOpFlags</li>
 </ul>
 <h3 id="Distribution_Information">Distribution Information</h3>
 <ul>
@@ -76,7 +64,7 @@ The mode of renegotiation that the peer must use can be set to the following:
   <li>The CVS tag for the JSS 4.3.1 release is <code>JSS_4_3_1_RTM</code>.</li>
   <li>Source tarballs are available from <a class=" link-ftp"
       href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_1_RTM/src/jss-4.3.1.tar.bz2"
-      rel="freelink">ftp://ftp.mozilla.org/pub/mozilla.or...-4.3.1.tar.bz2</a></li>
+     >ftp://ftp.mozilla.org/pub/mozilla.or...-4.3.1.tar.bz2</a></li>
   <li>Binary releases are no longer available on mozilla. JSS is a JNI library we provide the jss4.jar but expect you to
     build the JSS's matching JNI shared library. We provide the jss4.jar in case you do not want to obtain your own
     JCE code signing certificate. JSS is a JCE provider and therefore the jss4.jar must be signed. <a class="link-ftp"
@@ -96,7 +84,7 @@ The mode of renegotiation that the peer must use can be set to the following:
       href="http://mxr.mozilla.org/mozilla/source/security/jss/">
       http://mxr.mozilla.org/mozilla/source/security/jss/</a></li>
   <li>The RUN TIME behavior of JSS can be affected by the <a class="internal"
-      href="/en-US/NSS_reference/NSS_environment_variables" title="En/NSS reference/NSS environment variables">NSS
+      href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_environment_variables">NSS
       Environment Variables</a>. </li>
 </ul>
 <h3 id="Platform_Information">Platform Information</h3>

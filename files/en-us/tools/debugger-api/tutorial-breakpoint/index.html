@@ -15,7 +15,7 @@ slug: Tools/Debugger-API/Tutorial-Breakpoint
  <li>
   <p>Save the following text to an HTML file:</p>
 
-  <pre class="language-html notranslate"><code>&lt;div onclick="report('the best div');"&gt;Click me!&lt;/div&gt;
+  <pre class="language-html"><code>&lt;div onclick="report('the best div');"&gt;Click me!&lt;/div&gt;
 &lt;div onclick="report('another great div');"&gt;Or me!&lt;/div&gt;
 &lt;script&gt;
 function report(what) {
@@ -32,7 +32,7 @@ function report(what) {
  <li>
   <p>Click on the Scratchpad panel and enter the following code:</p>
 
-  <pre class="language-js notranslate"><code>Components.utils.import("resource://gre/modules/jsdebugger.jsm");
+  <pre class="language-js"><code>Components.utils.import("resource://gre/modules/jsdebugger.jsm");
 Components.utils.import("resource://gre/modules/Console.jsm");
 
 // This defines 'Debugger' in this Scratchpad;
@@ -65,7 +65,7 @@ console.log('Finished setting breakpoint!');</code></pre>
 
   <p>Now, click on the text that says “Click me!” in the web page. This runs the <code>div</code> element’s <code>onclick</code> handler. When control reaches the start of the <code>report</code> function, <code>Debugger</code> calls the breakpoint handler’s <code>hit</code> method, passing a <code>Debugger.Frame</code> instance. The <code>hit</code> method logs the breakpoint hit to the browser content toolbox’s console. Then it evaluates the expression <code>what</code> in the given stack frame, and logs its result. The toolbox’s console now looks like this:</p>
 
-  <p><img alt="The breakpoint handler’s console output" src="https://mdn.mozillademos.org/files/15721/console.png"></p>
+  <p><img alt="The breakpoint handler’s console output" src="console.png"></p>
 
   <p>You can also click on the text that says “Or me!”, to see <code>report</code> called from a different handler.</p>
 

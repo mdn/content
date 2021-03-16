@@ -2,33 +2,40 @@
 title: IDBDatabase.onerror
 slug: Web/API/IDBDatabase/onerror
 tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Property
-  - Reference
-  - Référence(2)
-  - Storage
-  - onerror
+- API
+- Database
+- IDBDatabase
+- IndexedDB
+- Property
+- Reference
+- Référence(2)
+- Storage
+- onerror
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
-<p>The <code><strong>onerror</strong></code> event handler of the {{domxref("IDBDatabase")}} interface handles the error event, fired when a request returns an error and bubbles up to the connection object.</p>
+<p>The <code><strong>onerror</strong></code> event handler of the
+  {{domxref("IDBDatabase")}} interface handles the error event, fired when a request
+  returns an error and bubbles up to the connection object.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Consider using <code>IDBOpenDBRequest.onsuccess</code> instead (see {{domxref("IDBRequest.onsuccess")}}, where it is inherited from).</p>
+  <p><strong>Note</strong>: Consider using <code>IDBOpenDBRequest.onsuccess</code> instead
+    (see {{domxref("IDBRequest.onsuccess")}}, where it is inherited from).</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;"><em>IDBDatabase</em>.onerror = <em>function</em>(event) { ... }</pre>
+<pre
+  class="brush: js"><em>IDBDatabase</em>.onerror = <em>function</em>(event) { ... }</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that creates a new object store; it also includes <code style="font-style: normal;">onerror</code> and <code style="font-style: normal;">onabort</code> functions to handle non-success cases.</p>
+<p>This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
+  creates a new object store; it also includes <code
+    style="font-style: normal;">onerror</code> and <code
+    style="font-style: normal;">onabort</code> functions to handle non-success cases.</p>
 
 <pre class="brush: js;highlight:[4,5,6]">DBOpenRequest.onupgradeneeded = function(event) {
   var db = this.result;
@@ -61,41 +68,42 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbdatabase-onerror', 'onerror')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-onerror", "onerror")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-onerror', 'onerror')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-onerror", "onerror")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBDatabase.onerror")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
- <li><code><a href="/en-US/docs/Web/API/IDBDatabase/error_event">error</a></code> event</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><code><a href="/en-US/docs/Web/API/IDBDatabase/error_event">error</a></code> event
+  </li>
 </ul>

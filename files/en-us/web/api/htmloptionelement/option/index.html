@@ -13,30 +13,44 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>Option()</code></strong> constructor creates a new {{domxref("HTMLOptionElement")}}.</p>
+<p>The <strong><code>Option()</code></strong> constructor creates a new
+  {{domxref("HTMLOptionElement")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <em>optionElementReference</em> = new Option(<em>text</em>, <em>value</em>, <em>defaultSelected</em>, <em>selected</em>);</pre>
+<pre
+  class="brush: js">var <em>optionElementReference</em> = new Option(<em>text</em>, <em>value</em>, <em>defaultSelected</em>, <em>selected</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>text</code> {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the content of the element, i.e. the displayed text. If this is not specified, a default value of "" (empty string) is used.</dd>
- <dt><code>value</code> {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the value of the {{domxref("HTMLOptionElement")}}, i.e. the value attribute of the equivalent {{htmlelement("option")}}. If this is not specified, the value of text is used as the value, e.g. for the associated {{htmlelement("select")}} element's value when the form is submitted to the server.</dd>
- <dt><code>defaultSelected</code> {{optional_inline}}</dt>
- <dd>A {{domxref("Boolean")}} that sets the {{htmlattrxref("selected", "option")}} attribute value, i.e. so that this {{htmlelement("option")}} will be the default value selected in the {{htmlelement("select")}} element when the page is first loaded. If this is not specified, a default value of false is used. Note that a value of true does not set the option to selected if it is not already selected.</dd>
- <dt><code>selected</code> {{optional_inline}}</dt>
- <dd>A {{domxref("Boolean")}} that sets the option's selected state; the default is false (not selected). If omitted, even if the defaultSelected argument is true, the option is not selected.</dd>
+  <dt><code>text</code> {{optional_inline}}</dt>
+  <dd>A {{domxref("DOMString")}} representing the content of the element, i.e. the
+    displayed text. If this is not specified, a default value of "" (empty string) is
+    used.</dd>
+  <dt><code>value</code> {{optional_inline}}</dt>
+  <dd>A {{domxref("DOMString")}} representing the value of the
+    {{domxref("HTMLOptionElement")}}, i.e. the value attribute of the equivalent
+    {{htmlelement("option")}}. If this is not specified, the value of text is used as the
+    value, e.g. for the associated {{htmlelement("select")}} element's value when the form
+    is submitted to the server.</dd>
+  <dt><code>defaultSelected</code> {{optional_inline}}</dt>
+  <dd>A {{domxref("Boolean")}} that sets the {{htmlattrxref("selected", "option")}}
+    attribute value, i.e. so that this {{htmlelement("option")}} will be the default value
+    selected in the {{htmlelement("select")}} element when the page is first loaded. If
+    this is not specified, a default value of false is used. Note that a value of true
+    does not set the option to selected if it is not already selected.</dd>
+  <dt><code>selected</code> {{optional_inline}}</dt>
+  <dd>A {{domxref("Boolean")}} that sets the option's selected state; the default is false
+    (not selected). If omitted, even if the defaultSelected argument is true, the option
+    is not selected.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Just_add_new_options">Just add new options</h3>
 
-<pre class="brush: js notranslate"> /* assuming we have the following HTML
+<pre class="brush: js"> /* assuming we have the following HTML
 &lt;select id='s'&gt;
 
 &lt;/select&gt;
@@ -50,10 +64,11 @@ options.forEach(function(element,key) {
 });
 </pre>
 
-<h3 id="Append_options_with_different_parameters">Append options with different parameters</h3>
+<h3 id="Append_options_with_different_parameters">Append options with different parameters
+</h3>
 
-<pre class="brush: js notranslate"><code class="language-js">/* assuming we have the following HTML
-&lt;select id="s"&gt;
+<pre class="brush: js">/* assuming we have the following HTML
+&lt;select id=&quot;s&quot;&gt;
     &lt;option&gt;First&lt;/option&gt;
     &lt;option&gt;Second&lt;/option&gt;
     &lt;option&gt;Third&lt;/option&gt;
@@ -61,37 +76,37 @@ options.forEach(function(element,key) {
 */
 
 var s = document.getElementById('s');
-</code>var options = [ 'zero', 'one', 'two' ];<code class="language-js">
+var options = [ 'zero', 'one', 'two' ];
 
-options.forEach(function(element, key) {</code>
+options.forEach(function(element, key) {
   if (element == 'zero') {
     s[s.options.length] = new Option(element, s.options.length, false, false);
   }
   if (element == 'one') {
-    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
+    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the &quot;selected&quot; attribute
   }
   if (element == 'two') {
-    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in &quot;view&quot;
   }
-<code class="language-js">});
+});
 
 /* Result
-&lt;select id="s"&gt;
-  &lt;option value="0"&gt;zero&lt;/option&gt;
-  &lt;option value="1" selected=""&gt;one&lt;/option&gt;
-  &lt;option value="2"&gt;two&lt;/option&gt; // User will see this as 'selected'
+&lt;select id=&quot;s&quot;&gt;
+  &lt;option value=&quot;0&quot;&gt;zero&lt;/option&gt;
+  &lt;option value=&quot;1&quot; selected=&quot;&quot;&gt;one&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;two&lt;/option&gt; // User will see this as 'selected'
 &lt;/select&gt;
-</code>*/</pre>
+*/</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#dom-option','Option()')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG','#dom-option','Option()')}}</td>
+    </tr>
+  </tbody>
 </table>

@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Status">Status</h2>
 
-<pre class="syntaxbox notranslate">451 Unavailable For Legal Reasons</pre>
+<pre class="brush: html">451 Unavailable For Legal Reasons</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -23,11 +23,11 @@ tags:
 
 <p>Any attempt to identify the entity ultimately responsible for the resource being unavailable belongs in the response body, not in the <code>rel="blocked-by"</code> link. This includes the name of the person or organization that made a legal demand resulting in the content's removal.</p>
 
-<pre class="notranslate">HTTP/1.1 451 Unavailable For Legal Reasons
+<pre>HTTP/1.1 451 Unavailable For Legal Reasons
 Link: &lt;https://spqr.example.org/legislatione&gt;; rel="blocked-by"
 Content-Type: text/html</pre>
 
-<pre class="notranslate">&lt;html&gt;
+<pre>&lt;html&gt;
       &lt;head&gt;&lt;title&gt;Unavailable For Legal Reasons&lt;/title&gt;&lt;/head&gt;
       &lt;body&gt;
             &lt;h1&gt;Unavailable For Legal Reasons&lt;/h1&gt;

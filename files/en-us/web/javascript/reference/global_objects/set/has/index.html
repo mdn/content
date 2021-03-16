@@ -2,44 +2,52 @@
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - set
+- ECMAScript 2015
+- JavaScript
+- Method
+- Prototype
+- set
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>has()</code></strong> method returns a boolean indicating whether an element with the specified value exists in a <code>Set</code> object or not.</p>
+<p>The <strong><code>has()</code></strong> method returns a boolean indicating whether an
+  element with the specified value exists in a <code>Set</code> object or not.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>mySet</var>.has(<var>value</var>);</pre>
+<pre class="brush: js"><var>mySet</var>.has(<var>value</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>value</var></code></dt>
- <dd>The value to test for presence in the <code>Set</code> object.</dd>
+  <dt><code><var>value</var></code></dt>
+  <dd>The value to test for presence in the <code>Set</code> object.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns <code>true</code> if an element with the specified value exists in the <code>Set</code> object; otherwise <code>false</code>.</p>
+<p>Returns <code>true</code> if an element with the specified value exists in the
+  <code>Set</code> object; otherwise <code>false</code>.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Technically speaking, <code>has()</code> uses the <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">Same-value-zero</a> algorithm to determine whether the given element is found.</p>
+  <p><strong>Note:</strong> Technically speaking, <code>has()</code> uses the <a
+      href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">Same-value-zero</a>
+    algorithm to determine whether the given element is found.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_the_has_method">Using the has() method</h3>
 
-<pre class="brush: js notranslate">var mySet = new Set();
+<pre class="brush: js">var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // returns true
@@ -57,16 +65,16 @@ set1.add({'key1': 1}); // now set1 contains 2 entries
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -76,7 +84,7 @@ set1.add({'key1': 1}); // now set1 contains 2 entries
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
+  <li>{{jsxref("Set")}}</li>
+  <li>{{jsxref("Set.prototype.add()")}}</li>
+  <li>{{jsxref("Set.prototype.delete()")}}</li>
 </ul>

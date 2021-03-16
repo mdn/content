@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">let <var>results</var> = browser.storage.<var>&lt;storageType&gt;</var>.get(
+<pre class="brush: js">let <var>results</var> = browser.storage.<var>&lt;storageType&gt;</var>.get(
   <var>keys</var>    // null, string, object or array of strings
 )
 </pre>
@@ -61,7 +61,7 @@ tags:
 
 <p>Suppose storage contains two items:</p>
 
-<pre class="brush: js notranslate">// storage contains two items,
+<pre class="brush: js">// storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
   kitten:  {name:"Mog", eats:"mice"},
@@ -70,7 +70,7 @@ browser.storage.local.set({
 
 <p>Define success and failure handlers for the promise:</p>
 
-<pre class="brush: js notranslate">function onGot(item) {
+<pre class="brush: js">function onGot(item) {
   console.log(item);
 }
 
@@ -80,14 +80,14 @@ function onError(error) {
 
 <p>With no <code><var>keys</var></code> argument, retrieve everything:</p>
 
-<pre class="brush: js notranslate">let gettingItem = browser.storage.local.get();
+<pre class="brush: js">let gettingItem = browser.storage.local.get();
 gettingItem.then(onGot, onError);
 
 // -&gt; Object { kitten: Object, monster: Object }</pre>
 
 <p>With an empty <code><var>keys</var></code> argument, return nothing:</p>
 
-<pre class="brush: js notranslate">// with an empty array, retrieve nothing
+<pre class="brush: js">// with an empty array, retrieve nothing
 let gettingItem = browser.storage.local.get([]);
 gettingItem.then(onGot, onError);
 
@@ -95,21 +95,21 @@ gettingItem.then(onGot, onError);
 
 <p>With the name of an object, retrieve the match:</p>
 
-<pre class="brush: js notranslate">let gettingItem = browser.storage.local.get("kitten");
+<pre class="brush: js">let gettingItem = browser.storage.local.get("kitten");
 gettingItem.then(onGot, onError);
 
 // -&gt; Object { kitten: Object }</pre>
 
 <p>With an array of object names, retrieve all matches:</p>
 
-<pre class="brush: js notranslate">let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+<pre class="brush: js">let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
 gettingItem.then(onGot, onError);
 
 // -&gt; Object { kitten: Object, monster: Object } </pre>
 
 <p>With an object with object names as keys and the default value as value:</p>
 
-<pre class="brush: js notranslate">let gettingItem = browser.storage.local.get({
+<pre class="brush: js">let gettingItem = browser.storage.local.get({
   kitten: "no kitten",
   monster: "no monster",
   grapefruit: {
@@ -125,20 +125,20 @@ gettingItem.then(onGot, onError);
 
 <h3 id="Chrome_examples">Chrome examples</h3>
 
-<pre class="brush: js notranslate">chrome.storage.local.get("kitten", function(items){
+<pre class="brush: js">chrome.storage.local.get("kitten", function(items){
   console.log(items.kitten);  // -&gt; {name:"Mog", eats:"mice"}
 });</pre>
 
 <p class="brush: js">Or with an arrow function</p>
 
-<pre class="brush: js notranslate">chrome.storage.local.get("kitten", items =&gt; {
+<pre class="brush: js">chrome.storage.local.get("kitten", items =&gt; {
   console.log(items.kitten); // -&gt; {name:"Mog", eats:"mice"}
 });</pre>
 
 <p>Or using a Promise</p>
 
-<pre class="brush: js notranslate">let gettingItem = new Promise(resolve =&gt; chrome.storage.local.get("kitten", resolve));
-<code class="language-js">gettingItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>onGot<span class="punctuation token">)</span><span class="punctuation token">; </span></code><code class="language-js"><span class="comment token">// -&gt; Object { kitten: Object }</span></code></pre>
+<pre class="brush: js">let gettingItem = new Promise(resolve =&gt; chrome.storage.local.get("kitten", resolve));
+gettingItem.then(onGot); // -&gt; Object { kitten: Object }</pre>
 
 <div class="note"><strong>Acknowledgements</strong>
 

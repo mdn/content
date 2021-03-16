@@ -2,21 +2,23 @@
 title: HTMLDialogElement.show()
 slug: Web/API/HTMLDialogElement/show
 tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLDialogElement
-  - Method
-  - Reference
-  - show
+- API
+- Experimental
+- HTML DOM
+- HTMLDialogElement
+- Method
+- Reference
+- show
 ---
 <p>{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}</p>
 
-<p>The <strong><code>show()</code></strong> method of the {{domxref("HTMLDialogElement")}} interface displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.</p>
+<p>The <strong><code>show()</code></strong> method of the {{domxref("HTMLDialogElement")}}
+  interface displays the dialog modelessly, i.e. still allowing interaction with content
+  outside of the dialog.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">dialogInstance.show();</pre>
+<pre class="brush: js">dialogInstance.show();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,7 +30,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the <code>show()</code> method. From there you can click the <em>Cancel</em> button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.</p>
+<p>The following example shows a simple button that, when clicked, opens a
+  {{htmlelement("dialog")}} containing a form via the <code>show()</code> method. From
+  there you can click the <em>Cancel</em> button to close the dialog (via the
+  {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
+  button.</p>
 
 <pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
   &lt;dialog id="favDialog"&gt;
@@ -86,25 +92,26 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-show', 'show()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-show', 'show()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-show', 'show()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-show',
+        'show()')}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -114,5 +121,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
+  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
 </ul>

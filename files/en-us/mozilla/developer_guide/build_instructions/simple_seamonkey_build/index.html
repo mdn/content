@@ -5,7 +5,7 @@ tags:
   - Build documentation
   - SeaMonkey
 ---
-<p>You can build a bleeding-edge, development version of SeaMonkey using the commands below. For complete information, see the <a class="internal" href="/En/Developer_Guide/Build_Instructions" title="En/Build Documentation">build documentation</a>.</p>
+<p>You can build a bleeding-edge, development version of SeaMonkey using the commands below. For complete information, see the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">build documentation</a>.</p>
 
 <h2 id="Build_prerequisites">Build prerequisites</h2>
 
@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Installing_build_tools">Installing build tools</h2>
 
-<p>If your system is not listed below, see the <a class="internal" href="/En/Developer_Guide/Build_Instructions#Build_prerequisites" title="En/Build Documentation#Build prerequisites">build prerequisites page</a>.</p>
+<p>If your system is not listed below, see the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_prerequisites">build prerequisites page</a>.</p>
 
 <table style="margin-left: 2.5em;">
 	<tbody>
@@ -67,7 +67,7 @@ sudo yum group mark install "X Software Development"</pre>
 sudo port sync
 sudo port install mercurial libidl autoconf213 yasm</pre>
 				</li>
-				<li>Problems? See <a class="internal" href="/En/Developer_Guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X build prerequisites</a>.</li>
+				<li>Problems? See <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mac_OS_X_Prerequisites">Mac OS X build prerequisites</a>.</li>
 			</ul>
 			</td>
 		</tr>
@@ -76,14 +76,14 @@ sudo port install mercurial libidl autoconf213 yasm</pre>
 			<td>
 			<ul>
 				<li>Install Visual C++ 2013. Both the professional edition and the <a class="external" href="http://www.microsoft.com/Express/vc/">express edition</a> will work.</li>
-				<li>You may need to install one or more Windows SDKs. See <a class="internal" href="/En/Windows_SDK_versions" title="En/Windows SDK versions">Windows SDK versions</a> for a quick guide.</li>
+				<li>You may need to install one or more Windows SDKs. See <a class="internal" href="/en-US/Windows_SDK_versions">Windows SDK versions</a> for a quick guide.</li>
 				<li>If you decided on the Windows 8 SDK, you also need the Outlook 2010 MAPI Header Files from Microsoft.</li>
 				<li>Install <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe">MozillaBuild</a>, a package of additional build tools. (If you get a message saying this application did not install properly then you should see a windows dialog giving you the option to re-install with the 'correct settings'. After that all should be well.)</li>
 				<li>Open a shell window by running: <code>c:\mozilla-build\start-msvc2013.bat</code>. <strong>Even if you're on 64-bit Windows, do not use the files ending in <code>-x64.bat</code>.</strong></li>
 				<li>By default you will arrive in your Windows user home directory which is likely to contain spaces in its path (e.g. C:\Users\myaccount). This can lead to problems later in the building stage. To avoid that, create a directory without spaces in its path (e.g. <code>mkdir <span style="font-family: verdana,tahoma,sans-serif;">/c/mozilla-src</span></code>) and switch to it before building (<code>cd /c/mozilla-src</code>).</li>
 			</ul>
 
-			<p>Problems? See <a class="internal" href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites</a>.</p>
+			<p>Problems? See <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows build prerequisites</a>.</p>
 			</td>
 		</tr>
 	</tbody>
@@ -139,11 +139,11 @@ ac_add_options --disable-optimize
 python client.py checkout
 </pre>
 
-<p>Then just re-run the "(moz)<code>make -f client.mk</code>" command above. (moz)<code>make</code> will only recompile files that changed, but it's still a long haul. An <a class="internal" href="/en/Incremental_Build" title="En/Incremental Build">incremental build</a> can be faster.</p>
+<p>Then just re-run the "(moz)<code>make -f client.mk</code>" command above. (moz)<code>make</code> will only recompile files that changed, but it's still a long haul. An <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Incremental_Build">incremental build</a> can be faster.</p>
 
 <h3 id="References">References</h3>
 
 <ul>
-	<li><a class="internal" href="/En/Developer_Guide/Build_Instructions" title="En/Developer Guide/Build Instructions">General Build Documentation</a></li>
-	<li><a class="internal" href="/en/comm-central">comm-central</a></li>
+	<li><a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">General Build Documentation</a></li>
+	<li><a class="internal" href="/en-US/docs/comm-central">comm-central</a></li>
 </ul>

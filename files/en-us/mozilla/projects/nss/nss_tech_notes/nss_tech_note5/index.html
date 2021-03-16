@@ -34,7 +34,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         /* turn the SECItem into a key object */<br>
         PK11SymKey* SymKey = PK11_ImportSymKey(slot, cipherMech, PK11_OriginUnwrap,<br>
                                                                                                 CKA_ENCRYPT, &amp;keyItem, NULL)</i></small>;</li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a><br>
          </li>
     </ul>
   </li>
@@ -115,7 +115,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         /* turn the SECItem into a key object */<br>
         PK11SymKey* SymKey = PK11_ImportSymKey(slot, digestMech, PK11_OriginUnwrap,<br>
                                                                                                 CKA_DIGEST, &amp;keyItem, NULL)</i></small>;</li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a>. Can use <small><i>CKM_GENERIC_SECRET_KEY_GEN </i></small>as the key gen mechanism.<br>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a>. Can use <small><i>CKM_GENERIC_SECRET_KEY_GEN </i></small>as the key gen mechanism.<br>
          </li>
     </ul>
   </li>
@@ -163,7 +163,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         /* turn the SECItem into a key object */<br>
         PK11SymKey* SymKey = PK11_ImportSymKey(slot, hmacMech, PK11_OriginUnwrap,<br>
                                                                                                 CKA_SIGN,  &amp;keyItem, NULL)</i></small>;</li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a>. Can use <small><i>CKM_GENERIC_SECRET_KEY_GEN </i></small>as the key gen mechanism.<br>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a>. Can use <small><i>CKM_GENERIC_SECRET_KEY_GEN </i></small>as the key gen mechanism.<br>
          </li>
     </ul>
   </li>
@@ -219,7 +219,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
                                                                                                                  PK11_OriginUnwrap,<br>
                                                                                                                  CKA_WRAP,  &amp;keyItem, NULL)</i></small><br>
          </li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a><br>
          </li>
     </ul>
   </li>
@@ -235,7 +235,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         PK11SymKey* ToBeWrappedSymKey = PK11_ImportSymKey(slot, wrapMech,,<br>
                                                                                                                          PK11_OriginUnwrap,<br>
                                                                                                                         CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a><br>
          </li>
     </ul>
   </li>
@@ -248,7 +248,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>SECItem WrappedKey;<br>
     WrappedKey.len = SOME_LEN;<br>
     WrappedKey.data = allocate (SOME_LEN) bytes;</i></small></li>
-  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
+  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#moving_a_key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_WrapSymKey(wrapMech, SecParam, WrappingSymKey,<br>
                                                                      ToBeWrappedSymKey, &amp;WrappedKey);</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Transport/Store or do whatever with the Wrapped Key (WrappedKey.data, WrappedKey.len)&lt;/big&gt;</small>&lt;/big&gt;</small></li>
@@ -299,7 +299,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         PK11SymKey* WrappingSymKey = PK11_ImportSymKey(slot, wrapMech,<br>
                                                                                                                  PK11_OriginUnwrap,<br>
                                                                                                                  CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a><br>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a><br>
          </li>
     </ul>
   </li>
@@ -317,7 +317,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <small><i>SECItem WrappedKey;<br>
     WrappedKey.len = SOME_LEN;<br>
     WrappedKey.data = allocate (SOME_LEN) bytes;</i></small></li>
-  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedPvtKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
+  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingSymKey and the ToBeWrappedPvtKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#moving_a_key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_WrapPrivKey(slot, WrappingSymKey,  ToBeWrappedPvtKey, wrapMech,<br>
                                                                      SecParam, &amp;WrappedKey, NULL);</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Transport/Store or do whatever with the Wrapped Key (WrappedKey.data, WrappedKey.len)&lt;/big&gt;</small>&lt;/big&gt;</small></li>
@@ -350,7 +350,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
                       PK11_UnwrapPrivKey(slot, WrappingSymKey, wrapMech, SecParam, &amp;WrappedKey,<br>
                                                                   &amp;label,  pubValue, token, PR_TRUE /* sensitive */<br>
                                                                   keyType,  attribs, numAttribs, NULL /*wincx*/);</small></i><br>
-        <small><i> </i></small></li>
+        </li>
     </ul>
   </li>
   <li>Clean up<br>
@@ -395,14 +395,14 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
         PK11SymKey* ToBeWrappedSymKey = PK11_ImportSymKey(slot, wrapMech,,<br>
                                                                                                                          PK11_OriginUnwrap,<br>
                                                                                                                         CKA_WRAP,  &amp;keyItem, NULL)</i></small>;</li>
-      <li>If generating the key - see section <a href="#Generate_a_Symmetric_Key">Generate a Symmetric Key</a></li>
+      <li>If generating the key - see section <a href="#generate_a_symmetric_key">Generate a Symmetric Key</a></li>
     </ul>
   </li>
   <li>Allocate space for the wrapped key<br>
     <small><i>SECItem WrappedKey;<br>
     WrappedKey.len = SOME_LEN;<br>
     WrappedKey.data = allocate (SOME_LEN) bytes;</i></small></li>
-  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingPubKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#Moving_a_Key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
+  <li><small>&lt;big&gt;Do the Wrap&lt;/big&gt;</small>. Note that the WrappingPubKey and the ToBeWrappedSymKey must be on the slot where the wrap is going to happen. To move  keys to the desired slot, see section <a href="#moving_a_key_from_one_slot_to_another">Moving a Key from one slot to another</a><br>
     <small>&lt;big&gt;<small><i>SECStatus s = PK11_PubWrapSymKey(wrapMech, WrappingPubKey,<br>
                                                                             ToBeWrappedSymKey, &amp;WrappedKey);</i></small>&lt;/big&gt;</small></li>
   <li><small>&lt;big&gt;<small>&lt;big&gt;Transport/Store or do whatever with the Wrapped Key (WrappedKey.data, WrappedKey.len)&lt;/big&gt;</small>&lt;/big&gt;</small></li>
@@ -437,7 +437,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
     <i>PK11SymKey* SymKey = PK11_KeyGen(slot, keygenMech, NULL, keysize, NULL);</i></small></li>
 </ol>
 <p><small>&lt;big&gt;You can also see an <a href="../sample-code/sample1.html">sample program</a> that does key generation.&lt;/big&gt;</small></p>
-<h4 id="Extract_the_raw_key_(This_should_not_normally_be_used._Better_to_use_wrapping_instead._See_method1_and_method2_).">Extract the raw key (This should not normally be used. Better to use wrapping instead. See <a href="#Symmetric_Key_WrappingUnwrapping_Sym_key">method1</a> and <a href="#PKI_Wrap_SymKey">method2</a> ). </h4>
+<h4 id="Extract_the_raw_key_(This_should_not_normally_be_used._Better_to_use_wrapping_instead._See_method1_and_method2_).">Extract the raw key (This should not normally be used. Better to use wrapping instead. See <a href="#symmetric_key_wrappingunwrapping_sym_key">method1</a> and <a href="#pki_wrap_symkey">method2</a> ). </h4>
 <p><i><small>SECStatus rv = PK11_ExtractKeyValue(SymKey);<br>
   SECItem *keydata = PK11_GetKeyData(SymKey);</small></i></p>
 
@@ -463,7 +463,7 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
 
 <h2 id="Moving_a_Key_from_one_slot_to_another_2"><a name="Moving_a_Key_from_one_slot_to_another"></a>Moving a Key from one slot to another</h2>
 <ul>
-  <li>To move a Private key from one slot to another, wrap the private key on the origin slot and unwrap it into the destination slot. See section <a href="#Symmetric_Key_WrappingUnwrapping_PvtKey">Symmetric Key Wrapping/Unwrapping of a Private Key</a></li>
+  <li>To move a Private key from one slot to another, wrap the private key on the origin slot and unwrap it into the destination slot. See section <a href="#symmetric_key_wrappingunwrapping_pvtkey">Symmetric Key Wrapping/Unwrapping of a Private Key</a></li>
   <li>To move a Symmetric key<br>
     <small><i>PK11SymKey *destSymKey = pk11_CopyToSlot(destslot, wrapMech, CKA_UNWRAP?, origSymKey);</i></small></li>
 </ul>
@@ -499,19 +499,3 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note5
      </li>
 </ol>
 <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

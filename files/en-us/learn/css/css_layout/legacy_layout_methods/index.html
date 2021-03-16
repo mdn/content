@@ -21,7 +21,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)</td>
+   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -174,9 +174,9 @@ div:nth-of-type(2) {
 
 <p>The aim is to turn this into a demonstration grid of two rows on a twelve column grid — the top row demonstrating the size of the individual columns, the second row some different sized areas on the grid.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13901/simple-grid-finished.png" style="display: block; height: 50px; margin: 0px auto; width: 952px;"></p>
+<p><img alt="" src="simple-grid-finished.png" style="display: block; margin: 0px auto;"></p>
 
-<p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
+<p>In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to <code>border-box</code> on all elements on the site (see <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely">Changing the box model completely</a> for more explanation).</p>
 
 <pre class="brush: css">* {
   box-sizing: border-box;
@@ -326,7 +326,7 @@ body {
 
 <h3 id="Easier_calculations_using_the_calc()_function">Easier calculations using the calc() function</h3>
 
-<p>You could use the {{cssxref("calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See <a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">this example from a MediaRecorder API tutorial</a>.</p>
+<p>You could use the {{cssxref("calc()")}} function to do the math right inside your CSS — this allows you to insert simple mathematical equations into your CSS values, to calculate what a value should be. It is especially useful when there is complex math to be done, and you can even compute a calculation that uses different units, for example "I want this element's height to always be 100% of its parent's height, minus 50px". See <a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">this example from a MediaRecorder API tutorial</a>.</p>
 
 <p>Anyway, back to our grids! Any column that spans more than one column of our grid has a total width of 6.25% multiplied by the number of columns spanned plus 2.08333333% multiplied by the number of gutters (which will always be the number of columns minus 1). The <code>calc()</code> function allows us to do this calculation right inside the width value, so for any item spanning 4 columns we can do this, for example:</p>
 
@@ -404,7 +404,7 @@ body {
 
 <p>Try loading and refreshing to see the difference, or check out our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html">fluid-grid-offset.html</a> example (see it <a href="https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html">running live</a> also). The finished example should look like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13903/offset-grid-finished.png" style="display: block; height: 47px; margin: 0px auto; width: 944px;"></p>
+<p><img alt="" src="offset-grid-finished.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: As an extra exercise, can you implement an <code>offset-by-two</code> class?</p>
@@ -454,7 +454,7 @@ body {
 
 <p>On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13905/flexbox-grid-incomplete.png" style="display: block; height: 71px; margin: 0px auto; width: 944px;"></p>
+<p><img alt="" src="flexbox-grid-incomplete.png" style="display: block; margin: 0px auto;"></p>
 
 <p>To fix this we still need to include our <code>span</code> classes to provide a width that will replace the value used by <code>flex-basis</code> for that element.</p>
 

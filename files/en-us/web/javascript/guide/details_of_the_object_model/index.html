@@ -6,7 +6,7 @@ tags:
   - Intermediate
   - JavaScript
   - Object
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}</div>
 
@@ -104,7 +104,7 @@ tags:
 <div style="display: table-cell; width: 350px; text-align: center; vertical-align: middle; padding: 10px;">
 <p>A simple object hierarchy with the following objects:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/3060/figure8.1.png"></p>
+<p><img alt="" src="figure8.1.png"></p>
 </div>
 
 <div style="display: table-cell; vertical-align: middle; padding: 10px;">
@@ -124,7 +124,7 @@ tags:
 
 <p>This section shows how to use very simple (and comparatively inflexible) definitions to demonstrate how to get the inheritance to work. In these definitions, you cannot specify any property values when you create an object. The newly-created object gets the default values, which you can change at a later time.</p>
 
-<p>In a real application, you would probably define constructors that allow you to provide property values at object creation time (see <a href="#More_flexible_constructors">More flexible constructors</a> for information). For now, these simple definitions demonstrate how the inheritance occurs.</p>
+<p>In a real application, you would probably define constructors that allow you to provide property values at object creation time (see <a href="#more_flexible_constructors">More flexible constructors</a> for information). For now, these simple definitions demonstrate how the inheritance occurs.</p>
 
 <p>The following Java and JavaScript <code>Employee</code> definitions are similar. The only difference is that you need to specify the type for each property in Java but not in JavaScript (this is due to Java being a <a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing">strongly typed language</a> while JavaScript is a weakly typed language).</p>
 
@@ -226,7 +226,7 @@ public class Engineer extends WorkerBee {
 <p>Using these definitions, you can create instances of these objects that get the default values for their properties. The next figure illustrates using these JavaScript definitions to create new objects and shows the property values for the new objects.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The term <em><em>instance</em></em> has a specific technical meaning in class-based languages. In these languages, an instance is an individual instantiation of a class and is fundamentally different from a class. In JavaScript, "instance" does not have this technical meaning because JavaScript does not have this difference between classes and instances. However, in talking about JavaScript, "instance" can be used informally to mean an object created using a particular constructor function. So, in this example, you could informally say that <code>jane</code> is an instance of <code>Engineer</code>. Similarly, although the terms <em><em>parent</em>, <em>child</em>, <em>ancestor</em></em>, and <em><em>descendant</em></em> do not have formal meanings in JavaScript; you can use them informally to refer to objects higher or lower in the prototype chain.</p>
+<p><strong>Note:</strong> The term <em>instance</em> has a specific technical meaning in class-based languages. In these languages, an instance is an individual instantiation of a class and is fundamentally different from a class. In JavaScript, "instance" does not have this technical meaning because JavaScript does not have this difference between classes and instances. However, in talking about JavaScript, "instance" can be used informally to mean an object created using a particular constructor function. So, in this example, you could informally say that <code>jane</code> is an instance of <code>Engineer</code>. Similarly, although the terms <em>parent</em>, <em>child</em>, <em>ancestor</em>, and <em>descendant</em> do not have formal meanings in JavaScript; you can use them informally to refer to objects higher or lower in the prototype chain.</p>
 </div>
 
 <h3 id="Creating_objects_with_simple_definitions">Creating objects with simple definitions</h3>
@@ -236,7 +236,7 @@ public class Engineer extends WorkerBee {
 
 <p>The following hierarchy is created using the code on the right side.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/10412/=figure8.3.png"></p>
+<p><img src="figure8.3.png"></p>
 
 <h4 id="Individual_objects_Jim_Sally_Mark_Fred_Jane_etc._Instances_created_from_constructor">Individual objects = Jim, Sally, Mark, Fred, Jane, etc.<br>
  "Instances" created from constructor</h4>
@@ -291,7 +291,7 @@ mark.dept = 'general';
 mark.projects = [];
 </pre>
 
-<p>The <code>mark</code> object is assigned local values for the <code>name</code> and <code>dept</code> properties by the Employee constructor. It is assigned a local value for the <code>projects</code> property by the <code>WorkerBee</code> constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in <a href="#Property_inheritance_revisited">Property inheritance revisited</a>.</p>
+<p>The <code>mark</code> object is assigned local values for the <code>name</code> and <code>dept</code> properties by the Employee constructor. It is assigned a local value for the <code>projects</code> property by the <code>WorkerBee</code> constructor. This gives you inheritance of properties and their values in JavaScript. Some subtleties of this process are discussed in <a href="#property_inheritance_revisited">Property inheritance revisited</a>.</p>
 
 <p>Because these constructors do not let you supply instance-specific values, this information is generic. The property values are the default ones shared by all new objects created from <code>WorkerBee</code>. You can, of course, change the values of any of these properties. So, you could give specific information for <code>mark</code> as follows:</p>
 
@@ -315,14 +315,14 @@ mark.projects = ['navigator'];</pre>
 
 <p>As soon as JavaScript executes this statement, the <code>mark</code> object also has the <code>specialty</code> property with the value of <code>"none"</code>. The following figure shows the effect of adding this property to the <code>Employee</code> prototype and then overriding it for the <code>Engineer</code> prototype.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
+<p><img alt="" class="internal" src="figure8.4.png"><br>
  <small><strong>Adding properties</strong></small></p>
 
 <h2 id="More_flexible_constructors">More flexible constructors</h2>
 
 <p>The constructor functions shown so far do not let you specify property values when you create an instance. As with Java, you can provide arguments to constructors to initialize property values for instances. The following figure shows one way to do this.</p>
 
-<p><img alt="" class="internal" id="figure8.5" src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
+<p><img alt="" class="internal" id="figure8.5" src="figure8.5.png"><br>
  <small><strong>Specifying properties in a constructor, take 1</strong></small></p>
 
 <p>The following pairs of examples show the Java and JavaScript definitions for these objects.</p>
@@ -415,7 +415,7 @@ jane.machine == 'belau';
 
 <p>So far, the constructor function has created a generic object and then specified local properties and values for the new object. You can have the constructor add more properties by directly calling the constructor function for an object higher in the prototype chain. The following figure shows these new definitions.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
+<p><img alt="" class="internal" src="figure8.6.png"><br>
  <small><strong>Specifying properties in a constructor, take 2</strong></small></p>
 
 <p>Let's look at one of these definitions in detail. Here's the new definition for the <code>Engineer</code> constructor:</p>
@@ -469,7 +469,7 @@ Employee.prototype.specialty = 'none';
 
 <p>Now the value of the <code>jane</code> object's <code>specialty</code> property is "none".</p>
 
-<p>Another way of inheriting is by using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/docs/JavaScript/Reference/Global Objects/Function/call">call()</a></code> / <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/docs/JavaScript/Reference/Global Objects/Function/apply"><code>apply()</code></a> methods. Below are equivalent:</p>
+<p>Another way of inheriting is by using the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code> / <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"><code>apply()</code></a> methods. Below are equivalent:</p>
 
 <pre class="brush: js">function Engineer(name, projs, mach) {
   this.base = WorkerBee;
@@ -567,7 +567,7 @@ Employee.prototype.name = 'Unknown';
 <pre class="brush: js">var f = new Foo();
 var isTrue = (f instanceof Foo);</pre>
 
-<p>For a more detailed example, suppose you have the same set of definitions shown in <a href="#Inheriting_properties">Inheriting properties</a>. Create an <code>Engineer</code> object as follows:</p>
+<p>For a more detailed example, suppose you have the same set of definitions shown in <a href="#inheriting_properties">Inheriting properties</a>. Create an <code>Engineer</code> object as follows:</p>
 
 <pre class="brush: js">var chris = new Engineer('Pigman, Chris', ['jsd'], 'fiji');
 </pre>

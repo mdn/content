@@ -53,11 +53,11 @@ tags:
 <ol>
  <li>Open Terminal (on Windows, open the command line utility)</li>
  <li>Create the folder where you want to save the program, for example, <code>test-node</code> and then enter it by entering the following command into your terminal:
-  <pre class="notranslate">cd test-node</pre>
+  <pre>cd test-node</pre>
  </li>
  <li>Using your favorite text editor, create a file called <code>hello.js</code> and paste the following code into it:<br>
 
-  <pre class="brush: js notranslate">// Load HTTP module
+  <pre class="brush: js">// Load HTTP module
 const http = require("http");
 
 const hostname = "127.0.0.1";
@@ -81,7 +81,7 @@ server.listen(port, hostname, () =&gt; {
  </li>
  <li>Save the file in the folder you created above.</li>
  <li>Go back to the terminal and type the following command:
-  <pre class="brush: bash notranslate">node hello.js</pre>
+  <pre class="brush: bash">node hello.js</pre>
  </li>
 </ol>
 
@@ -118,7 +118,7 @@ server.listen(port, hostname, () =&gt; {
 
 <p>The popularity of a web framework is important because it is an indicator of whether it will continue to be maintained, and what resources are likely to be available in terms of documentation, add-on libraries, and technical support.</p>
 
-<p>There isn't any readily-available and definitive measure of the popularity of server-side frameworks (although sites like <a href="http://hotframeworks.com/">Hot Frameworks</a> attempt to assess popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Express?</p>
+<p>There isn't any readily-available and definitive measure of the popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Express?</p>
 
 <p>Based on the number of <a href="https://expressjs.com/en/resources/companies-using-express.html">high profile companies</a> that use Express, the number of people contributing to the codebase, and the number of people providing both free and paid for support, then yes, <em>Express</em> is a popular framework!</p>
 
@@ -150,7 +150,7 @@ server.listen(port, hostname, () =&gt; {
 <p><strong><code>node ./app.js</code></strong></p>
 </div>
 
-<pre class="brush: js notranslate">const express = require('express');
+<pre class="brush: js">const express = require('express');
 const app = express();
 const port = 3000;
 
@@ -175,25 +175,25 @@ app.listen(port, () =&gt; {
 
 <p>The code below shows how we import a module by name, using the <em>Express</em> framework as an example. First we invoke the <code style="font-style: normal; font-weight: normal;">require()</code> function, specifying the name of the module as a string (<code>'express'</code>), and calling the returned object to create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. We can then access the properties and functions of the application object.</p>
 
-<pre class="brush: js notranslate">const express = require('express');
+<pre class="brush: js">const express = require('express');
 const app = express();
 </pre>
 
 <p>You can also create your own modules that can be imported in the same way.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organise your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
+<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organize your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
 </div>
 
 <p>To make objects available outside of a module you just need to expose them as additional properties on the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
 
-<pre class="brush: js notranslate">exports.area = function(width) { return width * width; };
+<pre class="brush: js">exports.area = function(width) { return width * width; };
 exports.perimeter = function(width) { return 4 * width; };
 </pre>
 
 <p>We can import this module using <code>require()</code>, and then call the exported method(s) as shown:</p>
 
-<pre class="brush: js notranslate">const square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
+<pre class="brush: js">const square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
 console.log('The area of a square with a width of 4 is ' + square.area(4));</pre>
 
 <div class="note">
@@ -202,7 +202,7 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <p>If you want to export a complete object in one assignment instead of building it one property at a time, assign it to <code>module.exports</code> as shown below (you can also do this to make the root of the exports object a constructor or other function):</p>
 
-<pre class="brush: js notranslate">module.exports = {
+<pre class="brush: js">module.exports = {
   area: function(width) {
     return width * width;
   },
@@ -223,13 +223,13 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <p>JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operation must complete before the next operation can start. For example, the following log functions are synchronous, and will print the text to the console in order (First, Second).</p>
 
-<pre class="brush: js notranslate">console.log('First');
+<pre class="brush: js">console.log('First');
 console.log('Second');
 </pre>
 
 <p>By contrast, an asynchronous API is one in which the API will start an operation and immediately return (before the operation is complete). Once the operation finishes, the API will use some mechanism to perform additional operations. For example, the code below will print out "Second, First" because even though <code>setTimeout()</code> method is called first, and returns immediately, the operation doesn't complete for several seconds.</p>
 
-<pre class="brush: js notranslate">setTimeout(function() {
+<pre class="brush: js">setTimeout(function() {
    console.log('First');
    }, 3000);
 console.log('Second');
@@ -251,7 +251,7 @@ console.log('Second');
 
 <p>In our <em>Hello World</em> Express example (see above), we defined a (callback) route handler function for HTTP <code>GET</code> requests to the site root (<code>'/'</code>).</p>
 
-<pre class="brush: js notranslate">app.get('/', (req, res) =&gt; {
+<pre class="brush: js">app.get('/', (req, res) =&gt; {
   res.send('Hello World!')
 });
 </pre>
@@ -268,7 +268,7 @@ console.log('Second');
 
 <p>There is a special routing method, <code>app.all()</code>, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to <code>/secret</code> irrespective of the HTTP verb used (provided it is supported by the <a href="https://nodejs.org/api/http.html#http_http_methods">http module</a>).</p>
 
-<pre class="brush: js notranslate">app.all('/secret', function(req, res, next) {
+<pre class="brush: js">app.all('/secret', function(req, res, next) {
   console.log('Accessing the secret section ...');
   next(); // pass control to the next handler
 });</pre>
@@ -277,7 +277,7 @@ console.log('Second');
 
 <p>Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of <em>/wiki/</em>). In <em>Express</em> this is achieved by using the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> object. For example, we can create our wiki route in a module named <strong>wiki.js</strong>, and then export the <code>Router</code> object, as shown below:</p>
 
-<pre class="brush: js notranslate">// wiki.js - Wiki route module
+<pre class="brush: js">// wiki.js - Wiki route module
 
 const express = require('express');
 const router = express.Router();
@@ -301,7 +301,7 @@ module.exports = router;
 
 <p>To use the router in our main app file we would then <code>require()</code> the route module (<strong>wiki.js</strong>), then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path. The two routes will then be accessible from <code style="font-style: normal; font-weight: normal;">/wiki/</code> and <code style="font-style: normal; font-weight: normal;">/wiki/about/</code>.</p>
 
-<pre class="brush: js notranslate">const wiki = require('./wiki.js');
+<pre class="brush: js">const wiki = require('./wiki.js');
 // ...
 app.use('/wiki', wiki);</pre>
 
@@ -319,12 +319,12 @@ app.use('/wiki', wiki);</pre>
 
 <p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="http://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
 
-<pre class="brush: bash notranslate"><code>$ npm install morgan
-</code></pre>
+<pre class="brush: bash">$ npm install morgan
+</pre>
 
 <p>You could then call <code>use()</code> on the <em>Express application object</em> to add the middleware to the stack:</p>
 
-<pre class="brush: js notranslate">const express = require('express');
+<pre class="brush: js">const express = require('express');
 const <strong>logger = require('morgan');</strong>
 const app = express();
 <strong>app.use(logger('dev'));</strong>
@@ -340,7 +340,7 @@ const app = express();
 
 <p>The example below shows how you can add the middleware function using both approaches, and with/without a route.</p>
 
-<pre class="brush: js notranslate">const express = require('express');
+<pre class="brush: js">const express = require('express');
 const app = express();
 
 // An example middleware function
@@ -370,12 +370,12 @@ app.listen(3000);</pre>
 
 <p>You can use the <a href="http://expressjs.com/en/4x/api.html#express.static">express.static</a> middleware to serve static files, including your images, CSS and JavaScript (<code>static()</code> is the only middleware function that is actually <strong>part</strong> of <em>Express</em>). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '<strong>public'</strong> at the same level as where you call node:</p>
 
-<pre class="brush: js notranslate">app.use(express.static('public'));
+<pre class="brush: js">app.use(express.static('public'));
 </pre>
 
 <p>Any files in the public directory are served by adding their filename (<em>relative</em> to the base "public" directory) to the base URL. So for example:</p>
 
-<pre class="notranslate"><code>http://localhost:3000/images/dog.jpg
+<pre><code>http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
@@ -383,18 +383,18 @@ http://localhost:3000/about.html
 
 <p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
 
-<pre class="brush: js notranslate">app.use(express.static('public'));
+<pre class="brush: js">app.use(express.static('public'));
 app.use(express.static('media'));
 </pre>
 
 <p>You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we <a href="http://expressjs.com/en/4x/api.html#app.use">specify a mount path</a> so that the files are loaded with the prefix "/media":</p>
 
-<pre class="brush: js notranslate">app.use('/media', express.static('public'));
+<pre class="brush: js">app.use('/media', express.static('public'));
 </pre>
 
 <p>Now, you can load the files that are in the <code>public</code> directory from the <code>/media</code> path prefix.</p>
 
-<pre class="notranslate"><code>http://localhost:3000/media/images/dog.jpg
+<pre><code>http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
 http://localhost:3000/media/cry.mp3</code>
 </pre>
@@ -407,7 +407,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>Errors are handled by one or more special middleware functions that have four arguments, instead of the usual three: <code>(err, req, res, next)</code>. For example:</p>
 
-<pre class="brush: js notranslate">app.use(function(err, req, res, next) {
+<pre class="brush: js">app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
@@ -433,12 +433,12 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p>In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:</p>
 
-<pre class="brush: bash notranslate"><code>$ npm install mongodb
-</code></pre>
+<pre class="brush: bash">$ npm install mongodb
+</pre>
 
 <p>The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.</p>
 
-<pre class="brush: js notranslate">//this works with older versions of  mongodb version ~ 2.2.33
+<pre class="brush: js">//this works with older versions of  mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
@@ -475,7 +475,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
 
 <p>In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)</p>
 
-<pre class="brush: js notranslate">const express = require('express');
+<pre class="brush: js">const express = require('express');
 const path = require('path');
 const app = express();
 
@@ -488,7 +488,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <p>The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.&lt;template_extension&gt;" that contains placeholders for data variables named 'title' and "message", you would call <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> in a route handler function to create and send the HTML response:</p>
 
-<pre class="brush: js notranslate">app.get('/', function(req, res) {
+<pre class="brush: js">app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
 });</pre>
 

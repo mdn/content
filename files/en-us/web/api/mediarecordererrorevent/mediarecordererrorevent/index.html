@@ -2,68 +2,86 @@
 title: MediaRecorderErrorEvent()
 slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
 tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture
-  - Media Capture and Streams
-  - MediaRecordingErrorEvent
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording
-  - Video
+- API
+- Audio
+- Constructor
+- Media
+- Media Capture
+- Media Capture and Streams
+- MediaRecordingErrorEvent
+- MediaStream Recording
+- MediaStream Recording API
+- Recording
+- Video
 ---
 <p>{{APIRef("MediaStream Recording")}}</p>
 
-<p><span class="seoSummary">The <code><strong>MediaRecorderErrorEvent</strong></code><strong><code>()</code></strong> constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object that represents an error that occurred during the recording of media by the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a>.</span></p>
+<p><span class="seoSummary">The
+    <code><strong>MediaRecorderErrorEvent</strong></code><strong><code>()</code></strong>
+    constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object that
+    represents an error that occurred during the recording of media by the <a
+      href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording
+      API</a>.</span></p>
 
 <div class="note">
-<p>In general, you won't create these yourself; they are delivered to your implementation of {{domxref("MediaRecorder.onerror")}} when errors occur while recording media.</p>
+  <p>In general, you won't create these yourself; they are delivered to your
+    implementation of {{domxref("MediaRecorder.onerror")}} when errors occur while
+    recording media.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>errorEvent</em> = new MediaRecorderErrorEvent(<em>errorInfo</em>)</pre>
+<pre
+  class="brush: js">var <em>errorEvent</em> = new MediaRecorderErrorEvent(<em>errorInfo</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>errorInfo</code></dt>
- <dd>An object describing the error object to be created. It <em>must</em> contain the <code>error</code> property at a minimum.
- <dl>
-  <dt><code>error</code></dt>
-  <dd>A {{domxref("DOMException")}} that describes the error that occurred. This object's {{domxref("DOMException.name", "name")}} property should indicate the name of the error that occurred. The other fields may or may not be present.</dd>
- </dl>
- </dd>
+  <dt><code>errorInfo</code></dt>
+  <dd>An object describing the error object to be created. It <em>must</em> contain the
+    <code>error</code> property at a minimum.
+    <dl>
+      <dt><code>error</code></dt>
+      <dd>A {{domxref("DOMException")}} that describes the error that occurred. This
+        object's {{domxref("DOMException.name", "name")}} property should indicate the
+        name of the error that occurred. The other fields may or may not be present.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <div class="note">
-<p>Some {{Glossary("user agent", "user agents")}} add to the <code>error</code> object other properties that provide information such as stack dumps, the name of the JavaScript file and the line number where the error occurred, and other debugging aids, but you should not rely on this information in a production environment.</p>
+  <p>Some {{Glossary("user agent", "user agents")}} add to the <code>error</code> object
+    other properties that provide information such as stack dumps, the name of the
+    JavaScript file and the line number where the error occurred, and other debugging
+    aids, but you should not rely on this information in a production environment.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('MediaStream Recording','#dom-mediarecordererrorevent-mediarecordererrorevent','MediaRecorderErrorEvent()')}}</td>
-   <td>{{Spec2('MediaStream Recording')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('MediaStream
+        Recording','#dom-mediarecordererrorevent-mediarecordererrorevent','MediaRecorderErrorEvent()')}}
+      </td>
+      <td>{{Spec2('MediaStream Recording')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table on this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.MediaRecorderErrorEvent.MediaRecorderErrorEvent")}}</p>
-

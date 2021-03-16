@@ -15,45 +15,45 @@ tags:
 <h2 id="In_this_article">In this article</h2>
 
 <ul>
-	<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Doctype_and_metadata">Doctype and metadata</a>
+	<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype_and_metadata">Doctype and metadata</a>
 
 	<ul>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Doctype">Doctype</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Document_language">Document language</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Document_characterset">Document characterset</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Viewport_meta_tag">Viewport meta tag</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#doctype">Doctype</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_language">Document language</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#document_characterset">Document characterset</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#viewport_meta_tag">Viewport meta tag</a></li>
 	</ul>
 	</li>
-	<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#General_markup_coding_style">General markup coding style</a>
+	<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#general_markup_coding_style">General markup coding style</a>
 	<ul>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Use_lowercase">Use lower case</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Trailing_slashes">Trailing slashes</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Quoting_attributes">Quoting attributes</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Use_double_quotes">Use double quotes</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Boolean_attributes">Boolean attributes</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Class_and_ID_names">Class and ID names</a></li>
-		<li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML#Entity_references">Entity references</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_lowercase">Use lower case</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#trailing_slashes">Trailing slashes</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#quoting_attributes">Quoting attributes</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#use_double_quotes">Use double quotes</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#boolean_attributes">Boolean attributes</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#class_and_id_names">Class and ID names</a></li>
+		<li><a href="/en-US/docs/MDN/Guidelines/Code_guidelines/HTML#entity_references">Entity references</a></li>
 	</ul>
 	</li>
 </ul>
 
 <h2 id="Doctype_and_metadata">Doctype and metadata</h2>
 
-<div class="note">
-<p><strong>Note</strong>: The guidelines in this section apply only when you need to show a complete HTML document. Most of the time you won't need to do this; a snippet is usually enough to demonstrate a feature. When using the <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples#Traditional_live_samples">EmbedLiveSample macro</a>, just include the HTML snippet; it will automatically be inserted it into a full HTML document when displayed.</p>
+<div class="note notecard">
+<p><strong>Note</strong>: The guidelines in this section apply only when you need to show a complete HTML document. Most of the time you won't need to do this; a snippet is usually enough to demonstrate a feature. When using the <a href="/en-US/docs/MDN/Structures/Code_examples#traditional_live_samples">EmbedLiveSample macro</a>, just include the HTML snippet; it will automatically be inserted it into a full HTML document when displayed.</p>
 </div>
 
 <h3 id="Doctype">Doctype</h3>
 
 <p>You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible:</p>
 
-<pre class="brush: html example-good notranslate">&lt;!DOCTYPE html&gt;</pre>
+<pre class="brush: html example-good">&lt;!DOCTYPE html&gt;</pre>
 
 <h3 id="Document_language">Document language</h3>
 
 <p>Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:</p>
 
-<pre class="brush: html example-good notranslate">&lt;html lang="en-US"&gt;</pre>
+<pre class="brush: html example-good">&lt;html lang="en-US"&gt;</pre>
 
 <p>This is good for accessibility and search engines, helps with localizing content, and reminds people to use best practices.</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>You should also define your document's characterset like so:</p>
 
-<pre class="brush: html example-good notranslate">&lt;meta charset="utf-8"&gt;</pre>
+<pre class="brush: html example-good">&lt;meta charset="utf-8"&gt;</pre>
 
 <p>Use UTF-8 unless you have a very good reason not to; it will cover your character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather <a href="http://support.microsoft.com/kb/928847">nasty Internet Explorer security vulnerability</a>.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <p>Finally, you should always add the viewport meta tag into your HTML {{HTMLElement("head")}}, to give the example a better chance of working on mobile devices. You should include at least the following in your document, which can be modified later on as the need arises:</p>
 
-<pre class="brush: html example-good notranslate">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
+<pre class="brush: html example-good">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
 
 <p>See <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for further details.</p>
 
@@ -81,11 +81,11 @@ tags:
 
 <p>This is good:</p>
 
-<pre class="brush: html example-good notranslate">&lt;p class="nice"&gt;This looks nice and neat&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p class="nice"&gt;This looks nice and neat&lt;/p&gt;</pre>
 
 <p>This is not so good:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;P CLASS="WHOA-THERE"&gt;Why is my markup shouting?&lt;/P&gt;</pre>
+<pre class="brush: html example-bad">&lt;P CLASS="WHOA-THERE"&gt;Why is my markup shouting?&lt;/P&gt;</pre>
 
 <h3 id="Trailing_slashes">Trailing slashes</h3>
 
@@ -93,23 +93,23 @@ tags:
 
 <p>This is fine:</p>
 
-<pre class="brush: html example-good notranslate">&lt;input type="text"&gt;
+<pre class="brush: html example-good">&lt;input type="text"&gt;
 &lt;hr&gt;</pre>
 
 <p>The slashes are not needed:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;input type="text" /&gt;
+<pre class="brush: html example-bad">&lt;input type="text" /&gt;
 &lt;hr /&gt;</pre>
 
 <h3 id="Quoting_attributes">Quoting attributes</h3>
 
 <p>You should put all attribute values in double quotes. It is tempting to omit quotes since HTML5 allows this, but markup is neater and easier to read if you do include them. For example, this is better:</p>
 
-<pre class="brush: html example-good notranslate">&lt;img src="images/logo.jpg" alt="A circular globe icon" class="no-border"&gt;</pre>
+<pre class="brush: html example-good">&lt;img src="images/logo.jpg" alt="A circular globe icon" class="no-border"&gt;</pre>
 
 <p>than this:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;img src=images/logo.jpg alt=A circular globe icon class=no-border&gt;</pre>
+<pre class="brush: html example-bad">&lt;img src=images/logo.jpg alt=A circular globe icon class=no-border&gt;</pre>
 
 <p>It can also cause problems — in the above example the <code>alt</code> attribute will be interpreted as multiple attributes, because there are no quotes to specify that "A circular globe icon" is a single attribute value.</p>
 
@@ -117,21 +117,19 @@ tags:
 
 <p>Use double quotes for HTML, not single quotes:</p>
 
-<pre class="brush: html example-good notranslate">&lt;p class="important"&gt;Yes&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p class="important"&gt;Yes&lt;/p&gt;</pre>
 
-<pre class="brush: html example-bad notranslate">&lt;p class='important'&gt;Nope&lt;/p&gt;</pre>
+<pre class="brush: html example-bad">&lt;p class='important'&gt;Nope&lt;/p&gt;</pre>
 
 <h3 id="Boolean_attributes">Boolean attributes</h3>
 
 <p>Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:</p>
 
-<pre class="brush: html example-good notranslate">required</pre>
+<pre class="brush: html example-good">required</pre>
 
-<p>This is perfectly understandable and works fine. Instead of writing out the longer version with the value</p>
+<p>This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:</p>
 
-<pre class="brush: html example-bad notranslate">required="required" </pre>
-
-<p>Which is supported but not necessary.</p>
+<pre class="brush: html example-bad">required="required"</pre>
 
 <h3 id="Class_and_ID_names">Class and ID names</h3>
 
@@ -139,11 +137,11 @@ tags:
 
 <p>Good:</p>
 
-<pre class="brush: html example-good notranslate">&lt;p class="editorial-summary"&gt;Blah blah blah&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p class="editorial-summary"&gt;Blah blah blah&lt;/p&gt;</pre>
 
 <p>Bad:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p class="bigRedBox"&gt;Blah blah blah&lt;/p&gt;</pre>
+<pre class="brush: html example-bad">&lt;p class="bigRedBox"&gt;Blah blah blah&lt;/p&gt;</pre>
 
 <h3 id="Entity_references">Entity references</h3>
 
@@ -151,11 +149,11 @@ tags:
 
 <p>As an example you could just write</p>
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;© 2018 Me&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p&gt;© 2018 Me&lt;/p&gt;</pre>
 
 <p>Instead of</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;&amp;copy; 2018 Me&lt;/p&gt;</pre>
+<pre class="brush: html example-bad">&lt;p&gt;&amp;copy; 2018 Me&lt;/p&gt;</pre>
 
 <p>This is fine as long as you declare a UTF-8 character set.</p>
 

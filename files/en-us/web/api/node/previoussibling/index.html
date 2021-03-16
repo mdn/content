@@ -2,20 +2,23 @@
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
 tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
+- API
+- DOM
+- Gecko
+- Property
 ---
 <div>
-<div>{{APIRef("DOM")}}</div>
+  <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p>The <code><strong>Node.previousSibling</strong></code> read-only property returns the node immediately preceding the specified one in its parent's {{domxref("Node.childNodes", "childNodes")}} list, or <code>null</code> if the specified node is the first in that list.</p>
+<p>The <code><strong>Node.previousSibling</strong></code> read-only property returns the
+  node immediately preceding the specified one in its parent's
+  {{domxref("Node.childNodes", "childNodes")}} list, or <code>null</code> if the specified
+  node is the first in that list.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>previousNode</var> = <em>node</em>.previousSibling;
+<pre class="brush: js"><var>previousNode</var> = <em>node</em>.previousSibling;
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -31,45 +34,58 @@ console.log(document.getElementById("b2").previousSibling.id); // "b1"
 <h2 id="Notes">Notes</h2>
 
 <div>
-<p>Gecko-based browsers insert text nodes into a document to represent whitespace in the source markup. Therefore a node obtained, for example, using <a href="/en-US/docs/Web/API/Node/firstChild" title="The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children."><code>Node.firstChild</code></a> or <a href="/en-US/docs/Web/API/Node/previousSibling" title="The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."><code>Node.previousSibling</code></a> may refer to a whitespace text node rather than the actual element the author intended to get.</p>
+  <p>Gecko-based browsers insert text nodes into a document to represent whitespace in the
+    source markup. Therefore a node obtained, for example, using <a
+      href="/en-US/docs/Web/API/Node/firstChild"
+      title="The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children."><code>Node.firstChild</code></a>
+    or <a href="/en-US/docs/Web/API/Node/previousSibling"
+      title="The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."><code>Node.previousSibling</code></a>
+    may refer to a whitespace text node rather than the actual element the author intended
+    to get.</p>
 
-<p>See <a href="/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM">Whitespace in the DOM</a> and <a class="external" href="https://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: Why are some Text nodes empty?</a> for more information.</p>
+  <p>See <a href="/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM">Whitespace in the
+      DOM</a> and <a href="https://www.w3.org/DOM/faq.html#emptytext"
+      rel="noopener">W3C DOM 3 FAQ: Why are some Text nodes empty?</a> for more
+    information.</p>
 </div>
 
-<p>To navigate the opposite way through the child nodes list use <a href="/en-US/docs/Web/API/Node.nextSibling">Node.nextSibling</a>.</p>
+<p>To navigate the opposite way through the child nodes list use <a
+    href="/en-US/docs/Web/API/Node.nextSibling">Node.nextSibling</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-previoussibling', 'Node.previousSibling')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-640FB3C8', 'Node.previousSibling')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-640FB3C8', 'Node.previousSibling')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#attribute-previousSibling', 'Node.previousSibling')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-node-previoussibling', 'Node.previousSibling')}}
+      </td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core', 'core.html#ID-640FB3C8', 'Node.previousSibling')}}</td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Core', 'core.html#ID-640FB3C8', 'Node.previousSibling')}}</td>
+      <td>{{Spec2('DOM2 Core')}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-core.html#attribute-previousSibling',
+        'Node.previousSibling')}}</td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -79,5 +95,5 @@ console.log(document.getElementById("b2").previousSibling.id); // "b1"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Node.nextSibling")}}</li>
+  <li>{{domxref("Node.nextSibling")}}</li>
 </ul>

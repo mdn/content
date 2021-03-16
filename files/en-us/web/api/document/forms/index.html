@@ -11,21 +11,28 @@ tags:
   - Property
   - Reference
 ---
-<p><span class="seoSummary">The <strong><code>forms</code></strong> read-only property of the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing all the {{HTMLElement("form")}} elements contained in the document.</span></p>
+<p><span class="seoSummary">The <strong><code>forms</code></strong> read-only property of
+    the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
+    all the {{HTMLElement("form")}} elements contained in the document.</span></p>
 
 <div class="note">
-<p><strong>Note:</strong> Similarly, you can access a list of a form's component user input elements using the {{domxref("HTMLFormElement.elements")}} property.</p>
+  <p><strong>Note:</strong> Similarly, you can access a list of a form's component user
+    input elements using the {{domxref("HTMLFormElement.elements")}} property.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>collection</var> = <em>document</em>.forms;</pre>
+<pre
+  class="brush: js"><var>collection</var> = <em>document</em>.forms;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item in the collection is a {{domxref("HTMLFormElement")}} representing a single <code>&lt;form&gt;</code> element.</p>
+<p>An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
+  in the collection is a {{domxref("HTMLFormElement")}} representing a single
+  <code>&lt;form&gt;</code> element.</p>
 
-<p>If the document has no forms, the returned collection is empty, with a length of zero.</p>
+<p>If the document has no forms, the returned collection is empty, with a length of zero.
+</p>
 
 <h2 id="Example">Examples</h2>
 
@@ -90,25 +97,25 @@ var selectFormElement = document.forms[index].elements[index];
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-document-forms', 'Document.forms')}}</td>
+      <td>{{ Spec2('HTML WHATWG') }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 HTML', 'html.html#ID-1689064', 'Document.forms')}}</td>
+      <td>{{ Spec2('DOM2 Events') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -118,8 +125,8 @@ var selectFormElement = document.forms[index].elements[index];
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms</a></li>
- <li>{{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface</li>
+  <li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
+  <li>{{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface</li>
 </ul>
 
 <div>{{APIRef("DOM")}}</div>

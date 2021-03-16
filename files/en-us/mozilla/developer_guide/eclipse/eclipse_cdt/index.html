@@ -3,7 +3,7 @@ title: Eclipse CDT
 slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT
 tags:
   - Developing Mozilla
-  - 'Developing_Mozilla:Tools'
+  - Developing_Mozilla:Tools
   - Eclipse
   - Tools
 ---
@@ -45,7 +45,7 @@ tags:
 <p>For the Eclipse indexer to work well you must first build Mozilla, so that it includes headers from the objdir etc. These can be found and processed by Eclipse.</p>
 
 <div class="warning">
-<p><strong>Note:</strong> Your <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#Building_with_an_Objdir">MOZ_OBJDIR</a> must be outside the Mozilla source directory.</p>
+<p><strong>Note:</strong> Your <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options#building_with_an_objdir">MOZ_OBJDIR</a> must be outside the Mozilla source directory.</p>
 </div>
 
 <p>Once your build is complete, <code>mach</code> can then generate a useful Eclipse project on your behalf. First, make sure that the directory of Eclipse's <code>eclipse</code> binary (typically <code>/Applications/Eclipse.app/Contents/MacOS/</code> on macOS) is in your <code>PATH</code>. Then, to create the eclipse project and open it, run:</p>
@@ -105,7 +105,7 @@ tags:
 
 <div class="warning">Note: indexing, by its very nature, is specific to a given compiler configuration. Be aware that when Eclipse gives results for any of the actions that follow, it will not include results for sections of the code that are ifdef'ed out by the configuration used to create your object directory. For example, if you are using a Mac and you search for callers of nsDisplayListBuilder::IsInTransform, the results will not include the caller in nsObjectFrame.cpp because that caller is wrapped in "#ifndef XP_MACOSX". Just something to keep in mind. ;-)</div>
 
-<p>To jump to the definition of a symbol (or the declaration of a symbol if already at the definition), hover over the symbol, hold down the Ctrl/Cmd key, move the mouse slightly to linkify the symbol, then click on it. (Having to move the mouse slightly is <a class="link-https" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=26873">Eclipse bug 26873</a>). Alternately, you can jump to the definition of the symbol under the cursor by pressing F3.</p>
+<p>To jump to the definition of a symbol (or the declaration of a symbol if already at the definition), hover over the symbol, hold down the Ctrl/Cmd key and click on it. Alternately, you can jump to the definition of the symbol under the cursor by pressing F3.</p>
 
 <p>To do a C++ symbol search select "Search &gt; C/C++" from the menubar, or use Ctrl-H and select the "C/C++" Search tab.</p>
 
@@ -266,7 +266,7 @@ subprocess.Popen([eclipse_app_path, "-data", workspace_path])
 
 <p>This can be useful if you need to get certain bug fixes, or to help with testing to make sure that new Eclipse bugs that affect its use with Mozilla don't get shipped. If you've downloaded an <a class="external" href="http://www.eclipse.org/downloads/index-developer.php">Eclipse Developer build</a> then you can use Eclipse's software update mechanism to update your developer snapshot to the latest nightly for that developer branch. To do that, carry out the following steps.</p>
 
-<p>From Eclipse's "Help" menu select "Install New Software...", then in the "Install" window that opens, click "Available Software Sites". In the window that opens, click "Add", and in the prompt set Name to something like "Nightly" and Location to something like "<a class="external" href="http://download.eclipse.org/tools/cdt/builds/juno/nightly" rel="freelink">http://download.eclipse.org/tools/cd...s/juno/nightly</a>" (change "juno" to the current developer branch). Click "OK", then "OK" again. Type "Nightly" into the "Work with" field and select the repository that you just added. (If it doesn't appear, close the window, reopen it from the Help menu, and try again.) A "CDT Main Features" option should now have been added in the area below. Tick this (<em>all</em> of its sub-options should then be ticked), click "Next" twice, accept the license agreement, and then click "Finish". Eclipse should now update itself and ask you to restart.</p>
+<p>From Eclipse's "Help" menu select "Install New Software...", then in the "Install" window that opens, click "Available Software Sites". In the window that opens, click "Add", and in the prompt set Name to something like "Nightly" and Location to something like "<a class="external" href="http://download.eclipse.org/tools/cdt/builds/juno/nightly">http://download.eclipse.org/tools/cd...s/juno/nightly</a>" (change "juno" to the current developer branch). Click "OK", then "OK" again. Type "Nightly" into the "Work with" field and select the repository that you just added. (If it doesn't appear, close the window, reopen it from the Help menu, and try again.) A "CDT Main Features" option should now have been added in the area below. Tick this (<em>all</em> of its sub-options should then be ticked), click "Next" twice, accept the license agreement, and then click "Finish". Eclipse should now update itself and ask you to restart.</p>
 
 <p><strong>Troubleshooting:</strong> If you get an error when trying to update, try clicking "Available Software Sites" in the "Install" window, make sure "Juno" is still unticked, that "Nightly" is ticked, highlight "Nightly", click "Reload", "OK", and then try again.</p>
 

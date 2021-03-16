@@ -32,20 +32,20 @@ tags:
 
 <p>The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse. The header takes on the following values: <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code>.</p>
 
-<pre class="syntaxbox notranslate">Device-Memory: &lt;number&gt;
+<pre class="brush: html">Device-Memory: &lt;number&gt;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Server first needs to opt in to receive <code>Device-Memory</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>Device-Memory</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
 
-<pre class="notranslate">Accept-CH: Device-Memory
+<pre>Accept-CH: Device-Memory
 Accept-CH-Lifetime: 86400
 </pre>
 
 <p>Then on subsequent requests the client might send <code>Device-Memory</code> header back:</p>
 
-<pre class="notranslate">Device-Memory: 1
+<pre>Device-Memory: 1
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

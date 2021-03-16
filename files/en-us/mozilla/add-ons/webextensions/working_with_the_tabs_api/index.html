@@ -35,7 +35,7 @@ tags:
 
 <ul>
 	<li><code>"tabs</code>" permission is needed to access the <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code> properties of the Tab object. In Firefox, you also need <code>"tabs"</code> to perform a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">query</a> by URL.</li>
-	<li><a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">Host permission</a> is needed for {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}.</li>
+	<li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">Host permission</a> is needed for {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}.</li>
 </ul>
 
 <p>The following is how you might request <code>"tabs"</code> permission in your extension’s manifest.json file:</p>
@@ -46,14 +46,14 @@ tags:
 ],
 </pre>
 
-<p>This request gives you use of all Tabs API feature on all website your user visits. There is also an alternative approach for requesting permissions to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} where you don’t need host permission, in the form of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a>. This permission provides the same rights as <code>"tabs"</code> with <code>&lt;all_urls&gt;</code>, but with two restrictions:</p>
+<p>This request gives you use of all Tabs API feature on all website your user visits. There is also an alternative approach for requesting permissions to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} where you don’t need host permission, in the form of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission"><code>"activeTab"</code></a>. This permission provides the same rights as <code>"tabs"</code> with <code>&lt;all_urls&gt;</code>, but with two restrictions:</p>
 
 <ul>
 	<li>the user must interact with the extension through its browser or page action, context menu, or shortcut key.</li>
 	<li>it only grants permission within the active tab.</li>
 </ul>
 
-<p>The benefit of this approach is the user won’t get a permissions warning saying your extension can “Access your data for all websites”. This is because <code>&lt;all_urls&gt;</code> permission gives an extension the ability to execute scripts in any tab, any time it likes, whereas <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>"activeTab"</code></a> is limited to allowing the extension to perform a user requested action in the current tab.</p>
+<p>The benefit of this approach is the user won’t get a permissions warning saying your extension can “Access your data for all websites”. This is because <code>&lt;all_urls&gt;</code> permission gives an extension the ability to execute scripts in any tab, any time it likes, whereas <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission"><code>"activeTab"</code></a> is limited to allowing the extension to perform a user requested action in the current tab.</p>
 
 <h2 id="Discovering_more_about_tabs_and_their_properties">Discovering more about tabs and their properties</h2>
 
@@ -67,7 +67,7 @@ tags:
 
 <p>To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let’s walk through how the <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a> example adds the list of “switch to tabs” to its toolbar button popup.</p>
 
-<p><img alt="The tabs toolbar menu showing the switch to tap area" src="https://mdn.mozillademos.org/files/15723/Switch_to_tab.png" style="height: 645px; width: 369px;"></p>
+<p><img alt="The tabs toolbar menu showing the switch to tap area" src="switch_to_tab.png"></p>
 
 <h3 id="manifest.json">manifest.json</h3>
 
@@ -351,9 +351,9 @@ Define the other menu items
  }
 </pre>
 
-<p>It's worth noting the use of <code>console.log()</code>. This enables you to output information to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">debugger</a> console, which can be useful when resolving issues found during development.</p>
+<p>It's worth noting the use of <code>console.log()</code>. This enables you to output information to the <a href="https://extensionworkshop.com/documentation/develop/debugging/">debugger</a> console, which can be useful when resolving issues found during development.</p>
 
-<p><img alt="Example of the console.log output, from the move tabs feature, in the debugging console" src="https://mdn.mozillademos.org/files/15722/console.png" style="height: 329px; width: 911px;"></p>
+<p><img alt="Example of the console.log output, from the move tabs feature, in the debugging console" src="console.png"></p>
 
 <p>The move code first calls <code>callOnActiveTab()</code> which in turn calls <code>getCurrentWindowTabs()</code> to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:</p>
 
@@ -471,7 +471,7 @@ const DEFAULT_ZOOM = 1;
 <p>To use the CSS features you need either:</p>
 
 <ul>
-	<li><code>"tabs"</code> permission and <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>; or,</li>
+	<li><code>"tabs"</code> permission and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>; or,</li>
 	<li><code>"activeTab"</code> permission.</li>
 </ul>
 
@@ -619,6 +619,6 @@ gettingAllTabs.then((tabs) =&gt; {
 <p>If you want to learn more about the Tabs API, check out:</p>
 
 <ul>
-	<li><a href="/en-US/Add-ons/WebExtensions/API/tabs">Tabs API reference</a></li>
-	<li><a href="/en-US/Add-ons/WebExtensions/Examples">Example extensions</a> (many of which use the Tabs API)</li>
+	<li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">Tabs API reference</a></li>
+	<li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a> (many of which use the Tabs API)</li>
 </ul>

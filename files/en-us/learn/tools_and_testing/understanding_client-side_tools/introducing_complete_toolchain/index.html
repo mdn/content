@@ -40,7 +40,7 @@ tags:
 
 <p>The toolchain that we are creating in this article will be used to build and deploy a mini site that lists data (taken from one of <a href="https://api.nasa.gov/">NASA's open APIs</a>) concerning potentially hazardous space objects that threaten our existence on Earth! It looks like this:</p>
 
-<p><img alt="screenshot of the sample will it miss website" src="https://mdn.mozillademos.org/files/17193/will-it-miss-screenshot.png" style="height: 498px; width: 790px;"></p>
+<p><img alt="screenshot of the sample will it miss website" src="will-it-miss-screenshot.png"></p>
 
 <p>You can see a live version of the site at <a href="https://near-misses.netlify.com/">near-misses.netlify.com</a>.</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Library_installation_tools">Library installation tools</h3>
 
-<p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups">refer back to that section</a>.</p>
+<p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">refer back to that section</a>.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.</p>
@@ -142,25 +142,25 @@ tags:
 
 <p>You can interact with git in a number of different ways, from using the command line to issue commands, to using a <a href="https://git-scm.com/downloads/guis">git GUI app</a> to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:</p>
 
-<p><img alt="github integration shown in VS Code" src="https://mdn.mozillademos.org/files/17192/vscode-git.png" style="border-style: solid; border-width: 1px; height: 506px; width: 800px;"></p>
+<p><img alt="github integration shown in VS Code" src="vscode-git.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Anyway, installing git is all we need to do for now. Let's move on.</p>
 
 <h3 id="Code_tidying_tools">Code tidying tools</h3>
 
-<p>We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Installing_Prettier">Installing Prettier</a> section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.</p>
+<p>We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier">Installing Prettier</a> section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.</p>
 
 <p>You can check whether you've already got it installed globally using the following command:</p>
 
-<pre class="brush: bash notranslate">prettier -v</pre>
+<pre class="brush: bash">prettier -v</pre>
 
 <p>If installed, you'll get a version number returned like 2.0.2; if not, it'll return something along the lines of "command not found". If this is the case, install it using the following command:</p>
 
-<pre class="brush: bash notranslate">npm install prettier -g</pre>
+<pre class="brush: bash">npm install prettier -g</pre>
 
 <p>Now that Prettier is installed, running and tidying your code can be done on the command line on an individual file basis from anywhere on your computer, for example:</p>
 
-<pre class="brush: bash notranslate">prettier --write ./src/index.html</pre>
+<pre class="brush: bash">prettier --write ./src/index.html</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: In the command above, I use Prettier with the <code>--write</code> flag. Prettier understands this to mean "if there's problems in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use prettier without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."</p>
@@ -205,7 +205,7 @@ tags:
 
 <p>A little later in this chapter, we'll provide the eslint config. Once a working configuration is in place, running the command can generate some useful information. Here is an example eslint output:</p>
 
-<pre class="brush: bash notranslate">./my-project/src/index.js
+<pre class="brush: bash">./my-project/src/index.js
    2:8 error 'React' is defined but never used  no-unused-vars
  22:20 error 'body' is defined but never used   no-unused-vars
  96:19 error 'b' is defined but never used      no-unused-vars
@@ -218,7 +218,7 @@ tags:
 
 <p>As with other tools, code editor integration support is typically good for eslint, and potentially more useful as it can give us real-time feedback when issues crop up:</p>
 
-<p><img alt="eslint error integration shown in VS Code" src="https://mdn.mozillademos.org/files/17190/eslint-error.png" style="border-style: solid; border-width: 1px; height: 251px; width: 800px;"></p>
+<p><img alt="eslint error integration shown in VS Code" src="eslint-error.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Configuring_the_initial_project">Configuring the initial project</h2>
 
@@ -237,27 +237,27 @@ tags:
  <li>
   <p>Next, run the following commands to create a folder to keep your project in, and go inside the folder:</p>
 
-  <pre class="brush: bash notranslate">mkdir will-it-miss
+  <pre class="brush: bash">mkdir will-it-miss
 cd will-it-miss</pre>
  </li>
  <li>
   <p>Now we will create a new directory for all of our web site's development code to live in. Run the following now:</p>
 
-  <pre class="brush: bash notranslate">mkdir src</pre>
+  <pre class="brush: bash">mkdir src</pre>
 
   <p>Code organization tends to be quite subjective from team to team. For this project, the source code will live in <code>src</code>.</p>
  </li>
  <li>
   <p>Making sure you are inside the root of the <code>will-it-miss</code> directory, enter the following command to start git’s source control functionality working on the directory:</p>
 
-  <pre class="brush: bash notranslate">git init</pre>
+  <pre class="brush: bash">git init</pre>
 
   <p>This means that you'll now be able to start storing revisions to the folder's contents, saving it to a remote repository, etc. More on this later!</p>
  </li>
  <li>
   <p>Next, enter the following command to turn your directory into an npm package, with the advantages that we discussed in the previous article:</p>
 
-  <pre class="brush: bash notranslate">npm init --force</pre>
+  <pre class="brush: bash">npm init --force</pre>
 
   <p>This will create a default <code>package.json</code> file that we can configure later on if desired. The <code>--force</code> flag causes the command to instantly create a default <code>package.json</code> file without asking you all the usual questions about what contents you want it to have (as we saw previously). We only need the defaults for now, so this saves us a bit of time.</p>
  </li>
@@ -271,7 +271,7 @@ cd will-it-miss</pre>
  <li>
   <p>To get hold of the code files, visit <a href="https://github.com/remy/mdn-will-it-miss">https://github.com/remy/mdn-will-it-miss</a> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting <em>Clone or download</em> &gt; <em>Download ZIP</em>.</p>
 
-  <p><img alt="The github will it miss repo" src="https://mdn.mozillademos.org/files/17191/github-will-it-miss.png" style="height: 662px; width: 790px;"></p>
+  <p><img alt="The github will it miss repo" src="github-will-it-miss.png"></p>
  </li>
  <li>
   <p>Now copy the contents of the project's <code>src</code> directory to your currently empty <code>src</code> directory.</p>
@@ -288,7 +288,7 @@ cd will-it-miss</pre>
 
 <p>Now it's time to install the initial set of tools we'll be using in our dev environment. Run the following from inside your project's root directory:</p>
 
-<pre class="brush: bash notranslate">npm install --save-dev eslint prettier babel-eslint</pre>
+<pre class="brush: bash">npm install --save-dev eslint prettier babel-eslint</pre>
 
 <p>There's two important things to note about the command you just ran. The first is that we're installing the dependencies locally to the project — installing tools locally is better for a specific project. Installing locally (not including the <code>--global</code> option) allows us to easily recreate this setup on other machines.</p>
 
@@ -298,7 +298,7 @@ cd will-it-miss</pre>
 
 <h3 id="Configuring_our_tools">Configuring our tools</h3>
 
-<p>In the root of the project (not in the <code>src</code> directory), we will add configuration files to configure some of our tools, namely Prettier and eslint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavour of configuration file).</p>
+<p>In the root of the project (not in the <code>src</code> directory), we will add configuration files to configure some of our tools, namely Prettier and eslint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavor of configuration file).</p>
 
 <ol>
  <li>
@@ -307,7 +307,7 @@ cd will-it-miss</pre>
  <li>
   <p>To configure prettier, give <code>.prettierrc.json</code> the following contents:</p>
 
-  <pre class="brush: json notranslate">{
+  <pre class="brush: json">{
   "singleQuote": true,
   "trailingComma": "es5"
 }</pre>
@@ -317,7 +317,7 @@ cd will-it-miss</pre>
  <li>
   <p>Next up, we’ll configure eslint — create another file in the root of your <code>will-it-miss</code> directory called <code>.eslintrc.json</code>, and give it the following contents:</p>
 
-  <pre class="brush: json notranslate">{
+  <pre class="brush: json">{
   "env": {
     "es6": true,
     "browser": true
@@ -341,7 +341,7 @@ cd will-it-miss</pre>
 
   <p>The final config file should look like this — add in the bolded parts and save it:</p>
 
-  <pre class="brush: json notranslate">{
+  <pre class="brush: json">{
   "env": {
     "es6": true,
     "browser": true
@@ -367,7 +367,7 @@ cd will-it-miss</pre>
  <li>
   <p>Run the following terminal command in the root of your project folder:</p>
 
-  <pre class="brush: bash notranslate">npm install --save-dev eslint-plugin-react</pre>
+  <pre class="brush: bash">npm install --save-dev eslint-plugin-react</pre>
  </li>
 </ol>
 
@@ -385,7 +385,7 @@ cd will-it-miss</pre>
 
 <p>There's a number of choices for transform tools and though WebPack is a particularly popular one, this project is going to use Parcel — specifically because it requires a lot less configuration.</p>
 
-<p>Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#Using_the_package_ecosystem">saw in Chapter 3</a>.</p>
+<p>Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#using_the_package_ecosystem">saw in Chapter 3</a>.</p>
 
 <p>Parcel will take care of installing any transformation tooling and configuration required without us needing to intervene (in most cases).</p>
 
@@ -393,7 +393,7 @@ cd will-it-miss</pre>
 
 <p>We therefore need to install the parcel dependency in our project too — run the following command in your terminal:</p>
 
-<pre class="brush: bash notranslate">npm install --save-dev parcel-bundler</pre>
+<pre class="brush: bash">npm install --save-dev parcel-bundler</pre>
 
 <h3 id="Using_future_features">Using future features</h3>
 
@@ -410,7 +410,7 @@ cd will-it-miss</pre>
  <li>
   <p>Add the following contents to the new file, which will automagically give us full access to the latest CSS features:</p>
 
-  <pre class="brush: json notranslate">{
+  <pre class="brush: json">{
   "plugins": {
     "postcss-preset-env": {
       "stage": 0
@@ -434,11 +434,11 @@ cd will-it-miss</pre>
  <li>
   <p>To start Parcel off in the background, go to your terminal and run the following command:</p>
 
-  <pre class="brush: bash notranslate">npx parcel src/index.html</pre>
+  <pre class="brush: bash">npx parcel src/index.html</pre>
 
   <p>You should see an output like this (once the dependencies have been installed):</p>
 
-  <pre class="brush: bash notranslate">Server running at http://localhost:1234
+  <pre class="brush: bash">Server running at http://localhost:1234
 ✨  Built in 129ms.</pre>
 
   <p>Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.</p>

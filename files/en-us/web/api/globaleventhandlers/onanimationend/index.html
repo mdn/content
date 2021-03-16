@@ -2,38 +2,49 @@
 title: GlobalEventHandlers.onanimationend
 slug: Web/API/GlobalEventHandlers/onanimationend
 tags:
-  - API
-  - Animations
-  - CSS
-  - CSS Animations
-  - CSS3 Animations
-  - Document
-  - Element
-  - Event Handler
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - Web Animations
-  - Window
-  - onanimationend
-  - web animations api
+- API
+- Animations
+- CSS
+- CSS Animations
+- CSS3 Animations
+- Document
+- Element
+- Event Handler
+- GlobalEventHandlers
+- Property
+- Reference
+- Web Animations
+- Window
+- onanimationend
+- web animations api
 ---
 <div>{{APIRef("CSS3 Animations")}}</div>
 
-<p>The <code><strong>onanimationend</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for processing {{event("animationend")}} events.</p>
+<p>The <code><strong>onanimationend</strong></code> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  processing {{event("animationend")}} events.</p>
 
-<p>The <code>animationend</code> event fires when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> reaches the end of its active period (which is calculated as <code>{{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}</code>).</p>
+<p>The <code>animationend</code> event fires when a <a
+    href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a> reaches the end of its
+  active period (which is calculated as
+  <code>{{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}</code>).
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>animEndHandler</em> = <em>target</em>.onanimationend;
+<pre class="brush: js">var <em>animEndHandler</em> = <em>target</em>.onanimationend;
 
 <em>target</em>.onanimationend = <em>{{jsxref("Function")}}</em>
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Function")}} to be called when an {{event("animationend")}} event occurs indicating that a CSS animation has begun on the <em><code>target</code></em>, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.</p>
+<p>A {{jsxref("Function")}} to be called when an {{event("animationend")}} event occurs
+  indicating that a CSS animation has ended on the <em><code>target</code></em>, where the
+  target object is an HTML element ({{domxref("HTMLElement")}}), document
+  ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
+  input a single parameter: an {{domxref("AnimationEvent")}} object describing the event
+  which occurred.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -42,18 +53,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationend','onanimationend')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3
+        Animations','#eventdef-animationevent-animationend','onanimationend')}}</td>
+      <td>{{Spec2('CSS3 Animations')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,7 +75,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{event("animationend")}} event, which triggers this event handler</li>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>The {{event("animationstart")}} event</li>
+  <li>The {{event("animationend")}} event, which triggers this event handler</li>
+  <li>{{domxref("AnimationEvent")}}</li>
+  <li>The {{event("animationstart")}} event</li>
 </ul>

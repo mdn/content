@@ -2,21 +2,24 @@
 title: URL.host
 slug: Web/API/URL/host
 tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
+- API
+- Property
+- Reference
+- URL
+- URL API
 ---
 <div>{{ApiRef("URL API")}}</div>
 
-<p>The <strong><code>host</code></strong> property of the {{domxref("URL")}} interface is a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a <code>':'</code>, followed by the {{domxref("URL.port", "port")}} of the URL.</p>
+<p>The <strong><code>host</code></strong> property of the {{domxref("URL")}} interface is
+  a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname",
+  "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a
+  <code>':'</code>, followed by the {{domxref("URL.port", "port")}} of the URL.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>host</em> = <em>url</em>.host
+<pre class="brush: js">const <em>host</em> = <em>url</em>.host
 <em>url.<code>host</code></em> = <em>newHost</em>
 </pre>
 
@@ -40,18 +43,18 @@ console.log(url.host); // "developer.mozilla.org:4097"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-host', 'URL.host')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('URL', '#dom-url-host', 'URL.host')}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -61,5 +64,5 @@ console.log(url.host); // "developer.mozilla.org:4097"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
+  <li>The {{domxref("URL")}} interface it belongs to.</li>
 </ul>

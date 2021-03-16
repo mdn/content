@@ -11,7 +11,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 <p>For information on NSS and NSPR, see the following:</p>
 
 <ul>
- <li><a href="/docs/NSS">Network Security Services (NSS)</a>. NSS project page.</li>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS">Network Security Services (NSS)</a>. NSS project page.</li>
  <li><a href="/docs/NSPR">Netscape Portable Runtime</a>. NSPR project page.</li>
  <li><a href="/docs/NSPR_API_Reference">NSPR Reference</a>. NSPR API documentation.</li>
 </ul>
@@ -107,9 +107,9 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
 <p>The SCM tags for various python-nss releases can be found in the <a href="#release_info">Release Information</a>.</p>
 
-<p>You may want to review the <a href="/en-US/docs/Developer_Guide/Source_Code/Mercurial"> Getting Mozilla Source Code Using Mercurial</a> documentation for more information with working with Mercurial.</p>
+<p>You may want to review the <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Getting Mozilla Source Code Using Mercurial</a> documentation for more information with working with Mercurial.</p>
 
-<p>The old deprecated CVS documentation can be found here: <a href="/en/Mozilla_Source_Code_Via_CVS"> Getting Mozilla Source Code Using CVS</a>.</p>
+<p>The old deprecated CVS documentation can be found here: <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">Getting Mozilla Source Code Using CVS</a>.</p>
 
 <p>The old deprecated python-nss CVS source code location is <code class="filename">mozilla/security/python/nss</code>.</p>
 
@@ -891,7 +891,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
      <li>For NSS &gt;= 3.13 support CERTDB_TERMINAL_RECORD</li>
      <li>You can now query for a specific certificate extension Certficate.get_extension()</li>
      <li>The PublicKey formatting (i.e. format_lines) was augmented to format DSA keys (formerly it only recognized RSA keys).</li>
-     <li>Allow lables and values to be justified when printing objects</li>
+     <li>Allow labels and values to be justified when printing objects</li>
     </ul>
 
     <h5 id="The_following_classes_were_added">The following classes were added</h5>
@@ -1122,7 +1122,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
      <li>Add AddrInfo class to support IPv6 address resolution. Supports iteration over it's set of NetworkAddress objects and provides hostname, canonical_name object properties.</li>
      <li>Add PR_AI_* constants.</li>
      <li>NetworkAddress constructor and NetworkAddress.set_from_string() added optional family parameter. This is necessary for utilizing PR_GetAddrInfoByName().</li>
-     <li>NetworkAddress initialized via a string paramter are now initalized via PR_GetAddrInfoByName using family.</li>
+     <li>NetworkAddress initialized via a string parameter are now initalized via PR_GetAddrInfoByName using family.</li>
      <li>Add NetworkAddress.address property to return the address sans the port as a string. NetworkAddress.str() includes the port. For IPv6 the a hex string must be enclosed in brackets if a port is appended to it, the bracketed hex address with appended with a port is unappropriate in some circumstances, hence the new address property to permit either the address string with a port or without a port.</li>
      <li>Fix the implementation of the NetworkAddress.family property, it was returning bogus data due to wrong native data size.</li>
      <li>HostEntry objects now support iteration and indexing of their NetworkAddress members.</li>
@@ -1134,7 +1134,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
     <h5 id="Deprecated_Functionality_3">Deprecated Functionality</h5>
 
     <ul>
-     <li>NetworkAddress initialized via a string paramter is now deprecated. AddrInfo should be used instead.</li>
+     <li>NetworkAddress initialized via a string parameter is now deprecated. AddrInfo should be used instead.</li>
      <li>NetworkAddress.set_from_string is now deprecated. AddrInfo should be used instead.</li>
      <li>NetworkAddress.hostentry is deprecated. It was a bad idea, NetworkAddress objects can support both IPv4 and IPv6, but a HostEntry object can only support IPv4. Plus the implementation depdended on being able to perform a reverse DNS lookup which is not always possible.</li>
      <li>HostEntry.get_network_addresses() and HostEntry.get_network_address() are now deprecated. In addition their port parameter is now no longer respected. HostEntry objects now support iteration and indexing of their NetworkAddress and that should be used to access their NetworkAddress objects instead.</li>

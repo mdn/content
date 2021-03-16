@@ -2,7 +2,7 @@
 title: Gmake vs. Pymake
 slug: Mozilla/Developer_guide/Build_Instructions/Gmake_vs_Pymake
 ---
-<p>Mozilla supports building with two different (but mostly compatible) build tools: gmake and <a href="/en/pymake">pymake</a>.</p>
+<p>Mozilla supports building with two different (but mostly compatible) build tools: gmake and <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/pymake">pymake</a>.</p>
 <h3 id="Path_issues_on_Windows">Path issues on Windows</h3>
 <p>On Windows, you must take special care to be able to switch back and forth between gmake and pymake on the same object dir.  Gmake uses MSYS paths ("/c/dev/foo"), while pymake uses native Windows paths ("C:\dev\foo").  If you try to switch from gmake to pymake or pymake to gmake the build will fail unless you did a relative configure.  A relative configure produces paths that look like "../../foo" which can be understood by gmake and pymake.  To configure relatively, invoke configure or client.mk from your objdir.</p>
 <p>For example, if using the default objdir, you might type in the root of your source tree: <code>mkdir obj-i686-pc-mingw3</code><code>2; cd obj-i686-pc-mingw32; python ../build/pymake/make.py -f ../client.mk.</code></p>

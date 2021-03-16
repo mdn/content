@@ -13,13 +13,13 @@ tags:
 
 <p>Using the File API, which was added to the DOM in HTML5, it's now possible for web content to ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML <code>{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}</code> element or by drag and drop.</p>
 
-<p>If you want to use the DOM File API from extensions or other browser chrome code, you can; however, note there are some additional features to be aware of. See <a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a> for details.</p>
+<p>If you want to use the DOM File API from extensions or other browser chrome code, you can; however, note there are some additional features to be aware of. See <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">Using the DOM File API in chrome code</a> for details.</p>
 
 <h2 id="Accessing_selected_files">Accessing selected file(s)</h2>
 
 <p>Consider this HTML:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="input" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="file" id="input" multiple&gt;</pre>
 
 <p>The File API makes it possible to access a {{DOMxRef("FileList")}} containing {{DOMxRef("File")}} objects representing the files selected by the user.</p>
 
@@ -27,13 +27,13 @@ tags:
 
 <p>Accessing the first selected file using a classical DOM selector:</p>
 
-<pre class="brush: js notranslate">const selectedFile = document.getElementById('input').files[0];</pre>
+<pre class="brush: js">const selectedFile = document.getElementById('input').files[0];</pre>
 
 <h3 id="Accessing_selected_files_on_a_change_event">Accessing selected file(s) on a change event</h3>
 
 <p>It is also possible (but not mandatory) to access the {{DOMxRef("FileList")}} through the <code>change</code> event. You need to use {{DOMxRef("EventTarget.addEventListener()")}} to add the <code>change</code> event listener, like this:</p>
 
-<pre class="brush: js notranslate">const inputElement = document.getElementById("input");
+<pre class="brush: js">const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
@@ -43,11 +43,11 @@ function handleFiles() {
 
 <p>The {{DOMxRef("FileList")}} object provided by the DOM lists all of the files selected by the user, each specified as a {{DOMxRef("File")}} object. You can determine how many files the user selected by checking the value of the file list's <code>length</code> attribute:</p>
 
-<pre class="brush: js notranslate">const numFiles = fileList.length;</pre>
+<pre class="brush: js">const numFiles = fileList.length;</pre>
 
 <p>Individual {{DOMxRef("File")}} objects can be retrieved by accessing the list as an array:</p>
 
-<pre class="brush: js notranslate">for (let i = 0, numFiles = fileList.length; i &lt; numFiles; i++) {
+<pre class="brush: js">for (let i = 0, numFiles = fileList.length; i &lt; numFiles; i++) {
   const file = fileList[i];
   // ...
 }
@@ -70,7 +70,7 @@ function handleFiles() {
 
 <p>The following example shows a possible use of the <code>size</code> property:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -118,12 +118,12 @@ function handleFiles() {
 
 <p>Consider this HTML:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none"&gt;
+<pre class="brush: html">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none"&gt;
 &lt;button id="fileSelect"&gt;Select some files&lt;/button&gt;</pre>
 
 <p>The code that handles the <code>click</code> event can look like this:</p>
 
-<pre class="brush: js notranslate">const fileSelect = document.getElementById("fileSelect"),
+<pre class="brush: js">const fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
 fileSelect.addEventListener("click", function (e) {
@@ -141,12 +141,12 @@ fileSelect.addEventListener("click", function (e) {
 
 <p>Consider this HTML:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden"&gt;
+<pre class="brush: html">&lt;input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden"&gt;
 &lt;label for="fileElem"&gt;Select some files&lt;/label&gt;</pre>
 
 <p>and this CSS:</p>
 
-<pre class="brush: css notranslate">.visually-hidden {
+<pre class="brush: css">.visually-hidden {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -171,7 +171,7 @@ input.visually-hidden:focus-within + label {
 
 <p>The first step is to establish a drop zone. Exactly what part of your content will accept drops may vary depending on the design of your application, but making an element receive drop events is easy:</p>
 
-<pre class="brush: js notranslate">let dropbox;
+<pre class="brush: js">let dropbox;
 
 dropbox = document.getElementById("dropbox");
 dropbox.addEventListener("dragenter", dragenter, false);
@@ -183,7 +183,7 @@ dropbox.addEventListener("drop", drop, false);
 
 <p>We don't actually need to do anything with the <code>dragenter</code> and <code>dragover</code> events in our case, so these functions are both simple. They just stop propagation of the event and prevent the default action from occurring:</p>
 
-<pre class="brush: js notranslate">function dragenter(e) {
+<pre class="brush: js">function dragenter(e) {
   e.stopPropagation();
   e.preventDefault();
 }
@@ -196,7 +196,7 @@ function dragover(e) {
 
 <p>The real magic happens in the <code>drop()</code> function:</p>
 
-<pre class="brush: js notranslate">function drop(e) {
+<pre class="brush: js">function drop(e) {
   e.stopPropagation();
   e.preventDefault();
 
@@ -213,7 +213,7 @@ function dragover(e) {
 
 <p>Let's say you're developing the next great photo-sharing website and want to use HTML to display thumbnail previews of images before the user actually uploads them. You can establish your input element or drop zone as discussed previously and have them call a function such as the <code>handleFiles()</code> function below.</p>
 
-<pre class="brush: js notranslate">function handleFiles(files) {
+<pre class="brush: js">function handleFiles(files) {
   for (let i = 0; i &lt; files.length; i++) {
     const file = files[i];
 
@@ -243,11 +243,11 @@ function dragover(e) {
 
 <p>When you have a {{DOMxRef("File")}} object you'd like to reference by URL from HTML, you can create an object URL for it like this:</p>
 
-<pre class="brush: js notranslate">const objectURL = window.URL.createObjectURL(fileObj);</pre>
+<pre class="brush: js">const objectURL = window.URL.createObjectURL(fileObj);</pre>
 
 <p>The object URL is a string identifying the {{DOMxRef("File")}} object. Each time you call {{DOMxRef("URL.createObjectURL()")}}, a unique object URL is created even if you've created an object URL for that file already. Each of these must be released. While they are released automatically when the document is unloaded, if your page uses them dynamically you should release them explicitly by calling {{DOMxRef("URL.revokeObjectURL()")}}:</p>
 
-<pre class="brush: js notranslate">URL.revokeObjectURL(objectURL);</pre>
+<pre class="brush: js">URL.revokeObjectURL(objectURL);</pre>
 
 <h2 id="Example_Using_object_URLs_to_display_images">Example: Using object URLs to display images</h2>
 
@@ -255,7 +255,7 @@ function dragover(e) {
 
 <p>The HTML that presents the interface looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none"&gt;
+<pre class="brush: html">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none"&gt;
 &lt;a href="#" id="fileSelect"&gt;Select some files&lt;/a&gt;
 &lt;div id="fileList"&gt;
   &lt;p&gt;No files selected!&lt;/p&gt;
@@ -266,7 +266,7 @@ function dragover(e) {
 
 <p>The <code>handleFiles()</code> method follows:</p>
 
-<pre class="brush: js notranslate">const fileSelect = document.getElementById("fileSelect"),
+<pre class="brush: js">const fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem"),
     fileList = document.getElementById("fileList");
 
@@ -336,7 +336,7 @@ function handleFiles() {
 
 <p>Continuing with the code that built the thumbnails in the previous example, recall that every thumbnail image is in the CSS class <code>obj</code> with the corresponding {{DOMxRef("File")}} attached in a <code>file</code> attribute. This allows us to select all of the images the user has chosen for uploading using {{DOMxRef("Document.querySelectorAll()")}}, like this:</p>
 
-<pre class="brush: js notranslate">function sendFiles() {
+<pre class="brush: js">function sendFiles() {
   const imgs = document.querySelectorAll(".obj");
 
   for (let i = 0; i &lt; imgs.length; i++) {
@@ -351,7 +351,7 @@ function handleFiles() {
 
 <p>The <code>FileUpload</code> function accepts two inputs: an image element and a file from which to read the image data.</p>
 
-<pre class="brush: js notranslate">function FileUpload(img, file) {
+<pre class="brush: js">function FileUpload(img, file) {
   const reader = new FileReader();
   this.ctrl = createThrobber(img);
   const xhr = new XMLHttpRequest();
@@ -396,7 +396,7 @@ function handleFiles() {
 
 <p>This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.</p>
 
-<pre class="brush: js notranslate">&lt;?php
+<pre class="brush: js">&lt;?php
 if (isset($_FILES['myFile'])) {
     // Example:
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
@@ -457,12 +457,12 @@ if (isset($_FILES['myFile'])) {
 
 <p>In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference <code>pdfjs.disabled</code> must be set to <code>false</code> {{non-standard_inline()}}.</p>
 
-<pre class="brush: html notranslate">&lt;iframe id="viewer"&gt;
+<pre class="brush: html">&lt;iframe id="viewer"&gt;
 </pre>
 
 <p>And here is the change of the <code>src</code> attribute:</p>
 
-<pre class="brush: js notranslate">const obj_url = URL.createObjectURL(blob);
+<pre class="brush: js">const obj_url = URL.createObjectURL(blob);
 const iframe = document.getElementById('viewer');
 iframe.setAttribute('src', obj_url);
 URL.revokeObjectURL(obj_url);</pre>
@@ -471,7 +471,7 @@ URL.revokeObjectURL(obj_url);</pre>
 
 <p>You can manipulate files of other formats the same way. Here is how to preview uploaded video:</p>
 
-<pre class="brush: js notranslate">const video = document.getElementById('video');
+<pre class="brush: js">const video = document.getElementById('video');
 const obj_url = URL.createObjectURL(blob);
 video.src = obj_url;
 video.play();
@@ -509,5 +509,5 @@ URL.revokeObjectURL(obj_url);</pre>
  <li>{{DOMxRef("FileReader")}}</li>
  <li>{{DOMxRef("URL")}}</li>
  <li>{{DOMxRef("XMLHttpRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
 </ul>

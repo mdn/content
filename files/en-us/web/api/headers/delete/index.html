@@ -11,26 +11,31 @@ tags:
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>The <strong><code>delete()</code></strong> method of the {{domxref("Headers")}} interface deletes a header from the current <code>Headers</code> object.</p>
+<p>The <strong><code>delete()</code></strong> method of the {{domxref("Headers")}}
+  interface deletes a header from the current <code>Headers</code> object.</p>
 
 <p>This method throws a {{jsxref("TypeError")}} for the following reasons:</p>
 
 <ul>
- <li>The value of the name parameter is not the name of an HTTP header.</li>
- <li>The value of {{Glossary("Guard")}} is <code>immutable</code>.</li>
+  <li>The value of the name parameter is not the name of an HTTP header.</li>
+  <li>The value of {{Glossary("Guard")}} is <code>immutable</code>.</li>
 </ul>
 
-<p>For security reasons, some headers can only be controller by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} and {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p>For security reasons, some headers can only be controller by the user agent. These
+  headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
+  and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
+  1)}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>myHeaders</em>.delete(<em>name</em>);</pre>
+<pre class="brush: js"><em>myHeaders</em>.delete(<em>name</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>name</code></dt>
- <dd>The name of the HTTP header you want to delete from the <code>Headers</code> object.</dd>
+  <dt><code>name</code></dt>
+  <dd>The name of the HTTP header you want to delete from the <code>Headers</code> object.
+  </dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -57,18 +62,18 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-headers-delete','delete()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Fetch','#dom-headers-delete','delete()')}}</td>
+      <td>{{Spec2('Fetch')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -78,7 +83,8 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
+  </li>
+  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

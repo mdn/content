@@ -15,7 +15,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>maxlength</code></strong> attribute defines the maximum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher.</span> If no maxlength is specified, or an invalid value is specified, the input or textarea has no maximum length.</p>
 
-<p>Any <code>maxlength</code> value must be greater than or equal to the value of <code><a href="">minlength</a></code>, if present and valid. The input will fail constraint validation if the length of the text value of the field is greater than maxlength UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>Any <code>maxlength</code> value must be greater than or equal to the value of <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code>, if present and valid. The input will fail constraint validation if the length of the text value of the field is greater than maxlength UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
 <h3 id="Constraint_validation">Constraint validation</h3>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;input type="password" maxlength="4"/&gt;
+<pre class="brush: html">&lt;input type="password" maxlength="4"/&gt;
 </pre>
 
 <p>{{EmbedLiveSample('Examples', '100%', 200)}}</p>

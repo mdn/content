@@ -20,9 +20,9 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <p>Highlights:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi">Debugging Firefox for Android over Wifi</a></li>
+ <li><a href="/en-US/docs/Tools/about:debugging#connecting_over_the_network">Debugging Firefox for Android over Wifi</a></li>
  <li><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Configuring_Simulators">Firefox OS Simulator configuration in WebIDE</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#Saving_filter_presets">CSS filter presets</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters#saving_filter_presets">CSS filter presets</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-08-10&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-06-29&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12478437">All devtools bugs fixed between Firefox 41 and Firefox 42</a>.</p>
@@ -32,7 +32,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <ul>
  <li>Vertical {{cssxref('writing-mode')}} is now supported with rtl scripts ({{bug(1131451)}}).</li>
  <li>The values of {{cssxref("caption-side")}} are now relative to the table, and changing actual meaning according to its {{cssxref("writing-mode")}} value {{bug(1202993)}}.</li>
- <li>Non-standard properties like {{cssxref('-moz-margin-start')}} are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule and iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).</li>
+ <li>Non-standard properties like <code>-moz-margin-start</code> are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule and iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).</li>
  <li>The prefixed version of CSS gradients can be turned off by setting the <code>layout.css.prefixes.gradients</code> preference to <code>false</code>.</li>
  <li>Several old bugs with {{cssxref("float")}} and margin collapsing behavior have been fixed ({{bug(478834)}}, {{bug(538194)}}, and {{bug(451791)}}).</li>
 </ul>
@@ -47,7 +47,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <ul>
  <li>The {{jsxref("Reflect")}} object has been implemented ({{bug(987514)}}).</li>
- <li>The implementation of the {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}} trap has been updated to match the final ES2015 specification ({{bug(1049662)}}).</li>
+ <li>The implementation of the {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}} trap has been updated to match the final ES2015 specification ({{bug(1049662)}}).</li>
  <li>Calling {{jsxref("Map")}}, {{jsxref("Set")}}, or {{jsxref("WeakMap")}} without {{jsxref('Operators', 'new')}}, will now throw a {{jsxref("TypeError")}} ({{bug(1083752)}}).</li>
 </ul>
 
@@ -74,7 +74,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <ul>
  <li>{{domxref('Request.context')}} has been removed ({{bug(1188062)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.push.enabled</code> pref in <a>about:config</a>.</span></span></li>
+ <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <code>dom.push.enabled</code> pref in <a>about:config</a>.</li>
  <li>The {{domxref("PushManager.hasPermission()")}} method has been deprecated in the spec, and replaced with the {{domxref("PushManager.permissionState()")}} method. Firefox has updated its implementation to reflect this ({{bug("1183853")}}.)</li>
  <li>Service-worker-related additions to the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> have been implemented ({{bug(1114554)}}), but are disabled in this release.</li>
 </ul>
@@ -84,7 +84,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <p>Our experimental implementation of <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> have been extended to support:</p>
 
 <ul>
- <li>The {{domxref('AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).</li>
+ <li>The {{domxref('Animation/playbackRate', 'AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).</li>
  <li>The {{domxref('CSSAnimation')}} and {{domxref('CSSTransition')}} interfaces ({{bug(1178186)}}).</li>
  <li>The {{domxref('Animation.reverse()')}} method ({{bug(1150808)}}).</li>
  <li>The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{event('cancel')}} and {{event('finish')}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).</li>
@@ -92,7 +92,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 
 <h4 id="Web_Components">Web Components</h4>
 
-<p>Our experimental implementation of the <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> has been modified:</p>
+<p>Our experimental implementation of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> has been modified:</p>
 
 <ul>
  <li>When trying to invoke {{domxref('Node.cloneNode()')}} on a {{domxref('ShadowRoot')}}, throws a <code>DataCloneError</code> exception ({{bug(1176757)}}).</li>
@@ -118,7 +118,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h4 id="New_APIs">New APIs</h4>
 
 <ul>
- <li>The {{domxref("ImageBitmap")}} interface and the {{domxref("ImageBitmapFactories.createImageBitmap","createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ({{bug(1044102)}}).</li>
+ <li>The {{domxref("ImageBitmap")}} interface and the {{domxref("WindowOrWorkerGlobalScope/createImageBitmap","createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ({{bug(1044102)}}).</li>
 </ul>
 
 <h4 id="Miscellaneous">Miscellaneous</h4>
@@ -127,7 +127,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
  <li>The {{domxref('IDBCursorWithValue')}} interface is now available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> ({{bug(1188115)}}).</li>
  <li>Error events sent in <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> doesn't bubble anymore ({{bug(1188141)}}).</li>
  <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a> (MSE) has been activated for all Web sites, and no more for a white list of sites ({{bug(1185611)}}).</li>
- <li>The non-standard and deprecated {{domxref('Window.mozRequestAnimationFrame()')}} has been removed ({{bug(909154)}}). Use the standard {{domxref('Window.requestAnimationFrame()')}} instead.</li>
+ <li>The non-standard and deprecated <code>Window.mozRequestAnimationFrame()</code> has been removed ({{bug(909154)}}). Use the standard {{domxref('Window.requestAnimationFrame()')}} instead.</li>
  <li>Speech synthesis (text-to-speech) has been implemented in Firefox Desktop for Windows, hidden behind the <code>media.webspeech.synth.enabled</code> flag in <code>about:config</code> ({{bug("1003457")}}.) See <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> for more information.</li>
 </ul>
 
@@ -152,7 +152,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h2 id="Networking">Networking</h2>
 
 <ul>
- <li>The CSP <code><a href="/Web/Security/CSP/CSP_policy_directives#upgrade-insecure-requests">upgrade-insecure-requests</a></code> directive has been implemented ({{bug(1139297)}}).</li>
+ <li>The CSP <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#upgrade-insecure-requests">upgrade-insecure-requests</a></code> directive has been implemented ({{bug(1139297)}}).</li>
 </ul>
 
 <h2 id="Security">Security</h2>

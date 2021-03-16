@@ -113,7 +113,7 @@ tags:
 
 <p>The below diagram shows these layers:</p>
 
-<p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+<p><img alt="Diagram of the box model" src="box-model.png"></p>
 
 <h3 id="The_standard_CSS_box_model">The standard CSS box model</h3>
 
@@ -121,7 +121,7 @@ tags:
 
 <p>If we assume that the box has the following CSS defining <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, and <code>padding</code>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 350px;
   height: 150px;
   margin: 10px;
@@ -132,7 +132,7 @@ tags:
 
 <p>The space taken up by our box using the standard box model will actually be 410px (350 + 25 + 25 + 5 + 5), and the height 210px (150 + 25 + 25 + 5 + 5), as the padding and border are added to the width used for the content box.</p>
 
-<p><img alt="Showing the size of the box when the standard box model is being used." src="https://mdn.mozillademos.org/files/16559/standard-box-model.png" style="height: 300px; width: 500px;"></p>
+<p><img alt="Showing the size of the box when the standard box model is being used." src="standard-box-model.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The margin is not counted towards the actual size of the box — sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border — it does not extend into the margin.</p>
@@ -142,22 +142,22 @@ tags:
 
 <p>You might think it is rather inconvenient to have to add up the border and padding to get the real size of the box, and you would be right! For this reason, CSS had an alternative box model introduced some time after the standard box model. Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus the width for the padding and border. The same CSS as used above would give the below result (width = 350px, height = 150px).</p>
 
-<p><img alt="Showing the size of the box when the alternate box model is being used." src="https://mdn.mozillademos.org/files/16557/alternate-box-model.png" style="height: 240px; width: 440px;"></p>
+<p><img alt="Showing the size of the box when the alternate box model is being used." src="alternate-box-model.png"></p>
 
 <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting <code>box-sizing: border-box</code> on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css">.box {
   box-sizing: border-box;
-} </code></pre>
+} </pre>
 
 <p>If you want all of your elements to use the alternative box model, and this is a common choice among developers, set the <code>box-sizing</code> property on the <code>&lt;html&gt;</code> element, then set all other elements to inherit that value, as seen in the snippet below. If you want to understand the thinking behind this, see <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>.</p>
 
-<pre class="brush: css notranslate"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-<span class="selector token">*, *<span class="pseudo-element token">::before</span>, *<span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">box-sizing</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: css">html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.</p>
@@ -179,7 +179,7 @@ tags:
 
 <p>Your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!</p>
 
-<p><img alt="Inspecting the box model of an element using Firefox DevTools" src="https://mdn.mozillademos.org/files/16560/box-model-devtools.png" style="height: 683px; width: 1150px;"></p>
+<p><img alt="Inspecting the box model of an element using Firefox DevTools" src="box-model-devtools.png"></p>
 
 <h2 id="Margins_padding_and_borders">Margins, padding, and borders</h2>
 
@@ -316,7 +316,7 @@ tags:
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
+<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 

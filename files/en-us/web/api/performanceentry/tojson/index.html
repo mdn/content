@@ -2,34 +2,37 @@
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
 tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
+- API
+- Method
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p>The <strong><code>toJSON()</code></strong> method is a <em>serializer</em>; it returns a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.</p>
+<p>The <strong><code>toJSON()</code></strong> method is a <em>serializer</em>; it returns
+  a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.
+</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">json = perfEntry.toJSON();
+<pre class="brush: js">json = perfEntry.toJSON();
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
-	<dt>None</dt>
-	<dd> </dd>
+  <dt>None</dt>
+  <dd> </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
-	<dt>json</dt>
-	<dd>A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} object.</dd>
+  <dt>json</dt>
+  <dd>A JSON object that is the serialization of the {{domxref("PerformanceEntry")}}
+    object.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -84,23 +87,21 @@ function check_PerformanceEntry(obj) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson', 'toJSON')}}</td>
-			<td>{{Spec2('Performance Timeline Level 2')}}</td>
-			<td>Initial definition of <code>toJSON()</code> method.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson',
+        'toJSON')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td>Initial definition of <code>toJSON()</code> method.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceEntry.toJSON")}}</p>
-</div>

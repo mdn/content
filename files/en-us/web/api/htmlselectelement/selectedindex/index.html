@@ -2,20 +2,23 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 tags:
-  - API
-  - HTML DOM
-  - HTML forms
-  - HTMLSelectElement
-  - Property
-  - Reference
+- API
+- HTML DOM
+- HTML forms
+- HTMLSelectElement
+- Property
+- Reference
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <code><strong>HTMLSelectElement.selectedIndex</strong></code> is a <code>long</code> that reflects the index of the first or last selected {{HTMLElement("option")}} element, depending on the value of <code>multiple</code>. The value <code>-1</code> indicates that no element is selected.</p>
+<p>The <code><strong>HTMLSelectElement.selectedIndex</strong></code> is a
+  <code>long</code> that reflects the index of the first or last selected
+  {{HTMLElement("option")}} element, depending on the value of <code>multiple</code>. The
+  value <code>-1</code> indicates that no element is selected.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>index</var> = <var>selectElem</var>.selectedIndex;
+<pre class="brush: js">var <var>index</var> = <var>selectElem</var>.selectedIndex;
 <em>selectElem<code>.selectedIndex = </code>index;</em>
 </pre>
 
@@ -51,27 +54,32 @@ selectElem.addEventListener('change', function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change since the latest snapshot, {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex', 'HTMLSelectElement')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition, snapshot of {{SpecName("HTML WHATWG")}}.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-select-selectedindex', 'HTMLSelectElement')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change since the latest snapshot, {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', 'forms.html#dom-select-selectedindex',
+        'HTMLSelectElement')}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Initial definition, snapshot of {{SpecName("HTML WHATWG")}}.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table in this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("api.HTMLSelectElement.selectedIndex")}}</p>

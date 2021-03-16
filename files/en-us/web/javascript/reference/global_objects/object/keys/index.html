@@ -2,44 +2,54 @@
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
+- ECMAScript 5
+- JavaScript
+- JavaScript 1.8.5
+- Method
+- Object
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>Object.keys()</strong></code> method returns an array of a given object's own enumerable property <strong>names</strong>, iterated in the same order that a normal loop would.</span></p>
+<p><span class="seoSummary">The <code><strong>Object.keys()</strong></code> method returns
+    an array of a given object's own enumerable property <strong>names</strong>, iterated
+    in the same order that a normal loop would.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-keys.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Object.keys(<var>obj</var>)</pre>
+<pre class="brush: js">Object.keys(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>obj</var></code></dt>
- <dd>The object of which the enumerable's own properties are to be returned.</dd>
+  <dt><code><var>obj</var></code></dt>
+  <dd>The object of which the enumerable's own properties are to be returned.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An array of strings that represent all the enumerable properties of the given object.</p>
+<p>An array of strings that represent all the enumerable properties of the given object.
+</p>
 
 <h2 id="Description">Description</h2>
 
-<p><code>Object.keys()</code> returns an array whose elements are strings corresponding to the enumerable properties found directly upon <code>object</code>. The ordering of the properties is the same as that given by looping over the properties of the object manually.</p>
+<p><code>Object.keys()</code> returns an array whose elements are strings corresponding to
+  the enumerable properties found directly upon <code>object</code>. The ordering of the
+  properties is the same as that given by looping over the properties of the object
+  manually.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Object.keys">Using Object.keys</h3>
 
-<pre class="brush: js notranslate">// simple array
+<pre class="brush: js">// simple array
 const arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
@@ -61,15 +71,17 @@ myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 </pre>
 
-<p>If you want <em>all</em> properties—including non-enumerables—see {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+<p>If you want <em>all</em> properties—including non-enumerables—see
+  {{jsxref("Object.getOwnPropertyNames()")}}.</p>
 
 <h3 id="Non-object_coercion">Non-object coercion</h3>
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}.</p>
+<p>In ES5, if the argument to this method is not an object (a primitive), then it will
+  cause a {{jsxref("TypeError")}}.</p>
 
 <p>From ES2015 onwards, a non-object argument will be coerced to an object.</p>
 
-<pre class="brush: js notranslate">// In ES5
+<pre class="brush: js">// In ES5
 Object.keys('foo');  // TypeError: "foo" is not an object
 
 // In ES2015+
@@ -78,9 +90,10 @@ Object.keys('foo');  // ["0", "1", "2"]
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>To add compatible <code>Object.keys</code> support in older environments that do not natively support it, copy the following snippet:</p>
+<p>To add compatible <code>Object.keys</code> support in older environments that do not
+  natively support it, copy the following snippet:</p>
 
-<pre class="brush: js notranslate">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+<pre class="brush: js">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -123,38 +136,45 @@ if (!Object.keys) {
 }
 </pre>
 
-<p>Please note that the above code includes non-enumerable keys in IE7 (and maybe IE8), when passing in an object from a different window.</p>
+<p>Please note that the above code includes non-enumerable keys in IE7 (and maybe IE8),
+  when passing in an object from a different window.</p>
 
-<p>For a simple Browser Polyfill, see <a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
+<p>For a simple Browser Polyfill, see <a
+    href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript
+    - Object.keys Browser Compatibility</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured
+  data. If you'd like to contribute to the data, please check out <a     href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</div>
 
 <p>{{Compat("javascript.builtins.Object.keys")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
+  <li><a
+      href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability
+      and ownership of properties</a></li>
+  <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
+  <li>{{jsxref("Object.create()")}}</li>
+  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
+  <li>{{jsxref("Object.values()")}}</li>
+  <li>{{jsxref("Object.entries()")}}</li>
 </ul>

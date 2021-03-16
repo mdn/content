@@ -13,7 +13,7 @@ tags:
 
 <p class="summary"><span class="seoSummary">A <a href="/en-US/docs/Web/CSS">CSS</a> <strong><dfn>pseudo-class</dfn></strong> is a keyword added to a selector that specifies a special state of the selected element(s).</span> For example, {{CSSxRef(":hover")}} can be used to change a button's color when the user's pointer hovers over it.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Any button over which the user's pointer is hovering */
+<pre class="brush: css no-line-numbers">/* Any button over which the user's pointer is hovering */
 button:hover {
   color: blue;
 }</pre>
@@ -102,6 +102,8 @@ button:hover {
 <p>These pseudo-classes relate to form elements, and enable selecting elements based on HTML attributes and the state that the field is in before and after interaction.</p>
 
 <dl>
+ <dt>{{CSSxRef(":autofill")}}</dt>
+ <dd>Matches when an {{htmlelement("input")}} has been autofilled by the browser.</dd>
  <dt>{{CSSxRef(":enabled")}}</dt>
  <dd>Represents a user interface element that is in an enabled state.</dd>
  <dt>{{CSSxRef(":disabled")}}</dt>
@@ -117,7 +119,7 @@ button:hover {
  <dt>{{CSSxRef(":checked")}}</dt>
  <dd>Matches when elements such as checkboxes and radiobuttons are toggled on.</dd>
  <dt>{{CSSxRef(":indeterminate")}}</dt>
- <dd>Matches when UI elements are in an undeterminate state.</dd>
+ <dd>Matches when UI elements are in an indeterminate state.</dd>
  <dt>{{CSSxRef(":blank")}}</dt>
  <dd>Matches a user-input element which is empty, containing an empty string or other null input.</dd>
  <dt>{{CSSxRef(":valid")}}</dt>
@@ -158,7 +160,7 @@ button:hover {
  <dt>{{CSSxRef(":nth-of-type")}}</dt>
  <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.</dd>
  <dt>{{CSSxRef(":nth-last-of-type")}}</dt>
- <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backards from the end of the list.</dd>
+ <dd>Uses A<em>n</em>+B notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.</dd>
  <dt>{{CSSxRef(":first-of-type")}}</dt>
  <dd>Matches an element that is the first of its siblings, and also matches a certain type selector.</dd>
  <dt>{{CSSxRef(":last-of-type")}}</dt>
@@ -169,7 +171,7 @@ button:hover {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">selector:pseudo-class {
+<pre class="brush: css">selector:pseudo-class {
   property: value;
 }
 </pre>
@@ -184,7 +186,8 @@ button:hover {
 
 <ul>
  <li>{{CSSxRef(":active")}}</li>
- <li>{{CSSxRef(":any-link")}} </li>
+ <li>{{CSSxRef(":any-link")}}</li>
+ <li>{{CSSxRef(":autofill")}}</li>
 </ul>
 <span>B</span>
 

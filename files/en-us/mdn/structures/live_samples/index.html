@@ -31,7 +31,7 @@ tags:
 
 <p>The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the Web. Of course, as a practical matter, the code must contribute to the point of the page that contains it; random stuff running on MDN will be removed by the editor community.</p>
 
-<div class="note">
+<div class="note notecard">
 <p><strong>Note:</strong> You <strong>must</strong> use the macro for presenting the live sample's output. MDN's editor will strip out any direct use of the <code>&lt;iframe&gt;</code> element in order to ensure security.</p>
 </div>
 
@@ -44,18 +44,18 @@ tags:
 <p>There are two macros that you can use to display live samples:</p>
 
 <ul>
- <li><span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> embeds a live sample into a page</li>
- <li><span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/LiveSampleLink.ejs">LiveSampleLink</a></code></span> creates a link that opens the live sample in a new page</li>
+ <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> embeds a live sample into a page</li>
+ <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs">LiveSampleLink</a></code> creates a link that opens the live sample in a new page</li>
 </ul>
 
-<p>In many cases, you may be able to add the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> or <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/LiveSampleLink.ejs">LiveSampleLink</a></code></span> macro to pages with little or no additional work! As long as the sample can be identified by a heading's ID or is in a block with an ID you can use, adding the macro should do the job.</p>
+<p>In many cases, you may be able to add the <code>EmbedLiveSample</code> or <code>LiveSampleLink</code> macro to pages with little or no additional work! As long as the sample can be identified by a heading's ID or is in a block with an ID you can use, adding the macro should do the job.</p>
 
 <h4 id="EmbedLiveSample_macro">EmbedLiveSample macro</h4>
 
-<pre class="syntaxbox notranslate"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
+<pre class="brush: js"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
 
-<div class="Note">
-<p>If the heading is translated, its ID is automatically updated to match the translated text. Therefore, you must change the value of <em>block_ID</em> in the macro call in the translated article, in order for the macro to work properly.</p>
+<div class="note notecard">
+<p><strong>Note</strong>: If the heading is translated, its ID is automatically updated to match the translated text. Therefore, you must change the value of <em>block_ID</em> in the macro call in the translated article, in order for the macro to work properly.</p>
 </div>
 
 <dl>
@@ -68,12 +68,17 @@ tags:
  <dt>screenshot_URL</dt>
  <dd>The URL of a screenshot that shows what the live sample should look like. This is optional, but can be useful for new technologies that may not work in the user's browser, so they can see what the sample would look like if it were supported by their browser. If you include this parameter, the screenshot is shown next to the live sample, with appropriate headings.</dd>
  <dt>page_slug</dt>
- <dd>The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.</dd>
+ <dd>
+   <p>The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.</p>
+   <div class="notecard warning">
+   <strong>Warning:</strong> To show a live sample from one code-containing page in a different, target page, the code-containing page must itself use the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro to embed a live sample in its own page. Otherwise, if the code-containing page doesn't itself use the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro its own page, the live sample will fail to display at all on the target page. (See <a href="https://github.com/mdn/yari/issues/2243">Yari issue #2243</a>.)
+   </div>
+ </dd>
 </dl>
 
 <h4 id="LiveSampleLink_macro">LiveSampleLink macro</h4>
 
-<pre class="syntaxbox notranslate"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
+<pre class="brush: js"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
 
 <dl>
  <dt>block_ID</dt>
@@ -96,8 +101,8 @@ tags:
 
 <p>Each piece of code must be in a {{HTMLElement("pre")}} block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a class on the <code>&lt;pre&gt;</code> element of <code>brush:<em>language-type</em></code>, where <em>language-type</em> is the type of language the block contains, e.g. <code>html</code>, <code>css</code>, or <code>js</code>.</p>
 
-<div class="note">
-<p><strong>Note:</strong> You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.</p>
+<div class="note notecard">
+<p><strong>Note</strong>: You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.</p>
 </div>
 
 <p>So make sure the {{HTMLElement("pre")}} blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.</p>
@@ -114,7 +119,7 @@ tags:
 
 <p>This HTML creates a paragraph and some blocks to help us position and style a message.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
 &lt;div class="box"&gt;
   &lt;div id="item"&gt;Hello world! Welcome to MDN&lt;/div&gt;
 &lt;/div&gt;
@@ -124,7 +129,7 @@ tags:
 
 <p>The CSS code styles the box as well as the text inside it.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 200px;
   border-radius: 6px;
   padding: 20px;
@@ -143,7 +148,7 @@ tags:
 
 <p>This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.</p>
 
-<pre class="brush: js notranslate">var el = document.getElementById('item');
+<pre class="brush: js">var el = document.getElementById('item');
 el.onclick = function() {
   alert('Owww, stop poking me!');
 }
@@ -159,7 +164,7 @@ el.onclick = function() {
 
 <p>{{LiveSampleLink('Live_sample_demo', 'Live sample demo link')}}</p>
 
-<h2 id="Conventions_regarding_live_samples"><a id="conventions">Conventions regarding live samples</a></h2>
+<h2 id="Conventions_regarding_live_samples">Conventions regarding live samples</h2>
 
 <dl>
  <dt>Orders of code blocks</dt>

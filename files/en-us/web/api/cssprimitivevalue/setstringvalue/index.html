@@ -10,44 +10,49 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>setStringValue()</strong></code> method of the {{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the property attached to this value can't accept the specified unit or the string value, the value will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
+<p>The <code><strong>setStringValue()</strong></code> method of the
+  {{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the
+  property attached to this value can't accept the specified unit or the string value, the
+  value will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>cssPrimitiveValue</var>.setStringValue(<var>stringType</var>, <var>stringValue</var>);</pre>
+<pre
+  class="brush: js"><var>cssPrimitiveValue</var>.setStringValue(<var>stringType</var>, <var>stringValue</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>stringType</dt>
- <dd>An <code>unsigned short</code> representing the type of the value. Possible values are:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Description</td>
-   </tr>
-   <tr>
-    <td><code>CSS_ATTR</code></td>
-    <td>The value is an {{cssxref("attr()")}} function.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_IDENT</code></td>
-    <td>The value is an identifier.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_STRING</code></td>
-    <td>The value is a {{cssxref("&lt;string&gt;")}}.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_URI</code></td>
-    <td>The value is a {{cssxref("&lt;uri&gt;")}}.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>stringValue</dt>
- <dd>A {{domxref("DOMString")}} representing the new string value.</dd>
+  <dt>stringType</dt>
+  <dd>An <code>unsigned short</code> representing the type of the value. Possible values
+    are:
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td class="header">Constant</td>
+          <td class="header">Description</td>
+        </tr>
+        <tr>
+          <td><code>CSS_ATTR</code></td>
+          <td>The value is an {{cssxref("attr()")}} function.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_IDENT</code></td>
+          <td>The value is an identifier.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_STRING</code></td>
+          <td>The value is a {{cssxref("&lt;string&gt;")}}.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_URI</code></td>
+          <td>The value is a {{cssxref("url()")}}.</td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt>stringValue</dt>
+  <dd>A {{domxref("DOMString")}} representing the new string value.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -57,41 +62,41 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Type</strong></th>
-   <th scope="col"><strong>Description</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOMException</code></td>
-   <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a string value or if the string value can't be converted into the specified unit.<br>
-    An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col"><strong>Type</strong></th>
+      <th scope="col"><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DOMException</code></td>
+      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a
+        string value or if the string value can't be converted into the specified
+        unit.<br>
+        An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-setStringValue', 'CSSPrimitiveValue.setStringValue')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-setStringValue',
+        'CSSPrimitiveValue.setStringValue')}}</td>
+      <td>{{Spec2('DOM2 Style')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CSSPrimitiveValue.setStringValue")}}</p>
-</div>

@@ -2,21 +2,23 @@
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/GlobalEventHandlers/onpointerenter
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- PointerEvent
+- Property
+- Reference
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>The <strong><code>onpointerenter</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} events.</p>
+<p>The <strong><code>onpointerenter</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} events.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>targetElement</var>.onpointerenter = <var>enterHandler</var>;
+<pre class="brush: js"><var>targetElement</var>.onpointerenter = <var>enterHandler</var>;
 
 var <var>enterHandler</var> = <var>targetElement</var>.onpointerenter;
 </pre>
@@ -24,15 +26,17 @@ var <var>enterHandler</var> = <var>targetElement</var>.onpointerenter;
 <h3 id="Value">Value</h3>
 
 <dl>
- <dt><code>enterHandler</code></dt>
- <dd>The <code>pointerenter</code> event handler for element <code>targetElement</code>.</dd>
+  <dt><code>enterHandler</code></dt>
+  <dd>The <code>pointerenter</code> event handler for element <code>targetElement</code>.
+  </dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows two ways to use <code>onpointerenter</code> to set an element's <code>pointerenter</code> event handler.</p>
+<p>This example shows two ways to use <code>onpointerenter</code> to set an element's
+  <code>pointerenter</code> event handler.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;script&gt;
 function enterHandler(ev) {
   // Process the pointerenter event
@@ -53,25 +57,27 @@ function init() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerenter', 'onpointerenter')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Non-stable version</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerenter', 'onpointerenter')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerenter',
+        'onpointerenter')}}</td>
+      <td>{{Spec2('Pointer Events 2')}}</td>
+      <td>Non-stable version</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerenter',
+        'onpointerenter')}}</td>
+      <td>{{Spec2('Pointer Events')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -81,6 +87,10 @@ function init() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Document/pointerenter_event">Document: pointerenter</a></code> event</li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">HTMLElement: pointerenter</a></code> event</li>
+  <li>
+    <code><a href="/en-US/docs/Web/API/Document/pointerenter_event">Document: pointerenter</a></code>
+    event</li>
+  <li>
+    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">HTMLElement: pointerenter</a></code>
+    event</li>
 </ul>

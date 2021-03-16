@@ -7,12 +7,12 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
       <div>
        2010-03-03 <em>Newsgroup: <a class="link-news" href="news://news.mozilla.org/mozilla.dev.tech.crypto" rel="external" title="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></em>
        <div id="section_1">
-        <h1 class="editable" id="Introduction">Introduction</h1>
+        <h1 id="Introduction">Introduction</h1>
         <p>Network Security Services (NSS) 3.12.6 is a patch release for NSS 3.12. The bug fixes in NSS 3.12.6 are described in the "<a href="http://mdn.beonex.com/en/NSS_3.12.6_release_notes.html#bugsfixed">Bugs Fixed</a>" section below.</p>
         <p>NSS 3.12.6 is tri-licensed under the MPL 1.1/GPL 2.0/LGPL 2.1. <a name="distribution"></a></p>
        </div>
        <div id="section_2">
-        <h1 class="editable" id="Distribution_Information">Distribution Information</h1>
+        <h1 id="Distribution_Information">Distribution Information</h1>
         <p>The CVS tag for the NSS 3.12.6 release is <code>NSS_3_12_6_RTM</code>.  NSS 3.12.6 requires <a class="external" href="https://www.mozilla.org/projects/nspr/release-notes/" rel="external" title="http://www.mozilla.org/projects/nspr/release-notes/">NSPR 4.8.4</a>.<br>
          <br>
          See the <a href="http://mdn.beonex.com/en/NSS_3.12.6_release_notes.html#docs">Documentation</a> section for the build instructions.</p>
@@ -24,9 +24,9 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          <a name="new"></a></p>
        </div>
        <div id="section_3">
-        <h1 class="editable" id="New_in_NSS_3.12.6">New in NSS 3.12.6</h1>
+        <h1 id="New_in_NSS_3.12.6">New in NSS 3.12.6</h1>
         <div id="section_4">
-         <h3 class="editable" id="SSL3_TLS_Renegotiation_Indication_Extension_(RFC_5746)">SSL3 &amp; TLS Renegotiation Indication Extension (<a class="external" href="https://tools.ietf.org/html/rfc5746" rel="external" title="http://tools.ietf.org/html/rfc5746">RFC 5746</a>)</h3>
+         <h3 id="SSL3_TLS_Renegotiation_Indication_Extension_(RFC_5746)">SSL3 &amp; TLS Renegotiation Indication Extension (<a class="external" href="https://tools.ietf.org/html/rfc5746" rel="external" title="http://tools.ietf.org/html/rfc5746">RFC 5746</a>)</h3>
          <ul>
           <li>By default, NSS 3.12.6 uses the new TLS Renegotiation Indication Extension for TLS renegotiation but allows simple SSL/TLS connections (without renegotiation) with peers that don't support the TLS Renegotiation Indication Extension.
            <p>The behavior of NSS for renegotiation can be changed through API function calls, or with the following environment variables:</p>
@@ -80,7 +80,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          </ul>
         </div>
         <div id="section_5">
-         <h3 class="editable" id="TLS_Server_Name_Indication_for_servers">TLS Server Name Indication for servers</h3>
+         <h3 id="TLS_Server_Name_Indication_for_servers">TLS Server Name Indication for servers</h3>
          <ul>
           <li>TLS Server Name Indication (SNI) for servers is almost fully implemented in NSS 3.12.6.<br>
            See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=360421" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=360421">bug 360421</a> for details.<br>
@@ -115,7 +115,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          </ul>
         </div>
         <div id="section_6">
-         <h3 class="editable" id="New_functions">New functions</h3>
+         <h3 id="New_functions">New functions</h3>
          <ul>
           <li><em>in cert.h</em>
            <ul>
@@ -140,7 +140,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          </ul>
         </div>
         <div id="section_7">
-         <h3 class="editable" id="New_error_codes">New error codes</h3>
+         <h3 id="New_error_codes">New error codes</h3>
          <ul>
           <li><em>in sslerr.h</em>
            <ul>
@@ -151,7 +151,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          </ul>
         </div>
         <div id="section_8">
-         <h3 class="editable" id="New_types">New types</h3>
+         <h3 id="New_types">New types</h3>
          <ul>
           <li><em>in sslt.h</em>
            <ul>
@@ -161,7 +161,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
          </ul>
         </div>
         <div id="section_9">
-         <h3 class="editable" id="New_environment_variables">New environment variables</h3>
+         <h3 id="New_environment_variables">New environment variables</h3>
          <ul>
           <li>SQLITE_FORCE_PROXY_LOCKING
            <ul>
@@ -180,7 +180,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
         </div>
        </div>
        <div id="section_10">
-        <h1 class="editable" id="Bugs_Fixed">Bugs Fixed</h1>
+        <h1 id="Bugs_Fixed">Bugs Fixed</h1>
         <p>The following bugs have been fixed in NSS 3.12.6.</p>
         <ul>
          <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=275744" rel="external" title="https://bugzilla.mozilla.org/show_bug.cgi?id=275744">Bug 275744</a>: Support for TLS compression RFC 3749</li>
@@ -218,20 +218,20 @@ slug: Mozilla/Projects/NSS/NSS_3.12.6_release_notes
         <p><a name="docs"></a></p>
        </div>
        <div id="section_11">
-        <h1 class="editable" id="Documentation">Documentation</h1>
+        <h1 id="Documentation">Documentation</h1>
         <p>For a list of the primary NSS documentation pages on mozilla.org, see <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/#documentation" rel="external" title="http://www.mozilla.org/projects/security/pki/nss/#documentation">NSS Documentation</a>. New and revised documents available since the release of NSS 3.11 include the following:</p>
         <ul>
-         <li><a href="http://mdn.beonex.com/en/NSS_reference/Building_and_installing_NSS/Build_instructions.html" rel="internal" title="En/NSS reference/Building and installing NSS/Build instructions">Build Instructions</a></li>
+         <li><a href="http://mdn.beonex.com/en/NSS_reference/Building_and_installing_NSS/Build_instructions.html" rel="internal">Build Instructions</a></li>
          <li><a class="external" href="http://wiki.mozilla.org/NSS_Shared_DB" rel="external" title="http://wiki.mozilla.org/NSS_Shared_DB">NSS Shared DB</a></li>
         </ul>
         <p><a name="compatibility"></a></p>
        </div>
        <div id="section_12">
-        <h1 class="editable" id="Compatibility">Compatibility</h1>
+        <h1 id="Compatibility">Compatibility</h1>
         <p>NSS 3.12.6 shared libraries are backward compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.12.6 shared libraries without recompiling or relinking.  Furthermore, applications that restrict their use of NSS APIs to the functions listed in <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html" rel="external" title="http://www.mozilla.org/projects/security/pki/nss/ref/nssfunctions.html">NSS Public Functions</a> will remain compatible with future versions of the NSS shared libraries. <a name="feedback"></a></p>
        </div>
        <div id="section_13">
-        <h1 class="editable" id="Feedback">Feedback</h1>
+        <h1 id="Feedback">Feedback</h1>
         <p>Bugs discovered should be reported by filing a bug report with <a class="link-https" href="https://bugzilla.mozilla.org/" rel="external" title="https://bugzilla.mozilla.org/">mozilla.org Bugzilla</a> (product NSS).</p>
        </div>
       </div>

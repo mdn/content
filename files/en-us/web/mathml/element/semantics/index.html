@@ -20,14 +20,14 @@ tags:
  <li>If no Presentation MathML is found, render the first <code>&lt;annotation&gt;</code> or <code>&lt;annotation-xml&gt;</code> child element of <code>&lt;semantics&gt;</code>.<br>
   Beware that <code>&lt;annotation-xml&gt;</code> elements are only recognized, if the encoding attribute is set to one of the following:
   <ul>
-   <li><code><span class="s">"application/mathml-presentation+xml</span></code>"</li>
-   <li><code><span class="s">"MathML-Presentation</span></code>"</li>
-   <li><span class="s"><code>"SVG1.1</code></span>"</li>
+   <li><code>"application/mathml-presentation+xml"</code></li>
+   <li><code>"MathML-Presentation"</code></li>
+   <li><code>"SVG1.1"</code></li>
    <li><code>"text/html"</code></li>
    <li><code>"image/svg+xml"</code></li>
-   <li><code><span class="st">"application/xml</span></code>".</li>
+   <li><code>"application/xml</code>".</li>
   </ul>
-  Note that <span class="c">"application/mathml+xml</span>" is <em>not</em> mentioned here as it does not distinguish between Content or Presentation MathML.</li>
+  Note that <code>"application/mathml+xml"</code> is <em>not</em> mentioned here as it does not distinguish between Content or Presentation MathML.</li>
 </ul>
 
 <h2 id="Attributes">Attributes</h2>
@@ -38,7 +38,7 @@ tags:
  <dt id="attr-definitionurl">definitionURL</dt>
  <dd>The location of the annotation key symbol.</dd>
  <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-encoding">encoding</dt>
  <dd>The encoding of the semantic information in the annotation (e.g. "MathML-Content", "MathML-Presentation", "application/openmath+xml", "image/png")</dd>
  <dt id="attr-cd">cd</dt>
@@ -51,7 +51,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: html notranslate">&lt;math&gt;
+<pre class="brush: html">&lt;math&gt;
   &lt;semantics&gt;
 
     &lt;!-- Presentation MathML --&gt;

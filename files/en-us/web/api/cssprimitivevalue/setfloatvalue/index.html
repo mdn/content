@@ -2,108 +2,114 @@
 title: CSSPrimitiveValue.setFloatValue()
 slug: Web/API/CSSPrimitiveValue/setFloatValue
 tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setFloatValue
+- API
+- CSSPrimitiveValue
+- Method
+- NeedsExample
+- setFloatValue
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>setFloatValue()</strong></code> method of the {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property attached to this value can't accept the specified unit or the float value, the value will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
+<p>The <code><strong>setFloatValue()</strong></code> method of the
+  {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property
+  attached to this value can't accept the specified unit or the float value, the value
+  will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>cssPrimitiveValue</var>.setFloatValue(<var>unitType</var>, <var>floatValue</var>);</pre>
+<pre
+  class="brush: js"><var>cssPrimitiveValue</var>.setFloatValue(<var>unitType</var>, <var>floatValue</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>unitType</dt>
- <dd>An <code>unsigned short</code> representing the code for the unit type, in which the value should be returned. Valid values are:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Description</td>
-   </tr>
-   <tr>
-    <td><code>CSS_CM</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in centimeters.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_DEG</code></td>
-    <td>The value is an {{cssxref("&lt;angle&gt;")}} in degrees.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_DIMENSION</code></td>
-    <td>The value is a {{cssxref("&lt;number&gt;")}} with an unknown dimension.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_EMS</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in em units.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_EXS</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in ex units.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_GRAD</code></td>
-    <td>The value is an {{cssxref("&lt;angle&gt;")}} in grads.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_HZ</code></td>
-    <td>The value is a {{cssxref("&lt;frequency&gt;")}} in Hertz. The value can be obtained by using the getFloatValue method.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_IN</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in inches.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_KHZ</code></td>
-    <td>The value is a {{cssxref("&lt;frequency&gt;")}} in Kilohertz.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_MM</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in millimeters.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_MS</code></td>
-    <td>The value is a {{cssxref("&lt;time&gt;")}} in milliseconds.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_NUMBER</code></td>
-    <td>The value is a simple {{cssxref("&lt;number&gt;")}}.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_PC</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in picas.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_PERCENTAGE</code></td>
-    <td>The value is a {{cssxref("&lt;percentage&gt;")}}.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_PT</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in points.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_PX</code></td>
-    <td>The value is a {{cssxref("&lt;length&gt;")}} in pixels.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_RAD</code></td>
-    <td>The value is an {{cssxref("&lt;angle&gt;")}} in radians.</td>
-   </tr>
-   <tr>
-    <td><code>CSS_S</code></td>
-    <td>The value is a {{cssxref("&lt;time&gt;")}} in seconds.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>floatValue</dt>
- <dd>A <code>float</code> representing the new float value.</dd>
+  <dt>unitType</dt>
+  <dd>An <code>unsigned short</code> representing the code for the unit type, in which the
+    value should be returned. Valid values are:
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td class="header">Constant</td>
+          <td class="header">Description</td>
+        </tr>
+        <tr>
+          <td><code>CSS_CM</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in centimeters.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_DEG</code></td>
+          <td>The value is an {{cssxref("&lt;angle&gt;")}} in degrees.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_DIMENSION</code></td>
+          <td>The value is a {{cssxref("&lt;number&gt;")}} with an unknown dimension.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_EMS</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in em units.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_EXS</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in ex units.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_GRAD</code></td>
+          <td>The value is an {{cssxref("&lt;angle&gt;")}} in grads.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_HZ</code></td>
+          <td>The value is a {{cssxref("&lt;frequency&gt;")}} in Hertz. The value can be
+            obtained by using the getFloatValue method.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_IN</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in inches.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_KHZ</code></td>
+          <td>The value is a {{cssxref("&lt;frequency&gt;")}} in Kilohertz.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_MM</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in millimeters.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_MS</code></td>
+          <td>The value is a {{cssxref("&lt;time&gt;")}} in milliseconds.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_NUMBER</code></td>
+          <td>The value is a simple {{cssxref("&lt;number&gt;")}}.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_PC</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in picas.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_PERCENTAGE</code></td>
+          <td>The value is a {{cssxref("&lt;percentage&gt;")}}.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_PT</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in points.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_PX</code></td>
+          <td>The value is a {{cssxref("&lt;length&gt;")}} in pixels.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_RAD</code></td>
+          <td>The value is an {{cssxref("&lt;angle&gt;")}} in radians.</td>
+        </tr>
+        <tr>
+          <td><code>CSS_S</code></td>
+          <td>The value is a {{cssxref("&lt;time&gt;")}} in seconds.</td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt>floatValue</dt>
+  <dd>A <code>float</code> representing the new float value.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -113,41 +119,40 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><strong>Type</strong></th>
-   <th scope="col"><strong>Description</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>DOMException</code></td>
-   <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a float value or if the string value can't be converted into the specified unit.<br>
-    An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col"><strong>Type</strong></th>
+      <th scope="col"><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DOMException</code></td>
+      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a
+        float value or if the string value can't be converted into the specified unit.<br>
+        An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-setFloatValue', 'CSSPrimitiveValue.setFloatValue')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue-setFloatValue',
+        'CSSPrimitiveValue.setFloatValue')}}</td>
+      <td>{{Spec2('DOM2 Style')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CSSPrimitiveValue.setFloatValue")}}</p>
-</div>

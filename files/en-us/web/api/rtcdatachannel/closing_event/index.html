@@ -50,7 +50,7 @@ tags:
 
 <p>First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">dataChannel.addEventListener("closing", ev =&gt; {
+<pre class="brush: js">dataChannel.addEventListener("closing", ev =&gt; {
   myConnectionStatus.icon = closingIcon;
   myConnectionStatus.text = "Connection closing";
 });
@@ -58,7 +58,7 @@ tags:
 
 <p>You can also set the {{domxref("RTCDataChannel.onclosing", "onclosing")}} event handler property directly:</p>
 
-<pre class="brush: js notranslate">pc.onclosing = ev =&gt; {
+<pre class="brush: js">pc.onclosing = ev =&gt; {
  myConnectionStatus.icon = closingIcon;
  myConnectionStatus.text = "Connection closing";
 };

@@ -2,22 +2,26 @@
 title: XPathResult.invalidIteratorState
 slug: Web/API/XPathResult/invalidIteratorState
 tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
+- API
+- DOM XPath API
+- Property
+- Reference
+- XPath
+- XPathResult
 ---
 <div>{{APIRef("DOM XPath")}}</div>
 
-<p>The read-only <strong><code>invalidIteratorState</code></strong> property of the {{domxref("XPathResult")}} interface signifies that the iterator has become invalid. It is <code>true</code> if {{domxref("XPathResult.resultType")}} is <code>UNORDERED_NODE_ITERATOR_TYPE</code> or <code>ORDERED_NODE_ITERATOR_TYPE</code> and the document has been modified since this result was returned.</p>
+<p>The read-only <strong><code>invalidIteratorState</code></strong> property of the
+  {{domxref("XPathResult")}} interface signifies that the iterator has become invalid. It
+  is <code>true</code> if {{domxref("XPathResult.resultType")}} is
+  <code>UNORDERED_NODE_ITERATOR_TYPE</code> or <code>ORDERED_NODE_ITERATOR_TYPE</code> and
+  the document has been modified since this result was returned.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>iteratorState</em> = <em>result</em>.invalidIteratorState;
+<pre class="brush: js">var <em>iteratorState</em> = <em>result</em>.invalidIteratorState;
 </pre>
 
 <h3 id="Return_Value">Return value</h3>
@@ -26,7 +30,8 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows the use of the <code>invalidIteratorState</code> property.</p>
+<p>The following example shows the use of the <code>invalidIteratorState</code> property.
+</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -50,23 +55,21 @@ document.querySelector("output").textContent = result.invalidIteratorState ? "in
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-invalid-iterator-state", "XPathResult.invalidIteratorState")}}</td>
-   <td>{{Spec2("DOM3 XPath")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM3 XPath", "xpath.html#XPathResult-invalid-iterator-state",
+        "XPathResult.invalidIteratorState")}}</td>
+      <td>{{Spec2("DOM3 XPath")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.XPathResult.invalidIteratorState")}}</p>
-</div>

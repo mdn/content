@@ -4,13 +4,13 @@ slug: Tools/DevToolsAPI
 tags:
   - DevTools
 ---
-<p>{{ToolsSidebar}}{{Obsolete_Header}}</p>
+<p>{{ToolsSidebar}}{{deprecated_header}}</p>
 
 <div class="notecard warning">
 <p><strong>Warning:</strong> The DevTools API is still WIP. If you notice any inconsistency, please let The Firefox Developer Tools Team know.</p>
 </div>
 
-<p>While this api is currently a work-in-progress, there are usable portions of <a href="/en-US/docs/Tools/Page_Inspector#Developer_API">page inspector</a> and <a href="/en-US/docs/Tools/Debugger#Extending_Debugger_from_Addons">debugger</a> that may be used currently.</p>
+<p>While this api is currently a work-in-progress, there are usable portions of <a href="/en-US/docs/Tools/Page_Inspector#developer_api">page inspector</a> and <a href="/en-US/docs/Tools/Debugger#extending_debugger_from_addons">debugger</a> that may be used currently.</p>
 
 <h2 id="Introduction">Introduction</h2>
 
@@ -26,7 +26,7 @@ tags:
 
 <p>The <code>gDevTools</code> API can be used to register new tools, themes and handle toolboxes for different tabs and windows. To use the <code>gDevTools</code> API from an add-on, it can be imported with following snippet</p>
 
-<pre class="brush: js"><code>const { gDevTools } = require("resource:///modules/devtools/gDevTools.jsm");</code></pre>
+<pre class="brush: js">const { gDevTools } = require(&quot;resource:///modules/devtools/gDevTools.jsm&quot;);</pre>
 
 <h4 id="Methods">Methods</h4>
 
@@ -375,14 +375,14 @@ tags:
 
 <p>Here's a minimal definition for a tool.</p>
 
-<pre class="brush: js"><code>let def = {
-  id: "my-tool",
-  label: "My Tool",
-  icon: "chrome://browser/skin/devtools/tool-webconsole.svg",
-  url: "about:blank",
+<pre class="brush: js">let def = {
+  id: &quot;my-tool&quot;,
+  label: &quot;My Tool&quot;,
+  icon: &quot;chrome://browser/skin/devtools/tool-webconsole.svg&quot;,
+  url: &quot;about:blank&quot;,
   isTargetSupported: target =&gt; true,
   build: (window, toolbox) =&gt; new MyToolPanel(window, toolbox)
-};</code>
+};
 
 // Register it.
 gDevTools.registerTool(def);
@@ -421,7 +421,7 @@ gDevTools.registerTool(def);
 
 <p>Here's a basic template for a ToolPanel implementation.</p>
 
-<pre class="brush: js"><code>// In the ToolDefinition object, do
+<pre class="brush: js">// In the ToolDefinition object, do
 //   build: (window, target) =&gt; new MyPanel(window, target),
 
 function MyPanel(window, target) {
@@ -431,7 +431,7 @@ function MyPanel(window, target) {
   this.target = target;
 
   // Do synchronous initialization here.
-  window.document.body.addEventListener("click", this.handleClick);
+  window.document.body.addEventListener(&quot;click&quot;, this.handleClick);
 }
 
 MyPanel.prototype = {
@@ -443,17 +443,17 @@ MyPanel.prototype = {
 
   destroy: function() {
     // Synchronous destruction.
-    this.window.document.body.removeEventListener("click", this.handleClick);
+    this.window.document.body.removeEventListener(&quot;click&quot;, this.handleClick);
 
     // Async destruction.
     return this.destroySomethingAsynchronously()
-      .then(() =&gt; console.log("destroyed"));
+      .then(() =&gt; console.log(&quot;destroyed&quot;));
   },
 
   handleClick: function(event) {
-    console.log("Clicked", event.originalTarget);
+    console.log(&quot;Clicked&quot;, event.originalTarget);
   },
-};</code>
+};
 </pre>
 
 <h3 id="EventEmitter">EventEmitter</h3>
@@ -492,49 +492,41 @@ MyPanel.prototype = {
 
 <p>Here's a few examples using the {{anch("gDevTools")}} object.</p>
 
-<pre class="brush: js"><code>let onInit = (eventName, toolbox, netmonitor) =&gt; console.log("Netmonitor initialized!");
+<pre class="brush: js">let onInit = (eventName, toolbox, netmonitor) =&gt; console.log(&quot;Netmonitor initialized!&quot;);
 
 // Attach a listener.
-gDevTools.on("netmonitor-init", onInit);
+gDevTools.on(&quot;netmonitor-init&quot;, onInit);
 
 // Remove a listener.
-gDevTools.off("netmonitor-init", onInit);
+gDevTools.off(&quot;netmonitor-init&quot;, onInit);
 
 // Attach a one time listener.
-gDevTools.once("netmonitor-init", (eventName, toolbox, netmonitor) =&gt; {
-  console.log("Network Monitor initialized once!", toolbox, netmonitor);
+gDevTools.once(&quot;netmonitor-init&quot;, (eventName, toolbox, netmonitor) =&gt; {
+  console.log(&quot;Network Monitor initialized once!&quot;, toolbox, netmonitor);
 });
 
 // Use the Promise returned by the once method.
-gDevTools.once("netmonitor-init").then(toolbox =&gt; {
+gDevTools.once(&quot;netmonitor-init&quot;).then(toolbox =&gt; {
   // Note that the second argument is not available here.
-  console.log("Network Monitor initialized to toolbox", toolbox);
-});</code>
+  console.log(&quot;Network Monitor initialized to toolbox&quot;, toolbox);
+});
 </pre>
 
 <h3 id="ToolSidebar">ToolSidebar</h3>
 
 <p>To build a sidebar in your tool, first, add a xul:tabbox where you want the sidebar to live:</p>
 
-<pre class="line"><code class="brush: html">    <span class="nt">&lt;splitter</span> <span class="na">class=</span><span class="s">"devtools-side-splitter"</span><span class="nt">/&gt;</span></code>
-<code>    <span class="nt">&lt;tabbox</span> <span class="na">id=</span><span class="s">"mytool-sidebar"</span> <span class="na">class=</span><span class="s">"devtools-sidebar-tabs"</span> <span class="na">hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span></code>
-<code>      <span class="nt">&lt;tabs/&gt;</span></code>
-<code>      <span class="nt">&lt;tabpanels</span> <span class="na">flex=</span><span class="s">"1"</span><span class="nt">/&gt;</span></code>
-<code>    <span class="nt">&lt;/tabbox&gt;</span></code></pre>
+<pre class="brush: html">    &lt;splitter class="devtools-side-splitter"/&gt;
+    &lt;tabbox id="mytool-sidebar" class="devtools-sidebar-tabs" hidden="true"&gt;
+      &lt;tabs/&gt;
+      &lt;tabpanels flex="1"/&gt;
+    &lt;/tabbox&gt;</pre>
 
-<div class="line"> </div>
+<p>A sidebar is composed of tabs. Each tab will hold an iframe. For example, in the Inspector, there are 3 tabs (Computed View, Rule View, Layout View). The user can select the tab he wants to see.</p>
 
-<div class="line">A sidebar is composed of tabs. Each tab will hold an iframe. For example, in the Inspector, there are 3 tabs (Computed View, Rule View, Layout View). The user can select the tab he wants to see.</div>
+<p>If the availability of the tabs depends on some tool-related conditions, we might want to not let the user select a tab. This API provides methods to hide the tabstripe. For example, in the Web Console, there are 2 views (Network View and Object View). These views are only available in certain conditions controlled by the WebConsole code. So it's up the WebConsole the hide and show the sidebar, and select the correct tab.</p>
 
-<div class="line"> </div>
-
-<div class="line">If the availability of the tabs depends on some tool-related conditions, we might want to not let the user select a tab. This API provides methods to hide the tabstripe. For example, in the Web Console, there are 2 views (Network View and Object View). These views are only available in certain conditions controlled by the WebConsole code. So it's up the WebConsole the hide and show the sidebar, and select the correct tab.</div>
-
-<div class="line"> </div>
-
-<div class="line">If the loaded document exposes a <code>window.setPanel(ToolPanel)</code> function, the sidebar will call it once the document is loaded.</div>
-
-<div class="line"> </div>
+<p>If the loaded document exposes a <code>window.setPanel(ToolPanel)</code> function, the sidebar will call it once the document is loaded.</p>
 
 <table class="standard-table">
  <tbody>

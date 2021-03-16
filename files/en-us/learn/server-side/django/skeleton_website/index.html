@@ -50,7 +50,7 @@ tags:
 
 <p>For the <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>, the website and project folders are named <em>locallibrary</em>, and includes one application named <em>catalog</em>. The top-level folder structure will therefore be as follows:</p>
 
-<pre class="brush: bash notranslate"><em>locallibrary/         # Website folder</em>
+<pre class="brush: bash"><em>locallibrary/         # Website folder</em>
     <strong>manage.py         </strong><em># Script to run Django tools for this project</em> (created using django-admin)
     <em>locallibrary/     # Website/project folder </em>(created using django-admin)
     <em>catalog/          # Application folder </em>(created using manage.py)
@@ -61,20 +61,20 @@ tags:
 <h2 id="Creating_the_project">Creating the project</h2>
 
 <ol>
- <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">virtual environment</a>. </li>
+ <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment">virtual environment</a>. </li>
  <li>Navigate <span style="line-height: 1.5;">to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: </span><em>django_projects</em>). Then change into your newly-created directory:
- <pre class="brush: bash notranslate">mkdir django_projects
+ <pre class="brush: bash">mkdir django_projects
 cd django_projects</pre>
  </li>
  <li>Create the new project using the <code>django-admin startproject</code> command as shown, and then change into the project folder:
-   <pre class="brush: bash notranslate">django-admin startproject locallibrary
+   <pre class="brush: bash">django-admin startproject locallibrary
 cd locallibrary</pre>
  </li>
 </ol>
 
 <p>The <code>django-admin</code> tool creates a folder/file structure as follows:</p>
 
-<pre class="brush: bash notranslate"><em>locallibrary/</em>
+<pre class="brush: bash"><em>locallibrary/</em>
     manage.py
     <em>locallibrary/</em>
         __init__.py
@@ -85,7 +85,7 @@ cd locallibrary</pre>
 
 <p>Our current working directory should look something like this:</p>
 
-<pre class="syntaxbox notranslate">../django_projects/locallibrary/</pre>
+<pre class="brush: python">../django_projects/locallibrary/</pre>
 
 <p>The <em>locallibrary</em> project sub-folder is the entry point for the website:</p>
 
@@ -103,7 +103,7 @@ cd locallibrary</pre>
 
 <p>Next, run the following command to create the <em>catalog</em> application that will live inside our <em>locallibrary</em> project. Make sure to run this command from the same folder as your project's <strong>manage.py</strong>:</p>
 
-<pre class="brush: bash notranslate">python3 manage.py startapp catalog</pre>
+<pre class="brush: bash">python3 manage.py startapp catalog</pre>
 
 <div class="note">
 <p><strong>Note</strong>: The example command is for Linux/macOS X. On Windows, the command should be: </p>
@@ -119,7 +119,7 @@ cd locallibrary</pre>
 
 <p>The updated project directory should now look like this:</p>
 
-<pre class="brush: bash notranslate"><em>locallibrary/</em>
+<pre class="brush: bash"><em>locallibrary/</em>
     manage.py
     <em>locallibrary/
 </em><strong>    <em>catalog/</em>
@@ -149,7 +149,7 @@ cd locallibrary</pre>
 
 <p>Open the project settings file, <strong>django_projects/locallibrary/locallibrary/settings.py</strong>, and find the definition for the <code>INSTALLED_APPS</code> list. Then add a new line at the end of the list, as shown below:</p>
 
-<pre class="brush: bash notranslate">INSTALLED_APPS = [
+<pre class="brush: bash">INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -172,7 +172,7 @@ cd locallibrary</pre>
 
 <p>We'll use the SQLite database for this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in <strong>settings.py</strong>:</p>
 
-<pre class="brush: python notranslate">DATABASES = {
+<pre class="brush: python">DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -186,7 +186,7 @@ cd locallibrary</pre>
 
 <p>The <strong>settings.py</strong> file is also used for configuring a number of other settings, but at this point, you probably only want to change the <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-TIME_ZONE">TIME_ZONE</a> — this should be made equal to a string from the standard <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of tz database time zones</a> (the TZ column in the table contains the values you want). Change your <code>TIME_ZONE</code> value to one of these strings appropriate for your time zone, for example:</p>
 
-<pre class="brush: python notranslate">TIME_ZONE = 'Europe/London'</pre>
+<pre class="brush: python">TIME_ZONE = 'Europe/London'</pre>
 
 <p>There are two other settings you won't change now, but that you should be aware of:</p>
 
@@ -201,7 +201,7 @@ cd locallibrary</pre>
 
 <p>Open <strong>locallibrary/locallibrary/urls.py</strong> and note the instructional text which explains some of the ways to use the URL mapper.</p>
 
-<pre class="brush: python notranslate">"""locallibrary URL Configuration
+<pre class="brush: python">"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -232,7 +232,7 @@ urlpatterns = [
 
 <p>To add a new list item to the <code>urlpatterns</code> list, add the following lines to the bottom of the file. This new item includes a <code>path()</code> that forwards requests with the pattern <code>catalog/</code> to the module <code>catalog.urls</code> (the file with the relative URL <strong>catalog/urls.py</strong>).</p>
 
-<pre class="brush: python notranslate"># Use include() to add paths from the catalog application
+<pre class="brush: python"># Use include() to add paths from the catalog application
 from django.urls import include
 
 urlpatterns += [
@@ -249,7 +249,7 @@ urlpatterns += [
 
 <p>Add the following lines to the bottom of the file:</p>
 
-<pre class="brush: python notranslate">#Add URL maps to redirect the base URL to our application
+<pre class="brush: python">#Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
@@ -258,7 +258,7 @@ urlpatterns += [
 
 <p>Leave the first parameter of the path function empty to imply '/'. If you write the first parameter as '/' Django will give you the following warning when you start the development server:</p>
 
-<pre class="brush: python notranslate">System check identified some issues:
+<pre class="brush: python">System check identified some issues:
 
 WARNINGS:
 ?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
@@ -270,7 +270,7 @@ If this pattern is targeted in an include(), ensure the include() pattern has a 
 
 <p>Add the following final block to the bottom of the file now:</p>
 
-<pre class="notranslate"><code># Use static() to add url mapping to serve static files during development (only)
+<pre><code># Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -280,7 +280,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 <div class="note">
 <p><strong>Note</strong>: There are a number of ways to extend the <code>urlpatterns</code> list (previously, we just appended a new list item using the <code>+=</code> operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:</p>
 
-<pre class="brush: python notranslate">urlpatterns = [
+<pre class="brush: python">urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='catalog/')),
@@ -291,7 +291,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 
 <p>As a final step, create a file inside your catalog folder called <strong>urls.py</strong>, and add the following text to define the (empty) imported <code>urlpatterns</code>. This is where we'll add our patterns as we build the application.</p>
 
-<pre class="brush: python notranslate">from django.urls import path
+<pre class="brush: python">from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -311,7 +311,7 @@ urlpatterns = [
 
 <p>When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains <strong>manage.py</strong>):</p>
 
-<pre class="brush: bash notranslate">python3 manage.py makemigrations
+<pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate
 </pre>
 
@@ -337,7 +337,7 @@ python3 manage.py migrate
 
 <p>Run the <em>development web server</em> by calling the <code>runserver</code> command (in the same directory as <strong>manage.py</strong>):</p>
 
-<pre class="brush: bash notranslate">python3 manage.py runserver
+<pre class="brush: bash">python3 manage.py runserver
 
  Performing system checks...
 
@@ -350,7 +350,7 @@ python3 manage.py migrate
 
 <p>Once the server is running, you can view the site by navigating to <code>http://127.0.0.1:8000/</code> in your local web browser. You should see a site error page that looks like this:</p>
 
-<p><img alt="Django Debug page for Django 2.0" src="https://mdn.mozillademos.org/files/15729/django_404_debug_page.png"></p>
+<p><img alt="Django Debug page for Django 2.0" src="django_404_debug_page.png"></p>
 
 <p>Don't worry! This error page is expected because we don't have any pages/urls defined in the <code>catalog.urls</code> module (which we're redirected to when we get a URL to the root of the site).</p>
 

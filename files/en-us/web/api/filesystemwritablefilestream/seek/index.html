@@ -9,19 +9,24 @@ tags:
   - stream
   - write
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>seek()</code></strong> method of the {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor offset to the position (in bytes) specified when calling the method.</p>
+<p class="summary">The <strong><code>seek()</code></strong> method of the
+  {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
+  offset to the position (in bytes) specified when calling the method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">FileSystemWritableStream.seek(position).then(...);</pre>
+<pre
+  class="brush: js">FileSystemWritableStream.seek(position).then(...);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>position</code></dt>
- <dd>An unsigned long describing the byte position from the top (beginning) of the file.</dd>
+  <dt><code>position</code></dt>
+  <dd>An unsigned long describing the byte position from the top (beginning) of the file.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -31,10 +36,10 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>NotAllowedError</dt>
- <dd>If the {{domxref('PermissionStatus.state')}} is not 'granted'.</dd>
- <dt>TypeError</dt>
- <dd>If <code>position</code> is not defined or of type unsigned long.</dd>
+  <dt>NotAllowedError</dt>
+  <dd>If the {{domxref('PermissionStatus.state')}} is not 'granted'.</dd>
+  <dt>TypeError</dt>
+  <dd>If <code>position</code> is not defined or of type unsigned long.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -44,18 +49,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API','#api-filesystemwritablefilestream-seek','seek')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System Access
+        API','#api-filesystemwritablefilestream-seek','seek')}}</td>
+      <td>{{Spec2('File System Access API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -65,6 +71,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

@@ -82,8 +82,6 @@ tags:
  <dd>A double-precision floating-point value which indicates the duration (total length) of the media in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>The height of the video's display area, in <a href="https://drafts.csswg.org/css-values/#px">CSS pixels</a> (absolute values only; <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">no percentages</a>.)</dd>
- <dt>{{htmlattrdef("intrinsicsize")}} {{experimental_inline}}</dt>
- <dd>This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.</dd>
  <dt>{{htmlattrdef("muted")}}</dt>
@@ -218,7 +216,7 @@ tags:
 
 <p>Browsers don't all support the same video formats; you can provide multiple sources inside nested {{htmlelement("source")}} elements, and the browser will then use the first one it understands.</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="myVideo.mp4" type="video/mp4"&gt;
   &lt;source src="myVideo.webm" type="video/webm"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is
@@ -261,7 +259,7 @@ tags:
 
 <p>For example, to detect when audio tracks are added to or removed from a <code>&lt;video&gt;</code> element, you can use code like this:</p>
 
-<pre class="brush: js notranslate">var elem = document.querySelector("video");
+<pre class="brush: js">var elem = document.querySelector("video");
 
 elem.audioTrackList.onaddtrack = function(event) {
   trackEditor.addTrack(event.track);
@@ -282,7 +280,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 <p>This example plays a video when activated, providing the user with the browser's default video controls to control playback.</p>
 
-<pre class="brush: html notranslate">&lt;!-- Simple video example --&gt;
+<pre class="brush: html">&lt;!-- Simple video example --&gt;
 &lt;!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org --&gt;
 &lt;!-- Poster from peach.blender.org --&gt;
 &lt;video controls
@@ -304,7 +302,7 @@ and watch it with your favorite video player!
 
 <p>This example builds on the last one, offering three different sources for the media; this allows the video to be watched regardless of which video codecs are supported by the browser.</p>
 
-<pre class="brush: html notranslate">&lt;!-- Using multiple sources as fallbacks for a video tag --&gt;
+<pre class="brush: html">&lt;!-- Using multiple sources as fallbacks for a video tag --&gt;
 &lt;!-- 'Elephants Dream' by Orange Open Movie Project Studio, licensed under CC-3.0, hosted by archive.org --&gt;
 &lt;!-- Poster hosted by Wikimedia --&gt;
 &lt;video width="620" controls
@@ -333,14 +331,14 @@ and watch it with your favorite video player!
 
 <p>If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the <code>"AddType"</code> configuration directive in <code>httpd.conf</code>.</p>
 
-<pre class="notranslate">AddType video/ogg .ogm
+<pre>AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
 </pre>
 
 <p>If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in <code>httpd.conf</code>.</p>
 
-<pre class="notranslate">AddType video/webm .webm
+<pre>AddType video/webm .webm
 </pre>
 
 <p>Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.</p>
@@ -355,7 +353,7 @@ AddType video/ogg .ogg
 
 <p>In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone:</p>
 
-<pre class="notranslate">14
+<pre>14
 00:03:14 --&gt; 00:03:18
 [Dramatic rock music]
 

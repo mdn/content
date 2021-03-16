@@ -60,14 +60,14 @@ tags:
 
 <p>This example logs information about the unhandled promise rejection to the console.</p>
 
-<pre class="brush:js; notranslate">window.addEventListener("unhandledrejection", event =&gt; {
+<pre class="brush: js">window.addEventListener("unhandledrejection", event =&gt; {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
 </pre>
 
 <p>You can also use the {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property to set up the event listener:</p>
 
-<pre class="brush: js notranslate">window.onunhandledrejection = event =&gt; {
+<pre class="brush: js">window.onunhandledrejection = event =&gt; {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
 </pre>
@@ -76,7 +76,7 @@ tags:
 
 <p>Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rejections to the console by default. You can prevent that from happening by adding a handler for <code>unhandledrejection</code> events that—in addition to any other tasks you wish to perform—calls {{domxref("Event.preventDefault()", "preventDefault()")}} to cancel the event, preventing it from bubbling up to be handled by the runtime's logging code. This works because <code>unhandledrejection</code> is cancelable.</p>
 
-<pre class="brush:js; notranslate">window.addEventListener('unhandledrejection', function (event) {
+<pre class="brush: js">window.addEventListener('unhandledrejection', function (event) {
   // ...your code here to handle the unhandled rejection...
 
   // Prevent the default handling (such as outputting the

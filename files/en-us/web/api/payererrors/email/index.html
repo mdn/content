@@ -2,30 +2,37 @@
 title: PayerErrors.email
 slug: Web/API/PayerErrors/email
 tags:
-  - API
-  - Commerce
-  - Email
-  - Errors
-  - PayerErrors
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Shopping
-  - Validation
-  - payment
+- API
+- Commerce
+- Email
+- Errors
+- PayerErrors
+- Payment Request
+- Payment Request API
+- Reference
+- Shopping
+- Validation
+- payment
 ---
 <div>{{APIRef("Payment Request API")}}{{draft}}</div>
 
-<p>The <code><strong>email</strong></code> property is included in a {{domxref("PayerErrors")}} object if the {{domxref("PaymentResponse.payerEmail")}} property failed validation; in this case, the property should contain a string describing how to correct the problem. If the payer's email address passed validation, this property is not included in the <code>PayerErrors</code> object.</p>
+<p>The <code><strong>email</strong></code> property is included in a
+  {{domxref("PayerErrors")}} object if the {{domxref("PaymentResponse.payerEmail")}}
+  property failed validation; in this case, the property should contain a string
+  describing how to correct the problem. If the payer's email address passed validation,
+  this property is not included in the <code>PayerErrors</code> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>payerEmail</em> = <em>payerErrors</em>.email;
+<pre class="brush: js"><em>payerEmail</em> = <em>payerErrors</em>.email;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>If validation of the payer's email address ({{domxref("PaymentResponse.payerEmail")}}) found problems, this property should be set to a {{domxref("DOMString")}} that explains the validation problem and how to correct it. If the email address is valid, this property should be omitted from the {{domxref("PayerErrors")}} object.</p>
+<p>If validation of the payer's email address ({{domxref("PaymentResponse.payerEmail")}})
+  found problems, this property should be set to a {{domxref("DOMString")}} that explains
+  the validation problem and how to correct it. If the email address is valid, this
+  property should be omitted from the {{domxref("PayerErrors")}} object.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -55,23 +62,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dom-payererrors-email','PayerErrors.email')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Payment','#dom-payererrors-email','PayerErrors.email')}}</td>
+      <td>{{Spec2('Payment')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PayerErrors.email")}}</p>
-</div>

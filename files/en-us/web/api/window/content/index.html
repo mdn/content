@@ -10,7 +10,7 @@ slug: Web/API/Window/content
 
 <p>Returns a <a href="/en-US/docs/DOM/window">Window object</a> for the primary content window. This is useful in XUL windows that have a <code>&lt;browser&gt;</code> (or <code>tabbrowser</code> or <code>&lt;iframe&gt;</code>) with <code>type="content-primary"</code> attribute on it — the most famous example is Firefox main window, <code>browser.xul</code>. In such cases, <code>content</code> returns a reference to the <code>Window</code> object for the document currently displayed in the browser. It is a shortcut for <code><var>browserRef</var>.contentWindow</code>.</p>
 
-<p>In unprivileged content (webpages), <code>content</code> is normally equivalent to <a href="/en-US/DOM/window.top">top</a> (except in the case of a webpage loaded in a sidebar, <code>content</code> still refers to the <code>Window</code> of the currently selected tab).</p>
+<p>In unprivileged content (webpages), <code>content</code> is normally equivalent to <a href="/en-US/docs/DOM/window.top">top</a> (except in the case of a webpage loaded in a sidebar, <code>content</code> still refers to the <code>Window</code> of the currently selected tab).</p>
 
 <div class="note">
 <p><strong>Note</strong>: Some examples use <code>_content</code> instead of <code>content</code>. The former has been deprecated for a long time, and you should use <code>content</code> in any new code.</p>
@@ -35,6 +35,6 @@ slug: Web/API/Window/content
 <h3 id="See_also">See also</h3>
 
 <ul>
- <li><a href="/en/docs/Working_with_windows_in_chrome_code">Working with windows in chrome code</a></li>
+ <li><a href="/en-US/docs/Working_with_windows_in_chrome_code">Working with windows in chrome code</a></li>
  <li>When accessing content documents from privileged code, be aware of <a href="/en-US/XPCNativeWrapper">XPCNativeWrappers</a>.</li>
 </ul>

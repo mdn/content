@@ -2,26 +2,27 @@
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
 tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+- ECMAScript 2015
+- Generator
+- JavaScript
+- Method
+- Prototype
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>return()</code></strong> method returns the given value and finishes the generator.</p>
+<p>The <strong><code>return()</code></strong> method returns the given value and finishes
+  the generator.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>gen</var>.return(<var>value</var>)</pre>
+<pre class="brush: js"><var>gen</var>.return(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>value</var></code></dt>
- <dd>The value to return.</dd>
+  <dt><code><var>value</var></code></dt>
+  <dd>The value to return.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,7 +35,7 @@ tags:
 
 <p>The following example shows a simple generator and the <code>return</code> method.</p>
 
-<pre class="brush: js notranslate">function* gen() {
+<pre class="brush: js">function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -47,11 +48,14 @@ g.return('foo'); // { value: "foo", done: true }
 g.next();        // { value: undefined, done: true }
 </pre>
 
-<p>If <code>return(<var>value</var>)</code> is called on a generator that is already in "completed" state, the generator will remain in "completed" state.</p>
+<p>If <code>return(<var>value</var>)</code> is called on a generator that is already in
+  "completed" state, the generator will remain in "completed" state.</p>
 
-<p>If no argument is provided, the <code>value</code> property of returned object is the same as if <code>.next()</code>. If an argument is provided, it will be set to the value of the <code>value</code> property of the returned object.</p>
+<p>If no argument is provided, the <code>value</code> property of returned object is the
+  same as if <code>.next()</code>. If an argument is provided, it will be set to the value
+  of the <code>value</code> property of the returned object.</p>
 
-<pre class="brush: js notranslate">function* gen() {
+<pre class="brush: js">function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -69,27 +73,25 @@ g.return(1); // { value: 1, done: true }
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-generator.prototype.return',
+        'Generator.prototype.return')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Generator.return")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
+  <li>{{jsxref("Statements/function*", "function*")}}</li>
 </ul>

@@ -2,60 +2,70 @@
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 tags:
-  - API
-  - CustomEvent
-  - DOM
-  - Deprecated
-  - Method
-  - Reference
+- API
+- CustomEvent
+- DOM
+- Deprecated
+- Method
+- Reference
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <code><strong>CustomEvent.initCustomEvent()</strong></code> method initializes a <code>CustomEvent</code> object. If the event has already been dispatched, this method does nothing.</p>
+<p>The <code><strong>CustomEvent.initCustomEvent()</strong></code> method initializes a
+  <code>CustomEvent</code> object. If the event has already been dispatched, this method
+  does nothing.</p>
 
-<p>Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.</p>
+<p>Events initialized in this way must have been created with the {{
+  domxref("Document.createEvent()") }} method. This method must be called to set the event
+  before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
+  dispatched, it doesn't do anything anymore.</p>
 
 <div class="note">
-<p><strong>Do not use this method anymore, as it is deprecated.</strong></p>
+  <p><strong>Do not use this method anymore, as it is deprecated.</strong></p>
 
-<p><strong>Note:</strong> Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use those.</p>
+  <p><strong>Note:</strong> Rather than using the feature, instead use specific event
+    constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page
+    on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
+      triggering events</a> gives more information about the way to use those.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>event</em>.initCustomEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>detail</em>);
+<pre class="brush: js"><em>event</em>.initCustomEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>detail</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><em>type</em></code></dt>
- <dd>Is a {{domxref("DOMString")}} containing the name of the event.</dd>
- <dt><em><code>canBubble</code></em></dt>
- <dd>Is a {{jsxref("Boolean")}} indicating whether the event bubbles up through the DOM or not.</dd>
- <dt><code><em>cancelable</em></code></dt>
- <dd>Is a {{jsxref("Boolean")}} indicating whether the event is cancelable.</dd>
- <dt><em><code>detail</code></em></dt>
- <dd>The data passed when initializing the event.</dd>
+  <dt><code><em>type</em></code></dt>
+  <dd>Is a {{domxref("DOMString")}} containing the name of the event.</dd>
+  <dt><em><code>canBubble</code></em></dt>
+  <dd>Is a {{jsxref("Boolean")}} indicating whether the event bubbles up through the DOM
+    or not.</dd>
+  <dt><code><em>cancelable</em></code></dt>
+  <dd>Is a {{jsxref("Boolean")}} indicating whether the event is cancelable.</dd>
+  <dt><em><code>detail</code></em></dt>
+  <dd>The data passed when initializing the event.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-customevent-initcustomevent','CustomEvent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition, but already deprecated in favor of the use of a constructor, {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-customevent-initcustomevent','CustomEvent')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Initial definition, but already deprecated in favor of the use of a constructor,
+        {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -65,6 +75,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("CustomEvent")}}</li>
- <li>The constructor to use instead of this deprecated method: {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.</li>
+  <li>{{domxref("CustomEvent")}}</li>
+  <li>The constructor to use instead of this deprecated method:
+    {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.</li>
 </ul>

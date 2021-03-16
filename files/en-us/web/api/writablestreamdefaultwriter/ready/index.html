@@ -2,22 +2,26 @@
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 tags:
-  - API
-  - Method
-  - Ready
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-  - WritableStreamDefaultWriter
+- API
+- Method
+- Ready
+- Reference
+- Streams
+- Streams API
+- WritableStream
+- WritableStreamDefaultWriter
 ---
 <p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
 
-<p>The <strong><code>ready</code></strong> read-only property of the {{domxref("WritableStreamDefaultWriter")}} interface returns a {{jsxref("Promise")}} that resolves when the desired size of the stream's internal queue transitions from non-positive to positive, signaling that it is no longer applying backpressure.</p>
+<p>The <strong><code>ready</code></strong> read-only property of the
+  {{domxref("WritableStreamDefaultWriter")}} interface returns a {{jsxref("Promise")}}
+  that resolves when the desired size of the stream's internal queue transitions from
+  non-positive to positive, signaling that it is no longer applying backpressure.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.ready;</pre>
+<pre
+  class="brush: js">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.ready;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -25,7 +29,11 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows two uses of the <code>ready</code> property. The first uses <code>ready</code> to ensure that the <code>WritableStream</code> is done writing and thus able to receive data before sending a binary chunk. The second also checks whether the the <code>WritableStream</code> is done writing, but this time because the writing must be finished before the writer can be closed.</p>
+<p>The following example shows two uses of the <code>ready</code> property. The first uses
+  <code>ready</code> to ensure that the <code>WritableStream</code> is done writing and
+  thus able to receive data before sending a binary chunk. The second also checks whether
+  the the <code>WritableStream</code> is done writing, but this time because the writing
+  must be finished before the writer can be closed.</p>
 
 <pre class="brush: js">function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
@@ -63,18 +71,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Streams','#default-writer-ready','ready')}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Streams','#default-writer-ready','ready')}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

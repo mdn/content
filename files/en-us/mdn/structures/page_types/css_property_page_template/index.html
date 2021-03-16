@@ -22,20 +22,20 @@ tags:
 
 <ul>
 	<li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
-	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
-	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
+	<li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
+	<li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 	<li>
-	<div>\{{cssref}} — this generates a suitable CSS sidebar, depending on what tags are included on the page.</div>
+	<div>\{{CSSRef}} — this generates a suitable CSS sidebar, depending on what tags are included on the page.</div>
 	</li>
 </ul>
 
 <h3 id="Tags">Tags</h3>
 
-<p>In an CSS property subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>CSS</strong>, <strong>Reference</strong>, <strong>CSS Property</strong>, <em>the name of the Property</em> (e.g. <strong>background-color</strong>), <strong>Layout, Graphics, CSS Background/CSS Colors/other category</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>).</p>
+<p>In an CSS property subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>CSS</strong>, <strong>Reference</strong>, <strong>CSS Property</strong>, <em>the name of the Property</em> (e.g. <strong>background-color</strong>), <strong>Layout, Graphics, CSS Background/CSS Colors/other category</strong> as appropriate, <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
 
 <h3 id="Browser_compatibility">Browser compatibility</h3>
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables#The_new_way_The_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>. Note that for CSS properties, most of the work has already been done — you just need to check that an entry is available.</p>
+<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>. Note that for CSS properties, most of the work has already been done — you just need to check that an entry is available.</p>
 
 <p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
 
@@ -44,11 +44,11 @@ tags:
 <p>To generate these sections, you need to make sure appropriate entry has been filled in for the property in our <a href="https://github.com/mdn/data/blob/master/css/properties.json">properties.json</a> data file. See <a href="https://github.com/mdn/data/blob/master/css/properties.md">properties.md</a> for more information.</p>
 </div>
 
-<div>{{draft}}{{SeeCompatTable}}{{deprecated_header}}{{cssref}}</div>
+<div>{{draft}}{{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}</div>
 
 <p><span class="summary">The summary paragraph — start by naming the property and saying what it does. This should ideally be 1 or 2 short sentences.</span></p>
 
-<pre class="brush: css notranslate">/* Insert code block showing common use cases */
+<pre class="brush: css">/* Insert code block showing common use cases */
 /* or categories of values */
 </pre>
 
@@ -69,13 +69,13 @@ tags:
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>Fill in a simple example that nicely shows a typical usage of the property, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Structures/Code_examples">code examples</a> for more information).</p>
 
-<pre class="brush: js notranslate">my code block</pre>
+<pre class="brush: js">my code block</pre>
 
 <p>And/or include a list of links to useful code samples that live elsewhere:</p>
 

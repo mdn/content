@@ -2,30 +2,43 @@
 title: SpeechSynthesis.onvoiceschanged
 slug: Web/API/SpeechSynthesis/onvoiceschanged
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - onvoiceschanged
-  - speech
-  - synthesis
+- API
+- Experimental
+- Property
+- Reference
+- SpeechSynthesis
+- Web Speech API
+- onvoiceschanged
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>onvoiceschanged</strong></code> property of the {{domxref("SpeechSynthesis")}} interface represents an event handler that will run when the list of {{domxref("SpeechSynthesisVoice")}} objects that would be returned by the {{domxref("SpeechSynthesis.getVoices()")}} method has changed (when the <a href="/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event">voiceschanged</a> event fires.)</p>
+<p>The <code><strong>onvoiceschanged</strong></code> property of the
+  {{domxref("SpeechSynthesis")}} interface represents an event handler that will run when
+  the list of {{domxref("SpeechSynthesisVoice")}} objects that would be returned by the
+  {{domxref("SpeechSynthesis.getVoices()")}} method has changed (when the <a
+    href="/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event">voiceschanged</a> event
+  fires.)</p>
 
-<p>This may occur when speech synthesis is being done on the server-side and the voices list is being determined asynchronously, or when client-side voices are installed/uninstalled while a speech synthesis application is running.</p>
+<p>This may occur when speech synthesis is being done on the server-side and the voices
+  list is being determined asynchronously, or when client-side voices are
+  installed/uninstalled while a speech synthesis application is running.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">speechSynthesisInstance.onvoiceschanged = function() { ... };
+<pre class="brush: js">speechSynthesisInstance.onvoiceschanged = function() { ... };
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This could be used to populate a list of voices that the user can choose between when the event fires (see our <a href="https://github.com/mdn/web-speech-api/blob/gh-pages/speak-easy-synthesis/script.js">Speak easy synthesis demo</a>.) Note that Firefox doesn't support it at present, and will just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired. With Chrome however, you have to wait for the event to fire before populating the list, hence the bottom if statement seen below.</p>
+<p>This could be used to populate a list of voices that the user can choose between when
+  the event fires (see our <a
+    href="https://github.com/mdn/web-speech-api/blob/gh-pages/speak-easy-synthesis/script.js">Speak
+    easy synthesis demo</a>.) Note that Firefox doesn't support it at present, and will
+  just return a list of voices when {{domxref("SpeechSynthesis.getVoices()")}} is fired.
+  With Chrome however, you have to wait for the event to fire before populating the list,
+  hence the bottom if statement seen below.</p>
 
 <pre class="brush: js">var voices = [];
 
@@ -54,29 +67,27 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dom-speechsynthesis-onvoiceschanged', 'onvoiceschanged')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesis-onvoiceschanged',
+        'onvoiceschanged')}}</td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesis.onvoiceschanged")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

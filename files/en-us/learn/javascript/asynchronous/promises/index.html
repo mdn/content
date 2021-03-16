@@ -49,7 +49,7 @@ tags:
 
 <p>The code that the video chat application would use might look something like this:</p>
 
-<pre class="brush: js notranslate">function handleCallButton(evt) {
+<pre class="brush: js">function handleCallButton(evt) {
   setStatusMessage("Calling...");
   navigator.mediaDevices.getUserMedia({video: true, audio: true})
     .then(chatStream =&gt; {
@@ -69,7 +69,7 @@ tags:
 <p>The important thing here is that the <code>getUserMedia()</code> call returns almost immediately, even if the camera stream hasn't been obtained yet. Even if the <code>handleCallButton()</code> function has already returned to the code that called it, when <code>getUserMedia()</code> has finished working, it calls the handler you provide. As long as the app doesn't assume that streaming has begun, it can just keep on running.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> You can learn more about this somewhat advanced topic, if you're interested, in the article <a href="/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>. Code similar to this, but much more complete, is used in that example.</p>
+<p><strong>Note:</strong> You can learn more about this somewhat advanced topic, if you're interested, in the article <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>. Code similar to this, but much more complete, is used in that example.</p>
 </div>
 
 <h2 id="The_trouble_with_callbacks">The trouble with callbacks</h2>
@@ -84,9 +84,9 @@ tags:
  <li>You then collect your pizza and eat. This might fail if, say, you forgot your wallet so can't pay for the pizza!</li>
 </ol>
 
-<p>With old-style <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Callbacks">callbacks</a>, a pseudo-code representation of the above functionality might look something like this:</p>
+<p>With old-style <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks">callbacks</a>, a pseudo-code representation of the above functionality might look something like this:</p>
 
-<pre class="brush: js notranslate">chooseToppings(function(toppings) {
+<pre class="brush: js">chooseToppings(function(toppings) {
   placeOrder(toppings, function(order) {
     collectOrder(order, function(pizza) {
       eatPizza(pizza);
@@ -100,7 +100,7 @@ tags:
 
 <p>Promises make situations like the above much easier to write, parse, and run. If we represented the above pseudo-code using asynchronous promises instead, we'd end up with something like this:</p>
 
-<pre class="brush: js notranslate">chooseToppings()
+<pre class="brush: js">chooseToppings()
 .then(function(toppings) {
   return placeOrder(toppings);
 })
@@ -116,7 +116,7 @@ tags:
 
 <p>Using arrow functions, you can simplify the code even further:</p>
 
-<pre class="brush: js notranslate">chooseToppings()
+<pre class="brush: js">chooseToppings()
 .then(toppings =&gt;
   placeOrder(toppings)
 )
@@ -130,7 +130,7 @@ tags:
 
 <p>Or even this:</p>
 
-<pre class="brush: js notranslate">chooseToppings()
+<pre class="brush: js">chooseToppings()
 .then(toppings =&gt; placeOrder(toppings))
 .then(order =&gt; collectOrder(order))
 .then(pizza =&gt; eatPizza(pizza))
@@ -140,7 +140,7 @@ tags:
 
 <p>You could even do this, since the functions just pass their arguments directly, so there isn't any need for that extra layer of functions:</p>
 
-<pre class="brush: js notranslate">chooseToppings().then(placeOrder).then(collectOrder).then(eatPizza).catch(failureCallback);</pre>
+<pre class="brush: js">chooseToppings().then(placeOrder).then(collectOrder).then(eatPizza).catch(failureCallback);</pre>
 
 <p>This is not quite as easy to read, however, and this syntax might not be usable if your blocks are more complex than what we've shown here.</p>
 
@@ -159,7 +159,7 @@ tags:
 
 <p>Promises are important to understand because most modern Web APIs use them for functions that perform potentially lengthy tasks. To use modern web technologies you'll need to use promises. Later on in the chapter, we'll look at how to write your own promise, but for now, we'll look at some simple examples that you'll encounter in Web APIs.</p>
 
-<p>In the first example, we'll use the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> method to fetch an image from the web, the {{domxref("Body.blob", "blob()")}} method to transform the fetch response's raw body contents into a {{domxref("Blob")}} object, and then display that blob inside an {{htmlelement("img")}} element. This is very similar to the example we looked at in the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Asynchronous_JavaScript">first article of the series</a>, but we'll do it a bit differently as we get you building your own promise-based code.</p>
+<p>In the first example, we'll use the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> method to fetch an image from the web, the {{domxref("Body.blob", "blob()")}} method to transform the fetch response's raw body contents into a {{domxref("Blob")}} object, and then display that blob inside an {{htmlelement("img")}} element. This is very similar to the example we looked at in the <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript">first article of the series</a>, but we'll do it a bit differently as we get you building your own promise-based code.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The following example will not work if you just run it directly from the file (i.e. via a <code>file://</code> URL). You need to run it through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local testing server</a>, or use an online solution such as <a href="https://glitch.com/">Glitch</a> or <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a>.</p>
@@ -175,12 +175,12 @@ tags:
  <li>
   <p>Inside your {{HTMLElement("script")}} element, add the following line:</p>
 
-  <pre class="brush: js notranslate">let promise = fetch('coffee.jpg');</pre>
+  <pre class="brush: js">let promise = fetch('coffee.jpg');</pre>
 
   <p>This calls the <code>fetch()</code> method, passing it the URL of the image to fetch from the network as a parameter. This can also take an options object as an optional second parameter, but we are just using the simplest version for now. We are storing the promise object returned by <code>fetch()</code> inside a variable called <code>promise</code>. As we said before, this object represents an intermediate state that is initially neither success nor failure — the official term for a promise in this state is <strong>pending</strong>.</p>
  </li>
  <li>
-  <p>To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> method of the promise object. The callback inside the <code>.then()</code> block (referred to as the <strong>executor</strong>) runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been <strong>fulfilled</strong>. It is passed the returned {{domxref("Response")}} object as a parameter.</p>
+  <p>To respond to the successful completion of the operation whenever that occurs (in this case, when a {{domxref("Response")}} is returned), we invoke the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">.then()</a></code> method of the promise object. The callback inside the <code>.then()</code> block runs only when the promise call completes successfully and returns the {{domxref("Response")}} object — in promise-speak, when it has been <strong>fulfilled</strong>. It is passed the returned {{domxref("Response")}} object as a parameter.</p>
 
   <div class="notecard note">
   <p><strong>Note</strong>: The way that a <code>.then()</code> block works is similar to when you add an event listener to an object using <code>AddEventListener()</code>. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a <code>.then()</code> will only run once for each time it is used, whereas an event listener could be invoked multiple times.</p>
@@ -188,17 +188,17 @@ tags:
 
   <p>We immediately run the <code>blob()</code> method on this response to ensure that the response body is fully downloaded, and when it is available transform it into a <code>Blob</code> object that we can do something with. The result of this is returned like so:</p>
 
-  <pre class="brush: js notranslate">response =&gt; response.blob()</pre>
+  <pre class="brush: js">response =&gt; response.blob()</pre>
 
   <p>which is shorthand for</p>
 
-  <pre class="brush: js notranslate">function(response) {
+  <pre class="brush: js">function(response) {
   return response.blob();
 }</pre>
 
   <p>Unfortunately, we need to do slightly more than this. Fetch promises do not fail on 404 or 500 errors — only on something catastrophic like a network failure. Instead, they succeed, but with the <code><a href="/en-US/docs/Web/API/Response/ok">response.ok</a></code> property set to <code>false</code>. To produce an error on a 404, for example, we need to check the value of <code>response.ok</code>, and if <code>false</code>, throw an error, only returning the blob if it is <code>true</code>. This can be done like so — add the following lines below your first line of JavaScript.</p>
 
-  <pre class="brush: js notranslate">let promise2 = promise.then(response =&gt; {
+  <pre class="brush: js">let promise2 = promise.then(response =&gt; {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   } else {
@@ -211,14 +211,14 @@ tags:
 
   <p>Add the following to the end of your code:</p>
 
-  <pre class="brush: js notranslate">let promise3 = promise2.then(myBlob =&gt; {
+  <pre class="brush: js">let promise3 = promise2.then(myBlob =&gt; {
 
 })</pre>
  </li>
  <li>
-  <p>Now let's fill in the body of the executor function. Add the following lines inside the curly braces:</p>
+   <p>Now let's fill in the body of the <code>.then()</code> callback. Add the following lines inside the curly braces:</p>
 
-  <pre class="brush: js notranslate">let objectURL = URL.createObjectURL(myBlob);
+  <pre class="brush: js">let objectURL = URL.createObjectURL(myBlob);
 let image = document.createElement('img');
 image.src = objectURL;
 document.body.appendChild(image);</pre>
@@ -237,7 +237,7 @@ document.body.appendChild(image);</pre>
 
 <p>Something is missing — currently, there is nothing to explicitly handle errors if one of the promises fails (<strong>rejects</strong>, in promise-speak). We can add error handling by running the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">.catch()</a></code> method off the previous promise. Add this now:</p>
 
-<pre class="brush: js notranslate">let errorCase = promise3.catch(e =&gt; {
+<pre class="brush: js">let errorCase = promise3.catch(e =&gt; {
   console.log('There has been a problem with your fetch operation: ' + e.message);
 });</pre>
 
@@ -253,7 +253,7 @@ document.body.appendChild(image);</pre>
 
 <p>This is a very longhand way of writing this out; we've deliberately done this to help you understand what is going on clearly. As shown earlier on in the article, you can chain together <code>.then()</code> blocks (and also <code>.catch()</code> blocks). The above code could also be written like this (see also <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html">simple-fetch-chained.html</a> on GitHub):</p>
 
-<pre class="brush: js notranslate">fetch('coffee.jpg')
+<pre class="brush: js">fetch('coffee.jpg')
 .then(response =&gt; {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -271,7 +271,7 @@ document.body.appendChild(image);</pre>
   console.log('There has been a problem with your fetch operation: ' + e.message);
 });</pre>
 
-<p>Bear in mind that the value returned by a fulfilled promise becomes the parameter passed to the next <code>.then()</code> block's executor function.</p>
+<p>Bear in mind that the value returned by a fulfilled promise becomes the parameter passed to the next <code>.then()</code> block's callback function.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: <code>.then()</code>/<code>.catch()</code> blocks in promises are basically the async equivalent of a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block in sync code. Bear in mind that synchronous <code>try...catch</code> won't work in async code.</p>
@@ -279,13 +279,13 @@ document.body.appendChild(image);</pre>
 
 <h2 id="Promise_terminology_recap">Promise terminology recap</h2>
 
-<p>There was a lot to cover in the above section, so let's go back over it quickly to give you a <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#Promise_terminology_recap">short guide that you can bookmark</a> and use to refresh your memory in the future. You should also go over the above section again a few more time to make sure these concepts stick.</p>
+<p>There was a lot to cover in the above section, so let's go back over it quickly to give you a <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#promise_terminology_recap">short guide that you can bookmark</a> and use to refresh your memory in the future. You should also go over the above section again a few more time to make sure these concepts stick.</p>
 
 <ol>
  <li>When a promise is created, it is neither in a success or failure state. It is said to be <strong>pending</strong>.</li>
  <li>When a promise returns, it is said to be <strong>resolved</strong>.
   <ol>
-   <li>A successfully resolved promise is said to be <strong>fulfilled</strong>. It returns a value, which can be accessed by chaining a <code>.then()</code> block onto the end of the promise chain. The executor function inside the <code>.then()</code> block will contain the promise's return value.</li>
+   <li>A successfully resolved promise is said to be <strong>fulfilled</strong>. It returns a value, which can be accessed by chaining a <code>.then()</code> block onto the end of the promise chain. The callback function inside the <code>.then()</code> block will contain the promise's return value.</li>
    <li>An unsuccessful resolved promise is said to be <strong>rejected</strong>. It returns a <strong>reason</strong>, an error message stating why the promise was rejected. This reason can be accessed by chaining a <code>.catch()</code> block onto the end of the promise chain.</li>
   </ol>
  </li>
@@ -297,11 +297,11 @@ document.body.appendChild(image);</pre>
 
 <p>You can do this with the ingeniously named <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code> static method. This takes an array of promises as an input parameter and returns a new <code>Promise</code> object that will fulfil only if and when <em>all</em> promises in the array fulfil. It looks something like this:</p>
 
-<pre class="brush: js notranslate">Promise.all([a, b, c]).then(values =&gt; {
+<pre class="brush: js">Promise.all([a, b, c]).then(values =&gt; {
   ...
 });</pre>
 
-<p>If they all fulfil, the chained <code>.then()</code> block's executor function will be passed an array containing all those results as a parameter. If any of the promises passed to <code>Promise.all()</code> reject, the whole block will reject.</p>
+<p>If they all fulfil, the chained <code>.then()</code> block's callback function will be passed an array containing all those results as a parameter. If any of the promises passed to <code>Promise.all()</code> reject, the whole block will reject.</p>
 
 <p>This can be very useful. Imagine that we’re fetching information to dynamically populate a UI feature on our page with content. In many cases, it makes sense to receive all the data and only then show the complete content, rather than displaying partial information.</p>
 
@@ -317,7 +317,7 @@ document.body.appendChild(image);</pre>
  <li>
   <p>In our script, we'll first define a function that returns the promises we want to send to <code>Promise.all()</code>. This would be easy if we just wanted to run the <code>Promise.all()</code> block in response to three <code>fetch()</code> operations completing. We could just do something like:</p>
 
-  <pre class="brush: js notranslate">let a = fetch(url1);
+  <pre class="brush: js">let a = fetch(url1);
 let b = fetch(url2);
 let c = fetch(url3);
 
@@ -329,7 +329,7 @@ Promise.all([a, b, c]).then(values =&gt; {
 
   <p>However, we don't want to do this. Our code doesn't care when the <code>fetch()</code> operations are done. Instead, what we want is the loaded data. That means we want to run the <code>Promise.all()</code> block when we get back usable blobs representing the images, and a usable text string. We can write a function that does this; add the following inside your <code>&lt;script&gt;</code> element:</p>
 
-  <pre class="brush: js notranslate">function fetchAndDecode(url, type) {
+  <pre class="brush: js">function fetchAndDecode(url, type) {
   return fetch(url).then(response =&gt; {
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -353,7 +353,7 @@ Promise.all([a, b, c]).then(values =&gt; {
    <li>Inside the function body, we have a similar structure to what we saw in the first example — we call the <code>fetch()</code> function to fetch the resource at the specified URL, then chain it onto another promise that returns the decoded (or "read") response body. This was always the <code>blob()</code> method in the previous example.</li>
    <li>However, two things are different here:
     <ul>
-     <li>First of all, the second promise we return is different depending on what the <code>type</code> value is. Inside the executor function, we include a simple <code>if ... else if</code> statement to return a different promise depending on what type of file we need to decode (in this case we've got a choice of <code>blob</code> or <code>text</code>, but it would be easy to extend this to deal with other types as well).</li>
+     <li>First of all, the second promise we return is different depending on what the <code>type</code> value is. Inside the <code>.then()</code> callback function, we include a simple <code>if ... else if</code> statement to return a different promise depending on what type of file we need to decode (in this case we've got a choice of <code>blob</code> or <code>text</code>, but it would be easy to extend this to deal with other types as well).</li>
      <li>Second, we have added the <code>return</code> keyword before the <code>fetch()</code> call. The effect this has is to run the entire chain and then run the final result (i.e. the promise returned by <code>blob()</code> or <code>text()</code>) as the return value of the function we've just defined. In effect, the <code>return</code> statements pass the results back up the chain to the top.</li>
     </ul>
    </li>
@@ -367,23 +367,23 @@ Promise.all([a, b, c]).then(values =&gt; {
  <li>
   <p>Next, we call our function three times to begin the process of fetching and decoding the images and text and store each of the returned promises in a variable. Add the following below your previous code:</p>
 
-  <pre class="brush: js notranslate">let coffee = fetchAndDecode('coffee.jpg', 'blob');
+  <pre class="brush: js">let coffee = fetchAndDecode('coffee.jpg', 'blob');
 let tea = fetchAndDecode('tea.jpg', 'blob');
 let description = fetchAndDecode('description.txt', 'text');</pre>
  </li>
  <li>
-  <p>Next, we will define a <code>Promise.all()</code> block to run some code only when all three of the promises stored above have successfully fulfilled. To begin with, add a block with an empty executor inside the <code>.then()</code> call, like so:</p>
+  <p>Next, we will define a <code>Promise.all()</code> block to run some code only when all three of the promises stored above have successfully fulfilled. To begin with, add a block with an empty callback function inside the <code>.then()</code> call, like so:</p>
 
-  <pre class="brush: js notranslate">Promise.all([coffee, tea, description]).then(values =&gt; {
+  <pre class="brush: js">Promise.all([coffee, tea, description]).then(values =&gt; {
 
 });</pre>
 
-  <p>You can see that it takes an array containing the promises as a parameter. The executor will only run when all three promises resolve; when that happens, it will be passed an array containing the results from the individual promises (i.e. the decoded response bodies), kind of like [coffee-results, tea-results, description-results].</p>
+  <p>You can see that it takes an array containing the promises as a parameter. The <code>.then()</code> callback function will only run when all three promises resolve; when that happens, it will be passed an array containing the results from the individual promises (i.e. the decoded response bodies), kind of like [coffee-results, tea-results, description-results].</p>
  </li>
  <li>
-  <p>Finally, add the following inside the executor. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.</p>
+  <p>Finally, add the following inside the callback. Here we use some fairly simple sync code to store the results in separate variables (creating object URLs from the blobs), then display the images and text on the page.</p>
 
-  <pre class="brush: js notranslate">console.log(values);
+  <pre class="brush: js">console.log(values);
 // Store each value returned from the promises in separate variables; create object URLs from the blobs
 let objectURL1 = URL.createObjectURL(values[0]);
 let objectURL2 = URL.createObjectURL(values[1]);
@@ -423,7 +423,7 @@ document.body.appendChild(para);</pre>
 
 <p>There will be cases where you want to run a final block of code after a promise completes, regardless of whether it fulfilled or rejected. Previously you'd have to include the same code in both the <code>.then()</code> and <code>.catch()</code> callbacks, for example:</p>
 
-<pre class="brush: js notranslate">myPromise
+<pre class="brush: js">myPromise
 .then(response =&gt; {
   doSomething(response);
   runFinalCode();
@@ -435,7 +435,7 @@ document.body.appendChild(para);</pre>
 
 <p>In more recent modern browsers, the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code> method is available, which can be chained onto the end of your regular promise chain allowing you to cut down on code repetition and do things more elegantly. The above code can now be written as follows:</p>
 
-<pre class="brush: js notranslate">myPromise
+<pre class="brush: js">myPromise
 .then(response =&gt; {
   doSomething(response);
 })
@@ -448,7 +448,7 @@ document.body.appendChild(para);</pre>
 
 <p>For a real example, take a look at our <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-finally.html">promise-finally.html demo</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-finally.html">source code</a> also). This works the same as the <code>Promise.all()</code> demo we looked at in the above section, except that in the <code>fetchAndDecode()</code> function we chain a <code>finally()</code> call on to the end of the chain:</p>
 
-<pre class="brush: js notranslate">function fetchAndDecode(url, type) {
+<pre class="brush: js">function fetchAndDecode(url, type) {
   return fetch(url).then(response =&gt; {
     if(!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -486,7 +486,7 @@ document.body.appendChild(para);</pre>
 
 <p>Let's have a look at a simple example to get you started — here we wrap a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call with a promise — this runs a function after two seconds that resolves the promise (using the passed <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code> call) with a string of "Success!".</p>
 
-<pre class="brush: js notranslate">let timeoutPromise = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">let timeoutPromise = new Promise((resolve, reject) =&gt; {
   setTimeout(function(){
     resolve('Success!');
   }, 2000);
@@ -496,14 +496,14 @@ document.body.appendChild(para);</pre>
 
 <p>So when you call this promise, you can chain a <code>.then()</code> block onto the end of it and it will be passed a string of "Success!". In the below code we alert that message:</p>
 
-<pre class="brush: js notranslate">timeoutPromise
+<pre class="brush: js">timeoutPromise
 .then((message) =&gt; {
    alert(message);
 })</pre>
 
 <p>or even just</p>
 
-<pre class="brush: js notranslate">timeoutPromise.then(alert);
+<pre class="brush: js">timeoutPromise.then(alert);
 </pre>
 
 <p>Try <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise.html">running this live</a> to see the result (also see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html">source code</a>).</p>
@@ -522,7 +522,7 @@ document.body.appendChild(para);</pre>
 
 <p>Take a copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html">previous example</a>, and replace the existing <code>timeoutPromise()</code> definition with this:</p>
 
-<pre class="brush: js notranslate">function timeoutPromise(message, interval) {
+<pre class="brush: js">function timeoutPromise(message, interval) {
   return new Promise((resolve, reject) =&gt; {
     if (message === '' || typeof message !== 'string') {
       reject('Message is empty or not a string');
@@ -548,7 +548,7 @@ document.body.appendChild(para);</pre>
 
 <p>Since the <code>timeoutPromise()</code> function returns a <code>Promise</code>, we can chain <code>.then()</code>, <code>.catch()</code>, etc. onto it to make use of its functionality. Let's use it now — replace the previous <code>timeoutPromise</code> usage with this one:</p>
 
-<pre class="brush: js notranslate">timeoutPromise('Hello there!', 1000)
+<pre class="brush: js">timeoutPromise('Hello there!', 1000)
 .then(message =&gt; {
    alert(message);
 })

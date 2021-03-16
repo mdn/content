@@ -2,36 +2,47 @@
 title: HTMLDialogElement.open
 slug: Web/API/HTMLDialogElement/open
 tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLDialogElement
-  - Property
-  - Reference
-  - open
+- API
+- Experimental
+- HTML DOM
+- HTMLDialogElement
+- Property
+- Reference
+- open
 ---
 <div>
-<div>{{ APIRef("HTML DOM") }}</div>
+  <div>{{ APIRef("HTML DOM") }}</div>
 
-<p>{{ SeeCompatTable() }}</p>
+  <p>{{ SeeCompatTable() }}</p>
 
-<p>The <strong><code>open</code></strong> property of the {{domxref("HTMLDialogElement")}} interface is a {{domxref("Boolean")}} reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.</p>
+  <p>The <strong><code>open</code></strong> property of the
+    {{domxref("HTMLDialogElement")}} interface is a {{domxref("Boolean")}} reflecting the
+    {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is
+    available for interaction.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">dialogInstance.open = true;
+<pre class="brush: js">dialogInstance.open = true;
 var myOpenValue = dialogInstance.open;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}} representing the state of the {{htmlattrxref("open", "dialog")}} HTML attribute. <code>true</code> means it is set, and therefore the dialog is shown. <code>false</code> means it not set, and therefore the dialog is not shown.</p>
+<p>A {{domxref("Boolean")}} representing the state of the {{htmlattrxref("open",
+  "dialog")}} HTML attribute. <code>true</code> means it is set, and therefore the dialog
+  is shown. <code>false</code> means it not set, and therefore the dialog is not shown.
+</p>
 
-<p>The property is now read only — it is possible to set the value to programmatically show or hide the dialog.</p>
+<p>The property is now read only — it is possible to set the value to programmatically
+  show or hide the dialog.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method. From there you can click the <em>Cancel</em> button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.</p>
+<p>The following example shows a simple button that, when clicked, opens a
+  {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method.
+  From there you can click the <em>Cancel</em> button to close the dialog (via the
+  {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
+  button.</p>
 
 <pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
   &lt;dialog id="favDialog"&gt;
@@ -87,31 +98,35 @@ var myOpenValue = dialogInstance.open;</pre>
   &lt;/script&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a> (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live also</a>).</p>
+  <p><strong>Note</strong>: You can find this example on GitHub as <a
+      href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a>
+    (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live
+      also</a>).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-open', 'open')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-open', 'open')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-open', 'open')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-open',
+        'open')}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -121,5 +136,5 @@ var myOpenValue = dialogInstance.open;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
+  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
 </ul>

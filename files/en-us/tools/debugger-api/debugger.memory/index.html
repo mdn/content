@@ -97,7 +97,7 @@ slug: Tools/Debugger-API/Debugger.Memory
   <dd>
   <p>The <code>collections</code> property’s value is an array. Because SpiderMonkey’s collector is incremental, a full collection cycle may consist of multiple discrete collection slices with the JS mutator running interleaved. For each collection slice that occurred, there is an entry in the <code>collections</code> array with the following form:</p>
 
-  <pre class="language-js notranslate"><code>
+  <pre class="language-js"><code>
 {
   "startTimestamp":<em>timestamp</em>,
   "endTimestamp":<em>timestamp</em>,
@@ -165,7 +165,7 @@ slug: Tools/Debugger-API/Debugger.Memory
 
 <h2 id="Function_Properties_of_the_Debugger.Memory.prototype_Object">Function Properties of the <code>Debugger.Memory.prototype</code> Object</h2>
 
-<h2 id="Memory_Use_Analysis_Exposes_Implementation_Details"><em><em>Memory Use Analysis Exposes Implementation Details</em></em></h2>
+<h2 id="Memory_Use_Analysis_Exposes_Implementation_Details">Memory Use Analysis Exposes Implementation Details</h2>
 
 <p>Memory analysis may yield surprising results, because browser implementation details that are transparent to content JavaScript often have visible effects on memory consumption. Web developers need to know their pages’ actual memory consumption on real browsers, so it is correct for the tool to expose these behaviors, as long as it is done in a way that helps developers make decisions about their own code.</p>
 

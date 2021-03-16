@@ -2,26 +2,30 @@
 title: History.forward()
 slug: Web/API/History/forward
 tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
+- API
+- HTML DOM
+- History
+- History API
+- Method
+- Reference
 ---
 <div>{{APIRef("History API")}}</div>
 
-<p>The <strong><code>History.forward()</code></strong> method causes the browser to move forward one page in the session history. It has the same effect as calling {{domxref("History.go", "history.go(1)")}}.</p>
+<p>The <strong><code>History.forward()</code></strong> method causes the browser to move
+  forward one page in the session history. It has the same effect as calling
+  {{domxref("History.go", "history.go(1)")}}.</p>
 
-<p>This method is {{glossary("asynchronous")}}. Add a listener for the {{event("popstate")}} event in order to determine when the navigation has completed.</p>
+<p>This method is {{glossary("asynchronous")}}. Add a listener for the
+  {{event("popstate")}} event in order to determine when the navigation has completed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">history.forward()</pre>
+<pre class="brush: js">history.forward()</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following examples create a button that moves forward one step in the session history.</p>
+<p>The following examples create a button that moves forward one step in the session
+  history.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -29,30 +33,30 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'go-forward'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> <span class="parameter token">e</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-  window<span class="punctuation token">.</span>history<span class="punctuation token">.forward</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span></code></pre>
+<pre class="brush: js line-numbers language-js">document.getElementById('go-forward').addEventListener('click', e =&gt; {
+  window.history.forward();
+})</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#history", "History")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "browsers.html#history", "History")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "browsers.html#history", "History")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML5 W3C", "browsers.html#history", "History")}}</td>
+      <td>{{Spec2("HTML5 W3C")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -62,6 +66,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("History")}}</li>
- <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
+  <li>{{domxref("History")}}</li>
+  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with
+      the History API</a></li>
 </ul>

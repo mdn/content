@@ -2,23 +2,28 @@
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 tags:
-  - API
-  - DOM
-  - DOM Events
-  - Method
-  - MouseEvent
-  - Reference
-  - getModifierState
+- API
+- DOM
+- DOM Events
+- Method
+- MouseEvent
+- Reference
+- getModifierState
 ---
 <p id="Summary">{{APIRef("DOM Events")}}</p>
 
-<p>The <strong><code>MouseEvent.getModifierState()</code></strong> method returns the current state of the specified modifier key: <code>true</code> if the modifier is active (i.e., the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
+<p>The <strong><code>MouseEvent.getModifierState()</code></strong> method returns the
+  current state of the specified modifier key: <code>true</code> if the modifier is active
+  (i.e., the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
 
-<p>See the document of {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()")}} for details.</p>
+<p>See the document of
+  {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()")}} for
+  details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <code><em>active</em> = <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
+<pre
+  class="brush: js">var <code><em>active</em> = <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
 
 <h3 id="Returns">Returns </h3>
 
@@ -27,25 +32,28 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em><code>keyArg</code></em></dt>
- <dd>A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or <code>"Accel"</code>. This is case-sensitive.</dd>
+  <dt><em><code>keyArg</code></em></dt>
+  <dd>A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
+    values which represent modifier keys or <code>"Accel"</code>. This is case-sensitive.
+  </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#widl-MouseEvent-getModifierState', 'getModifierState()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Events', '#widl-MouseEvent-getModifierState',
+        'getModifierState()')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,6 +63,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("MouseEvent")}} this method belongs to.</li>
- <li>{{domxref("KeyboardEvent.getModifierState")}}</li>
+  <li>The {{domxref("MouseEvent")}} this method belongs to.</li>
+  <li>{{domxref("KeyboardEvent.getModifierState")}}</li>
 </ul>

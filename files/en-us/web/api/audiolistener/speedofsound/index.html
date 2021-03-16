@@ -12,17 +12,23 @@ tags:
 ---
 <div>{{ APIRef("Web Audio API") }}{{deprecated_header}}</div>
 
-<p>The <strong><code>speedOfSound</code></strong> property of the {{ domxref("AudioListener") }} interface is a double value representing the speed of sound, in <em>meters per second</em>.</p>
+<p>The <strong><code>speedOfSound</code></strong> property of the {{
+  domxref("AudioListener") }} interface is a double value representing the speed of sound,
+  in <em>meters per second</em>.</p>
 
-<p>The <code>speedOfSound</code> property's default value is <code>343.3</code> m/s and is used to calculate the <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler shift</a> appropriate for the speed the panner is travelling at (as defined by {{domxref("PannerNode.setVelocity")}}.)</p>
+<p>The <code>speedOfSound</code> property's default value is <code>343.3</code> m/s and is
+  used to calculate the <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler
+    shift</a> appropriate for the speed the panner is travelling at (as defined by
+  {{domxref("PannerNode.setVelocity")}}.)</p>
 
 <div class="note">
-<p><strong>Note</strong>: Bear in mind that no propagation delay is automatically applied to a sound far from the listener.</p>
+  <p><strong>Note</strong>: Bear in mind that no propagation delay is automatically
+    applied to a sound far from the listener.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>audioCtx</em> = new AudioContext();
+<pre class="brush: js">var <em>audioCtx</em> = new AudioContext();
 var <em>myListener</em> = <em>audioCtx</em>.listener;
 <em>myListener</em>.speedOfSound = 343.3;
 </pre>
@@ -37,13 +43,11 @@ var <em>myListener</em> = <em>audioCtx</em>.listener;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioListener.speedOfSound")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

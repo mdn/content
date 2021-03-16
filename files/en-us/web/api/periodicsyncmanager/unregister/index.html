@@ -2,27 +2,31 @@
 title: PeriodicSyncManager.unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
+- Background Sync
+- Method
+- Offline
+- PWA
+- PeriodicSyncManager
+- Service Worker
+- Web Periodic Background Synchronization API
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
-<p class="summary">The <strong><code>unregister()</code></strong> method of the {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves when unregistration completes.</p>
+<p class="summary">The <strong><code>unregister()</code></strong> method of the
+  {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
+  corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves
+  when unregistration completes.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>unregister</var> = PeriodicSyncManager.unregister(tag);</pre>
+<pre
+  class="brush: js">var <var>unregister</var> = PeriodicSyncManager.unregister(tag);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>tag</dt>
- <dd>The unique {{jsxref('String')}} descriptor for the specific background sync.</dd>
+  <dt>tag</dt>
+  <dd>The unique {{jsxref('String')}} descriptor for the specific background sync.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -35,9 +39,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example removes a periodic sync to stop syncing articles in the background.</p>
+<p>The following example removes a periodic sync to stop syncing articles in the
+  background.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.unregister('get-latest-news');
 });
 </pre>
@@ -45,18 +50,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Periodic Background Sync','#dom-periodicsyncmanager-unregister','unregister')}}</td>
-   <td>{{Spec2('Periodic Background Sync')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Periodic Background
+        Sync','#dom-periodicsyncmanager-unregister','unregister')}}</td>
+      <td>{{Spec2('Periodic Background Sync')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -66,6 +72,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
+  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
+      the Periodic Background Sync API</a></li>
+  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
+      Periodic Background Sync demo app</a></li>
 </ul>

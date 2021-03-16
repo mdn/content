@@ -22,23 +22,12 @@ tags:
  <dt id="attr-dir">dir</dt>
  <dd>The text direction. Possible values are either <code>ltr</code> (left to right) or <code>rtl</code> (right to left).</dd>
  <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-fence">fence</dt>
  <dd>There is no visual effect for this attribute, but it specifies whether the operator is a fence (such as parentheses).<br>
  Allowed values are <code>true</code> or <code>false</code>.</dd>
- <dt id="attr-form">form</dt>
- <dd>Specifies the role of the operator in an enclosed expression, which affects spacing and other default properties. For ordinary operators (+, -, etc. ) you usually do not need to specify this attribute explicitly.<br>
- Possible values are:
- <ul>
-  <li><code>prefix</code>, for opening fences. (It is the default value if the operator is the first argument in a {{ MathMLElement("mrow") }} element with more than one argument.)</li>
-  <li><code>infix</code>, for separators. (It is the default value if the operator is not included in a {{ MathMLElement("mrow") }} element.)</li>
-  <li><code>postfix</code>, closing fences. (It is the default value if the operator is the last argument in a {{ MathMLElement("mrow") }} element with more than one argument.)</li>
- </ul>
- </dd>
  <dt id="attr-href">href</dt>
  <dd>Used to set a hyperlink to a specified URI.</dd>
- <dt id="attr-largeop">largeop</dt>
- <dd>Specifies whether the operator should be drawn larger than normal when <code>displaystyle="true"</code> is set. Allowed values are either <code>true</code> or <code>false</code>.</dd>
  <dt id="attr-lspace">lspace</dt>
  <dd>The amount of space before the operator (see <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a> for values and units). The constant <code>thickmathspace</code> (5/18em) is the default value.</dd>
  <dt id="attr-mathbackground">mathbackground</dt>
@@ -112,7 +101,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;math&gt;
+<pre class="brush: html">&lt;math&gt;
 
 &lt;mrow&gt;
   &lt;mn&gt;5&lt;/mn&gt;
@@ -171,5 +160,5 @@ tags:
 <ul>
  <li>Starting with Gecko 16.0 {{ geckoRelease("16.0") }} the default values for <code>lspace</code> and <code>rspace</code> have been corrected to match the MathML3 specification. They now default to the constant <code>thickmathspace</code> (5/18em).</li>
  <li>Some <code>mathvariant</code> values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">math fonts</a>.</li>
- <li>Any <a class="external" href="https://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs">linebreaking</a> or <a class="external" href="https://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs">indentation attributes</a> are not implemented yet. See {{ bug("534962") }}.</li>
+ <li>Any <a href="https://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs">linebreaking</a> or <a href="https://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs">indentation attributes</a> are not implemented yet. See {{ bug("534962") }}.</li>
 </ul>

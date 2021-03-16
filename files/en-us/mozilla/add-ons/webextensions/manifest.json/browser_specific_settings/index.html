@@ -17,12 +17,12 @@ tags:
 		</tr>
 		<tr>
 			<th scope="row">Mandatory</th>
-			<td>Usually, no (but see also <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_add-on_ID">When do you need an Add-on ID?</a>). Mandatory before Firefox 48 (desktop) and Firefox for Android.</td>
+			<td>Usually, no (but see also <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id">When do you need an Add-on ID?</a>). Mandatory before Firefox 48 (desktop) and Firefox for Android.</td>
 		</tr>
 		<tr>
 			<th scope="row">Example</th>
 			<td>
-			<pre class="brush: json; no-line-numbers notranslate">
+			<pre class="brush: json; no-line-numbers">
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
@@ -45,13 +45,13 @@ tags:
 
 <dl>
 	<dt><code>id</code></dt>
-	<dd>Is the extension ID. Optional from Firefox 48, mandatory before Firefox 48. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensions and the Add-on ID</a> to see when you need to specify an add-on ID.</dd>
+	<dd>Is the extension ID. Optional from Firefox 48, mandatory before Firefox 48. See <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Extensions and the Add-on ID</a> to see when you need to specify an add-on ID.</dd>
 	<dt><code>strict_min_version</code></dt>
 	<dd>Minimum version of Gecko to support. Versions containing a "*" are not valid in this field. Defaults to "42a1".</dd>
 	<dt><code>strict_max_version</code></dt>
 	<dd>Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, then the extension will be disabled, or not permitted to be installed. Defaults to "*", which disables checking for a maximum version.</dd>
 	<dt><code>update_url</code></dt>
-	<dd>Is a link to an <a href="/en-US/Add-ons/Updates">extension update manifest</a>. Note that the link must begin with "https". This key is for managing extension updates yourself (i.e. not through AMO).</dd>
+	<dd>Is a link to an <a href="https://extensionworkshop.com/documentation/manage/updating-your-extension/">extension update manifest</a>. Note that the link must begin with "https". This key is for managing extension updates yourself (i.e. not through AMO).</dd>
 </dl>
 
 <p>See the list of <a href="https://addons.mozilla.org/en-US/firefox/pages/appversions/">valid Gecko versions</a>.</p>
@@ -69,9 +69,9 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: json; auto-links: false; no-line-numbers notranslate">"id": "extensionname@example.org"</pre>
+<pre class="brush: json; auto-links: false; no-line-numbers">"id": "extensionname@example.org"</pre>
 
-<pre class="brush: json; auto-links: false; no-line-numbers notranslate">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
+<pre class="brush: json; auto-links: false; no-line-numbers">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
 
 <h3 id="Microsoft_Edge_properties">Microsoft Edge properties</h3>
 
@@ -87,8 +87,8 @@ tags:
 	<p>Boolean property which controls the placement of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions">browser action</a>.</p>
 
 	<ul>
-		<li><code>true</code> is equivalent to setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> to <code>navbar</code>.</li>
-		<li><code>false</code> is equivalent to setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Syntax">browser_action.default_area</a></code> to <code>menupanel</code>.</li>
+		<li><code>true</code> is equivalent to setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax">browser_action.default_area</a></code> to <code>navbar</code>.</li>
+		<li><code>false</code> is equivalent to setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax">browser_action.default_area</a></code> to <code>menupanel</code>.</li>
 	</ul>
 	</dd>
 </dl>
@@ -112,7 +112,7 @@ tags:
 
 <p>Example with all possible keys. Note that most extensions will omit <code>strict_max_version</code> and <code>update_url</code>.</p>
 
-<pre class="brush: json; auto-links: false; no-line-numbers notranslate">"browser_specific_settings": {
+<pre class="brush: json; auto-links: false; no-line-numbers">"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",

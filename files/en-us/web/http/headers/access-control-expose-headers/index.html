@@ -9,21 +9,9 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Access-Control-Expose-Headers</code></strong> response header indicates which headers can be exposed as part of the response by listing their names.</p>
+<p>The <strong><code>Access-Control-Expose-Headers</code></strong> response header allows a server to indicate which response headers should be made available to scripts running in the browser, in response to a cross-origin request.</p>
 
-<p>By default, only the 7 {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed:</p>
-
-<ul>
- <li>{{HTTPHeader("Cache-Control")}}</li>
- <li>{{HTTPHeader("Content-Language")}}</li>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Expires")}}</li>
- <li>{{HTTPHeader("Last-Modified")}}</li>
- <li>{{HTTPHeader("Pragma")}}</li>
-</ul>
-
-<p>If you want clients to be able to access other headers, you have to list them using the <code>Access-Control-Expose-Headers</code> header. {{HTTPHeader("Content-Length")}} was not part of the original set safelisted response headers [<a href="https://github.com/whatwg/fetch/pull/626">ref</a>].</p>
+<p>Only the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed by default. For clients to be able to access other headers, the server must list them using the <code>Access-Control-Expose-Headers</code> header.</p>
 
 <table class="properties">
  <tbody>
@@ -40,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
+<pre class="brush: html">Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
 Access-Control-Expose-Headers: *
 </pre>
 
@@ -48,7 +36,7 @@ Access-Control-Expose-Headers: *
 
 <dl>
  <dt>&lt;header-name&gt;</dt>
- <dd>A list of exposed headers consisting of zero or more <a href="/en-US/docs/Web/HTTP/Headers">header names</a> other than the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} that the resource might use and can be exposed.</dd>
+ <dd>A list of zero or more comma-separated <a href="/en-US/docs/Web/HTTP/Headers">header names</a> that clients are allowed to access from a response. These are <em>in addition</em> to the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}.</dd>
  <dt><code>*</code> (wildcard)</dt>
  <dd>The value "<code>*</code>" only counts as a special wildcard value for requests without credentials (requests without <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> or HTTP authentication information). In requests with credentials, it is treated as the literal header name "<code>*</code>" without special semantics.<br>
  Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.</dd>
@@ -56,21 +44,21 @@ Access-Control-Expose-Headers: *
 
 <h2 id="Examples">Examples</h2>
 
-<p>To expose a non-CORS-safelisted request header, you can specify:</p>
+<p>The {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are: {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, {{HTTPHeader("Last-Modified")}}, {{HTTPHeader("Pragma")}}. To expose a non-CORS-safelisted response header, you can specify:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: Content-Length</pre>
+<pre>Access-Control-Expose-Headers: Content-Encoding</pre>
 
 <p>To additionally expose a custom header, like <code>X-Kuma-Revision</code>, you can specify multiple headers separated by a comma:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
+<pre>Access-Control-Expose-Headers: Content-Encoding, X-Kuma-Revision</pre>
 
-<p>In requests without credentials, you can also use a wildcard value:</p>
+<p>For requests without credentials, a server can also respond with a wildcard value:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: *</pre>
+<pre>Access-Control-Expose-Headers: *</pre>
 
 <p>However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:</p>
 
-<pre class="notranslate">Access-Control-Expose-Headers: *, Authorization</pre>
+<pre>Access-Control-Expose-Headers: *, Authorization</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

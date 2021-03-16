@@ -2,197 +2,264 @@
 title: Node
 slug: Web/API/Node
 tags:
-  - API
-  - DOM
-  - Document
-  - Element
-  - Interface
-  - Node
-  - Reference
-  - Structure
-  - hierarchy
+- API
+- DOM
+- Document
+- Element
+- Interface
+- Node
+- Reference
+- Structure
+- hierarchy
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The {{Glossary("DOM")}} <strong><code>Node</code></strong> interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably.</span> As an abstract class, there is no such thing as a plain <code>Node</code> object. All objects that implement <code>Node</code> functionality are based on one of its subclasses. Most notable are {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.</p>
+<p><span class="seoSummary">The
+    {{Glossary("DOM")}} <strong><code>Node</code></strong> interface is an abstract base
+    class upon which many other DOM API objects are based, thus letting those object types
+    to be used similarly and often interchangeably.</span> As an abstract class, there is
+  no such thing as a plain <code>Node</code> object. All objects that implement
+  <code>Node</code> functionality are based on one of its subclasses. Most notable are
+  {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.
+</p>
 
-<p>In addition, every kind of DOM node is represented by an interface based on <code>Node</code>. These include {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, and {{DOMxRef("CDATASection")}} are all based on), {{DOMxRef("ProcessingInstruction")}}, {{DOMxRef("DocumentType")}}, {{DOMxRef("Notation")}}, {{DOMxRef("Entity")}}, and {{DOMxRef("EntityReference")}}.</p>
+<p>In addition, every kind of DOM node is represented by an interface based on
+  <code>Node</code>. These include {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}}
+  (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef("CDATASection")}} and
+  {{DOMxRef("ProcessingInstruction")}} are all based on), {{DOMxRef("DocumentType")}},
+  {{DOMxRef("Notation")}}, {{DOMxRef("Entity")}}, and {{DOMxRef("EntityReference")}}.</p>
 
-<p>In some cases, a particular feature of the base <code>Node</code> interface may not apply to one of its child interfaces; in that case, the inheriting node may return <code>null</code> or throw an exception, depending on circumstances. For example, attempting to add children to a node type that cannot have children will throw an exception.</p>
+<p>In some cases, a particular feature of the base <code>Node</code> interface may not
+  apply to one of its child interfaces; in that case, the inheriting node may
+  return <code>null</code> or throw an exception, depending on circumstances. For example,
+  attempting to add children to a node type that cannot have children will throw an
+  exception.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>In addition to the properties below, <code>Node</code> inherits properties from its parent, {{DOMxRef("EventTarget")}}</em>.</p>
+<p><em>In addition to the properties below, <code>Node</code> inherits properties from its
+    parent, {{DOMxRef("EventTarget")}}</em>.</p>
 
 <dl>
- <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} representing the base URL of the document containing the <code>Node</code>.</dd>
- <dt>{{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a live {{DOMxRef("NodeList")}} containing all the children of this node (including elements, text and comments). {{DOMxRef("NodeList")}} being live means that if the children of the <code>Node</code> change, the {{DOMxRef("NodeList")}} object is automatically updated.</dd>
- <dt>{{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} representing the first direct child node of the node, or <code>null</code> if the node has no child.</dd>
- <dt>{{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}</dt>
- <dd>A boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g. the {{DOMxRef("Document")}} object in the case of the normal DOM, or the {{DOMxRef("ShadowRoot")}} in the case of a shadow DOM.</dd>
- <dt>{{DOMxRef("Node.lastChild")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} representing the last direct child node of the node, or <code>null</code> if the node has no child.</dd>
- <dt>{{DOMxRef("Node.nextSibling")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} representing the next node in the tree, or <code>null</code> if there isn't such node.</dd>
- <dt>{{DOMxRef("Node.nodeName")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the name of the <code>Node</code>. The structure of the name will differ with the node type. E.g. An {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like <code>'audio'</code> for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}} node will have the <code>'#text'</code> string, or a {{DOMxRef("Document")}} node will have the <code>'#document'</code> string.</dd>
- <dt>{{DOMxRef("Node.nodeType")}}{{ReadOnlyInline}}</dt>
- <dd>Returns an <code>unsigned short</code> representing the type of the node. Possible values are:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Name</th>
-    <th scope="col">Value</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>ELEMENT_NODE</code></td>
-    <td><code>1</code></td>
-   </tr>
-   <tr>
-    <td><code>ATTRIBUTE_NODE</code> {{Deprecated_Inline}}</td>
-    <td><code>2</code></td>
-   </tr>
-   <tr>
-    <td><code>TEXT_NODE</code></td>
-    <td><code>3</code></td>
-   </tr>
-   <tr>
-    <td><code>CDATA_SECTION_NODE</code></td>
-    <td><code>4</code></td>
-   </tr>
-   <tr>
-    <td><code>ENTITY_REFERENCE_NODE</code> {{Deprecated_Inline}}</td>
-    <td><code>5</code></td>
-   </tr>
-   <tr>
-    <td><code>ENTITY_NODE</code> {{Deprecated_Inline}}</td>
-    <td><code>6</code></td>
-   </tr>
-   <tr>
-    <td><code>PROCESSING_INSTRUCTION_NODE</code></td>
-    <td><code>7</code></td>
-   </tr>
-   <tr>
-    <td><code>COMMENT_NODE</code></td>
-    <td><code>8</code></td>
-   </tr>
-   <tr>
-    <td><code>DOCUMENT_NODE</code></td>
-    <td><code>9</code></td>
-   </tr>
-   <tr>
-    <td><code>DOCUMENT_TYPE_NODE</code></td>
-    <td><code>10</code></td>
-   </tr>
-   <tr>
-    <td><code>DOCUMENT_FRAGMENT_NODE</code></td>
-    <td><code>11</code></td>
-   </tr>
-   <tr>
-    <td><code>NOTATION_NODE</code> {{Deprecated_Inline}}</td>
-    <td><code>12</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{DOMxRef("Node.nodeValue")}}</dt>
- <dd>Returns / Sets the value of the current node.</dd>
- <dt>{{DOMxRef("Node.ownerDocument")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("Document")}} that this node belongs to. If the node is itself a document, returns <code>null</code>.</dd>
- <dt>{{DOMxRef("Node.parentNode")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} that is the parent of this node. If there is no such node, like if this node is the top of the tree or if doesn't participate in a tree, this property returns <code>null</code>.</dd>
- <dt>{{DOMxRef("Node.parentElement")}}{{ReadOnlyInline}}</dt>
- <dd>Returns an {{DOMxRef("Element")}} that is the parent of this node. If the node has no parent, or if that parent is not an {{DOMxRef("Element")}}, this property returns <code>null</code>.</dd>
- <dt>{{DOMxRef("Node.previousSibling")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("Node")}} representing the previous node in the tree, or <code>null</code> if there isn't such node.</dd>
- <dt>{{DOMxRef("Node.textContent")}}</dt>
- <dd>Returns / Sets the textual content of an element and all its descendants.</dd>
+  <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("DOMString")}} representing the base URL of the document
+    containing the <code>Node</code>.</dd>
+  <dt>{{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a live {{DOMxRef("NodeList")}} containing all the children of this node
+    (including elements, text and comments). {{DOMxRef("NodeList")}} being live means that
+    if the children of the <code>Node</code> change, the {{DOMxRef("NodeList")}} object is
+    automatically updated.</dd>
+  <dt>{{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("Node")}} representing the first direct child node of the node,
+    or <code>null</code> if the node has no child.</dd>
+  <dt>{{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}</dt>
+  <dd>A boolean indicating whether or not the Node is connected (directly or indirectly)
+    to the context object, e.g. the {{DOMxRef("Document")}} object in the case of the
+    normal DOM, or the {{DOMxRef("ShadowRoot")}} in the case of a shadow DOM.</dd>
+  <dt>{{DOMxRef("Node.lastChild")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("Node")}} representing the last direct child node of the node,
+    or <code>null</code> if the node has no child.</dd>
+  <dt>{{DOMxRef("Node.nextSibling")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("Node")}} representing the next node in the tree, or
+    <code>null</code> if there isn't such node.</dd>
+  <dt>{{DOMxRef("Node.nodeName")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("DOMString")}} containing the name of the <code>Node</code>. The
+    structure of the name will differ with the node type. E.g. An
+    {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
+    <code>'audio'</code> for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
+    node will have the <code>'#text'</code> string, or a {{DOMxRef("Document")}} node will
+    have the <code>'#document'</code> string.</dd>
+  <dt>{{DOMxRef("Node.nodeType")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns an <code>unsigned short</code> representing the type of the node. Possible
+    values are:
+    <table class="standard-table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>ELEMENT_NODE</code></td>
+          <td><code>1</code></td>
+        </tr>
+        <tr>
+          <td><code>ATTRIBUTE_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>2</code></td>
+        </tr>
+        <tr>
+          <td><code>TEXT_NODE</code></td>
+          <td><code>3</code></td>
+        </tr>
+        <tr>
+          <td><code>CDATA_SECTION_NODE</code></td>
+          <td><code>4</code></td>
+        </tr>
+        <tr>
+          <td><code>ENTITY_REFERENCE_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>5</code></td>
+        </tr>
+        <tr>
+          <td><code>ENTITY_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>6</code></td>
+        </tr>
+        <tr>
+          <td><code>PROCESSING_INSTRUCTION_NODE</code></td>
+          <td><code>7</code></td>
+        </tr>
+        <tr>
+          <td><code>COMMENT_NODE</code></td>
+          <td><code>8</code></td>
+        </tr>
+        <tr>
+          <td><code>DOCUMENT_NODE</code></td>
+          <td><code>9</code></td>
+        </tr>
+        <tr>
+          <td><code>DOCUMENT_TYPE_NODE</code></td>
+          <td><code>10</code></td>
+        </tr>
+        <tr>
+          <td><code>DOCUMENT_FRAGMENT_NODE</code></td>
+          <td><code>11</code></td>
+        </tr>
+        <tr>
+          <td><code>NOTATION_NODE</code> {{Deprecated_Inline}}</td>
+          <td><code>12</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt>{{DOMxRef("Node.nodeValue")}}</dt>
+  <dd>Returns / Sets the value of the current node.</dd>
+  <dt>{{DOMxRef("Node.ownerDocument")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the {{DOMxRef("Document")}} that this node belongs to. If the node is itself
+    a document, returns <code>null</code>.</dd>
+  <dt>{{DOMxRef("Node.parentNode")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("Node")}} that is the parent of this node. If there is no such
+    node, like if this node is the top of the tree or if doesn't participate in a tree,
+    this property returns <code>null</code>.</dd>
+  <dt>{{DOMxRef("Node.parentElement")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns an {{DOMxRef("Element")}} that is the parent of this node. If the node has
+    no parent, or if that parent is not an {{DOMxRef("Element")}}, this property returns
+    <code>null</code>.</dd>
+  <dt>{{DOMxRef("Node.previousSibling")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("Node")}} representing the previous node in the tree, or
+    <code>null</code> if there isn't such node.</dd>
+  <dt>{{DOMxRef("Node.textContent")}}</dt>
+  <dd>Returns / Sets the textual content of an element and all its descendants.</dd>
 </dl>
 
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{DOMxRef("Node.localName")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} representing the local part of the qualified name of an element.
- <div class="notecard note">
- <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.</p>
- </div>
- </dd>
- <dt>{{DOMxRef("Node.namespaceURI")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>The namespace URI of this node, or <code>null</code> if it is no namespace.
- <div class="notecard note">
- <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code> namespace in both HTML and XML trees.</p>
- </div>
- </dd>
- <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} representing the namespace prefix of the node, or <code>null</code> if no prefix is specified.</dd>
+  <dt>{{DOMxRef("Node.localName")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{DOMxRef("DOMString")}} representing the local part of the qualified name
+    of an element.
+    <div class="notecard note">
+      <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the
+        local name for HTML elements (but not XHTML elements). In later versions, this
+        does not happen, so the property is in lower case for both HTML and XHTML.</p>
+    </div>
+  </dd>
+  <dt>{{DOMxRef("Node.namespaceURI")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>The namespace URI of this node, or <code>null</code> if it is no namespace.
+    <div class="notecard note">
+      <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no
+        namespace. In later versions, HTML elements are in the
+        <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>
+        namespace in both HTML and XML trees.</p>
+    </div>
+  </dd>
+  <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+  <dd>Is a {{DOMxRef("DOMString")}} representing the namespace prefix of the node, or
+    <code>null</code> if no prefix is specified.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>In addition to the properties below, <code>Node</code> inherits methods from its parent, {{DOMxRef("EventTarget")}}.</em></p>
+<p><em>In addition to the properties below, <code>Node</code> inherits methods from its
+    parent, {{DOMxRef("EventTarget")}}.</em></p>
 
 <dl>
- <dt>{{DOMxRef("Node.appendChild()", "Node.appendChild(<var>childNode</var>)")}}</dt>
- <dd>Adds the specified <code><var>childNode</var></code> argument as the last child to the current node.<br>
- If the argument referenced an existing node on the DOM tree, the node will be detached from its current position and attached at the new position.</dd>
- <dt>{{DOMxRef("Node.cloneNode()")}}</dt>
- <dd>Clone a {{DOMxRef("Node")}}, and optionally, all of its contents. By default, it clones the content of the node.</dd>
- <dt>{{DOMxRef("Node.compareDocumentPosition()")}}</dt>
- <dd>Compares the position of the current node against another node in any other document.</dd>
- <dt>{{DOMxRef("Node.contains()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not a node is a descendant of the calling node.</dd>
- <dt>{{domxref("Node.getBoxQuads()")}} {{experimental_inline}}</dt>
- <dd>Returns a list of the node's CSS boxes relative to another node.</dd>
- <dt>{{DOMxRef("Node.getRootNode()")}}</dt>
- <dd>Returns the context object's root which optionally includes the shadow root if it is available. </dd>
- <dt>{{DOMxRef("Node.hasChildNodes()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element has any child nodes.</dd>
- <dt>{{DOMxRef("Node.insertBefore()")}}</dt>
- <dd>Inserts a {{DOMxRef("Node")}} before the reference node as a child of a specified parent node.</dd>
- <dt>{{DOMxRef("Node.isDefaultNamespace()")}}</dt>
- <dd>Accepts a namespace URI as an argument and returns a {{jsxref("Boolean")}} with a value of <code>true</code> if the namespace is the default namespace on the given node or <code>false</code> if not.</dd>
- <dt>{{DOMxRef("Node.isEqualNode()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} which indicates whether or not two nodes are of the same type and all their defining data points match.</dd>
- <dt>{{DOMxRef("Node.isSameNode()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not the two nodes are the same (that is, they reference the same object).</dd>
- <dt>{{DOMxRef("Node.lookupPrefix()")}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the prefix for a given namespace URI, if present, and <code>null</code> if not. When multiple prefixes are possible, the result is implementation-dependent.</dd>
- <dt>{{DOMxRef("Node.lookupNamespaceURI()")}}</dt>
- <dd>Accepts a prefix and returns the namespace URI associated with it on the given node if found (and <code>null</code> if not). Supplying <code>null</code> for the prefix will return the default namespace.</dd>
- <dt>{{DOMxRef("Node.normalize()")}}</dt>
- <dd>Clean up all the text nodes under this element (merge adjacent, remove empty).</dd>
- <dt>{{DOMxRef("Node.removeChild()")}}</dt>
- <dd>Removes a child node from the current element, which must be a child of the current node.</dd>
- <dt>{{DOMxRef("Node.replaceChild()")}}</dt>
- <dd>Replaces one child {{DOMxRef("Node")}} of the current one with the second one given in parameter.</dd>
+  <dt>{{DOMxRef("Node.appendChild()", "Node.appendChild(<var>childNode</var>)")}}</dt>
+  <dd>Adds the specified <code><var>childNode</var></code> argument as the last child to
+    the current node.<br>
+    If the argument referenced an existing node on the DOM tree, the node will be detached
+    from its current position and attached at the new position.</dd>
+  <dt>{{DOMxRef("Node.cloneNode()")}}</dt>
+  <dd>Clone a {{DOMxRef("Node")}}, and optionally, all of its contents. By default, it
+    clones the content of the node.</dd>
+  <dt>{{DOMxRef("Node.compareDocumentPosition()")}}</dt>
+  <dd>Compares the position of the current node against another node in any other
+    document.</dd>
+  <dt>{{DOMxRef("Node.contains()")}}</dt>
+  <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not a node is a
+    descendant of the calling node.</dd>
+  <dt>{{domxref("Node.getBoxQuads()")}} {{experimental_inline}}</dt>
+  <dd>Returns a list of the node's CSS boxes relative to another node.</dd>
+  <dt>{{DOMxRef("Node.getRootNode()")}}</dt>
+  <dd>Returns the context object's root which optionally includes the shadow root if it is
+    available. </dd>
+  <dt>{{DOMxRef("Node.hasChildNodes()")}}</dt>
+  <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element has any child
+    nodes.</dd>
+  <dt>{{DOMxRef("Node.insertBefore()")}}</dt>
+  <dd>Inserts a {{DOMxRef("Node")}} before the reference node as a child of a specified
+    parent node.</dd>
+  <dt>{{DOMxRef("Node.isDefaultNamespace()")}}</dt>
+  <dd>Accepts a namespace URI as an argument and returns a {{jsxref("Boolean")}} with a
+    value of <code>true</code> if the namespace is the default namespace on the given node
+    or <code>false</code> if not.</dd>
+  <dt>{{DOMxRef("Node.isEqualNode()")}}</dt>
+  <dd>Returns a {{jsxref("Boolean")}} which indicates whether or not two nodes are of the
+    same type and all their defining data points match.</dd>
+  <dt>{{DOMxRef("Node.isSameNode()")}}</dt>
+  <dd>Returns a {{jsxref("Boolean")}} value indicating whether or not the two nodes are
+    the same (that is, they reference the same object).</dd>
+  <dt>{{DOMxRef("Node.lookupPrefix()")}}</dt>
+  <dd>Returns a {{DOMxRef("DOMString")}} containing the prefix for a given namespace URI,
+    if present, and <code>null</code> if not. When multiple prefixes are possible, the
+    result is implementation-dependent.</dd>
+  <dt>{{DOMxRef("Node.lookupNamespaceURI()")}}</dt>
+  <dd>Accepts a prefix and returns the namespace URI associated with it on the given node
+    if found (and <code>null</code> if not). Supplying <code>null</code> for the prefix
+    will return the default namespace.</dd>
+  <dt>{{DOMxRef("Node.normalize()")}}</dt>
+  <dd>Clean up all the text nodes under this element (merge adjacent, remove empty).</dd>
+  <dt>{{DOMxRef("Node.removeChild()")}}</dt>
+  <dd>Removes a child node from the current element, which must be a child of the current
+    node.</dd>
+  <dt>{{DOMxRef("Node.replaceChild()")}}</dt>
+  <dd>Replaces one child {{DOMxRef("Node")}} of the current one with the second one given
+    in parameter.</dd>
 </dl>
 
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
- <dt>{{DOMxRef("Node.getUserData()")}} {{Obsolete_Inline}}</dt>
- <dd>Allows a user to get some {{DOMxRef("DOMUserData")}} from the node.</dd>
- <dt>{{DOMxRef("Node.hasAttributes()")}} {{Obsolete_Inline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has any attributes, or not.</dd>
- <dt>{{DOMxRef("Node.isSupported()")}} {{Obsolete_Inline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} flag containing the result of a test whether the DOM implementation implements a specific feature and this feature is supported by the specific node.</dd>
- <dt>{{DOMxRef("Node.setUserData()")}} {{Obsolete_Inline}}</dt>
- <dd>Allows a user to attach, or remove, {{DOMxRef("DOMUserData")}} to the node.</dd>
+  <dt>{{DOMxRef("Node.getUserData()")}} {{Obsolete_Inline}}</dt>
+  <dd>Allows a user to get some {{DOMxRef("DOMUserData")}} from the node.</dd>
+  <dt>{{DOMxRef("Node.hasAttributes()")}} {{Obsolete_Inline}}</dt>
+  <dd>Returns a {{jsxref("Boolean")}} indicating if the element has any attributes, or
+    not.</dd>
+  <dt>{{DOMxRef("Node.isSupported()")}} {{Obsolete_Inline}}</dt>
+  <dd>Returns a {{jsxref("Boolean")}} flag containing the result of a test whether the DOM
+    implementation implements a specific feature and this feature is supported by the
+    specific node.</dd>
+  <dt>{{DOMxRef("Node.setUserData()")}} {{Obsolete_Inline}}</dt>
+  <dd>Allows a user to attach, or remove, {{DOMxRef("DOMUserData")}} to the node.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Remove_all_children_nested_within_a_node">Remove all children nested within a node</h3>
+<h3 id="Remove_all_children_nested_within_a_node">Remove all children nested within a node
+</h3>
 
-<pre class="brush: js notranslate">function removeAllChildren(element) {
+<pre class="brush: js">function removeAllChildren(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild)
   }
@@ -200,14 +267,15 @@ tags:
 
 <h4 id="Sample_usage">Sample usage</h4>
 
-<pre class="brush: js; notranslate">/* Note: or use document.body.textContent = "" */
+<pre class="brush: js">/* Note: or use document.body.textContent = "" */
 removeAllChildren(document.body)</pre>
 
 <h3 id="Recurse_through_child_nodes">Recurse through child nodes</h3>
 
-<p>The following function recursively calls a callback function for each node contained by a root node (including the root itself):</p>
+<p>The following function recursively calls a callback function for each node contained by
+  a root node (including the root itself):</p>
 
-<pre class="brush: js; notranslate">function eachNode(rootNode, callback) {
+<pre class="brush: js">function eachNode(rootNode, callback) {
 	if (!callback) {
 		const nodes = []
 		eachNode(rootNode, function(node) {
@@ -233,36 +301,51 @@ removeAllChildren(document.body)</pre>
 
 <h4 id="Syntax">Syntax</h4>
 
-<pre class="syntaxbox notranslate">eachNode(<var>rootNode</var>, <var>callback</var>)</pre>
+<pre
+  class="brush: js">eachNode(<var>rootNode</var>, <var>callback</var>)</pre>
 
 <h4 id="Description">Description</h4>
 
-<p>Recursively calls a function for each descendant node of <code><var>rootNode</var></code> (including the root itself).</p>
+<p>Recursively calls a function for each descendant node of
+  <code><var>rootNode</var></code> (including the root itself).</p>
 
-<p>If <code><var>callback</var></code> is omitted, the function returns an {{jsxref("Array")}} instead, which contains <code><var>rootNode</var></code> and all nodes contained within.</p>
+<p>If <code><var>callback</var></code> is omitted, the function returns an
+  {{jsxref("Array")}} instead, which contains <code><var>rootNode</var></code> and all
+  nodes contained within.</p>
 
-<p>If <code><var>callback</var></code> is provided, and it returns {{jsxref("Boolean")}} <code>false</code> when called, the current recursion level is aborted, and the function resumes execution at the last parent's level. This can be used to abort loops once a node has been found (such as searching for a text node which contains a certain string).</p>
+<p>If <code><var>callback</var></code> is provided, and it returns {{jsxref("Boolean")}}
+  <code>false</code> when called, the current recursion level is aborted, and the function
+  resumes execution at the last parent's level. This can be used to abort loops once a
+  node has been found (such as searching for a text node which contains a certain string).
+</p>
 
 <h4 id="Parameters">Parameters</h4>
 
 <dl>
- <dt><code><var>rootNode</var></code></dt>
- <dd>The <code>Node</code> object whose descendants will be recursed through.</dd>
- <dt><code><var>callback</var></code> {{optional_inline}}</dt>
- <dd>An optional callback <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">function</a> that receives a <code>Node</code> as its only argument. If omitted, <code>eachNode</code> returns an {{jsxref("Array")}} of every node contained within <code><var>rootNode</var></code> (including the root itself).</dd>
+  <dt><code><var>rootNode</var></code></dt>
+  <dd>The <code>Node</code> object whose descendants will be recursed through.</dd>
+  <dt><code><var>callback</var></code> {{optional_inline}}</dt>
+  <dd>An optional callback <a
+      href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">function</a> that
+    receives a <code>Node</code> as its only argument. If omitted, <code>eachNode</code>
+    returns an {{jsxref("Array")}} of every node contained within
+    <code><var>rootNode</var></code> (including the root itself).</dd>
 </dl>
 
 <h4 id="Sample_usage_2">Sample usage</h4>
 
-<p>The following example prints the <a href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> properties of each <code>&lt;span&gt;</code> tag in a <code>&lt;div&gt;</code> element named <code>"box"</code>:</p>
+<p>The following example prints the <a
+    href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> properties of
+  each <code>&lt;span&gt;</code> tag in a <code>&lt;div&gt;</code> element named
+  <code>"box"</code>:</p>
 
-<pre class="brush: html; notranslate">&lt;div id="box"&gt;
+<pre class="brush: html">&lt;div id="box"&gt;
   &lt;span&gt;Foo&lt;/span&gt;
   &lt;span&gt;Bar&lt;/span&gt;
   &lt;span&gt;Baz&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js; notranslate">const box = document.getElementById("box")
+<pre class="brush: js">const box = document.getElementById("box")
 eachNode(box, function(node) {
   if (null != node.textContent) {
     console.log(node.textContent)
@@ -271,19 +354,22 @@ eachNode(box, function(node) {
 
 <p>The above will result in the following strings printing to the user's console:</p>
 
-<pre class="brush: js; notranslate">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
+<pre class="brush: js">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Whitespace forms part of a {{DOMxRef("Text")}} node, meaning indentation and newlines form separate <code>Text</code> between the <code>Element</code> nodes.</p>
+  <p><strong>Note:</strong> Whitespace forms part of a {{DOMxRef("Text")}} node, meaning
+    indentation and newlines form separate <code>Text</code> between the
+    <code>Element</code> nodes.</p>
 </div>
 
 <h4 id="Realistic_usage">Realistic usage</h4>
 
-<p>The following demonstrates a real-world use of the <code>eachNode()</code> function: searching for text on a web-page.</p>
+<p>The following demonstrates a real-world use of the <code>eachNode()</code> function:
+  searching for text on a web-page.</p>
 
 <p>We use a wrapper function named <code>grep</code> to do the searching:</p>
 
-<pre class="brush: js; notranslate">function grep(parentNode, pattern) {
+<pre class="brush: js">function grep(parentNode, pattern) {
 	const matches = []
 	let endScan = false
 
@@ -318,7 +404,7 @@ eachNode(box, function(node) {
 
 <p>For example, to find {{DOMxRef("Text")}} nodes that contain typos:</p>
 
-<pre class="brush: js; notranslate">const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
+<pre class="brush: js">const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
 const pattern = new RegExp("\\b(" + typos.join("|") + ")\\b", "gi")
 const mistakes = grep(document.body, pattern)
 console.log(mistakes)
@@ -327,46 +413,62 @@ console.log(mistakes)
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#interface-node", "Node")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Added the following methods: <code>getRootNode()</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#interface-node", "Node")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Removed the following properties: <code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
-    Removed the following methods: <code>isSupported()</code>, <code>hasAttributes()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-1950641247", "Node")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>The methods <code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, and <code>appendChild()</code> returns one more kind of error (<code>NOT_SUPPORTED_ERR</code>) if called on a {{DOMxRef("Document")}}.<br>
-    The <code>normalize()</code> method has been modified so that {{DOMxRef("Text")}} node can also be normalized if the proper {{DOMxRef("DOMConfiguration")}} flag is set.<br>
-    Added the following methods: <code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
-    Added the following properties: <code>baseURI</code> and <code>textContent</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#ID-1950641247", "Node")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>The <code>ownerDocument</code> property was slightly modified so that {{DOMxRef("DocumentFragment")}} also returns <code>null</code>.<br>
-    Added the following properties: <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
-    Added the following methods: <code>normalize()</code>, <code>isSupported()</code> and <code>hasAttributes()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM1", "level-one-core.html#ID-1950641247", "Node")}}</td>
-   <td>{{Spec2("DOM1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("DOM WHATWG", "#interface-node", "Node")}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td>Added the following methods: <code>getRootNode()</code></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM4", "#interface-node", "Node")}}</td>
+      <td>{{Spec2("DOM4")}}</td>
+      <td>Removed the following properties: <code>attributes</code>,
+        <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
+        Removed the following methods: <code>isSupported()</code>,
+        <code>hasAttributes()</code>, <code>getFeature()</code>,
+        <code>setUserData()</code>, and <code>getUserData()</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM3 Core", "core.html#ID-1950641247", "Node")}}</td>
+      <td>{{Spec2("DOM3 Core")}}</td>
+      <td>The methods <code>insertBefore()</code>, <code>replaceChild()</code>,
+        <code>removeChild()</code>, and <code>appendChild()</code> returns one more kind
+        of error (<code>NOT_SUPPORTED_ERR</code>) if called on a
+        {{DOMxRef("Document")}}.<br>
+        The <code>normalize()</code> method has been modified so that {{DOMxRef("Text")}}
+        node can also be normalized if the proper {{DOMxRef("DOMConfiguration")}} flag is
+        set.<br>
+        Added the following methods: <code>compareDocumentPosition()</code>,
+        <code>isSameNode()</code>, <code>lookupPrefix()</code>,
+        <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>,
+        <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>,
+        and <code>getUserData().</code><br>
+        Added the following properties: <code>baseURI</code> and <code>textContent</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM2 Core", "core.html#ID-1950641247", "Node")}}</td>
+      <td>{{Spec2("DOM2 Core")}}</td>
+      <td>The <code>ownerDocument</code> property was slightly modified so that
+        {{DOMxRef("DocumentFragment")}} also returns <code>null</code>.<br>
+        Added the following properties: <code>namespaceURI</code>, <code>prefix</code>,
+        and <code>localName</code>.<br>
+        Added the following methods: <code>normalize()</code>, <code>isSupported()</code>
+        and <code>hasAttributes()</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM1", "level-one-core.html#ID-1950641247", "Node")}}</td>
+      <td>{{Spec2("DOM1")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

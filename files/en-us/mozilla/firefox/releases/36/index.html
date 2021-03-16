@@ -4,9 +4,9 @@ slug: Mozilla/Firefox/Releases/36
 tags:
   - Firefox
 ---
-<div>{{FirefoxSidebar}}</div><div>
-<div><span class="seoSummary">Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</span></div>
-</div>
+<div>{{FirefoxSidebar}}</div>
+
+<p><span class="seoSummary">Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</span></p>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
@@ -15,12 +15,12 @@ tags:
 <p>Highlights:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Debugger#Debug_eval_sources">eval sources now appear in the Debugger</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger#debug_eval_sources">eval sources now appear in the Debugger</a></li>
  <li><a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Simpler process for connecting to Firefox for Android</a></li>
  <li>Box Model Highlighter works on remote targets</li>
- <li><a href="/en-US/docs/Tools/Performance#Inverting_the_call_tree">"Invert the call tree" option in the Profiler </a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#Type-specific_rich_output">Inspect DOM promises in the console</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2">Extra "Paste" commands in the Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Performance#inverting_the_call_tree">"Invert the call tree" option in the Profiler </a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console#type-specific_rich_output">Inspect DOM promises in the console</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector#element_popup_menu_2">Extra "Paste" commands in the Inspector</a></li>
 </ul>
 
 <p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2014-11-28&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-10-13&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=11736454">All devtools bugs fixed between Firefox 35 and Firefox 36</a>.</p>
@@ -30,12 +30,12 @@ tags:
 <ul>
  <li>The {{cssxref("will-change")}} property has been enabled by default ({{bug(961871)}}).</li>
  <li>The {{cssxref("white-space")}} property is now working on {{HTMLElement("textarea")}} HTML elements ({{bug(82711)}}).</li>
- <li>The {{cssxref("unicode-range")}} descriptor is now supported by {{cssxref("@font-face")}} ({{bug(475891)}}), but not enabled by default.</li>
+ <li>The {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor is now supported by {{cssxref("@font-face")}} ({{bug(475891)}}), but not enabled by default.</li>
  <li>The properties {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, and {{cssxref("text-decoration-style")}} are unprefixed ({{bug(825004)}}). The prefixed version are still available for some time to ease transition ({{bug(1097922)}}).</li>
  <li>The {{cssxref("text-decoration")}} property is turned into shorthand property ({{bug(1039488)}}).</li>
  <li>The properties {{cssxref("object-fit")}} and {{cssxref("object-position")}} are now supported ({{bug(624647)}})</li>
  <li>The <code>contents</code> value of the {{cssxref("display")}} property has been experimentally implemented. It is preffed off by default ({{bug(907396)}}).</li>
- <li>In <a href="/en-US/docs/Quirks_Mode_and_Standards_Mode">Quirks mode</a>, the <a href="/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style"><code>:active</code> and <code>:hover</code> quiver quirk</a> has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ({{bug(783213)}}).</li>
+ <li>In <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">Quirks mode</a>, the <a href="/en-US/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style"><code>:active</code> and <code>:hover</code> quiver quirk</a> has been altered to be applied less often: it is now used only on links, only if there are no pseudo-element or other pseudo-class in the element and if it isn't part of a pseudo-class element ({{bug(783213)}}).</li>
  <li>The {{cssxref("isolation")}} property has been implemented ({{bug(1077872)}}).</li>
  <li>CSS {{cssxref("&lt;gradient&gt;")}} now applies on the premultiplied colors, matching the spec and other browsers, and getting rid of unexpected gray colors appearing in them ({{bug(591600)}}).</li>
  <li>Interpolation hint syntax has been added to {{cssxref("&lt;gradient&gt;")}} ({{bug(1074056)}}).</li>
@@ -61,7 +61,7 @@ tags:
    <li>{{jsxref("Object.getOwnPropertySymbols()")}}</li>
   </ul>
  </li>
- <li>The old placeholder string <code>"@@iterator"</code> has been replaced with the real ES2015 well-known symbol {{jsxref("Symbol.iterator")}} for the <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a> interface property key ({{bug(918828)}}).</li>
+ <li>The old placeholder string <code>"@@iterator"</code> has been replaced with the real ES2015 well-known symbol {{jsxref("Symbol.iterator")}} for the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterable</a> interface property key ({{bug(918828)}}).</li>
  <li>The spec-internal abstract operation <code>ToNumber(string)</code> now supports binary (<code>0b</code>) and octal (<code>0o</code>) literals, this is a potentially breaking change from ES5 ({{bug(1079120)}}).
   <ul>
    <li><code>Number("0b11")</code> now returns <code>3</code>, not <code>NaN</code>.</li>
@@ -76,8 +76,8 @@ tags:
   </ul>
  </li>
  <li>The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ({{bug(1069063)}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> operator now triggers the "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" when using with <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> ({{bug(1074571)}}).</li>
- <li>The non-standard <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Non-standard_let_extensions"><code>let</code> blocks and <code>let</code> expressions</a> are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.</li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> operator now triggers the "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" when using with <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> ({{bug(1074571)}}).</li>
+ <li>The non-standard <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#non-standard_let_extensions"><code>let</code> blocks and <code>let</code> expressions</a> are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a> constructor now handles optional iterable argument ({{bug(1092537)}}).</li>
 </ul>
 
@@ -98,15 +98,13 @@ tags:
  <li>The default values of the options for {{domxref("MutationObserver.observe()")}} have been updated to match the latest specification ({{bug(973638)}}).</li>
  <li>Experimental support for virtual reality devices has landed behind the <code>dom.vr.enabled</code> preference, off by default ({{bug(1036604)}}).</li>
  <li>The function associated with {{domxref("RTCPeerConnection.onsignalingstatechange")}} now receives an event as parameter, as per spec ({{bug(1075133)}}).</li>
- <li>The experimental implementation of Web Animations make progress: the method {{domxref("AnimationPlayer.play()")}} and {{domxref("AnimationPlayer.pause()")}} are now supported ({{bug(1070745)}}), as well as {{domxref("AnimationPlayer.playState")}} ({{bug(1037321)}}).</li>
+ <li>The experimental implementation of Web Animations make progress: the method {{domxref("Animation/play", "AnimationPlayer.play()")}} and {{domxref("Animation/pause", "AnimationPlayer.pause()")}} are now supported ({{bug(1070745)}}), as well as {{domxref("Animation/playState", "AnimationPlayer.playState")}} ({{bug(1037321)}}).</li>
  <li>The non-standard {{domxref("DOMRequest")}} interface has now a {{domxref("DOMRequest.then()", "then()")}} method ({{bug(839838)}}).</li>
  <li>The CSSOM View scroll behavior controlling methods, {{domxref("Element.scroll()")}}, {{domxref("Element.scrollTo()")}}, {{domxref("Element.scrollBy()")}}, and {{domxref("Element.scrollIntoView()")}}, have been implemented or extended ({{bug(1045754)}} and {{bug(1087559)}}).</li>
  <li>Assigning to {{domxref("Element.innerHTML")}} on an {{domxref("SVGElement")}} now create elements in the SVG namespace ({{bug(886390)}}).</li>
  <li>The <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowserPersist#saveURI()"><code>nsIWebBrowserPersist.saveURI()</code></a> method now requires 8 arguments, in an order incompatible with previous releases.</li>
  <li>Support for Media Source Extensions (MSE) is activated by default in non-build releases (Nightly and Developer Edition only) ({{bug(1000686)}}). It keeps being preffed off on Beta and Release version.</li>
 </ul>
-
-<section id="sect13"> </section>
 
 <h3 id="MathML">MathML</h3>
 
@@ -131,8 +129,8 @@ tags:
 <ul>
  <li>RC4 is now considered as insecure and all UI indicators will react as such; SSLv3 has been disabled by default in Firefox 34, but the UI has been changed to help the user better understand what is happening ({{bug(1093595)}}).</li>
  <li>Also, RC4 is no longer offered in the initial handshake of TLS ({{bug(1088915)}}).</li>
- <li>The <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives#form-action"><code>form-action</code></a> directive of CSP 1.1 is now supported ({{bug(529697)}}).</li>
- <li>In the preferences of Firefox, The <a href="/en-US/docs/Web/Security/Do_not_track_field_guide">Do not track </a>selection widget is again an on/off switch ({{bug(1071747)}}).</li>
+ <li>The <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#form-action"><code>form-action</code></a> directive of CSP 1.1 is now supported ({{bug(529697)}}).</li>
+ <li>In the preferences of Firefox, The <a href="/en-US/docs/Web/HTTP/Headers/DNT">Do not track </a>selection widget is again an on/off switch ({{bug(1071747)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
@@ -142,7 +140,7 @@ tags:
 <h4 id="Highlights">Highlights</h4>
 
 <ul>
- <li>The <code><a href="en-US/Add-ons/SDK/Low-Level_APIs/test_httpd">sdk/test/httpd</a></code> module was removed in <a href="/en-US/Firefox/Releases/36">Firefox 36</a>, please use the <a href="https://www.npmjs.com/package/addon-httpd">addon-httpd</a> npm module instead.</li>
+ <li>The <code><a href="en-US/Add-ons/SDK/Low-Level_APIs/test_httpd">sdk/test/httpd</a></code> module was removed in <a href="/en-US/docs/Mozilla/Firefox/Releases/36">Firefox 36</a>, please use the <a href="https://www.npmjs.com/package/addon-httpd">addon-httpd</a> npm module instead.</li>
  <li>Add badges to <code><a href="en-US/Add-ons/SDK/High-Level_APIs/ui">sdk/ui</a></code> buttons ({{bug(994280)}}).</li>
  <li>Implemented global <code>require</code> function to access sdk modules anywhere ({{bug(1070927)}}), using:</li>
 </ul>
@@ -168,7 +166,7 @@ tags:
 
 <dl>
  <dt><code>TYPE_FETCH</code></dt>
- <dd>Indicates a content load request initiated by the {{domxref("GlobalFetch.fetch()")}} method.</dd>
+ <dd>Indicates a content load request initiated by the {{domxref("WindowOrWorkerGlobalScope/fetch", "GlobalFetch.fetch()")}} method.</dd>
  <dt><code>TYPE_IMAGESET</code></dt>
  <dd>Indicates a request to load an {{HTMLElement("img")}} (with the {{htmlattrxref("srcset", "img")}} attribute or {{HTMLElement("picture")}} element.</dd>
 </dl>

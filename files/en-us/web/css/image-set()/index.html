@@ -9,7 +9,7 @@ tags:
   - Reference
   - Web
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p class="summary">The <strong><code>image-set()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.</p>
 
@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">image-set() = image-set( &lt;image-set-option&gt;# )
+<pre class="brush: css">image-set() = image-set( &lt;image-set-option&gt;# )
 where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resolution&gt; and
       &lt;string&gt; is an &lt;url&gt;
 </pre>
@@ -34,7 +34,7 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <h3 id="Using_image-set_to_provide_alternative_background-image_options">Using image-set() to provide alternative background-image options</h3>
 
-<pre class="brush: css notranslate">background-image: image-set( "cat.png" 1x,
+<pre class="brush: css">background-image: image-set( "cat.png" 1x,
                              "cat-2x.png" 2x,
                              "cat-print.png" 600dpi);</pre>
 

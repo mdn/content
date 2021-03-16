@@ -16,9 +16,9 @@ tags:
  <li><a href="/en-US/docs/Tools/Responsive_Design_Mode">Completely revamped Responsive Design Mode, including UA selection and network throttling.</a></li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations">The Animation Inspector now displays timing functions.</a></li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">The Page Inspector now includes a CSS grid inspector.</a></li>
- <li><a href="/en-US/docs/Tools/about:debugging#Service_worker_state">about:debugging now shows service worker state.</a></li>
+ <li><a href="/en-US/docs/Tools/about:debugging#service_worker_state">about:debugging now shows service worker state.</a></li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#element_rule">The Page Inspector includes an easy way to highlight the selected element.</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Whitespace-only_text_nodes">The Page Inspector displays whitespace-only text nodes.</a></li>
+ <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#whitespace-only_text_nodes">The Page Inspector displays whitespace-only text nodes.</a></li>
 </ul>
 
 <p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2016-11-14&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2016-09-19&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%20about%3Adebugging&amp;component=Developer%20Tools%3A%20Animation%20Inspector&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Computed%20Styles%20Inspector&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20CSS%20Rules%20Inspector&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20DOM&amp;component=Developer%20Tools%3A%20Font%20Inspector&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20JSON%20Viewer&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Design%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Shared%20Components&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=13333174">All devtools bugs fixed between Firefox 51 and Firefox 52</a>.</p>
@@ -36,7 +36,7 @@ tags:
 <ul>
  <li>Added {{cssxref(":focus-within")}} pseudo-class ({{bug(1176997)}}).</li>
  <li>Added support for <code>display:flex/grid</code> and columnset layout inside {{HTMLElement("button")}} elements ({{bug(984869)}}).</li>
- <li>Implemented interpolation between numeric color and <a href="/en-US/docs/Web/CSS/color_value#currentColor_keyword">currentcolor</a> ({{bug(1299741)}}).</li>
+ <li>Implemented interpolation between numeric color and <a href="/en-US/docs/Web/CSS/color_value#currentcolor_keyword">currentcolor</a> ({{bug(1299741)}}).</li>
  <li>Implemented flexbox layout for <code>{{cssxref("justify-content")}}: space-evenly</code> and <code>{{cssxref("align-content")}}: space-evenly</code> ({{bug(1235922)}}).</li>
  <li>Added support for subpixel antialiasing in CSS {{cssxref("mask")}} / {{cssxref("clip-path")}} ({{bug(1305259)}}).</li>
  <li>Implemented CSS Text 3 segment break transformation rules ({{bug(1081858)}}).</li>
@@ -44,12 +44,12 @@ tags:
  <li>Implemented Flexbox layout for {{cssxref("align-self")}}|{{cssxref("justify-self")}}: [ first | last ]? baseline ({{bug(1221524)}}).</li>
  <li>The {{cssxref("touch-action")}} property is now enabled by default on all platforms. (For the full story, see <a href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4">intent to ship mail #1</a> and <a href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M">intent to ship mail #2</a>.)</li>
  <li>Flexbox {{cssxref("align-content")}} handling &amp; single-line-sizing should depend on {{cssxref("flex-wrap")}}, not number of lines ({{bug(1090031)}}).</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> can now be used to animate non-interpolable properties (see {{bug("1064937")}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> can now be used to animate non-interpolated properties (see {{bug("1064937")}}).</li>
  <li>Changed <code>baseline|last-baseline</code> to <code>[ first | last ]? baseline</code> ({{bug(1313254)}}).</li>
  <li>The used value for <code>left</code>/<code>right</code> is <code>start</code> for the block-axis ({{bug(1221565)}}).</li>
  <li>Stretching flexible tracks with an indefinite containing block length now respects the min/max size({{bug(1309407)}}).</li>
  <li>The initial values of {{cssxref("mask-position")}} and {{cssxref("mask-repeat")}} have been changed to <code>0% 0%</code> and <code>repeat</code>, respectively ({{bug(1308963)}}).</li>
- <li><span><span>There have been a number of changes to CSS {{cssxref("&lt;color&gt;")}} values (see {{bug(1295456)}}):</span></span>
+ <li>There have been a number of changes to CSS {{cssxref("&lt;color&gt;")}} values (see {{bug(1295456)}}):
   <ul>
    <li><code>rgba()</code> and <code>hsla()</code> have now been redefined as aliases of <code>rgb()</code> and <code>hsl()</code>; both accept the same parameter syntax.</li>
    <li><code>rgb(</code>) and <code>hsl()</code> now accept an optional alpha value, e.g. <code>rgb(255, 0, 0, 0.5)</code>.</li>
@@ -58,7 +58,7 @@ tags:
    <li>The hue component in <code>hsl()</code> colors can now be specified as an angle, as well as a number, e.g. <code>hsl(120deg, 60%, 70%)</code>.</li>
   </ul>
  </li>
- <li>Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child()")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.</li>
+ <li>Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.</li>
 </ul>
 
 <h4 id="CSS_Grids">CSS Grids</h4>
@@ -75,12 +75,9 @@ tags:
  <li>Implemented grid container baselines ({{bug(1151204)}}).</li>
  <li>Removed <code>&lt;flex&gt;</code> min-sizing from the style system ({{bug(1305244)}}).</li>
  <li>Remove preference <code>layout.css.masking.enabled</code> ({{bug(1308239)}}).</li>
- <li>The proprietary <span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>-moz-images-in-menus</code> and <code>-moz-images-in-buttons</code> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media types</a> have been removed (see {{bug(1302157)}}).</span></span></li>
- <li>Removed <code>-moz-use-text-color</code> value from color properties<span><span>; use <code><a href="/en-US/docs/Web/CSS/color_value#currentColor_keyword">currentcolor</a></code> instead</span></span> ({{bug(1306214)}}).</li>
- <li>[css-grid] 'max-width' set on grid item causes text to overflow ({{bug(1330380)}}).
-  <ul>
-  </ul>
- </li>
+ <li>The proprietary <code>-moz-images-in-menus</code> and <code>-moz-images-in-buttons</code> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media types</a> have been removed (see {{bug(1302157)}}).</li>
+ <li>Removed <code>-moz-use-text-color</code> value from color properties; use <code><a href="/en-US/docs/Web/CSS/color_value#currentcolor_keyword">currentcolor</a></code> instead ({{bug(1306214)}}).</li>
+ <li>[css-grid] 'max-width' set on grid item causes text to overflow ({{bug(1330380)}}).</li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -91,20 +88,20 @@ tags:
  <li>Support for the async functions has been added. This adds {{jsxref("Statements/async_function", "async function")}}, {{jsxref("Operators/async_function", "async function expression")}}, and the {{jsxref("Operators/await", "await")}} keyword ({{bug(1185106)}}).</li>
  <li>Implemented ES2017 <a href="/en-US/docs/Web/JavaScript/Reference/Trailing_commas">trailing commas</a> in functions ({{bug(1303788)}}).</li>
  <li>Implemented {{jsxref("Functions/rest_parameters", "rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} ({{bug(1243717)}}).</li>
- <li>The {{jsxref("Operators/Arithmetic_Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ({{bug(1291212)}}).</li>
- <li>You can now use <a href="http://www.iana.org/time-zones">IANA time zone names</a> in the <code>timeZone</code> option of date related APIs like {{jsxref("DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ({{bug(837961)}}).</li>
+ <li>The {{jsxref("Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ({{bug(1291212)}}).</li>
+ <li>You can now use <a href="http://www.iana.org/time-zones">IANA time zone names</a> in the <code>timeZone</code> option of date related APIs like {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} or {{jsxref("Date.toLocaleString()")}} ({{bug(837961)}}).</li>
 </ul>
 
 <h4 id="Changes_and_removals_2">Changes and removals</h4>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Assigning_the_rest_of_an_array_to_a_variable">Array destructuring</a> now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ({{bug(1041341)}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#assigning_the_rest_of_an_array_to_a_variable">Array destructuring</a> now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ({{bug(1041341)}}).</li>
  <li>Duplicate <code>__proto__</code> properties are now allowed in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">object destructuring</a> ({{bug(1204024)}}).</li>
  <li>{{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "<code>locales</code>" and "<code>options</code>" ({{bug(1130636)}}).</li>
  <li>{{jsxref("TypedArray")}} constructors now accept <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterables</a> to create new typed arrays ({{bug(1232266)}}).</li>
  <li>{{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their <code>this</code> values are valid Typed Array constructors ({{bug(1122396)}}).</li>
  <li>The non-standard {{jsxref("ArrayBuffer.slice()")}} method (not {{jsxref("ArrayBuffer.prototype.slice()")}}) is deprecated and now presents a warning when used ({{bug(1316913)}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Unicode_code_point_escapes">Unicode code point escapes</a> can now also be used as identifiers (e.g. "<code>let \u{61} = 123</code>", see {{bug(1314037)}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes">Unicode code point escapes</a> can now also be used as identifiers (e.g. "<code>let \u{61} = 123</code>", see {{bug(1314037)}}).</li>
  <li>
   <p>To conform with ES2015, <code>\u2e2f</code> and <code>ⸯ</code> now throw when used as identifier, for details see {{bug(917436)}} and {{bug(1197230)}}.</p>
  </li>
@@ -119,7 +116,7 @@ tags:
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/API/Selection_API">Selection API</a> has fully shipped, including the new {{Event("selectstart")}} and {{Event("selectionchange")}} events (see also {{domxref("GlobalEventHandlers.onselectstart")}} and {{domxref("GlobalEventHandlers.onselectionchange")}}) ({{bug(1309612)}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/Selection">Selection API</a> has fully shipped, including the new {{Event("selectstart")}} and {{Event("selectionchange")}} events (see also {{domxref("GlobalEventHandlers.onselectstart")}} and {{domxref("GlobalEventHandlers.onselectionchange")}}) ({{bug(1309612)}}).</li>
  <li>The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ({{bug(1292063)}}).</li>
  <li>Only HTML elements, plus the {{HTMLElement("svg")}} and {{HTMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullScreen()")}} ({{bug(1305928)}}).</li>
  <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a> have been reenabled on Windows desktop platforms — see {{bug(1244402)}}. (They were disabled in Firefox 24 because they broke a number of major sites; see {{bug(888304)}}.)</li>
@@ -129,7 +126,7 @@ tags:
  <li>The {{domxref("DataTransfer.types")}} property of the <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop API</a> now returns a frozen array of {{domxref("DOMString")}}s rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).</li>
  <li>The {{Event("loadstart")}} and {{Event("loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}). </li>
  <li>The {{domxref("Notification.requireInteraction")}} of the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> has been implemented (see {{bug(862395)}}.)</li>
- <li>The {{domxref("Window.open()")}} method now has a <code>noopener</code> <a href="/en-US/docs/Web/API/Window/open#Window_functionality_features">window feature</a> available (see {{bug(1267339)}}), which mirrors the functionality of the <code>rel="noopener"</code> <a href="/en-US/docs/Web/HTML/Link_types">Link type</a>.</li>
+ <li>The {{domxref("Window.open()")}} method now has a <code>noopener</code> <a href="/en-US/docs/Web/API/Window/open#window_functionality_features">window feature</a> available (see {{bug(1267339)}}), which mirrors the functionality of the <code>rel="noopener"</code> <a href="/en-US/docs/Web/HTML/Link_types">Link type</a>.</li>
  <li>The {{domxref("CustomElementRegistry.get()")}} method of the <a href="/en-US/docs/Web/Web_Components">Web Components API</a> has been implemented (see {{bug(1275838)}}).</li>
  <li><a href="/en-US/docs/Web/API/Pointer_events">Pointer Event</a> {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see {{bug(1304315)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> has been updated to include changes in the <a href="https://wicg.github.io/entries-api/">latest spec</a> (see {{bug(1284987)}} for the exact details).</li>
@@ -165,7 +162,7 @@ tags:
  <li>When an ICE connection is temporarily disrupted, the {{domxref("RTCPeerConnection.iceConnectionState")}} property now gets set to <code>"disconnected"</code>; this indicates a transitory failure that may resolve itself shortly, with the connection returning to the <code>"connected"</code> state afterward ({{bug(852665)}}).</li>
  <li>The {{domxref("MediaDevices.ondevicechange")}} event handler and corresponding {{event("devicechange")}} event, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.</li>
  <li>The {{domxref("MediaStream.active")}} property is now supported. This read-only Boolean property indicates whether or not at least one track on the stream is currently playing.</li>
- <li>Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a <a href="/en-US/docs/Glossary/WebRTC">WebRTC</a> connection, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> stream, or {{domxref("CanvasCaptureMediaStream")}}.</li>
+ <li>Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a <a href="/en-US/docs/Glossary/WebRTC">WebRTC</a> connection, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> stream, or {{domxref("CanvasCaptureMediaStreamTrack", "CanvasCaptureMediaStream")}}.</li>
  <li>Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{event("change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ({{bug(882674)}}).</li>
 </ul>
 
@@ -212,7 +209,7 @@ tags:
 
 <h2 id="Plugins">Plugins</h2>
 
-<p>All NPAPI <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugin</a> support except Flash has been dropped (see <span><a href="https://www.fxsitecompat.com/en-CA/docs/2016/plug-in-support-has-been-dropped-other-than-flash/">Plug-in support has been dropped other than Flash</a> for more details</span>). Flash usage is also set to be phased out in the future.</p>
+<p>All NPAPI <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugin</a> support except Flash has been dropped (see <a href="https://www.fxsitecompat.com/en-CA/docs/2016/plug-in-support-has-been-dropped-other-than-flash/">Plug-in support has been dropped other than Flash</a> for more details). Flash usage is also set to be phased out in the future.</p>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
@@ -225,10 +222,10 @@ tags:
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites"><code>topSites</code> API</a></li>
  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox"><code>omnibox</code> API</a></li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled">runtime.onInstalled</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onStartup">runtime.onStartup</a></code> events</li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/webRequest#Modifying_requests">asynchronous event listeners in webRequest</a></li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest#modifying_requests">asynchronous event listeners in webRequest</a></li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved">bookmarks.onMoved</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated">bookmarks.onCreated</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged">bookmarks.onChanged</a></code> events</li>
- <li><code>_execute_browser_action</code> and <code>_execute_page_action</code> in the <a href="/en-US/Add-ons/WebExtensions/manifest.json/commands">commands manifest key</a></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#match_about_blank">match_about_blank</a></code> in the content_scripts manifest key</li>
+ <li><code>_execute_browser_action</code> and <code>_execute_page_action</code> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands manifest key</a></li>
+ <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_about_blank">match_about_blank</a></code> in the content_scripts manifest key</li>
 </ul>
 
 <h3 id="Interfaces">Interfaces</h3>

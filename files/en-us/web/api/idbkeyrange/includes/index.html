@@ -2,26 +2,28 @@
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
 tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - includes
+- API
+- Database
+- IDBKeyRange
+- IndexedDB
+- Method
+- Reference
+- Storage
+- includes
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <code><strong>includes(</strong>)</code> method of the {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether a specified key is inside the key range.</p>
+  <p>The <code><strong>includes(</strong>)</code> method of the {{domxref("IDBKeyRange")}}
+    interface returns a boolean indicating whether a specified key is inside the key
+    range.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;">var isIncluded = myKeyRange.includes(key)</pre>
+<pre class="brush: js">var isIncluded = myKeyRange.includes(key)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,16 +38,16 @@ tags:
 <p>This method may raise a {{domxref("DOMException")}} of the following type:</p>
 
 <table>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/DOM/DOMError"><code>DataError</code></a></td>
-   <td>The supplied key was not a valid key.</td>
-  </tr>
- </thead>
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Description</th>
+    </tr>
+    <tr>
+      <td><a href="/en-US/docs/DOM/DOMError"><code>DataError</code></a></td>
+      <td>The supplied key was not a valid key.</td>
+    </tr>
+  </thead>
 </table>
 
 <h2 id="Example">Example</h2>
@@ -61,7 +63,9 @@ var myResult = keyRangeValue.includes('W');
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>The <code>includes()</code> method was added in the second edition of the Indexed DB specification. For browsers that do not support it, the following polyfill can be used.</p>
+<p>The <code>includes()</code> method was added in the second edition of the Indexed DB
+  specification. For browsers that do not support it, the following polyfill can be used.
+</p>
 
 <pre class="brush: js">IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key) {
   var r = this, c;
@@ -82,40 +86,40 @@ var myResult = keyRangeValue.includes('W');
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-idbkeyrange-includes', 'includes()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-includes", "includes()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB 2', '#dom-idbkeyrange-includes', 'includes()')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbkeyrange-includes", "includes()")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBKeyRange.includes")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

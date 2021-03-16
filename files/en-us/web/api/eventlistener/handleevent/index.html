@@ -18,18 +18,23 @@ tags:
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p><span class="seoSummary">The {{domxref("EventListener")}} method <code><strong>handleEvent()</strong></code> method is called by the {{Glossary("user agent")}} when an event is sent to the <code>EventListener</code>, in order to handle events that occur on an observed {{domxref("EventTarget")}}.</span></p>
+<p><span class="seoSummary">The {{domxref("EventListener")}} method
+		<code><strong>handleEvent()</strong></code> method is called by the
+		{{Glossary("user agent")}} when an event is sent to the
+		<code>EventListener</code>, in order to handle events that occur on an observed
+		{{domxref("EventTarget")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>eventListener</var>.handleEvent(<var>event</var>);</code>
+<pre class="brush: js">eventListener.handleEvent(event);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><strong><code>event</code></strong></dt>
-	<dd>An {{domxref("Event")}} object describing the event that has been fired and needs to be processed.</dd>
+	<dd>An {{domxref("Event")}} object describing the event that has been fired and needs
+		to be processed.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -48,12 +53,14 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-eventlistener-handleevent', 'EventListener.handleEvent()')}}</td>
+			<td>{{SpecName('DOM WHATWG', '#dom-eventlistener-handleevent',
+				'EventListener.handleEvent()')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
 			<td>No change.</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Events', '#Events-EventListener-handleEvent', 'EventListener.handleEvent()')}}</td>
+			<td>{{SpecName('DOM2 Events', '#Events-EventListener-handleEvent',
+				'EventListener.handleEvent()')}}</td>
 			<td>{{Spec2('DOM2 Events')}}</td>
 			<td>Initial definition.</td>
 		</tr>

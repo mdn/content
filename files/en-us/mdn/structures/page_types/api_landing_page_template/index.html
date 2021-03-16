@@ -25,19 +25,19 @@ tags:
 	<li>\{{draft}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
 	<li>\{{securecontext_header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
 	<li>
-	<div>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars">API reference sidebars</a> guide for information on how to do this.</div>
+	<div>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</div>
 	</li>
 </ul>
 
 <h3 id="Tags">Tags</h3>
 
-<p>In an API landing page, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Landing</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only).</p>
+<p>In an API landing page, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Landing</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only).</p>
 
 <p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on the WebVR page we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
 
 <h3 id="Browser_compatibility">Browser compatibility</h3>
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables#The_new_way_The_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
+<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
 <p>Once that is done, you can show the compat data for the API with a \{{Compat}} macro call.</p>
 </div>
@@ -61,13 +61,6 @@ tags:
 	<dd>Include a brief description of the interface and what it does here. Include one term and definition for each interface or dictionary.</dd>
 </dl>
 
-<h3 id="Name_of_API_mixins"><em>Name of API</em> mixins</h3>
-
-<dl>
-	<dt>{{domxref("NameOfTheInterface")}}</dt>
-	<dd>Include a brief description of the mixin and what it does here. Include one term and definition for each mixin. If there are no mixins in this API, delete this section.</dd>
-</dl>
-
 <h3 id="Extensions_to_other_interfaces">Extensions to other interfaces</h3>
 
 <p>The <em>name of interface</em> extends the following APIs, adding the listed features.</p>
@@ -88,11 +81,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Structures/Code_examples">code examples</a> for more information).</p>
 
 <p>This text should be replaced with a brief description of what the example demonstrates.</p>
 
-<pre class="brush: js notranslate">my code block</pre>
+<pre class="brush: js">my code block</pre>
 
 <p>If you've included an example directly in the page as shown above, and that example is longer than 4-5 lines or so, consider following the example with a step-by-step explanation of what it's doing, so that new programmers can learn more easily, and to help smooth the learning curve for complicated subjects.</p>
 

@@ -1,0 +1,51 @@
+---
+title: Element.ariaRelevant
+slug: Web/API/Element/ariaRelevant
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaRelevant
+  - AriaAttributes
+  - AriaMixin
+  - Element
+---
+<div>{{DefaultAPISidebar("DOM")}}{{SeeCompatTable}}</div>
+
+<p class="summary">The <strong><code>ariaRelevant</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><code>aria-relevant</code></a> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <code>aria-live</code> region are relevant and should be announced.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaRelevant</var> = element.ariaRelevant;
+<var>element</var>.ariaRelevant = <var>ariaRelevant</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} containing one or more of the following values, space separated:</p>
+
+<dl>
+  <dt>"additions"</dt>
+  <dd>Additions of Element Nodes within the live region should be considered relevant.</dd>
+  <dt>"removals"</dt>
+  <dd>Deletion of Nodes from the live region should be considered relevant.</dd>
+  <dt>"text"</dt>
+  <dd>Changes to the textual content of existing nodes should be considered relevant.</dd>
+  <dt>"all"</dt>
+  <dd>Equivalent to additions removals text.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-relevant</code> attribute on the element with an ID of <code>text</code> is set to "all". Using <code>ariaRelevant</code> we update the value to "text".</p>
+
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-relevant="all"&gt;&lt;/div&gt;</pre>
+
+<pre class="brush: js">let el = document.getElementById('clock');
+console.log(el.ariaRelevant); // all
+el.ariaRelevant = "text"
+console.log(el.ariaRelevant); // text</pre>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Element.ariaRelevant")}}</p>

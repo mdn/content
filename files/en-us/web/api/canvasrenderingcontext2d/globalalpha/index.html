@@ -2,37 +2,47 @@
 title: CanvasRenderingContext2D.globalAlpha
 slug: Web/API/CanvasRenderingContext2D/globalAlpha
 tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+- API
+- Canvas
+- CanvasRenderingContext2D
+- Property
+- Reference
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.globalAlpha</code></strong> property of the Canvas 2D API specifies the alpha (transparency) value that is applied to shapes and images before they are drawn onto the canvas.</p>
+<p>The
+  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.globalAlpha</code></strong>
+  property of the Canvas 2D API specifies the alpha (transparency) value that is applied
+  to shapes and images before they are drawn onto the canvas.</p>
 
 <div class="note">
-<p>See also the chapter <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>.</p>
+  <p>See also the chapter <a
+      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
+      styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
+      Tutorial</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>ctx</em>.globalAlpha = <em>value</em>;
+<pre class="brush: js"><em>ctx</em>.globalAlpha = <em>value</em>;
 </pre>
 
 <h3 id="Options">Options</h3>
 
 <dl>
- <dt><code>value</code></dt>
- <dd>A number between <code>0.0</code> (fully transparent) and <code>1.0</code> (fully opaque), inclusive. The default value is <code>1.0</code>. Values outside that range, including {{jsxref("Infinity")}} and {{jsxref("NaN")}}, will not be set, and <code>globalAlpha</code> will retain its previous value.</dd>
+  <dt><code>value</code></dt>
+  <dd>A number between <code>0.0</code> (fully transparent) and <code>1.0</code> (fully
+    opaque), inclusive. The default value is <code>1.0</code>. Values outside that range,
+    including {{jsxref("Infinity")}} and {{jsxref("NaN")}}, will not be set, and
+    <code>globalAlpha</code> will retain its previous value.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Drawing_translucent_shapes">Drawing translucent shapes</h3>
 
-<p>This example uses the <code>globalAlpha</code> property to draw two semi-transparent rectangles.</p>
+<p>This example uses the <code>globalAlpha</code> property to draw two semi-transparent
+  rectangles.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -59,12 +69,19 @@ ctx.fillRect(50, 50, 100, 100);
 
 <h3 id="Overlaying_transparent_shapes">Overlaying transparent shapes</h3>
 
-<p>This example illustrates the effect of overlaying multiple transparent shapes on top of each other. We begin by drawing a solid background composed of four differently colored squares. Next, we set the <code>globalAlpha</code> property to <code>0.2</code> (20% opaque); this alpha level will apply to all of our transparent shapes. After that, we use a <code>for</code> loop to draw a series of circles with increasing radii.</p>
+<p>This example illustrates the effect of overlaying multiple transparent shapes on top of
+  each other. We begin by drawing a solid background composed of four differently colored
+  squares. Next, we set the <code>globalAlpha</code> property to <code>0.2</code> (20%
+  opaque); this alpha level will apply to all of our transparent shapes. After that, we
+  use a <code>for</code> loop to draw a series of circles with increasing radii.</p>
 
-<p>With each new circle, the opacity of the previous circles underneath is effectively increased. If we were to increase the step count (and thus draw more circles), the background would eventually disappear completely from the center of the image.</p>
+<p>With each new circle, the opacity of the previous circles underneath is effectively
+  increased. If we were to increase the step count (and thus draw more circles), the
+  background would eventually disappear completely from the center of the image.</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+  <pre
+    class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 </div>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
@@ -92,23 +109,25 @@ for (let i = 0; i &lt; 7; i++) {
 }
 </pre>
 
-<p>{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+<p>{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180",
+  "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha", "CanvasRenderingContext2D.globalAlpha")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalalpha",
+        "CanvasRenderingContext2D.globalAlpha")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -118,18 +137,21 @@ for (let i = 0; i &lt; 7; i++) {
 <h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
 
 <ul>
- <li>Starting with Gecko 5.0, specifying invalid values for <code>globalAlpha</code> no longer throws a <code>SYNTAX_ERR</code> exception; these are now correctly silently ignored.</li>
+  <li>Starting with Gecko 5.0, specifying invalid values for <code>globalAlpha</code> no
+    longer throws a <code>SYNTAX_ERR</code> exception; these are now correctly silently
+    ignored.</li>
 </ul>
 
 <h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
 
 <ul>
- <li>In WebKit- and Blink-based browsers, a non-standard and deprecated method <code>ctx.setAlpha()</code> is implemented in addition to this property.</li>
+  <li>In WebKit- and Blink-based browsers, a non-standard and deprecated method
+    <code>ctx.setAlpha()</code> is implemented in addition to this property.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}</li>
+  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}</li>
 </ul>

@@ -25,7 +25,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS basics (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS text and font fundamentals</a>.</td>
+   <td>Basic computer literacy, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), CSS basics (study <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS text and font fundamentals</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -40,13 +40,13 @@ tags:
 
 <h3 id="Link_states">Link states</h3>
 
-<p>The first thing to understand is the concept of link states — different states that links can exist in, which can be styled using different <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors#Pseudo-classes">pseudo-classes</a>:</p>
+<p>The first thing to understand is the concept of link states — different states that links can exist in, which can be styled using different <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes">pseudo-classes</a>:</p>
 
 <ul>
  <li><strong>Link</strong>: A link which has a destination (i.e. not just a named anchor), styled using the {{cssxref(":link")}} pseudo class.</li>
  <li><strong>Visited</strong>: A link when it has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.</li>
  <li><strong>Hover</strong>: A link when it is being hovered over by a user's mouse pointer, styled using the {{cssxref(":hover")}} pseudo class.</li>
- <li><strong>Focus</strong>: A link when it has been focused (for example moved to by a keyboard user using the <kbd>Tab</kbd> key or similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.</li>
+ <li><strong>Focus</strong>: A link when it has been focused (for example moved to by a keyboard user using the <kbd>Tab</kbd> key or similar, or programmatically focused using {{domxref("HTMLOrForeignElement/focus", "HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.</li>
  <li><strong>Active</strong>: A link when it is being activated (e.g. clicked on), styled using the {{cssxref(":active")}} pseudo class.</li>
 </ul>
 
@@ -54,10 +54,10 @@ tags:
 
 <p>The following example illustrates what a link will behave like by default (the CSS is enlarging and centering the text to make it stand out more.)</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;a href="#"&gt;A simple link&lt;/a&gt;&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;&lt;a href="#"&gt;A simple link&lt;/a&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-size: 2rem;
   text-align: center;
 }</pre>
@@ -104,7 +104,7 @@ tags:
 
 <p>To start off with, we'll write out our empty rulesets:</p>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
 
 }
 
@@ -132,7 +132,7 @@ a:active {
 
 <p>Now let's add some more information to get this styled properly:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 300px;
   margin: 0 auto;
   font-size: 1.2rem;
@@ -174,7 +174,7 @@ a:active {
 
 <p>We'll also provide some sample HTML to apply the CSS to:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;There are several browsers available, such as &lt;a href="#"&gt;Mozilla
+<pre class="brush: html">&lt;p&gt;There are several browsers available, such as &lt;a href="#"&gt;Mozilla
 Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, and
 &lt;a href="#"&gt;Microsoft Edge&lt;/a&gt;.&lt;/p&gt;</pre>
 
@@ -206,7 +206,7 @@ Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, and
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;p&gt;There are several browsers available, such as &lt;a href="#"&gt;Mozilla
  Firefox&lt;/a&gt;, &lt;a href="#"&gt;Google Chrome&lt;/a&gt;, and
@@ -246,7 +246,7 @@ a:active {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -289,13 +289,13 @@ window.addEventListener("load", drawOutput);
 
 <p>Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;For more information on the weather, visit our &lt;a href="#"&gt;weather page&lt;/a&gt;,
+<pre class="brush: html">&lt;p&gt;For more information on the weather, visit our &lt;a href="#"&gt;weather page&lt;/a&gt;,
 look at &lt;a href="http://#"&gt;weather on Wikipedia&lt;/a&gt;, or check
 out &lt;a href="http://#"&gt;weather on Extreme Science&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>Next, the CSS:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 300px;
   margin: 0 auto;
   font-family: sans-serif;
@@ -335,13 +335,13 @@ a[href*="http"] {
 
 <p>{{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}</p>
 
-<p>So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule however is interesting — here we are inserting a custom background image on external links in a similar manner to how we handled <a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists#Using_a_custom_bullet_image">custom bullets on list items</a> in the last article — this time however we are using {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify <code>no-repeat</code> so we only get one copy inserted, and then specify the position as 100% of the way over to the right of the text content, and 0 pixels from the top.</p>
+<p>So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule however is interesting — here we are inserting a custom background image on external links in a similar manner to how we handled <a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image">custom bullets on list items</a> in the last article — this time however we are using {{cssxref("background")}} shorthand instead of the individual properties. We set the path to the image we want to insert, specify <code>no-repeat</code> so we only get one copy inserted, and then specify the position as 100% of the way over to the right of the text content, and 0 pixels from the top.</p>
 
 <p>We also use {{cssxref("background-size")}} to specify the size we want the background image to be shown at — it is useful to have a larger icon and then resize it like this as needed for responsive web design purposes. This does however only work with IE 9 and later, so if you need to support those older browsers, you'll just have to resize the image and insert it as is.</p>
 
 <p>Finally, we set some {{cssxref("padding-right")}} on the links to make space for the background image to appear in, so we aren't overlapping it with the text.</p>
 
-<p>A final word — how did we select just external links? Well, if you are writing your <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">HTML links</a> properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors#Attribute_selectors">attribute selector</a>: <code>a[href*="http"]</code> selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.</p>
+<p>A final word — how did we select just external links? Well, if you are writing your <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">HTML links</a> properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors">attribute selector</a>: <code>a[href*="http"]</code> selects {{htmlelement("a")}} elements, but only if they have an {{htmlattrxref("href","a")}} attribute with a value that contains "http" somewhere inside it.</p>
 
 <p>So that's it — try revisiting the active learning section above and trying this new technique out!</p>
 
@@ -350,7 +350,7 @@ a[href*="http"] {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Don't worry if you are not familiar with <a href="/en-US/docs/Learn/CSS/Styling_boxes">backgrounds</a> and <a href="/en-US/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">responsive web design</a> yet; these are explained in other places.</p>
+<p><strong>Note</strong>: Don't worry if you are not familiar with <a href="/en-US/docs/Learn/CSS/Building_blocks">backgrounds</a> and <a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">responsive web design</a> yet; these are explained in other places.</p>
 </div>
 
 <h2 id="Styling_links_as_buttons">Styling links as buttons</h2>
@@ -361,13 +361,13 @@ a[href*="http"] {
 
 <p>First, some HTML:</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Pizza&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Music&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Wombats&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Finland&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
 <p>And now our CSS:</p>
 
-<pre class="brush: css notranslate">body,html {
+<pre class="brush: css">body,html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -417,7 +417,7 @@ a:active {
 
 <ul>
  <li>Our second rule removes the default {{cssxref("padding")}} from the {{htmlelement("ul")}} element, and sets its width to span 100% of the outer container (the {{htmlelement("body")}}, in this case).</li>
- <li>{{htmlelement("li")}} elements are normally block by default (see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">types of CSS boxes</a> for a refresher), meaning that they will sit on their own lines. In this case, we are creating a horizontal list of links, so in the third rule we set the {{cssxref("display")}} property to inline, which causes the list items to sit on the same line as one another — they now behave like inline elements.</li>
+ <li>{{htmlelement("li")}} elements are normally block by default (see <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes">types of CSS boxes</a> for a refresher), meaning that they will sit on their own lines. In this case, we are creating a horizontal list of links, so in the third rule we set the {{cssxref("display")}} property to inline, which causes the list items to sit on the same line as one another — they now behave like inline elements.</li>
  <li>The fourth rule — which styles the {{htmlelement("a")}} element — is the most complicated here; let's go through it step by step:
   <ul>
    <li>As in previous examples, we start by turning off the default {{cssxref("text-decoration")}} and {{cssxref("outline")}} — we don't want those spoiling our look.</li>

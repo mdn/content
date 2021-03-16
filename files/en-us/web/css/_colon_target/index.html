@@ -13,22 +13,22 @@ tags:
 
 <p>The <strong><code>:target</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents a unique element (the <em>target element</em>) with an {{htmlattrxref("id")}} matching the URL's fragment.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects an element with an ID matching the current URL's fragment */
+<pre class="brush: css no-line-numbers">/* Selects an element with an ID matching the current URL's fragment */
 :target {
   border: 2px solid black;
 }</pre>
 
 <p>For example, the following URL has a fragment (denoted by the <em>#</em> sign) that points to an element called <code>section2</code>:</p>
 
-<pre class="notranslate">http://www.example.com/index.html#section2</pre>
+<pre>http://www.example.com/index.html#section2</pre>
 
 <p>The following element would be selected by a <code>:target</code> selector when the current URL is equal to the above:</p>
 
-<pre class="brush: html notranslate">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
+<pre class="brush: html">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -38,7 +38,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h3&gt;Table of Contents&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;Table of Contents&lt;/h3&gt;
 &lt;ol&gt;
  &lt;li&gt;&lt;a href="#p1"&gt;Jump to the first paragraph!&lt;/a&gt;&lt;/li&gt;
  &lt;li&gt;&lt;a href="#p2"&gt;Jump to the second paragraph!&lt;/a&gt;&lt;/li&gt;
@@ -55,7 +55,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p:target {
+<pre class="brush: css">p:target {
   background-color: gold;
 }
 
@@ -80,11 +80,14 @@ p:target i {
 
 <p>You can use the <code>:target</code> pseudo-class to create a lightbox without using any JavaScript. This technique relies on the ability of anchor links to point to elements that are initially hidden on the page. Once targeted, the CSS changes their <code>display</code> so that they are shown.</p>
 
-<div class="note"><strong>Note:</strong> A more complete pure-CSS lightbox based on the <code>:target</code> pseudo-class is <a href="https://github.com/madmurphy/takefive.css/">available on GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>A more complete pure-CSS lightbox based on the <code>:target</code> pseudo-class is <a href="https://github.com/madmurphy/takefive.css/">available on GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</p>
+</div>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;&lt;a href="#example1"&gt;Open example #1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#example2"&gt;Open example #2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -108,7 +111,7 @@ p:target i {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">/* Unopened lightbox */
+<pre class="brush: css">/* Unopened lightbox */
 .lightbox {
   display: none;
 }
@@ -208,5 +211,5 @@ p:target i {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors">Using the :target pseudo-class in selectors</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors">Using the :target pseudo-class in selectors</a></li>
 </ul>

@@ -2,25 +2,27 @@
 title: HTMLMediaElement.seekable
 slug: Web/API/HTMLMediaElement/seekable
 tags:
-  - API
-  - Audio
-  - Extensions
-  - HTMLMediaElement
-  - MSE
-  - Media
-  - Property
-  - Reference
-  - Video
-  - seekable
-  - source
+- API
+- Audio
+- Extensions
+- HTMLMediaElement
+- MSE
+- Media
+- Property
+- Reference
+- Video
+- seekable
+- source
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>seekable</code></strong> read-only property of the {{domxref("HTMLMediaElement")}} returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.</p>
+<p>The <strong><code>seekable</code></strong> read-only property of the
+  {{domxref("HTMLMediaElement")}} returns a {{domxref('TimeRanges')}} object that
+  contains the time ranges that the user is able to seek to, if any.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var seekable = audioOrVideo.seekable;</pre>
+<pre class="brush: js">var seekable = audioOrVideo.seekable;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -28,7 +30,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">var video = document.querySelector("video");
+<pre class="brush: html">var video = document.querySelector("video");
 var timeRangesObject = video.seekable;
 var timeRanges = [];
 //Go through the object and output an array
@@ -40,41 +42,45 @@ for (let count = 0; count &lt; timeRangesObject.length; count ++) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-video-element.html#dom-media-seekable", "HTMLMediaElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#dom-media-seekable", "HTMLMediaElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions','#htmlmediaelement-extensions','HTMLMediaElement extensions, like for seekable')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Specifies a new algorithm for returning the seekable time range of a media element whose source is a {{domxref("MediaSource")}} object.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "the-video-element.html#dom-media-seekable",
+        "HTMLMediaElement")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change from {{SpecName('HTML5 W3C')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#dom-media-seekable",
+        "HTMLMediaElement")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Source Extensions','#htmlmediaelement-extensions','HTMLMediaElement extensions, like for
+        seekable')}}</td>
+      <td>{{Spec2('Media Source Extensions')}}</td>
+      <td>Specifies a new algorithm for returning the seekable time range of a media
+        element whose source is a {{domxref("MediaSource")}} object.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLMediaElement.seekable")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
- <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a></li>
- <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Media buffering, seeking, and time ranges</a></li>
+  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
+  <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions
+      API</a></li>
+  <li><a
+      href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Media
+      buffering, seeking, and time ranges</a></li>
 </ul>

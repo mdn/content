@@ -2,35 +2,44 @@
 title: FormDataEvent()
 slug: Web/API/FormDataEvent/FormDataEvent
 tags:
-  - API
-  - Constructor
-  - Experimental
-  - FormDataEvent
-  - Forms
-  - Reference
+- API
+- Constructor
+- Experimental
+- FormDataEvent
+- Forms
+- Reference
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>The <code><strong>FormDataEvent()</strong></code> constructor creates a new {{domxref("FormDataEvent")}} object instance.</p>
+<p>The <code><strong>FormDataEvent()</strong></code> constructor creates a new
+  {{domxref("FormDataEvent")}} object instance.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">new FormDataEvent(<var>type</var>[, form<var>EventInit</var>]);</pre>
+<pre
+  class="brush: js">new FormDataEvent(<var>type</var>[, form<var>EventInit</var>]);</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>type</code></dt>
- <dd>A {{domxref("DOMString")}} representing the name of the event.</dd>
- <dt><code>formEventInit</code> {{optional_inline}}</dt>
- <dd>A <code>FormEventInit</code> dictionary, which can take the following optional fields:
- <ul>
-  <li><code>bubbles</code>: a {{jsxref("Boolean")}} indicating whether the event bubbles. The default is <code>false</code>.</li>
-  <li><code>cancelable</code>: a {{jsxref("Boolean")}} indicating whether the event can be cancelled. The default is <code>false</code>.</li>
-  <li><code>composed</code>: a {{jsxref("Boolean")}} indicating whether the event will trigger listeners outside of a shadow root (see {{domxref("Event.composed")}} for more details). The default is <code>false</code>.</li>
-  <li><code>formData</code>: A {{domxref("FormData")}} object to pre-populate the FormDataEvent with. This would then be accessed through the {{domxref("FormDataEvent.formData")}} property.</li>
- </ul>
- </dd>
+  <dt><code>type</code></dt>
+  <dd>A {{domxref("DOMString")}} representing the name of the event.</dd>
+  <dt><code>formEventInit</code> {{optional_inline}}</dt>
+  <dd>A <code>FormEventInit</code> dictionary, which can take the following optional
+    fields:
+    <ul>
+      <li><code>bubbles</code>: a {{jsxref("Boolean")}} indicating whether the event
+        bubbles. The default is <code>false</code>.</li>
+      <li><code>cancelable</code>: a {{jsxref("Boolean")}} indicating whether the event
+        can be cancelled. The default is <code>false</code>.</li>
+      <li><code>composed</code>: a {{jsxref("Boolean")}} indicating whether the event will
+        trigger listeners outside of a shadow root (see {{domxref("Event.composed")}} for
+        more details). The default is <code>false</code>.</li>
+      <li><code>formData</code>: A {{domxref("FormData")}} object to pre-populate the
+        FormDataEvent with. This would then be accessed through the
+        {{domxref("FormDataEvent.formData")}} property.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -47,20 +56,22 @@ for (let value of fdEv.formData.values()) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','form-control-infrastructure.html#the-formdataevent-interface', 'FormDataEvent')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML
+        WHATWG','form-control-infrastructure.html#the-formdataevent-interface',
+        'FormDataEvent')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -70,5 +81,5 @@ for (let value of fdEv.formData.values()) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("FormDataEvent")}}</li>
+  <li>{{domxref("FormDataEvent")}}</li>
 </ul>

@@ -18,35 +18,51 @@ tags:
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-<p>The <code>createMediaStreamSource()</code> method of the {{ domxref("AudioContext") }} Interface is used to create a new {{ domxref("MediaStreamAudioSourceNode") }} object, given a media stream (say, from a {{ domxref("MediaDevices.getUserMedia") }} instance), the audio from which can then be played and manipulated.</p>
-</div>
+<p>The <code>createMediaStreamSource()</code> method of the {{ domxref("AudioContext") }}
+  Interface is used to create a new {{ domxref("MediaStreamAudioSourceNode") }}
+  object, given a media stream (say, from a {{ domxref("MediaDevices.getUserMedia") }}
+  instance), the audio from which can then be played and manipulated.</p>
 
-<p>For more details about media stream audio source nodes, check out the {{ domxref("MediaStreamAudioSourceNode") }} reference page.</p>
+<p>For more details about media stream audio source nodes, check out the {{
+    domxref("MediaStreamAudioSourceNode") }} reference page.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>audioSourceNode</em> = <em>audioContext</em>.createMediaStreamSource(<em>stream</em>);</pre>
+<pre
+    class="brush: js"><em>audioSourceNode</em> = <em>audioContext</em>.createMediaStreamSource(<em>stream</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>stream</code></dt>
- <dd>A {{domxref("MediaStream")}} to serve as an audio source to be fed into an audio processing graph for use and manipulation.</dd>
+    <dt><code>stream</code></dt>
+    <dd>A {{domxref("MediaStream")}} to serve as an audio source to be fed into an audio
+        processing graph for use and manipulation.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node whose media is obtained from the specified source stream.</p>
+<p>A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
+    whose media is obtained from the specified source stream.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, we grab a media (audio + video) stream from {{ domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }} element to play then mute the audio, but then also feed the audio into a {{ domxref("MediaStreamAudioSourceNode") }}. Next, we feed this source audio into a low pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster), then a {{domxref("AudioDestinationNode") }}.</p>
+<p>In this example, we grab a media (audio + video) stream from {{
+    domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }}
+    element to play then mute the audio, but then also feed the audio into a {{
+    domxref("MediaStreamAudioSourceNode") }}. Next, we feed this source audio into a low
+    pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
+    then a {{domxref("AudioDestinationNode") }}.</p>
 
-<p>The range slider below the {{ htmlelement("video") }} element controls the amount of gain given to the lowpass filter — increase the value of the slider to make the audio sound more bass heavy!</p>
+<p>The range slider below the {{ htmlelement("video") }} element controls the amount of
+    gain given to the lowpass filter — increase the value of the slider to make the audio
+    sound more bass heavy!</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this <a href="https://mdn.github.io/webaudio-examples/stream-source-buffer/">example running live</a>, or <a href="https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer">view the source</a>.</p>
+    <p><strong>Note</strong>: You can see this <a
+            href="https://mdn.github.io/webaudio-examples/stream-source-buffer/">example
+            running live</a>, or <a
+            href="https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer">view
+            the source</a>.</p>
 </div>
 
 <pre class="brush: js;highlight[23]">var pre = document.querySelector('pre');
@@ -104,35 +120,38 @@ if (navigator.mediaDevices) {
 pre.innerHTML = myScript.innerHTML;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: As a consequence of calling <code>createMediaStreamSource()</code>, audio playback from the media stream will be re-routed into the processing graph of the {{domxref("AudioContext")}}. So playing/pausing the stream can still be done through the media element API and the player controls.</p>
+    <p><strong>Note</strong>: As a consequence of calling
+        <code>createMediaStreamSource()</code>, audio playback from the media stream will
+        be re-routed into the processing graph of the {{domxref("AudioContext")}}. So
+        playing/pausing the stream can still be done through the media element API and the
+        player controls.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiocontext-createmediastreamsource', 'AudioContext.createMediaStreamSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+    <tbody>
+        <tr>
+            <th scope="col">Specification</th>
+            <th scope="col">Status</th>
+            <th scope="col">Comment</th>
+        </tr>
+        <tr>
+            <td>{{SpecName('Web Audio API', '#dom-audiocontext-createmediastreamsource',
+                'AudioContext.createMediaStreamSource()')}}</td>
+            <td>{{Spec2('Web Audio API')}}</td>
+            <td></td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioContext.createMediaStreamSource")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
+            API</a></li>
 </ul>

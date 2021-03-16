@@ -2,37 +2,44 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
+- JavaScript
+- Method
+- Number
+- Prototype
+- Reference
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>valueOf()</code></strong> method returns the wrapped primitive value of a {{jsxref("Number")}} object.</p>
+<p>The <strong><code>valueOf()</code></strong> method returns the wrapped primitive value
+  of a {{jsxref("Number")}} object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-valueof.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>numObj</var>.valueOf()</pre>
+<pre class="brush: js"><var>numObj</var>.valueOf()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A number representing the primitive value of the specified {{jsxref("Number")}} object.</p>
+<p>A number representing the primitive value of the specified {{jsxref("Number")}} object.
+</p>
 
 <h2 id="Description">Description</h2>
 
-<p>This method is usually called internally by JavaScript and not explicitly in web code.</p>
+<p>This method is usually called internally by JavaScript and not explicitly in web code.
+</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_valueOf">Using valueOf</h3>
 
-<pre class="brush: js notranslate">let numObj = new Number(10)
+<pre class="brush: js">let numObj = new Number(10)
 console.log(typeof numObj)  // object
 
 let num = numObj.valueOf()
@@ -43,16 +50,17 @@ console.log(typeof num)     // number
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-number.prototype.valueof',
+        'Number.prototype.valueOf')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -62,5 +70,5 @@ console.log(typeof num)     // number
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Number.prototype.toSource()")}}</li>
+  <li>{{jsxref("Number.prototype.toSource()")}}</li>
 </ul>

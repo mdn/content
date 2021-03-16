@@ -8,13 +8,18 @@ tags:
   - File System Access API
   - Method
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
+</div>
 
-<p class="summary">The <strong><code>getAsFileSystemHandle()</code></strong> method of the {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.</p>
+<p class="summary">The <strong><code>getAsFileSystemHandle()</code></strong> method of the
+  {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
+  if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the
+  dragged item is a directory.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>handle</var> = DataTransferItem.getAsFileSystemHandle();</pre>
+<pre
+  class="brush: js">var <var>handle</var> = DataTransferItem.getAsFileSystemHandle();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -30,9 +35,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example uses the <code>getAsFileSystemHandle</code> method to return {{domxref('FileSystemHandle','file handles')}} for dropped items.</p>
+<p>This example uses the <code>getAsFileSystemHandle</code> method to return
+  {{domxref('FileSystemHandle','file handles')}} for dropped items.</p>
 
-<pre class="brush: js notranslate">elem.addEventListener('dragover', (e) =&gt; {
+<pre class="brush: js">elem.addEventListener('dragover', (e) =&gt; {
   // Prevent navigation.
   e.preventDefault();
 });
@@ -57,18 +63,18 @@ elem.addEventListener('drop', async (e) =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access','#drag-and-drop','getAsFileSystemHandle')}}</td>
-   <td>{{Spec2('File System Access')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System Access','#drag-and-drop','getAsFileSystemHandle')}}</td>
+      <td>{{Spec2('File System Access')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -78,6 +84,7 @@ elem.addEventListener('drop', async (e) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

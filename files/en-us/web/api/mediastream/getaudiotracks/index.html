@@ -2,26 +2,31 @@
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
 tags:
-  - API
-  - Audio
-  - Experimental
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - getAudioTracks
-  - track
+- API
+- Audio
+- Experimental
+- Media
+- Media Capture and Streams API
+- Media Streams API
+- MediaStream
+- MediaStreamTrack
+- Method
+- Reference
+- getAudioTracks
+- track
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p>The <strong><dfn><code>getAudioTracks()</code></dfn></strong> method of the {{domxref("MediaStream")}} interface returns a sequence that represents all the {{domxref("MediaStreamTrack")}} objects in this stream's <code><a href="https://www.w3.org/TR/mediacapture-streams/#track-set">track set</a></code> where {{domxref("MediaStreamTrack.kind")}} is <code>audio</code>.</p>
+<p>The <strong><dfn><code>getAudioTracks()</code></dfn></strong> method of the
+  {{domxref("MediaStream")}} interface returns a sequence that represents all the
+  {{domxref("MediaStreamTrack")}} objects in this
+  stream's <code><a href="https://www.w3.org/TR/mediacapture-streams/#track-set">track set</a></code> where {{domxref("MediaStreamTrack.kind")}}
+  is <code>audio</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>mediaStreamTracks</em> = <em>mediaStream</em>.getAudioTracks()</pre>
+<pre
+  class="brush: js">var <em>mediaStreamTracks</em> = <em>mediaStream</em>.getAudioTracks()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,17 +34,27 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An array of {{domxref("MediaStreamTrack")}} objects, one for each audio track contained in the stream. Audio tracks are those tracks whose {{domxref("MediaStreamTrack.kind", "kind")}} property is <code>audio</code>. The array is empty if the stream contains no audio tracks.</p>
+<p>An array of {{domxref("MediaStreamTrack")}} objects, one for each audio track contained
+  in the stream. Audio tracks are those tracks whose {{domxref("MediaStreamTrack.kind",
+  "kind")}} property is <code>audio</code>. The array is empty if the stream contains no
+  audio tracks.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The order of the returned tracks is not defined by the specification and may, in fact, change from one call to <code>getAudioTracks()</code> to the next.</p>
+  <p><strong>Note:</strong> The order of the returned tracks is not defined by the
+    specification and may, in fact, change from one call to <code>getAudioTracks()</code>
+    to the next.</p>
 </div>
 
-<p>Early versions of this API included a special <code>AudioStreamTrack</code> interface which was used as the type for each entry in the list of audio streams; however, this has since been merged into the main {{domxref("MediaStreamTrack")}} interface.</p>
+<p>Early versions of this API included a special <code>AudioStreamTrack</code> interface
+  which was used as the type for each entry in the list of audio streams; however, this
+  has since been merged into the main {{domxref("MediaStreamTrack")}} interface.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example gets a webcam's audio and video in a stream using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, attaches the stream to a {{HTMLElement("video")}} element, then sets a timer that, upon expiring, will stop the first audio track found on the stream.</p>
+<p>This example gets a webcam's audio and video in a stream using
+  {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, attaches the stream to a
+  {{HTMLElement("video")}} element, then sets a timer that, upon expiring, will stop the
+  first audio track found on the stream.</p>
 
 <pre class="brush: js">navigator.mediaDevices.getUserMedia({audio: true, video: true})
 .then(mediaStream =&gt; {
@@ -55,26 +70,30 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture','#dom-mediastream-getaudiotracks','getAudioTracks()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Media
+        Capture','#dom-mediastream-getaudiotracks','getAudioTracks()')}}</td>
+      <td>{{Spec2('Media Capture')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table on this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.MediaStream.getAudioTracks")}}</p>

@@ -2,22 +2,26 @@
 title: PeriodicSyncManager.getTags()
 slug: Web/API/PeriodicSyncManager/getTags
 tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
+- Background Sync
+- Method
+- Offline
+- PWA
+- PeriodicSyncManager
+- Service Worker
+- Web Periodic Background Synchronization API
+- periodic sync
 ---
 <div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
 
-<p class="summary">The <strong><code>getTags()</code></strong> method of the {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that resolves with a list of {{jsxref('String')}} objects representing the tags that are currently registered for periodic syncing.</p>
+<p class="summary">The <strong><code>getTags()</code></strong> method of the
+  {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that
+  resolves with a list of {{jsxref('String')}} objects representing the tags that are
+  currently registered for periodic syncing.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>tags</var> = PeriodicSyncManager.getTags();</pre>
+<pre
+  class="brush: js">var <var>tags</var> = PeriodicSyncManager.getTags();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -25,7 +29,8 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref('Promise')}} which resolves with a list of {{jsxref('String')}} objects representing tags that are currently registered for periodic syncing.</p>
+<p>A {{jsxref('Promise')}} which resolves with a list of {{jsxref('String')}} objects
+  representing tags that are currently registered for periodic syncing.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -33,9 +38,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example uses the <code>getTags()</code> method to check if a periodic sync task with a given tag is registered.</p>
+<p>The following example uses the <code>getTags()</code> method to check if a periodic
+  sync task with a given tag is registered.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.getTags().then(tags =&gt; {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
@@ -48,18 +54,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Periodic Background Sync','#dom-periodicsyncmanager-gettags','getTags')}}</td>
-   <td>{{Spec2('Periodic Background Sync')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Periodic Background
+        Sync','#dom-periodicsyncmanager-gettags','getTags')}}</td>
+      <td>{{Spec2('Periodic Background Sync')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -69,6 +76,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
+  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
+      the Periodic Background Sync API</a></li>
+  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
+      Periodic Background Sync demo app</a></li>
 </ul>

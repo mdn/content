@@ -42,7 +42,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="https://html.spec.whatwg.org/multipage/media.html#event-media-volumechange">HTML5 media</a></td>
+   <td><a href="https://html.spec.whatwg.org/multipage/media.html#event-media-volumechange">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
@@ -53,7 +53,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('volumechange', (event) =&gt; {
   console.log('The volume changed.');
@@ -61,7 +61,7 @@ video.addEventListener('volumechange', (event) =&gt; {
 
 <p>Using the <code>onvolumechange</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.onvolumechange = (event) =&gt; {
   console.log('The volume changed.');

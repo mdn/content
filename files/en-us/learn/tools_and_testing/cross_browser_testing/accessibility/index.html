@@ -55,7 +55,7 @@ tags:
 
 <p>In a way, this whole module is about accessibility — cross browser testing makes sure that your sites can be used by as many people as possible. <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a> defines accessibility more completely and thoroughly than this article does.</p>
 
-<p>That said, this article will cover cross browser and testing issues surrounding people with disabilities, and how they use the Web. We've already talked about other spheres such as <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">responsive design</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues">performance</a> in other places in the module.</p>
+<p>That said, this article will cover cross browser and testing issues surrounding people with disabilities, and how they use the Web. We've already talked about other spheres such as <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems">responsive design</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#performance_issues">performance</a> in other places in the module.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.</p>
@@ -66,7 +66,7 @@ tags:
 <p>In this section we'll detail some of the main issues that arise around web accessibility, connected with specific technologies, along with best practices to follow, and some quick tests you can do to see if your sites are going in the right direction.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Accessibility is morally the right thing to do, and good for business (numbers of disabled users, users on mobile devices, etc. present significant market segments), but it is also a legal requirement in many parts of the world to make web content accessible to people with disabilities. Read <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law">Accessibility guidelines and the law</a> for more information.</p>
+<p><strong>Note</strong>: Accessibility is morally the right thing to do, and good for business (numbers of disabled users, users on mobile devices, etc. present significant market segments), but it is also a legal requirement in many parts of the world to make web content accessible to people with disabilities. Read <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law">Accessibility guidelines and the law</a> for more information.</p>
 </div>
 
 <h3 id="HTML">HTML</h3>
@@ -77,7 +77,7 @@ tags:
 
 <p>The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;font size="7"&gt;My heading&lt;/font&gt;
+<pre class="brush: html example-bad">&lt;font size="7"&gt;My heading&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 This is the first section of my document.
 &lt;br&gt;&lt;br&gt;
@@ -91,7 +91,7 @@ This is the first subsection of my document. I'd love people to be able to find 
 &lt;br&gt;&lt;br&gt;
 This is the second subsection of my content. I think it is more interesting than the last one.</pre>
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;My heading&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;My heading&lt;/h1&gt;
 
 &lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
@@ -122,10 +122,10 @@ This is the second subsection of my content. I think it is more interesting than
 
 <p>You can try this out using our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">source code</a>) — open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements; the focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
+<p><img alt="" src="button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="notecard note">
-<p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#Show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
+<p>From Firefox 84 you can also enable an overlay that shows the page tabbing order. For more information see: <a href="/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order">Accessibility Inspector &gt; Show web page tabbing order</a>.</p>
 </div>
 
 <p>You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).</p>
@@ -145,7 +145,7 @@ This is the second subsection of my content. I think it is more interesting than
 
 <p>Another tip — as shown in our example, you can control how your focusable elements look when focused, using the <a href="/en-US/docs/Web/CSS/:focus">:focus</a> pseudo-class. It is a good idea to double up focus and hover styles, so your users get that visual clue that a control will do something when activated, whether they are using mouse or keyboard:</p>
 
-<pre class="brush: css notranslate">a:hover, input:hover, button:hover, select:hover,
+<pre class="brush: css">a:hover, input:hover, button:hover, select:hover,
 a:focus, input:focus, button:focus, select:focus {
   font-weight: bold;
 }</pre>
@@ -159,10 +159,10 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Sometimes it is not possible to avoid losing keyboard accessibility. You might have inherited a site where the semantics are not very good (perhaps you've ended up with a horrible CMS that generates buttons made with <code>&lt;div&gt;</code>s), or you are using a complex control that does not have keyboard accessibility built in, like the HTML5 {{htmlelement("video")}} element (amazingly, Opera is the only browser that allows you to tab through the <code>&lt;video&gt;</code> element's default browser controls). You have a few options here:</p>
 
 <ol>
- <li>Create custom controls using <code>&lt;button&gt;</code> elements (which we can tab to by default!) and JavaScript to wire up their functionality. See <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for some good examples of this.</li>
+ <li>Create custom controls using <code>&lt;button&gt;</code> elements (which we can tab to by default!) and JavaScript to wire up their functionality. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for some good examples of this.</li>
  <li>Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a> for some game-related examples that can be adapted for any purpose.</li>
  <li>Use some interesting tactics to fake button behavior. Take for example our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Here we've given our fake <code>&lt;div&gt;</code> buttons the ability to be focused (including via tab) by giving each one the attribute <code>tabindex="0"</code> (see WebAIM's <a href="http://webaim.org/techniques/keyboard/tabindex">tabindex article</a> for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
-  <pre class="brush: js notranslate">document.onkeydown = function(e) {
+  <pre class="brush: js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.onclick(e);
   }
@@ -179,12 +179,12 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Text alternatives are very important for accessibility — if a person has a visual or hearing impairment that stops them being able to see or hear some content, then this is a problem. The simplest text alternative available is the humble <code>alt</code> attribute, which we should include on all images that contain relevant content. This should contain a description of the image that successfully conveys its meaning and content on the page, to be picked up by a screenreader and read out to the user.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, read <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+<p><strong>Note</strong>: For more information, read <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">Text alternatives</a>.</p>
 </div>
 
 <p>Missing alt text can be tested for in a number of ways, for example using accessibility {{anch("Auditing tools")}}.</p>
 
-<p>Alt text is slightly more complex for video and audio content. There is a way to define text tracks (e.g. subtitles) and display them when video is being played, in the form of the {{htmlelement("track")}} element, and the <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT</a> format (see <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a> for a detailed tutorial). <a href="/en-US/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Browser_Compatibility">Browser compatibility</a> for these features is fairly good, but if you want to provide text alternatives for audio or support older browsers, a simple text transcript presented somewhere on the page or on a separate page might be a good idea.</p>
+<p>Alt text is slightly more complex for video and audio content. There is a way to define text tracks (e.g. subtitles) and display them when video is being played, in the form of the {{htmlelement("track")}} element, and the <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> format (see <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a> for a detailed tutorial). <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#browser_compatibility">Browser compatibility</a> for these features is fairly good, but if you want to provide text alternatives for audio or support older browsers, a simple text transcript presented somewhere on the page or on a separate page might be a good idea.</p>
 
 <h4 id="Element_relationships_and_context">Element relationships and context</h4>
 
@@ -195,7 +195,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Next on our list, the form {{htmlelement("label")}} element is one of the central features that allows us to make forms accessible. The trouble with forms is that you need labels to say what data should be entered into each form input. Each label needs to be included inside a {{htmlelement("label")}} to link it unambiguously to its partner form input (each <code>&lt;label&gt;</code> <code>for</code> attribute value needs to match the form element <code>id</code> value), and it will make sense even if the source order is not completely logical (which to be fair it should be).</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information about link text and form labels, read <a href="/en-US/docs/Learn/Accessibility/HTML#Meaningful_text_labels">Meaningful text labels</a>.</p>
+<p><strong>Note</strong>: For more information about link text and form labels, read <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels">Meaningful text labels</a>.</p>
 </div>
 
 <p>Finally, a quick word about data tables. A basic data table can be written with very simple markup (see <code>bad-table.html</code> <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html">source</a>), but this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data — to do this you need to know what the header rows are, and if they are heading up rows, columns, etc. This can only be done visually for such a table.</p>
@@ -203,7 +203,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>If you instead look at our <code>punk-bands-complete.html</code> example (<a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">live</a>, <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">source</a>), you can see a few accessibility aids at work here, such as table headers ({{htmlelement("th")}} and <code>scope</code> attributes), {{htmlelement("caption")}} element, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information about accessible tables, read <a href="/en-US/docs/Learn/Accessibility/HTML#Accessible_data_tables">Accessible data tables</a>.</p>
+<p><strong>Note</strong>: For more information about accessible tables, read <a href="/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables">Accessible data tables</a>.</p>
 </div>
 
 <h3 id="CSS">CSS</h3>
@@ -232,14 +232,14 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16918/20191022144107.png" style="display: block; height: 1131px; margin: 0px auto; max-width: 450px; width: 1272px;"></p>
+<p><img alt="" src="20191022144107.png" style="display: block; margin: 0px auto; max-width: 450px;"></p>
 
 <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
 
 <p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screenreaders. Unless of course, there is a good reason why you want this content to be hidden from screenreaders.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <span class="subtitle"><a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</span></p>
+<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -286,7 +286,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Here's an example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
 
 <p>You can see an example in action at Freedom Scientific's <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) Live Regions</a> example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a> provides another useful example.</p>
 
@@ -310,8 +310,8 @@ a:focus, input:focus, button:focus, select:focus {
 
 <ol>
  <li>Go to the <a href="http://wave.webaim.org/">Wave homepage</a>.</li>
- <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input at the top of the page (or the URL of another webpage you'd like to analyze) and press <em>Analyse Your Webpage</em>.</li>
- <li>Check out the description of the accessibility problems on the results page (the icons you can click to see what problems are occurring where are rather useful).</li>
+ <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.</li>
+ <li>The site should respond with a description of the accessibility problems. Click the icons displayed to see more information about each of the issues identified by Wave's evaluation.</li>
 </ol>
 
 <div class="note">
@@ -329,7 +329,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> example. We got the following results:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14213/aXe-screenshot.png" style="display: block; height: 580px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="axe-screenshot.png" style="display: block; margin: 0px auto;"></p>
 
 <p>aXe is also installable using <code>npm</code>, and can be integrated with task runners like <a href="http://gruntjs.com/">Grunt</a> and <a href="http://gulpjs.com/">Gulp</a>, automation frameworks like <a href="http://www.seleniumhq.org/">Selenium</a> and <a href="https://cucumber.io/">Cucumber</a>, unit testing frameworks like <a href="https://jasmine.github.io/">Jasmin</a>, and more besides (again, see the <a href="https://www.deque.com/products/axe/">main aXe page</a> for details).</p>
 
@@ -363,7 +363,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>When VO is on, the display will look mostly the same, but you'll see a black box at the bottom left of the screen that contains information on what VO currently has selected. The current selection will also be highlighted, with a black border — this highlight is known as the <strong>VO cursor</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14219/voiceover.png" style="border-style: solid; border-width: 1px; display: block; height: 386px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="voiceover.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>To use VO, you will make a lot of use of the "VO modifier" — this is a key or key combination that you need to press in addition to the actual VO keyboard shortcuts to get them to work. Using a modifier like this is common with screenreaders, to enable them to keep their commands from clashing with other commands. In the case of VO, the modifier can either be CapsLock, or Ctrl + Option.</p>
 
@@ -577,29 +577,29 @@ a:focus, input:focus, button:focus, select:focus {
 
 <h3 id="User_testing">User testing</h3>
 
-<p>As mentioned above, you can't rely on automated tools alone for determining accessibility problems on your site. It is recommended that when you draw up your testing plan, you should include some accessibility user groups if at all possible (see our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#User_testing">User Testing</a> section earlier on in the course for some more context). Try to get some screenreader users involved, some keyboard-only users, some non-hearing users, and perhaps other groups too, as suits your requirements.</p>
+<p>As mentioned above, you can't rely on automated tools alone for determining accessibility problems on your site. It is recommended that when you draw up your testing plan, you should include some accessibility user groups if at all possible (see our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#user_testing">User Testing</a> section earlier on in the course for some more context). Try to get some screenreader users involved, some keyboard-only users, some non-hearing users, and perhaps other groups too, as suits your requirements.</p>
 
 <h2 id="Accessibility_testing_checklist">Accessibility testing checklist</h2>
 
 <p>The following list provides a checklist for you to follow to make sure you've carried out the recommended accessibility testing for your project:</p>
 
 <ol>
- <li>Make sure your HTML is as semantically correct as possible. <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Validation">Validating it</a> is a good start, as is using an <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools">Auditing tool</a>.</li>
+ <li>Make sure your HTML is as semantically correct as possible. <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation">Validating it</a> is a good start, as is using an <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools">Auditing tool</a>.</li>
  <li>Check that your content makes sense when the CSS is turned off.</li>
- <li>Make sure your functionality is <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility">keyboard accessible</a>. Test using Tab, Return/Enter, etc.</li>
- <li>Make sure your non-text content has <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives">text alternatives</a>. An <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools">Auditing tool</a> is good for catching such problems.</li>
- <li>Make sure your site's <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Color_and_color_contrast">color contrast</a> is acceptable, using a suitable checking tool.</li>
- <li>Make sure <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Hiding_content">hidden content</a> is visible by screenreaders.</li>
+ <li>Make sure your functionality is <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility">keyboard accessible</a>. Test using Tab, Return/Enter, etc.</li>
+ <li>Make sure your non-text content has <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives">text alternatives</a>. An <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools">Auditing tool</a> is good for catching such problems.</li>
+ <li>Make sure your site's <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#color_and_color_contrast">color contrast</a> is acceptable, using a suitable checking tool.</li>
+ <li>Make sure <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#hiding_content">hidden content</a> is visible by screenreaders.</li>
  <li>Make sure that functionality is usable without JavaScript wherever possible.</li>
  <li>Use ARIA to improve accessibility where appropriate.</li>
- <li>Run your site through an <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Auditing_tools">Auditing tool</a>.</li>
+ <li>Run your site through an <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#auditing_tools">Auditing tool</a>.</li>
  <li>Test it with a screenreader.</li>
  <li>Include an accessibility policy/statement somewhere findable on your site to say what you did.</li>
 </ol>
 
 <h2 id="Finding_help">Finding help</h2>
 
-<p>There are many other issues you'll encounter with accessibility; the most important thing to know really is how to find answers online. Consult the HTML and CSS article's <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Finding_help">Finding help section</a> for some good pointers.</p>
+<p>There are many other issues you'll encounter with accessibility; the most important thing to know really is how to find answers online. Consult the HTML and CSS article's <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#finding_help">Finding help section</a> for some good pointers.</p>
 
 <h2 id="Summary">Summary</h2>
 

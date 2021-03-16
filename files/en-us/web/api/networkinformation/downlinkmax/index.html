@@ -2,33 +2,38 @@
 title: NetworkInformation.downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
 tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
+- API
+- Experimental
+- Network Information API
+- NetworkInformation
+- Property
+- Read-only
+- Reference
 ---
 <p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>NetworkInformation.downlinkMax</code></strong> read-only property returns the maximum downlink speed, in megabits per second (Mbps), for the underlying connection technology.</p>
+<p>The <strong><code>NetworkInformation.downlinkMax</code></strong> read-only property
+  returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
+  connection technology.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>max</em> = NetworkInformation.<em>downlinkMax</em></pre>
+<pre
+  class="brush: js">var <em>max</em> = NetworkInformation.<em>downlinkMax</em></pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li>an <code>unrestricted double</code> representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.</li>
+  <li>an <code>unrestricted double</code> representing the maximum downlink speed,
+    in megabits per second (Mb/s), for the underlying connection technology.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example monitors the connection using the <code>change</code> event and logs changes as they occur.</p>
+<p>The following example monitors the connection using the <code>change</code> event and
+  logs changes as they occur.</p>
 
 <pre class="brush: js"><code>function logConnectionType() {
   var connectionType = 'not supported';
@@ -52,20 +57,21 @@ navigator.connection.addEventListener('change', logConnectionType);</code></pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Network Information', '#dom-networkinformation-downlinkmax', 'downlinkMax')}}</td>
-   <td>{{Spec2('Network Information')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Network Information', '#dom-networkinformation-downlinkmax',
+        'downlinkMax')}}</td>
+      <td>{{Spec2('Network Information')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

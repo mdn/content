@@ -11,28 +11,37 @@ tags:
 ---
 <div>{{ApiRef("HTML DOM")}} {{deprecated_header}}</div>
 
-<p>The <code><strong>onkeypress</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("keypress")}} events.</p>
+<p>The <code><strong>onkeypress</strong></code> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{event("keypress")}} events.</p>
 
-<p>The <code>keypress</code> event <em>should</em> fire when the user presses a key on the keyboard. However, in practice browsers do not fire <code>keypress</code> events for certain keys.</p>
+<p>The <code>keypress</code> event <em>should</em> fire when the user presses a key on the
+  keyboard. However, in practice browsers do not fire <code>keypress</code> events for
+  certain keys.</p>
 
 <div class="notecard warning">
-<p>The <code>onkeypress</code> event handler has been deprecated. You may want to use {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}} instead.</p>
+  <p>The <code>onkeypress</code> event handler has been deprecated. You may want to use
+    {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}} instead.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>target</em>.onkeypress = <var>functionRef</var>;
+<pre class="brush: js"><em>target</em>.onkeypress = <var>functionRef</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("KeyboardEvent")}} object as its sole argument.</p>
+<p><code>functionRef</code> is a function name or a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
+    expression</a>. The function receives a {{domxref("KeyboardEvent")}} object as its
+  sole argument.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key inside the {{HtmlElement("input")}} element.</p>
+<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key
+  inside the {{HtmlElement("input")}} element.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -56,7 +65,9 @@ function logKey(e) {
 
 <h3 id="Filter_keys_with_a_regular_expression">Filter keys with a regular expression</h3>
 
-<p>This example filters the characters typed into a form field using a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>.</p>
+<p>This example filters the characters typed into a form field using a <a
+    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>.
+</p>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -82,7 +93,8 @@ input.onpaste = event =&gt; false;</pre>
 
 <h3 id="Capture_the_typing_of_a_hidden_word">Capture the typing of a hidden word</h3>
 
-<p>The following JavaScript function will do something after the user types the word "exit" in any point of a page.</p>
+<p>The following JavaScript function will do something after the user types the word
+  "exit" in any point of a page.</p>
 
 <pre class="brush: js">/* Type the word "exit" in any point of your page... */
 
@@ -109,7 +121,7 @@ input.onpaste = event =&gt; false;</pre>
     } else {
       nOffset = 0;
       /* Do something here... */
-      alert("Yesss!!!");
+      alert("Yes!!!");
       location.assign("https://developer.mozilla.org/");
     }
 
@@ -118,47 +130,54 @@ input.onpaste = event =&gt; false;</pre>
 })();</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> A more complete framework for capturing the typing of hidden words is <a href="https://github.com/madmurphy/spell.js/">available on GitHub</a>.</p>
+  <p><strong>Note:</strong> A more complete framework for capturing the typing of hidden
+    words is <a href="https://github.com/madmurphy/spell.js/">available on GitHub</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeypress','onkeypress')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeypress','onkeypress')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-<p>{{Compat("api.GlobalEventHandlers.onkeypress")}}</p>
+  <p>{{Compat("api.GlobalEventHandlers.onkeypress")}}</p>
 
-<h3 id="Browser_compatibility_notes">Browser compatibility notes</h3>
+  <h3 id="Browser_compatibility_notes">Browser compatibility notes</h3>
 
-<ul>
- <li>The <code>keypress</code> event is no longer fired for <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">non-printable keys</a> (see {{bug(968056)}} for Firefox 65's implementation of this), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).</li>
-</ul>
+  <ul>
+    <li>The <code>keypress</code> event is no longer fired for <a
+        href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable
+        keys</a> (see {{bug(968056)}} for Firefox 65's implementation of this), except for
+      the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and
+      <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for
+      cross-browser compatibility purposes).</li>
+  </ul>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{Event("keypress")}} event</li>
- <li>Related event handlers
-  <ul>
-   <li>{{domxref("GlobalEventHandlers.onkeydown")}}</li>
-   <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
-  </ul>
- </li>
+  <li>{{Event("keypress")}} event</li>
+  <li>Related event handlers
+    <ul>
+      <li>{{domxref("GlobalEventHandlers.onkeydown")}}</li>
+      <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
+    </ul>
+  </li>
 </ul>

@@ -9,9 +9,9 @@ tags:
 ---
 <p>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
 
-<p><span class="seoSummary">The <code><a class="external" href="https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog">dialog</a></code> role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).</span></p>
+<p><span class="seoSummary">The <code><a href="https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog">dialog</a></code> role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).</span></p>
 
-<pre class="brush: html notranslate">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
+<pre class="brush: html">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
   &lt;h2 <strong>id="dialog1Title"</strong>&gt;Your personal details were successfully updated&lt;/h2&gt;
   &lt;p <strong>id="dialog1Desc"</strong>&gt;You can change your details at any time in the user account section.&lt;/p&gt;
   &lt;button&gt;Close&lt;/button&gt;
@@ -34,7 +34,7 @@ tags:
 
 <p>If a dialog already has a visible title bar, the text inside that bar can be used to label the dialog itself. The best way to achieve this is by using the <code>aria-labelledby</code> attribute to the <code>role="dialog"</code> element. Additionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the <code>aria-describedby</code> attribute. This approach is shown in the code snippet below:</p>
 
-<pre class="brush: html notranslate">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
+<pre class="brush: html">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
   &lt;h2 <strong>id="dialog1Title"</strong>&gt;Your personal details were successfully updated&lt;/h2&gt;
   &lt;p <strong>id="dialog1Desc"</strong>&gt;You can change your details at any time in the user account section.&lt;/p&gt;
   &lt;button&gt;Close&lt;/button&gt;
@@ -82,7 +82,7 @@ tags:
 
 <h4 id="A_dialog_containing_a_form">A dialog containing a form</h4>
 
-<pre class="brush: html notranslate"> &lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
+<pre class="brush: html"> &lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
    &lt;h2 id="dialog1Title"&gt;Subscription Form&lt;/h2&gt;
    &lt;p id="dialog1Desc"&gt;We will not share this information with third parties.&lt;/p&gt;
    &lt;form&gt;
@@ -111,7 +111,7 @@ tags:
 <h4 id="Working_Examples">Working Examples:</h4>
 
 <ul>
- <li><a class="external" href="http://jqueryui.com/demos/dialog/">jQuery-UI Dialog</a></li>
+ <li><a href="http://jqueryui.com/demos/dialog/">jQuery-UI Dialog</a></li>
 </ul>
 
 <h3 id="Notes">Notes </h3>
@@ -141,5 +141,5 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role">ARIA: alertdialog role</a></li>
- <li><a href="/en/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="Using the alertdialog role">Using the alertdialog role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
 </ul>

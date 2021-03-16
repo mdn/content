@@ -2,34 +2,38 @@
 title: NotificationEvent.NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
 tags:
-  - API
-  - Constructor
-  - Experimental
-  - NotificationEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
+- API
+- Constructor
+- Experimental
+- NotificationEvent
+- Reference
+- Service Workers
+- ServiceWorker
 ---
 <p>{{APIRef("Web Notifications")}}{{draft}}</p>
 
-<p>The <strong><code>NotificationEvent()</code></strong> constructor creates a new {{domxref("NotificationEvent")}} object.</p>
+<p>The <strong><code>NotificationEvent()</code></strong> constructor creates a new
+  {{domxref("NotificationEvent")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var myNotificationEvent = new NotificationEvent(type, NotificationEventInit);</pre>
+<pre
+  class="brush: js">var myNotificationEvent = new NotificationEvent(type, NotificationEventInit);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>type</code></dt>
- <dd>TBD</dd>
- <dt><code>NotificationEventInit</code> {{optional_inline}}</dt>
- <dd>A dictionary object containing a {{domxref("Notification")}} object to be used as the notification the event is dispatched on. In later drafts of the specification, this parameter is not optional.</dd>
+  <dt><code>type</code></dt>
+  <dd>TBD</dd>
+  <dt><code>NotificationEventInit</code> {{optional_inline}}</dt>
+  <dd>A dictionary object containing a {{domxref("Notification")}} object to be used as
+    the notification the event is dispatched on. In later drafts of the specification,
+    this parameter is not optional.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var n = new Notification('Hello');
+<pre class="brush: js">var n = new Notification('Hello');
 var init = { notification: n };
 var myNotificationEvent = new NotificationEvent(type, init);
 </pre>
@@ -37,20 +41,22 @@ var myNotificationEvent = new NotificationEvent(type, init);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-notificationevent-notificationevent','NotificationEvent() constructor')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Web
+        Notifications','#dom-notificationevent-notificationevent','NotificationEvent()
+        constructor')}}</td>
+      <td>{{Spec2('Web Notifications')}}</td>
+      <td>Living standard.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

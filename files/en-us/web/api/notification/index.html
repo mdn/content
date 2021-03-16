@@ -44,23 +44,23 @@ tags:
 
 <dl>
  <dt>{{domxref("Notification.actions")}} {{readonlyinline}}</dt>
- <dd>The actions array of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The actions array of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.badge")}} {{readonlyinline}}</dt>
  <dd>The URL of the image used to represent the notification when there is not enough space to display the notification itself.</dd>
  <dt>{{domxref("Notification.body")}} {{readonlyinline}}</dt>
- <dd>The body string of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The body string of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
  <dd>Returns a structured clone of the notification’s data.</dd>
  <dt>{{domxref("Notification.dir")}} {{readonlyinline}}</dt>
- <dd>The text direction of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The text direction of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.lang")}} {{readonlyinline}}</dt>
- <dd>The language code of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The language code of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.tag")}} {{readonlyinline}}</dt>
- <dd>The ID of the notification (if any) as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The ID of the notification (if any) as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
- <dd>The URL of the image used as an icon of the notification as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The URL of the image used as an icon of the notification as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.image")}} {{readonlyinline}}</dt>
- <dd>The URL of an image to be displayed as part of the notification, as specified in the constructor's <code><var>options<var></var></var></code> parameter.</dd>
+ <dd>The URL of an image to be displayed as part of the notification, as specified in the constructor's <code><var>options</var></code> parameter.</dd>
  <dt>{{domxref("Notification.renotify")}} {{readonlyinline}}</dt>
  <dd>Specifies whether the user should be notified after a new notification replaces an old one.</dd>
  <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
@@ -112,11 +112,11 @@ tags:
 
 <p>Assume this basic HTML:</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="notifyMe()"&gt;Notify me!&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="notifyMe()"&gt;Notify me!&lt;/button&gt;</pre>
 
 <p>It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.</p>
 
-<pre class="brush: js notranslate">function notifyMe() {
+<pre class="brush: js">function notifyMe() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     alert("This browser does not support desktop notification");

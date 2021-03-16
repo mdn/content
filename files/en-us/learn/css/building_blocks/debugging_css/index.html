@@ -37,19 +37,19 @@ tags:
 
 <h2 id="The_DOM_versus_view_source">The DOM versus view source</h2>
 
-<p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/en-US/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
+<p>Something that can trip up newcomers to DevTools is the difference between what you see when you <a href="/en-US/docs/Tools/View_source">view the source</a> of a webpage, or look at the HTML file you put on the server, and what you can see in the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#html_pane">HTML Pane</a> of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
 
 <p>In the rendered DOM the browser may have corrected some badly-written HTML for you. If you incorrectly closed an element, for instance opening an <code>&lt;h2&gt;</code> but closing with an <code>&lt;/h3&gt;</code>, the browser will figure out what you were meaning to do and the HTML in the DOM will correctly close the open <code>&lt;h2&gt;</code> with an <code>&lt;/h2&gt;</code>. The browser will also normalize all of the HTML, and the DOM will also show any changes made by JavaScript.</p>
 
-<p>View Source in comparison, is the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
+<p>View Source in comparison, is the HTML source code as stored on the server. The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#html_tree">HTML tree</a> in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
 
 <h2 id="Inspecting_the_applied_CSS">Inspecting the applied CSS</h2>
 
 <p>Select an element on your page, either by right/ctrl-clicking on it and selecting <em>Inspect</em>, or selecting it from the HTML tree on the left of the DevTools display. Try selecting the element with the class of <code>box1</code>; this is the first element on the page with a bordered box drawn around it.</p>
 
-<p><img alt="The example page for this tutorial with DevTools open." src="https://mdn.mozillademos.org/files/16606/inspecting1.png" style="border-style: solid; border-width: 1px; height: 1527px; width: 2278px;"></p>
+<p><img alt="The example page for this tutorial with DevTools open." src="inspecting1.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>If you look at the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case to <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
+<p>If you look at the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> to the right of your HTML, you should be able to see the CSS properties and values applied to that element. You will see the rules directly applied to class <code>box1</code> and also the CSS that is being inherited by the box from its ancestors, in this case to <code>&lt;body&gt;</code>. This is useful if you are seeing some CSS being applied that you didn't expect. Perhaps it is being inherited from a parent element and you need to add a rule to overwrite it in the context of this element.</p>
 
 <p>Also useful is the ability to expand out shorthand properties. In our example the <code>margin</code> shorthand is used.</p>
 
@@ -69,7 +69,7 @@ tags:
 
 <p><strong>With <code>box1</code> selected, click on the swatch (the small colored circle) that shows the color applied to the border. A color picker will open up and you can try out some different colors; these will update in real time on the page. In a similar fashion, you could change the width or style of the border.</strong></p>
 
-<p><img alt="DevTools Styles Panel with a color picker open." src="https://mdn.mozillademos.org/files/16607/inspecting2-color-picker.png" style="border-style: solid; border-width: 1px; height: 1173px; width: 2275px;"></p>
+<p><img alt="DevTools Styles Panel with a color picker open." src="inspecting2-color-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Adding_a_new_property">Adding a new property</h2>
 
@@ -77,7 +77,7 @@ tags:
 
 <p><strong>You can click the closing curly brace in the rule to start entering a new declaration into it, at which point you can start typing the new property and DevTools will show you an autocomplete list of matching properties. After selecting <code>font-size</code>, enter the value you want to try. You can also click the + button to add an additional rule with the same selector, and add your new rules there.</strong></p>
 
-<p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="https://mdn.mozillademos.org/files/16608/inspecting3-font-size.png" style="border-style: solid; border-width: 1px; height: 956px; width: 2275px;"></p>
+<p><img alt="The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open" src="inspecting3-font-size.png" style="border-style: solid; border-width: 1px;"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS">Examine and edit CSS</a>.</p>
@@ -87,7 +87,7 @@ tags:
 
 <p>In previous lessons we have discussed <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">the Box Model</a>, and the fact that we have an alternate box model that changes how the size of elements are calculated based on the size you give them, plus the padding and borders. DevTools can really help you to understand how the size of an element is being calculated.</p>
 
-<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Layout_view">Layout view</a> shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.</p>
+<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#layout_view">Layout view</a> shows you a diagram of the box model on the selected element, along with a description of the properties and values that change how the element is laid out. This includes a description of properties that you may not have explicitly used on the element, but which do have initial values set.</p>
 
 <p>In this panel, one of the detailed properties is the <code>box-sizing</code> property, which controls what box model the element uses.</p>
 
@@ -95,7 +95,7 @@ tags:
 
 <p>The element with a class of <code>box2</code> is using <code>border-box</code>, so here the padding and border is subtracted from the size that you have given the element. This means that the space taken up on the page by the box is the exact size that you specified — in our case <code>width: 400px</code>.</p>
 
-<p><img alt="The Layout section of the DevTools" src="https://mdn.mozillademos.org/files/16609/inspecting4-box-model.png" style="border-style: solid; border-width: 1px; height: 1532px; width: 2275px;"></p>
+<p><img alt="The Layout section of the DevTools" src="inspecting4-box-model.png" style="border-style: solid; border-width: 1px;"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Find out more in <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model">Examining and Inspecting the Box Model</a>.</p>
@@ -107,14 +107,14 @@ tags:
 
 <p>In our example file there are two words that have been wrapped in an <code>&lt;em&gt;</code> element. One is displaying as orange and the other hotpink. In the CSS we have applied:</p>
 
-<pre class="brush: css notranslate">em {
+<pre class="brush: css">em {
   color: hotpink;
   font-weight: bold;
 }</pre>
 
 <p>Above that in the stylesheet however is a rule with a <code>.special</code> selector:</p>
 
-<pre class="brush: css notranslate">.special {
+<pre class="brush: css">.special {
   color: orange;
 }</pre>
 
@@ -122,11 +122,11 @@ tags:
 
 <p><strong>Inspect the <code>&lt;em&gt;</code> with the class of <code>.special</code> and DevTools will show you that orange is the color that applies, and also shows you the <code>color</code> property applied to the em crossed out. You can now see that the class is overriding the element selector.</strong></p>
 
-<p><img alt="Selecting an em and looking at DevTools to see what is over-riding the color." src="https://mdn.mozillademos.org/files/16610/inspecting5-specificity.png" style="border-style: solid; border-width: 1px; height: 1161px; width: 2275px;"></p>
+<p><img alt="Selecting an em and looking at DevTools to see what is over-riding the color." src="inspecting5-specificity.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Find_out_more_about_the_Firefox_DevTools">Find out more about the Firefox DevTools</h2>
 
-<p>There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main <a href="/en-US/docs/Tools">DevTools section</a>, and for more detail on the things we have briefly covered in this lesson see <a href="/en-US/docs/Tools/Page_Inspector#How_to">The How To Guides</a>.</p>
+<p>There is a lot of information about the Firefox DevTools here on MDN. Take a look at the main <a href="/en-US/docs/Tools">DevTools section</a>, and for more detail on the things we have briefly covered in this lesson see <a href="/en-US/docs/Tools/Page_Inspector#how_to">The How To Guides</a>.</p>
 
 <h2 id="Debugging_problems_in_CSS">Debugging problems in CSS</h2>
 
@@ -149,7 +149,7 @@ tags:
 
 <p>Browsers ignore CSS they don't understand. If the property or value you are using is not supported by the browser you are testing in then nothing will break, but that CSS won't be applied. DevTools will generally highlight unsupported properties and values in some way. In the screenshot below the browser does not support the subgrid value of {{cssxref("grid-template-columns")}}.</p>
 
-<p><img alt="Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported." src="https://mdn.mozillademos.org/files/16641/no-support.png" style="height: 397px; width: 1649px;"></p>
+<p><img alt="Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported." src="no-support.png"></p>
 
 <p>You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. The below table shows the compat data for the {{cssxref("shape-outside")}} property.</p>
 

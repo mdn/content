@@ -23,9 +23,9 @@ tags:
 <p><em>This interface also inherits the properties of its parent, {{domxref("Event")}}.</em></p>
 
 <dl>
- <dt>{{domxref("HashChangeEvent.newURL")}} {{readonlyInline}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}</dt>
  <dd>The new URL to which the window is navigating.</dd>
- <dt>{{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}</dt>
  <dd>The previous URL from which the window was navigated.</dd>
 </dl>
 
@@ -39,22 +39,22 @@ tags:
 
 <p>You can listen for the {{event("hashchange")}} event using any of the following options:</p>
 
-<pre class="brush: js notranslate">window.onhashchange = funcRef;
+<pre class="brush: js">window.onhashchange = funcRef;
 </pre>
 
 <p><strong>or</strong></p>
 
-<pre class="brush: html notranslate">&lt;body onhashchange="funcRef();"&gt;
+<pre class="brush: html">&lt;body onhashchange="funcRef();"&gt;
 </pre>
 
 <p><strong>or</strong></p>
 
-<pre class="brush: js notranslate">window.addEventListener("hashchange", funcRef, false);
+<pre class="brush: js">window.addEventListener("hashchange", funcRef, false);
 </pre>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush:js notranslate">function locationHashChanged() {
+<pre class="brush: js">function locationHashChanged() {
   if (location.hash === '#somecoolfeature') {
     somecoolfeature();
   }
@@ -65,9 +65,9 @@ window.addEventListener('hashchange', locationHashChanged);
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>There are several fallback scripts listed on the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a>. Basically, those scripts check the {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}} at a regular interval. Here is a version that allows only one handler to be bound to the {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} property:</p>
+<p>There are several fallback scripts listed on the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a>. Basically, those scripts check the <code>hash</code> property of {{domxref("Window.location")}} at a regular interval. Here is a version that allows only one handler to be bound to the {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} property:</p>
 
-<pre class="brush:js; notranslate">;(function(window) {
+<pre class="brush: js">;(function(window) {
 
   // Exit if the browser implements that event
   if ( "onhashchange" in window.document.body ) { return; }

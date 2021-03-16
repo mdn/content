@@ -11,11 +11,11 @@ tags:
 
 <p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>require-trusted-types-for</strong></code> {{experimental_inline}} directive instructs user agents to control the data passed to DOM XSS sink functions, like {{DOMxRef("Element.innerHTML")}} setter.</p>
 
-<p>When used, those functions only accept non-spoofable, typed values created by Trusted Type policies, and reject strings. <span>Together with <strong><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">trusted-types</a></code></strong> directive, which guards creation of Trusted Type policies, this allows authors to</span><span> define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.</span></p>
+<p>When used, those functions only accept non-spoofable, typed values created by Trusted Type policies, and reject strings. Together with <strong><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">trusted-types</a></code></strong> directive, which guards creation of Trusted Type policies, this allows authors to define rules guarding writing values to the DOM and thus reducing the DOM XSS attack surface to small, isolated parts of the web application codebase, facilitating their monitoring and code review.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Content-Security-Policy: require-trusted-types-for 'script';
+<pre>Content-Security-Policy: require-trusted-types-for 'script';
 </pre>
 
 <dl>
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
+<pre class="brush: js">// Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
 
 const attackerInput = '&lt;svg onload="alert(/cross-site-scripting/)" /&gt;';
 const el = document.createElement('div');

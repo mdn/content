@@ -27,8 +27,8 @@ tags:
 <p>JavaScript provides three different value-comparison operations:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">===</a> - Strict Equality Comparison ("strict equality", "identity", "triple equals")</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators">==</a> - Abstract Equality Comparison ("loose equality", "double equals")</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">===</a> - Strict Equality Comparison ("strict equality", "identity", "triple equals")</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators">==</a> - Abstract Equality Comparison ("loose equality", "double equals")</li>
  <li>{{jsxref("Object.is")}} provides SameValue (new in ES2015).</li>
 </ul>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not <code>NaN</code> and are the same value, or if one is <code>+0</code> and one is <code>-0</code>.</p>
 
-<pre class="brush: js notranslate">var num = 0;
+<pre class="brush: js">var num = 0;
 var obj = new String('0');
 var str = '0';
 
@@ -74,7 +74,7 @@ console.log(obj === undefined); // false
  <thead>
   <tr>
    <th scope="row"></th>
-   <th colspan="7" scope="col" style="text-align: center;">Operand B</th>
+   <th colspan="8" scope="col" style="text-align: center;">Operand B</th>
   </tr>
  </thead>
  <tbody>
@@ -87,12 +87,14 @@ console.log(obj === undefined); // false
    <td style="text-align: center;">String</td>
    <td style="text-align: center;">Boolean</td>
    <td style="text-align: center;">Object</td>
+   <td style="text-align: center;">BigInt</td>
   </tr>
   <tr>
-   <th rowspan="6" scope="row">Operand A</th>
+   <th rowspan="7" scope="row">Operand A</th>
    <td>Undefined</td>
    <td style="text-align: center;"><code>true</code></td>
    <td style="text-align: center;"><code>true</code></td>
+   <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
@@ -106,6 +108,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
    <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>false</code></td>
   </tr>
   <tr>
    <td>Number</td>
@@ -115,6 +118,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>ℝ(A) = ℝ(B)</code></td>
   </tr>
   <tr>
    <td>String</td>
@@ -124,6 +128,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>A === B</code></td>
    <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>StringToBigInt(A) === B</code></td>
   </tr>
   <tr>
    <td>Boolean</td>
@@ -133,6 +138,7 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>ToNumber(A) === ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A === B</code></td>
    <td style="text-align: center;"><code>ToNumber(A) == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>ToNumber(A) == B</code></td>
   </tr>
   <tr>
    <td>Object</td>
@@ -142,15 +148,32 @@ console.log(obj === undefined); // false
    <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
    <td style="text-align: center;"><code>ToPrimitive(A) == ToNumber(B)</code></td>
    <td style="text-align: center;"><code>A === B</code></td>
+   <td style="text-align: center;"><code>ToPrimitive(A) == B</code></td>
+  </tr>
+  <tr>
+   <td>BigInt</td>
+   <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>false</code></td>
+   <td style="text-align: center;"><code>ℝ(A) = ℝ(B)</code></td>
+   <td style="text-align: center;"><code>A === StringToBigInt(B)</code></td>
+   <td style="text-align: center;"><code>A == ToNumber(B)</code></td>
+   <td style="text-align: center;"><code>A == ToPrimitive(B)</code></td>
+   <td style="text-align: center;"><code>A === B</code></td>
   </tr>
  </tbody>
 </table>
 
-<p>In the above table, <code>ToNumber(A)</code> attempts to convert its argument to a number before comparison. Its behavior is equivalent to <code>+A</code> (the unary + operator). <code>ToPrimitive(A)</code> attempts to convert its object argument to a primitive value, by attempting to invoke varying sequences of <code>A.toString</code> and <code>A.valueOf</code> methods on <code>A</code>.</p>
+<p>In the above table:</p>
+<ul>
+  <li><code>ToNumber(A)</code> attempts to convert its argument to a number before comparison. Its behavior is equivalent to <code>+A</code> (the unary + operator).</li>
+  <li><code>ToPrimitive(A)</code> attempts to convert its object argument to a primitive value, by invoking varying sequences of <code>A.toString</code> and <code>A.valueOf</code> methods on <code>A</code>.</li>
+  <li><code>ℝ(A)</code> attempts to convert its argument to an ECMAScript <a href="https://tc39.es/ecma262/#mathematical-value">mathematical value</a>.</li>
+  <li><code>StringToBigInt(A)</code> attempts to convert its argument to a <code>BigInt</code> by applying the ECMAScript <a href="https://tc39.es/ecma262/#sec-stringtobigint"><code>StringToBigInt</code></a> algorithm.</li>
+</ul>
 
 <p>Traditionally, and according to ECMAScript, all objects are loosely unequal to <code>undefined</code> and <code>null</code>. But most browsers permit a very narrow class of objects (specifically, the <code>document.all</code> object for any page), in some contexts, to act as if they <em>emulate</em> the value <code>undefined</code>. Loose equality is one such context: <code>null == A</code> and <code>undefined == A</code> evaluate to true if, and only if, A is an object that <em>emulates</em> <code>undefined</code>. In all other cases an object is never loosely equal to <code>undefined</code> or <code>null</code>.</p>
 
-<pre class="brush: js notranslate">var num = 0;
+<pre class="brush: js">var num = 0;
 var obj = new String('0');
 var str = '0';
 
@@ -174,7 +197,7 @@ console.log(obj == undefined);
 
 <p>Same-value equality addresses a final use case: determining whether two values are <em>functionally identical</em> in all contexts. (This use case demonstrates an instance of the <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>.) One instance occurs when an attempt is made to mutate an immutable property:</p>
 
-<pre class="brush: js notranslate">// Add an immutable NEGATIVE_ZERO property to the Number constructor.
+<pre class="brush: js">// Add an immutable NEGATIVE_ZERO property to the Number constructor.
 Object.defineProperty(Number, 'NEGATIVE_ZERO',
                       { value: -0, writable: false, configurable: false, enumerable: false });
 
@@ -193,7 +216,7 @@ function attemptMutation(v) {
 
 <h2 id="Abstract_equality_strict_equality_and_same_value_in_the_specification">Abstract equality, strict equality, and same value in the specification</h2>
 
-<p>In ES5, the comparison performed by <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> is described in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>. The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> comparison is <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>. (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.</p>
+<p>In ES5, the comparison performed by <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>==</code></a> is described in <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>. The <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>===</code></a> comparison is <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>. (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 proposes to expose this algorithm through {{jsxref("Object.is")}}.</p>
 
 <p>We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.</p>
 
@@ -286,6 +309,14 @@ function attemptMutation(v) {
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
    <td style="background-color: rgb(255, 144, 144); text-align: center;"><code>false</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+  </tr>
+  <tr>
+   <td><code>0n</code></td>
+   <td><code>-0n</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
+   <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
    <td style="background-color: rgb(144, 255, 144); text-align: center;"><code>true</code></td>
   </tr>
   <tr>
@@ -419,18 +450,18 @@ function attemptMutation(v) {
  </tbody>
 </table>
 
-<h2 id="When_to_use_jsxrefObject.is_versus_triple_equals">When to use {{jsxref("Object.is")}} versus triple equals</h2>
+<h2 id="When_to_use_jsxrefObject.is_versus_triple_equals">When to use Object.is versus triple equals</h2>
 
-<p>In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to <code>true</code>, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.</p>
+<p>In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use <a href="/en-US/docs/Web/JavaScript/Reference/Operators"><code>===</code></a> instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to <code>true</code>, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.</p>
 
 <p>Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between <code>-0</code> and <code>+0</code> to manifest itself in your code:</p>
 
 <dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29"><code>- (unary negation)</code></a></dt>
+ <dt><a href="/en-US/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29"><code>- (unary negation)</code></a></dt>
  <dd>
- <pre class="brush:js notranslate">let stoppingForce = obj.mass * -obj.velocity;</pre>
+ <pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre>
 
- <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propogates out into <code>stoppingForce</code>.</p>
+ <p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p>
  </dd>
 </dl>
 
@@ -447,19 +478,19 @@ function attemptMutation(v) {
  <dt>{{jsxref("Math.sqrt")}}</dt>
  <dt>{{jsxref("Math.tan")}}</dt>
  <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">~</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&lt;&lt;</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">&gt;&gt;</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">~</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&lt;&lt;</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&gt;&gt;</a></code></dt>
  <dd>Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, <code>-0</code> will not survive a round trip after an inverse operation. E.g., both <code>Object.is(~~(-0), -0)</code> and <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> evaluate to <code>false</code>.</dd>
 </dl>
 
 <p>Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between <code>-0</code> and <code>+0</code>, it does exactly what's desired.</p>
 
-<h2 id="Caveat_jsxrefObject.is_and_NaN">Caveat: {{jsxref("Object.is")}} and NaN</h2>
+<h2 id="Caveat_jsxrefObject.is_and_NaN">Caveat: Object.is and NaN</h2>
 
 <p>The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a> are available, we can have distinct instances, which don't behave identically in all contexts. For example:</p>
 
-<pre class="brush: js notranslate">var f2b = x =&gt; new Uint8Array(new Float64Array([x]).buffer);
+<pre class="brush: js">var f2b = x =&gt; new Uint8Array(new Float64Array([x]).buffer);
 var b2f = x =&gt; new Float64Array(x.buffer)[0];
 var n = f2b(NaN);
 n[0] = 1;

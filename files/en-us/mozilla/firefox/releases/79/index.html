@@ -20,27 +20,27 @@ tags:
 <h4 id="Console">Console</h4>
 
 <ul>
- <li>Network messages with response codes in the 400-499 and 500-599 ranges are now considered errors, and are displayed <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">even if Response or XHR filters are disabled</a>. ({{bug(1635460)}})</li>
+ <li>Network messages with response codes in the 400-499 and 500-599 ranges are now considered errors, and are displayed <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">even if Response or XHR filters are disabled</a>. ({{bug(1635460)}})</li>
  <li>Network messages for requests that are blocked (by the browser or an extension) are now styled with a "prohibited" icon in the <a href="/en-US/docs/Tools/Web_Console/Console_messages">Console</a>. ({{bug(1629875)}})</li>
 </ul>
 
 <h4 id="Debugger">Debugger</h4>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Black_box_a_source">"Blackbox" a source file</a> is now called "ignore" a source file.  ({{bug(1642811)}})</li>
- <li><span><span>Inline preview is now available on <a href="/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions">exceptions</a>. ({{bug(1581708)}})</span></span></li>
- <li><span><span>Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ({{bug(1631545)}})</span></span></li>
- <li><span><span>In the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Call_stack">Call Stack section</a>, there is now a context menu option to <strong>Restart Frame</strong>, to execute the current stack frame from its beginning. ({{bug(1594467)}})</span></span></li>
+ <li><a href="/en-US/docs/Tools/Debugger/How_to/Ignore_a_source">"Blackbox" a source file</a> is now called "ignore" a source file.  ({{bug(1642811)}})</li>
+ <li>Inline preview is now available on <a href="/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions">exceptions</a>. ({{bug(1581708)}})</li>
+ <li>Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ({{bug(1631545)}})</li>
+ <li>In the <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">Call Stack section</a>, there is now a context menu option to <strong>Restart Frame</strong>, to execute the current stack frame from its beginning. ({{bug(1594467)}})</li>
 </ul>
 
-<h4 id="Other_tools"><span>Other tools</span></h4>
+<h4 id="Other_tools">Other tools</h4>
 
 <ul>
  <li>The new <a href="/en-US/docs/Tools/Application">Application panel</a> is now available, which initially provides inspection and debugging support for <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> and <a href="/en-US/docs/Web/Manifest">web app manifests</a>.</li>
- <li><span><span>The Messages tab of the Network Monitor has been merged with the <a href="/en-US/docs/Tools/Network_Monitor/request_details#Response_tab">Responses tab</a>. ({{bug(1636421)}})</span></span></li>
- <li><span><span>The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ({{bug(1602075)}})</span></span></li>
- <li>In <a href="/en-US/docs/Tools/Responsive_Design_Mode#Controlling_Responsive_Design_Mode">Responsive Design Mode</a>, when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})</li>
- <li>When <a href="/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device">remote debugging</a>, the URL bar now has <strong>Back</strong> and <strong>Forward</strong> buttons to help with navigation on the remote browser. ({{bug(1639425)}})</li>
+ <li>The Messages tab of the Network Monitor has been merged with the <a href="/en-US/docs/Tools/Network_Monitor/request_details#response_tab">Responses tab</a>. ({{bug(1636421)}})</li>
+ <li>The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ({{bug(1602075)}})</li>
+ <li>In <a href="/en-US/docs/Tools/Responsive_Design_Mode#controlling_responsive_design_mode">Responsive Design Mode</a>, when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})</li>
+ <li>When <a href="/en-US/docs/Tools/about:debugging#connecting_to_a_remote_device">remote debugging</a>, the URL bar now has <strong>Back</strong> and <strong>Forward</strong> buttons to help with navigation on the remote browser. ({{bug(1639425)}})</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -114,16 +114,16 @@ tags:
 <h3 id="WebAssembly">WebAssembly</h3>
 
 <ul>
- <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Bulk_memory_operations">WebAssembly Bulk memory operations</a> are now shipped ({{bug(1528294)}}).</li>
- <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Reference_types">WebAssembly Reference types</a> are now shipped ({{bug(1637884)}}).</li>
- <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#WebAssembly_threads">WebAssembly Threads</a> (Shared memory &amp; Atomics) are now shipped ({{bug(1389458)}}, {{bug(1648685)}}).</li>
+ <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#bulk_memory_operations">WebAssembly Bulk memory operations</a> are now shipped ({{bug(1528294)}}).</li>
+ <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#reference_types">WebAssembly Reference types</a> are now shipped ({{bug(1637884)}}).</li>
+ <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_threads">WebAssembly Threads</a> (Shared memory &amp; Atomics) are now shipped ({{bug(1389458)}}, {{bug(1648685)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 
 <ul>
  <li>New API: <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup">tabs.warmup()</a></code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1402256">bug 1402256</a>)</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#Storage_quotas_for_sync_data">Storage quotas are now enforced for the <code>sync</code> storage area</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1634615">bug 1634615</a>) (<a href="https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/">addons.mozilla.org blog post</a>)</li>
+ <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data">Storage quotas are now enforced for the <code>sync</code> storage area</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1634615">bug 1634615</a>) (<a href="https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/">addons.mozilla.org blog post</a>)</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

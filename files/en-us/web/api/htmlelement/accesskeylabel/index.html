@@ -4,18 +4,20 @@ slug: Web/API/HTMLElement/accessKeyLabel
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLElement.accessKeyLabel</code></strong> read-only property returns a {{jsxref("String")}} containing the element's browser-assigned access key (if any); otherwise it returns an empty string.</span></p>
+<p><span class="seoSummary">The <strong><code>HTMLElement.accessKeyLabel</code></strong>
+    read-only property returns a {{jsxref("String")}} containing the element's
+    browser-assigned access key (if any); otherwise it returns an empty string.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>label</var> = <var>element</var>.accessKeyLabel
+<pre class="brush: js"><var>label</var> = <var>element</var>.accessKeyLabel
 </pre>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var btn = document.getElementById('btn1');
+<pre class="brush: js">var btn = document.getElementById('btn1');
 var shortcutLabel = btn.accessKeyLabel || btn.accessKey;
 btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
 
@@ -28,7 +30,7 @@ btn.onclick = function () {
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;button accesskey="h" title="Caption" id="btn1"&gt;Hover me&lt;/button&gt;
+<pre class="brush: html">&lt;button accesskey="h" title="Caption" id="btn1"&gt;Hover me&lt;/button&gt;
 </pre>
 
 <h3 id="Result">Result</h3>
@@ -38,42 +40,45 @@ btn.onclick = function () {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#dom-accesskeylabel", "HTMLElement.accessKeyLabel")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Removed. <a href="https://github.com/w3c/html/pull/144">pull w3c/html#144</a>, <a href="https://github.com/w3c/html/issues/99">issue w3c/html#99</a>, <a href="https://discourse.wicg.io/t/accesskeylabel-author-accessible-info-about-shortcuts/1392/3">WICG discussion</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#dom-accesskeylabel", "HTMLElement.accessKeyLabel")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "interaction.html#dom-accesskeylabel",
+        "HTMLElement.accessKeyLabel")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>No change from initial definition.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1')}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td>Removed. <a href="https://github.com/w3c/html/pull/144">pull w3c/html#144</a>,
+        <a href="https://github.com/w3c/html/issues/99">issue w3c/html#99</a>, <a
+          href="https://discourse.wicg.io/t/accesskeylabel-author-accessible-info-about-shortcuts/1392/3">WICG
+          discussion</a>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "editing.html#dom-accesskeylabel",
+        "HTMLElement.accessKeyLabel")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Snapshot of {{SpecName('HTML WHATWG')}}, initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLElement.accessKeyLabel")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("element.accessKey")}}</li>
- <li>The <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> global attribute.</li>
+  <li>{{domxref("HTMLElement.accessKey")}}</li>
+  <li>The <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> global
+    attribute.</li>
 </ul>

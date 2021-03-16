@@ -11,11 +11,11 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values — basically, this specifies the maximum value for the range of results when using <code>getFloatFrequencyData()</code> or <code>getByteFrequencyData()</code>.</p>
+<p class="summary">The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>curValue</em> = <em>analyserNode</em>.maxDecibels;
+<pre class="brush: js">var <em>curValue</em> = <em>analyserNode</em>.maxDecibels;
 <em>analyserNode</em>.maxDecibels = <em>newValue</em>;
 </pre>
 
@@ -23,7 +23,7 @@ tags:
 
 <p>A double, representing the maximum <a href="https://en.wikipedia.org/wiki/Decibel" title="Decibel on Wikipedia">decibel</a> value for scaling the FFT analysis data, where <code>0</code> dB is the loudest possible sound, <code>-10</code> dB is a 10th of that, etc. The default value is <code>-30</code> dB.</p>
 
-<p>When getting data from <code>getFloatFrequencyData()</code> or <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>maxDecibels</code> or higher will be returned as <code>+1.0</code> or <code>255</code>, respectively.</p>
+<p>When getting data from <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>maxDecibels</code> or higher will be returned as <code>255</code>.</p>
 
 <p class="note"><strong>Note</strong>: If a value less than or equal to <code>AnalyserNode.minDecibels</code> is set, an <code>IndexSizeError</code> exception is thrown.</p>
 
@@ -81,20 +81,17 @@ draw();</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#dom-analysernode-maxdecibels', 'maxDecibels')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AnalyserNode.maxDecibels")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

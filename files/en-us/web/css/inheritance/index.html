@@ -8,7 +8,7 @@ tags:
   - Layout
   - Web
 ---
-<div>{{cssref}}</div>
+<div>{{CSSRef}}</div>
 
 <p>In CSS, <strong>inheritance</strong> controls what happens when no value is specified for a property on an element.</p>
 
@@ -27,11 +27,11 @@ tags:
 
 <p>A typical example of an inherited property is the {{ Cssxref("color") }} property. Given the style rules:</p>
 
-<pre class="brush: css notranslate">p { color: green; }</pre>
+<pre class="brush: css">p { color: green; }</pre>
 
 <p>... and the markup:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;This paragraph has &lt;em&gt;emphasized text&lt;/em&gt; in it.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;This paragraph has &lt;em&gt;emphasized text&lt;/em&gt; in it.&lt;/p&gt;</pre>
 
 <p>... the words "emphasized text" will appear green, since the <code>em</code> element has inherited the value of the {{ Cssxref("color") }} property from the <code>p</code> element. It does <em>not</em> get the initial value of the property (which is the color that is used for the root element when the page specifies no color).</p>
 
@@ -41,11 +41,11 @@ tags:
 
 <p>A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Given the style rules:</p>
 
-<pre class="brush: css notranslate"> p { border: medium solid; }</pre>
+<pre class="brush: css"> p { border: medium solid; }</pre>
 
 <p>... and the markup:</p>
 
-<pre class="brush: html notranslate">  &lt;p&gt;This paragraph has &lt;em&gt;emphasized text&lt;/em&gt; in it.&lt;/p&gt;</pre>
+<pre class="brush: html">  &lt;p&gt;This paragraph has &lt;em&gt;emphasized text&lt;/em&gt; in it.&lt;/p&gt;</pre>
 
 <p>... the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is <code>none</code>).</p>
 
@@ -55,7 +55,7 @@ tags:
 
 <p>You can control inheritance for all properties at once using the {{cssxref("all")}} shorthand property, which applies its value to all properties. For example:</p>
 
-<pre class="brush: css notranslate">font {
+<pre class="brush: css">font {
   all: revert;
   font-size: 200%;
   font-weight: bold;

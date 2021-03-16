@@ -23,7 +23,7 @@ tags:
 
 <h3 id="Using_source">Using source</h3>
 
-<pre class="brush: js notranslate">var regex = /fooBar/ig;
+<pre class="brush: js">var regex = /fooBar/ig;
 
 console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
 </pre>
@@ -32,7 +32,7 @@ console.log(regex.source); // "fooBar", doesn't contain /.../ and "ig".
 
 <p>Starting with ECMAScript 5, the <code>source</code> property no longer returns an empty string for empty regular expressions. Instead, the string <code>(?:)</code> is returned. In addition, line terminators (such as "\n") are escaped now.</p>
 
-<pre class="brush: js notranslate">new RegExp().source; // "(?:)"
+<pre class="brush: js">new RegExp().source; // "(?:)"
 
 new RegExp('\n').source === '\n';  // true, prior to ES5
 new RegExp('\n').source === '\\n'; // true, starting with ES5
@@ -55,10 +55,7 @@ new RegExp('\n').source === '\\n'; // true, starting with ES5
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.RegExp.source")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

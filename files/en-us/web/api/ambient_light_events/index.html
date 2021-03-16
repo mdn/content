@@ -9,7 +9,7 @@ tags:
 <p>The ambient light events are a handy way to make a web page or an application aware of any change in the light intensity. It allows them to react to such a change, for example by changing the color contrast of the User Interface (UI) or by changing the exposure necessary to take a picture.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (it is not exposed in the <a href="/en-US/docs/Web/API/Web_Workers_API#Worker_global_contexts_and_functions">worker global context</a>).</p>
+<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (it is not exposed in the <a href="/en-US/docs/Web/API/Web_Workers_API#worker_global_contexts_and_functions">worker global context</a>).</p>
 </div>
 
 <h2 id="Light_Events">Light Events</h2>
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">if ('ondevicelight' in window) {
+<pre class="brush: js">if ('ondevicelight' in window) {
   window.addEventListener('devicelight', function(event) {
     var body = document.querySelector('body');
     if (event.value &lt; 50) {

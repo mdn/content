@@ -61,14 +61,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">POST /test
+<pre class="brush: html">POST /test
 </pre>
 
 <h2 id="Example">Example</h2>
 
 <p>A simple form using the default <code>application/x-www-form-urlencoded</code> content type:</p>
 
-<pre class="line-numbers  language-html notranslate">POST /test HTTP/1.1
+<pre class="line-numbers  language-html">POST /test HTTP/1.1
 Host: foo.example
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
@@ -77,7 +77,7 @@ field1=value1&amp;field2=value2</pre>
 
 <p>A form using the <code>multipart/form-data</code> content type:</p>
 
-<pre class="notranslate">POST /test HTTP/1.1
+<pre>POST /test HTTP/1.1
 Host: foo.example
 Content-Type: multipart/form-data;boundary="boundary"
 

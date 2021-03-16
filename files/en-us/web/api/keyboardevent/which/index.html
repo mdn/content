@@ -2,27 +2,33 @@
 title: KeyboardEvent.which
 slug: Web/API/KeyboardEvent/which
 tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- Deprecated
+- KeyboardEvent
+- Property
+- Read-only
+- Reference
 ---
 <div>{{ APIRef("DOM Events") }} {{Deprecated_header}}</div>
 
-<p>The <code><strong>which</strong></code> read-only property of the {{domxref("KeyboardEvent")}} interface returns the numeric <code>keyCode</code> of the key pressed, or the character code (<code>charCode</code>) for an alphanumeric key pressed.</p>
+<p>The <code><strong>which</strong></code> read-only property of the
+  {{domxref("KeyboardEvent")}} interface returns the numeric <code>keyCode</code> of the
+  key pressed, or the character code (<code>charCode</code>) for an alphanumeric key
+  pressed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>keyResult</em> = <em>event</em>.which;
+<pre class="brush: js">var <em>keyResult</em> = <em>event</em>.which;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code>keyResult</code> contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.</li>
+  <li><code>keyResult</code> contains the numeric code for a particular key pressed,
+    depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see
+    {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for
+    more details.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -67,20 +73,21 @@ alert("onkeydown handler: \n"
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#legacy-interface-KeyboardEvent','KeyboardEvent.which')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition; specified as deprecated</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM3
+        Events','#legacy-interface-KeyboardEvent','KeyboardEvent.which')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>Initial definition; specified as deprecated</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -90,5 +97,5 @@ alert("onkeydown handler: \n"
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("KeyboardEvent")}}, the interface this property belongs too.</li>
+  <li>{{domxref("KeyboardEvent")}}, the interface this property belongs too.</li>
 </ul>

@@ -1,5 +1,5 @@
 ---
-title: 'Images, media, and form elements'
+title: Images, media, and form elements
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
 tags:
   - Beginner
@@ -109,13 +109,13 @@ tags:
 
 <p>In some browsers, form elements do not inherit font styling by default. Therefore if you want to be sure that your form fields use the font defined on the body, or on a parent element, you should add this rule to your CSS.</p>
 
-<pre class="brush: css"><code>button,
+<pre class="brush: css">button,
 input,
 select,
 textarea {
   font-family : inherit;
   font-size : 100%;
-} </code></pre>
+} </pre>
 
 <h3 id="Form_elements_and_box-sizing">Form elements and box-sizing</h3>
 
@@ -123,14 +123,14 @@ textarea {
 
 <p>For consistency it is a good idea to set margins and padding to <code>0</code> on all elements, then add these back in when styling particular controls</p>
 
-<pre class="brush: css"><code>button,
+<pre class="brush: css">button,
 input,
 select,
 textarea {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}</code></pre>
+}</pre>
 
 <h3 id="Other_useful_settings">Other useful settings</h3>
 
@@ -144,7 +144,7 @@ textarea {
 
 <p>As a final step, we can wrap up the various properties discussed above into the following "form reset" to provide a consistent base to work from. This includes all the items mentioned in the last three sections:</p>
 
-<pre class="brush: css"><code>button,
+<pre class="brush: css">button,
 input,
 select,
 textarea {
@@ -156,7 +156,7 @@ textarea {
 
 textarea {
   overflow: auto;
-} </code></pre>
+} </pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However if you want to take a look at one example, check out <a href="https://necolas.github.io/normalize.css/">Normalize.css</a>, which is a very popular stylesheet used as a base by many projects.</p>

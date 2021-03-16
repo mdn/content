@@ -2,21 +2,25 @@
 title: Range.toString()
 slug: Web/API/Range/toString
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
-  - Stringifier
+- API
+- DOM
+- Method
+- Range
+- Stringifier
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.toString()</code></strong> method is a stringifier returning the text of the {{domxref("Range")}}.</p>
+<p>The <strong><code>Range.toString()</code></strong> method is a stringifier returning
+  the text of the {{domxref("Range")}}.</p>
 
-<p>Alerting the contents of a {{domxref("Range")}} makes an implicit <code>toString()</code> call, so comparing range and text through an alert dialog is ineffective.</p>
+<p>Alerting the contents of a {{domxref("Range")}} makes an implicit
+  <code>toString()</code> call, so comparing range and text through an alert dialog is
+  ineffective.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>text</em> = <em>range</em>.toString();</pre>
+<pre
+  class="brush: js"><em>text</em> = <em>range</em>.toString();</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -40,23 +44,24 @@ document.getElementById('log').textContent = range.toString();</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-stringifier', 'Range.toString()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-toString', 'Range.toString()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-stringifier', 'Range.toString()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-toString',
+        'Range.toString()')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -66,5 +71,5 @@ document.getElementById('log').textContent = range.toString();</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

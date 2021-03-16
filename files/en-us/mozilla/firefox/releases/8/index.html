@@ -7,7 +7,7 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p>Firefox 8 was released on November 8, 2011. This article provides information both for <a href="/en/Firefox_8_for_developers#Changes_for_web_developers">web developers</a> and for add-on and <a href="/en/Firefox_8_for_developers#Changes_for_Mozilla_and_add-on_developers">Mozilla project developers</a> to help take full advantage of the features of this release.</p>
+<p>Firefox 8 was released on November 8, 2011. This article provides information both for <a href="/en-US/docs/Mozilla/Firefox/Releases/8#changes_for_web_developers">web developers</a> and for add-on and <a href="/en-US/docs/Mozilla/Firefox/Releases/8#changes_for_mozilla_and_add-on_developers">Mozilla project developers</a> to help take full advantage of the features of this release.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -35,20 +35,20 @@ tags:
  <li>When editing {{ domxref("element.contenteditable") }} areas, exiting a heading by pressing return, or exiting list editing mode by pressing return twice, now returns to paragraph entry mode (that is, paragraphs inside {{ HTMLElement("p") }} blocks) instead of separating lines by {{ HTMLElement("br") }} elements.</li>
  <li>Fixed a bug that prevents justification from taking effect properly when applied to the first line in a {{ domxref("element.contenteditable") }} area.</li>
  <li>Fixed a bug that caused pressing delete or backspace at the beginning of a {{ domxref("element.contenteditable") }} area to affect the previous <code>contenteditable</code> block if one is present.</li>
- <li>{{ domxref("document.getSelection()") }} now returns the same <code>Selection</code> object as {{ domxref("window.getSelection()") }}, instead of <em>stringifying</em> it.</li>
+ <li>{{ domxref("Document.getSelection()") }} now returns the same <code>Selection</code> object as {{ domxref("window.getSelection()") }}, instead of <em>stringifying</em> it.</li>
  <li>The HTML5 <code>selectionDirection</code> property makes it possible to define the direction of the selection in an editable text.</li>
  <li>{{ domxref("HTMLMediaElement") }} now have a <code>seekable</code> property that return a {{ domxref("TimeRanges") }} object.</li>
  <li>The {{ domxref("HTMLMediaElement") }}<code>.preload</code> attribute now correctly reflects as an <em>enumerated value</em>.</li>
- <li><a href="/en/HTML/CORS_settings_attributes"><code>crossOrigin</code> property</a> defaults to "Anonymous" when an invalid value is used.</li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/crossorigin"><code>crossOrigin</code> property</a> defaults to "Anonymous" when an invalid value is used.</li>
  <li>{{ domxref("window.navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.</li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><code><a href="/en/JavaScript/Reference/Global_Objects/RegExp/exec" title="en/JavaScript/Reference/Global Objects/RegExp/exec">RegExp.exec()</a></code> and <code><a href="/en/JavaScript/Reference/Global_Objects/RegExp/test" title="en/JavaScript/Reference/Global Objects/RegExp/test">RegExp.test()</a></code> called with no arguments now match against the string "undefined".</li>
- <li><code><a href="/en/JavaScript/Reference/Global_Objects/String/search" title="en/JavaScript/Reference/Global Objects/String/search">String.search()</a></code> and <code><a href="/en/JavaScript/Reference/Global_Objects/String/match" title="en/JavaScript/Reference/Global Objects/String/match">String.match()</a></code> called with no arguments or <code>undefined</code> now match against the empty string and thus match every string.</li>
- <li>Support for watchlists has been implemented with the new (non-standard) <a href="/en/JavaScript/Reference/Global_Objects/Object/watch"><code>watch()</code></a> and <a href="/en/JavaScript/Reference/Global_Objects/Object/unwatch"><code>unwatch()</code></a> methods.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">RegExp.exec()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test">RegExp.test()</a></code> called with no arguments now match against the string "undefined".</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search">String.search()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.match()</a></code> called with no arguments or <code>undefined</code> now match against the empty string and thus match every string.</li>
+ <li>Support for watchlists has been implemented with the new (non-standard) <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/watch"><code>watch()</code></a> and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/unwatch"><code>unwatch()</code></a> methods.</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
@@ -59,7 +59,7 @@ tags:
  <li>Handling of {{ cssxref("background-size") }} has been revised to more closely match the specification.</li>
  <li>In the past, {{ cssxref("text-decoration") }} in quirks mode had line thickness and position adjusted on descendant text to match the descendant. Now standards mode and quirks mode rendering are more similar.</li>
  <li>Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see {{ bug(682780) }}, comment 23 for details.</li>
- <li><a href="/en/CSS/Scaling_of_SVG_backgrounds">SVG images are now scaled properly</a> when used as background images.</li>
+ <li><a href="/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds">SVG images are now scaled properly</a> when used as background images.</li>
 </ul>
 
 <h3 id="Network">Network</h3>
@@ -74,20 +74,20 @@ tags:
 <h3 id="WebSockets">WebSockets</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> object's <a href="/en-US/docs/WebSockets/WebSockets_reference/WebSocket#send()" title="en-US/docs/WebSockets/WebSockets reference/WebSocket#send()"><code>send()</code></a> method no longer incorrectly returns a Boolean value.</li>
- <li>The <a href="/en-US/docs/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> object's <a href="/en-US/docs/WebSockets/WebSockets_reference/WebSocket#close()"><code>close()</code></a> method now matches the current draft of the standard, and close events now properly use the <a href="/en-US/docs/WebSockets/WebSockets_reference/CloseEvent"><code>CloseEvent</code></a> interface.</li>
- <li>The <a href="/en-US/docs/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> object's <code>extensions</code> attribute is now supported.</li>
+ <li>The <a href="/en-US/docs/Web/API/WebSocket"><code>WebSocket</code></a> object's <a href="/en-US/docs/Web/API/WebSocket#send()"><code>send()</code></a> method no longer incorrectly returns a Boolean value.</li>
+ <li>The <a href="/en-US/docs/Web/API/WebSocket"><code>WebSocket</code></a> object's <a href="/en-US/docs/Web/API/WebSocket#close()"><code>close()</code></a> method now matches the current draft of the standard, and close events now properly use the <a href="/en-US/docs/Web/API/CloseEvent"><code>CloseEvent</code></a> interface.</li>
+ <li>The <a href="/en-US/docs/Web/API/WebSocket"><code>WebSocket</code></a> object's <code>extensions</code> attribute is now supported.</li>
  <li>The WebSocket constructor now supports an array of protocols as well as a single protocol string.</li>
  <li>Mixed content is not allowed with WebSockets; that is, you can no longer open a connection to a non-secure WebSocket server from secure content.</li>
  <li>Connection errors with WebSockets now trigger the <code>onerror</code> handler.</li>
- <li><a href="/en-US/docs/WebSockets">WebSocket</a> API has been updated to the latest draft of the specification (see {{ bug("674890") }}, {{ bug("674527") }}, and {{ bug("674716") }}).</li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> API has been updated to the latest draft of the specification (see {{ bug("674890") }}, {{ bug("674527") }}, and {{ bug("674716") }}).</li>
  <li>The deflate-stream extension to WebSockets has been disabled; it has been deprecated, and was breaking compatibility with some sites.</li>
 </ul>
 
 <h3 id="WebGL">WebGL</h3>
 
 <ul>
- <li><a href="/en-US/docs/WebGL/Cross-Domain_Textures">Cross-domain textures</a> can now be allowed with CORS approval.</li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures">Cross-domain textures</a> can now be allowed with CORS approval.</li>
  <li>Cross-process rendering with Direct2D/Direct3D 10.</li>
 </ul>
 
@@ -101,27 +101,27 @@ tags:
 <h3 id="Developer_tools">Developer tools</h3>
 
 <ul>
- <li>The <a href="/en-US/docs/Tools/Web_Console#The_console_object"><code>console</code></a> object has a new <code>dir()</code> method, which displays an interactive list of the properties on a specified object.</li>
+ <li>The <a href="/en-US/docs/Tools/Web_Console#the_console_object"><code>console</code></a> object has a new <code>dir()</code> method, which displays an interactive list of the properties on a specified object.</li>
 </ul>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 
-<p>See <a href="/en/Firefox/Updating_add-ons_for_Firefox_8">Updating add-ons for Firefox 8</a> for a guide to changes you're likely to have to make to make your add-ons compatible with Firefox 8.</p>
+<p>See <a href="/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_8">Updating add-ons for Firefox 8</a> for a guide to changes you're likely to have to make to make your add-ons compatible with Firefox 8.</p>
 
-<div class="note"><strong>Note:</strong> Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces">Binary Interfaces</a> for details.</div>
+<div class="note"><strong>Note:</strong> Firefox 8 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">Binary Interfaces</a> for details.</div>
 
 <h3 id="XPCOM">XPCOM</h3>
 
 <dl>
- <dt><a href="/en/Components.utils"><code>Components.utils</code></a></dt>
- <dd>The new methods <a href="/en/Components.utils.createObjectIn"><code>Components.utils.createObjectIn()</code></a> and <a href="/en/Components.utils.makeObjectPropsNormal"><code>Components.utils.makeObjectPropsNormal()</code></a> have been created to make it easier to create objects in specific compartments.</dd>
+ <dt><a href="/en-US/docs/Components.utils"><code>Components.utils</code></a></dt>
+ <dd>The new methods <a href="/en-US/docs/Components.utils.createObjectIn"><code>Components.utils.createObjectIn()</code></a> and <a href="/en-US/docs/Components.utils.makeObjectPropsNormal"><code>Components.utils.makeObjectPropsNormal()</code></a> have been created to make it easier to create objects in specific compartments.</dd>
 </dl>
 
 <h4 id="Other_XPCOM_related_changes">Other XPCOM related changes</h4>
 
 <ul>
  <li>You can now instantiate DOM {{ domxref("File") }} objects from component code by doing new File, instead of having to instantiate an {{ interface("nsIDOMFile") }} directly.</li>
- <li>The <code>nsTPtrArray</code> array type has been removed. Its functionality is now all available on <code>nsTArray</code>, which now offers the <code>SafeElementAt()</code> method when instantiated using a pointer type. See the section on <a href="/en/XPCOM_array_guide#Bounds-safe_access_to_elements"><code>SafeElementAt()</code></a> in the <a href="/en/XPCOM_array_guide" title="XPCOM array guide">XPCOM array guide</a> for more information.</li>
+ <li>The <code>nsTPtrArray</code> array type has been removed. Its functionality is now all available on <code>nsTArray</code>, which now offers the <code>SafeElementAt()</code> method when instantiated using a pointer type. See the section on <a href="/en-US/docs/XPCOM_array_guide#Bounds-safe_access_to_elements"><code>SafeElementAt()</code></a> in the <a href="/en-US/docs/XPCOM_array_guide" title="XPCOM array guide">XPCOM array guide</a> for more information.</li>
 </ul>
 
 <h3 id="Workers">Workers</h3>
@@ -131,9 +131,9 @@ tags:
 <h3 id="XUL">XUL</h3>
 
 <ul>
- <li>A bug in {{ domxref("document.execCommand()") }} that occurred when calling it on the value of <code><span><a href="/en-US/docs/XUL/Property/contentDocument">contentDocument</a></span></code> has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.</li>
- <li><a href="/en/Extensions/Bootstrapped_extensions" title="Bootstrapped extensions">Bootstrapped add-ons</a> can now load chrome using a <a href="/en/Chrome_Registration"><code>chrome.manifest</code></a> file. See the section <a href="/en/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
- <li><a href="/en/XUL/image">XUL images</a> now shrink down with the same ratio in both directions when specifying maximum sizes.</li>
+ <li>A bug in {{ domxref("document.execCommand()") }} that occurred when calling it on the value of <code><a href="/en-US/docs/XUL/Property/contentDocument">contentDocument</a></code> has been fixed. Since Firefox 3, this resulted in errors instead of working correctly.</li>
+ <li><a href="/en-US/docs/Extensions/Bootstrapped_extensions" title="Bootstrapped extensions">Bootstrapped add-ons</a> can now load chrome using a <a href="/en-US/docs/Chrome_Registration"><code>chrome.manifest</code></a> file. See the section <a href="/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
+ <li><a href="/en-US/docs/XUL/image">XUL images</a> now shrink down with the same ratio in both directions when specifying maximum sizes.</li>
 </ul>
 
 <h3 id="Changes_to_the_build_system">Changes to the build system</h3>
@@ -152,7 +152,7 @@ tags:
 <h3 id="Chrome_registration">Chrome registration</h3>
 
 <ul>
- <li>The <a href="/en/Chrome_Registration#platformversion"><code>platformversion</code></a> flag can be used in the chrome.manifest to specify Gecko version compatibility.</li>
+ <li>The <a href="/en-US/docs/Chrome_Registration#platformversion"><code>platformversion</code></a> flag can be used in the chrome.manifest to specify Gecko version compatibility.</li>
 </ul>
 
 <h3 id="Interface_changes">Interface changes</h3>
@@ -169,9 +169,9 @@ tags:
  <li>The {{ interface("nsINetworkLinkService") }} interface has a new attribute, <code>linkType</code>. This attribute provides the type of network connection in use. All Operating Systems currently return <code>LINK_TYPE_UNKNOWN</code>. Android support was backed out due to perceived security concerns.</li>
  <li>The {{ interface("nsISelection2") }} interface has been merged into the {{ interface("nsISelectionPrivate") }} interface.</li>
  <li>The {{ interface("nsISelection3") }} interface has been merged into the {{ interface("nsISelection") }} interface.</li>
- <li>The {{ interface("nsISessionStartup") }} attribute state is now a <a href="/En/SpiderMonkey/JSAPI_Reference/Jsval"><code>jsval</code></a> instead of a string, for performance reasons.</li>
+ <li>The {{ interface("nsISessionStartup") }} attribute state is now a <a href="/en-US/SpiderMonkey/JSAPI_Reference/Jsval"><code>jsval</code></a> instead of a string, for performance reasons.</li>
  <li>The {{ interface("nsIDocShell") }} attribute <code>isActive</code> is now <code>false</code> for minimized windows.</li>
- <li>The {{ ifmethod("nsIDownloadHistory", "addDownload") }} method now saves <span id="summary_alias_container"><span id="short_desc_nonedit_display">the target where the download is saved on the local file system.</span></span></li>
+ <li>The {{ ifmethod("nsIDownloadHistory", "addDownload") }} method now saves the target where the download is saved on the local file system.</li>
 </ul>
 
 <h4 id="Removed_interfaces">Removed interfaces</h4>
@@ -189,7 +189,7 @@ tags:
 
 <ul>
  <li>When a window is minimized, un-minimized, or switches between full screen and windowed mode, it receives a <code>sizemodechange</code> event.</li>
- <li>You can now <a href="/en/Installing_extensions#Preventing_automatic_install_from_specific_locations">use the <code>extensions.autoDisableScopes</code> preference</a> to disable automatic installation of add-ons from specific add-on install locations.</li>
+ <li>You can now <a href="https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#preventing_automatic_install_from_specific_locations">use the <code>extensions.autoDisableScopes</code> preference</a> to disable automatic installation of add-ons from specific add-on install locations.</li>
  <li>The new {{ domxref("document.mozSyntheticDocument") }} property on {{ domxref("Document") }} objects lets you determine whether a document is synthetic (that is, something like a standalone image, video, or audio file) rather than a full, standard DOM document. This can be useful, for example, if you want to present different user interface in this situation (such as adding contextual items differently depending on this case).</li>
  <li>You can now specify a filter when opening <code>about:config</code>; for example, "about:config?filter=sessionstore" will show only session storage related preferences.</li>
 </ul>
@@ -197,13 +197,13 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/Firefox_7_for_developers">Firefox 7 for developers</a></li>
- <li><a href="/en/Firefox_6_for_developers">Firefox 6 for developers</a></li>
- <li><a href="/en/Firefox_5_for_developers">Firefox 5 for developers </a></li>
- <li><a href="/en/Firefox_4_for_developers">Firefox 4 for developers </a></li>
- <li><a href="/en/Firefox_3.6_for_developers">Firefox 3.6 for developers </a></li>
- <li><a href="/En/Firefox_3.5_for_developers">Firefox 3.5 for developers</a></li>
- <li><a href="/en/Firefox_3_for_developers">Firefox 3 for developers</a></li>
- <li><a href="/en/Firefox_2_for_developers">Firefox 2 for developers</a></li>
- <li><a href="/en/Firefox_1.5_for_developers">Firefox 1.5 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/6">Firefox 6 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers </a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/4">Firefox 4 for developers </a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers </a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li>
 </ul>

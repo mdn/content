@@ -11,53 +11,57 @@ tags:
   - form
 ---
 <div>
-<div>{{APIRef("HTML DOM")}}</div>
+  <div>{{APIRef("HTML DOM")}}</div>
 </div>
 
-<p>The read-only <strong><code>HTMLLabelElement.form</code></strong> property returns an {{domxref("HTMLFormElement")}} object which represents the form of which the label's associated control is a part, or null if there is either no associated control, or if that control isn't in a form.</p>
+<p>The read-only <strong><code>HTMLLabelElement.form</code></strong> property returns an
+  {{domxref("HTMLFormElement")}} object which represents the form of which the label's
+  associated control is a part, or null if there is either no associated control, or if
+  that control isn't in a form.</p>
 
 <p>This property is just a shortcut for <code>HTMLLabelElement.control.form</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>form</em> = <em>HTMLLabelElement</em>.form
+<pre class="brush: js"><em>form</em> = <em>HTMLLabelElement</em>.form
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>An {{domxref("HTMLFormElement")}} which represents the form with which the label's {{domxref("HTMLLabelElement.control", "control")}} is associated. If {{domxref("HTMLLabelElement.control", "control")}} is <code>null</code> (meaning the label isn't associated with a control), or if the control isn't part of a form, this property returns <code>null</code>.</p>
+<p>An {{domxref("HTMLFormElement")}} which represents the form with which the label's
+  {{domxref("HTMLLabelElement.control", "control")}} is associated. If
+  {{domxref("HTMLLabelElement.control", "control")}} is <code>null</code> (meaning the
+  label isn't associated with a control), or if the control isn't part of a form, this
+  property returns <code>null</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#dom-label-form', 'form')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#dom-label-form', 'form')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLLabelElement.form")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("HTMLLabelElement")}}</li>
- <li>{{domxref("HTMLElement")}}</li>
- <li>{{HTMLElement("label")}}</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms guide</a></li>
+  <li>{{domxref("HTMLLabelElement")}}</li>
+  <li>{{domxref("HTMLElement")}}</li>
+  <li>{{HTMLElement("label")}}</li>
+  <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
 </ul>

@@ -21,7 +21,7 @@ tags:
 <p>There are a number of components involved in digital rights management (DRM) on the web:</p>
 
 <ul>
- <li>A combination of browser and video player that support the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a> (EME). EME is a JavaScript API that coordinates the different moving parts involved in DRM. (See the <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video#Browser_support">browser support tables </a>for more information.) An example player that supports EME is <a href="https://github.com/google/shaka-player">Google's Shaka player</a>. (See <a href="https://shaka-player-demo.appspot.com/docs/api/tutorial-welcome.html">Welcome to Shaka Player</a> for a series of tutorials.) EME allows you to reuse encrypted assets across many HTML5 platforms.</li>
+ <li>A combination of browser and video player that support the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a> (EME). EME is a JavaScript API that coordinates the different moving parts involved in DRM. (See the <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video#browser_support">browser support tables </a>for more information.) An example player that supports EME is <a href="https://github.com/google/shaka-player">Google's Shaka player</a>. (See <a href="https://shaka-player-demo.appspot.com/docs/api/tutorial-welcome.html">Welcome to Shaka Player</a> for a series of tutorials.) EME allows you to reuse encrypted assets across many HTML5 platforms.</li>
  <li>A packaging service to encrypt your media. Your media needs to be encrypted to work with an EME-supporting player. HTML5 video can be encrypted once using the ISO BMFF/CENC format and streamed to many browser, mobile, and consumer electronics platforms, saving critical asset storage and maintenance costs. One tool that can satisfy these needs is <a href="https://github.com/google/shaka-packager">Shaka Packager</a>. (See <a href="https://storage.googleapis.com/wvdocs/Widevine_DRM_Encoding_and_Packaging.pdf">Widevine Encoding and Packaging</a> and <a href="https://storage.googleapis.com/wvdocs/Widevine_DRM_Using_Shaka_Packager_and_Player.pdf">Widevine Using the Shaka Packager and Player</a> for useful usage information.)</li>
  <li>A DRM service (key system) that generates keys to be used in license requests.</li>
  <li>A content decryption module (CDM) for client-side playback. This component handles retrieving keys, generating license requests by sending keys to license servers, etc. EME provides an interface for interacting with CDMs, though it does not define any itself.</li>
@@ -39,7 +39,7 @@ tags:
  <li><a href="https://developer.apple.com/streaming/fps/">Apple FairPlay</a></li>
 </ul>
 
-<p>In general, Widevine is supported by Firefox, Chrome, and Opera, PlayReady is supported by IE/Edge, and FairPlay is supported by Safari. Check out our <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video#Browser_support">Browser support tables</a> for more details.</p>
+<p>In general, Widevine is supported by Firefox, Chrome, and Opera, PlayReady is supported by IE/Edge, and FairPlay is supported by Safari. Check out our <a href="/en-US/docs/Plugins/Flash_to_HTML5/Video#browser_support">Browser support tables</a> for more details.</p>
 
 <h2 id="Authentication">Authentication</h2>
 

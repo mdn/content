@@ -12,22 +12,30 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>detune</code></strong> property of the {{domxref("AudioBufferSourceNode")}} interface is a <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing detuning of oscillation in <a href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
+<p class="summary">The <strong><code>detune</code></strong> property of the
+  {{domxref("AudioBufferSourceNode")}} interface is a <a
+    href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
+  representing detuning of oscillation in <a
+    href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
 
-<p>For example, values of +100 and -100 detune the source up or down by one semitone, while +1200 and -1200 detune it up or down by one octave.</p>
+<p>For example, values of +100 and -100 detune the source up or down by one semitone,
+  while +1200 and -1200 detune it up or down by one octave.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
+<pre class="brush: js">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
 <em>source</em>.detune.value = 100; // value in cents</pre>
 
 <div class="note">
-<p><strong>Note:</strong> Though the <code>AudioParam</code> returned is read-only, the value it represents is not.</p>
+  <p><strong>Note:</strong> Though the <code>AudioParam</code> returned is read-only, the
+    value it represents is not.</p>
 </div>
 
 <h3 id="Value">Value</h3>
 
-<p>A <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} whose value indicates the detuning of oscillation in <a href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
+<p>A <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
+  whose value indicates the detuning of oscillation in <a
+    href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -55,29 +63,28 @@ source.start();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiobuffersourcenode-detune', 'detune')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-audiobuffersourcenode-detune', 'detune')}}
+      </td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioBufferSourceNode.detune")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

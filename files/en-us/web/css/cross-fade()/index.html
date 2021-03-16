@@ -28,7 +28,7 @@ tags:
 
 <p>Think of the percentage as an opacity value for each image. This means a value of 0% means the image is fully transparent while a value of 100% makes the image fully opaque.</p>
 
-<pre class="brush: css notranslate">cross-fade( url(white.png) 0%, url(black.png) 100%); /* fully black */
+<pre class="brush: css">cross-fade( url(white.png) 0%, url(black.png) 100%); /* fully black */
 cross-fade( url(white.png) 25%, url(black.png) 75%); /* 25% white, 75% black */
 cross-fade( url(white.png) 50%, url(black.png) 50%); /* 50% white, 50% black */
 <span class="hljs-tag"><span class="hljs-value">cross-fade( url(white.png) 75%, url(black.png) 25%); /* 75% white, 25% black */
@@ -41,7 +41,7 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% 
 
 <p>The above could also have been written as:</p>
 
-<pre class="brush: css notranslate">cross-fade( url(white.png) 0%,   url(black.png)); /* fully black */
+<pre class="brush: css">cross-fade( url(white.png) 0%,   url(black.png)); /* fully black */
 cross-fade( url(white.png) 25%,  url(black.png)); /* 25% white, 75% black */
 cross-fade( url(white.png),      url(black.png)); /* 50% white, 50% black */
 cross-fade( url(white.png) 75%,  url(black.png)); /* 75% white, 25% black */
@@ -54,16 +54,16 @@ cross-fade( url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% 
 
 <p>If no percentages are declared and three images are included, each image will be 33.33% opaque. The two following are lines (almost) identical:</p>
 
-<pre class="brush: css notranslate">cross-fade( url(red.png), url(yellow.png), url(blue.png)); /* all three will be 33.3333% opaque */
+<pre class="brush: css">cross-fade( url(red.png), url(yellow.png), url(blue.png)); /* all three will be 33.3333% opaque */
 cross-fade( url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);</pre>
 
 <h3 id="Older_implemented_syntax">Older, implemented syntax</h3>
 
-<pre class="syntaxbox notranslate">cross-fade( &lt;image&gt;, &lt;image&gt;, &lt;percentage&gt; )</pre>
+<pre class="brush: css">cross-fade( &lt;image&gt;, &lt;image&gt;, &lt;percentage&gt; )</pre>
 
 <p>The specification for the <code>cross-fade()</code> function allows for multiple images and for each image to have transparency values independent of the other values. This was not always the case. The <a href="/en-US/docs/">original syntax</a>, which has been implemented in some browsers, only allowed for two images, with the sum of the transparency of those two images being exactly 100%. The original syntax is supported in Safari and supported with the <code>-webkit-</code> prefix in Chrome, Opera, and other blink-based browsers.</p>
 
-<pre class="brush: css notranslate">cross-fade(url(white.png), url(black.png), 0%);   /* fully black */
+<pre class="brush: css">cross-fade(url(white.png), url(black.png), 0%);   /* fully black */
 cross-fade(url(white.png), url(black.png), 25%);  /* 25% white, 75% black */
 cross-fade(url(white.png), url(black.png), 50%);  /* 50% white, 50% black */
 cross-fade(url(white.png), url(black.png), 75%);  /* 75% white, 25% black */
@@ -85,7 +85,7 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -93,11 +93,11 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="crossfade"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="crossfade"&gt;&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[4-11] notranslate">.crossfade {
+<pre class="brush: css; highlight[4-11]">.crossfade {
     width: 300px;
     height: 300px;
     background-image: -webkit-cross-fade(

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">font-style: normal;
+<pre class="brush: css">font-style: normal;
 font-style: italic;
 font-style: oblique;
 font-style: oblique 30deg;
@@ -45,7 +45,7 @@ font-style: oblique 30deg 50deg;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -53,26 +53,26 @@ font-style: oblique 30deg 50deg;
 
 <p>As an example, consider the garamond font family, in its normal form, we get the following result:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: garamond;
   src: url('garamond.ttf');
 }</pre>
 
-<p><img alt="unstyled Garamond" src="https://mdn.mozillademos.org/files/12265/garamondunstyled.JPG" style="height: 101px; width: 276px;"></p>
+<p><img alt="unstyled Garamond" src="garamondunstyled.jpg"></p>
 
 <p>The italicized version of this text uses the same glyphs present in the unstyled version, but they are artificially sloped by a few degrees.</p>
 
-<p><img alt="artificially sloped garamond" src="https://mdn.mozillademos.org/files/12267/garamondartificialstyle.JPG" style="height: 101px; width: 276px;"></p>
+<p><img alt="artificially sloped garamond" src="garamondartificialstyle.jpg"></p>
 
 <p>On the other hand, if a true italicized version of the font family exists, we can include it in the <code>src</code> descriptor and specify the font style as italic, so that it is clear that the font is italicized. True italics use different glyphs and are a bit different from their upright counterparts, having some unique features and generally have a rounded and calligraphic quality. These fonts are specially created by font designers and are <strong>not</strong> artificially sloped.</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: garamond;
   src: url('garamond-italic.ttf');
   font-style: italic;
 }</pre>
 
-<p><img alt="italic garamond" src="https://mdn.mozillademos.org/files/12269/garamonditalic.JPG" style="height: 101px; width: 267px;"></p>
+<p><img alt="italic garamond" src="garamonditalic.jpg"></p>
 
 <h2 id="Specifications">Specifications</h2>
 

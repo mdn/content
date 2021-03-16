@@ -16,11 +16,13 @@ tags:
 
 <p>The basic <code>style</code> object exposes the {{domxref("Stylesheet")}} and the {{domxref("CSSStylesheet")}} interfaces. Those interfaces contain members like <code>insertRule</code>, <code>selectorText</code>, and <code>parentStyleSheet</code> for accessing and manipulating the individual style rules that make up a CSS stylesheet.</p>
 
-<p>To get to the <code>style</code> objects from the <code>document</code>, you can use the {{domxref("document.styleSheets")}} property and access the individual objects by index (e.g., <code>document.styleSheets[0]</code> is the first stylesheet defined for the document, etc.).</p>
+<p>To get to the <code>style</code> objects from the <code>document</code>, you can use the {{domxref("Document.styleSheets")}} property and access the individual objects by index (e.g., <code>document.styleSheets[0]</code> is the first stylesheet defined for the document, etc.).</p>
 
 <h2 id="Modify_a_stylesheet_rule">Modify a stylesheet rule with CSSOM</h2>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<p>In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to blue.</p>
+
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Modifying a stylesheet rule with CSSOM&lt;/title&gt;
 &lt;style type="text/css"&gt;
@@ -38,21 +40,24 @@ The stylesheet declaration for the body's background color is modified via JavaS
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>{{ EmbedLiveSample('Modify_a_stylesheet_rule') }}</p>
+<h3>Result</h3>
 
-<p>The list of properties available in the DOM from the <code>style</code> property is given on the <a href="/en-US/docs/DOM/CSS">DOM CSS Properties List</a> page.</p>
+<p>{{EmbedGHLiveSample("css-examples/cssom/modify-rule.html", '100%', 120)}}</p>
+
+<p>The list of properties available in the DOM from the <code>style</code> property is given on the <a href="/en-US/docs/Web/CSS/Reference">DOM CSS Properties List</a> page.</p>
 
 <p>To modify styles to a document using CSS syntax, one can insert rules or insert {{HTMLElement("style")}} tags whose <code>innerHTML</code> property is set to the desired CSS.</p>
 
 <h2 id="Modify_an_element_style">Modify an element's style</h2>
 
-<p>The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
+<p>The element {{domxref("ElementCSSInlineStyle.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
 
 <p>Also, when you set this property on an element, you override any styles that have been set elsewhere for that element's particular property you are setting. Setting the <code>border</code> property, for example, will override settings made elsewhere for that element's <code>border</code> property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.</p>
 
 <p>To change a particular element's style, you can adapt the following example for the element(s) you want to style.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<div id="Example2">
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;simple style example&lt;/title&gt;
 
@@ -88,19 +93,20 @@ function resetStyle(elemId) {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+</div>
 
-<p>{{ EmbedLiveSample('Modify_an_element_style') }}</p>
+<p>{{ EmbedLiveSample('Example2') }}</p>
 
-<p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element. See <a href="/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle">Example 6: getComputedStyle</a> in the examples chapter for more information on how to use this method.</p>
+<p>The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the <code>document.defaultView</code> object returns all styles that have actually been computed for an element.</p>
 
 <h2 id="DOM_Style_Object">DOM Style Object</h2>
 
-<p>The <code>style</code> object represents an individual style statement. Unlike the individual rules available from the <code><a href="/en/DOM/document.styleSheets">document.styleSheets</a></code> collection, the style object is accessed from the <code>document</code> or from the elements to which that style is applied. It represents the <em>in-line</em> styles on a particular element.</p>
+<p>The <code>style</code> object represents an individual style statement. The style object is accessed from the <code>document</code> or from the elements to which that style is applied. It represents the <em>in-line</em> styles on a particular element.</p>
 
 <p>More important than the two properties noted here is the use of the <code>style</code> object to set individual style properties on an element:</p>
 
 <div id="DOM_Style_Object_code_sample">
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  &lt;head&gt;
   &lt;title&gt;style Property Example&lt;/title&gt;
@@ -130,9 +136,10 @@ function resetStyle(elemId) {
 
 <h3 id="DOM_Style_Object_SetAttribue">Using the setAttribute method</h3>
 
-<p>Note that you can also change style of an element by getting a reference to it and then use its <code><a href="/en/DOM/element.setAttribute">setAttribute</a></code> method to specify the CSS property and its value.</p>
 
-<pre class="brush: js notranslate">var el = document.getElementById('some-element');
+<p>Note that you can also change style of an element by getting a reference to it and then use its <code><a href="/en-US/docs/Web/API/Element/setAttribute">setAttribute</a></code> method to specify the CSS property and its value.</p>
+
+<pre class="brush: js">var el = document.getElementById('some-element');
 el.setAttribute('style', 'background-color:darkblue;');
 </pre>
 

@@ -17,42 +17,69 @@ tags:
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property <code><strong>alt</strong></code> provides fallback (alternate) text to display when the image specified by the {{HTMLElement("img")}} element is not loaded.</span> This may be the case because of an error, because the user has disabled the loading of images, or because the image hasn't finished loading yet.</p>
+<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property
+    <code><strong>alt</strong></code> provides fallback (alternate) text to display when
+    the image specified by the {{HTMLElement("img")}} element is not loaded.</span> This
+  may be the case because of an error, because the user has disabled the loading of
+  images, or because the image hasn't finished loading yet.</p>
 
-<p>Perhaps the most important reason to use the <code>alt</code> tag is to support <a href="/en-US/docs/Web/Accessibility">accessibility</a>, as the <code>alt</code> text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.</p>
+<p>Perhaps the most important reason to use the <code>alt</code> tag is to support <a
+    href="/en-US/docs/Web/Accessibility">accessibility</a>, as the <code>alt</code> text
+  may be used by screen readers and other assistive technologies to help differently-abled
+  users make full use of your content. It will be read aloud or sent to the touch device,
+  for example, to support visually impaired users.</p>
 
 <blockquote>
-<p><strong>Think of it like this:</strong> When choosing <code>alt</code> strings for your images, imagine what you would say when reading the page to someone over the phone without mentioning that there's an image on the page.</p>
+  <p><strong>Think of it like this:</strong> When choosing <code>alt</code> strings for
+    your images, imagine what you would say when reading the page to someone over the
+    phone without mentioning that there's an image on the page.</p>
 </blockquote>
 
-<p>The alternate text is displayed in the space the image would occupy and should be able to take the place of the image <em>without altering the meaning of the page</em>.</p>
+<p>The alternate text is displayed in the space the image would occupy and should be able
+  to take the place of the image <em>without altering the meaning of the page</em>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>htmlImageElement</em>.alt = <em>altText</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.alt = <em>altText</em>;
 let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which contains the alternate text to display when the image is not loaded or for use by assistive devices.</p>
+<p>A {{domxref("DOMString")}} which contains the alternate text to display when the image
+  is not loaded or for use by assistive devices.</p>
 
-<p>The <code>alt</code> attribute is officially mandatory; it's meant to always be specified. If the image doesn't require a fallback (such as for an image which is decorative or an advisory icon of minimal importance), you may specify an empty string (<code>""</code>). For compatibility reasons, browsers generally will accept an image without an <code>alt</code> attribute, but you should try to get into the habit of using it.</p>
+<p>The <code>alt</code> attribute is officially mandatory; it's meant to always be
+  specified. If the image doesn't require a fallback (such as for an image which is
+  decorative or an advisory icon of minimal importance), you may specify an empty string
+  (<code>""</code>). For compatibility reasons, browsers generally will accept an image
+  without an <code>alt</code> attribute, but you should try to get into the habit of using
+  it.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The fundamental guideline for the <code>alt</code> attribute is that every image's alternate text should be able to replace the image <em>without altering the meaning of the page</em>. You should never use <code>alt</code> for text that could be construed as a caption or title. There are separate attributes and elements designed for those purposes.</p>
+<p>The fundamental guideline for the <code>alt</code> attribute is that every image's
+  alternate text should be able to replace the image <em>without altering the meaning of
+    the page</em>. You should never use <code>alt</code> for text that could be construed
+  as a caption or title. There are separate attributes and elements designed for those
+  purposes.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Beyond that, there are additional guidelines for using <code>alt</code> appropriately which vary depending on what the image is being used for. These are shown in the examples below.</p>
+<p>Beyond that, there are additional guidelines for using <code>alt</code> appropriately
+  which vary depending on what the image is being used for. These are shown in the
+  examples below.</p>
 
 <h3 id="Decorative_images">Decorative images</h3>
 
-<p>Images with no semantic meaning—such as those which are solely decorative—or of limited informational value, should have their <code>alt</code> attributes set to the empty string (<code>""</code>). This is shown in the example below.</p>
+<p>Images with no semantic meaning—such as those which are solely decorative—or of limited
+  informational value, should have their <code>alt</code> attributes set to the empty
+  string (<code>""</code>). This is shown in the example below.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<p>In the HTML for this example, shown below, the {{HTMLElement("img")}} element includes the <code>alt</code> property, which will prevent the image from having any alternate text, since it's a decorative detail.</p>
+<p>In the HTML for this example, shown below, the {{HTMLElement("img")}} element includes
+  the <code>alt</code> property, which will prevent the image from having any alternate
+  text, since it's a decorative detail.</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="left-margin"&gt;
@@ -73,13 +100,19 @@ let <em>altText</em> = <em>htmlImageElement</em>.alt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<p>The CSS for this example sets up the styles for the layout as shown in the result below. They're not crucial to the concept shown in the HTML above, but you may expand the view below if you wish to read the CSS used.</p>
+<p>The CSS for this example sets up the styles for the layout as shown in the result
+  below. They're not crucial to the concept shown in the HTML above, but you may expand
+  the view below if you wish to read the CSS used.</p>
 
-<details><summary>View the CSS</summary>
+<details>
+  <summary>View the CSS</summary>
 
-<div class="hidden note"><strong>Editors:</strong> If you change the CSS below, please be sure to close the details box using the toggle at the top of the CSS view before saving. Otherwise, readers will find it open by default, which is not the intent here.</div>
+  <div class="hidden note"><strong>Editors:</strong> If you change the CSS
+    below, please be sure to close the details box using the toggle at the top of the CSS
+    view before saving. Otherwise, readers will find it open by default, which is not the
+    intent here.</div>
 
-<pre class="brush: css">body {
+  <pre class="brush: css">body {
   margin: 0;
   padding: 0;
 }
@@ -129,9 +162,14 @@ p {
 
 <h3 id="Images_used_as_buttons">Images used as buttons</h3>
 
-<p>When using an image as a button (by using it as the only visible child of an {{HTMLElement("a")}} element representing a hyperlink), the <code>alt</code> attribute must be used to convey the purpose of the button. In other words, it should be the same text you would use in a textual button to serve the same purpose.</p>
+<p>When using an image as a button (by using it as the only visible child of an
+  {{HTMLElement("a")}} element representing a hyperlink), the <code>alt</code> attribute
+  must be used to convey the purpose of the button. In other words, it should be the same
+  text you would use in a textual button to serve the same purpose.</p>
 
-<p>For example, in the snippet of HTML below, a toolbar which uses icon images as link labels provides <code>alt</code> attributes for each giving a textual label to use instead of the icon when the icons cannot be or are intentionally not used.</p>
+<p>For example, in the snippet of HTML below, a toolbar which uses icon images as link
+  labels provides <code>alt</code> attributes for each giving a textual label to use
+  instead of the icon when the icons cannot be or are intentionally not used.</p>
 
 <pre class="brush: html">&lt;li class="toolbar" aria-role="toolbar"&gt;
   &lt;a href="songs.html" aria-role="button"&gt;&lt;img src="songicon.svg" alt="Songs"&lt;/a&gt;
@@ -141,29 +179,51 @@ p {
 &lt;/li&gt;
 </pre>
 
-<h3 id="Images_containining_diagrams_or_maps">Images containining diagrams or maps</h3>
+<h3 id="Images_containing_diagrams_or_maps">Images containing diagrams or maps</h3>
 
-<p>When an image contains information presented as a diagram, chart, graph, or map, the <code>alt</code> text should provide the same information, at least in summary form. This is true whether the /me image is in a bitmapped format such as <a href="/en-US/docs/Web/Media/Formats/Image_types#PNG">PNG</a> or <a href="/en-US/docs/Web/Media/Formats/Image_types#JPEG">JPEG</a> or in a vector format like <a href="/en-US/docs/Web/Media/Formats/Image_types#SVG">SVG</a>.</p>
+<p>When an image contains information presented as a diagram, chart, graph, or map,
+  the <code>alt</code> text should provide the same information, at least in summary form.
+  This is true whether the /me image is in a bitmapped format such as <a
+    href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG</a> or <a
+    href="/en-US/docs/Web/Media/Formats/Image_types#jpeg">JPEG</a> or in a vector format
+  like <a href="/en-US/docs/Web/Media/Formats/Image_types#svg">SVG</a>.</p>
 
 <ul>
- <li>For a map, the <code>alt</code> text could be directions to the place indicated by the map, similarly to how you would explain it verbally.</li>
- <li>For a chart, the text could describe the items in the chart and their values.</li>
- <li>For a diagram, the text could be an explanation of the concept presented by the diagram.</li>
+  <li>For a map, the <code>alt</code> text could be directions to the place indicated by
+    the map, similarly to how you would explain it verbally.</li>
+  <li>For a chart, the text could describe the items in the chart and their values.</li>
+  <li>For a diagram, the text could be an explanation of the concept presented by the
+    diagram.</li>
 </ul>
 
-<p>Keep in mind that any text included in diagrams and charts presented in {{Glossary("SVG")}} format may be read by screen readers. This may impact the decisions you make shen writing the <code>alt</code> text for the diagram.</p>
+<p>Keep in mind that any text included in diagrams and charts presented in
+  {{Glossary("SVG")}} format may be read by screen readers. This may impact the decisions
+  you make shen writing the <code>alt</code> text for the diagram.</p>
 
 <h3 id="Icons_or_logos">Icons or logos</h3>
 
-<p>Logos (such as corporate or brand logos) and informational icons should use the corresponding text in their <code>alt</code> strings. That is, if an image is a corporate logo, the <code>alt</code> text should be the name of the company. If the image is an icon representing a status or other information, the text should be the name of that state.</p>
+<p>Logos (such as corporate or brand logos) and informational icons should use the
+  corresponding text in their <code>alt</code> strings. That is, if an image is a
+  corporate logo, the <code>alt</code> text should be the name of the company. If the
+  image is an icon representing a status or other information, the text should be the name
+  of that state.</p>
 
-<p>For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding <code>alt</code> text might be "<code>Updated Recently"</code> or even "<code>Updated on 27 August 2019"</code>.</p>
+<p>For example, if an image is a badge that's shown on a page to indicate that the content
+  of the page is new and has been updated recently, the
+  corresponding <code>alt</code> text might be "<code>Updated Recently"</code> or even
+  "<code>Updated on 27 August 2019"</code>.</p>
 
-<p>In this example, a starburst image with the word "New!" is used to indicate that an article is about something new (and probably supposedly also exciting). The <code>alt</code> attribute is set to <code>New Page!</code> to allow that text to be displayed in place of the image if the image isn't available. It is also available to be read by screen readers.</p>
+<p>In this example, a starburst image with the word "New!" is used to indicate that an
+  article is about something new (and probably supposedly also exciting).
+  The <code>alt</code> attribute is set to <code>New Page!</code> to allow that text to be
+  displayed in place of the image if the image isn't available. It is also available to be
+  read by screen readers.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<p>The HTML below creates a snippet of content from a site using the described icon. Note the use of the <code>alt</code> attribute on the {{HTMLElement("&lt;img&gt;")}}, providing a good substitution string to use in case the image doesn't load.</p>
+<p>The HTML below creates a snippet of content from a site using the described icon. Note
+  the use of the <code>alt</code> attribute on the {{HTMLElement("&lt;img&gt;")}},
+  providing a good substitution string to use in case the image doesn't load.</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
   &lt;img src="https://www.bitstampede.com/mdn-test/new-page.svg"
@@ -183,7 +243,8 @@ p {
 
 <h4 id="CSS_2">CSS</h4>
 
-<p>The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cssxref("shape-outside")}} to wrap the text around the icon in an appealing way.</p>
+<p>The main feature of the CSS here is the use of {{cssxref("clip-path")}} and
+  {{cssxref("shape-outside")}} to wrap the text around the icon in an appealing way.</p>
 
 <pre class="brush: css">.container {
   max-width: 500px;
@@ -210,25 +271,27 @@ p {
 
 <h3 id="Other_images">Other images</h3>
 
-<p>Images showing objects or scenes should have <code>alt</code> text describing what's seen in the image. A photo of a yellow teapot might literally have its <code>alt</code> attribute set to "<code>A yellow teapot"</code>.</p>
+<p>Images showing objects or scenes should have <code>alt</code> text describing what's
+  seen in the image. A photo of a yellow teapot might literally have
+  its <code>alt</code> attribute set to "<code>A yellow teapot"</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-img-alt', 'HTMLImageElement.alt')}}</td>
-   <td>{{Spec2('HTML DOM')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-img-alt', 'HTMLImageElement.alt')}}</td>
+      <td>{{Spec2('HTML DOM')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

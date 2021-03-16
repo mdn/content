@@ -1,0 +1,61 @@
+---
+title: HTMLCollection.length
+slug: Web/API/HTMLCollection/length
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p>The <code><strong>HTMLCollection.length</strong></code> property returns the number of
+  items in a {{domxref("HTMLCollection")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><em>numItems</em> = <em>htmlCollection</em>.length
+</pre>
+
+<ul>
+  <li><code>numItems</code> is an integer value representing the number of items in a
+    <code>HTMLCollection</code>.</li>
+</ul>
+
+<h2 id="Example">Example</h2>
+
+<p>The <code>length</code> property is often useful in DOM programming. It's often used to
+  test the length of a list, to see if it exists at all. It's also commonly used as the
+  iterator in a <code>for</code> loop, as in this example.</p>
+
+<pre class="brush: js">// All the elements with the class ".test" in the document
+var items = document.getElementsByClassName("test");
+
+// For each test item in the list,
+// append the entire element as a string of HTML
+var gross = "";
+for (var i = 0; i &lt; items.length; i++) {
+  gross += items[i].innerHTML;
+}
+
+// gross is now all the HTML for the test elements
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("DOM WHATWG", "#dom-htmlcollection-length", "HTMLCollection:
+        length")}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HTMLCollection.length")}}</p>

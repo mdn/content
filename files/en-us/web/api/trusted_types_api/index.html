@@ -1,0 +1,105 @@
+---
+title: Trusted Types API
+slug: Web/API/Trusted_Types_API
+tags:
+  - API
+  - Overview
+  - Reference
+  - Trusted Types
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong>Trusted Types API</strong> gives web developers a way to lock down the insecure parts of the {{domxref("Document Object Model","DOM API")}} to prevent client-side {{Glossary("Cross-site scripting")}} (XSS) attacks.</p>
+
+<h2>Concepts and Usage</h2>
+
+<p>Client-side, or DOM-based, XSS attacks happen when data controlled by a user (such as that input into a form field) reaches a function that can execute that data. These functions are known as <em>injection sinks</em>. DOM-based XSS attacks happen when a user is able to write arbitrary JavaScript code and have it executed by one of these functions.</p>
+
+<p>The Trusted Types API locks down risky injection sinks, requiring you to process the data before passing it to one of these functions. If you use a string, then the browser will throw a {{jsxref("TypeError")}} and prevent the use of the function.</p>
+
+<p>Trusted Types works alongside <a href="/en-US/docs/Web/HTTP/CSP">Content-Security Policy</a> with the <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">trusted-types</a> and <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a> directives.</p>
+
+<h3>Injection Sinks</h3>
+
+<p>The Trusted Types API locks down injection sinks that can act as a vector for DOM-XSS attacks. An injection sink is any Web API function that should only be called with trusted, validated or santized input. Examples of injection sinks include:</p>
+
+<ul>
+  <li>Functions that insert HTML into the document such as {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("Document.write")}}.</li>
+  <li>Functions that create a new same-origin {{domxref("Document")}} with caller-controlled markup such as {{domxref("DOMParser.parseFromString")}}.</li>
+  <li>Functions that execute code such as {{jsxref("Global_Objects/eval")}}.</li>
+  <li>Setters for {{domxref("Element")}} attributes that accept a URL of code to load or execute.</li>
+</ul>
+
+<p>Trusted Types will force you to process the data before passing it to any injection sink rather than use a string. This ensures that the data is trustworthy.</p>
+
+<h3>Trusted Type Policies</h3>
+
+<p>A policy is a factory for Trusted Types. Web developers can specify a set of policies used for the creation of typed objects which form the trusted codebase for valid Trusted Type objects.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<dl>
+  <dt>{{domxref("TrustedHTML")}}</dt>
+  <dd>Represents a string to insert into an injection sink that will render it as HTML.</dd>
+  <dt>{{domxref("TrustedScript")}}</dt>
+  <dd>Represents a string to insert into an injection sink that could lead to the script being executed.</dd>
+  <dt>{{domxref("TrustedScriptURL")}}</dt>
+  <dd>Represents a string to insert into an injection sink that will parse it as an URL of an external script resource.</dd>
+  <dt>{{domxref("TrustedTypePolicy")}}</dt>
+  <dd>Defines the functions used to create the above Trusted Type objects.</dd>
+  <dt>{{domxref("TrustedTypePolicyFactory")}}</dt>
+  <dd>Creates policies and verifies that Trusted Type object instances were created via one of the policies.</dd>
+  <dt>{{domxref("TrustedTypePolicyOptions")}}</dt>
+  <dd>A dictionary that holds author-defined functions for converting string values into trusted values.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.</p>
+
+<p>The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.</p>
+
+<pre class="brush: html">&lt;div id="myDiv"&gt;&lt;/div&gt;</pre>
+
+<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+});
+
+let el = document.getElementById("myDiv");
+const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+console.log(escaped instanceof TrustedHTML); // true
+el.innerHTML = escaped;
+</pre>
+
+<p>Read more about this example, and discover other ways to sanitize input in the article <a href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a>.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Trusted Types')}}</td>
+   <td>{{Spec2('Trusted Types')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>See the compatibility data for each of the Trusted Types API interfaces.</p>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>A <a href="https://github.com/w3c/webappsec-trusted-types#polyfill">polyfill is available</a>. The polyfill is also available as an npm package <a href="https://www.npmjs.com/package/trusted-types">trusted-types</a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
+</ul>

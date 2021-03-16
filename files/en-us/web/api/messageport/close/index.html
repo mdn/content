@@ -2,22 +2,24 @@
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
 tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - close
+- API
+- Channel messaging
+- MessagePort
+- Method
+- Reference
+- close
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <code><strong>close()</strong></code> method of the {{domxref("MessagePort")}} interface disconnects the port, so it is no longer active. This stops the flow of messages to that port.</p>
+<p>The <code><strong>close()</strong></code> method of the {{domxref("MessagePort")}}
+  interface disconnects the port, so it is no longer active. This stops the flow of
+  messages to that port.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">port.close()</pre>
+<pre class="brush: js">port.close()</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -29,7 +31,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code block, you can see a <code>handleMessage</code> handler function, run when a message is sent back to this document using {{domxref("EventTarget.addEventListener")}}.</p>
+<p>In the following code block, you can see a <code>handleMessage</code> handler function,
+  run when a message is sent back to this document using
+  {{domxref("EventTarget.addEventListener")}}.</p>
 
 <pre class="brush: js">channel.port1.addEventListener('message', handleMessage, false);
 function handleMessage(e) {
@@ -47,29 +51,28 @@ channel.port1.start();
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#dom-messageport-close', 'close()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'web-messaging.html#dom-messageport-close',
+        'close()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MessagePort.close")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using
+      channel messaging</a></li>
 </ul>

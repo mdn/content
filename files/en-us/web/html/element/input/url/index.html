@@ -111,7 +111,7 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
 
 <h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
 
@@ -131,13 +131,13 @@ tags:
 
 <p>See the section {{anch("Pattern validation")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefplaceholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefreadonly", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefsize", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefspellcheck", 0, 1, 2)}}</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -180,7 +180,7 @@ tags:
 
 <p>Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:</p>
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"&gt;</pre>
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"&gt;</pre>
 
 <p>{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}</p>
 
@@ -194,7 +194,7 @@ tags:
 
 <p>Here, we have a <code>url</code> input with the placeholder <code>http://www.example.com</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        placeholder="http://www.example.com"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
@@ -207,7 +207,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>url</code> edit box is 30 characters wide:</p>
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        size="30"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
@@ -218,7 +218,7 @@ tags:
 
 <p>The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        size="30" minlength="10" maxlength="80"&gt;
 </pre>
 
@@ -233,7 +233,7 @@ tags:
 <p>As always, you can provide a default value for a <code>url</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
 <div id="Default_value">
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        value="http://www.example.com"&gt;</pre>
 </div>
 
@@ -243,7 +243,7 @@ tags:
 
 <p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        list="defaultURLs"&gt;
 
 &lt;datalist id="defaultURLs"&gt;
@@ -262,7 +262,7 @@ tags:
 
 <p>You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your <code>&lt;option&gt;</code> elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
+<pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        list="defaultURLs"&gt;
 
 &lt;datalist id="defaultURLs"&gt;
@@ -293,14 +293,14 @@ tags:
 
 <p>As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.</p>
 
-<div id="Default_value">
-<pre class="brush: html notranslate">&lt;form&gt;
+<div id="Making_a_URL_required_example">
+<pre class="brush: html">&lt;form&gt;
   &lt;input id="myURL" name="myURL" type="url" required&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Making_a_URL_required_example", 600, 40)}}</p>
 
 <p>Try submitting the above form with no value entered to see what happens.</p>
 
@@ -313,7 +313,7 @@ tags:
 <p>Since inputs of type <code>url</code> validate against both the standard URL validation <em>and</em> the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
   }
@@ -338,7 +338,7 @@ tags:
   }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="myURL"&gt;Enter the problem website address:&lt;/label&gt;
     &lt;input id="myURL" name="myURL" type="url"

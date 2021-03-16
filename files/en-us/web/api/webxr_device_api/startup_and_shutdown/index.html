@@ -32,7 +32,7 @@ tags:
 
 <p>Thus the simplest code that fetches the <code>XRSystem</code> object is:</p>
 
-<pre class="brush: js notranslate">const xr = navigator.xr;</pre>
+<pre class="brush: js">const xr = navigator.xr;</pre>
 
 <p>The value of <code>xr</code> will be <code>null</code> or <code>undefined</code> if WebXR isn't available.</p>
 
@@ -89,7 +89,7 @@ tags:
 
 <p>Here we define a <code>getXR()</code> function, which returns the {{domxref("XRSystem")}} object after optionally installing the polyfill, assuming that the polyfill has been included or loaded using a prior {{HTMLElement("script")}} tag.</p>
 
-<pre class="brush: js notranslate">let webxrPolyfill = null;
+<pre class="brush: js">let webxrPolyfill = null;
 
 function getXR(usePolyfill) {
   let tempXR;
@@ -136,7 +136,7 @@ const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 
 <p>To find out if a given mode is supported, call the {{domxref("XRSystem")}} method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}}. This returns a promise which resolves to <code>true</code> if the given type of session is available for use or <code>false</code> otherwise.</p>
 
-<pre class="brush: js notranslate">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
+<pre class="brush: js">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
 if (immersiveOK) {
   // Create and use an immersive VR session
 } else {
@@ -149,7 +149,7 @@ if (immersiveOK) {
 
 <p>A WebXR session is represented by an {{domxref("XRSession")}} object. To obtain an <code>XRSession</code>, you call your {{domxref("XRSystem")}}'s {{domxref("XRSystem.requestSession", "requestSession()")}} method, which returns a promise that resolves with an <code>XRSession</code> if it's able to establish one successfully. Fundamentally, that looks like this:</p>
 
-<pre class="brush: js notranslate">xr.requestSession("immersive-vr").then((session) =&gt; {
+<pre class="brush: js">xr.requestSession("immersive-vr").then((session) =&gt; {
   xrSession = session;
   /* continue to set up the session */
 });
@@ -168,7 +168,7 @@ if (immersiveOK) {
 
 <p>If the session couldn't be created for some reason—such as feature policy disallowing its use or the user declining to grant permission to use the headset—the promise gets rejected. So a more complete function that starts up and returns a WebXR session could look like this:</p>
 
-<pre class="brush: js notranslate">async function createImmersiveSession(xr) {
+<pre class="brush: js">async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr");
     return session;
@@ -186,7 +186,7 @@ if (immersiveOK) {
 
 <p>For example, if you need an <code>unbounded</code> reference space, you can specify that as a required feature in order to ensure that the session you get can use unbounded spaces:</p>
 
-<pre class="brush: js notranslate">async function createImmersiveSession(xr) {
+<pre class="brush: js">async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr", {
       requiredFeatures: [ "unbounded" ]
@@ -200,7 +200,7 @@ if (immersiveOK) {
 
 <p>On the other hand, if you need an <em>inline</em> session and would prefer a <code>local</code> reference space, you can do this:</p>
 
-<pre class="brush: js notranslate">async function createInlineSession(xr) {
+<pre class="brush: js">async function createInlineSession(xr) {
   try {
     session = await xr.requestSession("inline", {
       optionalFeatures: [ "local" ]
@@ -233,7 +233,7 @@ if (immersiveOK) {
 
 <p>In basic form, code to do this final setup might look something like this:</p>
 
-<pre class="brush: js notranslate">async function runSession(session) {
+<pre class="brush: js">async function runSession(session) {
   let worldData;
 
   session.addEventListener("end", onSessionEnd);
@@ -299,7 +299,7 @@ if (immersiveOK) {
 
 <p>When the state of the <code>XRSession</code>'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives an {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.</p>
 
-<pre class="brush: js notranslate">session.onvisibilitychange = (event) =&gt; {
+<pre class="brush: js">session.onvisibilitychange = (event) =&gt; {
   switch(event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
@@ -344,7 +344,7 @@ if (immersiveOK) {
 
 <p>To cleanly shut down the WebXR session when you're done with it, you should call the session's {{domxref("XRSession.end", "end()")}} method. This returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> you can use to know when the shutdown is complete.</p>
 
-<pre class="brush: js notranslate">async function shutdownXR(session) {
+<pre class="brush: js">async function shutdownXR(session) {
   if (session) {
     await session.end();
 
@@ -361,7 +361,7 @@ if (immersiveOK) {
 
 <p>As previously established, you can detect when the WebXR session has ended—whether because you've called its {{domxref("XRSession.end", "end()")}} method, the user turned off their headset, or some sort of irresolvable error occurred in the XR system—by watching for the {{domxref("XRSession.end_event", "end")}} event to be sent to the {{domxref("XRSession")}}.</p>
 
-<pre class="brush: js notranslate">session.onend = (event) =&gt; {
+<pre class="brush: js">session.onend = (event) =&gt; {
   /* the session has shut down */
 
   freeResources();

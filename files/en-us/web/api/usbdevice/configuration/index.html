@@ -2,22 +2,25 @@
 title: USBDevice.configuration
 slug: Web/API/USBDevice/configuration
 tags:
-  - API
-  - Configuration
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
+- API
+- Configuration
+- Property
+- Reference
+- USB
+- USBDevice
+- WebUSB
+- WebUSB API
 ---
 <p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
 
-<p>The <strong><code>configuration</code></strong> read only property of the {{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for the currently selected interface for a paired USB device.</p>
+<p>The <strong><code>configuration</code></strong> read only property of the
+  {{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for
+  the currently selected interface for a paired USB device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var USBConfiguration = USBDevice.configuration</pre>
+<pre
+  class="brush: js">var USBConfiguration = USBDevice.configuration</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -25,7 +28,8 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example uses this property to test for the existence of a USBConfiguration property to select a configuration before claiming an interface.</p>
+<p>The following example uses this property to test for the existence of a
+  USBConfiguration property to select a configuration before claiming an interface.</p>
 
 <pre>async function connectDevice(usbDevice) {
   await usbDevice.open();
@@ -37,18 +41,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web USB','#dom-usbdevice-configuration','configuration')}}</td>
-			<td>{{Spec2('Web USB')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web USB','#dom-usbdevice-configuration','configuration')}}</td>
+      <td>{{Spec2('Web USB')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

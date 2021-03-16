@@ -2,29 +2,39 @@
 title: RTCPeerConnection.localDescription
 slug: Web/API/RTCPeerConnection/localDescription
 tags:
-  - Experimental
-  - Expérimental(2)
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - Référence(2)
-  - WebRTC
-  - localDescription
+- Experimental
+- Expérimental(2)
+- Property
+- RTCPeerConnection
+- Read-only
+- Reference
+- Référence(2)
+- WebRTC
+- localDescription
 ---
 <p>{{WebRTCSidebar}}{{SeeCompatTable}}</p>
 
-<p>The read-only property <code><strong>RTCPeerConnection.localDescription</strong></code> returns an {{domxref("RTCSessionDescription")}} describing the session for the local end of the connection. If it has not yet been set, this is <code>null</code>.</p>
+<p>The read-only property <code><strong>RTCPeerConnection.localDescription</strong></code>
+  returns an {{domxref("RTCSessionDescription")}} describing the session for the local end
+  of the connection. If it has not yet been set, this is <code>null</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> var <em>sessionDescription</em> = <em>peerConnection</em>.localDescription;</pre>
+<pre
+  class="brush: js"> var <em>sessionDescription</em> = <em>peerConnection</em>.localDescription;</pre>
 
-<p>On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't <code>null</code>; otherwise, the value of {{domxref("RTCPeerConnection.currentLocalDescription")}} is returned. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for details on this algorithm and why it's used.</p>
+<p>On a more fundamental level, the returned value is the value of
+  {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't
+  <code>null</code>; otherwise, the value of
+  {{domxref("RTCPeerConnection.currentLocalDescription")}} is returned. See
+  {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
+  descriptions")}} for details on this algorithm and why it's used.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example looks at the <code>localDescription</code> and displays an alert containing the {{domxref("RTCSessionDescription")}} object's <code>type</code> and <code>sdp</code> fields.</p>
+<p>This example looks at the <code>localDescription</code> and displays an alert
+  containing the {{domxref("RTCSessionDescription")}} object's <code>type</code> and
+  <code>sdp</code> fields.</p>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
 …
@@ -42,20 +52,21 @@ else {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-localdescription', 'RTCPeerConnection.localDescription') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-peerconnection-localdescription',
+        'RTCPeerConnection.localDescription') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -65,7 +76,12 @@ else {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.currentLocalDescription")}}</li>
- <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li>{{domxref("RTCPeerConnection.setLocalDescription()")}},
+    {{domxref("RTCPeerConnection.pendingLocalDescription")}},
+    {{domxref("RTCPeerConnection.currentLocalDescription")}}</li>
+  <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}},
+    {{domxref("RTCPeerConnection.remoteDescription")}},
+    {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
+    {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
 </ul>

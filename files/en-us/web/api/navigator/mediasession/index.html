@@ -2,37 +2,55 @@
 title: Navigator.mediaSession
 slug: Web/API/Navigator/mediaSession
 tags:
-  - API
-  - Audio
-  - Device
-  - Media
-  - Media Session API
-  - MediaSession
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - UX
-  - Video
-  - metadata
+- API
+- Audio
+- Device
+- Media
+- Media Session API
+- MediaSession
+- Navigator
+- Property
+- Read-only
+- Reference
+- UX
+- Video
+- metadata
 ---
 <p>{{APIRef}}</p>
 
-<p><span class="seoSummary">The read-only {{domxref("Navigator")}} property <code><strong>mediaSession</strong></code> returns a {{domxref("MediaSession")}} object that can be used to share with the browser metadata and other information about the current playback state of media being handled by a document.</span> This information may, in turn, be shared with the device and/or operating system in order to a device's standard media control user experience to describe and control the playback of the media.</p>
+<p><span class="seoSummary">The read-only {{domxref("Navigator")}} property
+    <code><strong>mediaSession</strong></code> returns a {{domxref("MediaSession")}}
+    object that can be used to share with the browser metadata and other information about
+    the current playback state of media being handled by a document.</span> This
+  information may, in turn, be shared with the device and/or operating system in order to
+  a device's standard media control user experience to describe and control the playback
+  of the media.</p>
 
-<p>In addition, the <code>MediaSession</code> interface provides the {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method, which lets you receive events when the user engages device controls such as either onscreen or physical play, pause, seek, and other similar controls. An internet radio app, for example, can use <code>setActionHandler()</code> to let fhe media controls on a keyboard or elsehwere on the user's device be used to control the app's media playback.</p>
+<p>In addition, the <code>MediaSession</code> interface provides the
+  {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method, which lets
+  you receive events when the user engages device controls such as either onscreen or
+  physical play, pause, seek, and other similar controls. An internet radio app, for
+  example, can use <code>setActionHandler()</code> to let fhe media controls on a keyboard
+  or elsewhere on the user's device be used to control the app's media playback.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <em>mediaSession</em> = navigator.mediaSession;</pre>
+<pre
+  class="brush: js">let <em>mediaSession</em> = navigator.mediaSession;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("MediaSession")}} object the current document can use to share information about media it's playing and its current playback status. This information can include typical metadata such as the title, artist, and album name of the song being played as well as potentially one or more images containing things like album art, artist photos, and so forth.</p>
+<p>A {{domxref("MediaSession")}} object the current document can use to share information
+  about media it's playing and its current playback status. This information can include
+  typical metadata such as the title, artist, and album name of the song being played as
+  well as potentially one or more images containing things like album art, artist photos,
+  and so forth.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, metadata is submitted to the <code>mediaSession</code> object. Note that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} property is available before attempting to use it.</p>
+<p>In this example, metadata is submitted to the <code>mediaSession</code> object. Note
+  that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} property
+  is available before attempting to use it.</p>
 
 <pre class="brush: js">if ("mediaSession" in navigator){
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -47,24 +65,28 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Session','#dom-navigator-mediasession','navigator.mediaSession')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Media
+        Session','#dom-navigator-mediasession','navigator.mediaSession')}}</td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p class="hidden">The compatibility table on this page is generated from structured data.
+  If you'd like to contribute to the data, please check out <a
+    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  and send us a pull request.</p>
 
 <p>{{Compat("api.Navigator.mediaSession")}}</p>

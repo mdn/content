@@ -21,7 +21,7 @@ tags:
 
 <h3 id="Visual_representation">Visual representation</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="https://mdn.mozillademos.org/files/17124/The_Javascript_Runtime_Environment_Example.svg" style="height: 271px; width: 295px;"></p>
+<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg"></p>
 
 <h3 id="Stack">Stack</h3>
 
@@ -50,7 +50,7 @@ console.log(bar(7)) //returns 42
 
 <p>A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.</p>
 
-<p>At some point during the <a href="#Event_loop">event loop</a>, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.</p>
+<p>At some point during the <a href="#event_loop">event loop</a>, the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.</p>
 
 <p>The processing of functions continues until the stack is once again empty. Then, the event loop will process the next message in the queue (if there is one).</p>
 
@@ -76,7 +76,7 @@ console.log(bar(7)) //returns 42
 
 <p>In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message—likewise with any other event.</p>
 
-<p>The function <code><a href="/en-US/docs/Web/API/WindowTimers.setTimeout">setTimeout</a></code> is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to <code>0</code>). The <em>time value</em> represents the (minimum) delay after which the message will actually be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the <code>setTimeout</code> message will have to wait for other messages to be processed. For this reason, the second argument indicates a <em>minimum</em> time—not a <em>guaranteed</em> time.<br>
+<p>The function <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout</a></code> is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to <code>0</code>). The <em>time value</em> represents the (minimum) delay after which the message will actually be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the <code>setTimeout</code> message will have to wait for other messages to be processed. For this reason, the second argument indicates a <em>minimum</em> time—not a <em>guaranteed</em> time.<br>
  <br>
  Here is an example that demonstrates this concept (<code>setTimeout</code> does not run immediately after its timer expires):</p>
 
@@ -97,7 +97,7 @@ while (true) {
 
 <h3 id="Zero_delays">Zero delays</h3>
 
-<p>Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout</code></a> with a delay of <code>0</code> (zero) milliseconds doesn't execute the callback function after the given interval.</p>
+<p>Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout</code></a> with a delay of <code>0</code> (zero) milliseconds doesn't execute the callback function after the given interval.</p>
 
 <p>The execution depends on the number of waiting tasks in the queue. In the example below, the message <code>''this is just a message''</code> will be written to the console before the message in the callback gets processed, because the delay is the <em>minimum</em> time required for the runtime to process the request (not a <em>guaranteed</em> time).</p>
 
@@ -130,7 +130,7 @@ while (true) {
 
 <h3 id="Several_runtimes_communicating_together">Several runtimes communicating together</h3>
 
-<p>A web worker or a cross-origin <code>iframe</code> has its own stack, heap, and message queue. Two distinct runtimes can only communicate through sending messages via the <a href="/en-US/docs/DOM/window.postMessage"><code>postMessage</code></a> method. This method adds a message to the other runtime if the latter listens to <code>message</code> events.</p>
+<p>A web worker or a cross-origin <code>iframe</code> has its own stack, heap, and message queue. Two distinct runtimes can only communicate through sending messages via the <a href="/en-US/docs/Web/API/Window/postMessage"><code>postMessage</code></a> method. This method adds a message to the other runtime if the latter listens to <code>message</code> events.</p>
 
 <h2 id="Never_blocking">Never blocking</h2>
 

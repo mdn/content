@@ -2,53 +2,62 @@
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
 tags:
-  - API
-  - Method
-  - URL
-  - URL API
-  - revokeObjectURL
+- API
+- Method
+- URL
+- URL API
+- revokeObjectURL
 ---
 <div>{{ApiRef("URL API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>URL.revokeObjectURL()</code></strong> static method releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL()") }}.</span> Call this method when you've finished using an object URL to let the browser know not to keep the reference to the file any longer.</p>
+<p><span class="seoSummary">The <strong><code>URL.revokeObjectURL()</code></strong> static
+    method releases an existing object URL which was previously created by calling
+    {{domxref("URL.createObjectURL()") }}.</span> Call this method when you've finished
+  using an object URL to let the browser know not to keep the reference to the file any
+  longer.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note:</strong> This method is not available from service workers, due to issues with the {{domxref("Blob")}} interface's life cycle and the potential for leaks.</p>
+  <p><strong>Note:</strong> This method is not available from service workers, due to
+    issues with the {{domxref("Blob")}} interface's life cycle and the potential for
+    leaks.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">URL.revokeObjectURL(<em>objectURL</em>)
+<pre class="brush: js">URL.revokeObjectURL(<em>objectURL</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>objectURL </code></dt>
- <dd>A {{domxref("DOMString")}} representing a object URL that was previously created by calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.</dd>
+  <dt><code>objectURL </code></dt>
+  <dd>A {{domxref("DOMString")}} representing a object URL that was previously created by
+    calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>See <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">Using object URLs to display images</a>.</p>
+<p>See <a
+    href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">Using
+    object URLs to display images</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#dfn-revokeObjectURL', 'revokeObjectURL()')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File API', '#dfn-revokeObjectURL', 'revokeObjectURL()')}}</td>
+      <td>{{Spec2('File API')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -58,7 +67,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">Using object URLs to display images</a></li>
- <li>{{domxref("URL.createObjectURL()") }}</li>
+  <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files
+      from web applications</a></li>
+  <li><a
+      href="/en-US/docs/Web/API/File/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">Using
+      object URLs to display images</a></li>
+  <li>{{domxref("URL.createObjectURL()") }}</li>
 </ul>

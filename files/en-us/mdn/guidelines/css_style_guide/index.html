@@ -13,17 +13,7 @@ tags:
 
 <p class="summary"><span class="seoSummary">MDN has many built-in global styles available for use when styling and laying out articles, and this article is a guide to the available classes and when to use them.</span></p>
 
-<p>Some of these styles can be accessed via the MDN editor's toolbar. In such cases, we'll include the phrase "Editing Toolbar" under the heading for the style, and an image of the relevant toolbar button.</p>
-
-<p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should first broach the subject in the <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse forum.</a></p>
-
-<div class="notecard note">
-<p><strong>Note</strong>: If you want to search for places where a given class is being used on MDN, you can do so using a URL of the form <code>https://developer.mozilla.org/en-US/search?locale=en-US&amp;css_classnames=<var>desired-css-class</var></code>. For example, to find pages that use our button class, try the URL <a href="https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=button">https://wiki.developer.mozilla.org/en-US/search?locale=*&amp;css_classnames=button</a>.</p>
-</div>
-
-<div class="notecard warning">
-<p><strong>Important</strong>: This guide is incomplete. See {{anch("Updating this guide")}} for information on how to help us finish it.</p>
-</div>
+<p>Please keep in that these styles have been developed to cover the most common situations that arise while styling article content, and that whenever possible, you should try to use the available classes; diverging too much from the standard content look-and-feel isn't good for consistency and readability. If you feel that your page absolutely requires some kind of special custom styling, you should <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">talk to us</a> about it.</p>
 
 <h2 id="Inline_styles">Inline styles</h2>
 
@@ -35,52 +25,17 @@ tags:
 
 <p><a class="button" href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip">Download source code</a></p>
 
-<details>
 <h4 id="Example_syntax">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;a href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip" class="button"&gt;Download source code&lt;/a&gt;</pre>
-</details>
-
-<h3 id=".external-icon_and_.ignore-external"><code style="white-space: nowrap;">.external-icon</code> and <code style="white-space: nowrap;">.ignore-external</code></h3>
-
-<p>Links to content outside of MDN are automatically formatted to have the class <code style="white-space: nowrap;">external-icon</code> added to them, which creates an icon indicating that they lead away from the site. In some cases, however, this icon is unwanted and interferes with other styles. It can be removed by adding the <code style="white-space: nowrap;">ignore-external</code> class to the link.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> Most of the time, we don't want to use these. <code style="white-space: nowrap;">.external-icon</code> is added automatically in order to help protect users from unknowingly leaving MDN. The only generally acceptable use cases are links to MDN-specific domains or subdomains, such as the ones we use for our sample code or other services.</p>
-</div>
-
-<p><a href="/">Link to MDN</a><br>
- <a href="http://wikipedia.org">Link away from MDN</a><br>
- <a class="ignore-external" href="http://wikipedia.org">Link away from MDN with <code style="white-space: nowrap;">ignore-external</code></a></p>
-
-<details>
-<h4 id="Example_syntax_2">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;a href="/"&gt;Link to MDN&lt;/a&gt;
-&lt;a href="http://wikipedia.org"&gt;Link away from MDN&lt;/a&gt;
-&lt;a href="http://wikipedia.org" class="ignore-external"&gt;Link away from MDN with &lt;code&gt;ignore-external&lt;/code&gt;&lt;/a&gt;</pre>
-</details>
-
-<h3 id=".glossaryLink"><code>.glossaryLink</code></h3>
-
-<p>This is a class for styling glossary links to make them less obtrusive on the page. This class is added using a KumaScript macro, as outlined in <a href="/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros#Creating_a_single_hyperlink">Commonly Used Macros</a>, so wouldn't be inserted manually.</p>
-
-<p>{{Glossary("HTML")}}</p>
-
-<details>
-<h4 id="Example_macro_syntax">Example macro syntax</h4>
-
-<p>\{{Glossary("HTML")}}</p>
-</details>
+<pre class="brush: html">&lt;a href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip" class="button"&gt;Download source code&lt;/a&gt;</pre>
 
 <h3 id=".hidden"><code>.hidden</code></h3>
 
-<p>Allows you to hide content in the wiki articles but view it in the editor. Typically this is used to provide HTML, CSS, and JavaScript to the script that creates the live code samples while only displaying the relevant language to the reader.</p>
+<p>Allows you to hide content in the final rendered view. Typically this is used to provide HTML, CSS, and JavaScript to the script that creates the live code samples while only displaying the relevant language to the reader.</p>
 
-<details>
 <h4 id="Example_syntax_3">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
+<pre class="brush: html">&lt;h4 id="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
 
 &lt;div class="hidden"&gt;
 &lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
@@ -111,17 +66,17 @@ function works() {
 &lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
 </pre>
 
-<h4 id="Hidden_Code_Sample">Hidden code Sample</h4>
+<h4 id="Hidden_code_sample">Hidden code sample</h4>
 
 <div class="hidden">
 <h5 id="HTML">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;button id="test"&gt;Click Me&lt;/button&gt;
+<pre class="brush: html">&lt;button id="test"&gt;Click Me&lt;/button&gt;
 </pre>
 
 <h5 id="CSS">CSS</h5>
 
-<pre class="brush: css notranslate">button{
+<pre class="brush: css">button{
     background-color: #a00;
     color:#fff;
     font-size: 20px;
@@ -131,232 +86,115 @@ function works() {
 
 <h5 id="JavaScript">JavaScript</h5>
 
-<pre class="brush: js notranslate">document.getElementById("test").addEventListener("click", works);
+<pre class="brush: js">document.getElementById("test").addEventListener("click", works);
 function works(){
     window.alert("you clicked it!");
 }
 </pre>
 
-<p>{{EmbedLiveSample("Hidden_Code_Sample", "100%", 150)}}</p>
-</details>
+<p>{{EmbedLiveSample("Hidden_code_sample", "100%", 150)}}</p>
 
 <h3 id=".seoSummary"><code>.seoSummary</code></h3>
 
-<p>This is a class that has no visible effect on content on the page, however, if the class is applied to an element (usually a {{HTMLElement("span")}}) KumaScript will use the element's content to create <code>description</code> {{HTMLElement("meta")}} tags. These provide a short description to be used in search engines and sharing sites like Facebook and Twitter. This class is available via the "SEO Summary" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11859/seosummary-menu-option.png" style="border: 1px solid black; display: block; height: 58px; margin: 0px auto; width: 235px;"></p>
-
-<details>
-<div class="notecard note">
-<p><strong>Note</strong>: If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary: there is no need to use this on most pages.</p>
-</div>
-
-<p>The final page display won't show any styling change, but in the editor the text that is set as the SEO summary will be marked with a dotted outline and a "SEO Summary" label", as shown below:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11861/seosummary-editor-representation.png" style="display: block; margin: 0 auto;"></p>
-
-<p>The below examples are taken from the <a href="/en-US/docs/Mozilla/Add-ons">Mozilla Add-ons</a> page.</p>
-
-<h3 id="Example_syntax_4">Example syntax</h3>
-
-<pre class="brush: html notranslate">&lt;p&gt;
-  &lt;span class="seoSummary"&gt;Add-ons add new functionality to &lt;a href="/en-US/docs/Mozilla/Gecko"&gt;Gecko&lt;/a&gt;-based applications such as Firefox, SeaMonkey, and Thunderbird.&lt;/span&gt;
-  There are two main types of add-on: &lt;a href="#Extensions"&gt;Extensions&lt;/a&gt; add new features to the application, while &lt;a href="#Themes"&gt;Themes&lt;/a&gt; modify the application's user interface.
-&lt;/p&gt;</pre>
-
-<h4 id="Example_of_the_generated_HTMLElementmeta_elements">Example of the generated {{HTMLElement("meta")}} elements</h4>
-
-<pre class="brush: html; notranslate">&lt;meta property="og:description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;
-&lt;meta name="description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;
-&lt;meta name="twitter:description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;</pre>
-
-<h4 id="Example_of_how_Facebook_uses_it">Example of how Facebook uses it</h4>
-
-<p><img alt="SEOSummary as it is used by Facebook" src="https://mdn.mozillademos.org/files/11857/seosummary.jpg" style="display: block; height: 338px; margin: 0px auto; width: 500px;"></p>
-</details>
+<p>This is a class that has no visible effect on content on the page, however, if the class is applied to an element (usually a {{HTMLElement("span")}}) KumaScript will use the element's content to create <code>description</code> {{HTMLElement("meta")}} tags. These provide a short description to be used in search engines and sharing sites like Facebook and Twitter.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This is <em>not</em> the same as the <code>{{anch(".summary")}}</code> class, which creates a special "About this page" style blurb box. That class does not set the SEO summary used by search engines or the macros that MDN uses to generate tooltips and to automatically produce menus listing subpages.</p>
+  <h4>Note</h4>
+  <p>If <code>.seoSummary</code> is not explicitly specified on a page, the first paragraph is automatically set as the SEO summary.</p>
 </div>
+
+<p>The below example is taken from the <a href="/en-US/docs/Mozilla/Add-ons">Mozilla Add-ons</a> page.</p>
+
+<h4 id="Example_syntax_4">Example syntax</h4>
+
+<pre class="brush: html">&lt;span class="seoSummary"&gt;
+  Add-ons allow developers to extend and modify the functionality of Firefox.
+&lt;/span&gt;</pre>
+
+<h4 id="Example_of_the_generated_HTMLElementmeta_elements">Example of the generated {{HTMLElement("meta")}} element</h4>
+
+<pre class="brush: html;">&lt;meta name="description"
+      content="Add-ons allow developers to extend and modify the functionality of Firefox."&gt;</pre>
 
 <h2 id="Block_level_styles">Block level styles</h2>
 
 <p>This section lists the block-level styles available for style content blocks on MDN.</p>
 
-<h3 id=".callout-box"><code style="white-space: nowrap;">.callout-box</code></h3>
+<h3 id="Code_syntax_highlighting">Code syntax highlighting</h3>
 
-<p>Allows you to create a right-floating box for containing a callout, or related information you want to highlight.</p>
+<p>To create a code example block on MDN, you wrap it in a <code>&lt;pre&gt;</code> element:</p>
 
-<div class="callout-box">
-<p>This is an exciting callout</p>
-</div>
-
-<p>Example content to float around</p>
-
-<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
-
-<details>
-<h4 id="Example_syntax_5">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="callout-box"&gt;
-  &lt;p&gt;This is an exciting callout&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Example content to float around&lt;/p&gt;
-&lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
+<pre>
+&lt;pre&gt;p {
+  color: red;
+  /* This is my code example */
+}&lt;/pre&gt;
 </pre>
-</details>
 
-<h3 id=".column-container"><code style="white-space: nowrap;">.column-container</code></h3>
+This gives you the following output:
 
-<p>Denotes a container for specific-width columns. Usually used in conjunction with other classes, as seen below.</p>
+<pre>p {
+  color: red;
+  /* This is my code example */
+}</pre>
 
-<div class="column-container">
-<div class="column-4">
-<p>My first equal width column.</p>
-</div>
-
-<div class="column-4">
-<p>My second equal width column.</p>
-</div>
-
-<div class="column-4">
-<p>My third equal width column.</p>
-</div>
-</div>
-
-<details>
-<h4 id="Example_syntax_6">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
-  &lt;div class="column-4"&gt;
-    &lt;p&gt;My first equal width column.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="column-4"&gt;
-    &lt;p&gt;My second equal width column.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="column-4"&gt;
-    &lt;p&gt;My third equal width column.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".column-1_.column-2_.column-3_..._all_the_way_up_to_.column-11"><code style="white-space: nowrap;">.column-1</code>, <code style="white-space: nowrap;">.column-2</code>, <code style="white-space: nowrap;">.column-3</code> ... all the way up to <code style="white-space: nowrap;">.column-11</code></h3>
-
-<p>Specifies a specific-width column, to be contained by <code style="white-space: nowrap;">.column-container</code>, that is a certain number of twelvths of the column container wide (based on a 12 column grid layout.) A gutter is left between each column pair.</p>
-
-<div class="column-container">
-<div class="column-1" style="background-color: yellow;">1/12</div>
-
-<div class="column-11" style="background-color: lime;">11/12</div>
-</div>
-
-<div class="column-container">
-<div class="column-5" style="background-color: yellow;">5/12</div>
-
-<div class="column-7" style="background-color: lime;">7/12</div>
-</div>
-
-<div class="column-container">
-<div class="column-6" style="background-color: yellow;">6/12</div>
-
-<div class="column-4" style="background-color: lime;">4/12</div>
-
-<div class="column-2" style="background-color: pink;">2/12</div>
-</div>
-
-<details>
-<h4 id="Example_syntax_7">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
-  &lt;div class="column-1" style="background-color: yellow;"&gt;1/12&lt;/div&gt;
-  &lt;div class="column-11" style="background-color: lime;"&gt;11/12&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="column-container"&gt;
-  &lt;div class="column-5" style="background-color: yellow;"&gt;5/12&lt;/div&gt;
-  &lt;div class="column-7" style="background-color: lime;"&gt;7/12&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="column-container"&gt;
-  &lt;div class="column-6" style="background-color: yellow;"&gt;6/12&lt;/div&gt;
-  &lt;div class="column-4" style="background-color: lime;"&gt;4/12&lt;/div&gt;
-  &lt;div class="column-2" style="background-color: pink;"&gt;2/12&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-</details>
-
-<h3 id=".column-quarter_.column-third_.column-half"><code style="white-space: nowrap;">.column-quarter</code>, <code style="white-space: nowrap;">.column-third</code>, <code style="white-space: nowrap;">.column-half</code></h3>
-
-<p>Specifies a specific-width column, to be contained by <code style="white-space: nowrap;">.column-container</code>, that is a certain portion of the column container wide. A gutter is left between each column pair.</p>
-
-<div class="column-container">
-<div class="column-half" style="background-color: yellow;">Half</div>
-
-<div class="column-half" style="background-color: lime;">Half</div>
-</div>
-
-<div class="column-container">
-<div class="column-third" style="background-color: yellow;">Third</div>
-
-<div class="column-third" style="background-color: lime;">Third</div>
-
-<div class="column-third" style="background-color: pink;">Third</div>
-</div>
-
-<div class="column-container">
-<div class="column-quarter" style="background-color: yellow;">Quarter</div>
-
-<div class="column-quarter" style="background-color: lime;">Quarter</div>
-
-<div class="column-quarter" style="background-color: pink;">Quarter</div>
-
-<div class="column-quarter" style="background-color: cyan;">Quarter</div>
-</div>
-
-<details>
-<p>These classes are equivalents of commonly-used numerical width classes, as follows:</p>
+<p>If you want to use syntax highlighting on your code example, you need to include a <code>class</code> attribute containing a value of <code>brush: <em>highlight-type</em></code>, where <code><em>highlight-type</em></code> can be one of:</p>
 
 <ul>
- <li><code style="white-space: nowrap;">.column-quarter</code> — equivalent to <code style="white-space: nowrap;">.column-3</code></li>
- <li><code style="white-space: nowrap;">.column-third</code> — equivalent to <code style="white-space: nowrap;">.column-4</code></li>
- <li><code style="white-space: nowrap;">.column-half</code> — equivalent to <code style="white-space: nowrap;">.column-6</code></li>
+  <li><code>bash</code></li>
+  <li><code>cpp</code> (for C/C++)</li>
+  <li><code>css</code></li>
+  <li><code>html</code></li>
+  <li><code>java</code></li>
+  <li><code>js</code> (for JavaScript)</li>
+  <li><code>json</code></li>
+  <li><code>php</code></li>
+  <li><code>python</code></li>
+  <li><code>sql</code></li>
+  <li><code>xml</code></li>
+  <li><code>wasm</code> (for WebAssembly text format)</li>
 </ul>
 
-<h4 id="Example_syntax_8">Example syntax</h4>
+<p>For example, to provide CSS highlighting, you'd do this:</p>
 
-<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
-  &lt;div class="column-half" style="background-color: yellow;"&gt;Half&lt;/div&gt;
-  &lt;div class="column-half" style="background-color: lime;"&gt;Half&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="column-container"&gt;
-  &lt;div class="column-third" style="background-color: yellow;"&gt;Third&lt;/div&gt;
-  &lt;div class="column-third" style="background-color: lime;"&gt;Third&lt;/div&gt;
-  &lt;div class="column-third" style="background-color: pink;"&gt;Third&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="column-container"&gt;
-  &lt;div class="column-quarter" style="background-color: yellow;"&gt;Quarter&lt;/div&gt;
-  &lt;div class="column-quarter" style="background-color: lime;"&gt;Quarter&lt;/div&gt;
-  &lt;div class="column-quarter" style="background-color: pink;"&gt;Quarter&lt;/div&gt;
-  &lt;div class="column-quarter" style="background-color: cyan;"&gt;Quarter&lt;/div&gt;
-&lt;/div&gt;
+<pre>
+&lt;pre class="brush: css"&gt;p {
+  color: red;
+  /* This is my code example */
+}&lt;/pre&gt;
 </pre>
-</details>
 
-<h3 id="&lt;details&gt;"><code>&lt;details&gt;</code></h3>
+Which gives you the following output:
 
-<p>Can be wrapped around a block of content to hide that content and instead display a "▶︎ Details" link that can be clicked to expand/collapse the content contained within. You can see it used throughout this article.</p>
+<pre class="brush: css">p {
+  color: red;
+  /* This is my code example */
+}</pre>
+
+<p>If no appropriate language is available, just use no brush value, or <code>brush: plain</code>, to get code without syntax highlighting.</p>
+
+<h3 id="details"><code>details</code></h3>
+
+<p>A <code>&lt;details&gt;</code> element can be wrapped around a block of content to hide that content and instead display a "▶︎ Details" link that can be clicked to expand/collapse the content contained within.</p>
 
 <details open>
+  <summary>
 <h4 id="Example_syntax_9">Example syntax</h4>
-
+  </summary>
 <p>This is an example syntax section for {{HTMLElement("details")}} that was hidden with {{HTMLElement("details")}}. Ooooooh, how meta.</p>
 
-<pre class="brush: html; notranslate">&lt;details&gt;
+<pre class="brush: html;">&lt;details&gt;
+    &lt;summary&gt;
 &lt;h4&gt;Example syntax&lt;/h4&gt;
+    &lt;/summary&gt;
 &lt;p&gt;This is an example syntax section for &lt;code&gt;.detail&lt;/code&gt; that was hidden with &lt;code&gt;.detail&lt;/code&gt;. Ooooooh, how meta.&lt;/p&gt;
 &lt;/details&gt;</pre>
 </details>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You can include an <code>open</code> attribute on the <code>&lt;details&gt;</code> element to make it opened by default.</p>
+</div>
 
 <h3 id=".example-bad_and_.example-good"><code style="white-space: nowrap;">.example-bad</code> and <code style="white-space: nowrap;">.example-good</code></h3>
 
@@ -364,21 +202,20 @@ function works(){
 
 <h5 id="Good_code_example">Good code example</h5>
 
-<pre class="brush: html example-good notranslate">&lt;label for="test"&gt;Form label:&lt;/label&gt;
+<pre class="brush: html example-good">&lt;label for="test"&gt;Form label:&lt;/label&gt;
 &lt;input type="text" id="test"&gt;
 </pre>
 
 <h5 id="Bad_code_example">Bad code example</h5>
 
-<pre class="brush: html example-bad notranslate">&lt;input type="text"&gt;
+<pre class="brush: html example-bad">&lt;input type="text"&gt;
 </pre>
 
-<details>
-<p><strong>You should always use headings with these classes, as shown below</strong> — CSS is unable to add localized language to the page identifying whether they're good or bad so this is important for people who rely on screen readers, and people with different cultural backgrounds (green and red are not universally good and bad.)</p>
+<p><strong>You should use headings with these classes, as shown below</strong> — CSS is unable to add localized language to the page identifying whether they're good or bad so this is important for people who rely on screen readers, and people with different cultural backgrounds (green and red are not universally good and bad.)</p>
 
 <h4 id="Example_syntax_10">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
+<pre class="brush: html">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
 
 &lt;pre class="brush: html example-good"&gt;
   &amp;lt;label for="test"&amp;gt;Form label:&amp;lt;/label&amp;gt;
@@ -390,194 +227,42 @@ function works(){
 &lt;pre class="brush: html example-bad"&gt;
   &amp;lt;input type="text"&amp;gt;
 &lt;/pre&gt;</pre>
-</details>
 
-<h3 id=".moreinfo"><code>.moreinfo</code></h3>
-
-<p>This class was originally designed to present a list of links for further reading but it can be used for any information that leads away from the current page.</p>
-
-<div class="moreinfo">
-<h4 id="Tools_to_build_on_your_JavaScript_knowledge">Tools to build on your JavaScript knowledge</h4>
-
-<dl>
- <dt>JavaScript frameworks</dt>
- <dd>Developed by Google <a href="https://angularjs.org/">Angular.js</a> is one of the best known frameworks.</dd>
- <dd><a href="http://emberjs.com/">Ember.js</a> is open source and community driven.</dd>
- <dt>JavaScript Compilers</dt>
- <dd><a href="https://babeljs.io/">Babel</a> lets you write ES2015 and compiles to more backwards compatible code.</dd>
-</dl>
-</div>
-
-<details>
-<h4 id="Example_syntax_11">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="moreinfo"&gt;
-  &lt;!-- content goes here --&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".blockIndicator.note"><code>.blockIndicator.note</code></h3>
+<h3 id=".note.notecard"><code>.note.notecard</code></h3>
 
 <p>Turns a section of content into a note box, which is normally a useful note that tangentially relates to the current subject but doesn't directly fit into the flow of information.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: This is how we usually present a note in an MDN article.</p>
+<h4>Note</h4>
+<p>This is how we usually present a note in an MDN article.</p>
 </div>
 
-<details>
-<p>This is available via the "Note box" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11677/Screen%20Shot%202015-10-05%20at%2006.56.01.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_12">Example syntax</h4>
 
-<pre class="brush: html; notranslate">&lt;div class="notecard note" role="complementary"&gt;
-  &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
+<pre class="brush: html">&lt;div class="notecard note"&gt;
+  &lt;h4&gt;Note&lt;/h4&gt;
+  &lt;p&gt;This is how we usually present a note in an MDN article.&lt;/p&gt;
 &lt;/div&gt;</pre>
-</details>
 
-<h3 id=".pull-aside"><code>.pull-aside</code></h3>
-
-<p>Pulls content to the side.</p>
-
-<div class="pull-aside">Some content that goes off to the side.</div>
-
-<p>Some content that does not go off to the side.</p>
-
-<details>
-<h4 id="Example_Syntax">Example Syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="pull-right"&gt;Some content that goes off to the side.&lt;/div&gt;
-&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;</pre>
-
-<h4 id="Other_uses">Other uses</h4>
-
-<div class="pull-aside">
-<div class="moreinfo">Combined with the <code>.moreinfo</code> class.</div>
-</div>
-
-<p>Some content that does not go off to the side.</p>
-
-<pre class="brush: html notranslate">&lt;div class="pull-aside"&gt;&lt;div class="moreinfo"&gt;Some content that goes off to the side.&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;
-&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;
-</pre>
-</details>
-
-<h3 id=".summary"><code>.summary</code> {{Obsolete_Inline}}</h3>
-
-<p>Creates a summary box for the page, which visually manifests as a grey box with extra padding — should be used for the opening paragraph of an article (but not for <em>reference</em> articles), to give it extra importance on the page.</p>
-
-<div class="notecard warning">
-<p><strong>Important:</strong> This is <em>not</em> the same as the {{anch(".seoSummary")}} class, which establishes the section of text which is used by search engines to summarize the page in results listings and by MDN to create tooltips and menus of page titles and their summaries. This class is strictly a visual effect. You can use both classes together if you wish in order to establish both a visible and an effective summary for the page.</p>
-</div>
-
-<p class="summary">This is the start of this article. Below we will talk about puppies, giraffes, and dugongs.</p>
-
-<details>
-<p>This is available via the "Article Summary" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11863/article-summary-menu-option.png" style="display: block; height: 238px; margin: 0px auto; width: 254px;"></p>
-
-<h4 id="Example_syntax_13">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;p class="summary"&gt;This is the start of this article. Below we will talk about puppies, giraffes, and dugongs.&lt;/p&gt;</pre>
-</details>
-
-<h3 id=".topicpage-table"><code>.topicpage-table</code></h3>
-
-<p>Creates two columns separated with a thick grey border. Often used on landing pages. This usually works best with nested {{HTMLElement("div")}}s. Note that the two child elements have to be given the <code>.section</code> class.</p>
-
-<div class="topicpage-table">
-<div class="section">Column 1</div>
-
-<div class="section">Column 2</div>
-</div>
-
-<details>
-<h4 id="Example_syntax_14">Example syntax</h4>
-
-<pre class="brush: html notranslate">&lt;div class="topicpage-table"&gt;
-  &lt;div class="section"&gt;Column 1&lt;/div&gt;
-  &lt;div class="section"&gt;Column 2&lt;/div&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".threecolumns"><code>.threecolumns</code></h3>
-
-<p>Causes a block of content to be displayed in three equal width columns.</p>
-
-<div class="threecolumns">
-<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
-
-<p>Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.</p>
-</div>
-
-<details>
-<p>This is available via the "Three columns" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
-
-<div class="notecard note">
-<p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
-</div>
-
-<h4 id="Example_syntax_15">Example syntax</h4>
-
-<pre class="notranslate">&lt;div class="threecolumns"&gt;
-  &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
-
-  &lt;p&gt;Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".twocolumns"><code>.twocolumns</code></h3>
-
-<p>Causes a block of content to be displayed in two equal width columns.</p>
-
-<div class="twocolumns">
-<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
-
-<p>Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.</p>
-</div>
-
-<details>
-<p>This is available via the "Two columns" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
-
-<div class="notecard note">
-<p><strong>Note</strong>: If you want to apply this to a list, then you should apply it to an outer wrapper {{HTMLElement("div")}} — if not, it gets applied to the {{HTMLElement("ul")}} element, which causes the list bullets to not display in Chrome.</p>
-</div>
-
-<h4 id="Example_syntax_16">Example syntax</h4>
-
-<pre class="notranslate">&lt;div class="twocolumns"&gt;
-  &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
-
-  &lt;p&gt;Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</details>
-
-<h3 id=".blockIndicator.warning"><code>.blockIndicator.warning</code></h3>
+<h3 id=".notecard.warning"><code>.notecard.warning</code></h3>
 
 <p>Turns a section of content into a warning box, which normally communicates a vital fact that the reader needs to be really careful about (e.g., they need to do something, or avoid something to avoid serious issues.)</p>
 
 <div class="notecard warning">
-<p><strong>Warning</strong>: Here be dragons!</p>
+  <h4>Warning</h4>
+  <p>Here be dragons!</p>
 </div>
 
-<details>
-<p>This is available via the "Warning box" option in the MDN editor WYSIWYG styles dropdown.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
+<p>We've used an <code>&lt;h4&gt;</code> for the heading in this example, but you should choose the level of heading that makes sense for your note's position in the document hierarchy — <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, or <code>&lt;h4&gt;</code>.</p>
 
 <h4 id="Example_syntax_17">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;div class="notecard warning"&gt;
-  &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;:Here be dragons!&lt;/p&gt;
+<pre class="brush: html">&lt;div class="notecard warning"&gt;
+  &lt;h4&gt;Warning&lt;/h4&gt;
+  &lt;p&gt;Here be dragons!&lt;/p&gt;
 &lt;/div&gt;</pre>
-</details>
 
 <h2 id="Table_styles">Table styles</h2>
 
@@ -657,22 +342,15 @@ function works(){
  </tbody>
 </table>
 
-<details>
-<p>A standard table can be created using the <em>Table</em> button in the MDN editor WYSIWYG toolbar. Pressing this brings up the Table Properties dialog box, which contains a number of functions. Generally you'll just want to use it to set the number of rows and columns, which cells are table headers ({{HTMLElement("th")}}), and a visible {{HTMLElement("caption")}} and {{HTMLAttrxRef("summary", "table")}} attribute to provide more information for screenreaders, if desired.</p>
-
-<p><img alt="A diagram showing the Table button in the MDN edit interface, which has a picture of a table on it, and the dialog box that it brings up, which has options on it to set row number, column number, which cells are headings, and more." src="https://mdn.mozillademos.org/files/11997/table-styles-interface-flat.png" style="display: block; margin: 0 auto;"></p>
-
 <h4 id="Style_notes">Style notes</h4>
 
 <ul>
  <li>Note the different styling applied to the headers ({{HTMLElement("th")}}), and the fact that they have {{HTMLAttrxRef("scope", "th")}} attributes applied for accessibility purposes.</li>
- <li>By default, alternating rows have zebra stripes applied, but these can be removed by adding the <code>.no-stripe</code> class to them.</li>
- <li>You can force a table to span the full width of the content area (or other immediate containing box, if it is not the content area) by adding the <code>.fullwidth</code> class to the {{HTMLElement("table")}} element.</li>
 </ul>
 
 <h4 id="Example_syntax_18">Example syntax</h4>
 
-<pre class="brush: html notranslate">&lt;table class="standard-table" summary="This table details what tea we liked to drink back in the heady month of December 2015"&gt;
+<pre class="brush: html">&lt;table class="standard-table"&gt;
  &lt;caption&gt;Favorite teas, December 2015&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
@@ -703,130 +381,3 @@ function works(){
   &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-</details>
-
-<h3 id=".standard-table.nostripe"><code><span style="white-space: nowrap;">.standard-table</span>.nostripe</code></h3>
-
-<table class="nostripe standard-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id=".standard-table.fullwidth"><code>.<span style="white-space: nowrap;">standard-table</span>.fullwidth</code></h3>
-
-<table class="fullwidth standard-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id=".fullwidth-table"><code style="white-space: nowrap;">.fullwidth-table</code></h3>
-
-<table class="fullwidth-table">
- <caption>Favorite teas, December 2015</caption>
- <thead>
-  <tr>
-   <th scope="row">Variety</th>
-   <th scope="col">Caffeine</th>
-   <th scope="col">Steeping Time</th>
-   <th scope="col">Water Temperature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Black</th>
-   <td>High</td>
-   <td>2-3 minutes</td>
-   <td>99 °C</td>
-  </tr>
-  <tr>
-   <th scope="row">Green</th>
-   <td>Low to Medium</td>
-   <td>1-2 minutes</td>
-   <td>75 to 80 °C</td>
-  </tr>
-  <tr>
-   <th colspan="4">Caffeine free</th>
-  </tr>
-  <tr>
-   <th scope="row">Herbal</th>
-   <td>None</td>
-   <td>3-6 minutes</td>
-   <td>99 °C</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Updating_this_guide">Updating this guide</h2>
-
-<p>This guide is incomplete, and is being gradually updated over time. If you'd like to help update or add to this guide, please feel free to do so! If you have questions or would like to discuss and idea you have for improving this article — or have suggestions for how we can improve the style or layout of MDN Web Docs in general — you have several options:</p>
-
-<p>If you want to help with completing it, or want to report a missing or incorrectly-documented style, contact are Chris Mills (in Discourse as chrisdavidmills and on <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> as chrismills)</p>
-
-<dl>
- <dt><a href="https://discourse.mozilla.org/c/mdn">Start a discussion on the MDN Web Docs Discourse forum</a></dt>
- <dd>If you have an idea you'd like to discuss with the MDN Web Docs community or the staff, please feel free to start a topic on the MDN Web Docs forum on the Mozilla Discourse discussion site.</dd>
- <dt><a href="https://github.com/mdn/sprints/issues/new?template=issue-template.md">File your suggestion in GitHub</a></dt>
- <dd>If you want to record your suggestion in our official issue tracking system, you are encouraged to do so. It's a good idea to discuss it first using one of the channels above, first, but it's not required.</dd>
- <dt><a href="irc://irc.mozilla.org/mdn">Ask questions in our IRC channel</a></dt>
- <dd>Our writing staff and community of contributors use the #mdn channel on <a href="https://wiki.mozilla.org/IRC">Mozilla's IRC server</a> to have discussions and share ideas. You're welcome to join us there and ask your questions or make your suggestions! (Note that IRC is poorly attended and may be discontinued in 2020; Discourse is a better bet for getting answers.)</dd>
-</dl>

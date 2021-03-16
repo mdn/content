@@ -2,40 +2,51 @@
 title: Range.setStart()
 slug: Web/API/Range/setStart
 tags:
-  - API
-  - DOM
-  - Method
-  - Range
+- API
+- DOM
+- Method
+- Range
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>The <strong><code>Range.setStart()</code></strong> method sets the start position of a {{ domxref("Range") }}.</p>
+<p>The <strong><code>Range.setStart()</code></strong> method sets the start position of a
+  {{ domxref("Range") }}.</p>
 
-<p>If the <code>startNode</code> is a {{domxref("Node")}} of type {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDataSection")}}, then <code>startOffset</code> is the number of characters from the start of <code>startNode</code>. For other <code>Node</code> types, <code>startOffset</code> is the number of child nodes between the start of the <code>startNode</code>.</p>
+<p>If the <code>startNode</code> is a {{domxref("Node")}} of type {{domxref("Text")}},
+  {{domxref("Comment")}}, or {{domxref("CDataSection")}}, then <code>startOffset</code> is
+  the number of characters from the start of <code>startNode</code>. For other
+  <code>Node</code> types, <code>startOffset</code> is the number of child nodes between
+  the start of the <code>startNode</code>.</p>
 
-<p>Setting the start point below (lower in the document) the end point will result in a collapsed range with the start and end points both set to the specified start position.</p>
+<p>Setting the start point below (lower in the document) the end point will result in a
+  collapsed range with the start and end points both set to the specified start position.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>range</em>.setStart(<em>startNode</em>, <em>startOffset</em>);
+<pre class="brush: js"><em>range</em>.setStart(<em>startNode</em>, <em>startOffset</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><em>startNode</em></dt>
- <dd>The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.</dd>
- <dt><em>startOffset</em></dt>
- <dd>An integer greater than or equal to zero representing the offset for the start of the {{ domxref("Range") }} from the start of <code>startNode</code>.</dd>
+  <dt><em>startNode</em></dt>
+  <dd>The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.</dd>
+  <dt><em>startOffset</em></dt>
+  <dd>An integer greater than or equal to zero representing the offset for the start of
+    the {{ domxref("Range") }} from the start of <code>startNode</code>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Highlight_part_of_an_element">Highlight part of an element</h3>
 
-<p>This example uses the <code>Range.setStart()</code> and {{domxref("Range.setEnd()")}} methods to add part of an address to a range. The selected range is then highlighted using  {{domxref("Range.surroundContents()")}}.</p>
+<p>This example uses the <code>Range.setStart()</code> and {{domxref("Range.setEnd()")}}
+  methods to add part of an address to a range. The selected range is then highlighted
+  using  {{domxref("Range.surroundContents()")}}.</p>
 
-<p>The address contains nine nodes: five text nodes, and four {{htmlElement("br")}} elements.</p>
+<p>The address contains nine nodes: five text nodes, and four {{htmlElement("br")}}
+  elements.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -77,7 +88,9 @@ range.surroundContents(mark);</pre>
 
 <h3 id="Get_characters_from_a_text_node">Get characters from a text node</h3>
 
-<p>This example uses the <code>Range.setStart()</code> and {{domxref("Range.setEnd()")}} methods to define the contents of a range. The resulting range contains the first through fifth characters within a text node.</p>
+<p>This example uses the <code>Range.setStart()</code> and {{domxref("Range.setEnd()")}}
+  methods to define the contents of a range. The resulting range contains the first
+  through fifth characters within a text node.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
@@ -100,23 +113,24 @@ document.getElementById('log').textContent = range;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart',
+        'Range.setStart()')}}</td>
+      <td>{{Spec2('DOM2 Traversal_Range')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -126,5 +140,5 @@ document.getElementById('log').textContent = range;</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+  <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

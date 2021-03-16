@@ -2,30 +2,35 @@
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+- API
+- DOM
+- Method
+- Node
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>isSameNode()</strong></code> method for <code>Node</code> objects tests whether two nodes are the same (that is, whether they reference the same object).</span></p>
+<p><span class="seoSummary">The <code><strong>isSameNode()</strong></code> method for
+    <code>Node</code> objects tests whether two nodes are the same (that is, whether they
+    reference the same object).</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <var>isSameNode</var> = <var>node</var>.isSameNode(<var>otherNode</var>)
+<pre class="brush: js">const <var>isSameNode</var> = <var>node</var>.isSameNode(<var>otherNode</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code><var>otherNode</var></code> The {{domxref("Node")}} to test against.</li>
+  <li><code><var>otherNode</var></code> The {{domxref("Node")}} to test against.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, we create three {{HTMLElement("div")}} blocks. The first and third have the same contents and attributes, while the second is different. Then we run some JavaScript to compare the nodes using <code>isSameNode()</code> and output the results.</p>
+<p>In this example, we create three {{HTMLElement("div")}} blocks. The first and third
+  have the same contents and attributes, while the second is different. Then we run some
+  JavaScript to compare the nodes using <code>isSameNode()</code> and output the results.
+</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -36,9 +41,9 @@ tags:
 &lt;p id="output"&gt;&lt;/p&gt;</pre>
 
 <div class="hidden">
-<h3 id="CSS">CSS</h3>
+  <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">#output {
+  <pre class="brush: css">#output {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
@@ -65,25 +70,26 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-issamenode', 'Node: isSameNode')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change (was for a long time removed from it).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-node-issamenode', 'Node: isSameNode')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>No change (was for a long time removed from it).</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}}
+      </td>
+      <td>{{Spec2('DOM3 Core')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -93,5 +99,5 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Node.isEqualNode()")}}</li>
+  <li>{{domxref("Node.isEqualNode()")}}</li>
 </ul>

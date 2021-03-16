@@ -8,7 +8,7 @@ tags:
 <p>Newsgroup: <a class="link-news" href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
 <p>Before building JSS, you need to set up your system as follows:</p>
 <ol>
- <li>Build NSPR/NSS by following the <a href="/en-US/NSS_reference/Building_and_installing_NSS/Build_instructions">NSPR/NSS build instructions</a>,</li>
+ <li>Build NSPR/NSS by following the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Build_instructions">NSPR/NSS build instructions</a>,</li>
  <li>To check that NSS built correctly, run <code>all.sh</code> (in <code>mozilla/security/nss/tests</code>) and examine the results (in <code>mozilla/test_results/security/</code><em>computername</em>.#<code>/results.html</code>.</li>
  <li>Install a Java compiler and runtime. JSS supports Java version 1.5 or later. We suggest you use the latest.</li>
  <li>You must have Perl version 5.005 or later.</li>
@@ -25,19 +25,13 @@ tags:
   <strong>Unix</strong>
   <pre>setenv JAVA_HOME /usr/local/jdk1.5.0 <em>(or wherever your JDK is installed)</em>
 </pre>
-  <ul>
-  </ul>
   <strong>Windows</strong>
   <pre>set JAVA_HOME=c:\programs\jdk1.5.0 <em>(or wherever your JDK is installed)</em>
 </pre>
-  <ul>
-  </ul>
   <strong>Windows (Cygnus)</strong>
   <pre>JAVA_HOME=/cygdrive/c/programs/jdk1.5.0 <em>(or wherever your JDK is installed)</em>
 export JAVA_HOME
 </pre>
-  <ul>
-  </ul>
   <strong>Windows build Configurations WINNT vs WIN95 </strong><br>
   <pre>As of NSS 3.15.4, NSPR/NSS/JSS build generates a "WIN95" configuration by default on Windows.
 We recommend most applications use the "WIN95" configuration. If you want JSS to be used

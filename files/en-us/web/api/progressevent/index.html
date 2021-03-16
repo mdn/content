@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Also inherits methods <em>from its parent {{domxref("Event")}}.</em></em></p>
+<p><em>Also inherits methods from its parent {{domxref("Event")}}.</em></p>
 
 <dl>
  <dt>{{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}</dt>
@@ -47,7 +47,7 @@ tags:
 
 <p>The following example adds a <code>ProgressEvent</code> to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.</p>
 
-<pre class="brush: js notranslate">var progressBar = document.getElementById("p"),
+<pre class="brush: js">var progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = function(pe) {

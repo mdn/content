@@ -14,21 +14,21 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td style="width: 40%;"><a href="#Native_messaging_manifests">Native messaging manifests</a></td>
+   <td style="width: 40%;"><a href="#native_messaging_manifests">Native messaging manifests</a></td>
    <td>Enable a feature called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a>, in which an extension can communicate with a native app installed on the device.</td>
   </tr>
   <tr>
-   <td><a href="#Managed_storage_manifests">Managed storage manifests</a></td>
+   <td><a href="#managed_storage_manifests">Managed storage manifests</a></td>
    <td>Define read-only data that an extension can access using the {{WebExtAPIRef("storage.managed")}} API.</td>
   </tr>
   <tr>
-   <td><a href="#PKCS_11_manifests">PKCS #11 manifests</a></td>
+   <td><a href="#pkcs_11_manifests">PKCS #11 manifests</a></td>
    <td>Enable an extension to use the {{WebExtAPIRef("pkcs11")}} API to enumerate PKCS #11 security modules and install them in Firefox.</td>
   </tr>
  </tbody>
 </table>
 
-<p>For all native manifests, you need to arrange things so the browser can find the manifest. The section on <a href="#Manifest_location">manifest location</a> describes these rules.</p>
+<p>For all native manifests, you need to arrange things so the browser can find the manifest. The section on <a href="#manifest_location">manifest location</a> describes these rules.</p>
 
 <h2 id="Native_messaging_manifests">Native messaging manifests</h2>
 
@@ -85,7 +85,7 @@ tags:
    <td><code>allowed_extensions</code></td>
    <td>Array of String</td>
    <td>
-    <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> values. Each value represents an extension which is allowed to communicate with this native application.</p>
+    <p>An array of <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Add-on ID</a> values. Each value represents an extension which is allowed to communicate with this native application.</p>
 
     <p>Note that this means you will probably want to include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key in your extension's <code>manifest.json</code> file, so you can set an explicit ID during development.</p>
    </td>
@@ -95,7 +95,7 @@ tags:
 
 <p>For example, here's a manifest for the <code>ping_pong</code> native application:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "ping_pong",
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
@@ -122,7 +122,7 @@ tags:
    <td><code>name</code></td>
    <td>String</td>
    <td>
-    <p>The ID of the extension that can access this storage, given as the ID you've specified in the extension's <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key.</p>
+    <p>The ID of the extension that can access this storage, given as the ID you've specified in the extension's <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a></code> key.</p>
    </td>
   </tr>
   <tr>
@@ -149,22 +149,22 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json notranslate"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">"name":</span> <span class="string token">"favourite-colour-examples@mozilla.org"</span><span class="punctuation token">,</span>
-  <span class="key token">"description":</span> <span class="string token">"ignored"</span><span class="punctuation token">,</span>
-  <span class="key token">"type":</span> <span class="string token">"storage"</span><span class="punctuation token">,</span>
-  <span class="key token">"data":</span>
-  <span class="punctuation token">{</span>
-    <span class="key token">"colour":</span> <span class="string token">"management thinks it should be blue!"</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json">{
+  &quot;name&quot;: &quot;favourite-colour-examples@mozilla.org&quot;,
+  &quot;description&quot;: &quot;ignored&quot;,
+  &quot;type&quot;: &quot;storage&quot;,
+  &quot;data&quot;:
+  {
+    &quot;colour&quot;: &quot;management thinks it should be blue!&quot;
+  }
+}</pre>
 
 <p>Given this JSON manifest, the <code>favourite-colour-examples@mozilla.org</code> extension could access the data using code like this:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">let</span> storageItem <span class="operator token">=</span> browser<span class="punctuation token">.</span>storage<span class="punctuation token">.</span>managed<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">(</span><span class="string token">'colour'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-storageItem<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="punctuation token">(</span>res<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string token">`Managed colour is: </span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>res<span class="punctuation token">.</span>colour<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('colour');
+storageItem.then((res) =&gt; {
+  console.log(`Managed colour is: ${res.colour}`);
+});</pre>
 
 <h2 id="PKCS_11_manifests">PKCS #11 manifests</h2>
 
@@ -221,10 +221,10 @@ storageItem<span class="punctuation token">.</span><span class="function token">
    <td><code>allowed_extensions</code></td>
    <td>Array of String</td>
    <td>
-    <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> values. Each value represents an extension which is allowed to interact with the module.</p>
+    <p>An array of <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Add-on ID</a> values. Each value represents an extension which is allowed to interact with the module.</p>
 
     <div class="notecard note">
-    <p><strong>Note:</strong> This means you will probably want to include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> key in your extension's <code>manifest.json</code> file, so you can set an explicit ID during development.</p>
+    <p><strong>Note:</strong> This means you will probably want to include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a></code> key in your extension's <code>manifest.json</code> file, so you can set an explicit ID during development.</p>
     </div>
    </td>
   </tr>
@@ -233,7 +233,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json notranslate">{
+<pre class="brush: json line-numbers  language-json">{
   "name": "my_module",
   "description": "My test module",
   "type": "pkcs11",
@@ -243,7 +243,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 
 <p>Given this JSON manifest, saved as <code>my_module.json</code>, the <code>my-extension@mozilla.org</code> extension could install the security module at <code>/path/to/libpkcs11testmodule.dylib</code> using code like this:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">browser.pkcs11.installModule("my_module");</pre>
+<pre class="brush: js line-numbers language-js">browser.pkcs11.installModule("my_module");</pre>
 
 <h2 id="Manifest_location">Manifest location</h2>
 
@@ -255,7 +255,7 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 
 <p>For global visibility, create a registry key with the following name:</p>
 
-<pre class="notranslate">HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<var>&lt;name&gt;</var>
 
@@ -271,7 +271,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For per-user visibility, create a registry key with the following name:</p>
 
-<pre class="notranslate">HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
+<pre>HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<var>&lt;name&gt;</var>
 
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<var>&lt;name&gt;</var>
 
@@ -283,7 +283,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For global visibility, store the manifest in:</p>
 
-<pre class="notranslate">/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
+<pre>/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
 
 /Library/Application Support/Mozilla/ManagedStorage/<var>&lt;name&gt;</var>.json
 
@@ -291,7 +291,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For per-user visibility, store the manifest in:</p>
 
-<pre class="notranslate">~/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
+<pre>~/Library/Application Support/Mozilla/NativeMessagingHosts/<var>&lt;name&gt;</var>.json
 
 ~/Library/Application Support/Mozilla/ManagedStorage/<var>&lt;name&gt;</var>.json
 
@@ -302,7 +302,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For global visibility, store the manifest in either:</p>
 
-<pre class="notranslate">/usr/lib/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
+<pre>/usr/lib/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
 
 /usr/lib/mozilla/managed-storage/<var>&lt;name&gt;</var>.json
 
@@ -311,7 +311,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>or:</p>
 
-<pre class="notranslate">/usr/lib64/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
+<pre>/usr/lib64/mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
 
 /usr/lib64/mozilla/managed-storage/<var>&lt;name&gt;</var>.json
 
@@ -319,7 +319,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 
 <p>For per-user visibility, store the manifest in:</p>
 
-<pre class="notranslate">~/.mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
+<pre>~/.mozilla/native-messaging-hosts/<var>&lt;name&gt;</var>.json
 
 ~/.mozilla/managed-storage/<var>&lt;name&gt;</var>.json
 

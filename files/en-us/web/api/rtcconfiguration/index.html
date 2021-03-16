@@ -22,7 +22,7 @@ tags:
 
 <dl>
  <dt>{{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} {{optional_inline}}</dt>
- <dd>Specifies how to handle negotiation of candidates when the remote peer is not compatible with the <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a>. This must be one of the values from the enum <code><a href="#RTCBundlePolicy_enum">RTCBundlePolicy</a></code>. If this value isn't included in the dictionary, <code>"balanced"</code> is assumed.</dd>
+ <dd>Specifies how to handle negotiation of candidates when the remote peer is not compatible with the <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a>. This must be one of the values from the enum <code><a href="#rtcbundlepolicy_enum">RTCBundlePolicy</a></code>. If this value isn't included in the dictionary, <code>"balanced"</code> is assumed.</dd>
  <dt>{{domxref("RTCConfiguration.certificates", "certificates")}} {{optional_inline}}</dt>
  <dd>An {{jsxref("Array")}} of objects of type {{domxref("RTCCertificate")}} which are used by the connection for authentication. If this property isn't specified, a set of certificates is generated automatically for each {{domxref("RTCPeerConnection")}} instance. Although only one certificate is used by a given connection, providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances. See <a href="/en-US/docs/Web/API/RTCConfiguration/certificates#Using_certificates">Using certificates</a> for further information.
  <div class="note">This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</div>
@@ -38,7 +38,7 @@ tags:
  <dt>{{domxref("RTCConfiguration.peerIdentity", "peerIdentity")}} {{optional_inline}}</dt>
  <dd>A {{domxref("DOMString")}} which specifies the target peer identity for the {{domxref("RTCPeerConnection")}}. If this value is set (it defaults to <code>null</code>), the <code>RTCPeerConnection</code> will not connect to a remote peer unless it can successfully authenticate with the given name.</dd>
  <dt>{{domxref("RTCConfiguration.rtcpMuxPolicy", "rtcpMuxPolicy")}} {{optional_inline}}</dt>
- <dd>The RTCP mux policy to use when gathering ICE candidates, in order to support non-multiplexed RTCP. The value must be one of those from the <a href="#RTCRtcpMuxPolicy_enum"><code>RTCRtcpMuxPolicy</code> enum</a>. The default is <code>"require"</code>.</dd>
+ <dd>The RTCP mux policy to use when gathering ICE candidates, in order to support non-multiplexed RTCP. The value must be one of those from the <a href="#rtcrtcpmuxpolicy_enum"><code>RTCRtcpMuxPolicy</code> enum</a>. The default is <code>"require"</code>.</dd>
 </dl>
 
 <h2 id="Constants">Constants</h2>
@@ -53,7 +53,7 @@ tags:
 
 <p>The configuration below establishes two ICE servers. The first one, <code>stun:stun.services.mozilla.com</code>, requires authentication, so the username and password are provided. The second server has two URLs: <code>stun:stun.example.com</code> and <code>stun:stun-1.example.com</code>.</p>
 
-<pre class="brush: js notranslate">var configuration = { iceServers: [{
+<pre class="brush: js">var configuration = { iceServers: [{
                           urls: "stun:stun.services.mozilla.com",
                           username: "louis@mozilla.com",
                           credential: "webrtcdemo"
@@ -83,7 +83,4 @@ var pc = new RTCPeerConnection(configuration);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCConfiguration")}}</p>
-</div>

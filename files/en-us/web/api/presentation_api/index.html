@@ -12,7 +12,7 @@ tags:
 
 <p><span class="seoSummary">The Presentation API lets a {{Glossary("user agent")}} (such as a Web browser) effectively display web content through large presentation devices such as projectors and network-connected televisions.</span> Supported types of multimedia devices include both displays which are wired using HDMI, DVI, or the like, or wireless, using <a href="https://www.dlna.org/">DLNA</a>, <a href="/en-US/docs/">Chromecast</a>, <a href="https://developer.apple.com/airplay/">AirPlay</a>, or <a href="https://www.wi-fi.org/discover-wi-fi/miracast">Miracast</a>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14544/presentation%20mode%20illustration.png" style="height: 382px; width: 945px;"></p>
+<p><img alt="" src="presentation_mode_illustration.png"></p>
 
 <p>In general, a web page uses the Presentation Controller API to specify the web content to be rendered on presentation device and initiate the presentation session. With Presentation Receiver API, the presenting web content obtains the session status. With providing both the controller page and the receiver one with a messaged-based channel, a Web developer can implement the interaction between these two pages.</p>
 
@@ -48,8 +48,7 @@ tags:
 
 <p>Example codes below highlight the usage of main features of the Presentation API: <code>controller.html</code> implements the controller and <code>presentation.html</code> implements the presentation. Both pages are served from the domain <code>http://example.org</code> (<code>http://example.org/controller.html</code> and <code>http://example.org/presentation.html</code>). These examples assume that the controlling page is managing one presentation at a time. Please refer to the comments in the code examples for further details.</p>
 
-<section id="monitor-availability-of-presentation-displays-example">
-<h3 id="Monitor_availability_of_presentation_displays"><span>Monitor availability of presentation displays </span></h3>
+<h3 id="Monitor_availability_of_presentation_displays">Monitor availability of presentation displays</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
@@ -82,10 +81,8 @@ tags:
   });
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
-<section id="starting-a-new-presentation-example">
-<h3 id="Starting_a_new_presentation"><span>Starting a new presentation </span></h3>
+<h3 id="Starting_a_new_presentation">Starting a new presentation</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
@@ -101,10 +98,8 @@ tags:
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
-<section id="reconnect-to-a-presentation-example">
-<h3 id="Reconnect_to_a_presentation"><span>Reconnect to a presentation </span></h3>
+<h3 id="Reconnect_to_a_presentation">Reconnect to a presentation</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
@@ -128,10 +123,8 @@ tags:
   reconnectBtn.onclick = reconnect;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
-<section id="presentation-initiation-by-the-controlling-ua-example">
-<h3 id="Presentation_initiation_by_the_controlling_UA"><span>Presentation initiation by the controlling UA </span></h3>
+<h3 id="Presentation_initiation_by_the_controlling_UA">Presentation initiation by the controlling UA</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
@@ -145,10 +138,8 @@ tags:
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
-<section id="monitor-connection-s-state-and-exchange-data-example">
-<h3 id="Monitor_connections_state_and_exchange_data"><span>Monitor connection's state and exchange data </span></h3>
+<h3 id="Monitor_connections_state_and_exchange_data">Monitor connection's state and exchange data</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
@@ -222,10 +213,8 @@ tags:
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
-<section id="monitor-available-connection-s-and-say-hello">
-<h3 id="Monitor_available_connections_and_say_hello"><span>Monitor available connection(s) and say hello </span></h3>
+<h3 id="Monitor_available_connections_and_say_hello">Monitor available connection(s) and say hello</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- presentation.html --&gt;</span>
@@ -247,10 +236,8 @@ tags:
   });
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
-<section id="passing-locale-information-with-a-message">
-<h3 id="Passing_locale_information_with_a_message"><span>Passing locale information with a message </span></h3>
+<h3 id="Passing_locale_information_with_a_message">Passing locale information with a message</h3>
 
 <div class="example">
 <pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
@@ -272,7 +259,6 @@ tags:
   };
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
 </div>
-</section>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">/* Keyword values */
+<pre class="brush: css">/* Keyword values */
 transition-timing-function: ease;
 transition-timing-function: ease-in;
 transition-timing-function: ease-out;
@@ -108,14 +108,14 @@ transition-timing-function: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Cubic-Bezier_examples">Cubic-Bezier examples</h3>
 
 <div class="hidden">
-<pre class="brush:html notranslate">&lt;div class="parent"&gt;
+<pre class="brush:html">&lt;div class="parent"&gt;
   &lt;div class="ease"&gt;ease&lt;/div&gt;
   &lt;div class="easein"&gt;ease-in&lt;/div&gt;
   &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
@@ -124,7 +124,7 @@ transition-timing-function: unset;</pre>
   &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css; notranslate">.parent {}
+<pre class="brush:css;">.parent {}
 .parent &gt; div[class] {
     width: 12em;
     min-width: 12em;
@@ -146,7 +146,7 @@ transition-timing-function: unset;</pre>
 }
 </pre>
 
-<pre class="brush:js notranslate">function updateTransition() {
+<pre class="brush:js">function updateTransition() {
   var els = document.querySelectorAll(".parent &gt; div[class]");
   for(var c = els.length, i = 0; i &lt; c; i++) {
      els[i].classList.toggle("box1");
@@ -157,7 +157,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.ease {
+<pre class="brush: css">.ease {
    transition-timing-function: ease;
 }
 .easein {
@@ -181,7 +181,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 <h3 id="Step_examples">Step examples</h3>
 
 <div class="hidden">
-<pre class="brush:html notranslate">&lt;div class="parent"&gt;
+<pre class="brush:html">&lt;div class="parent"&gt;
   &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
   &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
   &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
@@ -190,7 +190,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
   &lt;div class="step-end"&gt;step-end&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css; notranslate">.parent {}
+<pre class="brush:css;">.parent {}
 .parent &gt; div[class] {
     width: 12em;
     min-width: 12em;
@@ -212,7 +212,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 </pre>
 
-<pre class="brush:js notranslate">function updateTransition() {
+<pre class="brush:js">function updateTransition() {
   var els = document.querySelectorAll(".parent &gt; div[class]");
   for(var c = els.length, i = 0; i &lt; c; i++) {
      els[i].classList.toggle("box1");
@@ -223,7 +223,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.jump-start {
+<pre class="brush: css">.jump-start {
    transition-timing-function: steps(5, jump-start);
 }
 .jump-end {

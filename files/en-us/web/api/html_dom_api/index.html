@@ -45,7 +45,7 @@ tags:
 
 <p>For example, consider a document with two elements, one of which has two more elements nested inside it:</p>
 
-<p><img alt="Structure of a document with elements inside a document in a window" src="https://mdn.mozillademos.org/files/16587/dom-structure.svg" style="display: block; height: 379px; margin: 0 auto; width: 291px;"></p>
+<p><img alt="Structure of a document with elements inside a document in a window" src="dom-structure.svg" style="display: block; margin: 0 auto;"></p>
 
 <p>While the {{domxref("Document")}} interface is defined as part of the {{DOMxRef("Document_Object_Model", "DOM", "", "1")}} specification, the HTML specification significantly enhances it to add information specific to using the DOM in the context of a web browser, as well as to using it to represent HTML documents specifically.</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <p>The overall inheritance for HTML element classes looks like this:</p>
 
-<p><img alt="Hierarchy of interfaces for HTML elements" src="https://mdn.mozillademos.org/files/16596/html-dom-hierarchy.svg" style="display: block; height: 565px; margin: 0 auto; width: 661px;"></p>
+<p><img alt="Hierarchy of interfaces for HTML elements" src="html-dom-hierarchy.svg" style="display: block; margin: 0 auto;"></p>
 
 <p>As such, an element inherits the properties and methods of all of its ancestors. For example, consider a {{HTMLElement("a")}} element, which is represented in the DOM by an object of type {{domxref("HTMLAnchorElement")}}. The element, then, includes the anchor-specific properties and methods described in that class's documentation, but also those defined by {{domxref("HTMLElement")}} and {{domxref("Element")}}, as well as from {{domxref("Node")}} and, finally, {{domxref("EventTarget")}}.</p>
 
@@ -405,7 +405,7 @@ nameField.addEventListener("input", event =&gt; {
 
 <p>This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are <code>userName</code> and <code>sendButton</code>.  With these, we can access the properties and methods that provide information about and grant control over these elements.</p>
 
-<p>The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to <code>true</code>, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement.focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.</p>
+<p>The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to <code>true</code>, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLOrForeignElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.</p>
 
 <p>Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to add a handler for the <code>input</code> event to the user name input. This code looks at the length of the current value of the input; if it's zero, then the "Send" button is disabled if it's not already disabled. Otherwise, the code ensures that the button is enabled.</p>
 
@@ -469,10 +469,7 @@ nameField.addEventListener("input", event =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLElement")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

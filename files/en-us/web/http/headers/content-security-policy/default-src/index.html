@@ -52,7 +52,7 @@ tags:
 
 <p>One or more sources can be allowed for the <code>default-src</code> policy:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src &lt;source&gt;;
+<pre class="brush: html">Content-Security-Policy: default-src &lt;source&gt;;
 Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -63,7 +63,7 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 
 <dl>
  <dt>&lt;host-source&gt;</dt>
- <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/URIs_and_URLs">URL scheme</a> and/or port number. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source.<br>
+ <dd>Internet hosts by name or IP address, as well as an optional <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">URL scheme</a> and/or port number. The site's address may include an optional leading wildcard (the asterisk character, <code>'*'</code>), and you may use a wildcard (again, <code>'*'</code>) as the port number, indicating that all legal ports are valid for the source.<br>
  Examples:
  <ul>
   <li><code>http://*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the <code>http:</code> URL scheme.</li>
@@ -94,7 +94,7 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
  <dt>'nonce-&lt;base64-value&gt;'</dt>
  <dd>An allow-list for specific inline scripts using a cryptographic nonce (number used once). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide an unguessable nonce, as bypassing a resource’s policy is otherwise trivial. See <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">unsafe inline script</a> for an example. Specifying nonce makes a modern browser ignore <code>'unsafe-inline'</code> which could still be set for older browsers without nonce support.
  <div class="note">
- <p><strong>Note:</strong> The CSP <code>nonce</code> source can only be apply <em>nonceable</em> elements (e.g. as the {{HTMLElement("img")}} element has no <code>nonce</code> attribute, there is no way to associate it with this CSP source).</p>
+ <p><strong>Note:</strong> The CSP <code>nonce</code> source can only be applied to <em>nonceable</em> elements (e.g. as the {{HTMLElement("img")}} element has no <code>nonce</code> attribute, there is no way to associate it with this CSP source).</p>
  </div>
  </dd>
  <dt>'&lt;hash-algorithm&gt;-&lt;base64-value&gt;'</dt>
@@ -122,11 +122,11 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 
 <p>If there are other directives specified, <code>default-src</code> does not influence them. The following header:</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: default-src 'self'; script-src https://example.com</pre>
+<pre class="brush: bash">Content-Security-Policy: default-src 'self'; script-src https://example.com</pre>
 
 <p>is the same as:</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: connect-src 'self';
+<pre class="brush: bash">Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';
                          img-src 'self';

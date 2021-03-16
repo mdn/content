@@ -2,54 +2,63 @@
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
 tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+- API
+- Backwards compatibility
+- Deprecated
+- HTML
+- Navigation Timing
+- PerformanceTiming
+- Property
+- Read-only
+- legacy
 ---
 <p>{{APIRef("Navigation Timing")}}</p>
 
 <div class="warning">
-<p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+  <p>This interface of this property is deprecated in the <a
+      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
+      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+    interface instead.</p>
 </div>
 
-<p>The legacy <code><strong>PerformanceTiming</strong></code><strong><code>.connectStart</code></strong> read-only property returns an <code>unsigned long long</code> representing the moment, in milliseconds since the UNIX epoch, where the request to open a connection is sent to the network. If the transport layer reports an error and the connection establishment is started again, the last connection establisment start time is given. If a persistent connection is used, the value will be the same as {{domxref("PerformanceTiming.fetchStart")}}.</p>
+<p>The legacy
+  <code><strong>PerformanceTiming</strong></code><strong><code>.connectStart</code></strong>
+  read-only property returns an <code>unsigned long long</code> representing the moment,
+  in milliseconds since the UNIX epoch, where the request to open a connection is sent to
+  the network. If the transport layer reports an error and the connection establishment is
+  started again, the last connection establisment start time is given. If a persistent
+  connection is used, the value will be the same as
+  {{domxref("PerformanceTiming.fetchStart")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>time</em> = <em>performanceTiming</em>.connectStart;</pre>
+<pre
+  class="brush: js"><em>time</em> = <em>performanceTiming</em>.connectStart;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#dom-performancetiming-connectstart', 'PerformanceTiming.connectStart')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing', '#dom-performancetiming-connectstart',
+        'PerformanceTiming.connectStart')}}</td>
+      <td>{{Spec2('Navigation Timing')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceTiming.connectStart")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
+  <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
 </ul>

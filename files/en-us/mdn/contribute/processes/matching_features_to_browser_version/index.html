@@ -56,7 +56,7 @@ tags:
 
 <p>For example, given the string <code>05b49ea1</code>, the tool first looks for a match among the full commit changeset numbers, finds none, then looks at the prefixed short commits:</p>
 
-<p><img alt="Screenshot of the Chromium project's Find Releases tool" src="https://mdn.mozillademos.org/files/16573/find-releases-tool.png" style="border-style: solid; border-width: 1px; height: 144px; width: 412px;"></p>
+<p><img alt="Screenshot of the Chromium project's Find Releases tool" src="find-releases-tool.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Here, we see that changeset <code>05b49ea1</code> was first landed for Chrome 56, but was then backported to Chrome 55 and was presumably shipped there. This assumes the feature was not backed out at some point, and it's important to check on this.</p>
 
@@ -97,7 +97,7 @@ tags:
 
 <p>One useful resource is <a href="https://cs.chromium.org/chromium/src/android_webview/tools/system_webview_shell/test/data/webexposed/not-webview-exposed.txt">this file which lists the interfaces and/or interface members</a> which are not available in a WebView.</p>
 
-<pre class="notranslate">interface HTMLIFrameElement : HTMLElement
+<pre class="brush: js">interface HTMLIFrameElement : HTMLElement
     getter allowPaymentRequest
     setter allowPaymentRequest</pre>
 
@@ -140,7 +140,7 @@ tags:
 
 <p>The specific appearance of the display will vary depending on what tool you're using to view the blame information; for example, Mozilla DXR's <a href="https://hg.mozilla.org/mozilla-central/annotate/c2593a3058afdfeaac5c990e18794ee8257afe99/dom/webidl/RTCPeerConnection.webidl#l">output for the <code>RTCPeerConnection.webidl</code> file</a> looked like this when this article was written:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16504/hg-tooltip-revision.png" style="border-style: solid; border-width: 1px; width: 676px;"></p>
+<p><img alt="" src="hg-tooltip-revision.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Here, the mouse is pointing at a row with the revision number <code>199991</code> beside it. This has opened up a tooltip with details about that revision: It was created for bug 1032835, entitled "addTrack/removeTrack on-top of existing implementation". The tooltip includes several links which can be helpful:</p>
 
@@ -167,7 +167,7 @@ tags:
 
 <p>Consider {{bug(1435161)}}. This bug covers implementing the {{domxref("PaymentResponse.retry()")}} method. If you look at that bug, you'll see the information you need right there at the top:</p>
 
-<p><img alt='Screenshot showing "RESOLVED FIXED in Firefox 64" at the top of the Bugzilla screen' src="https://mdn.mozillademos.org/files/16494/bugzilla-fixedin-top.png" style="border-style: solid; border-width: 1px; width: 487px;"></p>
+<p><img alt='Screenshot showing "RESOLVED FIXED in Firefox 64" at the top of the Bugzilla screen' src="bugzilla-fixedin-top.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Right below the bug summary, you see the text "RESOLVED FIXED in Firefox 64". This corresponds to the presence of the tracking flag named <code>firefox45</code> having the value <code>fixed</code>.  On older bugs, before the release-numbered tracking flags were added, you might instead find one of these:</p>
 
@@ -175,12 +175,12 @@ tags:
  <li>
   <p>A tracking flag named <code>relnote-firefox</code> with the status set to the version of Firefox the feature arrived in. This tracking flag is intended to indicate when a feature needs to be mentioned in the release notes for the browser, but serves just as well to tell us when a feature was added.</p>
 
-  <p><img alt="Screenshot showing the relnote-firefox tracking flag used to indicate a version number" src="https://mdn.mozillademos.org/files/16495/bugzilla-relnote-firefox.png" style="border-style: solid; border-width: 1px; width: 347px;"></p>
+  <p><img alt="Screenshot showing the relnote-firefox tracking flag used to indicate a version number" src="bugzilla-relnote-firefox.png" style="border-style: solid; border-width: 1px;"></p>
  </li>
  <li>
   <p>The Target field in the Tracking group in Bugzilla is set to <code>mozillaN</code>, where <code>N</code> is the version number of Firefox. The trick to watch for is that this is sometimes inaccurate, as it represents when it was hoped to ship, not necessarily when it was actually released. Be sure to review the comments on the bug to ensure that it didn't miss its planned release.</p>
 
-  <p><img alt='Screenshot showing the Bugzilla Target field indicating a release target of "mozilla15" or Firefox 15' src="https://mdn.mozillademos.org/files/16496/bugzilla-target.png" style="border-style: solid; border-width: 1px; width: 449px;"></p>
+  <p><img alt='Screenshot showing the Bugzilla Target field indicating a release target of "mozilla15" or Firefox 15' src="bugzilla-target.png" style="border-style: solid; border-width: 1px;"></p>
  </li>
 </ul>
 
@@ -231,17 +231,17 @@ tags:
 
 <p>Once in the WebIDL file, click the "Blame" link under "VCS Links" in the Navigation box near the top-right corner of the DXR page.</p>
 
-<p><img alt="Screenshot of the DXR Navigation box" src="https://mdn.mozillademos.org/files/16526/dxr-navigation-box.png" style="border-style: solid; border-width: 1px; width: 197px;"></p>
+<p><img alt="Screenshot of the DXR Navigation box" src="dxr-navigation-box.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Once in the blame view, hover the mouse cursor over the revision number at the left side of the WebIDL on the same line as (or the first revision number found immediately above) the line of WebIDL corresponding to the feature you're interested in. For example, if you're looking for when the <code>RTCPeerConnection</code> method <code>addTrack()</code> was added to Firefox:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16504/hg-tooltip-revision.png" style="border-style: solid; border-width: 1px; width: 676px;"></p>
+<p><img alt="" src="hg-tooltip-revision.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>This shows you information about the changeset; if the information shown is what you're looking for, click the <code>changeset</code> link in the tooltip popup, then see {{anch("From a Mercurial changeset number")}} for details on how to get the version information you need from there.</p>
 
 <p>If you can't find the changeset you need just by browsing the blame page, the next thing to try is to look through the revision history. Click on the <code>revisions</code> link at the top of the Mercurial blame page, or the "Log" link in the Navigation box on the DXR page. This will present a list of every changeset that altered the file you're looking at. Look for a revision that matches the feature change you're interested in; if you find a promising revision, click the <code>diff</code> link next to that revision.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16502/hg-revisions-ontrack.png" style="border-style: solid; border-width: 1px; width: 878px;"></p>
+<p><img alt="" src="hg-revisions-ontrack.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>This takes you to the changeset details page. From here, you can collect the information you need as covered in {{anch("From a Mercurial changeset number")}}.</p>
 
@@ -278,7 +278,7 @@ tags:
 
 <p>To determine when support for a given <strong>value</strong> for a property was added, try opening the file <code><a href="https://dxr.mozilla.org/mozilla-central/source/layout/style/nsCSSProps.cpp">nsCSSProps.cpp</a></code> and looking through the tables of property values found there. These tables are all of type <code>KTableEntry</code>; each entry in the tables maps a CSS keyword to a value used to represent it internally. For instance, to determine when Firefox added support for the CSS Scroll Snap type value <code>proximity</code>, look through <code>nsCSSProps.cpp</code> until you find in the table <code>nsCSSProps::kScrollSnapTypeKTable</code>:</p>
 
-<pre class="brush: cpp notranslate">const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
+<pre class="brush: cpp">const KTableEntry nsCSSProps::kScrollSnapTypeKTable[] = {
   { eCSSKeyword_none,      NS_STYLE_SCROLL_SNAP_TYPE_NONE },
   { eCSSKeyword_mandatory, NS_STYLE_SCROLL_SNAP_TYPE_MANDATORY },
   { eCSSKeyword_proximity, NS_STYLE_SCROLL_SNAP_TYPE_PROXIMITY },
@@ -297,7 +297,7 @@ tags:
 
 <p>For example, if I have the changeset number <code>79525105ef9a</code>, I want to visit <a href="https://hg.mozilla.org/mozilla-central/rev/79525105ef9a">https://hg.mozilla.org/mozilla-central/rev/79525105ef9a</a>. This brings up a page that looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16505/hg-changeset.png" style="border-style: solid; border-width: 1px; width: 1788px;"></p>
+<p><img alt="" src="hg-changeset.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Below this is a list of the files that changed followed by the actual diffs showing the specific changes made.</p>
 
@@ -326,7 +326,7 @@ tags:
  <li>
   <p>Find the bug that introduces the change you're looking for, then look at the tests for that bug. See if the test for the feature is disabled by a line that looks something like one of the following:</p>
 
-  <pre class="notranslate">skip-if = toolkit == 'android'
+  <pre class="brush: cpp">skip-if = toolkit == 'android'
 skip-if = os == 'android'</pre>
 
   <p>If either of those are present, for example, the test is disabled on Android, which means the feature is almost certainly not included on Android. Similar things can happen to disable tests on Mac or Windows.</p>

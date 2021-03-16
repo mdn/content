@@ -2,22 +2,23 @@
 title: Attr.prefix
 slug: Web/API/Attr/prefix
 tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+- API
+- DOM
+- Property
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>Attr.prefix</strong></code> read-only property returns the namespace prefix of the specified attribute, or <code>null</code> if no prefix is specified.</p>
+<p>The <code><strong>Attr.prefix</strong></code> read-only property returns the namespace
+  prefix of the specified attribute, or <code>null</code> if no prefix is specified.</p>
 
 <div class="note">
-<p>Before DOM4 this API was defined within the {{domxref("Node")}} interface.</p>
+  <p>Before DOM4 this API was defined within the {{domxref("Node")}} interface.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>string</var> = <var>attribute</var>.prefix
+<pre class="brush: js"><var>string</var> = <var>attribute</var>.prefix
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -29,30 +30,31 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>This will only work when a namespace-aware parser is used, i.e. when a document is served with an XML MIME type. This will not work for HTML documents.</p>
+<p>This will only work when a namespace-aware parser is used, i.e. when a document is
+  served with an XML MIME type. This will not work for HTML documents.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-attr-prefix', 'Attr: prefix')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-attr-prefix", "Attr.prefix")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-attr-prefix', 'Attr: prefix')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM4", "#dom-attr-prefix", "Attr.prefix")}}</td>
+      <td>{{Spec2("DOM4")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -62,8 +64,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Attr.namespaceURI")}}</li>
- <li>{{domxref("Attr.localName")}}</li>
- <li>{{domxref("Element.prefix")}}</li>
- <li>{{domxref("Node.prefix")}}</li>
+  <li>{{domxref("Attr.namespaceURI")}}</li>
+  <li>{{domxref("Attr.localName")}}</li>
+  <li>{{domxref("Element.prefix")}}</li>
+  <li>{{domxref("Node.prefix")}}</li>
 </ul>

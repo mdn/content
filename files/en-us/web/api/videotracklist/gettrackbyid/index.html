@@ -2,58 +2,69 @@
 title: getTrackById
 slug: Web/API/VideoTrackList/getTrackById
 tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - getTrackById
-  - id
-  - track
+- API
+- HTML DOM
+- Media
+- Method
+- Reference
+- Track ID
+- Track List
+- Tracks
+- Video
+- VideoTrackList
+- getTrackById
+- id
+- track
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong> method <strong><code>getTrackById()</code></strong> returns the first {{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id", "id")}} matches the specified string.</span> This lets you find a specified track if you know its ID string.</p>
+<p><span class="seoSummary">The <strong>{{domxref("VideoTrackList")}}</strong> method
+    <strong><code>getTrackById()</code></strong> returns the first
+    {{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id",
+    "id")}} matches the specified string.</span> This lets you find a specified track if
+  you know its ID string.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>theTrack</em> = <em>VideoTrackList</em>.getTrackById(<em>id</em>);</pre>
+<pre
+  class="brush: js">var <em>theTrack</em> = <em>VideoTrackList</em>.getTrackById(<em>id</em>);</pre>
 
-<h3 id="Paramters">Paramters</h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>id</code></dt>
- <dd>A {{domxref("DOMString")}} indicating the ID of the track to locate within the track list.</dd>
+  <dt><code>id</code></dt>
+  <dd>A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+    list.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("VideoTrack")}} object indicating the first track found within the <code>VideoTrackList</code> whose <code>id</code> matches the specified string. If no match is found, this method returns <code>null</code>.</p>
+<p>A {{domxref("VideoTrack")}} object indicating the first track found within the
+  <code>VideoTrackList</code> whose <code>id</code> matches the specified string. If no
+  match is found, this method returns <code>null</code>.</p>
 
-<p>The tracks are searched in their natural order; that is, in the order defined by the media resource itself, or, if the resource doesn't define an order, the relative order in which the tracks are declared by the media resource.</p>
+<p>The tracks are searched in their natural order; that is, in the order defined by the
+  media resource itself, or, if the resource doesn't define an order, the relative order
+  in which the tracks are declared by the media resource.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-videotracklist-gettrackbyid', 'VideoTrackList.getTrackById()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-videotracklist-gettrackbyid',
+        'VideoTrackList.getTrackById()')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

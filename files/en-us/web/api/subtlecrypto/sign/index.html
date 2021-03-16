@@ -2,47 +2,61 @@
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
 tags:
-  - API
-  - Method
-  - Reference
-  - Référence(2)
-  - SubtleCrypto
-  - Web Crypto API
-  - sign
+- API
+- Method
+- Reference
+- Référence(2)
+- SubtleCrypto
+- Web Crypto API
+- sign
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
-<p>The <code><strong>sign()</strong></code> method of the {{domxref("SubtleCrypto")}} interface generates a digital {{glossary("signature")}}.</p>
+<p>The <code><strong>sign()</strong></code> method of the {{domxref("SubtleCrypto")}}
+  interface generates a digital {{glossary("signature")}}.</p>
 
-<p>It takes as its arguments a {{glossary("key")}} to sign with, some algorithm-specific parameters, and the data to sign. It returns a {{jsxref("Promise")}} which will be fulfilled with the signature.</p>
+<p>It takes as its arguments a {{glossary("key")}} to sign with, some algorithm-specific
+  parameters, and the data to sign. It returns a {{jsxref("Promise")}} which will be
+  fulfilled with the signature.</p>
 
-<p>You can use the corresponding {{domxref("SubtleCrypto.verify()")}} method to verify the signature.</p>
+<p>You can use the corresponding {{domxref("SubtleCrypto.verify()")}} method to verify the
+  signature.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>signature</em> = <em>crypto</em><code>.subtle.sign(<em>algorithm</em>, <em>key</em>, <em>data</em>)</code>;
+<pre class="brush: js">const <em>signature</em> = <em>crypto</em><code>.subtle.sign(<em>algorithm</em>, <em>key</em>, <em>data</em>)</code>;
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><em><code>algorithm</code></em> is a string or object that specifies the signature algorithm to use and its parameters:
+  <li><em><code>algorithm</code></em> is a string or object that specifies the signature
+    algorithm to use and its parameters:
 
-  <ul>
-   <li>To use <a href="#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, pass the string <code>"RSASSA-PKCS1-v1_5"</code> or an object of the form <code>{ "name": "RSASSA-PKCS1-v1_5" }</code>.</li>
-   <li>To use <a href="#RSA-PSS">RSA-PSS</a>, pass an {{domxref("RsaPssParams")}} object.</li>
-   <li>To use <a href="#ECDSA">ECDSA</a>, pass an {{domxref("EcdsaParams")}} object.</li>
-   <li>To use <a href="#HMAC">HMAC</a>, pass the string <code>"HMAC"</code> or an object of the form <code>{ "name": "HMAC" }</code>.<span style="display: none;"> </span></li>
-  </ul>
- </li>
- <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} object containing the key to be used for signing. If algorithm identifies a public-key cryptosystem, this is the private key.</li>
- <li><em><code>data</code></em> is an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object containing the data to be signed.</li>
+    <ul>
+      <li>To use <a href="#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, pass the string
+        <code>"RSASSA-PKCS1-v1_5"</code> or an object of the form
+        <code>{ "name": "RSASSA-PKCS1-v1_5" }</code>.</li>
+      <li>To use <a href="#rsa-pss">RSA-PSS</a>, pass an {{domxref("RsaPssParams")}}
+        object.</li>
+      <li>To use <a href="#ecdsa">ECDSA</a>, pass an {{domxref("EcdsaParams")}} object.
+      </li>
+      <li>To use <a href="#hmac">HMAC</a>, pass the string <code>"HMAC"</code> or an
+        object of the form <code>{ "name": "HMAC" }</code>.</li>
+    </ul>
+  </li>
+  <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} object containing the key to
+    be used for signing. If algorithm identifies a public-key cryptosystem, this is the
+    private key.</li>
+  <li><em><code>data</code></em> is an {{jsxref("ArrayBuffer")}} or
+    {{domxref("ArrayBufferView")}} object containing the data to be signed.</li>
 </ul>
 
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><code><em>signature</em></code> is a {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the signature.</li>
+  <li><code><em>signature</em></code> is a {{jsxref("Promise")}} that fulfills with an
+    {{jsxref("ArrayBuffer")}} containing the signature.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -50,47 +64,81 @@ tags:
 <p>The promise is rejected when the following exception is encountered:</p>
 
 <dl>
- <dt>{{exception("InvalidAccessError")}}</dt>
- <dd>Raised when the signing key is not a key for the request signing algorithm or when trying to use an algorithm that is either unknown or isn't suitable for signing.</dd>
+  <dt>{{exception("InvalidAccessError")}}</dt>
+  <dd>Raised when the signing key is not a key for the request signing algorithm or when
+    trying to use an algorithm that is either unknown or isn't suitable for signing.</dd>
 </dl>
 
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
-<p>The Web Crypto API provides four algorithms that can be used for signing and signature verification.</p>
+<p>The Web Crypto API provides four algorithms that can be used for signing and signature
+  verification.</p>
 
-<p>Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification. These systems all use a <a href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest algorithm</a> to hash the message to a short fixed size before signing. The choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.</p>
+<p>Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are
+  {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private
+  key for signing and the public key for verification. These systems all use a <a
+    href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest
+    algorithm</a> to hash the message to a short fixed size before signing. The choice of
+  digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()",
+  "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
+</p>
 
-<p>The fourth algorithm — HMAC — uses the same algorithm and key for signing and for verification: this means that the verification key must be kept secret, which in turn means that this algorithm is not suitable for many signature use cases. It can be a good choice however when the signer and verifier are the same entity.</p>
+<p>The fourth algorithm — HMAC — uses the same algorithm and key for signing and for
+  verification: this means that the verification key must be kept secret, which in turn
+  means that this algorithm is not suitable for many signature use cases. It can be a good
+  choice however when the signer and verifier are the same entity.</p>
 
 <h3 id="RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</h3>
 
-<p>The RSASSA-PKCS1-v1_5 algorithm is specified in <a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>.</p>
+<p>The RSASSA-PKCS1-v1_5 algorithm is specified in <a
+    href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>.</p>
 
 <h3 id="RSA-PSS">RSA-PSS</h3>
 
-<p>The RSA-PSS algorithm is specified in <a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a>.</p>
+<p>The RSA-PSS algorithm is specified in <a href="https://tools.ietf.org/html/rfc3447">RFC
+    3447</a>.</p>
 
-<p>It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the signature operation, so the same message signed with the same key will not result in the same signature each time. An extra property, defining the salt length, is passed into the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.</p>
+<p>It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the
+  signature operation, so the same message signed with the same key will not result in the
+  same signature each time. An extra property, defining the salt length, is passed into
+  the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()",
+  "verify()")}} functions when they are invoked.</p>
 
 <h3 id="ECDSA">ECDSA</h3>
 
-<p>ECDSA (Elliptic Curve Digital Signature Algorithm) is a variant of the Digital Signature Algorithm, specified in <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a>, that uses Elliptic Curve Cryptography (<a href="https://tools.ietf.org/html/rfc6090">RFC 6090</a>).</p>
+<p>ECDSA (Elliptic Curve Digital Signature Algorithm) is a variant of the Digital
+  Signature Algorithm, specified in <a
+    href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a>, that
+  uses Elliptic Curve Cryptography (<a href="https://tools.ietf.org/html/rfc6090">RFC
+    6090</a>).</p>
 
 <h3 id="HMAC">HMAC</h3>
 
-<p>The HMAC algorithm calculates and verifies hash-based message authentication codes according to the <a href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS 198-1 standard</a>.</p>
+<p>The HMAC algorithm calculates and verifies hash-based message authentication codes
+  according to the <a
+    href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS
+    198-1 standard</a>.</p>
 
-<p>The digest algorithm to use is specified in the <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> object that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code> object that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.</p>
+<p>The digest algorithm to use is specified in the
+  <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code> object
+  that you pass into  {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
+  <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code> object
+  that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can <a href="https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html">try the working examples</a> out on GitHub.</p>
+  <p><strong>Note</strong>: You can <a
+      href="https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html">try the
+      working examples</a> out on GitHub.</p>
 </div>
 
 <h3 id="RSASSA-PKCS1-v1_5_2">RSASSA-PKCS1-v1_5</h3>
 
-<p>This code fetches the contents of a text box, encodes it for signing, and signs it with a private key. <a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js">See the complete source code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for signing, and signs it with
+  a private key. <a
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js">See
+    the complete source code on GitHub.</a></p>
 
 <pre class="brush: js">/*
 Fetch the contents of the "message" textbox, and encode it
@@ -113,7 +161,10 @@ let signature = await window.crypto.subtle.sign(
 
 <h3 id="RSA-PSS_2">RSA-PSS</h3>
 
-<p>This code fetches the contents of a text box, encodes it for signing, and signs it with a private key. <a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js">See the complete source code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for signing, and signs it with
+  a private key. <a
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js">See
+    the complete source code on GitHub.</a></p>
 
 <pre class="brush: js">/*
 Fetch the contents of the "message" textbox, and encode it
@@ -139,7 +190,10 @@ let signature = await window.crypto.subtle.sign(
 
 <h3 id="ECDSA_2">ECDSA</h3>
 
-<p>This code fetches the contents of a text box, encodes it for signing, and signs it with a private key. <a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js">See the complete source code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for signing, and signs it with
+  a private key. <a
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js">See
+    the complete source code on GitHub.</a></p>
 
 <pre class="brush: js">/*
 Fetch the contents of the "message" textbox, and encode it
@@ -165,7 +219,10 @@ let signature = await window.crypto.subtle.sign(
 
 <h3 id="HMAC_2">HMAC</h3>
 
-<p>This code fetches the contents of a text box, encodes it for signing, and signs it with a secret key. <a href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js">See the complete source code on GitHub.</a></p>
+<p>This code fetches the contents of a text box, encodes it for signing, and signs it with
+  a secret key. <a
+    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js">See
+    the complete source code on GitHub.</a></p>
 
 <pre class="brush: js">/*
 Fetch the contents of the "message" textbox, and encode it
@@ -188,18 +245,19 @@ let signature = await window.crypto.subtle.sign(
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-sign', 'SubtleCrypto.sign()') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-sign',
+        'SubtleCrypto.sign()') }}</td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -209,9 +267,14 @@ let signature = await window.crypto.subtle.sign(
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("SubtleCrypto.verify()")}}.</li>
- <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSASSA-PKCS1-v1_5.</li>
- <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
- <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a> specifies ECDSA.</li>
- <li><a href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS 198-1</a> specifies HMAC.</li>
+  <li>{{domxref("SubtleCrypto.verify()")}}.</li>
+  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies
+    RSASSA-PKCS1-v1_5.</li>
+  <li><a href="https://tools.ietf.org/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
+  <li><a
+      href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a> specifies
+    ECDSA.</li>
+  <li><a
+      href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS
+      198-1</a> specifies HMAC.</li>
 </ul>

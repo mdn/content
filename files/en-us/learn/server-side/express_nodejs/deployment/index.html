@@ -44,8 +44,6 @@ tags:
 
 <p>This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a worked example of how to install the LocalLibrary website onto the <a href="https://www.heroku.com/">Heroku</a> cloud hosting service.</p>
 
-<p>Bear in mind that you don't have to use Heroku — there are other hosting services available. We've also provided a separate tutorial to show how to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">Install LocalLibrary on PWS/Cloud Foundry</a>.</p>
-
 <h2 id="What_is_a_production_environment">What is a production environment?</h2>
 
 <p>The production environment is the environment provided by the server computer where you will run your website for external consumption. The environment includes:</p>
@@ -96,7 +94,7 @@ tags:
  <li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
 </ul>
 
-<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, and the open source option <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> provide free credit when you first join.</p>
+<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a> and <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> provide free credit when you first join.</p>
 
 <p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).</p>
 
@@ -130,7 +128,7 @@ tags:
 
 <p>One way to minimize "debug" logging in production is to use a module like <a href="https://www.npmjs.com/package/debug">debug </a>that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.</p>
 
-<pre class="brush: js notranslate"><strong>var debug = require('debug')('author');</strong>
+<pre class="brush: js"><strong>var debug = require('debug')('author');</strong>
 
 // Display Author update form on GET
 exports.author_update_get = function(req, res, next) {
@@ -149,7 +147,7 @@ exports.author_update_get = function(req, res, next) {
 
 <p>You can then enable a particular set of logs by specifying them as a comma-separated list in the <code>DEBUG</code> environment variable. You can set the variables for displaying author and book logs as shown (wildcards are also supported).</p>
 
-<pre class="brush: bash notranslate">#Windows
+<pre class="brush: bash">#Windows
 set DEBUG=author,book
 
 #Linux
@@ -168,11 +166,11 @@ export DEBUG="author,book"
 
 <p>Add this to your site using <a href="https://www.npmjs.com/package/compression">compression</a> middleware. Install this at the root of your project by running the following command:</p>
 
-<pre class="brush: bash notranslate">npm install compression</pre>
+<pre class="brush: bash">npm install compression</pre>
 
 <p>Open <strong>./app.js</strong> and require the compression library as shown. Add the compression library to the middleware chain with the <code>use()</code> method (this should appear before any routes you want compressed — in this case, all of them!)</p>
 
-<pre class="brush: js notranslate">var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
+<pre class="brush: js">var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
 <strong>var compression = require('compression');</strong>
 
 // Create the Express application object
@@ -201,12 +199,12 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 <p>Install this at the root of your project by running the following command:</p>
 
-<pre class="brush: bash notranslate">npm install helmet
+<pre class="brush: bash">npm install helmet
 </pre>
 
 <p>Open <strong>./app.js</strong> and require the <em>helmet</em> library as shown. Then add the module to the middleware chain with the <code>use()</code> method.</p>
 
-<pre class="brush: js notranslate">var compression = require('compression');
+<pre class="brush: js">var compression = require('compression');
 <strong>var helmet = require('helmet');
 </strong>
 // Create the Express application object
@@ -290,11 +288,11 @@ var app = express();
 <ol>
  <li>Install <em>git</em> for your local computer (you can find versions for different platforms <a href="https://git-scm.com/downloads">here</a>).</li>
  <li>Open a command prompt/terminal and clone your repository using the URL you copied above:
-  <pre class="brush: bash notranslate">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/express-locallibrary-tutorial.git
+  <pre class="brush: bash">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/express-locallibrary-tutorial.git
 </pre>
   This will create the repository below the current point.</li>
  <li>Navigate into the new repo.
-  <pre class="brush: bash notranslate">cd express-locallibrary-tutorial</pre>
+  <pre class="brush: bash">cd express-locallibrary-tutorial</pre>
  </li>
 </ol>
 
@@ -303,11 +301,11 @@ var app = express();
 <ol>
  <li>Copy your Express application into this folder (excluding <strong>/node_modules</strong>, which contains dependency files that you should fetch from NPM as needed).</li>
  <li>Open a command prompt/terminal and use the <code>add</code> command to add all files to git.
-  <pre class="brush: bash notranslate">git add -A
+  <pre class="brush: bash">git add -A
 </pre>
  </li>
  <li>Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
-  <pre class="notranslate">&gt; git status
+  <pre>&gt; git status
 On branch main
 Your branch is up-to-date with 'origin/main'.
 Changes to be committed:
@@ -316,15 +314,15 @@ Changes to be committed:
         new file:   ...</pre>
  </li>
  <li>When you're satisfied, commit the files to your local repository:
-  <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
+  <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>Then synchronize your local repository to the Github website, using the following:
-  <pre class="brush: bash notranslate">git push origin main</pre>
+  <pre class="brush: bash">git push origin main</pre>
  </li>
 </ol>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
+<p><strong>Warning:</strong> In 2020 Github changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call <code>git push origin master</code> instead.</p>
 </div>
 
 <p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
@@ -347,12 +345,12 @@ Changes to be committed:
 
 <p>The only useful information missing in our current <strong>package.json</strong> is the version of node. We can find the version of node we're using for development by entering the command:</p>
 
-<pre class="brush: bash notranslate">&gt;node --version
+<pre class="brush: bash">&gt;node --version
 v12.18.4</pre>
 
 <p>Open <strong>package.json</strong>, and add this information as an <strong>engines &gt; node</strong> section as shown (using the version number for your system).</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
 <strong>  "engines": {
@@ -368,11 +366,11 @@ v12.18.4</pre>
 
 <p>Open <strong>app.js</strong> and find the line that sets the MongoDB connection variable. It will look something like this:</p>
 
-<pre class="brush: js notranslate">var mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';</pre>
+<pre class="brush: js">var mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';</pre>
 
 <p>Replace the line with the following code that uses <code>process.env.MONGODB_URI</code> to get the connection string from an environment variable named <code>MONGODB_URI</code> if has been set (use your own database URL instead of the placeholder below.)</p>
 
-<pre class="brush: js notranslate">// Set up mongoose connection
+<pre class="brush: js">// Set up mongoose connection
 var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
 var mongoDB = <strong>process.env.MONGODB_URI</strong> || dev_db_url;
 </pre>
@@ -383,16 +381,16 @@ var mongoDB = <strong>process.env.MONGODB_URI</strong> || dev_db_url;
 
 <p>First, we will need to fetch our dependencies (you will recall we didn't copy the <strong>node_modules</strong> folder into our git tree). You can do this by running the following command in your terminal at the root of the project:</p>
 
-<pre class="brush: bash notranslate">npm install
+<pre class="brush: bash">npm install
 </pre>
 
-<p>Now run the site (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
+<p>Now run the site (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
 
 <h4 id="Save_changes_to_Github">Save changes to Github</h4>
 
 <p>Next, let's save all our changes to Github. In the terminal (whilst inside our repository), enter the following commands:</p>
 
-<pre class="brush: bash notranslate">git add -A
+<pre class="brush: bash">git add -A
 git commit -m "Added files and changes required for deployment to heroku"
 git push origin main</pre>
 
@@ -400,7 +398,7 @@ git push origin main</pre>
 
 <h3 id="Get_a_Heroku_account">Get a Heroku account</h3>
 
-<p>To start using Heroku you will first need to create an account (skip ahead to <a href="#Create_and_upload_the_website">Create and upload the website</a> if you've already got an account and installed the Heroku client):</p>
+<p>To start using Heroku you will first need to create an account (skip ahead to <a href="#create_and_upload_the_website">Create and upload the website</a> if you've already got an account and installed the Heroku client):</p>
 
 <ul>
  <li>Go to <a href="https://www.heroku.com/">www.heroku.com</a> and click the <strong>SIGN UP FOR FREE</strong> button.</li>
@@ -416,14 +414,14 @@ git push origin main</pre>
 
 <p>After the client is installed you will be able to run commands. For example to get help on the client:</p>
 
-<pre class="brush: bash notranslate">heroku help
+<pre class="brush: bash">heroku help
 </pre>
 
 <h3 id="Create_and_upload_the_website">Create and upload the website</h3>
 
 <p>To create the app we run the "create" command in the root directory of our repository. This creates a git remote ("pointer to a remote repository") named <em>heroku</em> in our local git environment.</p>
 
-<pre class="brush: bash notranslate">heroku create</pre>
+<pre class="brush: bash">heroku create</pre>
 
 <div class="note">
 <p><strong>Note:</strong> You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.</p>
@@ -431,14 +429,14 @@ git push origin main</pre>
 
 <p>We can then push our app to the Heroku repository as shown below. This will upload the app, get all its dependencies, package it in a dyno, and start the site.</p>
 
-<pre class="brush: bash notranslate">git push heroku master</pre>
+<pre class="brush: bash">git push heroku main</pre>
 
 <p>If we're lucky, the app is now "running" on the site. To open your browser and run the new website, use the command:</p>
 
-<pre class="brush: bash notranslate">heroku open</pre>
+<pre class="brush: bash">heroku open</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This may result in the Heroku page error page. This is will be remedy in the next section.</p>
+<p><strong>Note</strong>: This may result in the Heroku page error page. This will be remedied in the next section.</p>
 </div>
 
 <div class="note">
@@ -447,23 +445,23 @@ git push origin main</pre>
 
 <h3 id="Setting_configuration_variables">Setting configuration variables</h3>
 
-<p>You will recall from a preceding section that we need to <a href="#NODE_ENV">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages. We do this by entering the following command:</p>
+<p>You will recall from a preceding section that we need to <a href="#node_env">set NODE_ENV to 'production'</a> in order to improve our performance and generate less-verbose error messages. We do this by entering the following command:</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config:set NODE_ENV='production'
+<pre class="brush: bash">&gt;heroku config:set NODE_ENV='production'
 Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 </pre>
 
-<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
+<p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+<pre class="brush: bash">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
 Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 </pre>
 
 <p>You can inspect your configuration variables at any time using the <code>heroku config</code> command — try this now:</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config
+<pre class="brush: bash">&gt;heroku config
 === limitless-tor-18923 Config Vars
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 NODE_ENV:    production
@@ -483,7 +481,7 @@ NODE_ENV:    production
 
 <p>The Heroku client provides a few tools for debugging:</p>
 
-<pre class="brush: bash notranslate">heroku logs  # Show current logs
+<pre class="brush: bash">heroku logs  # Show current logs
 heroku logs --tail # Show current logs and keep updating with any new results
 heroku ps   #Display dyno status
 </pre>

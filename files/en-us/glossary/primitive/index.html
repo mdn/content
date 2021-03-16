@@ -6,7 +6,7 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p><span class="seoSummary">In {{Glossary("JavaScript")}}, a <strong>primitive</strong> (primitive value, primitive data type) is data that is not an {{Glossary("object")}} and has no {{glossary("method","methods")}}. There are 6 primitive data types: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, and {{Glossary("symbol")}}. There also is {{Glossary("null")}}, which is seemingly primitive, but indeed is a special case for every {{jsxref("Object")}}: and any structured type is derived from <code>null</code> by the <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">Prototype Chain</a>.</span></p>
+<p><span class="seoSummary">In {{Glossary("JavaScript")}}, a <strong>primitive</strong> (primitive value, primitive data type) is data that is not an {{Glossary("object")}} and has no {{glossary("method","methods")}}. There are 7 primitive data types: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}}, and {{Glossary("null")}}.</span></p>
 
 <p>Most of the time, a primitive value is represented directly at the lowest level of the language implementation.</p>
 
@@ -18,7 +18,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">// Using a string method doesn't mutate the string
+<pre class="brush: js">// Using a string method doesn't mutate the string
 var bar = "baz";
 console.log(bar);               // baz
 bar.toUpperCase();

@@ -50,9 +50,9 @@ tags:
 <h3 id="Setting_up_Selenium_in_Node">Setting up Selenium in Node</h3>
 
 <ol>
- <li>To start with, set up a new npm project, as discussed in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm">Setting up Node and npm</a> in the last chapter. Call it something different, like <code>selenium-test</code>.</li>
+ <li>To start with, set up a new npm project, as discussed in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#setting_up_node_and_npm">Setting up Node and npm</a> in the last chapter. Call it something different, like <code>selenium-test</code>.</li>
  <li>Next, we need to install a framework to allow us to work with Selenium from inside Node. We are going to choose selenium's official <a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a>, as the documentation seems fairly up-to-date and it is well-maintained. If you want different options, <a href="http://webdriver.io/">webdriver.io</a> and <a href="http://nightwatchjs.org/">nightwatch.js</a> are also good choices. To install selenium-webdriver, run the following command, making sure you are inside your project folder:
-  <pre class="brush: bash notranslate"><code>npm install selenium-webdriver</code></pre>
+  <pre class="brush: bash">npm install selenium-webdriver</pre>
  </li>
 </ol>
 
@@ -77,13 +77,13 @@ tags:
 <ol>
  <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="http://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
  <li>Paste the following into the bottom of your file (updating the path as it actually is on your machine):
-  <pre class="brush: bash notranslate">#Add WebDriver browser drivers to PATH
+  <pre class="brush: bash">#Add WebDriver browser drivers to PATH
 
 export PATH=$PATH:/Users/bob</pre>
  </li>
  <li>Save and close this file, then restart your Terminal/command prompt to reapply your Bash configuration.</li>
  <li>Check that your new paths are in the <code>PATH</code> variable by entering the following into your terminal:
-  <pre class="brush: bash notranslate">echo $PATH</pre>
+  <pre class="brush: bash">echo $PATH</pre>
  </li>
  <li>You should see it printed out in the terminal.</li>
 </ol>
@@ -95,7 +95,7 @@ export PATH=$PATH:/Users/bob</pre>
 <ol>
  <li>Create a new file inside your project directory called <code>google_test.js</code>:</li>
  <li>Give it the following contents, then save it:
-  <pre class="brush: js notranslate">const webdriver = require('selenium-webdriver'),
+  <pre class="brush: js">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
@@ -127,7 +127,7 @@ driver.sleep(2000).then(function() {
 </pre>
  </li>
  <li>In terminal, make sure you are inside your project folder, then enter the following command:
-  <pre class="brush: bash notranslate">node google_test</pre>
+  <pre class="brush: bash">node google_test</pre>
  </li>
 </ol>
 
@@ -140,7 +140,7 @@ driver.sleep(2000).then(function() {
 <ol>
  <li>Create another new file inside your project directory called <code>google_test_multiple.js</code>. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the <code>.forBrowser()</code> method for other browsers,  see the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html">Browser enum</a> reference page.</li>
  <li>Give it the following contents, then save it:
-  <pre class="brush: js notranslate">const webdriver = require('selenium-webdriver'),
+  <pre class="brush: js">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
@@ -179,7 +179,7 @@ function searchTest(driver) {
 }</pre>
  </li>
  <li>In terminal, make sure you are inside your project folder, then enter the following command:
-  <pre class="brush: bash notranslate">node google_test_multiple</pre>
+  <pre class="brush: bash">node google_test_multiple</pre>
  </li>
  <li>If you are using a Mac and do decide to test Safari, you might get an error message along the lines of "Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver." If you get this, follow the given instruction and try again.</li>
 </ol>
@@ -196,29 +196,29 @@ function searchTest(driver) {
 
 <p>To start up a new test, you need to include the <code>selenium-webdriver</code> module like this:</p>
 
-<pre class="brush: js notranslate">const webdriver = require('selenium-webdriver'),
+<pre class="brush: js">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;</pre>
 
 <p>Next, you need to create a new instance of a driver, using the <code>new webdriver.Builder()</code> constructor. This needs to have the <code>forBrowser()</code> method chained onto it to specify what browser you want to test with this builder, and the <code>build()</code> method to actually build it (see the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html">Builder class reference</a> for detailed information on these features).</p>
 
-<pre class="brush: js notranslate">let driver = new webdriver.Builder()
+<pre class="brush: js">let driver = new webdriver.Builder()
     .forBrowser('firefox')
     .build();</pre>
 
 <p>Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the <code>forBrowser()</code> method:</p>
 
-<pre class="brush: js notranslate">let driver = new webdriver.Builder()
+<pre class="brush: js">let driver = new webdriver.Builder()
     .forBrowser('firefox', '46', 'MAC')
     .build();</pre>
 
 <p>You could also set these options using an environment variable, for example:</p>
 
-<pre class="brush: bash notranslate"><code>SELENIUM_BROWSER=firefox:46:MAC</code></pre>
+<pre class="brush: bash">SELENIUM_BROWSER=firefox:46:MAC</pre>
 
 <p>Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called <code>quick_test.js</code>, and add the following code to it:</p>
 
-<pre class="brush: js notranslate">var webdriver = require('selenium-webdriver'),
+<pre class="brush: js">var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
@@ -230,7 +230,7 @@ var driver = new webdriver.Builder()
 
 <p>To load the page you actually want to test, you use the <code>get()</code> method of the driver instance you created earlier, for example:</p>
 
-<pre class="brush: js notranslate"><span class="nx">driver</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://www.google.com'</span><span class="p">);</span></pre>
+<pre class="brush: js"><span class="nx">driver</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'http://www.google.com'</span><span class="p">);</span></pre>
 
 <div class="note">
 <p><span class="p"><strong>Note</strong>: See the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> for details of the features in this section and the ones below it.</span></p>
@@ -238,29 +238,29 @@ var driver = new webdriver.Builder()
 
 <p>You can use any URL to point to your resource, including a <code>file://</code> URL to test a local document:</p>
 
-<pre class="brush: js notranslate">driver.get('file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html');</pre>
+<pre class="brush: js">driver.get('file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html');</pre>
 
 <p>or</p>
 
-<pre class="brush: js notranslate">driver.get('http://localhost:8888/fake-div-buttons.html');</pre>
+<pre class="brush: js">driver.get('http://localhost:8888/fake-div-buttons.html');</pre>
 
 <p>But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths. </p>
 
 <p>Add this line to the bottom of <code>quick_test.js</code> now:</p>
 
-<pre class="brush: js notranslate">driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html');</pre>
+<pre class="brush: js">driver.get('https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html');</pre>
 
 <h3 id="Interacting_with_the_document">Interacting with the document</h3>
 
 <p>Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">select UI elements in many ways</a> in WebDriver, including by ID, class, element name, etc. The actual selection is done by the <code>findElement()</code> method, which accepts as a parameter a selection method. For example, to select an element by ID:</p>
 
-<pre class="brush: js notranslate"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
+<pre class="brush: js"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
 
 <p>One of the most useful ways to find an element by CSS — the  By.css method allows you to select an element using a CSS selector</p>
 
 <p>Enter the following at the bottom of your <code>quick_test.js</code> code now:</p>
 
-<pre class="brush: js notranslate"><span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'</span>button:nth-of-type(1)<span class="s1">'</span><span class="p">));</span></pre>
+<pre class="brush: js"><span class="kd">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'</span>button:nth-of-type(1)<span class="s1">'</span><span class="p">));</span></pre>
 
 <h3 id="Testing_your_element"><span class="p">Testing your element</span></h3>
 
@@ -268,7 +268,7 @@ var driver = new webdriver.Builder()
 
 <p>If we wanted to get the text inside our button, we could do this:</p>
 
-<pre class="brush: js notranslate">button.getText().then(function(text) {
+<pre class="brush: js">button.getText().then(function(text) {
   console.log('Button text is \'' + text + '\'');
 });</pre>
 
@@ -276,19 +276,19 @@ var driver = new webdriver.Builder()
 
 <p><span class="p">Making sure you are inside your project directory, try running the test:</span></p>
 
-<pre class="brush: bash notranslate"><span class="p">node quick_test.js</span></pre>
+<pre class="brush: bash"><span class="p">node quick_test.js</span></pre>
 
 <p><span class="p">You should see the button's text label reported inside the console.</span></p>
 
 <p><span class="p">let's do something a bit more useful. delete the previous code entry, then add this line at the bottom instead:</span></p>
 
-<pre class="brush: js notranslate">button.click();</pre>
+<pre class="brush: js">button.click();</pre>
 
 <p>Try running your test again; the button will be clicked, and the <code>alert()</code> popup should appear. At least we know the button is working!</p>
 
 <p>You can interact with the popup too. Add the following to the bottom of the code, and try testing it again:</p>
 
-<pre class="brush: js notranslate">let alert = driver.switchTo().alert();
+<pre class="brush: js">let alert = driver.switchTo().alert();
 
 alert.getText().then(function(text) {
   console.log('Alert text is \'' + text + '\'');
@@ -298,12 +298,12 @@ alert.accept();</pre>
 
 <p>Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:</p>
 
-<pre class="brush: js notranslate"><span class="kd">const</span> input <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'name'</span><span class="p">));
+<pre class="brush: js"><span class="kd">const</span> input <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'name'</span><span class="p">));
 input.</span>sendKeys('Filling in my form');</pre>
 
 <p>You can submit key presses that can't be represented by normal characters using properties of the <code>webdriver.Key</code> object. For example, above we used this construct to tab out of the form input before submitting it:</p>
 
-<pre class="brush: js notranslate">driver.sleep(1000).then(function() {
+<pre class="brush: js">driver.sleep(1000).then(function() {
   driver.findElement(By.name('q')).sendKeys(webdriver.Key.TAB);
 });
 </pre>
@@ -314,7 +314,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <p>In our <code>google_test.js</code> test for example, we included this block:</p>
 
-<pre class="brush: js notranslate">driver.sleep(2000).then(function() {
+<pre class="brush: js">driver.sleep(2000).then(function() {
   driver.getTitle().then(function(title) {
     if(title === 'webdriver - Google Search') {
       console.log('Test passed');
@@ -328,7 +328,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <p>We could add a <code>sleep()</code> method to our <code>quick_test.js</code> test too — try wrapping your last line of code in a block like this:</p>
 
-<pre class="brush: js notranslate">driver.sleep(2000).then(function() {
+<pre class="brush: js">driver.sleep(2000).then(function() {
   input.sendKeys('Filling in my form');
   input.getAttribute("value").then(function(value) {
     if(value !== '') {
@@ -347,7 +347,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <p>After you've finished running a test, you should shut down any driver instances you've opened, to make sure that you don't end up with loads of rogue browser instances open on your machine! This is done using the <code>quit()</code> method. Call this on your driver instance when you are finished with it. Add this line to the bottom of your <code>quick_test.js</code> test now:</p>
 
-<pre class="brush: js notranslate"><span class="nx">driver</span><span class="p">.</span><span class="nx">quit</span><span class="p">();</span></pre>
+<pre class="brush: js"><span class="nx">driver</span><span class="p">.</span><span class="nx">quit</span><span class="p">();</span></pre>
 
 <p><span class="p">When you run it, you should now see the test execute and the browser instance shut down again after the test is complete. This is useful for not cluttering up your computer with loads of browser instances, especially if you have so many that it is causing the computer to slow down.</span></p>
 
@@ -366,10 +366,10 @@ input.</span>sendKeys('Filling in my form');</pre>
 <ol>
  <li>For example, try making a local copy of our <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/selenium/mocha_test.js">mocha_test.js</a></code> example inside your project directory. Put it inside a subfolder called <code>test</code>. This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.</li>
  <li>Install the mocha test harness by running the following command inside your project directory:
-  <pre class="brush: bash notranslate">npm install --save-dev mocha</pre>
+  <pre class="brush: bash">npm install --save-dev mocha</pre>
  </li>
  <li>you can now run the test (and any others you put inside your <code>test</code> directory) using the following command:
-  <pre class="brush: bash notranslate">mocha --no-timeouts</pre>
+  <pre class="brush: bash">mocha --no-timeouts</pre>
  </li>
  <li>You should include the <code>--no-timeouts</code> flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).</li>
 </ol>
@@ -391,7 +391,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 <ol>
  <li>Inside your project directory, create a new file called <code>lambdatest_google_test.js</code></li>
  <li>Give it the following contents:
-  <pre class="brush: js notranslate">const webdriver = require('selenium-webdriver');
+  <pre class="brush: js">const webdriver = require('selenium-webdriver');
     By = webdriver.By,
     until = webdriver.until;
 
@@ -447,11 +447,11 @@ searchTextOnGoogle();
  </li>
  <li>Visit your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest automation dashboard</a>, to fetch your LambdaTest's username and access key by clicking on the <strong>key </strong>icon on the top-right(see <em>Username and Access Keys</em>). Replace the <code>{username}</code> and <code>{accessKey}</code> placeholders in the code with your actual user name and access key values (and make sure you keep them secure).</li>
  <li>Run the below command in your terminal to execute your test:
-  <pre class="brush: bash notranslate">node <code>lambdatest_google_test</code></pre>
+  <pre class="brush: bash">node lambdatest_google_test</pre>
   The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.<br>
   If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using <a href="https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/">LambdaTest restful API</a>.</li>
  <li>Now if you go to your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest Automation dashboard</a>, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg" style="border-style: solid; border-width: 2px; height: 758px; width: 1600px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
+  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="automation-logs-1.jpg" style="border-style: solid; border-width: 2px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
 </ol>
 
 <div class="note">
@@ -469,12 +469,12 @@ searchTextOnGoogle();
 <ol>
  <li>Use the below command for marking a status as <strong>passed</strong> on LambdaTest.
 
-  <pre class="brush: bash notranslate">driver.executeScript("lambda-status=passed");</pre>
+  <pre class="brush: bash">driver.executeScript("lambda-status=passed");</pre>
  </li>
  <li>
   <p>Use the below command for marking a status as <strong>failed</strong> on LambdaTest.</p>
 
-  <pre class="brush: bash notranslate">driver.executeScript("lambda-status=failed");</pre>
+  <pre class="brush: bash">driver.executeScript("lambda-status=failed");</pre>
  </li>
 </ol>
 
@@ -487,7 +487,7 @@ searchTextOnGoogle();
 <ol>
  <li>Inside your project directory, create a new file called <code>bstack_google_test.js</code>.</li>
  <li>Give it the following contents:
-  <pre class="notranslate">const webdriver = require('selenium-webdriver'),
+  <pre>const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
@@ -532,10 +532,10 @@ driver.quit();</pre>
  </li>
  <li>From your <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a>, get your user name and access key (see <em>Username and Access Keys</em>). Replace the <code>YOUR-USER-NAME</code> and <code>YOUR-ACCESS-KEY</code> placeholders in the code with your actual user name and access key values (and make sure you keep them secure).</li>
  <li>Run your test with the following command:
-  <pre class="brush: bash notranslate">node bstack_google_test</pre>
+  <pre class="brush: bash">node bstack_google_test</pre>
   The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!</li>
  <li>Now if you go back to the <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a> page, you'll see your test listed:<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/15383/bstack_automated_results.png" style="border-style: solid; border-width: 1px; display: block; height: 189px; margin: 0px auto; width: 700px;"></li>
+  <img alt="" src="bstack_automated_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
 <p>If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.</p>
@@ -556,20 +556,20 @@ driver.quit();</pre>
 
 <ol>
  <li>First, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
-  <pre class="brush: js notranslate">const request = require("request");</pre>
+  <pre class="brush: js">const request = require("request");</pre>
  </li>
  <li>Now we'll update our <code>capabilities</code> object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
-  <pre class="brush: js notranslate">'project' : 'Google test 2'</pre>
+  <pre class="brush: js">'project' : 'Google test 2'</pre>
  </li>
  <li>Next we need to access the <code>sessionId</code> of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the <code>driver</code> object (<code>let driver ...</code>) :
-  <pre class="brush: js notranslate">let sessionId;
+  <pre class="brush: js">let sessionId;
 
 driver.session_.then(function(sessionData) {
     sessionId = sessionData.id_;
 });</pre>
  </li>
  <li>Finally, update the <code>driver.sleep(2000)</code> ... block near the bottom of the code to add REST API calls (again, replace the <code>YOUR-USER-NAME</code> and <code>YOUR-ACCESS-KEY</code> placeholders in the code with your actual user name and access key values):
-  <pre class="brush: js notranslate">driver.sleep(2000).then(function() {
+  <pre class="brush: js">driver.sleep(2000).then(function() {
   driver.getTitle().then(function(title) {
     if(title === 'webdriver - Google Search') {
       console.log('Test passed');
@@ -587,7 +587,7 @@ driver.session_.then(function(sessionData) {
 
 <p>If you now go back to your <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a> page, you should see your test session available, as before, but with the updated data attached to it:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15385/bstack_custom_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="bstack_custom_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
 
@@ -598,7 +598,7 @@ driver.session_.then(function(sessionData) {
 <ol>
  <li>Inside your project directory, create a new file called <code>sauce_google_test.js</code>.</li>
  <li>Give it the following contents:
-  <pre class="brush: js notranslate">const webdriver = require('selenium-webdriver'),
+  <pre class="brush: js">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until,
     username = "YOUR-USER-NAME",
@@ -640,10 +640,10 @@ driver.quit();</pre>
  </li>
  <li>From your <a href="https://saucelabs.com/beta/user-settings">Sauce Labs user settings</a>, get your user name and access key. Replace the <code>YOUR-USER-NAME</code> and <code>YOUR-ACCESS-KEY</code> placeholders in the code with your actual user name and access key values (and make sure you keep them secure).</li>
  <li>Run your test with the following command:
-  <pre class="brush: bash notranslate">node sauce_google_test</pre>
+  <pre class="brush: bash">node sauce_google_test</pre>
   The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!</li>
  <li>Now if you go to your <a href="https://saucelabs.com/beta/dashboard/tests">Sauce Labs Automated Test dashboard</a> page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/14235/sauce_labs_automated_test.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img alt="" src="sauce_labs_automated_test.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
 <div class="note">
@@ -662,24 +662,24 @@ driver.quit();</pre>
 
 <ol>
  <li>Install the Node Sauce Labs wrapper using the following command (if you've not already done it for this project):
-  <pre class="brush: bash notranslate"><code class="language-html">npm install saucelabs --save-dev</code></pre>
+  <pre class="brush: bash">npm install saucelabs --save-dev</pre>
  </li>
  <li>Require saucelabs — put this at the top of your <code>sauce_google_test.js</code> file, just below the previous variable declarations:
-  <pre class="brush: js notranslate">const SauceLabs = require('saucelabs');</pre>
+  <pre class="brush: js">const SauceLabs = require('saucelabs');</pre>
  </li>
  <li>Create a new instance of SauceLabs, by adding the following just below that:
-  <pre class="brush: js notranslate">let saucelabs = new SauceLabs({
+  <pre class="brush: js">let saucelabs = new SauceLabs({
     username : "YOUR-USER-NAME",
     password : "YOUR-ACCESS-KEY"
 });</pre>
   Again, replace the <code>YOUR-USER-NAME</code> and <code>YOUR-ACCESS-KEY</code> placeholders in the code with your actual user name and access key values (note that the saucelabs npm package rather confusingly uses <code>password</code>, not <code>accessKey</code>). Since you are using these twice now, you may want to create a couple of helper variables to store them in.</li>
  <li>Below the block where you define the <code>driver</code> variable (just below the <code>build()</code> line), add the following block — this gets the correct driver <code>sessionID</code> that we need to write data to the job (you can see it action in the next code block):
-  <pre class="brush: js notranslate">driver.getSession().then(function (sessionid){
+  <pre class="brush: js">driver.getSession().then(function (sessionid){
       driver.sessionID = sessionid.id_;
 });</pre>
  </li>
  <li>Finally, replace the <code>driver.sleep(2000)</code> ... block near the bottom of the code with the following:
-  <pre class="brush: js notranslate">driver.sleep(2000).then(function() {
+  <pre class="brush: js">driver.sleep(2000).then(function() {
   driver.getTitle().then(function(title) {
     if(title === 'webdriver - Google Search') {
       console.log('Test passed');
@@ -702,7 +702,7 @@ driver.quit();</pre>
 
 <p>If you now go back to your <a href="https://saucelabs.com/beta/dashboard/tests">Sauce Labs Automated Test dashboard</a> page, you should see your new job now has the updated data attached to it:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14239/sauce_labs_updated_job_info.png" style="border-style: solid; border-width: 1px; display: block; height: 150px; margin: 0px auto; width: 1088px;"></p>
+<p><img alt="" src="sauce_labs_updated_job_info.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Your_own_remote_server">Your own remote server</h3>
 
@@ -712,7 +712,7 @@ driver.quit();</pre>
  <li>The Selenium remote server requires Java to run. Download the latest JDK for your platform from the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE downloads page</a>. Install it when it is downloaded.</li>
  <li>Next, download the latest <a href="http://selenium-release.storage.googleapis.com/index.html">Selenium standalone server</a> — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your <code>PATH</code>, do so now (see the {{anch("Setting up Selenium in Node")}} section).</li>
  <li>Run the standalone server by entering the following into a terminal on your server computer
-  <pre class="brush: bash notranslate"><code>java -jar </code>selenium-server-standalone-3.0.0.jar</pre>
+  <pre class="brush: bash">java -jar selenium-server-standalone-3.0.0.jar</pre>
   (update the <code>.jar</code> filename) so it matches exactly what file you've got.</li>
  <li>The server will run on <code><a href="http://localhost:4444/wd/hub">http://localhost:4444/wd/hub</a></code> — try going there now to see what you get.</li>
 </ol>
@@ -722,13 +722,13 @@ driver.quit();</pre>
 <ol>
  <li>Create a copy of your <code>google_test.js</code> file, and call it <code>google_test_remote.js</code>; put it in your project directory.</li>
  <li>Update the second code block (which starts with <code>let driver = ...</code>) like so
-  <pre class="brush: js notranslate">let driver = new webdriver.Builder()
+  <pre class="brush: js">let driver = new webdriver.Builder()
     .forBrowser('firefox')
     .usingServer('http://localhost:4444/wd/hub')
     .build();</pre>
  </li>
  <li>Run your test, and you should see it run as expected; this time however you will be running it on the standalone server:
-  <pre class="brush: bash notranslate">node google_test_remote.js</pre>
+  <pre class="brush: bash">node google_test_remote.js</pre>
  </li>
 </ol>
 

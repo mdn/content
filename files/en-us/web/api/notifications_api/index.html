@@ -16,7 +16,7 @@ tags:
 
 <p>On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:</p>
 
-<pre class="brush: js notranslate">btn.addEventListener('click', function() {
+<pre class="brush: js">btn.addEventListener('click', function() {
   let promise = Notification.requestPermission();
   // wait for permission
 })</pre>
@@ -25,7 +25,7 @@ tags:
 
 <p>This will spawn a request dialog, along the following lines:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17008/Screen_Shot_2019-12-11_at_9.59.14_AM.png" style="border-style: solid; border-width: 1px; display: block; height: 183px; margin: 0px auto; width: 643px;"></p>
+<p><img alt="" src="screen_shot_2019-12-11_at_9.59.14_am.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>From here the user can choose to allow notifications from this origin, or block them. Once a choice has been made, the setting will generally persist for the current session.</p>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>Next, a new notification is created using the {{domxref("Notification.Notification","Notification()")}} constructor. This must be passed a title argument, and can optionally be passed an options object to specify options, such as text direction, body text, icon to display, notification sound to play, and more.</p>
 
-<p>In addition, the Notifications API spec specifies a number of additions to the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>, to allow service workers to fire notifications.</p>
+<p>In addition, the Notifications API spec specifies a number of additions to the <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a>, to allow service workers to fire notifications.</p>
 
 <div class="note">
 <p><strong>Note</strong>: To find out more about using notifications in your own app, read <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a>.</p>

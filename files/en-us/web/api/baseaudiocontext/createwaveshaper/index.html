@@ -13,12 +13,14 @@ tags:
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <code>createWaveShaper()</code> method of the {{ domxref("BaseAudioContext") }} interface creates a {{ domxref("WaveShaperNode") }}, which represents a non-linear distortion. It is used to apply distortion effects to your audio.</p>
+  <p>The <code>createWaveShaper()</code> method of the {{ domxref("BaseAudioContext") }}
+    interface creates a {{ domxref("WaveShaperNode") }}, which represents a non-linear
+    distortion. It is used to apply distortion effects to your audio.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">baseAudioCtx.createWaveShaper();</pre>
+<pre class="brush: js">baseAudioCtx.createWaveShaper();</pre>
 
 <h3 id="Description">Returns</h3>
 
@@ -26,10 +28,19 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows basic usage of an AudioContext to create a wave shaper node. For applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a><a href="https://mdn.github.io/voice-change-o-matic/"> demo</a> (<a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
+<p>The following example shows basic usage of an AudioContext to create a wave shaper
+  node. For applied examples/information, check out our <a
+    href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a><a
+    href="https://mdn.github.io/voice-change-o-matic/"> demo</a> (<a
+    href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">see
+    app.js</a> for relevant code).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Sigmoid functions are commonly used for distortion curves because of their natural properties. Their S-shape, for instance, helps create a smoother sounding result. We found the below distortion curve code on <a href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack Overflow</a>.</p>
+  <p><strong>Note</strong>: Sigmoid functions are commonly used for distortion curves
+    because of their natural properties. Their S-shape, for instance, helps create a
+    smoother sounding result. We found the below distortion curve code on <a
+      href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack
+      Overflow</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -59,31 +70,28 @@ distortion.oversample = '4x';</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createwaveshaper', 'createWaveShaper()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createwaveshaper',
+        'createWaveShaper()')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat("api.BaseAudioContext.createWaveShaper")}}</p>
-</div>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>mask-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keywords syntax */
+<pre class="brush: css no-line-numbers">/* Keywords syntax */
 mask-size: cover;
 mask-size: contain;
 
@@ -64,14 +64,14 @@ mask-size: unset;
  <li>If two values are given, the first sets width and the second sets height.</li>
 </ul>
 
-<p>Each value can be a <code><a href="#length">&lt;length&gt;</a></code>, a <code><a href="#&lt;percentage&gt;">&lt;percentage&gt;</a></code>, or <code><a href="#auto">auto</a></code>.</p>
+<p>Each value can be a <code><a href="#length">&lt;length&gt;</a></code>, a <code><a href="#percentage">&lt;percentage&gt;</a></code>, or <code><a href="#auto">auto</a></code>.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><code>&lt;length&gt;</code></dt>
+ <dt><code id="length">&lt;length&gt;</code></dt>
  <dd>A <code>{{cssxref("&lt;length&gt;")}}</code> value scales the mask image to the specified length in the corresponding dimension. Negative lengths are not allowed.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
+ <dt><code id="percentage">&lt;percentage&gt;</code></dt>
  <dd>A {{cssxref("&lt;percentage&gt;")}} value scales the mask image in the corresponding dimension to the specified percentage of the mask positioning area, which is determined by the value of {{cssxref("mask-origin")}}. The mask positioning area is, by default, the area containing the content of the box and its padding; the area may also be changed to just the content or to the area containing borders, padding and content. Negative percentages are not allowed.</dd>
  <dt><a id="auto"><code>auto</code></a></dt>
  <dd>A keyword that scales the mask image in the corresponding directions in order to maintain its intrinsic proportion.</dd>
@@ -102,14 +102,14 @@ mask-size: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_mask_size_as_a_percentage">Setting mask size as a percentage</h3>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[6] notranslate">#masked {
+<pre class="brush: css; highlight[6]">#masked {
   width: 200px;
   height: 200px;
   background: blue linear-gradient(red, blue);
@@ -124,7 +124,7 @@ mask-size: unset;
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="masked"&gt;
+<pre class="brush: html">&lt;div id="masked"&gt;
 &lt;/div&gt;
 &lt;select id="maskSize"&gt;
   &lt;option value="auto"&gt;auto&lt;/option&gt;
@@ -138,7 +138,7 @@ mask-size: unset;
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var maskSize = document.getElementById("maskSize");
+<pre class="brush: js">var maskSize = document.getElementById("maskSize");
 maskSize.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskSize = evt.target.value;
 });

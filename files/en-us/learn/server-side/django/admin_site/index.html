@@ -43,14 +43,14 @@ tags:
 
 <p>First, open <strong>admin.py</strong> in the catalog application (<strong>/locallibrary/catalog/admin.py</strong>). It currently looks like this — note that it already imports <code>django.contrib.admin</code>:</p>
 
-<pre class="brush: python notranslate">from django.contrib import admin
+<pre class="brush: python">from django.contrib import admin
 
 # Register your models here.
 </pre>
 
 <p>Register the models by copying the following text into the bottom of the file. This code imports the models and then calls <code>admin.site.register</code> to register each of them.</p>
 
-<pre class="brush: python notranslate">from .models import Author, Genre, Book, BookInstance
+<pre class="brush: python">from .models import Author, Genre, Book, BookInstance
 
 admin.site.register(Book)
 admin.site.register(Author)
@@ -68,12 +68,12 @@ admin.site.register(BookInstance)
 
 <p>Call the following command, in the same directory as <strong>manage.py</strong>, to create the superuser. You will be prompted to enter a username, email address, and <em>strong</em> password.</p>
 
-<pre class="brush: bash notranslate">python3 manage.py createsuperuser
+<pre class="brush: bash">python3 manage.py createsuperuser
 </pre>
 
 <p>Once this command completes a new superuser will have been added to the database. Now restart the development server so we can test the login:</p>
 
-<pre class="brush: bash notranslate">python3 manage.py runserver
+<pre class="brush: bash">python3 manage.py runserver
 
 </pre>
 
@@ -83,13 +83,13 @@ admin.site.register(BookInstance)
 
 <p>This part of the site displays all our models, grouped by installed application. You can click on a model name to go to a screen that lists all its associated records, and you can further click on those records to edit them. You can also directly click the <strong>Add</strong> link next to each model to start creating a record of that type.</p>
 
-<p><img alt="Admin Site - Home page" src="https://mdn.mozillademos.org/files/13975/admin_home.png" style="display: block; height: 634px; margin: 0px auto; width: 998px;"></p>
+<p><img alt="Admin Site - Home page" src="admin_home.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Click on the <strong>Add </strong>link to the right of <em>Books</em> to create a new book (this will display a dialog much like the one below). Note how the titles of each field, the type of widget used, and the <code>help_text</code> (if any) match the values you specified in the model. </p>
 
 <p>Enter values for the fields. You can create new authors or genres by pressing the <strong>+</strong> button next to the respective fields (or select existing values from the lists if you've already created them). When you're done you can press <strong>SAVE</strong>, <strong>Save and add another</strong>, or <strong>Save and continue editing</strong> to save the record.</p>
 
-<p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
+<p><img alt="Admin Site - Book Add" src="admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: At this point we'd like you to spend some time adding a few books, authors, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).</p>
@@ -97,19 +97,19 @@ admin.site.register(BookInstance)
 
 <p>When you've finished adding books, click on the <strong>Home</strong> link in the top bookmark to be taken back to the main admin page. Then click on the <strong>Books</strong> link to display the current list of books (or on one of the other links to see other model lists). Now that you've added a few books, the list might look similar to the screenshot below. The title of each book is displayed; this is the value returned in the Book model's <code>__str__()</code> method that we specified in the last article.</p>
 
-<p><img alt="Admin Site - List of book objects" src="https://mdn.mozillademos.org/files/13935/admin_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 407px; margin: 0px auto; width: 1000px;"></p>
+<p><img alt="Admin Site - List of book objects" src="admin_book_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>From this list you can delete books by selecting the checkbox next to the book you don't want, selecting the <em>delete...</em> action from the <em>Action</em> drop-down list, and then pressing the <strong>Go</strong> button. You can also add new books by pressing the <strong>ADD BOOK</strong> button. </p>
 
 <p>You can edit a book by selecting its name in the link. The edit page for a book, shown below, is almost identical to the "Add" page. The main differences are the page title (<em>Change book</em>) and the addition of <strong>Delete</strong>, <strong>HISTORY</strong> and <strong>VIEW ON SITE</strong> buttons (this last button appears because we defined the <code>get_absolute_url()</code> method in our model).</p>
 
-<p><img alt="Admin Site - Book Edit" src="https://mdn.mozillademos.org/files/13977/admin_book_modify.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
+<p><img alt="Admin Site - Book Edit" src="admin_book_modify.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Now navigate back to the <strong>Home</strong> page (using the <em>Home</em> link in the breadcrumb trail) and then view the <strong>Author</strong> and <strong>Genre</strong> lists — you should already have quite a few created from when you added the new books, but feel free to add some more.</p>
 
 <p>What you won't have is any <em>Book Instances</em>, because these are not created from Books (although you can create a <code>Book</code> from a <code>BookInstance</code> — this is the nature of the <code>ForeignKey</code> field). Navigate back to the <em>Home</em> page and press the associated <strong>Add</strong> button to display the <em>Add book instance</em> screen below. Note the large, globally unique Id, which can be used to separately identify a single copy of a book in the library.</p>
 
-<p><img alt="Admin Site - BookInstance Add" src="https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png" style="border-style: solid; border-width: 1px; display: block; height: 514px; margin: 0px auto; width: 863px;"></p>
+<p><img alt="Admin Site - BookInstance Add" src="admin_bookinstance_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Create a number of these records for each of your books. Set the status as <em>Available</em> for at least some records and <em>On loan</em> for others. If the status is <strong>not</strong> <em>Available</em>, then also set a future <em>Due back</em> date.</p>
 
@@ -152,11 +152,11 @@ admin.site.register(BookInstance)
 
 <p>Let's start with the <code>Author</code> model. Open <strong>admin.py</strong> in the catalog application (<strong>/locallibrary/catalog/admin.py</strong>). Comment out your original registration (prefix it with a #) for the <code>Author</code> model:</p>
 
-<pre class="brush: js notranslate"># admin.site.register(Author)</pre>
+<pre class="brush: js"># admin.site.register(Author)</pre>
 
 <p>Now add a new <code>AuthorAdmin</code> and registration as shown below.</p>
 
-<pre class="brush: python notranslate"># Define the admin class
+<pre class="brush: python"># Define the admin class
 class AuthorAdmin(admin.ModelAdmin):
     pass
 
@@ -166,12 +166,12 @@ admin.site.register(Author, AuthorAdmin)
 
 <p>Now we'll add <code>ModelAdmin</code> classes for <code>Book</code>, and <code>BookInstance</code>. We again need to comment out the original registrations:</p>
 
-<pre class="brush: js notranslate"># admin.site.register(Book)
+<pre class="brush: js"># admin.site.register(Book)
 # admin.site.register(BookInstance)</pre>
 
 <p>Now to create and register the new models; for the purpose of this demonstration, we'll instead use the <code>@register</code> decorator to register the models (this does exactly the same thing as the <code>admin.site.register()</code> syntax):</p>
 
-<pre class="brush: python notranslate"># Register the Admin classes for Book using the decorator
+<pre class="brush: python"># Register the Admin classes for Book using the decorator
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     pass
@@ -190,17 +190,17 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Replace your <code>AuthorAdmin</code> class with the code below. The field names to be displayed in the list are declared in a <em>tuple</em> in the required order, as shown (these are the same names as specified in your original model).</p>
 
-<pre class="brush: python notranslate">class AuthorAdmin(admin.ModelAdmin):
+<pre class="brush: python">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
 </pre>
 
 <p>Now navigate to the author list in your website. The fields above should now be displayed, like so:</p>
 
-<p><img alt="Admin Site - Improved Author List" src="https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png" style="border-style: solid; border-width: 1px; display: block; height: 302px; margin: 0px auto; width: 941px;"></p>
+<p><img alt="Admin Site - Improved Author List" src="admin_improved_author_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>For our <code>Book</code> model we'll additionally display the <code>author</code> and <code>genre</code>. The <code>author</code> is a <code>ForeignKey</code> field (one-to-many) relationship, and so will be represented by the <code>__str__()</code> value for the associated record. Replace the <code>BookAdmin</code> class with the version below.</p>
 
-<pre class="brush: python notranslate">class BookAdmin(admin.ModelAdmin):
+<pre class="brush: python">class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
@@ -212,7 +212,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Add the following code into your <code>Book</code> model (<strong>models.py</strong>). This creates a string from the first three values of the <code>genre</code> field (if they exist) and creates a <code>short_description</code> that can be used in the admin site for this method.</p>
 
-<pre class="brush: python notranslate">    def display_genre(self):
+<pre class="brush: python">    def display_genre(self):
         """Create a string for the Genre. This is required to display genre in Admin."""
         return ', '.join(genre.name for genre in self.genre.all()[:3])
 
@@ -221,7 +221,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>After saving the model and updated admin, open your website and go to the <em>Books</em> list page; you should see a book list like the one below:</p>
 
-<p><img alt="Admin Site - Improved Book List" src="https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 337px; margin: 0px auto; width: 947px;"></p>
+<p><img alt="Admin Site - Improved Book List" src="admin_improved_book_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The <code>Genre</code> model (and the <code>Language</code> model, if you defined one) both have a single field, so there is no point creating an additional model for them to display additional fields.</p>
 
@@ -233,17 +233,17 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Once you've got a lot of items in a list, it can be useful to be able to filter which items are displayed. This is done by listing fields in the <code>list_filter</code> attribute. Replace your current <code style="font-style: normal; font-weight: normal;">BookInstanceAdmin</code> class with the code fragment below.</p>
 
-<pre class="brush: python notranslate">class BookInstanceAdmin(admin.ModelAdmin):
+<pre class="brush: python">class BookInstanceAdmin(admin.ModelAdmin):
 <strong>    list_filter = ('status', 'due_back')</strong>
 </pre>
 
 <p>The list view will now include a filter box to the right. Note how you can choose dates and status to filter the values:</p>
 
-<p><img alt="Admin Site - BookInstance List Filters" src="https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png" style="height: 528px; width: 960px;"></p>
+<p><img alt="Admin Site - BookInstance List Filters" src="admin_improved_bookinstance_list_filters.png"></p>
 
-<h3 id="Organise_detail_view_layout">Organise detail view layout</h3>
+<h3 id="organize_detail_view_layout">Organize detail view layout</h3>
 
-<p>By default, the detail views lay out all fields vertically, in their order of declaration in the model. You can change the order of declaration, which fields are displayed (or excluded), whether sections are used to organise the information, whether fields are displayed horizontally or vertically, and even what edit widgets are used in the admin forms.</p>
+<p>By default, the detail views lay out all fields vertically, in their order of declaration in the model. You can change the order of declaration, which fields are displayed (or excluded), whether sections are used to organize the information, whether fields are displayed horizontally or vertically, and even what edit widgets are used in the admin forms.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The <em>LocalLibrary</em> models are relatively simple so there isn't a huge need for us to change the layout; we'll make some changes anyway however, just to show you how.</p>
@@ -253,7 +253,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Update your <code>AuthorAdmin</code> class to add the <code>fields</code> line, as shown below (in bold):</p>
 
-<pre class="brush: python notranslate">class AuthorAdmin(admin.ModelAdmin):
+<pre class="brush: python">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
 <strong>    fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]</strong>
 </pre>
@@ -262,7 +262,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>In your website go to the author detail view — it should now appear as shown below:</p>
 
-<p><img alt="Admin Site - Improved Author Detail" src="https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png" style="border-style: solid; border-width: 1px; display: block; height: 282px; margin: 0px auto; width: 928px;"></p>
+<p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can also use the <code>exclude</code> attribute to declare a list of attributes to be excluded from the form (all other attributes in the model will be displayed). </p>
@@ -274,7 +274,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>In the <code>BookInstance</code> model we have information related to what the book is (i.e. <code>name</code>, <code>imprint</code>, and <code>id</code>) and when it will be available (<code>status</code>, <code>due_back</code>). We can add these in different sections by adding the text in bold to our <code>BookInstanceAdmin</code> class. </p>
 
-<pre class="brush: python notranslate">@admin.register(BookInstance)
+<pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
     list_filter = ('status', 'due_back')
 
@@ -291,7 +291,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Now navigate to a book instance view in your website; the form should appear as shown below:</p>
 
-<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png" style="border-style: solid; border-width: 1px; display: block; height: 580px; margin: 0px auto; width: 947px;"></p>
+<p><img alt="Admin Site - Improved BookInstance Detail with sections" src="admin_improved_bookinstance_detail_sections.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Inline_editing_of_associated_records">Inline editing of associated records</h3>
 
@@ -299,7 +299,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>You can do this by declaring <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, of type <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizontal layout) or <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (vertical layout, just like the default model layout). You can add the <code>BookInstance</code> information inline to our <code>Book</code> detail by adding the lines below in bold near your <code>BookAdmin</code>:</p>
 
-<pre class="brush: python notranslate"><strong>class BooksInstanceInline(admin.TabularInline):
+<pre class="brush: python"><strong>class BooksInstanceInline(admin.TabularInline):
     model = BookInstance</strong>
 
 @admin.register(Book)
@@ -310,7 +310,7 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>Now navigate to a view for a <code>Book</code> in your website — at the bottom you should now see the book instances relating to this book (immediately below the book's genre fields):</p>
 
-<p><img alt="Admin Site - Book with Inlines" src="https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; height: 889px; margin: 0px auto; width: 937px;"></p>
+<p><img alt="Admin Site - Book with Inlines" src="admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 

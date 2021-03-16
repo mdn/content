@@ -2,28 +2,33 @@
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
+- ECMAScript 5
+- JavaScript
+- Method
+- Object
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Object.isFrozen()</code></strong> determines if an object is {{jsxref("Object.freeze()", "frozen", "", 1)}}.</p>
+<p>The <strong><code>Object.isFrozen()</code></strong> determines if an object is
+  {{jsxref("Object.freeze()", "frozen", "", 1)}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Object.isFrozen(<var>obj</var>)</pre>
+<pre class="brush: js">Object.isFrozen(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>obj</var></code></dt>
- <dd>The object which should be checked.</dd>
+  <dt><code><var>obj</var></code></dt>
+  <dd>The object which should be checked.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -32,13 +37,16 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>An object is frozen if and only if it is not {{jsxref("Object.isExtensible()", "extensible", "", 1)}}, all its properties are non-configurable, and all its data properties (that is, properties which are not accessor properties with getter or setter components) are non-writable.</p>
+<p>An object is frozen if and only if it is not {{jsxref("Object.isExtensible()",
+  "extensible", "", 1)}}, all its properties are non-configurable, and all its data
+  properties (that is, properties which are not accessor properties with getter or setter
+  components) are non-writable.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Object.isFrozen">Using Object.isFrozen</h3>
 
-<pre class="brush: js notranslate">// A new object is extensible, so it is not frozen.
+<pre class="brush: js">// A new object is extensible, so it is not frozen.
 Object.isFrozen({}); // === false
 
 // An empty object which is not extensible
@@ -123,9 +131,11 @@ Object.isSealed(frozen); // === true
 
 <h3 id="Non-object_coercion">Non-object coercion</h3>
 
-<p>In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if it was a frozen ordinary object, return <code>true</code>.</p>
+<p>In ES5, if the argument to this method is not an object (a primitive), then it will
+  cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
+  it was a frozen ordinary object, return <code>true</code>.</p>
 
-<pre class="brush: js notranslate">Object.isFrozen(1);
+<pre class="brush: js">Object.isFrozen(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isFrozen(1);
@@ -135,31 +145,28 @@ Object.isFrozen(1);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
+  <li>{{jsxref("Object.freeze()")}}</li>
+  <li>{{jsxref("Object.preventExtensions()")}}</li>
+  <li>{{jsxref("Object.isExtensible()")}}</li>
+  <li>{{jsxref("Object.seal()")}}</li>
+  <li>{{jsxref("Object.isSealed()")}}</li>
 </ul>

@@ -2,27 +2,29 @@
 title: Selection.selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
 tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+- API
+- Experimental
+- HTML Editing
+- Method
+- Reference
+- Selection
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>Selection.selectAllChildren()</code></strong> method adds all the children of the specified node to the selection. Previous selection is lost.</p>
+<p>The <strong><code>Selection.selectAllChildren()</code></strong> method adds all the
+  children of the specified node to the selection. Previous selection is lost.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>sel</em>.selectAllChildren(<em>parentNode</em>)
+<pre class="brush: js"><em>sel</em>.selectAllChildren(<em>parentNode</em>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>parentNode</code></dt>
- <dd>All children of <code>parentNode</code> will be selected. <code>parentNode</code> itself is not part of the selection.</dd>
+  <dt><code>parentNode</code></dt>
+  <dd>All children of <code>parentNode</code> will be selected. <code>parentNode</code>
+    itself is not part of the selection.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -55,18 +57,19 @@ button.addEventListener('click', (e) =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#dom-selection-selectallchildren', 'Selection.selectAllChildren()')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Current definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selection API', '#dom-selection-selectallchildren',
+        'Selection.selectAllChildren()')}}</td>
+      <td>{{Spec2('Selection API')}}</td>
+      <td>Current definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -76,5 +79,5 @@ button.addEventListener('click', (e) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
+  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
 </ul>

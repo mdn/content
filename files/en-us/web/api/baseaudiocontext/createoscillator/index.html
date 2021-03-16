@@ -12,11 +12,14 @@ tags:
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p>The <code>createOscillator()</code> method of the {{domxref("BaseAudioContext")}} interface creates an {{domxref("OscillatorNode")}}, a source representing a periodic waveform. It basically generates a constant tone.</p>
+<p>The <code>createOscillator()</code> method of the {{domxref("BaseAudioContext")}}
+  interface creates an {{domxref("OscillatorNode")}}, a source representing a periodic
+  waveform. It basically generates a constant tone.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>oscillatorNode</em> = <em>audioCtx</em>.createOscillator();</pre>
+<pre
+  class="brush: js">var <em>oscillatorNode</em> = <em>audioCtx</em>.createOscillator();</pre>
 
 <h3 id="Description">Returns</h3>
 
@@ -24,7 +27,12 @@ tags:
 
 <h2 id="Examples">Example</h2>
 
-<p>The following example shows basic usage of an AudioContext to create an oscillator node. For applied examples/information, check out our <a href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code); also see our {{domxref("OscillatorNode")}} page for more information.</p>
+<p>The following example shows basic usage of an AudioContext to create an oscillator
+  node. For applied examples/information, check out our <a
+    href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a
+    href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see
+    app.js</a> for relevant code); also see our {{domxref("OscillatorNode")}} page for
+  more information.</p>
 
 <pre class="brush: js">// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -40,31 +48,28 @@ oscillator.start();</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createoscillator', 'createOscillator')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createoscillator',
+        'createOscillator')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat("api.BaseAudioContext.createOscillator")}}</p>
-</div>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

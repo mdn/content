@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingChildren = browser.bookmarks.getChildren(
+<pre class="brush:js">var gettingChildren = browser.bookmarks.getChildren(
   id                     // string
 )
 </pre>
@@ -52,7 +52,7 @@ function onRejected(error) {
   console.log(`An error: ${error}`);
 }
 
-var gettingChildren = browser.bookmarks.getChildren("unfilled_____");
+var gettingChildren = browser.bookmarks.getChildren("unfiled_____");
 gettingChildren.then(onFulfilled, onRejected);</pre>
 
 <p>{{WebExtExamples}}</p>

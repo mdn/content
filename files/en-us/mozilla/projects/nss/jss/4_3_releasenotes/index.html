@@ -15,8 +15,8 @@ tags:
  <li>SQLite-Based Shareable Certificate and Key Databases</li>
  <li>libpkix: an RFC 3280 Compliant Certificate Path Validation Library</li>
  <li>PKCS11 needsLogin method</li>
- <li><span class="bz_default_hidden" id="summary_alias_container" style="display: inline;"><span id="short_desc_nonedit_display">support HmacSHA256, HmacSHA384, and HmacSHA512</span></span></li>
- <li><span class="bz_default_hidden" style="display: inline;"><span>support for all NSS 3.12 initialization options</span></span></li>
+ <li>support HmacSHA256, HmacSHA384, and HmacSHA512</li>
+ <li>support for all NSS 3.12 initialization options</li>
 </ul>
 
 <p>JSS 4.3 is <a class="external" href="https://www.mozilla.org/MPL">tri-licensed</a> under MPL 1.1/GPL 2.0/LGPL 2.1.</p>
@@ -28,12 +28,12 @@ tags:
 <p><strong>JSS 4.3 requires <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/nss-3.12/nss-3.12-release-notes.html" title="http://www.mozilla.org/projects/security/pki/nss/nss-3.12/nss-3.12-release-notes.html">NSS 3.12</a> or higher. </strong></p>
 
 <ul>
- <li>New <a class="link-https" href="https://wiki.mozilla.org/NSS_Shared_DB">SQLite-Based Shareable Certificate and Key Databases</a> by prepending the string "sql:" to the directory path passed to configdir parameter for Crypomanager.initialize method or using the NSS environment variable <a class="external" href="/en-US/NSS_reference/NSS_environment_variables" rel="external nofollow" title="https://developer.mozilla.org/editor/fckeditor/core/editor/en/NSS_reference/NSS_environment_variables">NSS_DEFAULT_DB_TYPE</a>.</li>
+ <li>New <a class="link-https" href="https://wiki.mozilla.org/NSS_Shared_DB">SQLite-Based Shareable Certificate and Key Databases</a> by prepending the string "sql:" to the directory path passed to configdir parameter for Crypomanager.initialize method or using the NSS environment variable <a class="external" href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_environment_variables" rel="external nofollow" title="https://developer.mozilla.org/editor/fckeditor/core/editor/en/NSS_reference/NSS_environment_variables">NSS_DEFAULT_DB_TYPE</a>.</li>
  <li>Libpkix: an RFC 3280 Compliant Certificate Path Validation Library (see <a class="external" href="http://mxr.mozilla.org/mozilla/ident?i=PKIXVerify">PKIXVerify</a>)</li>
- <li>PK11Token.needsLogin method (see <a class="external" href="http://mxr.mozilla.org/security/search?string=needsLogin&amp;case=on&amp;find=security/.ss&amp;tree=security">needsLogin</a>)</li>
- <li><span class="bz_default_hidden" id="summary_alias_container" style="display: inline;"><span id="short_desc_nonedit_display">support HmacSHA256, HmacSHA384, and HmacSHA512 (see <a class="external" href="http://mxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/tests/HMACTest.java">HMACTest.java</a>)</span></span></li>
- <li><span class="bz_default_hidden" style="display: inline;"><span>support for all NSS 3.12 initialization options (see <a class="external" href="http://mxr.mozilla.org/security/ident?i=InitializationValues">InitializationValues</a>)</span></span></li>
- <li>New SSL error codes (see <a class="external" href="http://mxr.mozilla.org/security/source/security/jss/org/mozilla/jss/util/SSLerrs.h" rel="freelink">http://mxr.mozilla.org/security/sour...util/SSLerrs.h</a>)
+ <li>PK11Token.needsLogin method (see needsLogin)</li>
+ <li>support HmacSHA256, HmacSHA384, and HmacSHA512 (see <a class="external" href="http://mxr.mozilla.org/mozilla/source/security/jss/org/mozilla/jss/tests/HMACTest.java">HMACTest.java</a>)</li>
+ <li>support for all NSS 3.12 initialization options (see InitializationValues)</li>
+ <li>New SSL error codes (see https://mxr.mozilla.org/security/sour...util/SSLerrs.h)
   <ul>
    <li>SSL_ERROR_UNSUPPORTED_EXTENSION_ALERT<br>
     SSL_ERROR_CERTIFICATE_UNOBTAINABLE_ALERT<br>
@@ -42,7 +42,7 @@ tags:
     SSL_ERROR_BAD_CERT_HASH_VALUE_ALERT</li>
   </ul>
  </li>
- <li>New TLS cipher suites (see <a class="external" href="http://mxr.mozilla.org/security/source/security/jss/org/mozilla/jss/ssl/SSLSocket.java" rel="freelink">http://mxr.mozilla.org/security/sour...SSLSocket.java</a>):
+ <li>New TLS cipher suites (see https://mxr.mozilla.org/security/sour...SSLSocket.java):
   <ul>
    <li>TLS_RSA_WITH_CAMELLIA_128_CBC_SHA<br>
     TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA<br>
@@ -88,7 +88,7 @@ tags:
  <li>Javadoc <a href="/javadoc">[online]</a> <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_RTM/doc/JSS_4_3_RTM-doc.zip">[zipped]</a></li>
  <li>Read the instructions on <a href="/using_jss.html" title="using_jss.html">using JSS</a>.</li>
  <li>Source may be viewed with a browser (via the MXR tool) at <a class="external" href="http://mxr.mozilla.org/mozilla/source/security/jss/"> http://mxr.mozilla.org/mozilla/source/security/jss/</a></li>
- <li>The RUN TIME behavior of JSS can be affected by the <a class="internal" href="/en-US/NSS_reference/NSS_environment_variables" title="En/NSS reference/NSS environment variables">NSS Environment Variables</a>. </li>
+ <li>The RUN TIME behavior of JSS can be affected by the <a class="internal" href="/en-US/docs/Mozilla/Projects/NSS/Reference/NSS_environment_variables">NSS Environment Variables</a>. </li>
 </ul>
 
 <h3 id="Platform_Information">Platform Information</h3>

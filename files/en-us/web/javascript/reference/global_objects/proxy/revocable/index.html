@@ -2,30 +2,31 @@
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+- ECMAScript 2015
+- JavaScript
+- Method
+- Proxy
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>Proxy.revocable()</strong></code> method is used to create a revocable {{jsxref("Proxy")}} object.</p>
+<p>The <code><strong>Proxy.revocable()</strong></code> method is used to create a
+  revocable {{jsxref("Proxy")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Proxy.revocable(<var>target</var>, <var>handler</var>);
+<pre class="brush: js">Proxy.revocable(<var>target</var>, <var>handler</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<div>
 <dl>
- <dt><code><var>target</var></code></dt>
- <dd>A target object to wrap with <code>Proxy</code>. It can be any sort of object, including a native array, a function, or even another proxy.</dd>
- <dt><code><var>handler</var></code></dt>
- <dd>An object whose properties are functions define the behavior of proxy <code><var>p</var></code> when an operation is performed on it.</dd>
+  <dt><code><var>target</var></code></dt>
+  <dd>A target object to wrap with <code>Proxy</code>. It can be any sort of object,
+    including a native array, a function, or even another proxy.</dd>
+  <dt><code><var>handler</var></code></dt>
+  <dd>An object whose properties are functions define the behavior of proxy
+    <code><var>p</var></code> when an operation is performed on it.</dd>
 </dl>
-</div>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -33,16 +34,20 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>A revocable <code>Proxy</code> is an object with following two properties <code>{proxy: proxy, revoke: revoke}</code>.</p>
+<p>A revocable <code>Proxy</code> is an object with following two properties
+  <code>{proxy: proxy, revoke: revoke}</code>.</p>
 
 <dl>
- <dt><code>proxy</code></dt>
- <dd>A Proxy object created with <code>new Proxy(target, handler)</code> call.</dd>
- <dt><code>revoke</code></dt>
- <dd>A function with no argument to invalidate (switch off) the <code>proxy</code>.</dd>
+  <dt><code>proxy</code></dt>
+  <dd>A Proxy object created with <code>new Proxy(target, handler)</code> call.</dd>
+  <dt><code>revoke</code></dt>
+  <dd>A function with no argument to invalidate (switch off) the <code>proxy</code>.</dd>
 </dl>
 
-<p>If the <code>revoke()</code> function gets called, the proxy becomes unusable: Any trap to a handler will throw a {{jsxref("TypeError")}}. Once a proxy is revoked, it will remain revoked and can be garbage collected. Calling <code>revoke()</code> again has no effect.</p>
+<p>If the <code>revoke()</code> function gets called, the proxy becomes unusable: Any trap
+  to a handler will throw a {{jsxref("TypeError")}}. Once a proxy is revoked, it will
+  remain revoked and can be garbage collected. Calling <code>revoke()</code> again has no
+  effect.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -67,16 +72,17 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy.revocable', 'Proxy Revocation Functions')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-proxy.revocable', 'Proxy Revocation Functions')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -86,5 +92,5 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Proxy")}}</li>
+  <li>{{jsxref("Proxy")}}</li>
 </ul>

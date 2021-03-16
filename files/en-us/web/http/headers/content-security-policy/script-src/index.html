@@ -38,7 +38,7 @@ tags:
 
 <p>One or more sources can be allowed for the <code>script-src</code> policy:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: script-src &lt;source&gt;;
+<pre class="brush: html">Content-Security-Policy: script-src &lt;source&gt;;
 Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -52,19 +52,19 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
 
 <p>Given this CSP header:</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: script-src https://example.com/</pre>
 
 <p>the following script is blocked and won't be loaded or executed:</p>
 
-<pre class="brush: html notranslate">&lt;script src="https://not-example.com/js/library.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html">&lt;script src="https://not-example.com/js/library.js"&gt;&lt;/script&gt;</pre>
 
 <p>Note that inline event handlers are blocked as well:</p>
 
-<pre class="brush: html notranslate">&lt;button id="btn" onclick="doSomething()"&gt;</pre>
+<pre class="brush: html">&lt;button id="btn" onclick="doSomething()"&gt;</pre>
 
 <p>You should replace them with {{domxref("EventTarget.addEventListener", "addEventListener")}} calls:</p>
 
-<pre class="brush: js notranslate">document.getElementById("btn").addEventListener('click', doSomething);</pre>
+<pre class="brush: js">document.getElementById("btn").addEventListener('click', doSomething);</pre>
 
 <h3 id="Unsafe_inline_script">Unsafe inline script</h3>
 
@@ -74,32 +74,32 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
 
 <p>To allow inline scripts and inline event handlers, <code>'unsafe-inline'</code>, a nonce-source or a hash-source that matches the inline block can be specified.</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src 'unsafe-inline';
+<pre class="brush: bash">Content-Security-Policy: script-src 'unsafe-inline';
 </pre>
 
 <p>The above Content Security Policy will allow inline {{HTMLElement("script")}} elements</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   var inline = 1;
 &lt;/script&gt;</pre>
 
 <p>You can use a nonce-source to only allow specific inline script blocks:</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src 'nonce-2726c7f26c'</pre>
+<pre class="brush: bash">Content-Security-Policy: script-src 'nonce-2726c7f26c'</pre>
 
 <p>You will have to set the same nonce on the {{HTMLElement("script")}} element:</p>
 
-<pre class="brush: html notranslate">&lt;script nonce="2726c7f26c"&gt;
+<pre class="brush: html">&lt;script nonce="2726c7f26c"&gt;
   var inline = 1;
 &lt;/script&gt;</pre>
 
 <p>Alternatively, you can create hashes from your inline scripts. CSP supports sha256, sha384 and sha512.</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='</pre>
+<pre class="brush: bash">Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='</pre>
 
 <p>When generating the hash, don't include the {{HTMLElement("script")}} tags and note that capitalization and whitespace matter, including leading or trailing whitespace.</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;var inline = 1;&lt;/script&gt;</pre>
+<pre class="brush: html">&lt;script&gt;var inline = 1;&lt;/script&gt;</pre>
 
 <h3 id="Unsafe_eval_expressions">Unsafe eval expressions</h3>
 
@@ -118,20 +118,20 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
  <li>{{domxref("window.execScript")}} {{non-standard_inline}} (IE &lt; 11 only)</li>
 </ul>
 
-<h3 id="strict-dynamic">strict-dynamic</h3>
+<h3 id="examples-strict-dynamic">strict-dynamic</h3>
 
 <p>The <code>'strict-dynamic'</code> source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script. At the same time, any whitelist or source expressions such as <code>'self'</code> or <code>'unsafe-inline'</code> will be ignored. For example, a policy such as <code>script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/</code> would allow loading of a root script with <code>&lt;script nonce="R4nd0m" src="https://example.com/loader.js"&gt;</code> and propagate that trust to any script loaded by <code>loader.js</code>, but disallow loading scripts from <code>https://whitelisted.com/</code> unless accompanied by a nonce or loaded from a trusted script.</p>
 
-<pre class="brush: bash notranslate">script-src 'strict-dynamic' 'nonce-<em>someNonce</em>'</pre>
+<pre class="brush: bash">script-src 'strict-dynamic' 'nonce-<em>someNonce</em>'</pre>
 
 <p><em>Or</em></p>
 
-<pre class="brush: bash notranslate">script-src 'strict-dynamic' 'sha256-<em>base64EncodedHash</em>'</pre>
+<pre class="brush: bash">script-src 'strict-dynamic' 'sha256-<em>base64EncodedHash</em>'</pre>
 
 <p>It is possible to deploy <code>strict-dynamic</code> in a backwards compatible way, without requiring user-agent sniffing.<br>
  The policy:</p>
 
-<pre class="brush: bash notranslate">script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'</pre>
+<pre class="brush: bash">script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'</pre>
 
 <p>will act like <code>'unsafe-inline' https:</code> in browsers that support CSP1, <code>https: 'nonce-abcdefg'</code> in browsers that support CSP2, and <code>'nonce-abcdefg' 'strict-dynamic'</code> in browsers that support CSP3.</p>
 

@@ -2,42 +2,49 @@
 title: DataTransfer.mozTypesAt()
 slug: Web/API/DataTransfer/mozTypesAt
 tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
+- API
+- Method
+- Non-standard
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
 <p>{{ Non-standard_header() }}{{deprecated_header}}</p>
 
-<p>The <strong><code>DataTransfer.mozTypesAt()</code></strong> method returns a list of the format types that are stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.</p>
+<p>The <strong><code>DataTransfer.mozTypesAt()</code></strong> method returns a list of
+  the format types that are stored for an item at the specified index. If the index is not
+  in the range from 0 to the number of items minus one, an empty string list is returned.
+</p>
 
 <div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">nsIVariant <em>dataTransfer</em>.mozTypesAt(index);
+<pre class="brush: js">nsIVariant <em>dataTransfer</em>.mozTypesAt(index);
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
- <dt><em>index</em></dt>
- <dd>A <code>unsigned long</code> that is the index of the data for which to retrieve the types.</dd>
+  <dt><em>index</em></dt>
+  <dd>A <code>unsigned long</code> that is the index of the data for which to retrieve the
+    types.</dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
 
 <dl>
- <dt>{{interface("nsIVariant")}}</dt>
- <dd>A list of data formats (which are {{domxref("DOMString","strings")}}). If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.</dd>
+  <dt>{{interface("nsIVariant")}}</dt>
+  <dd>A list of data formats (which are {{domxref("DOMString","strings")}}). If the index
+    is not in the range from 0 to the number of items minus one, an empty string list is
+    returned.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows the use of the <code>mozTypesAt()</code> method in a {{event("drop")}} event handler.</p>
+<p>This example shows the use of the <code>mozTypesAt()</code> method in a
+  {{event("drop")}} event handler.</p>
 
 <pre class="brush: js">function drop_handler(event)
 {
@@ -69,7 +76,3 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.DataTransfer.mozTypesAt")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<p><a> </a></p>

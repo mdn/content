@@ -1,0 +1,59 @@
+---
+title: Element.ariaValueMax
+slug: Web/API/Element/ariaValueMax
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaValueMax
+  - AriaAttributes
+  - AriaMixin
+  - Element
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaValueMax</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> attribute, which defines the maximum allowed value for a range widget.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaValueMax</var> = element.ariaValueMax;
+<var>element</var>.ariaValueMax = <var>ariaValueMax</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} which contains a number.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-valuemax</code> attribute on the element with an ID of <code>slider</code> is set to "7". Using <code>ariaValueMax</code> we update the value to "6".</p>
+
+<pre class="brush: html">&lt;div role="slider" aria-valuenow="1"
+  aria-valuemin="1" aria-valuemax="7"
+	aria-valuetext="Sunday"&gt;</pre>
+
+<pre class="brush: js">let el = document.getElementById('slider');
+console.log(el.ariaValueMax); // 7
+el.ariaValueMax = "6";
+console.log(el.ariaValueMax); // 6</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariavaluemax','ariaValueMax')}}</td>
+   <td>{{Spec2('ARIA 1.2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Element.ariaValueMax")}}</p>

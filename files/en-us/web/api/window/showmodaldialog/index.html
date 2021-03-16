@@ -2,85 +2,102 @@
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
 tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Method
-  - Window
+- API
+- Deprecated
+- HTML DOM
+- Method
+- Window
 ---
-<div>{{ Fx_minversion_header(3) }} {{ obsolete_header() }}{{APIRef}}</div>
+<div>{{Fx_minversion_header(3)}}{{deprecated_header}}{{APIRef}}</div>
 
 <div class="warning">
-<p><strong><em>This feature has been removed. Please fix your Web sites and applications</em></strong>.</p>
+  <p><strong><em>This feature has been removed. Please fix your Web sites and
+        applications</em></strong>.</p>
 
-<p>This method was removed in Chrome 43 and Firefox 56.</p>
+  <p>This method was removed in Chrome 43 and Firefox 56.</p>
 </div>
 
-<p><span class="seoSummary">The <strong><code>Window.showModalDialog()</code></strong> created and displayed a modal dialog box containing a specified HTML document.</span></p>
+<p><span class="seoSummary">The <strong><code>Window.showModalDialog()</code></strong>
+    created and displayed a modal dialog box containing a specified HTML document.</span>
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>returnVal</var> = window.showModalDialog(<var>uri</var>[, <var>arguments</var>][, <var>options</var>]);
+<pre class="brush: js"><var>returnVal</var> = window.showModalDialog(<var>uri</var>[, <var>arguments</var>][, <var>options</var>]);
 </pre>
 
 <ul>
- <li><code>returnVal</code> holds the <code>returnValue</code> property as set by the document specified by <code>uri</code>.</li>
- <li><code>uri</code> is the URL of the document to display in the dialog.</li>
- <li><code>arguments</code> is an optional variant containing values passed to the dialog; these are made available in the <code><a href="/en-US/docs/DOM/window">window</a></code> object's <code><a href="/en-US/docs/DOM/window.dialogArguments">window.dialogArguments</a></code> property.</li>
- <li><code>options</code> is an optional string specifying window ornamentation for the dialog, using one or more semicolon delimited values:</li>
+  <li><code>returnVal</code> holds the <code>returnValue</code> property as set by the
+    document specified by <code>uri</code>.</li>
+  <li><code>uri</code> is the URL of the document to display in the dialog.</li>
+  <li><code>arguments</code> is an optional variant containing values passed to the
+    dialog; these are made available in the
+    <code><a href="/en-US/docs/DOM/window">window</a></code> object's
+    <code><a href="/en-US/docs/DOM/window.dialogArguments">window.dialogArguments</a></code>
+    property.</li>
+  <li><code>options</code> is an optional string specifying window ornamentation for the
+    dialog, using one or more semicolon delimited values:</li>
 </ul>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Syntax</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>center: {on | off | yes | no | 1 | 0 }</code></td>
-   <td>If <code>on</code>, <code>yes</code>, or <code>1</code>, the dialog window is centered on the desktop; otherwise it's hidden. Default is <code>yes</code>.</td>
-  </tr>
-  <tr>
-   <td><code>dialogheight: <em>height</em></code></td>
-   <td>The height of the dialog box in pixels.</td>
-  </tr>
-  <tr>
-   <td><code>dialogleft: <em>left</em></code></td>
-   <td>Distance of the dialog box from the left edge of the desktop.</td>
-  </tr>
-  <tr>
-   <td><code>dialogwidth: <em>width</em></code></td>
-   <td>The width of the dialog box in pixels.</td>
-  </tr>
-  <tr>
-   <td><code>dialogtop: <em>top</em></code></td>
-   <td>Distance of the dialog box from the top edge of the desktop.</td>
-  </tr>
-  <tr>
-   <td><code>resizable: {on | off | yes | no | 1 | 0 }</code></td>
-   <td>If this argument's value is <code>on</code>, <code>yes</code>, or 1, the dialog window can be resized by the user; otherwise its size is fixed. The default value is <code>no</code>.</td>
-  </tr>
-  <tr>
-   <td><code>scroll: {on | off | yes | no | 1 | 0 }</code></td>
-   <td>If <code>on</code>, <code>yes</code>, or 1, the dialog window has scroll bars; otherwise its size is fixed. Default is <code>no</code>.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Syntax</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>center: {on | off | yes | no | 1 | 0 }</code></td>
+      <td>If <code>on</code>, <code>yes</code>, or <code>1</code>, the dialog window is
+        centered on the desktop; otherwise it's hidden. Default is <code>yes</code>.</td>
+    </tr>
+    <tr>
+      <td><code>dialogheight: <em>height</em></code></td>
+      <td>The height of the dialog box in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>dialogleft: <em>left</em></code></td>
+      <td>Distance of the dialog box from the left edge of the desktop.</td>
+    </tr>
+    <tr>
+      <td><code>dialogwidth: <em>width</em></code></td>
+      <td>The width of the dialog box in pixels.</td>
+    </tr>
+    <tr>
+      <td><code>dialogtop: <em>top</em></code></td>
+      <td>Distance of the dialog box from the top edge of the desktop.</td>
+    </tr>
+    <tr>
+      <td><code>resizable: {on | off | yes | no | 1 | 0 }</code></td>
+      <td>If this argument's value is <code>on</code>, <code>yes</code>, or 1, the dialog
+        window can be resized by the user; otherwise its size is fixed. The default value
+        is <code>no</code>.</td>
+    </tr>
+    <tr>
+      <td><code>scroll: {on | off | yes | no | 1 | 0 }</code></td>
+      <td>If <code>on</code>, <code>yes</code>, or 1, the dialog window has scroll bars;
+        otherwise its size is fixed. Default is <code>no</code>.</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>{{Note("Firefox does not implement the <code>dialogHide</code>, <code>edge</code>, <code>status</code>, or <code>unadorned</code> arguments.")}}</p>
+<p>{{Note("Firefox does not implement the <code>dialogHide</code>, <code>edge</code>,
+  <code>status</code>, or <code>unadorned</code> arguments.")}}</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p><a href="/samples/domref/showModalDialog.html">Try out <code>showModalDialog()</code></a>.</p>
+<p><a href="/samples/domref/showModalDialog.html">Try out
+    <code>showModalDialog()</code></a>.</p>
 
 <h2 id="Notes">Notes</h2>
 
-<p><code>showModalDialog()</code> was briefly standardized as part of HTML5. The third argument for additional options was not present in the HTML5 version.</p>
+<p><code>showModalDialog()</code> was briefly standardized as part of HTML5. The third
+  argument for additional options was not present in the HTML5 version.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <ul>
- <li><a href="https://msdn.microsoft.com/en-us/library/ms536759(VS.85).aspx">MSDN page for <code>showModalDialog</code></a></li>
+  <li><a href="https://msdn.microsoft.com/en-us/library/ms536759(VS.85).aspx">MSDN page
+      for <code>showModalDialog</code></a></li>
 </ul>
 
 <h2 id="Compatibility">Browser compatibility</h2>
@@ -90,6 +107,9 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTMLElement("dialog")}}, a replacement for <code>window.showModalDialog()</code>.</li>
- <li><a href="https://github.com/niutech/showModalDialog">showModalDialog Polyfill</a> using a {{HTMLElement("dialog")}} and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a></li>
+  <li>{{HTMLElement("dialog")}}, a replacement for <code>window.showModalDialog()</code>.
+  </li>
+  <li><a href="https://github.com/niutech/showModalDialog">showModalDialog Polyfill</a>
+    using a {{HTMLElement("dialog")}} and <a
+      href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">generators</a></li>
 </ul>

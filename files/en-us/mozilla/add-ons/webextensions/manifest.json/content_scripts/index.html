@@ -21,7 +21,7 @@ tags:
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
 "content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
@@ -89,17 +89,17 @@ tags:
   <tr>
    <td><a id="exclude_globs"><code>exclude_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of strings containing wildcards. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="exclude_matches"><code>exclude_matches</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="include_globs"><code>include_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of strings containing wildcards. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="js"><code>js</code></a></td>
@@ -109,8 +109,8 @@ tags:
 
     <p>Files are injected in the order given. This means that, for example, if you include jQuery here followed by another content script, like this...</p>
 
-    <pre class="brush: json no-line-numbers notranslate">
-<code>"js": ["jquery.js", "my-content-script.js"]</code></pre>
+    <pre class="brush: json no-line-numbers">
+&quot;js&quot;: [&quot;jquery.js&quot;, &quot;my-content-script.js&quot;]</pre>
 
     <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
 
@@ -121,13 +121,13 @@ tags:
    <td><code><a id="match_about_blank">match_about_blank</a></code></td>
    <td><code>Boolean</code></td>
    <td>
-    <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
+    <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
 
     <p>This is especially useful to run scripts in empty iframes , whose URL is <code>"about:blank"</code>. To do this you should also set the <code>all_frames</code> key.</p>
 
     <p>For example, suppose you have a <code>content_scripts</code> key like this:</p>
 
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
   "content_scripts": [
     {
       "js": ["my-script.js"],
@@ -142,7 +142,7 @@ tags:
     <div class="notecard note">
     <p><strong>Note: </strong><code>match_about_blank</code> is supported in Firefox from version 52. </p>
 
-    <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> .</p>
+    <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> .</p>
     </div>
    </td>
   </tr>
@@ -150,7 +150,7 @@ tags:
    <td><a id="matches"><code>matches</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</p>
+    <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</p>
 
     <p>This is the only mandatory key.</p>
    </td>
@@ -195,7 +195,7 @@ tags:
 
 <p>To match one of these properties, a URL must match at least one of the items in its array. For example, given a property like:</p>
 
-<pre class="brush: json  no-line-numbers notranslate">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
+<pre class="brush: json  no-line-numbers">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
 
 <p>Both <code>http://example.org/</code> and <code>http://example.com/</code> will match.</p>
 
@@ -223,7 +223,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json  no-line-numbers notranslate">"content_scripts": [
+<pre class="brush: json  no-line-numbers">"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["borderify.js"]
@@ -232,7 +232,7 @@ tags:
 
 <p>This injects a single content script <code>borderify.js</code> into all pages under <code>mozilla.org</code> or any of its subdomains, whether served over HTTP or HTTPS.</p>
 
-<pre class="brush: json  no-line-numbers notranslate">  "content_scripts": [
+<pre class="brush: json  no-line-numbers">  "content_scripts": [
     {
       "exclude_matches": ["*://developer.mozilla.org/*"],
       "matches": ["*://*.mozilla.org/*"],

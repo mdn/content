@@ -13,17 +13,21 @@ tags:
 ---
 <p>{{APIRef("Gamepad API")}}</p>
 
-<p>The <code><strong>Gamepad.axes</strong></code> property of the {{domxref("Gamepad") }} interface returns an array representing the controls with axes present on the device (e.g. analog thumb sticks).</p>
+<p>The <code><strong>Gamepad.axes</strong></code> property of the {{domxref("Gamepad") }}
+  interface returns an array representing the controls with axes present on the device
+  (e.g. analog thumb sticks).</p>
 
-<p>Each entry in the array is a floating point value in the range -1.0 – 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).</p>
+<p>Each entry in the array is a floating point value in the range -1.0 – 1.0, representing
+  the axis position from the lowest value (-1.0) to the highest value (1.0).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">double[]</span>            <span class="idlAttrName">axes</span>;</span></span></pre>
+<pre
+  class="brush: js"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">double[]</span>            <span class="idlAttrName">axes</span>;</span></span></pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">function gameLoop() {
+<pre class="brush: js">function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
   } else {
@@ -53,18 +57,18 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "#dom-gamepad-axes", "Gamepad.axes")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Gamepad", "#dom-gamepad-axes", "Gamepad.axes")}}</td>
+      <td>{{Spec2("Gamepad")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -73,4 +77,4 @@ tags:
 
 <h2 id="See_also">See also</h2>
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></p>
+<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>

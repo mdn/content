@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js; notranslate">const encoder = new TextEncoder()
+<pre class="brush: js">const encoder = new TextEncoder()
 const view = encoder.encode('€')
 console.log(view); // Uint8Array(3) [226, 130, 172]
 </pre>
@@ -40,7 +40,7 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
 
 <h2 id="Methods">Methods</h2>
 
-<p><em><em>The <code>TextEncoder</code> interface doesn't inherit any</em> method</em>.</p>
+<p><em>The <code>TextEncoder</code> interface doesn't inherit any method</em>.</p>
 
 <dl>
  <dt>{{DOMxRef("TextEncoder.prototype.encode()")}}</dt>
@@ -53,7 +53,7 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
 
 <p>The below polyfill is compliant with the standard and therefore only supports UTF-8. It is designed to work in IE5 "out of the box". However, in IE5-IE9, it will return a regular Array instead of a TypedArray. In those cases a polyfill might be impractical for large strings. Finally, note that you should run the below code through a minifier (especially closure compiler) to turn sequences like <code>0x1e &lt;&lt; 3</code> into <code>0xf0</code>. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.</p>
 
-<pre class="brush: js notranslate">if (typeof TextEncoder === "undefined") {
+<pre class="brush: js">if (typeof TextEncoder === "undefined") {
     TextEncoder=function TextEncoder(){};
     TextEncoder.prototype.encode = function encode(str) {
         "use strict";
@@ -136,10 +136,7 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.TextEncoder")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

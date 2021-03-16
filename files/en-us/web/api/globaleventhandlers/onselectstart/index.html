@@ -2,59 +2,69 @@
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/GlobalEventHandlers/onselectstart
 tags:
-  - API
-  - Event Handler
-  - Experimental
-  - GlobalEventHandlers
-  - Property
-  - Reference
-  - Selection
-  - Selection API
-  - onselectstart
+- API
+- Event Handler
+- Experimental
+- GlobalEventHandlers
+- Property
+- Reference
+- Selection
+- Selection API
+- onselectstart
 ---
 <div>{{ApiRef('DOM')}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>onselectstart</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("selectstart")}} events.</p>
+<p>The <code><strong>onselectstart</strong></code> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes {{event("selectstart")}} events.</p>
 
-<p>The <code>selectstart</code> event fires when the user starts to make a new text selection on a webpage.</p>
+<p>The <code>selectstart</code> event fires when the user starts to make a new text
+  selection on a webpage.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><em>object</em>.onselectstart = <em>functionRef</em>;
+<pre class="brush: js"><em>object</em>.onselectstart = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole argument.</p>
+<p><code>functionRef</code> is a function name or a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
+    expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole
+  argument.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">document.onselectstart = function() {
+<pre class="brush: js">document.onselectstart = function() {
   console.log('Selection started!');
 };
 </pre>
 
-<p>For a full example, see our <a href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key quote generator</a> demo.</p>
+<p>For a full example, see our <a
+    href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key
+    quote generator</a> demo.</p>
 
-<pre class="brush: js notranslate">document.onselectstart = () =&gt; {
+<pre class="brush: js">document.onselectstart = () =&gt; {
   return false; // cancel selection
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API','#dom-globaleventhandlers-onselectstart','GlobalEventHandlers.onselectstart')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selection
+        API','#dom-globaleventhandlers-onselectstart','GlobalEventHandlers.onselectstart')}}
+      </td>
+      <td>{{Spec2('Selection API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -64,6 +74,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{event("selectstart")}} event</li>
- <li>Related event handler: {{domxref("GlobalEventHandlers.onselectionchange")}}</li>
+  <li>{{event("selectstart")}} event</li>
+  <li>Related event handler: {{domxref("GlobalEventHandlers.onselectionchange")}}</li>
 </ul>

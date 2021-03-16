@@ -2,18 +2,19 @@
 title: PerformanceResourceTiming.toJSON()
 slug: Web/API/PerformanceResourceTiming/toJSON
 tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
+- API
+- Method
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p>The <strong><code>toJSON()</code></strong> method is a <em>serializer</em> that returns a JSON representation of the {{domxref("PerformanceResourceTiming")}} object.</p>
+<p>The <strong><code>toJSON()</code></strong> method is a <em>serializer</em> that returns
+  a JSON representation of the {{domxref("PerformanceResourceTiming")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">json = resourcePerfEntry.toJSON();
+<pre class="brush: js">json = resourcePerfEntry.toJSON();
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
@@ -23,8 +24,10 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt>json</dt>
- <dd>A JSON object that is the serialization of the {{domxref("PerformanceResourceTiming")}} object as a map with entries from the closest inherited interface and with entries for each of the serializable attributes.</dd>
+  <dt>json</dt>
+  <dd>A JSON object that is the serialization of the
+    {{domxref("PerformanceResourceTiming")}} object as a map with entries from the closest
+    inherited interface and with entries for each of the serializable attributes.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -42,18 +45,19 @@ console.log("PerformanceEntry.toJSON = " + s);
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-tojson', 'toJSON')}}</td>
-   <td>{{Spec2('Resource Timing 2')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-tojson',
+        'toJSON')}}</td>
+      <td>{{Spec2('Resource Timing 2')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

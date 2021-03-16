@@ -5,11 +5,11 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<div class="note"><strong>Note:</strong> This documentation describes features which are only available in the <a class="internal" href="/en/mozilla-central">mozilla-central</a> code repository.  They are not present any released version of Firefox.</div>
-<p>In addition to the normal errors and warnings provided by C++ compiler, there are often code patterns in Mozilla which are legal C++ but are nevertheless incorrect in various ways. Mozilla can now use a tool called <a href="/En/Dehydra/Installing_Dehydra">Dehydra GCC</a> to detect incorrect code and provide authors with instant feedback during the compile process.</p>
+<div class="note"><strong>Note:</strong> This documentation describes features which are only available in the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> code repository.  They are not present any released version of Firefox.</div>
+<p>In addition to the normal errors and warnings provided by C++ compiler, there are often code patterns in Mozilla which are legal C++ but are nevertheless incorrect in various ways. Mozilla can now use a tool called <a href="/en-US/Dehydra/Installing_Dehydra">Dehydra GCC</a> to detect incorrect code and provide authors with instant feedback during the compile process.</p>
 <h3 id="Using_Static_Checking">Using Static Checking</h3>
 <p>Follow these steps to use static checking:</p>
-<ul> <li>Build GCC with plugin support (see instructions on the <a href="/En/Dehydra/Installing_Dehydra">Dehydra GCC</a> page)</li> <li>Build <a href="/En/Dehydra/Installing_Dehydra">Dehydra GCC</a></li> <li>Add the following line to your <code>.mozconfig</code> file:</li>
+<ul> <li>Build GCC with plugin support (see instructions on the <a href="/en-US/Dehydra/Installing_Dehydra">Dehydra GCC</a> page)</li> <li>Build <a href="/en-US/Dehydra/Installing_Dehydra">Dehydra GCC</a></li> <li>Add the following line to your <code>.mozconfig</code> file:</li>
 </ul>
 <pre class="eval">CXX=/path/to/gcc-with-plugin-support/bin/g++
 ac_add_options --with-static-checking=/path/to/gcc_treehydra.so
@@ -18,8 +18,8 @@ ac_add_options --with-static-checking=/path/to/gcc_treehydra.so
 <p>To change the analyses that are run, edit <a class=" external" href="http://hg.mozilla.org/mozilla-central/file/tip/config/static-checking-config.mk">config/static-checking-config.mk</a>.</p>
 <h3 id="Annotations">Annotations</h3>
 <p>The following macros are currently used to annotate classes:</p>
-<ul> <li><a href="/en/NS_STACK_CLASS">NS_STACK_CLASS</a></li> <li><a href="/en/NS_FINAL_CLASS">NS_FINAL_CLASS</a></li>
+<ul> <li><a href="/en-US/docs/NS_STACK_CLASS">NS_STACK_CLASS</a></li> <li><a href="/en-US/docs/NS_FINAL_CLASS">NS_FINAL_CLASS</a></li>
 </ul>
 <p>The following macros are currently used to annotate methods:</p>
-<ul> <li><a href="/en/NS_OVERRIDE">NS_OVERRIDE</a></li>
+<ul> <li><a href="/en-US/docs/NS_OVERRIDE">NS_OVERRIDE</a></li>
 </ul>

@@ -29,23 +29,14 @@ tags:
 <p><em>Inherits properties from its parent, {{domxref("CharacterData")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("Text.assignedSlot")}} {{readonlyInline}}</dt>
+ <dd>Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
  <dt>{{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}</dt>
  <dd>
  <p>Returns a {{domxref("Boolean")}} flag indicating whether or not the text node contains only whitespace.</p>
  </dd>
  <dt>{{domxref("Text.wholeText")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMString")}} containing the text of all <code>Text</code> nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.</dd>
- <dt>{{domxref("Text.assignedSlot")}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref("HTMLSlotElement")}} object associated with the element.</dd>
-</dl>
-
-<h3 id="Properties_included_from_Slotable">Properties included from Slotable</h3>
-
-<p><em>The <code>Text</code> interface includes the following property, defined on the {{domxref("Slotable")}} mixin.</em></p>
-
-<dl>
- <dt>{{domxref("Slotable.assignedSlot")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
 </dl>
 
 <h2 id="Methods_2">Methods</h2>

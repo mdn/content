@@ -1,6 +1,6 @@
 ---
 title: '::backdrop'
-slug: 'Web/CSS/::backdrop'
+slug: Web/CSS/::backdrop
 tags:
   - API
   - CSS
@@ -20,7 +20,7 @@ tags:
 
 <p>When multiple elements have been placed into full-screen mode, the backdrop is drawn immediately beneath the frontmost such element, and on top of the older full-screen elements.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Backdrop is only displayed when dialog is opened with dialog.showModal() */
+<pre class="brush: css no-line-numbers">/* Backdrop is only displayed when dialog is opened with dialog.showModal() */
 dialog::backdrop {
   background: rgba(255,0,0,.25);
 }</pre>
@@ -31,7 +31,7 @@ dialog::backdrop {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -39,14 +39,14 @@ dialog::backdrop {
 
 <p>In this example, the backdrop style used when a video is shifted to full-screen mode is configured to be a grey-blue color rather than the black it defaults to in most browsers.</p>
 
-<pre class="brush: css notranslate">video::backdrop {
+<pre class="brush: css">video::backdrop {
   background-color: #448;
 }
 </pre>
 
 <p>The resulting screen looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16287/bbb-backdrop.png" style="height: 282px; width: 500px;"></p>
+<p><img alt="" src="bbb-backdrop.png"></p>
 
 <p><a href="https://mdn.github.io/css-examples/backdrop/index.html">See this example in action</a>, after changing the color of the background cause the video to go fullscreen to see the change to the backdrop color.</p>
 
@@ -71,10 +71,7 @@ dialog::backdrop {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("css.selectors.backdrop")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

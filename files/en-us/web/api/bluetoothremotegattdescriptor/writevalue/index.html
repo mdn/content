@@ -2,29 +2,33 @@
 title: writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
 tags:
-  - API
-  - Bluetooth
-  - BluetoothGattDescriptor
-  - BluetoothRemoteGATTDescriptor
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - writeValue()
+- API
+- Bluetooth
+- BluetoothGattDescriptor
+- BluetoothRemoteGATTDescriptor
+- Experimental
+- Property
+- Reference
+- Web Bluetooth API
+- writeValue()
 ---
 <p>{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>BluetoothRemoteGATTDescriptor</code><code>.writeValue()</code></strong> method sets the value property to the bytes contained in an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.</p>
+<p>The
+  <strong><code>BluetoothRemoteGATTDescriptor</code><code>.writeValue()</code></strong>
+  method sets the value property to the bytes contained in
+  an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">BluetoothRemoteGATTDescriptor.writeValue(<em>array</em>[]).then(function() { ... })</pre>
+<pre
+  class="brush: js">BluetoothRemoteGATTDescriptor.writeValue(<em>array</em>[]).then(function() { ... })</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>array</dt>
- <dd>Sets the value with the bytes contained in the array.</dd>
+  <dt>array</dt>
+  <dd>Sets the value with the bytes contained in the array.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -34,23 +38,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Bluetooth','#dom-bluetoothremotegattdescriptor-writevalue','writeValue()')}}</td>
-   <td>{{Spec2('Web Bluetooth')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web
+        Bluetooth','#dom-bluetoothremotegattdescriptor-writevalue','writeValue()')}}</td>
+      <td>{{Spec2('Web Bluetooth')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BluetoothRemoteGATTDescriptor.writeValue")}}</p>
-</div>

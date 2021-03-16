@@ -2,27 +2,35 @@
 title: GlobalEventHandlers.onselect
 slug: Web/API/GlobalEventHandlers/onselect
 tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - HTML DOM
-  - Property
-  - Reference
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<p>The <strong><code>onselect</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes <a href="/en-US/docs/Web/API/Element/select_event"><code>select</code> events</a>.</p>
+<p>The <strong><code>onselect</code></strong> property of the
+  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  processes <a href="/en-US/docs/Web/API/Element/select_event"><code>select</code>
+    events</a>.</p>
 
-<p>The <code>select</code> event only fires after text inside an <code>{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}</code> or {{HtmlElement("textarea")}} is selected.</p>
+<p>The <code>select</code> event only fires after text inside an
+  <code>{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}</code> or
+  {{HtmlElement("textarea")}} is selected.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>target</em>.onselect = <em>functionRef</em>;
+<pre class="brush: js"><em>target</em>.onselect = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p><code>functionRef</code> is a function name or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("UIEvent")}} object as its sole argument.</p>
+<p><code>functionRef</code> is a function name or a <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
+    expression</a>. The function receives a {{domxref("UIEvent")}} object as its sole
+  argument.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -51,29 +59,27 @@ textarea.onselect = logSelection;</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.GlobalEventHandlers.onselect")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Element/select_event"><code>select</code> event</a></li>
+  <li><a href="/en-US/docs/Web/API/Element/select_event"><code>select</code> event</a>
+  </li>
 </ul>

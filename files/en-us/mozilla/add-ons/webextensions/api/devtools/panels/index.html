@@ -1,0 +1,108 @@
+---
+title: devtools.panels
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
+tags:
+  - API
+  - Add-ons
+  - Extensions
+  - Reference
+  - WebExtensions
+  - devtools.panels
+---
+<div>{{AddonSidebar}}</div>
+
+<div class="note">
+<p>Although the APIs are based on the <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>, there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis">Limitations of the devtools APIs</a>.</p>
+</div>
+
+<p>The <code>devtools.panels</code> API lets a devtools extension define its user interface inside the devtools window.</p>
+
+<p>The devtools window hosts a number of separate tools - the JavaScript Debugger, Network Monitor, and so on. A row of tabs across the top lets the user switch between the different tools. The window hosting each tool's user interface is called a "panel".</p>
+
+<p>With the <code>devtools.panels</code> API you can create new panels in the devtools window.</p>
+
+<p>Like all the <code>devtools</code> APIs, this API is only available to code running in the document defined in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> for more.</p>
+
+<h2 id="Types">Types</h2>
+
+<dl>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel">devtools.panels.ElementsPanel</a></code></dt>
+ <dd>Represents the HTML/CSS inspector in the browser's devtools.</dd>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel">devtools.panels.ExtensionPanel</a></code></dt>
+ <dd>Represents a devtools panel created by the extension.</dd>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane">devtools.panels.ExtensionSidebarPane</a></code></dt>
+ <dd>Represents a pane that an extension has added to the HTML/CSS inspector in the browser's devtools.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements">devtools.panels.elements</a></code></dt>
+ <dd>A reference to an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel">ElementsPanel</a></code> object.</dd>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName">devtools.panels.themeName</a></code></dt>
+ <dd>The name of the current devtools theme.</dd>
+</dl>
+
+<h2 id="Functions">Functions</h2>
+
+<dl>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create">devtools.panels.create()</a></code></dt>
+ <dd>Creates a new devtools panel.</dd>
+</dl>
+
+<h2 id="Events">Events</h2>
+
+<dl>
+ <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged">devtools.panels.onThemeChanged</a></code></dt>
+ <dd>Fired when the devtools theme changes.</dd>
+</dl>
+
+<h2 id="Example_extensions">Example extensions</h2>
+
+<ul>
+ <li><a class="external" href="https://github.com/mdn/webextensions-examples/tree/master/devtools-panels" rel="noopener">devtools-panels</a></li>
+</ul>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("webextensions.api.devtools.panels", 2)}}</p>
+
+<p>{{WebExtExamples("h2")}}</p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+</div>
+
+<div class="hidden">
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+</div>

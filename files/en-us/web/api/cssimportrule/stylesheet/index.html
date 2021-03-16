@@ -1,0 +1,74 @@
+---
+title: CSSImportRule.stylesheet
+slug: Web/API/CSSImportRule/stylesheet
+tags:
+- API
+- CSSOM
+- Property
+- Reference
+- CSSImportRule
+- Read-only
+---
+<p>{{APIRef("CSSOM")}}</p>
+
+<p class="summary">The read-only <strong><code>styleSheet</code></strong> property of the
+	{{domxref("CSSImportRule")}} interface returns the CSS Stylesheet specified by the
+	{{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. This will be
+	in the form of a {{domxref("CSSStyleSheet")}} object.</p>
+
+<p>An {{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> always has
+	an associated stylesheet.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre
+	class="brush: js">var <var>href</var> = <var>CSSImportRule</var>.styleSheet;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("CSSStyleSheet")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
+	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
+	<code>styleSheet</code> property returns the imported stylesheet.</p>
+
+<pre class="brush:css">@import url("style.css") screen;</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].styleSheet); //returns a CSSStyleSheet object</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSSOM', '#dom-cssimportrule-stylesheet',
+				'CSSImportRule.styleSheet')}}</td>
+			<td>{{Spec2('CSSOM')}}</td>
+			<td>No changes from {{SpecName('DOM2 Style')}}</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSImportRule', 'CSSImportRule')}}
+			</td>
+			<td>{{Spec2('DOM2 Style')}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured
+	data. If you'd like to contribute to the data, please check out <a
+		href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+	and send us a pull request.</div>
+
+<p>{{Compat("api.CSSImportRule.styleSheet")}}</p>

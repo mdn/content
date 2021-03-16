@@ -9,7 +9,7 @@ tags:
 <p>This chapter describes the functions and related types used to work with a certificate database such as the cert8.db database provided with NSS. This was converted from <a class="external" href="https://www.mozilla.org/projects/security/pki/nss/ref/ssl/sslcrt.html">"Chapter 5: Certificate Functions"</a>.</p>
 
 <ul>
- <li><a href="/en-US/docs/NSS_reference">Back to the NSS reference main page.</a></li>
+ <li><a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Back to the NSS reference main page.</a></li>
  <li><a href="NSS_Certificate_Functions#Validating_Certificates">Validating Certificates</a></li>
  <li><a href="NSS_Certificate_Functions#Manipulating_Certificates">Manipulating Certificates</a></li>
  <li><a href="NSS_Certificate_Functions#Getting_Certificate_Information">Getting Certificate Information</a></li>
@@ -32,10 +32,10 @@ tags:
 
 <h6 id="Syntax">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECStatus CERT_VerifyCertNow(
+<pre class="eval">SECStatus CERT_VerifyCertNow(
   CERTCertDBHandle *handle,
   CERTCertificate *cert,
   PRBool checkSig,
@@ -90,14 +90,14 @@ tags:
 
 <h5 id="CERT_VerifyCert">CERT_VerifyCert</h5>
 
-<p>Checks that the a given aribrary date is within the certificate's validity period and that the CA signature on the certificate is valid. It also optionally returns a log of all the problems with the chain. Calling CERT_VerifyCert with the paramters: CERT_VerifyCert(handle, cert, checkSig, certUsage, PR_Now(), wincx, NULL) is equivalent to calling CERT_VerifyNow(handle, cert, checkSig, certUsage, wincx).</p>
+<p>Checks that the a given aribrary date is within the certificate's validity period and that the CA signature on the certificate is valid. It also optionally returns a log of all the problems with the chain. Calling CERT_VerifyCert with the parameters: CERT_VerifyCert(handle, cert, checkSig, certUsage, PR_Now(), wincx, NULL) is equivalent to calling CERT_VerifyNow(handle, cert, checkSig, certUsage, wincx).</p>
 
 <h6 id="Syntax_2">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECStatus CERT_VerifyCert(
+<pre class="eval">SECStatus CERT_VerifyCert(
   CERTCertDBHandle *handle,
   CERTCertificate *cert,
   PRBool checkSig,
@@ -141,7 +141,7 @@ tags:
 
 <p><em>wincx</em>The PIN argument value to pass to PK11 functions. See description below for more information.</p>
 
-<p><em>log</em>Optional certificate log which returns all the errors in processing a given certificate chain. See <a href="/en-US/NSS_CERTVerify_Log">Using CERTVerifyLog</a> for more information.</p>
+<p><em>log</em>Optional certificate log which returns all the errors in processing a given certificate chain. See <a href="/en-US/docs/Mozilla/Projects/NSS/CERTVerify_Log">Using CERTVerifyLog</a> for more information.</p>
 
 <h6 id="Returns_2">Returns</h6>
 
@@ -162,10 +162,10 @@ tags:
 
 <h6 id="Syntax_3">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECStatus CERT_VerifyCertName(
+<pre class="eval">SECStatus CERT_VerifyCertName(
   CERTCertificate *cert,
   char *hostname);
 </pre>
@@ -209,11 +209,11 @@ tags:
 
 <h6 id="Syntax_4">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECCertTimeValidity CERT_CheckCertValidTimes(
+<pre class="eval">SECCertTimeValidity CERT_CheckCertValidTimes(
   CERTCertificate *cert,
   int64 t);
 </pre>
@@ -230,7 +230,7 @@ tags:
 
 <p>The function returns an enumerator of type SECCertTimeValidity:</p>
 
-<pre class="eval notranslate">typedef enum {
+<pre class="eval">typedef enum {
   secCertTimeValid,
   secCertTimeExpired,
   secCertTimeNotValidYet
@@ -243,7 +243,7 @@ tags:
 
 <h6 id="Syntax_5">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;nss.h&gt;
+<pre class="eval">#include &lt;nss.h&gt;
 
 SECStatus NSS_CmpCertChainWCANames(
   CERTCertificate *cert,
@@ -270,8 +270,8 @@ SECStatus NSS_CmpCertChainWCANames(
 <h4 id="Manipulating_Certificates">Manipulating Certificates</h4>
 
 <ul>
- <li><a href="/en-US/NSS_Certificate_Functions#CERT_DupCertificate">CERT_DupCertificate</a></li>
- <li><a href="/en-US/NSS_Certificate_Functions#CERT_DestroyCertificate">CERT_DestroyCertificate</a></li>
+ <li><a href="#cert_dupcertificate">CERT_DupCertificate</a></li>
+ <li><a href="#cert_destroycertificate">CERT_DestroyCertificate</a></li>
 </ul>
 
 <h5 id="CERT_DupCertificate">CERT_DupCertificate</h5>
@@ -280,10 +280,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_6">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertificate *CERT_DupCertificate(CERTCertificate *c)
+<pre class="eval">CERTCertificate *CERT_DupCertificate(CERTCertificate *c)
 </pre>
 
 <h6 id="Parameter">Parameter</h6>
@@ -306,11 +306,11 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_7">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
 </pre>
 
-<pre class="eval notranslate">void CERT_DestroyCertificate(CERTCertificate *cert);
+<pre class="eval">void CERT_DestroyCertificate(CERTCertificate *cert);
 </pre>
 
 <h6 id="Parameters_6">Parameters</h6>
@@ -328,11 +328,11 @@ SECStatus NSS_CmpCertChainWCANames(
 <h4 id="Getting_Certificate_Information">Getting Certificate Information</h4>
 
 <ul>
- <li><a href="/en-US/NSS_Certificate_Functions#CERT_FindCertByName">CERT_FindCertByName</a></li>
- <li><a href="/en-US/NSS_Certificate_Functions#CERT_GetCertNicknames">CERT_GetCertNicknames</a></li>
- <li><a href="/en-US/NSS_Certificate_Functions#CERT_FreeNicknames">CERT_FreeNicknames</a></li>
- <li><a href="/en-US/NSS_Certificate_Functions#CERT_GetDefaultCertDB">CERT_GetDefaultCertDB</a></li>
- <li><a href="/en-US/NSS_Certificate_Functions#NSS_FindCertKEAType">NSS_FindCertKEAType</a></li>
+ <li><a href="#cert_findcertbyname">CERT_FindCertByName</a></li>
+ <li><a href="#cert_getcertnicknames">CERT_GetCertNicknames</a></li>
+ <li><a href="#cert_freenicknames">CERT_FreeNicknames</a></li>
+ <li><a href="#cert_getdefaultcertdb">CERT_GetDefaultCertDB</a></li>
+ <li><a href="#nss_findcertkeatype">NSS_FindCertKEAType</a></li>
 </ul>
 
 <h5 id="CERT_FindCertByName">CERT_FindCertByName</h5>
@@ -341,10 +341,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_8">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertificate *CERT_FindCertByName (
+<pre class="eval">CERTCertificate *CERT_FindCertByName (
   CERTCertDBHandle *handle,
   SECItem *name);
 </pre>
@@ -367,11 +367,11 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_9">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 #include &lt;certt.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertNicknames *CERT_GetCertNicknames (
+<pre class="eval">CERTCertNicknames *CERT_GetCertNicknames (
   CERTCertDBHandle *handle,
   int what,
   void *wincx);
@@ -408,10 +408,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_10">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">void CERT_FreeNicknames(CERTCertNicknames *nicknames);
+<pre class="eval">void CERT_FreeNicknames(CERTCertNicknames *nicknames);
 </pre>
 
 <h6 id="Parameters_9">Parameters</h6>
@@ -426,10 +426,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_11">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;cert.h&gt;
+<pre class="eval">#include &lt;cert.h&gt;
 </pre>
 
-<pre class="eval notranslate">CERTCertDBHandle *CERT_GetDefaultCertDB(void);
+<pre class="eval">CERTCertDBHandle *CERT_GetDefaultCertDB(void);
 </pre>
 
 <h6 id="Returns_9">Returns</h6>
@@ -446,10 +446,10 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_12">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;nss.h&gt;
+<pre class="eval">#include &lt;nss.h&gt;
 </pre>
 
-<pre class="eval notranslate">SSLKEAType NSS_FindCertKEAType(CERTCertificate * cert);
+<pre class="eval">SSLKEAType NSS_FindCertKEAType(CERTCertificate * cert);
 </pre>
 
 <h6 id="Parameter_2">Parameter</h6>
@@ -478,11 +478,11 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <h6 id="Syntax_13">Syntax</h6>
 
-<pre class="eval notranslate">#include &lt;secitem.h&gt;
+<pre class="eval">#include &lt;secitem.h&gt;
 #include &lt;seccomon.h&gt;
 </pre>
 
-<pre class="eval notranslate">SECComparison SECITEM_CompareItem(
+<pre class="eval">SECComparison SECITEM_CompareItem(
   SECItem *a,
   SECItem *b);
 </pre>
@@ -499,7 +499,7 @@ SECStatus NSS_CmpCertChainWCANames(
 
 <p>The function returns an enumerator of type SECComparison.</p>
 
-<pre class="eval notranslate">typedef enum _SECComparison {
+<pre class="eval">typedef enum _SECComparison {
   SECLessThan                = -1,
   SECEqual                = 0,
   SECGreaterThan = 1

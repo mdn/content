@@ -2,24 +2,29 @@
 title: AudioNode.context
 slug: Web/API/AudioNode/context
 tags:
-  - API
-  - AudioNode
-  - Context
-  - Property
-  - Reference
-  - Web Audio API
+- API
+- AudioNode
+- Context
+- Property
+- Reference
+- Web Audio API
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The read-only <code>context</code> property of the {{domxref("AudioNode")}} interface returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.</p>
+<p class="summary">The read-only <code>context</code> property of the
+  {{domxref("AudioNode")}} interface returns the associated
+  {{domxref("BaseAudioContext")}}, that is the object representing the processing graph
+  the node is participating in.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>aContext</em> = <em>anAudioNode</em>.context;</pre>
+<pre
+  class="brush: js">var <em>aContext</em> = <em>anAudioNode</em>.context;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was used to construct this <code>AudioNode</code>.</p>
+<p>The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was
+  used to construct this <code>AudioNode</code>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -37,29 +42,27 @@ console.log(oscillator.context === audioCtx); // true
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audionode-context', 'context')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-audionode-context', 'context')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioNode.context")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
+      API</a></li>
 </ul>

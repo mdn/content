@@ -2,65 +2,67 @@
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- DOM Events
+- MouseEvent
+- Property
+- Read-only
+- Reference
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p>The <strong><code>MouseEvent.relatedTarget</code></strong> read-only property is the secondary target for the mouse event, if there is one. That is:</p>
+<p>The <strong><code>MouseEvent.relatedTarget</code></strong> read-only property is the
+  secondary target for the mouse event, if there is one. That is:</p>
 
 <table class="standard-table" style="width: auto;">
- <tbody>
-  <tr>
-   <td class="header">Event name</td>
-   <td class="header"><code>target</code></td>
-   <td class="header"><code>relatedTarget</code></td>
-  </tr>
-  <tr>
-   <td>{{Event("mouseenter")}}</td>
-   <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
-   <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
-  </tr>
-  <tr>
-   <td>{{Event("mouseleave")}}</td>
-   <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
-   <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
-  </tr>
-  <tr>
-   <td>{{Event("mouseout")}}</td>
-   <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
-   <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
-  </tr>
-  <tr>
-   <td>{{Event("mouseover")}}</td>
-   <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
-   <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
-  </tr>
-  <tr>
-   <td>{{Event("dragenter")}}</td>
-   <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
-   <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
-  </tr>
-  <tr>
-   <td>{{Event("dragexit")}}</td>
-   <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
-   <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Event name</td>
+      <td class="header"><code>target</code></td>
+      <td class="header"><code>relatedTarget</code></td>
+    </tr>
+    <tr>
+      <td>{{Event("mouseenter")}}</td>
+      <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
+      <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
+    </tr>
+    <tr>
+      <td>{{Event("mouseleave")}}</td>
+      <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
+      <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
+    </tr>
+    <tr>
+      <td>{{Event("mouseout")}}</td>
+      <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
+      <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
+    </tr>
+    <tr>
+      <td>{{Event("mouseover")}}</td>
+      <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
+      <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
+    </tr>
+    <tr>
+      <td>{{Event("dragenter")}}</td>
+      <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
+      <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
+    </tr>
+    <tr>
+      <td>{{Event("dragexit")}}</td>
+      <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
+      <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For events with no secondary target, <code>relatedTarget</code> returns <code>null</code>.</p>
+<p>For events with no secondary target, <code>relatedTarget</code> returns
+  <code>null</code>.</p>
 
 <p>{{domxref("FocusEvent.relatedTarget")}} is a similar property for focus events.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>target</em> = <em>instanceOfMouseEvent</em>.relatedTarget
+<pre class="brush: js">var <em>target</em> = <em>instanceOfMouseEvent</em>.relatedTarget
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -135,28 +137,30 @@ function overListener(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', '#dom-mouseevent-relatedtarget', 'MouseEvent.relatedTarget')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-relatedTarget','MouseEvent.relatedTarget')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>No change from {{SpecName('DOM2 Events')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.altkey')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('UI Events', '#dom-mouseevent-relatedtarget',
+        'MouseEvent.relatedTarget')}}</td>
+      <td>{{Spec2('UI Events')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3
+        Events','#widl-MouseEvent-relatedTarget','MouseEvent.relatedTarget')}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+      <td>No change from {{SpecName('DOM2 Events')}}.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.altkey')}}</td>
+      <td>{{Spec2('DOM2 Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -166,6 +170,7 @@ function overListener(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li><a href="/en-US/docs/DOM/event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
+  <li>{{ domxref("MouseEvent") }}</li>
+  <li><a href="/en-US/docs/DOM/event/Comparison_of_Event_Targets">Comparison of Event
+      Targets</a></li>
 </ul>

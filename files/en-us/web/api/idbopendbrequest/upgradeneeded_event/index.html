@@ -36,7 +36,7 @@ tags:
 
 <p>This example opens a database and handles the <code>upgradeneeded</code> event by making any necessary updates to the object store.</p>
 
-<pre class="brush: js; notranslate">// Open the database
+<pre class="brush: js">// Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
 dBOpenRequest.addEventListener('upgradeneeded', event =&gt; {
@@ -56,7 +56,7 @@ dBOpenRequest.addEventListener('upgradeneeded', event =&gt; {
 
 <p>This is the same example, but uses the onupgradeneeded event handler property.</p>
 
-<pre class="brush: js; notranslate">// Open the database
+<pre class="brush: js">// Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
 dBOpenRequest.onupgradeneeded = event =&gt; {

@@ -2,56 +2,71 @@
 title: RTCRtpContributingSource.audioLevel
 slug: Web/API/RTCRtpContributingSource/audioLevel
 tags:
-  - API
-  - Media
-  - MediaStreamTrack
-  - Property
-  - RTCRtpContributingSource
-  - RTP
-  - Reference
-  - WebRTC
-  - audioLevel
+- API
+- Media
+- MediaStreamTrack
+- Property
+- RTCRtpContributingSource
+- RTP
+- Reference
+- WebRTC
+- audioLevel
 ---
 <div>{{APIRef("WebRTC API")}}</div>
 
-<p><span class="seoSummary">The read-only <strong><code>audioLevel</code></strong> property of the {{domxref("RTCRtpContributingSource")}} interface indicates the audio level contained in the last RTP packet played from the described source.</span> audioLevel will be the level value defined in [RFC6465] if the RFC 6465 header extension is present, and otherwise null.</p>
+<p><span class="seoSummary">The read-only <strong><code>audioLevel</code></strong>
+    property of the {{domxref("RTCRtpContributingSource")}} interface indicates the audio
+    level contained in the last RTP packet played from the described source.</span>
+  audioLevel will be the level value defined in [RFC6465] if the RFC 6465 header extension
+  is present, and otherwise null.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>audioLevel</em> = <em>RTCRtpContributingSource</em>.audioLevel</pre>
+<pre
+  class="brush: js">var <em>audioLevel</em> = <em>RTCRtpContributingSource</em>.audioLevel</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A double-precision floating-point number which indicates the volume level of the audio in the most recently received RTP packet from the source described by the <code>RTCRtpContributingSource</code>.</p>
+<p>A double-precision floating-point number which indicates the volume level of the audio
+  in the most recently received RTP packet from the source described by the
+  <code>RTCRtpContributingSource</code>.</p>
 
-<p>This value, which is in the range 0.0 to 1.0, is on a linear scale and its value is defined in dBov, or decibels (overload). This is the amplitude relative to the point at which clipping of the audio begins to occur. A value of 1.0 represents 0 dBov (maximum volume), a value of 0.0 represents silence, and a value of 0.5 represents approximately 6 dB SPL (decibels of sound pressure level) change in the sound pressure level from 0 dBov.</p>
+<p>This value, which is in the range 0.0 to 1.0, is on a linear scale and its value is
+  defined in dBov, or decibels (overload). This is the amplitude relative to the point at
+  which clipping of the audio begins to occur. A value of 1.0 represents 0 dBov (maximum
+  volume), a value of 0.0 represents silence, and a value of 0.5 represents approximately
+  6 dB SPL (decibels of sound pressure level) change in the sound pressure level from 0
+  dBov.</p>
 
-<p>For both <code>RTCRtpContributingSource</code> and {{domxref("RTCRtpSynchronizationSource")}}, the audio level is converted to this form from the values defined in the specifications corresponding to each type of source.</p>
+<p>For both <code>RTCRtpContributingSource</code> and
+  {{domxref("RTCRtpSynchronizationSource")}}, the audio level is converted to this form
+  from the values defined in the specifications corresponding to each type of source.</p>
 
 <div class="note">
-<p><code>audioLevel</code> may be absent from <code>RTCRtpContributingSource</code> objects, which indicates that no volume level was provided by the source; however, it is <em>required</em> and always available on all <code>RTCRtpSynchronizationSource</code> objects.</p>
+  <p><code>audioLevel</code> may be absent from <code>RTCRtpContributingSource</code>
+    objects, which indicates that no volume level was provided by the source; however, it
+    is <em>required</em> and always available on all
+    <code>RTCRtpSynchronizationSource</code> objects.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0','#dom-rtcrtpcontributingsource-audiolevel','audioLevel')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebRTC
+        1.0','#dom-rtcrtpcontributingsource-audiolevel','audioLevel')}}</td>
+      <td>{{Spec2('WebRTC 1.0')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCRtpContributingSource.audioLevel")}}</p>
-</div>

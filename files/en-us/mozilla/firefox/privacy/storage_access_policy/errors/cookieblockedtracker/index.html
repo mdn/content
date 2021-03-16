@@ -1,0 +1,43 @@
+---
+title: 'Blocked: Storage access requests from trackers'
+slug: Mozilla/Firefox/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
+tags:
+  - Cookies
+  - Errors
+  - Storage
+  - storage access policy
+  - tracking
+---
+<div>{{FirefoxSidebar}}</div>
+
+<h2 id="Message">Message</h2>
+
+<p>Firefox:</p>
+
+<pre class="syntaxbox">CookieBlockedTracker=Request to access cookies or storage on “X” was blocked because it came from a tracker and content blocking is enabled.
+</pre>
+
+<h2 id="What_went_wrong">What went wrong?</h2>
+
+<p>A request to access cookies or storage was blocked because the browser identified it as coming from a tracker and content blocking is enabled.</p>
+
+<p>The permission can be changed or removed by:</p>
+
+<ul>
+ <li>Going to <em>Preferences &gt; Content Blocking </em>and either
+
+  <ul>
+   <li>adding an exception with the <em>Manage Exceptions</em>… button</li>
+   <li>choosing the <em>Custom</em> Content Blocking and unchecking the <em>Tracker</em> checkbox</li>
+  </ul>
+ </li>
+</ul>
+
+<p>If the blocked resource doesn't need authentication, you can fix the warning message by adding a <code>crossorigin="anonymous"</code> attribute to the relevant element.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://support.mozilla.org/en-US/kb/content-blocking">Content blocking</a> on <a href="https://support.mozilla.org">support.mozilla.org</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">The <code>crossorigin</code> attribute</a></li>
+</ul>

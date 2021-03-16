@@ -6,7 +6,7 @@ tags:
   - Developing Mozilla
   - OS/2
 ---
-<div class="warning"><strong>Note</strong>: This page is about building Mozilla applications on OS/2 as checked out from CVS. Building from Mercurial is possible, but only rudimentary documentation exist in <a class="internal" href="/En/Developer_Guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial" title="En/Developer Guide/Build Instructions/OS/2 Build Prerequisites/Building on OS/2 using Mercurial">Building on OS/2 using Mercurial</a>.</div>
+<div class="warning"><strong>Note</strong>: This page is about building Mozilla applications on OS/2 as checked out from CVS. Building from Mercurial is possible, but only rudimentary documentation exist in <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial">Building on OS/2 using Mercurial</a>.</div>
 
 <p>This document lists the tools required to build Mozilla products on the OS/2 platform and gives directions how to configure, download, and start a build. We have tried to be as detailed as possible with these instructions. In case you find errors or have problems, please ask for help in the newsgroup mozilla.dev.ports.os2 on news.mozilla.org.</p>
 
@@ -192,7 +192,7 @@ tags:
 
 <h2 id="Getting_sources_and_building">Getting sources and building</h2>
 
-<p>The <a href="/en/Configuring_Build_Options">options for the build</a> are taken from <code>.mozconfig</code> which is a file you create in the <code>mozilla</code> directory. They can also be generated using the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a> but you should start with a minimal file first, like this one:</p>
+<p>The <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">options for the build</a> are taken from <code>.mozconfig</code> which is a file you create in the <code>mozilla</code> directory. They can also be generated using the <a class="external" href="http://webtools.mozilla.org/build/config.cgi">Unix Build Configurator</a> but you should start with a minimal file first, like this one:</p>
 
 <pre>mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj
 mk_add_options MOZ_CO_PROJECT=suite
@@ -204,13 +204,13 @@ ac_add_options --disable-debug</pre>
 
 <p>that would create an optimized SeaMonkey build, with binaries located in the directory <code>obj</code> under the <code>mozilla</code> directory.</p>
 
-<p>The source code of Mozilla is distributed via CVS, the setmozenv script already sets up the environment for that. In principle you need to select a project to pull from CVS (add a line MOZ_CO_PROJECT to your .mozconfig), check out the main makefile <code>client.mk</code> by hand (<code>cvs co mozilla/client.mk</code>) and let the build system pull the rest of the sources (<code>make -f client.mk pull_all</code>). The details of this are described <a href="/En/Developer_Guide/Source_Code/CVS#Selecting_a_Project_to_Pull">here</a>.</p>
+<p>The source code of Mozilla is distributed via CVS, the setmozenv script already sets up the environment for that. In principle you need to select a project to pull from CVS (add a line MOZ_CO_PROJECT to your .mozconfig), check out the main makefile <code>client.mk</code> by hand (<code>cvs co mozilla/client.mk</code>) and let the build system pull the rest of the sources (<code>make -f client.mk pull_all</code>). The details of this are described <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS#selecting_a_project_to_pull">here</a>.</p>
 
 <p>Once you have created the <code>.mozconfig</code> file, you can start the build using<br>
  <code>make -f client.mk build 2&gt;&amp;1 | tee build.log</code><br>
  (The redirection and <code>tee</code> call keeps a logfile of the whole build in the file <code>build.log</code> but also issues all the messages to the screen.)</p>
 
-<p>Once the build is complete, the binaries can be found in <code>obj/dist/bin</code>. If you want to make a package, please follow the instructions on <a href="/en/Building_a_SeaMonkey_package">Building a SeaMonkey package</a>.</p>
+<p>Once the build is complete, the binaries can be found in <code>obj/dist/bin</code>. If you want to make a package, please follow the instructions on <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Building_a_SeaMonkey_package">Building a SeaMonkey package</a>.</p>
 
 <p>If these information is not enough, there is some background info in <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">How Mozilla's build system works</a>.</p>
 

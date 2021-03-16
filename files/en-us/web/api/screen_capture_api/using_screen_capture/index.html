@@ -61,14 +61,14 @@ tags:
 <figure>
 <figcaption><strong><em>Example of a window allowing the user to select a display surface to capture</em></strong></figcaption>
 
-<p><a href="https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png" style="height: 520px; width: 619px;"></a></p>
+<p><a href="Chrome-Screen-Capture-Window.png"><img alt="Screenshot of Chrome's window for picking a source surface" src="chrome-screen-capture-window.png" style="height: 520px; width: 619px;"></a></p>
 </figure>
 
 <p>You can then use the captured stream, <code>captureStream</code>, for anything that accepts a stream as input. The {{anch("Examples", "examples")}} below show a few ways to make use of the stream.</p>
 
 <h3 id="Visible_vs_logical_display_surfaces">Visible vs logical display surfaces</h3>
 
-<p>For the purposes of the Screen Capture API, a <strong>display surface</strong> is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, all of the applications of a window combined into a single surface, and a monitor (or group of monitors combined together into one surface).</p>
+<p>For the purposes of the Screen Capture API, a <strong>display surface</strong> is any content object that can be selected by the API for sharing purposes. Sharing surfaces include the contents of a browser tab, a complete window, all of the windows of an application combined into a single surface, and a monitor (or group of monitors combined together into one surface).</p>
 
 <p>There are two types of display surface. A <strong>visible display surface</strong> is a surface which is entirely visible on the screen, such as the frontmost window or tab, or the entire screen.</p>
 
@@ -156,7 +156,7 @@ tags:
 
 <h2 id="Using_the_captured_stream">Using the captured stream</h2>
 
-<p>The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specifed when <code>getDisplayMedia()</code> was called.</p>
+<p>The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specified when <code>getDisplayMedia()</code> was called.</p>
 
 <h2 id="Security">Security</h2>
 
@@ -247,7 +247,7 @@ console.info = msg =&gt; logElem.innerHTML += `&lt;span class="info"&gt;${msg}&l
   }
 }</pre>
 
-<p>After clearing the contents of the log in order to get rid of any leftover text from the previous attempt to connect, <code>startCapture()</code> calls {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, passing into it the constraints object defined by <code>displayMediaOptions</code>. Using {{jsxref("await")}}, the following line of code does not get executed until after the {{jsxref("promise")}} returned by <code>getDisplayMedia()</code> resolves. Upon resolution, the promise returns a {{domxref("MediaStream")}}, which will stream the contents of the screen, window, or other region selected by the user.</p>
+<p>After clearing the contents of the log in order to get rid of any leftover text from the previous attempt to connect, <code>startCapture()</code> calls {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, passing into it the constraints object defined by <code>displayMediaOptions</code>. Using {{jsxref("Operators/await", "await")}}, the following line of code does not get executed until after the {{jsxref("promise")}} returned by <code>getDisplayMedia()</code> resolves. Upon resolution, the promise returns a {{domxref("MediaStream")}}, which will stream the contents of the screen, window, or other region selected by the user.</p>
 
 <p>The stream is connected to the {{HTMLElement("video")}} element by storing the returned <code>MediaStream</code> into the element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}}.</p>
 

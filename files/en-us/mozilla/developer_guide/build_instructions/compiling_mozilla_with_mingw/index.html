@@ -5,7 +5,9 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p>{{ Note("This page used to be linked from <a href='\"en/Windows_Build_Prerequisites\"'>Windows Build Prerequisites</a> and should be again.") }}</p>
+<div class="notecard note">
+  <p>Note: This page used to be linked from <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a> and should be again.</p>
+</div>
 <p>This article explains how to use Mingw to build Mozilla projects on Windows without using Microsoft Visual Studio, in 14 steps. The versions built using these instructions are debug builds.</p>
 <h3 id="Disk_space_requirements">Disk space requirements</h3>
 <p>You will need at least 3.7 GB of free disk space in order to download the source code and install the needed build tools, as well as to build the software.</p>
@@ -20,7 +22,7 @@ tags:
  <li><a class="external" href="http://www.cygwin.com/">Information</a></li>
 </ul>
 <p>Install the tools into <code>C:\mozilla\cygwin\</code>. Remember to choose Unix as the Default Text File Type.</p>
-<p><img alt="Image:Cygwin04.png" class="internal" src="/@api/deki/files/171/=Cygwin04.png"></p>
+<p><img src="cygwin04.png"></p>
 <p>In addition to the default modules, you need to install:</p>
 <ul>
  <li>cygutils (Utils)</li>
@@ -35,7 +37,7 @@ tags:
  <li>m4 (interpreters)</li>
 </ul>
 <p>To select these optional installs, press the View button in the Select Packages part of the installer.</p>
-<p><img alt="Image:Cygwin08.png" class="internal" src="/@api/deki/files/172/=Cygwin08.png"></p>
+<p><img src="cygwin08.png"></p>
 <p>The following needed modules should be part of the default install, but you may wish to confirm that they're selected:</p>
 <ul>
  <li>ash</li>
@@ -102,10 +104,10 @@ dos2unix.exe *.h
 <h3 id="Get_client.mk">Get the source</h3>
 <p>To build Firefox, the latest mozilla-central sources can be downloaded with mercurial:</p>
 <pre class="eval">cd c:\mozilla\
-hg clone <a class="external" href="http://hg.mozilla.org/mozilla-central/" rel="freelink">http://hg.mozilla.org/mozilla-central/</a> mozilla
+hg clone <a class="external" href="http://hg.mozilla.org/mozilla-central/">http://hg.mozilla.org/mozilla-central/</a> mozilla
 </pre>
 <p>If you want to build Thunderbird or Sunbird:</p>
-<pre class="eval">hg clone <a class="external" href="http://hg.mozilla.org/comm-central/" rel="freelink">http://hg.mozilla.org/comm-central/</a> mozilla
+<pre class="eval">hg clone <a class="external" href="http://hg.mozilla.org/comm-central/">http://hg.mozilla.org/comm-central/</a> mozilla
 python client.py checkout
 </pre>
 <h3 id="Create_the_.mozconfig_file">Create the .mozconfig file</h3>
@@ -267,10 +269,10 @@ set BUILD_OFFICIAL=1
 </pre>
 <h3 id="See_also">See also</h3>
 <ul>
- <li><a href="/En/Developer_Guide/Build_Instructions">Build Documentation</a></li>
- <li><a href="/En/Developer_Guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
- <li><a href="/en/Developer_Guide/Mozilla_build_FAQ">Mozilla Build FAQ</a></li>
- <li><a class="internal" href="/en/Cross_Compile_Mozilla_for_Mingw32" title="En/Cross Compile Mozilla for Mingw32">Cross Compile Mozilla for Mingw32</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions">Build Documentation</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Mozilla_build_FAQ">Mozilla Build FAQ</a></li>
+ <li><a class="internal" href="/en-US/Cross_Compile_Mozilla_for_Mingw32">Cross Compile Mozilla for Mingw32</a></li>
 </ul>
 <div class="originaldocinfo">
  <h2 id="Original_Document_Information">Original Document Information</h2>

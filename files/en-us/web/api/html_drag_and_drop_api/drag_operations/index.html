@@ -64,18 +64,18 @@ tags:
 
 <p>When a drag occurs, data must be associated with the drag which identifies <em>what</em> is being dragged. For example, when dragging the selected text within a textbox, the data associated with the <em>drag data item</em> is the text itself. Similarly, when dragging a link on a web page, the drag data item is the link's URL.</p>
 
-<p>The {{domxref("DataTransfer","drag data")}} contains two pieces of information, the <strong>type</strong> (or format) of the data, and the data's <strong>value</strong>. The format is a type string (such as <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> for text data), and the value is a string of text. When the drag begins, you add data by providing a type and the data. During the drag, in an event listener for the <code>{{event("dragenter")}}</code> and <code>{{event("dragover")}}</code> events, you use the data types of the data being dragged to check whether a drop is allowed. For instance, a drop target that accepts links would check for the type <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code>. During a drop event, a listener would retrieve the data being dragged and insert it at the drop location.</p>
+<p>The {{domxref("DataTransfer","drag data")}} contains two pieces of information, the <strong>type</strong> (or format) of the data, and the data's <strong>value</strong>. The format is a type string (such as <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text">text/plain</a></code> for text data), and the value is a string of text. When the drag begins, you add data by providing a type and the data. During the drag, in an event listener for the <code>{{event("dragenter")}}</code> and <code>{{event("dragover")}}</code> events, you use the data types of the data being dragged to check whether a drop is allowed. For instance, a drop target that accepts links would check for the type <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link">text/uri-list</a></code>. During a drop event, a listener would retrieve the data being dragged and insert it at the drop location.</p>
 
-<p>The {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} property returns a list of MIME-type like {{domxref("DOMString")}}s, such as <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> or <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#image">image/jpeg</a></code>. You can also create your own types. The most commonly used types are listed in the article <a href="/en-US/docs/DragDrop/Recommended_Drag_Types">Recommended Drag Types</a>.</p>
+<p>The {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} property returns a list of MIME-type like {{domxref("DOMString")}}s, such as <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text">text/plain</a></code> or <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image">image/jpeg</a></code>. You can also create your own types. The most commonly used types are listed in the article <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a>.</p>
 
-<p>A drag may include data items of several different types. This allows data to be provided in more specific types, often custom types, yet still provide fallback data for drop targets that do not support more specific types. It is usually the case that the least specific type will be normal text data using the type <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code>. This data will be a simple textual representation.</p>
+<p>A drag may include data items of several different types. This allows data to be provided in more specific types, often custom types, yet still provide fallback data for drop targets that do not support more specific types. It is usually the case that the least specific type will be normal text data using the type <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text">text/plain</a></code>. This data will be a simple textual representation.</p>
 
 <p>To set a drag data item within the {{domxref("DragEvent.dataTransfer","dataTransfer")}}, use the {{domxref("DataTransfer.setData","setData()")}} method. It takes two arguments: the type of data and the data value. For example:</p>
 
 <pre class="brush: js">event.dataTransfer.setData("text/plain", "Text to drag");
 </pre>
 
-<p>In this case, the data value is "Text to drag" and is of the format <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code>.</p>
+<p>In this case, the data value is "Text to drag" and is of the format <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text">text/plain</a></code>.</p>
 
 <p>You can provide data in multiple formats. To do this, call the {{domxref("DataTransfer.setData","setData()")}} method multiple times with different formats. You should call it with formats in order from most specific to least specific.</p>
 
@@ -89,7 +89,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>By providing data in other types as well, we can also support drags to other applications in less specific forms. The <code>application/x.bookmark</code> type can provide data with more details for use within the application whereas the other types can include just a single URL or text version.</p>
 
-<p>Note that both the <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code> and <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> contain the same data in this example. This will often be true, but doesn't need to be the case.</p>
+<p>Note that both the <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link">text/uri-list</a></code> and <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text">text/plain</a></code> contain the same data in this example. This will often be true, but doesn't need to be the case.</p>
 
 <p>If you attempt to add data twice with the same format, the new data will replace the old data, but in the same position within the list of types as the old data.</p>
 
@@ -205,7 +205,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
   }
 }</pre>
 
-<p>In this example, we use the <code>includes</code> method to check if the type <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code> is present in the list of types. If it is, we will cancel the event so that a drop may be allowed. If the drag data does not contain a link, the event will not be cancelled, and a drop cannot occur at that location.</p>
+<p>In this example, we use the <code>includes</code> method to check if the type <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link">text/uri-list</a></code> is present in the list of types. If it is, we will cancel the event so that a drop may be allowed. If the drag data does not contain a link, the event will not be cancelled, and a drop cannot occur at that location.</p>
 
 <p>You may also wish to set either the {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, {{domxref("DataTransfer.dropEffect","dropEffect")}} property, or both at the same time, if you wish to be more specific about the type of operation that will performed. Naturally, changing either property will have no effect if you do not cancel the event as well.</p>
 
@@ -257,7 +257,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>In a web page, you should call the {{domxref("Event.preventDefault","preventDefault()")}} method of the event if you have accepted the drop, so that the browser's default handling is not triggered by the dropped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behavior will be prevented.</p>
 
-<p>You can retrieve other types of data as well. If the data is a link, it should have the type <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code>. You could then insert a link into the content.</p>
+<p>You can retrieve other types of data as well. If the data is a link, it should have the type <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link">text/uri-list</a></code>. You could then insert a link into the content.</p>
 
 <pre class="brush: js">function doDrop(event) {
   const lines = event.dataTransfer.getData("text/uri-list").split("\n");
@@ -272,7 +272,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 }
 </pre>
 
-<p>This example inserts a link from the dragged data. As the name implies, the <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code> type actually may contain a list of URLs, each on a separate line. The above code uses <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split">split</a></code> to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (<code>#</code>) are skipped, as these are comments.)</p>
+<p>This example inserts a link from the dragged data. As the name implies, the <code><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link">text/uri-list</a></code> type actually may contain a list of URLs, each on a separate line. The above code uses <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split</a></code> to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (<code>#</code>) are skipped, as these are comments.)</p>
 
 <p>For simple cases, you can use the special type <code>URL</code> just to retrieve the first valid URL in the list. For example:</p>
 
@@ -307,13 +307,13 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>After the <code>{{event("dragend")}}</code> event has finished propagating, the drag and drop operation is complete.</p>
 
-<p>[1]: In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">Bug 460801</a></p>
+<p>[1]: In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">Bug 460801</a></p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>
-	<li><a class="internal" href="/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
-	<li><a class="internal" href="/Web/Guide/HTML/Recommended_Drag_Types" title="Recommended Drag Types">Recommended Drag Types</a></li>
-	<li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
+	<li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</a></li>
+	<li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
+	<li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
+	<li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
 </ul>

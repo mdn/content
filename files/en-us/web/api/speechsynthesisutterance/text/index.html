@@ -2,31 +2,36 @@
 title: SpeechSynthesisUtterance.text
 slug: Web/API/SpeechSynthesisUtterance/text
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Text
-  - Web Speech API
-  - speech
-  - synthesis
+- API
+- Experimental
+- Property
+- Reference
+- SpeechSynthesisUtterance
+- Text
+- Web Speech API
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>text</code></strong> property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be synthesised when the utterance is spoken.</p>
+<p>The <strong><code>text</code></strong> property of the
+  {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be
+  synthesised when the utterance is spoken.</p>
 
-<p>The text may be provided as plain text, or a well-formed <a class="external external-icon" href="https://www.w3.org/TR/speech-synthesis/">SSML</a> document. The SSML tags will be stripped away by devices that don't support SSML.</p>
+<p>The text may be provided as plain text, or a well-formed <a
+    class="external external-icon" href="https://www.w3.org/TR/speech-synthesis/">SSML</a>
+  document. The SSML tags will be stripped away by devices that don't support SSML.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var myText = speechSynthesisUtteranceInstance.text;
+<pre class="brush: js">var myText = speechSynthesisUtteranceInstance.text;
 speechSynthesisUtteranceInstance.text = 'Hello I am speaking';
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} representing the text to the synthesised. The maximum length of the text that can be spoken in each utterance is 32,767 characters.</p>
+<p>A {{domxref("DOMString")}} representing the text to the synthesised. The maximum length
+  of the text that can be spoken in each utterance is 32,767 characters.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,29 +63,27 @@ inputForm.onsubmit = function(event) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dom-speechsynthesisutterance-text', 'text')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#dom-speechsynthesisutterance-text', 'text')}}
+      </td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesisUtterance.text")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

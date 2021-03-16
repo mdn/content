@@ -55,7 +55,7 @@ tags:
 
 <p>When this happens, the server URL and the error message are passed to a function called <code>reportConnectFail()</code> to log or output the connection failure.</p>
 
-<pre class="brush: js notranslate">pc.addEventListener("icecandidateerror", (event) =&gt; {
+<pre class="brush: js">pc.addEventListener("icecandidateerror", (event) =&gt; {
   if (event.errorCode === 701) {
     reportConnectFail(event.url, event.errorText);
   }
@@ -83,7 +83,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCPeerConnection.icecandidateerror_event")}}</p>
-</div>

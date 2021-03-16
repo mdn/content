@@ -12,9 +12,9 @@ tags:
   - Sensor APIs
   - Sensors
 ---
-<div>{{APIRef("Generic Sensor API")}}{{seecompattable}}</div>
+<div>{{APIRef("Generic Sensor API")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The <strong><code>Accelerometer</code></strong> interface of the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides on each reading the acceleration applied to the device along all three axes. </span></p>
+<p><span class="seoSummary">The <strong><code>Accelerometer</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides on each reading the acceleration applied to the device along all three axes. </span></p>
 
 <p>To use this sensor, the user must grant permission to the <code>'accelerometer'</code>, device sensor through the <a href="/en-US/docs/Web/API/Permissions"><code>Permissions</code></a> API.</p>
 
@@ -42,7 +42,7 @@ tags:
 
 <p>Acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js notranslate">let acl = new Accelerometer({frequency: 60});
+<pre class="brush: js">let acl = new Accelerometer({frequency: 60});
 
 acl.addEventListener('reading', () =&gt; {
   console.log("Acceleration along the X-axis " + acl.x);

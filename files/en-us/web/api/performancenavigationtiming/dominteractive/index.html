@@ -2,23 +2,30 @@
 title: PerformanceNavigationTiming.domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
 tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+- API
+- Property
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>domInteractive</code></strong> read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to <a href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">interactive</a>.</p>
+<p>The <strong><code>domInteractive</code></strong> read-only property returns a
+  {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
+  time immediately before the user agent sets the current document readiness of the
+  current document to <a
+    href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">interactive</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>perfEntry</em>.domInteractive;
+<pre class="brush: js"><em>perfEntry</em>.domInteractive;
 </pre>
 
 <h3 id="Return_Value">Return Value</h3>
 
-<p>A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the time immediately before the user agent sets the current document readiness of the current document to <a href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">interactive</a>.</p>
+<p>A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
+  the time immediately before the user agent sets the current document readiness of the
+  current document to <a
+    href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">interactive</a>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -50,23 +57,21 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-dominteractive', 'domInteractive')}}</td>
-   <td>{{Spec2('Navigation Timing Level 2')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing Level 2',
+        '#dom-performancenavigationtiming-dominteractive', 'domInteractive')}}</td>
+      <td>{{Spec2('Navigation Timing Level 2')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceNavigationTiming.domInteractive")}}</p>
-</div>

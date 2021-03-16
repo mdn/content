@@ -16,14 +16,14 @@ tags:
 
 <h3 id="Using_lineNumber">Using lineNumber</h3>
 
-<pre class="brush: js notranslate">var e = new Error('Could not parse input');
+<pre class="brush: js">var e = new Error('Could not parse input');
 throw e;
 console.log(e.lineNumber) // 2
 </pre>
 
 <h3 id="Alternative_example_using_error_event">Alternative example using error event</h3>
 
-<pre class="brush: js notranslate">window.addEventListener('error', function(e) {
+<pre class="brush: js">window.addEventListener('error', function(e) {
   console.log(e.lineNumber); // 5
 });
 var e = new Error('Could not parse input');
@@ -38,10 +38,7 @@ throw e;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.Error.lineNumber")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

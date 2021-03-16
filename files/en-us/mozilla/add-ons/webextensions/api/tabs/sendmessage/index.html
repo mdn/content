@@ -21,12 +21,12 @@ tags:
 <p>This is an asynchronous function that returns a {{jsxref("Promise")}}.</p>
 
 <div class="note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">const sending = browser.tabs.sendMessage(
+<pre class="brush:js">const sending = browser.tabs.sendMessage(
   <var>tabId</var>,     // integer
   <var>message</var>,   // any
   <var>options</var>    // optional object
@@ -39,20 +39,20 @@ tags:
  <dt><code><var>tabId</var></code></dt>
  <dd><code>integer</code>. ID of the tab whose content scripts we want to send a message to.</dd>
  <dt><code><var>message</var></code></dt>
- <dd><code>any</code>. An object that can be serialized to JSON.</dd>
- <dt><code><var>options</var></code><var> </var>{{optional_inline}}</dt>
+ <dd><code>any</code>. An object that can be serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
+ <dt><code><var>options</var></code> {{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
  <dl class="reference-values">
-  <dt><code><var>frameId</var></code><var> </var>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sends the message to a specific frame identified by <code><var>frameId</var></code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of <code>manifest.json</code>.</dd>
+  <dt><code><var>frameId</var></code> {{optional_inline}}</dt>
+  <dd><code>integer</code>. Sends the message to a specific frame identified by <code><var>frameId</var></code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of <code>manifest.json</code>.</dd>
  </dl>
  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response.</p>
+<p>A {{jsxref("Promise")}} that will be fulfilled with the response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response.</p>
 
 <p>If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message.</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>Here's an example of a background script that sends a message to the content scripts running in the active tab when the user clicks the browser action. The background script also expects the content script to send a response:</p>
 
-<pre class="brush: js notranslate">// background-script.js
+<pre class="brush: js">// background-script.js
 "use strict";
 
 function onError(error) {
@@ -90,7 +90,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Here's the corresponding content script:</p>
 
-<pre class="brush: js notranslate">// content-script.js
+<pre class="brush: js">// content-script.js
 "use strict";
 
 browser.runtime.onMessage.addListener(request =&gt; {
@@ -113,7 +113,7 @@ browser.runtime.onMessage.addListener(request =&gt; {
 </div>
 
 <div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

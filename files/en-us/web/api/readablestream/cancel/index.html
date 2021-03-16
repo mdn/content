@@ -11,35 +11,49 @@ tags:
 ---
 <div>{{APIRef("Streams")}}</div>
 
-<p class="summary">The <strong><code>cancel()</code></strong> method of the {{domxref("ReadableStream")}} interface cancels the associated stream. The supplied <code>reason</code> parameter will be given to the underlying source, which may or may not use it.</p>
+<p class="summary">The <strong><code>cancel()</code></strong> method of the
+  {{domxref("ReadableStream")}} interface returns a {{jsref("Promise")}} that
+  resolves when the stream is canceled.</p>
 
-<p>Cancel is used when you've completely finished with the stream and don't need any more data from it, even if there are chunks enqueued waiting to be read. That data is lost after cancel is called, and the stream is not readable any more. To read those chunks still and not completely get rid of the stream, you'd use {{domxref("ReadableStreamDefaultController.close()")}}.</p>
+<p>Cancel is used when you've completely finished with the stream and don't need any more
+  data from it, even if there are chunks enqueued waiting to be read. That data is lost
+  after cancel is called, and the stream is not readable any more. To read those chunks
+  still and not completely get rid of the stream, you'd use
+  {{domxref("ReadableStreamDefaultController.close()")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>promise</em> = <em>readableStream</em>.cancel(<em>reason</em>);</pre>
+<pre
+  class="brush: js">var <em>promise</em> = <em>readableStream</em>.cancel(<em>reason</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>reason</dt>
- <dd>A {{domxref("DOMString")}} providing a human-readable reason for the cancellation.</dd>
+  <dt>reason {{optional_inline}}</dt>
+  <dd>A human-readable reason for the cancellation. The underlying source may or may not use it.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code> parameter.</p>
+<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code>
+  parameter.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>TypeError</dt>
- <dd>The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is locked.</dd>
+  <dt>TypeError</dt>
+  <dd>The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is
+    locked.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In Jake Archibald's <a href="https://jsbin.com/gameboy/edit?js,console">cancelling a fetch</a> example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each chunk is searched for the string "service workers". When the search terms is found, <code>cancel()</code> is used to cancel the stream — the job is finished so it is no longer needed.</p>
+<p>In Jake Archibald's <a href="https://jsbin.com/gameboy/edit?js,console">cancelling a
+    fetch</a> example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
+  chunk is searched for the string "service workers". When the search terms is found,
+  <code>cancel()</code> is used to cancel the stream — the job is finished so it is no
+  longer needed.</p>
 
 <pre class="brush: js">var searchTerm = "service workers";
 // Chars to show either side of the result in the match
@@ -106,24 +120,27 @@ fetch(url).then(response =&gt; {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-cancel","cancel()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Streams","#rs-cancel","cancel()")}}</td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+  <p>The compatibility table on this page is generated from structured data. If you'd like
+    to contribute to the data, please check out <a
+      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+    and send us a pull request.</p>
 </div>
 
 <p>{{Compat("api.ReadableStream.cancel")}}</p>

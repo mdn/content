@@ -2,52 +2,52 @@
 title: Migration to HG
 slug: Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Migration_to_HG
 ---
-<p><span>The </span><span>NSPR, </span><span>NSS</span><span> and related projects have stopped using Mozilla'a CVS server, but have migrated to </span><br>
- <span>Mozilla's <span class="bold highlight search-highlight">HG</span> (Mercurial) server.</span><br>
+<p>The NSPR, NSS and related projects have stopped using Mozilla'a CVS server, but have migrated to <br>
+ Mozilla's HG (Mercurial) server.<br>
  <br>
- <span>Each project now lives in its own separate space, they can be found at: </span><br>
- <span>  </span><a href="https://hg.mozilla.org/projects/nspr/" rel="nofollow"><span>https://<span class="bold highlight search-highlight">hg</span>.mozilla.org/projects/nspr/</span></a><br>
- <span>  </span><a href="https://hg.mozilla.org/projects/nss/" rel="nofollow"><span>https://<span class="bold highlight search-highlight">hg</span>.mozilla.org/projects/nss/</span></a><br>
- <span>  </span><a href="https://hg.mozilla.org/projects/jss/" rel="nofollow"><span>https://<span class="bold highlight search-highlight">hg</span>.mozilla.org/projects/jss/</span></a><br>
+ Each project now lives in its own separate space, they can be found at: <br>
+   <a href="https://hg.mozilla.org/projects/nspr/" rel="nofollow">https://hg.mozilla.org/projects/nspr/</a><br>
+   <a href="https://hg.mozilla.org/projects/nss/" rel="nofollow">https://hg.mozilla.org/projects/nss/</a><br>
+   <a href="https://hg.mozilla.org/projects/jss/" rel="nofollow">https://hg.mozilla.org/projects/jss/</a><br>
    <a href="https://hg.mozilla.org/projects/python-nss/">https://hg.mozilla.org/projects/python-nss/</a></p>
-<p><span>This migration has been used as an opportunity to change the <span class="bold highlight search-highlight">layout</span> of the </span><br>
- <span>source directories. </span><br>
+<p>This migration has been used as an opportunity to change the layout of the <br>
+ source directories. <br>
  <br>
- <span>For NSPR, "mozilla/nsprpub" has been removed from the directory </span><br>
- <span>hierarchy, all files now live in the top directory of the NSPR </span><br>
- <span>repository. </span><br>
+ For NSPR, "mozilla/nsprpub" has been removed from the directory <br>
+ hierarchy, all files now live in the top directory of the NSPR <br>
+ repository. <br>
  <br>
- <span>Likewise for NSS and JSS, "mozilla/security" has been removed and files </span><br>
- <span>now live at the top level. In addition for NSS, we have merged the </span><br>
- <span>contents of directories mozilla/dbm and mozilla/security/dbm into the </span><br>
- <span>new directory lib/dbm. </span><br>
+ Likewise for NSS and JSS, "mozilla/security" has been removed and files <br>
+ now live at the top level. In addition for NSS, we have merged the <br>
+ contents of directories mozilla/dbm and mozilla/security/dbm into the <br>
+ new directory lib/dbm. <br>
  <br>
- <span>Besides the new <span class="bold highlight search-highlight">layout</span>, the build system hasn't changed. Most parts of </span><br>
- <span>the NSS build instructions remain valid, especially the instructions </span><br>
- <span>about setting environment variables. </span><br>
+ Besides the new layout, the build system hasn't changed. Most parts of <br>
+ the NSS build instructions remain valid, especially the instructions <br>
+ about setting environment variables. <br>
  <br>
- <span>Updated instructions for building NSS with NSPR can be found at: </span><br>
- <a href="/en-US/docs/NSS_reference/Building_and_installing_NSS/Build_instructions" rel="nofollow"><span>https://developer.mozilla.org/en-US/docs/NSS_reference/Building_and_installing_NSS/Build_instructions</span></a><br>
+ Updated instructions for building NSS with NSPR can be found at: <br>
+ <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Build_instructions" rel="nofollow">https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Build_instructions</a><br>
  <br>
- <span>It's best to refer to the above document to learn about the various </span><br>
- <span>environment variables that you might have to set to build on your </span><br>
- <span>platform (this part hasn't changed). </span><br>
+ It's best to refer to the above document to learn about the various <br>
+ environment variables that you might have to set to build on your <br>
+ platform (this part hasn't changed). <br>
  <br>
- <span>However, below is a brief summary that shows how to checkout the </span><br>
- <span>source code and build both NSPR and NSS: </span><br>
- <span>  mkdir workarea </span><br>
- <span>  cd workarea </span><br>
- <span>  <span class="bold highlight search-highlight">hg</span> clone </span><a href="https://hg.mozilla.org/projects/nspr" rel="nofollow"><span>https://<span class="bold highlight search-highlight">hg</span>.mozilla.org/projects/nspr</span></a><br>
- <span>  <span class="bold highlight search-highlight">hg</span> clone </span><a href="https://hg.mozilla.org/projects/nss" rel="nofollow"><span>https://<span class="bold highlight search-highlight">hg</span>.mozilla.org/projects/nss</span></a><br>
- <span>  cd nss </span><br>
- <span>  # set USE_64=1 on 64 bit architectures </span><br>
- <span>  # set BUILD_OPT=1 to get an optimized build </span><br>
- <span>  make nss_build_all </span><br>
+ However, below is a brief summary that shows how to checkout the <br>
+ source code and build both NSPR and NSS: <br>
+   mkdir workarea <br>
+   cd workarea <br>
+   hg clone <a href="https://hg.mozilla.org/projects/nspr" rel="nofollow">https://hg.mozilla.org/projects/nspr</a><br>
+   hg clone <a href="https://hg.mozilla.org/projects/nss" rel="nofollow">https://hg.mozilla.org/projects/nss</a><br>
+   cd nss <br>
+   # set USE_64=1 on 64 bit architectures <br>
+   # set BUILD_OPT=1 to get an optimized build <br>
+   make nss_build_all <br>
  <br>
- <span>Note that the JSS project has been given a private copy of the former </span><br>
- <span>mozilla/security/coreconf directory, allowing it to remain stable, </span><br>
- <span>and only update its build system as necessary. </span><br>
+ Note that the JSS project has been given a private copy of the former <br>
+ mozilla/security/coreconf directory, allowing it to remain stable, <br>
+ and only update its build system as necessary. <br>
  <br>
- <span>Because of the changes described above, we have decided to use a new </span><br>
- <span>series of (minor) version numbers. The first releases using the new code </span><br>
- <span><span class="bold highlight search-highlight">layout</span> will be NSPR 4.10 and NSS 3.15 </span></p>
+ Because of the changes described above, we have decided to use a new <br>
+ series of (minor) version numbers. The first releases using the new code <br>
+ layout will be NSPR 4.10 and NSS 3.15 </p>

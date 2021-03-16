@@ -41,7 +41,7 @@ tags:
 
 <p>Since Firefox 65, the <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition ({{bug(354358)}}). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
 
-<pre class="brush: js notranslate">eventTarget.addEventListener("keydown", event =&gt; {
+<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
@@ -55,10 +55,10 @@ tags:
 
 <p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">document.addEventListener('keydown', logKey);
+<pre class="brush: js">document.addEventListener('keydown', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
@@ -68,7 +68,7 @@ function logKey(e) {
 
 <h3 id="onkeydown_equivalent">onkeydown equivalent</h3>
 
-<pre class="brush: js notranslate">document.onkeydown = logKey;</pre>
+<pre class="brush: js">document.onkeydown = logKey;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -2,22 +2,24 @@
 title: URL.port
 slug: Web/API/URL/port
 tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-  - port
+- API
+- Property
+- Reference
+- URL
+- URL API
+- port
 ---
 <div>{{ApiRef("URL API")}}</div>
 
-<p>The <strong><code>port</code></strong> property of the {{domxref("URL")}} interface is a {{domxref("USVString")}} containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to <code>''</code>.</p>
+<p>The <strong><code>port</code></strong> property of the {{domxref("URL")}} interface is
+  a {{domxref("USVString")}} containing the port number of the URL. If the URL does not
+  contain an explicit port number, it will be set to <code>''</code>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">const <em>portNumber</em> = <em>url</em>.port
+<pre class="brush: js">const <em>portNumber</em> = <em>url</em>.port
 <em>url</em>.port = <em>newPortNumber</em>
 </pre>
 
@@ -34,18 +36,18 @@ console.log(url.port); // Logs '80'
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-port', 'URL.port')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('URL', '#dom-url-port', 'URL.port')}}</td>
+      <td>{{Spec2('URL')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -55,5 +57,5 @@ console.log(url.port); // Logs '80'
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
+  <li>The {{domxref("URL")}} interface it belongs to.</li>
 </ul>

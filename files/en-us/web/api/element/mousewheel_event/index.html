@@ -44,7 +44,7 @@ tags:
 
 <h2 id="The_detail_property">The detail property</h2>
 
-<p>The value of the {{domxref("Event.detail", "detail")}} property is always zero, except in Opera, which uses <code>detail</code> similarly to the Firefox-only {{domxref("Element.DOMMouseScroll_event", "DOMMouseScroll")}} event's <code>detail</code> value, which indicates the scroll distance in terms of lines, with negative values indicating the scrolling movement is either toward the bottom or toward the right, and positive values indicating scrolling to the top or left.</p>
+<p>The value of the {{domxref("UIEvent/detail", "detail")}} property is always zero, except in Opera, which uses <code>detail</code> similarly to the Firefox-only {{domxref("Element.DOMMouseScroll_event", "DOMMouseScroll")}} event's <code>detail</code> value, which indicates the scroll distance in terms of lines, with negative values indicating the scrolling movement is either toward the bottom or toward the right, and positive values indicating scrolling to the top or left.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> On macOS, the scroll distance (and therefore the value of <code>detail</code>) is computed based on the accelerated scroll distance.</p>
@@ -94,7 +94,7 @@ tags:
 
 <p>On Linux, the value is <code>80</code> or <code>-80</code> per native wheel event. This is different from other browsers.</p>
 
-<p>On Mac, the <code>detail</code> attribute value is computed from accelerated scroll amout of native event. The value is usually much bigger than Safari's or Chrome's value.</p>
+<p>On Mac, the <code>detail</code> attribute value is computed from accelerated scroll amount of native event. The value is usually much bigger than Safari's or Chrome's value.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

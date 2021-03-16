@@ -10,24 +10,30 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>matrix3d()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a 3D transformation as a 4x4 homogeneous matrix. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+<p>The <strong><code>matrix3d()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a
+		href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines a 3D transformation as a 4x4 homogeneous matrix.
+	Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <p>The <code>matrix3d()</code> function is specified with 16 values. They are described in the column-major order.</p>
 
-<pre class="syntaxbox notranslate">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
+<pre class="brush: css">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
-	<dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var> <var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var></dt>
+	<dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var>
+		<var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var>
+	</dt>
 	<dd>Are {{cssxref("&lt;number&gt;")}}s describing the linear transformation.</dd>
 	<dt><var>a4</var> <var>b4</var> <var>c4 d4</var></dt>
 	<dd>Are {{cssxref("&lt;number&gt;")}}s describing the translation to apply.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for <var>a4</var>, <var>b4</var> and <var>c4</var>.</div>
+<div class="note"><strong>Note:</strong> Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for
+	<var>a4</var>, <var>b4</var> and <var>c4</var>.
+</div>
 
 <table class="standard-table">
 	<thead>
@@ -40,9 +46,73 @@ tags:
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan="2" rowspan="2">This transformation applies to the 3D space and can't be represented on the plane.</td>
-			<td rowspan="2">A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not linear transformations.</td>
-			<td rowspan="2"><math><mfenced><mtable><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr><mtr><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr></mtable> </mfenced> </math></td>
+			<td colspan="2">This transformation applies to the 3D space and can't be represented on the
+				plane.</td>
+			<td>A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine
+					transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not
+				linear transformations.</td>
+			<td><math>
+					<mfenced>
+						<mtable>
+							<mtr>
+								<mtd>
+									<mi>a1</mi>
+								</mtd>
+								<mtd>
+									<mi>a2</mi>
+								</mtd>
+								<mtd>
+									<mi>a3</mi>
+								</mtd>
+								<mtd>
+									<mi>a4</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>b1</mi>
+								</mtd>
+								<mtd>
+									<mi>b2</mi>
+								</mtd>
+								<mtd>
+									<mi>b3</mi>
+								</mtd>
+								<mtd>
+									<mi>b4</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>c1</mi>
+								</mtd>
+								<mtd>
+									<mi>c2</mi>
+								</mtd>
+								<mtd>
+									<mi>c3</mi>
+								</mtd>
+								<mtd>
+									<mi>c4</mi>
+								</mtd>
+							</mtr>
+							<mtr>
+								<mtd>
+									<mi>d1</mi>
+								</mtd>
+								<mtd>
+									<mi>d2</mi>
+								</mtd>
+								<mtd>
+									<mi>d3</mi>
+								</mtd>
+								<mtd>
+									<mi>d4</mi>
+								</mtd>
+							</mtr>
+						</mtable>
+					</mfenced>
+				</math></td>
 		</tr>
 	</tbody>
 </table>
@@ -51,11 +121,12 @@ tags:
 
 <h3 id="Cube_squashing_example">Cube squashing example</h3>
 
-<p>The following example shows a 3D cube created from DOM elements and transforms, which can be hovered/focused to apply a <code>matrix3d()</code> transform to it.</p>
+<p>The following example shows a 3D cube created from DOM elements and transforms, which can be hovered/focused to apply
+	a <code>matrix3d()</code> transform to it.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;section id="example-element" tabindex="0"&gt;
+<pre class="brush: html">&lt;section id="example-element" tabindex="0"&gt;
   &lt;div class="face front"&gt;1&lt;/div&gt;
   &lt;div class="face back"&gt;2&lt;/div&gt;
   &lt;div class="face right"&gt;3&lt;/div&gt;
@@ -67,7 +138,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#example-element {
+<pre class="brush: css">#example-element {
   width: 100px;
   height: 100px;
   transform-style: preserve-3d;
@@ -132,7 +203,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="foo"&gt;
+<pre class="brush: html">&lt;div class="foo"&gt;
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
 necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
@@ -141,7 +212,7 @@ necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam ess
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   width: 100%;
 }
 body {
@@ -235,5 +306,6 @@ body {
 <ul>
 	<li>{{cssxref("transform")}}</li>
 	<li>{{cssxref("&lt;transform-function&gt;")}}</li>
-	<li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms Matrix</a></li>
+	<li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS
+			Transforms Matrix</a></li>
 </ul>

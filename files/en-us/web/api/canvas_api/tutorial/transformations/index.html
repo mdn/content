@@ -30,7 +30,7 @@ tags:
 <ul>
  <li>The transformations that have been applied (i.e. <code>translate</code>, <code>rotate</code> and <code>scale</code> – see below).</li>
  <li>The current values of the following attributes: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.</li>
- <li>The current <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths">clipping path</a>, which we'll see in the next section.</li>
+ <li>The current <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths">clipping path</a>, which we'll see in the next section.</li>
 </ul>
 
 <p>You can call the <code>save()</code> method as many times as you like. Each time the <code>restore()</code> method is called, the last saved state is popped off the stack and all saved settings are restored.</p>
@@ -76,7 +76,7 @@ tags:
 
 <h2 id="Translating">Translating</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/234/Canvas_grid_translate.png" style="float: right;">The first of the transformation methods we'll look at is <code>translate()</code>. This method is used to move the canvas and its origin to a different point in the grid.</p>
+<p><img alt="" class="internal" src="canvas_grid_translate.png" style="float: right;">The first of the transformation methods we'll look at is <code>translate()</code>. This method is used to move the canvas and its origin to a different point in the grid.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}</dt>
@@ -115,7 +115,7 @@ tags:
 
 <h2 id="Rotating">Rotating</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;">The second transformation method is <code>rotate()</code>. We use it to rotate the canvas around the current origin.</p>
+<p><img alt="" class="internal" src="canvas_grid_rotate.png" style="float: right;">The second transformation method is <code>rotate()</code>. We use it to rotate the canvas around the current origin.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}</dt>
@@ -221,7 +221,7 @@ tags:
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}</dt>
- <dd>Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math><br />
+ <dd>Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math><br>
  If any of the arguments are <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> the transformation matrix must be marked as infinite instead of the method throwing an exception.</dd>
 </dl>
 

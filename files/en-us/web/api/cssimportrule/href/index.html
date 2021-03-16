@@ -1,0 +1,74 @@
+---
+title: CSSImportRule.href
+slug: Web/API/CSSImportRule/href
+tags:
+- API
+- CSSOM
+- Property
+- Reference
+- CSSImportRule
+- Read-only
+---
+<p>{{APIRef("CSSOM")}}</p>
+
+<p class="summary">The read-only <strong><code>href</code></strong> property of the
+	{{domxref("CSSImportRule")}} interface returns the URL specified by the
+	{{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>.</p>
+
+<p>The resolved URL will be the {{HTMLAttrxRef("href","link")}} attribute of the
+	associated stylesheet.</p>
+
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre
+	class="brush: js">var <var>href</var> = <var>CSSImportRule</var>.href;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("USVString")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
+	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
+	<code>href</code> property returns the URL of the imported stylesheet.</p>
+
+<pre class="brush:css">@import url("style.css") screen;</pre>
+
+<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].href); //returns style.css</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSSOM', '#dom-cssimportrule-href', 'CSSImportRule.href')}}
+			</td>
+			<td>{{Spec2('CSSOM')}}</td>
+			<td>No changes from {{SpecName('DOM2 Style')}}</td>
+		</tr>
+		<tr>
+			<td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSImportRule', 'CSSImportRule')}}
+			</td>
+			<td>{{Spec2('DOM2 Style')}}</td>
+			<td>Initial definition</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured
+	data. If you'd like to contribute to the data, please check out <a
+		href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+	and send us a pull request.</div>
+
+<p>{{Compat("api.CSSImportRule.href")}}</p>

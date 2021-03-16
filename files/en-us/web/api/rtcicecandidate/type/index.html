@@ -2,39 +2,54 @@
 title: RTCIceCandidate.type
 slug: Web/API/RTCIceCandidate/type
 tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - Type
-  - WebRTC
-  - WebRTC API
+- API
+- Candidate
+- ICE
+- Media
+- RTCIceCandidate
+- Read-only
+- Reference
+- SDP
+- Type
+- WebRTC
+- WebRTC API
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>type</code></strong> specifies the type of candidate the object represents.</span></p>
+<p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong>
+    interface's read-only <strong><code>type</code></strong> specifies the type of
+    candidate the object represents.</span></p>
 
-<p>The <code>type</code> field's value is set when the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used. You can't specify the value of <code>type</code> in the options object, but the address is automatically extracted from the {{domxref("RTCIceCandidateInit.candidate", "candidate")}} a-line, if it's formatted properly, being taken from its <code>cand-type</code> field.</p>
+<p>The <code>type</code> field's value is set when the
+  {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor is used.
+  You can't specify the value of <code>type</code> in the options object, but the address
+  is automatically extracted from the {{domxref("RTCIceCandidateInit.candidate",
+  "candidate")}} a-line, if it's formatted properly, being taken from its
+  <code>cand-type</code> field.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>type</em> = <em>RTCIceCandidate</em>.type;</pre>
+<pre
+  class="brush: js">var <em>type</em> = <em>RTCIceCandidate</em>.type;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} whose value is one of those defined by the {{domxref("RTCIceCandidateType")}} enumerated type.</p>
+<p>A {{domxref("DOMString")}} whose value is one of those defined by the
+  {{domxref("RTCIceCandidateType")}} enumerated type.</p>
 
 <p>{{page("/en-US/docs/Web/API/RTCIceCandidateType", "Values")}}</p>
 
-<p>If <code>type</code> is <code>null</code>, that information was missing from the {{domxref("RTCIceCandidate.candidate", "candidate")}}'s a-line, which will cause {{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an <code>OperationError</code> exception.</p>
+<p>If <code>type</code> is <code>null</code>, that information was missing from the
+  {{domxref("RTCIceCandidate.candidate", "candidate")}}'s a-line, which will cause
+  {{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an
+  <code>OperationError</code> exception.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to present a modified user interface for host candidates (those where the {{domxref("RTCIceCandidate.ip", "ip")}} refers directly to the remote peer, rather than an intermediary).</p>
+<p>In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
+  present a modified user interface for host candidates (those where the
+  {{domxref("RTCIceCandidate.ip", "ip")}} refers directly to the remote peer, rather than
+  an intermediary).</p>
 
 <pre class="brush: js">if (candidate.type == "host") {
   showHostControls();
@@ -46,32 +61,31 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#dom-rtcicecandidate-type', 'RTCIceCandidate.type')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('WebRTC 1.0', '#dom-rtcicecandidate-type', 'RTCIceCandidate.type')}}
+      </td>
+      <td>{{Spec2('WebRTC 1.0')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCIceCandidate.type")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
- <li>{{domxref("RTCIceCandidate.tcpType")}}</li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
+      protocols</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
+  <li>{{domxref("RTCIceCandidate.tcpType")}}</li>
 </ul>

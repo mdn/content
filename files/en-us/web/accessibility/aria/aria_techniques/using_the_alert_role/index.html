@@ -20,7 +20,7 @@ tags:
 <h3 id="Description">Description</h3>
 
 <div class="summary">
-<p>This technique demonstrates how to use the <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a> role and describes the effect it has on browsers and assistive technology.</p>
+<p>This technique demonstrates how to use the <a href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a> role and describes the effect it has on browsers and assistive technology.</p>
 </div>
 
 <p>The alert role is used to communicate an important and usually time-sensitive message to the user. When this role is added to an element, the browser will send out an accessible alert event to assistive technology products which can then notify the user about it. The alert role is most useful for information that requires the user's immediate attention, for example:</p>
@@ -105,8 +105,10 @@ document.getElementById("expirationWarning").className = ""; </pre>
 <h4 id="Working_Examples">Working Examples:</h4>
 
 <ul>
- <li><a class="external" href="http://www.oaa-accessibility.org/example/1/">Alert role example using an ARIA alert box</a></li>
- <li><a class="external" href="http://www.oaa-accessibility.org/examplep/alertdialog1/">Alert example using a modal ARIA dialog box</a></li>
+ <li><a class="external" href="https://w3c.github.io/aria-practices/examples/alert/alert.html">WAI-ARIA Authoring Practices: Alert Example</a></li>
+ <li><a class="external" href="https://w3c.github.io/aria-practices/examples/dialog-modal/alertdialog.html">WAI-ARIA Authoring Practices: Alert Dialog Example</a></li>
+ <li><a class="external" href="https://w3c.github.io/aria-practices/examples/dialog-modal/dialog.html">WAI-ARIA Authoring Practices: Modal Dialog Example</a></li>
+ <li><a class="external" href="https://w3c.github.io/aria-practices/examples/dialog-modal/datepicker-dialog.html">WAI-ARIA Authoring Practices: Date Picker Dialog Example</a></li>
 </ul>
 
 <h3 id="Notes">Notes </h3>
@@ -114,20 +116,20 @@ document.getElementById("expirationWarning").className = ""; </pre>
 <ul>
  <li>Using the alert role on an element implies that element has <code>aria-live="assertive"</code>.</li>
  <li>The alert role should only be used for static text content. The element that the alert role is used on does not have to be able to receive focus, as screen readers will automatically announce the alert regardless of where keyboard focus is currently located.</li>
- <li>If an alert also provides interactive controls (such as form controls that allow the user to rectify a problem, or an "OK" button that discards the alert) the <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="Using the alert role">alertdialog</a> role should be used instead. </li>
+ <li>If an alert also provides interactive controls (such as form controls that allow the user to rectify a problem, or an "OK" button that discards the alert) the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog</a> role should be used instead. </li>
 </ul>
 
 <h3 id="ARIA_attributes_used">ARIA attributes used</h3>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a></li>
+ <li><a href="https://www.w3.org/TR/wai-aria-1.1/#alert">alert</a></li>
 </ul>
 
 <h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property" title="Using the aria-invalid property">Using the aria-invalid property</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute">Using the aria-invalid attribute</a></li>
 </ul>
 
 <h3 id="Compatibility">Compatibility</h3>
@@ -137,5 +139,5 @@ document.getElementById("expirationWarning").className = ""; </pre>
 <h3 id="Additional_resources">Additional resources</h3>
 
 <ul>
- <li>ARIA Best Practices - Alert Role: <a class="external" href="https://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert</a></li>
+ <li>ARIA Best Practices - Alert Role: <a href="https://www.w3.org/TR/wai-aria-practices/#alert">http://www.w3.org/TR/wai-aria-practices/#alert</a></li>
 </ul>

@@ -9,58 +9,60 @@ tags:
   - htmlFor
 ---
 <div>
-<div>{{APIRef("HTML DOM")}}</div>
+  <div>{{APIRef("HTML DOM")}}</div>
 </div>
 
-<p>The <strong><code>HTMLLabelElement.htmlFor</code></strong> property reflects the value of the {{htmlattrxref("for", "label")}} content property. That means that this script-accessible property is used to set and read the value of the content property <code>for</code>, which is the ID of the label's associated control element.</p>
+<p>The <strong><code>HTMLLabelElement.htmlFor</code></strong> property reflects the value
+  of the {{htmlattrxref("for", "label")}} content property. That means that this
+  script-accessible property is used to set and read the value of the content property
+  <code>for</code>, which is the ID of the label's associated control element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>controlId</em> = <em>HTMLLabelElement</em>.htmlFor
+<pre class="brush: js"><em>controlId</em> = <em>HTMLLabelElement</em>.htmlFor
 
 <em>HTMLLabelElement</em>.htmlFor = <em>newId</em>
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("DOMString")}} which contains the ID string of the element which is associated with the control.</p>
+<p>A {{domxref("DOMString")}} which contains the ID string of the element which is
+  associated with the control.</p>
 
 <div class="note">
-<p>If this property has a value, the {{domxref("HTMLLabelElement.control")}} property must refer to the same control.</p>
+  <p>If this property has a value, the {{domxref("HTMLLabelElement.control")}} property
+    must refer to the same control.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-label-htmlfor', 'htmlFor')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-label-htmlfor', 'htmlFor')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLLabelElement.htmlFor")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("HTMLLabelElement")}}</li>
- <li>{{domxref("HTMLLabelElement.control")}}</li>
- <li>{{domxref("HTMLElement")}}</li>
- <li>{{HTMLElement("label")}}</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms guide</a></li>
+  <li>{{domxref("HTMLLabelElement")}}</li>
+  <li>{{domxref("HTMLLabelElement.control")}}</li>
+  <li>{{domxref("HTMLElement")}}</li>
+  <li>{{HTMLElement("label")}}</li>
+  <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
 </ul>

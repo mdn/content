@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>-webkit-text-stroke-color</code></strong> CSS property specifies the stroke <a href="/en-US/docs/Web/CSS/color_value">color</a> of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;color&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;color&gt; values */
 -webkit-text-stroke-color: red;
 -webkit-text-stroke-color: #e08ab4;
 -webkit-text-stroke-color: rgb(200, 100, 0);
@@ -39,7 +39,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -47,12 +47,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Text with stroke&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Text with stroke&lt;/p&gt;
 &lt;input type="color" value="#ff0000"&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-width: 3px;
@@ -63,7 +63,7 @@ tags:
 <div class="hidden">
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var colorPicker = document.querySelector("input");
+<pre class="brush: js">var colorPicker = document.querySelector("input");
 colorPicker.addEventListener("change", function(evt) {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
 });</pre>

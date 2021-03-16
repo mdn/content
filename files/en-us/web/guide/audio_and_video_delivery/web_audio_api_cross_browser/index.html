@@ -9,17 +9,17 @@ tags:
 <p><em>What do we do!?</em></p>
 <p>We don't want to maintain two or more separate code bases, and feature detection code is cumbersome! Plus we want to write code that reliably works in the future, or at least, works with a minimum amount of changes. Is there a way to satisfy all these constraints at the same time? <em>Probably!</em></p>
 <h2 id="Writing_for_today_(and_tomorrow)">Writing for today (and tomorrow)</h2>
-<p>First, get a copy of <a href="https://github.com/cwilso/AudioContext-MonkeyPatch/">AudioContext-MonkeyPatch</a> by Chris Wilson. This little library will "normalise" the interfaces for you and make it look as if your code is running in a standards compliant browser, by aliasing prefixed names to the unprefixed versions. And it won't do anything if the unprefixed versions are already present.</p>
+<p>First, get a copy of <a href="https://github.com/cwilso/AudioContext-MonkeyPatch/">AudioContext-MonkeyPatch</a> by Chris Wilson. This little library will "normalize" the interfaces for you and make it look as if your code is running in a standards compliant browser, by aliasing prefixed names to the unprefixed versions. And it won't do anything if the unprefixed versions are already present.</p>
 <p>Once you include it in your page, you can write in "modern Web Audio API" style, and do things such as:</p>
-<pre class="brush: js notranslate">var audioContext = new AudioContext();
+<pre class="brush: js">var audioContext = new AudioContext();
 </pre>
 <p>everywhere, including Chrome/ium, Opera, Safari, and ---of course!--- Firefox.</p>
 <p>Also, if new methods such as <code>start</code> are not detected in some nodes, the library will also alias them to their old names. Thus, <code>start</code> is mapped to <code>noteOn</code>, <code>stop</code> to <code>noteOff</code>, and so on.</p>
 <p>If you're porting moderately "old" code (say, a year old) it's possible that it uses some methods that <code>AudioContext-MonkeyPatch</code> doesn't alias, because it helps you to write code in the <em>new</em> style. For example, the way to create instances of <code>GainNode</code> used to be</p>
-<pre class="brush: js notranslate">var gain = audioContext.createGainNode();
+<pre class="brush: js">var gain = audioContext.createGainNode();
 </pre>
 <p>but nowadays it is just</p>
-<pre class="brush: js notranslate">var gain = audioContext.createGain();
+<pre class="brush: js">var gain = audioContext.createGain();
 </pre>
 <p>Since the old method names are not present in Firefox, existing code may crash with something like <code>createGainNode is not a function</code>, and you now know why.</p>
 <p>There's <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#OldNames">a section</a> in the spec that lists the old names and their updated equivalences; be sure to check it out and change your code accordingly. You can also check <a href="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">this article</a> on porting which covers more cases and has many code samples.</p>
@@ -29,7 +29,7 @@ tags:
 <p>The node parameters you use must also be supported in Firefox too. If they aren't, you might be able to change them into something "acceptable" for the time being, and count on the talented audio developers to implement those very soon.</p>
 <p>For example, up until a couple of days ago <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#PannerNode-section">PannerNode</a> did not support the default HRTF panning model yet, and attempting to use a <code>PannerNode</code> with that configuration resulted in silence or a mono output coming out from that node, depending on the build you used.</p>
 <p>Today the support is already present in <a href="http://nightly.mozilla.org/">Nightly</a>, but not quite yet in <a href="https://www.mozilla.org/en-US/firefox/aurora/">Aurora</a>. In the meantime, you can explicitly specify <code>'equalpower'</code> instead:</p>
-<pre class="brush: js notranslate">var panner = new audioContext.PannerNode();
+<pre class="brush: js">var panner = new audioContext.PannerNode();
 panner.panningModel = 'equalpower';
 </pre>
 <p>Note that there's a <a href="https://github.com/WebAudio/demo-list">list of projects</a> built with the Web Audio API, specifying which ones use the standard <code>AudioContext</code> and which browsers do they work on. If you're a person that learns by example, it might be interesting to have a look at their source and see how they have resolved the compatibility issues.</p>

@@ -16,7 +16,7 @@ tags:
 
 <p>The following example show a simple image map (taken from <a href="https://www.w3.org/TR/WCAG20-TECHS/H24.html">H24: Providing text alternatives for the area elements of image maps</a>):</p>
 
-<pre class="notranslate">&lt;img src="welcome.gif" usemap="#map1"
+<pre class="brush: html">&lt;img src="welcome.gif" usemap="#map1"
     alt="Areas in the library. Select an area for
 more information on that area." /&gt;
 &lt;map id="map1" name="map1"&gt;
@@ -45,7 +45,7 @@ more information on that area." /&gt;
 
 <p>The following example shows a simple dialog box, defined as such using <code>role="dialog"</code> and labelled using <code>aria-labelledby</code>.</p>
 
-<pre class="notranslate">&lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
+<pre class="brush: html">&lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
   &lt;h2 id="dialog1Title"&gt;Your personal details were successfully updated&lt;/h2&gt;
   &lt;p id="dialog1Desc"&gt;You can change your details at any time in the user account section.&lt;/p&gt;
   &lt;button&gt;Close&lt;/button&gt;
@@ -53,7 +53,7 @@ more information on that area." /&gt;
 
 <p>If the dialog box doesn't have a heading, you can instead use <code>aria-label</code> to contain the label text:</p>
 
-<pre class="notranslate">&lt;div role="dialog" aria-label="Personal details updated confirmation"&gt;
+<pre class="brush: html">&lt;div role="dialog" aria-label="Personal details updated confirmation"&gt;
   &lt;p&gt;Your personal details were successfully updated. You can
     change your details at any time in the user account section.&lt;/p&gt;
   &lt;button&gt;Close&lt;/button&gt;
@@ -78,15 +78,15 @@ more information on that area." /&gt;
 
 <p>The title for the reference article about the {{htmlelement("title")}} element is as follows:</p>
 
-<pre class="notranslate">&lt;title&gt;&amp;lt;title&amp;gt;: The Document Title element - HTML: Hypertext Markup Language | MDN&lt;/title&gt;</pre>
+<pre class="brush: html">&lt;title&gt;&amp;lt;title&amp;gt;: The Document Title element - HTML: Hypertext Markup Language | MDN&lt;/title&gt;</pre>
 
 <p>Another example might look like so:</p>
 
-<pre class="notranslate">&lt;title&gt;Fill in your details to register — myGov services&lt;/title&gt;</pre>
+<pre class="brush: html">&lt;title&gt;Fill in your details to register — myGov services&lt;/title&gt;</pre>
 
 <p>To help the user, you can update the page title value to reflect significant page state changes (such as form validation problems):</p>
 
-<pre class="notranslate">&lt;title&gt;2 errors — Fill in your details to register — myGov services&lt;/title&gt;</pre>
+<pre class="brush: html">&lt;title&gt;2 errors — Fill in your details to register — myGov services&lt;/title&gt;</pre>
 
 <h3 id="See_also_3">See also</h3>
 
@@ -106,7 +106,7 @@ more information on that area." /&gt;
 
 <p>The following example shows code for a figure with a caption. The <code>alt</code> attribute of the {{htmlelement("img")}} describes the appearance of the image; the {{htmlelement("figcaption")}} describes it from a functional perspective (in this case, the Latin name of the flower in the image).</p>
 
-<pre class="notranslate">&lt;figure&gt;
+<pre class="brush: html">&lt;figure&gt;
   &lt;img src="milkweed.jgp"
       alt="Black and white close-up photo of milkweed flowers"&gt;
  &lt;figcaption&gt;Asclepias verticillata&lt;/figcaption&gt;
@@ -125,7 +125,7 @@ more information on that area." /&gt;
 
 <h3 id="Examples_4">Examples</h3>
 
-<pre class="notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Choose your favorite monster&lt;/legend&gt;
 
@@ -157,7 +157,7 @@ more information on that area." /&gt;
 
 <h3 id="Example_2">Example</h3>
 
-<pre class="notranslate">&lt;label&gt;I agree to the terms and conditions.
+<pre class="brush: html">&lt;label&gt;I agree to the terms and conditions.
   &lt;input type="checkbox" id="terms"&gt;
 &lt;/label&gt;
 
@@ -179,7 +179,7 @@ more information on that area." /&gt;
 
 <h3 id="Example_3">Example</h3>
 
-<pre class="notranslate">&lt;iframe
+<pre class="brush: html">&lt;iframe
     title="MDN Web docs"
     width="300"
     height="200"
@@ -187,10 +187,6 @@ more information on that area." /&gt;
 &lt;/iframe&gt;
 
 </pre>
-
-<h2 id="Use_alt_attribute_to_label_mglyph_elements">Use alt attribute to label mglyph  elements</h2>
-
-<p>When writing equations with MathML, give each {{mathmlelement("mglyph")}} element an <code>alt</code> attribute containing a name that describes the symbol. Since <code>mglyph</code> elements are used for non-standard symbols without Unicode definitions, screen readers won't automatically be able to name them. Alternative text helps users of screen readers understand the symbol.</p>
 
 <h2 id="Headings_must_be_labeled">Headings must be labeled</h2>
 
@@ -214,7 +210,7 @@ more information on that area." /&gt;
 
 <h3 id="Example_4">Example</h3>
 
-<pre class="notranslate">&lt;img src="milkweed.jgp"
+<pre class="brush: html">&lt;img src="milkweed.jgp"
      alt="Black and white close-up photo of milkweed flowers"&gt; </pre>
 
 <h2 id="Interactive_elements_must_be_labeled">Interactive elements must be labeled</h2>
@@ -229,7 +225,7 @@ more information on that area." /&gt;
 
 <p>In this example, the <code>label</code> attribute on the <code>&lt;optgroup&gt;</code> elements gives a category name for the group of options.</p>
 
-<pre class="notranslate">&lt;label for="dino-select"&gt;Choose a dinosaur:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="dino-select"&gt;Choose a dinosaur:&lt;/label&gt;
 &lt;select id="dino-select"&gt;
     &lt;optgroup label="Theropods"&gt;
         &lt;option&gt;Tyrannosaurus&lt;/option&gt;

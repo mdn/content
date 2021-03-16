@@ -49,8 +49,9 @@ tags:
 
 <p>{{page("/en-US/docs/Web/Media/Formats/Image_types", "Common_image_file_types")}}</p>
 
-<div class="note">
-<p><strong>Note:</strong> See <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a> for more comprehensive information about image formats supported by web browsers. This includes image formats that are supported but not recommended for web content (e.g. ICO, BMP, etc.)</p>
+<div class="notecard note">
+	<h4>Tip</h4>
+	<p>See <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a> for more comprehensive information about image formats supported by web browsers. This includes image formats that are supported but not recommended for web content (e.g. ICO, BMP, etc.)</p>
 </div>
 
 <h2 id="Image_loading_errors">Image loading errors</h2>
@@ -72,16 +73,16 @@ tags:
 <dl>
 	<dt>{{htmlattrdef("alt")}}</dt>
 	<dd>Defines an alternative text description of the image.
-	<div class="note">
-	<p><strong>Note:</strong> Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:</p>
-
-	<ul>
-		<li>Non-visual browsers (such as those used by people with visual impairments)</li>
-		<li>The user chooses not to display images (saving bandwidth, privacy reasons)</li>
-		<li>The image is invalid or an <a href="#Supported_image_formats">unsupported type</a></li>
-	</ul>
-
-	<p>In these cases, the browser may replace the image with the text in the element's <code>alt</code> attribute. For these reasons and others, provide a useful value for <code>alt</code> whenever possible.</p>
+		<div class="notecard note">
+			<h4>Note</h4>
+			<p>Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:</p>
+			<ul>
+				<li>Non-visual browsers (such as those used by people with visual impairments)</li>
+				<li>The user chooses not to display images (saving bandwidth, privacy reasons)</li>
+				<li>The image is invalid or an <a href="#supported_image_formats">unsupported type</a></li>
+			</ul>
+			
+			<p>In these cases, the browser may replace the image with the text in the element's <code>alt</code> attribute. For these reasons and others, provide a useful value for <code>alt</code> whenever possible.</p>
 	</div>
 
 	<p>Omitting <code>alt</code> altogether indicates that the image is a key part of the content and no textual equivalent is available. Setting this attribute to an empty string (<code>alt=""</code>) indicates that this image is <em>not</em> a key part of the content (it’s decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the <code>alt</code> is empty and the image failed to display.</p>
@@ -90,7 +91,7 @@ tags:
 	</dd>
 	<dt>{{htmlattrdef("crossorigin")}}</dt>
 	<dd>
-	<p>Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a <a href="/en-US/docs/Web/HTML/CORS_enabled_image">CORS-enabled image</a> returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "<a href="/en-US/docs/Web/HTML/CORS_enabled_image#What_is_a_tainted_canvas">tainted</a>".</p>
+	<p>Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a <a href="/en-US/docs/Web/HTML/CORS_enabled_image">CORS-enabled image</a> returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "<a href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas">tainted</a>".</p>
 
 	<p>If the <code>crossorigin</code> attribute is <em>not</em> specified, then a non-CORS request is sent (without the {{httpheader("Origin")}} request header), and the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.</p>
 
@@ -100,7 +101,7 @@ tags:
 
 	<dl>
 		<dt><code>anonymous</code></dt>
-		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a class="external" href="https://tools.ietf.org/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
+		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a href="https://tools.ietf.org/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
 		<dt><code>use-credentials</code></dt>
 		<dd>The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the <code>Authorization</code> request header). If the server does not opt into sharing credentials with the origin site (by sending back the <code>Access-Control-Allow-Credentials: true</code> response header), then the browser marks the image as tainted and restricts access to its image data.</dd>
 	</dl>
@@ -124,19 +125,23 @@ tags:
 	<dt>{{htmlattrdef("height")}}</dt>
 	<dd>The intrinsic height of the image, in pixels. Must be an integer without a unit.</dd>
 	<dt>{{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}</dt>
-	<dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a class="external" href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a class="external" href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
+	<dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
 	<dt>{{htmlattrdef("ismap")}}</dt>
 	<dd>This Boolean attribute indicates that the image is part of a <a href="https://en.wikipedia.org/wiki/Image_map#Server-side">server-side map</a>. If so, the coordinates where the user clicked on the image are sent to the server.
-	<div class="note">
-	<p><strong>Note:</strong> This attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.</p>
+	<div class="notecard note">
+		<h4>Note</h4>
+		<p><strong>Note:</strong> This attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.</p>
 	</div>
 	</dd>
-	<dt>{{htmlattrdef("loading")}}</dt>
+	<dt>{{htmlattrdef("loading")}} {{experimental_inline}}</dt>
 	<dd>Indicates how the browser should load the image:
 	<ul>
 		<li><code>eager</code>: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).</li>
 		<li><code>lazy</code>: Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
-		<div class="note"><strong>Note:</strong> Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.</div>
+		<div class="notecard note">
+			<h4>Note</h4>
+			<p>Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.</p>
+		</div>
 		</li>
 	</ul>
 	</dd>
@@ -153,7 +158,7 @@ tags:
 	<dt>{{htmlattrdef("sizes")}}</dt>
 	<dd>One or more strings separated by commas, indicating a set of source sizes. Each source size consists of:
 	<ol>
-		<li>A <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax">media condition</a>. This must be omitted for the last item in the list.</li>
+		<li>A <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax">media condition</a>. This must be omitted for the last item in the list.</li>
 		<li>A source size value.</li>
 	</ol>
 
@@ -185,8 +190,9 @@ tags:
 	<dd>The intrinsic width of the image in pixels. Must be an integer without a unit.</dd>
 	<dt>{{htmlattrdef("usemap")}}</dt>
 	<dd>The partial {{glossary("URL")}} (starting with <code>#</code>) of an <a href="/en-US/docs/Web/HTML/Element/map">image map</a> associated with the element.
-	<div class="note">
-	<p><strong>Note:</strong> You cannot use this attribute if the <code>&lt;img&gt;</code> element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.</p>
+	<div class="notecard note">
+		<h4>Note</h4>
+		<p>You cannot use this attribute if the <code>&lt;img&gt;</code> element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.</p>
 	</div>
 	</dd>
 </dl>
@@ -216,8 +222,9 @@ tags:
 	<dd>The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.</dd>
 	<dt>{{htmlattrdef("longdesc")}} {{Obsolete_Inline}}</dt>
 	<dd>A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
-	<div class="note">
-	<p><strong>Note:</strong> This attribute is mentioned in the latest {{glossary("W3C")}} version, <a class="external" href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a class="external" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+	<div class="notecard note">
+		<h4>Note</h4>
+		<p>This attribute is mentioned in the latest {{glossary("W3C")}} version, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
 	</div>
 	</dd>
 	<dt>{{htmlattrdef("name")}} {{Obsolete_Inline}}</dt>
@@ -242,7 +249,7 @@ tags:
 
 <p>The following example embeds an image into the page and includes alternative text for accessibility.</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
+<pre class="brush: html">&lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
      alt="MDN logo"&gt;
 </pre>
 
@@ -252,7 +259,7 @@ tags:
 
 <p>This example builds upon the previous one, showing how to turn the image into a link. To do so, nest the <code>&lt;img&gt;</code> tag inside the {{HTMLElement("a")}}. You should made the alternative text describe the resource the link is pointing to, as if you were using a text link instead.</p>
 
-<pre class="brush: html notranslate">&lt;a href="https://developer.mozilla.org"&gt;
+<pre class="brush: html">&lt;a href="https://developer.mozilla.org"&gt;
   &lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
        alt="Visit the MDN site"&gt;
 &lt;/a&gt;</pre>
@@ -263,7 +270,7 @@ tags:
 
 <p>In this example we include a <code>srcset</code> attribute with a reference to a high-resolution version of the logo; this will be loaded instead of the <code>src</code> image on high-resolution devices. The image referenced in the <code>src</code> attribute is counted as a <code>1x</code> candidate in {{glossary("User agent", "user agents")}} that support <code>srcset</code>.</p>
 
-<pre class="brush: html notranslate"> &lt;img src="https://developer.mozilla.org/static/img/favicon72.png"
+<pre class="brush: html"> &lt;img src="https://developer.mozilla.org/static/img/favicon72.png"
       alt="MDN logo"
       srcset="https://developer.mozilla.org/static/img/favicon144.png 2x"&gt;</pre>
 
@@ -273,7 +280,7 @@ tags:
 
 <p>The <code>src</code> attribute is ignored in {{glossary("User agent", "user agents")}} that support <code>srcset</code> when <code>w</code> descriptors are included. When the <code>(max-width: 600px)</code> media condition matches, the 200 pixel-wide image will load (it is the one that matches <code>200px</code> most closely), otherwise the other image will load.</p>
 
-<pre class="brush: html notranslate"> &lt;img src="/files/16864/clock-demo-200px.png"
+<pre class="brush: html"> &lt;img src="/files/16864/clock-demo-200px.png"
       alt="Clock"
       srcset="/files/16864/clock-demo-200px.png 200w,
           /files/16797/clock-demo-400px.png 400w"
@@ -282,7 +289,8 @@ tags:
 <p>{{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}</p>
 
 <div class="notecard note">
-<p>To see the resizing in action, <a href="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/img$samples/Using_the_srcset_and_sizes_attributes">view the example on a separate page</a>, so you can actually resize the content area.</p>
+	<h4>Note</h4>
+	<p>To see the resizing in action, <a href="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/img$samples/Using_the_srcset_and_sizes_attributes">view the example on a separate page</a>, so you can actually resize the content area.</p>
 </div>
 
 <h2 id="Security_and_privacy_concerns">Security and privacy concerns</h2>
@@ -297,22 +305,22 @@ tags:
 
 <h4 id="Dont">Don't</h4>
 
-<pre class="brush: html example-bad notranslate">&lt;img alt="image" src="penguin.jpg"&gt;
+<pre class="brush: html example-bad">&lt;img alt="image" src="penguin.jpg"&gt;
 </pre>
 
 <h4 id="Do">Do</h4>
 
-<pre class="brush: html example-good notranslate">&lt;img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg"&gt;
+<pre class="brush: html example-good">&lt;img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg"&gt;
 </pre>
 
 <p>When an <code>alt</code> attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.</p>
 
 <ul>
-	<li><a class="external" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
-	<li><a class="external" href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
-	<li><a class="external" href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
-	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
-	<li><a class="external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
+	<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
+	<li><a href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
+	<li><a href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h3 id="The_title_attribute">The title attribute</h3>
@@ -324,7 +332,7 @@ tags:
 <p>The value of the <code>title</code> attribute is usually presented to the user as a tooltip, which appears shortly after the cursor stops moving over the image. While this <em>can</em> provide additional information to the user, you should not assume that the user will ever see it: the user may only have keyboard or touchscreen. If you have information that's particularly important or valuable for the user, present it inline using one of the methods mentioned above instead of using <code>title</code>.</p>
 
 <ul>
-	<li><a class="external" href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
+	<li><a href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
 </ul>
 
 <h2 id="Technical_summary">Technical summary</h2>
@@ -333,7 +341,7 @@ tags:
 	<tbody>
 		<tr>
 			<th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-			<td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Embedded_content">embedded content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a>. If the element has a <code>usemap</code> attribute, it also is a part of the interactive content category.</td>
+			<td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content">embedded content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a>. If the element has a <code>usemap</code> attribute, it also is a part of the interactive content category.</td>
 		</tr>
 		<tr>
 			<th scope="row">Permitted content</th>

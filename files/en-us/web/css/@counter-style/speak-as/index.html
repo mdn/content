@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* Keyword values */
+<pre class="brush: css">/* Keyword values */
 speak-as: auto;
 speak-as: bullets;
 speak-as: numbers;
@@ -44,7 +44,7 @@ speak-as: &lt;counter-style-name&gt;;
  <dt><code>words</code></dt>
  <dd>The user agent will generate a counter value as normal and read it out as a word in the document language.</dd>
  <dt><code>spell-out</code></dt>
- <dd>The user agent will generate a counter representation as normal and would read it out letter by letter. If the user agent doesn't know how to read out a partiular counter symbol, the user agent might read it out as if the value of <code>speak-as</code> was <code>numbers</code>.</dd>
+ <dd>The user agent will generate a counter representation as normal and would read it out letter by letter. If the user agent doesn't know how to read out a particular counter symbol, the user agent might read it out as if the value of <code>speak-as</code> was <code>numbers</code>.</dd>
  <dt><code>&lt;counter-style-name&gt;</code></dt>
  <dd>The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("fallback")}} descriptor. If the specified style does not exist, <code>speak-as</code> defaults to <code>auto</code>.</dd>
 </dl>
@@ -61,7 +61,7 @@ speak-as: &lt;counter-style-name&gt;;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
  <h2 id="Examples">Examples</h2>
 
@@ -69,7 +69,7 @@ speak-as: &lt;counter-style-name&gt;;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul class="list"&gt;
+<pre class="brush: html">&lt;ul class="list"&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
@@ -79,7 +79,7 @@ speak-as: &lt;counter-style-name&gt;;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">@counter-style speak-as-example {
+<pre class="brush: css">@counter-style speak-as-example {
   system: fixed;
   symbols:     ;
   suffix: " ";

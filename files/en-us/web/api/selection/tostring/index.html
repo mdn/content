@@ -2,24 +2,26 @@
 title: Selection.toString()
 slug: Web/API/Selection/toString
 tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+- API
+- Experimental
+- HTML Editing
+- Method
+- Reference
+- Selection
 ---
 <div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
+  <div>
+    <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+  </div>
 </div>
 
-<p>The <strong><code>Selection.toString()</code></strong> method returns a string currently being represented by the selection object, i.e. the currently selected text.</p>
+<p>The <strong><code>Selection.toString()</code></strong> method returns a string
+  currently being represented by the selection object, i.e. the currently selected text.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>sel</em>.toString()
+<pre class="brush: js"><em>sel</em>.toString()
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -30,7 +32,8 @@ tags:
 
 <p>This method returns the currently selected text.</p>
 
-<p>In <a href="/en-US/JavaScript">JavaScript</a>, this method is called automatically when a function the selection object is passed to requires a string:</p>
+<p>In <a href="/en-US/JavaScript">JavaScript</a>, this method is called automatically when
+  a function the selection object is passed to requires a string:</p>
 
 <pre class="brush: js">alert(window.getSelection()) // What is called
 alert(window.getSelection().toString())  // What is actually being effectively called.
@@ -39,18 +42,19 @@ alert(window.getSelection().toString())  // What is actually being effectively c
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selection API', '#idl-def-selection-', 'Selection: toString()')}}</td>
-   <td>{{Spec2('Selection API')}}</td>
-   <td>Current</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selection API', '#dom-selection-stringifier', 'Selection stringifier')}}
+      </td>
+      <td>{{Spec2('Selection API')}}</td>
+      <td>Current</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -60,5 +64,5 @@ alert(window.getSelection().toString())  // What is actually being effectively c
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
+  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
 </ul>

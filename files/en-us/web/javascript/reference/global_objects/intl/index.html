@@ -41,23 +41,32 @@ tags:
 
 <h2 id="Locale_identification_and_negotiation">Locale identification and negotiation</h2>
 
-<p>The internationalization constructors as well as several language sensitive methods of other constructors (listed under <a href="#See_also">See also</a>) use a common pattern for identifying locales and determining the one they will actually use: they all accept <code>locales</code> and <code>options</code> arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the <code>options.localeMatcher</code> property.</p>
+<p>The internationalization constructors as well as several language sensitive methods of other constructors (listed under <a href="#see_also">See also</a>) use a common pattern for identifying locales and determining the one they will actually use: they all accept <code>locales</code> and <code>options</code> arguments, and negotiate the requested locale(s) against the locales they support using an algorithm specified in the <code>options.localeMatcher</code> property.</p>
 
 <h3 id="locales_argument">locales argument</h3>
 
-<p>The <code>locales</code> argument requests that a particular locale (or a locale from a list of them) be considered for use in a given operation.  A single locale may be specified by either an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale">Intl.Locale</a></code> object or a string that is a <a href="https://www.unicode.org/reports/tr35/tr35.html#BCP_47_Conformance">Unicode BCP 47 locale identifier</a>.  Multiple locales may be specified (and a best-supported locale determined by evaluating each of them in order and comparing against the locales supported by the implementation) by passing an array (or array-like object, with a <code>length</code> property and corresponding indexed elements) whose elements are either <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale">Intl.Locale</a></code> objects or values that convert to <a href="https://www.unicode.org/reports/tr35/tr35.html#BCP_47_Conformance">Unicode BCP 47 locale identifier </a>strings.  If the <code>locales</code> argument is not provided or is undefined, the runtime's default locale is used.</p>
+<p>The <code>locales</code> argument is used to determine the locale used in a given operation. The JavaScript implementation examines <code>locales</code>, and then computes a locale it understands that comes closest to satisfying the expressed preference. <code>locales</code> may be:</p>
 
-<p>A Unicode BCP 47 locale identifier consists of</p>
+<ul>
+	<li><code>undefined</code> (or omitted): The implementation's default locale will be used.</li>
+	<li>A locale: A locale identifier or an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale">Intl.Locale</a></code> object that wraps a locale identifier.</li>
+	<li>A list of locales: Any other value, that will be converted into an object and then treated as an array of locales.</li>
+</ul>
+
+<p>In the latter two cases, the actual locale used is the best-supported locale determined by <a href="#locale_negotiation">locale negotiation</a>.</p>
+
+<p>A locale identifier is a string that consists of:</p>
 
 <ol>
-	<li>a language code,</li>
-	<li>(optionally) a script code,</li>
-	<li>(optionally) a region (or country) code,</li>
-	<li>(optionally) one or more variant codes, and</li>
-	<li>(optionally) one or more extension sequences,</li>
+	<li>a language subtag,</li>
+	<li>(optionally) a script subtag,</li>
+	<li>(optionally) a region (or country) subtag,</li>
+	<li>(optionally) one or more variant subtags (all of which must be unique),</li>
+	<li>(optionally) one or more BCP 47 extension sequences, and</li>
+	<li>(optionally) a private-use extension sequence</li>
 </ol>
 
-<p>with all present components separated by hyphens.  Locale identifiers are case-insensitive ASCII.  However, it's conventional to use title case (first letter capitalized, successive letters lower case) for script code, upper case for region codes, and lower case for everything else.  For example:</p>
+<p>...with all present subtags and sequences separated by hyphens. Locale identifiers are case-insensitive ASCII. However, it's conventional to use title case (first letter capitalized, successive letters lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:</p>
 
 <ul>
 	<li>"<code>hi</code>": Hindi (language)</li>
@@ -66,26 +75,30 @@ tags:
 	<li>"<code>en-emodeng</code>": English (language) in the "Early modern English" dialect (variant)</li>
 </ul>
 
-<p>The subtags identifying languages, scripts, regions (including countries), and (rarely used) variants in Unicode BCP 47 locale identifiers are registered in the <a href="http://www.iana.org/assignments/language-subtag-registry">IANA Language Subtag Registry</a>.  This registry is periodically updated over time, and implementations may not always be up to date, so be careful not to rely too much on tags being universally supported.</p>
+<p>Subtags identifying languages, scripts, regions (including countries), and (rarely used) variants are registered in the <a href="http://www.iana.org/assignments/language-subtag-registry">IANA Language Subtag Registry</a>. This registry is periodically updated over time, and implementations may not always be up to date, so don't rely too much on subtags being universally supported.</p>
 
-<p>BCP 47 also allows for extensions, each consisting of a single digit or letter (other than <code>"x"</code>) and one or more two- to eight-letter or digit tags, all separated by hyphens. JavaScript internationalization functions use the <code>"u"</code> (Unicode) extension, which can be used to request additional customization of {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, or {{jsxref("DateTimeFormat")}} objects. Examples:</p>
+<p>BCP 47 extension sequences consist of a single digit or letter (other than <code>"x"</code>) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "<code>de-a-foo-a-foo</code>" is invalid. BCP 47 extension subtags are defined in the <a href="https://github.com/unicode-org/cldr/tree/master/common/bcp47">Unicode CLDR Project</a>. Currently only two extensions have defined semantics:</p>
 
 <ul>
-	<li>"<code>de-DE-u-co-phonebk</code>": Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.</li>
-	<li>"<code>th-TH-u-nu-thai</code>": Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.</li>
-	<li>"<code>ja-JP-u-ca-japanese</code>": Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成25.</li>
-	<li>"<code>en-GB-u-ca-islamic</code>": use British English with the Islamic (Hijri) calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24 Muharram, 1439.</li>
+	<li>The <code>"u"</code> (Unicode) extension can be used to request additional customization of {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, or {{jsxref("DateTimeFormat")}} objects. Examples:
+
+		<ul>
+			<li>"<code>de-DE-u-co-phonebk</code>": Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.</li>
+			<li>"<code>th-TH-u-nu-thai</code>": Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.</li>
+			<li>"<code>ja-JP-u-ca-japanese</code>": Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成25.</li>
+			<li>"<code>en-GB-u-ca-islamic</code>": use British English with the Islamic (Hijri) calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24 Muharram, 1439.</li>
+		</ul>
+	</li>
+	<li>The <code>"t"</code> (transformed) extension indicates transformed content: for example, text that was translated from another locale. No <code>Intl</code> functionality currently considers the <code>"t"</code> extension. However, this extension sometimes contains a nested locale (with no extensions): for example, the transformed extension in "<code>de-t-en</code>" contains the locale identifier for English. If a nested locale is present, it must be a valid locale identifier. For example, because "<code>en-emodeng-emodeng</code>" is invalid (because it contains a duplicate <code>emodeng</code> variant subtag), "<code>de-t-en-emodeng-emodeng</code>" is also invalid.</li>
 </ul>
 
-<p>Other BCP 47 extension tags can be found in the <a href="https://github.com/unicode-org/cldr/tree/master/common/bcp47">Unicode CLDR Project</a>.</p>
+<p>Finally, a private-use extension sequence using the letter <code>"x"</code> may appear, followed by one or more one- to eight-letter or digit subtags separated by hyphens. This allows applications to encode information for their own private use, that will be ignored by all <code>Intl</code> operations.</p>
 
-<p>Finally, an extension using the letter <code>"x"</code> may appear, followed by one or one- to eight-letter or digit tags.  This extension allows applications to encode information for their own private use, that will be ignored by all <code>Intl</code> operations.</p>
-
-<h3 id="Locale_negotiation">Locale negotiation</h3>
+<h3 id="locale_negotiation">Locale negotiation</h3>
 
 <p>The list of locales specified by the <code>locales</code> argument, after Unicode extensions have been removed from them, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the "<code>lookup</code>" matcher follows the Lookup algorithm specified in <a href="https://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a>; the "<code>best fit</code>" matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a <code>locales</code> argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the <code>options</code> argument (see below).</p>
 
-<p>If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the "<code>co</code>" key (collation) is only supported by {{jsxref("Collator")}}, and its "<code>phonebk</code>" value is only supported for German.</p>
+<p>If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the "<code>co</code>" key (collation) is only supported by {{jsxref("Collator")}}, and its "<code>phonebk</code>" value is only supported for German.</p>
 
 <h3 id="options_argument">options argument</h3>
 
@@ -99,7 +112,7 @@ tags:
 
 <p>You can use <code>Intl</code> to format dates and numbers in a form that's conventional for a specific language and region:</p>
 
-<pre class="brush: js notranslate">const count = 26254.39;
+<pre class="brush: js">const count = 26254.39;
 const date = new Date("2012-05-24");
 
 function log(locale) {

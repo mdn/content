@@ -2,26 +2,32 @@
 title: IDBObjectStore.delete()
 slug: Web/API/IDBObjectStore/delete
 tags:
-  - API
-  - IndexedDB
-  - Method
-  - Reference
+- API
+- IndexedDB
+- Method
+- Reference
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p>The <strong><code>delete()</code></strong> method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the specified record or records.</p>
+  <p>The <strong><code>delete()</code></strong> method of the
+    {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+    and, in a separate thread, deletes the specified record or records.</p>
 
-<p>Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple records to be deleted from a store. To delete all records in a store, use  {{domxref("IDBObjectStore.clear")}}.</p>
+  <p>Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
+    records to be deleted from a store. To delete all records in a store, use 
+    {{domxref("IDBObjectStore.clear")}}.</p>
 
-<p>Bear in mind that if you are using a {{domxref("cursor", "IDBCursor")}}, you can use the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current record — without having to explicitly look up the record's key.</p>
+  <p>Bear in mind that if you are using a {{domxref("cursor", "IDBCursor")}}, you can use
+    the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
+    record — without having to explicitly look up the record's key.</p>
 
-<p>{{AvailableInWorkers}}</p>
+  <p>{{AvailableInWorkers}}</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>request</em> = <em>objectStore</em>.delete(<em>Key</em>);
+<pre class="brush: js">var <em>request</em> = <em>objectStore</em>.delete(<em>Key</em>);
 
 var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
 </pre>
@@ -29,50 +35,62 @@ var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>Key</dt>
- <dd>The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all records with keys in range.</dd>
+  <dt>Key</dt>
+  <dd>The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
+    records with keys in range.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired. The <code>request.result</code> attribute is set to undefined.</p>
+<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
+  operation are fired. The <code>request.result</code> attribute is set to undefined.</p>
 
 <h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>This object store's transaction is inactive.</td>
-  </tr>
-  <tr>
-   <td><code>ReadOnlyError</code></td>
-   <td>The object store's transaction mode is read-only.</td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>The object store has been deleted.</td>
-  </tr>
-  <tr>
-   <td><code>DataError</code></td>
-   <td>
-    <p>The <var>key</var> is not a <a class="internalDFN" href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key">valid key</a> or a <a class="internalDFN" href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range">key range</a>.</p>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TransactionInactiveError</code></td>
+      <td>This object store's transaction is inactive.</td>
+    </tr>
+    <tr>
+      <td><code>ReadOnlyError</code></td>
+      <td>The object store's transaction mode is read-only.</td>
+    </tr>
+    <tr>
+      <td><code>InvalidStateError</code></td>
+      <td>The object store has been deleted.</td>
+    </tr>
+    <tr>
+      <td><code>DataError</code></td>
+      <td>
+        <p>The <var>key</var> is not a <a class="internalDFN"
+            href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key">valid
+            key</a> or a <a class="internalDFN"
+            href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range">key
+            range</a>.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we open a read/write transaction on our database and delete one specific record out of our object store using <code>delete()</code> — a sample record with the key "Walk dog". For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In the following code snippet, we open a read/write transaction on our database and
+  delete one specific record out of our object store using <code>delete()</code> — a
+  sample record with the key "Walk dog". For a full working example, see our <a
+    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
+    Notifications</a><span style="line-height: 1.5;"> app (</span><a
+    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
+    example live</a><span style="line-height: 1.5;">.)</span></p>
 
 <pre class="brush: js" style="font-size: 14px;">// Let us open our database
 <span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -115,40 +133,38 @@ function deleteData() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-delete', 'delete()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-delete", "delete()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-delete', 'delete()')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-delete", "delete()")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBObjectStore.delete")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

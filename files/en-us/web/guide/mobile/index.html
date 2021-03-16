@@ -7,7 +7,7 @@ tags:
 ---
 <p>This page provides an overview of some of the main techniques needed to design web sites that work well on mobile devices. If you're looking for information on Mozilla's Firefox OS project, see the <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> page. Or you might be interested in details about <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox for Android</a>.</p>
 
-<p>We've organized it into two sections, <a href="#Designing_for_mobile_devices">designing for mobile devices</a> and <a href="#Cross-browser_development">cross-browser compatibility</a>. Also see Jason Grlicky's guide to <a href="/en-US/docs/Web/Guide/Mobile/Mobile-friendliness">mobile-friendliness</a> for web developers.</p>
+<p>We've organized it into two sections, <a href="#designing_for_mobile_devices">designing for mobile devices</a> and <a href="#cross-browser_development">cross-browser compatibility</a>. Also see Jason Grlicky's guide to <a href="/en-US/docs/Web/Guide/Mobile/Mobile-friendliness">mobile-friendliness</a> for web developers.</p>
 
 <h2 id="Designing_for_mobile_devices">Designing for mobile devices</h2>
 
@@ -26,7 +26,7 @@ tags:
 
 <h3 id="Working_with_touch_screens">Working with touch screens</h3>
 
-<p>To use a touch screen you'll need to work with <a href="/en-US/docs/Web/API/Touch_events">DOM Touch events</a>. You won't be able to use the CSS {{cssxref(":hover")}} pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
+<p>To use a touch screen you'll need to work with <a href="/en-US/docs/Web/API/Touch_events">DOM Touch events</a>. You won't be able to use the CSS {{cssxref(":hover")}} pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
 
 <p>You can use the <a href="/en-US/docs/Web/CSS/@media/pointer">pointer</a> or <a href="/en-US/docs/Web/CSS/@media/any-pointer">any-pointer</a> media query to load different CSS on a touch-enabled device.</p>
 
@@ -54,9 +54,9 @@ tags:
 
 <p>For example, if you set a gradient as a background for some text using a vendor-prefixed property like <code>-webkit-linear-gradient</code>, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your <code>linear-gradient</code> rule.</p>
 
-<p>See this <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">list of Gecko-specific properties</a>, and this <a href="/en-US/docs/Web/CSS/Webkit_Extensions">list of WebKit-specific properties</a>, and Peter Beverloo's <a class="external" href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">table of vendor-specific properties</a>.</p>
+<p>See this <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">list of Gecko-specific properties</a>, and this <a href="/en-US/docs/Web/CSS/Webkit_Extensions">list of WebKit-specific properties</a>, and Peter Beverloo's <a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">table of vendor-specific properties</a>.</p>
 
-<p>Using tools like <a class="external" href="http://csslint.net/">CSS Lint</a> can help find problems like this in code, and preprocessors like <a class="external" href="http://sass-lang.com/">SASS</a> and <a class="external" href="http://lesscss.org/">LESS</a> can help you to produce cross-browser code.</p>
+<p>Using tools like <a href="http://csslint.net/">CSS Lint</a> can help find problems like this in code, and preprocessors like <a href="http://sass-lang.com/">SASS</a> and <a href="http://lesscss.org/">LESS</a> can help you to produce cross-browser code.</p>
 
 <h3 id="Take_care_with_user_agent_sniffing">Take care with user agent sniffing</h3>
 

@@ -50,7 +50,7 @@ tags:
 
 <p>A "typical website" could be structured something like this:</p>
 
-<p><img alt="a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer." src="https://mdn.mozillademos.org/files/12417/sample-website.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer." src="sample-website.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="HTML_for_structuring_content">HTML for structuring content</h2>
 
@@ -59,10 +59,10 @@ tags:
 <p>This is because visuals don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?</p>
 
 <div class="note">
-<p><strong>Note</strong>: Colorblind people represent around <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">4% of the world population</a> or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women are colorblind. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 million such people in the world</a>, while the total population was <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">around 7 billion</a>).</p>
+<p><strong>Note</strong>: <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">Roughy 8% of men and 0.5% of women</a> are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 million such people in the world</a>, while the total population was <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">around 7 billion</a>).</p>
 </div>
 
-<p>In your HTML code, you can mark up sections of content based on their <em>functionality</em> — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Why_do_we_need_structure">consequences of not using the right element structure and semantics for the right job</a>.</p>
+<p>In your HTML code, you can mark up sections of content based on their <em>functionality</em> — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognize those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure">consequences of not using the right element structure and semantics for the right job</a>.</p>
 
 <p>To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:</p>
 
@@ -78,7 +78,7 @@ tags:
 
 <p>Our example seen above is represented by the following code (you can also <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html">find the example in our GitHub repository</a>). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -171,14 +171,14 @@ tags:
 <ul>
  <li>{{HTMLElement('main')}} is for content <em>unique to this page.</em> Use <code>&lt;main&gt;</code> only <em>once</em> per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.</li>
  <li>{{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).</li>
- <li>{{HTMLElement('section')}} is similar to <code>&lt;article&gt;</code>, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries), or a theme. It's considered best practice to begin each section with a <a href="/en-US/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy">heading</a>; also note that you can break <code>&lt;article&gt;</code>s up into different <code>&lt;section&gt;</code>s, or <code>&lt;section&gt;</code>s up into different <code>&lt;article&gt;</code>s, depending on the context.</li>
+ <li>{{HTMLElement('section')}} is similar to <code>&lt;article&gt;</code>, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries), or a theme. It's considered best practice to begin each section with a <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">heading</a>; also note that you can break <code>&lt;article&gt;</code>s up into different <code>&lt;section&gt;</code>s, or <code>&lt;section&gt;</code>s up into different <code>&lt;article&gt;</code>s, depending on the context.</li>
  <li>{{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).</li>
- <li>{{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title">titles and headings</a>).</li>
+ <li>{{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title">titles and headings</a>).</li>
  <li>{{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.</li>
  <li>{{HTMLElement('footer')}} represents a group of end content for a page.</li>
 </ul>
 
-<p>Each of the aformentioned elements can be clicked on to read the corresponding article in the "HTML element reference" section, providing more detail about each one.</p>
+<p>Each of the aforementioned elements can be clicked on to read the corresponding article in the "HTML element reference" section, providing more detail about each one.</p>
 
 <h3 id="Non-semantic_wrappers">Non-semantic wrappers</h3>
 
@@ -186,7 +186,7 @@ tags:
 
 <p>{{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
+<pre class="brush: html">&lt;p&gt;The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
 him as he staggered through the door &lt;span class="editor-note"&gt;[Editor's note: At this point in the
 play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 
@@ -194,7 +194,7 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 
 <p>{{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:</p>
 
-<pre class="brush: html notranslate">&lt;div class="shopping-cart"&gt;
+<pre class="brush: html">&lt;div class="shopping-cart"&gt;
   &lt;h2&gt;Shopping cart&lt;/h2&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -221,20 +221,20 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 <p><code>&lt;br&gt;</code> creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. For example:</p>
 
 <div id="line-break-live-sample">
-<pre class="brush: html notranslate">&lt;p&gt;There once was a man named O'Dell&lt;br&gt;
+<pre class="brush: html">&lt;p&gt;There once was a man named O'Dell&lt;br&gt;
 Who loved to write HTML&lt;br&gt;
 But his structure was bad, his semantics were sad&lt;br&gt;
 and his markup didn't read very well.&lt;/p&gt;</pre>
 </div>
 
-<p>Without the <code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML">HTML ignores most whitespace</a>); with <code>&lt;br&gt;</code> elements in the code, the markup renders like this:</p>
+<p>Without the <code>&lt;br&gt;</code> elements, the paragraph would just be rendered in one long line (as we said earlier in the course, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html">HTML ignores most whitespace</a>); with <code>&lt;br&gt;</code> elements in the code, the markup renders like this:</p>
 
 <p>{{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}</p>
 
 <p><code>&lt;hr&gt;</code> elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line. As an example:</p>
 
 <div id="horizantal-rule-live-sample">
-<pre class="brush: html notranslate">&lt;p&gt;Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Meanwhile, Harry was sitting at home, staring at his royalty statement and pondering when the next spin off series would come out, when an enchanted distress letter flew through his window and landed in his lap. He read it hazily and sighed; "better get back to work then", he mused.&lt;/p&gt;</pre>
 </div>
@@ -248,11 +248,11 @@ and his markup didn't read very well.&lt;/p&gt;</pre>
 <p>Once you've planned out the structure of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages, this can be fairly simple, and fun!</p>
 
 <ol>
- <li>Bear in mind that you'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page.<img alt="the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy" src="https://mdn.mozillademos.org/files/12423/common-features.png" style="border-style: solid; border-width: 1px; display: block; height: 375px; margin: 0px auto; width: 600px;"></li>
- <li>Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.<img alt="A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer" src="https://mdn.mozillademos.org/files/12429/site-structure.png" style="border-style: solid; border-width: 1px; display: block; height: 232px; margin: 0px auto; width: 600px;"></li>
- <li>Now, brainstorm all the other (not common to every page) content you want to have on your website — write a big list down.<img alt="A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info" src="https://mdn.mozillademos.org/files/12425/feature-list.png" style="border-style: solid; border-width: 1px; display: block; height: 1066px; margin: 0px auto; width: 600px;"></li>
- <li>Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called {{glossary("Card sorting")}}.<img alt="The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things" src="https://mdn.mozillademos.org/files/12421/card-sorting.png" style="border-style: solid; border-width: 1px; display: block; height: 579px; margin: 0px auto; width: 600px;"></li>
- <li>Now try to sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the center, and link to most if not all of the others; most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.<img alt="A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page" src="https://mdn.mozillademos.org/files/12427/site-map.png" style="border-style: solid; border-width: 1px; display: block; height: 872px; margin: 0px auto; width: 600px;"></li>
+ <li>Bear in mind that you'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page.<img alt="the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy" src="common-features.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.<img alt="A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer" src="site-structure.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Now, brainstorm all the other (not common to every page) content you want to have on your website — write a big list down.<img alt="A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info" src="feature-list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called {{glossary("Card sorting")}}.<img alt="The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things" src="card-sorting.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Now try to sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the center, and link to most if not all of the others; most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.<img alt="A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page" src="site-map.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
 <h3 id="Active_learning_create_your_own_sitemap">Active learning: create your own sitemap</h3>

@@ -2,25 +2,29 @@
 title: BatteryManager.onchargingchange
 slug: Web/API/BatteryManager/onchargingchange
 tags:
-  - API
-  - Battery API
-  - Event Handler
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Référence(2)
+- API
+- Battery API
+- Event Handler
+- NeedsMarkupWork
+- Property
+- Reference
+- Référence(2)
 ---
-<div>{{obsolete_header}}</div>
+<div>{{deprecated_header}}</div>
 
 <p>{{APIRef("Battery API")}}</p>
 
-<p>Specifies an event listener to receive {{event("chargingchange")}} events. These events occur when the battery {{domxref("BatteryManager.charging", "charging")}} state is updated.</p>
+<p>Specifies an event listener to receive {{event("chargingchange")}} events. These events
+   occur when the battery {{domxref("BatteryManager.charging", "charging")}} state is
+   updated.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">battery.onchargingchange = funcRef</pre>
+<pre class="brush: js">battery.onchargingchange = funcRef</pre>
 
-<p>Where <code><em>battery</em></code> is a {{domxref("BatteryManager")}} object, and <code><em>funcRef</em></code> is a function to be called when the {{event("chargingchange")}} event occurs.</p>
+<p>Where <code><em>battery</em></code> is a {{domxref("BatteryManager")}} object, and
+   <code><em>funcRef</em></code> is a function to be called when the
+   {{event("chargingchange")}} event occurs.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -48,20 +52,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Battery API")}}</td>
-   <td>{{Spec2("Battery API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+   <thead>
+      <tr>
+         <th scope="col">Specification</th>
+         <th scope="col">Status</th>
+         <th scope="col">Comment</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>{{SpecName("Battery API")}}</td>
+         <td>{{Spec2("Battery API")}}</td>
+         <td>Initial definition</td>
+      </tr>
+   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -71,6 +75,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.getBattery")}}</li>
+   <li>{{domxref("BatteryManager")}}</li>
+   <li>{{domxref("Navigator.getBattery")}}</li>
 </ul>

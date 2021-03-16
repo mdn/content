@@ -36,7 +36,7 @@ BluetoothRemoteGATTCharacteristic implements CharacteristicEventHandlers;</pre>
 
 <dl>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("BluetoothGATTService")}} this characteristic belongs to.</dd>
+ <dd>Returns the {{DOMxRef("BluetoothRemoteGATTService")}} this characteristic belongs to.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMString")}} containing the UUID of the characteristic, for example <code>'00002a37-0000-1000-8000-00805f9b34fb'</code> for the Heart Rate Measurement characteristic.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}{{ReadOnlyInline}}</dt>
@@ -49,9 +49,9 @@ BluetoothRemoteGATTCharacteristic implements CharacteristicEventHandlers;</pre>
 
 <dl>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptor()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} that resolves to the first {{DOMxRef("BluetoothGATTDescriptor")}} for a given descriptor UUID.</dd>
+ <dd>Returns a {{JSxRef("Promise")}} that resolves to the first {{DOMxRef("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptors()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("Array")}} of all {{DOMxRef("BluetoothGATTDescriptor")}} objects for a given descriptor UUID.</dd>
+ <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("Array")}} of all {{DOMxRef("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.readValue()")}}</dt>
  <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("ArrayBuffer")}} holding a duplicate of the <code>value</code> property if it is available and supported. Otherwise it throws an error.</dd>
  <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()")}}</dt>

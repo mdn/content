@@ -33,13 +33,13 @@ tags:
 
 <h2 id="Tips_to_keep_your_CSS_tidy">Tips to keep your CSS tidy</h2>
 
-<p>Here are some general suggestions for ways to keep your stylesheets organised and tidy.</p>
+<p>Here are some general suggestions for ways to keep your stylesheets organized and tidy.</p>
 
 <h3 id="Does_your_project_have_a_coding_style_guide">Does your project have a coding style guide?</h3>
 
 <p>If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.</p>
 
-<p>For example, have a look at the <a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS">CSS guidelines for MDN code examples</a>.</p>
+<p>For example, have a look at the <a href="/en-US/docs/MDN/Guidelines/Code_guidelines/CSS">CSS guidelines for MDN code examples</a>.</p>
 
 <h3 id="Keep_it_consistent">Keep it consistent</h3>
 
@@ -51,12 +51,12 @@ tags:
 
 <p>There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:</p>
 
-<pre class="brush: css  notranslate">.box { background-color: #567895; }
+<pre class="brush: css">.box { background-color: #567895; }
 h2 { background-color: black; color: white; }</pre>
 
 <p>Other developers prefer to break everything onto a new line:</p>
 
-<pre class="brush: css  notranslate">.box {
+<pre class="brush: css">.box {
   background-color: #567895;
 }
 
@@ -71,12 +71,12 @@ h2 {
 
 <p>Adding comments to your CSS will help any future developer work with your CSS file, but will also help you when you come back to the project after a break.</p>
 
-<pre class="brush: css  notranslate">/* This is a CSS comment
+<pre class="brush: css">/* This is a CSS comment
 It can be broken onto multiple lines. */</pre>
 
 <p>A good tip is to add a block of comments between logical sections in your stylesheet too, to help locate different sections quickly when scanning through, or even give you something to search for to jump right into that part of the CSS. If you use a string which won't appear in the code you can jump from section to section by searching for it — below we have used <code>||</code>.</p>
 
-<pre class="brush: css  notranslate">/* || General styles */
+<pre class="brush: css">/* || General styles */
 
 ...
 
@@ -94,7 +94,7 @@ It can be broken onto multiple lines. */</pre>
 
 <p>You may have used a CSS property in a specific way to get around older browser incompatibilities, for example:</p>
 
-<pre class="brush: css  notranslate">.box {
+<pre class="brush: css">.box {
   background-color: red; /* fallback for older browsers that don't support gradients */
   background-image: linear-gradient(to right, #ff0000, #aa0000);
 }
@@ -117,7 +117,7 @@ It can be broken onto multiple lines. */</pre>
 
 <p>In this section of the stylesheet we are providing default styling for the type on the site, setting up a default style for data tables and lists and so on.</p>
 
-<pre class="brush: css  notranslate">/* || GENERAL STYLES */
+<pre class="brush: css">/* || GENERAL STYLES */
 
 body { ... }
 
@@ -130,7 +130,7 @@ blockquote { ... }
 
 <p>After this section we could define a few utility classes, for example a class that removes the default list style for lists we're going to display as flex items or in some other way. If you have a few things you know you will want to apply to lots of different elements, they can come in this section.</p>
 
-<pre class="brush: css  notranslate">/* || UTILITIES */
+<pre class="brush: css">/* || UTILITIES */
 
 .nobullets {
   list-style: none;
@@ -144,7 +144,7 @@ blockquote { ... }
 
 <p>Then we can add everything that is used sitewide. That might be things like the basic page layout, the header, navigation styling, and so on.</p>
 
-<pre class="brush: css  notranslate">/* || SITEWIDE */
+<pre class="brush: css">/* || SITEWIDE */
 
 .main-nav { ... }
 
@@ -153,7 +153,7 @@ blockquote { ... }
 
 <p>Finally we will include CSS for specific things, broken down by the context, page or even component in which they are used.</p>
 
-<pre class="brush: css  notranslate">/* || STORE PAGES */
+<pre class="brush: css">/* || STORE PAGES */
 
 .product-listing { ... }
 
@@ -166,13 +166,13 @@ blockquote { ... }
 
 <p>If you create very specific selectors you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the below selector, which applies the rule to a <code>&lt;p&gt;</code> with a class of <code>box</code> inside an <code>&lt;article&gt;</code> with a class of <code>main</code>.</p>
 
-<pre class="brush: css  notranslate">article.main p.box {
+<pre class="brush: css">article.main p.box {
   border: 1px solid #ccc;
 }</pre>
 
 <p>If you then wanted to apply the same rules to something outside of <code>main</code>, or to something other than a <code>&lt;p&gt;</code>, you would have to add another selector to these rules or create a whole new ruleset. Instead, you could use the selector <code>.box</code> to apply your rule to any element that has the class <code>box</code>:</p>
 
-<pre class="brush: css  notranslate">.box {
+<pre class="brush: css">.box {
   border: 1px solid #ccc;
 }</pre>
 
@@ -184,15 +184,15 @@ blockquote { ... }
 
 <p>For example, we might have an online store as part of the site, with a lot of CSS used only for styling the product listings and forms needed for the store. It would make sense to have those things in a different stylesheet, only linked to on store pages.</p>
 
-<p>This can make it easier to keep your CSS organised, and also means that if multiple people are working on the CSS you will have fewer situations where two people need to work on the same stylesheet at once, leading to conflicts in source control.</p>
+<p>This can make it easier to keep your CSS organized, and also means that if multiple people are working on the CSS you will have fewer situations where two people need to work on the same stylesheet at once, leading to conflicts in source control.</p>
 
 <h2 id="Other_tools_that_can_help">Other tools that can help</h2>
 
-<p>CSS itself doesn't have much in the way of in-built organisation, therefore you need to do the work to create consistency and rules around how you write CSS. The web community has also developed various tools and approaches that can help you to manage larger CSS projects. As they may be helpful for you to investigate, and you are likely to come across these things when working with other people, we've included a short guide to some of these.</p>
+<p>CSS itself doesn't have much in the way of in-built organization, therefore you need to do the work to create consistency and rules around how you write CSS. The web community has also developed various tools and approaches that can help you to manage larger CSS projects. As they may be helpful for you to investigate, and you are likely to come across these things when working with other people, we've included a short guide to some of these.</p>
 
 <h3 id="CSS_methodologies">CSS methodologies</h3>
 
-<p>Instead of needing to come up with your own rules for writing CSS, you may benefit from adopting one of the approaches already designed by the community and tested across many projects. These methodologies are essentially CSS coding guides that take a very structured approach to writing and organising CSS. Typically they tend to result in more verbose use of CSS than you might have if you wrote and optimised every selector to a custom set of rules for that project.</p>
+<p>Instead of needing to come up with your own rules for writing CSS, you may benefit from adopting one of the approaches already designed by the community and tested across many projects. These methodologies are essentially CSS coding guides that take a very structured approach to writing and organizing CSS. Typically they tend to result in more verbose use of CSS than you might have if you wrote and optimised every selector to a custom set of rules for that project.</p>
 
 <p>However, you do gain a lot of structure by adopting one and, as many of these systems are very widely used, other developers are more likely to understand the approach you are using and be able to write their CSS in the same way, rather than having to work out your own personal methodology from scratch.</p>
 
@@ -202,7 +202,7 @@ blockquote { ... }
 
 <p>If you are not taking an OOCSS approach you might create custom CSS for the different places this pattern is used, for example creating a class called <code>comment</code> with a bunch of rules for the component parts, then a class called <code>list-item</code> with almost the same rules as the <code>comment</code> class except for some tiny differences. The differences between these two components is that the list-item has a bottom border, and images in comments have a border whereas list-item images do not.</p>
 
-<pre class="brush: css  notranslate">.comment {
+<pre class="brush: css">.comment {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
@@ -227,7 +227,7 @@ blockquote { ... }
 
 <p>In OOCSS, you would create one pattern called <code>media</code> that would have all of the common CSS for both patterns — a base class for things that are generally the shape of the media object. Then we'd add an additional class to deal with those tiny differences, thus extending that styling in specific ways.</p>
 
-<pre class="brush: css  notranslate">.media {
+<pre class="brush: css">.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
@@ -246,7 +246,7 @@ blockquote { ... }
 
 <p>In your HTML the comment would need both the <code>media</code> and <code>comment</code> classes applied:</p>
 
-<pre class="brush: html  notranslate">&lt;div class="media comment"&gt;
+<pre class="brush: html">&lt;div class="media comment"&gt;
   &lt;img /&gt;
   &lt;div class="content"&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -254,7 +254,7 @@ blockquote { ... }
 
 <p>The list-item would have <code>media</code> and <code>list-item</code> applied:</p>
 
-<pre class="brush: html  notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li class="media list-item"&gt;
     &lt;img /&gt;
     &lt;div class="content"&gt;&lt;/div&gt;
@@ -265,9 +265,9 @@ blockquote { ... }
 
 <h4 id="BEM">BEM</h4>
 
-<p>BEM stands for Block Element Modifier. In BEM a block is a standalone entity such as a button, menu, or logo. An element is something like a list item or a title that is tied to the block it is in. A modifier is a flag on a block or element that changes the styling or behavior. You will be able to recognise code that uses BEM due to the extensive use of dashes and underscores in the CSS classes. For example, look at the classes applied to this HTML from the page about <a href="http://getbem.com/naming/">BEM Naming conventions</a>:</p>
+<p>BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity such as a button, menu, or logo. An element is something like a list item or a title that is tied to the block it is in. A modifier is a flag on a block or element that changes the styling or behavior. You will be able to recognize code that uses BEM due to the extensive use of dashes and underscores in the CSS classes. For example, look at the classes applied to this HTML from the page about <a href="http://getbem.com/naming/">BEM Naming conventions</a>:</p>
 
-<pre class="brush: html  notranslate">&lt;form class="form form--theme-xmas form--simple"&gt;
+<pre class="brush: html">&lt;form class="form form--theme-xmas form--simple"&gt;
   &lt;input class="form__input" type="text" /&gt;
   &lt;input
     class="form__submit form__submit--disabled"
@@ -288,37 +288,37 @@ blockquote { ... }
 
 <h3 id="Build_systems_for_CSS">Build systems for CSS</h3>
 
-<p>Another way to organise CSS is to take advantage of some of the tooling that is available for front-end developers, which allows you to take a slightly more programmatic approach to writing CSS. There are a number of tools which we refer to as <em>pre-processors</em> and <em>post-processors</em>. A pre-processor runs over your raw files and turns them into a stylesheet, whereas a post-processor takes your finished stylesheet and does something to it — perhaps to optimize it in order that it will load faster.</p>
+<p>Another way to organize CSS is to take advantage of some of the tooling that is available for front-end developers, which allows you to take a slightly more programmatic approach to writing CSS. There are a number of tools which we refer to as <em>pre-processors</em> and <em>post-processors</em>. A pre-processor runs over your raw files and turns them into a stylesheet, whereas a post-processor takes your finished stylesheet and does something to it — perhaps to optimize it in order that it will load faster.</p>
 
 <p>Using any of these tools will require that your development environment can run the scripts that do the pre and post-processing. Many code editors can do this for you, or you can install command line tools to help.</p>
 
-<p>The most popular pre-processor is <a href="https://sass-lang.com/">Sass</a>. This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organisation, even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the <a href="https://sass-lang.com/guide">Sass basics</a> article, then move on to their other documentation.</p>
+<p>The most popular pre-processor is <a href="https://sass-lang.com/">Sass</a>. This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organization, even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the <a href="https://sass-lang.com/guide">Sass basics</a> article, then move on to their other documentation.</p>
 
 <h4 id="Defining_variables">Defining variables</h4>
 
-<p>CSS now has native <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom properties</a>, making this feature increasingly less important, however one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then use that variable around the project. This means that if you realise you have used the wrong shade of blue, you only need change it in one place.</p>
+<p>CSS now has native <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom properties</a>, making this feature increasingly less important, however one of the reasons you might use Sass is to be able to define all of the colors and fonts used in a project as settings, then use that variable around the project. This means that if you realize you have used the wrong shade of blue, you only need change it in one place.</p>
 
 <p>If we created a variable called <code>$base-color</code> as in the first line below, we could then use it through the stylesheet anywhere that required that color.</p>
 
-<pre class="brush: css  notranslate"><code>$base-color: #c6538c;
+<pre class="brush: css">$base-color: #c6538c;
 
 .alert {
   border: 1px solid $base-color;
-}</code></pre>
+}</pre>
 
 <p>Once compiled to CSS, you would end up with the following CSS in the final stylesheet.</p>
 
-<pre class="brush: css  notranslate"><code>.alert {
+<pre class="brush: css"><code>.alert {
   border: 1px solid #c6538c;
 }</code></pre>
 
 <h4 id="Compiling_component_stylesheets">Compiling component stylesheets</h4>
 
-<p>I mentioned above that one way to organise CSS is to break down stylesheets into smaller stylesheets. When using Sass you can take this to another level and have lots of very small stylesheets — even going as far as having a separate stylesheet for each component. By using the include functionality in Sass (partials) these can then all be compiled together into one, or a small number of stylesheets to actually link into your website.</p>
+<p>I mentioned above that one way to organize CSS is to break down stylesheets into smaller stylesheets. When using Sass you can take this to another level and have lots of very small stylesheets — even going as far as having a separate stylesheet for each component. By using the include functionality in Sass (partials) these can then all be compiled together into one, or a small number of stylesheets to actually link into your website.</p>
 
 <p>So for example, with <a href="https://sass-lang.com/documentation/at-rules/use#partials">partials</a>, you could have several style files inside a directory, say <code>foundation/_code.scss</code>, <code>foundation/_lists.scss</code>, <code>foundation/_footer.scss</code>, <code>foundation/_links.scss</code>, etc., then use the Sass <code>@use</code> role to load them into other stylesheets:</p>
 
-<pre class="brush: css  notranslate">// foundation/_index.sass
+<pre class="brush: css">// foundation/_index.sass
 @use 'code'
 @use 'lists'
 @use 'footer'
@@ -326,7 +326,7 @@ blockquote { ... }
 
 <p>If the partials are all loaded into an index file, as implied above, you can then load that entire directory into another stylesheet in one go:</p>
 
-<pre class="brush: css  notranslate">// style.sass
+<pre class="brush: css">// style.sass
 @use 'foundation'</pre>
 
 <div class="notecard note">

@@ -48,7 +48,7 @@ tags:
 
 <p>The following example shows how to use a relative time formatter for the English language.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -68,7 +68,7 @@ rtf.format(1, "day");
 
 <p>The following example shows how to create a relative time formatter returning formatted parts</p>
 
-<pre class="brush: js notranslate">const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+<pre class="brush: js">const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using the day unit.
 rtf.formatToParts(-1, "day");

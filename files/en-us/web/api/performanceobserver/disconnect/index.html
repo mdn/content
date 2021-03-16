@@ -2,22 +2,25 @@
 title: PeformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - disconnect()
-  - observers
+- API
+- Method
+- Performance Observer API
+- PerformanceObserver
+- Reference
+- Web Performance
+- disconnect()
+- observers
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p>The <strong><code>disconnect()</code></strong> method of the {{domxref('PerformanceObserver')}} interface is used to stop the performance observer from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}} events.</p>
+<p>The <strong><code>disconnect()</code></strong> method of the
+  {{domxref('PerformanceObserver')}} interface is used to stop the performance observer
+  from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}}
+  events.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>performanceObserver</em>.disconnect();
+<pre class="brush: js"><em>performanceObserver</em>.disconnect();
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -43,23 +46,21 @@ observer2.observe({entryTypes: ["measure"]});
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-disconnect', 'disconnect()')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td>Initial definition of <code>disconnect()</code> method.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2',
+        '#dom-performanceobserver-disconnect', 'disconnect()')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td>Initial definition of <code>disconnect()</code> method.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceObserver.disconnect")}}</p>
-</div>

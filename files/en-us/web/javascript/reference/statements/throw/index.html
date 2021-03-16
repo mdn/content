@@ -2,31 +2,42 @@
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
 tags:
-  - Exception
-  - JavaScript
-  - Language feature
-  - Statement
+- Exception
+- JavaScript
+- Language feature
+- Statement
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong><code>throw</code> statement</strong> throws a user-defined exception. Execution of the current function will stop (the statements after <code>throw</code> won't be executed), and control will be passed to the first <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a> block in the call stack. If no <code>catch</code> block exists among caller functions, the program will terminate.</p>
+<p>The <strong><code>throw</code> statement</strong> throws a user-defined exception.
+  Execution of the current function will stop (the statements after <code>throw</code>
+  won't be executed), and control will be passed to the first <a
+    href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a>
+  block in the call stack. If no <code>catch</code> block exists among caller functions,
+  the program will terminate.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-throw.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">throw <var>expression</var>; </pre>
+<pre class="brush: js">throw <var>expression</var>; </pre>
 
 <dl>
- <dt><code><var>expression</var></code></dt>
- <dd>The expression to throw.</dd>
+  <dt><code><var>expression</var></code></dt>
+  <dd>The expression to throw.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>Use the <code>throw</code> statement to throw an exception. When you throw an exception, <code><var>expression</var></code> specifies the value of the exception. Each of the following throws an exception:</p>
+<p>Use the <code>throw</code> statement to throw an exception. When you throw an
+  exception, <code><var>expression</var></code> specifies the value of the exception. Each
+  of the following throws an exception:</p>
 
 <pre class="brush: js">throw 'Error2'; // generates an exception with a string value
 throw 42;       // generates an exception with the value 42
@@ -34,15 +45,21 @@ throw true;     // generates an exception with the value true
 throw new Error('Required');  // generates an error object with the message of Required
 </pre>
 
-<p>Also note that the <code>throw</code> statement is affected by <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">automatic semicolon insertion (ASI)</a> as no line terminator between the <code>throw</code> keyword and the expression is allowed.</p>
+<p>Also note that the <code>throw</code> statement is affected by <a
+    href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">automatic
+    semicolon insertion (ASI)</a> as no line terminator between the <code>throw</code>
+  keyword and the expression is allowed.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Throw_an_object">Throw an object</h3>
 
-<p>You can specify an object when you throw an exception. You can then reference the object's properties in the <code>catch</code> block. The following example creates an object of type <code>UserException</code> and uses it in a <code>throw</code> statement.</p>
+<p>You can specify an object when you throw an exception. You can then reference the
+  object's properties in the <code>catch</code> block. The following example creates an
+  object of type <code>UserException</code> and uses it in a <code>throw</code> statement.
+</p>
 
-<pre class="brush: js notranslate">function UserException(message) {
+<pre class="brush: js">function UserException(message) {
   this.message = message;
   this.name = 'UserException';
 }
@@ -69,7 +86,9 @@ try {
 
 <h3 id="Another_example_of_throwing_an_object">Another example of throwing an object</h3>
 
-<p>The following example tests an input string for a U.S. zip code. If the zip code uses an invalid format, the throw statement throws an exception by creating an object of type <code>ZipCodeFormatException</code>.</p>
+<p>The following example tests an input string for a U.S. zip code. If the zip code uses
+  an invalid format, the throw statement throws an exception by creating an object of type
+  <code>ZipCodeFormatException</code>.</p>
 
 <pre class="brush: js">/*
  * Creates a ZipCode object.
@@ -139,9 +158,12 @@ e = verifyZipCode('95060 1234');  // returns 95060 1234
 
 <h3 id="Rethrow_an_exception">Rethrow an exception</h3>
 
-<p>You can use <code>throw</code> to rethrow an exception after you catch it. The following example catches an exception with a numeric value and rethrows it if the value is over 50. The rethrown exception propagates up to the enclosing function or to the top level so that the user sees it.</p>
+<p>You can use <code>throw</code> to rethrow an exception after you catch it. The
+  following example catches an exception with a numeric value and rethrows it if the value
+  is over 50. The rethrown exception propagates up to the enclosing function or to the top
+  level so that the user sees it.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw n; // throws an exception with a numeric value
 } catch (e) {
   if (e &lt;= 50) {
@@ -156,16 +178,16 @@ e = verifyZipCode('95060 1234');  // returns 95060 1234
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -175,6 +197,6 @@ e = verifyZipCode('95060 1234');  // returns 95060 1234
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
- <li>{{jsxref("Global_Objects/Error", "Error")}}</li>
+  <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
+  <li>{{jsxref("Global_Objects/Error", "Error")}}</li>
 </ul>

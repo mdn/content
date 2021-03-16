@@ -1,0 +1,93 @@
+---
+title: Firefox 87 for developers
+slug: Mozilla/Firefox/Releases/87
+tags:
+  - '87'
+  - Firefox
+  - Mozilla
+  - Release
+---
+<p>{{FirefoxSidebar}}{{draft}}</p>
+
+<p class="summary">This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">March 23, 2021</a>.</p>
+
+<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+
+<h3 id="Developer_Tools">Developer Tools</h3>
+
+<ul>
+  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_prefers-color-scheme">Page Inspector</a> to simulate {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} media queries, without having to change the operating system to light or dark mode ({{bug(1679408)}} and {{bug(1692272)}}).</li>
+  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":target")}} pseudo-class for the currently selected element (in addition to the pseudo-classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}}, and {{cssxref(":visited")}}). ({{bug(1689899)}}).</li>
+  <li>Firefox <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#rule_display">Page Inspector</a> improvements and bug fixes related to inactive CSS rules:
+    <ul>
+      <li>The {{cssxref("table-layout")}} property is now marked as inactive for non-table elements ({{bug(1551571)}}).</li>
+      <li>The {{cssxref("scroll-padding")}} properties (shorthand and longhand) are now marked as inactive for non-scrollable elements ({{bug(1551577)}}).</li>
+      <li>The {{cssxref("text-overflow")}} property was previously incorrectly marked as inactive for some {{cssxref("overflow")}} values ({{bug(1671457)}}).</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="Removals">Removals</h4>
+
+<h3 id="HTML">HTML</h3>
+
+<h4 id="Removals_2">Removals</h4>
+
+<h3 id="CSS">CSS</h3>
+
+<ul>
+  <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. The {{cssxref("::first-letter")}} pseudo-element now respects these digraphs and treats them as a single unit ({{bug(92176)}}).</li>
+</ul>
+
+<h4 id="Removals_3">Removals</h4>
+
+<ul>
+  <li>The non-standard values of {{cssxref("caption-side")}} (<code>left</code>, <code>right</code>, <code>top-outside</code>, and <code>bottom-outside</code>) have been removed and placed behind the <code>layout.css.caption-side-non-standard.enabled</code> flag ({{bug(1688695)}}).</li>
+  <li>The {{HTMLElement("link")}} element is no longer matched by {{cssxref(":link")}}, {{cssxref(":visited")}}, or {{cssxref(":any-link")}}. This aligns the behavior in Firefox to existing behavior in Chrome and to a recent spec change ({{bug(1687538)}}).</li>
+</ul>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<h4 id="Removals_4">Removals</h4>
+
+<h3 id="HTTP">HTTP</h3>
+
+<ul>
+  <li>Some enterprise authentication services require that TLS client certificates be <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">sent in CORS preflight requests</a>. Users of these services can enable this (non-specification compliant) behavior using the <code>network.cors_preflight.allow_client_cert</code> preference ({{bug(1511151)}}).</li>
+  <li>The default <code><a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</a></code> has been changed to <code><a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin">strict-origin-when-cross-origin</a></code> (from <code>no-referrer-when-downgrade</code>), reducing the risk of leaking referrer information in cross-origin requests ({{bug(1589074)}}).</li>
+  <li><code><a href="/en-US/docs/Web/HTTP/Headers/Content-Length">Content-Length</a></code> has been added to the list of <a href="/en-US/docs/Glossary/CORS-safelisted_response_header">CORS-safelisted response headers</a> ({{bug(1460299)}}).</li>
+</ul>
+
+<h4 id="Removals_5">Removals</h4>
+
+<h3 id="Security">Security</h3>
+
+<h4 id="Removals_6">Removals</h4>
+
+<h3 id="APIs">APIs</h3>
+
+<h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>The {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. They allow web apps to override text edit behavior before the browser modifies the DOM tree, and provide more control over input events to improve performance. The global {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} event is sent to an {{HTMLElement("input")}} element — or any element whose {{htmlattrxref("contenteditable")}} attribute is enabled — immediately before the element's value changes. The {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</li>
+</ul>
+
+<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+
+<h4 id="Removals_7">Removals</h4>
+
+<h3 id="WebAssembly">WebAssembly</h3>
+
+<h4 id="Removals_8">Removals</h4>
+
+<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<h4 id="webdriver_removals">Removals</h4>
+
+<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+
+<h4 id="Removals_9">Removals</h4>
+
+<h2 id="Older_versions">Older versions</h2>
+
+<p>{{Firefox_for_developers(86)}}</p>

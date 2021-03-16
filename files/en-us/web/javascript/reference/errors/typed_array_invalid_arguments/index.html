@@ -2,18 +2,20 @@
 title: 'TypeError: invalid arguments'
 slug: Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+- Error
+- Errors
+- JavaScript
+- TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<p>The JavaScript exception "invalid arguments" occurs when <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> constructors are provided with a wrong argument.</p>
+<p>The JavaScript exception "invalid arguments" occurs when <a
+    href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> constructors are
+  provided with a wrong argument.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">TypeError: invalid arguments (Firefox)</pre>
+<pre class="brush: js">TypeError: invalid arguments (Firefox)</pre>
 
 <h2 id="Error_type">Error type</h2>
 
@@ -21,23 +23,26 @@ tags:
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed array</a> constructors require either</p>
+<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed array</a> constructors require
+  either</p>
 
 <ul>
- <li>a length,</li>
- <li>another typed array,</li>
- <li>array-like objects,</li>
- <li>iterable objects or</li>
- <li>an {{jsxref("ArrayBuffer")}} object</li>
+  <li>a length,</li>
+  <li>another typed array,</li>
+  <li>array-like objects,</li>
+  <li>iterable objects or</li>
+  <li>an {{jsxref("ArrayBuffer")}} object</li>
 </ul>
 
-<p>to create a new typed array. Other constructor arguments will not create a valid typed array.</p>
+<p>to create a new typed array. Other constructor arguments will not create a valid typed
+  array.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="No_strings_in_typed_arrays">No strings in typed arrays</h3>
 
-<p>Typed arrays, for example a {{jsxref("Uint8Array")}}, can't be constructed from a string. In fact, strings can't be in typed arrays at all.</p>
+<p>Typed arrays, for example a {{jsxref("Uint8Array")}}, can't be constructed from a
+  string. In fact, strings can't be in typed arrays at all.</p>
 
 <pre class="brush: js example-bad">var ta = new Uint8Array("nope");
 // TypeError: invalid arguments
@@ -74,7 +79,7 @@ var uint8 = new Uint8Array(iterable);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("Uint8Array")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a></li>
+  <li>{{jsxref("ArrayBuffer")}}</li>
+  <li>{{jsxref("Uint8Array")}}</li>
 </ul>

@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Overview">Overview</h2>
 
-<p>An <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Form</a> is a group of one or more fields/widgets on a web page that can be used to collect information from users for submission to a server. Forms are a flexible mechanism for collecting user input because there are suitable form inputs available for entering many different types of data—text boxes, checkboxes, radio buttons, date pickers, etc. Forms are also a relatively secure way of sharing data with the server, as they allow us to send data in <code>POST</code> requests with cross-site request forgery protection.</p>
+<p>An <a href="/en-US/docs/Learn/Forms">HTML Form</a> is a group of one or more fields/widgets on a web page that can be used to collect information from users for submission to a server. Forms are a flexible mechanism for collecting user input because there are suitable form inputs available for entering many different types of data—text boxes, checkboxes, radio buttons, date pickers, etc. Forms are also a relatively secure way of sharing data with the server, as they allow us to send data in <code>POST</code> requests with cross-site request forgery protection.</p>
 
 <p>Working with forms can be complicated! Developers need to write HTML for the form, validate and properly sanitize entered data on the server (and possibly also in the browser), repost the form with error messages to inform users of any invalid fields, handle the data when it has successfully been submitted, and finally respond to the user in some way to indicate success.</p>
 
@@ -44,13 +44,13 @@ tags:
 
 <h3 id="HTML_Forms">HTML Forms</h3>
 
-<p>First a brief overview of <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>. Consider a simple HTML form, with a single text field for entering the name of some "team", and its associated label:</p>
+<p>First a brief overview of <a href="/en-US/docs/Learn/Forms">HTML Forms</a>. Consider a simple HTML form, with a single text field for entering the name of some "team", and its associated label:</p>
 
-<p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
+<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The form is defined in HTML as a collection of elements inside <code>&lt;form&gt;...&lt;/form&gt;</code> tags, containing at least one <code>input</code> element of <code>type="submit"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
+<pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
     &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
     &lt;input type="submit" value="OK"&gt;
@@ -74,7 +74,7 @@ tags:
 
 <p>Form handling uses all of the same techniques that we learned for displaying information about our models: the route sends our request to a controller function which performs any database actions required, including reading data from the models, then generates and returns an HTML page. What makes things more complicated is that the server also needs to be able to process the data provided by the user, and redisplay the form with error information if there are any problems.</p>
 
-<p>A process flowchart for processing form requests is shown below, starting with a request for a page containing a form (shown in green):<img alt="" src="https://mdn.mozillademos.org/files/14478/Web%20server%20form%20handling.png" style="height: 649px; width: 800px;"></p>
+<p>A process flowchart for processing form requests is shown below, starting with a request for a page containing a form (shown in green):<img alt="" src="web_server_form_handling.png"></p>
 
 <p>As shown in the diagram above, the main things that form handling code needs to do are:</p>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>Install the module by running the following command in the root of the project.</p>
 
-<pre class="brush: bash notranslate">npm install express-validator
+<pre class="brush: bash">npm install express-validator
 </pre>
 
 <h4 id="Using_express-validator">Using express-validator</h4>
@@ -119,9 +119,9 @@ tags:
 <p><strong>Note:</strong> The <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> guide on  Github provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using <a href="https://express-validator.github.io/docs/schema-validation.html">schema validation</a> and <a href="https://express-validator.github.io/docs/custom-validators-sanitizers.html">creating custom validators</a>). Below we cover just a subset that is useful for the <em>LocalLibrary</em>.</p>
 </div>
 
-<p>To use the validator in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator/check</strong>' and <strong>'express-validator/filter</strong>' modules, as shown below:</p>
+<p>To use the validator in our controllers, we specify the particular functions we want to import from the <a href="https://www.npmjs.com/package/express-validator">express-validator</a> module, as shown below:</p>
 
-<pre class="brush: js notranslate">const { body,validationResult } = require('express-validator');
+<pre class="brush: js">const { body,validationResult } = require('express-validator');
 </pre>
 
 <p>There are many functions available, allowing you to check and sanitize data from request parameters, body, headers, cookies, etc., or all of them at once. For this tutorial, we'll primarily be using <code>body</code> and <code>validationResult</code> (as "required" above).</p>
@@ -133,19 +133,19 @@ tags:
   <br>
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method <code>trim()</code> to remove whitespace from the start and end of the string, and then <code>isLength()</code> to check the resulting string isn't empty. Finally, we call <code>escape()</code> to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
-  <pre class="brush: js notranslate">body('name', 'Empty name').trim().isLength({ min: 1 }).escape(), </pre>
+  <pre class="brush: js">body('name', 'Empty name').trim().isLength({ min: 1 }).escape(), </pre>
   This test checks that the age field is a valid date and uses <code>optional()</code> to specify that null and empty strings will not fail validation.
 
-  <pre class="brush: js notranslate">body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601().toDate(),
+  <pre class="brush: js">body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601().toDate(),
 </pre>
   You can also daisy chain different validators, and add messages that are displayed if the preceding validators are true.
 
-  <pre class="brush: js notranslate">body('name').trim().isLength({ min: 1 }).withMessage('Name empty.')
+  <pre class="brush: js">body('name').trim().isLength({ min: 1 }).withMessage('Name empty.')
     .isAlpha().withMessage('Name must be alphabet letters.'),
 </pre>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: Runs the validation, making errors available in the form of a <code>validation</code> result object. This is invoked in a separate callback, as shown below:
-  <pre class="brush: js notranslate">(req, res, next) =&gt; {
+  <pre class="brush: js">(req, res, next) =&gt; {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
 
@@ -190,7 +190,7 @@ tags:
 
 <p>We have already created the routes for all our model's create pages in <strong>/routes/catalog.js</strong> (in a <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>). For example, the genre routes are shown below:</p>
 
-<pre class="brush: js notranslate">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
+<pre class="brush: js">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);
 
 // POST request for creating Genre.

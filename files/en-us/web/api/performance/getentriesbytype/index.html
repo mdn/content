@@ -2,34 +2,42 @@
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
 tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
+- API
+- Method
+- Reference
+- Web Performance
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p>The <strong><code>getEntriesByType()</code></strong> method returns a list of {{domxref("PerformanceEntry")}} objects for a given <em>type</em>. The list's members (<em>entries</em>) can be created by making performance <em>marks</em> or <em>measures</em> (for example by calling the {{domxref("Performance.mark","mark()")}} method) at explicit points in time.</p>
+<p>The <strong><code>getEntriesByType()</code></strong> method returns a list of
+  {{domxref("PerformanceEntry")}} objects for a given <em>type</em>. The list's members
+  (<em>entries</em>) can be created by making performance <em>marks</em> or
+  <em>measures</em> (for example by calling the {{domxref("Performance.mark","mark()")}}
+  method) at explicit points in time.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>entries</em> = window.performance.getEntriesByType(type);
+<pre class="brush: js"><em>entries</em> = window.performance.getEntriesByType(type);
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
- <dt>type</dt>
- <dd>The type of entry to retrieve such as "<code>mark</code>". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.</dd>
+  <dt>type</dt>
+  <dd>The type of entry to retrieve such as "<code>mark</code>". The valid entry types are
+    listed in {{domxref("PerformanceEntry.entryType")}}.</dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
 
 <dl>
- <dt>entries</dt>
- <dd>A list of {{domxref("PerformanceEntry")}} objects that have the specified <code>type</code>. The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the specified <code>type</code>, or no argument is provided, an empty list is returned.
+  <dt>entries</dt>
+  <dd>A list of {{domxref("PerformanceEntry")}} objects that have the specified
+    <code>type</code>. The items will be in chronological order based on the entries'
+    {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the
+    specified <code>type</code>, or no argument is provided, an empty list is returned.
   </dd>
 </dl>
 
@@ -88,28 +96,27 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performance-getentriesbytype', 'getEntriesByType()')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#dom-performance-getentriesbytype', 'getEntriesByType()')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performance-getentriesbytype',
+        'getEntriesByType()')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline', '#dom-performance-getentriesbytype',
+        'getEntriesByType()')}}</td>
+      <td>{{Spec2('Performance Timeline')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Performance.getEntriesByType")}}</p>
-</div>

@@ -10,11 +10,13 @@ tags:
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p><span class="seoSummary">The <strong><code>conditionText</code></strong> property of the {{domxref("CSSConditionRule")}} interface returns or sets the text of the CSS rule.</span></p>
+<p><span class="seoSummary">The <strong><code>conditionText</code></strong> property of
+    the {{domxref("CSSConditionRule")}} interface returns or sets the text of the CSS
+    rule.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>text</var> = <var>CSSConditionRule</var>.conditionText
+<pre class="brush: js">var <var>text</var> = <var>CSSConditionRule</var>.conditionText
 <var>cssConditionRule</var>.conditionText = <var>text</var></pre>
 
 <h3 id="Value">Value</h3>
@@ -23,9 +25,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example demonstrates getting and setting the value of <code>conditionText</code> on a {{domxref("CSSMediaRule")}} which implements the {{domxref("CSSConditionRule")}} interface.</p>
+<p>The following example demonstrates getting and setting the value of
+  <code>conditionText</code> on a {{domxref("CSSMediaRule")}} which implements the
+  {{domxref("CSSConditionRule")}} interface.</p>
 
-<pre class="brush: css">@media (min-width: 500px) {  
+<pre class="brush: css">@media (min-width: 500px) {
   body {
     color: blue;
   }
@@ -40,20 +44,21 @@ console.log(text);  // "(min-width: 400px)"</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#dom-cssconditionrule-conditiontext', 'conditionText') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('CSS3 Conditional', '#dom-cssconditionrule-conditiontext',
+        'conditionText') }}</td>
+      <td>{{ Spec2('CSS3 Conditional') }}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -63,5 +68,6 @@ console.log(text);  // "(min-width: 400px)"</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling
+      information</a></li>
 </ul>

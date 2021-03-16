@@ -12,11 +12,11 @@ tags:
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <strong><code>buffer</code></strong> property of the {{ domxref("ConvolverNode") }} interface <span>represents a mono, stereo, or 4-channel </span>{{domxref("AudioBuffer")}} containing the (possibly multichannel) impulse response used by the <code>ConvolverNode</code> to create the reverb effect.</p>
+<p>The <strong><code>buffer</code></strong> property of the {{ domxref("ConvolverNode") }} interface represents a mono, stereo, or 4-channel {{domxref("AudioBuffer")}} containing the (possibly multichannel) impulse response used by the <code>ConvolverNode</code> to create the reverb effect.</p>
 
 <p>This is normally a simple recording of as-close-to-an-impulse as can be found in the space you want to model. For example, if you want to model the reverb in your bathroom, you might set up a microphone near the door to record the sound of a balloon pop or synthesized impulse from the sink. That audio recording could then be used as the buffer.</p>
 
-<p><span>This </span><em>{{domxref("AudioBuffer")}}</em><span> must have the same sample-rate as the <code>AudioContext</code> or an exception will be thrown. At the time when this attribute is set, the buffer and the state of the attribute will be used to configure the <code>ConvolverNode</code> with this impulse response having the given normalization. The initial value of this attribute is <code>null</code>.</span></p>
+<p>This <em>{{domxref("AudioBuffer")}}</em>  must have the same sample-rate as the <code>AudioContext</code> or an exception will be thrown. At the time when this attribute is set, the buffer and the state of the attribute will be used to configure the <code>ConvolverNode</code> with this impulse response having the given normalization. The initial value of this attribute is <code>null</code>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -79,13 +79,10 @@ convolver.buffer = concertHallBuffer;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ConvolverNode.buffer")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

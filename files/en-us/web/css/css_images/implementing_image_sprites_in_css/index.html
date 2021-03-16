@@ -11,7 +11,7 @@ tags:
   - Sprites
   - Web
 ---
-<p>{{cssRef}}</p>
+<p>{{CSSRef}}</p>
 
 <p><strong>Image sprites</strong> are used in numerous web apps where multiple images are used. Rather than include each image as a separate image file, it is much more memory- and bandwidth-friendly to send them as a single image; using background position as a way to distinguish between individual images in the same image file, so the number of HTTP requests is reduced.</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <p>Suppose an image is given to every item with class <code>toolbtn</code>:</p>
 
-<pre class="brush:css notranslate">.toolbtn {
+<pre class="brush:css">.toolbtn {
   background: url(myfile.png);
   display: inline-block;
   height: 20px;
@@ -32,7 +32,7 @@ tags:
 
 <p>A background position can be added either as two x, y values after the {{cssxref("url()")}} in the background, or as {{cssxref("background-position")}}. For example:</p>
 
-<pre class="brush:css notranslate">#btn1 {
+<pre class="brush:css">#btn1 {
   background-position: -20px 0px;
 }
 
@@ -44,7 +44,7 @@ tags:
 
 <p>Similarly, you can also make hover states with:</p>
 
-<pre class="brush:css notranslate">#btn:hover {
+<pre class="brush:css">#btn:hover {
   background-position: <var>&lt;pixels shifted right&gt;</var>px <var>&lt;pixels shifted down&gt;</var>px;
 }</pre>
 

@@ -2,18 +2,20 @@
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
 tags:
-  - API
-  - DOM
-  - NodeIterator
-  - Property
+- API
+- DOM
+- NodeIterator
+- Property
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>NodeIterator.whatToShow</code></strong> read-only property represents an <code>unsigned integer</code> representing a bitmask signifying what types of nodes should be returned by the {{domxref("NodeIterator")}}.</p>
+<p>The <strong><code>NodeIterator.whatToShow</code></strong> read-only property represents
+	an <code>unsigned integer</code> representing a bitmask signifying what types of nodes
+	should be returned by the {{domxref("NodeIterator")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var nodeTypes = <em>nodeIterator</em>.whatToShow;
+<pre class="brush: js">var nodeTypes = <em>nodeIterator</em>.whatToShow;
 </pre>
 
 <p>The values that can be combined to form the bitmask are:</p>
@@ -33,7 +35,12 @@ tags:
 		<tr>
 			<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
 			<td><code>2</code></td>
-			<td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} with an {{ domxref("Attr") }} node as its root; in this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree.</td>
+			<td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when
+				creating a {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }}
+				with an {{ domxref("Attr") }} node as its root; in this case, it means
+				that the attribute node will appear in the first position of the iteration
+				or traversal. Since attributes are never children of other nodes, they do
+				not appear when traversing over the document tree.</td>
 		</tr>
 		<tr>
 			<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}</td>
@@ -68,7 +75,12 @@ tags:
 		<tr>
 			<td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
 			<td><code>32</code></td>
-			<td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when creating a {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} with an {{ domxref("Entity") }} node as its root; in this case, it means that the {{ domxref("Entity") }} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
+			<td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when creating
+				a {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} with an {{
+				domxref("Entity") }} node as its root; in this case, it means that the {{
+				domxref("Entity") }} node will appear in the first position of the
+				traversal. Since entities are not part of the document tree, they do not
+				appear when traversing over the document tree.</td>
 		</tr>
 		<tr>
 			<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
@@ -78,7 +90,12 @@ tags:
 		<tr>
 			<td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
 			<td><code>2048</code></td>
-			<td>Shows {{ domxref("Notation") }} nodes. This is meaningful only when creating a {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }} with a {{ domxref("Notation") }} node as its root; in this case, it means that the {{ domxref("Notation") }} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.</td>
+			<td>Shows {{ domxref("Notation") }} nodes. This is meaningful only when
+				creating a {{ domxref("NodeIterator") }} or {{ domxref("TreeWalker") }}
+				with a {{ domxref("Notation") }} node as its root; in this case, it means
+				that the {{ domxref("Notation") }} node will appear in the first position
+				of the traversal. Since entities are not part of the document tree, they
+				do not appear when traversing over the document tree.</td>
 		</tr>
 		<tr>
 			<td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -117,12 +134,15 @@ if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-whattoshow', 'NodeIterator.whatToShow')}}</td>
+			<td>{{SpecName('DOM WHATWG', '#dom-nodeiterator-whattoshow',
+				'NodeIterator.whatToShow')}}</td>
 			<td>{{Spec2('DOM WHATWG')}}</td>
 			<td>No change from {{SpecName('DOM2 Traversal_Range')}}.</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeIterator-whatToShow', 'NodeIterator.whatToShow')}}</td>
+			<td>{{SpecName('DOM2 Traversal_Range',
+				'traversal.html#Traversal-NodeIterator-whatToShow',
+				'NodeIterator.whatToShow')}}</td>
 			<td>{{Spec2('DOM2 Traversal_Range')}}</td>
 			<td>Initial definition.</td>
 		</tr>

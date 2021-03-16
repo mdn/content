@@ -27,7 +27,7 @@ tags:
 
 <p>You might want to return {{jsxref("Array")}} objects in your derived array class <code>MyArray</code>. For example, when using methods such as {{jsxref("Array.map", "map()")}} that return the default constructor, you want these methods to return a parent <code>Array</code> object, instead of the <code>MyArray</code> object. The <code>species</code> symbol lets you do this:</p>
 
-<pre class="brush: js notranslate">class MyArray extends Array {
+<pre class="brush: js">class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }

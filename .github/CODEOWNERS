@@ -77,6 +77,11 @@
 /files/en-us/web/javascript/    @mdn/yari-content-javascript
 
 # ----------------------------------------------------------------------------
+# ENGLISH SVG CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/svg/    @mdn/yari-content-svg
+
+# ----------------------------------------------------------------------------
 # CONTROL FILES OWNER(S)
 # ----------------------------------------------------------------------------
 # These should be the last matches in this file, since any pull request that

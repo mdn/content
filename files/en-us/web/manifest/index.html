@@ -30,7 +30,7 @@ It is a {{Glossary("JSON")}}-formatted file, with one exception: it is allowed t
 
 <h2 id="Example_manifest">Example manifest</h2>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
@@ -72,24 +72,22 @@ It is a {{Glossary("JSON")}}-formatted file, with one exception: it is allowed t
 
 <p>Web app manifests are deployed in your HTML pages using a {{HTMLElement("link")}} element in the {{HTMLElement("head")}} of a document:</p>
 
-<pre id="output_head">&lt;link rel="manifest" href="manifest.json"&gt;</pre>
+<pre id="output_head" class="brush: html">&lt;link rel="manifest" href="manifest.json"&gt;</pre>
 
-<div class="note">
-<p><strong>Note</strong>: The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification (the response of the manifest file should return <code>Content-Type: application/manifest+json</code>). Browsers generally support manifests with other appropriate extensions like <code>.json</code> (<code>Content-Type: application/json</code>).</p>
-</div>
+<p>The <code>.webmanifest</code> extension is specified in the <a href="https://w3c.github.io/manifest/#media-type-registration">Media type registration</a> section of the specification (the response of the manifest file should return <code>Content-Type: application/manifest+json</code>). Browsers generally support manifests with other appropriate extensions like <code>.json</code> (<code>Content-Type: application/json</code>).</p>
 
-<div class="note">
-<p><strong>Note</strong>: If the manifest requires credentials to fetch - the {{domxref("HTML/CORS_settings_attributes", "crossorigin")}} attribute must be set to <code>use-credentials</code>, even if the manifest file is in the same origin as the current page.</p>
-</div>
+<p>If the manifest requires credentials to fetch, the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin"><code>crossorigin</code></a> attribute must be set to <code>use-credentials</code>, even if the manifest file is in the same origin as the current page.</p>
+
+<pre class="brush: html">&lt;link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials"&gt;</pre>
 
 <h2 id="Splash_screens">Splash screens</h2>
 
-<p>In Chrome 47 and later, a splash screen is displayed for sites launched from a homescreen. This splashscreen is auto-generated from properties in the web app manifest, specifically:</p>
+<p>In some browsers (Chrome 47 and later, for example), a splash screen is displayed for sites launched from a homescreen. This splash screen is auto-generated from properties in the web app manifest, specifically:</p>
 
 <ul>
-	<li><code><a href="/docs/Web/Manifest/name">name</a></code></li>
-	<li><code><a href="/docs/Web/Manifest/background_color">background_color</a></code></li>
-	<li>The icon in the <code><a href="/docs/Web/Manifest/icons">icons</a></code> array that is closest to 128dpi for the device.</li>
+	<li><code><a href="/en-US/docs/Web/Manifest/name">name</a></code></li>
+	<li><code><a href="/en-US/docs/Web/Manifest/background_color">background_color</a></code></li>
+	<li>The icon in the <code><a href="/en-US/docs/Web/Manifest/icons">icons</a></code> array that is closest to 128dpi for the device.</li>
 </ul>
 
 <h2 id="Specifications">Specifications</h2>

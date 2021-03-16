@@ -139,11 +139,11 @@ tags:
 
 <p>When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:</p>
 
-<p><img alt="video.png" class="default internal" src="/@api/deki/files/3282/=video.png" style="height: 192px; width: 320px;"></p>
+<p><img class="default internal" src="video.png"></p>
 
 <p>In line 2, that frame of video is copied into the graphics context <code>ctx1</code> of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size.  Note that you can pass the video element into the context's <code>drawImage()</code> method to draw the current video frame into the context.  The result is:</p>
 
-<p><img alt="sourcectx.png" class="default internal" src="/@api/deki/files/3284/=sourcectx.png" style="height: 96px; width: 160px;"></p>
+<p><img class="default internal" src="sourcectx.png"></p>
 
 <p>Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the <code>getImageData()</code> method on the first context.  This provides raw 32-bit pixel image data we can then manipulate.  Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.</p>
 
@@ -153,11 +153,11 @@ tags:
 
 <p>The resulting image looks like this:</p>
 
-<p><img alt="output.png" class="default internal" src="/@api/deki/files/3283/=output.png" style="height: 96px; width: 161px;"></p>
+<p><img class="default internal" src="output.png"></p>
 
 <p>This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.</p>
 
-<p><a class="external" href="https://github.com/mdn/dom-examples/tree/master/canvas/chroma-keying">View the full source for this example</a>.</p>
+<p><a href="https://github.com/mdn/dom-examples/tree/master/canvas/chroma-keying">View the full source for this example</a>.</p>
 
 <h2 id="See_also">See also</h2>
 

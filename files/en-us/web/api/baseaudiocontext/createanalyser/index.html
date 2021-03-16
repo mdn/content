@@ -12,15 +12,19 @@ tags:
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary">The <code>createAnalyser()</code> method of the {{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and create data visualisations.</p>
+<p class="summary">The <code>createAnalyser()</code> method of the
+  {{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which
+  can be used to expose audio time and frequency data and create data visualisations.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more on using this node, see the {{domxref("AnalyserNode")}} page.</p>
+  <p><strong>Note</strong>: For more on using this node, see the
+    {{domxref("AnalyserNode")}} page.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>analyserNode</var> = <var>baseAudioContext</var>.createAnalyser();</pre>
+<pre
+  class="brush: js">var <var>analyserNode</var> = <var>baseAudioContext</var>.createAnalyser();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -28,7 +32,14 @@ tags:
 
 <h2 id="Examples">Example</h2>
 
-<p>The following example shows basic usage of an AudioContext to create an Analyser node, then use requestAnimationFrame() to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+<p>The following example shows basic usage of an AudioContext to create an Analyser node,
+  then use requestAnimationFrame() to collect time domain data repeatedly and draw an
+  "oscilloscope style" output of the current audio input. For more complete applied
+  examples/information, check out our <a
+    href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see
+  <a
+    href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js
+    lines 128–205</a> for relevant code).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -82,29 +93,28 @@ function draw() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createanalyser', 'createAnalyser()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createanalyser',
+        'createAnalyser()')}}</td>
+      <td>{{Spec2('Web Audio API')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.BaseAudioContext.createAnalyser")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  </li>
 </ul>

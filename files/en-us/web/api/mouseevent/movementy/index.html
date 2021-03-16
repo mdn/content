@@ -2,24 +2,28 @@
 title: MouseEvent.movementY
 slug: Web/API/MouseEvent/movementY
 tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - MovementY
-  - Property
-  - Read-only
-  - Reference
-  - mouse lock
-  - pointer lock
+- API
+- DOM
+- DOM Events
+- MouseEvent
+- MovementY
+- Property
+- Read-only
+- Reference
+- mouse lock
+- pointer lock
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
-<p>The <strong><code>movementY</code></strong> read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous {{event("mousemove")}} event. In other words, the value of the property is computed like this: <code>currentEvent.movementY = currentEvent.screenY - previousEvent.screenY</code>.</p>
+<p>The <strong><code>movementY</code></strong> read-only property of the
+  {{domxref("MouseEvent")}} interface provides the difference in the Y coordinate of the
+  mouse pointer between the given event and the previous {{event("mousemove")}} event. In
+  other words, the value of the property is computed like this:
+  <code>currentEvent.movementY = currentEvent.screenY - previousEvent.screenY</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>yShift</em> = <em>instanceOfMouseEvent</em>.movementY;
+<pre class="brush: js">var <em>yShift</em> = <em>instanceOfMouseEvent</em>.movementY;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -28,7 +32,8 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>This example logs the amount of mouse movement using {{domxref("MouseEvent.movementX", "movementX")}} and <code>movementY</code>.</p>
+<p>This example logs the amount of mouse movement using {{domxref("MouseEvent.movementX",
+  "movementX")}} and <code>movementY</code>.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -50,18 +55,19 @@ document.addEventListener('mousemove', logMovement);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock','#dom-mouseevent-movementy','MouseEvent.movementY')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Pointer Lock','#dom-mouseevent-movementy','MouseEvent.movementY')}}
+      </td>
+      <td>{{Spec2('Pointer Lock')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -71,7 +77,7 @@ document.addEventListener('mousemove', logMovement);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("MouseEvent.movementX")}}</li>
- <li>{{domxref("MouseEvent")}}</li>
- <li><a href="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock</a></li>
+  <li>{{domxref("MouseEvent.movementX")}}</li>
+  <li>{{domxref("MouseEvent")}}</li>
+  <li><a href="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock</a></li>
 </ul>

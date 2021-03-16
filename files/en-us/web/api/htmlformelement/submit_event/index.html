@@ -40,7 +40,7 @@ tags:
 <p>The <code>submit</code> event fires when the user clicks a submit button ({{HtmlElement("button")}} or {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) or presses <kbd>Enter</kbd> while editing a field (e.g. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form. The event is not sent to the form when calling the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Trying to submit a form that does not pass <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">validation</a> triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no <code>submit</code> event.</p>
+<p><strong>Note:</strong> Trying to submit a form that does not pass <a href="/en-US/docs/Learn/Forms/Form_validation">validation</a> triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no <code>submit</code> event.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;form id="form"&gt;
+<pre class="brush: html">&lt;form id="form"&gt;
   &lt;label&gt;Test field: &lt;input type="text"&gt;&lt;/label&gt;
   &lt;br&gt;&lt;br&gt;
   &lt;button type="submit"&gt;Submit form&lt;/button&gt;
@@ -58,7 +58,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function logSubmit(event) {
+<pre class="brush: js">function logSubmit(event) {
   log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
   event.preventDefault();
 }
@@ -107,10 +107,7 @@ form.addEventListener('submit', logSubmit);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLFormElement.submit_event")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

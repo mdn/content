@@ -39,31 +39,31 @@ tags:
 
 <h3 id="Window_size_logger">Window size logger</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Resize the floating video window to fire the &lt;code&gt;resize&lt;/code&gt; event.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Resize the floating video window to fire the &lt;code&gt;resize&lt;/code&gt; event.&lt;/p&gt;
 &lt;p&gt;Window height: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Window width: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;video id="video" src="" muted autoplay&gt;&lt;/video&gt;
 </pre>
 
-<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> heightOutput <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#height'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> widthOutput <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#width'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const video = document.querySelector('#video');
+const heightOutput = document.querySelector('#height');
+const widthOutput = document.querySelector('#width');
 
-<span class="keyword token">function</span> <span class="function token">resize</span><span class="punctuation token">(</span><span class="parameter token">evt</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  heightOutput<span class="punctuation token">.</span>textContent <span class="operator token">=</span> evt<span class="punctuation token">.</span>target<span class="punctuation token">.</span>width<span class="punctuation token">;</span>
-  widthOutput<span class="punctuation token">.</span>textContent <span class="operator token">=</span> evt<span class="punctuation token">.</span>target<span class="punctuation token">.</span>width<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function resize(evt) {
+  heightOutput.textContent = evt.target.width;
+  widthOutput.textContent = evt.target.width;
+}
 
-video<span class="punctuation token">.</span><span class="function token">requestPictureInPicture</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-  <span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="parameter token">pictureInPictureWindow</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-    pictureInPictureWindow<span class="punctuation token">.</span>onresize <span class="operator token">=</span> resize<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+video.requestPictureInPicture()
+  .then(pictureInPictureWindow =&gt; {
+    pictureInPictureWindow.onresize = resize;
+  });</pre>
 
 <h3 id="addEventListener_equivalent">addEventListener equivalent</h3>
 
 <p>You could set up the event handler using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method:</p>
 
-<pre class="brush: js notranslate">pictureInPictureWindow.addEventListener('resize', resize);</pre>
+<pre class="brush: js">pictureInPictureWindow.addEventListener('resize', resize);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

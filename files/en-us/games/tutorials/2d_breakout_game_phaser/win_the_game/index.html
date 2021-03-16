@@ -16,7 +16,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}</p>
 
 <div class="summary">
-<p>This is the <strong>12th step</strong> out of 16 of the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html">Gamedev-Phaser-Content-Kit/demos/lesson12.html</a>.</p>
+<p>This is the <strong>12th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html">Gamedev-Phaser-Content-Kit/demos/lesson12.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.</span></p>
@@ -25,7 +25,7 @@ tags:
 
 <p>Add the following new code into your <code>ballHitBrick()</code> function:</p>
 
-<pre class="brush: js notranslate">function ballHitBrick(ball, brick) {
+<pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
     score += 10;
     scoreText.setText('Points: '+score);
@@ -53,6 +53,6 @@ tags:
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra — we'll give the player three <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives">lives</a> instead of one.</p>
+<p>Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra — we'll give the player three <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives">lives</a> instead of one.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}</p>

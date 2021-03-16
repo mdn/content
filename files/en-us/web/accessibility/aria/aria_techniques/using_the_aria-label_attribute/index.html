@@ -16,15 +16,15 @@ tags:
 ---
 <div>{{draft}}</div>
 
-<p><span class="seoSummary">The <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label" rel="external"><code>aria-label</code></a> attribute is used to define a string that labels the current element. Use it in cases where a text label is <em>not</em> visible on the screen. If there is visible text labeling the element, use <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="Using the aria-labelledby attribute">aria-labelledby</a> instead.</span></p>
+<p><span class="seoSummary">The <a href="https://www.w3.org/TR/wai-aria/#aria-label" rel="external"><code>aria-label</code></a> attribute is used to define a string that labels the current element. Use it in cases where a text label is <em>not</em> visible on the screen. If there is visible text labeling the element, use <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a> instead.</span></p>
 
 <p>This attribute can be used with any typical HTML element; it is not limited to elements that have an ARIA <code>role</code> assigned.</p>
 
-<h3 class="editable" id="Value"><span>Value</span></h3>
+<h3 id="Value">Value</h3>
 
 <p>string</p>
 
-<h3 class="editable" id="Possible_effects_on_user_agents_and_assistive_technology"><span>Possible effects on user agents and assistive technology </span></h3>
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology</h3>
 
 <div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
@@ -36,7 +36,7 @@ tags:
 <p>In the example below, a button is styled to look like a typical "close" button, with an X in the middle. Since there is nothing indicating that the purpose of the button is to close the dialog, the <code>aria-label</code> attribute is used to provide the label to any assistive technologies.</p>
 </div>
 
-<pre><span class="tag">&lt;button aria-label=<span class="str">"Close"</span> onclick=<span class="str">"myDialog.close()"</span>&gt;</span>X<span class="tag">&lt;/button&gt;</span>
+<pre class="brush: html">&lt;button aria-label="Close" onclick="myDialog.close()"&gt;X&lt;/button&gt;
 </pre>
 
 <h3 id="Notes">Notes </h3>
@@ -53,7 +53,7 @@ tags:
 <h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Using the aria-labelledby attribute</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Using the aria-labelledby attribute</a></li>
 </ul>
 
 <h3 id="Compatibility">Compatibility</h3>
@@ -63,5 +63,5 @@ tags:
 <h3 id="Additional_resources">Additional resources</h3>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label">WAI-ARIA specification for aria-label</a></li>
+ <li><a href="https://www.w3.org/TR/wai-aria/#aria-label">WAI-ARIA specification for aria-label</a></li>
 </ul>

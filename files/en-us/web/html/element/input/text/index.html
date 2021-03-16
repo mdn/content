@@ -48,7 +48,7 @@ tags:
 
 <p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement.value", "value")}} property in JavaScript.</p>
 
-<pre class="brush: js notranslate">let theText = myTextInput.value;
+<pre class="brush: js">let theText = myTextInput.value;
 </pre>
 
 <p>If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value may be an empty string ("").</p>
@@ -225,7 +225,7 @@ tags:
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"&gt;
@@ -239,13 +239,13 @@ tags:
 
 <p>{{EmbedLiveSample("Basic_example", 600, 50)}}</p>
 
-<p>When submitted, the data name/value pair sent to the server will be <code>uname=Chris</code> (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.</p>
+<p>When submitted, the data name/value pair sent to the server will be <code>name=Chris</code> (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.</p>
 
 <h3 id="Setting_placeholders">Setting placeholders</h3>
 
 <p>You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"
@@ -266,7 +266,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"
@@ -292,7 +292,7 @@ tags:
 
 <p>There are useful pseudo-classes available for styling form elements to help the user see when their values are valid or invalid. These are {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) mark next to inputs containing valid values, and a cross (X) next to inputs containing invalid values.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -318,7 +318,7 @@ input:valid+span:after {
 
 <p>You can use the {{htmlattrxref("required","input")}} attribute as an easy way of making entering a value required before form submission is allowed:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required&gt;
@@ -330,7 +330,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
+<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 </div>
 
 <p>This renders like so:</p>
@@ -345,7 +345,7 @@ input:valid+span:after {
 
 <p>The example below requires that the entered value be 4–8 characters in length.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="10"
@@ -359,7 +359,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
+<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 </div>
 
 <p>This renders like so:</p>
@@ -378,7 +378,7 @@ input:valid+span:after {
 
 <p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="45"
@@ -392,7 +392,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }

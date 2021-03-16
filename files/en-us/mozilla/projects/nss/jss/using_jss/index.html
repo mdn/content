@@ -66,7 +66,7 @@ tags:
     </tr>
     <tr>
      <td>freebl_*</td>
-     <td>Processor-specific optimized big-number arithmetic library. Not present on all platforms. <a href="/en-US/docs/Introduction_to_Network_Security_Services">More information...</a></td>
+     <td>Processor-specific optimized big-number arithmetic library. Not present on all platforms. <a href="/en-US/docs/Mozilla/Projects/NSS/Introduction_to_Network_Security_Services">More information...</a></td>
     </tr>
     <tr>
      <td>fort</td>
@@ -173,20 +173,13 @@ zip -r ../jss42.jar .
 
 <p>You need to set some environment variables before building and running Java applications with JSS.</p>
 
-<ul>
- <li>
-  <dl>
-   <dt><code>CLASSPATH</code></dt>
-   <dd>Include the path containing the JSS classes you built, or the path to <code>jss42.jar</code>. (The path to <code>jss34.jar</code> ends with the string "/jss42.jar". It is not just the directory that contains <code>jss42.jar</code>.)
-   </dd>
-   <dt><code>LD_LIBRARY_PATH</code> (Unix) / <code>PATH</code> (Windows)</dt>
-   <dd>Include the path to the NSPR, NSS, and JSS shared libraries.</dd>
-  </dl>
-
-  <ul>
-  </ul>
- </li>
-</ul>
+<dl>
+  <dt><code>CLASSPATH</code></dt>
+  <dd>Include the path containing the JSS classes you built, or the path to <code>jss42.jar</code>. (The path to <code>jss34.jar</code> ends with the string "/jss42.jar". It is not just the directory that contains <code>jss42.jar</code>.)
+  </dd>
+  <dt><code>LD_LIBRARY_PATH</code> (Unix) / <code>PATH</code> (Windows)</dt>
+  <dd>Include the path to the NSPR, NSS, and JSS shared libraries.</dd>
+</dl>
 
 <h3 id="Initialize_JSS_in_your_application"><a name="init">Initialize JSS in your application</a></h3>
 

@@ -16,30 +16,46 @@ tags:
 ---
 <div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
 
-<p>The {{domxref("GeolocationCoordinates")}} interface's read-only <code><strong>longitude</strong></code> property is a double-precision floating point value which represents the longitude of a geographical position, specified in decimal degrees. Together with a {{domxref("DOMTimeStamp")}} indicating a time of measurement, the <code>GeolocationCoordinates</code> object is part of the {{domxref("GeolocationPosition")}} interface, which is the object type returned by Geolocation API functions that obtain and return a geographical position.</p>
+<p>The {{domxref("GeolocationCoordinates")}} interface's read-only
+  <code><strong>longitude</strong></code> property is a double-precision floating point
+  value which represents the longitude of a geographical position, specified in decimal
+  degrees. Together with a {{domxref("DOMTimeStamp")}} indicating a time of measurement,
+  the <code>GeolocationCoordinates</code> object is part of the
+  {{domxref("GeolocationPosition")}} interface, which is the object type returned by
+  Geolocation API functions that obtain and return a geographical position.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>let longitude</var> = <var>geolocationCoordinatesInstance</var>.longitude
+<pre class="brush: js"><var>let longitude</var> = <var>geolocationCoordinatesInstance</var>.longitude
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>The value in <code>longitude</code> is the geographical longitude of the location on Earth described by the <code>Coordinates</code> object, in decimal degrees. The value is defined by the World Geodetic System 1984 specification (WGS 84).</p>
+<p>The value in <code>longitude</code> is the geographical longitude of the location on
+  Earth described by the <code>Coordinates</code> object, in decimal degrees. The value is
+  defined by the World Geodetic System 1984 specification (WGS 84).</p>
 
 <div class="note">
-<p><strong>Note</strong>: The zero meridian (also known as the prime meridian or the reference meridian) is not precisely the same as the Greenwhich meridian that most people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102 meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This is the same standard used by the {{interwiki("wikipedia", "Global Positioning System")}} (GPS).</p>
+  <p><strong>Note</strong>: The zero meridian (also known as the prime meridian or the
+    reference meridian) is not precisely the same as the Greenwhich meridian that most
+    people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference
+    Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102
+    meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This
+    is the same standard used by the {{interwiki("wikipedia", "Global Positioning
+    System")}} (GPS).</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this simple example, we fetch the user's location and display the resulting coordinates once they're returned.</p>
+<p>In this simple example, we fetch the user's location and display the resulting
+  coordinates once they're returned.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>The JavaScript code below creates an event listener so that when the user clicks on a button, the location information is retrieved and displayed.</p>
+<p>The JavaScript code below creates an event listener so that when the user clicks on a
+  button, the location information is retrieved and displayed.</p>
 
-<pre class="brush: js notranslate">let button = document.getElementById("get-location");
+<pre class="brush: js">let button = document.getElementById("get-location");
 let latText = document.getElementById("latitude");
 let longText = document.getElementById("longitude");
 
@@ -53,17 +69,29 @@ button.addEventListener("click", function() {
   });
 });</pre>
 
-<p>After setting up variables to more conveniently reference the button element and the two elements into which the latitude and logitude will be drawn, the event listener is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch and display the location information.</p>
+<p>After setting up variables to more conveniently reference the button element and the
+  two elements into which the latitude and logitude will be drawn, the event listener is
+  established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}
+  on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
+  and display the location information.</p>
 
-<p>Upon receiving a {{event("click")}} event, we call {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the device's current position. This is an asynchronous request, so we provide a callback which receives as in put a {{domxref("GeolocationPosition")}} object describing the determined position.</p>
+<p>Upon receiving a {{event("click")}} event, we call
+  {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the
+  device's current position. This is an asynchronous request, so we provide a callback
+  which receives as in put a {{domxref("GeolocationPosition")}} object describing the
+  determined position.</p>
 
-<p>From the <code>GeolocationPosition</code> object, we obtain the user's latitude and longitude using {{domxref("Coordinates.latitude", "position.coords.latitude")}} and <code>position.coords.longitude</code> so we can update the displayed coordinates. The two {{HTMLElement("span")}} elements are updated to display the corresponding values after being converted to a value with two decimal places.</p>
+<p>From the <code>GeolocationPosition</code> object, we obtain the user's latitude and
+  longitude using {{domxref("GeolocationCoordinates/latitude", "position.coords.latitude")}} and
+  <code>position.coords.longitude</code> so we can update the displayed coordinates. The
+  two {{HTMLElement("span")}} elements are updated to display the corresponding values
+  after being converted to a value with two decimal places.</p>
 
 <h3 id="HTML">HTML</h3>
 
 <p>The HTML used to present the results looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Your location is &lt;span id="latitude"&gt;0.00&lt;/span&gt;°
   latitude by &lt;span id="longitude"&gt;0.00&lt;/span&gt;° longitude.
 &lt;/p&gt;
@@ -80,20 +108,21 @@ button.addEventListener("click", function() {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#dom-geolocationcoordinates-longitude', 'Coordinates.longitude')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Geolocation', '#dom-geolocationcoordinates-longitude',
+        'Coordinates.longitude')}}</td>
+      <td>{{Spec2('Geolocation')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -103,7 +132,11 @@ button.addEventListener("click", function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using">Using the Geolocation API</a></li>
- <li>The {{domxref("GeolocationCoordinates")}} interface it belongs to.</li>
- <li>The {{domxref("GeolocationPosition")}} interface, which is the top-level interface used to return geolocation data from the Geolocation API functions {{domxref("Geolocation.getCurrentPosition()")}} and {{domxref("Geolocation.watchPosition", "watchPosition()")}}.</li>
+  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
+  </li>
+  <li>The {{domxref("GeolocationCoordinates")}} interface it belongs to.</li>
+  <li>The {{domxref("GeolocationPosition")}} interface, which is the top-level interface
+    used to return geolocation data from the Geolocation API functions
+    {{domxref("Geolocation.getCurrentPosition()")}} and
+    {{domxref("Geolocation.watchPosition", "watchPosition()")}}.</li>
 </ul>

@@ -10,56 +10,71 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createPattern()</code></strong> method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a {{domxref("CanvasPattern")}}.</p>
+<p>The
+  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.createPattern()</code></strong>
+  method of the Canvas 2D API creates a pattern using the specified image and repetition.
+  This method returns a {{domxref("CanvasPattern")}}.</p>
 
-<p>This method doesn't draw anything to the canvas directly. The pattern it creates must be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle")}} properties, after which it is applied to any subsequent drawing.</p>
+<p>This method doesn't draw anything to the canvas directly. The pattern it creates must
+  be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle")}} or
+  {{domxref("CanvasRenderingContext2D.strokeStyle")}} properties, after which it is
+  applied to any subsequent drawing.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">CanvasPattern <var>ctx</var>.createPattern(<var>image</var>, <var>repetition</var>);
+<pre class="brush: js">CanvasPattern <var>ctx</var>.createPattern(<var>image</var>, <var>repetition</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>image</code></dt>
- <dd>A {{domxref("CanvasImageSource")}} to be used as the pattern's image. It can be any of the following:
- <ul>
-  <li>{{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})</li>
-  <li>{{domxref("SVGImageElement")}} ({{HTMLElement("image")}})</li>
-  <li>{{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}, by using the capture of the video)</li>
-  <li>{{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})</li>
-  <li>{{domxref("ImageBitmap")}}</li>
-  <li>{{domxref("OffscreenCanvas")}}</li>
- </ul>
- </dd>
- <dt><code>repetition</code></dt>
- <dd>A {{domxref("DOMString")}} indicating how to repeat the pattern's image. Possible values are:
- <ul>
-  <li><code>"repeat"</code> (both directions)</li>
-  <li><code>"repeat-x"</code> (horizontal only)</li>
-  <li><code>"repeat-y"</code> (vertical only)</li>
-  <li><code>"no-repeat"</code> (neither direction)</li>
- </ul>
- If <code>repetition</code> is specified as an empty string (<code>""</code>) or {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of <code>"repeat"</code> will be used.</dd>
+  <dt><code>image</code></dt>
+  <dd>A {{domxref("CanvasImageSource")}} to be used as the pattern's image. It can be any
+    of the following:
+    <ul>
+      <li>{{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})</li>
+      <li>{{domxref("SVGImageElement")}} ({{HTMLElement("image")}})</li>
+      <li>{{domxref("HTMLVideoElement")}} ({{HTMLElement("video")}}, by using the capture
+        of the video)</li>
+      <li>{{domxref("HTMLCanvasElement")}} ({{HTMLElement("canvas")}})</li>
+      <li>{{domxref("ImageBitmap")}}</li>
+      <li>{{domxref("OffscreenCanvas")}}</li>
+    </ul>
+  </dd>
+  <dt><code>repetition</code></dt>
+  <dd>A {{domxref("DOMString")}} indicating how to repeat the pattern's image. Possible
+    values are:
+    <ul>
+      <li><code>"repeat"</code> (both directions)</li>
+      <li><code>"repeat-x"</code> (horizontal only)</li>
+      <li><code>"repeat-y"</code> (vertical only)</li>
+      <li><code>"no-repeat"</code> (neither direction)</li>
+    </ul>
+    If <code>repetition</code> is specified as an empty string (<code>""</code>) or
+    {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of <code>"repeat"</code>
+    will be used.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt>{{domxref("CanvasPattern")}}</dt>
- <dd>An opaque object describing a pattern.</dd>
+  <dt>{{domxref("CanvasPattern")}}</dt>
+  <dd>An opaque object describing a pattern.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Creating_a_pattern_from_an_image">Creating a pattern from an image</h3>
 
-<p>This example uses the <code>createPattern()</code> method to create a {{domxref("CanvasPattern")}} with a repeating source image. Once created, the pattern is assigned to the canvas context's fill style and applied to a rectangle.</p>
+<p>This example uses the <code>createPattern()</code> method to create a
+  {{domxref("CanvasPattern")}} with a repeating source image. Once created, the pattern is
+  assigned to the canvas context's fill style and applied to a rectangle.</p>
 
 <p>The original image looks like this:</p>
 
-<p><img alt="A flowery pattern" src="https://mdn.mozillademos.org/files/222/Canvas_createpattern.png" style="height: 117px; width: 86px;"></p>
+<p><img alt="A flowery pattern"
+    src="canvas_createpattern.png"></p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -84,7 +99,9 @@ img.onload = function() {
 
 <h3 id="Creating_a_pattern_from_a_canvas">Creating a pattern from a canvas</h3>
 
-<p>In this example we create a pattern from the contents of an offscreen canvas. We then apply it to the fill style of our primary canvas, and fill that canvas with the pattern.</p>
+<p>In this example we create a pattern from the contents of an offscreen canvas. We then
+  apply it to the fill style of our primary canvas, and fill that canvas with the pattern.
+</p>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
@@ -119,18 +136,19 @@ document.body.appendChild(canvas);</pre>
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createpattern", "CanvasRenderingContext2D.createPattern")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createpattern",
+        "CanvasRenderingContext2D.createPattern")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -140,13 +158,17 @@ document.body.appendChild(canvas);</pre>
 <h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
 
 <ul>
- <li>Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a <code>null</code> or <code>undefined</code> image correctly throws a <code>TYPE_MISMATCH_ERR</code> exception.</li>
- <li>Starting with Gecko 16.0 {{geckoRelease("16.0")}}, specifying <code>null</code> for the <code>repetition</code> parameter is now allowed and results in the repetition being set to <code>"repeat"</code> ({{bug(762657)}}).</li>
+  <li>Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a <code>null</code> or
+    <code>undefined</code> image correctly throws a <code>TYPE_MISMATCH_ERR</code>
+    exception.</li>
+  <li>Starting with Gecko 16.0 {{geckoRelease("16.0")}}, specifying <code>null</code> for
+    the <code>repetition</code> parameter is now allowed and results in the repetition
+    being set to <code>"repeat"</code> ({{bug(762657)}}).</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
+  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
+  <li>{{domxref("CanvasPattern")}}</li>
 </ul>

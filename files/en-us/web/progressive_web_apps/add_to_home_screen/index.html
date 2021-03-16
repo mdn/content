@@ -18,8 +18,9 @@ tags:
 
 <h2 id="What_browsers_support_A2HS">What browsers support A2HS?</h2>
 
-<p>A2HS is supported in all mobile browsers, except iOS webview. It's also supported in some Chromium desktop browsers.<br>
- Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#Other">since v58</a> and is working on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1407202">desktop support</a>.</p>
+<p>A2HS is supported in all mobile browsers, except iOS webview. It's also supported in some Chromium desktop browsers.</p>
+
+<p>Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#Other">since v58</a>.</p>
 
 <p>See <a href="https://caniuse.com/#feat=web-app-manifest">caniuse.com</a> for exact details.</p>
 
@@ -29,15 +30,15 @@ tags:
 
 <p>If you have Firefox for Android available, use it to navigate to our demo at <code>https://mdn.github.io/pwa-examples/a2hs/</code>. You'll see fox pictures, but more important, you'll see a "home" icon with a plus (+) icon inside it — this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15762/add-to-home-screen-icon.png" style="border-style: solid; border-width: 1px; display: block; height: 64px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="add-to-home-screen-icon.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Tapping this will show a confirmation banner — pressing the big + <em>ADD TO HOME SCREEN</em> button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 421px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="fx-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 421px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="chrome-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find out a lot more about Chrome install banners from the article <a href="https://developers.google.com/web/fundamentals/app-install-banners/">Web App Install Banners</a>.</p>
@@ -47,7 +48,7 @@ tags:
 
 <p>Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15770/a2hs-on-home-screen.png" style="border-style: solid; border-width: 1px; display: block; height: 243px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="" src="a2hs-on-home-screen.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.</p>
 
@@ -82,7 +83,7 @@ tags:
 
 <p>The manifest for our sample app looks like this:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",
   "display": "fullscreen",
@@ -110,7 +111,7 @@ tags:
 
 <p>To finish setting up your manifest, you need to reference it from the HTML of your application's home page:</p>
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest.webmanifest<span class="pl-pds">"</span></span>&gt;</pre>
+<pre class="brush: html">&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest.webmanifest<span class="pl-pds">"</span></span>&gt;</pre>
 
 <p>Browsers that support A2HS will know where to look for your manifest once this is in place.</p>
 
@@ -132,11 +133,11 @@ tags:
 
 <p>To make our PWA installable on desktop, we first added a button to our document to allow users to do the installation — this isn't made available automatically on desktop apps, and the installation needs to be triggered by a user gesture:</p>
 
-<pre class="brush: html notranslate">&lt;button class="add-button"&gt;Add to home screen&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button class="add-button"&gt;Add to home screen&lt;/button&gt;</pre>
 
 <p>We then gave it some simple styling:</p>
 
-<pre class="brush: css notranslate">.add-button {
+<pre class="brush: css">.add-button {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -146,13 +147,13 @@ tags:
 
 <p>At the bottom of our <a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js"><code>index.js</code> file</a>, we added some JavaScript to handle the installation. First of all, we declare a <code>deferredPrompt</code> variable (which we'll explain later on), get a reference to our install button, and set it to <code>display: none</code> initially:</p>
 
-<pre class="brush: js notranslate">let deferredPrompt;
+<pre class="brush: js">let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
 addBtn.style.display = 'none';</pre>
 
 <p>We hide the button initially because the PWA will not be available for install until it follows the A2HS criteria. When this happens, supporting browsers will fire a <code>beforeinstallprompt</code> event. We can then use a handler like the one below to handle the installation:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('beforeinstallprompt', (e) =&gt; {
+<pre class="brush: js">window.addEventListener('beforeinstallprompt', (e) =&gt; {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
@@ -197,11 +198,11 @@ addBtn.style.display = 'none';</pre>
 
 <p>So when the button is clicked, the install prompt appears.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 163px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="" src="chrome-desktop-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If the user selects <em>Install</em>, the app is installed (available as standalone desktop app), and the Install button no longer shows (the <code>onbeforeinstallprompt</code> event no longer fires if the app is already installed). When you open the app, it will appear in its own window:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16280/a2hs-installed-desktop.png" style="border-style: solid; border-width: 1px; display: block; height: 296px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="a2hs-installed-desktop.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If the user selects <em>Cancel</em>, the state of the app goes back to how it was before the button was clicked.</p>
 

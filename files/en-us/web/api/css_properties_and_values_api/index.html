@@ -19,7 +19,7 @@ tags:
 
 <p>The following uses {{domxref('CSS.registerProperty')}} in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> to type a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-color</code>, as a color, give it a default value, and not allow it to inherit its value:</p>
 
-<pre class="brush: js notranslate">window.CSS.registerProperty({
+<pre class="brush: js">window.CSS.registerProperty({
   name: '--my-color',
   syntax: '&lt;color&gt;',
   inherits: false,
@@ -29,7 +29,7 @@ tags:
 
 <p>The same registration can take place in <a href="/en-US/docs/Web/CSS">CSS</a> using the {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
 
-<pre class="brush: css notranslate">@property --my-color {
+<pre class="brush: css">@property --my-color {
   syntax: '&lt;color&gt;';
   inherits: false;
   initial-value: #c0ffee;

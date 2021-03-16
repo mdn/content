@@ -10,7 +10,7 @@ tags:
   - JavaScript
   - Learn
   - events
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -35,7 +35,7 @@ tags:
 
 <p>As mentioned above, <strong>events</strong> are actions or occurrences that happen in the system you are programming — the system produces (or "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be automatically taken (that is, some code running) when the event occurs. For example, in an airport, when the runway is clear for take off, a signal is communicated to the pilot. As a result, the plane can safely takeoff.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14077/MDN-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="mdn-mozilla-events-runway.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In the case of the Web, events are fired inside the browser window, and tend to be attached to a specific item that resides in it — this might be a single element, set of elements, the HTML document loaded in the current tab, or the entire browser window. There are many different types of events that can occur. For example:</p>
 
@@ -61,15 +61,15 @@ tags:
 
 <p>Let's look at a simple example of what we mean here. You've already seen events and event handlers used in many of the examples, but let's recap just to cement our knowledge. In the following example, we have a single {{htmlelement("button")}}, which when pressed, makes the background change to a random color:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Change color&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Change color&lt;/button&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">button { margin: 10px };</pre>
+<pre class="brush: css">button { margin: 10px };</pre>
 </div>
 
 <p>The JavaScript looks like so:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 function random(number) {
   return Math.floor(Math.random() * (number+1));
@@ -94,7 +94,7 @@ btn.onclick = function() {
 
 <p>For example, <a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Node.js</a> is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications. The <a href="https://nodejs.org/docs/latest-v12.x/api/events.html">Node.js event model</a> relies on listeners to listen for events and emitters to emit events periodically — it doesn't sound that different, but the code is quite different, making use of functions like <code>on()</code> to register an event listener, and <code>once()</code> to register an event listener that unregisters after it has run once. The <a href="https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect">HTTP connect event docs</a> provide a good example.</p>
 
-<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples"><code>runtime.onMessage</code> page</a> for an example.</p>
+<p>You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>. The event model is similar to the web events model, but a bit different — event listeners properties are camel-cased (such as <code>onMessage</code> rather than <code>onmessage</code>), and need to be combined with the <code>addListener</code> function. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples"><code>runtime.onMessage</code> page</a> for an example.</p>
 
 <p>You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.</p>
 
@@ -106,18 +106,18 @@ btn.onclick = function() {
 
 <p>These are the properties that exist to contain event handler code we have seen most frequently during the course. Returning to the above example:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 btn.onclick = function() {
   const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/HTMLElement/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
+<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
 
 <p>You could also set the handler property to be equal to a named function name (like we saw in <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a>). The following works just the same:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 function bgChange() {
   const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
@@ -137,16 +137,16 @@ btn.onclick = bgChange;</pre>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.</li>
 </ul>
 
-<p>Some events are general and available nearly anywhere (e.g. an <code>onclick</code> handler can be registered on nearly any element), whereas some are more specific and only useful in certain situations (e.g. it makes sense to use <a href="/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay</a> only on specific elements, such as {{htmlelement("video")}}).</p>
+<p>Some events are general and available nearly anywhere (e.g. an <code>onclick</code> handler can be registered on nearly any element), whereas some are more specific and only useful in certain situations (e.g. it makes sense to use <a href="/en-US/docs/Web/API/GlobalEventHandlers/onplay">onplay</a> only on specific elements, such as {{htmlelement("video")}}).</p>
 
 <h3 id="Inline_event_handlers_—_dont_use_these">Inline event handlers — don't use these</h3>
 
 <p>You might also see a pattern like this in your code:</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="bgChange()"&gt;Press me&lt;/button&gt;
+<pre class="brush: html">&lt;button onclick="bgChange()"&gt;Press me&lt;/button&gt;
 </pre>
 
-<pre class="brush: js notranslate">function bgChange() {
+<pre class="brush: js">function bgChange() {
   const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
 }</pre>
@@ -157,7 +157,7 @@ btn.onclick = bgChange;</pre>
 
 <p>The earliest method of registering event handlers found on the Web involved <strong>event handler HTML attributes</strong> (or <strong>inline event handlers</strong>) like the one shown above — the attribute value is literally the JavaScript code you want to run when the event occurs. The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="alert('Hello, this is my old-fashioned event handler!');"&gt;Press me&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="alert('Hello, this is my old-fashioned event handler!');"&gt;Press me&lt;/button&gt;</pre>
 
 <p>You can find HTML attribute equivalents for many of the event handler properties; however, you shouldn't use these — they are considered bad practice. It might seem easy to use an event handler attribute if you are doing something really quick, but they quickly become unmanageable and inefficient.</p>
 
@@ -165,7 +165,7 @@ btn.onclick = bgChange;</pre>
 
 <p>Even in a single file, inline event handlers are not a good idea. One button is OK, but what if you had 100 buttons? You'd have to add 100 attributes to the file; it would quickly turn into a maintenance nightmare. With JavaScript, you could easily add an event handler function to all the buttons on the page no matter how many there were, using something like this:</p>
 
-<pre class="brush: js notranslate">const buttons = document.querySelectorAll('button');
+<pre class="brush: js">const buttons = document.querySelectorAll('button');
 
 for (let i = 0; i &lt; buttons.length; i++) {
   buttons[i].onclick = bgChange;
@@ -173,7 +173,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
 
 <p class="brush: js">Note that another option here would be to use the <code><a href="/en-US/docs/Web/API/NodeList/forEach">forEach()</a></code> built-in method available on <code><a href="/en-US/docs/Web/API/NodeList">NodeList</a></code> objects:</p>
 
-<pre class="brush: js notranslate">buttons.forEach(function(button) {
+<pre class="brush: js">buttons.forEach(function(button) {
   button.onclick = bgChange;
 });</pre>
 
@@ -181,11 +181,11 @@ for (let i = 0; i &lt; buttons.length; i++) {
 <p><strong>Note</strong>: Separating your programming logic from your content also makes your site more friendly to search engines.</p>
 </div>
 
-<h3 id="addEventListener_and_removeEventListener">addEventListener() and removeEventListener()</h3>
+<h3 id="adding_and_removing_event_handlers">Adding and removing event handlers</h3>
 
-<p>The newest type of event mechanism is defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Events/">Document Object Model (DOM) Level 2 Events</a> Specification, which provides browsers with a new function — <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>. This functions in a similar way to the event handler properties, but the syntax is obviously different. We could rewrite our random color example to look like this:</p>
+<p>The modern mechanism for adding event handlers is the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method. Using it, we could rewrite our random color example to look like this:</p>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 
 function bgChange() {
   const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
@@ -198,27 +198,39 @@ btn.addEventListener('click', bgChange);</pre>
 <p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">see it running live</a>).</p>
 </div>
 
-<p>Inside the <code>addEventListener()</code> function, we specify two parameters — the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it. Note: It is perfectly appropriate to put all the code inside the <code>addEventListener()</code> function, in an anonymous function, like this:</p>
+<p>Inside the <code>addEventListener()</code> function, we specify two parameters: the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it. Note: It is perfectly appropriate to put all the code inside the <code>addEventListener()</code> function, in an anonymous function, like this:</p>
 
-<pre class="brush: js notranslate">btn.addEventListener('click', function() {
+<pre class="brush: js">btn.addEventListener('click', function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   document.body.style.backgroundColor = rndCol;
 });</pre>
 
-<p>This mechanism has some advantages over the older mechanisms discussed earlier. First, there is a counterpart function, <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>, which removes a previously added listener. For example, this would remove the listener set in the first code block in this section:</p>
+<p>This mechanism has some advantages over the older mechanisms discussed here earlier. First, there is a counterpart function, <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code>, which removes a previously added event handler. For example, this would remove the event handler set in the first code block in this section:</p>
 
-<pre class="brush: js notranslate">btn.removeEventListener('click', bgChange);</pre>
+<pre class="brush: js">btn.removeEventListener('click', bgChange);</pre>
 
-<p>This isn't significant for simple, small programs, but for larger, more complex programs it can improve efficiency to clean up old unused event handlers. Plus, this allows you to have the same button performing different actions in different circumstances — all you have to do is add or remove event handlers as appropriate.</p>
+<p>Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then, later, calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the <code>AbortSignal</code>. For example, to add an event handler that we can remove with an <code>AbortSignal</code>:</p>
 
-<p>Second, you can register multiple handlers for the same listener. The following two handlers wouldn't both be applied:</p>
+<pre class="brush: js">const controller = new AbortController();
+btn.addEventListener('click', function() {
+  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+}, { signal: controller.signal }); // pass an AbortSignal to this handler</pre>
 
-<pre class="brush: js notranslate">myElement.onclick = functionA;
+<p>Then the event handler created by the code above can be removed like this:</p>
+
+<pre class="brush: js">controller.abort(); // removes any/all event handlers associated with this controller</pre>
+
+<p>For simple, small programs, cleaning up old, unused event handlers isn’t necessary — but for larger, more complex programs, it can improve efficiency. Plus, the ability to remove event handlers allows you to have the same button performing different actions in different circumstances — all you have to do is add or remove handlers.</p>
+
+<p>The second advantage that {{domxref("EventTarget/addEventListener()", "addEventListener()")}} has over the older mechanisms discussed here earlier is that it allows you to register multiple handlers for the same listener. The following two handlers wouldn't both be applied:</p>
+
+<pre class="brush: js">myElement.onclick = functionA;
 myElement.onclick = functionB;</pre>
 
-<p>The second line overwrites the value of <code>onclick</code> set by the first line. This would work, however:</p>
+<p>The second line overwrites the value of <code>onclick</code> set by the first line. What would work, however, is the following:</p>
 
-<pre class="brush: js notranslate">myElement.addEventListener('click', functionA);
+<pre class="brush: js">myElement.addEventListener('click', functionA);
 myElement.addEventListener('click', functionB);</pre>
 
 <p>Both functions would now run when the element is selected.</p>
@@ -238,7 +250,7 @@ myElement.addEventListener('click', functionB);</pre>
 
 <p>The main advantages of the third mechanism are that you can remove event handler code if needed, using <code>removeEventListener()</code>, and you can add multiple listeners of the same type to elements if required. For example, you can call <code>addEventListener('click', function() { ... })</code> on an element multiple times, with different functions specified in the second argument. This is impossible with event handler properties because any subsequent attempts to set a property will overwrite earlier ones, e.g.:</p>
 
-<pre class="brush: js notranslate">element.onclick = function1;
+<pre class="brush: js">element.onclick = function1;
 element.onclick = function2;
 etc.</pre>
 
@@ -254,7 +266,7 @@ etc.</pre>
 
 <p>Sometimes inside an event handler function, you'll see a parameter specified with a name such as <code>event</code>, <code>evt</code>, or <code>e</code>. This is called the <strong>event object</strong>, and it is automatically passed to event handlers to provide extra features and information. For example, let's rewrite our random color example again slightly:</p>
 
-<pre class="brush: js notranslate">function bgChange(e) {
+<pre class="brush: js">function bgChange(e) {
   const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   e.target.style.backgroundColor = rndCol;
   console.log(e);
@@ -274,7 +286,7 @@ btn.addEventListener('click', bgChange);</pre>
 
 <p><code>e.target</code> is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them. You might, for example, have a set of 16 tiles that disappear when selected. It is useful to always be able to just set the thing to disappear as <code>e.target</code>, rather than having to select it in some more difficult way. In the following example (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html">useful-eventtarget.html</a> for the full source code; also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html">running live</a> here), we create 16 {{htmlelement("div")}} elements using JavaScript. We then select all of them using {{domxref("document.querySelectorAll()")}}, then loop through each one, adding an <code>onclick</code> handler to each that makes it so that a random color is applied to each one when selected:</p>
 
-<pre class="brush: js notranslate">const divs = document.querySelectorAll('div');
+<pre class="brush: js">const divs = document.querySelectorAll('div');
 
 for (let i = 0; i &lt; divs.length; i++) {
   divs[i].onclick = function(e) {
@@ -287,7 +299,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 <div class="hidden">
 <h6 id="Hidden_example">Hidden example</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -331,7 +343,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 
 <p>{{ EmbedLiveSample('Hidden_example', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href="/en-US/docs/Web/API/MediaRecorder_API">Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
+<p>Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder API</a>, for example, has a <code>dataavailable</code> event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding <a href="/en-US/docs/Web/API/MediaRecorder/ondataavailable">ondataavailable</a> handler's event object has a <code>data</code> property available containing the recorded audio or video data to allow you to access it and do something with it.</p>
 
 <h3 id="Preventing_default_behavior">Preventing default behavior</h3>
 
@@ -341,7 +353,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 
 <p>First, a simple HTML form that requires you to enter your first and last name:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="fname"&gt;First name: &lt;/label&gt;
     &lt;input id="fname" type="text"&gt;
@@ -357,7 +369,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 &lt;p&gt;&lt;/p&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }
 </pre>
@@ -365,7 +377,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 
 <p>Now some JavaScript — here we implement a very simple check inside an <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a></code> event handler (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty. If they are, we call the <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:</p>
 
-<pre class="brush: js notranslate">const form = document.querySelector('form');
+<pre class="brush: js">const form = document.querySelector('form');
 const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 const para = document.querySelector('p');
@@ -392,7 +404,7 @@ form.onsubmit = function(e) {
 <div class="hidden">
 <h6 id="Hidden_video_example">Hidden video example</h6>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -469,7 +481,7 @@ form.onsubmit = function(e) {
 
 <p>This is a pretty simple example that shows and hides a {{htmlelement("div")}} with a {{htmlelement("video")}} element inside it:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Display video&lt;/button&gt;
+<pre class="brush: html">&lt;button&gt;Display video&lt;/button&gt;
 
 &lt;div class="hidden"&gt;
   &lt;video&gt;
@@ -481,13 +493,13 @@ form.onsubmit = function(e) {
 
 <p>When the {{htmlelement("button")}} is selected, the video is displayed, by changing the class attribute on the <code>&lt;div&gt;</code> from <code>hidden</code> to <code>showing</code> (the example's CSS contains these two classes, which position the box off the screen and on the screen, respectively):</p>
 
-<pre class="brush: js notranslate">btn.onclick = function() {
+<pre class="brush: js">btn.onclick = function() {
   videoBox.setAttribute('class', 'showing');
 }</pre>
 
 <p>We then add a couple more <code>onclick</code> event handlers — the first one to the <code>&lt;div&gt;</code> and the second one to the <code>&lt;video&gt;</code>. Now, when the area of the <code>&lt;div&gt;</code> outside the video is selected, the box should be hidden again and when the video itself is selected, the video should start to play.</p>
 
-<pre class="brush: js notranslate">videoBox.onclick = function() {
+<pre class="brush: js">videoBox.onclick = function() {
   videoBox.setAttribute('class', 'hidden');
 };
 
@@ -515,7 +527,7 @@ video.onclick = function() {
  <li>Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element.</li>
 </ul>
 
-<p><a href="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png"><img alt="" src="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png" style="display: block; height: 452px; margin: 0px auto; width: 960px;"></a></p>
+<p><a href="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png"><img alt="" src="bubbling-capturing.png" style="display: block; margin: 0px auto;"></a></p>
 
 <p>(Select the image for a bigger diagram)</p>
 
@@ -536,7 +548,7 @@ video.onclick = function() {
 
 <p>We can, therefore, fix our current problem by changing the second handler function in the previous code block to this:</p>
 
-<pre class="brush: js notranslate">video.onclick = function(e) {
+<pre class="brush: js">video.onclick = function(e) {
   e.stopPropagation();
   video.play();
 };</pre>

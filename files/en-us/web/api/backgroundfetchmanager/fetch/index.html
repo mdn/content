@@ -1,0 +1,112 @@
+---
+title: BackgroundFetchManager.fetch()
+slug: Web/API/BackgroundFetchManager/fetch
+tags:
+  - API
+  - Method
+  - Reference
+  - fetch()
+  - BackgroundFetchManager
+  - Experimental
+  - Service Workers
+  - Fetch
+---
+<div>{{draft}}{{DefaultAPISidebar("Background Fetch")}}</div>
+
+<p class="summary">The <strong><code>fetch()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects. </p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>backgroundFetchRegistration</var> = BackgroundFetchManager.fetch();</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+<dt>id</dt>
+<dd>A developer-defined identifier that can be passed to the other methods to retrieve a {{domxref("backgroundFetchRegistration")}}.</dd>
+<dt>request</dt>
+<dd>A {{domxref("RequestInfo")}} object or an array of such objects.</dd>
+<dt>options</dt>
+<dd>A {{domxref("BackgroundFetchOptions")}} object.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+<dt>TypeError</dt>
+<dd>Raised if no request is provided, if the mode of a request is 'no-cors', if no service worker is present, a request already exists with the requested <code>id</code>, or the request fails.</dd>
+<dt>DOMException</dt>
+<dd>
+  <p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
+  <table class="standard-table">
+   <thead>
+    <tr>
+     <th scope="col">Exception</th>
+     <th scope="col">Description</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td><code>AbortError</code></td>
+     <td>
+      <p>Indicates the fetch was aborted.</p>
+     </td>
+    </tr>
+    <tr>
+     <td><code>NotAllowedError</code></td>
+     <td>
+      <p>Indicates that user permission has not been granted to make background fetches.</p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following examples shows how to use <code>fetch()</code> to create a
+{{domxref("BackgroundFetchRegistration")}}. With an active
+{{domxref('ServiceWorker', 'service worker')}}, use the
+{{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the
+<code>BackgroundFetchManager</code> object and call its <code>fetch()</code>
+method.</p>
+
+<pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
+  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
+    title: 'Episode 5: Interesting things.',
+    icons: [{
+      sizes: '300x300',
+      src: '/ep-5-icon.png',
+      type: 'image/png',
+    }],
+    downloadTotal: 60 * 1024 * 1024,
+  });
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Background Fetch','#background-fetch-manager-fetch','fetch')}}</td>
+   <td>{{Spec2('Background Fetch')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchManager.fetch")}}</p>

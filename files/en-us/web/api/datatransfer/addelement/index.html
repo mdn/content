@@ -2,37 +2,40 @@
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
 tags:
-  - API
-  - Method
-  - Non-standard
-  - Reference
-  - drag and drop
+- API
+- Method
+- Non-standard
+- Reference
+- drag and drop
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
 <p>{{Non-standard_header()}}</p>
 
-<p>The <strong><code>DataTransfer.addElement()</code></strong> method sets the drag source to the given element. This element will be the element to which {{event("drag")}} and {{event("dragend")}} events are fired, and not the defaut target (the node that was dragged).</p>
+<p>The <strong><code>DataTransfer.addElement()</code></strong> method sets the drag source
+  to the given element. This element will be the element to which {{event("drag")}} and
+  {{event("dragend")}} events are fired, and not the default target (the node that was
+  dragged).</p>
 
 <div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">void <em>dataTransfer</em>.addElement(el);
+<pre class="brush: js">void <em>dataTransfer</em>.addElement(el);
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
- <dt><em>el</em></dt>
- <dd>The {{domxref("Element")}} to set as the drag source.</dd>
+  <dt><em>el</em></dt>
+  <dd>The {{domxref("Element")}} to set as the drag source.</dd>
 </dl>
 
 <h3 id="Return_Value">Return value</h3>
 
 <dl>
- <dt>void</dt>
- <dd> </dd>
+  <dt>void</dt>
+  <dd> </dd>
 </dl>
 
 <h2 id="Example">Example</h2>

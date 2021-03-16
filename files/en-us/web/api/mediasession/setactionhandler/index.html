@@ -15,19 +15,29 @@ tags:
 ---
 <p>{{APIRef("Media Session API")}}</p>
 
-<p>The <strong><code>setActionHandler()</code></strong> method of the {{domxref("MediaSession")}} interface sets a handler for a media session action. These actions let a web app receive notifications when the user engages a device's built-in physical or onscreen media controls, such as play, stop, or seek buttons.</p>
+<p>The <strong><code>setActionHandler()</code></strong> method of the
+  {{domxref("MediaSession")}} interface sets a handler for a media session action. These
+  actions let a web app receive notifications when the user engages a device's built-in
+  physical or onscreen media controls, such as play, stop, or seek buttons.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">navigator.mediaSession.setActionHandler(<em>type</em>, <em>callback</em>)</pre>
+<pre
+  class="brush: js">navigator.mediaSession.setActionHandler(<em>type</em>, <em>callback</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>type</code></dt>
- <dd>A {{domxref("DOMString")}} representing an action type to listen for. It will be one of <code>{{anch("play")}}</code>, <code>{{anch("pause")}}</code>, <code>{{anch("stop")}}</code>, <code>{{anch("seekbackward")}}</code>,<code> {{anch("seekforward")}}</code>, <code>{{anch("seekto")}}</code>, <code>{{anch("skipad")}}</code>,<code>{{anch("previoustrack")}}</code>, or <code>{{anch("nexttrack")}}</code>. Further details on the action types can be found below under {{anch("Media session actions")}}.</dd>
- <dt><code>callback</code></dt>
- <dd>A function to call when the specified action type is invoked. The callback receives no input parameters, and should not return a value.</dd>
+  <dt><code>type</code></dt>
+  <dd>A {{domxref("DOMString")}} representing an action type to listen for. It will be one
+    of <code>{{anch("play")}}</code>,
+    <code>{{anch("pause")}}</code>, <code>{{anch("stop")}}</code>,
+    <code>{{anch("seekbackward")}}</code>,<code> {{anch("seekforward")}}</code>, <code>{{anch("seekto")}}</code>, <code>{{anch("skipad")}}</code>,<code>{{anch("previoustrack")}}</code>,
+    or <code>{{anch("nexttrack")}}</code>. Further details on the action types can be
+    found below under {{anch("Media session actions")}}.</dd>
+  <dt><code>callback</code></dt>
+  <dd>A function to call when the specified action type is invoked. The callback receives
+    no input parameters, and should not return a value.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -36,79 +46,86 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>To remove a previously-established action handler, call <code>setActionHandler()</code> again, specifying <code>null</code> as the <code>callback</code>.</p>
+<p>To remove a previously-established action handler, call <code>setActionHandler()</code>
+  again, specifying <code>null</code> as the <code>callback</code>.</p>
 
-<p>The action handler receives as input a single parameter: an object conforming to the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action type (so the same function can handle multiple action types), as well as data needed in order to perform the action.</p>
+<p>The action handler receives as input a single parameter: an object conforming to
+  the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action
+  type (so the same function can handle multiple action types), as well as data needed in
+  order to perform the action.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example creates a new media session and assigns action handlers (which don't do anything) to it.</p>
+<p>This example creates a new media session and assigns action handlers (which don't do
+  anything) to it.</p>
 
-<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'mediaSession'</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span>metadata <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaMetadata</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-    title<span class="punctuation token">:</span> <span class="string token">'Unforgettable'</span><span class="punctuation token">,</span>
-    artist<span class="punctuation token">:</span> <span class="string token">'Nat King Cole'</span><span class="punctuation token">,</span>
-    album<span class="punctuation token">:</span> <span class="string token">'The Ultimate Collection (Remastered)'</span><span class="punctuation token">,</span>
-    artwork<span class="punctuation token">:</span> <span class="punctuation token">[</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/96x96'</span><span class="punctuation token">,</span>   sizes<span class="punctuation token">:</span> <span class="string token">'96x96'</span><span class="punctuation token">,</span>   type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/128x128'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'128x128'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/192x192'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'192x192'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/256x256'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'256x256'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/384x384'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'384x384'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/512x512'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'512x512'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="punctuation token">]</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">if ('mediaSession' in navigator) {
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: 'Unforgettable',
+    artist: 'Nat King Cole',
+    album: 'The Ultimate Collection (Remastered)',
+    artwork: [
+      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
+      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
+      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
+      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
+      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
+      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
+    ]
+  });
 
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'play'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'pause'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'stop'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'seekbackward'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'seekforward'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'seekto'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'previoustrack'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'nexttrack'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span><span class="string token">'skipad'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">/* Code excerpted. */</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('stop', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekbackward', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekforward', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('seekto', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
+  navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
+}</pre>
 
-<p>The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.</p>
+<p>The following example sets up two functions for playing and pausing, then uses them as
+  callbacks with the relevant action handlers.</p>
 
-<pre class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> actionHandlers <span class="operator token">=</span> <span class="punctuation token">[</span>
-  <span class="comment token">// play</span>
-  <span class="punctuation token">[</span>
-    <span class="string token">'play'</span><span class="punctuation token">,</span>
-    <span class="keyword token">async</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// play our audio</span>
-      <span class="keyword token">await</span> audioEl<span class="punctuation token">.</span><span class="function token">play</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="comment token">// set playback state</span>
-      navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span>playbackState <span class="operator token">=</span> <span class="string token">"playing"</span><span class="punctuation token">;</span>
-      <span class="comment token">// update our status element</span>
-      <span class="function token">updateStatus</span><span class="punctuation token">(</span>allMeta<span class="punctuation token">[</span>index<span class="punctuation token">]</span><span class="punctuation token">,</span> <span class="string token">'Action: play  |  Track is playing...'</span><span class="punctuation token">)</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">]</span><span class="punctuation token">,</span>
-  <span class="punctuation token">[</span>
-    <span class="string token">'pause'</span><span class="punctuation token">,</span>
-    <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
-      <span class="comment token">// pause out audio</span>
-      audioEl<span class="punctuation token">.</span><span class="function token">pause</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="comment token">// set playback state</span>
-      navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span>playbackState <span class="operator token">=</span> <span class="string token">"paused"</span><span class="punctuation token">;</span>
-      <span class="comment token">// update our status element</span>
-      <span class="function token">updateStatus</span><span class="punctuation token">(</span>allMeta<span class="punctuation token">[</span>index<span class="punctuation token">]</span><span class="punctuation token">,</span> <span class="string token">'Action: pause  |  Track has been paused...'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">]</span><span class="punctuation token">,</span>
-<span class="punctuation token">]</span>
+<pre class="brush: js">const actionHandlers = [
+  // play
+  [
+    'play',
+    async function() {
+      // play our audio
+      await audioEl.play();
+      // set playback state
+      navigator.mediaSession.playbackState = &quot;playing&quot;;
+      // update our status element
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+    }
+  ],
+  [
+    'pause',
+    () =&gt; {
+      // pause out audio
+      audioEl.pause();
+      // set playback state
+      navigator.mediaSession.playbackState = &quot;paused&quot;;
+      // update our status element
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+    }
+  ],
+]
 
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">const</span> <span class="punctuation token">[</span>action<span class="punctuation token">,</span> handler<span class="punctuation token">]</span> <span class="keyword token">of</span> actionHandlers<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span><span class="function token">setActionHandler</span><span class="punctuation token">(</span>action<span class="punctuation token">,</span> handler<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="template-string token"><span class="string template-punctuation token">`</span><span class="string token">The media session action "</span><span class="interpolation token"><span class="interpolation-punctuation punctuation token">${</span>action<span class="interpolation-punctuation punctuation token">}</span></span><span class="string token">" is not supported yet.</span><span class="string template-punctuation token">`</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+for (const [action, handler] of actionHandlers) {
+  try {
+    navigator.mediaSession.setActionHandler(action, handler);
+  } catch (error) {
+    console.log(`The media session action &quot;${action}&quot; is not supported yet.`);
+  }
+}</pre>
 
-<p>This example uses appropriate action handlers to allow seeking in either direction through the playing media.</p>
+<p>This example uses appropriate action handlers to allow seeking in either direction
+  through the playing media.</p>
 
-<pre class="brush: js notranslate">let skipTime = 10; // Time to skip in seconds
+<pre class="brush: js">let skipTime = 10; // Time to skip in seconds
 
 navigator.mediaSession.setActionHandler('seekbackward', evt =&gt; {
  // User clicked "Seek Backward" media notification icon.
@@ -123,13 +140,17 @@ navigator.mediaSession.setActionHandler('seekforward', evt =&gt; {
 
 <p>To remove a media action handler, assign it to null.</p>
 
-<pre class="brush: js notranslate">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
+<pre
+  class="brush: js">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
 
-<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions in one handler function</h3>
+<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions
+  in one handler function</h3>
 
-<p>You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
+<p>You can also, if you prefer, use a single function to handle multiple action types, by
+  checking the value of the <code>MediaSessionActionDetails</code> object's
+  {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
 
-<pre class="brush: js notranslate">let skipTime = 7;
+<pre class="brush: js">let skipTime = 7;
 
 navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
@@ -147,28 +168,27 @@ function handleSeek(details) {
 }
 </pre>
 
-<p>Here, the <code>handleSeek()</code> function handles both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
+<p>Here, the <code>handleSeek()</code> function handles
+  both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Session','#dom-mediasession-setactionhandler','MediaSession.setActionHandler()')}}</td>
-   <td>{{Spec2('Media Session')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Media Session','#dom-mediasession-setactionhandler','MediaSession.setActionHandler()')}}
+      </td>
+      <td>{{Spec2('Media Session')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaSession.setActionHandler")}}</p>
-</div>

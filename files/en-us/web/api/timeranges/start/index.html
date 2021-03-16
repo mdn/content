@@ -2,13 +2,13 @@
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
 tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - NeedsBrowserCompatibility
-  - Reference
-  - TimeRanges
+- API
+- HTML DOM
+- Media
+- Method
+- NeedsBrowserCompatibility
+- Reference
+- TimeRanges
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -18,20 +18,21 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><em>startTime</em> = TimeRanges.start(index)
+<pre class="brush: js"><em>startTime</em> = TimeRanges.start(index)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
- <li><code>index</code> is the range number to return the starting time for.</li>
+  <li><code>index</code> is the range number to return the starting time for.</li>
 </ul>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>INDEX_SIZE_ERR</dt>
- <dd>A <code>DOMException</code> thrown if the specified index doesn't correspond to an existing range.</dd>
+  <dt>INDEX_SIZE_ERR</dt>
+  <dd>A <code>DOMException</code> thrown if the specified index doesn't correspond to an
+    existing range.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -53,23 +54,24 @@ if (buf.length == 1) {
 }
 </pre>
 
-<p>This example looks at the time ranges and looks to see if the entire video has been loaded.</p>
+<p>This example looks at the time ranges and looks to see if the entire video has been
+  loaded.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-timeranges-start", "TimeRanges.start()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "#dom-timeranges-start", "TimeRanges.start()")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

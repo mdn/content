@@ -31,7 +31,7 @@ tags:
 
 <h4 id="Feature_Detecting_and_Enabling_Navigation_Preloading">Feature Detecting and Enabling Navigation Preloading </h4>
 
-<pre class="brush: js notranslate">addEventListener('activate', event =&gt; {
+<pre class="brush: js">addEventListener('activate', event =&gt; {
   event.waitUntil(async function() {
     if (self.registration.navigationPreload) {
       // Enable navigation preloads!
@@ -45,7 +45,7 @@ tags:
 
 <p>The following example shows the implementation of a fetch event that uses a preloaded response. </p>
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+<pre class="brush: js">addEventListener('fetch', event =&gt; {
   event.respondWith(async function() {
     // Respond from the cache if we can
     const cachedResponse = await caches.match(event.request);

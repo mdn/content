@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush:css no-line-numbers">/* Keyword value */
 z-index: auto;
 
 /* &lt;integer&gt; values */
@@ -38,14 +38,14 @@ z-index: initial;
 z-index: unset;
 </pre>
 
-<p>The <code>z-index</code> property is specified as either the keyword <code><a href="#auto">auto</a></code> or an <code><a href="#&lt;integer&gt;">&lt;integer&gt;</a></code>.</p>
+<p>The <code>z-index</code> property is specified as either the keyword <code><a href="#auto">auto</a></code> or an <code><a href="#integer">&lt;integer&gt;</a></code>.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
  <dt><a id="auto"><code>auto</code></a></dt>
  <dd>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box.</dd>
- <dt><a id="&lt;integer&gt;"><code>&lt;integer&gt;</code></a></dt>
+ <dt><a id="integer"><code>&lt;integer&gt;</code></a></dt>
  <dd>This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is <code>0</code>. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</dd>
 </dl>
 
@@ -55,7 +55,7 @@ z-index: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -63,7 +63,7 @@ z-index: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="dashed-box"&gt;Dashed box&lt;/div&gt;
   &lt;div class="gold-box"&gt;Gold box&lt;/div&gt;
   &lt;div class="green-box"&gt;Green box&lt;/div&gt;
@@ -72,7 +72,7 @@ z-index: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; notranslate">.wrapper {
+<pre class="brush: css;">.wrapper {
   position: relative;
 }
 

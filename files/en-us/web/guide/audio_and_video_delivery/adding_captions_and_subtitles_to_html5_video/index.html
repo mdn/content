@@ -11,14 +11,14 @@ tags:
   - track
 ---
 <div class="summary">
-<p><span class="seoSummary">In other articles we looked at how to <a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">build a cross browser video player</a> using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to <a href="/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics">style the player</a>. This article will take the same player and show how to add captions and subtitles to it, using {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} and the {{ htmlelement("track") }} element.</span></p>
+<p><span class="seoSummary">In other articles we looked at how to <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">build a cross browser video player</a> using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">style the player</a>. This article will take the same player and show how to add captions and subtitles to it, using {{ domxref("WebVTT_API","the WebVTT format") }} and the {{ htmlelement("track") }} element.</span></p>
 </div>
 
 <h2 id="Captioned_video_example">Captioned video example</h2>
 
 <p>In this article, we will refer to the Video player with captions example. This example uses an excerpt from the <a href="http://www.sintel.org/">Sintel open movie</a>, created by the <a href="http://www.blender.org/foundation/">Blender Foundation</a>.</p>
 
-<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
+<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="video-player-with-captions.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source on Github</a>, and also <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">view the example live</a>.</p>
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Modifications_to_the_HTML_and_CSS">Modifications to the HTML and CSS</h2>
 
-<p>This section summarises the modifications made to the previous article's code in order to facilitate the addition of subtitles to the video. If you are not interested in this, and just want to get straight into the JavaScript and more relevant CSS, skip to the {{ anch("Subtitle implementation") }} section.<br>
+<p>This section summarizes the modifications made to the previous article's code in order to facilitate the addition of subtitles to the video. If you are not interested in this, and just want to get straight into the JavaScript and more relevant CSS, skip to the {{ anch("Subtitle implementation") }} section.<br>
  <br>
  In this example we are using a different video, <a href="http://www.sintel.org/">Sintel</a>, as it actually has some speech in it and therefore is better for illustrating how subtitles work!</p>
 
@@ -274,7 +274,7 @@ var createMenuItem = function(id, lang, label) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p><a href="http://caniuse.com/webvtt">Browser support for WebVTT and the <code>&lt;track&gt;</code> element</a> is fairly good, although some browsers differ slightly in their implementation.</p>
+<p><a href="https://caniuse.com/webvtt">Browser support for WebVTT and the <code>&lt;track&gt;</code> element</a> is fairly good, although some browsers differ slightly in their implementation.</p>
 
 <h3 id="Internet_Explorer">Internet Explorer</h3>
 

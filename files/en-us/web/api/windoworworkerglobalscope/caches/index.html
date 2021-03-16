@@ -2,23 +2,27 @@
 title: WindowOrWorkerGlobalScope.caches
 slug: Web/API/WindowOrWorkerGlobalScope/caches
 tags:
-  - API
-  - Experimental
-  - Property
-  - Read-only
-  - Reference
-  - Service Workers
-  - Web Workers
-  - Window
-  - WindowOrWorkerGlobalScope
+- API
+- Experimental
+- Property
+- Read-only
+- Reference
+- Service Workers
+- Web Workers
+- Window
+- WindowOrWorkerGlobalScope
 ---
 <div>{{APIRef()}}{{SeeCompatTable}}</div>
 
-<p>The <code><strong>caches</strong></code> read-only property of the {{domxref("WindowOrWorkerGlobalScope")}} interface returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.</p>
+<p>The <code><strong>caches</strong></code> read-only property of the
+  {{domxref("WindowOrWorkerGlobalScope")}} interface returns the
+  {{domxref("CacheStorage")}} object associated with the current context. This object
+  enables functionality such as storing assets for offline use, and generating custom
+  responses to requests.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // or just caches
+<pre class="brush: js">var <em>myCacheStorage</em> = self.caches; // or just caches
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -27,7 +31,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The following example shows how you'd use a cache in a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> context to store assets offline.</p>
+<p>The following example shows how you'd use a cache in a <a
+    href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> context to store
+  assets offline.</p>
 
 <pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
@@ -51,23 +57,24 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#self-caches', 'caches')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#self-caches', 'caches')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers')}}</td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -77,8 +84,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li>{{domxref("CacheStorage")}}</li>
- <li>{{domxref("Cache")}}</li>
+  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+  <li>{{domxref("CacheStorage")}}</li>
+  <li>{{domxref("Cache")}}</li>
 </ul>

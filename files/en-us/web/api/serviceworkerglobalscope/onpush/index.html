@@ -2,28 +2,33 @@
 title: ServiceWorkerGlobalScope.onpush
 slug: Web/API/ServiceWorkerGlobalScope/onpush
 tags:
-  - API
-  - Property
-  - Push
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - onpush
+- API
+- Property
+- Push
+- Reference
+- Service Workers
+- ServiceWorker
+- ServiceWorkerGlobalScope
+- onpush
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>The <code><strong>ServiceWorkerGlobalScope.onpush</strong></code> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a push message is received by a service worker via a push server.</p>
+<p>The <code><strong>ServiceWorkerGlobalScope.onpush</strong></code> event of the
+  {{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a push message is
+  received by a service worker via a push server.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
+<pre class="brush: js">ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
 self.addEventListener('push', function(PushEvent) { ... })
 </pre>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example takes data from a {{domxref("PushEvent")}} and displays it on all of the service worker's clients. The data payload of the push message is available in the event object's <code>data</code> property ({{domxref("PushEvent.data")}}, which contains a {{domxref("PushMessageData")}} object.)</p>
+<p>The following example takes data from a {{domxref("PushEvent")}} and displays it on all
+  of the service worker's clients. The data payload of the push message is available in
+  the event object's <code>data</code> property ({{domxref("PushEvent.data")}}, which
+  contains a {{domxref("PushMessageData")}} object.)</p>
 
 <pre class="brush: js">self.addEventListener('push', function(event) {
   if (!(self.Notification &amp;&amp; self.Notification.permission === 'granted')) {
@@ -54,29 +59,27 @@ self.addEventListener('push', function(PushEvent) { ... })
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#dom-serviceworkerglobalscope-onpush', 'onpush')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Initial definition. This event is specified in the Push API, but accessed through {{domxref("ServiceWorkerGlobalScope")}}.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Push API', '#dom-serviceworkerglobalscope-onpush', 'onpush')}}</td>
+      <td>{{Spec2('Push API')}}</td>
+      <td>Initial definition. This event is specified in the Push API, but accessed
+        through {{domxref("ServiceWorkerGlobalScope")}}.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ServiceWorkerGlobalScope.onpush")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
+  <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
 </ul>

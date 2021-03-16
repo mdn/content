@@ -6,9 +6,9 @@ tags:
   - Firefox 3
   - XUL
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ Gecko_minversion_header("1.9") }}</p>
+<div>{{FirefoxSidebar}}</div>
 
-<p>Full page zoom (or just fullZoom) is a new feature in <a href="/en/Firefox_3_for_developers">Firefox 3</a>.</p>
+<p>Full page zoom (or just fullZoom) is a new feature in <a href="/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 3</a>.</p>
 
 <h3 id="Example_.28XUL:browser.29">Example (XUL:browser)</h3>
 
@@ -23,7 +23,7 @@ ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 
 <p>Note: This is probably out of date.</p>
 
-<p>You may use the fullZoom feature for a <a href="/en/XUL/iframe">XUL:iframe</a> as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:</p>
+<p>You may use the fullZoom feature for a <a href="/en-US/docs/XUL/iframe">XUL:iframe</a> as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:</p>
 
 <pre>var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");

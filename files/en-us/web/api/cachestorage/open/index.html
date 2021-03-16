@@ -14,17 +14,22 @@ tags:
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>open()</code></strong> method of the {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching the <code>cacheName</code>.</span></p>
+<p><span class="seoSummary">The <strong><code>open()</code></strong> method of the
+    {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
+    the {{domxref("Cache")}} object matching the <code>cacheName</code>.</span></p>
 
-<p>You can access <code>CacheStorage</code> through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
+<p>You can access <code>CacheStorage</code> through the global
+  {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If the specified {{domxref("Cache")}} does not exist, a new cache is created with that <code>cacheName</code> and a {{jsxref("Promise")}} that resolves to this new {{domxref("Cache")}} object is returned.</p>
+  <p><strong>Note</strong>: If the specified {{domxref("Cache")}} does not exist, a new
+    cache is created with that <code>cacheName</code> and a {{jsxref("Promise")}} that
+    resolves to this new {{domxref("Cache")}} object is returned.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
+<pre class="brush: js">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
   // Do something with your cache
 });
 </pre>
@@ -32,8 +37,8 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>cacheName</dt>
- <dd>The name of the cache you want to open.</dd>
+  <dt>cacheName</dt>
+  <dd>The name of the cache you want to open.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -42,9 +47,14 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>). Here we wait for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling <code>CacheStorage.open()</code> to create a new cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.</p>
+<p>This example is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test
+    example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>).
+  Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
+  {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
+  the app. This consists of calling <code>CacheStorage.open()</code> to create a new
+  cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', function(event) {
+<pre class="brush: js">self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -65,18 +75,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache-storage-open', 'CacheStorage: open')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('Service Workers', '#cache-storage-open', 'CacheStorage: open')}}
+      </td>
+      <td>{{Spec2('Service Workers')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -86,7 +97,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
+      Workers</a></li>
+  <li>{{domxref("Cache")}}</li>
+  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
 </ul>

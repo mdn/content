@@ -10,15 +10,20 @@ tags:
   - getFile
   - working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+</div>
 
-<p class="summary">The <strong><code>getFile()</code></strong> method of the {{domxref("FileSystemFileHandle")}} interface returns a {{domxref('File','file object')}} representing the state on disk of the entry represented by the handle.</p>
+<p class="summary">The <strong><code>getFile()</code></strong> method of the
+  {{domxref("FileSystemFileHandle")}} interface returns a {{domxref('File','file
+  object')}} representing the state on disk of the entry represented by the handle.</p>
 
-<p>If the file on disk changes or is removed after this method is called, the returned {{domxref('File','file object')}} will likely be no longer readable.</p>
+<p>If the file on disk changes or is removed after this method is called, the returned
+  {{domxref('File','file object')}} will likely be no longer readable.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>File</var> = FileSystemFileHandle.getFile();</pre>
+<pre
+  class="brush: js">var <var>File</var> = FileSystemFileHandle.getFile();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,15 +36,17 @@ tags:
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
- <dt>NotAllowedError</dt>
- <dd>Thrown if the {{domxref('PermissionStatus.state')}} is not <code>granted</code> in read mode.</dd>
+  <dt>NotAllowedError</dt>
+  <dd>Thrown if the {{domxref('PermissionStatus.state')}} is not <code>granted</code> in
+    read mode.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following asynchronous function presents a file picker and once a file is chosen, uses the <code>getFile()</code> method to retrieve the contents.</p>
+<p>The following asynchronous function presents a file picker and once a file is chosen,
+  uses the <code>getFile()</code> method to retrieve the contents.</p>
 
-<pre class="brush: js notranslate">async function getTheFile() {
+<pre class="brush: js">async function getTheFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
@@ -50,18 +57,19 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access','#api-filesystemfilehandle-getfile','getFile')}}</td>
-   <td>{{Spec2('File System Access')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('File System Access API','#api-filesystemfilehandle-getfile','getFile')}}
+      </td>
+      <td>{{Spec2('File System Access API')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -71,6 +79,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="https://web.dev/file-system-access/">The File System Access API:
+      simplifying access to local files</a></li>
 </ul>

@@ -2,29 +2,38 @@
 title: RTCSessionDescription.toJSON()
 slug: Web/API/RTCSessionDescription/toJSON
 tags:
-  - Experimental
-  - Expérimental(2)
-  - Method
-  - RTCSessionDescription
-  - Reference
-  - Référence(2)
-  - Serializer
-  - WebRTC
+- Experimental
+- Expérimental(2)
+- Method
+- RTCSessionDescription
+- Reference
+- Référence(2)
+- Serializer
+- WebRTC
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p>The <code><strong>RTCSessionDescription.toJSON()</strong></code> method generates a {{Glossary("JSON")}} description of the object. Both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.</p>
+<p>The <code><strong>RTCSessionDescription.toJSON()</strong></code> method generates a
+  {{Glossary("JSON")}} description of the object. Both properties,
+  {{domxref("RTCSessionDescription.type", "type")}} and
+  {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
+</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code>var <em>jsonValue = sd</em>.toJSON();
+<pre class="brush: js"><code>var <em>jsonValue = sd</em>.toJSON();
 </code></pre>
 
 <p>The result value is a {{jsxref("JSON")}} object containing the following values:</p>
 
 <ul>
- <li><code>"type"</code>, containing the value of the {{domxref("RTCSessionDescription.type")}} property and can be one of the following values: <code>"offer"</code>, <code>"answer"</code>, <code>"pranswer"</code> or <code>null</code>.</li>
- <li><code>"sdp"</code>, containing a {{domxref("DOMString")}}, or <code>null</code>, with the {{Glossary("SDP")}} message corresponding to {{domxref("RTCSessionDescription.sdp")}} property.</li>
+  <li><code>"type"</code>, containing the value of the
+    {{domxref("RTCSessionDescription.type")}} property and can be one of the following
+    values: <code>"offer"</code>, <code>"answer"</code>, <code>"pranswer"</code> or
+    <code>null</code>.</li>
+  <li><code>"sdp"</code>, containing a {{domxref("DOMString")}}, or <code>null</code>,
+    with the {{Glossary("SDP")}} message corresponding to
+    {{domxref("RTCSessionDescription.sdp")}} property.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -37,20 +46,21 @@ alert(JSON.stringify(sd)); // This call the toJSON() method behind the scene.
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-rtcsessiondescription-tojson', 'RTCSessionDescription: toJSON()') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcsessiondescription-tojson',
+        'RTCSessionDescription: toJSON()') }}</td>
+      <td>{{ Spec2('WebRTC 1.0') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -60,5 +70,5 @@ alert(JSON.stringify(sd)); // This call the toJSON() method behind the scene.
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
 </ul>

@@ -2,44 +2,48 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - asynchronous
-  - await
+- Iterate
+- Iteration
+- JavaScript
+- Language feature
+- Reference
+- Statement
+- asynchronous
+- await
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong><code>for await...of</code> statement</strong> creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code>-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. Like the {{jsxref("Operators/await", "await")}} operator, the statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.</p>
+<p>The <strong><code>for await...of</code> statement</strong> creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code>-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.</p>
 
 <div class="notecard note">
-<p><code>for await...of</code> doesn't work with async iterators that are not async iterables.</p>
+  <p><code>for await...of</code> doesn't work with async iterators that are not async
+    iterables.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">for await (<var>variable</var> of <var>iterable</var>) {
+<pre class="brush: js">for await (<var>variable</var> of <var>iterable</var>) {
   <var>statement</var>
 }
 </pre>
 
 <dl>
- <dt><code><var>variable</var></code></dt>
- <dd>On each iteration a value of a different property is assigned to <code><var>variable</var></code>. <code><var>variable</var></code> may be declared with <code>const</code>, <code>let</code>, or <code>var</code>.</dd>
- <dt><code><var>iterable</var></code></dt>
- <dd>Object whose iterable properties are to be iterated over.</dd>
+  <dt><code><var>variable</var></code></dt>
+  <dd>On each iteration a value of a different property is assigned to
+    <code><var>variable</var></code>. <code><var>variable</var></code> may be declared
+    with <code>const</code>, <code>let</code>, or <code>var</code>.</dd>
+  <dt><code><var>iterable</var></code></dt>
+  <dd>Object whose iterable properties are to be iterated over.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Iterating_over_async_iterables">Iterating over async iterables</h3>
 
-<p>You can also iterate over an object that explicitly implements async iterable protocol:</p>
+<p>You can also iterate over an object that explicitly implements async iterable protocol:
+</p>
 
-<pre class="brush:js notranslate">const asyncIterable = {
+<pre class="brush: js">const asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
@@ -67,9 +71,10 @@ tags:
 
 <h3 id="Iterating_over_async_generators">Iterating over async generators</h3>
 
-<p>Since the return values of async generators conform to the async iterable protocol, they can be looped using <code>for await...of</code>.</p>
+<p>Since the return values of async generators conform to the async iterable protocol,
+  they can be looped using <code>for await...of</code>.</p>
 
-<pre class="brush: js notranslate">async function* asyncGenerator() {
+<pre class="brush: js">async function* asyncGenerator() {
   let i = 0;
   while (i &lt; 3) {
     yield i++;
@@ -85,11 +90,13 @@ tags:
 // 1
 // 2</pre>
 
-<p>For a more concrete example of iterating over an async generator using <code>for await...of</code>, consider iterating over data from an API.</p>
+<p>For a more concrete example of iterating over an async generator using
+  <code>for await...of</code>, consider iterating over data from an API.</p>
 
-<p>This example first creates an async iterable for a stream of data, then uses it to find the size of the response from the API.</p>
+<p>This example first creates an async iterable for a stream of data, then uses it to find
+  the size of the response from the API.</p>
 
-<pre class="brush: js notranslate">async function* streamAsyncIterable(stream) {
+<pre class="brush: js">async function* streamAsyncIterable(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -120,11 +127,14 @@ async function getResponseSize(url) {
 }
 getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
 
-<h3 id="Iterating_over_sync_iterables_and_generators">Iterating over sync iterables and generators</h3>
+<h3 id="Iterating_over_sync_iterables_and_generators">Iterating over sync iterables and
+  generators</h3>
 
-<p><code>for await...of</code> loop also consumes sync iterables and generators. In that case it internally awaits emitted values before assign them to the loop control variable.</p>
+<p><code>for await...of</code> loop also consumes sync iterables and generators. In that
+  case it internally awaits emitted values before assign them to the loop control
+  variable.</p>
 
-<pre class="brush: js notranslate">function* generator() {
+<pre class="brush: js">function* generator() {
   yield 0;
   yield 1;
   yield Promise.resolve(2);
@@ -156,10 +166,14 @@ for (let numOrPromise of generator()) {
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: be aware of yielding rejected promises from sync generator. In such case <code>for await...of</code> throws when consuming rejected promise and DOESN'T CALL <code>finally</code> blocks within that generator. This can be undesireable if you need to free some allocated resources with <code>try/finally</code>.</p>
+  <p><strong>Note</strong>: be aware of yielding rejected promises from sync generator. In
+    such case <code>for await...of</code> throws when consuming rejected promise and
+    DOESN'T CALL <code>finally</code> blocks within that generator. This can be
+    undesireable if you need to free some allocated resources with
+    <code>try/finally</code>.</p>
 </div>
 
-<pre class="brush: js notranslate">function* generatorWithRejectedPromises() {
+<pre class="brush: js">function* generatorWithRejectedPromises() {
   try {
     yield 0;
     yield 1;
@@ -178,13 +192,13 @@ for (let numOrPromise of generator()) {
       console.log(num);
     }
   } catch (e) {
-    console.log('catched', e)
+    console.log('caught', e)
   }
 })();
 // 0
 // 1
 // 2
-// catched 3
+// caught 3
 
 // compare with for-of loop:
 
@@ -193,47 +207,51 @@ try {
     console.log(numOrPromise);
   }
 } catch (e) {
-  console.log('catched', e)
+  console.log('caught', e)
 }
 // 0
 // 1
 // Promise { 2 }
 // Promise { &lt;rejected&gt; 3 }
 // 4
-// catched 5
+// caught 5
 // called finally
 </pre>
 
-<p>To make  <code>finally</code> blocks of a sync generator to be always called use appropriate form of the loop, <code>for await...of</code> for the async generator and <code>for...of</code> for the sync one and await yielded promises explicitly inside the loop.</p>
+<p>To make  <code>finally</code> blocks of a sync generator to be always called use
+  appropriate form of the loop, <code>for await...of</code> for the async generator and
+  <code>for...of</code> for the sync one and await yielded promises explicitly inside the
+  loop.</p>
 
-<pre class="brush: js notranslate">(async function() {
+<pre class="brush: js">(async function() {
   try {
     for (let numOrPromise of generatorWithRejectedPromises()) {
       console.log(await numOrPromise);
     }
   } catch (e) {
-    console.log('catched', e)
+    console.log('caught', e)
   }
 })()
 // 0
 // 1
 // 2
-// catched 3
+// caught 3
 // called finally</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language:
+        The for-in, for-of, and for-await-of Statements')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -243,6 +261,6 @@ try {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}</li>
- <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+  <li>{{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}</li>
+  <li>{{jsxref("Statements/for...of", "for...of")}}</li>
 </ul>

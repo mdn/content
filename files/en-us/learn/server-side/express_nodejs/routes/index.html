@@ -44,7 +44,7 @@ tags:
  <li>Views (templates) used by the controllers to render the data.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14456/MVC%20Express.png" style="height: 460px; width: 800px;"></p>
+<p><img alt="" src="mvc_express.png"></p>
 
 <p>Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.</p>
 
@@ -57,7 +57,7 @@ tags:
 <p>There are several ways to create routes. For this tutorial we're going to use the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.</p>
 
 <div class="note">
-<p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
+<p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
 </div>
 
 <p>The rest of this section provides an overview of how the <code>Router</code> can be used to define the routes.</p>
@@ -68,7 +68,7 @@ tags:
 
 <p>First we create routes for a wiki in a module named <strong>wiki.js</strong>. The code first imports the Express application object, uses it to get a <code>Router</code> object and then adds a couple of routes to it using the <code>get()</code> method. Last of all the module exports the <code>Router</code> object.</p>
 
-<pre class="brush: js notranslate">// wiki.js - Wiki route module.
+<pre class="brush: js">// wiki.js - Wiki route module.
 
 var express = require('express');
 var router = express.Router();
@@ -93,7 +93,7 @@ module.exports = router;
 
 <p>To use the router module in our main app file we first <code>require()</code> the route module (<strong>wiki.js</strong>). We then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path, specifying a URL path of 'wiki'.</p>
 
-<pre class="brush: js notranslate">var wiki = require('./wiki.js');
+<pre class="brush: js">var wiki = require('./wiki.js');
 // ...
 app.use('/wiki', wiki);</pre>
 
@@ -103,7 +103,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>Our module above defines a couple of typical route functions. The "about" route (reproduced below) is defined using the <code>Router.get()</code> method, which responds only to HTTP GET requests. The first argument to this method is the URL path while the second is a callback function that will be invoked if an HTTP GET request with the path is received.</p>
 
-<pre class="brush: js notranslate">router.get('/about', function (req, res) {
+<pre class="brush: js">router.get('/about', function (req, res) {
   res.send('About this wiki');
 })
 </pre>
@@ -111,7 +111,7 @@ app.use('/wiki', wiki);</pre>
 <p>The callback takes three arguments (usually named as shown: <code>req</code>, <code>res</code>, <code>next</code>), that will contain the HTTP Request object, HTTP response, and the <em>next</em> function in the middleware chain.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Router functions are <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware">Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
+<p><strong>Note:</strong> Router functions are <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#using_middleware">Express middleware</a>, which means that they must either complete (respond to) the request or call the <code>next</code> function in the chain. In the case above we complete the request using <code>send()</code>, so the <code>next</code> argument is not used (and we choose not to specify it).</p>
 
 <p>The  router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).</p>
 </div>
@@ -126,7 +126,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>For example, the code below behaves just like the previous <code>/about</code> route, but only responds to HTTP POST requests.</p>
 
-<pre class="brush: js notranslate">router.post('/about', function (req, res) {
+<pre class="brush: js">router.post('/about', function (req, res) {
   res.send('About this wiki');
 })</pre>
 
@@ -145,7 +145,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>The route paths can also be JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, the route path below will match <code>catfish </code>and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
 
-<pre class="brush: js notranslate">app.get(/.*fish$/, function (req, res) {
+<pre class="brush: js">app.get(/.*fish$/, function (req, res) {
   ...
 })</pre>
 
@@ -159,7 +159,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>So for example, consider a URL encoded to contain information about users and books: <code>http://localhost:3000/users/34/books/8989</code>. We can extract this information as shown below, with the <code>userId</code> and <code>bookId</code> path parameters:</p>
 
-<pre class="brush: js notranslate">app.get('/users/:userId/books/:bookId', function (req, res) {
+<pre class="brush: js">app.get('/users/:userId/books/:bookId', function (req, res) {
   // Access userId via: req.params.userId
   // Access bookId via: req.params.bookId
   res.send(req.params);
@@ -203,7 +203,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>Start by creating a folder for our controllers in the project root (<strong>/controllers</strong>) and then create separate controller files/modules for handling each of the models:</p>
 
-<pre class="notranslate">/express-locallibrary-tutorial  //the project root
+<pre>/express-locallibrary-tutorial  //the project root
   <strong>/controllers</strong>
     <strong>authorController.js</strong>
     <strong>bookController.js</strong>
@@ -214,7 +214,7 @@ app.use('/wiki', wiki);</pre>
 
 <p>Open the <strong>/controllers/authorController.js</strong> file and type in the following code:</p>
 
-<pre class="brush: js notranslate">var Author = require('../models/author');
+<pre class="brush: js">var Author = require('../models/author');
 
 // Display list of all Authors.
 exports.author_list = function(req, res) {
@@ -265,7 +265,7 @@ exports.author_update_post = function(req, res) {
 
 <p>Open the <strong>/controllers/bookinstanceController.js</strong> file and copy in the following code (this follows an identical pattern to the <code>Author</code> controller module):</p>
 
-<pre class="brush: js notranslate">var BookInstance = require('../models/bookinstance');
+<pre class="brush: js">var BookInstance = require('../models/bookinstance');
 
 // Display list of all BookInstances.
 exports.bookinstance_list = function(req, res) {
@@ -312,7 +312,7 @@ exports.bookinstance_update_post = function(req, res) {
 
 <p>Open the <strong>/controllers/genreController.js</strong> file and copy in the following text (this follows an identical pattern to the <code>Author</code> and <code>BookInstance</code> files):</p>
 
-<pre class="brush: js notranslate">var Genre = require('../models/genre');
+<pre class="brush: js">var Genre = require('../models/genre');
 
 // Display list of all Genre.
 exports.genre_list = function(req, res) {
@@ -359,7 +359,7 @@ exports.genre_update_post = function(req, res) {
 
 <p>Open the <strong>/controllers/bookController.js</strong> file and copy in the following code. This follows the same pattern as the other controller modules, but additionally has an <code>index()</code> function for displaying the site welcome page:</p>
 
-<pre class="brush: js notranslate">var Book = require('../models/book');
+<pre class="brush: js">var Book = require('../models/book');
 
 <strong>exports.index = function(req, res) {
     res.send('NOT IMPLEMENTED: Site Home Page');
@@ -412,7 +412,7 @@ exports.book_update_post = function(req, res) {
 
 <p>The skeleton already has a <strong>./routes</strong> folder containing routes for the <em>index</em> and <em>users</em>. Create another route file — <strong>catalog.js</strong> — inside this folder, as shown.</p>
 
-<pre class="notranslate">/express-locallibrary-tutorial //the project root
+<pre>/express-locallibrary-tutorial //the project root
   /routes
     index.js
     users.js
@@ -420,7 +420,7 @@ exports.book_update_post = function(req, res) {
 
 <p>Open <strong>/routes/catalog.js</strong> and copy in the code below:</p>
 
-<pre class="brush: js notranslate"><strong>var express = require('express');
+<pre class="brush: js"><strong>var express = require('express');
 var router = express.Router();
 </strong>
 // Require controller modules.
@@ -551,7 +551,7 @@ router.get('/bookinstances', book_instance_controller.bookinstance_list);
 
 <p>Open <strong>/routes/index.js</strong> and replace the existing route with the function below.</p>
 
-<pre class="brush: js notranslate">// GET home page.
+<pre class="brush: js">// GET home page.
 router.get('/', function(req, res) {
   res.redirect('/catalog');
 });</pre>
@@ -566,13 +566,13 @@ router.get('/', function(req, res) {
 
 <p>Open <strong>app.js</strong> and require the catalog route below the other routes (add the third line shown below, underneath the other two):</p>
 
-<pre class="brush: js notranslate">var indexRouter = require('./routes/index');
+<pre class="brush: js">var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 <strong>var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site</strong></pre>
 
 <p>Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two):</p>
 
-<pre class="brush: js notranslate">app.use('/', indexRouter);
+<pre class="brush: js">app.use('/', indexRouter);
 app.use('/users', usersRouter);
 <strong>app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.</strong></pre>
 
@@ -588,19 +588,19 @@ app.use('/users', usersRouter);
 
 <ul>
  <li>The default method
-  <pre class="brush: bash notranslate"><code>// Windows
+  <pre class="brush: bash">// Windows
 SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 
 // macOS or Linux
-DEBUG=express-locallibrary-tutorial:* npm start</code>
+DEBUG=express-locallibrary-tutorial:* npm start
 </pre>
  </li>
  <li>If you previously set up <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">nodemon</a>, you can instead use:
-  <pre class="brush: bash notranslate"><code>// Windows
-SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong>
+  <pre class="brush: bash">// Windows
+SET DEBUG=express-locallibrary-tutorial:* &amp; npm run devstart
 
 // macOS or Linux
-</code>DEBUG=express-locallibrary-tutorial:* npm <strong style="font-family: inherit; font-size: 1rem;">run devstart</strong>
+DEBUG=express-locallibrary-tutorial:* npm run devstart
 </pre>
  </li>
 </ul>

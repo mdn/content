@@ -21,7 +21,7 @@ tags:
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
 "browser_action": {
   "browser_style": true,
   "default_icon": {
@@ -47,9 +47,9 @@ tags:
 
 <p>A browser action is a button that your extension adds to the browser's toolbar. The button has an icon, and may optionally have a popup whose content is specified using HTML, CSS, and JavaScript.</p>
 
-<p>If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a> when the user clicks the button.</p>
+<p>If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a> when the user clicks the button.</p>
 
-<p>You can also create and manipulate browser actions programmatically using the <a href="/en-US/Add-ons/WebExtensions/API/browserAction">browserAction API</a>.</p>
+<p>You can also create and manipulate browser actions programmatically using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction API</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -72,7 +72,7 @@ tags:
 
     <p>Use this to include a stylesheet in your popup that will make its look consistent with the browser's UI and with other extensions that use the <code>browser_style</code> property. Although this key defaults to <code>false</code>, it's recommended that you include it and set it to <code>true</code> in order to make your popups consistent with the look of the rest of the browser user interface.</p>
 
-    <p>In Firefox, the stylesheet can be seen at chrome://browser/content/extension.css, or chrome://browser/content/extension-mac.css on OS X. When setting dimensions, be aware that this style sheet currently sets <code>box-sizing: border-box</code> (see <a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
+    <p>In Firefox, the stylesheet can be seen at chrome://browser/content/extension.css, or chrome://browser/content/extension-mac.css on OS X. When setting dimensions, be aware that this style sheet currently sets <code>box-sizing: border-box</code> (see <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).</p>
 
     <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">Browser styles</a> describes the classes you can apply to elements in the popup in order to get particular styles.</p>
 
@@ -120,12 +120,12 @@ tags:
 
     <p>You can specify a single icon file by supplying a string here:</p>
 
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
 "default_icon": "path/to/geo.svg"</pre>
 
     <p>To specify multiple icons in different sizes, specify an object here. The name of each property is the icon's height in pixels, and must be convertible to an integer. The value is the URL. For example:</p>
 
-    <pre class="brush: json no-line-numbers notranslate">
+    <pre class="brush: json no-line-numbers">
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
@@ -133,7 +133,7 @@ tags:
 
     <p>You cannot specify multiple icons of the same sizes.<br>
      <br>
-     See <a href="/en-US/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes">Choosing icon sizes</a> for more guidance on this.</p>
+     See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more guidance on this.</p>
    </td>
   </tr>
   <tr>
@@ -144,9 +144,9 @@ tags:
 
     <p>The HTML file may include CSS and JavaScript files using <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> elements, just like a normal web page. However, <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt; </a></code>must have <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code> attribute to load a file. Don't use <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> with embedded code, because you'll get a confusing Content Violation Policy error.</p>
 
-    <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
+    <p>Unlike a normal web page, JavaScript running in the popup can access all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> (subject, of course, to the extension having the appropriate <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>).</p>
 
-    <p>This is a <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+    <p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
    </td>
   </tr>
   <tr>
@@ -155,7 +155,7 @@ tags:
    <td>
     <p>Tooltip for the button, displayed when the user moves their mouse over it. If the button is added to the browser's menu panel, this is also shown under the app icon.</p>
 
-    <p>This is a <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+    <p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
    </td>
   </tr>
   <tr>
@@ -196,7 +196,7 @@ tags:
 
 <p>There are two main approaches to this. You can supply a single icon as an SVG file, and it will be scaled correctly:</p>
 
-<pre class="brush: json no-line-numbers notranslate">"default_icon": "path/to/geo.svg"</pre>
+<pre class="brush: json no-line-numbers">"default_icon": "path/to/geo.svg"</pre>
 
 <p>Alternatively, you can supply several icons in different sizes, and the browser will pick the best match.</p>
 
@@ -209,7 +209,7 @@ tags:
 
 <p>So you can specify icons that match exactly, on both normal and Retina displays, by supplying three icon files, and specifying them like this:</p>
 
-<pre class="brush: json no-line-numbers notranslate">"default_icon": {
+<pre class="brush: json no-line-numbers">"default_icon": {
   "16": "path/to/geo-16.png",
   "32": "path/to/geo-32.png",
   "64": "path/to/geo-64.png"
@@ -219,7 +219,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers notranslate">"browser_action": {
+<pre class="brush: json no-line-numbers">"browser_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -228,9 +228,9 @@ tags:
 
 <p>A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:</p>
 
-<pre class="brush: js no-line-numbers notranslate"> browser.browserAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js no-line-numbers"> browser.browserAction.onClicked.addListener(handleClick);</pre>
 
-<pre class="brush: json notranslate">"browser_action": {
+<pre class="brush: json">"browser_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -241,7 +241,7 @@ tags:
 
 <p>A browser action with an icon, a title, and a popup. The popup will be shown when the user clicks the button.</p>
 
-<p>For a simple, but complete, extension that uses a browser action, see the <a href="/en-US/Add-ons/WebExtensions/Your_second_WebExtension">walkthrough tutorial</a>.</p>
+<p>For a simple, but complete, extension that uses a browser action, see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">walkthrough tutorial</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

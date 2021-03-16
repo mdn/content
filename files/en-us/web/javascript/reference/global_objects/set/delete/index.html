@@ -2,41 +2,47 @@
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
 tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+- ECMAScript 2015
+- JavaScript
+- Method
+- Prototype
+- Reference
+- set
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>delete()</code></strong> method removes a specified value from a <code>Set</code> object, if it is in the set.</p>
+<p>The <strong><code>delete()</code></strong> method removes a specified value from a
+  <code>Set</code> object, if it is in the set.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub
+  repository. If you'd like to contribute to the interactive examples project, please
+  clone <a
+    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
+  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>mySet</var>.delete(<var>value</var>);</pre>
+<pre class="brush: js"><var>mySet</var>.delete(<var>value</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>value</var></code></dt>
- <dd>The value to remove from <code><var>mySet</var></code>.</dd>
+  <dt><code><var>value</var></code></dt>
+  <dd>The value to remove from <code><var>mySet</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns <code>true</code> if <code><var>value</var></code> was already in <code><var>mySet</var></code>; otherwise <code>false</code>.</p>
+<p>Returns <code>true</code> if <code><var>value</var></code> was already in
+  <code><var>mySet</var></code>; otherwise <code>false</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_the_delete_method">Using the delete() method</h3>
 
-<pre class="brush: js notranslate">const mySet = new Set();
+<pre class="brush: js">const mySet = new Set();
 mySet.add('foo');
 
 mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
@@ -47,7 +53,7 @@ mySet.has('foo');    // Returns false. The "foo" element is no longer present.
 
 <p>Let's checkout below how to delete an Object from a Set.</p>
 
-<pre class="brush: js notranslate">const setObj = new Set();   // Create a new set.
+<pre class="brush: js">const setObj = new Set();   // Create a new set.
 
 setObj.add({x: 10, y: 20}); // Add object in the set.
 
@@ -64,16 +70,17 @@ setObj.forEach(function(point){
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -83,6 +90,6 @@ setObj.forEach(function(point){
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.clear()")}}</li>
+  <li>{{jsxref("Set")}}</li>
+  <li>{{jsxref("Set.prototype.clear()")}}</li>
 </ul>

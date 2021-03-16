@@ -2,24 +2,28 @@
 title: 'Feature-Policy: camera'
 slug: Web/HTTP/Headers/Feature-Policy/camera
 tags:
-  - Directive
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Reference
-  - camera
+- Directive
+- Feature Policy
+- Feature-Policy
+- HTTP
+- Reference
+- camera
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>camera</code> directive controls whether the current document is allowed to use video input devices. When this policy is enabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a {{domxref("NotAllowedError")}}.</span></p>
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header
+    <code>camera</code> directive controls whether the current document is allowed to use
+    video input devices. When this policy is enabled, the {{jsxref("Promise")}} returned
+    by {{domxref("MediaDevices.getUserMedia()")}} will reject with
+    a {{domxref("NotAllowedError")}}.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">Feature-Policy: camera &lt;allowlist&gt;;</pre>
+<pre class="brush: html">Feature-Policy: camera &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>{{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
@@ -29,20 +33,20 @@ tags:
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Feature Policy')}}</td>
+      <td>{{Spec2('Feature Policy')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -52,7 +56,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a></li>
+  <li>{{HTTPHeader("Feature-Policy")}} header</li>
+  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature
+      Policy</a></li>
 </ul>

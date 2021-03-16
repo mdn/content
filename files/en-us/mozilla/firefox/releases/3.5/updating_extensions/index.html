@@ -4,7 +4,7 @@ slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 tags:
   - Extensions
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ fx_minversion_header(3.5) }}</p>
+<div>{{FirefoxSidebar}}</div>
 <p>This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.5.</p>
 <h2 id="Update_basics">Update basics</h2>
 <p>This section covers the basics of what you need to do whenever you update an extension for a new version of Firefox.</p>
@@ -30,9 +30,9 @@ firefox -createProfile testBeta4
 <p>Once you've done that, try using your extension again, this time with your regular profile.  This will help to ensure compatibility with any existing saved data.</p>
 <h3 id="Update_your_extension_on_addons.mozilla.org">Update your extension on addons.mozilla.org</h3>
 <p>Finally, it's time to release your updated extension.  If your extension didn't need any code changes you can log into the AMO dashboard and update the compatibility version there.  Otherwise, you'll need to upload a new version to AMO.</p>
-<p>See <a class="internal" href="/en/Submitting_an_add-on_to_AMO" title="En/Submitting an add-on to AMO">Submitting an add-on to AMO</a> for additional information.</p>
+<p>See <a class="internal" href="/en-US/docs/Submitting_an_add-on_to_AMO">Submitting an add-on to AMO</a> for additional information.</p>
 <h2 id="Accessing_the_Places_database">Accessing the Places database</h2>
-<p>Prior to Firefox 3.5, accessing the Places database directly using the <a class="internal" href="/en/Storage">Storage API</a> required a little bit of trickery:</p>
+<p>Prior to Firefox 3.5, accessing the Places database directly using the <a class="internal" href="/en-US/docs/Storage">Storage API</a> required a little bit of trickery:</p>
 <pre class="brush: js">var places = Components.classes["@mozilla.org/file/directory_service;1"].
                         getService(Components.interfaces.nsIProperties).
                         get("ProfD", Components.interfaces.nsIFile);
@@ -46,7 +46,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
                     getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 </pre>
 <h2 id="Search_textboxes">Search textboxes</h2>
-<p>The <a class="internal" href="/en/XUL/textbox"><code>textbox</code></a> type <code>timed</code> is deprecated; instead, you should use <code>search</code>.</p>
+<p>The <a class="internal" href="/en-US/docs/XUL/textbox"><code>textbox</code></a> type <code>timed</code> is deprecated; instead, you should use <code>search</code>.</p>
 <p>In Firefox 3, you might have used:</p>
 <pre class="brush: xml">&lt;textbox type="timed" timeout="1000" oncommand="alert(this.value);"/&gt;
 </pre>
@@ -54,7 +54,7 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 <pre class="brush: xml">&lt;textbox type="search" timeout="1000" oncommand="alert(this.value);"/&gt;
 </pre>
 <h2 id="JSON">JSON</h2>
-<p>The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support.  For details, see <a class="internal" href="/En/Using_native_JSON" title="/en/Using JSON in Firefox">Using JSON in Firefox</a> and the article on <a class="internal" href="/en/JSON">JSON</a> for a more general overview of JSON and how to use it in various versions of Firefox.</p>
+<p>The JSON.jsm JavaScript module was dropped in Firefox 3.5 in favor of native JSON object support.  For details, see <a class="internal" href="/en-US/Using_native_JSON">Using JSON in Firefox</a> and the article on <a class="internal" href="/en-US/docs/Glossary/JSON">JSON</a> for a more general overview of JSON and how to use it in various versions of Firefox.</p>
 <p>To ensure compatibility with both Firefox 3 and Firefox 3.5, you can do the following:</p>
 <pre class="brush: js">if (typeof(JSON) == "undefined") {
   Components.utils.import("resource://gre/modules/JSON.jsm");
@@ -67,9 +67,9 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 <h2 id="Changes_to_context_menus">Changes to context menus</h2>
 <p>In order to support the new audio and video features added in Gecko 1.9.1, the <code>nsContextMenu</code> class has renamed the <code>imageURL</code> getter to <code>mediaURL</code>; however, <code>imageURL</code> was added back in on June 9, 2009.</p>
 <h2 id="Changes_to_chrome_registration">Changes to chrome registration</h2>
-<p>Firefox 3.5 closes a security hole that made it possible to use remote chrome.  This will affect any add-on that includes a resource in their <code>chrome.manifest</code> file that references a web site, data or resource urls.  See <a class="internal" href="/En/Security_changes_in_Firefox_3.5" title="En/Security changes in Firefox 3.5">Security changes in Firefox 3.5</a> for details.</p>
+<p>Firefox 3.5 closes a security hole that made it possible to use remote chrome.  This will affect any add-on that includes a resource in their <code>chrome.manifest</code> file that references a web site, data or resource urls.  See <a class="internal" href="/en-US/Security_changes_in_Firefox_3.5">Security changes in Firefox 3.5</a> for details.</p>
 <h2 id="Getting_a_load_context_from_a_request">Getting a load context from a request</h2>
-<p>Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use <span><span><code>notificationCallbacks.getInterface(nsIDOMWindow)</code> to get the window object associated with </span></span>the load. While the older approach may work in some circumstances, it is not recommended to use it anymore (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=457153#c16">details</a>).</p>
+<p>Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use <code>notificationCallbacks.getInterface(nsIDOMWindow)</code> to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=457153#c16">details</a>).</p>
 <p>This correct and reliable way to do this is to use an {{ interface("nsILoadContext") }} (see the <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/docshell/base/nsILoadContext.idl">interface definition</a> on mxr).</p>
 <p>From JavaScript, you do it like this:</p>
 <pre class="brush: js">var loadContext;
@@ -121,9 +121,9 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 <p>If your extension is using <code>xpcnativewrappers=no</code> (which it shouldn't be doing in the first place, since it's not safe to do so), XBL from that extension will not be applied to documents which are using <code>XPCNativeWrapper</code> automation starting in Firefox 3.5.</p>
 <h2 id="New_capabilities_of_interest">New capabilities of interest</h2>
 <h3 id="Listening_to_events_on_all_tabs">Listening to events on all tabs</h3>
-<p>Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs.  See <a class="internal" href="/En/Listening_to_events_on_all_tabs" title="en/Listening to events on all tabs">Listening to events on all tabs</a> for details.</p>
+<p>Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs.  See <a class="internal" href="/en-US/Listening_to_events_on_all_tabs">Listening to events on all tabs</a> for details.</p>
 <h2 id="For_Theme_developers">For Theme developers:</h2>
 <ul>
-  <li>Check <a class="internal" href="/En/Theme_changes_in_Firefox_3.1" rel="internal">Theme changes in Firefox 3.1</a>.</li>
+  <li>Check <a class="internal" href="/en-US/Theme_changes_in_Firefox_3.1" rel="internal">Theme changes in Firefox 3.1</a>.</li>
   <li>Go to the Mozillazine forum <a class="topictitle external" href="http://forums.mozillazine.org/viewtopic.php?f=18&amp;t=665138">Theme changes for FF3.1</a> to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).</li>
 </ul>

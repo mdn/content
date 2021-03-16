@@ -2,21 +2,25 @@
 title: HTMLDialogElement.showModal()
 slug: Web/API/HTMLDialogElement/showModal
 tags:
-  - API
-  - Experimental
-  - HTML DOM
-  - HTMLDialogElement
-  - Method
-  - Reference
-  - showModal
+- API
+- Experimental
+- HTML DOM
+- HTMLDialogElement
+- Method
+- Reference
+- showModal
 ---
 <p>{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}</p>
 
-<p>The <strong><code>showModal()</code></strong> method of the {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top of any other dialogs that might be present. It displays into the top layer, along with a {{cssxref('::backdrop')}} pseudo-element. Interaction outside the dialog is blocked and the content outside it is rendered inert.</p>
+<p>The <strong><code>showModal()</code></strong> method of the
+  {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
+  of any other dialogs that might be present. It displays into the top layer, along with a
+  {{cssxref('::backdrop')}} pseudo-element. Interaction outside the dialog is blocked and
+  the content outside it is rendered inert.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">dialogInstance.showModal();</pre>
+<pre class="brush: js">dialogInstance.showModal();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,11 +32,17 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p>If the dialog is already open (i.e. if the <code>open</code> attribute is already set on the {{htmlelement("dialog")}} element), an <code>InvalidStateError</code> is thrown.</p>
+<p>If the dialog is already open (i.e. if the <code>open</code> attribute is already set
+  on the {{htmlelement("dialog")}} element), an <code>InvalidStateError</code> is thrown.
+</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method. From there you can click the <em>Cancel</em> button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.</p>
+<p>The following example shows a simple button that, when clicked, opens a
+  {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method.
+  From there you can click the <em>Cancel</em> button to close the dialog (via the
+  {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
+  button.</p>
 
 <pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
   &lt;dialog id="favDialog"&gt;
@@ -88,31 +98,36 @@ tags:
   &lt;/script&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a> (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live also</a>).</p>
+  <p><strong>Note</strong>: You can find this example on GitHub as <a
+      href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a>
+    (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live
+      also</a>).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-showmodal', 'showModal()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#dom-htmldialogelement-showmodal', 'showModal()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'forms.html#dom-dialog-showmodal', 'showModal()')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5.1',
+        'interactive-elements.html#dom-htmldialogelement-showmodal', 'showModal()')}}</td>
+      <td>{{Spec2('HTML5.1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -122,5 +137,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
+  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
 </ul>

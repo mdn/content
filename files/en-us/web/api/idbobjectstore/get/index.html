@@ -13,63 +13,82 @@ tags:
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>The <strong><code>get()</code></strong> method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the object store selected by the specified key. This is for retrieving specific records from an object store.</p>
+  <p>The <strong><code>get()</code></strong> method of the {{domxref("IDBObjectStore")}}
+    interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+    returns the object store selected by the specified key. This is for retrieving
+    specific records from an object store.</p>
 </div>
 
-<p>If a value is successfully found, then a structured clone of it is created and set as the <code><a href="/en/IndexedDB/IDBRequest#attr_result" title="en/IndexedDB/IDBRequest#attr result">result</a></code> of the request object.</p>
+<p>If a value is successfully found, then a structured clone of it is created and set as
+  the <code><a href="/en-US/docs/Web/API/IDBRequest#attr_result">result</a></code> of the
+  request object.</p>
 
-<p>{{ Note("This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value. To tell these situations apart, call the <code>openCursor()</code> method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.") }}</p>
+<p>{{ Note("This method produces the same result for: a) a record that doesn't exist in
+  the database and b) a record that has an undefined value. To tell these situations
+  apart, call the <code>openCursor()</code> method with the same key. That method provides
+  a cursor if the record exists, and no cursor if it does not.") }}</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <em>request</em> = <em>objectStore</em>.get(<em>key</em>);</pre>
+<pre
+  class="brush: js">var <em>request</em> = <em>objectStore</em>.get(<em>key</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>key</dt>
- <dd>The key or key range that identifies the record to be retrieved.</dd>
+  <dt>key</dt>
+  <dd>The key or key range that identifies the record to be retrieved.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.</p>
+<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
+  operation are fired.</p>
 
 <h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
 
-<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of one of the following types:</span></p>
+<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of
+    one of the following types:</span></p>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
-  </tr>
-  <tr>
-   <td><code>DataError</code></td>
-   <td>
-    <p>The key or key range provided contains an invalid key.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.<br>
-     </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TransactionInactiveError</code></td>
+      <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
+    </tr>
+    <tr>
+      <td><code>DataError</code></td>
+      <td>
+        <p>The key or key range provided contains an invalid key.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>InvalidStateError</code></td>
+      <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.<br>
+         </td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we open a read/write transaction on our database and get one specific record from object store using <code>get()</code> — a sample record with the key "Walk dog". Once this data object is retrieved, you could then update it using normal JavaScript, then put it back into the database using  a {{domxref("IDBObjectStore.put")}} operation. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In the following code snippet, we open a read/write transaction on our database and get
+  one specific record from object store using <code>get()</code> — a sample record with
+  the key "Walk dog". Once this data object is retrieved, you could then update it using
+  normal JavaScript, then put it back into the database using  a
+  {{domxref("IDBObjectStore.put")}} operation. For a full working example, see our <a
+    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
+    Notifications</a><span style="line-height: 1.5;"> app (</span><a
+    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
+    example live</a><span style="line-height: 1.5;">.)</span></p>
 
 <pre class="brush: js">// Let us open our database
 <span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -113,43 +132,43 @@ function getData() {
 
 };</pre>
 
-<h2 id="Specifications"><span style="font-size: 2.14285714285714rem;">Specifications</span></h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-get', 'get()')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-get", "get()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-get', 'get()')}}</td>
+      <td>{{Spec2('IndexedDB')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-get", "get()")}}</td>
+      <td>{{Spec2("IndexedDB 2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBObjectStore.get")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+  <li>Using cursors: {{domxref("IDBCursor")}}</li>
+  <li>Reference example: <a class="external"
+      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a class="external"
+      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

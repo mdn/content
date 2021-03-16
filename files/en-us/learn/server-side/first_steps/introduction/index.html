@@ -51,9 +51,9 @@ tags:
 
 <p>The diagram below shows a basic web server architecture for a <em>static site</em> (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.</p>
 
-<p>The server retrieves the requested document from its file system and returns an HTTP response containing the document and a <a href="/en-US/docs/Web/HTTP/Status#Successful_responses">success status</a> (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see <a href="/en-US/docs/Web/HTTP/Status#Client_error_responses">client error responses</a> and <a href="/en-US/docs/Web/HTTP/Status#Server_error_responses">server error responses</a>).</p>
+<p>The server retrieves the requested document from its file system and returns an HTTP response containing the document and a <a href="/en-US/docs/Web/HTTP/Status#successful_responses">success status</a> (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see <a href="/en-US/docs/Web/HTTP/Status#client_error_responses">client error responses</a> and <a href="/en-US/docs/Web/HTTP/Status#server_error_responses">server error responses</a>).</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png" style="height: 223px; width: 800px;"></p>
+<p><img alt="A simplified diagram of a static web server." src="basic_static_app_server.png"></p>
 
 <h3 id="Dynamic_sites">Dynamic sites</h3>
 
@@ -67,13 +67,11 @@ tags:
 
 <p>Requests for <em>static</em> resources are handled in the same way as for static sites (static resources are any files that don't change —typically: CSS, JavaScript, Images, pre-created PDF files etc). </p>
 
-<p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png"></p>
+<p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="web_application_with_html_and_steps.png"></p>
 
 <p>Requests for dynamic resources are instead forwarded (2) to server-side code (shown in the diagram as a <em>Web Application</em>). For "dynamic requests" the server interprets the request, reads required information from the database (3), combines the retrieved data with HTML templates (4), and sends back a response containing the generated HTML (5,6). </p>
 
-<div>
 <h2 id="Are_server-side_and_client-side_programming_the_same">Are server-side and client-side programming the same?</h2>
-</div>
 
 <p>Let's now turn our attention to the code involved in server-side and client-side programming. In each case, the code is significantly different:</p>
 
@@ -101,11 +99,9 @@ tags:
 <p>In contrast, you would almost never consider writing the server-side component of a web app without a framework — implementing a vital feature like an HTTP server is really hard to do from scratch in say Python, but Python web frameworks like Django provide one out of the box, along with other very useful tools.</p>
 </div>
 
-<div>
 <h2 id="What_can_you_do_on_the_server-side">What can you do on the server-side?</h2>
 
 <p>Server-side programming is very useful because it allows us to <em>efficiently</em> deliver information tailored for individual users and thereby create a much better user experience.</p>
-</div>
 
 <p>Companies like Amazon use server-side programming to construct search results for products, make targeted product suggestions based on client preferences and previous buying habits, simplify purchases, etc.</p>
 

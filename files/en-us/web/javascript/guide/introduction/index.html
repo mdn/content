@@ -6,7 +6,7 @@ tags:
   - Guide
   - Introduction
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</div>
 
@@ -17,7 +17,7 @@ tags:
 <p>This guide assumes you have the following basic background:</p>
 
 <ul>
- <li>A general understanding of the Internet and the World Wide Web (<a href="/en-US/docs/Glossary/WWW">WWW</a>).</li>
+ <li>A general understanding of the Internet and the World Wide Web (<a href="/en-US/docs/Glossary/World_Wide_Web">WWW</a>).</li>
  <li>Good working knowledge of HyperText Markup Language (<a href="/en-US/docs/Glossary/HTML">HTML</a>).</li>
  <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.</li>
 </ul>
@@ -87,9 +87,9 @@ tags:
 
 <h2 id="JavaScript_and_the_ECMAScript_Specification">JavaScript and the ECMAScript specification</h2>
 
-<p>JavaScript is standardized at <a class="external" href="https://www.ecma-international.org/">Ecma International</a> — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called ECMAScript, behaves the same way in all applications that support the standard. Companies can use the open standard language to develop their implementation of JavaScript. The ECMAScript standard is documented in the ECMA-262 specification. See <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript">New in JavaScript</a> to learn more about different versions of JavaScript and ECMAScript specification editions.</p>
+<p>JavaScript is standardized at <a href="https://www.ecma-international.org/">Ecma International</a> — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript. This standardized version of JavaScript, called ECMAScript, behaves the same way in all applications that support the standard. Companies can use the open standard language to develop their implementation of JavaScript. The ECMAScript standard is documented in the ECMA-262 specification. See <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript">New in JavaScript</a> to learn more about different versions of JavaScript and ECMAScript specification editions.</p>
 
-<p>The ECMA-262 standard is also approved by the <a class="external" href="https://www.iso.org/home.html">ISO</a> (International Organization for Standardization) as ISO-16262. You can also find the specification on <a class="external" href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">the Ecma International website</a>. The ECMAScript specification does not describe the Document Object Model (DOM), which is standardized by the <a class="external" href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> and/or <a href="https://whatwg.org">WHATWG (Web Hypertext Application Technology Working Group)</a>. The DOM defines the way in which HTML document objects are exposed to your script. To get a better idea about the different technologies that are used when programming with JavaScript, consult the article <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
+<p>The ECMA-262 standard is also approved by the <a href="https://www.iso.org/home.html">ISO</a> (International Organization for Standardization) as ISO-16262. You can also find the specification on <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">the Ecma International website</a>. The ECMAScript specification does not describe the Document Object Model (DOM), which is standardized by the <a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> and/or <a href="https://whatwg.org">WHATWG (Web Hypertext Application Technology Working Group)</a>. The DOM defines the way in which HTML document objects are exposed to your script. To get a better idea about the different technologies that are used when programming with JavaScript, consult the article <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
 
 <h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript documentation versus the ECMAScript specification</h3>
 
@@ -115,25 +115,25 @@ tags:
 
 <p>The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png"></p>
+<p><img alt="" src="2019-04-04_00-15-29.png"></p>
 
 <p>The console works the exact same way as <code>eval</code>: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by <code>console.log</code> around <code>eval</code>, like so:</p>
 
-<pre class="brush: js notranslate">function greetMe(yourName) {
-  alert("Hello " + yourName)
+<pre class="brush: js">function greetMe(yourName) {
+  alert(&quot;Hello &quot; + yourName)
 }
-<code>console.log(eval('3 + 5'))</code>
+console.log(eval('3 + 5'))
 </pre>
 
 <h3 id="Multi-line_input_in_the_Web_Console">Multi-line input in the Web Console</h3>
 
-<p>The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode">multi-line line input mode</a>.</p>
+<p>The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">multi-line line input mode</a>.</p>
 
 <h3 id="Hello_world">Hello world</h3>
 
 <p>To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:</p>
 
-<pre class="brush: js notranslate">(function(){
+<pre class="brush: js">(function(){
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
@@ -148,10 +148,9 @@ tags:
 
 <p>In the following pages, this guide introduces you to the JavaScript syntax and language features, so that you will be able to write more complex applications.</p>
 
-<p>But for now, remember to always include the <code>(function(){"use strict";</code> before your code, and add <code>})();</code> to the end of your code. You will learn <a href="/en-US/docs/Glossary/IIFE">what these mean</a>, but for now they can be thought of as doing the following:</p>
+<p>But for now, remember to always include the <code>(function(){"use strict";</code> before your code, and add <code>})();</code> to the end of your code. The <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> and <a href="/en-US/docs/Glossary/IIFE">IIFE</a> articles explain what those do, but for now they can be thought of as doing the following:</p>
 
 <ol>
- <li>Massively improve performance.</li>
  <li>Prevent semantics in JavaScript that trip up beginners.</li>
  <li>Prevent code snippets executed in the console from interacting with one-another (e.g., having something created in one console execution being used for a different console execution).</li>
 </ol>

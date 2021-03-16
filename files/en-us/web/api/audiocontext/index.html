@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The <code>AudioContext</code> interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}.</span> An audio context controls both the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an <code>AudioContext</code> before you do anything else, as everything happens inside a context. It's recommended to create one AudioContext and reuse it instead of initializing a new one each time, and it's OK to use a single <code>AudioContext</code> for several different audio source and pipeline concurrently.</p>
+<p><span class="seoSummary">The <code>AudioContext</code> interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}.</span> An audio context controls both the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an <code>AudioContext</code> before you do anything else, as everything happens inside a context. It's recommended to create one AudioContext and reuse it instead of initializing a new one each time, and it's OK to use a single <code>AudioContext</code> for several different audio sources and pipeline concurrently.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -61,11 +61,11 @@ tags:
 
 <p>Basic audio context declaration:</p>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();</pre>
+<pre class="brush: js">var audioCtx = new AudioContext();</pre>
 
 <p>Cross browser variant:</p>
 
-<pre class="brush: js notranslate">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var oscillatorNode = audioCtx.createOscillator();
@@ -92,14 +92,11 @@ var finish = audioCtx.destination;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioContext")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul style="margin-left: 40px;">
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
  <li>{{domxref("OfflineAudioContext")}}</li>
 </ul>

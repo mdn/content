@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -47,7 +47,7 @@ tags:
 
 <p>When you've got a container with some inline children and you want to put a margin between each child but not have it interfere with the spacing at the end of the row, you might do something like this:</p>
 
-<pre class="brush: css notranslate">article {
+<pre class="brush: css">article {
   background-color: red;
   margin: 20px;
   padding: 20px;
@@ -64,13 +64,13 @@ article &gt; span {
 
 <p>The problem here is that you'd end up with 20px too much spacing at the right of the row, so you'd maybe do this to fix it:</p>
 
-<pre class="brush: css notranslate">span:last-child {
+<pre class="brush: css">span:last-child {
   margin-right: 0;
 }</pre>
 
 <p>It is a pain having to write another rule to achieve this, and it is also not very flexible. Instead, <code>margin-trim</code> could fix it:</p>
 
-<pre class="brush: css notranslate"> article {
+<pre class="brush: css"> article {
   margin-trim: in-flow;
   ...
 }</pre>

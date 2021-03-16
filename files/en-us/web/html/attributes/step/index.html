@@ -75,15 +75,15 @@ tags:
 
 <p>We add a big red border around invalid inputs:</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: solid red 3px;
 }</pre>
 
 <p>Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.</p>
 
-<pre class="brush: html notranslate">&lt;input id="myNumber" name="myNumber" type="number" step="2" min="1.2"&gt;</pre>
+<pre class="brush: html">&lt;input id="myNumber" name="myNumber" type="number" step="2" min="1.2"&gt;</pre>
 
-<p>Valid values include <code>1.2</code>, <code>3.2</code>, <code>5.2</code>, <code>7.2</code>, <code>9.2</code>, <code>11.2</code>, and so on. Integers and even numbers follwed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of <code>1.2</code> and greater</p>
+<p>Valid values include <code>1.2</code>, <code>3.2</code>, <code>5.2</code>, <code>7.2</code>, <code>9.2</code>, <code>11.2</code>, and so on. Integers and even numbers followed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of <code>1.2</code> and greater</p>
 
 <p>{{EmbedLiveSample("min_impact_on_step",200,55)}}</p>
 

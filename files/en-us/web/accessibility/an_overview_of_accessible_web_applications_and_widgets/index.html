@@ -12,7 +12,7 @@ tags:
 
 <h2 id="The_problem">The problem</h2>
 
-<p>Dynamic content on a web page can be particularly problematic for users who, for whatever reason, are unable to view the screen. Stock tickers, live twitter feed updates, progress indicators, and similar content modify the DOM in ways that an assistive technology (AT) may not be aware of. That's where <a href="/en/ARIA">ARIA</a> comes in.</p>
+<p>Dynamic content on a web page can be particularly problematic for users who, for whatever reason, are unable to view the screen. Stock tickers, live twitter feed updates, progress indicators, and similar content modify the DOM in ways that an assistive technology (AT) may not be aware of. That's where <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> comes in.</p>
 
 <p><em>Example 1: Markup for a tabs widget built without ARIA labeling. There's no information in the markup to describe the widget's form and function.</em></p>
 
@@ -36,7 +36,7 @@ tags:
 &lt;/div&gt;</pre>
 
 <p><em>Example 2: How the tabs widget might be styled visually. Users might recognize it visually, but there are no machine-readable semantics for an assistive technology.</em><br>
- <img alt="Screenshot of the tabs widget" class="default internal" src="/@api/deki/files/4926/=Tabs_Widget.png"></p>
+ <img alt="Screenshot of the tabs widget" class="default internal" src="tabs_widget.png"></p>
 
 <h2 id="ARIA">ARIA</h2>
 
@@ -92,7 +92,7 @@ tags:
  <li><strong><code>aria-grabbed</code></strong>: indicates the 'grabbed' state of an object in a drag-and-drop operation</li>
 </ul>
 
-<p>(For a full list of ARIA states, consult the <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#introstates">ARIA list of states and properties</a>.)</p>
+<p>(For a full list of ARIA states, consult the <a href="https://www.w3.org/TR/wai-aria-1.1/#introstates">ARIA list of states and properties</a>.)</p>
 
 <p>Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).</p>
 
@@ -131,7 +131,7 @@ tags:
 
 <p><em>Example 2c. JavaScript to update the aria-checked attribute </em></p>
 
-<pre class="brush: javascript">var showTip = function(el) {
+<pre class="brush: js">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');
 }</pre>
 
@@ -145,7 +145,7 @@ tags:
 
 <h3 id="Asynchronous_content_changes">Asynchronous content changes</h3>
 
-<div class="note">Under construction. See also <a href="/en/ARIA/Live_Regions" title="Live Regions">Live Regions</a></div>
+<div class="note">Under construction. See also <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Live Regions</a></div>
 
 <h2 id="Keyboard_navigation">Keyboard navigation</h2>
 
@@ -163,13 +163,13 @@ tags:
  <li>If in doubt, mimic the standard desktop behavior of the control you are creating.</li>
 </ul>
 
-<p>So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the &lt;ol&gt; in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the &lt;li&gt; elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets" title="en/Accessibility/Keyboard-navigable JavaScript widgets">Keyboard-navigable JavaScript widgets</a> describes how to implement this behavior with JavaScript.</p>
+<p>So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the &lt;ol&gt; in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the &lt;li&gt; elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating <a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Keyboard-navigable JavaScript widgets</a> describes how to implement this behavior with JavaScript.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/ARIA">ARIA</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Writing Keyboard-navigable JavaScript widgets</a></li>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA Specification</a></li>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a></li>
+ <li><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA Specification</a></li>
+ <li><a href="https://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a></li>
 </ul>

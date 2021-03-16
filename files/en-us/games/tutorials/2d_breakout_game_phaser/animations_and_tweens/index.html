@@ -17,7 +17,7 @@ tags:
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>
 
 <div class="summary">
-<p>This is the <strong>14th step</strong> out of 16 of the <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html">Gamedev-Phaser-Content-Kit/demos/lesson14.html</a>.</p>
+<p>This is the <strong>14th step</strong> out of 16 of the <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">Gamedev Phaser tutorial</a>. You can find the source code as it should look after completing this lesson at <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html">Gamedev-Phaser-Content-Kit/demos/lesson14.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">To make the game look more juicy and alive we can use animations and tweens. This will result in a better, more entertaining experience. Let's explore how to implement Phaser animations and tweens in our game.</span></p>
@@ -30,7 +30,7 @@ tags:
 
 <p>Next, we will load the spritesheet — put the following line at the bottom of your <code>preload()</code> function:</p>
 
-<pre class="brush: js notranslate">game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
+<pre class="brush: js">game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
 </pre>
 
 <p>Instead of loading a single image of the ball we can load the whole spritesheet — a collection of different images. We will show the sprites sequentially to create the illusion of animation. The <code>spritesheet()</code> method's two extra parameters determine the width and height of each single frame in the given spritesheet file, indicating to the program how to chop it up to get the individual frames.</p>
@@ -39,7 +39,7 @@ tags:
 
 <p>Next up, go into your create() function, find the line that loads the ball sprite, and below it put the call to <code>animations.add()</code> seen below:</p>
 
-<pre class="brush: js notranslate">ball = game.add.sprite(50, 250, 'ball');
+<pre class="brush: js">ball = game.add.sprite(50, 250, 'ball');
 ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 </pre>
 
@@ -55,7 +55,7 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 <p>In the <code>arcade.collide()</code> method call that handles the collision between the ball and the paddle (the first line inside <code>update()</code>, see below) we can add an extra parameter that specifies a function to be executed every time the collision happens, in the same fashion as the <code>ballHitBrick()</code> function. Update the first line inside <code>update()</code> as shown below:</p>
 
-<pre class="brush: js notranslate">function update() {
+<pre class="brush: js">function update() {
     game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
     paddle.x = game.input.x || game.world.width*0.5;
@@ -64,7 +64,7 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 <p>Then we can create the <code>ballHitPaddle()</code> function (having <code>ball</code> and <code>paddle</code> as default parameters), playing the wobble animation when it is called. Add the following function just before your closing <code>&lt;/script&gt;</code> tag:</p>
 
-<pre class="brush: js notranslate">function ballHitPaddle(ball, paddle) {
+<pre class="brush: js">function ballHitPaddle(ball, paddle) {
     ball.animations.play('wobble');
 }
 </pre>
@@ -77,7 +77,7 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 <p>Let's add a tween to our game to make the bricks smoothly disappear when they are hit by the ball. Go to your <code>ballhitBrick()</code> function, find your <code>brick.kill();</code> line, and replace it with the following:</p>
 
-<pre class="brush: js notranslate">var killTween = game.add.tween(brick.scale);
+<pre class="brush: js">var killTween = game.add.tween(brick.scale);
 killTween.to({x:0,y:0}, 200, Phaser.Easing.Linear.None);
 killTween.onComplete.addOnce(function(){
     brick.kill();
@@ -96,7 +96,7 @@ killTween.start();
 
 <p>That's the expanded version of the tween definition, but we can also use the shorthand syntax:</p>
 
-<pre class="brush: js notranslate">game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
+<pre class="brush: js">game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
 </pre>
 
 <p>This tween will double the brick's scale in half a second using Elastic easing, will start automatically, and have a delay of 100 milliseconds.</p>
@@ -109,6 +109,6 @@ killTween.start();
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>Animations and tweens look very nice, but we can add even more to our game — in the next section we'll look at handling <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons">button</a> inputs.</p>
+<p>Animations and tweens look very nice, but we can add even more to our game — in the next section we'll look at handling <a href="/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons">button</a> inputs.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}</p>

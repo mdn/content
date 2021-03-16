@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 flex: auto;
 flex: initial;
 flex: none;
@@ -62,7 +62,7 @@ flex: unset;
  <li><strong>One-value syntax:</strong> the value must be one of:
 
   <ul>
-   <li>a <code>&lt;number&gt;</code>: In this case it is interpreted as <code>flex: &lt;number&gt; 1 0</code>; the <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code> value is assumed to be 1 and the <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code> value is assumed to be <code>0</code>.</li>
+   <li>a <code>&lt;number&gt;</code>: In this case it is interpreted as <code>flex: &lt;number&gt; 1 0</code>; the <code><a href="#flex-shrink">&lt;flex-shrink&gt;</a></code> value is assumed to be 1 and the <code><a href="#flex-basis">&lt;flex-basis&gt;</a></code> value is assumed to be <code>0</code>.</li>
    <li>one of the keywords: <code><a href="#none">none</a></code>, <code><a href="#auto">auto</a></code>, or <code>initial</code>.</li>
   </ul>
  </li>
@@ -70,22 +70,22 @@ flex: unset;
   <ul>
    <li>The first value must be:
     <ul>
-     <li>a {{cssxref("&lt;number&gt;")}} and it is interpreted as <code><a href="#&lt;'flex-grow'>">&lt;flex-grow&gt;</a></code>.</li>
+     <li>a {{cssxref("&lt;number&gt;")}} and it is interpreted as <code><a href="#flex-grow">&lt;flex-grow&gt;</a></code>.</li>
     </ul>
    </li>
    <li>The second value must be one of:
     <ul>
-     <li>a {{cssxref("&lt;number&gt;")}}: then it is interpreted as <code><a href="#&lt;'flex-shrink'>">&lt;flex-shrink&gt;</a></code>.</li>
-     <li>a valid value for {{cssxref("width")}}: then it is interpreted as <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code>.</li>
+     <li>a {{cssxref("&lt;number&gt;")}}: then it is interpreted as <code><a href="#flex-shrink">&lt;flex-shrink&gt;</a></code>.</li>
+     <li>a valid value for {{cssxref("width")}}: then it is interpreted as <code><a href="#flex-basis">&lt;flex-basis&gt;</a></code>.</li>
     </ul>
    </li>
   </ul>
  </li>
  <li><strong>Three-value syntax:</strong> the values must be in the following order:
   <ol>
-   <li>a {{cssxref("&lt;number&gt;")}} for <code><a href="#&lt;'flex-grow'>">&lt;flex-grow&gt;</a></code>.</li>
-   <li>a {{cssxref("&lt;number&gt;")}} for <code><a href="#&lt;'flex-grow'>">&lt;flex-shrink&gt;</a></code>.</li>
-   <li>a valid value for {{cssxref("width")}} for <code><a href="#&lt;'flex-basis'>">&lt;flex-basis&gt;</a></code>.</li>
+   <li>a {{cssxref("&lt;number&gt;")}} for <code><a href="#flex-grow">&lt;flex-grow&gt;</a></code>.</li>
+   <li>a {{cssxref("&lt;number&gt;")}} for <code><a href="#flex-shrink">&lt;flex-shrink&gt;</a></code>.</li>
+   <li>a valid value for {{cssxref("width")}} for <code><a href="#flex-basis">&lt;flex-basis&gt;</a></code>.</li>
   </ol>
  </li>
 </ul>
@@ -99,11 +99,11 @@ flex: unset;
  <dd>The item is sized according to its <code>width</code> and <code>height</code> properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting "<code>flex: 1 1 auto</code>".</dd>
  <dt id="none"><code>none</code></dt>
  <dd>The item is sized according to its <code>width</code> and <code>height</code> properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "<code>flex: 0 0 auto</code>".</dd>
- <dt id="&lt;'flex-grow'&gt;"><code>&lt;'flex-grow'&gt;</code></dt>
+ <dt id="flex-grow"><code>&lt;'flex-grow'&gt;</code></dt>
  <dd>Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted. (initial is <code>0</code>)</dd>
- <dt id="&lt;'flex-shrink'&gt;"><code>&lt;'flex-shrink'&gt;</code></dt>
+ <dt id="flex-shrink"><code>&lt;'flex-shrink'&gt;</code></dt>
  <dd>Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to <code>1</code> when omitted. (initial is <code>1</code>)</dd>
- <dt id="&lt;'flex-basis'&gt;"><code>&lt;'flex-basis'&gt;</code></dt>
+ <dt id="flex-basis"><code>&lt;'flex-basis'&gt;</code></dt>
  <dd>Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of <code>0</code> must have a unit to avoid being interpreted as a flexibility. Defaults to <code>0</code> when omitted. (initial is <code>auto</code>)</dd>
 </dl>
 
@@ -112,7 +112,7 @@ flex: unset;
 <p>For most purposes, authors should set <code>flex</code> to one of the following values: <code>auto</code>, <code>initial</code>, <code>none</code>, or a positive unitless number. To see the effect of these values, try resizing the flex containers below:</p>
 
 <div id="flex">
-<pre class="hidden brush: html notranslate">&lt;div class="flex-container"&gt;
+<pre class="hidden brush: html">&lt;div class="flex-container"&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
@@ -143,7 +143,7 @@ flex: unset;
 &lt;/div&gt;
 </pre>
 
-<pre class="hidden brush: css notranslate">* {
+<pre class="hidden brush: css">* {
   box-sizing: border-box;
 }
 
@@ -202,7 +202,7 @@ flex: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -210,7 +210,7 @@ flex: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="flex-container"&gt;
+<pre class="brush: html">&lt;div id="flex-container"&gt;
   &lt;div class="flex-item" id="flex"&gt;Flex box (click to toggle raw box)&lt;/div&gt;
   &lt;div class="raw-item" id="raw"&gt;Raw box&lt;/div&gt;
 &lt;/div&gt;
@@ -218,7 +218,7 @@ flex: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#flex-container {
+<pre class="brush: css">#flex-container {
   display: flex;
   flex-direction: row;
 }
@@ -233,14 +233,14 @@ flex: unset;
 </pre>
 
 <div class="hidden">
-<pre class="brush: js notranslate">var flex = document.getElementById("flex");
+<pre class="brush: js">var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 </pre>
 
-<pre class="brush: css notranslate">#flex-container {
+<pre class="brush: css">#flex-container {
   width: 100%;
   font-family: Consolas, Arial, sans-serif;
 }
@@ -281,7 +281,7 @@ flex.addEventListener("click", function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("css.properties.flex")}}</p>
 

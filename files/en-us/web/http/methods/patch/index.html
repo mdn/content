@@ -53,14 +53,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">PATCH /file.txt HTTP/1.1
+<pre class="brush: html">PATCH /file.txt HTTP/1.1
 </pre>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="Request">Request</h3>
 
-<pre class="line-numbers  language-html notranslate">PATCH /file.txt HTTP/1.1
+<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -74,7 +74,7 @@ Content-Length: 100
 
 <p>In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.</p>
 
-<pre class="newpage notranslate">HTTP/1.1 204 No Content
+<pre class="newpage">HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 

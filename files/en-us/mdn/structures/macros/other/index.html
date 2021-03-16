@@ -7,21 +7,16 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p>In contrast to the macros listed in <a href="/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros">Commonly-used macros</a>, the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.</p>
+<p>In contrast to the macros listed in <a href="/en-US/docs/MDN/Structures/Macros/Commonly-used_macros">Commonly-used macros</a>, the macros documented in this article are used infrequently or only in specific contexts, or are deprecated.</p>
 
 <h2 id="Special_contexts">Special contexts</h2>
 
 <p>These macros are used only with particular contexts, such as a specific API reference.</p>
 
 <ul>
- <li>{{TemplateLink("jsapixref")}} links to a page in the <a href="/en-US/docs/SpiderMonkey/JSAPI_Reference">JSAPI Reference</a>.</li>
- <li>{{TemplateLink("XPCOMxref")}} links to a page in the XPCOM reference. You can specify the name of an XPCOM function, class, component, or interface (although for the latter, you should use {{TemplateLink("Interface")}} instead). This macro will find the page and create a link to it, wherever it is in the XPCOM reference subtree.</li>
- <li>{{TemplateLink("npapi")}} links to the <a href="/en-US/docs/Gecko_Plugin_API_Reference">Gecko Plugin API Reference</a>.</li>
- <li>{{TemplateLink("interface")}} can be used when linking to XPCOM interfaces.<br>
-  Example: <code>\{{interface("nsIIOService")}}</code> results in: {{ Interface("nsIIOService") }}.</li>
- <li>{{TemplateLink("ifmethod")}} and {{TemplateLink("ifattribute")}} let you create a link to a particular method or attribute (respectively) on a Mozilla interface that's been created using our <a href="/en-US/docs/MDN/Contribute/Howto/Write_interface_reference_documentation">standard format for interface documentation</a>. For example, <code>\{\{ifmethod("nsIAutoCompleteSearch","stopSearch")\}\}</code> shows up as {{ ifmethod("nsIAutoCompleteSearch", "stopSearch") }}. Note that for {{TemplateLink("ifattribute")}}, <code>id="..."</code> must be added explicitly in the target, since attributes do not have headings.</li>
- <li>{{TemplateLink("Interwiki")}} makes it easy to create interwiki links. Currently it supports linking to Wikipedia and Wikimo. The first parameter is the name of the wiki ("wikipedia" or "wikimo"), and the second is the path of the article. For example, <code>\{\{interwiki("wikipedia", "Firefox")\}\}</code> shows up as {{ interwiki("wikipedia", "Firefox") }}. This template auto-detects the page language and directs to the same language on Wikipedia, for example.</li>
- <li>{{TemplateLink("RFC")}} creates a link to the specified RFC, given its number. The syntax is: <code>\{\{RFC(number)\}\}</code>. For example, <code>\{\{RFC(2616)\}\}</code> becomes {{ RFC(2616) }}.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Interwiki.ejs">Interwiki</a></code> makes it easy to create interwiki links. Currently it supports linking to Wikipedia and Wikimo. The first parameter is the name of the wiki ("wikipedia" or "wikimo"), and the second is the path of the article. For example, <code>\{\{interwiki("wikipedia", "Firefox")\}\}</code> shows up as {{ interwiki("wikipedia", "Firefox") }}. This template auto-detects the page language and directs to the same language on Wikipedia, for example.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/RFC.ejs">RFC</a></code> creates a link to the specified RFC, given its number. The syntax is: <code>\{\{RFC(number)\}\}</code>. For example, <code>\{\{RFC(2616)\}\}</code> becomes {{ RFC(2616) }}.</li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> macro inserts a link to an anchor. <code>\{\{Anch("top")\}\}</code> produces <code>&lt;a href="#top"&gt;top&lt;/a&gt;</code> ({{ Anch("top") }}). You can also add a second parameter which contains replacement text to display as the link text.</li>
 </ul>
 
 <h3 id="Landing_page_components">Landing page components</h3>
@@ -31,47 +26,27 @@ tags:
 <h4 id="Lists_of_subpages">Lists of subpages</h4>
 
 <ul>
- <li>{{TemplateLink("ListSubpages")}} generates an unordered list of links to all the immediate children of the current page; useful for automatically generating tables of contents for sets of documentation.</li>
- <li>{{TemplateLink("LandingPageListSubpages")}} outputs a two-column definition list of all immediate subpages of the current page, with their titles as the {{HTMLElement("dt")}} and their SEO summary as the {{HTMLElement("dd")}}. This makes it easy to automatically generate reasonably attractive landing pages.</li>
- <li>{{TemplateLink("NavListWithPrioritizedPages")}} generates an ordered list formatted properly for use in a zone navigation sidebar (or quicklinks). As input, you can specify zero or more page slugs that should be pulled out of the main list and instead inserted at the top of the list, in the given order. All remaining pages are placed in the list alphabetically. One level of subpages is included.</li>
- <li>{{TemplateLink("APIListAlpha")}} builds a list of the current page's subpages, formatted as a list of API terms, divided up by first letter. There are three parameters. The first is 0 if you want to include all top-level subpages or 1 to leave out subpages with "." in their names. The second and third let you add text to display as part of the name in each link. This can be used to add "&lt;" and "&gt;" for element links, or to add "()" at the end of lists of method names.</li>
- <li>{{TemplateLink("SubpagesWithSummaries")}} constructs a definition list of all the immediate children of the current page. There is no other formatting done. You can get a two-column list ready for use as a multi-column landing page using {{TemplateLink("LandingPageListSubpages")}}.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/ListSubpages.ejs">ListSubpages</a></code> generates an unordered list of links to all the immediate children of the current page; useful for automatically generating tables of contents for sets of documentation.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LandingPageListSubpages.ejs">LandingPageListSubpages</a></code> outputs a two-column definition list of all immediate subpages of the current page, with their titles as the {{HTMLElement("dt")}} and their SEO summary as the {{HTMLElement("dd")}}. This makes it easy to automatically generate reasonably attractive landing pages.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/NavListWithPrioritizedPages.ejs">NavListWithPrioritizedPages</a></code> generates an ordered list formatted properly for use in a zone navigation sidebar (or quicklinks). As input, you can specify zero or more page slugs that should be pulled out of the main list and instead inserted at the top of the list, in the given order. All remaining pages are placed in the list alphabetically. One level of subpages is included.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/APIListAlpha.ejs">APIListAlpha</a></code> builds a list of the current page's subpages, formatted as a list of API terms, divided up by first letter. There are three parameters. The first is 0 if you want to include all top-level subpages or 1 to leave out subpages with "." in their names. The second and third let you add text to display as part of the name in each link. This can be used to add "&lt;" and "&gt;" for element links, or to add "()" at the end of lists of method names.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SubpagesWithSummaries.ejs">SubpagesWithSummaries</a></code> constructs a definition list of all the immediate children of the current page. There is no other formatting done. You can get a two-column list ready for use as a multi-column landing page using <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LandingPageListSubpages.ejs">LandingPageListSubpages</a></code>.</li>
 </ul>
 
 <h3 id="Quicklinks">Quicklinks</h3>
 
-<p>We have some macros specifically designed to create <a href="/en-US/docs/MDN/Contribute/Style_guide/Quicklinks">quicklinks</a>:</p>
+<p>We have some macros specifically designed to create <a href="/en-US/docs/MDN/Structures/Quicklinks">quicklinks</a>:</p>
 
 <ul>
- <li>The {{TemplateLink("MakeSimpleQuicklinks")}} macro creates a flat list of links in the quicklinks box. Give it a set of paths to destination pages as its input arguments. Each link's text is the page title, and each link has a tooltip derived from the page summary.</li>
- <li>{{TemplateLink("QuickLinksWithSubpages")}} creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.</li>
-</ul>
-
-<h2 id="Infrequently_used">Infrequently used</h2>
-
-<ul>
- <li id="Template.3Aoutdated">{{TemplateLink("outdated")}} can be used to flag pages that are known to be (or might be) horribly outdated. The template is followed by an optional parameter, which can be used to provide details. For example: <code>\{\{outdated("It was last updated in 1999.")\}\}</code> gives you this: {{ Outdated("It was last updated in 1999.") }}</li>
- <li>{{TemplateLink("disambig")}} is used on the few disambiguation pages we have. Do not use this macro on Glossary disambiguation pages; use the {{TemplateLink("GlossaryDisambiguation")}} macro instead.</li>
- <li>{{TemplateLink("block-title")}} can be used to create bolded text which visually serves as a title for a block in a page, does not appear in the auto-generated table of contents, and can act as a link target just as headings do. The syntax is: <code>\{\{block-title(<em>title</em>)\}\}</code>, where <code><em>title</em></code> is whatever you want displayed. <code><em>title</em></code> also serves as the target for links to the section you are titling. {{TemplateLink("block-title")}} is meant for use in titling {{ Anch("Template:sidenote") }}s, tables, images, and code blocks, particularly in places where you'll be referring to the item more than once or in places not close to the item itself.</li>
- <li>{{TemplateLink("ref")}} and {{TemplateLink("endnote")}} can be used to implement footnotes to articles. The footnote "number" is created using <code>\{\{ref("something")\}\}</code>, where <code><em>something</em></code> should be some suitably descriptive word for whatever is being mentioned in the footnote. Then, at the end of the document, insert  <code>\{\{endnote("something")\}\} Blah blah, text for first footnote</code> to create a numbered list for the footnotes' information.</li>
- <li>{{TemplateLink("ReleaseChannelInfo")}} is used to create the standard header at the top of "Firefox X for developers" pages for a given channel; it takes four parameters: the Firefox version, the Gecko version, a string indicating an expected release date, and the name of the channel on which the release can currently be downloaded.</li>
- <li>{{TemplateLink("InsertFeedLinkList")}} outputs a list of links from an RSS feed. Its parameters configure the output significantly:
-  <ul>
-   <li>Feed URL</li>
-   <li>Maximum number of entries to include in the output</li>
-   <li>The heading level to use for the name of the feed, or 0 to leave that heading out</li>
-   <li>Class name to use when building the list; this will be applied to the {{HTMLElement("ul")}} element.</li>
-   <li>List type; this is an integer value. 0 produces a simple bullet list, while 1 outputs a header for the page title followed by a paragraph with a byline in it.</li>
-   <li>The heading level to use for the items in the list when using list type 1.</li>
-  </ul>
- </li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/MakeSimpleQuicklinks.ejs">MakeSimpleQuicklinks</a></code> macro creates a flat list of links in the quicklinks box. Give it a set of paths to destination pages as its input arguments. Each link's text is the page title, and each link has a tooltip derived from the page summary.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/QuickLinksWithSubpages.ejs">QuickLinksWithSubpages</a></code> creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.</li>
 </ul>
 
 <h3 id="Transclusion">Transclusion</h3>
 
 <p><strong>Transclusion</strong> is the embedding of part or all of one page into another. Exercise caution when using this macro, to ensure that the transcluded content makes sense in the context of the page it is embedded into.</p>
 
-<p>{{TemplateLink("page")}} lets you embed some or all of a specific page into a document. It accepts five parameters:</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/page.ejs">page</a></code> lets you embed some or all of a specific page into a document. It accepts five parameters:</p>
 
 <ol>
  <li>The URI of the page to transclude. For example, "/en-US/docs/Project:MDN/About".</li>
@@ -83,29 +58,19 @@ tags:
 
 <h4 id="Example_without_heading">Example without heading</h4>
 
-<p>\{{Page("/en-US/docs/MDN/About", "About Mozilla")}}</p>
+<p>\{{Page("/en-US/docs/MDN/About", "How you can help")}}</p>
 
 <p>Result:</p>
 
-<p>{{Page("/en-US/docs/MDN/About", "About Mozilla")}}</p>
+<p>{{Page("/en-US/docs/MDN/About", "How you can help")}}</p>
 
 <h4 id="Example_with_heading">Example with heading</h4>
 
-<p>\{{Page("/en-US/docs/MDN/About", "About Mozilla", 0, 1)}}</p>
+<p>\{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}</p>
 
 <p>Result:</p>
 
-<p>{{Page("/en-US/docs/MDN/About", "About Mozilla", 0, 1)}}</p>
-
-<h3 id="Creating_new_badges">Creating new badges</h3>
-
-<p>We also have badges that don't have icon bubbles. The generic template for this is {{TemplateLink("SimpleBadge")}}, which accepts three parameters:</p>
-
-<ol>
- <li>Text to display in the badge.</li>
- <li>Name of a CSS class to use as the background for the badge.</li>
- <li>(Optional) Text to display in a tooltip when hovering over the badge.</li>
-</ol>
+<p>{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}</p>
 
 <h2 id="Deprecated">Deprecated</h2>
 
@@ -114,67 +79,15 @@ tags:
 <h3 id="Linking">Linking</h3>
 
 <ul>
- <li>The {{TemplateLink("anch")}} macro inserts a link to an anchor. <code class="nowiki">\{\{Anch("top")\}\}</code> produces <code class="nowiki">&lt;a href="#top"&gt;top&lt;/a&gt;</code> ({{ Anch("top") }}). You can also add a second parameter which contains replacement text to display as the link text. \{{anch("Other badges", "you can use other badges")}} produces this result: {{anch("Other badges", "you can use other badges")}}. The idea was to create a template that allows easy linking to other sections in a document. <strong>Replacement:</strong> Use the Anchor toolbar button in the Editor interface. <em>This isn't really a "replacement" and there's some discussion about whether this is truly deprecated at this time.</em></li>
- <li>The {{TemplateLink("SectionOnPage")}} macro creates a phrase that links to both the name of a section and the article containing that section. For example, <code>\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</code> outputs the following: <em>{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</em>.</li>
- <li>The {{TemplateLink("manch")}} inserts a link to a method within the current interface; this is intended only for use in interface documentation pages. <code>\{\{manch("foo")\}\}</code> produces <code>&lt;code&gt;&lt;a href="current/path#foo"&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> ({{ manch("foo") }}).</li>
- <li>The {{TemplateLink("Link")}} macro inserts a link to the specified page on MDN, using the page's title as the visible string to click on, and the tooltip picked up from the page's SEO summary.</li>
- <li>The {{TemplateLink("LinkItem")}} macro inserts a link to a specified URL, with the indicated text as the visible string to click on. The link automatically picks up as its tooltip the summary of the target page. This differs from {{TemplateLink("Link")}} in that you must specify the title.</li>
- <li>The {{TemplateLink("LinkItemDL")}} macro inserts a link to a specified URL, with the indicated text as a {{HTMLElement("dt")}} which is also the link. The {{HTMLElement("dd")}} element contains the specified page's summary.</li>
- <li>{{TemplateLink("funcref")}} creates links to global functions (usually C++) documented on top-level pages. However, such pages are no longer created at the top-level of MDN.</li>
- <li>{{TemplateLink("Pref")}} inserts a link to the entry in the <a href="/en-US/docs/Mozilla/Preferences/Preference_reference">Preference reference</a> for the specified preference.</li>
- <li>{{TemplateLInk("spec")}} inserts a link to a specification. <strong>Replacement:</strong> Use {{TemplateLink("Spec2")}} or {{TemplateLink("SpecName")}} instead.</li>
- <li>{{TemplateLink("source")}} allows you to link to a Mozilla source code file without having to type a long MXR URL using this syntax: <code>\{\{Source("browser/Makefile.in")\}\}</code>. This gives you: {{ Source("browser/Makefile.in") }}. The text of the link is the path provided; if you want different text, then just provide a second parameter, like so: <code>\{\{Source("browser/Makefile.in", "the browser/ Makefile.in")\}\}</code>, which produces {{ Source("browser/Makefile.in", "the browser/ Makefile.in") }}. Note that the link will be to the very latest version of the file in bleeding-edge code.</li>
- <li>{{TemplateLink("Source_cvs")}} works just like {{TemplateLink("source")}}, except it links to the <a href="/en-US/docs/Developer_Guide/Source_Code/CVS" title="en-US/docs/Developer Guide/Source Code/CVS">CVS</a> repository instead of the newer <a href="/en-US/docs/mozilla-central">mozilla-central</a> one.</li>
- <li>{{TemplateLink("LXRSearch")}} can be used to create an LXR search URL.</li>
-</ul>
 
-<h3 id="Code_samples">Code samples</h3>
-
-<p>The following macros were used prior to the implementation of the built-in <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">live sample system</a> in Kuma, and should be replaced by uses of {{TemplateLink("EmbedLiveSample")}} or {{TemplateLink("LiveSampleLink")}}.</p>
-
-<ul>
- <li>{{TemplateLink("LiveSample")}} lets you create a button linking to a sample file; these samples were sent to <a class="link-mailto" href="mailto:eshepherd@mozilla.com">Eric Shepherd</a> for uploading. These were used on Reference pages when linking to live, standalone sample pages. The template accepts one parameter, the name of the HTML file to link to.</li>
- <li>{{TemplateLink("CSSLiveSample")}} lets you create a button linking to a sample in the CSS Reference; these samples were sent to <a class="link-mailto" href="mailto:eshepherd@mozilla.com">Eric Shepherd</a> for uploading. These were used on CSS Reference pages when linking to live, standalone sample pages. The template accepts one parameter, the name of the HTML file to link to.</li>
- <li>{{TemplateLink("DOMLiveSample")}} lets you create a button linking to a sample in the DOM Reference; these samples were sent to <a class="link-mailto" href="mailto:eshepherd@mozilla.com">Eric Shepherd</a> for uploading. These were used on DOM Reference pages when linking to live, standalone sample pages. The template accepts one parameter, the name of the HTML file to link to.</li>
- <li>{{TemplateLink("HTMLLiveSample")}} lets you create a button linking to a sample in the HTML Reference; these samples were sent to <a class="link-mailto" href="mailto:eshepherd@mozilla.com">Eric Shepherd</a> for uploading. These were used on HTML Reference pages when linking to live, standalone sample pages. The template accepts one parameter, the name of the HTML file to link to.</li>
- <li>{{TemplateLink("SVGLiveSample")}} lets you create a button linking to a sample in the DOM Reference; these samples were sent to <a class="link-mailto" href="mailto:eshepherd@mozilla.com">Eric Shepherd</a> for uploading. These were used on SVG Reference pages when linking to live, standalone sample pages. The template accepts one parameter, the name of the HTML file to link to.</li>
- <li>{{TemplateLink("JSFiddleLink")}} lets you easily create a button linking to a sample on the <a class="external" href="https://jsfiddle.net">jsFiddle</a> web site. These should <strong>NOT</strong> be used to replace in-line samples, or MDC-uploaded samples, but to offer access to secondary examples readers can experiment with. The template accepts one parameter, the ID tag of the jsFiddle item to link to.</li>
-</ul>
-
-<h3 id="Organizational">Organizational</h3>
-
-<ul>
- <li>{{TemplateLink("LockedPage")}} inserts a mark bar across the page that provides an explanation for why a page is locked. This macro is obsolete because Kuma doesn't support locking pages.</li>
- <li>{{TemplateLInk("jsapi_ref_header")}} was used to create breadcrumbs for the JSAPI referenced; this is now done by Kuma, not by a macro.</li>
-</ul>
-
-<h3 id="Formatting">Formatting</h3>
-
-<ul>
- <li>{{TemplateLink("Note")}} inserts a specially-formatted "note" block into the article's text. This is intended to call out an interesting or important fact. <strong>Replacement:</strong> Use the <code>Note box </code>style in the Editor toolbar.</li>
- <li>{{TemplateLink("warning")}} inserts a specially-formatted "warning" block. {{TemplateLink("WarningStart")}} and {{TemplateLink("WarningEnd")}} define the start and end of warning block that needs to contain other macro calls .<strong>Replacement:</strong> Use the <code>Warning box </code>style in the Editor toolbar.</li>
-</ul>
-
-<h3 id="Version_indicators">Version indicators</h3>
-
-<p>The following macros are deprecated because this information should be contained in the Browser Compatibility table of the article.</p>
-
-<ul>
- <li>{{TemplateLink("gecko_minversion_header")}} indicates the minimum Gecko version for a feature.</li>
- <li>{{TemplateLink("Gecko")}}  inserts the text "Gecko <em>versionnumber</em>" into the text, but adds a tooltip to the text that, when the user hovers over it, displays the corresponding versions of Firefox, Thunderbird, and SeaMonkey.</li>
- <li>{{TemplateLink("fx_minversion_header")}}  and {{TemplateLink("fx_minversion_section")}} indicate the minimum Firefox version for a feature.</li>
- <li>{{TemplateLink("tb_minversion_header")}}, {{TemplateLink("tb_minversion_section")}}, and {{TemplateLink("tb_minversion_inline")}} indicate the minimum Thunderbird version for a feature.</li>
- <li>{{TemplateLink("js_minversion_header")}} and {{TemplateLink("js_minversion_inline")}} indicate the minimum JavaScript version for a feature.</li>
- <li>{{TemplateLink("MobileOnlyHeader")}} inserts an "Available only for mobile Firefox" header box.  {{TemplateLink("MobileOnlyInline")}} inserts a inline indicator. These indicate the version of Gecko as of which the interface is still only available for mobile. </li>
- <li>{{TemplateLink("dom_level")}} indicates the minimum DOM version for a feature.</li>
- <li>{{TemplateLink("renamed_inline")}} inserts an in-line "renamed" mark to indicate that an API has been renamed.</li>
- <li>{{TemplateLink("unimplemented_inline")}} inserts an in-line "unimplemented" mark to prevent the use of, for example a function, method or property which is not yet implemented. <strong>Replacement:</strong> Use the Browser Compatibility table to indicate this information.</li>
- <li>{{TemplateLink("unimplemented_inline_webkit")}} inserts an in-line "unimplemented" mark to prevent the use of, for example, a function, method or property which is not yet implemented. <strong>Replacement:</strong> Use the Browser Compatibility table to indicate this information.</li>
- <li>{{TemplateLink("gecko_callout_heading")}} includes a Gecko version-specific call-out box.</li>
- <li>{{TemplateLink("fx_minversion_note")}} creates a note about a minimum version of Firefox; {{TemplateLink("GeckoMinVersionNoteStart")}} and {{TemplateLink("GeckoMinVersionNoteEnd")}} can be used to wrap text inside a box labeled as pertaining to a given version of Gecko and later; specify the version as the sole parameter to the "start" macro.</li>
- <li>{{TemplateLink("tb_minversion_note")}} creates a note about a minimum version of Thunderbird.</li>
- <li>{{TemplateLink("js_minversion_note")}} creates a note about a minimum version of JavaScript.</li>
- <li>
-  <p>{{TemplateLink("h1_gecko_minversion")}}, {{TemplateLink("h2_gecko_minversion")}}, and {{TemplateLink("h3_gecko_minversion")}} let you insert headers (h1, h2, and h3) that include at the right end of the line a badge indicating the Gecko version (and corresponding app versions) that the section applies to.</p>
- </li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SectionOnPage.ejs">SectionOnPage</a></code> macro creates a phrase that links to both the name of a section and the article containing that section. For example, <code>\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</code> outputs the following: <em>{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</em>.</li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/manch.ejs">manch</a></code> inserts a link to a method within the current interface; this is intended only for use in interface documentation pages. <code>\{\{manch("foo")\}\}</code> produces <code>&lt;code&gt;&lt;a href="current/path#foo"&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> ({{ manch("foo") }}).</li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> macro inserts a link to the specified page on MDN, using the page's title as the visible string to click on, and the tooltip picked up from the page's SEO summary.</li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItem.ejs">LinkItem</a></code> macro inserts a link to a specified URL, with the indicated text as the visible string to click on. The link automatically picks up as its tooltip the summary of the target page. This differs from <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> in that you must specify the title.</li>
+ <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItemDL.ejs">LinkItemDL</a></code> macro inserts a link to a specified URL, with the indicated text as a {{HTMLElement("dt")}} which is also the link. The {{HTMLElement("dd")}} element contains the specified page's summary.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/funcref.ejs">funcref</a></code> creates links to global functions (usually C++) documented on top-level pages. However, such pages are no longer created at the top-level of MDN.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/spec.ejs">spec</a></code> inserts a link to a specification. <strong>Replacement:</strong> Use {{TemplateLink("Spec2")}} or <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SpecName.ejs">SpecName</a></code> instead.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code> allows you to link to a Mozilla source code file without having to type a long MXR URL using this syntax: <code>\{\{Source("browser/Makefile.in")\}\}</code>. This gives you: {{ Source("browser/Makefile.in") }}. The text of the link is the path provided; if you want different text, then just provide a second parameter, like so: <code>\{\{Source("browser/Makefile.in", "the browser/ Makefile.in")\}\}</code>, which produces {{ Source("browser/Makefile.in", "the browser/ Makefile.in") }}. Note that the link will be to the very latest version of the file in bleeding-edge code.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Source_cvs.ejs">Source_cvs</a></code> works just like <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code>, except it links to the <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">CVS</a> repository instead of the newer <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> one.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LXRSearch.ejs">LXRSearch</a></code> can be used to create an LXR search URL.</li>
 </ul>

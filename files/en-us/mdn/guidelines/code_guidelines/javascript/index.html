@@ -17,56 +17,56 @@ tags:
 <h2 id="In_this_article">In this article</h2>
 
 <ul>
- <li><a href="#General_JavaScript_guidelines">General JavaScript guidelines</a>
+ <li><a href="#general_javascript_guidelines">General JavaScript guidelines</a>
 
   <ul>
-   <li><a href="#Use_expanded_syntax">Use expanded syntax</a></li>
-   <li><a href="#JavaScript_comments">JavaScript comments</a></li>
-   <li><a href="#Use_ES6_features">Use ES6 features</a></li>
+   <li><a href="#use_expanded_syntax">Use expanded syntax</a></li>
+   <li><a href="#javascript_comments">JavaScript comments</a></li>
+   <li><a href="#use_es6_features">Use ES6 features</a></li>
   </ul>
  </li>
- <li><a href="#Variables">Variables</a>
+ <li><a href="#variables">Variables</a>
   <ul>
-   <li><a href="#Variable_naming">Variable naming</a></li>
-   <li><a href="#Declaring_variables">Declaring variables</a></li>
+   <li><a href="#variable_naming">Variable naming</a></li>
+   <li><a href="#declaring_variables">Declaring variables</a></li>
   </ul>
  </li>
- <li><a href="#Operators_and_comparison">Operators and comparison</a>
+ <li><a href="#operators_and_comparison">Operators and comparison</a>
   <ul>
-   <li><a href="#Ternary_operators">Ternary operators</a></li>
-   <li><a href="#Use_strict_equality">Use strict equality</a></li>
-   <li><a href="#Use_shortcuts_for_boolean_tests">Use shortcuts for boolean tests</a></li>
+   <li><a href="#ternary_operators">Ternary operators</a></li>
+   <li><a href="#use_strict_equality">Use strict equality</a></li>
+   <li><a href="#use_shortcuts_for_boolean_tests">Use shortcuts for boolean tests</a></li>
   </ul>
  </li>
- <li><a href="#Control_statements">Control statements</a></li>
- <li><a href="#Strings">Strings</a>
+ <li><a href="#control_statements">Control statements</a></li>
+ <li><a href="#strings">Strings</a>
   <ul>
-   <li><a href="#Use_template_literals">Use template literals</a></li>
-   <li><a href="#Use_textContent_not_innerHTML">Use textContent, not innerHTML</a></li>
+   <li><a href="#use_template_literals">Use template literals</a></li>
+   <li><a href="#use_textcontent_not_innerhtml">Use textContent, not innerHTML</a></li>
   </ul>
  </li>
- <li><a href="#Conditionals">Conditionals</a>
+ <li><a href="#conditionals">Conditionals</a>
   <ul>
-   <li><a href="#General_purpose_looping">General purpose looping</a></li>
-   <li><a href="#Switch_statements">Switch statements</a></li>
+   <li><a href="#general_purpose_looping">General purpose looping</a></li>
+   <li><a href="#switch_statements">Switch statements</a></li>
   </ul>
  </li>
- <li><a href="#Functions_and_objects">Functions and objects</a>
+ <li><a href="#functions_and_objects">Functions and objects</a>
   <ul>
-   <li><a href="#Function_naming">Function naming</a></li>
-   <li><a href="#Defining_functions">Defining functions</a></li>
-   <li><a href="#Creating_objects">Creating objects</a></li>
-   <li><a href="#Object_classes">Object classes</a></li>
-   <li><a href="#Object_naming">Object naming</a></li>
+   <li><a href="#function_naming">Function naming</a></li>
+   <li><a href="#defining_functions">Defining functions</a></li>
+   <li><a href="#creating_objects">Creating objects</a></li>
+   <li><a href="#object_classes">Object classes</a></li>
+   <li><a href="#object_naming">Object naming</a></li>
   </ul>
  </li>
- <li><a href="#Arrays">Arrays</a>
+ <li><a href="#arrays">Arrays</a>
   <ul>
-   <li><a href="#Creating_arrays">Creating arrays</a></li>
-   <li><a href="#Adding_to_an_array">Adding to an array</a></li>
+   <li><a href="#creating_arrays">Creating arrays</a></li>
+   <li><a href="#adding_to_an_array">Adding to an array</a></li>
   </ul>
  </li>
- <li><a href="#Error_handling">Error handling</a></li>
+ <li><a href="#error_handling">Error handling</a></li>
 </ul>
 
 <h2 id="General_JavaScript_guidelines">General JavaScript guidelines</h2>
@@ -77,25 +77,25 @@ tags:
 
 <p>Do this</p>
 
-<pre class="brush: js; example-good notranslate">function myFunc() {
+<pre class="brush: js example-good">function myFunc() {
   console.log('Hello!');
 };</pre>
 
 <p>Not this</p>
 
-<pre class="brush: js; example-bad notranslate">function myFunc() { console.log('Hello!'); };</pre>
+<pre class="brush: js example-bad">function myFunc() { console.log('Hello!'); };</pre>
 
 <p>We also have a few specific rules around spacing inside language features. You should include spaces between operators and operands, parameters, etc.</p>
 
 <p>This is more readable</p>
 
-<pre class="brush: js; example-good notranslate">if(dayOfWeek === 7 &amp;&amp; weather === 'sunny') {
+<pre class="brush: js example-good">if(dayOfWeek === 7 &amp;&amp; weather === 'sunny') {
   goOnTrip('beach', 'car', ['ice cream', 'bucket and spade', 'beach towel']);
 }</pre>
 
 <p>than this</p>
 
-<pre class="brush: js; example-bad notranslate">if(dayOfWeek===7&amp;&amp;weather==='sunny'){
+<pre class="brush: js example-bad">if(dayOfWeek===7&amp;&amp;weather==='sunny'){
   goOnTrip('beach','car',['ice cream','bucket and spade','beach towel']);
 }</pre>
 
@@ -113,11 +113,11 @@ tags:
 
 <p>Use JS-style comments to comment code that isn't self-documenting:</p>
 
-<pre class="brush: js; example-good notranslate">// This is a JavaScript-style comment</pre>
+<pre class="brush: js example-good">// This is a JavaScript-style comment</pre>
 
 <p>Put your comments on separate lines preceding the code they are referring to:</p>
 
-<pre class="brush: js; example-good notranslate">function myFunc() {
+<pre class="brush: js example-good">function myFunc() {
   // Output the string 'Hello' to the browser's JS console
   console.log('Hello');
   // Create a new paragraph, fill it with content, and append it to the &lt;body&gt;
@@ -146,13 +146,13 @@ tags:
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">let playerScore = 0;
+<pre class="brush: js example-good">let playerScore = 0;
 
 let speed = distance / time;</pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
+<pre class="brush: js example-bad">let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 
 let s = d/t;
 </pre>
@@ -167,33 +167,33 @@ let s = d/t;
 
 <p>If a variable will not be reassigned, prefer <code>const</code>:</p>
 
-<pre class="brush: js; example-good notranslate">const myName = 'Chris';
+<pre class="brush: js example-good">const myName = 'Chris';
 console.log(myName);
 </pre>
 
 <p>Otherwise, use <code>let</code>:</p>
 
-<pre class="brush: js; example-good notranslate">let myAge = '40';
+<pre class="brush: js example-good">let myAge = '40';
 myAge++;
 console.log('Happy birthday!');
 </pre>
 
 <p>This example uses <code>let</code> where it should prefer <code>const</code>. It will work but should be avoided in MDN code examples:</p>
 
-<pre class="brush: js; example-bad notranslate">let myName = 'Chris';
+<pre class="brush: js example-bad">let myName = 'Chris';
 console.log(myName);
 </pre>
 
 <p>This example uses const for a variable that gets reassigned. The reassignment will throw an error:</p>
 
-<pre class="brush: js; example-bad notranslate">const myAge = '40';
+<pre class="brush: js example-bad">const myAge = '40';
 myAge++;
 console.log('Happy birthday!');
 </pre>
 
 <p>This example uses <code>var</code>, which should be avoided in MDN code examples unless it is really needed:</p>
 
-<pre class="brush: js; example-bad notranslate">var myAge = '40';
+<pre class="brush: js example-bad">var myAge = '40';
 var myName = 'Chris';</pre>
 
 <h2 id="Operators_and_comparison">Operators and comparison</h2>
@@ -202,11 +202,11 @@ var myName = 'Chris';</pre>
 
 <p>Ternary operators should be put on a single line:</p>
 
-<pre class="brush: js; example-good notranslate">let status = (age &gt;= 18) ? 'adult' : 'minor';</pre>
+<pre class="brush: js example-good">let status = (age &gt;= 18) ? 'adult' : 'minor';</pre>
 
 <p>Not nested:</p>
 
-<pre class="brush: js; example-bad notranslate">let status = (age &gt;= 18)
+<pre class="brush: js example-bad">let status = (age &gt;= 18)
   ? 'adult'
   : 'minor';</pre>
 
@@ -218,12 +218,12 @@ var myName = 'Chris';</pre>
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">name === 'Chris';
+<pre class="brush: js example-good">name === 'Chris';
 age !== 25;</pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">name == 'Chris';
+<pre class="brush: js example-bad">name == 'Chris';
 age != 25;</pre>
 
 <h3 id="Use_shortcuts_for_boolean_tests">Use shortcuts for boolean tests</h3>
@@ -234,15 +234,17 @@ age != 25;</pre>
 
 <p>Write control statements like this:</p>
 
-<pre class="brush: js; example-good notranslate">if(iceCream) {
+<pre class="brush: js example-good">if(iceCream) {
   alert('Woo hoo!');
 }</pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">if (iceCream){
+<pre class="brush: js example-bad">if (iceCream){
   alert('Woo hoo!');
 }</pre>
+
+<p>Also bear in mind:</p>
 
 <ul>
  <li>There should be <em>no space</em> between a control statement keyword and its opening parenthesis.</li>
@@ -257,25 +259,25 @@ age != 25;</pre>
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">let myName = 'Chris';
+<pre class="brush: js example-good">let myName = 'Chris';
 console.log(`Hi! I'm ${myName}!`);</pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">let myName = 'Chris';
+<pre class="brush: js example-bad">let myName = 'Chris';
 console.log('Hi! I\'m' + myName + '!');</pre>
 
 <h3 id="Use_textContent_not_innerHTML">Use textContent, not innerHTML</h3>
 
 <p>When inserting strings into DOM nodes, use {{DOMxRef("Node.textContent")}}:</p>
 
-<pre class="brush: js example-good notranslate">let text = 'Hello to all you good people';
+<pre class="brush: js example-good">let text = 'Hello to all you good people';
 const para = document.createElement('p');
 para.textContent = text;</pre>
 
 <p>Not {{DOMxRef("Element.innerHTML")}}:</p>
 
-<pre class="brush: js; example-bad notranslate">let text = 'Hello to all you good people';
+<pre class="brush: js example-bad">let text = 'Hello to all you good people';
 const para = document.createElement('p');
 para.innerHTML = text;</pre>
 
@@ -289,7 +291,7 @@ para.innerHTML = text;</pre>
 
 <p>When using <code>for</code>/<code>for...of</code> loops, make sure to define the initializer properly, with a <code>let</code> keyword:</p>
 
-<pre class="brush: js; example-good notranslate">let cats = ['Athena', 'Luna'];
+<pre class="brush: js example-good">let cats = ['Athena', 'Luna'];
 for(let i of cats) {
   console.log(i);
 }
@@ -297,7 +299,7 @@ for(let i of cats) {
 
 <p>Not</p>
 
-<pre class="brush: js; example-bad notranslate">let cats = ['Athena', 'Luna'];
+<pre class="brush: js example-bad">let cats = ['Athena', 'Luna'];
 for(i of cats) {
   console.log(i);
 }
@@ -314,7 +316,7 @@ for(i of cats) {
 
 <p>Format switch statements like this:</p>
 
-<pre class="brush: js; example-good notranslate">let expr = 'Papayas';
+<pre class="brush: js example-good">let expr = 'Papayas';
 switch(expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
@@ -335,13 +337,13 @@ switch(expr) {
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">function sayHello() {
+<pre class="brush: js example-good">function sayHello() {
   alert('Hello!');
 };</pre>
 
 <p>Not these:</p>
 
-<pre class="brush: js; example-bad notranslate">function SayHello() {
+<pre class="brush: js example-bad">function SayHello() {
   alert('Hello!');
 };
 
@@ -360,13 +362,13 @@ function notVeryObviousName() {
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">function sum(a, b) {
+<pre class="brush: js example-good">function sum(a, b) {
   return a + b;
 }</pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">let sum = function(a, b) {
+<pre class="brush: js example-bad">let sum = function(a, b) {
   return a + b;
 }</pre>
 
@@ -374,14 +376,14 @@ function notVeryObviousName() {
 
 <p>So instead of this:</p>
 
-<pre class="brush: js; example-good notranslate">const array1 = [1, 2, 3, 4];
+<pre class="brush: js example-good">const array1 = [1, 2, 3, 4];
 let sum = array.reduce(function(a, b) {
   return a + b;
 });</pre>
 
 <p>you could write this:</p>
 
-<pre class="brush: js; example-good notranslate">const array = [1, 2, 3, 4];
+<pre class="brush: js example-good">const array = [1, 2, 3, 4];
 let sum = array.reduce((a, b) =&gt;
   a + b
 );</pre>
@@ -399,12 +401,12 @@ let sum = array.reduce((a, b) =&gt;
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">let myObject = { };
+<pre class="brush: js example-good">let myObject = { };
 </pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">let myObject = new Object();
+<pre class="brush: js example-bad">let myObject = new Object();
 </pre>
 
 <h3 id="Object_classes">Object classes</h3>
@@ -413,7 +415,7 @@ let sum = array.reduce((a, b) =&gt;
 
 <p>For example:</p>
 
-<pre class="brush: js; example-good notranslate">class Person {
+<pre class="brush: js example-good">class Person {
   constructor(name, age, gender) {
     this.name = name;
     this.age = age;
@@ -427,7 +429,7 @@ let sum = array.reduce((a, b) =&gt;
 
 <p>Use <code>extends</code> for inheritance:</p>
 
-<pre class="brush: js; example-good notranslate">class Teacher extends Person {
+<pre class="brush: js example-good">class Teacher extends Person {
   ...
 }</pre>
 
@@ -437,7 +439,7 @@ let sum = array.reduce((a, b) =&gt;
 
 <p>When defining an object instance, either a literal or via a constructor, use lowerCamelCase for the instance name:</p>
 
-<pre class="brush: js; example-good notranslate">let hanSolo = new Person('Han Solo', 25, 'male');
+<pre class="brush: js example-good">let hanSolo = new Person('Han Solo', 25, 'male');
 
 let hanSolo = {
   name: 'Han Solo',
@@ -453,31 +455,31 @@ let hanSolo = {
 
 <p>Do this:</p>
 
-<pre class="brush: js; example-good notranslate">let myArray = [ ];</pre>
+<pre class="brush: js example-good">let myArray = [ ];</pre>
 
 <p>Not this:</p>
 
-<pre class="brush: js; example-bad notranslate">let myArray = new Array(length);</pre>
+<pre class="brush: js example-bad">let myArray = new Array(length);</pre>
 
 <h3 id="Adding_to_an_array">Adding to an array</h3>
 
 <p>When adding items to an array, use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>, not direct assignment. Given the following array:</p>
 
-<pre class="brush: js; notranslate">const pets = [];</pre>
+<pre class="brush: js">const pets = [];</pre>
 
 <p>do this:</p>
 
-<pre class="brush: js; example-good notranslate">pets.push('cat');</pre>
+<pre class="brush: js example-good">pets.push('cat');</pre>
 
 <p>not this:</p>
 
-<pre class="brush: js; example-bad notranslate">pets[pets.length] = 'cat';</pre>
+<pre class="brush: js example-bad">pets[pets.length] = 'cat';</pre>
 
 <h2 id="Error_handling">Error handling</h2>
 
 <p>If certain states of your program throw uncaught errors, they will halt execution and potentially reduce the usefulness of the example. You should therefore catch errors using a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> block:</p>
 
-<pre class="brush: js; example-good notranslate">try {
+<pre class="brush: js example-good">try {
   console.log(results);
 }
 catch(e) {
@@ -493,8 +495,8 @@ catch(e) {
 <p>For API examples, we'd like to highlight a few examples we think are good:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Examples"><code>fetch()</code> examples</a></li>
- <li><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect#Examples"><code>fillRect()</code> examples</a> (the Canvas 2D examples are generally good, although they still use old-style <code>var</code>).</li>
+ <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#examples"><code>fetch()</code> examples</a></li>
+ <li><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect#examples"><code>fillRect()</code> examples</a> (the Canvas 2D examples are generally good, although they still use old-style <code>var</code>).</li>
  <li><a href="/en-US/docs/Web/API/PaymentRequest/show">Payment Request API <code>show()</code></a> (The {{DOMxRef("PaymentRequest")}} examples are generally quite good).</li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> (general good practices for HTML, CSS, and JavaScript, and a good demonstration of how to use snippets and link to full examples elsewhere).</li>
  <li><a href="/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Using the Media Capabilities API</a> (more general good practices for using code snippets in a guide).</li>

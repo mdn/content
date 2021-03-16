@@ -11,7 +11,7 @@ tags:
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p>The <strong><code>IDBObjectStore</code></strong> interface of the <a href="/en/IndexedDB">IndexedDB API</a> represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.</p>
+<p>The <strong><code>IDBObjectStore</code></strong> interface of the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.</p>
 
 <p>{{AvailableInWorkers}}</p>
 </div>
@@ -20,9 +20,9 @@ tags:
 
 <dl>
  <dt>{{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}</dt>
- <dd>A list of the names of <a href="/en/IndexedDB#gloss_index" title="en/IndexedDB#gloss index">indexes</a> on objects in this object store.</dd>
+ <dd>A list of the names of <a href="/en-US/docs/IndexedDB#gloss_index">indexes</a> on objects in this object store.</dd>
  <dt>{{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}</dt>
- <dd>The <a href="/en/IndexedDB#gloss_key_path" title="en/IndexedDB#gloss key path">key path</a> of this object store. If this attribute is <code>null</code>, the application must provide a key for each modification operation.</dd>
+ <dd>The <a href="/en-US/docs/IndexedDB#gloss_key_path">key path</a> of this object store. If this attribute is <code>null</code>, the application must provide a key for each modification operation.</dd>
  <dt>{{domxref("IDBObjectStore.name")}}</dt>
  <dd>The name of this object store.</dd>
  <dt>{{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}</dt>
@@ -35,7 +35,7 @@ tags:
 
 <dl>
  <dt>{{domxref("IDBObjectStore.add()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for adding new records to an object store.</dd>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for adding new records to an object store.</dd>
  <dt>{{domxref("IDBObjectStore.clear()")}}</dt>
  <dd>Creates and immediately returns an {{domxref("IDBRequest")}} object, and clears this object store in a separate thread. This is for deleting all current records out of an object store.</dd>
  <dt>{{domxref("IDBObjectStore.count()")}}</dt>
@@ -61,7 +61,7 @@ tags:
  <dt>{{domxref("IDBObjectStore.openKeyCursor()")}}<span style="line-height: 1.5;"> </span></dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursor")}}. Used for iterating through an object store with a key.</dd>
  <dt>{{domxref("IDBObjectStore.put()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is <code>readwrite</code>.</dd>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is <code>readwrite</code>.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -156,10 +156,7 @@ objectStoreRequest.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.IDBObjectStore")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
@@ -170,5 +167,5 @@ objectStoreRequest.onsuccess = function(event) {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

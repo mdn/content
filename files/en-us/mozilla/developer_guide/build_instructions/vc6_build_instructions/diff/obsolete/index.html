@@ -9,7 +9,7 @@ tags:
 ---
 <p>These are the patches that used to be required to build trunk with VC6 but are no longer necessary.</p>
 <ul>
-  <li>VC6 doesn't recognise inner classes as friends of outer classes and thus failed to compile HashKey, nsScriptEventHandlerOwnerTearoff or gfxSparseBitSet correctly, however HashDouble has now been removed and nsScriptEventHandlerOwnerTearoff is now a separate class so this friend declaration is now required anyway, while gfxSparseBitSet was moved from gfxWindowsFonts.h to gfxFontUtils.h:</li>
+  <li>VC6 doesn't recognize inner classes as friends of outer classes and thus failed to compile HashKey, nsScriptEventHandlerOwnerTearoff or gfxSparseBitSet correctly, however HashDouble has now been removed and nsScriptEventHandlerOwnerTearoff is now a separate class so this friend declaration is now required anyway, while gfxSparseBitSet was moved from gfxWindowsFonts.h to gfxFontUtils.h:</li>
 </ul>
 <pre class="eval">Index: gfxTextRunCache.h
 ===================================================================

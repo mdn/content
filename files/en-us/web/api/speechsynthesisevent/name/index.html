@@ -2,23 +2,29 @@
 title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
 tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - name
-  - speech
-  - synthesis
+- API
+- Experimental
+- Property
+- Reference
+- SpeechSynthesisEvent
+- Web Speech API
+- name
+- speech
+- synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>name</code></strong> read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the <a href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML</a> marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.</p>
+<p>The <strong><code>name</code></strong> read-only property of the
+	{{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with
+	certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}}
+	is being spoken: the name of the <a
+		href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML</a> marker reached in
+	the case of a {{event("mark")}} event, or the type of boundary reached in the case of
+	a {{event("boundary")}} event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">event.name;
+<pre class="brush: js">event.name;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -41,22 +47,20 @@ tags:
 			<th scope="col">Comment</th>
 		</tr>
 		<tr>
-			<td>{{SpecName('Web Speech API', '#dom-speechsynthesisevent-name', 'name')}}</td>
+			<td>{{SpecName('Web Speech API', '#dom-speechsynthesisevent-name', 'name')}}
+			</td>
 			<td>{{Spec2('Web Speech API')}}</td>
-			<td> </td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesisEvent.name")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

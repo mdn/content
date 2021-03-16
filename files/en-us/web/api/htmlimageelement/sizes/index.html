@@ -2,51 +2,80 @@
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
 tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Property
-  - Reference
-  - Responsive Design
-  - Responsive Images
-  - size
-  - sizes
-  - width
+- API
+- HTML
+- HTML DOM
+- HTMLImageElement
+- Property
+- Reference
+- Responsive Design
+- Responsive Images
+- size
+- sizes
+- width
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property <code><strong>sizes</strong></code> allows you to specify the layout width of the image for each of a list of media conditions. This provides the ability to automatically select among different images—even images of different orientations or aspect ratios—as the document state changes to match different media conditions.</span> Each condition is specified using the same conditional format used by <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>.</p>
+<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property
+    <code><strong>sizes</strong></code> allows you to specify the layout width of the
+    image for each of a list of media conditions. This provides the ability to
+    automatically select among different images—even images of different orientations or
+    aspect ratios—as the document state changes to match different media
+    conditions.</span> Each condition is specified using the same conditional format used
+  by <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let <em>sizes</em> = <em>htmlImageElement</em>.sizes;
+<pre class="brush: js">let <em>sizes</em> = <em>htmlImageElement</em>.sizes;
 <em>htmlImageElement</em>.sizes = <em>sizes</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("USVString")}} containing a comma-separated list of source size descriptors followed by an optional fallback size. Each <strong>source size descriptor</strong> is comprised of a media condition, then at least one whitespace character, then the <strong>source size value</strong> to use for the image when the media condition evaluates to <code>true</code>.</p>
+<p>A {{domxref("USVString")}} containing a comma-separated list of source size descriptors
+  followed by an optional fallback size. Each <strong>source size descriptor</strong> is
+  comprised of a media condition, then at least one whitespace character, then the
+  <strong>source size value</strong> to use for the image when the media condition
+  evaluates to <code>true</code>.</p>
 
 <h4 id="Media_conditions">Media conditions</h4>
 
-<p>Each source size descriptor consists of a media condition as defined by the media queries standard. Because a source size descriptor is used to specify the width to use for the image during layout of the page, the media condition is typically (but not necessarily) based entirely on width information. See {{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for details on how to construct a media condition.</p>
+<p>Each source size descriptor consists of a media condition as defined by the media
+  queries standard. Because a source size descriptor is used to specify the width to use
+  for the image during layout of the page, the media condition is typically (but not
+  necessarily) based entirely on width information. See
+  {{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
+  details on how to construct a media condition.</p>
 
 <h4 id="Source_size_values">Source size values</h4>
 
-<p>The source size value is a <a href="/en-US/docs/Web/CSS/length">CSS length</a>. It may be specified using font-relative units (such as <code>em</code> or <code>ex</code>), absolute units (such as <code>px</code> or <code>cm</code>), or the <code>vw</code> unit, which lets you specify the width as a percentage of the viewport width (<code>1vw</code> being 1% of the viewport width).</p>
+<p>The source size value is a <a href="/en-US/docs/Web/CSS/length">CSS length</a>. It may
+  be specified using font-relative units (such as <code>em</code> or <code>ex</code>),
+  absolute units (such as <code>px</code> or <code>cm</code>), or the <code>vw</code>
+  unit, which lets you specify the width as a percentage of the viewport width
+  (<code>1vw</code> being 1% of the viewport width).</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> The source size value must <em>not</em> be specified as a percentage of the container size; that is, lengths such as <code>50%</code> or <code>100%</code> are not allowed, as there would be uncertainty as to what the specified value is a percentage of.</p>
+  <p><strong>Note:</strong> The source size value must <em>not</em> be specified as a
+    percentage of the container size; that is, lengths such as <code>50%</code> or
+    <code>100%</code> are not allowed, as there would be uncertainty as to what the
+    specified value is a percentage of.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, a blog-like layout is created, displaying some text and an image which for which three size points are specified, depending on the width of the window. Three versions of the image are also available, with their widths specified. The browser takes all of this information and selects an image and width that best meets the specified values.</p>
+<p>In this example, a blog-like layout is created, displaying some text and an image which
+  for which three size points are specified, depending on the width of the window. Three
+  versions of the image are also available, with their widths specified. The browser takes
+  all of this information and selects an image and width that best meets the specified
+  values.</p>
 
-<p>How exactly the images are used may depend upon the browser and what the pixel density of the user's display is.</p>
+<p>How exactly the images are used may depend upon the browser and what the pixel density
+  of the user's display is.</p>
 
-<p>Buttons at the bottom of the example let you actually modify the <code>sizes</code> property slightly, switching the largest of the three widths for the image between 40em and 50em.</p>
+<p>Buttons at the bottom of the example let you actually modify the <code>sizes</code>
+  property slightly, switching the largest of the three widths for the image between 40em
+  and 50em.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -93,7 +122,10 @@ article img {
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>The JavaScript code handles the two buttons that let you toggle the third width option between 40em and 50em; this is done by handling the {{domxref("Element.click_event", "click")}} event, using the JavaScript string object method {{jsxref("String.replace", "replace()")}} to replace the relevant portion of the <code>sizes</code> string.</p>
+<p>The JavaScript code handles the two buttons that let you toggle the third width option
+  between 40em and 50em; this is done by handling the {{domxref("Element.click_event",
+  "click")}} event, using the JavaScript string object method {{jsxref("String.replace",
+  "replace()")}} to replace the relevant portion of the <code>sizes</code> string.</p>
 
 <pre class="brush: js">let image = document.querySelector("article img");
 let break40 = document.getElementById("break40");
@@ -109,25 +141,27 @@ break50.addEventListener("click",
 
 <p>{{EmbedLiveSample("Example", 900, 850)}}</p>
 
-<p>This result may be <a href="https://mdn.mozillademos.org/en-US/docs/Web/API/HTMLImageElement/sizes$samples/Example">viewed in its own window here</a>.</p>
+<p>This result may be <a
+    href="https://mdn.mozillademos.org/en-US/docs/Web/API/HTMLImageElement/sizes$samples/Example">viewed
+    in its own window here</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-img-sizes', 'HTMLImageElement.sizes')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-img-sizes', 'HTMLImageElement.sizes')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -137,8 +171,12 @@ break50.addEventListener("click",
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries">Media queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries">Media queries</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media
+      queries</a></li>
+  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in
+      HTML</a></li>
+  <li><a
+      href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive
+      images</a></li>
 </ul>
