@@ -133,8 +133,10 @@ tags:
  <dd>A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.</dd>
  <dt>The <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> global HTML attribute</dt>
  <dd>Assigns a slot in a shadow DOM shadow tree to an element.</dd>
- <dt>{{domxref("Element", "Slotable")}}</dt>
- <dd>A mixin implemented by both {{domxref("Element")}} and {{domxref("Text")}} nodes, defining features that allow them to become the contents of an {{htmlelement("slot")}} element. The mixin defines one attribute, {{domxref("Element.assignedSlot")}}, which returns a reference to the slot the node is inserted in.</dd>
+ <dt>{{domxref("Element.assignedSlot")}}</dt>
+ <dd>A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this element is inserted.</dd>
+<dt>{{domxref("Text.assignedSlot")}}</dt>
+ <dd>A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this text node is inserted.</dd>
  <dt>{{domxref("Element")}} extensions</dt>
  <dd>Extensions to the <code>Element</code> interface related to slots:
  <ul>
