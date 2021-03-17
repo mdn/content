@@ -229,7 +229,7 @@ window.addEventListener("message", (event) =&gt; {
   listening for events sent by <code>postMessage</code> throws an exception.</p>
 
 <p>After <code>postMessage()</code> is called, the {{domxref("MessageEvent")}} will be
-  dispatched <em>only after all pending execution contexts have finished</em>. 
+  dispatched <em>only after all pending execution contexts have finished</em>.
   For example, if <code>postMessage()</code> is invoked in an event handler, that event
   handler will run to completion, as will any remaining handlers for that same event,
   before the {{domxref("MessageEvent")}} is dispatched.</p>
