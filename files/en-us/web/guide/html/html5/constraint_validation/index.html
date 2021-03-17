@@ -10,7 +10,7 @@ tags:
 ---
 <p>The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache.<a href="/en-US/docs/Web/Guide/HTML/HTML5"> HTML5</a> introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and <em>constraint validation</em> to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the <a href="/en-US/docs/Web/API/Constraint_validation">Constraint validation API</a>.</p>
 
-<p>For a basic introduction to these concepts, with examples, see the <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form validation tutorial</a>.</p>
+<p>For a basic introduction to these concepts, with examples, see the <a href="/en-US/docs/Learn/Forms/Form_validation">Form validation tutorial</a>.</p>
 
 <div class="note"><strong>Note:</strong> HTML5 Constraint validation doesn't remove the need for validation on the <em>server side</em>. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.</div>
 
@@ -168,7 +168,7 @@ tags:
 
 <ul>
  <li>If the {{ htmlattrxref("novalidate", "form") }} attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.</li>
- <li>Calling the <code>submit()</code> method on the <code><a href="/en-US/docs/DOM/HTMLFormElement">HTMLFormElement</a></code> interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if doesn't satisfy the constraints. Call the <code>click()</code> method on a submit button instead.</li>
+ <li>Calling the <code>submit()</code> method on the <code><a href="/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement</a></code> interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if doesn't satisfy the constraints. Call the <code>click()</code> method on a submit button instead.</li>
 </ul>
 </div>
 
@@ -312,7 +312,7 @@ tags:
 <p>The following items can help with controlling the text of a constraint violation:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Constraint_validation#element.setCustomValidity(message)">element.setCustomValidity(message)</a> method on the following elements:
+ <li><a href="/en-US/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)">element.setCustomValidity(message)</a> method on the following elements:
 
   <ul>
    <li>{{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.</li>
