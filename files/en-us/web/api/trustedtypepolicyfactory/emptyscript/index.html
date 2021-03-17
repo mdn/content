@@ -23,7 +23,7 @@ tags:
 
 <p>The <a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyscript">specification</a> explains that the <code>emptyScript</code> object can be used to detect support for dynamic code compilation.</p>
 
-<p>Native Trusted Types implementations can support <code>eval(TrustedScript)</code>, therefore in the below example in a native implementation will return false for <code>eval(trustedTypes.emptyScript)</code>. A polyfill will return a truthy object.</p>
+<p>Native Trusted Types implementations can support <code>eval(TrustedScript)</code>, therefore in the below example a native implementation will return false for <code>eval(trustedTypes.emptyScript)</code>. A polyfill will return a truthy object.</p>
 
 <pre class="brush: js">const supportsTS = !eval(trustedTypes.emptyScript);
 eval(supportsTS ? myTrustedScriptObj : myTrustedScriptObj.toString());</pre>
