@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the below example the constant <code>url</code> was created by a policy, and therefore <code>isScriptURL</code> returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to <code>isScriptURL</code>.</p>
+<p>In the below example the constant <code>url</code> was created by a policy, and therefore <code>isScriptURL()</code> returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to <code>isScriptURL()</code>.</p>
 
 <pre class="brush: js">const url = policy.createScriptURL('https://example.com/myscript.js');
 console.log(trustedTypes.isScriptURL(url)) // true;
