@@ -392,7 +392,7 @@ tags:
 
 <p>In our tests, this new structure did serve to improve things overall. The tabs are now recognized as tabs (e.g. "tab" is spoken by the screenreader), the selected tab is indicated by "selected" being read out with the tab name, and the screenreader also tells you which tab number you are currently on. In addition, because of the <code>aria-hidden</code> settings (only the non-hidden tab ever has <code>aria-hidden="false"</code> set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.</p>
 
-<p>The above example uses <em>list items</em> to create the tabs but a <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tablist">tablist</a></code> <em>can be empty</em>. In this case, in lieu of list items, the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-owns">aria-owns</a></code> attribute is used to create an explicit relationship between the tabs and the corresponding tabpanels — as shown below:</p>
+<p>The above example uses <em>list items</em> to create the tabs but a <code><a href="https://www.w3.org/TR/wai-aria-1.1/#tablist">tablist</a></code> <em>can be empty</em>. In this case, in lieu of list items, the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-owns">aria-owns</a></code> attribute is used to create an explicit relationship between the tabs and the corresponding tabpanels — as shown below (<a href="https://tabpanelwidget.com">see it running live</a>):</p>
 
 <pre class="brush: html">&lt;div role="tablist" aria-owns="tab-1 tab-2 tab-3"&gt;&lt;/div&gt;
 &lt;h2 id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0"&gt;Tab 1&lt;/h2&gt;
