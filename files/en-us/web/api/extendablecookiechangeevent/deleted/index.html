@@ -56,7 +56,7 @@ tags:
 <p>In this example when the cookie is deleted the event listener logs the <code>deleted</code> property to the console. It contains an object representing the cookie that has just been deleted.</p>
 
 <pre class="brush:js">self.addEventListener('cookiechange', (event) => {
-  console.log(event.deleted);
+  console.log(event.deleted[0]);
 });</pre>
 
 <h2 id="Specifications">Specifications</h2>
