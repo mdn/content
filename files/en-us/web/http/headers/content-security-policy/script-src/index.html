@@ -106,12 +106,12 @@ Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
 <p>The <code>'unsafe-eval'</code> source expression controls several script execution methods that create code from strings. If <code>'unsafe-eval'</code> isn't specified with the <code>script-src</code> directive, the following methods are blocked and won't have any effect:</p>
 
 <ul>
- <li>{{jsxref("eval", "eval()")}}</li>
+ <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
  <li>{{jsxref("Function", "Function()")}}</li>
  <li>When passing a string literal like to methods like: <code>window.setTimeout("alert(\"Hello World!\");", 500);</code>
   <ul>
-   <li>{{domxref("window.setTimeout")}}</li>
-   <li>{{domxref("window.setInterval")}}</li>
+   <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
+   <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
    <li>{{domxref("window.setImmediate")}}</li>
   </ul>
  </li>
