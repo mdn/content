@@ -48,7 +48,7 @@ tags:
 <p>An element with role="table" is a static tabular structure with rows containing cells. The cells are not focusable or selectable, though widgets within individual cells of the table can be interactive. Using a native HTML table element whenever possible is strongly encouraged.</p>
 
 <div class="warning">
-<p>If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a> instead.</p>
 </div>
 
 <p>To create an ARIA table, add <code>role="table"</code> to the container element. Within that container, each row has <code>role="row"</code> set and contains child cells. Each cell has a role of either <code>columnheader</code>, <code>rowheader</code>, or <code>cell</code>. Rows can be children of the table or within a <code>rowgroup</code>.</p>
@@ -57,7 +57,7 @@ tags:
 
 <p>If the table contains sortable columns or rows, the <code>aria-sort</code> attribute should be added on the header cell element (not the table itself). If any rows or columns are hidden, the <code>aria-colcount</code> or <code>aria-rowcount</code> should be included indicating the total number of columns or rows, respectively, along with the <code>aria-colindex</code> or <code>aria-rowindex</code> on each cell. The <code>aria-colindex</code> or <code>aria-rowindex</code> is set to the position of a cell within the row or column, respectively. If the table includes cells that span multiple rows or multiple columns, then <code>aria-rowspan</code> or <code>aria-colspan</code> should be included as well. Realize, it is much simpler to use the <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> element, along with all the related semantic elements and attributes that are all supported by all assistive technologies.</p>
 
-<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a> instead.</p>
 
 <div class="note">
 <p>Note: Using a native HTML table element whenever possible is strongly encouraged.</p>
