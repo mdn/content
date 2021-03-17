@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Step_1_–_How_to_make_an_HTTP_request">Step 1 – How to make an HTTP request</h2>
 
-<p>In order to make an <a href="/en/HTTP">HTTP</a> request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where <code>XMLHttpRequest</code> comes in. Its predecessor originated in Internet Explorer as an ActiveX object called <code>XMLHTTP</code>. Then, Mozilla, Safari, and other browsers followed, implementing an <code>XMLHttpRequest</code> object that supported the methods and properties of Microsoft's original ActiveX object. Meanwhile, Microsoft implemented XMLHttpRequest as well.</p>
+<p>In order to make an <a href="/en-US/docs/Web/HTTP">HTTP</a> request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where <code>XMLHttpRequest</code> comes in. Its predecessor originated in Internet Explorer as an ActiveX object called <code>XMLHTTP</code>. Then, Mozilla, Safari, and other browsers followed, implementing an <code>XMLHttpRequest</code> object that supported the methods and properties of Microsoft's original ActiveX object. Meanwhile, Microsoft implemented XMLHttpRequest as well.</p>
 
 <pre class="brush: js">// Old compatibility code, no longer needed.
 if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
@@ -40,7 +40,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
 
 <p>After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the <code>onreadystatechange</code> property of the object and naming it after the function to call when the request changes state, like this:</p>
 
-<pre class="brush: js"><code>httpRequest.onreadystatechange = nameOfTheFunction;</code></pre>
+<pre class="brush: js">httpRequest.onreadystatechange = nameOfTheFunction;</pre>
 
 <p>Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:</p>
 
@@ -98,7 +98,7 @@ httpRequest.send();
  <li>4 (complete) or (<strong>request finished and response is ready</strong>)</li>
 </ul>
 
-<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en/HTTP/HTTP_response_codes#Successful_responses"><code>200 OK</code></a> response code.</p>
+<p>Next, check the <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> of the HTTP response. The possible codes are listed at the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>. In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a <a href="/en-US/docs/Web/HTTP/HTTP_response_codes#successful_responses"><code>200 OK</code></a> response code.</p>
 
 <pre class="brush: js">if (httpRequest.status === 200) {
     // Perfect!
@@ -165,9 +165,9 @@ httpRequest.send();
 
 <div class="note"><strong>Note</strong>: If you're sending a request to a piece of code that will return XML, rather than a static HTML file, you must set response headers to work in Internet Explorer. If you do not set header <code>Content-Type: application/xml</code>, IE will throw a JavaScript "Object Expected" error after the line where you tried to access an XML element.</div>
 
-<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">bypassing the cache</a>)</div>
+<div class="note"><strong>Note 2</strong>: If you do not set header <code>Cache-Control: no-cache</code> the browser will cache the response and never re-submit the request, making debugging challenging. You can also add an always-different GET parameter, like a timestamp or random number (see <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache">bypassing the cache</a>)</div>
 
-<div class="note"><strong>Note 3</strong>: If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en/JavaScript/Guide/Closures">closure</a> containing the AJAX functions avoids this.</div>
+<div class="note"><strong>Note 3</strong>: If the <code>httpRequest</code> variable is used globally, competing functions calling <code>makeRequest()</code> can overwrite each other, causing a race condition. Declaring the <code>httpRequest </code>variable local to a <a href="/en-US/docs/Web/JavaScript/Closures">closure</a> containing the AJAX functions avoids this.</div>
 
 <p>In the event of a communication error (such as the server going down), an exception will be thrown in the <code>onreadystatechange</code> method when accessing the response status. To mitigate this problem, you could wrap your <code>if...then</code> statement in a <code>try...catch</code>:</p>
 
@@ -268,10 +268,10 @@ alert(root_node.firstChild.data);
 
 <p>The <code>test.php</code> file should contain the following:</p>
 
-<pre class="brush: php"><code>$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
-$computedString = "Hi, " . $name . "!";
+<pre class="brush: php">$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
+$computedString = &quot;Hi, &quot; . $name . &quot;!&quot;;
 $array = ['userName' =&gt; $name, 'computedString' =&gt; $computedString];
-echo json_encode($array);</code></pre>
+echo json_encode($array);</pre>
 
 <p>For more on DOM methods, be sure to check out <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM)</a>.</p>
 
