@@ -18,7 +18,7 @@ tags:
 <ul>
  <li>If <code>display</code> is set to <code>none</code> on a {{SVGElement("tspan")}}, {{SVGElement("tref")}}, or {{SVGElement("altGlyph")}} element, then the text string is ignored for the purposes of text layout.</li>
  <li>Regarding events, if <code>display</code> is set to <code>none</code>, the element receives no events.</li>
- <li>The geometry of a <a href="/en-US/docs/Web/SVG/Element#Graphics_elements">graphics element</a> with <code>display</code> set to <code>none</code> is not included in bounding box and clipping paths calculations.</li>
+ <li>The geometry of a <a href="/en-US/docs/Web/SVG/Element#graphics_elements">graphics element</a> with <code>display</code> set to <code>none</code> is not included in bounding box and clipping paths calculations.</li>
 </ul>
 
 <p>The <code>display</code> attribute only affects the direct rendering of a given element, whereas it does not prevent elements from being referenced by other elements. For example, setting it to <code>none</code> on a {{SVGElement("path")}} element will prevent that element from getting rendered directly onto the canvas, but the {{SVGElement("path")}} element can still be referenced by a {{SVGElement("textPath")}} element; furthermore, its geometry will be used in text-on-a-path processing even if the {{SVGElement("path")}} has a <code>display</code> value of <code>none</code>.</p>
