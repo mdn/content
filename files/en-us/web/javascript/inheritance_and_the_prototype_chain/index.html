@@ -305,7 +305,7 @@ delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
-<p>The <code>new</code> operator won't create properties on it's prototype.</p>
+<p>In the following example, calling `new Graph()` creates a `Graph` instance that its own `vertices` property, and that doesn’t inherit any `vertices` property. So when the `vertices` property is deleted from that `Graph` instance, the instance then has neither its own `vertices` property nor any inherited `vertices` property.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [4,4];
