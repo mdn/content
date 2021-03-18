@@ -18,9 +18,11 @@ tags:
 
 <h3 id="Returns">Return value</h3>
 
-<p>A {{domxref("DOMString")}} containing the value of the <code>[[Data]]</code> internal slot.</p>
+<p>A {{domxref("DOMString","string")}} containing the sanitized HTML.</p>
 
 <h2 id="Examples">Examples</h2>
+
+<p>The constant <code>escaped</code> is an object created via the Trusted Types policy escapeHTMLPolicy. The <code>toString()</code> method returns a string to safely insert into a document.</p>
 
 <pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
   createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")

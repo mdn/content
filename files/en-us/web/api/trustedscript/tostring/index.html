@@ -18,9 +18,11 @@ tags:
 
 <h3 id="Returns">Return value</h3>
 
-<p>A {{domxref("DOMString")}} containing the value of the <code>[[Data]]</code> internal slot.</p>
+<p>A {{domxref("DOMString","string")}} containing the sanitized script.</p>
 
 <h2 id="Examples">Examples</h2>
+
+<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy. The <code>toString()</code> method returns a string to safely execute as a script.</p>
 
 <pre class="brush: js">const sanitized = scriptPolicy.createScript("eval('2 + 2')");
 console.log(sanitized.toString());

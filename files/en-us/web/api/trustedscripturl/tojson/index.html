@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Trusted Types API")}}</div>
 
-<p class="summary">The <strong><code>toJSON()</code></strong> method of the {{domxref("TrustedScriptURL")}} interface returns a string which may safely inserted into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a>.</p>
+<p class="summary">The <strong><code>toJSON()</code></strong> method of the {{domxref("TrustedScriptURL")}} interface returns a JSON representation of the stored data.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -18,9 +18,11 @@ tags:
 
 <h3 id="Returns">Return value</h3>
 
-<p>A {{domxref("DOMString")}} containing the value of the <code>[[Data]]</code> internal slot.</p>
+<p>A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.</p>
 
 <h2 id="Examples">Examples</h2>
+
+<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy. The <code>toString()</code> method returns a string to safely use to load a third party script.</p>
 
 <pre class="brush: js">const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
   console.log(sanitized.toJSON());

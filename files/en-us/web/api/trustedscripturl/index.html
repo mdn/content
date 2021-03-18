@@ -17,12 +17,14 @@ tags:
 
 <dl>
   <dt>{{domxref("TrustedScriptURL.toJSON()")}}</dt>
-  <dd>A {{domxref("USVString")}} containing the value of the <code>[[Data]]</code> internal slot.</dd>
+  <dd>Returns a JSON representation of the stored data.</dd>
   <dt>{{domxref("TrustedScriptURL.toString()")}}</dt>
-  <dd>A {{domxref("USVString")}} containing the value of the <code>[[Data]]</code> internal slot.</dd>
+  <dd>A {{domxref("USVString","string")}} containing the sanitized URL.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
+
+<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy.</p>
 
 <pre class="brush: js">const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
 console.log(sanitized;) /* a TrustedScriptURL object */
