@@ -12,13 +12,17 @@ on:
 jobs:
   triage:
     # This make sure it only runs on our origin repo
-    if: github.repository_owner == 'mdn'
+    # and make an exception for Dependabot.
+    if: github.repository_owner == 'mdn' && github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Stop anything and everything
         run: |
-          echo "Any PR that edits these files should break the build and expect admin overrides"
+          # echo "Any PR that edits these files should break the build and expect admin overrides"
           echo "Owner?"
           echo ${{ github.repository_owner }}
           echo ${{ github.event.pull_request }}
-          exit 1
+          # XXX This is temporarily commented out until we understand better
+          # how to actually works. We need to test what happens when
+          # PRs on forks come in that edit any of these files.
+          # exit 1
