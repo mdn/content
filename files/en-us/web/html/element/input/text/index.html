@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Value">Value</h2>
 
-<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement.value", "value")}} property in JavaScript.</p>
+<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLDataElement/value", "value")}} property in JavaScript.</p>
 
 <pre class="brush: js">let theText = myTextInput.value;
 </pre>
@@ -142,7 +142,7 @@ tags:
 
 <h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement.value")}} property.</p>
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLDataElement/value","value")}} property.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
