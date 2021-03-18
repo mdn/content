@@ -34,10 +34,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>options</var>]);
-<var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>]);
-<var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>, <var>wantsUntrusted</var> {{Non-standard_inline}}]); // Gecko/Mozilla only</pre>
+<pre class="brush: js">addEventListener(type, listener);
+addEventListener(type, listener, options);
+addEventListener(type, listener, useCapture);
+addEventListenertype, listener, useCapture, wantsUntrusted); //wantsUntrusted is Firefox only
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -72,7 +73,7 @@ tags:
           passive listeners</a> to learn more.</dd>
       <dt><code>signal</code></dt>
       <dd>An {{domxref("AbortSignal")}}. The listener will be removed when the given <code>AbortSignal</code>’s {{domxref("AbortController/abort()", "abort()")}} method is called.</dd>
-      <dt>{{non-standard_inline}} <code>mozSystemGroup</code></dt>
+      <dt><code>mozSystemGroup</code> {{non-standard_inline}}</dt>
       <dd>A {{jsxref("Boolean")}} indicating that the listener should be added to the
         system group. Available only in code running in XBL or in the
         {{glossary("chrome")}} of the Firefox browser.</dd>
@@ -92,17 +93,23 @@ tags:
       order</a> for a detailed explanation. If not specified,
     <code><var>useCapture</var></code> defaults to <code>false</code>.</dd>
   <dd>
-    <div class="note"><strong>Note:</strong> For event listeners attached to the event
-      target, the event is in the target phase, rather than the capturing and bubbling
-      phases. Events in the target phase will trigger all listeners on an element in the
-      order they were registered, regardless of the <code><var>useCapture</var></code>
-      parameter.</div>
+    <div class="notecard note">
+      <h4>Note</h4>
+      <p>For event listeners attached to the event target, the event is in the target phase, 
+        rather than the capturing and bubbling phases.
+        Events in the target phase will trigger all listeners on an element in the
+      order they were registered, regardless of the <var>useCapture</var>
+      parameter.</p>
+    </div>
 
-    <div class="note"><strong>Note:</strong> <code><var>useCapture</var></code> has not
+    <div class="notecard note">
+      <h4>Note</h4>
+      <p><code><var>useCapture</var></code> has not
       always been optional. Ideally, you should include it for the widest possible browser
-      compatibility.</div>
+      compatibility.</p>
+    </div>
   </dd>
-  <dt><code><var>wantsUntrusted</var></code> {{Non-standard_inline}}</dt>
+  <dt><code><var>wantsUntrusted</var></code> {{optional_inline}} {{Non-standard_inline}}</dt>
   <dd>A Firefox (Gecko)-specific parameter. If <code>true</code>, the listener receives
     synthetic events dispatched by web content (the default is <code>false</code> for
     browser {{glossary("chrome")}} and <code>true</code> for regular web pages). This
@@ -712,8 +719,9 @@ myButton.addEventListener('click', function() {
 console.log(someString);  // Expected Value: 'Data' (will never output 'Data Again')
 </pre>
 
-<div class="note">
-  <p><strong>Note:</strong> Although inner scopes have access to <code>const</code>,
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Although inner scopes have access to <code>const</code>,
     <code>let</code> variables from outer scopes, you cannot expect any changes to these
     variables to be accessible after the event listener definition, within the same outer
     scope. Why? Because by the time the event listener would execute, the scope in which
@@ -728,8 +736,9 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
   properties, and that they can be passed around by reference, makes them likely
   candidates for sharing data among scopes. Let's explore this.</p>
 
-<div class="note">
-  <p><strong>Note:</strong> Functions in JavaScript are actually objects. (Hence they too
+  <div class="notecard note">
+    <h4>Note</h4>
+  <p>Functions in JavaScript are actually objects. (Hence they too
     can have properties, and will be retained in memory even after they finish executing
     if assigned to a variable that persists in memory.)</p>
 </div>
@@ -763,8 +772,9 @@ window.setInterval(function() {
   function, both have access to the same data (i.e. when one changes the data, the other
   can respond to the change).</p>
 
-<div class="note">
-  <p><strong>Note:</strong> Objects are stored in variables by reference, meaning only the
+  <div class="notecard note">
+    <h4>Note</h4>
+    <p>Objects are stored in variables by reference, meaning only the
     memory location of the actual data is stored in the variable. Among other things, this
     means variables that "store" objects can actually affect other variables that get
     assigned ("store") the same object reference. When two variables reference the same
@@ -772,8 +782,9 @@ window.setInterval(function() {
     either variable will affect the other.</p>
 </div>
 
-<div class="note">
-  <p><strong>Note:</strong> Because objects are stored in variables by reference, you can
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Because objects are stored in variables by reference, you can
     return an object from a function to keep it alive (preserve it in memory so you don't
     lose the data) after that function stops executing.</p>
 </div>
@@ -810,8 +821,9 @@ window.setInterval(function() {
   using the following code at the beginning of your script. The code supports the use of
   <code>handleEvent()</code> and also the {{event("DOMContentLoaded")}} event.</p>
 
-<div class="note">
-  <p><strong>Note: </strong><code>useCapture</code> is not supported, as IE 8 does not
+  <div class="notecard note">
+    <h4>Note</h4>
+    <p><code>useCapture</code> is not supported, as IE 8 does not
     have any alternative method. The following code only adds IE 8 support. This IE 8
     polyfill only works in standards mode: a doctype declaration is required.</p>
 </div>
@@ -991,11 +1003,11 @@ for(let i=0, j=0 ; i&lt;els.length ; i++){
   prevents the event listener from being called, so it can't block page rendering while
   the user is scrolling.</p>
 
-<div class="note">
-  <p><strong>Note:</strong> See the compatibility table below if you need to know which
-    browsers (and/or which versions of those browsers) implement this altered behavior.
-  </p>
-</div>
+  <div class="notecard note">
+    <h4>Note</h4>
+    <p>See the compatibility table below if you need to know which
+    browsers (and/or which versions of those browsers) implement this altered behavior.</p>
+  </div>
 
 <p>You can override this behavior by explicitly setting the value of <code>passive</code>
   to <code>false</code>, as shown here:</p>
