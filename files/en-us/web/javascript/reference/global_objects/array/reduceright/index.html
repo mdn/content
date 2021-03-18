@@ -324,10 +324,10 @@ var right = a.reduceRight(function(prev, cur) { return prev + cur; });
 console.log(left);  // "12345"
 console.log(right); // "54321"</pre>
 
-<h3 id="Defining_Composible_Function">Defining Composible Function</h3>
+<h3 id="Defining_Composible_Function">Defining Composible Functions</h3>
 
-<p>The concept of compose function is simple it combines n functions. It’s a flowing
-  right-to-left, calling each function with the output of the last one.</p>
+<p>The concept of composing functions is simple: it combines <code>n</code> functions. It flows
+  right-to-left, calling each function with the output of the previous function.</p>
 
 <pre class="brush: js">/**
  * Function Composition is way in which result of one function can
