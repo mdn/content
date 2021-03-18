@@ -1,4 +1,4 @@
-name: Dangerous file changes
+name: System file changes
 
 on:
   pull_request_target:
@@ -6,6 +6,8 @@ on:
       - '.github/workflows/**'
       - '.github/CODEOWNERS'
       - '.github/dependabot.yml'
+      - 'pr-lint/**'
+      - 'scripts/**'
       - package.json
       - yarn.lock
 
@@ -13,15 +15,20 @@ jobs:
   triage:
     # This make sure it only runs on our origin repo
     # and make an exception for Dependabot.
-    if: github.repository_owner == 'mdn' && github.actor != 'dependabot[bot]'
+    if: github.repository_owner == 'mdn' && github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Stop anything and everything
         run: |
           # echo "Any PR that edits these files should break the build and expect admin overrides"
-          echo "Owner?"
+          echo "PR user?"
+          echo ${{ github.event.pull_request.user.login }}
+          echo "PR actor?"
+          echo ${{ github.actor }}
+          echo "Repository owner?"
           echo ${{ github.repository_owner }}
           echo ${{ github.event.pull_request }}
+
           # XXX This is temporarily commented out until we understand better
           # how to actually works. We need to test what happens when
           # PRs on forks come in that edit any of these files.
