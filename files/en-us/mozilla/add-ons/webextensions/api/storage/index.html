@@ -30,7 +30,7 @@ tags:
 
 <p>Although this API is similar to {{domxref("Window.localStorage")}} it is recommended that you don't use <code>Window.localStorage</code> in the extension code to store extension-related data. Firefox will clear data stored by extensions using the localStorage API in various scenarios where users clear their browsing history and data for privacy reasons, while data saved using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> API will be correctly persisted in these scenarios.</p>
 
-<p>You can examine the stored data under the Extension Storage item in the <a href="/en-US/docs/">Storage Inspector</a> tab of the <a href="https://extensionworkshop.com/documentation/develop/debugging/">developer toolbox</a>, accessible from <code>about:debugging</code>.</p>
+<p>You can examine the stored data under the Extension Storage item in the <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> tab of the <a href="https://extensionworkshop.com/documentation/develop/debugging/">developer toolbox</a>, accessible from <code>about:debugging</code>.</p>
 
 <div class="note">The storage area is not encrypted and shouldn't be used for storing confidential user information.</div>
 

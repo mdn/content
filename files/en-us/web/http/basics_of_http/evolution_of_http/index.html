@@ -159,12 +159,12 @@ Server: Apache
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, where the server can push occasional messages to the browser.</li>
- <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a>, a new protocol that can be set up by upgrading an existing HTTP connection.</li>
 </ul>
 
 <h3 id="Relaxing_the_security-model_of_the_Web">Relaxing the security-model of the Web</h3>
 
-<p>HTTP is independent of the security model of the Web, the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. In fact, the current Web security model has been developed after the creation of HTTP! Over the years, it has proved useful to be able to be more lenient, by allowing under certain constraints to lift some of the restriction of this policy. How much and when such restrictions are lifted is transmitted by the server to the client using a new bunch of HTTP headers. These are defined in specifications like <a href="/en-US/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/en-US/docs/Web/Security/CSP">Content Security Policy</a> (CSP).</p>
+<p>HTTP is independent of the security model of the Web, the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>. In fact, the current Web security model has been developed after the creation of HTTP! Over the years, it has proved useful to be able to be more lenient, by allowing under certain constraints to lift some of the restriction of this policy. How much and when such restrictions are lifted is transmitted by the server to the client using a new bunch of HTTP headers. These are defined in specifications like <a href="/en-US/docs/Glossary/CORS">Cross-Origin Resource Sharing</a> (CORS) or the <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> (CSP).</p>
 
 <p>In addition to these large extensions, numerous other headers have been added, sometimes experimentally only. Notable headers are Do Not Track ({{HTTPHeader("DNT")}}) header to control privacy, {{HTTPHeader("X-Frame-Options")}}, or {{HTTPHeader('Upgrade-Insecure-Requests')}} but many more exist.</p>
 

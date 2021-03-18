@@ -14,7 +14,7 @@ tags:
   - developer recommendation
 ---
 <div class="summary">
-<p>The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/WebGL">WebGL</a> or <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.</p>
+<p>The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.</p>
 </div>
 
 <h2 id="Video_manipulation">Video manipulation</h2>
@@ -105,12 +105,12 @@ tags:
 <p>This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of <code>setTimeout()</code> when running on browsers that support it.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
+<p><strong>Note</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
 </div>
 
 <h3 id="Video_and_WebGL">Video and WebGL</h3>
 
-<p><a href="/en-US/docs/Web/WebGL">WebGL</a> is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
 
@@ -286,7 +286,7 @@ window.addEventListener('load', setFilter);
 <p>{{ EmbedLiveSample('Playable_code_2', 700, 425) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: unless you have <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
+<p><strong>Note</strong>: unless you have <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
 </div>
 
 <h4 id="Common_audio_filters">Common audio filters</h4>
@@ -377,12 +377,12 @@ context.listener.setPosition(0, 0, 0);</pre>
 <h3 id="Tutorials">Tutorials</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Manipulating_video_using_canvas">Manipulating Video Using Canvas</a></li>
- <li><a href="/en-US/Apps/Build/Manipulating_media/HTML5_playbackRate_explained">HTML5 playbackRate explained</a></li>
+ <li><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating Video Using Canvas</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained">HTML5 playbackRate explained</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
- <li><a href="/en-US/docs/Web/WebGL/Animating_textures_in_WebGL#Using_the_video_frames_as_a_texture">Using Video frames as a WebGL Texture</a> (You can also the <a href="http://threejs.org">THREE.js</a> WebGL library (and others) to <a href="https://stemkoski.github.io/Three.js/Video.html">achieve this effect</a>)</li>
- <li><a href="/en-US/docs/Web/WebGL/Animating_textures_in_WebGL">Animating Textures in WebGL</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialisation basics</a></li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture">Using Video frames as a WebGL Texture</a> (You can also the <a href="http://threejs.org">THREE.js</a> WebGL library (and others) to <a href="https://stemkoski.github.io/Three.js/Video.html">achieve this effect</a>)</li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL">Animating Textures in WebGL</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room">Developing Game Audio with the Web Audio API (Room effects and filters)</a></li>
 </ul>
 
@@ -394,7 +394,7 @@ context.listener.setPosition(0, 0, 0);</pre>
  <li>The {{htmlelement("canvas")}} element</li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
  <li><a href="/en-US/docs/Web/API/AudioContext">AudioContext</a></li>
- <li>More info on <a href="/en-US/docs/Web/API/AudioContext.createPanner">Spatial Audio</a></li>
+ <li>More info on <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner">Spatial Audio</a></li>
  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
 </ul>
 

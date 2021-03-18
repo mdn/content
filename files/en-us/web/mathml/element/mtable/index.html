@@ -4,12 +4,12 @@ slug: Web/MathML/Element/mtable
 tags:
   - MathML
   - MathML Reference
-  - 'MathML:Element'
-  - 'MathML:Tabular Math'
+  - MathML:Element
+  - MathML:Tabular Math
 ---
 <div>{{MathMLRef}}</div>
 
-<p class="summary">The MathML <code>&lt;mtable&gt;</code> element allows you to create tables or matrices. Inside a <code>&lt;mtable&gt;</code> only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of <a href="/en-US/docs/HTML">HTML</a>.</p>
+<p class="summary">The MathML <code>&lt;mtable&gt;</code> element allows you to create tables or matrices. Inside a <code>&lt;mtable&gt;</code> only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of <a href="/en-US/docs/Web/HTML">HTML</a>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> The <code>&lt;mtable&gt;</code> element resets the <code>displaystyle</code> attribute to <code>false</code>. If you want to use this element as an inline-block, you might want to set <code>&lt;mtable displaystyle="true"&gt;...&lt;/mtable&gt;</code>.</p>
@@ -30,7 +30,7 @@ tags:
  </ul>
  In addition, values of the <code>align</code> attribute can end with a <em>rownumber</em> (e.g. <code>align="center 3"</code>). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table. Starting with Gecko 8.0 {{ geckoRelease("8.0") }} the interpretation of <em>negative</em> values has been corrected ({{ bug(601436) }}). In Gecko 17.0 {{geckoRelease("17.0")}} the parsing has been updated to treat whitespace correctly.</dd>
  <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
+ <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
  <dt id="attr-columnalign">columnalign</dt>
  <dd>Specifies the horizontal alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. <code>columnalign="left right center"</code>). Possible values are: <code>left</code>, <code>center</code> (default) and <code>right</code>.</dd>
  <dt id="attr-columnlines">columnlines</dt>
@@ -46,9 +46,9 @@ tags:
  <dt id="attr-href">href</dt>
  <dd>Used to set a hyperlink to a specified URI.</dd>
  <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
  <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
  <dt id="attr-rowalign">rowalign</dt>
  <dd>Specifies the vertical alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding rows (e.g. <code>rowalign="top bottom axis"</code>). Possible values are: <code>axis</code>, <code>baseline</code> (default), <code>bottom</code>, <code>center</code> and <code>top</code>.</dd>
  <dt id="attr-rowlines">rowlines</dt>
@@ -56,14 +56,14 @@ tags:
  <dt id="attr-rowspacing">{{ unimplemented_inline() }} rowspacing</dt>
  <dd>Specifies the space between table rows.</dd>
  <dt id="attr-width">width</dt>
- <dd>Specifies the width of the entire table. Accepts <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length values</a>.</dd>
+ <dd>Specifies the width of the entire table. Accepts <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length values</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Alignment_with_row_number">Alignment with row number</h3>
 
-<p>Rendering: <img alt="" src="/files/3295/mtable-1.png" style="margin-left: 10px; vertical-align: middle;"></p>
+<p>Rendering: <img alt="" src="mtable-1.png" style="margin-left: 10px; vertical-align: middle;"></p>
 
 <pre class="brush: html">&lt;math&gt;
 

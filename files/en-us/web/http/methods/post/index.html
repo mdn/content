@@ -12,7 +12,7 @@ tags:
 
 <p>The difference between {{HTTPMethod("PUT")}} and <code>POST</code> is that <code>PUT</code> is idempotent: calling it once or several times successively has the same effect (that is no <em>side</em> effect), where successive identical <code>POST</code> may have additional effects, like passing an order several times.</p>
 
-<p>A <code>POST</code> request is typically sent via an <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:</p>
+<p>A <code>POST</code> request is typically sent via an <a href="/en-US/docs/Learn/Forms">HTML form</a> and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:</p>
 
 <ul>
  <li><code>application/x-www-form-urlencoded</code>: the keys and values are encoded in key-value tuples separated by <code>'&amp;'</code>, with a <code>'='</code> between the key and the value. Non-alphanumeric characters in both keys and values are {{glossary("percent-encoding", "percent encoded")}}: this is the reason why this type is not suitable to use with binary data (use <code>multipart/form-data</code> instead)</li>
@@ -53,7 +53,7 @@ tags:
    <td>Only if freshness information is included</td>
   </tr>
   <tr>
-   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
+   <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
    <td>Yes</td>
   </tr>
  </tbody>
