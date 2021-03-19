@@ -305,7 +305,7 @@ delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
-<p>In the following example, calling `new Graph()` creates a `Graph` instance that its own `vertices` property, and that doesn’t inherit any `vertices` property. So when the `vertices` property is deleted from that `Graph` instance, the instance then has neither its own `vertices` property nor any inherited `vertices` property.</p>
+<p>In the following example, calling <code>new Graph()</code> creates a <code>Graph</code> instance that its own <code>vertices</code> property, and that doesn’t inherit any <code>vertices` property. So when the <code>vertices</code> property is deleted from that <code>Graph` instance, the instance then has neither its own <code>vertices</code> property nor any inherited <code>vertices</code> property.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [4,4];
