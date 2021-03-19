@@ -16,9 +16,10 @@ tags:
   {{DOMxRef("MediaQueryList")}} interface removes a listener from the
   <code>MediaQueryListener</code>.</p>
 
-<p>This is basically an alias of {{DOMxRef("EventTarget.removeEventListener()")}}, for
-  backwards compatibility purposes — in older browsers you could use
-  <code>removeEventListener()</code> instead.</p>
+<p>This is basically an alias of {{DOMxRef("EventTarget.removeEventListener()")}}, retained for
+  backwards compatibility purposes. Older browsers should use <code>removeListener</code>
+  instead of <code>removeEventListener</code> since <code>MediaQueryList</code> only inherits
+  from <code>EventTarget</code> in newer browsers.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
