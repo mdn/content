@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.296":
-  version "0.4.296"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.296.tgz#b10d8aa24faba3f926d8fe0d5eea925f6a65c1a2"
-  integrity sha512-DamQG9DyBJPcXgzKPuTzHuK2l4r2QXjFdo5pmCuOSG6UD/lob8N6IBb+sNX303dgZan2zrokSPjtXoFfOPtvMQ==
+"@mdn/yari@0.4.300":
+  version "0.4.300"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.300.tgz#3d41de94b9aeadebda085e4da6d7317be3acea0d"
+  integrity sha512-xjQWSbm8ThTrRhrdo9bQCMlLmLoXjXgD6t9YVWfz2WVTU1HjnWENznFqhfeTESw4T1j6ezxmYjir4CC0HlCUtg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -87,7 +87,7 @@
     sanitize-filename "^1.6.3"
     send "0.17.1"
     source-map-support "0.5.19"
-    tempy "1.0.0"
+    tempy "1.0.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -3661,10 +3661,10 @@ tempfile@^2.0.0:
     temp-dir "^1.0.0"
     uuid "^3.0.1"
 
-tempy@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/tempy/-/tempy-1.0.0.tgz#4f192b3ee3328a2684d0e3fc5c491425395aab65"
-  integrity sha512-eLXG5B1G0mRPHmgH2WydPl5v4jH35qEn3y/rA/aahKhIa91Pn119SsU7n7v/433gtT9ONzC8ISvNHIh2JSTm0w==
+tempy@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tempy/-/tempy-1.0.1.tgz#30fe901fd869cfb36ee2bd999805aa72fbb035de"
+  integrity sha512-biM9brNqxSc04Ee71hzFbryD11nX7VPhQQY32AdDmjFvodsRFz/3ufeoTZ6uYkRFfGo188tENcASNs3vTdsM0w==
   dependencies:
     del "^6.0.0"
     is-stream "^2.0.0"
