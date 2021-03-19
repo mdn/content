@@ -87,7 +87,7 @@ tags:
 
 <p>Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
   extensions or custom certificates, but for setting custom preferences we recommend using the <code>prefs</code> (<a
-    href="#Prefs">Preferences Object</a>) entry instead.</p>
+    href="#prefs">Preferences Object</a>) entry instead.</p>
 <p>Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when
   <code>profile</code> is provided. By default geckodriver will create a new profile in this location.</p>
 
@@ -229,8 +229,8 @@ tags:
 <span class="p">}</span></pre>
 
 <p><span class="p">The <code><a href="#firefoxoptions">moz:firefoxOptions</a></code> must be placed—as above—inside
-    <code><a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysMatch">alwaysMatch</a></code>, or in one of the
-  </span><code><a href="/en-US/docs/Web/WebDriver/Capabilities#firstMatch">firstMatch</a></code> <a
+    <code><a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch">alwaysMatch</a></code>, or in one of the
+  </span><code><a href="/en-US/docs/Web/WebDriver/Capabilities#firstmatch">firstMatch</a></code> <a
     href="/en-US/docs/Web/WebDriver/Capabilities">capabilities objects</a> as seen here:</p>
 
 <pre class="brush: json">{

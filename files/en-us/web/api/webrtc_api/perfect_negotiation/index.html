@@ -264,7 +264,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
         await Promise.all([
           pc.setLocalDescription({type: "rollback"}),
-          pc.setRemoteDescription(description);
+          pc.setRemoteDescription(description)
         ]);
       } else {
         await pc.setRemoteDescription(description);
