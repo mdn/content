@@ -49,7 +49,12 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>An <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a>
-  (which is not a restartable iterable).</p>
+  (which is not a restartable iterable) of matches.</p>
+
+<p>Each match is an array (with extra properties <code>index</code> and
+  <code>input</code>; see the return value for {{jsxref("RegExp.exec")}}). The match
+  array has the matched text as the first item, and then one item for each
+  parenthetical capture group of the matched text.</p>
 
 <h2 id="Examples">Examples</h2>
 
