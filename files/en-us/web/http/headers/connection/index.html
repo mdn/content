@@ -17,7 +17,7 @@ tags:
 <div class="notecard warning">
   <p>Connection-specific header fields such as {{HTTPHeader("Connection")}} and
     {{HTTPHeader("Keep-Alive")}} are <a
-      href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>.
+      href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>.
     Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
     spec requirements and won’t load any response which contains them.</p>
 </div>
@@ -28,8 +28,7 @@ tags:
   {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any
   hop-by-hop headers used by the message must be listed in the <code>Connection</code>
   header, so that the first proxy knows it has to consume them and not forward them
-  further. Standard hop-by-hop headers can be listed too (it is often the case of
-  {{HTTPHeader("Keep-Alive")}}, but this is not mandatory).</p>
+  further. Standard hop-by-hop headers are also required to be listed.</p>
 
 <table class="properties">
   <tbody>
@@ -46,7 +45,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Connection: keep-alive
+<pre class="brush: html">Connection: keep-alive
 Connection: close
 </pre>
 

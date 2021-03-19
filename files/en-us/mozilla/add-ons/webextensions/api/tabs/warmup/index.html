@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">var warming = browser.tabs.warmup(
+<pre class="brush:js">var warming = browser.tabs.warmup(
   tabId               // integer
 )
 </pre>
@@ -45,7 +45,7 @@ tags:
 
 <p>This code adds a listener to the <code>browserAction.onClicked</code> event. The listener retrieves all tabs in the current window that contain pages under "https://developer.mozilla.org/" and warms up the first one that it finds.</p>
 
-<pre class="notranslate brush: js">function onSuccess() {
+<pre class="brush: js">function onSuccess() {
   console.log("success!");
 }
 

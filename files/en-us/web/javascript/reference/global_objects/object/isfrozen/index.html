@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.isFrozen(<var>obj</var>)</pre>
+<pre class="brush: js">Object.isFrozen(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +46,7 @@ tags:
 
 <h3 id="Using_Object.isFrozen">Using Object.isFrozen</h3>
 
-<pre class="brush: js notranslate">// A new object is extensible, so it is not frozen.
+<pre class="brush: js">// A new object is extensible, so it is not frozen.
 Object.isFrozen({}); // === false
 
 // An empty object which is not extensible
@@ -135,7 +135,7 @@ Object.isSealed(frozen); // === true
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it was a frozen ordinary object, return <code>true</code>.</p>
 
-<pre class="brush: js notranslate">Object.isFrozen(1);
+<pre class="brush: js">Object.isFrozen(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isFrozen(1);
@@ -159,10 +159,7 @@ Object.isFrozen(1);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
 
 <h2 id="See_also">See also</h2>
 

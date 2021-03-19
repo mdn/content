@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Number.isFinite(<var>value</var>)</pre>
+<pre class="brush: js">Number.isFinite(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,7 +49,7 @@ tags:
 
 <h3 id="Using_isFinite">Using isFinite</h3>
 
-<pre class="brush: js notranslate">Number.isFinite(Infinity);  // false
+<pre class="brush: js">Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -64,7 +64,7 @@ Number.isFinite(null);      // false, would've been true with
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (Number.isFinite === undefined) Number.isFinite = function(value) {
+<pre class="brush: js">if (Number.isFinite === undefined) Number.isFinite = function(value) {
     return typeof value === 'number' &amp;&amp; isFinite(value);
 }
 </pre>

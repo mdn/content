@@ -28,13 +28,16 @@ tags:
 
 <p>While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction such as inside an event handler or form validation. With JavaScript, developers control the adding and removing of alerts as appropriate.</p>
 
-<pre class="brush: html">&lt;button type="button" onclick="triggerAlert"&gt;Trigger alert&lt;/button&gt;
+<pre class="brush: html">&lt;button type="button"&gt;Trigger alert&lt;/button&gt;
 &lt;p class="alert"&gt;The alert will trigger when the button is pressed.&lt;/p&gt;
 </pre>
 
-<pre class="brush: js">function triggerAlert() {
+<pre class="brush: js">const btn = document.querySelector('button');
+btn.addEventListener('click', triggerAlert);
+
+function triggerAlert() {
   var alertEl = document.querySelector('.alert');
-  alertEl.addAttribute("role", "alert");
+  alertEl.setAttribute("role", "alert");
 }
 </pre>
 

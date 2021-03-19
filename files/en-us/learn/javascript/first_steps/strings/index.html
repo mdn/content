@@ -87,7 +87,7 @@ dblSgl;</pre>
 
 <p>To fix our previous problem code line, we need to escape the problem quote mark. Escaping characters means that we do something to them to make sure they are recognized as text, not part of the code. In JavaScript, we do this by putting a backslash just before the character. Try this:</p>
 
-<pre class="brush: js">bigmouth = 'I\'ve got no right to take my place...';
+<pre class="brush: js">let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
 <p>This works fine. You can escape other characters in the same way, e.g. <code>\"</code>,  and there are some special codes besides. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Escape notation</a> for more details.</p>
@@ -153,7 +153,7 @@ typeof myNum;</pre>
    <li>Conversely, every number has a method called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> that converts it to the equivalent string. Try this:
     <pre class="brush: js">let myNum2 = 123;
 let myString2 = myNum2.toString();
-typeof myString;</pre>
+typeof myString2;</pre>
    </li>
   </ul>
   These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through <code>Number()</code> to handle this. We did exactly this in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">Number Guessing Game, in line 54</a>.</li>

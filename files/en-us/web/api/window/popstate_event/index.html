@@ -82,7 +82,7 @@ tags:
 
 <p>A page at <code>http://example.com/example.html</code> running the following code will generate logs as indicated:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('popstate', (event) =&gt; {
+<pre class="brush: js">window.addEventListener('popstate', (event) =&gt; {
   console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
 });
 history.pushState({page: 1}, "title 1", "?page=1");
@@ -95,7 +95,7 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 
 <p>The same example using the <code>onpopstate</code> event handler property:</p>
 
-<pre class="brush: js notranslate">window.onpopstate = function(event) {
+<pre class="brush: js">window.onpopstate = function(event) {
   console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 history.pushState({page: 1}, "title 1", "?page=1");

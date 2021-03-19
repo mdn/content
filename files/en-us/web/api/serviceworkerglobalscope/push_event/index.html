@@ -42,7 +42,7 @@ tags:
 
 <p>This example sets up a handler for <code>push</code> events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.</p>
 
-<pre class="brush: js notranslate">self.addEventListener("push", event =&gt; {
+<pre class="brush: js">self.addEventListener("push", event =&gt; {
   let message = event.data.json();
 
   switch(message.type) {

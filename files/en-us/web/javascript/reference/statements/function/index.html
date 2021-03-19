@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">function <var>name</var>([<var>param</var>[, <var>param</var>,[..., <var>param</var>]]]) {
+<pre class="brush: js">function <var>name</var>([<var>param</var>[, <var>param</var>,[..., <var>param</var>]]]) {
    [<var>statements</var>]
 }
 </pre>
@@ -60,7 +60,7 @@ tags:
   implementations and therefore this pattern should not be used in production code. For
   conditional function creation, use function expressions instead.</p>
 
-<pre class="brush: js notranslate">var hoisted = "foo" in this;
+<pre class="brush: js">var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
 if (false) {
   function foo(){ return 1; }
@@ -81,7 +81,7 @@ if (false) {
 
 <p>The results are exactly the same for a condition that evaluates to true</p>
 
-<pre class="brush: js notranslate">var hoisted = "foo" in this;
+<pre class="brush: js">var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
 if (true) {
   function foo(){ return 1; }
@@ -105,7 +105,7 @@ if (true) {
 <p>Function declarations in JavaScript are hoisted to the top of the enclosing function or
   global scope. You can use the function before you declared it:</p>
 
-<pre class="brush: js notranslate">hoisted(); // logs "foo"
+<pre class="brush: js">hoisted(); // logs "foo"
 
 function hoisted() {
   console.log('foo');
@@ -115,7 +115,7 @@ function hoisted() {
 <p>Note that {{jsxref("Operators/function", "function expressions", "", 1)}} are not
   hoisted:</p>
 
-<pre class="brush: js notranslate">notHoisted(); // TypeError: notHoisted is not a function
+<pre class="brush: js">notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
    console.log('bar');
@@ -130,7 +130,7 @@ var notHoisted = function() {
   given the number of units sold of products <code>a</code>, <code>b</code>, and
   <code>c</code>.</p>
 
-<pre class="brush: js notranslate">function calc_sales(units_a, units_b, units_c) {
+<pre class="brush: js">function calc_sales(units_a, units_b, units_c) {
    return units_a * 79 + units_b * 129 + units_c * 699;
 }
 </pre>

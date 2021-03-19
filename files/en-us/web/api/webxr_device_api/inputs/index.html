@@ -89,7 +89,7 @@ tags:
 
 <p>You can easily obtain the target ray corresponding to the <code>targetRaySpace</code> from within the drawing handler for a given frame using {{domxref("XRFrame")}}'s {{domxref("XRFrame.getPose", "getPose()")}} method. The returned {{domxref("XRPose")}}'s {{domxref("XRPose.transform", "transform")}} is the transform corresponding to the target ray. Thus, for an input controller <code>primaryInput</code>:</p>
 
-<pre class="brush: js notranslate">let targetRayPose = frame.session.getPose(primaryInput.targetRaySpace,
+<pre class="brush: js">let targetRayPose = frame.session.getPose(primaryInput.targetRaySpace,
                        viewerRefSpace);
 let targetRayOrigin = targetRayPose.transform.position;
 let targetRayVector = targetRayPose.transform.orientation;
@@ -106,7 +106,7 @@ let targetRayVector = targetRayPose.transform.orientation;
 <figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
 <figcaption><strong>The coordinate system for the left hand's grip space.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="https://mdn.mozillademos.org/files/17266/dark_left.svg" style="width: 100%;"></div>
+<div style="background-color: #FFF;"><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="dark_left.svg"></div>
 </figure>
 </div>
 
@@ -114,7 +114,7 @@ let targetRayVector = targetRayPose.transform.orientation;
 <figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 504px; padding: 1em; margin: 1em auto;">
 <figcaption><strong>The coordinate system for the right hand's grip space.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="https://mdn.mozillademos.org/files/17267/dark_right.svg" style="width: 100%;"></div>
+<div style="background-color: #FFF;"><img alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world." src="dark_right.svg"></div>
 </figure>
 </div>
 </div>
@@ -127,7 +127,7 @@ let targetRayVector = targetRayPose.transform.orientation;
 <figure style="background: #eee; border: 1px solid #aaa; border-radius: 1em; width: 30em; padding: 1em; margin: 0 auto; display: grid;">
 <figcaption><strong>Mapping the grip space to the world coordinate system. The distances <em>x</em>, <em>y</em>, and <em>z</em> together make up the world coordinates (<em>x</em>, <em>y</em>, z) corresponding to the origin of the grip space <em>G</em>.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="A diagram showing the relationship between the grip space and the world space" src="https://mdn.mozillademos.org/files/17269/gripspace-on-worldspace.svg" style="width: 100%;"></div>
+<div style="background-color: #FFF;"><img alt="A diagram showing the relationship between the grip space and the world space" src="gripspace-on-worldspace.svg"></div>
 </figure>
 </div>
 
@@ -141,7 +141,7 @@ let targetRayVector = targetRayPose.transform.orientation;
 <figure style="background: #eee; border: 1px solid #aaa; border-radius: 1em; width: 30em; padding: 1em; margin: 0 auto; display: grid;">
 <figcaption><strong>Mapping a grip space to the world origin when the controller is positioned below and to the left of the world origin, and closer to us than the world origin is.</strong></figcaption>
 
-<div style="background-color: #FFF;"><img alt="The relationship between another grip space and the world space" src="https://mdn.mozillademos.org/files/17270/gripspace-on-worldspace-diag.svg" style="width: 100%;"></div>
+<div style="background-color: #FFF;"><img alt="The relationship between another grip space and the world space" src="gripspace-on-worldspace-diag.svg"></div>
 </figure>
 </div>
 
@@ -171,13 +171,13 @@ let targetRayVector = targetRayPose.transform.orientation;
 
 <p>The WebXR session represented by the {{domxref("XRSession")}} object has an {{domxref("XRSession.inputSources", "inputSources")}} property which is a <em>live</em> list of the WebXR input devices currently connected to the XR system.</p>
 
-<pre class="brush: js notranslate">let inputSourceList = xrSession.inputSources;</pre>
+<pre class="brush: js">let inputSourceList = xrSession.inputSources;</pre>
 
 <p>Due to the fact that the contents of the {{domxref("XRInputSource")}} objects representing each input source in the list are read-only, changes to these inputs are made by the WebXR system by deleting the source's record and adding a new one to replace it. An {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event is sent to your <code>XRSession</code> whenever one or more of the input sources change, or when an input source is added to or removed from the list.</p>
 
 <p>For example, if you need to keep up with which controller is held in each of the player's hands, you might do something like this:</p>
 
-<pre class="brush: js notranslate">let inputSourceList = NULL;
+<pre class="brush: js">let inputSourceList = NULL;
 let leftHandSource = NULL;
 let rightHandSource = NULL;
 
@@ -230,7 +230,7 @@ xrSession.addEventListener("inputsourceschange", event =&gt; {
 
 <p>The most direct way to decide which controller is primary is to have a user-definable "Handedness" preference that the user sets to indicate which of their hands is dominant. You would then look at each input source and find one matching this, if available, falling back to another controller if no controller is in that hand.</p>
 
-<pre class="brush: js notranslate">let primaryInputSource = xrSession.inputSources[0];
+<pre class="brush: js">let primaryInputSource = xrSession.inputSources[0];
 
 for (let i=0; i &lt; xrSession.inputSources.length; i++) {
   if (xrSession.inputSources[i].handedness === user.handedness) {
@@ -246,7 +246,7 @@ for (let i=0; i &lt; xrSession.inputSources.length; i++) {
 
 <p>Another option is to use the first input the user triggers the select action on. The code below starts by assuming the first input source is the primary, then establishes a handler for the {{domxref("XRSession.select_event", "select")}} event that records the event's source as the primary input source. Then the <code>select</code> event handler is replaced with the function <code>realSelectHandler()</code>, which will be used for handling all future <code>select</code> events. Then we pass the event through to <code>realSelectHandler()</code> to allow the event to be processed as normal.</p>
 
-<pre class="brush: js notranslate">let primaryInputSource = xrSession.inputSources[0];
+<pre class="brush: js">let primaryInputSource = xrSession.inputSources[0];
 
 xrSession.onselect = function(event) {
   primaryInputSource = event.inputSource;
@@ -269,7 +269,7 @@ xrSession.onselect = function(event) {
 
 <p>For example, the <code>generic-trigger-squeeze-touchpad</code> profile name can be used to locate the following JSON profile data by locating the <code>profileId</code> field that has the value <code>generic-trigger-squeeze-touchpad</code>.</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
     "profileId": "generic-trigger-squeeze-touchpad",
     "fallbackProfileIds": [],
     "layouts" : {
@@ -341,7 +341,7 @@ xrSession.onselect = function(event) {
 
 <p>If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the <code>selectstart</code> and <code>selectend</code> events and act on the <code>start</code> event.</p>
 
-<pre class="brush: js notranslate">xrSession.addEventListener("select", event =&gt; {
+<pre class="brush: js">xrSession.addEventListener("select", event =&gt; {
   let inputSource = event.inputSource;
   let frame = event.frame;
 
@@ -374,7 +374,7 @@ xrSession.onselect = function(event) {
 
 <h5 id="Picking_up_an_object_handling_squeezestart_events">Picking up an object: handling squeezestart events</h5>
 
-<pre class="brush: js notranslate">xrSession.addEventListener("squeezestart", event =&gt; {
+<pre class="brush: js">xrSession.addEventListener("squeezestart", event =&gt; {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -406,7 +406,7 @@ xrSession.onselect = function(event) {
 
 <p>This code presumes the existence of additional functions <code>findTargetPosition()</code>, which follows the target ray until it collides with something, then returns the coordinates at which the collision occurred, and <code>putObject()</code>, which places the object held in the specified <code>hand</code> at the given position, removing it from the hand.</p>
 
-<pre class="brush: js notranslate">xrSession.addEventListener("squeeze", event =&gt; {
+<pre class="brush: js">xrSession.addEventListener("squeeze", event =&gt; {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -435,7 +435,7 @@ xrSession.onselect = function(event) {
 
 <p>The {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is received after the squeeze is complete, even if it fails. We handle it by returning the currently-held object to where it was when it was picked up.</p>
 
-<pre class="brush: js notranslate">xrSession.addEventListener("squeezeend", event =&gt; {
+<pre class="brush: js">xrSession.addEventListener("squeezeend", event =&gt; {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -458,10 +458,10 @@ xrSession.onselect = function(event) {
  <li>The user presses the mouse button while inside the {{HTMLElement("canvas")}} presenting the WebXR scene.</li>
  <li>The mouse event is captured by the XR device's driver.</li>
  <li>The device creates a new <code>XRInputSource</code> to represent the simulated XR input source. The {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is set to <code>screen</code>, and the other information is filled out as appropriate. This new input source is temporarily added to the list that's returned by the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}.</li>
- <li>The browser delivers {{domxref("Element.pointerdown_event", "pointerdown")}} events corresponding to the action.</li>
+ <li>The browser delivers {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} events corresponding to the action.</li>
  <li>A primary action is generated and sent to the app in the form of a {{domxref("XRSession.selectstart_event", "selectstart")}} event, with its source set to the new <code>XRInputSource</code>. Or, if the mouse is being used as an off-hand or secondary controller, an auxiliary action is sent instead.</li>
  <li>When the user releases the mouse button, the {{domxref("XRSession.select_event", "select")}} event is sent to the <code>XRSession</code>, then the DOM receives a {{domxref("Element.click_event", "click")}} event. The session then receives the {{domxref("XRSession.selectend_event", "selectend")}} event indicating the completion of the action.</li>
- <li>When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("Element.pointerup_event", "pointerup")}} events are sent.</li>
+ <li>When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("HTMLElement/pointerup_event", "pointerup")}} events are sent.</li>
 </ol>
 
 <p>Thus, the transient input source is indeed transient—it exists only for the duration of handling the input and will as such not be listed in the input source list.</p>
@@ -482,7 +482,7 @@ xrSession.onselect = function(event) {
 
 <p>This space is found in the input source's {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} property. It can be used to determine the direction the controller is pointing and to determine the origin and orientation of the target ray. That can be accomplished by doing something like the following example, which implements a {{domxref("XRSession.select_event", "select")}} event handler that needs this information. As usual, this code is assuming the use of <a href="https://glmatrix.net/">glMatrix</a> to perform the matrix and vector math:</p>
 
-<pre class="brush: js notranslate">xrSession.addEventListener("select", event =&gt; {
+<pre class="brush: js">xrSession.addEventListener("select", event =&gt; {
   const targetRaySpace = event.inputSource.targetRaySpace;
 
   let targetRayPose = event.frame.getPose(targetRaySpace, viewerRefSpace);
@@ -507,7 +507,7 @@ xrSession.onselect = function(event) {
 
 <p>If you need to peel out the actual position of the target ray's origin and the ray's directionality, you can do so like this:</p>
 
-<pre class="brush: js notranslate">const targetRayOrigin = vec3.create();
+<pre class="brush: js">const targetRayOrigin = vec3.create();
 const targetRayDirection = quat.create();
 mat4.getTranslation(targetRayOrigin, viewerRefSpace);
 mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
@@ -518,7 +518,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>In any case, to identify the targeted object, you need to determine if the ray specified by the {{domxref("XRInputSession")}} property {{domxref("XRInputSession.targetRaySpace", "targetRaySpace")}} intersects any objects in the scene, whether thye're virtual or real-world.</p>
 
-<p>See <a href="/en-US/docs/Web/API/Web_Audio_API/Targeting">Targeting and hit detection</a> for a more detailed look at what's involved..</p>
+<p>See <a href="/en-US/docs/Web/API/WebXR_Device_API/Targeting">Targeting and hit detection</a> for a more detailed look at what's involved..</p>
 
 <h3 id="Presenting_hand-held_objects">Presenting hand-held objects</h3>
 
@@ -571,7 +571,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>The corresponding code for keyboard input might look something like this:</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keydown", event =&gt; {
+<pre class="brush: js">document.addEventListener("keydown", event =&gt; {
   switch(event.key) {
     case: "a":
     case: "A":
@@ -600,7 +600,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>Now that we have the deltas that need to be applied to the position and orientation—in our example, in the <code>posDelta</code> and <code>orientDelta</code> properties of our <code>avatar</code> object—we can write code to apply those changes. Since we're already rendering the scene on a schedule, we can just add the code to apply these changes there, along with preparing and drawing the scene.</p>
 
-<pre class="brush: js notranslate">function drawFrame(time, frame) {
+<pre class="brush: js">function drawFrame(time, frame) {
   applyExternalInputs(avatar);
   let pose = frame.getViewerPose(avatar.referenceSpace);
 
@@ -616,7 +616,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 
 <p>The <code>applyExternalInputs()</code> method takes the <code>avatar</code> object replaces its <code>referenceSpace</code> property with a new reference space that incorporates the updated deltas.</p>
 
-<pre class="brush: js notranslate">function applyExternalInputs(avatar) {
+<pre class="brush: js">function applyExternalInputs(avatar) {
   if (!avatar.posDelta.x &amp;&amp; !avatar.posDelta.y &amp;&amp; !avatar.posDelta.z) {
     return;  // Player hasn't moved with keyboard
   }
@@ -631,7 +631,7 @@ mat4.getRotation(targetRayDirection, viewerRefSpace);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Targeting">Targeting and hit detection </a></li>
+ <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Targeting">Targeting and hit detection </a></li>
  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Input_profiles">Using WebXR input profiles </a></li>
  <li><a href="/en-US/docs/Web/WebXR_Device_API/Gamepads">Supporting advanced controllers and gamepads in WebXR applications </a></li>
  <li><a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry">Geometry and reference spaces in WebXR </a></li>

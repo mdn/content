@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">function* <var>name</var>([<var>param</var>[, <var>param</var>[, ... <var>param</var>]]]) {
+<pre class="brush: js">function* <var>name</var>([<var>param</var>[, <var>param</var>[, ... <var>param</var>]]]) {
    <var>statements</var>
 }
 </pre>
@@ -76,7 +76,7 @@ tags:
 
 <h3 id="Simple_example">Simple example</h3>
 
-<pre class="brush: js notranslate">function* idMaker() {
+<pre class="brush: js">function* idMaker() {
   var index = 0;
   while (true)
     yield index++;
@@ -92,7 +92,7 @@ console.log(gen.next().value); // 3
 
 <h3 id="Example_with_yield*">Example with yield*</h3>
 
-<pre class="brush: js notranslate">function* anotherGenerator(i) {
+<pre class="brush: js">function* anotherGenerator(i) {
   yield i + 1;
   yield i + 2;
   yield i + 3;
@@ -115,7 +115,7 @@ console.log(gen.next().value); // 20
 
 <h3 id="Passing_arguments_into_Generators">Passing arguments into Generators</h3>
 
-<pre class="brush: js notranslate">function* logGenerator() {
+<pre class="brush: js">function* logGenerator() {
   console.log(0);
   console.log(1, yield);
   console.log(2, yield);
@@ -134,7 +134,7 @@ gen.next('mayonnaise'); // 3 mayonnaise
 
 <h3 id="Return_statement_in_a_generator">Return statement in a generator</h3>
 
-<pre class="brush: js notranslate">function* yieldAndReturn() {
+<pre class="brush: js">function* yieldAndReturn() {
   yield "Y";
   return "R";
   yield "unreachable";
@@ -148,7 +148,7 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 <h3 id="Generator_as_an_object_property">Generator as an object property</h3>
 
-<pre class="brush: js notranslate">const someObj = {
+<pre class="brush: js">const someObj = {
   *generator () {
     yield 'a';
     yield 'b';
@@ -164,7 +164,7 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 <h3 id="Generator_as_an_object_method">Generator as an object method</h3>
 
-<pre class="brush: js notranslate">class Foo {
+<pre class="brush: js">class Foo {
   *generator () {
     yield 1;
     yield 2;
@@ -183,7 +183,7 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 <h3 id="Generator_as_a_computed_property">Generator as a computed property</h3>
 
-<pre class="brush: js notranslate">class Foo {
+<pre class="brush: js">class Foo {
   *[Symbol.iterator] () {
     yield 1;
     yield 2;
@@ -203,13 +203,13 @@ console.log(Array.from(SomeObj)); // [ 'a', 'b' ]
 
 <h3 id="Generators_are_not_constructable">Generators are not constructable</h3>
 
-<pre class="brush: js notranslate">function* f() {}
+<pre class="brush: js">function* f() {}
 var obj = new f; // throws "TypeError: f is not a constructor
 </pre>
 
 <h3 id="Generator_defined_in_an_expression">Generator defined in an expression</h3>
 
-<pre class="brush: js notranslate">const foo = function* () {
+<pre class="brush: js">const foo = function* () {
   yield 10;
   yield 20;
 };
@@ -219,7 +219,7 @@ console.log(bar.next()); // {value: 10, done: false}</pre>
 
 <h3 id="Generator_example">Generator example</h3>
 
-<pre class="brush: js notranslate">function* powers(n){
+<pre class="brush: js">function* powers(n){
      //endless loop to generate
      for(let current =n;; current *= n){
          yield current;
@@ -254,10 +254,7 @@ for(let power of powers(2)){
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.statements.generator_function")}}</p>
-</div>
+<p>{{Compat("javascript.statements.generator_function")}}</p>
 
 <h2 id="See_also">See also</h2>
 

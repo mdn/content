@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   defineProperty: function(<var>target</var>, <var>property</var>, <var>descriptor</var>) {
   }
 });
@@ -88,7 +88,7 @@ tags:
 
 <p>The following code traps {{jsxref("Object.defineProperty()")}}.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   defineProperty: function(target, prop, descriptor) {
     console.log('called: ' + prop);
     return true;
@@ -113,7 +113,7 @@ Object.defineProperty(p, 'a', desc); // "called: a"
   <li><code>set</code></li>
 </ul>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   defineProperty(target, prop, descriptor) {
     console.log(descriptor);
     return Reflect.defineProperty(target, prop, descriptor);
@@ -145,10 +145,7 @@ Object.defineProperty(p, 'name', {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}</p>
 
 <h2 id="See_also">See also</h2>
 

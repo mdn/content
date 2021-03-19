@@ -46,7 +46,7 @@ tags:
 
 <p>For example, look at the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> page on MDN. The corresponding entry in <code>GroupData.json</code> looks like this:</p>
 
-<pre class="brush: json notranslate">"Fetch API": {
+<pre class="brush: json">"Fetch API": {
     "overview":   [ "Fetch API"],
     "interfaces": [ "Body",
                     "Headers",
@@ -69,7 +69,7 @@ tags:
 
 <p>Note that most of the values included inside the listed sub-members equate to both the link text, and slugs appended to the end of the main API index page —  <code>https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs/Web/API</code> — to create the final URL for the displayed link. So for example, "Body" will result in a link being created like so:</p>
 
-<pre class="brush: html notranslate">&lt;li&gt;&lt;a href="/en-US/docs/Web/API"&gt;Body&lt;/a&gt;&lt;/li&gt;</pre>
+<pre class="brush: html">&lt;li&gt;&lt;a href="/en-US/docs/Web/API"&gt;Body&lt;/a&gt;&lt;/li&gt;</pre>
 
 <p>There are a few exceptions. For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials. In this case the slugs are appended to the end of the MDN docs root — https://developer.mozilla.org/<em>&lt;language-code&gt;</em>/docs — allowing an article anywhere on MDN to be included.</p>
 
@@ -94,7 +94,7 @@ tags:
 	<li>
 	<p><code>"guides"</code> — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:</p>
 
-	<pre class="brush: json notranslate">{ "url":   "/docs/Web/API/Detecting_device_orientation",
+	<pre class="brush: json">{ "url":   "/docs/Web/API/Detecting_device_orientation",
 "title": "Detecting device orientation" }</pre>
 
 	<p>Creates a link with the title "Detecting device orientation", which points to <a href="/en-US/docs/Web/API/Detecting_device_orientation">https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation</a>.</p>
@@ -122,4 +122,4 @@ tags:
 
 <p>Once you've added an entry for your API into <code>GroupData.json</code>, submitted it as a pull request and had the change accepted into the main repo, you can include it in your API reference pages using the {{TemplateLink("APIRef")}} macro, which takes the name you used for your API in GroupData as a parameter. As an example, the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>'s sidebar is included in its pages with the following:</p>
 
-<pre class="brush: js notranslate">\{{APIRef("WebVR API")}}</pre>
+<pre class="brush: js">\{{APIRef("WebVR API")}}</pre>

@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>mediaRecorder</em> = new MediaRecorder(<em>stream</em>[, <em>options</em>]);</pre>
+  class="brush: js">var <em>mediaRecorder</em> = new MediaRecorder(<em>stream</em>[, <em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,6 +65,11 @@ tags:
       <p>If bits per second values are not specified for video and/or audio, the default
         adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
         the sample rate and the number of channels.</p>
+    </div>
+    <div class="notecard note">
+      <p>Video resolution, frame rate and similar settings are specified as constraints
+        when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
+        not here in the MediaRecorder API.</p>
     </div>
   </dd>
 </dl>

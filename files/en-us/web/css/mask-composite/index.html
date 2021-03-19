@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>mask-composite</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property represents a compositing operation used on the current mask layer with the mask layers below it.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 mask-composite: add;
 mask-composite: subtract;
 mask-composite: intersect;
@@ -50,7 +50,7 @@ mask-composite: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,7 +58,7 @@ mask-composite: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[7] notranslate">#masked {
+<pre class="brush: css; highlight[7]">#masked {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
@@ -72,7 +72,7 @@ mask-composite: unset;
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="masked"&gt;
+<pre class="brush: html">&lt;div id="masked"&gt;
 &lt;/div&gt;
 &lt;select id="compositeMode"&gt;
   &lt;option value="add"&gt;add&lt;/option&gt;
@@ -84,7 +84,7 @@ mask-composite: unset;
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var clipBox = document.getElementById("compositeMode");
+<pre class="brush: js">var clipBox = document.getElementById("compositeMode");
 clipBox.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskComposite = evt.target.value;
 });

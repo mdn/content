@@ -14,7 +14,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>some()</code></strong> method tests whether
     at least one element in the array passes the test implemented by the provided
-    function. It returns a Boolean value. </span></p>
+  function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-some.html")}}</div>
 
@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>arr</var>.some(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>arr</var>.some(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -104,7 +104,7 @@ tags:
   that <code><var>fun</var>.call</code> evaluates to the original value of
   {{jsxref("Function.prototype.call()")}}.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.17
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.17
 // Reference: https://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
   Array.prototype.some = function(fun, thisArg) {
@@ -138,7 +138,7 @@ if (!Array.prototype.some) {
 
 <p>The following example tests whether any element in the array is bigger than 10.</p>
 
-<pre class="brush: js notranslate">function isBiggerThan10(element, index, array) {
+<pre class="brush: js">function isBiggerThan10(element, index, array) {
   return element &gt; 10;
 }
 
@@ -151,7 +151,7 @@ if (!Array.prototype.some) {
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow
     functions</a> provide a shorter syntax for the same test.</p>
 
-<pre class="brush: js notranslate">[2, 5, 8, 1, 4].some(x =&gt; x &gt; 10);  // false
+<pre class="brush: js">[2, 5, 8, 1, 4].some(x =&gt; x &gt; 10);  // false
 [12, 5, 8, 1, 4].some(x =&gt; x &gt; 10); // true</pre>
 
 <h3 id="Checking_whether_a_value_exists_in_an_array">Checking whether a value exists in an
@@ -160,7 +160,7 @@ if (!Array.prototype.some) {
 <p>To mimic the function of the <code>includes()</code> method, this custom
   function returns <code>true</code> if the element exists in the array:</p>
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'mango', 'guava'];
+<pre class="brush: js">const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
   return arr.some(function(arrVal) {
@@ -174,7 +174,7 @@ checkAvailability(fruits, 'banana'); // true</pre>
 <h3 id="Checking_whether_a_value_exists_using_an_arrow_function">Checking whether a value
   exists using an arrow function</h3>
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'mango', 'guava'];
+<pre class="brush: js">const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
   return arr.some(arrVal =&gt; val === arrVal);
@@ -185,7 +185,7 @@ checkAvailability(fruits, 'banana'); // true</pre>
 
 <h3 id="Converting_any_value_to_Boolean">Converting any value to Boolean</h3>
 
-<pre class="brush: js notranslate">const TRUTHY_VALUES = [true, 'true', 1];
+<pre class="brush: js">const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
   'use strict';
@@ -222,10 +222,7 @@ getBoolean('true');  // true</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.some")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.some")}}</p>
 
 <h2 id="See_also">See also</h2>
 

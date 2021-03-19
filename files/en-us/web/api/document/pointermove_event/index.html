@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/Events/pointercancel">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
+<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -39,13 +39,13 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">document.addEventListener('pointermove', (event) =&gt; {
+<pre class="brush: js">document.addEventListener('pointermove', (event) =&gt; {
   console.log('Pointer moved');
 });</pre>
 
 <p>Using the <code>onpointermove</code> event handler property:</p>
 
-<pre class="brush: js notranslate">document.onpointermove = (event) =&gt; {
+<pre class="brush: js">document.onpointermove = (event) =&gt; {
   console.log('Pointer moved');
 };</pre>
 

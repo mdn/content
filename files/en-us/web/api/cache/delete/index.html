@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>cache</em>.delete(<em>request</em>, {<em>options</em>}).then(function(<em>found</em>) {
+<pre class="brush: js"><em>cache</em>.delete(<em>request</em>, {<em>options</em>}).then(function(<em>found</em>) {
   // your cache entry has been deleted if found
 });
 </pre>
@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">caches.open('v1').then(function(cache) {
+<pre class="brush: js">caches.open('v1').then(function(cache) {
   cache.delete('/images/image.png').then(function(response) {
     someUIUpdateFunction();
   });
@@ -91,10 +91,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Cache.delete")}}</p>
-</div>
+<p>{{Compat("api.Cache.delete")}}</p>
 
 <h2 id="See_also">See also</h2>
 

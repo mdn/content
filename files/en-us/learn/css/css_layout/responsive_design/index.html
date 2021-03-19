@@ -40,9 +40,7 @@ tags:
 
 <p>These two approaches tended to result in a website that looked its best on the screen of the person designing the site! The liquid site resulted in a squashed design on smaller screens (as seen below) and unreadably long line lengths on larger ones.</p>
 
-<figure><img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this simple liquid layout: <a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">source code</a>. When viewing the example, drag your browser window in and out to see how this looks at different sizes.</p>
@@ -50,9 +48,7 @@ tags:
 
 <p>The fixed-width site risked a horizontal scrollbar on screens smaller than the site width (as seen below), and lots of white space at the edges of the design on larger screens.</p>
 
-<figure><img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this simple fixed-width layout: <a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">source code</a>. Again, observe the result as you change the browser window size.</p>
@@ -92,11 +88,11 @@ tags:
 
 <p>For example, the following media query tests to see if the current web page is being displayed as screen media (therefore not a printed document) and the viewport is at least 800 pixels wide. The CSS for the <code>.container</code> selector will only be applied if these two things are true.</p>
 
-<pre class="brush: css notranslate">@media screen and (min-width: 800px) {
+<pre class="brush: css">@media screen and (min-width: 800px) {
   .container {
     margin: 1em 2em;
   }
-} 
+}
 </pre>
 
 <p>You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as <em>breakpoints</em>.</p>
@@ -113,29 +109,25 @@ tags:
 
 <p>In the early days of responsive design, our only option for performing layout was to use <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>. Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
 
-<pre class="notranslate"><code>target / context = result </code>
+<pre><code>target / context = result </code>
 </pre>
 
 <p>For example, if our target column size is 60 pixels, and the context (or container) it is in is 960 pixels, we divide 60 by 960 to get a value we can use in our CSS, after moving the decimal point two places to the right.</p>
 
-<pre class="brush: css notranslate">.col {
+<pre class="brush: css">.col {
   width: 6.25%; /* 60 / 960 = 0.0625 */
-} 
+}
 </pre>
 
 <p>This approach will be found in many places across the web today, and it is documented here in the layout section of our <a href="/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy layout methods</a> article. It is likely that you will come across websites using this approach in your work, so it is worth understanding it, even though you would not build a modern site using a float-based flexible grid.</p>
 
 <p>The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens the layout displays the boxes stacked on top of one another:</p>
 
-<figure><img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png" style="display: block;">
 
 <p>On wider screens they move to two columns:</p>
 
-<figure><img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: You can find the <a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">live example</a> and <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">source code</a> for this example on GitHub.</p>
@@ -149,16 +141,16 @@ tags:
 
 <p>The oldest of these layout methods is multicol — when you specify a <code>column-count</code>, this indicates how many columns you want your content to be split into. The browser then works out the size of these, a size that will change according to the screen size.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-count: 3;
-} 
+}
 </pre>
 
 <p>If you instead specify a <code>column-width</code>, you are specifying a <em>minimum</em> width. The browser will create as many columns of that width as will comfortably fit into the container, then share out the remaining space between all the columns. Therefore the number of columns will change according to how much space there is.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   column-width: 10em;
-} 
+}
 </pre>
 
 <h3 id="Flexbox">Flexbox</h3>
@@ -167,13 +159,13 @@ tags:
 
 <p>In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of <code>flex: 1</code> as described in the layout topic <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items">Flexbox: Flexible sizing of flex items</a>.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: flex;
 }
 
 .item {
   flex: 1;
-} 
+}
 </pre>
 
 <div class="notecard note">
@@ -184,10 +176,10 @@ tags:
 
 <p>In CSS Grid Layout the <code>fr</code> unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at <code>1fr</code>. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit">Flexible grids with the fr unit</a>.</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-} 
+}
 </pre>
 
 <div class="notecard note">
@@ -198,9 +190,9 @@ tags:
 
 <p>The simplest approach to responsive images was as described in Marcotte's early articles on responsive design. Basically, you would take an image that was at the largest size that might be needed, and scale it down. This is still an approach used today, and in most stylesheets, you will find the following CSS somewhere:</p>
 
-<pre class="brush: css notranslate">img {
+<pre class="brush: css">img {
   max-width: 100%;
-} 
+}
 </pre>
 
 <p>There are obvious downsides to this approach. The image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth — a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by scaling down an image.</p>
@@ -217,7 +209,7 @@ tags:
 
 <p>In this example, we want to set our level 1 heading to be <code>4rem</code>, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least <code>1200px</code>.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 1em;
 }
 
@@ -229,22 +221,18 @@ h1 {
   h1 {
     font-size: 4rem;
   }
-} 
+}
 </pre>
 
 <p>We have edited our responsive grid example above to also include responsive type using the method outlined. You can see how the heading switches sizes as the layout goes to the two column version.</p>
 
 <p>On mobile the heading is smaller:</p>
 
-<figure><img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png" style="display: block;">
 
 <p>On desktop, however, we see the larger heading size:</p>
 
-<figure><img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png" style="display: block;">
-<figcaption></figcaption>
-</figure>
+<img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png" style="display: block;">
 
 <div class="notecard note">
 <p><strong>Note</strong>: See this example in action: <a href="https://mdn.github.io/css-examples/learn/rwd/type-rwd.html">example</a>, <a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html">source code</a>.</p>
@@ -256,7 +244,7 @@ h1 {
 
 <p>An interesting approach is to use the viewport unit <code>vw</code> to enable responsive typography. <code>1vw</code> is equal to one percent of the viewport width, meaning that if you set your font size using <code>vw</code>, it will always relate to the size of the viewport.</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 6vw;
 }</pre>
 
@@ -264,7 +252,7 @@ h1 {
 
 <p>There is a solution, and it involves using <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code>. If you add the <code>vw</code> unit to a value set using a fixed size such as <code>em</code>s or <code>rem</code>s then the text will still be zoomable. Essentially, the <code>vw</code> unit adds on top of that zoomed value:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: calc(1.5rem + 3vw);
 }</pre>
 
@@ -278,7 +266,7 @@ h1 {
 
 <p>If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the <code>&lt;head&gt;</code> of the document.</p>
 
-<pre class="brush: html notranslate">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+<pre class="brush: html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
 </pre>
 
 <p>This meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.</p>

@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>mask-origin</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the origin of a mask.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 mask-origin: content-box;
 mask-origin: padding-box;
 mask-origin: border-box;
@@ -74,7 +74,7 @@ mask-origin: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -82,7 +82,7 @@ mask-origin: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[9] notranslate">#masked {
+<pre class="brush: css; highlight[9]">#masked {
   width: 100px;
   height: 100px;
   margin: 10px;
@@ -97,7 +97,7 @@ mask-origin: unset;
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="masked"&gt;
+<pre class="brush: html">&lt;div id="masked"&gt;
 &lt;/div&gt;
 &lt;select id="origin"&gt;
   &lt;option value="content-box"&gt;content-box&lt;/option&gt;
@@ -112,7 +112,7 @@ mask-origin: unset;
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var origin = document.getElementById("origin");
+<pre class="brush: js">var origin = document.getElementById("origin");
 origin.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskOrigin = evt.target.value;
 });

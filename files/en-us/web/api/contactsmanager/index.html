@@ -29,14 +29,14 @@ tags:
 
 <p>The following code checks whether the Contact Picker API is supported.</p>
 
-<pre class="brush: js notranslate">const supported = ('contacts' in navigator &amp;&amp; 'ContactsManager' in window);
+<pre class="brush: js">const supported = ('contacts' in navigator &amp;&amp; 'ContactsManager' in window);
 </pre>
 
 <h3 id="Checking_for_Supported_Properties">Checking for Supported Properties</h3>
 
 <p>The following asynchronous function uses the <code>getProperties</code> method to check for supported properties.</p>
 
-<pre class="brush: js notranslate">async function checkProperties() {
+<pre class="brush: js">async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
   if (supportedProperties.includes('name')) {
     // run code for name support
@@ -62,7 +62,7 @@ tags:
 
 <p>An asynchronous function is then defined which uses the <code>select()</code> method to present the user with a contact picker interface and handle the chosen results.</p>
 
-<pre class="brush: js notranslate">const props = ['name', 'email', 'tel', 'address', 'icon'];
+<pre class="brush: js">const props = ['name', 'email', 'tel', 'address', 'icon'];
 const opts = {multiple: true};
 
 async function getContacts() {

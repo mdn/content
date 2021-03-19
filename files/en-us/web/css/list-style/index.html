@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* type */
+<pre class="brush:css no-line-numbers">/* type */
 list-style: square;
 
 /* image */
@@ -73,7 +73,7 @@ list-style: unset;
 
 <p>Safari has an issue whereby unordered lists with a <code>list-style</code> value of <code>none</code> applied to them will not be recognized as a list in the accessibility tree. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/en-US/docs/Web/CSS/content">pseudo-content</a> before each list item to ensure the list is recognized properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
 
-<pre class="brush: css notranslate">ul {
+<pre class="brush: css">ul {
   list-style: none;
 }
 
@@ -94,7 +94,7 @@ ul li::before {
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -102,7 +102,7 @@ ul li::before {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">List 1
+<pre class="brush: html">List 1
 &lt;ul class="one"&gt;
   &lt;li&gt;List Item1&lt;/li&gt;
   &lt;li&gt;List Item2&lt;/li&gt;
@@ -118,7 +118,7 @@ List 2
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.one {
+<pre class="brush: css">.one {
   list-style: circle;
 }
 

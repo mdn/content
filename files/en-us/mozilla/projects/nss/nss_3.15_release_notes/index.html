@@ -14,7 +14,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
 <h2 id="New_in_NSS_3.15">New in NSS 3.15</h2>
 <h3 id="New_Functionality">New Functionality</h3>
 <ul>
-  <li>Support for OCSP Stapling (<a href="https://tools.ietf.org/html/rfc6066">RFC 6066</a>, Certificate Status Request) has been added for both client and server sockets. TLS client applications may enable this via a call to <code>SSL_OptionSetDefault(SSL_ENABLE_OCSP_STAPLING, PR_TRUE);</code></li>
+  <li>Support for OCSP Stapling (<a href="https://datatracker.ietf.org/doc/html/rfc6066">RFC 6066</a>, Certificate Status Request) has been added for both client and server sockets. TLS client applications may enable this via a call to <code>SSL_OptionSetDefault(SSL_ENABLE_OCSP_STAPLING, PR_TRUE);</code></li>
   <li>Added function SECITEM_ReallocItemV2. It replaces function SECITEM_ReallocItem, which is now declared as obsolete.</li>
   <li>Support for single-operation (eg: not multi-part) symmetric key encryption and decryption, via <em>PK11_Encrypt</em> and <em>PK11_Decrypt</em>.</li>
   <li>certutil has been updated to support creating name constraints extensions.</li>
@@ -79,7 +79,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
   <li><em>SECITEM_ReallocItem</em> is now deprecated. Please consider using <em>SECITEM_ReallocItemV2</em> in all future code.</li>
   <li>
     <p>NSS has migrated from CVS to the Mercurial source control management system.</p>
-    <p>Updated build instructions are available at <a href="/en-US/docs/NSS_reference/Building_and_installing_NSS/Migration_to_HG">Migration to HG</a></p>
+    <p>Updated build instructions are available at <a href="/en-US/docs/Mozilla/Projects/NSS/Reference/Building_and_installing_NSS/Migration_to_HG">Migration to HG</a></p>
     <p>As part of this migration, the source code directory layout has been re-organized.</p>
   </li>
   <li>

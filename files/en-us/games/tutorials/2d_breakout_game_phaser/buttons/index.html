@@ -25,7 +25,7 @@ tags:
 
 <p>We will need a variable to store a boolean value representing whether the game is currently being played or not, and another one to represent our button. Add these lines below your other variable definitions:</p>
 
-<pre class="brush: js notranslate">var playing = false;
+<pre class="brush: js">var playing = false;
 var startButton;
 </pre>
 
@@ -33,7 +33,7 @@ var startButton;
 
 <p>We can load the button spritesheet the same way we loaded the ball's wobble animation. Add the following to the bottom of the <code>preload()</code> function:</p>
 
-<pre class="brush: js notranslate">game.load.spritesheet('button', 'img/button.png', 120, 40);
+<pre class="brush: js">game.load.spritesheet('button', 'img/button.png', 120, 40);
 </pre>
 
 <p>A single button frame is 120 pixels wide and 40 pixels high.</p>
@@ -44,7 +44,7 @@ var startButton;
 
 <p>Adding the new button to the game is done by using the <code>add.button</code> method. Add the following lines to the bottom of your <code>create()</code> function:</p>
 
-<pre class="brush: js notranslate">startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+<pre class="brush: js">startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
 startButton.anchor.set(0.5);
 </pre>
 
@@ -64,7 +64,7 @@ startButton.anchor.set(0.5);
 
 <p>Now we need to define the <code>startGame()</code> function referenced in the code above:</p>
 
-<pre class="brush: js notranslate">function startGame() {
+<pre class="brush: js">function startGame() {
     startButton.destroy();
     ball.body.velocity.set(150, -150);
     playing = true;
@@ -79,7 +79,7 @@ startButton.anchor.set(0.5);
 
 <p>It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the <code>playing</code> variable and make the paddle movable only when the game has started. To do that, adjust the <code>update()</code> function like so:</p>
 
-<pre class="brush: js notranslate">function update() {
+<pre class="brush: js">function update() {
     game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
     if(playing) {

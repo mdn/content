@@ -45,7 +45,7 @@ tags:
 
 <p>In the following example, the variable <code>bigNumber</code> is assigned a value that is larger than the maximum value. When the {{jsxref("Statements/if...else", "if")}} statement executes, <code>bigNumber</code> has the value <code>Infinity</code>, so <code>bigNumber</code> is set to a more manageable value before continuing.</p>
 
-<pre class="brush: js notranslate">var bigNumber = Number.MAX_VALUE * 2;
+<pre class="brush: js">var bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber == Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();

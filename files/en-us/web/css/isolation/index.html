@@ -15,11 +15,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/isolation.html")}}</div>
 
-<p>This property is especially helpful when used in conjunction with {{cssxref("mix-blend-mode")}}.</p>
+<p>This property is especially helpful when used in conjunction with {{cssxref("mix-blend-mode")}} and {{cssxref("z-index")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 isolation: auto;
 isolation: isolate;
 
@@ -46,7 +46,7 @@ isolation: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -54,7 +54,7 @@ isolation: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="b" class="a"&gt;
+<pre class="brush: html">&lt;div id="b" class="a"&gt;
   &lt;div id="d"&gt;
     &lt;div class="a c"&gt;auto&lt;/div&gt;
   &lt;/div&gt;
@@ -66,7 +66,7 @@ isolation: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.a {
+<pre class="brush: css">.a {
   background-color: rgb(0,255,0);
 }
 #b {

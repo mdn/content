@@ -77,7 +77,7 @@ tags:
 
 <p>The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;font size="7"&gt;My heading&lt;/font&gt;
+<pre class="brush: html example-bad">&lt;font size="7"&gt;My heading&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 This is the first section of my document.
 &lt;br&gt;&lt;br&gt;
@@ -91,7 +91,7 @@ This is the first subsection of my document. I'd love people to be able to find 
 &lt;br&gt;&lt;br&gt;
 This is the second subsection of my content. I think it is more interesting than the last one.</pre>
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;My heading&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;My heading&lt;/h1&gt;
 
 &lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
@@ -145,7 +145,7 @@ This is the second subsection of my content. I think it is more interesting than
 
 <p>Another tip — as shown in our example, you can control how your focusable elements look when focused, using the <a href="/en-US/docs/Web/CSS/:focus">:focus</a> pseudo-class. It is a good idea to double up focus and hover styles, so your users get that visual clue that a control will do something when activated, whether they are using mouse or keyboard:</p>
 
-<pre class="brush: css notranslate">a:hover, input:hover, button:hover, select:hover,
+<pre class="brush: css">a:hover, input:hover, button:hover, select:hover,
 a:focus, input:focus, button:focus, select:focus {
   font-weight: bold;
 }</pre>
@@ -162,12 +162,12 @@ a:focus, input:focus, button:focus, select:focus {
  <li>Create custom controls using <code>&lt;button&gt;</code> elements (which we can tab to by default!) and JavaScript to wire up their functionality. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for some good examples of this.</li>
  <li>Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a> for some game-related examples that can be adapted for any purpose.</li>
  <li>Use some interesting tactics to fake button behavior. Take for example our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Here we've given our fake <code>&lt;div&gt;</code> buttons the ability to be focused (including via tab) by giving each one the attribute <code>tabindex="0"</code> (see WebAIM's <a href="http://webaim.org/techniques/keyboard/tabindex">tabindex article</a> for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
-  <pre class="brush: js notranslate">document.onkeydown = function(e) {
+  <pre class="brush: js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.onclick(e);
   }
 };</pre>
-  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
+  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
 </ol>
 
 <div class="note">
@@ -286,7 +286,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>Here's an example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
 
 <p>You can see an example in action at Freedom Scientific's <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) Live Regions</a> example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a> provides another useful example.</p>
 
@@ -310,8 +310,8 @@ a:focus, input:focus, button:focus, select:focus {
 
 <ol>
  <li>Go to the <a href="http://wave.webaim.org/">Wave homepage</a>.</li>
- <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input at the top of the page (or the URL of another webpage you'd like to analyze) and press <em>Analyse Your Webpage</em>.</li>
- <li>Check out the description of the accessibility problems on the results page (the icons you can click to see what problems are occurring where are rather useful).</li>
+ <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.</li>
+ <li>The site should respond with a description of the accessibility problems. Click the icons displayed to see more information about each of the issues identified by Wave's evaluation.</li>
 </ol>
 
 <div class="note">

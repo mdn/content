@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
 width: 300px;
 width: 25em;
 
@@ -74,23 +74,23 @@ width: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Default_width">Default width</h3>
 
-<pre class="brush:css notranslate">p.goldie {
+<pre class="brush:css">p.goldie {
   background: gold;
 }</pre>
 
-<pre class="brush:html notranslate">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+<pre class="brush:html">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample('Default_width', '500px', '64px')}}</p>
 
 <h3 id="Pixels_and_ems">Pixels and ems</h3>
 
-<pre class="brush: css notranslate">.px_length {
+<pre class="brush: css">.px_length {
   width: 200px;
   background-color: red;
   color: white;
@@ -105,26 +105,26 @@ width: unset;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="px_length"&gt;Width measured in px&lt;/div&gt;
+<pre class="brush: html">&lt;div class="px_length"&gt;Width measured in px&lt;/div&gt;
 &lt;div class="em_length"&gt;Width measured in em&lt;/div&gt;</pre>
 
 <p>{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}</p>
 
 <h3 id="Percentage">Percentage</h3>
 
-<pre class="brush: css notranslate">.percent {
+<pre class="brush: css">.percent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div class="percent"&gt;Width in percentage&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="percent"&gt;Width in percentage&lt;/div&gt;</pre>
 
 <p>{{EmbedLiveSample('Percentage', '500px', '64px')}}</p>
 
 <h3 id="max-content">max-content</h3>
 
-<pre class="brush:css; notranslate">p.maxgreen {
+<pre class="brush:css;">p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
@@ -132,20 +132,20 @@ width: unset;
   width: max-content;
 }</pre>
 
-<pre class="brush:html notranslate">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+<pre class="brush:html">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample('max-content', '500px', '64px')}}</p>
 
 <h3 id="min-content">min-content</h3>
 
-<pre class="brush:css notranslate">p.minblue {
+<pre class="brush:css">p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
   width: min-content;
 }</pre>
 
-<pre class="brush:html notranslate">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+<pre class="brush:html">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
 
 <p>{{EmbedLiveSample('min-content', '500px', '155px')}}</p>
 

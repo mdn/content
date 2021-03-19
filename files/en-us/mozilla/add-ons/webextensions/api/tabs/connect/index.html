@@ -52,7 +52,7 @@ tags:
 
 <p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
 
-<pre class="notranslate brush: js">function connectToTab(tabs) {
+<pre class="brush: js">function connectToTab(tabs) {
   if (tabs.length &gt; 0) {
     var examplePort = browser.tabs.connect(
       tabs[0].id,

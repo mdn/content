@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>numItems</em> = <em>nodeList</em>.length
+<pre class="brush: js"><em>numItems</em> = <em>nodeList</em>.length
 </pre>
 
 <ul>
@@ -32,12 +32,12 @@ tags:
   iterator in a <code>for</code> loop, as in this example.</p>
 
 <pre class="brush: js">// All the paragraphs in the document
-var items = document.getElementsByTagName("p");
+const items = document.getElementsByTagName("p");
 
 // For each item in the list,
 // append the entire element as a string of HTML
-var gross = "";
-for (var i = 0; i &lt; items.length; i++) {
+let gross = "";
+for (let i = 0; i &lt; items.length; i++) {
   gross += items[i].innerHTML;
 }
 

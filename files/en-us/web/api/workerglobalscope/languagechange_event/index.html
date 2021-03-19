@@ -36,13 +36,13 @@ tags:
 
 <p>You can use the <code>languagechange</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
 
-<pre class="brush: js notranslate">worker.addEventListener('languagechange', function() {
+<pre class="brush: js">worker.addEventListener('languagechange', function() {
   console.log('languagechange event detected!');
 });</pre>
 
 <p>Or use the {{domxref("WorkerGlobalScope/onlanguagechange", "onlanguagechange")}} event handler property:</p>
 
-<pre class="brush: js notranslate">worker.onlanguagechange = function(event) {
+<pre class="brush: js">worker.onlanguagechange = function(event) {
   console.log('languagechange event detected!');
 };</pre>
 

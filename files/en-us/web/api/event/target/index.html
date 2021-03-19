@@ -2,13 +2,13 @@
 title: Event.target
 slug: Web/API/Event/target
 tags:
-- API
-- DOM
-- Event
-- Property
-- Reference
-- delegation
-- target
+  - API
+  - DOM
+  - Event
+  - Property
+  - Reference
+  - delegation
+  - target
 ---
 <div>{{ApiRef("DOM")}}</div>
 
@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <var>theTarget</var> = <var>someEvent</var>.target;</pre>
+  class="brush: js">const <var>theTarget</var> = <var>someEvent</var>.target;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -31,7 +31,7 @@ tags:
 <p>The <code>event.target</code> property can be used in order to implement <strong>event
     delegation</strong>.</p>
 
-<pre class="brush: js notranslate">// Make a list
+<pre class="brush: js">// Make a list
 const ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -93,7 +93,7 @@ ul.addEventListener('click', hide, false);
   of the <code>target</code> property) and it has the same semantics as
   <code>Event.target</code>.</p>
 
-<pre class="brush: js notranslate">function hide(evt) {
+<pre class="brush: js">function hide(evt) {
   // Support IE6-8
   var target = evt.target || evt.srcElement;
   target.style.visibility = 'hidden';

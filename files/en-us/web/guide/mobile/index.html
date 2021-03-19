@@ -15,7 +15,7 @@ tags:
 
 <h3 id="Working_with_small_screens">Working with small screens</h3>
 
-<p><a href="/en-US/docs/Web/Guide/Responsive_design">Responsive Web Design</a> is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:</p>
+<p><a href="/en-US/docs/Web/Progressive_web_apps">Responsive Web Design</a> is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:</p>
 
 <ul>
  <li>fluid CSS layouts, to make the page adapt smoothly as the browser window size changes</li>
@@ -26,7 +26,7 @@ tags:
 
 <h3 id="Working_with_touch_screens">Working with touch screens</h3>
 
-<p>To use a touch screen you'll need to work with <a href="/en-US/docs/Web/API/Touch_events">DOM Touch events</a>. You won't be able to use the CSS {{cssxref(":hover")}} pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
+<p>To use a touch screen you'll need to work with <a href="/en-US/docs/Web/API/Touch_events">DOM Touch events</a>. You won't be able to use the CSS {{cssxref(":hover")}} pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
 
 <p>You can use the <a href="/en-US/docs/Web/CSS/@media/pointer">pointer</a> or <a href="/en-US/docs/Web/CSS/@media/any-pointer">any-pointer</a> media query to load different CSS on a touch-enabled device.</p>
 
@@ -52,17 +52,17 @@ tags:
  <li>For browsers that don't support these features, provide an acceptable fallback.</li>
 </ul>
 
-<p>For example, if you set a gradient as a background for some text using a vendor-prefixed property like <code>-webkit-linear-gradient</code>, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your <code>linear-gradient</code> rule.</p>
+<p>For example, if you set a gradient as a background for some text using a vendor-prefixed property like <code>-webkit-linear-gradient</code>, it's best to include the other vendor-prefixed versions of the {{cssxref("linear-gradient()")}} property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your <code>linear-gradient</code> rule.</p>
 
-<p>See this <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">list of Gecko-specific properties</a>, and this <a href="/en-US/docs/Web/CSS/Webkit_Extensions">list of WebKit-specific properties</a>, and Peter Beverloo's <a class="external" href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">table of vendor-specific properties</a>.</p>
+<p>See this <a href="/en-US/docs/Web/CSS/Mozilla_Extensions">list of Gecko-specific properties</a>, and this <a href="/en-US/docs/Web/CSS/WebKit_Extensions">list of WebKit-specific properties</a>, and Peter Beverloo's <a href="http://peter.sh/experiments/vendor-prefixed-css-property-overview/">table of vendor-specific properties</a>.</p>
 
-<p>Using tools like <a class="external" href="http://csslint.net/">CSS Lint</a> can help find problems like this in code, and preprocessors like <a class="external" href="http://sass-lang.com/">SASS</a> and <a class="external" href="http://lesscss.org/">LESS</a> can help you to produce cross-browser code.</p>
+<p>Using tools like <a href="http://csslint.net/">CSS Lint</a> can help find problems like this in code, and preprocessors like <a href="http://sass-lang.com/">SASS</a> and <a href="http://lesscss.org/">LESS</a> can help you to produce cross-browser code.</p>
 
 <h3 id="Take_care_with_user_agent_sniffing">Take care with user agent sniffing</h3>
 
 <p>It's preferable for web sites to detect specific device features such as screen size and touch screens using the techniques listed above, and adapt themselves accordingly. But sometimes this is impractical, and web sites resort to parsing the browser's user agent string to try to distinguish between desktops, tablets, and phones, to serve different content to each type of device.</p>
 
-<p>If you do this, make sure your algorithm is correct, and you aren't serving the wrong type of content to a device because you don't understand a particular browser's user agent string. See this <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop">guide to using the user agent string to determine device type</a>.</p>
+<p>If you do this, make sure your algorithm is correct, and you aren't serving the wrong type of content to a device because you don't understand a particular browser's user agent string. See this <a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile.2c_tablet_or_desktop">guide to using the user agent string to determine device type</a>.</p>
 
 <h3 id="Test_on_multiple_browsers">Test on multiple browsers</h3>
 

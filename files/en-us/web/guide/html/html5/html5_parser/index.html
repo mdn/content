@@ -8,8 +8,6 @@ tags:
   - HTML5
   - Web
 ---
-<p>{{ gecko_minversion_header("2") }}</p>
-
 <p>Gecko 2 introduces a new parser, based on HTML5. The HTML parser is one of the most complicated and sensitive pieces of a browser. It controls how your HTML source code is turned into web pages and, as such, changes to it are rare. The new parser is faster, complies with the HTML5 standard, and enables a lot of new functionality as well.</p>
 
 <p>The new parser introduces these major improvements:</p>
@@ -18,10 +16,10 @@ tags:
  <li>You can now use SVG and MathML inline in HTML5 pages, without XML namespace syntax.</li>
  <li>Parsing is now done in a separate thread from Firefox’s main UI thread, improving overall browser responsiveness.</li>
  <li>Calls to {{DOMxRef("Element.innerHTML","innerHTML")}} are a lot faster.</li>
- <li><a class="external" href="http://tinyurl.com/html-parser-bugs">Dozens of long-standing parser related bugs</a> are now fixed.</li>
+ <li><a href="http://tinyurl.com/html-parser-bugs">Dozens of long-standing parser related bugs</a> are now fixed.</li>
 </ul>
 
-<p>The <a class="external" href="https://www.w3.org/TR/html5/">HTML5 specification</a> provides a more detailed description than previous HTML standards of how to turn a stream of bytes into a DOM tree. This will result in more consistent behavior across browser implementations. In other words, in supporting HTML5, Gecko, WebKit, and Internet Explorer (IE) will behave more consistently with each other.</p>
+<p>The <a href="https://www.w3.org/TR/html5/">HTML5 specification</a> provides a more detailed description than previous HTML standards of how to turn a stream of bytes into a DOM tree. This will result in more consistent behavior across browser implementations. In other words, in supporting HTML5, Gecko, WebKit, and Internet Explorer (IE) will behave more consistently with each other.</p>
 
 <h2 id="Changed_parser_behaviors">Changed parser behaviors</h2>
 
@@ -33,15 +31,15 @@ tags:
 
 <h3 id="Calling_document.write_during_parsing">Calling document.write() during parsing</h3>
 
-<p>Prior to HTML5, Gecko and WebKit allowed calls to <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a> <em>during parsing</em> to insert content into the source stream. This behavior was inherently <a class="external" href="https://en.wikipedia.org/wiki/Race_condition">racy</a>, as the content was inserted into a timing-dependent point in the source stream. If the call happened after the parser was done, the inserted content replaced the document. In IE, such calls are either ignored or imply a call to <a href="/en-US/docs/DOM/document.open"><code>document.open()</code></a>, replacing the document. In HTML5, <code>document.write()</code> can only be called from a script that is created by a {{ HTMLElement("script") }} tag that does not have the <code><a href="/En/HTML/Element/Script#attr_async">async</a></code> or <code><a href="/En/HTML/Element/Script#attr_defer">defer</a></code> attributes set. With the HTML5 parser, calls to <code>document.write()</code> in any other context either are ignored or replace the document.</p>
+<p>Prior to HTML5, Gecko and WebKit allowed calls to <a href="/en-US/docs/Web/API/Document/write"><code>document.write()</code></a> <em>during parsing</em> to insert content into the source stream. This behavior was inherently <a href="https://en.wikipedia.org/wiki/Race_condition">racy</a>, as the content was inserted into a timing-dependent point in the source stream. If the call happened after the parser was done, the inserted content replaced the document. In IE, such calls are either ignored or imply a call to <a href="/en-US/docs/Web/API/Document/open"><code>document.open()</code></a>, replacing the document. In HTML5, <code>document.write()</code> can only be called from a script that is created by a {{ HTMLElement("script") }} tag that does not have the <code><a href="/en-US/docs/Web/HTML/Element/script#attr_async">async</a></code> or <code><a href="/en-US/docs/Web/HTML/Element/script#attr_defer">defer</a></code> attributes set. With the HTML5 parser, calls to <code>document.write()</code> in any other context either are ignored or replace the document.</p>
 
 <p>Some contexts from which you should <em>not</em> call <code>document.write()</code> include:</p>
 
 <ul>
- <li>scripts created using <a href="/en-US/docs/DOM/document.createElement">document.createElement()</a></li>
+ <li>scripts created using <a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></li>
  <li>event handlers</li>
- <li><a href="/en-US/docs/DOM/window.setTimeout">setTimeout()</a></li>
- <li><a href="/en-US/docs/DOM/window.setInterval">setInterval()</a></li>
+ <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></li>
+ <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></li>
  <li><code>&lt;script async src="..."&gt;</code></li>
  <li><code>&lt;script defer src="..."&gt;</code></li>
 </ul>
@@ -86,13 +84,13 @@ tags:
 
 <p>Unrelated to the requirements of HTML5 specification, the Gecko 2 parser uses <em>speculative parsing</em>, in which it continues parsing a document while scripts are being downloaded and executed. This results in improved performance compared to older parsers, because most of the time, Gecko can complete these tasks in parallel.</p>
 
-<p>To best take advantage of speculative parsing, and help your pages to load as quickly as possible, ensure that when you call <a href="/en-US/docs/DOM/document.write">document.write()</a>, you write a <em>balanced sub-tree</em> within that chunk of script. A balanced sub-tree is HTML code in which any elements that are opened are also closed, so that after the script, the elements left open are the same ones that were open before the script. The open and closing tags do not need to be written by the same <code>document.write()</code> call, as long as they are within the same <code>&lt;script&gt;</code> tag.</p>
+<p>To best take advantage of speculative parsing, and help your pages to load as quickly as possible, ensure that when you call <a href="/en-US/docs/Web/API/Document/write">document.write()</a>, you write a <em>balanced sub-tree</em> within that chunk of script. A balanced sub-tree is HTML code in which any elements that are opened are also closed, so that after the script, the elements left open are the same ones that were open before the script. The open and closing tags do not need to be written by the same <code>document.write()</code> call, as long as they are within the same <code>&lt;script&gt;</code> tag.</p>
 
 <p>Please note that you shouldn't use end tags for void elements that don't have end tags: {{ HTMLElement('area') }}, {{ HTMLElement('base') }}, {{ HTMLElement('br') }}, {{ HTMLElement('col') }}, {{ HTMLElement('command') }}, {{ HTMLElement('embed') }}, {{ HTMLElement('hr') }}, {{ HTMLElement('img') }}, {{ HTMLElement('input') }}, {{ HTMLElement('keygen') }}, {{ HTMLElement('link') }}, {{ HTMLElement('meta') }}, {{ HTMLElement('param') }}, {{ HTMLElement('source') }} and {{ HTMLElement('wbr') }}. (There are also some element whose end tags can be omitted in some cases, such as {{ HTMLElement('p') }} in the example below, but it's simpler to always use end tags for those elements than to make sure that the end tags are only omitted when they aren't necessary.)</p>
 
 <p>For example, the following code writes a balanced sub-tree:</p>
 
-<pre class="notranslate">&lt;script&gt;
+<pre>&lt;script&gt;
   document.write("&lt;div&gt;");
   document.write("&lt;p&gt;Some content goes here.&lt;/p&gt;");
   document.write("&lt;/div&gt;");
@@ -102,9 +100,9 @@ tags:
 
 <p>In contrast, the following code contains two scripts with unbalanced sub-trees, which causes speculative parsing to fail and therefore the time to parse the document is longer.</p>
 
-<pre class="notranslate">&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
+<pre>&lt;script&gt;document.write("&lt;div&gt;");&lt;/script&gt;
 &lt;p&gt;Some content goes here.&lt;/p&gt;
 &lt;script&gt;document.write("&lt;/div&gt;");&lt;/script&gt;
 </pre>
 
-<p>For more information, see <a href="/en/HTML/HTML5/Optimizing_Your_Pages_for_Speculative_Parsing">Optimizing your pages for speculative parsing</a>.</p>
+<p>For more information, see <a href="/en-US/docs/Glossary/speculative_parsing">Optimizing your pages for speculative parsing</a>.</p>

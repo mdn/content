@@ -127,7 +127,7 @@ tags:
 
 <p>This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to render the canvas, or if can't read a canvas.</p>
 
-<pre class="brush: html notranslate">&lt;canvas width="300" height="300"&gt;
+<pre class="brush: html">&lt;canvas width="300" height="300"&gt;
   An alternative text describing what your canvas displays.
 &lt;/canvas&gt;
 </pre>
@@ -136,7 +136,7 @@ tags:
 
 <p>Then in the JavaScript code, call {{domxref("HTMLCanvasElement.getContext()")}} to get a drawing context and start drawing onto the canvas:</p>
 
-<pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
+<pre class="brush: js">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'green';
 ctx.fillRect(10, 10, 100, 100);</pre>

@@ -39,7 +39,7 @@ tags:
 
 <p>You can use the <code>abort</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
 
-<pre class="brush: js notranslate">var controller = new AbortController();
+<pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
 
 signal.addEventListener('abort', function() {
@@ -48,7 +48,7 @@ signal.addEventListener('abort', function() {
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/AbortSignal/onabort">onabort</a></code> event handler property:</p>
 
-<pre class="brush: js notranslate">var controller = new AbortController();
+<pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
 
 signal.onabort = function() {
@@ -73,10 +73,7 @@ signal.onabort = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AbortSignal.abort_event")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

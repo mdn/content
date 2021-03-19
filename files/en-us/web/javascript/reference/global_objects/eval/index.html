@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>eval(<em>string</em>)</code></pre>
+<pre class="brush: js"><code>eval(<em>string</em>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -84,7 +84,7 @@ eval(expression.toString());            // returns 4
   console.log(eval('x + y'));  // Direct call, uses local scope, result is 6
   var geval = eval; // equivalent to calling eval in the global scope
   console.log(geval('x + y')); // Indirect call, uses global scope, throws ReferenceError because `x` is undefined
-  (0, eval)('x + y'); // another example of Indirect call
+  console.log((0, eval)('x + y')); // Indirect call using the comma operator; result is 6
 }
 </pre>
 
@@ -265,8 +265,7 @@ var result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c will now be 1</p
 <h3 id="Use_functions_instead_of_evaluating_snippets_of_code">Use functions instead of
   evaluating snippets of code</h3>
 
-<p>JavaScript has <a class="external"
-    href="https://en.wikipedia.org/wiki/First-class_function">first-class functions</a>,
+<p>JavaScript has <a     href="https://en.wikipedia.org/wiki/First-class_function">first-class functions</a>,
   which means you can pass functions as arguments to other APIs, store them in variables
   and objects' properties, and so on. Many DOM APIs are designed with this in mind, so you
   can (and should) write:</p>

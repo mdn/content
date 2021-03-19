@@ -17,13 +17,13 @@ tags:
  <li>In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 <a href="/en-US/docs/Character_Sets_Supported_by_Gecko">character sets</a> has been removed.</li>
  <li>When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the <a href="/en-US/docs/Web/HTML/Element/map#gecko_notes">Gecko notes</a> on the {{ HTMLElement("map") }} element for details.</li>
  <li>Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.</li>
- <li>WebGL <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures">no longer loads textures from domains other than the originating domain</a>, as a security measure. <a href="/en-US/HTTP_access_control">HTTP access control</a> support should be coming sometime in the future to make this possible more securely.</li>
+ <li>WebGL <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures">no longer loads textures from domains other than the originating domain</a>, as a security measure. <a href="/en-US/docs/Web/HTTP_access_control">HTTP access control</a> support should be coming sometime in the future to make this possible more securely.</li>
 </ul>
 
 <h4 id="Canvas_improvements">Canvas improvements</h4>
 
 <ul>
- <li>The {{ HTMLElement("canvas") }} 2D drawing context now supports specifying an <code>ImageData</code> object as the input to the <code>createImageData()</code> method; this <a href="/en-US/HTML/Canvas/Pixel_manipulation_with_canvas#creating_an_imagedata_object">creates a new <code>ImageData</code> object</a> initialized with the same dimensions as the specified object, but still with all pixels preset to transparent black. This was documented as implemented already but was not.</li>
+ <li>The {{ HTMLElement("canvas") }} 2D drawing context now supports specifying an <code>ImageData</code> object as the input to the <code>createImageData()</code> method; this <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object">creates a new <code>ImageData</code> object</a> initialized with the same dimensions as the specified object, but still with all pixels preset to transparent black. This was documented as implemented already but was not.</li>
  <li>Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method <code>addColorStop()</code> now correctly throws <code>INDEX_SIZE_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
  <li>The {{ domxref("HTMLCanvasElement") }} method <code>toDataURL()</code> now correctly lower-cases the specified MIME type before matching.</li>
  <li><code>getImageData()</code> now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.</li>

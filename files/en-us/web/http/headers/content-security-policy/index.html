@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Content-Security-Policy: &lt;policy-directive&gt;; &lt;policy-directive&gt;
+<pre class="brush: html">Content-Security-Policy: &lt;policy-directive&gt;; &lt;policy-directive&gt;
 </pre>
 
 <p>where <code>&lt;policy-directive&gt;</code> consists of:
@@ -164,7 +164,7 @@ tags:
         {{CSP("report-to")}}:</p>
 
       <pre
-        class="brush: html notranslate">Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname</pre>
+        class="brush: html">Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname</pre>
 
       <p>In browsers that support {{CSP("report-to")}}, the
         <code><strong>report-uri</strong></code> directive will be ignored.</p>
@@ -198,6 +198,52 @@ tags:
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
     This directive is intended for web sites with large numbers of insecure legacy URLs
     that need to be rewritten.</dd>
+</dl>
+
+<h2 id="Values">Values</h2>
+
+<h3 id="Keyword_values">Keyword values</h3>
+
+<dl>
+ <dt><code>none</code></dt>
+ <dd>Won't allow loading of any resources.</dd>
+ <dt><code>self</code></dt>
+ <dd>Only allow resources from the current origin.</dd>
+ <dt><code>strict-dynamic</code> {{experimental_inline}}</dt>
+ <dd></dd>
+ <dt><code>report-sample</code> {{experimental_inline}}</dt>
+ <dd></dd>
+</dl>
+
+<h3 id="Unsafe_keyword_values">Unsafe keyword values</h3>
+
+<dl>
+ <dt><code>unsafe-inline</code></dt>
+ <dd>Allow use of inline resources.</dd>
+ <dt><code>unsafe-eval</code></dt>
+ <dd>Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and {{domxref("window.execScript", "execScript")}}{{non-standard_inline}}.</dd>
+ <dt><code>unsafe-hashes</code> {{experimental_inline}}</dt>
+ <dd></dd>
+ <dt><code>unsafe-allow-redirects</code> {{experimental_inline}}</dt>
+ <dd></dd>
+</dl>
+
+<h3 id="Hosts_values">Hosts values</h3>
+
+<dl>
+ <dt>Host</dt>
+ <dd>Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. <code>example.com</code>, <code>*.example.com</code>, <code>https://*.example.com:12/path/to/file.js</code></dd>
+ <dt>Scheme:</dt>
+ <dd>Only allow loading of resources over a specific scheme, should always end with "<code>:</code>". e.g. <code>https:</code>, <code>http:</code>, <code>data:</code> etc.</dd>
+</dl>
+
+<h3 id="Other_values">Other values</h3>
+
+<dl>
+ <dt>nonce-*</dt>
+ <dd>A cryptographic nonce (only used once) to whitelist scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the <a href="/en-US/docs/Web/HTML/Element/script#attr-nonce">script tag nonce attribute</a>. e.g. <code>nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV</code></dd>
+ <dt>sha*-*</dt>
+ <dd>sha256, sha384, or sha512. followed by a dash and then the sha* value. e.g. <code>sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=</code></dd>
 </dl>
 
 <h2 id="CSP_in_workers">CSP in workers</h2>

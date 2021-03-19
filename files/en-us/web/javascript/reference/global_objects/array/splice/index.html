@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>arrDeletedItems</var> = <var>arr</var>.splice(<var>start</var>[, <var>deleteCount</var>[, <var>item1</var>[, <var>item2</var>[, ...]]]])
+<pre class="brush: js">let <var>arrDeletedItems</var> = <var>arr</var>.splice(<var>start</var>[, <var>deleteCount</var>[, <var>item1</var>[, <var>item2</var>[, ...]]]])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -85,7 +85,7 @@ tags:
 <h3 id="Remove_0_zero_elements_before_index_2_and_insert_drum">Remove 0 (zero) elements
   before index 2, and insert "drum"</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
 let removed = myFish.splice(2, 0, 'drum')
 
 // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
@@ -94,7 +94,7 @@ let removed = myFish.splice(2, 0, 'drum')
 <h3 id="Remove_0_zero_elements_before_index_2_and_insert_drum_and_guitar">Remove 0 (zero)
   elements before index 2, and insert "drum" and "guitar"</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
 let removed = myFish.splice(2, 0, 'drum', 'guitar')
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
@@ -103,7 +103,7 @@ let removed = myFish.splice(2, 0, 'drum', 'guitar')
 
 <h3 id="Remove_1_element_at_index_3">Remove 1 element at index 3</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon']
 let removed = myFish.splice(3, 1)
 
 // myFish is ["angel", "clown", "drum", "sturgeon"]
@@ -113,7 +113,7 @@ let removed = myFish.splice(3, 1)
 <h3 id="Remove_1_element_at_index_2_and_insert_trumpet">Remove 1 element at index 2, and
   insert "trumpet"</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'drum', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'drum', 'sturgeon']
 let removed = myFish.splice(2, 1, 'trumpet')
 
 // myFish is ["angel", "clown", "trumpet", "sturgeon"]
@@ -122,15 +122,15 @@ let removed = myFish.splice(2, 1, 'trumpet')
 <h3 id="Remove_2_elements_from_index_0_and_insert_parrot_anemone_and_blue">Remove 2
   elements from index 0, and insert "parrot", "anemone" and "blue"</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'trumpet', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'trumpet', 'sturgeon']
 let removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue')
 
 // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed is ["angel", "clown"]</pre>
 
-<h3 id="Remove_2_elements_from_index_2">Remove 2 elements from index 2</h3>
+<h3 id="remove_2_elements_starting_from_index_2">Remove 2 elements, starting from index 2</h3>
 
-<pre class="brush: js notranslate">let myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon']
+<pre class="brush: js">let myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon']
 let removed = myFish.splice(2, 2)
 
 // myFish is ["parrot", "anemone", "sturgeon"]
@@ -138,15 +138,15 @@ let removed = myFish.splice(2, 2)
 
 <h3 id="Remove_1_element_from_index_-2">Remove 1 element from index -2</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
 let removed = myFish.splice(-2, 1)
 
 // myFish is ["angel", "clown", "sturgeon"]
 // removed is ["mandarin"]</pre>
 
-<h3 id="Remove_all_elements_from_index_2">Remove all elements from index 2</h3>
+<h3 id="remove_all_elements_starting_from_index_2">Remove all elements, starting from index 2</h3>
 
-<pre class="brush: js notranslate">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
+<pre class="brush: js">let myFish = ['angel', 'clown', 'mandarin', 'sturgeon']
 let removed = myFish.splice(2)
 
 // myFish is ["angel", "clown"]
@@ -170,10 +170,7 @@ let removed = myFish.splice(2)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.splice")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Array.splice")}}</p>
 
 <h2 id="See_also">See also</h2>
 

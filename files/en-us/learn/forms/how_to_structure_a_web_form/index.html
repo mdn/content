@@ -198,7 +198,7 @@ tags:
   <pre class="brush: html">&lt;h1&gt;Payment form&lt;/h1&gt;
 &lt;p&gt;Required fields are followed by &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
  </li>
- <li>Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of two radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+ <li>Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
   <pre class="brush: html">&lt;section&gt;
     &lt;h2&gt;Contact information&lt;/h2&gt;
     &lt;fieldset&gt;
@@ -280,7 +280,11 @@ tags:
 &lt;/section&gt;</pre>
  </li>
  <li>The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type <code>submit</code>, for submitting the form data. Add this to the bottom of your form now:
-  <pre class="brush: html">&lt;p&gt; &lt;button type="submit"&gt;Validate the payment&lt;/button&gt; &lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;section&gt;
+    &lt;p&gt;
+      &lt;button type="submit"&gt;Validate the payment&lt;/button&gt;
+    &lt;/p&gt;
+&lt;/section&gt;</pre>
  </li>
 </ol>
 

@@ -7,13 +7,13 @@ tags:
 ---
 <div>{{MathMLRef}}</div>
 
-<p>This is an alphabetical list of MathML attributes. More details for each attribute are available on particular <a href="/en-US/docs/MathML/Element">element pages</a>.</p>
+<p>This is an alphabetical list of MathML attributes. More details for each attribute are available on particular <a href="/en-US/docs/Web/MathML/Element">element pages</a>.</p>
 
 <p>Notes:</p>
 
 <ul>
- <li>The MathML {{ MathMLElement("mstyle") }} and {{ MathMLElement("math") }} {{ gecko_minversion_inline("7.0") }} elements accept all attributes of all MathML presentation elements.</li>
- <li>See <a href="/en-US/docs/MathML/Attributes/Values">values</a> for notes on values and units in MathML.</li>
+ <li>The MathML {{ MathMLElement("mstyle") }} and {{ MathMLElement("math") }}  elements accept all attributes of all MathML presentation elements.</li>
+ <li>See <a href="/en-US/docs/Web/MathML/Attribute/Values">values</a> for notes on values and units in MathML.</li>
  <li>The attributes <code>background</code>, <code>color</code>, <code>fontfamily</code>, <code>fontsize</code>, <code>fontstyle</code>, <code>fontweight</code> and <code>xlink:href</code> are deprecated.</li>
  <li>The <a href="/en-US/docs/Glossary/XLink">XLink</a> attributes on MathML elements: <code>xlink:actuate</code>, <code>xlink:href</code>, <code>xlink:show</code> and <code>xlink:type</code> are deprecated as well.</li>
 </ul>
@@ -49,11 +49,6 @@ tags:
     {{ MathMLElement("mstack") }}</td>
    <td>Specifies different alignments of several elements (see element pages for details).</td>
   </tr>
-  <tr id="alignmentscope">
-   <td>{{ unimplemented_inline() }} <code>alignmentscope</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A Boolean value specifying whether table columns should act as alignment scopes or not.</td>
-  </tr>
   <tr id="alt-*">
    <td>{{ unimplemented_inline() }}<br>
     <code>altimg</code><br>
@@ -81,7 +76,7 @@ tags:
   </tr>
   <tr id="columnalign">
    <td><code>columnalign</code></td>
-   <td>{{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}, {{ MathMLElement("mlabeledtr") }}</td>
+   <td>{{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}</td>
    <td>Specifies the horizontal alignment of table cells.</td>
   </tr>
   <tr id="columnlines">
@@ -99,20 +94,10 @@ tags:
    <td>{{ MathMLElement("mtd") }}</td>
    <td>A non-negative integer value that indicates over how many table columns the cell extends.</td>
   </tr>
-  <tr id="columnwidth">
-   <td>{{ unimplemented_inline() }} <code>columnwidth</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>Specifies the width of table columns.</td>
-  </tr>
   <tr id="crossout">
    <td>{{ unimplemented_inline() }} <code>crossout</code></td>
    <td>{{ MathMLElement("mscarry") }}</td>
    <td>Specifies what kind of line is drawn to cross out carries.</td>
-  </tr>
-  <tr id="decimalpoint">
-   <td>{{ unimplemented_inline() }} <code>decimalpoint</code></td>
-   <td>{{ MathMLElement("mstyle") }}</td>
-   <td>If the <code>decimalpoint</code> value is used to specify the <a href="#align">alignment</a>, this attribute is specifying the character for the alignment point within {{ MathMLElement("mstack") }} and {{ MathMLElement("mtable") }} columns.</td>
   </tr>
   <tr id="denomalign">
    <td><code>denomalign</code> {{deprecated_inline}}</td>
@@ -122,7 +107,7 @@ tags:
   <tr id="depth">
    <td><code>depth</code></td>
    <td>{{ MathMLElement("mpadded") }}</td>
-   <td>Sets or increments the depth. See <a href="/en-US/docs/MathML/Attributes/Values">length</a>.</td>
+   <td>Sets or increments the depth. See <a href="/en-US/docs/Web/MathML/Attribute/Values">length</a>.</td>
   </tr>
   <tr id="dir">
    <td><code>dir</code></td>
@@ -148,25 +133,10 @@ tags:
    <td>{{ MathMLElement("malignmark") }}</td>
    <td></td>
   </tr>
-  <tr id="equalcolumns">
-   <td>{{ unimplemented_inline() }} <code>equalcolumns</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A Boolean value indicating whether to force all columns to have the same total height.</td>
-  </tr>
-  <tr id="equalrows">
-   <td>{{ unimplemented_inline() }} <code>equalrows</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A Boolean value indicating whether to force all rows to have the same total height.</td>
-  </tr>
   <tr id="fence">
    <td><code>fence</code></td>
    <td>{{ MathMLElement("mo") }}</td>
    <td>A Boolean value specifying whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.</td>
-  </tr>
-  <tr id="form">
-   <td>{{ unimplemented_inline() }} <code>form</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>Specifies the role of the operator in an enclosed expression.</td>
   </tr>
   <tr id="frame">
    <td><code>frame</code></td>
@@ -180,13 +150,13 @@ tags:
   </tr>
   <tr id="groupalign">
    <td>{{ unimplemented_inline() }} <code>groupalign</code></td>
-   <td>{{ MathMLElement("maligngroup") }}, {{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}</td>
+   <td>{{ MathMLElement("maligngroup") }}</td>
    <td></td>
   </tr>
   <tr id="height">
    <td><code>height</code></td>
-   <td>{{ MathMLElement("mglyph") }}, {{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}</td>
-   <td>Specifies the desired height. See <a href="/en-US/docs/MathML/Attributes/Values#Lengths">lengths</a> for possible values.</td>
+   <td>{{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}</td>
+   <td>Specifies the desired height. See <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">lengths</a> for possible values.</td>
   </tr>
   <tr id="href">
    <td><code>href</code></td>
@@ -238,11 +208,6 @@ tags:
    <td>{{ MathMLElement("mstyle") }}</td>
    <td>Specifies the default <code>linebreakstyle</code> to use for infix operators.</td>
   </tr>
-  <tr id="largeop">
-   <td><code>largeop</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>Specifies whether the operator should be drawn larger than normal.</td>
-  </tr>
   <tr id="length">
    <td><code>length</code></td>
    <td>{{ MathMLElement("msline") }}</td>
@@ -250,7 +215,7 @@ tags:
   </tr>
   <tr id="linebreak">
    <td>{{ unimplemented_inline() }} <code>linebreak</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
+   <td>{{ MathMLElement("mo") }}</td>
    <td></td>
   </tr>
   <tr id="linebreakmultchar">
@@ -286,7 +251,7 @@ tags:
   <tr id="lspace">
    <td><code>lspace</code></td>
    <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mpadded") }}</td>
-   <td>The amount of space before the operator (see <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a> for values and units).</td>
+   <td>The amount of space before the operator (see <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">length</a> for values and units).</td>
   </tr>
   <tr id="lquote">
    <td><code>lquote</code></td>
@@ -296,12 +261,12 @@ tags:
   <tr id="mathbackground">
    <td><code>mathbackground</code></td>
    <td><em>All</em></td>
-   <td>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords">HTML color names</a>.</td>
+   <td>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#html.2fsvg.2fx11.c2.a0_color_keywords">HTML color names</a>.</td>
   </tr>
   <tr id="mathcolor">
    <td><code>mathcolor</code></td>
    <td><em>All</em></td>
-   <td>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords">HTML color names</a>.</td>
+   <td>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#html.2fsvg.2fx11.c2.a0_color_keywords">HTML color names</a>.</td>
   </tr>
   <tr id="mathsize">
    <td><code>mathsize</code></td>
@@ -317,11 +282,6 @@ tags:
    <td><code>maxsize</code></td>
    <td>{{ MathMLElement("mo") }}</td>
    <td>The maximum size of the operator.</td>
-  </tr>
-  <tr id="minlabelspacing">
-   <td>{{ unimplemented_inline() }} <code>minlabelspacing</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A <a href="/en-US/docs/MathML/Attributes/Values">length value</a> specifying the minimum space between a <a href="Element/mlabeledtr" rel="internal">label</a> and the adjacent cell in the row.</td>
   </tr>
   <tr id="minsize">
    <td><code>minsize</code></td>
@@ -347,11 +307,6 @@ tags:
    <td><code>open</code></td>
    <td>{{ MathMLElement("mfenced") }}</td>
    <td>A string for the opening delimiter.</td>
-  </tr>
-  <tr id="overflow">
-   <td>{{ unimplemented_inline() }} <code>overflow</code></td>
-   <td>{{ MathMLElement("math") }}</td>
-   <td>If an expression is too long to fit in the allowed width, this attribute sets the preferred handling.</td>
   </tr>
   <tr id="position">
    <td>{{ unimplemented_inline() }} <code>position</code></td>
@@ -423,16 +378,6 @@ tags:
    <td>{{ MathMLElement("msgroup") }}</td>
    <td></td>
   </tr>
-  <tr id="side">
-   <td>{{ unimplemented_inline() }} <code>side</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>Specifies the position where {{ MathMLElement("mlabeledtr") }} label elements should be placed.</td>
-  </tr>
-  <tr id="src">
-   <td>{{ unimplemented_inline() }} <code>src</code></td>
-   <td>{{ MathMLElement("mglyph") }}</td>
-   <td>The location of the image resource.</td>
-  </tr>
   <tr id="stackalign">
    <td>{{ unimplemented_inline() }} <code>stackalign</code></td>
    <td>{{ MathMLElement("mstack") }}</td>
@@ -465,8 +410,8 @@ tags:
   </tr>
   <tr id="width">
    <td><code>width</code></td>
-   <td>{{ MathMLElement("mglyph") }}, {{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}, {{ MathMLElement("mtable") }}</td>
-   <td>Specifies the desired width. See <a href="/en-US/docs/MathML/Attributes/Values#Lengths">lengths</a> for possible values.</td>
+   <td>{{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}, {{ MathMLElement("mtable") }}</td>
+   <td>Specifies the desired width. See <a href="/en-US/docs/Web/MathML/Attribute/Values#lengths">lengths</a> for possible values.</td>
   </tr>
   <tr id="xlink-href">
    <td><code>xlink:href</code> {{deprecated_inline}}</td>
@@ -476,7 +421,7 @@ tags:
   <tr id="xmlns">
    <td><code>xmlns</code></td>
    <td>{{ MathMLElement("math") }}</td>
-   <td>Specifies the URI for the MathML namespace (<code><a class="external" href="https://www.w3.org/1998/Math/MathML">http://www.w3.org/1998/Math/MathML</a></code>)</td>
+   <td>Specifies the URI for the MathML namespace (<code><a href="https://www.w3.org/1998/Math/MathML">http://www.w3.org/1998/Math/MathML</a></code>)</td>
   </tr>
  </tbody>
 </table>

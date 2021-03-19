@@ -34,7 +34,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>)</code></pre>
+  class="brush: js"><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>)</code></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,7 +68,7 @@ tags:
   "Object.prototype.__proto__")}} permits appending a whole prototype chain to a new
   prototype object:</p>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
 *** Object.appendChain(@object, @prototype)
 *
 * Appends the first non-native prototype of a chain to a new prototype.
@@ -117,7 +117,7 @@ Object.appendChain = function(oChain, oProto) {
 <h4 id="First_example_Appending_a_chain_to_a_prototype">First example: Appending a chain
   to a prototype</h4>
 
-<pre class="brush: js notranslate">function Mammal() {
+<pre class="brush: js">function Mammal() {
   this.isMammal = 'yes';
 }
 
@@ -146,7 +146,7 @@ console.log(oCat.breathing); // 'yes'
   Second example: Transforming a primitive value into an instance of its constructor and
   append its chain to a prototype</h4>
 
-<pre class="brush: js notranslate">function MySymbol() {
+<pre class="brush: js">function MySymbol() {
   this.isSymbol = 'yes';
 }
 
@@ -166,7 +166,7 @@ console.log(typeof oPrime); // 'object'
   Third example: Appending a chain to the Function.prototype object and appending a new
   function to that chain</h4>
 
-<pre class="brush: js notranslate">function Person(sName) {
+<pre class="brush: js">function Person(sName) {
   this.identity = sName;
 }
 
@@ -181,7 +181,7 @@ george(); // 'Hello guys!!'
 
 <h3 id="Using_Object.setPrototypeOf">Using Object.setPrototypeOf</h3>
 
-<pre class="brush: js notranslate">var dict = Object.setPrototypeOf({}, null);
+<pre class="brush: js">var dict = Object.setPrototypeOf({}, null);
 </pre>
 
 <h2 id="Polyfill">Polyfill</h2>
@@ -189,7 +189,7 @@ george(); // 'Hello guys!!'
 <p>Using the older {{jsxref("Object.prototype.__proto__")}} property, we can easily define
   <code>Object.setPrototypeOf</code> if it isn't available already:</p>
 
-<pre class="brush: js notranslate">if (!Object.setPrototypeOf) {
+<pre class="brush: js">if (!Object.setPrototypeOf) {
     // Only works in Chrome and FireFox, does not work in IE:
      Object.prototype.setPrototypeOf = function(obj, proto) {
          if(obj.__proto__) {
@@ -228,10 +228,7 @@ george(); // 'Hello guys!!'
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.setPrototypeOf")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.Object.setPrototypeOf")}}</p>
 
 <h2 id="See_also">See also</h2>
 

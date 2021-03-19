@@ -24,7 +24,7 @@ tags:
  <li>Usually a client will present a password prompt to the user and will then issue the request including the correct <code>Authorization</code> header.</li>
 </ol>
 
-<p><img alt="A sequence diagram illustrating HTTP messages between a client and a server lifeline." src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;" title="Sequence Diagram of Client-server HTTP Authentication"></p>
+<p><img alt="A sequence diagram illustrating HTTP messages between a client and a server lifeline." src="httpauth.png" title="Sequence Diagram of Client-server HTTP Authentication"></p>
 
 <p>In the case of a "Basic" authentication like shown in the figure, the exchange <strong>must</strong> happen over an HTTPS (TLS) connection to be secure.</p>
 
@@ -52,17 +52,17 @@ tags:
 
 <p>The syntax for these headers is the following:</p>
 
-<pre class="brush: html notranslate">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
+<pre class="brush: html">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 </pre>
 
-<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
+<p>Here, <code>&lt;type&gt;</code> is the authentication scheme ("Basic" is the most common scheme and <a href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">introduced below</a>). The <em>realm</em> is used to describe the protected area or to indicate the scope of protection. This could be a message like "Access to the staging site" or similar, so that the user knows to which space they are trying to get access to.</p>
 
 <h3 id="Authorization_and_Proxy-Authorization_headers">Authorization and Proxy-Authorization headers</h3>
 
 <p>The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the <code>&lt;type&gt;</code> is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.</p>
 
-<pre class="brush: html notranslate">Authorization: &lt;type&gt; &lt;credentials&gt;
+<pre class="brush: html">Authorization: &lt;type&gt; &lt;credentials&gt;
 Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 </pre>
 
@@ -101,14 +101,14 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 
 <p>The <code>.htaccess</code> file typically looks like this:</p>
 
-<pre class="notranslate">AuthType Basic
+<pre>AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
 Require valid-user</pre>
 
 <p>The <code>.htaccess</code> file references a <code>.htpasswd</code> file in which each line consists of a username and a password separated by a colon (<code>:</code>). You cannot see the actual passwords as they are <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">hashed</a> (using MD5-based hashing, in this case). Note that you can name your <code>.htpasswd</code> file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to <code>.ht*</code> files).</p>
 
-<pre class="notranslate">aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
+<pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 </pre>
 
@@ -116,7 +116,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 <p>For nginx, you will need to specify a location that you are going to protect and the <code>auth_basic</code> directive that provides the name to the password-protected area. The <code>auth_basic_user_file</code> directive then points to a <code>.htpasswd</code> file containing the encrypted user credentials, just like in the Apache example above.</p>
 
-<pre class="notranslate">location /status {
+<pre>location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;
 }</pre>
@@ -125,7 +125,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 <p>Many clients also let you avoid the login prompt by using an encoded URL containing the username and the password like this:</p>
 
-<pre class="example-bad notranslate">https://username:password@www.example.com/</pre>
+<pre class="example-bad">https://username:password@www.example.com/</pre>
 
 <p><strong>The use of these URLs is deprecated</strong>. In Chrome, the <code>username:password@</code> part in URLs is even <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7">stripped out</a> for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."</p>
 

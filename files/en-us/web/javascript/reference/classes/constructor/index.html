@@ -17,14 +17,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">constructor([<var>arguments</var>]) { ... }</pre>
+<pre class="brush: js">constructor([<var>arguments</var>]) { ... }</pre>
 
 <h2 id="Description">Description</h2>
 
 <p>A constructor enables you to provide any custom initialization that must be done before
   any other methods can be called on an instantiated object.</p>
 
-<pre class="brush: js notranslate">class Person {
+<pre class="brush: js">class Person {
 
   constructor(name) {
     this.name = name;
@@ -43,18 +43,18 @@ otto.introduce();</pre>
 <p>If you don't provide your own constructor, then a default constructor will be supplied
   for you. If your class is a base class, the default constructor is empty:</p>
 
-<pre class="brush: js notranslate">constructor() {}</pre>
+<pre class="brush: js">constructor() {}</pre>
 
 <p>If your class is a derived class, the default constructor calls the parent constructor,
   passing along any arguments that were provided:</p>
 
-<pre class="brush: js notranslate">constructor(...args) {
+<pre class="brush: js">constructor(...args) {
   super(...args);
 }</pre>
 
 <p>That enables code like this to work:</p>
 
-<pre class="brush: js notranslate">class ValidationError extends Error {
+<pre class="brush: js">class ValidationError extends Error {
 
   printCustomerMessage() {
     return `Validation failed :-( (details: ${this.message})`;
@@ -82,7 +82,7 @@ try {
   class, then you must explicitly call the parent class constructor using
   <code>super</code>. For example:</p>
 
-<pre class="brush: js notranslate">class ValidationError extends Error {
+<pre class="brush: js">class ValidationError extends Error {
 
   constructor(message) {
     super(message);  // call parent class constructor
@@ -124,7 +124,7 @@ try {
     href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).
 </p>
 
-<pre class="brush: js notranslate">class Square extends Polygon {
+<pre class="brush: js">class Square extends Polygon {
   constructor(length) {
     // Here, it calls the parent class' constructor with lengths
     // provided for the Polygon's width and height
@@ -150,7 +150,7 @@ try {
   base class <code>Polygon</code> is still called when a new instance of a square is
   created.</p>
 
-<pre class="brush: js notranslate">class Polygon {
+<pre class="brush: js">class Polygon {
     constructor() {
         this.name = "Polygon";
     }

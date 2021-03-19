@@ -56,7 +56,7 @@ tags:
 
 <p>We have created a simple example page at <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html">dom-example.html</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html">see it live also</a>). Try opening this up in your browser — it is a very simple page containing a {{htmlelement("section")}} element inside which you can find an image, and a paragraph with a link inside. The HTML source code looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -100,17 +100,16 @@ tags:
  <li>Take a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html">dom-example.html page</a> and the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png">image</a> that goes along with it.</li>
  <li>Add a <code>&lt;script&gt;&lt;/script&gt;</code> element just above the closing <code>&lt;/body&gt;</code> tag.</li>
  <li>To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable. Inside your script element, add the following line:
-  <pre class="brush: js notranslate">const link = document.querySelector('a');</pre>
+  <pre class="brush: js">const link = document.querySelector('a');</pre>
  </li>
  <li>Now we have the element reference stored in a variable, we can start to manipulate it using properties and methods available to it (these are defined on interfaces like {{domxref("HTMLAnchorElement")}} in the case of {{htmlelement("a")}} element, its more general parent interface {{domxref("HTMLElement")}}, and {{domxref("Node")}} — which represents all nodes in a DOM). First of all, let's change the text inside the link by updating the value of the {{domxref("Node.textContent")}} property. Add the following line below the previous one:
-  <pre class="brush: js notranslate">link.textContent = 'Mozilla Developer Network';</pre>
+  <pre class="brush: js">link.textContent = 'Mozilla Developer Network';</pre>
  </li>
  <li>We should also change the URL the link is pointing to, so that it doesn't go to the wrong place when it is clicked on. Add the following line, again at the bottom:
-  <pre class="brush: js notranslate">link.href = 'https://developer.mozilla.org';</pre>
+  <pre class="brush: js">link.href = 'https://developer.mozilla.org';</pre>
  </li>
 </ol>
 
-<div>
 <p>Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above <code>querySelector()</code> call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an <a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">array</a>-like object called a {{domxref("NodeList")}}.</p>
 
 <p>There are older methods available for grabbing element references, such as:</p>
@@ -121,7 +120,6 @@ tags:
 </ul>
 
 <p>These two work in older browsers than the modern methods like <code>querySelector()</code>, but are not as convenient. Have a look and see what others you can find!</p>
-</div>
 
 <h3 id="Creating_and_placing_new_nodes">Creating and placing new nodes</h3>
 
@@ -129,20 +127,20 @@ tags:
 
 <ol>
  <li>Going back to the current example, let's start by grabbing a reference to our {{htmlelement("section")}} element — add the following code at the bottom of your existing script (do the same with the other lines too):
-  <pre class="brush: js notranslate">const sect = document.querySelector('section');</pre>
+  <pre class="brush: js">const sect = document.querySelector('section');</pre>
  </li>
  <li>Now let's create a new paragraph using {{domxref("Document.createElement()")}} and give it some text content in the same way as before:
-  <pre class="brush: js notranslate">const para = document.createElement('p');
+  <pre class="brush: js">const para = document.createElement('p');
 para.textContent = 'We hope you enjoyed the ride.';</pre>
  </li>
  <li>You can now append the new paragraph at the end of the section using {{domxref("Node.appendChild()")}}:
-  <pre class="brush: js notranslate">sect.appendChild(para);</pre>
+  <pre class="brush: js">sect.appendChild(para);</pre>
  </li>
  <li>Finally for this part, let's add a text node to the paragraph the link sits inside, to round off the sentence nicely. First we will create the text node using {{domxref("Document.createTextNode()")}}:
-  <pre class="brush: js notranslate">const text = document.createTextNode(' — the premier source for web development knowledge.');</pre>
+  <pre class="brush: js">const text = document.createTextNode(' — the premier source for web development knowledge.');</pre>
  </li>
  <li>Now we'll grab a reference to the paragraph the link is inside, and append the text node to it:
-  <pre class="brush: js notranslate">const linkPara = document.querySelector('p');
+  <pre class="brush: js">const linkPara = document.querySelector('p');
 linkPara.appendChild(text);</pre>
  </li>
 </ol>
@@ -155,21 +153,21 @@ linkPara.appendChild(text);</pre>
 
 <p>If we wanted to move the paragraph with the link inside it to the bottom of the section, we could do this:</p>
 
-<pre class="brush: js notranslate">sect.appendChild(linkPara);</pre>
+<pre class="brush: js">sect.appendChild(linkPara);</pre>
 
 <p>This moves the paragraph down to the bottom of the section. You might have thought it would make a second copy of it, but this is not the case — <code>linkPara</code> is a reference to the one and only copy of that paragraph. If you wanted to make a copy and add that as well, you'd need to use {{domxref("Node.cloneNode()")}} instead.</p>
 
 <p>Removing a node is pretty simple as well, at least when you have a reference to the node to be removed and its parent. In our current case, we just use {{domxref("Node.removeChild()")}}, like this:</p>
 
-<pre class="brush: js notranslate">sect.removeChild(linkPara);</pre>
+<pre class="brush: js">sect.removeChild(linkPara);</pre>
 
 <p>When you want to remove a node based only on a reference to itself, which is fairly common, you can use {{domxref("ChildNode.remove()")}}:</p>
 
-<pre class="brush: js notranslate">linkPara.remove();</pre>
+<pre class="brush: js">linkPara.remove();</pre>
 
 <p>This method is not supported in older browsers. They have no method to tell a node to remove itself, so you'd have to do the following.</p>
 
-<pre class="brush: js notranslate">linkPara.parentNode.removeChild(linkPara);</pre>
+<pre class="brush: js">linkPara.parentNode.removeChild(linkPara);</pre>
 
 <p>Have a go at adding the above lines to your code.</p>
 
@@ -177,20 +175,20 @@ linkPara.appendChild(text);</pre>
 
 <p>It is possible to manipulate CSS styles via JavaScript in a variety of ways.</p>
 
-<p>To start with, you can get a list of all the stylesheets attached to a document using {{domxref("DocumentOrShadowRoot/styleSheets", "Document.stylesheets")}}, which returns an array-like object with {{domxref("CSSStyleSheet")}} objects. You can then add/remove styles as wished. However, we're not going to expand on those features because they are a somewhat archaic and difficult way to manipulate style. There are much easier ways.</p>
+<p>To start with, you can get a list of all the stylesheets attached to a document using {{domxref("Document.stylesheets")}}, which returns an array-like object with {{domxref("CSSStyleSheet")}} objects. You can then add/remove styles as wished. However, we're not going to expand on those features because they are a somewhat archaic and difficult way to manipulate style. There are much easier ways.</p>
 
 <p>The first way is to add inline styles directly onto elements you want to dynamically style. This is done with the {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} property, which contains inline styling information for each element in the document. You can set properties of this object to directly update element styles.</p>
 
 <ol>
  <li>As an example, try adding these lines to our ongoing example:
-  <pre class="brush: js notranslate">para.style.color = 'white';
+  <pre class="brush: js">para.style.color = 'white';
 para.style.backgroundColor = 'black';
 para.style.padding = '10px';
 para.style.width = '250px';
 para.style.textAlign = 'center';</pre>
  </li>
  <li>Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector/DOM inspector</a>, you'll see that these lines are indeed adding inline styles to the document:
-  <pre class="brush: html notranslate">&lt;p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;"&gt;We hope you enjoyed the ride.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;"&gt;We hope you enjoyed the ride.&lt;/p&gt;</pre>
  </li>
 </ol>
 
@@ -203,7 +201,7 @@ para.style.textAlign = 'center';</pre>
 <ol>
  <li>Delete the previous five lines you added to the JavaScript.</li>
  <li>Add the following inside your HTML {{htmlelement("head")}}:
-  <pre class="notranslate">&lt;style&gt;
+  <pre>&lt;style&gt;
 .highlight {
   color: white;
   background-color: black;
@@ -214,7 +212,7 @@ para.style.textAlign = 'center';</pre>
 &lt;/style&gt;</pre>
  </li>
  <li>Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
-  <pre class="brush: js notranslate">para.setAttribute('class', 'highlight');</pre>
+  <pre class="brush: js">para.setAttribute('class', 'highlight');</pre>
  </li>
  <li>Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.</li>
 </ol>
@@ -239,17 +237,17 @@ para.style.textAlign = 'center';</pre>
 
 <ol>
  <li>First of all, let's grab a reference to the div, and then grab the width and height of the viewport (the inner window, where your document is displayed) and store them in variables — these two values are handily contained in the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties. Add the following lines inside the existing {{htmlelement("script")}} element:
-  <pre class="brush: js notranslate">const div = document.querySelector('div');
+  <pre class="brush: js">const div = document.querySelector('div');
 let winWidth = window.innerWidth;
 let winHeight = window.innerHeight;</pre>
  </li>
  <li>Next, we'll dynamically alter the width and height of the div to equal that of the viewport. Add the following two lines below your first ones:
-  <pre class="brush: js notranslate">div.style.width = winWidth + 'px';
+  <pre class="brush: js">div.style.width = winWidth + 'px';
 div.style.height = winHeight + 'px';</pre>
  </li>
  <li>Save and try refreshing your browser — you should now see the div become as big as your viewport, whatever size of screen your are using. If you now try resizing your window to make it bigger, you'll see that the div stays the same size — we are only setting it once.</li>
  <li>How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's access that via the {{domxref("GlobalEventHandlers/onresize", "Window.onresize")}} event handler and rerun our sizing code each time it changes. Add the following to the bottom of your code:
-  <pre class="brush: js notranslate">window.onresize = function() {
+  <pre class="brush: js">window.onresize = function() {
   winWidth = window.innerWidth;
   winHeight = window.innerHeight;
   div.style.width = winWidth + 'px';

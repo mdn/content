@@ -22,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var window = window.open(url, windowName, [windowFeatures]);</pre>
+  class="brush: js">var window = window.open(url, windowName, [windowFeatures]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -78,14 +78,14 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush:js notranslate">var windowObjectReference;
+<pre class="brush:js">var windowObjectReference;
 var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
 function openRequestedPopup() {
   windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
 }</pre>
 
-<pre class="brush:js notranslate">var windowObjectReference;
+<pre class="brush:js">var windowObjectReference;
 
 function openRequestedPopup() {
   windowObjectReference = window.open(
@@ -323,7 +323,7 @@ function openRequestedPopup() {
 
 <h2 id="Best_practices">Best practices</h2>
 
-<pre class="brush:js notranslate">&lt;script type="text/javascript"&gt;
+<pre class="brush:js">&lt;script type="text/javascript"&gt;
 var windowObjectReference = null; // global variable
 
 function openFFPromotionPopup() {
@@ -379,7 +379,7 @@ function openFFPromotionPopup() {
 <p>You can also parameterize the function to make it versatile, functional in more
   situations, therefore re-usable in scripts and webpages:</p>
 
-<pre class="brush:js notranslate">&lt;script type="text/javascript"&gt;
+<pre class="brush:js">&lt;script type="text/javascript"&gt;
 var windowObjectReference = null; // global variable
 
 function openRequestedPopup(url, windowName) {
@@ -405,7 +405,7 @@ function openRequestedPopup(url, windowName) {
 <p>You can also make such function able to open only 1 secondary window and to reuse such
   single secondary window for other links in this manner:</p>
 
-<pre class="brush:js notranslate">&lt;script type="text/javascript"&gt;
+<pre class="brush:js">&lt;script type="text/javascript"&gt;
 var windowObjectReference = null; // global variable
 var PreviousUrl; /* global variable that will store the
                     url currently in the secondary window */

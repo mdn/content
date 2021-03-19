@@ -10,7 +10,12 @@ tags:
   - Reference
   - 'recipe:css-property'
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+<div>{{CSSRef}}</div>
+
+<div class="notecard warning">
+  <h4>Scheduled for removal</h4>
+  <p>From Firefox 88 onwards, the standard {{cssxref("outline")}} property will follow the shape of {{cssxref("border-radius")}}, making <code>-moz-outline-radius</code> properties redundant. As such, this property will be removed.</p>
+</div>
 
 <p>In Mozilla applications, the <strong><code>-moz-outline-radius-bottomleft</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property can be used to round the bottom-left corner of an element's {{cssxref("outline")}}.</p>
 
@@ -33,7 +38,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -43,11 +48,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Look at this paragraph's bottom-left corner.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Look at this paragraph's bottom-left corner.&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   margin: 10px;
   border: solid cyan;
   outline: dotted green;

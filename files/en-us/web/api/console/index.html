@@ -15,7 +15,7 @@ tags:
 
 <p>The <code>console</code> object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as <code>console</code>. For example:</p>
 
-<pre class="brush: js notranslate">console.log("Failed to open the specified link")</pre>
+<pre class="brush: js">console.log("Failed to open the specified link")</pre>
 
 <p>This page documents the {{anch("Methods")}} available on the <code>console</code> object and gives a few {{anch("Usage")}} examples.</p>
 
@@ -65,7 +65,7 @@ tags:
  <dt>{{domxref("console.time()")}}</dt>
  <dd>Starts a <a href="/en-US/docs/Web/API/Console#timers">timer</a> with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.</dd>
  <dt>{{domxref("console.timeEnd()")}}</dt>
- <dd>Stops the specified <a href="/en-US/docs/Web/API/Console#timers">timer</a> and logs the elapsed time in seconds since it started.</dd>
+ <dd>Stops the specified <a href="/en-US/docs/Web/API/Console#timers">timer</a> and logs the elapsed time in milliseconds since it started.</dd>
  <dt>{{domxref("console.timeLog()")}}</dt>
  <dd>Logs the value of the specified <a href="/en-US/docs/Web/API/Console#timers">timer</a> to the console.</dd>
  <dt>{{domxref("console.timeStamp()")}} {{Non-standard_inline}}</dt>
@@ -88,25 +88,25 @@ tags:
 
 <p>The simplest way to use the logging methods is to output a single object:</p>
 
-<pre class="brush: js notranslate">var someObject = { str: "Some text", id: 5 };
+<pre class="brush: js">var someObject = { str: "Some text", id: 5 };
 console.log(someObject);
 </pre>
 
 <p>The output looks something like this:</p>
 
-<pre class="brush: bash notranslate">[09:27:13.475] ({str:"Some text", id:5})</pre>
+<pre class="brush: bash">[09:27:13.475] ({str:"Some text", id:5})</pre>
 
 <h4 id="Outputting_multiple_objects">Outputting multiple objects</h4>
 
 <p>You can also output multiple objects by listing them when calling the logging method, like this:</p>
 
-<pre class="brush: js notranslate">var car = "Dodge Charger";
+<pre class="brush: js">var car = "Dodge Charger";
 var someObject = { str: "Some text", id: 5 };
 console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>This output will look like this:</p>
 
-<pre class="brush: bash notranslate">[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+<pre class="brush: bash">[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 </pre>
 
 <h4 id="Using_string_substitutions">Using string substitutions</h4>
@@ -130,14 +130,14 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>Each of these pulls the next argument after the format string off the parameter list. For example:</p>
 
-<pre class="brush: js notranslate">for (var i=0; i&lt;5; i++) {
+<pre class="brush: js">for (var i=0; i&lt;5; i++) {
   console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
 }
 </pre>
 
 <p>The output looks like this:</p>
 
-<pre class="brush: bash notranslate">[13:14:13.481] Hello, Bob. You've called me 1 times.
+<pre class="brush: bash">[13:14:13.481] Hello, Bob. You've called me 1 times.
 [13:14:13.483] Hello, Bob. You've called me 2 times.
 [13:14:13.485] Hello, Bob. You've called me 3 times.
 [13:14:13.487] Hello, Bob. You've called me 4 times.
@@ -148,11 +148,15 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>You can use the <code>%c</code> directive to apply a CSS style to console output:</p>
 
-<pre class="brush: js notranslate">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</pre>
+<pre class="brush: js">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</pre>
 
 <p>The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.</p>
 
 <p><img alt="" src="css-styling.png" style="display: block; margin: 0 auto;"></p>
+
+<p>You may use <code>%c</code> multiple times:</p>
+
+<pre class="brush: js notranslate">console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");</pre>
 
 <p>The properties usable along with the <code>%c</code> syntax are as follows (at least, in Firefox — they may differ in other browsers):</p>
 
@@ -187,7 +191,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <p>To exit the current group, call <code>console.groupEnd()</code>. For example, given this code:</p>
 
-<pre class="brush: js notranslate">console.log("This is the outer level");
+<pre class="brush: js">console.log("This is the outer level");
 console.group("First group");
 console.log("In the first group");
 console.group("Second group");
@@ -209,7 +213,7 @@ console.debug("Back to the outer level");
 
 <p>For example, given this code:</p>
 
-<pre class="brush: js notranslate">console.time("answer time");
+<pre class="brush: js">console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
 alert("Do a bunch of other stuff...");
@@ -228,7 +232,7 @@ console.timeEnd("answer time");
 
 <p>The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call {{domxref("console.trace()")}}. Given code like this:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   function bar() {
     console.trace();
   }

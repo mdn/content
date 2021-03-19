@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <var>character</var> = <var>str</var>.charAt(<var>index</var>)</pre>
+  class="brush: js">let <var>character</var> = <var>str</var>.charAt(<var>index</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,7 +62,7 @@ tags:
 <p>The following example displays characters at different locations in the string
   "<code>Brave new world</code>":</p>
 
-<pre class="brush: js notranslate">var anyString = 'Brave new world';
+<pre class="brush: js">var anyString = 'Brave new world';
 console.log("The character at index 0   is '" + anyString.charAt()   + "'");
 // No index was provided, used 0 as default
 
@@ -76,7 +76,7 @@ console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
 
 <p>These lines display the following:</p>
 
-<pre class="brush: js notranslate">The character at index 0   is 'B'
+<pre class="brush: js">The character at index 0   is 'B'
 
 The character at index 0   is 'B'
 The character at index 1   is 'r'
@@ -92,7 +92,7 @@ The character at index 999 is ''
   provides a whole character, even if the string contains characters that are not in the
   Basic Multi-lingual Plane.</p>
 
-<pre class="brush: js notranslate">var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+<pre class="brush: js">var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
 for (var i = 0, chr; i &lt; str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
@@ -148,7 +148,7 @@ function getWholeChar(str, i) {
   an incrementing variable automatically (if the character warrants it in being a
   surrogate pair).</p>
 
-<pre class="brush: js notranslate">let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
+<pre class="brush: js">let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
 for (let i = 0, chr; i &lt; str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i)
 
@@ -209,7 +209,7 @@ function getWholeCharAndI(str, i) {
   index, to treat the surrogate pairs within a string as the single characters they
   represent, one can use the following:</p>
 
-<pre class="brush: js notranslate">function fixedCharAt(str, idx) {
+<pre class="brush: js">function fixedCharAt(str, idx) {
   let ret = ''
   str += ''
   let end = str.length

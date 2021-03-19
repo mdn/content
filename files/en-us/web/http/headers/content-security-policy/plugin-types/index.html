@@ -2,17 +2,17 @@
 title: 'CSP: plugin-types'
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 tags:
-- CSP
-- Content-Security-Policy
-- Directive
-- Flash
-- HTTP
-- Java
-- Plugin
-- Plugins
-- Security
+  - CSP
+  - Content-Security-Policy
+  - Directive
+  - Flash
+  - HTTP
+  - Java
+  - Plugin
+  - Plugins
+  - Security
 ---
-<div>{{HTTPSidebar}}</div>
+<div>{{HTTPSidebar}}{{deprecated_header}}</div>
 
 <p>The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
   <code><strong>plugin-types</strong></code> directive restricts the set of plugins that
@@ -51,14 +51,14 @@ tags:
 <p>One or more <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a> can
   be set for the <code>plugin-types</code> policy:</p>
 
-<pre class="brush: html notranslate">Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt;;
+<pre class="brush: html">Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt;;
 Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt; &lt;type&gt;/&lt;subtype&gt;;
 </pre>
 
 <dl>
   <dt>&lt;type&gt;/&lt;subtype&gt;</dt>
   <dd>A valid <a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">MIME
+      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">MIME
       type</a>.</dd>
 </dl>
 
@@ -104,11 +104,6 @@ Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt; &lt;type&gt;/
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{specName("CSP 3.0", "#directive-plugin-types", "plugin-types")}}</td>
-      <td>{{Spec2('CSP 3.0')}}</td>
-      <td>No changes.</td>
-    </tr>
     <tr>
       <td>{{specName("CSP 1.1", "#directive-plugin-types", "plugin-types")}}</td>
       <td>{{Spec2('CSP 1.1')}}</td>

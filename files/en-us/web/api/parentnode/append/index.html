@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">// [Throws, Unscopable]
+<pre class="brush: js">// [Throws, Unscopable]
 ParentNode.append(...<var>nodesOrDOMStrings</var>) // returns undefined
 </pre>
 
@@ -52,7 +52,7 @@ ParentNode.append(...<var>nodesOrDOMStrings</var>) // returns undefined
 
 <h3 id="Appending_an_element">Appending an element</h3>
 
-<pre class="brush: js notranslate">let parent = document.createElement("div")
+<pre class="brush: js">let parent = document.createElement("div")
 let p = document.createElement("p")
 parent.append(p)
 
@@ -61,14 +61,14 @@ console.log(parent.childNodes) // NodeList [ &lt;p&gt; ]
 
 <h3 id="Appending_text">Appending text</h3>
 
-<pre class="brush: js notranslate">let parent = document.createElement("div")
+<pre class="brush: js">let parent = document.createElement("div")
 parent.append("Some text")
 
 console.log(parent.textContent) // "Some text"</pre>
 
 <h3 id="Appending_an_element_and_text">Appending an element and text</h3>
 
-<pre class="brush: js notranslate">let parent = document.createElement("div")
+<pre class="brush: js">let parent = document.createElement("div")
 let p = document.createElement("p")
 parent.append("Some text", p)
 
@@ -79,7 +79,7 @@ console.log(parent.childNodes) // NodeList [ #text "Some text", &lt;p&gt; ]</pre
 <p>The <code>append()</code> method is not scoped into the <code>with</code> statement.
   See {{jsxref("Symbol.unscopables")}} for more information.</p>
 
-<pre class="brush: js notranslate">let parent = document.createElement("div")
+<pre class="brush: js">let parent = document.createElement("div")
 
 with(parent) {
   append("foo")
@@ -91,7 +91,7 @@ with(parent) {
 <p>You can polyfill the <code>append() method</code> in Internet Explorer 9 and higher
   with the following code:</p>
 
-<pre class="brush: js notranslate">// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
+<pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('append')) {

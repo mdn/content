@@ -35,7 +35,7 @@ tags:
  </tbody>
 </table>
 
-<p>This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, <code>invalid</code> events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner {{HtmlElement("form")}}, or after the <a href="/en-US/docs/Web/HTML/Forms_in_HTML#Constraint_Validation_API"><code>checkValidity()</code></a> method of the element or its owner <code>&lt;form&gt;</code> is called.</p>
+<p>This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, <code>invalid</code> events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner {{HtmlElement("form")}}, or after the <a href="/en-US/docs/Learn/Forms#constraint_validation_api"><code>checkValidity()</code></a> method of the element or its owner <code>&lt;form&gt;</code> is called.</p>
 
 <p>It is not checked on {{domxref("Element/blur_event", "blur")}}.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;form action="#"&gt;
+<pre class="brush: html">&lt;form action="#"&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;label&gt;Enter an integer between 1 and 10: &lt;input type="number" min="1" max="10" required&gt;&lt;/label&gt;&lt;/li&gt;
     &lt;li&gt;&lt;input type="submit" value="submit"&gt;&lt;/li&gt;
@@ -54,7 +54,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">const input = document.querySelector('input')
+<pre class="brush: js">const input = document.querySelector('input')
 const log = document.getElementById('log')
 
 input.addEventListener('invalid', logValue)

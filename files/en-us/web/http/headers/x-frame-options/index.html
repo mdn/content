@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>X-Frame-Options</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid <a href="/en-US/docs/Web/Security/Types_of_attacks#Click-jacking">click-jacking</a> attacks, by ensuring that their content is not embedded into other sites.</p>
+<p>The <strong><code>X-Frame-Options</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid <a href="/en-US/docs/Web/Security/Types_of_attacks#click-jacking">click-jacking</a> attacks, by ensuring that their content is not embedded into other sites.</p>
 
 <p>The added security is provided only if the user accessing the document is using a browser that supports <code>X-Frame-Options</code>.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>There are two possible directives for <code>X-Frame-Options</code>:</p>
 
-<pre class="brush: html notranslate">X-Frame-Options: DENY
+<pre class="brush: html">X-Frame-Options: DENY
 X-Frame-Options: SAMEORIGIN
 </pre>
 
@@ -63,26 +63,26 @@ X-Frame-Options: SAMEORIGIN
 
 <p>To configure Apache to send the <code>X-Frame-Options</code> header for all pages, add this to your site's configuration:</p>
 
-<pre class="notranslate">Header always set X-Frame-Options "SAMEORIGIN"
+<pre>Header always set X-Frame-Options "SAMEORIGIN"
 </pre>
 
 <p>To configure Apache to set the <code>X-Frame-Options</code> DENY, add this to your site's configuration:</p>
 
-<pre class="notranslate">Header set X-Frame-Options "DENY"
+<pre>Header set X-Frame-Options "DENY"
 </pre>
 
 <h3 id="Configuring_nginx">Configuring nginx</h3>
 
 <p>To configure nginx to send the <code>X-Frame-Options</code> header, add this either to your http, server or location configuration:</p>
 
-<pre class="notranslate">add_header X-Frame-Options SAMEORIGIN always;
+<pre>add_header X-Frame-Options SAMEORIGIN always;
 </pre>
 
 <h3 id="Configuring_IIS">Configuring IIS</h3>
 
 <p>To configure IIS to send the <code>X-Frame-Options</code> header, add this to your site's <code>Web.config</code> file:</p>
 
-<pre class="brush: xml notranslate">&lt;system.webServer&gt;
+<pre class="brush: xml">&lt;system.webServer&gt;
   ...
 
   &lt;httpProtocol&gt;
@@ -101,26 +101,26 @@ X-Frame-Options: SAMEORIGIN
 
 <p>To configure HAProxy to send the <code>X-Frame-Options</code> header, add this to your front-end, listen, or backend configuration:</p>
 
-<pre class="notranslate">rspadd X-Frame-Options:\ SAMEORIGIN
+<pre>rspadd X-Frame-Options:\ SAMEORIGIN
 </pre>
 
 <p>Alternatively, in newer versions:</p>
 
-<pre class="notranslate">http-response set-header X-Frame-Options SAMEORIGIN
+<pre>http-response set-header X-Frame-Options SAMEORIGIN
 </pre>
 
 <h3 id="Configuring_Express">Configuring Express</h3>
 
 <p>To configure Express to send the <code>X-Frame-Options</code> header, you can use <a href="https://helmetjs.github.io/">helmet</a> which uses <a href="https://helmetjs.github.io/docs/frameguard/">frameguard</a> to set the header. Add this to your server configuration:</p>
 
-<pre class="brush: js notranslate">const helmet = require('helmet');
+<pre class="brush: js">const helmet = require('helmet');
 const app = express();
 app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
 </pre>
 
 <p>Alternatively, you can use frameguard directly:</p>
 
-<pre class="brush: js notranslate">const frameguard = require('frameguard')
+<pre class="brush: js">const frameguard = require('frameguard')
 app.use(frameguard({ action: 'SAMEORIGIN' }))
 </pre>
 
@@ -149,7 +149,7 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 
 <ul>
  <li>{{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}</li>
- <li><a href="https://tools.ietf.org/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
- <li><a class="external" href="https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses">ClickJacking Defenses - IEBlog</a></li>
+ <li><a href="https://datatracker.ietf.org/doc/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
+ <li><a href="https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses">ClickJacking Defenses - IEBlog</a></li>
  <li><a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options">Combating ClickJacking with X-Frame-Options - IEInternals</a></li>
 </ul>

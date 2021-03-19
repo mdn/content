@@ -50,7 +50,7 @@ tags:
 
 <p>Listen for {{WebExtAPIRef("tabs.onUpdated")}} events, and switch the popup if the loading status changes:</p>
 
-<pre class="notranslate brush: js">browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) =&gt; {
+<pre class="brush: js">browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) =&gt; {
   if (changeInfo.status) {
     browser.pageAction.show(tabId);
     if (changeInfo.status == "loading") {

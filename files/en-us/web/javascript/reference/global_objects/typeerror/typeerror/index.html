@@ -16,7 +16,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new TypeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+  class="brush: js">new TypeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,7 +33,7 @@ tags:
 
 <h3 id="Catching_a_TypeError">Catching a TypeError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   null.f()
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -48,7 +48,7 @@ tags:
 
 <h3 id="Creating_a_TypeError">Creating a TypeError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new TypeError('Hello', "someFile.js", 10)
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -79,10 +79,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypeError.TypeError")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.TypeError.TypeError")}}</p>
 
 <h2 id="See_also">See also</h2>
 

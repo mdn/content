@@ -43,11 +43,11 @@ tags:
 
 <p>You might wonder why this is so important. After all, you can use a combination of CSS and JavaScript to make just about any HTML element behave in whatever way you want. For example, a control button to play a video on your site could be marked up like this:</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;Play video&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;Play video&lt;/div&gt;</pre>
 
 <p>But as you'll see in greater detail later on, it makes sense to use the correct element for the job:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Play video&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Play video&lt;/button&gt;</pre>
 
 <p>Not only do HTML <code>&lt;button&gt;</code>s have some suitable styling applied by default (which you will probably want to override), they also have built-in keyboard accessibility — users can navigate between buttons using the <kbd>Tab</kbd> key and activate their selection using <kbd>Return</kbd> or <kbd>Enter</kbd>.</p>
 
@@ -79,7 +79,7 @@ tags:
 
 <p>One of the best accessibility aids a screen reader user can have is an excellent content structure with headings, paragraphs, lists, etc. An excellent semantic example might look something like the following:</p>
 
-<pre class="brush: html example-good line-numbers language-html notranslate">&lt;h1&gt;My heading&lt;/h1&gt;
+<pre class="brush: html example-good line-numbers language-html">&lt;h1&gt;My heading&lt;/h1&gt;
 
 &lt;p&gt;This is the first section of my document.&lt;/p&gt;
 
@@ -110,7 +110,7 @@ tags:
 
 <p>People sometimes write headings, paragraphs, etc. using presentational HTML and line breaks, something like the following:</p>
 
-<pre class="brush: html example-bad line-numbers language-html notranslate">&lt;font size="7"&gt;My heading&lt;/font&gt;
+<pre class="brush: html example-bad line-numbers language-html">&lt;font size="7"&gt;My heading&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 This is the first section of my document.
 &lt;br&gt;&lt;br&gt;
@@ -150,7 +150,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Try our example <a href="https://mdn.github.io/learning-area/accessibility/html/table-layout.html">table-layout.html</a> example, which looks something like this:</p>
 
-<pre class="brush: html notranslate">&lt;table width="1200"&gt;
+<pre class="brush: html">&lt;table width="1200"&gt;
       &lt;!-- main heading row --&gt;
       &lt;tr id="heading"&gt;
         &lt;td colspan="6"&gt;
@@ -219,7 +219,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Table layouts are a relic of the past — they made sense back when CSS support was not widespread in browsers, but now they just create confusion for screen reader users. Additionally, their source code requires more markup, which makes them less flexible and more difficult to maintain. You can verify these claims by comparing your previous experience with a <a href="https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/">more modern website structure example</a>, which could look something like this:</p>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;Header&lt;/h1&gt;
 &lt;/header&gt;
 
@@ -279,7 +279,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>You essentially get this behavior for free, just by using the appropriate elements, e.g.</p>
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;Links&lt;/h1&gt;
+<pre class="brush: html example-good">&lt;h1&gt;Links&lt;/h1&gt;
 
 &lt;p&gt;This is a link to &lt;a href="https://www.mozilla.org"&gt;Mozilla&lt;/a&gt;.&lt;/p&gt;
 
@@ -319,17 +319,17 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>However, it is again the case that people sometimes do strange things with HTML. For example, you sometimes see buttons marked up using {{htmlelement("div")}}s, for example:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;div data-message="This is from the first button"&gt;Click me!&lt;/div&gt;
+<pre class="brush: html example-bad">&lt;div data-message="This is from the first button"&gt;Click me!&lt;/div&gt;
 &lt;div data-message="This is from the second button"&gt;Click me too!&lt;/div&gt;
 &lt;div data-message="This is from the third button"&gt;And me!&lt;/div&gt;</pre>
 
 <p>But using such code is not advised — you immediately lose the native keyboard accessibility you would have had if you'd just used {{htmlelement("button")}} elements, plus you don't get any of the default CSS styling that buttons get.</p>
 
-<h4 id="Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</h4>
+<h4 id="building_keyboard_accessibility_back_in">Building keyboard accessibility back in</h4>
 
 <p>Adding such advantages back in takes a bit of work (you can see an example in our <a class="external external-icon" href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example — also see the <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Here we've given our fake <code>&lt;div&gt;</code> buttons the ability to be focused (including via tab) by giving each one the attribute <code>tabindex="0"</code>:</p>
 
-<pre class="brush: html notranslate">&lt;div data-message="This is from the first button" tabindex="0"&gt;Click me!&lt;/div&gt;
+<pre class="brush: html">&lt;div data-message="This is from the first button" tabindex="0"&gt;Click me!&lt;/div&gt;
 &lt;div data-message="This is from the second button" tabindex="0"&gt;Click me too!&lt;/div&gt;
 &lt;div data-message="This is from the third button" tabindex="0"&gt;And me!&lt;/div&gt;</pre>
 
@@ -342,13 +342,13 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Whilst the above addition allows us to tab to the buttons, it does not allow us to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">document.onkeydown = function(e) {
+<pre class="brush: js line-numbers  language-js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.click();
   }
 };</pre>
 
-<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
+<p>Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <code><a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.click()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> which gives us the element that is currently focused on the page.</p>
 
 <p>This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. <strong>Better to just use the right element for the right job in the first place.</strong></p>
 
@@ -362,11 +362,11 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:</p>
 
-<pre class="brush: html example-good notranslate">&lt;p&gt;Whales are really awesome creatures. &lt;a href="whales.html"&gt;Find out more about whales&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html example-good">&lt;p&gt;Whales are really awesome creatures. &lt;a href="whales.html"&gt;Find out more about whales&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <p>but this is bad link text:</p>
 
-<pre class="brush: html example-bad notranslate">&lt;p&gt;Whales are really awesome creatures. To find more out about whales, &lt;a href="whales.html"&gt;click here&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html example-bad">&lt;p&gt;Whales are really awesome creatures. To find more out about whales, &lt;a href="whales.html"&gt;click here&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: You can find a lot more about link implementation and best practices in our <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a> article. You can also see some good and bad examples at <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> and <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
@@ -374,13 +374,13 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:</p>
 
-<pre class="brush: html example-bad notranslate">Fill in your name: &lt;input type="text" id="name" name="name"&gt;</pre>
+<pre class="brush: html example-bad">Fill in your name: &lt;input type="text" id="name" name="name"&gt;</pre>
 
 <p>However, this is not so useful for disabled users. There is nothing in the above example to associate the label unambiguously with the form input and make it clear how to fill it in if you cannot see it. If you access this with some screen readers, you may only be given a description along the lines of "edit text."</p>
 
 <p>The following is a much better example:</p>
 
-<pre class="brush: html example-good notranslate">&lt;div&gt;
+<pre class="brush: html example-good">&lt;div&gt;
   &lt;label for="name"&gt;Fill in your name:&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</pre>
@@ -403,7 +403,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>A basic data table can be written with very simple markup, for example:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;Name&lt;/td&gt;
     &lt;td&gt;Age&lt;/td&gt;
@@ -445,7 +445,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>We have a simple example written up, <a href="https://mdn.github.io/learning-area/accessibility/html/accessible-image.html">accessible-image.html</a>, which features four copies of the same image:</p>
 
-<pre class="notranslate">&lt;img src="dinosaur.png"&gt;
+<pre>&lt;img src="dinosaur.png"&gt;
 
 &lt;img src="dinosaur.png"
      alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."&gt;
@@ -481,7 +481,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Let's have another quick look at the fourth method:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
+<pre class="brush: html">&lt;img src="dinosaur.png" aria-labelledby="dino-label"&gt;
 
 &lt;p id="dino-label"&gt;The Mozilla red Tyrannosaurus ... &lt;/p&gt;</pre>
 
@@ -495,13 +495,13 @@ This is the second subsection of my content. I think is more interesting than th
 
 <p>Images also have another mechanisms available for providing descriptive text. For example, there is a <code>longdesc</code> attribute that is meant to point to a separate web document containing an extended description of the image, for example:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
 
 <p>This sounds like a good idea, especially for infographics like big charts with lots of information on them that could perhaps be represented as an accessible data table instead (see <a href="/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables">Accessible data tables</a>). However, <code>longdesc</code> is not supported consistently by screen readers, and the content is completely inaccessible to non-screen reader users. It is arguably much better to include the long description on the same page as the image, or link to it with a regular link.</p>
 
 <p>HTML5 includes two new elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which are supposed to associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:</p>
 
-<pre class="brush: html notranslate">&lt;figure&gt;
+<pre class="brush: html">&lt;figure&gt;
   &lt;img src="dinosaur.png" alt="The Mozilla Tyrannosaurus"&gt;
   &lt;figcaption&gt;A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.&lt;/figcaption&gt;
 &lt;/figure&gt;</pre>
@@ -510,7 +510,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 <h3 id="Empty_alt_attributes">Empty alt attributes</h3>
 
-<pre class="brush: html notranslate">&lt;h3&gt;
+<pre class="brush: html">&lt;h3&gt;
   &lt;img src="article-icon.png" alt=""&gt;
   Tyrannosaurus Rex: the king of the dinosaurs
 &lt;/h3&gt;</pre>
@@ -547,12 +547,12 @@ This is the second subsection of my content. I think is more interesting than th
 
 <h4 id="Link_that_opens_a_new_tab_or_window">Link that opens a new tab or window</h4>
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="https://www.wikipedia.org/"&gt;Wikipedia (opens in a new window)&lt;/a&gt;
+<pre class="brush: html">&lt;a target="_blank" href="https://www.wikipedia.org/"&gt;Wikipedia (opens in a new window)&lt;/a&gt;
 </pre>
 
 <h4 id="Link_to_a_non-HTML_resource">Link to a non-HTML resource</h4>
 
-<pre class="brush: html notranslate">&lt;a target="_blank" href="2017-annual-report.ppt"&gt;2017 Annual Report (PowerPoint)&lt;/a&gt;
+<pre class="brush: html">&lt;a target="_blank" href="2017-annual-report.ppt"&gt;2017 Annual Report (PowerPoint)&lt;/a&gt;
 </pre>
 
 <p>If an icon is used in place of text to signify this kind of links behavior, make sure it includes an {{HTMLAttrxRef("alt", "img", "alternate description", "true")}}.</p>

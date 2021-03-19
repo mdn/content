@@ -9,9 +9,9 @@ tags:
   - NeedsContent
   - Plugins
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
 
-<p>The <code>PluginArray</code> interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugins</a>; it's returned by the {{DOMxRef("window.navigator.plugins")}} property. The <code>PluginArray</code> is not a JavaScript array, but has the <code>length</code> property and supports accessing individual items using bracket notation (<code>plugins[2]</code>), as well as via <code>item(<var>index</var>)</code> and <code>namedItem(<em>"name"</em>)</code> methods.</p>
+<p>The <code>PluginArray</code> interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugins</a>; it's returned by the {{DOMxRef("NavigatorPlugins.plugins", "navigator.plugins")}} property. The <code>PluginArray</code> is not a JavaScript array, but has the <code>length</code> property and supports accessing individual items using bracket notation (<code>plugins[2]</code>), as well as via <code>item(<var>index</var>)</code> and <code>namedItem(<em>"name"</em>)</code> methods.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Own properties of <code>PluginArray</code> objects are no longer enumerable in the latest browser versions.</p>

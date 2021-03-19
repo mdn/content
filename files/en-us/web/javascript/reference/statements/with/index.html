@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">with (<var>expression</var>)
+<pre class="brush: js">with (<var>expression</var>)
   <var>statement</var>
 </pre>
 
@@ -67,7 +67,7 @@ tags:
   reader or JavaScript compiler to decide whether an unqualified name will be found along
   the scope chain, and if so, in which object. So given this example:</p>
 
-<pre class="brush: js notranslate">function f(x, o) {
+<pre class="brush: js">function f(x, o) {
   with (o) {
     console.log(x);
   }
@@ -83,25 +83,23 @@ tags:
   especially when used with something other than a plain object. Consider this example:
 </p>
 
-<div>
-  <pre class="brush: js notranslate">function f(foo, values) {
+<pre class="brush: js">function f(foo, values) {
   with (foo) {
     console.log(values);
   }
 }
 </pre>
 
-  <p>If you call <code>f([1,2,3], obj)</code> in an ECMAScript 5 environment, then the
-    <code>values</code> reference inside the <code>with</code> statement will resolve to
-    <code>obj</code>. However, ECMAScript 2015 introduces a <code>values</code> property
-    on {{jsxref("Array.prototype")}} (so that it will be available on every array). So, in
-    a JavaScript environment that supports ECMAScript 2015, the <code>values</code>
-    reference inside the <code>with</code> statement could resolve to
-    <code>[1,2,3].values</code>. However, in this particular example,
-    {{jsxref("Array.prototype")}} has been defined with <code>values</code> in its
-    {{jsxref("Symbol.unscopables")}} object. If it were not, one can see how this would be
-    a difficult issue to debug.</p>
-</div>
+<p>If you call <code>f([1,2,3], obj)</code> in an ECMAScript 5 environment, then the
+  <code>values</code> reference inside the <code>with</code> statement will resolve to
+  <code>obj</code>. However, ECMAScript 2015 introduces a <code>values</code> property
+  on {{jsxref("Array.prototype")}} (so that it will be available on every array). So, in
+  a JavaScript environment that supports ECMAScript 2015, the <code>values</code>
+  reference inside the <code>with</code> statement could resolve to
+  <code>[1,2,3].values</code>. However, in this particular example,
+  {{jsxref("Array.prototype")}} has been defined with <code>values</code> in its
+  {{jsxref("Symbol.unscopables")}} object. If it were not, one can see how this would be
+  a difficult issue to debug.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -113,7 +111,7 @@ tags:
   {{jsxref("Math.sin", "sin")}} methods, without specifying an object. JavaScript assumes
   the <code>Math</code> object for these references.</p>
 
-<pre class="brush: js notranslate">var a, x, y;
+<pre class="brush: js">var a, x, y;
 var r = 10;
 
 with (Math) {

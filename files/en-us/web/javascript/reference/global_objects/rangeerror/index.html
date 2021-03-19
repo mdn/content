@@ -51,7 +51,7 @@ tags:
 
 <h3 id="Using_RangeError_for_numeric_values">Using RangeError (for numeric values)</h3>
 
-<pre class="brush: js notranslate">function check(n)
+<pre class="brush: js">function check(n)
 {
     if( !(n &gt;= -500 &amp;&amp; n &lt;= 500) )
     {
@@ -73,7 +73,7 @@ catch(error)
 
 <h3 id="Using_RangeError_for_non-numeric_values">Using RangeError (for non-numeric values)</h3>
 
-<pre class="brush: js notranslate">function check(value)
+<pre class="brush: js">function check(value)
 {
     if(["apple", "banana", "carrot"].includes(value) === false)
     {
@@ -111,10 +111,7 @@ catch(error)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("javascript.builtins.RangeError")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>canvas</var>.toBlob(<var>callback</var>, <var>mimeType</var>, <var>qualityArgument</var>);
+<pre class="brush: js"><var>canvas</var>.toBlob(<var>callback</var>, <var>mimeType</var>, <var>qualityArgument</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -63,7 +63,7 @@ tags:
   image, then appends a new {{HTMLElement("img")}} element to the document, whose source
   image is the one created using the canvas.</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 
 canvas.toBlob(function(blob) {
   var newImg = document.createElement('img'),
@@ -84,7 +84,7 @@ canvas.toBlob(function(blob) {
   image in JPEG format:</p>
 
 <pre
-  class="brush: js notranslate"> canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG at 95% quality</pre>
+  class="brush: js"> canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG at 95% quality</pre>
 
 <h3 id="A_way_to_convert_a_canvas_to_an_ico_Mozilla_only">A way to convert a canvas to an
   ico (Mozilla only)</h3>
@@ -94,7 +94,7 @@ canvas.toBlob(function(blob) {
   by setting the download attribute. The value of the download attribute is the name it
   will use as the file name.</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -126,7 +126,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
     or add-on code, as OS APIs are not present on web sites.</p>
 </div>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();

@@ -40,15 +40,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -68,7 +68,7 @@ tags:
 	<li>
 	<p>Create a <code>&lt;script&gt;</code> section at the top of <code>src/components/Todos.svelte</code> and give it some content, as follows:</p>
 
-	<pre class="brush: html notranslate">&lt;script&gt;
+	<pre class="brush: html">&lt;script&gt;
   let todos = [
     { id: 1, name: 'Create a Svelte starter app', completed: true },
     { id: 2, name: 'Create your first component', completed: true },
@@ -84,7 +84,7 @@ tags:
 	<li>
 	<p>Let's start by showing a status message. Find the <code>&lt;h2&gt;</code> heading with an <code>id</code> of <code>list-heading</code> and replace the hardcoded number of active and completed tasks with dynamic expressions:</p>
 
-	<pre class="brush: html notranslate">&lt;h2 id="list-heading"&gt;{completedTodos} out of {totalTodos} items completed&lt;/h2&gt;</pre>
+	<pre class="brush: html">&lt;h2 id="list-heading"&gt;{completedTodos} out of {totalTodos} items completed&lt;/h2&gt;</pre>
 	</li>
 	<li>
 	<p>Go to the app, and you should see the "2 out of 3 items completed" message as before, but this time the information is coming from the <code>todos</code> array.</p>
@@ -106,7 +106,7 @@ tags:
 	<li>
 	<p>Replace the existing <code>&lt;ul&gt;</code> element with the following simplified version to get an idea of how it works:</p>
 
-	<pre class="brush: html notranslate">&lt;ul&gt;
+	<pre class="brush: html">&lt;ul&gt;
 {#each todos as todo, index (todo.id)}
   &lt;li&gt;
     &lt;input type="checkbox" checked={todo.completed}/&gt; {index}. {todo.name} (id: {todo.id})
@@ -124,7 +124,7 @@ tags:
 	<li>
 	<p>Now we've seen that this is working, let's generate a complete todo item with each loop of the <code>{#each}</code> directive, and inside embed the information from the <code>todos</code> array: <code>id</code>, <code>name</code>, and <code>completed</code>. Replace your existing <code>&lt;ul&gt;</code> block with the following:</p>
 
-	<pre class="brush: html notranslate">&lt;!-- Todos --&gt;
+	<pre class="brush: html">&lt;!-- Todos --&gt;
 &lt;ul role="list" class="todo-list stack-large" aria-labelledby="list-heading"&gt;
   {#each todos as todo (todo.id)}
     &lt;li class="todo"&gt;
@@ -164,7 +164,7 @@ tags:
 	<li>
 	<p>In <code>Todos.svelte</code>, replace the existing <code>let todos = ...</code>  block with <code>export let todos = []</code>.</p>
 
-	<pre class="brush: js notranslate">export let todos = []</pre>
+	<pre class="brush: js">export let todos = []</pre>
 
 	<p>This may feel a little weird at first. That's not how <code>export</code> normally works in JavaScript modules! This is how Svelte 'extends' JavaScript by taking valid syntax and giving it a new purpose. In this case Svelte is using the <code>export</code> keyword to mark a variable declaration as a property or prop, which means it becomes accessible to consumers of the component.</p>
 
@@ -178,7 +178,7 @@ tags:
 	<li>
 	<p>Now let's move our todos to <code>App.svelte</code> and pass them to the <code>Todos.svelte</code> component as a prop. Update <code>src/App.svelte</code> as follows:</p>
 
-	<pre class="brush: js notranslate">&lt;script&gt;
+	<pre class="brush: js">&lt;script&gt;
   import Todos from './components/Todos.svelte'
 
   let todos = [
@@ -195,7 +195,7 @@ tags:
 	<li>
 	<p>When the attribute and the variable have the same name, Svelte allows you to just specify the variable as a handy shortcut, so we can rewrite our last line like this. Try this now.</p>
 
-	<pre class="brush: js notranslate">&lt;Todos {todos} /&gt;</pre>
+	<pre class="brush: js">&lt;Todos {todos} /&gt;</pre>
 	</li>
 </ol>
 
@@ -209,7 +209,7 @@ tags:
 	<li>
 	<p>Update the <code>&lt;input type="checkbox"&gt;</code> element inside <code>src/components/Todos.svelte</code> as follows:</p>
 
-	<pre class="brush: html notranslate">&lt;input type="checkbox" id="todo-{todo.id}"
+	<pre class="brush: html">&lt;input type="checkbox" id="todo-{todo.id}"
   on:click={() =&gt; todo.completed = !todo.completed}
   checked={todo.completed}
 /&gt;</pre>
@@ -217,14 +217,14 @@ tags:
 	<li>
 	<p>Next we'll add a function to remove a todo from our <code>todos</code> array. At the bottom of the <code>Todos.svelte</code> <code>&lt;script&gt;</code> section, add the <code>removeTodo()</code> function like so:</p>
 
-	<pre class="brush: js notranslate">function removeTodo(todo) {
+	<pre class="brush: js">function removeTodo(todo) {
   todos = todos.filter(t =&gt; t.id !== todo.id)
 }</pre>
 	</li>
 	<li>
 	<p>We'll call it via the <em>Delete</em> button. Update it with a <code>click</code> event, like so:</p>
 
-	<pre class="brush: html notranslate">&lt;button type="button" class="btn btn__danger"
+	<pre class="brush: html">&lt;button type="button" class="btn btn__danger"
   on:click={() =&gt; removeTodo(todo)}
 &gt;
   Delete &lt;span class="visually-hidden"&gt;{todo.name}&lt;/span&gt;
@@ -246,7 +246,7 @@ tags:
 
 <p>The same is not true for <code>totalTodos</code> and <code>completedTodos</code>, however. In the following code they are assigned a value when the component is instantiated and the script is executed, but after that, their values are not modified:</p>
 
-<pre class="brush: js notranslate">let totalTodos = todos.length
+<pre class="brush: js">let totalTodos = todos.length
 let completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 <p>We could recalculate them after toggling and removing todos, but there's an easier way to do it.</p>
@@ -259,7 +259,7 @@ let completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 <p>Update your <code>totalTodos</code> and <code>completedTodos</code> variable definitions inside <code>src/components/Todos.svelte</code> to look like so:</p>
 
-<pre class="brush: js notranslate">$: totalTodos = todos.length
+<pre class="brush: js">$: totalTodos = todos.length
 $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 <p>If you check your app now, you'll see that the heading's numbers are updated when todos are completed or deleted. Nice!</p>
@@ -274,27 +274,27 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>First, we'll create a variable to hold the text of the new todo. Add this declaration to the <code>&lt;script&gt;</code> section of <code>Todos.svelte</code> file:</p>
 
-	<pre class="brush: js notranslate">let newTodoName = ''</pre>
+	<pre class="brush: js">let newTodoName = ''</pre>
 	</li>
 	<li>
 	<p>Now we will use this value in the <code>&lt;input&gt;</code> for adding new tasks. To do that we need to bind our <code>newTodoName</code> variable to the <code>todo-0</code> input, so that the <code>newTodoName</code> variable value stays in sync with the input's <code>value</code> property. We could do something like this:</p>
 
-	<pre class="brush: js notranslate">&lt;input value={newTodoName} on:keydown={(e) =&gt; newTodoName = e.target.value} /&gt;</pre>
+	<pre class="brush: js">&lt;input value={newTodoName} on:keydown={(e) =&gt; newTodoName = e.target.value} /&gt;</pre>
 
 	<p>Whenever the value of the variable <code>newTodoName</code> changes, it will be reflected in the <code>value</code> attribute of the input, and whenever a key is pressed in the input, we will update the contents of the variable <code>newTodoName</code>.</p>
 
 	<p>This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the <code><a href="https://svelte.dev/docs#bind_element_property">bind:property</a></code> directive:</p>
 
-	<pre class="brush: html notranslate">&lt;input bind:value={newTodoName} /&gt;</pre>
+	<pre class="brush: html">&lt;input bind:value={newTodoName} /&gt;</pre>
 
 	<p>So, let's implement this. Update the <code>todo-0</code> input like so:</p>
 
-	<pre class="brush: html notranslate">&lt;input bind:value={newTodoName} type="text" id="todo-0" autocomplete="off" class="input input__lg" /&gt;</pre>
+	<pre class="brush: html">&lt;input bind:value={newTodoName} type="text" id="todo-0" autocomplete="off" class="input input__lg" /&gt;</pre>
 	</li>
 	<li>
 	<p>An easy way to test that this works is to add a reactive statement to log the contents of <code>newTodoName</code>. Add this snippet at the end of the <code>&lt;script&gt;</code> section:</p>
 
-	<pre class="brush: js notranslate">$: console.log('newTodoName: ', newTodoName)</pre>
+	<pre class="brush: js">$: console.log('newTodoName: ', newTodoName)</pre>
 
 	<div class="notecard note">
 	<p><strong>Note</strong>: as you may have noticed, reactive statements aren't limited to variable declarations. You can put <em>any</em> JavaScript statement after the <code>$:</code> sign.</p>
@@ -306,7 +306,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>Next up we'll create a function to add the new todo — <code>addTodo()</code> — which will push a new <code>todo</code> object onto the <code>todos</code> array. Add this to the bottom of your <code>&lt;script&gt;</code> block inside <code>src/components/Todos.svelte</code>:</p>
 
-	<pre class="brush: js notranslate">function addTodo() {
+	<pre class="brush: js">function addTodo() {
   todos.push({ id: 999, name: newTodoName, completed: false })
   newTodoName = ''
 }</pre>
@@ -318,7 +318,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>Now we want to update our HTML so that we call <code>addTodo()</code> whenever the form is submitted. Update the NewTodo form's opening tag like so:</p>
 
-	<pre class="brush: html notranslate">&lt;form on:submit|preventDefault={addTodo}&gt;</pre>
+	<pre class="brush: html">&lt;form on:submit|preventDefault={addTodo}&gt;</pre>
 
 	<p>The <code><a href="https://svelte.dev/docs#on_element_event">on:eventname</a></code> directive supports adding modifiers to the DOM event with the <code>|</code> character. In this case, the <code>preventDefault</code> modifier tells Svelte to generate the code to call <code>event.preventDefault()</code> before running the handler. Explore the previous link to see what other modifiers are available.</p>
 	</li>
@@ -333,7 +333,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 	<p>Update your <code>addTodo()</code> function like so:</p>
 
-	<pre class="brush: js notranslate">function addTodo() {
+	<pre class="brush: js">function addTodo() {
   todos = [...todos, { id: 999, name: newTodoName, completed: false }]
   newTodoName = ''
 }</pre>
@@ -348,7 +348,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>Let's declare a <code>newTodoId</code> variable calculated from the number of todos plus 1, and make it reactive. Add the following snippet to the <code>&lt;script&gt;</code> section:</p>
 
-	<pre class="brush: js notranslate">let newTodoId
+	<pre class="brush: js">let newTodoId
   $: {
     if (totalTodos === 0) {
       newTodoId = 1;
@@ -366,7 +366,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 	<p>Let's use this in our <code>addTodo()</code> function — update it like so:</p>
 
-	<pre class="brush: js notranslate">function addTodo() {
+	<pre class="brush: js">function addTodo() {
   todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }]
   newTodoName = ''
 }</pre>
@@ -381,7 +381,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>At the bottom of our <code>&lt;script&gt;</code> section add the following:</p>
 
-	<pre class="brush: js notranslate">let filter = 'all'
+	<pre class="brush: js">let filter = 'all'
   const filterTodos = (filter, todos) =&gt;
     filter === 'active' ? todos.filter(t =&gt; !t.completed) :
     filter === 'completed' ? todos.filter(t =&gt; t.completed) :
@@ -394,7 +394,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>Let's update the filter button markup to make it dynamic and update the current filter when the user presses one of the filter buttons. Update it like this:</p>
 
-	<pre class="brush: html notranslate">&lt;div class="filters btn-group stack-exception"&gt;
+	<pre class="brush: html">&lt;div class="filters btn-group stack-exception"&gt;
   &lt;button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={()=&gt; filter = 'all'} &gt;
     &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
     &lt;span&gt;All&lt;/span&gt;
@@ -427,7 +427,7 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 	<li>
 	<p>Now we just need to use the helper function in the <code>{#each}</code> loop; update it like this:</p>
 
-	<pre class="brush: html notranslate">...
+	<pre class="brush: html">...
   &lt;ul role="list" class="todo-list stack-large" aria-labelledby="list-heading"&gt;
   {#each filterTodos(filter, todos) as todo (todo.id)}
 ...</pre>
@@ -446,11 +446,11 @@ $: completedTodos = todos.filter(todo =&gt; todo.completed).length</pre>
 
 <p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/04-componentizing-our-app</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/04-componentizing-our-app</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 

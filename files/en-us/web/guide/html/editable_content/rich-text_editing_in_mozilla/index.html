@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Executing_Commands">Executing Commands</h3>
 
-<p>When an HTML document has been switched to designMode, the document object exposes the {{ domxref("document.execCommand") }} method which allows one to run <a href="/en-US/docs/Web/API/document.execCommand#Commands">commands</a> to manipulate the contents of the editable region. Most commands affect the document's selection (bold, italics, etc), while others insert new elements (adding a link) or affect an entire line (indenting). When using <code>contentEditable</code>, calling <code>execCommand</code> will affect the currently active editable element.</p>
+<p>When an HTML document has been switched to designMode, the document object exposes the {{ domxref("document.execCommand") }} method which allows one to run <a href="/en-US/docs/Web/API/Document/execCommand#commands">commands</a> to manipulate the contents of the editable region. Most commands affect the document's selection (bold, italics, etc), while others insert new elements (adding a link) or affect an entire line (indenting). When using <code>contentEditable</code>, calling <code>execCommand</code> will affect the currently active editable element.</p>
 
 <h3 id="Internet_Explorer_Differences">Internet Explorer Differences</h3>
 
@@ -41,16 +41,16 @@ tags:
 &lt;STRONG&gt;&lt;EM&gt;&lt;U&gt;Dinosaurs are big.&lt;/U&gt;&lt;/EM&gt;&lt;/STRONG&gt;
 </pre>
 
-<p>Another difference between Mozilla and IE is how to access the document object of an iframe, which is usually used in conjunction with designMode. Mozilla uses the W3C standard way, namely <code>IFrameElement.<a class="external" href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-38538621">contentDocument</a></code>, while IE requires <code>IFrameElement.document</code>.</p>
+<p>Another difference between Mozilla and IE is how to access the document object of an iframe, which is usually used in conjunction with designMode. Mozilla uses the W3C standard way, namely <code>IFrameElement.<a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-38538621">contentDocument</a></code>, while IE requires <code>IFrameElement.document</code>.</p>
 
-<p><em><strong>DevEdge</strong></em> provides a JavaScript helper class, <code><a href="/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode</a></code>, which is a wrapper for the designMode feature which hides the differences between IE and Mozilla.</p>
+<p><em><strong>DevEdge</strong></em> provides a JavaScript helper class, <code><a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode</a></code>, which is a wrapper for the designMode feature which hides the differences between IE and Mozilla.</p>
 
 <p><br>
  <strong>Event Handling Disabled</strong></p>
 
 <p>A further difference for Mozilla is that once a document is switched to designMode, all events on that particular document are disabled. Once designMode is turned off however (as this now seems possible in Mozilla 1.5) the events become active again.</p>
 
-<p><strong>More information</strong> can be found in the <a href="/en/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_editing">Rich text editing</a> section of <a href="/en/Migrate_apps_from_Internet_Explorer_to_Mozilla">Migrate apps from Internet Explorer to Mozilla</a>.</p>
+<p><strong>More information</strong> can be found in the <a href="/en-US/Migrate_apps_from_Internet_Explorer_to_Mozilla#rich_text_editing">Rich text editing</a> section of <a href="/en-US/Migrate_apps_from_Internet_Explorer_to_Mozilla">Migrate apps from Internet Explorer to Mozilla</a>.</p>
 
 <h3 id="Examples">Examples</h3>
 
@@ -271,14 +271,14 @@ img.intLink { border: 0; }
 <h3 id="Resources">Resources</h3>
 
 <ul>
- <li><a class="external" href="https://mozilla.org/editor/midas-spec.html">mozilla.org's rich-text editing Specification</a></li>
- <li><a class="external" href="https://mozilla.org/editor/midasdemo/">mozilla.org's rich-text editing Demo</a></li>
- <li><a class="external" href="https://www.mozilla.org/editor/ie2midas.html">Converting an app using document.designMode from IE to Mozilla at mozilla.org</a></li>
+ <li><a href="https://mozilla.org/editor/midas-spec.html">mozilla.org's rich-text editing Specification</a></li>
+ <li><a href="https://mozilla.org/editor/midasdemo/">mozilla.org's rich-text editing Demo</a></li>
+ <li><a href="https://www.mozilla.org/editor/ie2midas.html">Converting an app using document.designMode from IE to Mozilla at mozilla.org</a></li>
  <li><code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code></li>
  <li><a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537834(v=vs.85)">MSDN: How to Create an HTML Editor Application</a></li>
- <li><a class="external" href="http://www.kevinroth.com/rte/demo.htm">A closed source, cross-browser rich-text editing demo</a></li>
- <li><a href="/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode; a JavaScript helper class for easier cross-browser development using designMode.</a></li>
- <li><a class="external" href="http://starkravingfinkle.org/blog/2007/07/firefox-3-contenteditable/">Firefox 3 and contentEditable</a></li>
+ <li><a href="http://www.kevinroth.com/rte/demo.htm">A closed source, cross-browser rich-text editing demo</a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode; a JavaScript helper class for easier cross-browser development using designMode.</a></li>
+ <li><a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-contenteditable/">Firefox 3 and contentEditable</a></li>
 </ul>
 
 <div class="originaldocinfo">
@@ -289,7 +289,7 @@ img.intLink { border: 0; }
  <li>Published: 04 Apr 2003</li>
  <li>Revised: 01 Jul 2003</li>
  <li>Revised: 24 Apr 2005, <a href="/User:Fumble" title="User:Fumble">Joel Coreson</a></li>
- <li>Revised: 28 Nov 2006, <a class="link-mailto" href="mailto:kkuhns@ComputronicsUSA.com">Ken Kuhns</a>, <a class="external" href="http://www.ComputronicsUSA.com">ComputronicsUSA</a></li>
+ <li>Revised: 28 Nov 2006, <a class="link-mailto" href="mailto:kkuhns@ComputronicsUSA.com">Ken Kuhns</a>, <a href="http://www.ComputronicsUSA.com">ComputronicsUSA</a></li>
  <li>Revised: 19 Dec 2007, <a href="/User:MarkFinkle" title="User:MarkFinkle">Mark Finkle</a></li>
 </ul>
 </div>

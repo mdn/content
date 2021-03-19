@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)
+<pre class="brush: js">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)
 </pre>
 
 <div class="notecard note">
@@ -112,8 +112,7 @@ tags:
   used as the replacement string. (<strong>Note:</strong> The above-mentioned special
   replacement patterns do <em>not</em> apply in this case.)</p>
 
-<p>Note that the function will be invoked multiple times for each full match to be
-  replaced if the regular expression in the first parameter is global.</p>
+<p>Note that if the first argument of an <code>replaceAll()</code> invocation is a {{jsxref("RegExp")}} object or regular expression literal, the function will be invoked multiple times.</p>
 
 <p>The arguments to the function are as follows:</p>
 
@@ -132,7 +131,7 @@ tags:
     <tr>
       <td><code>p1, p2, ...</code></td>
       <td>The <var>n</var>th string found by a parenthesized capture group, provided the
-        first argument to <code>replace()</code> was a {{jsxref("RegExp")}} object.
+        first argument to <code>replaceAll()</code> was a {{jsxref("RegExp")}} object.
         (Corresponds to <code>$1</code>, <code>$2</code>, etc. above.) For example,
         if <code>/(\a+)(\b+)/</code>, was given, <code>p1</code> is the match for
         <code>\a+</code>, and <code>p2</code> for <code>\b+</code>.</td>
@@ -158,20 +157,20 @@ tags:
 
 <h3 id="Using_replaceAll">Using replaceAll</h3>
 
-<pre class="brush: js notranslate">'aabbcc'.replaceAll('b', '.');
+<pre class="brush: js">'aabbcc'.replaceAll('b', '.');
 // 'aa..cc'</pre>
 
 <h3 id="Non-global_regex_throws">Non-global regex throws</h3>
 
 <p>When using a regular expression search value, it must be global. This won't work:</p>
 
-<pre class="brush: js; example-bad notranslate">'aabbcc'.replaceAll(/b/, '.');
+<pre class="brush: js; example-bad">'aabbcc'.replaceAll(/b/, '.');
 TypeError: replaceAll must be called with a global RegExp
 </pre>
 
 <p>This will work:</p>
 
-<pre class="brush: js example-good notranslate">'aabbcc'.replaceAll(/b/g, '.');
+<pre class="brush: js example-good">'aabbcc'.replaceAll(/b/g, '.');
 "aa..cc"
 </pre>
 

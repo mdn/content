@@ -11,27 +11,21 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;section&gt;</code> element</strong> represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document.</span> Typically, but not always, sections have a heading.</p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;section&gt;</code> element</strong> represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it.</span> Sections should always have a heading, with very few exceptions.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}</div>
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
-<p>As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results and a map display and its controls don't have specific elements, and could be put inside a <code>&lt;section&gt;</code>.</p>
-
-<div class="note">
-<p><strong>Note:</strong> If the contents of the element would make sense syndicated as a standalone piece, the {{HTMLElement("article")}} element may be a better choice.</p>
-</div>
-
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Sectioning_content">Sectioning content</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">Sectioning content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -39,7 +33,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>. Note that a <code>&lt;section&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>. Note that a <code>&lt;section&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -62,28 +56,81 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
+<p>As mentioned above, <code>&lt;section&gt;</code> is a generic sectioning element, and should only be used if there isn't a more specific element to represent it. As an example, a navigation menu should be wrapped in a {{htmlelement("nav")}} element, but a list of search results or a map display and its controls don't have specific elements, and could be put inside a <code>&lt;section&gt;</code>.</p>
+
+<p>Also consider these cases:</p>
+
 <ul>
- <li>Each <code>&lt;section&gt;</code> should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the <code>&lt;section&gt;</code> element.</li>
- <li>If it makes sense to separately syndicate the content of a <code>&lt;section&gt;</code> element, use an {{HTMLElement("article")}} element instead.</li>
- <li>Do not use the <code>&lt;section&gt;</code> element as a generic container; this is what {{HTMLElement("div")}} is for, especially when the sectioning is only for styling purposes. A rule of thumb is that a section should logically appear in the outline of a document.</li>
+  <li>If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.</li>
+  <li>If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.</li>
+  <li>If the contents represent the main content area of a document, use {{HTMLElement("main")}}.</li>
+  <li>If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}}. A rule of thumb is that a <code>&lt;section&gt;</code> should logically appear in the outline of a document.</li>
 </ul>
 
-<h2 id="Example">Example</h2>
+<p>To reiterate, each <code>&lt;section&gt;</code> should be identified, typically by including a heading ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) as a child of the <code>&lt;section&gt;</code> element, wherever possible. See below for examples of where you might see a <code>&lt;section&gt;</code> without a heading.</p>
 
-<h3 id="Before">Before</h3>
+<h2 id="Example">Examples</h2>
+
+<h3 id="simple_usage_example">Simple usage example</h3>
+
+<h4 id="Before">Before</h4>
 
 <pre class="brush: html">&lt;div&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;h2&gt;Heading&lt;/h2&gt;
   &lt;p&gt;Bunch of awesome content&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<h3 id="After">After</h3>
+<h4 id="After">After</h4>
 
 <pre class="brush: html">&lt;section&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;h2&gt;Heading&lt;/h2&gt;
   &lt;p&gt;Bunch of awesome content&lt;/p&gt;
 &lt;/section&gt;
 </pre>
+
+<h3 id="using_a_section_without_a_heading">Using a section without a heading</h3>
+
+<p>Circumstances where you might see <code>&lt;section&gt;</code> used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screenreaders, and they are also good for SEO.</p>
+
+<p>Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a <code>&lt;nav&gt;</code> element, you could conceiveably wrap a previous/next menu in a <code>&lt;section&gt;</code>:</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;a href="#"&gt;Previous article&lt;/a&gt;
+  &lt;a href="#"&gt;Next article&lt;/a&gt;
+&lt;/section&gt;
+</pre>
+
+<p>Or what about some kind of button bar for controlling your app? This might not necessarily want a heading, but it is still a distinct section of the document:</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;button class="reply"&gt;Reply&lt;/button&gt;
+  &lt;button class="reply-all"&gt;Reply to all&lt;/button&gt;
+  &lt;button class="fwd"&gt;Forward&lt;/button&gt;
+  &lt;button class="del"&gt;Delete&lt;/button&gt;
+&lt;/section&gt;
+</pre>
+
+<p>Sections with no headings do not appear in the document outline. If you did want force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it:</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h2 class="hidden"&gt;Controls&lt;/h2&gt;
+  &lt;button class="reply"&gt;Reply&lt;/button&gt;
+  &lt;button class="reply-all"&gt;Reply to all&lt;/button&gt;
+  &lt;button class="fwd"&gt;Forward&lt;/button&gt;
+  &lt;button class="del"&gt;Delete&lt;/button&gt;
+&lt;/section&gt;
+</pre>
+
+<p>Make sure to use some assistive technology and screenreader-friendly CSS to hide it, like so:</p>
+
+<pre class="brush: html">.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+</pre>
+
+<p>Depending on the content, including a heading could also be good for SEO, so it is an option to consider.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -116,7 +163,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.section")}}</p>
 
@@ -126,4 +173,5 @@ tags:
  <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
  <li><a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">Using HTML sections and outlines</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">ARIA: Region role</a></li>
+ <li><a href="https://www.smashingmagazine.com/2020/01/html5-article-section/">Why You Should Choose HTML5 article Over section</a>, by Bruce Lawson</li>
 </ul>

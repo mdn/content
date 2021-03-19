@@ -29,18 +29,12 @@ tags:
 <p><em>Inherits properties from its ancestor, {{domxref("Credential")}}.</em></p>
 
 <dl>
- <dt>{{domxref("PasswordCredential.additionalData")}} {{deprecated_inline()}}{{securecontext_inline}}</dt>
- <dd>One of a {{domxref("FormData")}} instance, a {{domxref("URLSearchParams")}} instance, or null. The data in the objects will be added to the {{domxref("request")}} body and sent to the remote endpoint with the credentials.</dd>
  <dt>{{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}</dt>
  <dd>A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.</dd>
- <dt>{{domxref("PasswordCredential.idName")}} {{deprecated_inline()}}{{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} containing the name that will be used for the ID field when submitting the current object to a remote endpoint via {{domxref("fetch")}}. This property defaults to 'username', but may be overridden to match whatever the backend service expects.</dd>
  <dt>{{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}</dt>
  <dd>A {{domxref("USVString")}} containing a human-readable public name for display in a credential chooser.</dd>
  <dt>{{domxref("PasswordCredential.password")}} {{readonlyinline}}{{securecontext_inline}}</dt>
  <dd>A {{domxref("USVString")}} containing the password of the credential.</dd>
- <dt>{{domxref("PasswordCredential.passwordName")}} {{deprecated_inline()}}{{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} representing the name that will be used for the password field when submitting the current object to a remote endpoint via {{domxref("fetch")}}. This property defaults to 'password', but may be overridden to match whatever the backend service expects.</dd>
 </dl>
 
 <h3 id="Event_handlers">Event handlers</h3>
@@ -85,7 +79,4 @@ navigator.credentials.store(cred)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PasswordCredential")}}</p>
-</div>

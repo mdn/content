@@ -8,13 +8,15 @@ tags:
   - Reference
   - 'recipe:css-property'
 ---
+<div>{{CSSRef}}</div>
+
 <p>The <strong><code>grid-column-end</code></strong> CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid-column-end.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush: css no-line-numbers">/* Keyword value */
 grid-column-end: auto;
 
 /* &lt;custom-ident&gt; values */
@@ -68,7 +70,7 @@ grid-column-end: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -76,7 +78,7 @@ grid-column-end: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -87,7 +89,7 @@ grid-column-end: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -108,7 +110,7 @@ grid-column-end: unset;
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -168,63 +170,3 @@ grid-column-end: unset;
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-line-based-placement/">Line-based placement</a></em></li>
 </ul>
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

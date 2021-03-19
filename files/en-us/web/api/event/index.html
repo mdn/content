@@ -25,7 +25,7 @@ tags:
 <p><strong>Note:</strong> One element can have several such handlers, even for the exact same event—particularly if separate, independent code modules attach them, each for its own independent purposes. (For example, a webpage with an advertising-module and statistics-module both monitoring video-watching.)</p>
 </div>
 
-<p>When there are many nested elements, each with its own handler(s), event processing can become very complicated—especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">Event bubbling and capture</a> settings of each handler triggered.</p>
+<p>When there are many nested elements, each with its own handler(s), event processing can become very complicated—especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">Event bubbling and capture</a> settings of each handler triggered.</p>
 
 <h2 id="Introduction">Interfaces based on Event</h2>
 
@@ -194,7 +194,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Types of events available: <a href="/en-US/docs/Web/Reference/Events">Event reference</a></li>
+ <li>Types of events available: <a href="/en-US/docs/Web/Events">Event reference</a></li>
  <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a> (<code>target</code> vs <code>currentTarget</code> vs <code>relatedTarget</code> vs <code>originalTarget</code>)</li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Creating and triggering custom events</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering custom events</a></li>
 </ul>

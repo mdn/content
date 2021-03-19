@@ -42,7 +42,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">element.setAttribute('slot', slotName);
+<pre class="brush: js">element.setAttribute('slot', slotName);
 // element.assignedSlot = $slot
 element.removeAttribute('slot');
 // element.assignedSlot = null
@@ -50,7 +50,7 @@ element.removeAttribute('slot');
 
 <p>The following snippet is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange example</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">see it live also</a>).</p>
 
-<pre class="brush: js notranslate">let slots = this.shadowRoot.querySelectorAll('slot');
+<pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
   let nodes = slots[1].assignedNodes();
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');

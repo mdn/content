@@ -6,7 +6,7 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* source | slice */
+<pre class="brush: css no-line-numbers">/* source | slice */
 border-image: linear-gradient(red, blue) 27;
 
 /* source | slice | repeat */
@@ -71,7 +71,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 <p>Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -81,7 +81,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -89,18 +89,18 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 <p>In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:</p>
 
-<p><img alt="an example borderimage" src="https://mdn.mozillademos.org/files/4127/border.png" style="height: 81px; width: 81px;"></p>
+<p><img alt="an example borderimage" src="border.png"></p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based border image!&lt;/div&gt;
+<pre class="brush: html">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based border image!&lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
 <p>To match the size of a single diamond, we will use a value of 81 divided by 3, or <code>27</code>, for slicing the image into corner and edge regions. To center the border image on the edge of the element's background, we will make the outset values equal to half of the width values. Finally, a repeat value of <code>round</code> will make the border slices fit evenly, i.e., without clipping or gaps.</p>
 
-<pre class="brush:css notranslate">#bitmap {
+<pre class="brush:css">#bitmap {
   width: 200px;
   background-color: #ffa;
   border: 36px solid orange;
@@ -124,12 +124,12 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="gradient"&gt;This element is surrounded by a gradient-based border image!&lt;/div&gt;
+<pre class="brush: html">&lt;div id="gradient"&gt;This element is surrounded by a gradient-based border image!&lt;/div&gt;
 </pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush:css notranslate">#gradient {
+<pre class="brush:css">#gradient {
   width: 200px;
   border: 30px solid;
   border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
@@ -174,5 +174,5 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
  <li>{{cssxref("box-shadow")}}</li>
  <li>{{cssxref("background-image")}}</li>
  <li>{{cssxref("url()", "url()")}} function</li>
- <li>Gradient functions: {{CSSxRef("conic-gradient")}}, {{CSSxRef("linear-gradient")}}, {{CSSxRef("repeating-linear-gradient")}}, {{CSSxRef("radial-gradient")}}, {{CSSxRef("repeating-radial-gradient")}}</li>
+ <li>Gradient functions: {{CSSxRef("conic-gradient()")}}, {{CSSxRef("linear-gradient()")}}, {{CSSxRef("repeating-linear-gradient()")}}, {{CSSxRef("radial-gradient()")}}, {{CSSxRef("repeating-radial-gradient()")}}</li>
 </ul>

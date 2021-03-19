@@ -85,8 +85,6 @@ tags:
 
 <h4 id="Eagerly_lose_contexts_too">Eagerly lose contexts too</h4>
 
-<p><code>WEBGL_lose_context.loseContext()</code> can be used to release a WebGL context and its resources eagerly. Use this if you are finished with any contexts, such as probe contexts, or if you hit a fallback case.</p>
-
 <h3 id="Flush_when_expecting_results_like_queries_or_rendering_frame_completion">Flush when expecting results (like queries or rendering frame completion)</h3>
 
 <p>Flush tells the implementation to push all pending commands out for execution, flushing them out of the queue, instead of waiting for more commands to enqueue before sending for execution.</p>
@@ -186,7 +184,7 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>Instead of:</p>
 
-<pre class="brush: js notranslate">function compileOnce(gl, shader) {
+<pre class="brush: js">function compileOnce(gl, shader) {
   if (shader.compiled) return;
   gl.compileShader(shader);
   shader.compiled = true;
@@ -205,7 +203,7 @@ for (const [vs, fs, prog] of programs) {
 
 <p>Consider:</p>
 
-<pre class="brush: js notranslate">function compileOnce(gl, shader) {
+<pre class="brush: js">function compileOnce(gl, shader) {
   if (shader.compiled) return;
   gl.compileShader(shader);
   shader.compiled = true;
@@ -232,7 +230,7 @@ for (const [vs, fs, prog] of programs) {
 
 <p>Example usage:</p>
 
-<pre class="brush: js notranslate">ext = gl.getExtension('KHR_parallel_shader_compile');
+<pre class="brush: js">ext = gl.getExtension('KHR_parallel_shader_compile');
 gl.compileProgram(vs);
 gl.compileProgram(fs);
 gl.attachShader(prog, vs);
@@ -275,7 +273,7 @@ if (ext) {
 
 <p>Instead of:</p>
 
-<pre class="brush: js notranslate">gl.compileShader(vs);
+<pre class="brush: js">gl.compileShader(vs);
 if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
   console.error('vs compile failed: ' + gl.getShaderInfoLog(vs));
 }
@@ -293,7 +291,7 @@ if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
 
 <p>Consider:</p>
 
-<pre class="brush: js notranslate">gl.compileShader(vs);
+<pre class="brush: js">gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
@@ -493,7 +491,7 @@ precision mediump float;
 
 <p>However, for 2d resources that are never "zoomed out", don't pay the 30% memory surcharge for mipmaps:</p>
 
-<pre class="brush: js notranslate">const tex = gl.createTexture();
+<pre class="brush: js">const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults to NEAREST_MIPMAP_LINEAR, for mipmapping!
 </pre>
@@ -645,7 +643,7 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>The approach in WebGL 2 is analogous to the approach in OpenGL: <a href="https://jdashg.github.io/misc/async-gpu-downloads.html">https://jdashg.github.io/misc/async-gpu-downloads.html</a></p>
 
-<pre class="brush: js notranslate">function clientWaitAsync(gl, sync, flags, interval_ms) {
+<pre class="brush: js">function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) =&gt; {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
@@ -719,7 +717,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 <p>On supporting browsers (Chromium?), <code>ResizeObserver</code> can be used with <code>'device-pixel-content-box'</code> to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:</p>
 
-<pre class="brush: js notranslate">window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
+<pre class="brush: js">window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
    await new Promise(fn_resolve =&gt; {
       const observer = new ResizeObserver(entries =&gt; {
          for (const cur of entries) {

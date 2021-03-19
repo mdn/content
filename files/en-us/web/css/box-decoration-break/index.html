@@ -7,7 +7,7 @@ tags:
   - CSS Property
   - Experimental
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 box-decoration-break: slice;
 box-decoration-break: clone;
 
@@ -56,7 +56,7 @@ box-decoration-break: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -64,7 +64,7 @@ box-decoration-break: unset;
 
 <p>An inline element that contains line breaks styled with:</p>
 
-<pre class="brush:css notranslate">.example {
+<pre class="brush:css">.example {
   background: linear-gradient(to bottom right, yellow, green);
   box-shadow:
     8px 8px 10px 0px deeppink,
@@ -83,23 +83,23 @@ box-decoration-break: unset;
 
 <p>... results in:</p>
 
-<p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example." src="https://mdn.mozillademos.org/files/8167/box-decoration-break-inline-slice.png" style="height: 177px; width: 191px;"></p>
+<p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example." src="box-decoration-break-inline-slice.png"></p>
 
 <p>Adding <code>box-decoration-break: clone</code> to the above styles:</p>
 
-<pre class="brush:css notranslate">-webkit-box-decoration-break: clone;
+<pre class="brush:css">-webkit-box-decoration-break: clone;
 box-decoration-break: clone;
 </pre>
 
 <p>... results in:</p>
 
-<p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example" src="https://mdn.mozillademos.org/files/8169/box-decoration-break-inline-clone.png" style="height: 180px; width: 231px;"></p>
+<p><img alt="A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example" src="box-decoration-break-inline-clone.png"></p>
 
 <p>You can <a href="https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html">try the two inline examples above</a> in your browser.</p>
 
 <p>Here's an example of an inline element using a large <code>border-radius</code> value. The second <code>"iM"</code> has a line-break between the <code>"i"</code> and the <code>"M"</code>. For comparison, the first <code>"iM"</code> is without line breaks. Note that if you stack the rendering of the two fragments horizontally next to each other it will result in the non-fragmented rendering.</p>
 
-<p><img alt="A screenshot of the rendering of the second inline element example." src="https://mdn.mozillademos.org/files/8189/box-decoration-break-slice-inline-2.png" style="height: 184px; width: 108px;"></p>
+<p><img alt="A screenshot of the rendering of the second inline element example." src="box-decoration-break-slice-inline-2.png"></p>
 
 <p><a href="https://mdn.mozillademos.org/files/8191/box-decoration-break-inline-extreme.html">Try the above example</a> in your browser.</p>
 
@@ -107,17 +107,17 @@ box-decoration-break: clone;
 
 <p>A block element with similar styles as above and no fragmentation results in:</p>
 
-<p><img alt="A screenshot of the rendering of the block element used in the examples without any fragmentation." src="https://mdn.mozillademos.org/files/8181/box-decoration-break-block.png" style="height: 149px; width: 333px;"></p>
+<p><img alt="A screenshot of the rendering of the block element used in the examples without any fragmentation." src="box-decoration-break-block.png"></p>
 
 <p>Fragmenting the above block into three columns results in:</p>
 
-<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice." src="https://mdn.mozillademos.org/files/8183/box-decoration-break-block-slice.png" style="height: 55px; max-width: none; width: 1025px;"></p>
+<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice." src="box-decoration-break-block-slice.png" style="max-width: none;"></p>
 
 <p>Note that stacking these pieces vertically will result in the non-fragmented rendering.</p>
 
 <p>Now, the same example but styled with <code>box-decoration-break: clone</code> results in:</p>
 
-<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone." src="https://mdn.mozillademos.org/files/8185/box-decoration-break-block-clone.png" style="height: 61px; max-width: none; width: 1023px;"></p>
+<p><img alt="A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone." src="box-decoration-break-block-clone.png" style="max-width: none;"></p>
 
 <p>Note here that each fragment has an identical replicated border, box-shadow, and background.</p>
 

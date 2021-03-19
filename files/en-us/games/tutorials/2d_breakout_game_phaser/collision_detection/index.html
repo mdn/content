@@ -25,7 +25,7 @@ tags:
 
 <p>The physics engine makes everything a lot easier — we just need to add two simple pieces of code. First, add a new line inside your <code>update()</code> function that checks for collision detection between ball and bricks, as shown below:</p>
 
-<pre class="brush: js notranslate">function update() {
+<pre class="brush: js">function update() {
     game.physics.arcade.collide(ball, paddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
     paddle.x = game.input.x || game.world.width*0.5;
@@ -34,7 +34,7 @@ tags:
 
 <p>The ball's position is calculated against the positions of all the bricks in the group. The third, optional parameter is the function executed when a collision occurs — <code>ballHitBrick()</code>. Create this new function as the bottom of your code, just before the closing <code>&lt;/script&gt;</code> tag, as follows:</p>
 
-<pre class="brush: js notranslate">function ballHitBrick(ball, brick) {
+<pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
 }
 </pre>

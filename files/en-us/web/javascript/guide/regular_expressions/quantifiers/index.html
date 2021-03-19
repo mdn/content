@@ -94,7 +94,7 @@ tags:
 
 <h3 id="Repeated_pattern">Repeated pattern</h3>
 
-<pre class="brush: js notranslate">var wordEndingWithAs = /\w+a+\b/;
+<pre class="brush: js">var wordEndingWithAs = /\w+a+\b/;
 var delicateMessage = "This is Spartaaaaaaa";
 
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
@@ -102,7 +102,7 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 
 <h3 id="Counting_characters">Counting characters</h3>
 
-<pre class="brush: js notranslate">var singleLetterWord = /\b\w\b/g;
+<pre class="brush: js">var singleLetterWord = /\b\w\b/g;
 var notSoLongWord = /\b\w{1,6}\b/g;
 var loooongWord = /\b\w{13,}\b/g;
 
@@ -115,7 +115,7 @@ console.table(sentence.match(loooongWord));      // ["multiplication"]
 
 <h3 id="Optional_character">Optional character</h3>
 
-<pre class="brush: js notranslate">var britishText = "He asked his neighbour a favour.";
+<pre class="brush: js">var britishText = "He asked his neighbour a favour.";
 var americanText = "He asked his neighbor a favor.";
 
 var regexpEnding = /\w+ou?r/g;
@@ -133,7 +133,7 @@ console.table(americanText.match(regexpEnding));
 
 <h3 id="Greedy_versus_non-greedy">Greedy versus non-greedy</h3>
 
-<pre class="brush: js notranslate">var text = "I must be getting somewhere near the centre of the earth.";
+<pre class="brush: js">var text = "I must be getting somewhere near the centre of the earth.";
 var greedyRegexp = /[\w ]+/;
 // [\w ]      a letter of the latin alphabet or a whitespace
 //      +     one or several times

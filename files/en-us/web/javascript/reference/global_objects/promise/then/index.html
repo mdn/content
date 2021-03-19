@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>p.then(onFulfilled[, onRejected])</var>;
+<pre class="brush: js"><var>p.then(onFulfilled[, onRejected])</var>;
 
 p.then(value =&gt; {
   // fulfillment
@@ -84,7 +84,7 @@ p.then(value =&gt; {
 <p>Following, an example to demonstrate the asynchronicity of the <code>then</code>
   method.</p>
 
-<pre class="brush: js notranslate">// using a resolved promise, the 'then' block will be triggered instantly,
+<pre class="brush: js">// using a resolved promise, the 'then' block will be triggered instantly,
 // but its handlers will be triggered asynchronously as demonstrated by the console.logs
 const resolvedProm = Promise.resolve(33);
 
@@ -115,7 +115,7 @@ setTimeout(() =&gt; {
 
 <h3 id="Using_the_then_method">Using the <code>then</code> method</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   resolve('Success!');
   // or
   // reject(new Error("Error!"));
@@ -138,7 +138,7 @@ p1.then(value =&gt; {
   in the method chain. The below snippet simulates asynchronous code with the
   <code>setTimeout</code> function.</p>
 
-<pre class="brush: js notranslate">Promise.resolve('foo')
+<pre class="brush: js">Promise.resolve('foo')
   // 1. Receive "foo", concatenate "bar" to it, and resolve that to the next then
   .then(function(string) {
     return new Promise(function(resolve, reject) {
@@ -181,7 +181,7 @@ p1.then(value =&gt; {
   <code>Promise.resolve(&lt;value returned by whichever handler was called&gt;)</code>.
 </p>
 
-<pre class="brush: js notranslate">var p2 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p2 = new Promise(function(resolve, reject) {
   resolve(1);
 });
 
@@ -200,7 +200,7 @@ p2.then(function(value) {
 <p>A <code>then</code> call will return a rejected promise if the function throws an error
   or returns a rejected Promise.</p>
 
-<pre class="brush: js notranslate">Promise.resolve()
+<pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
     // Makes .then() return a rejected promise
     throw new Error('Oh no!');
@@ -215,14 +215,14 @@ p2.then(function(value) {
   first <code>then()</code> will return <code>42</code> wrapped in a resolving Promise
   even though the previous Promise in the chain was rejected.</p>
 
-<pre class="brush: js notranslate">Promise.reject()
+<pre class="brush: js">Promise.reject()
   .then(() =&gt; 99, () =&gt; 42) // onRejected returns 42 which is wrapped in a resolving Promise
   .then(solution =&gt; console.log('Resolved with ' + solution)); // Resolved with 42</pre>
 
 <p>In practice, it is often desirable to catch rejected promises rather than use
   <code>then</code>'s two case syntax, as demonstrated below.</p>
 
-<pre class="brush: js notranslate">Promise.resolve()
+<pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
     // Makes .then() return a rejected promise
     throw new Error('Oh no!');
@@ -237,7 +237,7 @@ p2.then(function(value) {
 <p>You can also use chaining to implement one function with a Promise-based API on top of
   another such function.</p>
 
-<pre class="brush: js notranslate">function fetch_current_data() {
+<pre class="brush: js">function fetch_current_data() {
   // The <a href="/en-US/docs/Web/API/GlobalFetch/fetch">fetch</a>() API returns a Promise.  This function
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more
@@ -257,7 +257,7 @@ p2.then(function(value) {
 <p>If <code>onFulfilled</code> returns a promise, the return value of <code>then</code>
   will be resolved/rejected by the promise.</p>
 
-<pre class="brush: js notranslate">function resolveLater(resolve, reject) {
+<pre class="brush: js">function resolveLater(resolve, reject) {
   setTimeout(function() {
     resolve(10);
   }, 1000);
@@ -299,7 +299,7 @@ p3.then(function(v) {
   ({{jsxref("Reflect.apply()")}}) method to create a (non-cancellable)
   {{domxref("window.setImmediate")}}-style function.</p>
 
-<pre class="brush: js notranslate">const nextTick = (() =&gt; {
+<pre class="brush: js">const nextTick = (() =&gt; {
   const noop = () =&gt; {}; // literally
   const nextTickPromise = () =&gt; Promise.resolve().then(noop);
 

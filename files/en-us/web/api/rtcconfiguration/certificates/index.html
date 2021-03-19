@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>rtcConfiguration</em> = {
+<pre class="brush: js">let <em>rtcConfiguration</em> = {
   certificates: <em>certificateList</em>
 };
 
@@ -89,7 +89,7 @@ let <em>certificates</em> = <em>rtcConfiguration</em>.certificates;
 <p>This example uses {{domxref("RTCPeerConnection.generateCertificate()")}} to create a
   certificate, then uses it to open a new {{domxref("RTCPeerConnection")}}.</p>
 
-<pre class="brush: js notranslate">RTCPeerConnection.generateCertificate({
+<pre class="brush: js">RTCPeerConnection.generateCertificate({
     name: 'RSASSA-PKCS1-v1_5',
     hash: 'SHA-256',
     modulusLength: 2048,
@@ -118,7 +118,4 @@ let <em>certificates</em> = <em>rtcConfiguration</em>.certificates;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCConfiguration.certificates")}}</p>
-</div>
+<p>{{Compat("api.RTCConfiguration.certificates")}}</p>

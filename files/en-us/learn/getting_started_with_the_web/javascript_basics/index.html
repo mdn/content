@@ -48,11 +48,11 @@ tags:
 <ol>
  <li>Go to your test site and create a new folder named <code>scripts</code>. Within the scripts folder, create a new file called <code>main.js</code>, and save it.</li>
  <li>In your <code>index.html</code> file, enter this code on a new line, just before the closing <code>&lt;/body&gt;</code> tag:
-  <pre class="brush: html notranslate">&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</pre>
  </li>
  <li>This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).</li>
  <li>Add this code to the <code>main.js</code> file:
-  <pre class="brush: js notranslate">const myHeading = document.querySelector('h1');
+  <pre class="brush: js">const myHeading = document.querySelector('h1');
 myHeading.textContent = 'Hello world!';</pre>
  </li>
  <li>Make sure the HTML and JavaScript files are saved. Then load <code>index.html</code> in your browser. You should see something like this:<img alt="" src="hello-world.png" style="display: block; margin: 0px auto;"></li>
@@ -86,7 +86,7 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <p>{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code> (less recommended, dive deeper for the explanation) or the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> keyword, followed by the name you give to the variable:</p>
 
-<pre class="brush: js notranslate">let myVariable;</pre>
+<pre class="brush: js">let myVariable;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a>.</p>
@@ -106,20 +106,20 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <p>After declaring a variable, you can give it a value:</p>
 
-<pre class="brush: js notranslate">myVariable = 'Bob';
+<pre class="brush: js">myVariable = 'Bob';
 </pre>
 
 <p>Also, you can do both these operations on the same line:</p>
 
-<pre class="brush: js notranslate">let myVariable = 'Bob';</pre>
+<pre class="brush: js">let myVariable = 'Bob';</pre>
 
 <p>You retrieve the value by calling the variable name:</p>
 
-<pre class="brush: js notranslate">myVariable;</pre>
+<pre class="brush: js">myVariable;</pre>
 
 <p>After assigning a value to a variable, you can change it later in the code:</p>
 
-<pre class="notranslate">let myVariable = 'Bob';
+<pre>let myVariable = 'Bob';
 myVariable = 'Steve';</pre>
 
 <p>Note that variables may hold values that have different <a href="/en-US/docs/Web/JavaScript/Data_structures">data types</a>:</p>
@@ -170,13 +170,13 @@ myVariable = 'Steve';</pre>
 
 <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 Everything in between is a comment.
 */</pre>
 
 <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
 
-<pre class="brush: js notranslate" style="font-size: 14px;">// This is a comment
+<pre class="brush: js" style="font-size: 14px;">// This is a comment
 </pre>
 
 <h3 id="Operators">Operators</h3>
@@ -250,7 +250,7 @@ Everything in between is a comment.
 
 <p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the <code>if ... else</code> statement. For example:</p>
 
-<pre class="brush: js notranslate">let iceCream = 'chocolate';
+<pre class="brush: js">let iceCream = 'chocolate';
 if(iceCream === 'chocolate') {
   alert('Yay, I love chocolate ice cream!');
 } else {
@@ -265,10 +265,10 @@ if(iceCream === 'chocolate') {
 
 <ol>
  <li>
-  <pre class="brush: js notranslate">let myVariable = document.querySelector('h1');</pre>
+  <pre class="brush: js">let myVariable = document.querySelector('h1');</pre>
  </li>
  <li>
-  <pre class="brush: js notranslate">alert('hello!');</pre>
+  <pre class="brush: js">alert('hello!');</pre>
  </li>
 </ol>
 
@@ -280,14 +280,14 @@ if(iceCream === 'chocolate') {
 
 <p>You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:</p>
 
-<pre class="brush: js notranslate">function multiply(num1,num2) {
+<pre class="brush: js">function multiply(num1,num2) {
   let result = num1 * num2;
   return result;
 }</pre>
 
 <p>Try running this in the console; then test with several arguments. For example:</p>
 
-<pre class="brush: js notranslate">multiply(4, 7);
+<pre class="brush: js">multiply(4, 7);
 multiply(20, 20);
 multiply(0.5, 3);</pre>
 
@@ -299,7 +299,7 @@ multiply(0.5, 3);</pre>
 
 <p>Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the <a href="/en-US/docs/Web/API/Element/click_event">click event</a>, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = function() {
+<pre class="brush: js">document.querySelector('html').onclick = function() {
     alert('Ouch! Stop poking me!');
 }</pre>
 
@@ -307,11 +307,11 @@ multiply(0.5, 3);</pre>
 
 <p>Note that</p>
 
-<pre class="brush: js notranslate">document.querySelector('html').onclick = function() {};</pre>
+<pre class="brush: js">document.querySelector('html').onclick = function() {};</pre>
 
 <p>is equivalent to</p>
 
-<pre class="brush: js notranslate">let myHTML = document.querySelector('html');
+<pre class="brush: js">let myHTML = document.querySelector('html');
 myHTML.onclick = function() {};</pre>
 
 <p>It's just shorter.</p>
@@ -331,7 +331,7 @@ myHTML.onclick = function() {};</pre>
  <li>Save this image in your <code>images</code> folder.</li>
  <li>Rename the image <em>firefox2.png</em>.</li>
  <li>Add the JavaScript below to your <code>main.js</code> file.
-  <pre class="brush: js notranslate">let myImage = document.querySelector('img');
+  <pre class="brush: js">let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
@@ -364,21 +364,21 @@ myImage.onclick = function() {
 <ol>
  <li>In <code>index.html</code>, add the following line just before the {{htmlelement("script")}} element:
 
-  <pre class="brush: html notranslate">&lt;button&gt;Change user&lt;/button&gt;</pre>
+  <pre class="brush: html">&lt;button&gt;Change user&lt;/button&gt;</pre>
  </li>
  <li>In <code>main.js</code>, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
-  <pre class="brush: js notranslate">let myButton = document.querySelector('button');
+  <pre class="brush: js">let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');</pre>
  </li>
  <li>Add the function below to set the personalized greeting. This won't do anything yet, but this will change soon.
-  <pre class="brush: js notranslate">function setUserName() {
+  <pre class="brush: js">function setUserName() {
   let myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
   myHeading.textContent = 'Mozilla is cool, ' + myName;
 }</pre>
   The <code>setUserName()</code> function contains a <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a> function, which displays a dialog box, similar to <code>alert()</code>. This <code>prompt()</code> function does more than <code>alert()</code>, asking the user to enter data, and storing it in a variable after the user clicks <em>OK.</em> In this case, we are asking the user to enter a name. Next, the code calls on an API <code>localStorage</code>, which allows us to store data in the browser and retrieve it later. We use localStorage's <code>setItem()</code> function to create and store a data item called <code>'name'</code>, setting its value to the <code>myName</code> variable which contains the user's entry for the name. Finally, we set the <code>textContent</code> of the heading to a string, plus the user's newly stored name.</li>
  <li>Add the <code>if ... else</code> block (below). We could call this initialization code, as it structures the app when it first loads.
-  <pre class="brush: js notranslate">if(!localStorage.getItem('name')) {
+  <pre class="brush: js">if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
@@ -386,7 +386,7 @@ let myHeading = document.querySelector('h1');</pre>
 }</pre>
   This first line of this block uses the negation operator (logical NOT, represented by the <code>!</code>) to check whether the <code>name</code> data exists. If not, the <code>setUserName()</code> function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using <code>getItem()</code> and set the <code>textContent</code> of the heading to a string, plus the user's name, as we did inside <code>setUserName()</code>.</li>
  <li>Put this <code>onclick</code> event handler (below) on the button. When clicked, <code>setUserName()</code> runs. This allows the user to enter a different name by pressing the button.
-  <pre class="brush: js notranslate">myButton.onclick = function() {
+  <pre class="brush: js">myButton.onclick = function() {
   setUserName();
 }
 </pre>
@@ -401,13 +401,13 @@ let myHeading = document.querySelector('h1');</pre>
 
 <p>To avoid these problems, you could check that the user hasn't entered a blank name. Update your <code>setUserName()</code> function to this:</p>
 
-<pre class="brush: js notranslate">function setUserName() {
+<pre class="brush: js">function setUserName() {
   let myName = prompt('Please enter your name.');
   if(!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = `Mozilla is cool, ${myName}`;
+    myHeading.textContent = 'Mozilla is cool, ' + myName;
   }
 }</pre>
 

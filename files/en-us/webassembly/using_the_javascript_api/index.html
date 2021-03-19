@@ -32,15 +32,15 @@ tags:
 <ol>
  <li>First we need a wasm module! Grab our <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> file and save a copy in a new directory on your local machine.</li>
  <li>Next, let’s create a simple HTML file called <code>index.html</code> in the same directory as your wasm file (can use our <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> if you haven’t got one easily available).</li>
- <li>Now, to help us understand what is going on here, let’s look at the text representation of our wasm module (which we also meet in <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
-  <pre class="brush: js notranslate">(module
+ <li>Now, to help us understand what is going on here, let’s look at the text representation of our wasm module (which we also meet in <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
+  <pre class="brush: js">(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
     call $i))</pre>
  </li>
  <li>In the second line, you will see that the import has a two-level namespace — the internal function <code>$i</code> is imported from <code>imports.imported_func</code>. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the wasm module. Create a <code>&lt;script&gt;&lt;/script&gt;</code> element in your HTML file, and add the following code to it:
-  <pre class="brush: js notranslate">var importObject = {
+  <pre class="brush: js">var importObject = {
   imports: { imported_func: arg =&gt; console.log(arg) }
 };</pre>
  </li>
@@ -54,7 +54,7 @@ tags:
 
 <p>Add the following to your script, below the first block:</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 .then(obj =&gt; obj.instance.exports.exported_func());</pre>
 
 <p>The net result of this is that we call our exported WebAssembly function <code>exported_func</code>, which in turn calls our imported JavaScript function <code>imported_func</code>, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you’ll see this in action!</p>
@@ -71,7 +71,7 @@ tags:
 
 <p>The equivalent code would look like this:</p>
 
-<pre class="brush: js notranslate">fetch('simple.wasm').then(response =&gt;
+<pre class="brush: js">fetch('simple.wasm').then(response =&gt;
   response.arrayBuffer()
 ).then(bytes =&gt;
   WebAssembly.instantiate(bytes, importObject)
@@ -83,7 +83,7 @@ tags:
 
 <p>In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the “wasm://” entry.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15823/wasm-debug.png" style="display: block; height: 317px; margin: 0px auto; width: 1019px;"></p>
+<p><img alt="" src="wasm-debug.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See <a href="https://www.youtube.com/watch?v=R1WtBkMeGds">WebAssembly debugging with Firefox DevTools</a> for a video preview.</p>
 
@@ -91,7 +91,7 @@ tags:
 
 <p>In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called <a href="https://webassembly.org/docs/semantics/#linear-memory">Linear Memory</a> that are read and written by <a href="https://webassembly.org/docs/semantics/#linear-memory-accesses">load and store instructions</a> inside the module.  In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.</p>
 
-<p>Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object.  This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared memories</a>, which can be transferred between Window and Worker contexts using <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code>, and used in multiple places.</p>
+<p>Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object.  This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories">shared memories</a>, which can be transferred between Window and Worker contexts using <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code>, and used in multiple places.</p>
 
 <p>In JavaScript, a Memory instance can be thought of as a resizable <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> (or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>, in the case of shared memories) and, just as with <code>ArrayBuffers</code>, a single web app can create many independent Memory objects.  You can create one using the {{jsxref("WebAssembly.Memory()")}} constructor, which takes as arguments an initial size and (optionally) a maximum size and a <code>shared</code> property that states whether it is a shared memory or not.</p>
 
@@ -104,17 +104,17 @@ tags:
  <li>
   <p>Now add the following line to the top of your script, to create a memory instance:</p>
 
-  <pre class="brush: js notranslate">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
+  <pre class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
   <p>The unit of <code>initial</code> and <code>maximum</code> is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.</p>
 
   <p>WebAssembly memory exposes its bytes by providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:</p>
 
-  <pre class="brush: js notranslate">new Uint32Array(memory.buffer)[0] = 42;</pre>
+  <pre class="brush: js">new Uint32Array(memory.buffer)[0] = 42;</pre>
 
   <p>You can then return the same value using:</p>
 
-  <pre class="brush: js notranslate">new Uint32Array(memory.buffer)[0]</pre>
+  <pre class="brush: js">new Uint32Array(memory.buffer)[0]</pre>
  </li>
  <li>
   <p>Try this now in your demo — save what you’ve added so far, load it in your browser, then try entering the above two lines in your JavaScript console.</p>
@@ -125,7 +125,7 @@ tags:
 
 <p>A memory instance can be grown by calls to {{jsxref("Memory.prototype.grow()")}}, where again the argument is specified in units of WebAssembly pages:</p>
 
-<pre class="brush: js notranslate">memory.grow(1);</pre>
+<pre class="brush: js">memory.grow(1);</pre>
 
 <p>If a maximum value was supplied upon creation of the memory instance, attempts to grow past this maximum will throw a {{jsxref("WebAssembly.RangeError")}} exception. The engine takes advantage of this supplied upper-bounds to reserve memory ahead of time, which can make resizing more efficient.</p>
 
@@ -148,7 +148,7 @@ tags:
  <li>
   <p>Go back to your <code>memory.html</code> sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:</p>
 
-  <pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+  <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(results =&gt; {
   // add code here
 });</pre>
@@ -156,7 +156,7 @@ tags:
  <li>
   <p>Since this module exports its memory, given an Instance of this module called instance we can use an exported function <code>accumulate()</code> to create and populate an input array directly in the module instance’s linear memory (<code>mem</code>). Add the following into your code, where indicated:</p>
 
-  <pre class="brush: js notranslate">var i32 = new Uint32Array(memory.buffer);
+  <pre class="brush: js">var i32 = new Uint32Array(memory.buffer);
 
 for (var i = 0; i &lt; 10; i++) {
   i32[i] = i;
@@ -210,7 +210,7 @@ console.log(sum);</pre>
  <li>
   <p>As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:</p>
 
-  <pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('table.wasm'))
+  <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table.wasm'))
 .then(function(results) {
   // add code here
 });</pre>
@@ -218,7 +218,7 @@ console.log(sum);</pre>
  <li>
   <p>Now let’s access the data in the tables — add the following lines to your code in the indicated place:</p>
 
-  <pre class="brush: js notranslate">var tbl = results.instance.exports.tbl;
+  <pre class="brush: js">var tbl = results.instance.exports.tbl;
 console.log(tbl.get(0)());  // 13
 console.log(tbl.get(1)());  // 42</pre>
  </li>
@@ -236,7 +236,7 @@ console.log(tbl.get(1)());  // 42</pre>
 
 <p>To create a WebAssembly global instance from inside your JavaScript, you use the {{jsxref("WebAssembly.Global()")}} constructor, which looks like this:</p>
 
-<pre class="brush: js notranslate">const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);</pre>
+<pre class="brush: js">const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);</pre>
 
 <p>You can see that this takes two parameters:</p>
 
@@ -254,7 +254,7 @@ console.log(tbl.get(1)());  // 42</pre>
 
 <p>The value of the global is then changed, first to <code>42</code> using the <code>Global.value</code> property, and then to 43 using the <code>incGlobal()</code> function exported out of the <code>global.wasm</code> module (this adds 1 to whatever value is given to it and then returns the new value).</p>
 
-<pre class="brush: js notranslate">const output = document.getElementById('output');
+<pre class="brush: js">const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
     output.innerHTML += `Testing ${msg}: `;
@@ -292,7 +292,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
  <li>One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing <a href="https://webassembly.org/docs/dynamic-linking">dynamic linking</a>.</li>
 </ul>
 
-<p>You can see multiplicity in action in our Understanding text format article — see the <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking section</a>.</p>
+<p>You can see multiplicity in action in our Understanding text format article — see the <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking section</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 

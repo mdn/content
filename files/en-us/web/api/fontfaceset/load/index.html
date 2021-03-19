@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>result</var> = <var>aFontFaceSet</var>.load(<em>font</em>);
+<pre class="brush: js"><var>result</var> = <var>aFontFaceSet</var>.load(<em>font</em>);
 
 result = aFontFaceSet.load(font, text);
 </pre>
@@ -41,7 +41,7 @@ result = aFontFaceSet.load(font, text);
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// returns a promise that will be fulfilled or rejected according the success to load MyFont
+<pre class="brush: js">// returns a promise that will be fulfilled or rejected according the success to load MyFont
 // The code in 'then' can assume the availability of that font.
 
 document.fonts.load("12px MyFont", "ß").then(…);
@@ -66,7 +66,4 @@ document.fonts.load("12px MyFont", "ß").then(…);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.FontFaceSet.load")}}</p>
-</div>
+<p>{{Compat("api.FontFaceSet.load")}}</p>

@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.webRequest.onAuthRequired.addListener(
+<pre class="brush: js">browser.webRequest.onAuthRequired.addListener(
   <var>listener</var>,                    // function
   <var>filter</var>,                      //  object
   <var>extraInfoSpec</var>                //  optional array of strings
@@ -179,7 +179,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  </dl>
  </dd>
  <dt><code>realm</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The authentication <a href="https://tools.ietf.org/html/rfc1945#section-11">realm</a> provided by the server, if there is one.</dd>
+ <dd><code>string</code>. The authentication <a href="https://datatracker.ietf.org/doc/html/rfc1945#section-11">realm</a> provided by the server, if there is one.</dd>
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.</dd>
  <dd>
@@ -236,7 +236,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
 
 <p>This code just observes authentication requests for the target URL:</p>
 
-<pre class="notranslate brush: js">const target = "https://intranet.company.com/";
+<pre class="brush: js">const target = "https://intranet.company.com/";
 
 function observe(requestDetails) {
   console.log(`observing: ${requestDetails.requestId}`);
@@ -249,7 +249,7 @@ browser.webRequest.onAuthRequired.addListener(
 
 <p>This code cancels authentication requests for the target URL:</p>
 
-<pre class="notranslate brush: js">const target = "https://intranet.company.com/";
+<pre class="brush: js">const target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log(`canceling: ${requestDetails.requestId}`);
@@ -264,7 +264,7 @@ browser.webRequest.onAuthRequired.addListener(
 
 <p>This code supplies credentials synchronously. It has to keep track of outstanding requests, to ensure that it doesn't repeatedly try to submit bad credentials:</p>
 
-<pre class="notranslate brush: js">const target = "https://intranet.company.com/";
+<pre class="brush: js">const target = "https://intranet.company.com/";
 
 const myCredentials = {
   username: "me@company.com",
@@ -313,7 +313,7 @@ browser.webRequest.onErrorOccurred.addListener(
 
 <p>This code supplies credentials asynchronously, fetching them from storage. It also has to keep track of outstanding requests, to ensure that it doesn't repeatedly try to submit bad credentials:</p>
 
-<pre class="notranslate brush: js">const target = "https://httpbin.org/basic-auth/*";
+<pre class="brush: js">const target = "https://httpbin.org/basic-auth/*";
 
 const pendingRequests = [];
 

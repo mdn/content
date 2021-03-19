@@ -29,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedArray</var>.map(<var>mapFn</var>[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>typedArray</var>.map(<var>mapFn</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -95,7 +95,7 @@ tags:
 <p>The following code takes a typed array and creates a new typed array containing the
   square roots of the numbers in the first typed array.</p>
 
-<pre class="brush: js notranslate">const numbers = new Uint8Array([1, 4, 9]);
+<pre class="brush: js">const numbers = new Uint8Array([1, 4, 9]);
 const roots = numbers.map(Math.sqrt);
 // roots is now: Uint8Array [1, 2, 3],
 // numbers is still Uint8Array [1, 4, 9]
@@ -108,7 +108,7 @@ const roots = numbers.map(Math.sqrt);
   argument is used with it. The argument will automatically be assigned to each element of
   the typed array as <code>map()</code> loops through the original typed array.</p>
 
-<pre class="brush: js notranslate">const numbers = new Uint8Array([1, 4, 9]);
+<pre class="brush: js">const numbers = new Uint8Array([1, 4, 9]);
 const doubles = numbers.map(function(num) {
   return num * 2;
 });
@@ -134,10 +134,7 @@ const doubles = numbers.map(function(num) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.map")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.TypedArray.map")}}</p>
 
 <h2 id="See_also">See also</h2>
 

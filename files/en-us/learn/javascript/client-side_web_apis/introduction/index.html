@@ -129,7 +129,7 @@ tags:
 
 <p>So how do these objects interact? If you look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html">simple web audio example</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/">see it live also</a>), you'll first see the following HTML:</p>
 
-<pre class="brush: html notranslate">&lt;audio src="outfoxing.mp3"&gt;&lt;/audio&gt;
+<pre class="brush: html">&lt;audio src="outfoxing.mp3"&gt;&lt;/audio&gt;
 
 &lt;button class="paused"&gt;Play&lt;/button&gt;
 &lt;br&gt;
@@ -141,12 +141,12 @@ tags:
 
 <p>We start by creating an <code>AudioContext</code> instance inside which to manipulate our track:</p>
 
-<pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>
 
 <p>Next, we create constants that store references to our <code>&lt;audio&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements, and use the {{domxref("AudioContext.createMediaElementSource()")}} method to create a <code>MediaElementAudioSourceNode</code> representing the source of our audio — the <code>&lt;audio&gt;</code> element will be played from:</p>
 
-<pre class="brush: js notranslate">const audioElement = document.querySelector('audio');
+<pre class="brush: js">const audioElement = document.querySelector('audio');
 const playBtn = document.querySelector('button');
 const volumeSlider = document.querySelector('.volume');
 
@@ -154,7 +154,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);</pre>
 
 <p>Next up we include a couple of event handlers that serve to toggle between play and pause when the button is pressed and reset the display back to the beginning when the song has finished playing:</p>
 
-<pre class="brush: js notranslate">// play/pause audio
+<pre class="brush: js">// play/pause audio
 playBtn.addEventListener('click', function() {
     // check if context is in suspended state (autoplay policy)
     if (audioCtx.state === 'suspended') {
@@ -186,7 +186,7 @@ audioElement.addEventListener('ended', function() {
 
 <p>Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:</p>
 
-<pre class="brush: js notranslate">const gainNode = audioCtx.createGain();
+<pre class="brush: js">const gainNode = audioCtx.createGain();
 
 volumeSlider.addEventListener('input', function() {
     gainNode.gain.value = this.value;
@@ -194,7 +194,7 @@ volumeSlider.addEventListener('input', function() {
 
 <p>The final thing to do to get this to work is to connect the different nodes in the audio graph up, which is done using the {{domxref("AudioNode.connect()")}} method available on every node type:</p>
 
-<pre class="brush: js notranslate">audioSource.connect(gainNode).connect(audioCtx.destination);</pre>
+<pre class="brush: js">audioSource.connect(gainNode).connect(audioCtx.destination);</pre>
 
 <p>The audio starts in the source, which is then connected to the gain node so the audio's volume can be adjusted. The gain node is then connected to the destination node so the sound can be played on your computer (the {{domxref("BaseAudioContext/destination", "AudioContext.destination")}} property represents whatever is the default {{domxref("AudioDestinationNode")}} available on your computer's hardware, e.g. your speakers).</p>
 
@@ -204,19 +204,19 @@ volumeSlider.addEventListener('input', function() {
 
 <p>The Document Object Model (DOM) API also has a simple entry point — its features tend to be found hanging off the {{domxref("Document")}} object, or an instance of an HTML element that you want to affect in some way, for example:</p>
 
-<pre class="brush: js notranslate">const em = document.createElement('em'); // create a new em element
+<pre class="brush: js">const em = document.createElement('em'); // create a new em element
 const para = document.querySelector('p'); // reference an existing p element
 em.textContent = 'Hello there!'; // give em some text content
 para.appendChild(em); // embed em inside para</pre>
 
 <p>The <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:</p>
 
-<pre class="brush: js notranslate">const canvas = document.querySelector('canvas');
+<pre class="brush: js">const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');</pre>
 
 <p>Anything that we want to do to the canvas is then achieved by calling properties and methods of the context object (which is an instance of {{domxref("CanvasRenderingContext2D")}}), for example:</p>
 
-<pre class="brush: js notranslate">Ball.prototype.draw = function() {
+<pre class="brush: js">Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -239,7 +239,7 @@ const ctx = canvas.getContext('2d');</pre>
 
 <p>The following code provides a simple example of how this would be used:</p>
 
-<pre class="brush: js notranslate">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+<pre class="brush: js">let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -263,7 +263,7 @@ request.onload = function() {
 
 <p>WebAPI features are subject to the same security considerations as JavaScript and other web technologies (for example <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>), but they sometimes have additional security mechanisms in place. For example, some of the more modern WebAPIs will only work on pages served over HTTPS due to them transmitting potentially sensitive data (examples include <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push</a>).</p>
 
-<p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> asks for permission using a pop-up dialogue box:</p>
+<p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> asks for permission using a pop-up dialog box:</p>
 
 <p><img alt="" src="notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 

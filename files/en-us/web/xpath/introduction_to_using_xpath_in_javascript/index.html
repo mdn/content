@@ -12,27 +12,27 @@ tags:
   - XPath
   - XSLT
 ---
-<p>This document describes the interface for using <a href="/en-US/docs/XPath">XPath</a> in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the <a class="external" href="https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/">DOM 3 XPath</a>, which means that XPath expressions can be run against both HTML and XML documents.</p>
+<p>This document describes the interface for using <a href="/en-US/docs/Web/XPath">XPath</a> in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the <a href="https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/">DOM 3 XPath</a>, which means that XPath expressions can be run against both HTML and XML documents.</p>
 
-<p>The main interface to using XPath is the <a href="/en-US/docs/Web/API/document.evaluate">evaluate</a> function of the <a href="/en-US/docs/Web/API/document">document</a> object.</p>
+<p>The main interface to using XPath is the <a href="/en-US/docs/Web/API/Document/evaluate">evaluate</a> function of the <a href="/en-US/docs/Web/API/Document">document</a> object.</p>
 
 <h2 id="document.evaluate">document.evaluate</h2>
 
-<p>This method evaluates <a href="/en-US/docs/XPath">XPath</a> expressions against an <a href="/en-US/docs/Glossary/XML">XML</a> based document (including HTML documents), and returns a <code><a href="/en-US/docs/XPathResult">XPathResult</a></code> object, which can be a single node or a set of nodes. The existing documentation for this method is located at <a href="/en-US/docs/Web/API/Document.evaluate">document.evaluate</a>, but it is rather sparse for our needs at the moment; a more comprehensive examination will be given below.</p>
+<p>This method evaluates <a href="/en-US/docs/Web/XPath">XPath</a> expressions against an <a href="/en-US/docs/Glossary/XML">XML</a> based document (including HTML documents), and returns a <code><a href="/en-US/docs/Web/API/XPathResult">XPathResult</a></code> object, which can be a single node or a set of nodes. The existing documentation for this method is located at <a href="/en-US/docs/Web/API/Document/evaluate">document.evaluate</a>, but it is rather sparse for our needs at the moment; a more comprehensive examination will be given below.</p>
 
 <pre class="brush: js">var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<p>The <a href="/en-US/docs/Web/API/Document.evaluate">evaluate</a> function takes a total of five parameters:</p>
+<p>The <a href="/en-US/docs/Web/API/Document/evaluate">evaluate</a> function takes a total of five parameters:</p>
 
 <ul>
  <li><code>xpathExpression</code>: A string containing the XPath expression to be evaluated.</li>
- <li><code>contextNode</code>: A node in the document against which the <code>xpathExpression</code> should be evaluated, including any and all of its child nodes. The <a href="/en-US/docs/Web/API/document">document</a> node is the most commonly used.</li>
+ <li><code>contextNode</code>: A node in the document against which the <code>xpathExpression</code> should be evaluated, including any and all of its child nodes. The <a href="/en-US/docs/Web/API/Document">document</a> node is the most commonly used.</li>
  <li><code>namespaceResolver</code>: A function that will be passed any namespace prefixes contained within <code>xpathExpression</code> which returns a string representing the namespace URI associated with that prefix. This enables conversion between the prefixes used in the XPath expressions and the possibly different prefixes used in the document. The function can be either:
   <ul>
-   <li><a href="#implementing_a_default_namespace_resolver">Created</a> by using the <code><a href="/en-US/docs/Web/API/Document.createNSResolver">createNSResolver</a></code> method of a <code><a href="/en-US/docs/Using_XPath#Node-specific_evaluator_function">XPathEvaluator</a></code> object. You should use this virtually all of the time.</li>
+   <li><a href="#implementing_a_default_namespace_resolver">Created</a> by using the <code><a href="/en-US/docs/Web/API/Document/createNSResolver">createNSResolver</a></code> method of a <code><a href="/en-US/docs/Web/API/XPathEvaluator">XPathEvaluator</a></code> object. You should use this virtually all of the time.</li>
    <li><code>null</code>, which can be used for HTML documents or when no namespace prefixes are used. Note that, if the <code>xpathExpression</code> contains a namespace prefix, this will result in a <code>DOMException</code> being thrown with the code <code>NAMESPACE_ERR</code>.</li>
    <li>A custom user-defined function. See the <a href="#implementing_a_user_defined_namespace_resolver">Using a User Defined Namespace Resolver</a> section in the appendix for details.</li>
   </ul>
@@ -47,7 +47,7 @@ tags:
 
 <h3 id="Implementing_a_Default_Namespace_Resolver">Implementing a Default Namespace Resolver</h3>
 
-<p>We create a namespace resolver using the <code>createNSResolver</code> method of the <a href="/en-US/docs/Web/API/document">document</a> object.</p>
+<p>We create a namespace resolver using the <code>createNSResolver</code> method of the <a href="/en-US/docs/Web/API/Document">document</a> object.</p>
 
 <pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
@@ -63,7 +63,7 @@ var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null
 
 <h3 id="Notes">Notes</h3>
 
-<p>Adapts any DOM node to resolve namespaces so that an <a href="/en-US/docs/XPath">XPath</a> expression can be easily evaluated relative to the context of the node where it appeared within the document. This adapter works like the DOM Level 3 method <code>lookupNamespaceURI</code> on nodes in resolving the <code>namespaceURI</code> from a given prefix using the current information available in the node's hierarchy at the time <code>lookupNamespaceURI</code> is called. Also correctly resolves the implicit <code>xml</code> prefix.</p>
+<p>Adapts any DOM node to resolve namespaces so that an <a href="/en-US/docs/Web/XPath">XPath</a> expression can be easily evaluated relative to the context of the node where it appeared within the document. This adapter works like the DOM Level 3 method <code>lookupNamespaceURI</code> on nodes in resolving the <code>namespaceURI</code> from a given prefix using the current information available in the node's hierarchy at the time <code>lookupNamespaceURI</code> is called. Also correctly resolves the implicit <code>xml</code> prefix.</p>
 
 <h3 id="Specifying_the_Return_Type">Specifying the Return Type</h3>
 
@@ -89,7 +89,7 @@ var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null
 
 <h5 id="Example">Example</h5>
 
-<p>The following uses the XPath expression <code><a href="/en-US/docs/XPath/Functions/count">count(//p)</a></code> to obtain the number of <code>&lt;p&gt;</code> elements in an HTML document:</p>
+<p>The following uses the XPath expression <code><a href="/en-US/docs/Web/XPath/Functions/count">count(//p)</a></code> to obtain the number of <code>&lt;p&gt;</code> elements in an HTML document:</p>
 
 <pre class="brush: js">var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
 
@@ -211,7 +211,7 @@ alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.tex
 
 <p>Notice that, since HTML does not have namespaces, we have passed <code>null</code> for the <code>namespaceResolver</code> parameter.</p>
 
-<p>Since we wish to search over the entire document for the headings, we have used the <a href="/en-US/docs/Web/API/document">document</a> object itself as the <code>contextNode</code>.</p>
+<p>Since we wish to search over the entire document for the headings, we have used the <a href="/en-US/docs/Web/API/Document">document</a> object itself as the <code>contextNode</code>.</p>
 
 <p>The result of this expression is an <code>XPathResult</code> object. If we wish to know the type of result returned, we may evaluate the <code>resultType</code> property of the returned object. In this case, that will evaluate to <code>4</code>, an <code>UNORDERED_NODE_ITERATOR_TYPE</code>. This is the default return type when the result of the XPath expression is a node set. It provides access to a single node at a time and may not return nodes in a particular order. To access the returned nodes, we use the <code>iterateNext()</code> method of the returned object:</p>
 
@@ -277,7 +277,7 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 <pre>'//xhtml:td/mathml:math'
 </pre>
 
-<p>will select all <a href="/en-US/docs/Web/API/MathML">MathML</a> expressions that are the children of (X)HTML table data cell elements.</p>
+<p>will select all <a href="/en-US/docs/Web/MathML">MathML</a> expressions that are the children of (X)HTML table data cell elements.</p>
 
 <p>In order to associate the '<code>mathml:</code>' prefix with the namespace URI '<code>http://www.w3.org/1998/Math/MathML</code>' and '<code>xhtml:</code>' with the URI '<code>http://www.w3.org/1999/xhtml</code>' we provide a function:</p>
 
@@ -329,7 +329,7 @@ doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
 
 <p>If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.</p>
 
-<p>While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using <code><a href="/en-US/docs/XPath/Functions/local-name">local-name()</a></code> in combination with <code><a href="/en-US/docs/XPath/Functions/namespace-uri">namespace-uri()</a></code> instead of <code><a href="/en-US/docs/XPath/Functions/name">name()</a></code>), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).</p>
+<p>While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using <code><a href="/en-US/docs/Web/XPath/Functions/local-name">local-name()</a></code> in combination with <code><a href="/en-US/docs/Web/XPath/Functions/namespace-uri">namespace-uri()</a></code> instead of <code><a href="/en-US/docs/Web/XPath/Functions/name">name()</a></code>), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).</p>
 
 <p>For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: <code>var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];</code></p>
 
@@ -417,7 +417,7 @@ var thisitemEl = thislevel.iterateNext();
 <h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
- <li>Based Upon Original Document <a class="external" href="http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html">Mozilla XPath Tutorial</a></li>
+ <li>Based Upon Original Document <a href="http://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html">Mozilla XPath Tutorial</a></li>
  <li>Original Source Author: James Graham.</li>
  <li>Other Contributors: James Thompson.</li>
  <li>Last Updated Date: 2006-3-25.</li>

@@ -40,7 +40,7 @@ tags:
 
 <p>We can start by creating a separate component to handle the editing functionality. In your <code>components</code> directory, create a new file called <code>ToDoItemEditForm.vue</code>.  Copy the following code into that file:</p>
 
-<pre class="brush: js notranslate">&lt;template&gt;
+<pre class="brush: js">&lt;template&gt;
   &lt;form class="stack-small" @submit.prevent="onSubmit"&gt;
     &lt;div&gt;
       &lt;label class="edit-label"&gt;Edit Name for &amp;quot;\{{label}}&amp;quot;&lt;/label&gt;
@@ -133,7 +133,7 @@ form &gt; * {
 
 <p>Update your <code>ToDoItem</code>’s template as shown below.</p>
 
-<pre class="brush: html notranslate">&lt;template&gt;
+<pre class="brush: html">&lt;template&gt;
   &lt;div class="stack-small"&gt;
     &lt;div class="custom-checkbox"&gt;
       &lt;input type="checkbox" class="checkbox" :id="id" :checked="isDone"
@@ -164,7 +164,7 @@ form &gt; * {
 
 <p>Add <code>isEditing</code> below your existing <code>isDone</code> data point:</p>
 
-<pre class="brush: js notranslate">data() {
+<pre class="brush: js">data() {
   return {
     isDone: this.done,
     isEditing: false
@@ -173,7 +173,7 @@ form &gt; * {
 
 <p>Now add your methods inside a methods property, right below your <code>data()</code> property:</p>
 
-<pre class="brush: js notranslate">methods: {
+<pre class="brush: js">methods: {
     deleteToDo() {
       this.$emit('item-deleted');
     },
@@ -194,19 +194,19 @@ form &gt; * {
 
 <p>First of all add <code>v-if="!isEditing"</code> to the root <code>&lt;div&gt;</code> in your <code>ToDoItem</code> component,</p>
 
-<pre class="brush: html notranslate">&lt;div class="stack-small" v-if="!isEditing"&gt;</pre>
+<pre class="brush: html">&lt;div class="stack-small" v-if="!isEditing"&gt;</pre>
 
 <p>Next, below that <code>&lt;div&gt;</code>'s closing tag add the following line:</p>
 
-<pre class="brush: html notranslate">&lt;to-do-item-edit-form v-else :id="id" :label="label"&gt;&lt;/to-do-item-edit-form&gt;</pre>
+<pre class="brush: html">&lt;to-do-item-edit-form v-else :id="id" :label="label"&gt;&lt;/to-do-item-edit-form&gt;</pre>
 
 <p>We also need to import and register the <code>ToDoItemEditForm</code> component, so we can use it inside this template. Add this line at the top of your <code>&lt;script&gt;</code> element:</p>
 
-<pre class="brush: js notranslate">import ToDoItemEditForm from "./ToDoItemEditForm";</pre>
+<pre class="brush: js">import ToDoItemEditForm from "./ToDoItemEditForm";</pre>
 
-<p>And add a <code>components</code> property about the <code>props</code> property inside the component object:</p>
+<p>And add a <code>components</code> property above the <code>props</code> property inside the component object:</p>
 
-<pre class="brush: js notranslate">components: {
+<pre class="brush: js">components: {
   ToDoItemEditForm
 },</pre>
 
@@ -222,14 +222,14 @@ form &gt; * {
 
 <p>Add it now, below your existing methods:</p>
 
-<pre class="brush: js notranslate">itemEdited(newLabel) {
+<pre class="brush: js">itemEdited(newLabel) {
   this.$emit('item-edited', newLabel);
   this.isEditing = false;
 }</pre>
 
 <p>Next, we'll need an <code>editCancelled()</code> method. This method will take no arguments and just serve to set <code>isEditing</code> back to <code>false</code>.  Add this method below the previous one:</p>
 
-<pre class="brush: js notranslate">editCancelled() {
+<pre class="brush: js">editCancelled() {
   this.isEditing = false;
 }</pre>
 
@@ -237,7 +237,7 @@ form &gt; * {
 
 <p>Update your <code>&lt;to-do-item-edit-form&gt;&lt;/to-do-item-edit-form&gt;</code> call to look like so:</p>
 
-<pre class="brush: js notranslate">&lt;to-do-item-edit-form v-else :id="id" :label="label"
+<pre class="brush: js">&lt;to-do-item-edit-form v-else :id="id" :label="label"
                       @item-edited="itemEdited"
                       @edit-cancelled="editCancelled"&gt;
 &lt;/to-do-item-edit-form&gt;</pre>
@@ -248,7 +248,7 @@ form &gt; * {
 
 <p>Add the following new methods to your <code>App.vue</code>'s component object, below the existing methods inside the <code>methods</code> property:</p>
 
-<pre class="notranslate">deleteToDo(toDoId) {
+<pre>deleteToDo(toDoId) {
   const itemIndex = this.ToDoItems.findIndex(item =&gt; item.id === toDoId);
   this.ToDoItems.splice(itemIndex, 1);
 },
@@ -266,7 +266,7 @@ editToDo(toDoId, newLabel) {
 
 <p>Update the <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> call inside the <code>App.vue</code> template to look like this:</p>
 
-<pre class="brush: js notranslate">&lt;to-do-item :label="item.label" :done="item.done" :id="item.id"
+<pre class="brush: js">&lt;to-do-item :label="item.label" :done="item.done" :id="item.id"
             @checkbox-changed="updateDoneStatus(item.id)"
             @item-deleted="deleteToDo(item.id)"
             @item-edited="editToDo(item.id, $event)"&gt;
@@ -294,12 +294,12 @@ editToDo(toDoId, newLabel) {
  <li>
   <p>Remove the following line from inside our <code>data()</code> property:</p>
 
-  <pre class="brush: js notranslate"><span class="blob-code-inner blob-code-marker"><span class="pl-s1">isDone<span class="pl-k">:</span> <span class="pl-c1">this</span>.<span class="pl-smi">done</span>,</span></span></pre>
+  <pre class="brush: js"><span class="blob-code-inner blob-code-marker"><span class="pl-s1">isDone<span class="pl-k">:</span> <span class="pl-c1">this</span>.<span class="pl-smi">done</span>,</span></span></pre>
  </li>
  <li>
   <p>Add the following block below the data() { } block:</p>
 
-  <pre class="brush: js notranslate">computed: {
+  <pre class="brush: js">computed: {
   isDone() {
     return this.done;
   }

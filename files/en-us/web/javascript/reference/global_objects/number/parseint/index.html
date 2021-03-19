@@ -17,23 +17,21 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Number.parseInt(<var>string,</var>[ <var>radix</var>])</pre>
+  class="brush: js">Number.parseInt(<var>string,</var>[ <var>radix</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<div>
-  <dl>
-    <dt><code><var>string</var></code></dt>
-    <dd>The value to parse. If this argument is not a string, then it is converted to one
-      using the <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code>
-      abstract operation. Leading whitespace in this argument is ignored.</dd>
-    <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
-    <dd>An integer between <code>2</code> and <code>36</code> that represents the
-      <em>radix</em> (the base in mathematical numeral systems) of the
-      <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong>
-      default to <code>10</code>!</dd>
-  </dl>
-</div>
+<dl>
+  <dt><code><var>string</var></code></dt>
+  <dd>The value to parse. If this argument is not a string, then it is converted to one
+    using the <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code>
+    abstract operation. Leading whitespace in this argument is ignored.</dd>
+  <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
+  <dd>An integer between <code>2</code> and <code>36</code> that represents the
+    <em>radix</em> (the base in mathematical numeral systems) of the
+    <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong>
+    default to <code>10</code>!</dd>
+</dl>
 
 <h3 id="Return_value">Return value</h3>
 

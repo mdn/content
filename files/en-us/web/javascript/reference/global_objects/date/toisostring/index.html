@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateObj</var>.toISOString()</pre>
+<pre class="brush: js"><var>dateObj</var>.toISOString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -45,7 +45,7 @@ tags:
   updated to support this method can work around the absence of this method using the
   following shim:</p>
 
-<pre class="brush: js notranslate">if (!Date.prototype.toISOString) {
+<pre class="brush: js">if (!Date.prototype.toISOString) {
   (function() {
 
     function pad(number) {
@@ -74,7 +74,7 @@ tags:
 
 <h3 id="Using_toISOString">Using toISOString()</h3>
 
-<pre class="brush: js notranslate">let today = new Date('05 October 2011 14:48 UTC')
+<pre class="brush: js">let today = new Date('05 October 2011 14:48 UTC')
 
 console.log(today.toISOString())  // Returns 2011-10-05T14:48:00.000Z
 </pre>

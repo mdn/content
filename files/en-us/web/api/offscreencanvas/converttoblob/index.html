@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Promise&lt;Blob&gt; OffscreenCanvas.convertToBlob(<var>options</var>);</pre>
+<pre>Promise&lt;Blob&gt; OffscreenCanvas.convertToBlob(<var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -24,7 +24,7 @@ tags:
  <dd>
  <p>You can specify several options when converting your {{domxref("OffscreenCanvas")}} object into a {{domxref("Blob")}} object, for example:</p>
 
- <pre class="notranslate">const blob = offscreenCanvas.convertToBlob({
+ <pre>const blob = offscreenCanvas.convertToBlob({
   type: "image/jpeg",
   quality: 0.95
 });</pre>
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate">var offscreen = new OffscreenCanvas(256, 256);
+<pre>var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
 
 // ... some drawing using the gl context ...

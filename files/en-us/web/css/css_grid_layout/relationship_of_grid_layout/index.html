@@ -6,6 +6,8 @@ tags:
   - CSS Grids
   - Guide
 ---
+<div>{{CSSRef}}</div>
+
 <p>CSS Grid Layout has been designed to work alongside other parts of CSS, as part of a complete system for doing the layout. In this guide, I will explain how a grid fits together with other techniques you may already be using.</p>
 
 <h2 id="Grid_and_flexbox">Grid and flexbox</h2>
@@ -22,7 +24,7 @@ tags:
 
 <div id="onedtwod">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -40,7 +42,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -49,7 +51,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   width: 500px;
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +74,7 @@ tags:
 
 <div id="Two_Dimensional_With_Grid">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -90,7 +92,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
@@ -99,7 +101,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -134,7 +136,7 @@ tags:
 <p>In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to <code>flex-end</code> so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on <code>box1</code> so it will override the default and stretch to the height of the container and on <code>box2</code> so it aligns to the start of the flex container.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -152,14 +154,14 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: flex;
   align-items: flex-end;
   min-height: 200px;
@@ -179,7 +181,7 @@ tags:
 <p>This second example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to <code>start</code> and <code>end</code> rather than <code>flex-start</code> and <code>flex-end</code>. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -197,14 +199,14 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   align-items: end;
@@ -222,7 +224,7 @@ tags:
 
 <h3 id="The_fr_unit_and_flex-basis">The <code>fr</code> unit and <code>flex-basis</code></h3>
 
-<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
+<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax()", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
 
 <p>If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way of the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.</p>
 
@@ -235,7 +237,7 @@ tags:
 <p>In this next example, I have used the <code>auto-fill</code> keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -253,14 +255,14 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, 200px);
 }
@@ -270,10 +272,10 @@ tags:
 
 <h3 id="A_flexible_number_of_tracks">A flexible number of tracks</h3>
 
-<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
+<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fit</code> and the {{cssxref("minmax()", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -291,14 +293,14 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
   &lt;div&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -319,7 +321,7 @@ tags:
 <p>In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has <code>position: relative</code> and so becomes the positioning context of this item.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -337,7 +339,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;
@@ -347,7 +349,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-auto-rows: 200px;
@@ -375,7 +377,7 @@ tags:
 
 <p>If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove <code>position:</code> <code>relative</code> from the wrapper above, positioning context is from the viewport, as shown in this image.</p>
 
-<p><img alt="Image of grid container as parent" src="https://mdn.mozillademos.org/files/14661/2_abspos_example.png" style="height: 408px; width: 1702px;"></p>
+<p><img alt="Image of grid container as parent" src="2_abspos_example.png"></p>
 
 <p>Once again the item no longer participates in the grid layout in terms of sizing or when other items are auto-placed.</p>
 
@@ -386,7 +388,7 @@ tags:
 <p>I have given <code>.box3</code> position relative and then positioned the sub-item with the offset properties. In this case, the positioning context is the grid area.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -404,7 +406,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three
@@ -416,7 +418,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-auto-rows: 200px;
@@ -454,7 +456,7 @@ tags:
 
 <div id="Display_Contents_Before">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -478,7 +480,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;
     &lt;div class="nested"&gt;a&lt;/div&gt;
     &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -491,7 +493,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -510,7 +512,7 @@ tags:
 
 <div id="Display_Contents_After">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -534,7 +536,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;
     &lt;div class="nested"&gt;a&lt;/div&gt;
     &lt;div class="nested"&gt;b&lt;/div&gt;
@@ -547,7 +549,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -572,66 +574,3 @@ tags:
  <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox Guides</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Columns">Multiple-column Layout Guides</a></li>
 </ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values, and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

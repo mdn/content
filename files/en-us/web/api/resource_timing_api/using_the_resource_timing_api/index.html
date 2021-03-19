@@ -27,7 +27,7 @@ tags:
 
 <p>An application can get timestamps for the various phases of resource loading such as redirection, DNS lookup, and TCP connection setup. Those phases and their property names are illustrated in Figure 1.</p>
 
-<p><img alt="Graphic of Resource Timing timestamps" src="https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg" style="height: 540px; width: 720px;"><br>
+<p><img alt="Graphic of Resource Timing timestamps" src="resourcetiming-timestamps.jpg"><br>
 Figure 1. Resource timing properties</p>
 
 <p>An application developer can use the property values to calculate the length of time a phase takes and that information can help diagnose performance issues.</p>
@@ -36,7 +36,7 @@ Figure 1. Resource timing properties</p>
 
 <p>The following example illustrates using the resource timing properties to calculate the amount of time the following phases take: redirection ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} ), DNS lookup ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}), TCP handshake ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}), and response ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This example also calculates the time from the start of the fetch and request start phases ({{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}, respectively), until the response has ended ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This timing data provides a detailed profile of the resource loading phases and this data can be used to help identify performance bottlenecks.</p>
 
-<pre class="brush: js notranslate">function calculate_load_times() {
+<pre class="brush: js">function calculate_load_times() {
   // Check performance support
   if (performance === undefined) {
     console.log("= Calculate Load Times: performance NOT supported");
@@ -94,7 +94,7 @@ Figure 1. Resource timing properties</p>
 
 <p>The following example demonstrates using these three properties.</p>
 
-<pre class="brush: js notranslate">function display_size_data(){
+<pre class="brush: js">function display_size_data(){
   // Check for support of the PerformanceResourceTiming.*size properties and print their values
   // if supported.
   if (performance === undefined) {
@@ -136,7 +136,7 @@ Figure 1. Resource timing properties</p>
 
 <p>The following example demonstrates the usage of these two methods.</p>
 
-<pre class="brush: js notranslate">function clear_resource_timings() {
+<pre class="brush: js">function clear_resource_timings() {
   if (performance === undefined) {
     console.log("= performance.clearResourceTimings(): peformance NOT supported");
     return;
@@ -178,7 +178,7 @@ function set_resource_timing_buffer_size(n) {
 
 <p>The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the <code>init()</code> function.</p>
 
-<pre class="brush: js notranslate">function buffer_full(event) {
+<pre class="brush: js">function buffer_full(event) {
   console.log("WARNING: Resource Timing Buffer is FULL!");
   set_resource_timing_buffer_size(200);
 }

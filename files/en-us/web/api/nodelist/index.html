@@ -27,7 +27,7 @@ tags:
 
 <p>For example, {{domxref("Node.childNodes")}} is live:</p>
 
-<pre class="brush: js notranslate">const parent = document.getElementById('parent');
+<pre class="brush: js">const parent = document.getElementById('parent');
 let child_nodes = parent.childNodes;
 console.log(child_nodes.length); // let's assume "2"
 parent.appendChild(document.createElement('div'));
@@ -67,7 +67,7 @@ console.log(child_nodes.length); // outputs "3"
 
 <p>It's possible to loop over the items in a <code>NodeList</code> using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop:</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; myNodeList.length; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; myNodeList.length; i++) {
   let item = myNodeList[i];
 }
 </pre>
@@ -76,7 +76,7 @@ console.log(child_nodes.length); // outputs "3"
 
 <p><code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
 
-<pre class="brush: js notranslate">const list = document.querySelectorAll('input[type=checkbox]');
+<pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
 for (let checkbox of list) {
   checkbox.checked = true;
 }</pre>
@@ -85,7 +85,7 @@ for (let checkbox of list) {
 
 <p>There is also an Internet Explorer-compatible way to use {{jsxref("Array.forEach()", "Array.prototype.forEach")}} for iteration:</p>
 
-<pre class="brush: js notranslate">const list = document.querySelectorAll('input[type=checkbox]');
+<pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
 Array.prototype.forEach.call(list, function (checkbox) {
   checkbox.checked = true;
 });</pre>

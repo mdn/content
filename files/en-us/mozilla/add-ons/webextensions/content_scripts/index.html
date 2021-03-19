@@ -105,7 +105,7 @@ tags:
 
 <p>The script <code>page-script.js</code> does this:</p>
 
-<pre class="notranslate brush: js">// page-script.js
+<pre class="brush: js">// page-script.js
 
 // add a new element to the DOM
 let p = document.createElement("p");
@@ -123,7 +123,7 @@ window.confirm = function() {
 
 <p>Now an extension injects a content script into the page:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 // can access and modify the DOM
 let pageScriptPara = document.getElementById("page-script-para");
@@ -263,7 +263,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>If the click was on a link, it sends a message to the background page with the target URL:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -276,7 +276,7 @@ function notifyExtension(e) {
 
 <p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -332,7 +332,7 @@ function notify(message) {
  <li>Uses <code>myPort</code> to sends messages to the background script when the user clicks the document</li>
 </ul>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -360,7 +360,7 @@ document.body.addEventListener("click", function() {
  <li>Sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
 </ul>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 let portFromCS;
 
@@ -383,7 +383,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>If you have multiple content scripts communicating at the same time, you might want to store connections to them in an array.</p>
 
-<pre class="notranslate brush: js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 let ports = []
 
@@ -430,7 +430,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>For example:</p>
 
-<pre class="notranslate brush: js">// page-script.js
+<pre class="brush: js">// page-script.js
 
 let messenger = document.getElementById("from-page-script");
 
@@ -444,7 +444,7 @@ function messageContentScript() {
 }
 </pre>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 window.addEventListener("message", function(event) {
   if (event.source == window &amp;&amp;
@@ -461,7 +461,7 @@ window.addEventListener("message", function(event) {
 
 <p>To give a trivial example, suppose the content script code that receives the message does something like this:</p>
 
-<pre class="notranslate brush: js example-bad">// content-script.js
+<pre class="brush: js example-bad">// content-script.js
 
 window.addEventListener("message", function(event) {
   if (event.source == window &amp;&amp;
@@ -489,7 +489,7 @@ window.addEventListener("message", function(event) {
 
 <p>For example, consider a content script like this:</p>
 
-<pre class="notranslate brush: js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 window.eval('window.x = 1;');
 eval('window.y = 2');
@@ -505,7 +505,7 @@ window.postMessage({
 
 <p>On receiving the message, the page script logs the same variables:</p>
 
-<pre class="notranslate brush: js">window.addEventListener("message", function(event) {
+<pre class="brush: js">window.addEventListener("message", function(event) {
   if (event.source === window &amp;&amp; event.data &amp;&amp; event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -515,14 +515,14 @@ window.postMessage({
 <dl>
  <dt>In Chrome, this produces output like this:</dt>
  <dd>
- <pre class="notranslate">In content script, window.x: 1
+ <pre>In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
 In page script, window.y: undefined</pre>
  </dd>
  <dt>In Firefox, this produces output like this:</dt>
  <dd>
- <pre class="notranslate">In content script, window.x: undefined
+ <pre>In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
 In page script, window.y: undefined</pre>
@@ -536,7 +536,7 @@ In page script, window.y: undefined</pre>
 
 <p>The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:</p>
 
-<pre class="notranslate brush: js example-bad">// page.js redefines console.log
+<pre class="brush: js example-bad">// page.js redefines console.log
 
 let original = console.log;
 
@@ -545,7 +545,7 @@ console.log = function() {
 }
 </pre>
 
-<pre class="notranslate brush: js example-bad">// content-script.js calls the redefined version
+<pre class="brush: js example-bad">// content-script.js calls the redefined version
 
 window.eval('console.log(false)');
 </pre>

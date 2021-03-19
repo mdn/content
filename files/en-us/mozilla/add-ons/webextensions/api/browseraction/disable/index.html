@@ -40,7 +40,7 @@ tags:
 
 <p>Disable the browser action when clicked, and re-enable it every time a new tab is opened:</p>
 
-<pre class="notranslate brush: js">browser.tabs.onCreated.addListener(() =&gt; {
+<pre class="brush: js">browser.tabs.onCreated.addListener(() =&gt; {
   browser.browserAction.enable();
 });
 
@@ -51,7 +51,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Disable the browser action only for the active tab:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
   browser.browserAction.disable(tab.id);
 });</pre>
 

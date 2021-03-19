@@ -55,7 +55,7 @@ int version() {
 
 <p>And you will see the correct version number in the <a href="https://googlechrome.github.io/samples/webassembly/version.html">output</a>:</p>
 
-<p><img alt="  Screenshot of the DevTools console showing the correct versionnumber." src="https://mdn.mozillademos.org/files/15913/version.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="  Screenshot of the DevTools console showing the correct versionnumber." src="version.png" style="border-style: solid; border-width: 1px;"></p>
 
 <div class="note">
 <p><strong>Note:</strong> libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.</p>
@@ -158,7 +158,7 @@ api.free_result(resultPointer);</pre>
 <p>Depending on the size of your image, you might run into an error where wasm can't grow the memory enough to accommodate both the input and the output image:</p>
 
 <p><img alt="
-  Screenshot of the DevTools console showing an error." src="https://mdn.mozillademos.org/files/15922/error.png"></p>
+  Screenshot of the DevTools console showing an error." src="error.png"></p>
 
 <p>Luckily, the solution to this problem is in the error message. You just need to add <code>-s ALLOW_MEMORY_GROWTH=1</code> to your compilation command.</p>
 
@@ -175,4 +175,4 @@ document.body.appendChild(img)
 
 <p><a href="https://googlechrome.github.io/samples/webassembly/image.html">Demo</a> | <a href="https://developers.google.com/web/updates/2018/03/emscripting-a-c-library">Original Article</a></p>
 
-<p><img alt="DevTools network panel and the generated image." src="https://mdn.mozillademos.org/files/15914/result.jpg" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="DevTools network panel and the generated image." src="result.jpg" style="border-style: solid; border-width: 1px;"></p>

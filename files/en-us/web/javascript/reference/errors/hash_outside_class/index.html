@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">SyntaxError: Unexpected '#' used outside of class body.
+<pre class="brush: js">SyntaxError: Unexpected '#' used outside of class body.
 </pre>
 
 <h2 id="Error_type">Error type</h2>
@@ -39,17 +39,17 @@ tags:
 
 <p>For each case, there might be something slightly wrong. For example</p>
 
-<pre class="brush: js example-bad notranslate">document.querySelector(#some-element)
+<pre class="brush: js example-bad">document.querySelector(#some-element)
 </pre>
 
 <p>This can be fixed via</p>
 
-<pre class="brush: js example-good notranslate">document.querySelector("#some-element")
+<pre class="brush: js example-good">document.querySelector("#some-element")
 </pre>
 
 <h3 id="Outside_of_a_class">Outside of a class</h3>
 
-<pre class="brush: js example-bad notranslate">class ClassWithPrivateField {
+<pre class="brush: js example-bad">class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -61,7 +61,7 @@ this.#privateField = 42
 
 <p>This can be fixed by moving the private field back into the class</p>
 
-<pre class="brush: js example-good notranslate">class ClassWithPrivateField {
+<pre class="brush: js example-good">class ClassWithPrivateField {
   #privateField
 
   constructor() {

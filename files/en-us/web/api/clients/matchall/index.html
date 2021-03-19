@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">self.clients.matchAll(<em>options</em>).then(function(<em>clients</em>) {
+<pre class="brush: js">self.clients.matchAll(<em>options</em>).then(function(<em>clients</em>) {
   // do something with your clients list
 });</pre>
 
@@ -53,7 +53,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">clients.matchAll(options).then(function(clientList) {
+<pre class="brush: js">clients.matchAll(options).then(function(clientList) {
   for (var i = 0 ; i &lt; clientList.length ; i++) {
     if (clientList[i].url === 'index.html') {
       clients.openWindow(clientList[i]);
@@ -81,7 +81,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Clients.matchAll")}}</p>
-</div>
+<p>{{Compat("api.Clients.matchAll")}}</p>

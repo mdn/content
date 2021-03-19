@@ -127,7 +127,7 @@ tags:
 
 <p>Since humans tend to think in degrees, and some functions (such as CSS transforms) can accept degrees, it is a good idea to keep functions handy that convert between the two:</p>
 
-<pre class="brush: js notranslate">function degToRad(degrees) {
+<pre class="brush: js">function degToRad(degrees) {
   return degrees * (Math.PI / 180);
 };
 
@@ -139,11 +139,11 @@ function radToDeg(rad) {
 
 <p>If we want to calculate the height of an equilateral triangle, and we know its side length is 100, we can use the formulae <em>length of the adjacent multiplied by the tangent of the angle is equal to the opposite.</em></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14829/trigonometry.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="trigonometry.png" style="display: block; margin: 0 auto;"></p>
 
 <p>In JavaScript, we can do this with the following:</p>
 
-<pre class="brush: js notranslate">50 * Math.tan(degToRad(60)).</pre>
+<pre class="brush: js">50 * Math.tan(degToRad(60)).</pre>
 
 <p>We use our <code>degToRad()</code> function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.</p>
 
@@ -151,7 +151,7 @@ function radToDeg(rad) {
 
 <p>This can be achieved with a combination of {{jsxref("Math.random()")}} and {{jsxref("Math.floor()")}}:</p>
 
-<pre class="brush: js notranslate">function random(min, max) {
+<pre class="brush: js">function random(min, max) {
   const num = Math.floor(Math.random() * (max - min + 1)) + min;
   return num;
 }

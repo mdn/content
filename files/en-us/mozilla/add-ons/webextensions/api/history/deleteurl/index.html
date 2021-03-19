@@ -52,7 +52,7 @@ tags:
 
 <p>Remove all visits to "https://example.org/" from history, then check that this URL no longer returned from {{WebExtAPIRef("history.search()")}}:</p>
 
-<pre class="notranslate brush: js">var urlToRemove = "https://example.org/";
+<pre class="brush: js">var urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
@@ -77,7 +77,7 @@ deletingUrl.then(onRemoved);</pre>
 
 <p>Remove the last-visited page from history, with a listener to {{WebExtAPIRef("history.onVisitRemoved")}} to log the URL of the removed page:</p>
 
-<pre class="notranslate brush: js">function onRemoved(removeInfo) {
+<pre class="brush: js">function onRemoved(removeInfo) {
   if (removeInfo.urls.length) {
     console.log("Removed: " + removeInfo.urls[0]);
   }

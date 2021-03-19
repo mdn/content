@@ -62,7 +62,7 @@ tags:
 
 <p>In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using <code>flex-direction</code> you can see how the tab order continues to follow the order that the items are listed in the source.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}</p>
 
 <p>In the same way that changing the value of <code>flex-direction</code> does not change the order in which items are navigated to, changing this value does not change paint order. It is a visual reversal of the items only.</p>
 
@@ -103,9 +103,7 @@ tags:
 <p>You can also use negative values with order, which can be quite useful. If you want to make one item display first, and leave the order of all other items unchanged, you can give that item an order of <code>-1</code>. As this is lower than 0 the item will always be displayed first.</p>
 
 <p>In the live code example below I have items laid out using Flexbox. By changing which item has the class <code>active</code> assigned to it in the HTML, you can change which item displays first and therefore becomes full width at the top of the layout, with the other items displaying below it.</p>
-
-<p>{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}</p>
-
+<p>{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}</p>
 <p>The items are displayed in what is described in the specification as <em>order-modified document order</em>. The value of the order property is taken into account before the items are displayed.</p>
 
 <p>Order also changes the paint order of the items; items with a lower value for <code>order</code> will be painted first and those with a higher value for <code>order</code> painted afterwards.</p>

@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>:visited</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;a&gt; that has been visited */
+<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt; that has been visited */
 a:visited {
   color: green;
 }</pre>
@@ -28,7 +28,7 @@ a:visited {
  <li>Allowable CSS properties are {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("column-rule-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("text-decoration-color") }}, and {{ cssxref("text-emphasis-color") }}.</li>
  <li>Allowable SVG attributes are {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}.</li>
  <li>The alpha component of the allowed styles will be ignored. The alpha component of the element's non-<code>:visited</code> state will be used instead, except when that component is <code>0</code>, in which case the style set in <code>:visited</code> will be ignored entirely.</li>
- <li>Although these styles can be change the appearance of colors to the end user, the {{domxref("window.getComputedStyle")}} method will lie and always return the value of the non-<code>:visited</code> color.</li>
+ <li>Although these styles can change the appearance of colors to the end user, the {{domxref("window.getComputedStyle")}} method will lie and always return the value of the non-<code>:visited</code> color.</li>
  <li>The <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element is never matched by <code>:visited</code>.</li>
 </ul>
 
@@ -38,7 +38,7 @@ a:visited {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -46,12 +46,12 @@ a:visited {
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;a href="#test-visited-link"&gt;Have you visited this link yet?&lt;/a&gt;&lt;br&gt;
+<pre class="brush: html">&lt;a href="#test-visited-link"&gt;Have you visited this link yet?&lt;/a&gt;&lt;br&gt;
 &lt;a href=""&gt;You've already visited this link.&lt;/a&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">a {
+<pre class="brush: css">a {
   /* Specify non-transparent defaults to certain properties,
      allowing them to be styled with the :visited state */
   background-color: white;

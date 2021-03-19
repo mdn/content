@@ -35,14 +35,14 @@ tags:
 
 <p>{{glossary("HTML")}} (Hypertext Markup Language) is not a programming language. It is a <em>markup language</em> that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or <em>mark up</em> different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on.  For example, consider the following line of text:</p>
 
-<pre class="notranslate">My cat is very grumpy</pre>
+<pre>My cat is very grumpy</pre>
 
 <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph  ({{htmlelement("p")}}) element:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;My cat is very grumpy&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;My cat is very grumpy&lt;/p&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Tags in HTML are case-insensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as <code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, <code>&lt;TiTlE&gt;</code>, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency, readability, and other reasons.</p>
+<p><strong>Note</strong>: Tags in HTML are case-insensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as <code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, <code>&lt;TiTlE&gt;</code>, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.</p>
 </div>
 
 <h2 id="Anatomy_of_an_HTML_element">Anatomy of an HTML element</h2>
@@ -70,7 +70,7 @@ tags:
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
 
@@ -87,7 +87,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -108,7 +108,7 @@ body {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -193,13 +193,13 @@ textarea.onkeyup = function(){
 
 <p>Elements can be placed within other elements. This is called <em>nesting</em>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word <em>very</em> in a {{htmlelement("strong")}} element, which means that the word is to have strong(er) text formatting:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</pre>
 
 <p>There is a right and wrong way to do nesting. In the example above, we opened the <code>p</code> element first, then opened the <code>strong</code> element. For proper nesting, we should close the <code>strong</code> element first, before closing the <code>p</code>.</p>
 
 <p>The following is an example of the <em>wrong</em> way to do nesting:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</pre>
+<pre class="example-bad brush: html">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</pre>
 
 <p>The <strong>tags have to open and close in a way that they are inside or outside one another</strong>. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
 
@@ -214,7 +214,7 @@ textarea.onkeyup = function(){
 
 <p>Consider the following example:</p>
 
-<pre class="brush: html notranslate">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
+<pre class="brush: html">&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;
 
 &lt;p&gt;fourth&lt;/p&gt;&lt;p&gt;fifth&lt;/p&gt;&lt;p&gt;sixth&lt;/p&gt;
 </pre>
@@ -239,7 +239,7 @@ textarea.onkeyup = function(){
 
 <p>Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. For example, the {{htmlelement("img")}} element embeds an image file onto a page:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</pre>
 
 <p>This would output the following:</p>
 
@@ -290,7 +290,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code2">Playable code2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -307,7 +307,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -327,7 +327,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -412,11 +412,11 @@ textarea.onkeyup = function(){
 
 <p>Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the {{htmlattrxref("disabled", "input")}} attribute, which you can assign to form input elements. (You use this to <em>disable</em> the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:</p>
 
-<pre class="notranslate">&lt;input type="text" disabled="disabled"&gt;</pre>
+<pre>&lt;input type="text" disabled="disabled"&gt;</pre>
 
 <p>As shorthand, it is acceptable to write this as follows:</p>
 
-<pre class="brush: html notranslate">&lt;!-- using the disabled attribute prevents the end user from entering text into the input box --&gt;
+<pre class="brush: html">&lt;!-- using the disabled attribute prevents the end user from entering text into the input box --&gt;
 &lt;input type="text" disabled&gt;
 
 &lt;!-- text input is allowed, as it doesn't contain the disabled attribute --&gt;
@@ -431,11 +431,11 @@ textarea.onkeyup = function(){
 
 <p>If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with <em>only</em> the <code>href</code> attribute, like this:</p>
 
-<pre class="brush: html notranslate">&lt;a href=https://www.mozilla.org/&gt;favorite website&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href=https://www.mozilla.org/&gt;favorite website&lt;/a&gt;</pre>
 
 <p>However, as soon as we add the <code>title</code> attribute in this way, there are problems:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;a href=https://www.mozilla.org/ title=The Mozilla homepage&gt;favorite website&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href=https://www.mozilla.org/ title=The Mozilla homepage&gt;favorite website&lt;/a&gt;</pre>
 
 <p>As written above, the browser misinterprets the markup, mistaking the <code>title</code> attribute for three attributes:  a title attribute with the value <em>The</em>, and two Boolean attributes, <code>Mozilla</code> and <code>homepage</code>. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!</p>
 
@@ -447,31 +447,31 @@ textarea.onkeyup = function(){
 
 <p>In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://www.example.com"&gt;A link to my example.&lt;/a&gt;
+<pre class="brush: html">&lt;a href="http://www.example.com"&gt;A link to my example.&lt;/a&gt;
 
 &lt;a href='http://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;a href="http://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href="http://www.example.com'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>However, if you use one type of quote, you can include the other type of quote <em>inside</em> your attribute values:</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://www.example.com" title="Isn't this fun?"&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href="http://www.example.com" title="Isn't this fun?"&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>To use quote marks inside other quote marks of the same type (single quote or double quote), use <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html">HTML entities</a>. For example, this will break:</p>
 
-<pre class="example-bad brush: html notranslate">&lt;a href='http://www.example.com' title='Isn't this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="example-bad brush: html">&lt;a href='http://www.example.com' title='Isn't this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <p>Instead, you need to do this:</p>
 
-<pre class="brush: html notranslate">&lt;a href='http://www.example.com' title='Isn&amp;apos;t this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
+<pre class="brush: html">&lt;a href='http://www.example.com' title='Isn&amp;apos;t this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
 
 <h2 id="Anatomy_of_an_HTML_document">Anatomy of an HTML document</h2>
 
 <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -487,7 +487,7 @@ textarea.onkeyup = function(){
 <ol>
  <li><code>&lt;!DOCTYPE html&gt;</code>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
 
-  <pre class="notranslate">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  <pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre>
   More recently, the doctype is a historical artifact that needs to be included for everything else to work right. <code>&lt;!DOCTYPE html&gt;</code> is the shortest string of characters that counts as a valid doctype. That is all you need to know!</li>
  <li><code>&lt;html&gt;&lt;/html&gt;</code>: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.</li>
@@ -529,7 +529,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code3">Playable code3</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -546,7 +546,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -574,7 +574,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -659,7 +659,7 @@ textarea.onkeyup = function(){
 
 <p>In the examples above, you may have noticed that a lot of whitespace is included in the code. This is optional. These two code snippets are equivalent:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Dogs are silly.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Dogs are silly.&lt;/p&gt;
 
 &lt;p&gt;Dogs        are
          silly.&lt;/p&gt;</pre>
@@ -709,7 +709,7 @@ textarea.onkeyup = function(){
  <br>
  In the example below, there are two paragraphs:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;In HTML, you define a paragraph using the &lt;p&gt; element.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;In HTML, you define a paragraph using the &lt;p&gt; element.&lt;/p&gt;
 
 &lt;p&gt;In HTML, you define a paragraph using the &amp;lt;p&amp;gt; element.&lt;/p&gt;</pre>
 
@@ -727,7 +727,7 @@ textarea.onkeyup = function(){
 
 <p>To write an HTML comment, wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code>. For example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;I'm not inside a comment&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;I'm not inside a comment&lt;/p&gt;
 
 &lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</pre>
 

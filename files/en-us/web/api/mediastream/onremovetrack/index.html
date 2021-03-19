@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>MediaStream</em>.onremovetrack = <em>eventHandler</em>;
+<pre class="brush: js"><em>MediaStream</em>.onremovetrack = <em>eventHandler</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -43,7 +43,7 @@ tags:
 <p>This example adds a listener which, when a track is removed from the stream, logs the
   track that was removed.</p>
 
-<pre class="brush: js notranslate">stream.onremovetrack = function(event) {
+<pre class="brush: js">stream.onremovetrack = function(event) {
   let trackList = document.getElementById("tracks");
   let label = document.createElement("li");
 
@@ -74,10 +74,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.MediaStream.onremovetrack")}}</p>
-</div>
+<p>{{Compat("api.MediaStream.onremovetrack")}}</p>
 
 <h2 id="See_also">See also</h2>
 

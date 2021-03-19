@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>videoElement</em>.requestPictureInPicture();</pre>
+<pre class="brush: js"><em>videoElement</em>.requestPictureInPicture();</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -39,7 +39,7 @@ tags:
 <p>This example requests that the video enters Picture-in-Picture mode, and sets an event
   listener to handle the floating window resizing.</p>
 
-<pre class="brush: js notranslate">function enterPictureInPicture() {
+<pre class="brush: js">function enterPictureInPicture() {
   videoElement.requestPictureInPicture()
     .then(pictureInPictureWindow =&gt; {
       pictureInPictureWindow.addEventListener("resize", () =&gt; onPipWindowResize(), false);
@@ -67,10 +67,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}</p>
-</div>
+<p>{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -80,6 +77,6 @@ tags:
   <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
   <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
   <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
-  <li>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</li>
+  <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
   <li>{{CSSxRef(":picture-in-picture")}}</li>
 </ul>

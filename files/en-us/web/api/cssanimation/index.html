@@ -35,7 +35,7 @@ tags:
 
 <p>The animation in the following example is defined in CSS with the name <code>slide-in</code>. Calling {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}} objects. In our case this returns a <code>CSSAnimation</code> object, representing the animation created in CSS.</p>
 
-<pre class="brush: css notranslate">.animate {
+<pre class="brush: css">.animate {
   animation: slide-in 0.7s both;
 }
 
@@ -48,7 +48,7 @@ tags:
   }
 }</pre>
 
-<pre class="brush: js notranslate">let animations = document.querySelector(".animate").getAnimations();
+<pre class="brush: js">let animations = document.querySelector(".animate").getAnimations();
 console.log(animations[0]);</pre>
 
 <h2 id="Specifications">Specifications</h2>

@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>Notification</var>.onclick = function(event) { ... };
+<pre class="brush: js"><var>Notification</var>.onclick = function(event) { ... };
 </pre>
 
 <p>The default behavior is to move the focus to the viewport of the notification's related
@@ -32,7 +32,7 @@ tags:
   (specified by the inclusion of the <code>'_blank'</code> parameter) once a notification
   is clicked:</p>
 
-<pre class="brush: js notranslate">notification.onclick = function(event) {
+<pre class="brush: js">notification.onclick = function(event) {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
   window.open('http://www.mozilla.org', '_blank');
 }</pre>

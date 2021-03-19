@@ -32,7 +32,7 @@ tags:
 
 <p>The CSS {{cssxref("background")}} property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
   url(big-star.png) center no-repeat, rebeccapurple;
 } 
@@ -110,7 +110,7 @@ tags:
 
 <p>You can use keywords such as <code>top</code> and <code>right</code> (look up the others on the {{cssxref("background-position")}} page):</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -119,7 +119,7 @@ tags:
 
 <p>And <a href="/en-US/docs/Web/CSS/length">Lengths</a>, and <a href="/en-US/docs/Web/CSS/percentage">percentages</a>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
@@ -128,7 +128,7 @@ tags:
 
 <p>You can also mix keyword values with lengths or percentages, in which case the first value must refer to the horizontal position or offset and the second vertical. For example:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: 20px top;
@@ -136,7 +136,7 @@ tags:
 
 <p>Finally, you can also use a 4-value syntax in order to indicate a distance from certain edges of the box — the length unit, in this case, is an offset from the value that precedes it. So in the CSS below we are positioning the background 20px from the top and 10px from the right:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   background-image: url(star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
@@ -172,7 +172,7 @@ tags:
 
 <p>The other <code>background-*</code> properties can also have comma-separated values in the same way as <code>background-image</code>:</p>
 
-<pre class="brush: css notranslate">background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
+<pre class="brush: css">background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
@@ -223,19 +223,19 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>We can set a border for all four sides of a box with {{cssxref("border")}}:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border: 1px solid black;
 } </pre>
 
 <p>Or we can target one edge of the box, for example:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-top: 1px solid black;
 } </pre>
 
 <p>The individual properties for these shorthands would be:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-width: 1px;
   border-style: solid;
   border-color: black;
@@ -243,7 +243,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>And for the longhands:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: black;
@@ -263,13 +263,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>For example, to make all four corners of a box have a 10px radius:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-radius: 10px;
 } </pre>
 
 <p>Or to make the top right corner have a horizontal radius of 1em, and a vertical radius of 10%:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   border-top-right-radius: 1em 10%;
 } </pre>
 

@@ -14,18 +14,16 @@ tags:
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <code>loopEnd</code> property of the {{ domxref("AudioBufferSourceNode") }}
-    interface specifies is a floating point number specifying, in seconds, at what offset
-    into playing the {{domxref("AudioBuffer")}} playback should loop back to the time
-    indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} property.
-    This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
-    <code>true</code>.</p>
-</div>
+<p>The <code>loopEnd</code> property of the {{ domxref("AudioBufferSourceNode") }}
+  interface specifies is a floating point number specifying, in seconds, at what offset
+  into playing the {{domxref("AudioBuffer")}} playback should loop back to the time
+  indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} property.
+  This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
+  <code>true</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>AudioBufferSourceNode.loopEnd = endOffsetInSeconds</em>;
+<pre class="brush: js"><em>AudioBufferSourceNode.loopEnd = endOffsetInSeconds</em>;
 
 var <em>endOffsetInSeconds</em> = <em>AudioBufferSourceNode<code>.loopEnd;</code></em>
 </pre>
@@ -125,10 +123,7 @@ loopendControl.oninput = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioBufferSourceNode.loopEnd")}}</p>
-</div>
+<p>{{Compat("api.AudioBufferSourceNode.loopEnd")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -120,7 +120,7 @@ tags:
 
 <p>This example tests for browser compatibility and creates a new barcode detector object, with specified supported formats.</p>
 
-<pre class="brush: js notranslate">// check compatibility
+<pre class="brush: js">// check compatibility
 if (!('BarcodeDetector' in window)) {
   console.log('Barcode Detector is not supported by this browser.');
 } else {
@@ -135,7 +135,7 @@ if (!('BarcodeDetector' in window)) {
 
 <p>The following example calls the <code>getSupportFormat()</code> method and logs the results to the console.</p>
 
-<pre class="brush: js notranslate">// check supported types
+<pre class="brush: js">// check supported types
 BarcodeDetector.getSupportedFormats()
   .then(supportedFormats =&gt; {
     supportedFormats.forEach(format =&gt; console.log(format));
@@ -145,10 +145,10 @@ BarcodeDetector.getSupportedFormats()
 
 <p>This example uses the <code>detect()</code> method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.</p>
 
-<pre class="brush: js notranslate">  barcodeDetector.detect(imageEl)
+<pre class="brush: js">  barcodeDetector.detect(imageEl)
     .then(barcodes =&gt; {
       barcodes.forEach(barcode =&gt; console.log(barcode.rawData));
-    }
+    })
     .catch(err =&gt; {
       console.log(err);
     })

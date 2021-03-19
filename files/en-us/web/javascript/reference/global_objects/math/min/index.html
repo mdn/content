@@ -31,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Math.min([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
+  class="brush: js">Math.min([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
 <p>This finds the min of <code>x</code> and <code>y</code> and assigns it to
   <code>z</code>:</p>
 
-<pre class="brush: js notranslate">var x = 10, y = -20;
+<pre class="brush: js">var x = 10, y = -20;
 var z = Math.min(x, y);
 </pre>
 
@@ -74,7 +74,7 @@ var z = Math.min(x, y);
 <p><code>Math.min()</code> is often used to clip a value so that it is always less than or
   equal to a boundary. For instance, this</p>
 
-<pre class="brush: js notranslate">var x = f(foo);
+<pre class="brush: js">var x = f(foo);
 
 if (x &gt; boundary) {
   x = boundary;
@@ -83,7 +83,7 @@ if (x &gt; boundary) {
 
 <p>may be written as this</p>
 
-<pre class="brush: js notranslate">var x = Math.min(f(foo), boundary);
+<pre class="brush: js">var x = Math.min(f(foo), boundary);
 </pre>
 
 <p>{{jsxref("Math.max()")}} can be used in a similar way to clip a value at the other end.

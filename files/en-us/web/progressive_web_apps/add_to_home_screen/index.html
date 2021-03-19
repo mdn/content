@@ -20,7 +20,7 @@ tags:
 
 <p>A2HS is supported in all mobile browsers, except iOS webview. It's also supported in some Chromium desktop browsers.</p>
 
-<p>Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#Other">since v58</a>.</p>
+<p>Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#other">since v58</a>.</p>
 
 <p>See <a href="https://caniuse.com/#feat=web-app-manifest">caniuse.com</a> for exact details.</p>
 
@@ -83,7 +83,7 @@ tags:
 
 <p>The manifest for our sample app looks like this:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   "background_color": "purple",
   "description": "Shows random fox pictures. Hey, at least it isn't cats.",
   "display": "fullscreen",
@@ -111,7 +111,7 @@ tags:
 
 <p>To finish setting up your manifest, you need to reference it from the HTML of your application's home page:</p>
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest.webmanifest<span class="pl-pds">"</span></span>&gt;</pre>
+<pre class="brush: html">&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest.webmanifest<span class="pl-pds">"</span></span>&gt;</pre>
 
 <p>Browsers that support A2HS will know where to look for your manifest once this is in place.</p>
 
@@ -133,11 +133,11 @@ tags:
 
 <p>To make our PWA installable on desktop, we first added a button to our document to allow users to do the installation — this isn't made available automatically on desktop apps, and the installation needs to be triggered by a user gesture:</p>
 
-<pre class="brush: html notranslate">&lt;button class="add-button"&gt;Add to home screen&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button class="add-button"&gt;Add to home screen&lt;/button&gt;</pre>
 
 <p>We then gave it some simple styling:</p>
 
-<pre class="brush: css notranslate">.add-button {
+<pre class="brush: css">.add-button {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -147,13 +147,13 @@ tags:
 
 <p>At the bottom of our <a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js"><code>index.js</code> file</a>, we added some JavaScript to handle the installation. First of all, we declare a <code>deferredPrompt</code> variable (which we'll explain later on), get a reference to our install button, and set it to <code>display: none</code> initially:</p>
 
-<pre class="brush: js notranslate">let deferredPrompt;
+<pre class="brush: js">let deferredPrompt;
 const addBtn = document.querySelector('.add-button');
 addBtn.style.display = 'none';</pre>
 
 <p>We hide the button initially because the PWA will not be available for install until it follows the A2HS criteria. When this happens, supporting browsers will fire a <code>beforeinstallprompt</code> event. We can then use a handler like the one below to handle the installation:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('beforeinstallprompt', (e) =&gt; {
+<pre class="brush: js">window.addEventListener('beforeinstallprompt', (e) =&gt; {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.

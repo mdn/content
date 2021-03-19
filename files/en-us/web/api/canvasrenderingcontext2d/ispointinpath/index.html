@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>ctx</em>.isPointInPath(<em>x</em>, <em>y</em> [, <em>fillRule</em>]);
+<pre class="brush: js"><em>ctx</em>.isPointInPath(<em>x</em>, <em>y</em> [, <em>fillRule</em>]);
 <em>ctx</em>.isPointInPath(<em>path</em>, <em>x</em>, <em>y</em> [, <em>fillRule</em>]);
 </pre>
 
@@ -64,13 +64,13 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 &lt;p&gt;In path: &lt;code id="result"&gt;false&lt;/code&gt;&lt;/p&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js highlight:[7] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[7]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const result = document.getElementById('result');
 
@@ -91,12 +91,12 @@ result.innerText = ctx.isPointInPath(30, 70);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circle

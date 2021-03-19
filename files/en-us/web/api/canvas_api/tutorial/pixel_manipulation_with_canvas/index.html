@@ -32,11 +32,11 @@ tags:
 
 <p>For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:</p>
 
-<pre class="brush: js notranslate">blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
+<pre class="brush: js">blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
 
 <p>If given a set of coordinates (X and Y), you may end up doing something like this:</p>
 
-<pre class="brush: js notranslate">var xCoord = 50;
+<pre class="brush: js">var xCoord = 50;
 var yCoord = 100;
 var canvasWidth = 1024;
 
@@ -60,7 +60,7 @@ var alphaForCoord = imageData.data[alphaIndex];
 
 <p>Or, if ES2015 is appropriate:</p>
 
-<pre class="brush: js notranslate">const xCoord = 50;
+<pre class="brush: js">const xCoord = 50;
 const yCoord = 100;
 const canvasWidth = 1024;
 
@@ -76,26 +76,26 @@ const [redIndex, greenIndex, blueIndex, alphaIndex] = colorIndices;
 
 <p>You may also access the size of the pixel array in bytes by reading the <code>Uint8ClampedArray.length</code> attribute:</p>
 
-<pre class="brush: js notranslate">var numBytes = imageData.data.length;
+<pre class="brush: js">var numBytes = imageData.data.length;
 </pre>
 
 <h2 id="Creating_an_ImageData_object">Creating an ImageData object</h2>
 
 <p>To create a new, blank <code>ImageData</code> object, you should use the {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} method. There are two versions of the <code>createImageData()</code> method:</p>
 
-<pre class="brush: js notranslate">var myImageData = ctx.createImageData(width, height);</pre>
+<pre class="brush: js">var myImageData = ctx.createImageData(width, height);</pre>
 
 <p>This creates a new <code>ImageData</code> object with the specified dimensions. All pixels are preset to transparent black (all zeroes i.e rgba(0,0,0,0)).</p>
 
 <p>You can also create a new <code>ImageData</code> object with the same dimensions as the object specified by <code>anotherImageData</code>. The new object's pixels are all preset to transparent black. <strong>This does not copy the image data!</strong></p>
 
-<pre class="brush: js notranslate">var myImageData = ctx.createImageData(anotherImageData);</pre>
+<pre class="brush: js">var myImageData = ctx.createImageData(anotherImageData);</pre>
 
 <h2 id="Getting_the_pixel_data_for_a_context">Getting the pixel data for a context</h2>
 
 <p>To obtain an <code>ImageData</code> object containing a copy of the pixel data for a canvas context, you can use the <code>getImageData()</code> method:</p>
 
-<pre class="brush: js notranslate">var myImageData = ctx.getImageData(left, top, width, height);</pre>
+<pre class="brush: js">var myImageData = ctx.getImageData(left, top, width, height);</pre>
 
 <p>This method returns an <code>ImageData</code> object representing the pixel data for the area of the canvas whose corners are represented by the points (<code>left</code>,<code>top</code>), (<code>left+width</code>, <code>top</code>), (<code>left</code>, <code>top+height</code>), and (<code>left+width</code>, <code>top+height</code>). The coordinates are specified in canvas coordinate space units.</p>
 
@@ -109,7 +109,7 @@ const [redIndex, greenIndex, blueIndex, alphaIndex] = colorIndices;
 
 <p>In this example we are using the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData"><code>getImageData()</code> </a>method to display the color under the mouse cursor. For this, we need the current position of the mouse with <code>layerX</code> and <code>layerY</code>, then we look up the pixel data on that position in the pixel array that <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a></code> provides us. Finally, we use the array data to set a background color and a text in the <code>&lt;div&gt;</code> to display the color. Clicking on the image will do the same operation but remember what the selected color was.</p>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js">var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 var canvas = document.getElementById('canvas');
@@ -152,21 +152,21 @@ canvas.addEventListener('click', function(event) {
 
 <p>You can use the<a href="/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData"> putImageData() </a>method to paint pixel data into a context:</p>
 
-<pre class="brush: js notranslate">ctx.putImageData(myImageData, dx, dy);
+<pre class="brush: js">ctx.putImageData(myImageData, dx, dy);
 </pre>
 
 <p>The <code>dx</code> and <code>dy</code> parameters indicate the device coordinates within the context at which to paint the top left corner of the pixel data you wish to draw.</p>
 
 <p>For example, to paint the entire image represented by <code>myImageData</code> to the top left corner of the context, you can do the following:</p>
 
-<pre class="brush: js notranslate">ctx.putImageData(myImageData, 0, 0);
+<pre class="brush: js">ctx.putImageData(myImageData, 0, 0);
 </pre>
 
 <h3 id="Grayscaling_and_inverting_colors">Grayscaling and inverting colors</h3>
 
 <p>In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a>. The invert function subtracts each color from the max value 255. The grayscale function uses the average of red, green and blue. You can also use a weighted average, given by the formula <code>x = 0.299r + 0.587g + 0.114b</code>, for example. See <a href="https://en.wikipedia.org/wiki/Grayscale">Grayscale</a> on Wikipedia for more information.</p>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js">var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 
@@ -233,14 +233,14 @@ for (const input of inputs) {
 
 <p>We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.</p>
 
-<pre class="brush: js notranslate">zoomctx.drawImage(canvas,
+<pre class="brush: js">zoomctx.drawImage(canvas,
                   Math.min(Math.max(0, x - 5), img.width - 10),
                   Math.min(Math.max(0, y - 5), img.height - 10),
                   10, 10, 0, 0, 200, 200);</pre>
 
 <p>Zoom example:</p>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js">var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 img.onload = function() {

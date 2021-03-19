@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Basic_concepts">Basic concepts</h2>
 
-<p>To extract data from your audio source, you need an {{ domxref("AnalyserNode") }}, which is created using the {{ domxref("AudioContext.createAnalyser()") }} method, for example:</p>
+<p>To extract data from your audio source, you need an {{ domxref("AnalyserNode") }}, which is created using the {{ domxref("BaseAudioContext.createAnalyser") }} method, for example:</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -129,7 +129,7 @@ var x = 0;</pre>
 
 <p>This gives us a nice waveform display that updates several times a second:</p>
 
-<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="https://mdn.mozillademos.org/files/7977/wave.png" style="display: block; height: 96px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="wave.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Creating_a_frequency_bar_graph">Creating a frequency bar graph</h2>
 
@@ -182,9 +182,8 @@ var x = 0;</pre>
 
 <p>This code gives us a result like the following:</p>
 
-<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://mdn.mozillademos.org/files/7975/bar-graph.png" style="height: 157px; width: 1260px;"></p>
+<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="bar-graph.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: The examples listed in this article have shown usage of {{ domxref("AnalyserNode.getByteFrequencyData()") }} and {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. For working examples showing {{ domxref("AnalyserNode.getFloatFrequencyData()") }} and {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, refer to our <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too) — this is exactly the same as the original <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>, except that it uses Float data, not unsigned byte data.</p>
 </div>
-

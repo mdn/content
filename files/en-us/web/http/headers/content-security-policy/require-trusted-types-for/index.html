@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Content-Security-Policy: require-trusted-types-for 'script';
+<pre>Content-Security-Policy: require-trusted-types-for 'script';
 </pre>
 
 <dl>
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
+<pre class="brush: js">// Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
 
 const attackerInput = '&lt;svg onload="alert(/cross-site-scripting/)" /&gt;';
 const el = document.createElement('div');

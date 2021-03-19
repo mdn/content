@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>client</var>.postMessage(<var>message</var>[, <var>transfer</var>]);
+<pre class="brush: js"><var>client</var>.postMessage(<var>message</var>[, <var>transfer</var>]);
 <var>client</var>.postMessage(<var>message</var>[, { transfer }]);
 </pre>
 
@@ -48,7 +48,7 @@ tags:
 
 <p>Sending a message from a service worker to a client:</p>
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+<pre class="brush: js">addEventListener('fetch', event =&gt; {
   event.waitUntil(async function() {
     // Exit early if we don't have access to the client.
     // Eg, if it's cross-origin.
@@ -71,7 +71,7 @@ tags:
 
 <p>Receiving that message:</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.addEventListener('message', event =&gt; {
+<pre class="brush: js">navigator.serviceWorker.addEventListener('message', event =&gt; {
   console.log(event.data.msg, event.data.url);
 });</pre>
 
@@ -97,7 +97,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Client.postMessage")}}</p>
-</div>
+<p>{{Compat("api.Client.postMessage")}}</p>

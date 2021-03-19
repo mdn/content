@@ -37,7 +37,7 @@ tags:
 
 <p>In this basic example, an <code>EventSource</code> is created to receive events from the server; a page with the name <code>sse.php</code> is responsible for generating the events.</p>
 
-<pre class="brush: js line-numbers language-js notranslate">var evtSource = new EventSource('sse.php');
+<pre class="brush: js line-numbers language-js">var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.addEventListener('message', (e) =&gt; {
@@ -49,7 +49,7 @@ evtSource.addEventListener('message', (e) =&gt; {
 
 <h3 id="onmessage_equivalent">onmessage equivalent</h3>
 
-<pre class="brush: js notranslate">evtSource.onmessage = (e) =&gt; {
+<pre class="brush: js">evtSource.onmessage = (e) =&gt; {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
@@ -78,7 +78,7 @@ evtSource.addEventListener('message', (e) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
+ <li><a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
  <li><code><a href="/en-US/docs/Web/API/EventSource/open_event">open</a></code></li>
  <li><code><a href="/en-US/docs/Web/API/EventSource/error_event">error</a></code></li>
 </ul>

@@ -14,30 +14,23 @@ tags:
 <p>Including an <code>aria-live</code> attribute or a specialized live region <code>role</code> (such as <code>role="alert"</code>) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.</p>
 </div>
 
-<h2 id="Simple_live_regions"><span class="mw-headline" id="Live_Region_State">Simple live regions</span></h2>
+<h2 id="Live_regions">Live regions</h2>
 
-<p>Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. Below is a list of each related ARIA live region property with a description.</p>
+<p>Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. A live region is explicitly denoted using the <code>aria-live</code> attribute.</p>
 
-<ol>
- <li><code><strong>aria-live</strong></code>: The <code>aria-live=POLITENESS_SETTING</code> is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: <code>off</code>, <code>polite</code> or <code>assertive</code>. The default setting is <code>off</code>. This attribute is by far the most important.</li>
- <li>
-  <p class="comment"><code><strong>aria-controls</strong></code>: The <code>aria-controls=[IDLIST]</code> is used to associate a control with the regions that it controls. Regions are identified just like an <code>id</code> in a <code>div</code>, and multiple regions can be associated with a control using a space, e.g. <code>aria-controls="myRegionID1 myRegionsID2"</code>.</p>
-
-  <div class="warning">Not known if the aria-controls aspect of live regions is implemented in current ATs, or which. Needs research.</div>
- </li>
-</ol>
+<p><code><strong>aria-live</strong></code>: The <code>aria-live=POLITENESS_SETTING</code> is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: <code>off</code>, <code>polite</code> or <code>assertive</code>. The default setting is <code>off</code>. This attribute is by far the most important.</p>
 
 <p>Normally, only <code>aria-live="polite"</code> is used. Any region which receives updates that are important for the user to receive, but not so rapid as to be annoying, should receive this attribute. The screen reader will speak changes whenever the user is idle.</p>
 
-<p>For regions which are not important, or would be annoying because of rapid updates or other reasons, silence them with <code>aria-live="off"</code>.</p>
+<p><code>aria-live="assertive"</code> should only be used for time-sensitive/critical notifications that absolutely require the user's immediate attention. Generally, a change to an assertive live region will interrupt any announcement a screen reader is currently making. As such, it can be extremely annoying and disruptive and should only be used sparingly.</p>
 
-<h3 id="Dropdown_box_updates_useful_onscreen_information">Dropdown box updates useful onscreen information</h3>
+<p>As <code>aria-live="off"</code> is the assumed default for elements, it should not be necessary to set this explicitly, unless you're trying to suppress the announcement of elements which have an implicit live region role (such as <code>role="alert"</code>).</p>
+
+<h3 id="Basic_example_Dropdown_box_updates_useful_onscreen_information">Basic example: Dropdown box updates useful onscreen information</h3>
 
 <p>A website specializing in providing information about planets provides a dropdown box. When a planet is selected from the dropdown, a region on the page is updated with information about the selected planet.</p>
 
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html notranslate">&lt;fieldset&gt;
+<pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;Planet information&lt;/legend&gt;
   &lt;label for="planetsSelect"&gt;Planet:&lt;/label&gt;
   &lt;select id="planetsSelect" aria-controls="planetInfo"&gt;
@@ -58,9 +51,7 @@ tags:
 &lt;p&gt;&lt;small&gt;Information courtesy &lt;a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System"&gt;Wikipedia&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 </pre>
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js notranslate">const PLANETS_INFO = {
+<pre class="brush: js">const PLANETS_INFO = {
   mercury: {
     title: 'Mercury',
     description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
@@ -113,9 +104,9 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p><img alt="A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture." src="web_accessibility_aria_aria_live_regions.png"></p>
 
-<h2 id="Preferring_specialized_live_region_roles">Preferring specialized live region roles</h2>
+<h2 id="Roles_with_implicit_live_region_attributes">Roles with implicit live region attributes</h2>
 
-<p>In the following well-known predefined cases it is better to use a specific provided "live region role":</p>
+<p>Elements with the following <code>role="..."</code> values act as live regions by default:</p>
 
 <table style="width: 100%;">
  <thead>
@@ -143,7 +134,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
   </tr>
   <tr>
    <td>progressbar</td>
-   <td>A hybrid between a widget and a live region. Use this with aria-valuemin, aria-valuenow and aria-valuemax. (TBD: add more info here).</td>
+   <td>A hybrid between a widget and a live region. Use this with <code>aria-valuemin</code>, <code>aria-valuenow</code> and <code>aria-valuemax</code>. (TBD: add more info here).</td>
    <td></td>
   </tr>
   <tr>
@@ -159,63 +150,68 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
  </tbody>
 </table>
 
-<h2 id="Advanced_live_regions">Advanced live regions</h2>
+<h2 id="Additional_live_region_attributes">Additional live region attributes</h2>
 
 <p>(TBD: more granular information on the support of the individual attributes with combinations of OS/Browser/AT).</p>
 
 <p>General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).</p>
 
-<p>The Paciello Group has some <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">information about the state of the support of Live Regions </a>(2014). Paul J. Adam has researched<a href="http://pauljadam.com/demos/aria-atomic-relevant.html"> the support of Aria-Atomic and Aria-Relevant</a> in particular. </p>
+<p>The Paciello Group has some <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">information about the state of the support of Live Regions </a>(2014). Paul J. Adam has researched <a href="http://pauljadam.com/demos/aria-atomic-relevant.html">the support of <code>aria-atomic</code> and <code>aria-relevant</code></a> in particular.</p>
 
 <ol>
  <li><code><strong>aria-atomic</strong></code>: The <code>aria-atomic=BOOLEAN</code> is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: <code>false</code> or <code>true</code>. The default setting is <code>false</code>.</li>
  <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><strong>aria-relevant</strong></a></code>: The <code>aria-relevant=[LIST_OF_CHANGES]</code> is used to set what types of changes are relevant to a live region. The possible settings are one or more of: <code>additions</code>, <code>removals</code>, <code>text</code>, <code>all</code>. The default setting is: <code>additions text</code>.</li>
- <li><code><strong>aria-labelledby</strong></code>: The <code>aria-labelledby=[IDLIST]</code> is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region. and label identifiers are separated with a space.</li>
- <li><code><strong>aria-describedby</strong></code>: The <code>aria-describedby=[IDLIST]</code> is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.</li>
 </ol>
 
-<h3 id="Advanced_use_case_Clock"><span class="mw-headline" id="Use_Case:_Clock">Advanced use case: Clock</span></h3>
+<h3 id="basic-examples-aria-atomic">Basic examples: <code>aria-atomic</code></h3>
 
 <p>As an illustration of <code>aria-atomic</code>, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.</p>
 
-<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite"&gt;
+  &lt;span id="clock-hours"&gt;&lt;/span&gt;
+  &lt;span id="clock-mins"&gt;&lt;/span&gt;
+&lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">/* basic JavaScript to update the clock */
-
-setInterval(function() {
+<pre class="brush: js">/* basic JavaScript to update the clock */
+function updateClock() {
   var now = new Date();
-  document.getElementById('clock').innerHTML = "Time: " + now.getHours() + ":" + ("0"+now.getMinutes()).substr(-2);
-}, 60000);
+  document.getElementById('clock-hours').innerHTML = now.getHours();
+  document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
+}
+
+/* first run */
+updateClock();
+
+/* update every minute */
+setInterval(updateClock, 60000);
 </pre>
 
-<p>The first time the function executes, the entirety of the string that is added will be announced. On subsequent calls, only the parts of the content that changed compared to the previous content will be announced. For instance, when the clock changes from "17:33" to "17:34", assistive technologies will only announce "4", which won't be very useful to users.</p>
+<p>The first time the function executes, the entirety of the string that is added will be announced. On subsequent calls, only the parts of the content that changed compared to the previous content will be announced. For instance, when the clock changes from "17:33" to "17:34", assistive technologies will only announce "34", which won't be very useful to users.</p>
 
-<p>One way around this would be to first clear the contents of the live region, and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.</p>
+<p>One way around this would be to first clear all the contents of the live region (in this case, set the <code>innerHTML</code> of both <code>&lt;span id="clock-hours"&gt;</code> and <code>&lt;span id="clock-mins"&gt;</code> to be empty), and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.</p>
 
-<p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").</p>
+<p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").</p>
 
-<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;
+  ...
+&lt;/div&gt;
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: As observed, setting/updating the innerHTML again would cause the whole text to be read again, whether or not you set aria-atomic="true", so the above Clock example does not work as expected.</p>
-</div>
+<p>Another example of <code>aria-atomic</code> - an update/notification made as a result of a user action.</p>
 
-<p>A working example of a simple year control for better understanding:</p>
-
-<pre class="brush: html notranslate">&lt;div id="date-input"&gt;
+<pre class="brush: html">&lt;div id="date-input"&gt;
 &lt;label&gt;Year:
 &lt;input type="text" id="year" value="1990" onblur="change(event)"/&gt;
 &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;div id="date-output" aria-live="polite"&gt;
+&lt;div id="date-output" aria-atomic="true" aria-live="polite"&gt;
 The set year is:
 &lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 function change(event) {
   var yearOut = document.getElementById("year-output");
 
@@ -228,15 +224,15 @@ function change(event) {
   }
 };</pre>
 
-<p>Without <code>aria-atomic="true" </code>the screenreader announces only the changed value of year.</p>
+<p>Without <code>aria-atomic="true"</code> the screenreader announces only the changed value of year. With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changed value</em>"</p>
 
-<p>With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changed value</em>"</p>
+<h3 id="basic-example-aria-relevant">Basic example: <code>aria-relevant</code></h3>
 
-<h3 id="Advanced_use_case_Roster"><span class="mw-headline" id="Use_Case:_Roster">Advanced use case: Roster</span></h3>
+<p>With <code>aria-relevant</code> you can specify which types of changes/updates to a live region should be announced.</p>
 
-<p>A chat site would like to display a list of users currently logged in. Display a list of users where a user's log-in and log-out status will be reflected dynamically (without a page reload).</p>
+<p>As an example, consider a chat site that wants to display a list of users currently logged in. Rather than just announcing the users that are currently logged in, we also want to trigger an announcement specifically when a user is <em>removed</em> from the list. We can achieve this by specifying <code>aria-relevant="additions removals"</code>.</p>
 
-<pre class="brush: html notranslate">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
+<pre class="brush: html">&lt;ul id="roster" aria-live="polite" aria-relevant="additions removals"&gt;
 	&lt;!-- use JavaScript to add remove users here--&gt;
 &lt;/ul&gt;
 </pre>

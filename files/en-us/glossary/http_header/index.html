@@ -27,19 +27,19 @@ tags:
 
 <p>A basic request with one header:</p>
 
-<pre class="brush: plain notranslate">GET /example.http HTTP/1.1
+<pre class="brush: plain">GET /example.http HTTP/1.1
 Host: example.com
 </pre>
 
 <p>Redirects have mandatory headers ({{HTTPHeader("Location")}}):</p>
 
-<pre class="brush: plain notranslate">302 Found
+<pre class="brush: plain">302 Found
 Location: /NewPage.html
 </pre>
 
 <p>A typical set of headers:</p>
 
-<pre class="brush: plain notranslate">304 Not Modified
+<pre class="brush: plain">304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
 Cache-Control: public, max-age=315360000
@@ -58,7 +58,7 @@ X-Cache-Info: cached
 <ol>
  <li>Specifications
   <ol>
-   <li>Syntax of <a href="https://tools.ietf.org/html/rfc7230#section-3.2">headers</a> in the HTTP specification.</li>
+   <li>Syntax of <a href="https://datatracker.ietf.org/doc/html/rfc7230#section-3.2">headers</a> in the HTTP specification.</li>
   </ol>
  </li>
  <li>Technical Reference

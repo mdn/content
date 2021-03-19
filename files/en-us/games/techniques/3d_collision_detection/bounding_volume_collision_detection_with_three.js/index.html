@@ -23,7 +23,7 @@ tags:
 
 <p>To create a <strong><code>Box3</code> instance</strong>, we need to provide the <strong>lower and upper boundaries</strong> of the box. Usually we will want this AABB to be "linked" to an object in our 3D world (like a character.) In Three.js, <code>Geometry</code> instances have a <code>boundingBox</code> property with <code>min</code> and <code>max</code> boundaries for the object. Keep in mind that in order for this property to be defined, you need to manually call <code>Geometry.computeBoundingBox</code> beforehand.</p>
 
-<pre class="brush: js notranslate">var knot = new THREE.Mesh(
+<pre class="brush: js">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new MeshNormalMaterial({}));
 
@@ -39,7 +39,7 @@ var knotBBox = new Box3(
 
 <p>A more simple alternative that fixes the previous issue is to set those boundaries later on with <code>Box3.setFromObject</code>, which will compute the dimensions taking into account a 3D entity's <strong>transformations <em>and</em> any child meshes</strong> as well.</p>
 
-<pre class="brush: js notranslate">var knot = new THREE.Mesh(
+<pre class="brush: js">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new MeshNormalMaterial({}));
 
@@ -50,7 +50,7 @@ knotBBox.setFromObject(knot);</pre>
 
 <p>Instantiating <strong><code>Sphere</code> objects</strong> is similar. We need to provide the sphere's center and radius, which can be added to the <code>boundingSphere</code> property available in <code>Geometry</code>.</p>
 
-<pre class="brush: js notranslate">var knot = new THREE.Mesh(
+<pre class="brush: js">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new MeshNormalMaterial({}));
 
@@ -61,7 +61,7 @@ var knotBSphere = new Sphere(
 
 <p>Unfortunately, there is no equivalent of <code>Box3.setFromObject</code> for Sphere instances. So if we apply transformations or change the position of the <code>Mesh</code>, we need to manually update the bounding sphere. For instance:</p>
 
-<pre class="brush: js notranslate">knot.scale.set(2, 2, 2);
+<pre class="brush: js">knot.scale.set(2, 2, 2);
 knotBSphere.radius = knot.geometry.radius * 2;
 </pre>
 
@@ -71,14 +71,14 @@ knotBSphere.radius = knot.geometry.radius * 2;
 
 <p>Both <code>Box3</code> and <code>Sphere</code> have a <strong><code>containsPoint</code></strong> method to do this test.</p>
 
-<pre class="brush: js notranslate">var point = new THREE.Vector3(2, 4, 7);
+<pre class="brush: js">var point = new THREE.Vector3(2, 4, 7);
 knotBBox.containsPoint(point);</pre>
 
 <h4 id="Box3_vs._Box3"><code>Box3</code> vs. <code>Box3</code></h4>
 
 <p>The <strong><code>Box3.intersectsBox</code></strong> method is available for performing this test.</p>
 
-<pre class="brush: js notranslate">knotBbox.intersectsBox(otherBox);</pre>
+<pre class="brush: js">knotBbox.intersectsBox(otherBox);</pre>
 
 <div class="note">
 <p><strong>Note</strong>: This is different from the <code>Box3.containsBox</code> method, which checks whether the Box3 <em>fully</em> wraps another one.</p>
@@ -88,13 +88,13 @@ knotBBox.containsPoint(point);</pre>
 
 <p>In a similar fashion as before, there is a <code><strong>Sphere.intersectsSphere</strong></code> method to perform this test.</p>
 
-<pre class="brush: js notranslate">knotBSphere.intersectsSphere(otherSphere);</pre>
+<pre class="brush: js">knotBSphere.intersectsSphere(otherSphere);</pre>
 
 <h4 id="Sphere_vs._Box3"><code>Sphere</code> vs. <code>Box3</code></h4>
 
 <p>Unfortunately this test is not implemented in Three.js, but we can patch Sphere to implement a <a href="/en-US/docs/Games/Techniques/3D_collision_detection">Sphere vs. AABB intersection</a> algorithm.</p>
 
-<pre class="brush: js notranslate">// expand THREE.js Sphere to support collision tests vs Box3
+<pre class="brush: js">// expand THREE.js Sphere to support collision tests vs Box3
 // we are creating a vector outside the method scope to
 // avoid spawning a new instance of Vector3 on every check
 
@@ -124,9 +124,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <p>As an alternative to using raw <code>Box3</code> and <code>Sphere</code> objects, Three.js has a useful object to make handling <strong>bounding boxes easier: <code><a href="https://threejs.org/docs/#api/helpers/BoxHelper">BoxHelper</a></code></strong> (previously <code>BoundingBoxHelper</code>, which has been deprecated). This helper takes a <code>Mesh</code> and calculates a bounding box volume for it (including its child meshes). This results in a new box <code>Mesh</code> representing the bounding box, which shows the bounding box's shape, and can passed to the previously seen <code>setFromObject</code> method in order to have a bounding box matching the <code>Mesh</code>.</p>
 
-<div>
 <p><code>BoxHelper</code> is the <strong>recommended</strong> way to handle 3D collisions with bounding volumes in Three.js. You will miss sphere tests, but the tradeoffs are well worth it.</p>
-</div>
 
 <p>The advantages of using this helper are:</p>
 
@@ -140,7 +138,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 
 <p>To use it, we need to create a new <code>BoxHelper</code> instance and supply the geometry and — optionally — a color that will be used for the wireframe material. We also need to add the newly created object to the <code>three.js</code> scene in order to render it. We assume our scene variable to be called <code>scene</code>.</p>
 
-<pre class="brush: js notranslate">var knot = new THREE.Mesh(
+<pre class="brush: js">var knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
   new THREE.MeshNormalMaterial({})
 );
@@ -149,12 +147,12 @@ scene.add(knotBoxHelper);</pre>
 
 <p>In order to also have our actual <code>Box3</code> bounding box, we create a new <code>Box3</code> object and make it assume the <code>BoxHelper</code>'s shape and position.</p>
 
-<pre class="brush: js notranslate">var box3 = new THREE.Box3();
+<pre class="brush: js">var box3 = new THREE.Box3();
 box3.setFromObject(knotBoxHelper);</pre>
 
 <p>If we change the <code>Mesh</code> position, rotation, scale, etc. we need to call the <code>update()</code> method so the <code>BoxHelper</code> instance matches its linked <code>Mesh</code>. We also need to call <code>setFromObject</code> again in order to make the <code>Box3</code> follow the <code>Mesh</code>.</p>
 
-<pre class="brush: js notranslate">knot.position.set(-3, 2, 1);
+<pre class="brush: js">knot.position.set(-3, 2, 1);
 knot.rotation.x = -Math.PI / 4;
 // update the bounding box so it stills wraps the knot
 knotBoxHelper.update();
@@ -162,7 +160,7 @@ box3.setFromObject(knotBoxHelper);</pre>
 
 <p>Performing <strong>collision tests</strong> is done in the same way as explained in the above section — we use our Box3 object in the same way as described above.</p>
 
-<pre class="brush: js notranslate">// box vs box
+<pre class="brush: js">// box vs box
 box3.intersectsBox(otherBox3);
 // box vs point
 box3.containsPoint(point.position);</pre>

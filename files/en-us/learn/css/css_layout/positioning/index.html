@@ -46,11 +46,11 @@ tags:
 
 <p>To demonstrate this, and get your example set up for future sections, first add a <code>class</code> of <code>positioned</code> to the second {{htmlelement("p")}} in the HTML:</p>
 
-<pre class="brush: html   notranslate">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
 
 <p>Now add the following rule to the bottom of your CSS:</p>
 
-<pre class="brush: css   notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: static;
   background: yellow;
 }</pre>
@@ -65,7 +65,7 @@ tags:
 
 <p>Relative positioning is the first position type we'll take a look at. This is very similar to static positioning, except that once the positioned element has taken its place in the normal layout flow, you can then modify its final position, including making it overlap other elements on the page. Go ahead and update the <code>position</code> declaration in your code:</p>
 
-<pre class="brush: css   notranslate">position: relative;</pre>
+<pre class="brush: css">position: relative;</pre>
 
 <p>If you save and refresh at this stage, you won't see a change in the result at all.  So how do you modify the element's position? You need to use the {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} properties, which we'll explain in the next section.</p>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}} are used alongside {{cssxref("position")}} to specify exactly where to move the positioned element to. To try this out, add the following declarations to the <code>.positioned</code> rule in your CSS:</p>
 
-<pre class="brush: css   notranslate">top: 30px;
+<pre class="brush: css">top: 30px;
 left: 30px;</pre>
 
 <div class="note">
@@ -83,7 +83,7 @@ left: 30px;</pre>
 <p>If you now save and refresh, you'll get a result something like this:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Relative positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -93,7 +93,7 @@ left: 30px;</pre>
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -130,12 +130,13 @@ span {
 
 <p>Absolute positioning brings very different results. Let's try changing the position declaration in your code as follows:</p>
 
-<pre class="brush: css   notranslate">position: absolute;</pre>
+<pre class="brush: css">position: absolute;</pre>
 
 <p>If you now save and refresh, you should see something like so:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<h3 id="hidden_abspos_code">hidden abspos code</h3>
+<pre class="brush: html">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -145,7 +146,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -170,7 +171,7 @@ span {
 }</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Absolute_positioning', '100%', 420) }}</p>
+<p>{{ EmbedLiveSample('hidden_abspos_code', '100%', 450) }}</p>
 
 <p>First of all, note that the gap where the positioned element should be in the document flow is no longer there — the first and third elements have closed together like it no longer exists! Well, in a way, this is true. An absolutely positioned element no longer exists in the normal document layout flow. Instead, it sits on its own layer separate from everything else. This is very useful: it means that we can create isolated UI features that don't interfere with the layout of other elements on the page.  For example, popup information boxes and control menus; rollover panels; UI features that can be dragged and dropped anywhere on the page; and so on...</p>
 
@@ -196,12 +197,12 @@ span {
 
 <p>The positioned element is nested inside the {{htmlelement("body")}} in the HTML source, but in the final layout, it is 30px away from the top and left of the edge of the page. We can change the <strong>positioning context</strong> — which element the absolutely positioned element is positioned relative to. This is done by setting positioning on one of the element's ancestors — to one of the elements it is nested inside (you can't position it relative to an element it is not nested inside). To demonstrate this, add the following declaration to your <code>body</code> rule:</p>
 
-<pre class="brush: css   notranslate">position: relative;</pre>
+<pre class="brush: css">position: relative;</pre>
 
 <p>This should give the following result:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Positioning context&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positioning context&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -211,7 +212,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -251,7 +252,7 @@ span {
 
 <p>Try adding the following to your CSS, to make the first paragraph absolutely positioned too:</p>
 
-<pre class="brush: css   notranslate">p:nth-of-type(1) {
+<pre class="brush: css">p:nth-of-type(1) {
   position: absolute;
   background: lime;
   top: 10px;
@@ -266,12 +267,12 @@ span {
 
 <p>To change the stacking order, try adding the following declaration to your <code>p:nth-of-type(1)</code> rule:</p>
 
-<pre class="brush: css   notranslate">z-index: 1;</pre>
+<pre class="brush: css">z-index: 1;</pre>
 
 <p>You should now see the finished example, with the lime paragraph on top:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;z-index&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;z-index&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -281,7 +282,7 @@ span {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
   position: relative;
@@ -326,13 +327,13 @@ p:nth-of-type(1) {
 
 <h2 id="Fixed_positioning">Fixed positioning</h2>
 
-<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ascendants is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
+<p>Let's now look at fixed positioning. This works in exactly the same way as absolute positioning, with one key difference: whereas absolute positioning fixes an element in place relative to its nearest positioned ancestor (the initial containing block if there isn't one),<strong> fixed positioning</strong> <em>usually</em> fixes an element in place relative to the visible portion of the viewport, except if one of its ancestors is a fixed containing block due to its <a href="/en-US/docs/Web/CSS/transform">transform property</a> being different from none. This means that you can create useful UI items that are fixed in place, like persisting navigation menus that are always visible no matter how much the page scrolls.</p>
 
 <p>Let's put together a simple example to show what we mean. First of all, delete the existing <code>p:nth-of-type(1)</code> and <code>.positioned</code> rules from your CSS.</p>
 
 <p>Now, update the <code>body</code> rule to remove the <code>position: relative;</code> declaration and add a fixed height, like so:</p>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -340,7 +341,7 @@ p:nth-of-type(1) {
 
 <p>Now we're going to give the {{htmlelement("h1")}} element <code>position: fixed;</code>, and get it to sit at the top of the viewport. Add the following rule to your CSS:</p>
 
-<pre class="brush: css   notranslate">h1 {
+<pre class="brush: css">h1 {
   position: fixed;
   top: 0;
   width: 500px;
@@ -353,14 +354,14 @@ p:nth-of-type(1) {
 
 <p>If you save and refresh now, you'll see a fun little effect whereby the heading stays fixed, and the content appears to scroll up and disappear underneath it. But we could improve this more — at the moment some of the content starts off underneath the heading. This is because the positioned heading no longer appears in the document flow, so the rest of the content moves up to the top. We need to move it all down a bit; we can do this by setting some top margin on the first paragraph. Add this now:</p>
 
-<pre class="brush: css   notranslate">p:nth-of-type(1) {
+<pre class="brush: css">p:nth-of-type(1) {
   margin-top: 60px;
 }</pre>
 
 <p>You should now see the finished example:</p>
 
 <div class="hidden">
-<pre class="brush: html   notranslate">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
 
@@ -370,7 +371,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -415,7 +416,7 @@ p:nth-of-type(1) {
 <div class="hidden">
 <h6 id="Sticky_positioning_example">Sticky positioning example</h6>
 
-<pre class="brush: html   notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -425,7 +426,7 @@ p:nth-of-type(1) {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -439,7 +440,7 @@ p:nth-of-type(1) {
 }</pre>
 </div>
 
-<pre class="brush: css   notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
@@ -450,7 +451,7 @@ p:nth-of-type(1) {
 
 <p>An interesting and common use of <code>position: sticky</code> is to create a scrolling index page where different headings stick to the top of the page as they reach it. The markup for such an example might look like so:</p>
 
-<pre class="brush: html   notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
@@ -483,7 +484,7 @@ p:nth-of-type(1) {
 
 <p>The CSS might look as follows. In normal flow the {{htmlelement("dt")}} elements will scroll with the content. When we add <code>position: sticky</code> to the {{htmlelement("dt")}} element, along with a {{cssxref("top")}} value of 0, supporting browsers will stick the headings to the top of the viewport as they reach that position. Each subsequent header will then replace the previous one as it scrolls up to that position.</p>
 
-<pre class="brush: css   notranslate">dt {
+<pre class="brush: css">dt {
   background-color: black;
   color: white;
   padding: 10px;
@@ -496,7 +497,7 @@ p:nth-of-type(1) {
 
 <div id="Sticky_2">
 <div class="hidden">
-<pre class="brush: css   notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -513,7 +514,7 @@ dt {
 }
 </pre>
 
-<pre class="brush: html   notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
@@ -548,7 +549,7 @@ dt {
 
 <p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
 
-<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ascendants' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
+<p>Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling mechanism", which is determined by its ancestors' <a href="/en-US/docs/Web/CSS/position">position</a> property.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can see this example live at <code><a href="https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>).</p>

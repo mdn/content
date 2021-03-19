@@ -15,7 +15,7 @@ tags:
 
 <p>Events can be created with the <a href="/en-US/docs/Web/API/Event"><code>Event</code></a> constructor as follows:</p>
 
-<pre class="brush: js notranslate">const event = new Event('build');
+<pre class="brush: js">const event = new Event('build');
 
 // Listen for the event.
 elem.addEventListener('build', function (e) { /* ... */ }, false);
@@ -32,11 +32,11 @@ elem.dispatchEvent(event);</pre>
 <p>To add more data to the event object, the <a href="/en-US/docs/Web/API/CustomEvent">CustomEvent</a> interface exists and the <u><strong>detail</strong></u> property can be used to pass custom data.<br>
  <span style="line-height: 1.5;">For example, the event could be created as follows:</span></p>
 
-<pre class="brush: js notranslate">const event = new CustomEvent('build', { detail: elem.dataset.time });</pre>
+<pre class="brush: js">const event = new CustomEvent('build', { detail: elem.dataset.time });</pre>
 
 <p>This will then allow you to access the additional data in the event listener:</p>
 
-<pre class="brush: js notranslate">function eventHandler(e) {
+<pre class="brush: js">function eventHandler(e) {
   console.log('The time is: ' + e.detail);
 }
 </pre>
@@ -45,7 +45,7 @@ elem.dispatchEvent(event);</pre>
 
 <p>The older approach to creating events uses APIs inspired by Java. The following shows an example with {{domxref("document.createEvent()")}}:</p>
 
-<pre class="brush: js notranslate">// Create the event.
+<pre class="brush: js">// Create the event.
 const event = document.createEvent('Event');
 
 // Define that the event name is 'build'.
@@ -65,12 +65,12 @@ elem.dispatchEvent(event);
 
 <p>It is often desirable to trigger an event from a child element, and have an ancestor catch it; optionally, with data:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;textarea&gt;&lt;/textarea&gt;
 &lt;/form&gt;
 </pre>
 
-<pre class="brush: js notranslate">const form = document.querySelector('form');
+<pre class="brush: js">const form = document.querySelector('form');
 const textarea = document.querySelector('textarea');
 
 // Create a new event, allow bubbling, and provide any data you want to pass to the "detail" property
@@ -90,12 +90,12 @@ textarea.addEventListener('input', e =&gt; e.target.dispatchEvent(eventAwesome))
 
 <p>Elements can listen for events that haven't been created yet:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;textarea&gt;&lt;/textarea&gt;
 &lt;/form&gt;
 </pre>
 
-<pre class="brush: js notranslate">const form = document.querySelector('form');
+<pre class="brush: js">const form = document.querySelector('form');
 const textarea = document.querySelector('textarea');
 
 form.addEventListener('awesome', e =&gt; console.log(e.detail.text()));
@@ -109,9 +109,9 @@ textarea.addEventListener('input', function() {
 
 <h2 id="Triggering_built-in_events">Triggering built-in events</h2>
 
-<p>This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. <a class="external" href="https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html">View the example in action.</a></p>
+<p>This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. <a href="https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html">View the example in action.</a></p>
 
-<pre class="brush: js notranslate">function simulateClick() {
+<pre class="brush: js">function simulateClick() {
   const event = new MouseEvent('click', {
     view: window,
     bubbles: true,

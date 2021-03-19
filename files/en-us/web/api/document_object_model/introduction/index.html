@@ -10,6 +10,7 @@ tags:
   - Introduction
   - Tutorial
 ---
+<div>{{DefaultAPISidebar("DOM")}}</div>
 <p><span class="seoSummary">The <strong>Document Object Model</strong> (<strong>DOM</strong>) is the data representation of the objects that comprise the structure and content of a document on the web. In this guide, we'll briefly introduce the DOM.</span> We'll look at how the DOM represents an {{Glossary("HTML")}} or {{Glossary("XML")}} document in memory and how you use APIs to create web content and applications.</p>
 
 <h2 id="What_is_the_DOM">What is the DOM?</h2>
@@ -18,11 +19,11 @@ tags:
 
 <p>A Web page is a document. This document can be either displayed in the browser window or as the HTML source. But it is the same document in both cases. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.</p>
 
-<p>The <a class="external" href="https://www.w3.org/DOM/">W3C DOM</a> and <a class="external" href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
+<p>The <a href="https://www.w3.org/DOM/">W3C DOM</a> and <a href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
 
 <p>For example, the standard DOM specifies that the <code>querySelectorAll</code> method in the code below must return a list of all the <code>&lt;p&gt;</code> elements in the document:</p>
 
-<pre class="brush: js notranslate">const paragraphs = document.querySelectorAll("p");
+<pre class="brush: js">const paragraphs = document.querySelectorAll("p");
 // paragraphs[0] is the first &lt;p&gt; element
 // paragraphs[1] is the second &lt;p&gt; element, etc.
 alert(paragraphs[0].nodeName);
@@ -42,7 +43,7 @@ alert(paragraphs[0].nodeName);
 
 <p>The DOM was designed to be independent of any particular programming language, making the structural representation of the document available from a single, consistent API. Though we focus exclusively on JavaScript in this reference documentation, implementations of the DOM can be built for any language, as this Python example demonstrates:</p>
 
-<pre class="brush: python notranslate"># Python DOM example
+<pre class="brush: python"># Python DOM example
 import xml.dom.minidom as m
 doc = m.parse(r"C:\Projects\Py\chap1.xml")
 doc.nodeName # DOM property of document object
@@ -59,12 +60,12 @@ p_list = doc.getElementsByTagName("para")
 
 <p>This following JavaScript will display an alert when the document is loaded (and when the whole DOM is available for use):</p>
 
-<pre class="brush: html notranslate">&lt;body onload="window.alert('Welcome to my home page!');"&gt;
+<pre class="brush: html">&lt;body onload="window.alert('Welcome to my home page!');"&gt;
 </pre>
 
 <p>Another example. This function creates a new H1 element, adds text to that element, and then adds the <code>H1</code> to the tree for this document:</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
     &lt;script&gt;
        // run this function when the document is loaded
@@ -147,7 +148,7 @@ p_list = doc.getElementsByTagName("para")
 
 <p>When you get a reference to a <code>table</code> object, as in the following example, you routinely use all three of these interfaces interchangeably on the object, perhaps without knowing it.</p>
 
-<pre class="brush: js notranslate">const table = document.getElementById("table");
+<pre class="brush: js">const table = document.getElementById("table");
 const tableAttrs = table.attributes; // Node/Element interface
 for (let i = 0; i &lt; tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
@@ -189,7 +190,7 @@ table.summary = "note: increased border";
 
 <p>You can use this test page or create a similar one to test the DOM interfaces you are interested in and see how they work on the browser platform. You can update the contents of the <code>test()</code> function as needed, create more buttons, or add elements as necessary.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;DOM Tests&lt;/title&gt;
   &lt;script&gt;
@@ -201,20 +202,20 @@ table.summary = "note: increased border";
 &lt;/head&gt;
 &lt;body&gt;
   &lt;div style="margin: .5in; height: 400px;"&gt;
-    &lt;p&gt;&lt;b&gt;&lt;tt&gt;text&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
     &lt;form&gt;
       &lt;select onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="black"&gt;black&lt;/option&gt;
         &lt;option value="red"&gt;red&lt;/option&gt;
       &lt;/select&gt;
-      &lt;p&gt;&lt;b&gt;&lt;tt&gt;bgColor&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;bgColor&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="white"&gt;white&lt;/option&gt;
         &lt;option value="lightgrey"&gt;gray&lt;/option&gt;
       &lt;/select&gt;
-      &lt;p&gt;&lt;b&gt;&lt;tt&gt;link&lt;/tt&gt;&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;link&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="blue"&gt;blue&lt;/option&gt;
@@ -239,14 +240,3 @@ table.summary = "note: increased border";
 <img src="dom_ref_introduction_to_the_dom.gif"></figure>
 
 <p>In this example, the drop-down menus dynamically update such DOM—accessible aspects of the web page as its background color (<code>bgColor</code>), the color of the hyperlinks (<code>aLink</code>), and color of the text (<code>text</code>). However, you design your test pages, testing the interfaces as you read about them is an important part of learning how to use the DOM effectively.</p>
-
-<h2 id="Subnav">Subnav</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
-</ul>
-
-<div>{{DefaultAPISidebar("DOM")}}</div>

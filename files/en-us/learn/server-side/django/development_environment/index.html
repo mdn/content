@@ -129,20 +129,20 @@ tags:
 
 <p>Ubuntu Linux 20.04 LTS includes Python 3.8.5 by default. You can confirm this by running the following command in the bash terminal:</p>
 
-<pre class="brush: bash notranslate"><span style="line-height: 1.5;">python3 -V
+<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
  Python 3.8.5</span>
 </pre>
 
 <p>However, the Python Package Index tool (<em>pip3</em>) you'll need to install packages for Python 3 (including Django) is <strong>not</strong> available by default. You can install <em>pip3</em> in the bash terminal using:</p>
 
-<pre class="brush: bash notranslate">sudo apt install python3-pip
+<pre class="brush: bash">sudo apt install python3-pip
 </pre>
 
 <h3 id="macOS">macOS</h3>
 
 <p>macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the bash terminal:</p>
 
-<pre class="brush: bash notranslate"><span style="line-height: 1.5;">python3 -V
+<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
  </span>-bash: python3: command not found</pre>
 
 <p>You can easily install Python 3 (along with the <em>pip3</em> tool) from<a href="https://www.python.org/"> python.org</a>:</p>
@@ -154,7 +154,7 @@ tags:
    <li>Select the <strong>Download Python 3.8.6</strong> button (the exact version number may differ).
     <div class="notecard note">
       <h4>Note</h4>
-      <p>The version offered may be different. Ensure that the <a href="/en-US/docs/">version you download is supported by Django</a> (if needed, links for getting older versions can be found on the same page).</p>
+      <p>The version offered may be different. Ensure that the version you download is supported by Django (if needed, links for getting older versions can be found on the same page).</p>
     </div>
    </li>
   </ol>
@@ -164,13 +164,13 @@ tags:
 
 <p>You can now confirm successful installation by checking for the <em>Python 3</em> version as shown below:</p>
 
-<pre class="brush: bash notranslate"><span style="line-height: 1.5;">python3 -V
+<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
  Python 3.9.0</span>
 </pre>
 
 <p>You can similarly check that <em>pip3</em> is installed by listing the available packages:</p>
 
-<pre class="brush: bash notranslate">pip3 list</pre>
+<pre class="brush: bash">pip3 list</pre>
 
 <h3 id="Windows_10">Windows 10</h3>
 
@@ -194,13 +194,13 @@ tags:
 
 <p>You can then verify that Python 3 was installed by entering the following text into the command prompt:</p>
 
-<pre class="brush: bash notranslate"><span style="line-height: 1.5;">py -3 -V
+<pre class="brush: bash"><span style="line-height: 1.5;">py -3 -V
  Python 3.8.6</span>
 </pre>
 
 <p>The Windows installer incorporates <em>pip3</em> (the Python package manager) by default. You can list installed packages as shown:</p>
 
-<pre class="brush: bash notranslate"><span style="line-height: 1.5;">pip3 list</span>
+<pre class="brush: bash"><span style="line-height: 1.5;">pip3 list</span>
 </pre>
 
 <div class="notecard note">
@@ -220,11 +220,11 @@ tags:
 
 <p>Install the tool using <em>pip3</em>:</p>
 
-<pre class="brush: bash notranslate">sudo pip3 install virtualenvwrapper</pre>
+<pre class="brush: bash">sudo pip3 install virtualenvwrapper</pre>
 
 <p>Then add the following lines to the end of your shell startup file (this is a hidden file name <strong>.bashrc</strong> in your home directory). These set the location where the virtual environments should live, the location of your development project directories, and the location of the script installed with this package:</p>
 
-<pre class="brush: bash notranslate">export WORKON_HOME=$HOME/.virtualenvs
+<pre class="brush: bash">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 export PROJECT_HOME=$HOME/Devel
@@ -240,11 +240,11 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 <p>Then reload the startup file by running the following command in the terminal:</p>
 
-<pre class="brush: bash notranslate">source ~/.bashrc</pre>
+<pre class="brush: bash">source ~/.bashrc</pre>
 
 <p>At this point you should see a bunch of scripts being run as shown below:</p>
 
-<pre class="brush: bash notranslate">virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
+<pre class="brush: bash">virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
@@ -260,11 +260,11 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_detail
 
 <p>Install <em>virtualenvwrapper</em> (and bundling <em>virtualenv</em>) using <em>pip</em> as shown.</p>
 
-<pre class="brush: bash notranslate">sudo pip3 install virtualenvwrapper</pre>
+<pre class="brush: bash">sudo pip3 install virtualenvwrapper</pre>
 
 <p>Then add the following lines to the end of your shell startup file.</p>
 
-<pre class="brush: bash notranslate">export WORKON_HOME=$HOME/.virtualenvs
+<pre class="brush: bash">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh</pre>
@@ -275,7 +275,7 @@ source /usr/local/bin/virtualenvwrapper.sh</pre>
 
   <p>For example, one installation test on macOS ended up with the following lines being necessary in the startup file:</p>
 
-  <pre class="brush: bash notranslate">export WORKON_HOME=$HOME/.virtualenvs
+  <pre class="brush: bash">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3
 export PROJECT_HOME=$HOME/Devel
 source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh</pre>
@@ -291,7 +291,7 @@ source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.s
 
   <p>The commands look something like this:</p>
 
-  <pre class="notranslate"><code>cd ~  # Navigate to my home directory
+  <pre><code>cd ~  # Navigate to my home directory
 ls -la #List the content of the directory. YOu should see .bash_profile
 nano .bash_profile # Open the file in the nano text editor, within the terminal
 # Scroll to the end of the file, and copy in the lines above
@@ -301,7 +301,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Then reload the startup file by making the following call in the terminal:</p>
 
-<pre class="brush: bash notranslate">source ~/.bash_profile</pre>
+<pre class="brush: bash">source ~/.bash_profile</pre>
 
 <p>At this point, you may see a bunch of scripts being run (the same scripts as for the Ubuntu installation). You should now be able to create a new virtual environment with the <code>mkvirtualenv</code> command.</p>
 
@@ -309,7 +309,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Installing <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> is even simpler than setting up <em>virtualenvwrapper</em> because you don't need to configure where the tool stores virtual environment information (there is a default value). All you need to do is run the following command in the command prompt:</p>
 
-<pre class="notranslate"><code>pip3 install virtualenvwrapper-win</code></pre>
+<pre><code>pip3 install virtualenvwrapper-win</code></pre>
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command</p>
 
@@ -319,7 +319,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>Now you can create a new virtual environment with the <code>mkvirtualenv</code> command. As this command runs you'll see the environment being set up (what you see is slightly platform-specific). When the command completes the new virtual environment will be active — you can see this because the start of the prompt will be the name of the environment in brackets (below we show this for Ubuntu, but the final line is similar for Windows/macOS).</p>
 
-<pre class="notranslate"><code>$ mkvirtualenv my_django_environment
+<pre><code>$ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
 ...
@@ -349,11 +349,11 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 <p>Once you've created a virtual environment, and called <code>workon</code> to enter it, you can use <em>pip3</em> to install Django. </p>
 
-<pre class="brush: bash notranslate">pip3 install django~=3.1</pre>
+<pre class="brush: bash">pip3 install django~=3.1</pre>
 
 <p>You can test that Django is installed by running the following command (this just tests that Python can find the Django module):</p>
 
-<pre class="brush: bash notranslate"># Linux/macOS
+<pre class="brush: bash"># Linux/macOS
 python3 -m django --version
  3.1.2
 
@@ -366,7 +366,7 @@ py -3 -m django --version
   <h4>Note</h4>
   <p>If the above Windows command does not show a django module present, try:</p>
 
-<pre class="brush: bash notranslate">py -m django --version</pre>
+<pre class="brush: bash">py -m django --version</pre>
 
 <p>In Windows <em>Python 3</em> scripts are launched by prefixing the command with <code>py -3</code>, although this can vary depending on your specific installation. Try omitting the <code>-3 </code>modifier if you encounter any problems with commands. In Linux/macOS, the command is <code>python3.</code></p>
 </div>
@@ -380,18 +380,18 @@ py -3 -m django --version
 
 <p>The above test works, but it isn't very much fun. A more interesting test is to create a skeleton project and see it working. To do this, first navigate in your command prompt/terminal to where you want to store your Django apps. Create a folder for your test site and navigate into it.</p>
 
-<pre class="brush: bash notranslate">mkdir django_test
+<pre class="brush: bash">mkdir django_test
 cd django_test
 </pre>
 
 <p>You can then create a new skeleton site called "<em>mytestsite</em>" using the <strong>django-admin</strong> tool as shown. After creating the site you can navigate into the folder where you will find the main script for managing projects, called <strong>manage.py</strong>.</p>
 
-<pre class="brush: bash notranslate">django-admin startproject mytestsite
+<pre class="brush: bash">django-admin startproject mytestsite
 cd mytestsite</pre>
 
 <p>We can run the <em>development web server</em> from within this folder using <strong>manage.py</strong> and the <code>runserver</code> command, as shown.</p>
 
-<pre class="brush: bash notranslate">$ python3 manage.py runserver
+<pre class="brush: bash">$ python3 manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
 

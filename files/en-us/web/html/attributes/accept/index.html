@@ -17,12 +17,12 @@ tags:
 
 <p>For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an <code>&lt;input&gt;</code> like this:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="docpicker"
+<pre class="brush: html">&lt;input type="file" id="docpicker"
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
 
 <p>Whereas if you're accepting a media file, you may want to be include any format of that media type:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="soundFile" accept="audio/*"&gt;
+<pre class="brush: html">&lt;input type="file" id="soundFile" accept="audio/*"&gt;
 &lt;input type="file" id="videoFile" accept="video/*"&gt;
 &lt;input type="file" id="imageFile" accept="image/*"&gt;</pre>
 
@@ -35,7 +35,7 @@ tags:
 <p>When set on a file input type, the native file picker that opens up should only enable selecting files of the correct file type. Most operating systems lighten the files that don't match the criteria and aren't selectable.</p>
 
 <div id="simple_example">
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
 	&lt;label for="soundFile"&gt;Select an audio file:&lt;/label&gt;
 	&lt;input type="file" id="soundFile" accept="audio/*"&gt;
 	&lt;/p&gt;
@@ -67,13 +67,13 @@ tags:
 
 <p>The <code>accept</code> attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
+<pre class="brush: html">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
 
 <h2 id="Using_file_inputs">Using file inputs</h2>
 
 <h3 id="A_basic_example">A basic example</h3>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
  &lt;div&gt;
    &lt;label for="file"&gt;Choose file to upload&lt;/label&gt;
    &lt;input type="file" id="file" name="file" multiple&gt;
@@ -84,7 +84,7 @@ tags:
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }</pre>
 </div>
@@ -116,7 +116,7 @@ tags:
 
 <p>Let's look at a more complete example:</p>
 
-<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
   &lt;div&gt;
     &lt;label for="profile_pic"&gt;Choose file to upload&lt;/label&gt;
     &lt;input type="file" id="profile_pic" name="profile_pic"
@@ -128,7 +128,7 @@ tags:
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }</pre>
 </div>

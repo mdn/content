@@ -46,7 +46,7 @@ tags:
 
 <p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -95,10 +95,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.ServiceWorker")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

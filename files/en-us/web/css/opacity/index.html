@@ -6,7 +6,7 @@ tags:
   - CSS Property
   - Opacity
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>If you <a href="http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app">do not want to apply opacity to child elements</a>, use the {{cssxref("background")}} property instead. For example:</p>
 
-<pre class="brush:css notranslate">background: rgba(0, 0, 0, 0.4);</pre>
+<pre class="brush:css">background: rgba(0, 0, 0, 0.4);</pre>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -64,7 +64,7 @@ tags:
 
 <ul>
  <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -74,7 +74,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -82,13 +82,13 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="light"&gt;You can barely see this.&lt;/div&gt;
+<pre class="brush: html">&lt;div class="light"&gt;You can barely see this.&lt;/div&gt;
 &lt;div class="medium"&gt;This is easier to see.&lt;/div&gt;
 &lt;div class="heavy"&gt;This is very easy to see.&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div { background-color: yellow; }
+<pre class="brush: css">div { background-color: yellow; }
 .light {
   opacity: 0.2; /* Barely see the text over the background */
 }
@@ -108,13 +108,13 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;img src="<a href="https://developer.mozilla.org/static/img/opengraph-logo.png">//developer.mozilla.org/static/img/opengraph-logo.png</a>"
+<pre class="brush: html">&lt;img src="<a href="/static/img/opengraph-logo.png">//developer.mozilla.org/static/img/opengraph-logo.png</a>"
   alt="MDN logo" width="128" height="146"
   class="opacity"&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">img.opacity {
+<pre class="brush: css">img.opacity {
   opacity: 1;
   filter: alpha(opacity=100); /* IE8 and lower */
   zoom: 1; /* Triggers "hasLayout" in IE 7 and lower */

@@ -13,11 +13,11 @@ tags:
 ---
 <div>{{APIRef("File System API")}}{{Non-standard_Header}}{{deprecated_header}}</div>
 
-<p class="summsry">In the <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a>, a <code>FileException </code>object represents error conditions that you might encounter while accessing the file system using the synchronous API. It extends the FileException interface described in <a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> and adds several new error codes.</p>
+<p class="summsry">In the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a>, a <code>FileException </code>object represents error conditions that you might encounter while accessing the file system using the synchronous API. It extends the FileException interface described in <a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> and adds several new error codes.</p>
 
 <h2 id="Basic_concepts">Basic concepts</h2>
 
-<p>Synchronous APIs do not have error callbacks, which makes it difficult to catch errors. The added complexity of using <a href="/en-US/docs/DOM/Worker">WebWorkers</a> with this API makes debugging even more challenging. To simplify things a bit, wrap your worker code in a try/catch. When errors occur, forward them to the main app using <code>postMessage()</code> as in the following:</p>
+<p>Synchronous APIs do not have error callbacks, which makes it difficult to catch errors. The added complexity of using <a href="/en-US/docs/Web/API/Worker">WebWorkers</a> with this API makes debugging even more challenging. To simplify things a bit, wrap your worker code in a try/catch. When errors occur, forward them to the main app using <code>postMessage()</code> as in the following:</p>
 
 <pre class="brush: js">function onError(e) {
   postMEssage('ERROR:' + e.toString());
@@ -137,6 +137,6 @@ var fileEntry = fs.root.getFile('log.txt', {create: true, exclusive:true}0;
 
 <p>Specification: {{spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD")}}</p>
 
-<p>Reference: <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
 
-<p>Introduction: <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>

@@ -30,7 +30,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.findIndex(<var>callback</var>[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>typedarray</var>.findIndex(<var>callback</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -92,7 +92,7 @@ tags:
 <p>The following example finds the index of an element in the typed array that is a prime
   number (or returns <code>-1</code> if there is no prime number).</p>
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+<pre class="brush: js">function isPrime(element, index, array) {
   var start = 2;
   while (start &lt;= Math.sqrt(element)) {
     if (element % start++ &lt; 1) {
@@ -111,7 +111,7 @@ console.log(uint16.findIndex(isPrime)); // 2
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
+<pre class="brush: js">TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
         'use strict';
         if (!this) {
           throw new TypeError('Array.prototype.some called on null or undefined');
@@ -163,10 +163,7 @@ console.log(uint16.findIndex(isPrime)); // 2
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.findIndex")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.TypedArray.findIndex")}}</p>
 
 <h2 id="See_also">See also</h2>
 

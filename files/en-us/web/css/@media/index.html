@@ -20,7 +20,7 @@ tags:
 
 <p>The <code>@media</code> at-rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">conditional group at-rule</a>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* At the top level of your code */
+<pre class="brush: css no-line-numbers">/* At the top level of your code */
 @media screen and (min-width: 900px) {
   article {
     padding: 1rem 3rem;
@@ -65,13 +65,13 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Testing_for_print_and_screen_media_types">Testing for print and screen media types</h3>
 
-<pre class="brush: css notranslate">@media print {
+<pre class="brush: css">@media print {
   body { font-size: 10pt; }
 }
 
@@ -93,7 +93,7 @@ tags:
 
 <p>Introduced in Media Queries Level 4 is a new range syntax that allows for less verbose media queries when testing for any feature accepting a range, as shown in the below examples:</p>
 
-<pre class="brush: css notranslate">@media (height &gt; 600px) {
+<pre class="brush: css">@media (height &gt; 600px) {
     body { line-height: 1.4; }
 }
 

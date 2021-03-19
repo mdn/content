@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Using_orientation_to_rotate_an_element">Using orientation to rotate an element</h2>
 
-<p>The easiest way to convert <a href="/en-US/docs/DOM/DeviceOrientationEvent">orientation data</a> to a <a href="/en-US/docs/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values.</p>
+<p>The easiest way to convert <a href="/en-US/docs/Web/API/Window/deviceorientation_event">orientation data</a> to a <a href="/en-US/docs/Web/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values.</p>
 
 <p>It is important to keep in mind, however, that the <a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Device Orientation coordinate system</a> is different from the <a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">CSS coordinate system</a>. Namely, the former is {{interwiki("wikipedia", "Right-hand_rule", "right-handed")}} and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a>. These are some of the practical consequences of these differences:</p>
 
@@ -25,7 +25,7 @@ tags:
 
 <p>Here's a simple code snippet to sum it up:</p>
 
-<pre class="brush: js notranslate">const elem = document.getElementById("view3d");
+<pre class="brush: js">const elem = document.getElementById("view3d");
 
 window.addEventListener("deviceorientation", function(e) {
   elem.style.transform =
@@ -37,7 +37,7 @@ window.addEventListener("deviceorientation", function(e) {
 
 <p>Should you ever need to convert a rotate3d axis-angle to orientation Euler angles, you can use the following algorithm:</p>
 
-<pre class="brush: js notranslate">// convert a rotate3d axis-angle to deviceorientation angles
+<pre class="brush: js">// convert a rotate3d axis-angle to deviceorientation angles
 function orient( aa ) {
     var x = aa.x, y = aa.y, z = aa.z, a = aa.a,
         c = Math.cos( aa.a ),
@@ -81,6 +81,6 @@ function orient( aa ) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
-	<li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
+	<li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
 </ul>

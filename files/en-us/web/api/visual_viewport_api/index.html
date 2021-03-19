@@ -35,16 +35,16 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("VisualViewport")}}</dt>
- <dd>Represents the visual viewport for a given window. A window's <code>VisualViewport</code> object provides information about the viewport's position and size, and receives the {{domxref("VisualViewport.resize_event", "resize")}} and event:VisualViewport:scroll events you can onitor to know when chances occur to the window's viewport.</dd>
+ <dd>Represents the visual viewport for a given window. A window's <code>VisualViewport</code> object provides information about the viewport's position and size, and receives the {{domxref("VisualViewport.resize_event", "resize")}} and {{domxref("VisualViewport.scroll_event", "scroll")}} events you can monitor to know when changes occur to the window's viewport.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
 <p>The code below is based on the sample the specification, though it adds a few things that make it function better. It shows a function called <code>viewportHandler()</code>. When called it queries the <code>offsetLeft</code> and <code>height</code> properties for values it uses in a CSS <code>translate()</code> method. You invoke this function by passing it to <em>both</em> event calls.</p>
 
-<p>One thing that may not be clear in this example is the use of the <code>pendingUpdate</code> flag and the call to <code>requestAnimationFrame()</code>. The <code>pendingUpdate</code> flag serves to prevent multiple invocations of the transfrom that can occur when <code>onresize</code> and <code>onscroll</code> fire at the same time. Using <code>requestAnimationFrame()</code> ensures that the transform ocurrs before the next render.</p>
+<p>One thing that may not be clear in this example is the use of the <code>pendingUpdate</code> flag and the call to <code>requestAnimationFrame()</code>. The <code>pendingUpdate</code> flag serves to prevent multiple invocations of the transfrom that can occur when <code>onresize</code> and <code>onscroll</code> fire at the same time. Using <code>requestAnimationFrame()</code> ensures that the transform occurs before the next render.</p>
 
-<pre class="brush: js notranslate">let pendingUpdate = false;
+<pre class="brush: js">let pendingUpdate = false;
 
 function viewportHandler(event) {
   if (pendingUpdate) return;
@@ -93,9 +93,4 @@ window.visualViewport.addEventListener('resize', viewportHandler);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
 <p>{{Compat("api.VisualViewport")}}</p>
-</div>
-</div>

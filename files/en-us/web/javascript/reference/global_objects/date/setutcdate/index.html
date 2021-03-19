@@ -10,8 +10,9 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>setUTCDate()</code></strong> method sets the day of the month for a
-  specified date according to universal time.</p>
+<p>The <strong><code>setUTCDate()</code></strong> method changes the day of the month of a given {{jsxref("Date")}} instance, based on UTC time.</p>
+
+<p>To instead change the day of the month for a given {{jsxref("Date")}} instance based on local time, use the {{jsxref("Date.prototype.setDate()", "setDate()")}} method.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}</div>
 
@@ -24,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>dateObj</var>.setUTCDate(<var>dayValue</var>)</pre>
+  class="brush: js"><var>dateObj</var>.setUTCDate(<var>dayValue</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,7 +51,7 @@ tags:
 
 <h3 id="Using_setUTCDate">Using setUTCDate()</h3>
 
-<pre class="brush: js notranslate">var theBigDay = new Date();
+<pre class="brush: js">var theBigDay = new Date();
 theBigDay.setUTCDate(20);
 </pre>
 

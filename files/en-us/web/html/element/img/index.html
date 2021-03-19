@@ -101,7 +101,7 @@ tags:
 
 	<dl>
 		<dt><code>anonymous</code></dt>
-		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a class="external" href="https://tools.ietf.org/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
+		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a href="https://datatracker.ietf.org/doc/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
 		<dt><code>use-credentials</code></dt>
 		<dd>The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the <code>Authorization</code> request header). If the server does not opt into sharing credentials with the origin site (by sending back the <code>Access-Control-Allow-Credentials: true</code> response header), then the browser marks the image as tainted and restricts access to its image data.</dd>
 	</dl>
@@ -125,7 +125,7 @@ tags:
 	<dt>{{htmlattrdef("height")}}</dt>
 	<dd>The intrinsic height of the image, in pixels. Must be an integer without a unit.</dd>
 	<dt>{{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}</dt>
-	<dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a class="external" href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a class="external" href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
+	<dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
 	<dt>{{htmlattrdef("ismap")}}</dt>
 	<dd>This Boolean attribute indicates that the image is part of a <a href="https://en.wikipedia.org/wiki/Image_map#Server-side">server-side map</a>. If so, the coordinates where the user clicked on the image are sent to the server.
 	<div class="notecard note">
@@ -133,7 +133,7 @@ tags:
 		<p><strong>Note:</strong> This attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.</p>
 	</div>
 	</dd>
-	<dt>{{htmlattrdef("loading")}}</dt>
+	<dt>{{htmlattrdef("loading")}} {{experimental_inline}}</dt>
 	<dd>Indicates how the browser should load the image:
 	<ul>
 		<li><code>eager</code>: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).</li>
@@ -224,7 +224,7 @@ tags:
 	<dd>A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
 	<div class="notecard note">
 		<h4>Note</h4>
-		<p>This attribute is mentioned in the latest {{glossary("W3C")}} version, <a class="external" href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a class="external" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+		<p>This attribute is mentioned in the latest {{glossary("W3C")}} version, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
 	</div>
 	</dd>
 	<dt>{{htmlattrdef("name")}} {{Obsolete_Inline}}</dt>
@@ -316,11 +316,11 @@ tags:
 <p>When an <code>alt</code> attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.</p>
 
 <ul>
-	<li><a class="external" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
-	<li><a class="external" href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
-	<li><a class="external" href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
+	<li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
+	<li><a href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
+	<li><a href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
-	<li><a class="external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
+	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h3 id="The_title_attribute">The title attribute</h3>
@@ -332,7 +332,7 @@ tags:
 <p>The value of the <code>title</code> attribute is usually presented to the user as a tooltip, which appears shortly after the cursor stops moving over the image. While this <em>can</em> provide additional information to the user, you should not assume that the user will ever see it: the user may only have keyboard or touchscreen. If you have information that's particularly important or valuable for the user, present it inline using one of the methods mentioned above instead of using <code>title</code>.</p>
 
 <ul>
-	<li><a class="external" href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
+	<li><a href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
 </ul>
 
 <h2 id="Technical_summary">Technical summary</h2>

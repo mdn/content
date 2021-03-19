@@ -22,7 +22,7 @@ tags:
 
 <p>The code below is an example of a basic audio implementation using HTML5:</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
   &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
   &lt;!-- fallback for non supporting browsers goes here --&gt;
@@ -58,7 +58,7 @@ tags:
 
 <p>Specifying <code>autoplay</code> will cause the audio to start playing as soon as possible and without any user interaction — in short, the audio will autoplay.</p>
 
-<pre class="brush: html notranslate">&lt;audio autoplay&gt;
+<pre class="brush: html">&lt;audio autoplay&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -70,7 +70,7 @@ tags:
 
 <p>The <code>loop</code> attribute will ensure that upon getting to the end of the audio clip, the audio clip will loop back to the beginning and start playing again.</p>
 
-<pre class="brush: html notranslate">&lt;audio loop&gt;
+<pre class="brush: html">&lt;audio loop&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -78,7 +78,7 @@ tags:
 
 <p>If you want the audio to start muted (no volume), add the <code>muted</code> attribute.</p>
 
-<pre class="brush: html notranslate">&lt;audio muted&gt;
+<pre class="brush: html">&lt;audio muted&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -102,7 +102,7 @@ tags:
 <p><strong>Note</strong>: This value is often ignored on mobile platforms.</p>
 </div>
 
-<pre class="brush: html notranslate">&lt;audio preload="auto"&gt;
+<pre class="brush: html">&lt;audio preload="auto"&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -110,7 +110,7 @@ tags:
 
 <p>We specify the <code>controls</code> attribute when we require the browser to provide us with its default playback controls.</p>
 
-<pre class="brush: html notranslate">&lt;audio controls&gt;
+<pre class="brush: html">&lt;audio controls&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>As mentioned above, you can use the {{ htmlelement("source") }} element to specify one or more source audio files. Alternatively, you can include the <code>src</code> attribute directly on the {{ htmlelement("audio") }} element to specify a single source file.</p>
 
-<pre class="brush: html notranslate">&lt;audio src="audiofile.mp3"&gt;
+<pre class="brush: html">&lt;audio src="audiofile.mp3"&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -126,7 +126,7 @@ tags:
 
 <p>As mentioned above, to be sure that the browser knows what type of file is being specified, it's good practice to specify a <code>type</code> attribute alongside the <code>src</code> attribute. The <code>type</code> attribute specifies the MIME type or Internet Media Type of the file.</p>
 
-<pre class="brush: html notranslate">&lt;audio src="audiofile.mp3" type="audio/mpeg"&gt;
+<pre class="brush: html">&lt;audio src="audiofile.mp3" type="audio/mpeg"&gt;
   ...
 &lt;/audio&gt;</pre>
 
@@ -136,17 +136,17 @@ tags:
  <br>
  Given the following HTML:</p>
 
-<pre class="brush: html notranslate">&lt;audio id="my-audio" src="audiofile.mp3"&gt;
+<pre class="brush: html">&lt;audio id="my-audio" src="audiofile.mp3"&gt;
   ...
 &lt;/audio&gt;</pre>
 
 <p>You can grab the {{htmlelement("audio") }} element like this:</p>
 
-<pre class="brush: js notranslate">var myAudio = document.getElementById('my-audio');</pre>
+<pre class="brush: js">var myAudio = document.getElementById('my-audio');</pre>
 
 <p>Alternatively, you can create a new element. Here's an example of creating an {{ htmlelement("audio") }} element, setting the media to play, playing and pausing, and then playing from 5 seconds into the audio:</p>
 
-<pre class="brush: js notranslate">var myAudio = document.createElement('audio');
+<pre class="brush: js">var myAudio = document.createElement('audio');
 
 if (myAudio.canPlayType('audio/mpeg')) {
   myAudio.setAttribute('src','audiofile.mp3');
@@ -175,13 +175,13 @@ myAudio.play();</pre>
 
 <p>The <code>play()</code> method is used to tell the audio to play. It takes no parameters.</p>
 
-<pre class="brush: js notranslate">myAudio.play();</pre>
+<pre class="brush: js">myAudio.play();</pre>
 
 <h4 id="pause">pause</h4>
 
 <p>The <code>pause()</code> method is used to tell the audio to pause. It takes no parameters.</p>
 
-<pre class="brush: js notranslate">myAudio.pause();</pre>
+<pre class="brush: js">myAudio.pause();</pre>
 
 <div class="note">
 <p><strong>Note</strong>: There is no stop method — to implement a stop function, you'd have to pause the media then set the <code>{{ anch("currentTime") }}</code> property value to 0.</p>
@@ -191,7 +191,7 @@ myAudio.play();</pre>
 
 <p>The <code>canPlayType()</code> method asks the browser whether a certain audio file type is supported. It takes the mime type of the type to check as a parameter.</p>
 
-<pre class="brush: js notranslate">if (myAudio.canPlayType('audio/mpeg')) {
+<pre class="brush: js">if (myAudio.canPlayType('audio/mpeg')) {
   // It's supported.
   // Do something here!
 }</pre>
@@ -216,7 +216,7 @@ myAudio.play();</pre>
 
 <p>The value of <code>currentTime</code> is a number which represents the time in seconds.</p>
 
-<pre class="brush: js notranslate">if (myAudio.currentTime &gt; 5) {
+<pre class="brush: js">if (myAudio.currentTime &gt; 5) {
   myAudio.currentTime = 3;
 }</pre>
 
@@ -224,14 +224,14 @@ myAudio.play();</pre>
 
 <p>The <code>volume</code> property allows us to set the audio volume, as a number between 0 and 1.</p>
 
-<pre class="brush: js notranslate">// set the volume at 50%
+<pre class="brush: js">// set the volume at 50%
 myAudio.volume = 0.5;</pre>
 
 <h2 id="Creating_your_own_custom_audio_player">Creating your own custom audio player</h2>
 
 <p>The JavaScript media API allows you to create your own custom player. Let's take a look at a very minimal example. We can combine HTML and JavaScript to create a very simple player with a play and a pause button. First, we'll set up the audio in the HTML, without the <code>controls</code> attribute, since we are creating our own controls:</p>
 
-<pre class="brush: html notranslate">&lt;audio id="my-audio"&gt;
+<pre class="brush: html">&lt;audio id="my-audio"&gt;
   &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
   &lt;source src="audiofile.ogg" type="audio/ogg"&gt;
   &lt;!-- place fallback here as &lt;audio&gt; supporting browsers will ignore it --&gt;
@@ -244,7 +244,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>Next, we attach some functionality to the player using JavaScript:</p>
 
-<pre class="brush: js notranslate">window.onload = function(){
+<pre class="brush: js">window.onload = function(){
 
   var myAudio = document.getElementById('my-audio');
   var play = document.getElementById('play');
@@ -274,7 +274,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>The <code>loadstart</code> event tells us that load process has started and the browser is connecting to the media.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("loadstart", function() {
+<pre class="brush: js">myAudio.addEventListener("loadstart", function() {
   //grabbing the file
 });</pre>
 
@@ -282,7 +282,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>If you just want to know as soon as the duration of your media is established, this is the event for you. This can be useful because the initial value for duration is <code>NaN</code> (Not a Number), which you probably don't want to display to your users.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("durationchange", function() {
+<pre class="brush: js">myAudio.addEventListener("durationchange", function() {
   //you can display the duration now
 });</pre>
 
@@ -290,7 +290,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>Metadata can consist of more than just duration — if you want to wait for all the metadata to download before doing something, you can detect the <code>loadedmetadata</code> event.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("loadedmetadata", function() {
+<pre class="brush: js">myAudio.addEventListener("loadedmetadata", function() {
   //you can display the duration now
 });</pre>
 
@@ -298,7 +298,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>The <code>loadeddata</code> event is fired when the first bit of media arrives. The playhead is in position but not quite ready to play.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("loadeddata", function() {
+<pre class="brush: js">myAudio.addEventListener("loadeddata", function() {
   //you could display the playhead now
 });</pre>
 
@@ -306,7 +306,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>The <code>progress</code> event indicates that the download of media is still in progress. It is good practice to display some kind of 'loader' at this point.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("progress", function() {
+<pre class="brush: js">myAudio.addEventListener("progress", function() {
   // you could let the user know the media is downloading
 });</pre>
 
@@ -314,7 +314,7 @@ myAudio.volume = 0.5;</pre>
 
 <p><code>canplay</code> is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("canplay", function() {
+<pre class="brush: js">myAudio.addEventListener("canplay", function() {
   //audio is ready to play
 });</pre>
 
@@ -322,7 +322,7 @@ myAudio.volume = 0.5;</pre>
 
 <p><code>canplaythrough</code> is similar to <code>canplay</code> but it lets you know that the media is ready to be played all the way through (that is to say that the file has completely downloaded, or it is estimated that it will download in time so that buffering stops do not occur).</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("canplaythrough", function() {
+<pre class="brush: js">myAudio.addEventListener("canplaythrough", function() {
   //audio is ready to play all the way through
 });</pre>
 
@@ -357,7 +357,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>The <code>timeupdate</code> event is triggered every time the <code>currentTime</code> property changes. In practice, this occurs every 250 milliseconds. This event can be used to trigger the displaying of playback progress.</p>
 
-<pre class="notranslate">myAudio.addEventListener("timeupdate", function() {
+<pre>myAudio.addEventListener("timeupdate", function() {
   //update something related to playback progress
 });</pre>
 
@@ -381,7 +381,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>The <code>ended</code> event is initiated when the end of the media is reached.</p>
 
-<pre class="brush: js notranslate">myAudio.addEventListener("ended", function() {
+<pre class="brush: js">myAudio.addEventListener("ended", function() {
   //do something once audio track has finished playing
 });</pre>
 
@@ -393,7 +393,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>Consider this snippet of HTML:</p>
 
-<pre class="brush: html notranslate">&lt;audio id="my-audio"&gt;
+<pre class="brush: html">&lt;audio id="my-audio"&gt;
   &lt;source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg"&gt;
   &lt;source src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg" type="audio/ogg"&gt;
   &lt;!-- place fallback here as &lt;audio&gt; supporting browsers will ignore it --&gt;
@@ -411,7 +411,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>Styled like so:</p>
 
-<pre class="brush: css notranslate">#controls {
+<pre class="brush: css">#controls {
    width: 80px;
    float: left;
 }
@@ -429,7 +429,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>Now let's wire this thing up with JavaScript:</p>
 
-<pre class="brush: js notranslate">window.onload = function(){
+<pre class="brush: js">window.onload = function(){
 
    var myAudio = document.getElementById('my-audio');
    var play = document.getElementById('play');
@@ -475,10 +475,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>You should end up with something like this:</p>
 
-<p><img alt="A basic audio player with play/pause button and seek bar" src="https://mdn.mozillademos.org/files/7489/simpleplayer.png" style="float: left; height: 55px; width: 422px;"></p>
-
-<p><br>
-   </p>
+<p><img alt="A basic audio player with play/pause button and seek bar" src="simpleplayer.png" style="float: left;"></p>
 
 <h3 id="Seeking_using_the_seek_bar">Seeking using the seek bar</h3>
 
@@ -486,7 +483,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>First of all, we apply a quick update to the progress bar CSS to display the hand pointer on hover:</p>
 
-<pre class="brush: css notranslate">#progress {
+<pre class="brush: css">#progress {
    margin-left: 80px;
    border: 1px solid black;
    cursor: pointer;
@@ -494,7 +491,7 @@ myAudio.volume = 0.5;</pre>
 
 <p>Then we add the code that detects the click and moves the 'playhead' to the correct position:</p>
 
-<pre class="brush: js notranslate">var progress = document.getElementById('progress');
+<pre class="brush: js">var progress = document.getElementById('progress');
 
 progress.addEventListener('click', function(e) {
 
@@ -516,13 +513,13 @@ progress.addEventListener('click', function(e) {
 
 <p>This property lets us know which parts of the audio has been buffered (downloaded in advance). It returns something called a <code>TimeRanges</code> object.</p>
 
-<pre class="brush: js notranslate">myBufferedTimeRanges = myAudio.buffered;</pre>
+<pre class="brush: js">myBufferedTimeRanges = myAudio.buffered;</pre>
 
 <h4 id="seekable">seekable</h4>
 
 <p>The seekable property informs you of whether you can jump directly to that part of the media without further buffering.</p>
 
-<pre class="brush: js notranslate">mySeekableTimeRanges = myAudio.seekable;</pre>
+<pre class="brush: js">mySeekableTimeRanges = myAudio.seekable;</pre>
 
 <h4 id="Buffering_events">Buffering events</h4>
 
@@ -536,7 +533,7 @@ progress.addEventListener('click', function(e) {
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: you can read more on <a href="/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges">Buffering, Seeking and Time Ranges</a> elsewhere.</p>
+<p><strong>Note</strong>: you can read more on <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Buffering, Seeking and Time Ranges</a> elsewhere.</p>
 </div>
 
 <h2 id="Browser_support">Browser support</h2>
@@ -723,17 +720,17 @@ progress.addEventListener('click', function(e) {
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: We are at the stage where nearly all browsers support MP3 — for more details visit this page on <a href="/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility">media format browser compatibility</a>.</p>
+<p><strong>Note</strong>: We are at the stage where nearly all browsers support MP3 — for more details visit this page on <a href="/en-US/docs/Web/Media/Formats#browser_compatibility">media format browser compatibility</a>.</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/Apps/Build/Manipulating_media/buffering_seeking_time_ranges">Buffering, Seeking and Time Ranges</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges">Buffering, Seeking and Time Ranges</a></li>
  <li><a href="/en-US/docs/Web/Guide/Events/Media_events">Media events</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video">Using HTML5 audio and video</a></li>
- <li><a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">Creating a cross-browser video player</a></li>
- <li><a class="external" href="http://jPlayer.org">jPlayer</a>: An open source audio and video library for jQuery and Zepto.</li>
+ <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Using HTML5 audio and video</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a></li>
+ <li><a href="http://jPlayer.org">jPlayer</a>: An open source audio and video library for jQuery and Zepto.</li>
  <li><a href="http://jplayer.org/HTML5.Media.Event.Inspector">Media Event Inspector</a><br>
    </li>
 </ul>

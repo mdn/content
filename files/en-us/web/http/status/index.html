@@ -21,7 +21,7 @@ tags:
  <li><span class="seoSummary">Server errors (<code>500</code>–<code>599</code>)</span></li>
 </ol>
 
-<p>The below status codes are defined by <a href="https://tools.ietf.org/html/rfc2616#section-10">section 10 of RFC 2616</a>. You can find an updated specification in <a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">RFC 7231</a>.</p>
+<p>The below status codes are defined by <a href="https://datatracker.ietf.org/doc/html/rfc2616#section-10">section 10 of RFC 2616</a>. You can find an updated specification in <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1">RFC 7231</a>.</p>
 
 <div class="notecard note">
 <p>If you receive a response that is not in this list, it is a non-standard response, possibly custom to the server's software.</p>
@@ -68,7 +68,7 @@ tags:
  <dd>Conveys information about multiple resources, for situations where multiple status codes might be appropriate.</dd>
  <dt>{{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})</dt>
  <dd>Used inside a <code>&lt;dav:propstat&gt;</code> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.</dd>
- <dt>{{HTTPStatus(226, "226 IM Used")}} (<a href="https://tools.ietf.org/html/rfc3229">HTTP Delta encoding</a>)</dt>
+ <dt>{{HTTPStatus(226, "226 IM Used")}} (<a href="https://datatracker.ietf.org/doc/html/rfc3229">HTTP Delta encoding</a>)</dt>
  <dd>The server has fulfilled a <code>GET</code> request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.</dd>
 </dl>
 
@@ -111,7 +111,7 @@ tags:
  <dt>{{HTTPStatus(405, "405 Method Not Allowed")}}</dt>
  <dd>The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, <code>GET</code> and <code>HEAD</code>, must never be disabled and should not return this error code.</dd>
  <dt>{{HTTPStatus(406, "406 Not Acceptable")}}</dt>
- <dd>This response is sent when the web server, after performing <a href="/en-US/docs/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, doesn't find any content that conforms to the criteria given by the user agent.</dd>
+ <dd>This response is sent when the web server, after performing <a href="/en-US/docs/Web/HTTP/Content_negotiation#server-driven_negotiation">server-driven content negotiation</a>, doesn't find any content that conforms to the criteria given by the user agent.</dd>
  <dt>{{HTTPStatus(407, "407 Proxy Authentication Required")}}</dt>
  <dd>This is similar to 401 but authentication is needed to be done by a proxy.</dd>
  <dt>{{HTTPStatus(408, "408 Request Timeout")}}</dt>
@@ -180,7 +180,7 @@ tags:
  <dt>{{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})</dt>
  <dd>The server detected an infinite loop while processing the request.</dd>
  <dt>{{HTTPStatus(510, "510 Not Extended")}}</dt>
- <dd>Further extensions to the request are required for the server to fulfil it.</dd>
+ <dd>Further extensions to the request are required for the server to fulfill it.</dd>
  <dt>{{HTTPStatus(511, "511 Network Authentication Required")}}</dt>
  <dd>The 511 status code indicates that the client needs to authenticate to gain network access.</dd>
 </dl>

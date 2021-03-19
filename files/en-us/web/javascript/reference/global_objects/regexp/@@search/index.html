@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexp</var>[Symbol.search](<var>str</var>)</pre>
+<pre class="brush: js"><var>regexp</var>[Symbol.search](<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +46,7 @@ tags:
 <p>This method is called internally in {{jsxref("String.prototype.search()")}}. For
   example, the following two examples return the same result.</p>
 
-<pre class="brush: js notranslate">'abc'.search(/a/);
+<pre class="brush: js">'abc'.search(/a/);
 
 /a/[Symbol.search]('abc');</pre>
 
@@ -61,7 +61,7 @@ tags:
   {{jsxref("String.prototype.search()")}}, except the different <code>this</code> and the
   different arguments order.</p>
 
-<pre class="brush: js notranslate">var re = /-/g;
+<pre class="brush: js">var re = /-/g;
 var str = '2016-01-02';
 var result = re[Symbol.search](str);
 console.log(result);  // 4
@@ -72,7 +72,7 @@ console.log(result);  // 4
 <p>Subclass of {{jsxref("RegExp")}} can override <code>[@@search]()</code> method to
   modify the behavior.</p>
 
-<pre class="brush: js notranslate">class MyRegExp extends RegExp {
+<pre class="brush: js">class MyRegExp extends RegExp {
   constructor(str) {
     super(str)
     this.pattern = str;
@@ -106,10 +106,7 @@ console.log(result); // 3
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.RegExp.@@search")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.RegExp.@@search")}}</p>
 
 <h2 id="See_also">See also</h2>
 

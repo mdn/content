@@ -16,7 +16,7 @@ tags:
 
 <p>This only works when used inside CSS placed within a <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a>. Note also that this selector won't select a text node placed into a slot; it only targets actual elements.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any element placed inside a slot */
+<pre class="brush: css no-line-numbers">/* Selects any element placed inside a slot */
 ::slotted(*) {
   font-weight: bold;
 }
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>In this demo we use a simple template with three slots:</p>
 
-<pre class="brush: html notranslate">&lt;template id="person-template"&gt;
+<pre class="brush: html">&lt;template id="person-template"&gt;
   &lt;div&gt;
     &lt;h2&gt;Personal ID Card&lt;/h2&gt;
     &lt;slot name="person-name"&gt;NAME MISSING&lt;/slot&gt;
@@ -52,7 +52,7 @@ tags:
 
 <p>A custom element — <code>&lt;person-details&gt;</code> — is defined like so:</p>
 
-<pre class="brush: js notranslate">customElements.define('person-details',
+<pre class="brush: js">customElements.define('person-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -77,7 +77,7 @@ tags:
 
 <p>The element looks like this when inserted into the page:</p>
 
-<pre class="brush: html notranslate">&lt;person-details&gt;
+<pre class="brush: html">&lt;person-details&gt;
   &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
   &lt;span slot="person-age"&gt;Immortal&lt;/span&gt;
   &lt;span slot="person-occupation"&gt;Superhero&lt;/span&gt;

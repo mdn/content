@@ -121,7 +121,7 @@ tags:
 
 <p>If we assume that the box has the following CSS defining <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, and <code>padding</code>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 350px;
   height: 150px;
   margin: 10px;
@@ -146,13 +146,13 @@ tags:
 
 <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting <code>box-sizing: border-box</code> on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   box-sizing: border-box;
 } </pre>
 
 <p>If you want all of your elements to use the alternative box model, and this is a common choice among developers, set the <code>box-sizing</code> property on the <code>&lt;html&gt;</code> element, then set all other elements to inherit that value, as seen in the snippet below. If you want to understand the thinking behind this, see <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   box-sizing: border-box;
 }
 *, *::before, *::after {
@@ -316,7 +316,7 @@ tags:
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
+<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 

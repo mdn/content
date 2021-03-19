@@ -6,13 +6,15 @@ tags:
   - CSS Grids
   - Guide
 ---
+<div>{{CSSRef}}</div>
+
 <p class="summary">In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. <span class="seoSummary">For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</span></p>
 
 <h2 id="Logical_and_physical_properties_and_values">Logical and physical properties and values</h2>
 
 <p>CSS is full of <strong>physical</strong> positioning keywords – left and right, top and bottom. If we position an item using absolute positioning, we use these physical keywords as offset values to push the item around. In the code snippet below, the item is placed 20 pixels from the top, and 30 pixels from the left of the container:</p>
 
-<pre class="brush:css notranslate">.container {
+<pre class="brush:css">.container {
   position: relative;
 }
 .item {
@@ -22,7 +24,7 @@ tags:
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="item"&gt;Item&lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -67,7 +69,7 @@ tags:
 
 <div id="writing_1">
 <div class="hidden">
-<pre class="brush: css notranslate">.wrapper &gt; p {
+<pre class="brush: css">.wrapper &gt; p {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
@@ -79,7 +81,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;p style="writing-mode: horizontal-tb"&gt;I have writing mode set to the default &lt;code&gt;horizontal-tb&lt;/code&gt;&lt;/p&gt;
   &lt;p style="writing-mode: vertical-rl"&gt;I have writing mode set to &lt;code&gt;vertical-rl&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -96,7 +98,7 @@ tags:
 
 <div id="writing_2">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -114,7 +116,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
@@ -122,7 +124,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;Item 1&lt;/div&gt;
   &lt;div class="item2"&gt;Item 2&lt;/div&gt;
   &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -138,7 +140,7 @@ gap: 10px;
 
 <div id="writing_3">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -156,7 +158,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -165,7 +167,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;Item 1&lt;/div&gt;
   &lt;div class="item2"&gt;Item 2&lt;/div&gt;
   &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -187,7 +189,7 @@ gap: 10px;
 
 <div id="writing_4">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -205,7 +207,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -232,7 +234,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="item1"&gt;Item 1&lt;/div&gt;
   &lt;div class="item2"&gt;Item 2&lt;/div&gt;
   &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -262,7 +264,7 @@ gap: 10px;
 
 <div id="writing_5">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -280,7 +282,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 100px);
@@ -298,7 +300,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
         &lt;div class="item1"&gt;Item 1&lt;/div&gt;
         &lt;div class="item2"&gt;Item 2&lt;/div&gt;
         &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -312,7 +314,7 @@ gap: 10px;
 
 <div id="writing_6">
 <div class="hidden">
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -330,7 +332,7 @@ gap: 10px;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   direction: rtl;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -349,7 +351,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
         &lt;div class="item1"&gt;Item 1&lt;/div&gt;
         &lt;div class="item2"&gt;Item 2&lt;/div&gt;
         &lt;div class="item3"&gt;Item 3&lt;/div&gt;
@@ -390,7 +392,7 @@ gap: 10px;
 <p>In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise <code>ltr</code>. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:</p>
 
 <div id="writing_7">
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr auto;
@@ -411,7 +413,7 @@ gap: 10px;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
         &lt;div class="content"&gt;
             &lt;p&gt;Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.&lt;/p&gt;
             &lt;p&gt;Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.&lt;/p&gt;
@@ -441,65 +443,3 @@ gap: 10px;
 
 <p>The <a href="https://drafts.csswg.org/css-logical-props/">CSS Logical Properties specification</a> means that you can use the <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">logical equivalents</a> for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.</p>
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>

@@ -16,7 +16,7 @@ tags:
 
 <p>Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the <code>&lt;SearchForm&gt;</code> element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.</p>
 
-<p>OpenSearch description files can be advertised as described in <a href="#autodiscovery_of_search_plugins">Autodiscovery of search plugins</a>, and can be installed programmatically as described in <a href="/en/Adding_search_engines_from_web_pages">Adding search engines from web pages</a>.</p>
+<p>OpenSearch description files can be advertised as described in <a href="#autodiscovery_of_search_plugins">Autodiscovery of search plugins</a>, and can be installed programmatically as described in <a href="/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages">Adding search engines from web pages</a>.</p>
 
 <h2 id="OpenSearch_description_file">OpenSearch description file</h2>
 
@@ -48,7 +48,7 @@ tags:
  <dd>
  <p>URI of an icon for the search engine. When possible, include a 16×16 image of type <code>image/x-icon</code> (such as <code>/favicon.ico</code>) and a 64×64 image of type <code>image/jpeg</code> or <code>image/png</code>.</p>
 
- <p>The URI may also use the <a href="/en-US/docs/Web/HTTP/data_URIs"><code>data:</code> URI scheme</a>. (You can generate a <code>data:</code> URI from an icon file at <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.)</p>
+ <p>The URI may also use the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URI scheme</a>. (You can generate a <code>data:</code> URI from an icon file at <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.)</p>
 
  <pre class="brush: xml">&lt;Image height="16" width="16" type="image/x-icon"&gt;https://example.com/favicon.ico&lt;/Image&gt;
   &lt;!-- or --&gt;
@@ -59,7 +59,7 @@ tags:
 
  <div class="note"><strong>Note:</strong> For icons loaded remotely (that is, from <code>https://</code> URIs as opposed to <code>data:</code> URIs), Firefox will reject icons larger than <strong>10 kilobytes</strong>.</div>
 
- <p><img alt="Search suggestions from Google displayed in Firefox's search box" class="internal" src="/@api/deki/files/358/=SearchSuggestionSample.png"></p>
+ <p><img alt="Search suggestions from Google displayed in Firefox's search box" class="internal" src="searchsuggestionsample.png"></p>
  </dd>
  <dt>Url</dt>
  <dd>Describes the URL or URLs to use for the search. The <code>template</code> attribute indicates the base URL for the search query.</dd>
@@ -117,7 +117,7 @@ tags:
 
 <div class="note">
 <p>In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive <em>no</em> indication. <em>In general, behavior varies among browsers</em>.</p>
-<img alt="How search plugin availability is shown in Firefox" src="https://mdn.mozillademos.org/files/16679/new.png" style="height: 164px; width: 885px;"></div>
+<img alt="How search plugin availability is shown in Firefox" src="new.png"></div>
 
 <h2 id="Supporting_automatic_updates_for_OpenSearch_plugins">Supporting automatic updates for OpenSearch plugins</h2>
 
@@ -140,7 +140,7 @@ tags:
  <li>Your server should serve OpenSearch plugins using <code>Content-Type: application/opensearchdescription+xml</code>.</li>
  <li>Be sure that your Search Plugin XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&amp;) in the <code>template</code> URL must be escaped as <code>&amp;amp;</code>, and tags must be closed with a trailing slash or matching end tag.</li>
  <li>The <code>xmlns</code> attribute is important — without it you could get the error message "Firefox could not download the search plugin".</li>
- <li>You <strong>must</strong> include a <code>text/html</code> URL — search plugins including only Atom or <a href="/en/RSS">RSS</a> URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.</li>
+ <li>You <strong>must</strong> include a <code>text/html</code> URL — search plugins including only Atom or <a href="/en-US/docs/Glossary/RSS">RSS</a> URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.</li>
  <li>Remotely fetched favicons must not be larger than 10KB (see {{ Bug(361923) }}).</li>
 </ul>
 

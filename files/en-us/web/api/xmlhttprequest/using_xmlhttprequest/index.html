@@ -28,7 +28,7 @@ tags:
   information such as the response body and the <a href="/en-US/docs/Web/HTTP/Status">HTTP
     status</a> of the result.</p>
 
-<pre class="brush: js notranslate">function reqListener () {
+<pre class="brush: js">function reqListener () {
   console.log(this.responseText);
 }
 
@@ -126,7 +126,7 @@ oReq.send();</pre>
   "overrideMimeType()")}} method on the <code>XMLHttpRequest</code> object and is a
   workable solution.</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 oReq.open("GET", url);
 // retrieve data unprocessed as a binary string
 oReq.overrideMimeType("text/plain; charset=x-user-defined");
@@ -142,7 +142,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
   "<code>arraybuffer</code>" to fetch the remote content into a {{jsxref("ArrayBuffer")}}
   object, which stores the raw binary data.</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.onload = function(e) {
   var arraybuffer = oReq.response; // not responseText
@@ -175,7 +175,7 @@ oReq.send();</pre>
   <dd>The transfer is complete; all data is now in the <code>response</code></dd>
 </dl>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.addEventListener("progress", updateProgress);
 oReq.addEventListener("load", transferComplete);
@@ -226,7 +226,7 @@ function transferCanceled(evt) {
   The upload events are fired on the <code>XMLHttpRequest.upload</code> object, as shown
   below:</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.upload.addEventListener("progress", updateProgress);
 oReq.upload.addEventListener("load", transferComplete);
@@ -257,7 +257,7 @@ oReq.open();
 <p>One can also detect all three load-ending conditions (<code>abort</code>,
   <code>load</code>, or <code>error</code>) using the <code>loadend</code> event:</p>
 
-<pre class="brush:js notranslate">req.addEventListener("loadend", loadEnd);
+<pre class="brush:js">req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
   console.log("The transfer finished (although we don't know if it succeeded or not).");
@@ -317,14 +317,14 @@ function loadEnd(e) {
     <p>Method: <code>POST</code>; Encoding type:
       <code>application/x-www-form-urlencoded</code> (default):</p>
 
-    <pre class="brush:plain notranslate">Content-Type: application/x-www-form-urlencoded
+    <pre class="brush:plain">Content-Type: application/x-www-form-urlencoded
 
 foo=bar&amp;baz=The+first+line.%0D%0AThe+second+line.%0D%0A</pre>
   </li>
   <li>
     <p>Method: <code>POST</code>; Encoding type: <code>text/plain</code>:</p>
 
-    <pre class="brush:plain notranslate">Content-Type: text/plain
+    <pre class="brush:plain">Content-Type: text/plain
 
 foo=bar
 baz=The first line.
@@ -335,7 +335,7 @@ The second line.</pre>
       <code><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">multipart/form-data</a></code>:
     </p>
 
-    <pre class="brush:plain notranslate">Content-Type: multipart/form-data; boundary=---------------------------314911788813839
+    <pre class="brush:plain">Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
 -----------------------------314911788813839
 Content-Disposition: form-data; name="foo"
@@ -355,7 +355,7 @@ The second line.
   be added to the URL:</p>
 
 <pre
-  class="brush:plain notranslate">?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</pre>
+  class="brush:plain">?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</pre>
 
 <h4 id="A_little_vanilla_framework">A little vanilla framework</h4>
 
@@ -367,7 +367,7 @@ The second line.
   ways to <em>submit</em>, and to <strong>upload files</strong>:</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: html notranslate">&lt;!doctype html&gt;
+  <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
@@ -630,7 +630,7 @@ var AJAXSubmit = (function () {
   <code>action</code> attribute of these sample forms), and put the following
   <em>minimalistic</em> content:</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
 /* register.php */
 
 header("Content-type: text/plain");
@@ -657,7 +657,7 @@ print_r($_FILES);
 
 <p>The syntax to activate this script is:</p>
 
-<pre class="brush: js notranslate">AJAXSubmit(myForm);</pre>
+<pre class="brush: js">AJAXSubmit(myForm);</pre>
 
 <div class="note"><strong>Note:</strong> This framework uses the {{domxref("FileReader")}}
   API to transmit file uploads. This is a recent API and is not implemented in IE9 or
@@ -697,7 +697,7 @@ print_r($_FILES);
     <code>FormData</code> API</strong>. Note the brevity of the code:</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: html notranslate">&lt;!doctype html&gt;
+  <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" charset="UTF-8" /&gt;
@@ -832,7 +832,7 @@ function AJAXSubmit (oFormElement) {
 
 <h2 id="Get_last_modified_date">Get last modified date</h2>
 
-<pre class="brush: js notranslate">function getHeaderTime () {
+<pre class="brush: js">function getHeaderTime () {
   console.log(this.getResponseHeader("Last-Modified"));  /* A valid GMTString date or null */
 }
 
@@ -846,7 +846,7 @@ oReq.send();</pre>
 
 <p>Let's create two functions:</p>
 
-<pre class="brush: js notranslate">function getHeaderTime () {
+<pre class="brush: js">function getHeaderTime () {
   var nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath));
   var nLastModif = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -867,7 +867,7 @@ function ifHasChanged(sURL, fCallback) {
 
 <p>And to test:</p>
 
-<pre class="brush: js notranslate">/* Let's test the file "yourpage.html"... */
+<pre class="brush: js">/* Let's test the file "yourpage.html"... */
 
 ifHasChanged("yourpage.html", function (nModif, nVisit) {
   console.log("The page '" + this.filepath + "' has been changed on " + (new Date(nModif)).toLocaleString() + "!");
@@ -889,7 +889,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 <p>A cross-browser compatible approach to bypassing the cache is appending a timestamp to
   the URL, being sure to include a "?" or "&amp;" as appropriate. For example:</p>
 
-<pre class="brush:plain notranslate">http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
+<pre class="brush:plain">http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
 http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;12345
 </pre>
 
@@ -898,7 +898,7 @@ http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;
 
 <p>You can automatically adjust URLs using the following code:</p>
 
-<pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush:js">var oReq = new XMLHttpRequest();
 
 oReq.open("GET", url + ((/\?/).test(url) ? "&amp;" : "?") + (new Date()).getTime());
 oReq.send(null);</pre>

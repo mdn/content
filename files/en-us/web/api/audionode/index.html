@@ -45,7 +45,7 @@ tags:
 
 <p>There are two ways to create an <code>AudioNode</code>: via the <em>constructor</em> and via the <em>factory method</em>.</p>
 
-<pre class="brush: js; notranslate">// constructor
+<pre class="brush: js;">// constructor
 const analyserNode = new AnalyserNode(audioCtx, {
   fftSize: 2048,
   maxDecibels: -25,
@@ -105,7 +105,7 @@ analyserNode.smoothingTimeConstant = 0.5;</pre>
 
 <p>This simple snippet of code shows the creation of some audio nodes, and how the <code>AudioNode</code> properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
 
-<pre class="brush: js; notranslate">const audioCtx = new AudioContext();
+<pre class="brush: js;">const audioCtx = new AudioContext();
 
 const oscillator = new OscillatorNode(audioCtx);
 const gainNode = new GainNode(audioCtx);
@@ -136,10 +136,7 @@ oscillator.channelCount;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

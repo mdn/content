@@ -36,7 +36,7 @@ tags:
  </ul>
  </dd>
  <dt><code>cipherSuite</code> {{optional_inline}}</dt>
- <dd><code>String</code>. Cipher suite used for the connection, formatted as per the <a href="https://tools.ietf.org/html/rfc5246#appendix-A.5">TLS specification</a>: for example, "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</span></span></span></span>".</dd>
+ <dd><code>String</code>. Cipher suite used for the connection, formatted as per the <a href="https://datatracker.ietf.org/doc/html/rfc5246#appendix-A.5">TLS specification</a>: for example, "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</span></span></span></span>".</dd>
  <dt><code>errorMessage</code> {{optional_inline}}</dt>
  <dd>
  <p><code>String</code>. If there was a problem with the TLS handshake (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then <code>status</code> will be "broken" and the <code>errorMessage</code> property will contain a string describing the error, taken from Firefox's internal list of error codes.</p>

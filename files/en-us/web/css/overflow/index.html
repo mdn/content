@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 overflow: visible;
 overflow: hidden;
 overflow: clip;
@@ -81,7 +81,7 @@ overflow: unset;
 
 <p>Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.</p>
 
-<p>Specifying a value other than <code>visible</code> (the default) creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
+<p>Specifying a value other than <code>visible</code> (the default) or <code>clip</code> creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
 
 <p>In order for <code>overflow</code> to have an effect, the block-level container must have either a set height (<code>height</code> or <code>max-height</code>) or <code>white-space</code> set to <code>nowrap</code>.</p>
 
@@ -95,13 +95,13 @@ overflow: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_different_overflow_values_for_text">Setting different overflow values for text</h3>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   width: 12em;
   height: 6em;
   border: dotted;
@@ -112,19 +112,19 @@ overflow: unset;
 <p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="brush: css notranslate">p { overflow: hidden; /* no scrollbars are provided */ }
+<pre class="brush: css">p { overflow: hidden; /* no scrollbars are provided */ }
 </pre>
 
 <p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="brush: css notranslate">p { overflow: scroll; /* always show scrollbars */ }
+<pre class="brush: css">p { overflow: scroll; /* always show scrollbars */ }
 </pre>
 
 <p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<pre class="brush: css notranslate">p { overflow: auto; /* append scrollbars if necessary */ }
+<pre class="brush: css">p { overflow: auto; /* append scrollbars if necessary */ }
 </pre>
 
 <p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>

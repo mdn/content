@@ -2,18 +2,18 @@
 title: XRInputSource.gripSpace
 slug: Web/API/XRInputSource/gripSpace
 tags:
-- API
-- AR
-- Augmented Reality
-- Experimental
-- Property
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- WebXR Device API
-- XRInputSession
-- gripSpace
+  - API
+  - AR
+  - Augmented Reality
+  - Experimental
+  - Property
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - WebXR Device API
+  - XRInputSession
+  - gripSpace
 ---
 <div>{{securecontext_header}}{{APIRef("WebXR")}}</div>
 
@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>xrSpace</var> = <em>xrInputSource</em>.gripSpace;</pre>
+  class="brush: js">var <var>xrSpace</var> = <em>xrInputSource</em>.gripSpace;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -50,8 +50,7 @@ tags:
 
       <div style="background-color: #FFF;"><img
           alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world."
-          src="https://mdn.mozillademos.org/files/17260/GripSpace-LeftHand-Light.svg"
-          style="width: 100%;"></div>
+          src="gripspace-lefthand-light.svg"></div>
     </figure>
   </div>
 
@@ -63,8 +62,7 @@ tags:
 
       <div style="background-color: #FFF;"><img
           alt="A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world."
-          src="https://mdn.mozillademos.org/files/17261/GripSpace-RightHand-Light.svg"
-          style="width: 100%;"></div>
+          src="gripspace-righthand-light.svg"></div>
     </figure>
   </div>
 </div>
@@ -90,7 +88,7 @@ tags:
   used to render a mesh that represents the position and orieintation of the controller in
   the virtual environment.</p>
 
-<pre class="brush: js notranslate">for (let source in xrSession.inputSources) {
+<pre class="brush: js">for (let source in xrSession.inputSources) {
   if (source.gripSpace) {
     let gripPose = frame.getPose(source.gripSpace, xrRefSpace);
 

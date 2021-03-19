@@ -65,7 +65,7 @@ sensor.start();</pre>
 
 <h3 id="Permissions_Example">Permissions Example</h3>
 
-<p>Using orientation sensors requires requsting permissions for multiple device sensors. Becuase the {{domxref('Permissions')}} uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.</p>
+<p>Using orientation sensors requires requsting permissions for multiple device sensors. Because the {{domxref('Permissions')}} uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.</p>
 
 <pre class="brush: js">const sensor = new AbsoluteOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),

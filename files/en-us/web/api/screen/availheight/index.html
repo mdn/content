@@ -2,12 +2,12 @@
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
 tags:
-- API
-- CSSOM View
-- Property
-- Reference
-- Screen size
-- availHeight
+  - API
+  - CSSOM View
+  - Property
+  - Reference
+  - Screen size
+  - availHeight
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>availHeight</var> = <var>window</var>.screen.availHeight;
+<pre class="brush: js">let <var>availHeight</var> = <var>window</var>.screen.availHeight;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -38,10 +38,9 @@ tags:
   <code>height</code> (the total height of the screen in CSS pixels) minus the heights of
   the Dock and menu bar, as seen in the diagram below.</p>
 
-<p><a href="/files/15243/availHeight-diagram.svg"><img
+<p><a href="/en-US/docs/Web/API/Screen/availHeight/availheight-diagram.svg"><img
       alt="Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents"
-      src="https://mdn.mozillademos.org/files/15243/availHeight-diagram.svg"
-      style="height: 312px; width: 500px;"></a></p>
+      src="availheight-diagram.svg"></a></p>
 
 <h2 id="Example">Example</h2>
 
@@ -53,22 +52,21 @@ tags:
 </p>
 
 <pre
-  class="brush: html; notranslate">let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");</pre>
+  class="brush: html;">let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");</pre>
 
 <p>The Panels window's HTML, in <code>panels.html</code>, has JavaScript code of its own,
   which is executed as soon as the window is created. It doesn't even need to wait for any
   particular event (or any event at all). That code handles resizing the window based on
   the available space:</p>
 
-<pre class="brush: js; notranslate">window.outerHeight = window.screen.availHeight;</pre>
+<pre class="brush: js;">window.outerHeight = window.screen.availHeight;</pre>
 
 <p>The result is something similar to the below. Note the Panels window filling all
   available vertical space at the left of the screen.</p>
 
 <p><a href="https://mdn.mozillademos.org/files/15247/screen-availHeight.png"><img
       alt="Screenshot of the example for Screen.availHeight"
-      src="https://mdn.mozillademos.org/files/15247/screen-availHeight.png"
-      style="height: 338px; width: 600px;"></a></p>
+      src="screen-availheight.png"></a></p>
 
 <p>On a Windows system, this would function similarly, by opening the window and sizing it
   vertically so it uses all available vertical space, leaving room for the taskbar and any

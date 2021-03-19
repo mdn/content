@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">Intl.NumberFormat.prototype.formatToParts(<var>number</var>)</pre>
+	class="brush: js">Intl.NumberFormat.prototype.formatToParts(<var>number</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
 	locale-specific parts. The structure the <code>formatToParts()</code> method returns,
 	looks like this:</p>
 
-<pre class="brush: js notranslate">[
+<pre class="brush: js">[
   { type: "integer", value: "3" },
   { type: "group", value: "." },
   { type: "integer", value: "500" }
@@ -85,7 +85,7 @@ tags:
 <p><code>NumberFormat</code> outputs localized, opaque strings that cannot be manipulated
 	directly:</p>
 
-<pre class="brush: js notranslate">var number = 3500;
+<pre class="brush: js">var number = 3500;
 
 var formatter = new Intl.NumberFormat('de-DE', {
   style: 'currency',
@@ -101,7 +101,7 @@ formatter.format(number);
 	strings produced by <code>NumberFormat</code> formatters by providing you the string
 	in parts:</p>
 
-<pre class="brush: js notranslate">formatter.formatToParts(number);
+<pre class="brush: js">formatter.formatToParts(number);
 
 // return value:
 [
@@ -124,7 +124,7 @@ formatter.format(number);
 		href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template
 		literals</a>, and {{jsxref("Array.prototype.reduce()")}}.</p>
 
-<pre class="brush: js notranslate">var numberString = formatter.formatToParts(number).map(({type, value}) =&gt; {
+<pre class="brush: js">var numberString = formatter.formatToParts(number).map(({type, value}) =&gt; {
   switch (type) {
     case 'currency': return `&lt;strong&gt;${value}&lt;/strong&gt;`;
     default : return value;
@@ -135,7 +135,7 @@ formatter.format(number);
 <p>This will make the currency bold, when using the <code>formatToParts()</code> method.
 </p>
 
-<pre class="brush: js notranslate">console.log(numberString);
+<pre class="brush: js">console.log(numberString);
 // "3.500,00 &lt;strong&gt;€&lt;/strong&gt;"</pre>
 
 <h2 id="Specifications">Specifications</h2>

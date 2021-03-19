@@ -13,7 +13,8 @@ tags:
 <p>Level 2 of the CSS Grid Layout specification includes a <code>subgrid</code> value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does, and gives some use cases and design patterns that are solved by the feature.</p>
 
 <div class="notecard warning">
-<p><strong>Important</strong>: This feature is shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
+  <h4>Important</h4>
+  <p>This feature is shipped in Firefox 71, which is currently the only browser to implement subgrid.</p>
 </div>
 
 <h2 id="Introduction_to_subgrid">Introduction to subgrid</h2>
@@ -72,7 +73,7 @@ tags:
 
 <p>If you inspect this in the Firefox Grid Inspector you can see how the line of the grid is in the correct place down the center of the gap, so when we set the gap to 0, it acts in a similar way to applying a negative margin to an element, giving the space from the gap back to the item.</p>
 
-<p><img alt="The smaller item displays in the gap as row-gap is set to 0 on the subgrid." src="https://mdn.mozillademos.org/files/16628/gap.png" style="height: 928px; width: 1312px;"></p>
+<p><img alt="The smaller item displays in the gap as row-gap is set to 0 on the subgrid." src="gap.png"></p>
 
 <h2 id="Named_grid_lines">Named grid lines</h2>
 
@@ -90,7 +91,7 @@ tags:
 
 <p>Other than needing to take care of items that do not fit in your subgrid, a subgrid acts very similarly to any nested grid; the only difference is that the track sizing of the subgrid is set on the parent grid. As with any nested grid however, the size of content in the subgrid can change the track sizing, assuming a track sizing method is used that allows content to affect the size. In such a case, auto-sized row tracks for example will grow to fit content in the main grid and content in the subgrid.</p>
 
-<p>As the subgrid value acts in much the same way as a regular nested grid, it is easy to switch between the two. For example, if you realise that you need an implicit grid for rows, all you would need to do is remove the <code>subgrid</code> value of <code>grid-template-rows</code> and perhaps give a value for <code>grid-auto-rows</code> to control the implicit track sizing.</p>
+<p>As the subgrid value acts in much the same way as a regular nested grid, it is easy to switch between the two. For example, if you realize that you need an implicit grid for rows, all you would need to do is remove the <code>subgrid</code> value of <code>grid-template-rows</code> and perhaps give a value for <code>grid-auto-rows</code> to control the implicit track sizing.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -106,10 +107,15 @@ tags:
   <tr>
    <td>{{SpecName("CSS Grid 2")}}</td>
    <td>{{Spec2("CSS Grid 2")}}</td>
-   <td>Initial definition of <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Subgrid">subgrids</a>.</td>
+   <td>Initial definition of <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid">subgrids</a>.</td>
   </tr>
  </tbody>
 </table>
+
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("css.properties.grid-template-columns.subgrid")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -118,73 +124,3 @@ tags:
  <li><a href="https://noti.st/rachelandrew/i6gUcF/hello-subgrid">Hello Subgrid!</a> A presentation from CSSConf.eu</li>
 </ul>
 
-<h2 id="Subnav">Subnav</h2>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><strong><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></strong></li>
- <li class="toggle">
-  <details open><summary>Guides</summary>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout">Masonry layout</a></li>
-  </ol>
-  </details>
- </li>
- <li class="toggle">
-  <details open><summary>Properties</summary>
-  <ol>
-   <li><code><a href="/en-US/docs/Web/CSS/align-tracks">align-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/column-gap">column-gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/gap">gap</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid">grid</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></code></li>
-   <li><code><a href="/en-US/docs/Web/CSS/justify-tracks">justify-tracks</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/masonry-auto-flow">masonry-auto-flow</a></code>{{Experimental_Inline}}</li>
-   <li><code><a href="/en-US/docs/Web/CSS/row-gap">row-gap</a></code></li>
-  </ol>
-  </details>
- </li>
- <li class="toggle">
-  <details open><summary>Glossary</summary>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
-  </details>
- </li>
-</ol>
-</section>

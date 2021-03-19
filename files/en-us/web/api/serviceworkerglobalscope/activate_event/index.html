@@ -37,7 +37,7 @@ tags:
 
 <p>The following snippet shows how you could use an <code>activate</code> event handler to upgrade a cache.</p>
 
-<pre class="brush: js notranslate">globalScope.addEventListener('activate', function(event) {
+<pre class="brush: js">globalScope.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(
@@ -51,7 +51,7 @@ tags:
 
 <p>You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property:</p>
 
-<pre class="brush: js notranslate">globalScope.onactivate = function(event) {
+<pre class="brush: js">globalScope.onactivate = function(event) {
   ...
 };</pre>
 

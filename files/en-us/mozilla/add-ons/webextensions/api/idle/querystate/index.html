@@ -46,7 +46,7 @@ tags:
 
 <p>In this simple snippet, we call <code>queryState()</code> and then check if the returned <code>newState</code> is <code>idle</code> or <code>active</code>, logging a message as appropriate. Because we have specified  a <code>detectionIntervalInSeconds</code> of 15, an <code>idle</code> state will only be reported if there has been no user activity for at least 15 seconds</p>
 
-<pre class="notranslate brush: js">function onGot(newState) {
+<pre class="brush: js">function onGot(newState) {
   if (newState === 'idle') {
     console.log('Please come back — we miss you!');
   } else if (newState === 'active') {

@@ -41,7 +41,7 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
-      - uses: technote-space/get-diff-action@v4.0.5
+      - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_content
         with:
           PATTERNS: files/**/*.html
@@ -57,7 +57,7 @@ jobs:
           # this to "*:error" which means the slightest flaw in the build
           # will break the build.
           # See https://github.com/mdn/yari/issues/715
-          export BUILD_FLAW_LEVELS="*:ignore"
+          export BUILD_FLAW_LEVELS="unsafe_html: error, *:ignore"
 
           # Note, it might be interesting to explore building *some*
           # pages in a PR build if the diff doesn't have any index.html
@@ -97,7 +97,7 @@ jobs:
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-      - uses: technote-space/get-diff-action@v4.0.5
+      - uses: technote-space/get-diff-action@v4.0.6
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -111,7 +111,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.0.5
+      - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

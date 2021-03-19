@@ -6,7 +6,7 @@ tags:
   - CSS Box Alignment
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <p>The <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-content</code></strong> property sets the distribution of space between and around content items along a <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>'s cross-axis or a <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">grid</a>'s block axis.</p>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Basic positional alignment */
+<pre class="brush:css no-line-numbers">/* Basic positional alignment */
 /* align-content does not take left and right values */
 align-content: center;     /* Pack items around the center */
 align-content: start;      /* Pack items from the start */
@@ -77,7 +77,7 @@ align-content: unset;
  <dt><code>baseline<br>
  first baseline</code><br>
  <code>last baseline</code></dt>
- <dd><img alt='the baseline is the line upon which most letters "sit" and below which descenders extend.' src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png" style="height: 110px; width: 410px;"></dd>
+ <dd><img alt='the baseline is the line upon which most letters "sit" and below which descenders extend.' src="410px-typography_line_terms.svg.png"></dd>
  <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
  The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
  <dt><code>space-between</code></dt>
@@ -100,13 +100,13 @@ align-content: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[4] notranslate">#container {
+<pre class="brush: css; highlight[4]">#container {
   height:200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
@@ -174,7 +174,7 @@ select {
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div id="container" class="flex"&gt;
+<pre class="brush: html">&lt;div id="container" class="flex"&gt;
   &lt;div id="item1"&gt;1&lt;/div&gt;
   &lt;div id="item2"&gt;2&lt;/div&gt;
   &lt;div id="item3"&gt;3&lt;/div&gt;
@@ -227,7 +227,7 @@ select {
 <div class="hidden">
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var values = document.getElementById('values');
+<pre class="brush: js">var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 

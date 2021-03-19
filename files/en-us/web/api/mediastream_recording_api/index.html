@@ -42,7 +42,7 @@ tags:
  <br>
  Example here, we use an HTML Canvas as source of the {{domxref("MediaStream")}}, and stop recording after 9 seconds.</p>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector("canvas");
+<pre class="brush: js">var canvas = document.querySelector("canvas");
 
 // Optional frames per second argument.
 var stream = canvas.captureStream(25);
@@ -98,7 +98,7 @@ setTimeout(event =&gt; {
 
 <p>In this code snippet, <code>enumerateDevices()</code> is used to examine the available input devices, locate those which are audio input devices, and create {{HTMLElement("option")}} elements that are then added to a {{HTMLElement("select")}} element representing an input source picker.</p>
 
-<pre class="brush: js notranslate">navigator.mediaDevices.enumerateDevices()
+<pre class="brush: js">navigator.mediaDevices.enumerateDevices()
 .then(function(devices) {
   devices.forEach(function(device) {
     let menu = document.getElementById("inputdevices");

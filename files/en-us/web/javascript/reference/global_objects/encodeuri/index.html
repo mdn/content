@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">encodeURI(<var>URI</var>)</pre>
+<pre class="brush: js">encodeURI(<var>URI</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,7 +48,7 @@ tags:
   special meaning:</p>
 
 <pre
-  class="brush: plain notranslate">http://username:password@www.example.com:80/path/to/file.php?foo=316&amp;bar=this+has+spaces#anchor</pre>
+  class="brush: plain">http://username:password@www.example.com:80/path/to/file.php?foo=316&amp;bar=this+has+spaces#anchor</pre>
 
 <p>Hence <code>encodeURI()</code> <strong>does not</strong> encode characters that are
   necessary to formulate a complete URI. Also, <code>encodeURI()</code> <strong>does
@@ -58,7 +58,7 @@ tags:
 
 <p><code>encodeURI()</code> escapes all characters <strong>except</strong>:</p>
 
-<pre class="brush: plain notranslate"><strong>Not Escaped</strong>:
+<pre class="brush: plain"><strong>Not Escaped</strong>:
 
     A-Z a-z 0-9 ; , / ? : @ &amp; = + $ - _ . ! ~ * ' ( ) #<code>
 </code>
@@ -71,7 +71,7 @@ tags:
 <p><code>encodeURI()</code> differs from {{jsxref("encodeURIComponent",
   "encodeURIComponent()")}} as follows:</p>
 
-<pre class="brush: js notranslate">var set1 = ";,/?:@&amp;=+$#"; // Reserved Characters
+<pre class="brush: js">var set1 = ";,/?:@&amp;=+$#"; // Reserved Characters
 var set2 = "-_.!~*'()";   // Unreserved Marks
 var set3 = "ABC abc 123"; // Alphanumeric Characters + Space
 
@@ -96,7 +96,7 @@ console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (the space gets encode
 <p>An {{jsxref("URIError")}} will be thrown if one attempts to encode a surrogate which is
   not part of a high-low pair, e.g.,</p>
 
-<pre class="brush: js notranslate">// high-low pair ok
+<pre class="brush: js">// high-low pair ok
 console.log(encodeURI('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
@@ -108,11 +108,11 @@ console.log(encodeURI('\uDFFF'));</pre>
 <h3 id="Encoding_for_IPv6">Encoding for IPv6</h3>
 
 <p>If one wishes to follow the more recent <a
-    href="https://tools.ietf.org/html/rfc3986">RFC3986</a> for URLs, which makes square
+    href="https://datatracker.ietf.org/doc/html/rfc3986">RFC3986</a> for URLs, which makes square
   brackets reserved (for {{glossary("IPv6")}}) and thus not encoded when forming something
   which could be part of a URL (such as a host), the following code snippet may help:</p>
 
-<pre class="brush: js notranslate">function fixedEncodeURI(str) {
+<pre class="brush: js">function fixedEncodeURI(str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
 }</pre>
 

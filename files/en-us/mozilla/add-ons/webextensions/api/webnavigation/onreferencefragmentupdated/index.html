@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.webNavigation.onReferenceFragmentUpdated.addListener(
+<pre class="brush: js">browser.webNavigation.onReferenceFragmentUpdated.addListener(
   <var>listener</var>,                   // function
   <var>filter</var>                      // optional object
 )
@@ -86,7 +86,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(<var>listener</var>
 
 <p>Logs the target URLs and extra transition information for <code>onReferenceFragmentUpdated</code>, if the target URL's hostname contains "example.com" or starts with "developer".</p>
 
-<pre class="notranslate brush: js">const filter = {
+<pre class="brush: js">const filter = {
   url:
   [
     {hostContains: "example.com"},

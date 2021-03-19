@@ -2,15 +2,15 @@
 title: WindowOrWorkerGlobalScope.fetch()
 slug: Web/API/WindowOrWorkerGlobalScope/fetch
 tags:
-- API
-- Experimental
-- Fetch
-- Fetch API
-- GlobalFetch
-- Method
-- Reference
-- WindowOrWorkerGlobalScope
-- request
+  - API
+  - Experimental
+  - Fetch
+  - Fetch API
+  - GlobalFetch
+  - Method
+  - Reference
+  - WindowOrWorkerGlobalScope
+  - request
 ---
 <p>{{APIRef("Fetch API")}}</p>
 
@@ -34,7 +34,7 @@ tags:
   {{domxref("Response.status")}} properties.</p>
 
 <p>The <code>fetch()</code> method is controlled by the <code>connect-src</code> directive
-  of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a>
+  of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a>
   rather than the directive of the resources it's retrieving.</p>
 
 <div class="note">
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>fetchResponsePromise</var> = fetch(<var>resource</var> [, <var>init</var>])
+<pre class="brush: js">const <var>fetchResponsePromise</var> = fetch(<var>resource</var> [, <var>init</var>])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,11 +53,8 @@ tags:
   <dt><code><var>resource</var></code></dt>
   <dd>This defines the resource that you wish to fetch. This can either be:
     <ul>
-      <li>A {{domxref("USVString")}} containing the direct URL of the resource you want to
-        fetch. Some browsers accept the <code>blob:</code> and <code>data:</code> schemes.
-      </li>
+      <li>A string or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.</li>
       <li>A {{domxref("Request")}} object.</li>
-      <li>A {{domxref("URL")}} object, or any other object with a <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> that provides the URL for the resource you want to fetch.</li>
     </ul>
   </dd>
   <dt><code><var>init</var></code> {{optional_inline}}</dt>
@@ -86,20 +83,28 @@ tags:
       <dd>The mode you want to use for the request, e.g., <code>cors</code>,
         <code>no-cors</code>, or <code>same-origin</code>.</dd>
       <dt><code>credentials</code></dt>
-      <dd>The request credentials you want to use for the request: <code>omit</code>,
-        <code>same-origin</code>, or <code>include</code>. To automatically send cookies
-        for the current domain, this option must be provided. Starting with Chrome 50,
-        this property also takes a {{domxref("FederatedCredential")}} instance or a
-        {{domxref("PasswordCredential")}} instance.</dd>
-      <dt><code>cache</code></dt>
-      <dd>The <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> you want to use
-        for the request.</dd>
+      <dd>
+        <p>Controls what browsers do with credentials (<a href="/en-US/docs/Web/HTTP/Cookies">cookies</a>, <a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a> entries, and TLS client certificates). Must be one of the following strings:</p>
+        <dl>
+          <dt><code>omit</code></dt>
+          <dd>Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).</dd>
+          <dt><code>same-origin</code></dt>
+          <dd>Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.</dd>
+          <dt><code>include</code></dt>
+          <dd>Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
+            <div class="notecard note">
+              <h4>Note</h4>
+              <p>Credentials may be included in simple and "final" cross-origin requests, but should not be included in <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">CORS preflight requests</a>.</p>
+            </div>
+          </dd>
+        </dl>
+      </dd>
 <dt><code>redirect</code></dt>
 <dd>How to handle a <code>redirect</code> response:
     <ul>
         <li><code>follow</code>: Automatically follow redirects. Unless otherwise stated the redirect mode is set to <code>follow</code></li>
         <li><code>error</code>: Abort with an error if a redirect occurs.</li>
-        <li><code>manual</code>: Caller intends to process the response in another context.<br>See <a class="external" href="https://fetch.spec.whatwg.org/#requests">WHATWG fetch standard</a> for more information.</li>
+        <li><code>manual</code>: Caller intends to process the response in another context.<br>See <a href="https://fetch.spec.whatwg.org/#requests">WHATWG fetch standard</a> for more information.</li>
     </ul>
       <dt><code>referrer</code></dt>
       <dd>A {{domxref("USVString")}} specifying the referrer of the request. This can be a
@@ -130,7 +135,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Promise")}} that resolves to a {{domxref("Response")}} object.</p>
+<p>A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -154,7 +159,7 @@ tags:
   handled properly, then create an Object URL of it and display it in an
   {{htmlelement("img")}} element.</p>
 
-<pre class="brush: js notranslate">const myImage = document.querySelector('img');
+<pre class="brush: js">const myImage = document.querySelector('img');
 
 let myRequest = new Request('flowers.jpg');
 
@@ -177,7 +182,7 @@ fetch(myRequest)
     Request init live</a>), we do the same thing except that we pass in an
   <code><var>init</var></code> object when we invoke <code>fetch()</code>:</p>
 
-<pre class="brush: js notranslate">const myImage = document.querySelector('img');
+<pre class="brush: js">const myImage = document.querySelector('img');
 
 let myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -199,12 +204,12 @@ fetch(myRequest, myInit).then(function(response) {
   <code>Request</code> constructor to get the same effect:</p>
 
 <pre
-  class="brush: js notranslate">let myRequest = new Request('flowers.jpg', myInit);</pre>
+  class="brush: js">let myRequest = new Request('flowers.jpg', myInit);</pre>
 
 <p>You can also use an object literal as <code>headers</code> in
   <code><var>init</var></code>.</p>
 
-<pre class="brush: js notranslate">const myInit = {
+<pre class="brush: js">const myInit = {
   method: 'GET',
   headers: {
     'Content-Type': 'image/jpeg'
@@ -255,7 +260,7 @@ let myRequest = new Request('flowers.jpg', myInit);
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
   <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

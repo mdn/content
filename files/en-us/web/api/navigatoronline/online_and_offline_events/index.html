@@ -10,7 +10,7 @@ tags:
   - Offline web applications
   - Web Development
 ---
-<p>Some browsers implement <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> from the <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
+<p>Some browsers implement <a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> from the <a href="https://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
 
 <h2 id="Overview">Overview</h2>
 
@@ -23,7 +23,7 @@ tags:
 
 <p>It is this process that online/offline events help to simplify.</p>
 
-<p>Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
+<p>Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
 
 <h2 id="API">API</h2>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>Here's the JavaScript part:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('load', function() {
+<pre class="brush: js">window.addEventListener('load', function() {
   var status = document.getElementById("status");
   var log = document.getElementById("log");
 
@@ -78,7 +78,7 @@ tags:
 
 <p>A touch of CSS</p>
 
-<pre class="brush: css notranslate">#status {
+<pre class="brush: css">#status {
   position: fixed;
   width: 100%;
   font: bold 1em sans-serif;
@@ -102,7 +102,7 @@ tags:
 
 <p>And the corresponding HTML<span class="comment">XXX When mochitests for this are created, point to those instead and update this example -nickolay</span></p>
 
-<pre class="brush: html notranslate">&lt;div id="status"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div id="status"&gt;&lt;/div&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 &lt;p&gt;This is a test&lt;/p&gt;
 </pre>
@@ -113,13 +113,13 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a class="external" href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
+<p>If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
 
 <h2 id="References">References</h2>
 
 <ul>
- <li><a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
+ <li><a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
  <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">The bug tracking online/offline events implementation in Firefox</a> and a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">follow-up</a></li>
  <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">A simple test case</a></li>
- <li><a class="external" href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>
+ <li><a href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>
 </ul>

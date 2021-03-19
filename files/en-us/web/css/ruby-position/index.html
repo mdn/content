@@ -6,13 +6,13 @@ tags:
   - CSS Property
   - CSS Ruby
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
 <p>The <code><strong>ruby-position</strong></code> CSS property defines the position of a ruby element relatives to its base element. It can be position over the element (<code>over</code>), under it (<code>under</code>), or between the characters, on their right side (<code>inter-character</code>).</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 ruby-position: over;
 ruby-position: under;
 ruby-position: inter-character;
@@ -29,9 +29,9 @@ ruby-position: unset;
 
 <dl>
  <dt><code>over</code></dt>
- <dd><img alt="Over example" src="https://mdn.mozillademos.org/files/10251/Screen%20Shot%202015-03-04%20at%2013.02.20.png" style="height: 31px; width: 77px;">Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.</dd>
+ <dd><img alt="Over example" src="screen_shot_2015-03-04_at_13.02.20.png">Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.</dd>
  <dt><code>under</code></dt>
- <dd><img alt="Under example" src="https://mdn.mozillademos.org/files/10249/Screen%20Shot%202015-03-04%20at%2013.02.07.png" style="height: 34px; width: 78px;">Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.</dd>
+ <dd><img alt="Under example" src="screen_shot_2015-03-04_at_13.02.07.png">Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.</dd>
  <dt><code>inter-character</code></dt>
  <dd>Is a keyword indicating that the ruby has to be placed between the different characters.</dd>
 </dl>
@@ -42,7 +42,7 @@ ruby-position: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -50,14 +50,14 @@ ruby-position: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ruby&gt;
+<pre class="brush: html">&lt;ruby&gt;
   &lt;rb&gt;超電磁砲&lt;/rb&gt;
   &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;レールガン&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
 &lt;/ruby&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">ruby {
+<pre class="brush: css">ruby {
     ruby-position:over;
 }</pre>
 
@@ -69,14 +69,14 @@ ruby-position: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ruby&gt;
+<pre class="brush: html">&lt;ruby&gt;
   &lt;rb&gt;超電磁砲&lt;/rb&gt;
   &lt;rp&gt;（&lt;/rp&gt;&lt;rt&gt;レールガン&lt;/rt&gt;&lt;rp&gt;）&lt;/rp&gt;
 &lt;/ruby&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">ruby {
+<pre class="brush: css">ruby {
     ruby-position:under;
 }</pre>
 

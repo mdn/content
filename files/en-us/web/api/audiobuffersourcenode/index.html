@@ -84,7 +84,7 @@ tags:
 <p>You can also <a class="external external-icon" href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
 </div>
 
-<pre class="brush: js notranslate">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
@@ -135,10 +135,7 @@ source.start();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioBufferSourceNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

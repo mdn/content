@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>obj</var>.toLocaleString()</pre>
+<pre class="brush: js"><var>obj</var>.toLocaleString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -58,7 +58,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">const testArray = [4, 7, 10];
+<pre class="brush: js">const testArray = [4, 7, 10];
 
 let euroPrices = testArray.toLocaleString('fr', { style: 'currency', currency: 'EUR'});
 // "4,00 €,7,00 €,10,00 €"</pre>
@@ -70,7 +70,7 @@ let euroPrices = testArray.toLocaleString('fr', { style: 'currency', currency: '
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">const testDate = new Date(Date.now());
+<pre class="brush: js">const testDate = new Date(Date.now());
 // "Date Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
 
 let deDate = testDate.toLocaleString('de');
@@ -87,7 +87,7 @@ var frDate = testDate.toLocaleString('fr');
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">const testNumber = 2901234564;
+<pre class="brush: js">const testNumber = 2901234564;
 // "2901234564"
 
 let deNumber = testNumber.toLocaleString('de');

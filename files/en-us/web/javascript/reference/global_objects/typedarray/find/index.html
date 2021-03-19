@@ -33,7 +33,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>typedarray</var>.find(<var>callback</var>[, <var>thisArg</var>])</pre>
+  class="brush: js"><var>typedarray</var>.find(<var>callback</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -95,7 +95,7 @@ tags:
 <p>The following example finds an element in the typed array that is a prime number (or
   returns {{jsxref("undefined")}} if there is no prime number).</p>
 
-<pre class="brush: js notranslate">function isPrime(element, index, array) {
+<pre class="brush: js">function isPrime(element, index, array) {
   var start = 2;
   while (start &lt;= Math.sqrt(element)) {
     if (element % start++ &lt; 1) {
@@ -126,10 +126,7 @@ console.log(uint8.find(isPrime)); // 5</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.find")}}</p>
-</div>
+<p>{{Compat("javascript.builtins.TypedArray.find")}}</p>
 
 <h2 id="See_also">See also</h2>
 

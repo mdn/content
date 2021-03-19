@@ -35,7 +35,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>options</var>]);
+  class="brush: js"><var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>options</var>]);
 <var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>]);
 <var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>, <var>wantsUntrusted</var> {{Non-standard_inline}}]); // Gecko/Mozilla only</pre>
 
@@ -70,6 +70,8 @@ tags:
         does call <code>preventDefault()</code>, the user agent will do nothing other than
         generate a console warning. See <a href="#improving_scrolling_performance_with_passive_listeners">Improving scrolling performance with
           passive listeners</a> to learn more.</dd>
+      <dt><code>signal</code></dt>
+      <dd>An {{domxref("AbortSignal")}}. The listener will be removed when the given <code>AbortSignal</code>’s {{domxref("AbortController/abort()", "abort()")}} method is called.</dd>
       <dt>{{non-standard_inline}} <code>mozSystemGroup</code></dt>
       <dd>A {{jsxref("Boolean")}} indicating that the listener should be added to the
         system group. Available only in code running in XBL or in the
@@ -129,7 +131,7 @@ tags:
   {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} might look like this:
 </p>
 
-<pre class="brush: js notranslate">function eventHandler(event) {
+<pre class="brush: js">function eventHandler(event) {
   if (event.type == 'fullscreenchange') {
     /* handle a full screen toggle */
   } else /* fullscreenerror */ {
@@ -154,7 +156,7 @@ tags:
 
 <p>For example, if you want to check for the <code>passive</code> option:</p>
 
-<pre class="brush: js notranslate">let passiveSupported = false;
+<pre class="brush: js">let passiveSupported = false;
 
 try {
   const options = {
@@ -190,7 +192,7 @@ try {
 <p>Then, when you want to create an actual event listener that uses the options in
   question, you can do something like this:</p>
 
-<pre class="brush: js notranslate">someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
+<pre class="brush: js">someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
                                ? { passive: true } : false);</pre>
 
 <p>Here we're adding a listener for the {{domxref("Element/mouseup_event", "mouseup")}}
@@ -218,7 +220,7 @@ try {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table id="outside"&gt;
+<pre class="brush: html">&lt;table id="outside"&gt;
   &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td id="t2"&gt;two&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
@@ -226,7 +228,7 @@ try {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">// Function to change the content of t2
+<pre class="brush: js">// Function to change the content of t2
 function modifyText() {
   const t2 = document.getElementById("t2");
   if (t2.firstChild.nodeValue == "three") {
@@ -249,6 +251,44 @@ el.addEventListener("click", modifyText, false);
 
 <p>{{EmbedLiveSample('Add_a_simple_listener')}}</p>
 
+<h3 id="add_a_abortable_listener">Add an abortable listener</h3>
+
+<p>This example demonstrates how to add an <code>addEventListener()</code> that can be aborted with an {{domxref("AbortSignal")}}.</p>
+
+<h4 id="HTML_5">HTML</h4>
+
+<pre class="brush: html">&lt;table id="outside"&gt;
+  &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td id="t2"&gt;two&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<h4 id="JavaScript_5">JavaScript</h4>
+
+<pre class="brush: js">// Add an abortable event listener to table
+const controller = new AbortController();
+const el = document.getElementById("outside");
+el.addEventListener("click", modifyText, { signal: controller.signal } );
+
+// Function to change the content of t2
+function modifyText() {
+  const t2 = document.getElementById("t2");
+  if (t2.firstChild.nodeValue == "three") {
+    t2.firstChild.nodeValue = "two";
+  } else {
+    t2.firstChild.nodeValue = "three";
+    controller.abort(); // remove listener after value reaches "three"
+  }
+}
+
+</pre>
+
+<p>In the above example just above, we modify the code in the previous example such that after the second row’s content changes to "three", we call <code>abort()</code> from the {{domxref("AbortController")}} we passed to the <code>addEventListener()</code> call. That results in the value remaining as "three" forever — because we no longer have any code listening for a click event.</p>
+
+<h4 id="Result_5">Result</h4>
+
+<p>{{EmbedLiveSample('add_a_abortable_listener')}}</p>
+
 <h3 id="Event_listener_with_anonymous_function">Event listener with anonymous function
 </h3>
 
@@ -257,14 +297,14 @@ el.addEventListener("click", modifyText, false);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table id="outside"&gt;
+<pre class="brush: html">&lt;table id="outside"&gt;
   &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td id="t2"&gt;two&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">// Function to change the content of t2
+<pre class="brush: js">// Function to change the content of t2
 function modifyText(new_text) {
   const t2 = document.getElementById("t2");
   t2.firstChild.nodeValue = new_text;
@@ -290,7 +330,7 @@ el.addEventListener("click", function(){modifyText("four")}, false);
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table id="outside"&gt;
+<pre class="brush: html">&lt;table id="outside"&gt;
   &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td id="t2"&gt;two&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
@@ -298,7 +338,7 @@ el.addEventListener("click", function(){modifyText("four")}, false);
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<pre class="brush: js notranslate">// Function to change the content of t2
+<pre class="brush: js">// Function to change the content of t2
 function modifyText(new_text) {
   const t2 = document.getElementById("t2");
   t2.firstChild.nodeValue = new_text;
@@ -325,7 +365,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);
 
 <h4 id="HTML_4">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
+<pre class="brush: html">&lt;div class="outer"&gt;
   outer, once &amp; none-once
   &lt;div class="middle" target="_blank"&gt;
     middle, capture &amp; none-capture
@@ -341,7 +381,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.outer, .middle, .inner1, .inner2 {
+<pre class="brush: css">.outer, .middle, .inner1, .inner2 {
   display: block;
   width:   520px;
   padding: 15px;
@@ -366,7 +406,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);
 
 <h4 id="JavaScript_4">JavaScript</h4>
 
-<pre class="brush: js notranslate">const outer  = document.querySelector('.outer');
+<pre class="brush: js">const outer  = document.querySelector('.outer');
 const middle = document.querySelector('.middle');
 const inner1 = document.querySelector('.inner1');
 const inner2 = document.querySelector('.inner2');
@@ -486,7 +526,7 @@ function nonePassiveHandler(event) {
   the element. It is the same as the value of the <code>currentTarget</code> property of
   the event argument that is passed to the handler.</p>
 
-<pre class="brush: js notranslate">my_element.addEventListener('click', function (e) {
+<pre class="brush: js">my_element.addEventListener('click', function (e) {
   console.log(this.className)           // logs the className of my_element
   console.log(e.currentTarget === this) // logs `true`
 })
@@ -496,7 +536,7 @@ function nonePassiveHandler(event) {
     href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#no_separate_this">arrow
     functions do not have their own <code>this</code> context</a>.</p>
 
-<pre class="brush: js notranslate">my_element.addEventListener('click', (e) =&gt; {
+<pre class="brush: js">my_element.addEventListener('click', (e) =&gt; {
   console.log(this.className)           // WARNING: `this` is not `my_element`
   console.log(e.currentTarget === this) // logs `false`
 })</pre>
@@ -508,7 +548,7 @@ function nonePassiveHandler(event) {
   occurrence of <code>this</code> within the code represents a reference to the element.
 </p>
 
-<pre class="brush: html notranslate">&lt;table id="my_table" onclick="console.log(this.id);"&gt;&lt;!-- `this` refers to the table; logs 'my_table' --&gt;
+<pre class="brush: html">&lt;table id="my_table" onclick="console.log(this.id);"&gt;&lt;!-- `this` refers to the table; logs 'my_table' --&gt;
   ...
 &lt;/table&gt;
 </pre>
@@ -518,7 +558,7 @@ function nonePassiveHandler(event) {
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">standard rules</a>. This is
   shown in the following example:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   function logID() { console.log(this.id); }
 &lt;/script&gt;
 &lt;table id="my_table" onclick="logID();"&gt;&lt;!-- when called, `this` will refer to the global object --&gt;
@@ -540,7 +580,7 @@ function nonePassiveHandler(event) {
 
 <p>This is an example with and without <code>bind()</code>:</p>
 
-<pre class="brush: js notranslate">const Something = function(element) {
+<pre class="brush: js">const Something = function(element) {
   // |this| is a newly created object
   this.name = 'Something Good';
   this.onclick1 = function(event) {
@@ -558,7 +598,7 @@ const s = new Something(document.body);
 <p>Another solution is using a special function called <code>handleEvent()</code> to catch
   any events:</p>
 
-<pre class="brush: js notranslate">const Something = function(element) {
+<pre class="brush: js">const Something = function(element) {
   // |this| is a newly created object
   this.name = 'Something Good';
   this.handleEvent = function(event) {
@@ -588,7 +628,7 @@ const s = new Something(document.body);
   <code>EventListener</code> a function that calls the method of the object that contains
   the fields that need to be accessed:</p>
 
-<pre class="brush: js notranslate">class SomeClass {
+<pre class="brush: js">class SomeClass {
 
   constructor() {
     this.name = 'Something Good';
@@ -634,7 +674,7 @@ myObject.register();</pre>
   <code>Function.prototype.bind()</code> to pass a value to an event listener via the
   <code>this</code> reference variable.</p>
 
-<pre class="brush: js notranslate">const myButton = document.getElementById('my-button-id');
+<pre class="brush: js">const myButton = document.getElementById('my-button-id');
 const someString = 'Data';
 
 myButton.addEventListener('click', function () {
@@ -660,7 +700,7 @@ myButton.addEventListener('click', function () {
   from outside of an event listener is to make it accessible to the scope in which the
   event listener is declared.</p>
 
-<pre class="brush: js notranslate">const myButton = document.getElementById('my-button-id');
+<pre class="brush: js">const myButton = document.getElementById('my-button-id');
 let someString = 'Data';
 
 myButton.addEventListener('click', function() {
@@ -699,7 +739,7 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
   event listener, and any changes to the data back out after an event handler executes.
   Consider this example.</p>
 
-<pre class="brush: js notranslate">const myButton = document.getElementById('my-button-id');
+<pre class="brush: js">const myButton = document.getElementById('my-button-id');
 const someObject = {aProperty: 'Data'};
 
 myButton.addEventListener('click', function() {
@@ -745,7 +785,7 @@ window.setInterval(function() {
   <code>attachEvent()</code>, rather than the standard
   <code>addEventListener()</code>. For IE, we modify the preceding example to:</p>
 
-<pre class="brush: js notranslate">if (el.addEventListener) {
+<pre class="brush: js">if (el.addEventListener) {
   el.addEventListener('click', modifyText, false);
 } else if (el.attachEvent)  {
   el.attachEvent('onclick', modifyText);
@@ -776,7 +816,7 @@ window.setInterval(function() {
     polyfill only works in standards mode: a doctype declaration is required.</p>
 </div>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
   if (!Event.prototype.preventDefault) {
     Event.prototype.preventDefault=function() {
       this.returnValue=false;
@@ -855,7 +895,7 @@ window.setInterval(function() {
     href="https://www.w3.org/TR/DOM-Level-2-Events">Events</a> specification. Before then,
   event listeners were registered as follows:</p>
 
-<pre class="brush: js notranslate">// Passing a function reference — do not add '()' after it, which would call the function!
+<pre class="brush: js">// Passing a function reference — do not add '()' after it, which would call the function!
 el.onclick = modifyText;
 
 // Using a function expression
@@ -877,7 +917,7 @@ element.onclick = function() {
 
 <h3 id="Memory_issues">Memory issues</h3>
 
-<pre class="brush: js notranslate">const els = document.getElementsByTagName('*');
+<pre class="brush: js">const els = document.getElementsByTagName('*');
 
 // Case 1
 for(let i=0 ; i &lt; els.length; i++){
@@ -920,7 +960,7 @@ for(let i=0 ; i &lt; els.length; i++){
   with each add, the remove-statement from above can still remove a listener, but now only
   the last one added.</p>
 
-<pre class="brush: js notranslate">// For illustration only: Note "MISTAKE" of [j] for [i] thus causing desired events to all attach to SAME element
+<pre class="brush: js">// For illustration only: Note "MISTAKE" of [j] for [i] thus causing desired events to all attach to SAME element
 
 // Case 3
 for(let i=0, j=0 ; i&lt;els.length ; i++){
@@ -960,7 +1000,7 @@ for(let i=0, j=0 ; i&lt;els.length ; i++){
 <p>You can override this behavior by explicitly setting the value of <code>passive</code>
   to <code>false</code>, as shown here:</p>
 
-<pre class="brush: js notranslate">/* Feature detection */
+<pre class="brush: js">/* Feature detection */
 let passiveIfSupported = false;
 
 try {

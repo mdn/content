@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>id</var> = ContentIndexEvent.id;</pre>
+<pre class="brush: js">var <var>id</var> = ContentIndexEvent.id;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -33,7 +33,7 @@ tags:
   {{domxref('ServiceWorkerGlobalScope','global scope')}} of a
   {{domxref('ServiceWorker')}}.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('contentdelete', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache

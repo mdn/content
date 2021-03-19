@@ -12,9 +12,7 @@ tags:
 ---
 <div>{{AddonSidebar()}}</div>
 
-<div>
-<p>An event handler that will be called when the stream is opened and is about to begin delivering data. From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
-</div>
+<p><span class="summary">An event handler that will be called when the stream is opened and is about to begin delivering data.</span> From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -26,7 +24,7 @@ tags:
 
 <p>This example will replace the page content with "replacement text":</p>
 
-<pre class="notranslate brush: js line-numbers  language-js">function listener(details) {
+<pre class="brush: js line-numbers  language-js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = event =&gt; {

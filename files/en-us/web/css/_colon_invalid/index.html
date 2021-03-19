@@ -13,7 +13,7 @@ tags:
 
 <p>The <strong><code>:invalid</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validate</a>.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any invalid &lt;input&gt; */
+<pre class="brush: css no-line-numbers">/* Selects any invalid &lt;input&gt; */
 input:invalid {
   background-color: pink;
 }</pre>
@@ -22,7 +22,7 @@ input:invalid {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -30,7 +30,7 @@ input:invalid {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div class="field"&gt;
     &lt;label for="url_input"&gt;Enter a URL:&lt;/label&gt;
     &lt;input type="url" id="url_input"&gt;
@@ -44,7 +44,7 @@ input:invalid {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">label {
+<pre class="brush: css">label {
   display: block;
   margin: 1px;
   padding: 1px;
@@ -135,10 +135,7 @@ input:required:invalid {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("css.selectors.invalid")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

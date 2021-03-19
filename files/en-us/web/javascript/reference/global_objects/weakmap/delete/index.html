@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>wm</var>.delete(<var>key</var>);</pre>
+<pre class="brush: js"><var>wm</var>.delete(<var>key</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -43,7 +43,7 @@ tags:
 
 <h3 id="Using_the_delete_method">Using the delete() method</h3>
 
-<pre class="brush: js highlight:[4] notranslate">var wm = new WeakMap();
+<pre class="brush: js highlight:[4]">var wm = new WeakMap();
 wm.set(window, 'foo');
 
 wm.delete(window); // Returns true. Successfully removed.

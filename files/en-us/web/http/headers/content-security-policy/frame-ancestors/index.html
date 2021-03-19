@@ -41,7 +41,7 @@ tags:
 
 <p>One or more sources can be set for the <code>frame-ancestors</code> policy:</p>
 
-<pre class="brush: html notranslate">Content-Security-Policy: frame-ancestors &lt;source&gt;;
+<pre class="brush: html">Content-Security-Policy: frame-ancestors &lt;source&gt;;
 Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -71,7 +71,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
  <dd>A scheme such as <code>http:</code> or <code>https:</code>. The colon is required and scheme should not be quoted. You can also specify data schemes (not recommended).
  <ul>
   <li><code>data:</code> Allows <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URIs</a> to be used as a content source.<em> This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.</em></li>
-  <li><code>mediastream:</code> Allows <a href="/en-US/docs/Web/API/MediaStream_API"><code>mediastream:</code> URIs</a> to be used as a content source.</li>
+  <li><code>mediastream:</code> Allows <a href="/en-US/docs/Web/API/Media_Streams_API"><code>mediastream:</code> URIs</a> to be used as a content source.</li>
   <li><code>blob:</code> Allows <a href="/en-US/docs/Web/API/Blob"><code>blob:</code> URIs</a> to be used as a content source.</li>
   <li><code>filesystem:</code> Allows <a href="/en-US/docs/Web/API/FileSystem"><code>filesystem:</code> URIs</a> to be used as a content source.</li>
  </ul>
@@ -84,7 +84,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: frame-ancestors 'none';
+<pre class="brush: bash">Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;</pre>
 

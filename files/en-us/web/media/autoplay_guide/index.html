@@ -29,11 +29,11 @@ tags:
 
 <p>That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:</p>
 
-<pre class="brush: html notranslate">&lt;audio src="/music.mp4" autoplay&gt;</pre>
+<pre class="brush: html">&lt;audio src="/music.mp4" autoplay&gt;</pre>
 
 <p>and</p>
 
-<pre class="brush: js notranslate">audioElement.play();</pre>
+<pre class="brush: js">audioElement.play();</pre>
 
 <p>The following web features and APIs may be affected by autoplay blocking:</p>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>An {{HTMLElement("audio")}} element using the <code>autoplay</code> attribute might look like this:</p>
 
-<pre class="brush: html notranslate">&lt;audio id="musicplayer" autoplay&gt;
+<pre class="brush: html">&lt;audio id="musicplayer" autoplay&gt;
   &lt;source src="/music/chapter1.mp4"&gt;
 &lt;/audio&gt;
 </pre>
@@ -96,13 +96,13 @@ tags:
 
 <p>Consider this HTML for a media element:</p>
 
-<pre class="brush: html notranslate">&lt;video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)"&gt;</pre>
+<pre class="brush: html">&lt;video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)"&gt;</pre>
 
 <p>Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called <code>handleFirstPlay()</code>, which receives as input the <code>play</code> event.</p>
 
 <p><code>handleFirstPlay()</code> looks like this:</p>
 
-<pre class="brush: js notranslate">function handleFirstPlay(event) {
+<pre class="brush: js">function handleFirstPlay(event) {
   let vid = event.target;
 
   vid.onplay = null;
@@ -130,7 +130,7 @@ tags:
 
 <p>This simple example plays the first {{HTMLElement("video")}} element found in the document. <code>play()</code> won't let the playback begin unless the document has permission to automatically play media.</p>
 
-<pre class="brush: js notranslate">document.querySelector("video").play();</pre>
+<pre class="brush: js">document.querySelector("video").play();</pre>
 
 <h4 id="Example_Handling_play_failures">Example: Handling play() failures</h4>
 
@@ -138,7 +138,7 @@ tags:
 
 <p>You might use code like this to accomplish the job:</p>
 
-<pre class="brush: js notranslate">let startPlayPromise = videoElem.play();
+<pre class="brush: js">let startPlayPromise = videoElem.play();
 
 if (startPlayPromise !== undefined) {
   startPlayPromise.then(() =&gt; {
@@ -184,11 +184,11 @@ if (startPlayPromise !== undefined) {
 
 <p>To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:</p>
 
-<pre class="brush: plain notranslate">Feature-Policy: autoplay 'self'</pre>
+<pre class="brush: plain">Feature-Policy: autoplay 'self'</pre>
 
 <p>To do the same for an {{HTMLElement("iframe")}}:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="mediaplayer.html"
+<pre class="brush: html">&lt;iframe src="mediaplayer.html"
         allow="autoplay 'src'"&gt;
 &lt;/iframe&gt;
 </pre>
@@ -197,11 +197,11 @@ if (startPlayPromise !== undefined) {
 
 <p>Adding <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> permission to the previous example results in a <code>Feature-Policy</code> header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.</p>
 
-<pre class="brush: plain notranslate">Feature-Policy: autoplay 'self'; fullscreen</pre>
+<pre class="brush: plain">Feature-Policy: autoplay 'self'; fullscreen</pre>
 
 <p>The same permissions, grated using the <code>&lt;iframe&gt;</code> element's <code>allow</code> property, look like this:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="mediaplayer.html"
+<pre class="brush: html">&lt;iframe src="mediaplayer.html"
         allow="autoplay 'src'; fullscreen"&gt;
 &lt;/iframe&gt;
 </pre>
@@ -210,11 +210,11 @@ if (startPlayPromise !== undefined) {
 
 <p>The <code>Feature-Policy</code> header to allow media to be played from both the document's (or <code>&lt;iframe&gt;</code>'s) own domain and <code>https://example.media</code> looks like this:</p>
 
-<pre class="brush: plain notranslate">Feature-Policy: autoplay 'self' https://example.media</pre>
+<pre class="brush: plain">Feature-Policy: autoplay 'self' https://example.media</pre>
 
 <p>An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:</p>
 
-<pre class="brush: html notranslate">&lt;iframe width="300" height="200"
+<pre class="brush: html">&lt;iframe width="300" height="200"
         src="mediaplayer.html"
         allow="autoplay 'src' https://example.media"&gt;
 &lt;/iframe&gt;
@@ -224,11 +224,11 @@ if (startPlayPromise !== undefined) {
 
 <p>Setting the <code>autoplay</code> feature policy to <code>'none'</code> disables autoplay entirely for the document or <code>&lt;iframe&gt;</code> and all nested frames. The HTTP header is:</p>
 
-<pre class="brush: plain notranslate">Feature-Policy: autoplay 'none'</pre>
+<pre class="brush: plain">Feature-Policy: autoplay 'none'</pre>
 
 <p>Using the <code>&lt;iframe&gt;</code>'s <code>allow</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="mediaplayer.html"
+<pre class="brush: html">&lt;iframe src="mediaplayer.html"
         allow="autoplay 'none'"&gt;
 &lt;/iframe&gt;
 </pre>
@@ -241,7 +241,7 @@ if (startPlayPromise !== undefined) {
 
 <p>A common use case for autoplay is to automatically begin to play a video clip that goes along with an article, an advertisement, or a preview of the page's main functionality. To autoplay videos like these, you have two options: don't have an audio track, or have an audio track but configure the {{HTMLElement("video")}} element to mute the audio by default, like this:</p>
 
-<pre class="brush: html notranslate">&lt;video src="/videos/awesomevid.webm" controls autoplay playsinline muted&gt;</pre>
+<pre class="brush: html">&lt;video src="/videos/awesomevid.webm" controls autoplay playsinline muted&gt;</pre>
 
 <p>This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the {{htmlattrxref("muted", "video")}} attribute is included, and the {{htmlattrxref("playsinline", "video")}} attribute that is required for autoplay in Safari, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.</p>
 
@@ -274,5 +274,5 @@ if (startPlayPromise !== undefined) {
  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> (Learning guide)</li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics">Cross-browser audio basics</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics">Cross-browser audio basics</a></li>
 </ul>

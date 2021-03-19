@@ -47,7 +47,7 @@ tags:
 
 <p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then tries to save the currently active tab as a PDF file, then logs the result:</p>
 
-<pre class="notranslate brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
   browser.tabs.saveAsPDF({})
     .then((status) =&gt; {
       console.log(status);

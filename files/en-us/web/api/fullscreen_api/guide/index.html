@@ -24,7 +24,7 @@ tags:
 
 <p>Let's consider this {{HTMLElement("video")}} element:</p>
 
-<pre class="brush: html notranslate">&lt;video controls id="myvideo"&gt;
+<pre class="brush: html">&lt;video controls id="myvideo"&gt;
   &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
   &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
 &lt;/video&gt;
@@ -32,7 +32,7 @@ tags:
 
 <p>We can put that video into full-screen mode as follows:</p>
 
-<pre class="brush: js notranslate">var elem = document.getElementById("myvideo");
+<pre class="brush: js">var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }</pre>
@@ -43,7 +43,7 @@ if (elem.requestFullscreen) {
 
 <p>It's worth noting a key difference here between the Gecko and WebKit implementations at this time: Gecko automatically adds CSS rules to the element to stretch it to fill the screen: "<code>width: 100%; height: 100%</code>". WebKit doesn't do this; instead, it centers the fullscreen element at the same size in a screen that's otherwise black. To get the same fullscreen behavior in WebKit, you need to add your own "<code>width: 100%; height: 100%;</code>" CSS rules to the element yourself:</p>
 
-<pre class="brush: css notranslate">#myvideo:-webkit-full-screen {
+<pre class="brush: css">#myvideo:-webkit-full-screen {
   width: 100%;
   height: 100%;
 }
@@ -72,8 +72,8 @@ if (elem.requestFullscreen) {
 <p>The {{DOMxRef("Document")}} provides some additional information that can be useful when developing fullscreen web applications:</p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</dt>
- <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed fullscreen. If this is non-null, the document is in fullscreen mode. If this is null, the document is not in fullscreen mode.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}</dt>
+ <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed fullscreen. If this is non-null, the document (or shadow DOM) is in fullscreen mode. If this is null, the document (or shadow DOM) is not in fullscreen mode.</dd>
  <dt>{{DOMxRef("Document.fullscreenEnabled")}}</dt>
  <dd>The <code>fullscreenEnabled</code> property tells you whether or not the document is currently in a state that would allow fullscreen mode to be requested.</dd>
 </dl>
@@ -88,13 +88,13 @@ if (elem.requestFullscreen) {
 
 <p>In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.</p>
 
-<p><a href="/samples/domref/fullscreen.html">View Live Examples</a></p>
+<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html">View Live Examples</a></p>
 
 <h3 id="Watching_for_the_Enter_key">Watching for the Enter key</h3>
 
 <p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
-<pre class="brush: js notranslate">document.addEventListener("keydown", function(e) {
+<pre class="brush: js">document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
     toggleFullScreen();
   }
@@ -105,7 +105,7 @@ if (elem.requestFullscreen) {
 
 <p>This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.</p>
 
-<pre class="brush: js notranslate">function toggleFullScreen() {
+<pre class="brush: js">function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
   } else {
@@ -150,7 +150,7 @@ if (elem.requestFullscreen) {
    <td><code>msFullscreenEnabled</code></td>
   </tr>
   <tr>
-   <th scope="row">{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</th>
+   <th scope="row">{{DOMxRef("Document.fullscreenElement")}}</th>
    <td><code>webkitFullscreenElement</code></td>
    <td><code>mozFullScreenElement</code></td>
    <td><code>msFullscreenElement</code></td>

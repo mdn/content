@@ -77,7 +77,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>fetchEvent</em>.respondWith(
+<pre class="brush: js"><em>fetchEvent</em>.respondWith(
   // Promise that resolves to a Response.
 );</pre>
 
@@ -120,7 +120,7 @@ tags:
 <p>This fetch event tries to return a response from the cache API, falling back to the
 	network otherwise.</p>
 
-<pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
+<pre class="brush: js">addEventListener('fetch', event =&gt; {
   // Prevent the default, and handle the request ourselves.
   event.respondWith(async function() {
     // Try to get the response from a cache.
