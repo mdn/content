@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>A locale's collation rules are used to determine how strings are ordered in that locale. Certain locales use a character's case (UPPERCASE or lowercase) in the collation process. This additional rule can be expressed in a {{jsxref("Locale", "Locale's")}} <code>caseFirst</code> property.</p>
+<p>A locale's collation rules are used to determine how strings are ordered in that locale. Certain locales use a character's case (UPPERCASE or lowercase) in the collation process. This additional rule can be expressed in a {{jsxref("Intl/Locale", "Locale's")}} <code>caseFirst</code> property.</p>
 
 <p>There are 3 values that the <code>caseFirst</code> property can have, outlined in the table below.</p>
 
@@ -57,7 +57,7 @@ console.log(caseFirstStr.caseFirst); // Prints "upper"</pre>
 
 <h3 id="Setting_the_caseFirst_value_via_the_configuration_object_argument">Setting the caseFirst value via the configuration object argument</h3>
 
-<p>The {{jsxref("Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the <code>caseFirst</code> property of the configuration object to your desired <code>caseFirst</code> value, and then pass it into the constructor.</p>
+<p>The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can be used to pass extension types. Set the <code>caseFirst</code> property of the configuration object to your desired <code>caseFirst</code> value, and then pass it into the constructor.</p>
 
 <pre class="brush: js">let caseFirstObj= new Intl.Locale("en-Latn-US", {caseFirst: "lower"});
 console.log(us12hour.caseFirst); // Prints "lower"</pre>

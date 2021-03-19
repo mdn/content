@@ -2,11 +2,11 @@
 title: WebGL2RenderingContext.getSyncParameter()
 slug: Web/API/WebGL2RenderingContext/getSyncParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -25,16 +25,16 @@ tags:
   <dt>sync</dt>
   <dd>A {{domxref("WebGLSync")}} object.</dd>
   <dt><code>pname</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying which information to return. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying which information to return. Possible values:
     <ul>
-      <li><code>gl.OBJECT_TYPE</code>: Returns a {{domxref("GLenum")}} indicating the type
+      <li><code>gl.OBJECT_TYPE</code>: Returns a {{domxref("WebGL_API.Types")}} indicating the type
         of the sync object (always <code>gl.SYNC_FENCE</code>).</li>
-      <li><code>gl.SYNC_STATUS</code>: Returns a {{domxref("GLenum")}} indicating the
+      <li><code>gl.SYNC_STATUS</code>: Returns a {{domxref("WebGL_API.Types")}} indicating the
         status of the sync object (<code>gl.SIGNALED</code> or
         <code>gl.UNSIGNALED</code>).</li>
-      <li><code>gl.SYNC_CONDITION</code>: Returns a {{domxref("GLenum")}} indicating the
+      <li><code>gl.SYNC_CONDITION</code>: Returns a {{domxref("WebGL_API.Types")}} indicating the
         sync objects' condition (always <code>gl.SYNC_GPU_COMMANDS_COMPLETE</code>).</li>
-      <li><code>gl.SYNC_FLAGS</code>: Returns a {{domxref("GLenum")}} indicating the flags
+      <li><code>gl.SYNC_FLAGS</code>: Returns a {{domxref("WebGL_API.Types")}} indicating the flags
         with which the sync object was created (always 0 as no flags are supported).</li>
     </ul>
   </dd>
@@ -42,8 +42,8 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Depends on the <code>pname</code> parameter, either a {{domxref("GLenum")}} or a
-  {{domxref("GLbitfield")}}.</p>
+<p>Depends on the <code>pname</code> parameter, either a {{domxref("WebGL_API.Types")}} or a
+  {{domxref("WebGL_API.Types")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 

@@ -24,7 +24,7 @@ tags:
 
 <dl>
  <dt><em>url</em></dt>
- <dd>Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("&lt;url&gt;")}} representing the location of the resource to import. The URL may be absolute or relative.</dd>
+ <dd>Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("url()")}} representing the location of the resource to import. The URL may be absolute or relative.</dd>
  <dt><em>list-of-media-queries</em></dt>
  <dd>Is a comma-separated list of <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> conditioning the application of the CSS rules defined in the linked URL. If the browser does not support any these queries, it does not load the linked resource.</dd>
  <dt><em>supports-query</em></dt>
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Imported rules must precede all other types of rules, except {{CSSxRef("@charset")}} rules; as it is not a <a href="/en-US/docs/Web/CSS/Syntax#nested_statements">nested statement</a>, <code>@import</code> cannot be used inside <a href="/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules">conditional group at-rules</a>.</p>
+<p>Imported rules must precede all other types of rules, except {{CSSxRef("@charset")}} rules; as it is not a <a href="/en-US/docs/Web/CSS/Syntax#nested_statements">nested statement</a>, <code>@import</code> cannot be used inside <a href="/en-US/docs/Web/CSS/At-rule#conditional_group_rules">conditional group at-rules</a>.</p>
 
 <p>So that {{glossary("user agent")}}s can avoid retrieving resources for unsupported media types, authors may specify media-dependent <code>@import</code> rules. These conditional imports specify comma-separated <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> after the URL. In the absence of any media query, the import is unconditional. Specifying <code>all</code> for the medium has the same effect.</p>
 
@@ -79,7 +79,7 @@ tags:
   <tr>
    <td>{{SpecName('CSS3 Media Queries', '#media0', '@import')}}</td>
    <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Extended the syntax to support any media query and not only simple <a href="/en-US/docs/Web/CSS/@media#Media_types">media types</a>.</td>
+   <td>Extended the syntax to support any media query and not only simple <a href="/en-US/docs/Web/CSS/@media#media_types">media types</a>.</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'cascade.html#at-import', '@import')}}</td>

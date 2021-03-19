@@ -22,7 +22,7 @@ tags:
 ---
 <p>{{APIRef("WebXR Device API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>XRRigidTransform</code></strong> is a <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a> interface that represents the 3D geometric transform described by a position and orientation.</span></p>
+<p><span class="seoSummary">The <strong><code>XRRigidTransform</code></strong> is a <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a> interface that represents the 3D geometric transform described by a position and orientation.</span></p>
 
 <p><code>XRRigidTransform</code> is used to specify transforms throughout the WebXR APIs, including:</p>
 
@@ -50,7 +50,7 @@ tags:
  <dt>{{DOMxRef("XRRigidTransform.orientation")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>A {{DOMxRef("DOMPointReadOnly")}} which contains a unit quaternion describing the rotational component of the transform. As a unit quaternion, its length is always normalized to <code>1.0</code>.</dd>
  <dt>{{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the transform matrix in the form of a 16-member {{DOMxRef("Float32Array")}}. See the section <a href="/en-US/docs/Web/API/XRRigidTransform/matrix#Matrix_format">Matrix format</a> for how the array is used to represent a matrix.</dd>
+ <dd>Returns the transform matrix in the form of a 16-member {{DOMxRef("Float32Array")}}. See the section <a href="/en-US/docs/Web/API/XRRigidTransform/matrix#matrix_format">Matrix format</a> for how the array is used to represent a matrix.</dd>
  <dt>{{DOMxRef("XRRigidTransform.inverse")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a <code>XRRigidTransform</code> which is the inverse of this transform. That is, if applied to an object that had been previously transformed by the original transform, it will undo the transform and return the original object.</dd>
 </dl>

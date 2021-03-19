@@ -2,11 +2,11 @@
 title: WebGL2RenderingContext.texSubImage3D()
 slug: Web/API/WebGL2RenderingContext/texSubImage3D
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -35,7 +35,7 @@ void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffs
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target) of the active texture.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target) of the active texture.
     Possible values:
     <ul>
       <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
@@ -43,22 +43,22 @@ void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffs
     </ul>
   </dd>
   <dt><code>level</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the level of detail. Level 0 is the base image
     level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
   <dt><code>xoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the x offset within the texture image.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the x offset within the texture image.</dd>
   <dt><code>yoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the y offset within the texture image.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the y offset within the texture image.</dd>
   <dt><code>zoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the z offset within the texture image.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the z offset within the texture image.</dd>
   <dt><code>width</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the width of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the texture.</dd>
   <dt><code>height</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the height of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the height of the texture.</dd>
   <dt><code>depth</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the depth of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the depth of the texture.</dd>
   <dt><code>format</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the format of the texel data. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the format of the texel data. Possible values:
     <ul>
       <li><code>gl.ALPHA</code>: Discards the red, green and blue components and reads the
         alpha component.</li>
@@ -96,7 +96,7 @@ void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffs
     </ul>
   </dd>
   <dt><code>type</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the data type of the texel data. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the data type of the texel data. Possible values:
     <ul>
       <li><code>gl.UNSIGNED_BYTE</code>: 8 bits per channel for <code>gl.RGBA</code></li>
       <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 5 red bits, 6 green bits, 5 blue bits.
@@ -143,7 +143,7 @@ void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffs
     </ul>
   </dd>
   <dt>offset</dt>
-  <dd>A {{domxref("GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
+  <dd>A {{domxref("WebGL_API.Types")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
     <code>WebGLBuffer</code> bound to the <code>PIXEL_UNPACK_BUFFER</code> target.</dd>
 </dl>

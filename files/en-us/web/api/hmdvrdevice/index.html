@@ -29,14 +29,14 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDevice")}}.</em></p>
+<p><em>This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}.</em></p>
 
 <dl>
- <dt>{{domxref("VRDevice.hardwareUnitId")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.hardwareUnitId")}} {{readonlyInline}}</dt>
  <dd>Returns the distinct hardware ID for the overall hardware unit that this <code>VRDevice</code> is a part of. All devices that are part of the same physical piece of hardware will have the same <code>hardwareUnitId</code>.</dd>
- <dt>{{domxref("VRDevice.deviceId")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}}</dt>
  <dd>Returns the ID for this specific <code>VRDevice</code>. The ID shouldn’t change across browser restarts, allowing configuration data to be saved based on it.</dd>
- <dt>{{domxref("VRDevice.deviceName")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}}</dt>
  <dd>A human-readable name to identify the <code>VRDevice</code>.</dd>
 </dl>
 

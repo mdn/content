@@ -2,18 +2,18 @@
 title: EffectTiming.iterationStart
 slug: Web/API/EffectTiming/iterationStart
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- iterationStart
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - iterationStart
+  - waapi
+  - web animations api
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
@@ -24,13 +24,13 @@ tags:
 
 <div class="note">
   <p>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}}, and
+    {{domxref("KeyframeEffect.KeyframeEffect")}}, and
     {{domxref("KeyframeEffect.KeyframeEffect()")}} all accept an object of timing
     properties including <code>iterationStart.</code> The value of
     <code>iterationStart</code> corresponds directly
     to {{domxref("AnimationEffectTimingReadOnly.iterationStart")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
+    {{domxref("AnimationEffect/getTiming", "timing")}} objects returned by
+    {{domxref("AnimationEffect")}}, {{domxref("KeyframeEffect")}}, and
     {{domxref("KeyframeEffect")}}.</p>
 </div>
 
@@ -61,7 +61,7 @@ tags:
 <div class="note">
   <p>It's currently undefined what happens if you specify a value of
     <code>iterationStart</code> which is greater than the value of
-    {{domxref("AnimationEffectTimingProperties.iterations")}}. See <a
+    {{domxref("EffectTiming.iterations")}}. See <a
       href="https://github.com/w3c/web-animations/issues/170">issue 170 in the Web
       Animations API specification's issue tracker</a> for details and status of any
     changes to the specification in this regard.</p>
@@ -93,12 +93,12 @@ tags:
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
   <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including this one.
   </li>
   <li>The value of this property corresponds to
-    {{domxref("AnimationEffectReadOnly.timing")}},
+    {{domxref("AnimationEffect.getTiming")}},
     {{domxref("KeyframeEffectReadOnly.timing")}},
     and {{domxref("KeyframeEffect.timing")}}).</li>
 </ul>

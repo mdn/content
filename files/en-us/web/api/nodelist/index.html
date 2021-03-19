@@ -72,9 +72,9 @@ console.log(child_nodes.length); // outputs "3"
 }
 </pre>
 
-<p><strong>Don't use <code><a href="/en-US/docs/JavaScript/Reference/Statements/for...in" title="JavaScript/ Reference/Statements/for...in">for...in</a></code> to enumerate the items in <code>NodeList</code>s</strong>, since they will <em>also</em> enumerate its <code>length</code> and <code>item</code> properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, <code>for..in</code> is not guaranteed to visit the properties in any particular order.</p>
+<p><strong>Don't use <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="JavaScript/ Reference/Statements/for...in">for...in</a></code> to enumerate the items in <code>NodeList</code>s</strong>, since they will <em>also</em> enumerate its <code>length</code> and <code>item</code> properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, <code>for..in</code> is not guaranteed to visit the properties in any particular order.</p>
 
-<p><code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
+<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
 
 <pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
 for (let checkbox of list) {

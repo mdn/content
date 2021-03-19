@@ -16,7 +16,7 @@ tags:
 
 <p><code>callee</code> is a property of the <code>arguments</code> object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").</p>
 
-<div class="warning"><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</div>
+<div class="warning"><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</div>
 
 <h3 id="Why_was_arguments.callee_removed_from_ES5_strict_mode">Why was <code>arguments.callee</code> removed from ES5 strict mode?</h3>
 

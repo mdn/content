@@ -37,11 +37,11 @@ tags:
 
 <h4 id="Vertex_shader">Vertex shader</h4>
 
-<p>Each time a shape is rendered, the vertex shader is run for each vertex in the shape. Its job is to transform the input vertex from its original coordinate system into the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#Clip_space">clip space</a></strong> coordinate system used by WebGL, in which each axis has a range from -1.0 to 1.0, regardless of aspect ratio, actual size, or any other factors.</p>
+<p>Each time a shape is rendered, the vertex shader is run for each vertex in the shape. Its job is to transform the input vertex from its original coordinate system into the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#clip_space">clip space</a></strong> coordinate system used by WebGL, in which each axis has a range from -1.0 to 1.0, regardless of aspect ratio, actual size, or any other factors.</p>
 
 <p>The vertex shader must perform the needed transforms on the vertex's position, make any other adjustments or calculations it needs to make on a per-vertex basis, then return the transformed vertex by saving it in a special variable provided by GLSL, called <code>gl_Position</code>.</p>
 
-<p>The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in <a href="/en-US/docs/Web/API/WebGL_API/Data#Varyings">varyings</a> or <a href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a> as appropriate to be shared with the fragment shader.</p>
+<p>The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in <a href="/en-US/docs/Web/API/WebGL_API/Data#varyings">varyings</a> or <a href="/en-US/docs/Web/API/WebGL_API/Data#attributes">attributes</a> as appropriate to be shared with the fragment shader.</p>
 
 <p>Our vertex shader below receives vertex position values from an attribute we define called <code>aVertexPosition</code>. That position is then multiplied by two 4x4 matrices we provide called <code>uProjectionMatrix</code> and <code>uModelViewMatrix</code>; <code>gl_Position</code> is set to the result. For more info on projection and other matrixes <a href="https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html">you might find this article useful</a>.</p>
 
@@ -146,7 +146,7 @@ function loadShader(gl, type, source) {
 <pre class="brush: js">  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 </pre>
 
-<p>After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. <a href="/en-US/docs/Web/API/WebGL_API/Data#Uniforms">Uniforms</a> are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around</p>
+<p>After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. <a href="/en-US/docs/Web/API/WebGL_API/Data#uniforms">Uniforms</a> are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around</p>
 
 <pre class="brush: js">  const programInfo = {
     program: shaderProgram,

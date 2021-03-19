@@ -86,7 +86,7 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
  <li>Content scripts can't create file systems or initiate access to a file system. There are only two ways to get access to file system entries at this time:
   <ul>
    <li>The {{HTMLElement("input")}} element, using the {{domxref("HTMLInputElement.webkitEntries")}} property to access an array of {{domxref("FileSystemEntry")}} objects describing file system entries you can then read.</li>
-   <li>Using drag and drop by calling the {{domxref("DataTransferItem.getAsEntry()")}} method, which lets you get a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} for files dropped on a drop zone.</li>
+   <li>Using drag and drop by calling the {{domxref("DataTransferItem.webkitGetAsEntry")}} method, which lets you get a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} for files dropped on a drop zone.</li>
   </ul>
  </li>
  <li>You can't use the <code><a href="/en-US/docs/Web/API/LocalFileSystem#requestfilesystem">LocalFileSystem.requestFileSystem()</a></code> method to get access to a specified local file system.</li>

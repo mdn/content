@@ -2,11 +2,11 @@
 title: WebGL2RenderingContext.clientWaitSync()
 slug: Web/API/WebGL2RenderingContext/clientWaitSync
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -25,17 +25,17 @@ tags:
   <dt><code>sync</code></dt>
   <dd>A {{domxref("WebGLSync")}} object on which to wait on.</dd>
   <dt>flags</dt>
-  <dd>A {{domxref("GLbitfield")}} specifying a bitwise combination of flags controlling
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a bitwise combination of flags controlling
     the flushing behavior. May be <code>gl.SYNC_FLUSH_COMMANDS_BIT</code>.</dd>
   <dt>timeout</dt>
-  <dd>A {{domxref("GLint64")}} specifying a timeout (in nanoseconds) for which to wait for
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a timeout (in nanoseconds) for which to wait for
     the sync object to become signaled. Must not be larger than
     <code>gl.MAX_CLIENT_WAIT_TIMEOUT_WEBGL</code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("GLenum")}} indicating the sync object's status.</p>
+<p>A {{domxref("WebGL_API.Types")}} indicating the sync object's status.</p>
 
 <ul>
   <li><code>gl.ALREADY_SIGNALED</code>: Indicates that the sync object was signaled when

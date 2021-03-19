@@ -2,12 +2,12 @@
 title: Navigator.onLine
 slug: Web/API/NavigatorOnLine/onLine
 tags:
-- API
-- DOM Reference
-- NavigatorOnLine
-- Online
-- Property
-- Reference
+  - API
+  - DOM Reference
+  - NavigatorOnLine
+  - Online
+  - Property
+  - Reference
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
@@ -37,8 +37,8 @@ tags:
   only looks for LAN connection like Chrome and Safari giving false positives.</p>
 
 <p>You can see changes in the network state by listening for the events on <a
-    href="/en-US/docs/Web/API/document.ononline"><code>window.ononline</code></a> and <a
-    href="/en-US/docs/Web/API/document.onoffline"><code>window.onoffline</code></a>.</p>
+    href="/en-US/docs/Web/API/Document/ononline"><code>window.ononline</code></a> and <a
+    href="/en-US/docs/Web/API/Document/onoffline"><code>window.onoffline</code></a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -69,7 +69,7 @@ tags:
 </h3>
 
 <p>To see changes in the network state, use
-  <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code> to
+  <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> to
   listen for the events on <code>window.online</code> and <code>window.offline</code>, as
   in the following example:</p>
 
@@ -104,7 +104,7 @@ window.addEventListener('online', function(e) { console.log('online'); });
 
 <h2 id="Notes">Notes</h2>
 
-<p>See <a href="/en-US/docs/Online_and_offline_events">Online/Offline Events</a> for a
+<p>See <a href="/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events">Online/Offline Events</a> for a
   more detailed description of this property as well as new offline-related features
   introduced in Firefox 3.</p>
 

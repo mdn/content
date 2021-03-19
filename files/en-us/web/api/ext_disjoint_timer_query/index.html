@@ -35,19 +35,19 @@ tags:
 
 <dl>
  <dt><code>ext.QUERY_COUNTER_BITS_EXT</code></dt>
- <dd>A {{domxref("GLint")}} indicating the number of bits used to hold the query result for the given target.</dd>
+ <dd>A {{domxref("WebGL_API.Types")}} indicating the number of bits used to hold the query result for the given target.</dd>
  <dt><code>ext.CURRENT_QUERY_EXT</code></dt>
  <dd>A {{domxref("WebGLQuery")}} object, which is the currently active query for the given target.</dd>
  <dt><code>ext.QUERY_RESULT_EXT</code></dt>
- <dd>A {{domxref("GLuint64EXT")}} containing the query result.</dd>
+ <dd>A {{domxref("WebGL_API.Types")}} containing the query result.</dd>
  <dt><code>ext.QUERY_RESULT_AVAILABLE_EXT</code></dt>
- <dd>A {{domxref("GLboolean")}} indicating whether or not a query result is available.</dd>
+ <dd>A {{domxref("WebGL_API.Types")}} indicating whether or not a query result is available.</dd>
  <dt><code>ext.TIME_ELAPSED_EXT</code></dt>
  <dd>Elapsed time (in nanoseconds).</dd>
  <dt><code>ext.TIMESTAMP_EXT</code></dt>
  <dd>The current time.</dd>
  <dt><code>ext.GPU_DISJOINT_EXT</code></dt>
- <dd>A {{domxref("GLboolean")}} indicating whether or not the GPU performed any disjoint operation.</dd>
+ <dd>A {{domxref("WebGL_API.Types")}} indicating whether or not the GPU performed any disjoint operation.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -57,15 +57,15 @@ tags:
 <dl>
  <dt>{{domxref("EXT_disjoint_timer_query.createQueryEXT()", "ext.createQueryEXT()")}}</dt>
  <dd>
- <p>Creates a new {{domxref("WebGLTimerQueryEXT")}}.</p>
+ <p>Creates a new {{domxref("WebGLQuery")}}.</p>
  </dd>
  <dt>{{domxref("EXT_disjoint_timer_query.deleteQueryEXT()", "ext.deleteQueryEXT()")}}</dt>
  <dd>
- <p>Deletes a given {{domxref("WebGLTimerQueryEXT")}}.</p>
+ <p>Deletes a given {{domxref("WebGLQuery")}}.</p>
  </dd>
  <dt>{{domxref("EXT_disjoint_timer_query.isQueryEXT()", "ext.isQueryEXT()")}}</dt>
  <dd>
- <p>Returns <code>true</code> if a given object is a valid {{domxref("WebGLTimerQueryEXT")}}.</p>
+ <p>Returns <code>true</code> if a given object is a valid {{domxref("WebGLQuery")}}.</p>
  </dd>
  <dt>{{domxref("EXT_disjoint_timer_query.beginQueryEXT()", "ext.beginQueryEXT()")}}</dt>
  <dd>The timer starts when all commands prior to <code>beginQueryEXT</code> have been fully executed.</dd>

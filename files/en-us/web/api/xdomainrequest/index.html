@@ -2,23 +2,23 @@
 title: XDomainRequest
 slug: Web/API/XDomainRequest
 tags:
-- AJAX
-- API
-- IE
-- JavaScript
-- Microsoft
-- Obsolete
-- Web
+  - AJAX
+  - API
+  - IE
+  - JavaScript
+  - Microsoft
+  - Obsolete
+  - Web
 ---
 <div>{{APIRef("XDomain")}}{{deprecated_header}}{{non-standard_header}}</div>
 
 <p>XDomainRequest is an implementation of <a
-    href="/en-US/docs/HTTP/Access_control_CORS">HTTP access control (CORS) </a>that worked
+    href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS) </a>that worked
   in Internet Explorer 8 and 9. It was removed in Internet Explorer 10 in favor of
   using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest </a>with proper CORS;
   if you are targeting Internet Explorer 10 or later, or wish to support any other
   browser, you need to use standard <a
-    href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a>.</p>
+    href="/en-US/docs/Web/HTTP/CORS">HTTP access control</a>.</p>
 
 <p>This interface can send both GET and POST requests.</p>
 
@@ -93,7 +93,7 @@ tags:
 
 <div class="note">
   <p><strong>Note:</strong> The <code>xdr.send()</code> call is wrapped in a timeout (see
-    {{domxref("window.setTimeout()")}} to prevent an issue with the interface where some
+    {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} to prevent an issue with the interface where some
     requests are lost if multiple <code>XDomainRequest</code>s are being sent at the same
     time.</p>
 </div>
@@ -113,7 +113,7 @@ tags:
     https to https). If these do not match, the request will error "Access is Denied".
   </li>
   <li>The requested URL's server must have the <a
-      href="/en-US/docs/Web/HTTP/Access_control_CORS#Access-Control-Allow-Origin"><code>Access-Control-Allow-Origin</code></a>
+      href="/en-US/docs/Web/HTTP/CORS#access-control-allow-origin"><code>Access-Control-Allow-Origin</code></a>
     header set to either all ("*") or to include the origin of the request.</li>
 </ul>
 

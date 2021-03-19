@@ -2,11 +2,11 @@
 title: WebGLRenderingContext.pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -23,10 +23,10 @@ tags:
 
 <dl>
   <dt>pname</dt>
-  <dd>A {{domxref("Glenum")}} specifying which parameter to set. See below for possible
+  <dd>A {{domxref("WebGL_API.Types")}} specifying which parameter to set. See below for possible
     values.</dd>
   <dt>param</dt>
-  <dd>A {{domxref("GLint")}} specifying a value to set the <em><code>pname</code></em>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a value to set the <em><code>pname</code></em>
     parameter to. See below for possible values.</dd>
 </dl>
 
@@ -51,7 +51,7 @@ tags:
     <tr>
       <td><code>gl.PACK_ALIGNMENT</code></td>
       <td>Packing of pixel data into memory</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>4</td>
       <td>1, 2, 4, 8</td>
       <td>OpenGL ES 2.0</td>
@@ -59,7 +59,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_ALIGNMENT</code></td>
       <td>Unpacking of pixel data from memory.</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>4</td>
       <td>1, 2, 4, 8</td>
       <td>OpenGL ES 2.0</td>
@@ -67,7 +67,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_FLIP_Y_WEBGL</code></td>
       <td>Flips the source data along its vertical axis if true.</td>
-      <td>{{domxref("GLboolean")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>false</td>
       <td>true, false</td>
       <td>WebGL</td>
@@ -75,7 +75,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL</code></td>
       <td>Multiplies the alpha channel into the other color channels</td>
-      <td>{{domxref("GLboolean")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>false</td>
       <td>true, false</td>
       <td>WebGL</td>
@@ -83,7 +83,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_COLORSPACE_CONVERSION_WEBGL</code></td>
       <td>Default color space conversion or no color space conversion.</td>
-      <td>{{domxref("GLenum")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td><code>gl.BROWSER_DEFAULT_WEBGL</code></td>
       <td><code>gl.BROWSER_DEFAULT_WEBGL</code>, <code>gl.NONE</code></td>
       <td>WebGL</td>
@@ -109,7 +109,7 @@ tags:
     <tr>
       <td><code>gl.PACK_ROW_LENGTH</code></td>
       <td>Number of pixels in a row.</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -118,7 +118,7 @@ tags:
       <td><code>gl.PACK_SKIP_PIXELS</code></td>
       <td>Number of pixel locations skipped before the first pixel is written into memory.
       </td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -127,7 +127,7 @@ tags:
       <td><code>gl.PACK_SKIP_ROWS</code></td>
       <td>Number of rows of pixel locations skipped before the first pixel is written into
         memory</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -135,7 +135,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_ROW_LENGTH</code></td>
       <td>Number of pixels in a row.</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -143,7 +143,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_IMAGE_HEIGHT</code></td>
       <td>Image height used for reading pixel data from memory</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -151,7 +151,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_SKIP_PIXELS</code></td>
       <td>Number of pixel images skipped before the first pixel is read from memory</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -160,7 +160,7 @@ tags:
       <td><code>gl.UNPACK_SKIP_ROWS</code></td>
       <td>Number of rows of pixel locations skipped before the first pixel is read from
         memory</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>
@@ -168,7 +168,7 @@ tags:
     <tr>
       <td><code>gl.UNPACK_SKIP_IMAGES</code></td>
       <td>Number of pixel images skipped before the first pixel is read from memory</td>
-      <td>{{domxref("GLint")}}</td>
+      <td>{{domxref("WebGL_API.Types")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
       <td>OpenGL ES 3.0</td>

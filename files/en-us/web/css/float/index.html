@@ -6,11 +6,11 @@ tags:
   - CSS Positioning
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>float</code></strong> CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</span> The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to <a href="/en-US/docs/Web/CSS/position#Absolute_positioning">absolute positioning</a>).</p>
+<p><span class="seoSummary">The <strong><code>float</code></strong> CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it.</span> The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to <a href="/en-US/docs/Web/CSS/position#absolute_positioning">absolute positioning</a>).</p>
 
 <div>{{EmbedInteractiveExample("pages/css/float.html")}}</div>
 
@@ -85,7 +85,7 @@ tags:
  </tbody>
 </table>
 
-<div class="note"><strong>Note:</strong> If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support <code>float</code>, but in older browsers you have to spell it as <code>cssFloat</code>, with Internet Explorer versions 8 and older using <code>styleFloat</code>. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (due to the fact that "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape &lt;label&gt;'s "for" as "htmlFor").</div>
+<div class="note"><strong>Note:</strong> If you're referring to this property from JavaScript as a member of the {{domxref("ElementCSSInlineStyle.style")}} object, modern browsers support <code>float</code>, but in older browsers you have to spell it as <code>cssFloat</code>, with Internet Explorer versions 8 and older using <code>styleFloat</code>. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (due to the fact that "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape &lt;label&gt;'s "for" as "htmlFor").</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -221,6 +221,6 @@ div {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/block_formatting_context">Block formatting context</a></li>
+ <li><a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block formatting context</a></li>
  <li>Use {{cssxref("clear")}} to force an item to move below a floated element.</li>
 </ul>

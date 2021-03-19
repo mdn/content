@@ -19,7 +19,7 @@ tags:
 
 <p>Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API tutorial</a>.</p>
 
-<p>You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load (<a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample">this section of our advanced article</a> shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.</p>
+<p>You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load (<a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#dial_up_%e2%80%94_loading_a_sound_sample">this section of our advanced article</a> shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.</p>
 
 <p>If you're looking to work with audio from the user's camera or microphone you can access it via the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a> and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.</p>
 
@@ -57,7 +57,7 @@ button.addEventListener('click', function() {
 }, false);
 </pre>
 
-<p>If however, you create the context outside of a user gesture, its state will be set to <code>suspended</code> and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the <a href="/en-US/docs/Web/API/BaseAudioContext/resume"><code>resume()</code></a> method.</p>
+<p>If however, you create the context outside of a user gesture, its state will be set to <code>suspended</code> and it will need to be started after user interaction. We can use the same click event example here, test for the state of the context and start it, if it is suspended, using the <a href="/en-US/docs/Web/API/AudioContext/resume"><code>resume()</code></a> method.</p>
 
 <pre class="brush: js">const audioCtx = new AudioContext();
 const button = document.querySelector('button');

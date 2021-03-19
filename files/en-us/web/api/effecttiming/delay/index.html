@@ -2,18 +2,18 @@
 title: EffectTiming.delay
 slug: Web/API/EffectTiming/delay
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- delay
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - delay
+  - waapi
+  - web animations api
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
@@ -24,13 +24,13 @@ tags:
 
 <div class="note">
   <p>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including
     <code>delay</code>. The value of <code>delay</code> corresponds directly
-    to {{domxref("EffectTiming.delay")}} in {{domxref("AnimationEffectReadOnly.timing",
-    "timing")}} objects returned by {{domxref("AnimationEffectReadOnly")}},
-    {{domxref("KeyframeEffectReadOnly")}}, and {{domxref("KeyframeEffect")}}.</p>
+    to {{domxref("EffectTiming.delay")}} in {{domxref("AnimationEffect/getTiming",
+    "timing")}} objects returned by {{domxref("AnimationEffect")}},
+    {{domxref("KeyframeEffect")}}, and {{domxref("KeyframeEffect")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -98,13 +98,13 @@ tears.forEach(function(el) {
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
   <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including this one.
   </li>
   <li>The value of this property corresponds to the one in {{domxref("EffectTiming")}}
-    (which is the {{domxref("AnimationEffectReadOnly.timing", "timing")}} object for
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}},
+    (which is the {{domxref("AnimationEffect/getTiming", "timing")}} object for
+    {{domxref("AnimationEffect")}}, {{domxref("KeyframeEffect")}},
     and {{domxref("KeyframeEffect")}}).</li>
   <li>CSS's
     <code><a href="/en-US/docs/Web/CSS/transition-delay">transition-delay</a></code>

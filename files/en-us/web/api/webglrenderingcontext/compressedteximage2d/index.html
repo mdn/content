@@ -1,14 +1,14 @@
 ---
-title: 'WebGLRenderingContext.compressedTexImage[23]D()'
+title: WebGLRenderingContext.compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGL extension
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGL extension
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -42,7 +42,7 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target) of the active texture.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target) of the active texture.
     Possible values for <code>compressedTexImage2D</code>:
     <ul>
       <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
@@ -67,10 +67,10 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
     </ul>
   </dd>
   <dt><code>level</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the level of detail. Level 0 is the base image
     level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
   <dt><code>internalformat</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the compressed image format. Compressed image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the compressed image format. Compressed image
     formats must be enabled by <a
       href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</a> before
     using this method. All values are possible for <code>compressedTexImage2D</code>. See
@@ -177,19 +177,19 @@ void <var>gl</var>.compressedTexImage3D(<var>target</var>, <var>level</var>, <va
     </ul>
   </dd>
   <dt><code>width</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the width of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the texture.</dd>
   <dt><code>height</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the height of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the height of the texture.</dd>
   <dt><code>depth</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the depth of the texture/the number of textures
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the depth of the texture/the number of textures
     in a <code>TEXTURE_2D_ARRAY</code>.</dd>
   <dt><code>border</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the width of the border. Must be 0.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the border. Must be 0.</dd>
   <dt><code>imageSize</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of bytes to read from the buffer
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the number of bytes to read from the buffer
     bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>offset</code></dt>
-  <dd>A {{domxref("GLintptr")}} specifying the offset in bytes from which to read from the
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the offset in bytes from which to read from the
     buffer bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>pixels</code></dt>
   <dd>An {{domxref("ArrayBufferView")}} that will be used as a data store for the

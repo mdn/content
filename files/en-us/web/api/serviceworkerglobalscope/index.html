@@ -17,9 +17,9 @@ tags:
 
 <p>Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.onfetch")}} or {{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
 
-<p>Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("GlobalFetch.fetch", "fetch()")}} method, can be used.</p>
+<p>Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}} method, can be used.</p>
 
-<p>This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</p>
+<p>This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowOrWorkerGlobalScope")}}, {{domxref("WindowOrWorkerGlobalScope")}}, and {{domxref("WindowEventHandlers")}}.</p>
 
 <p>{{InheritanceDiagram(700, 85, 20)}}</p>
 
@@ -44,7 +44,7 @@ tags:
  <dd>Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.oncontentdelete")}} property.</dd>
  <dt><code>fetch</code></dt>
- <dd>Occurs when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.<br>
+ <dd>Occurs when a {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}} is called.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onfetch")}} property.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope/install_event", "install")}}</dt>
  <dd>Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.<br>
@@ -79,7 +79,7 @@ tags:
 <p><code>ServiceWorkerGlobalScope</code> implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("WindowOrWorkerGlobalScope")}}. Therefore it also has the following property available to it:</p>
 
 <dl>
- <dt>{{domxref("GlobalFetch.fetch()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.fetch")}}</dt>
  <dd>Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.</dd>
 </dl>
 
@@ -87,7 +87,7 @@ tags:
 
 <p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (see <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch example live</a>.) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the <code>fetch</code> event. When fired, the code returns a promise that resolves to the first matching request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.</p>
 
-<p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
+<p>The code also handles exceptions thrown from the {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
@@ -140,7 +140,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>

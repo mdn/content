@@ -69,7 +69,7 @@ grid-auto-rows: unset;
  <dd>Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.</dd>
  <dt>{{cssxref("min-content")}}</dt>
  <dd>Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.</dd>
- <dt>{{cssxref("minmax", "minmax(min, max)")}}</dt>
+ <dt>{{cssxref("minmax()", "minmax(min, max)")}}</dt>
  <dd>Is a functional notation that defines a size range greater than or equal to <em>min</em> and less than or equal to <em>max</em>. If <em>max</em> is smaller than <em>min</em>, then <em>max</em> is ignored and the function is treated as <em>min</em>. As a maximum, a <code>&lt;flex&gt;</code> value sets the track’s flex factor. As a minimum, it is treated as zero (or minimal content, if the grid container is sized under a minimal content constraint).</dd>
  <dt>{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Represents the formula <code>min(max-content, max(auto, <var>argument</var>))</code>, which is calculated similar to <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</dd>
@@ -146,6 +146,6 @@ grid-auto-rows: unset;
 
 <ul>
  <li>Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">Auto-placement in grid layout - sizing rows in the implicit grid</a></em></li>
+ <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#sizing_rows_in_the_implicit_grid">Auto-placement in grid layout - sizing rows in the implicit grid</a></em></li>
  <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-auto-placement-order/">Introducing Grid auto-placement and order</a></em></li>
 </ul>

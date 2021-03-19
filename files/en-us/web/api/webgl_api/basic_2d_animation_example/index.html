@@ -291,11 +291,11 @@ function startup() {
 
 <p>{{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}).</p>
 
-<p>The uniform named <code>uScalingFactor</code> is set to the <code>currentScale</code> value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext.uniform2fv", "uniform2fv()")}} (since this is a 2-value floating-point vector).</p>
+<p>The uniform named <code>uScalingFactor</code> is set to the <code>currentScale</code> value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext/uniform", "uniform2fv()")}} (since this is a 2-value floating-point vector).</p>
 
 <p><code>uRotationVector</code> is set to the current rotation vector (<code>currentRotation)</code>, also using <code>uniform2fv()</code>.</p>
 
-<p><code>uGlobalColor</code> is set using {{domxref("WebGLRenderingContext.uniform4fv", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).</p>
+<p><code>uGlobalColor</code> is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).</p>
 
 <p>Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.</p>
 

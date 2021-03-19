@@ -2,13 +2,13 @@
 title: SubtleCrypto.verify()
 slug: Web/API/SubtleCrypto/verify
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- verify
+  - API
+  - Method
+  - Reference
+  - Référence(2)
+  - SubtleCrypto
+  - Web Crypto API
+  - verify
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.verify(<em>algorithm</em>, <em>key</em>, <em>signature</em>, <em>data</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.verify(algorithm, key, signature, data);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -35,14 +35,14 @@ tags:
 
     <ul>
       <li>To use <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>,
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>,
         pass the string <code>"RSASSA-PKCS1-v1_5"</code> or an object of the form
         <code>{ "name": "RSASSA-PKCS1-v1_5" }</code>.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, pass
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, pass
         an {{domxref("RsaPssParams")}} object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a>, pass an
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a>, pass an
         {{domxref("EcdsaParams")}} object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>, pass the
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>, pass the
         string <code>"HMAC"</code> or an object of the form
         <code>{ "name": "HMAC" }</code>.</li>
     </ul>
@@ -78,7 +78,7 @@ tags:
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
 <p>The <code>verify()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/sign#Supported_algorithms">sign()</a></code>
+  <code><a href="/en-US/docs/Web/API/SubtleCrypto/sign#supported_algorithms">sign()</a></code>
   method.</p>
 
 <h2 id="Examples">Examples</h2>

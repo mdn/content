@@ -2,13 +2,13 @@
 title: SubtleCrypto.exportKey()
 slug: Web/API/SubtleCrypto/exportKey
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- exportKey
+  - API
+  - Method
+  - Reference
+  - Référence(2)
+  - SubtleCrypto
+  - Web Crypto API
+  - exportKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -16,11 +16,11 @@ tags:
   interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
   and gives you the key in an external, portable format.</p>
 
-<p>To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
+<p>To export a key, the key must have {{domxref("CryptoKey")}} set to
   <code>true</code>.</p>
 
 <p>Keys can be exported in several formats: see <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">Supported
     formats</a> in the
   <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>
   page for details.</p>
@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.exportKey(<em>format</em>, <em>key</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.exportKey(format, key);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -43,15 +43,15 @@ tags:
 
     <ul>
       <li><code>raw</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#raw">Raw</a> format.</li>
       <li><code>pkcs8</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8">PKCS #8</a> format.
       </li>
       <li><code>spki</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
         format.</li>
       <li><code>jwk</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key">JSON Web Key</a>
         format.</li>
     </ul>
   </li>

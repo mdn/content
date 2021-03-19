@@ -2,11 +2,11 @@
 title: WebGL2RenderingContext.getActiveUniformBlockParameter()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -26,25 +26,25 @@ tags:
   <dt><code>program</code></dt>
   <dd>A {{domxref("WebGLProgram")}} containing the active uniform block.</dd>
   <dt><code>uniformBlockIndex</code></dt>
-  <dd>A {{domxref("GLuint")}} specifying the index of the active uniform block within the
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the index of the active uniform block within the
     program.</dd>
   <dt><code>pname</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying which information to query. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying which information to query. Possible values:
     <ul>
-      <li><code>gl.UNIFORM_BLOCK_BINDING</code>: Returns a {{domxref("GLuint")}}
+      <li><code>gl.UNIFORM_BLOCK_BINDING</code>: Returns a {{domxref("WebGL_API.Types")}}
         indicating the uniform buffer binding point.</li>
-      <li><code>gl.UNIFORM_BLOCK_DATA_SIZE</code>: Returns a {{domxref("GLuint")}}
+      <li><code>gl.UNIFORM_BLOCK_DATA_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}}
         indicating the minimum total buffer object size.</li>
-      <li><code>gl.UNIFORM_BLOCK_ACTIVE_UNIFORMS</code>: Returns a {{domxref("GLuint")}}
+      <li><code>gl.UNIFORM_BLOCK_ACTIVE_UNIFORMS</code>: Returns a {{domxref("WebGL_API.Types")}}
         indicating the number of active uniforms in the uniform block.</li>
       <li><code>gl.UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES</code>: Returns a
         {{jsxref("Uint32Array")}} indicating the list of active uniforms in the uniform
         block.</li>
       <li><code>gl.UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER</code>: Returns a
-        {{domxref("GLboolean")}} indicating whether the uniform block is referenced by the
+        {{domxref("WebGL_API.Types")}} indicating whether the uniform block is referenced by the
         vertex shader.</li>
       <li><code>gl.UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER</code>: Returns a
-        {{domxref("GLboolean")}} indicating whether the uniform block is referenced by the
+        {{domxref("WebGL_API.Types")}} indicating whether the uniform block is referenced by the
         fragment shader.</li>
     </ul>
   </dd>

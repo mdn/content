@@ -2,11 +2,11 @@
 title: EXT_disjoint_timer_query.getQueryObjectEXT()
 slug: Web/API/EXT_disjoint_timer_query/getQueryObjectEXT
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL extension
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL extension
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -23,9 +23,9 @@ tags:
 
 <dl>
   <dt><code>query</code></dt>
-  <dd>A {{domxref("WebGLTimerQueryEXT")}} object from which to return information.</dd>
+  <dd>A {{domxref("WebGLQuery")}} object from which to return information.</dd>
   <dt><code>pname</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying which information to return. Must be
+  <dd>A {{domxref("WebGL_API.Types")}} specifying which information to return. Must be
     <code>ext.QUERY_RESULT_EXT</code> or <code>ext.QUERY_RESULT_AVAILABLE_EXT</code>.</dd>
 </dl>
 
@@ -35,9 +35,9 @@ tags:
 
 <ul>
   <li>If <code>pname</code> is <code>ext.QUERY_RESULT_EXT</code>: A
-    {{domxref("GLuint64EXT")}} containing the query result.</li>
+    {{domxref("WebGL_API.Types")}} containing the query result.</li>
   <li>If <code>pname</code> is <code>ext.QUERY_RESULT_AVAILABLE_EXT</code>: A
-    {{domxref("GLboolean")}} indicating whether or not a query result is available.</li>
+    {{domxref("WebGL_API.Types")}} indicating whether or not a query result is available.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -90,6 +90,6 @@ if (available &amp;&amp; !disjoint) {
 
 <ul>
   <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li>{{domxref("WebGLTimerQueryEXT")}}</li>
+  <li>{{domxref("WebGLQuery")}}</li>
   <li>{{domxref("EXT_disjoint_timer_query")}}</li>
 </ul>

@@ -2,13 +2,13 @@
 title: WebGLRenderingContext.compressedTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/compressedTexSubImage2D
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGL extension
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGL extension
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -35,7 +35,7 @@ void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, 
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target) of the active
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target) of the active
     compressed texture. Possible values:
     <ul>
       <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
@@ -54,20 +54,20 @@ void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, 
     </ul>
   </dd>
   <dt><code>level</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the level of detail. Level 0 is the base image
     level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
   <dt><code>xoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the horizontal offset within the compressed
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the horizontal offset within the compressed
     texture image.</dd>
   <dt><code>yoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the vertical offset within the compressed texture
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the vertical offset within the compressed texture
     image.</dd>
   <dt><code>width</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the width of the compressed texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the compressed texture.</dd>
   <dt><code>height</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the height of the compressed texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the height of the compressed texture.</dd>
   <dt><code>format</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the compressed image format. Compressed image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the compressed image format. Compressed image
     formats must be enabled by <a
       href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</a> before
     using this method. Possible values:
@@ -168,10 +168,10 @@ void gl.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, 
     </ul>
   </dd>
   <dt><code>imageSize</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of bytes to read from the buffer
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the number of bytes to read from the buffer
     bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>offset</code></dt>
-  <dd>A {{domxref("GLintptr")}} specifying the offset in bytes from which to read from the
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the offset in bytes from which to read from the
     buffer bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>pixels</code></dt>
   <dd>An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed

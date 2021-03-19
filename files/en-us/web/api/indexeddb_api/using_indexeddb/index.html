@@ -94,7 +94,7 @@ request.onsuccess = function(event) {
 
 <p>Which of the two functions, <code>onsuccess()</code> or <code>onerror()</code>, gets called? If everything succeeds, a success event (that is, a DOM event whose <code>type</code> property is set to <code>"success"</code>) is fired with <code>request</code> as its <code>target</code>. Once it is fired, the <code>onsuccess()</code> function on <code>request</code> is triggered with the success event as its argument. Otherwise, if there was any problem, an error event (that is, a DOM event whose <code>type</code> property is set to <code>"error"</code>) is fired at <code>request</code>. This triggers the <code>onerror()</code> function with the error event as its argument.</p>
 
-<p>The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Storage_limits">Storage limits</a>.)  </p>
+<p>The IndexedDB API is designed to minimize the need for error handling, so you're not likely to see many error events (at least, not once you're used to the API!). In the case of opening a database, however, there are some common conditions that generate error events. The most likely problem is that the user decided not to give your web app permission to create a database. One of the main design goals of IndexedDB is to allow large amounts of data to be stored for offline use. (To learn more about how much storage you can have for each browser, see <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#storage_limits">Storage limits</a>.)  </p>
 
 <p>Obviously, browsers do not want to allow some advertising network or malicious website to pollute your computer, so browsers used to prompt the user the first time any given web app attempts to open an IndexedDB for storage. The user could choose to allow or deny access. Also, IndexedDB storage in browsers' privacy modes only lasts in-memory until the incognito session is closed (Private Browsing mode for Firefox and Incognito mode for Chrome, but in Firefox this is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">not implemented yet</a> as of April 2020 so you can't use IndexedDB in Firefox Private Browsing at all).</p>
 
@@ -539,7 +539,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>Please see "<a href="/en-US/docs/Web/API/IDBCursor#Constants">IDBCursor Constants</a>" for the valid direction arguments.</p>
+<p>Please see "<a href="/en-US/docs/Web/API/IDBCursor#constants">IDBCursor Constants</a>" for the valid direction arguments.</p>
 
 <h2 id="Version_changes_while_a_web_app_is_open_in_another_tab">Version changes while a web app is open in another tab</h2>
 

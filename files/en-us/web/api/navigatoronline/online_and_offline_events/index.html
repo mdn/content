@@ -29,26 +29,26 @@ tags:
 
 <h3 id="navigator.onLine"><code>navigator.onLine</code></h3>
 
-<p><code><a href="/en-US/docs/DOM/window.navigator.onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline).</p>
+<p><code><a href="/en-US/docs/Web/API/NavigatorOnLine/onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline).</p>
 
 <p>This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the specification:</p>
 
 <blockquote cite="https://www.whatwg.org/specs/web-apps/current-work/#offline">The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
 
-<p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="https://developer.mozilla.org/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
+<p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="/en-US/docs/Mozilla/Firefox/Releases/41#miscellaneous">Firefox 41</a> updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
 
 <p>This property existed in older versions of Firefox and Internet Explorer (the specification based itself off of these prior implementations), so you can begin using it immediately. Network status autodetection was implemented in Firefox 2.</p>
 
 <h3 id=".22online.22_and_.22offline.22_events">"<code>online</code>" and "<code>offline</code>" events</h3>
 
-<p><a href="/en-US/docs/Firefox_3_for_developers">Firefox 3</a> introduces two new events: "<a href="/en-US/docs/Web/API/document.ononline"><code>online</code></a>" and "<a href="/en-US/docs/Web/API/document.onoffline"><code>offline</code></a>". These two events are fired on the <code>&lt;body&gt;</code> of each page when the browser switches between online and offline mode. Additionally, the events bubble up from <code>document.body</code>, to <code>document</code>, ending at <code>window</code>. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).</p>
+<p><a href="/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 3</a> introduces two new events: "<a href="/en-US/docs/Web/API/Document/ononline"><code>online</code></a>" and "<a href="/en-US/docs/Web/API/Document/onoffline"><code>offline</code></a>". These two events are fired on the <code>&lt;body&gt;</code> of each page when the browser switches between online and offline mode. Additionally, the events bubble up from <code>document.body</code>, to <code>document</code>, ending at <code>window</code>. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).</p>
 
-<p><a href="https://developer.mozilla.org/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> fires these events when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
+<p><a href="/en-US/docs/Mozilla/Firefox/Releases/41#miscellaneous">Firefox 41</a> fires these events when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
 
 <p>You can register listeners for these events in a few familiar ways:</p>
 
 <ul>
- <li>using <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code> on the <code>window</code>, <code>document</code>, or <code>document.body</code></li>
+ <li>using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> on the <code>window</code>, <code>document</code>, or <code>document.body</code></li>
  <li>by setting the <code>.ononline</code> or <code>.onoffline</code> properties on <code>document</code> or <code>document.body</code> to a JavaScript <code>Function</code> object. (<strong>Note:</strong> using <code>window.ononline</code> or <code>window.onoffline</code> will not work for compatibility reasons.)</li>
  <li>by specifying <code>ononline="..."</code> or <code>onoffline="..."</code> attributes on the <code>&lt;body&gt;</code> tag in the HTML markup.</li>
 </ul>

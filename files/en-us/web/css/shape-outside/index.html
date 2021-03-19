@@ -11,7 +11,7 @@ tags:
   - Reference
   - Shape
   - margin
-  - 'recipe:css-property'
+  - recipe:css-property
   - shape-outside
   - wrapping
 ---
@@ -57,7 +57,7 @@ shape-outside: unset;
  <dt><code>none</code></dt>
  <dd>The float area is unaffected. Inline content wraps around the element's margin box, like usual.</dd>
  <dt><code>&lt;shape-box&gt;</code></dt>
- <dd>The float area is computed according to the shape of a float element's edges (as defined by the <a href="/en-US/docs/Web/CSS/box_model">CSS box model</a>). This can be <code>margin-box</code>, <code>border-box</code>, <code>padding-box</code>, or <code>content-box</code>. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).</dd>
+ <dd>The float area is computed according to the shape of a float element's edges (as defined by the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS box model</a>). This can be <code>margin-box</code>, <code>border-box</code>, <code>padding-box</code>, or <code>content-box</code>. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).</dd>
  <dd>
  <dl>
   <dt><code>margin-box</code></dt>
@@ -87,7 +87,7 @@ shape-outside: unset;
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>When animating between one <code>&lt;basic-shape&gt;</code> and a second, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc")}} where possible. If list values are not one of those types but are identical (such as finding <code>nonzero</code> in the same list position in both lists), those values do interpolate.</p>
+<p>When animating between one <code>&lt;basic-shape&gt;</code> and a second, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc()")}} where possible. If list values are not one of those types but are identical (such as finding <code>nonzero</code> in the same list position in both lists), those values do interpolate.</p>
 
 <ul>
  <li>Both shapes must use the same reference box.</li>
@@ -192,7 +192,7 @@ p {
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Shapes">CSS Shapes</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Overview of CSS Shapes</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values">Shapes from Box Values</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values">Shapes from Box Values</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">Basic Shapes</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">Shapes from Images</a></li>
  <li>{{cssxref("&lt;basic-shape&gt;")}}</li>

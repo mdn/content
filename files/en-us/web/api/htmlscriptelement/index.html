@@ -42,22 +42,22 @@ tags:
 
   <ol>
    <li>If the <code>async</code> attribute is present, then the script will be executed asynchronously as soon as it downloads.</li>
-   <li>If the <code>async</code> attribute is absent but the <code>defer</code> attribute is present, then the script is executed when <a href="/en-US/docs/Web/Events/DOMContentLoaded">the page has finished parsing</a>.</li>
+   <li>If the <code>async</code> attribute is absent but the <code>defer</code> attribute is present, then the script is executed when <a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">the page has finished parsing</a>.</li>
    <li>If neither attribute is present, then the script is fetched and executed immediately, blocking further parsing of the page.</li>
   </ol>
 
   <p>The <code>defer</code> attribute may be specified with the <code>async</code> attribute, so legacy browsers that only support <code>defer</code> (and not <code>async</code>) fall back to the <code>defer</code> behavior instead of the default blocking behavior.</p>
 
-  <div class="note"><strong>Note:</strong> The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. <a href="https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script">These algorithms</a> describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} <a href="https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag">start</a> and <a href="https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag">end</a> tags in HTML, <a href="https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag">in foreign content</a>, and <a href="https://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML">in XML</a>; the rules for the <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a> method; the handling of <a href="https://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting">scripting</a>; and so on.</div></dd>
+  <div class="note"><strong>Note:</strong> The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. <a href="https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script">These algorithms</a> describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} <a href="https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag">start</a> and <a href="https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag">end</a> tags in HTML, <a href="https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag">in foreign content</a>, and <a href="https://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML">in XML</a>; the rules for the <a href="/en-US/docs/Web/API/Document/write"><code>document.write()</code></a> method; the handling of <a href="https://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting">scripting</a>; and so on.</div></dd>
 
  <dt>{{domxref("HTMLScriptElement.crossOrigin")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS setting</a> for the script element. For scripts from other <a href="/en-US/docs/Glossary/Origin">origins</a>, this controls if error information will be exposed.</dd>
+ <dd>Is a {{domxref("DOMString")}} reflecting the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS setting</a> for the script element. For scripts from other <a href="/en-US/docs/Glossary/Origin">origins</a>, this controls if error information will be exposed.</dd>
 
  <dt>{{domxref("HTMLScriptElement.text")}}</dt>
  <dd>
-  <p>Is a {{domxref("DOMString")}} that joins and returns the contents of all <a href="/en-US/docs/DOM/Text"><code>Text</code> nodes</a> inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the <a href="/en-US/docs/DOM/Node.textContent"><code>textContent</code></a> IDL attribute.</p>
+  <p>Is a {{domxref("DOMString")}} that joins and returns the contents of all <a href="/en-US/docs/Web/API/Text"><code>Text</code> nodes</a> inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the <a href="/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> IDL attribute.</p>
 
-  <div class="note"><strong>Note:</strong> When inserted using the <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a> method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using <a href="/en-US/docs/DOM/element.innerHTML"><code>innerHTML</code></a> or <a href="/en-US/docs/DOM/element.outerHTML"><code>outerHTML</code></a>, they do not execute at all.</div>
+  <div class="note"><strong>Note:</strong> When inserted using the <a href="/en-US/docs/Web/API/Document/write"><code>document.write()</code></a> method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using <a href="/en-US/docs/Web/API/Element/innerHTML"><code>innerHTML</code></a> or <a href="/en-US/docs/Web/API/Element/outerHTML"><code>outerHTML</code></a>, they do not execute at all.</div>
  </dd>
 
  <dt>{{domxref("HTMLScriptElement.noModule")}}</dt>
@@ -156,6 +156,6 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
  <li>HTML {{HTMLElement("script")}} element</li>
  <li>HTML {{HTMLElement("noscript")}} element</li>
  <li>{{domxref("document.currentScript")}}</li>
- <li><a href="/en-US/docs/DOM/Using_web_workers">Web Workers</a> (code snippets similar to scripts but executed in <a href="/en-US/docs/JavaScript/DedicatedWorkerGlobalScope">another global context</a>)</li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a> (code snippets similar to scripts but executed in <a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope">another global context</a>)</li>
  <li><a href="http://pieisgood.org/test/script-link-events/">Ryan Grove's &lt;script&gt; and &lt;link&gt; node event compatibility chart</a></li>
 </ul>

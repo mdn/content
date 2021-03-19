@@ -2,17 +2,17 @@
 title: EffectTiming.fill
 slug: Web/API/EffectTiming/fill
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- fill
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - fill
+  - web animations api
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
@@ -21,7 +21,7 @@ tags:
   specifies a <strong>fill mode</strong>, which defines how the element to which the
   animation is applied should look when the animation sequence is not actively running,
   such as before the time specified by
-  {{domxref("AnimationEffectTimingProperties.iterationStart", "iterationStart")}} or after
+  {{domxref("EffectTiming/iterationStart", "iterationStart")}} or after
   animation's end time.</p>
 
 <p>For example, setting fill to <code>"none"</code> means the animation's effects are not
@@ -87,7 +87,7 @@ tags:
     "playState")}}.</dd>
   <dt><code>"auto"</code></dt>
   <dd>If the animation effect the fill mode is being applied to is a keyframe effect
-    ({{domxref("KeyframeEffect")}} or {{domxref("KeyframeEffectReadOnly")}}),
+    ({{domxref("KeyframeEffect")}} or {{domxref("KeyframeEffect")}}),
     <code>"auto"</code> is equivalent to <code>"none"</code>. Otherwise, the result is
     <code>"both"</code>.</dd>
 </dl>
@@ -246,7 +246,7 @@ tags:
     White Rabbit</a> example, the White Rabbit's animation is formed by coupling a
   <code>KeyframeEffect</code> with an <code>Animation</code> object. The
   <code>keyframeEffect</code> takes an object of <a
-    href="/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options">timing
+    href="/en-US/docs/Web/API/EffectTiming">timing
     properties</a>, which is where we pass in <code>fill</code>. <code>Forwards</code>
   makes the rabbit retain its last keyframe rather than reverting to its unanimated state:
 </p>
@@ -278,7 +278,7 @@ var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
   <li>The forwards fill of an animation (or backwards fill if the animation is playing in
     reverse) will continue to override any changes to specified style indefinitely which
     can lead to confusing behavior. This is because animations take priority in the <a
-      href="/en-US/docs/Web/CSS/Cascade#Cascading_order">CSS cascade</a> over normal
+      href="/en-US/docs/Web/CSS/Cascade#cascading_order">CSS cascade</a> over normal
     author styles.</li>
   <li>In order to avoid leaking memory when many filling animations overlap, the browser
     is required to remove overlapped animations which can lead to surprising results in

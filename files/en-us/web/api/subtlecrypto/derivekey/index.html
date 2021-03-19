@@ -2,13 +2,13 @@
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
 tags:
-- API
-- Crypto
-- Method
-- Reference
-- SubtleCrypto
-- Web
-- deriveKey
+  - API
+  - Crypto
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web
+  - deriveKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <p>It's worth noting that the three key derivation algorithms you can use have quite
   different characteristics and are appropriate in quite different situations. See <a
-    href="#Supported_algorithms">Supported algorithms</a> for some more detail on this.
+    href="#supported_algorithms">Supported algorithms</a> for some more detail on this.
 </p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -42,7 +42,7 @@ tags:
 
 <ul>
   <li><code><em>algorithm</em></code> is an object defining the <a
-      href="#Supported_algorithms">derivation algorithm</a> to use.
+      href="#supported_algorithms">derivation algorithm</a> to use.
 
     <ul>
       <li>To use <a href="#ecdh">ECDH</a>, pass an
@@ -66,13 +66,13 @@ tags:
   <li><code><em>derivedKeyAlgorithm</em></code> is an object defining the algorithm the
     derived key will be used for.
     <ul>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: pass an
         <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: pass an
         <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code>
         object.</li>
     </ul>
@@ -118,7 +118,7 @@ tags:
 <ul>
   <li>{{exception("InvalidAccessError")}}</li>
   <li>Raised when the master key is not a key for the requested derivation algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    the {{domxref("CryptoKey")}} value of that key doesn't contain
     <code>deriveKey</code>.</li>
   <li>{{exception("NotSupported")}}</li>
   <li>Raised when trying to use an algorithm that is either unknown or isn't suitable for

@@ -2,11 +2,11 @@
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -41,10 +41,10 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-<code>if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
   throw new Error('Could not compile WebGL program. \n\n' + info);
-}</code></pre>
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

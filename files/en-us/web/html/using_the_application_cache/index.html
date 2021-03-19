@@ -16,7 +16,7 @@ tags:
 
 <ul>
  <li>From Firefox 84 it has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</li>
- <li>From Firefox 60, and in some or all <a href="/en-US/docs/Web/HTML/Using_the_application_cache#Browser_compatibility">supporting browsers</a>, it is only available in <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a> (HTTPS).</li>
+ <li>From Firefox 60, and in some or all <a href="/en-US/docs/Web/HTML/Using_the_application_cache#browser_compatibility">supporting browsers</a>, it is only available in <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a> (HTTPS).</li>
  <li>As of Firefox 44+, when <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> is used to provide offline support for a page, a warning message displays in the console advising developers to use <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> instead ({{bug("1204581")}})</li>
 </ul>
 </div>
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Introduction">Introduction</h2>
 
-<p><a href="/en-US/docs/Web/HTML/HTML5">HTML5</a> provides an <em>application caching</em> mechanism that lets web applications run offline. This <strong>Application Cache</strong> (<em>AppCache</em>) interface lists resources that browsers should cache to be available offline. Applications that are cached load and work correctly offline, even if users press the Refresh button.</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> provides an <em>application caching</em> mechanism that lets web applications run offline. This <strong>Application Cache</strong> (<em>AppCache</em>) interface lists resources that browsers should cache to be available offline. Applications that are cached load and work correctly offline, even if users press the Refresh button.</p>
 
 <p>An application cache gives the following benefits:</p>
 
@@ -73,7 +73,7 @@ tags:
 
 <ol>
  <li>When the browser visits a document that includes the <code>manifest</code> attribute, if no application cache exists, the browser loads the document and then fetches all the entries listed in the manifest file, creating the first version of the application cache.</li>
- <li>Subsequent visits to that document cause the browser to load the document and other assets specified in the manifest file from the application cache (not from the server). In addition, the browser also sends a <code>checking</code> event to the <code><a href="/en-US/docs/DOM/window.applicationCache">window.applicationCache</a></code> object, and fetches the manifest file, following the appropriate HTTP caching rules.</li>
+ <li>Subsequent visits to that document cause the browser to load the document and other assets specified in the manifest file from the application cache (not from the server). In addition, the browser also sends a <code>checking</code> event to the <code><a href="/en-US/docs/Web/API/Window/applicationCache">window.applicationCache</a></code> object, and fetches the manifest file, following the appropriate HTTP caching rules.</li>
  <li>If the currently-cached copy of the manifest is up-to-date, the browser sends a <code>noupdate</code> event to the <code>applicationCache</code> object, and the update process is complete. Note that if you change any cached resources on the server, you must also change the manifest file itself, so that the browser knows it needs to fetch all the resources again.</li>
  <li>If the manifest file <em>has</em> changed, all the files listed in the manifest—as well as those added to the cache by calling <code><a href="/en-US/docs/nsIDOMOfflineResourceList#add.28.29">applicationCache.add()</a></code>—are fetched into a temporary cache, following the appropriate HTTP caching rules. For each file fetched into this temporary cache, the browser sends a <code>progress</code> event to the <code>applicationCache</code> object. If any errors occur, the browser sends an <code>error</code> event, and the update halts.</li>
  <li>Once all the files have been successfully retrieved, they are moved into the real offline cache automatically, and a <code>cached</code> event is sent to the <code>applicationCache</code> object. Since the document has already been loaded into the browser from the cache, the updated document will not be rendered until the document is reloaded (either manually or programmatically).</li>
@@ -96,7 +96,7 @@ tags:
 
 <p>On Linux, you can find the setting at Edit &gt; Preferences &gt; Advanced &gt; Network &gt; Offline Web Content and User Data</p>
 
-<p>See also <a href="/en-US/docs/DOM/Storage#Storage_location_and_clearing_the_data">clearing the DOM Storage data</a>.</p>
+<p>See also <a href="/en-US/docs/Web/API/Web_Storage_API#storage_location_and_clearing_the_data">clearing the DOM Storage data</a>.</p>
 
 <p>Application caches can also become obsolete. If an application's manifest file is removed from the server, the browser removes all application caches that use that manifest, and sends an "obsoleted" event to the <code>applicationCache</code> object. This sets the application cache's state to <code>OBSOLETE</code>.</p>
 

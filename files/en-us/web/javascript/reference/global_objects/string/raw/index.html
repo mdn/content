@@ -2,17 +2,17 @@
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Reference
-- String
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Reference
+  - String
 ---
 <div>{{JSRef}}</div>
 
 <p><span class="seoSummary">The static <strong><code>String.raw()</code></strong> method
     is a tag function of <a
-      href="/en-US/docs/Web/JavaScript/Reference/template_strings">template literals</a>.
+      href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>.
     This is <em>similar</em> to the <code>r</code> prefix in Python, or the <code>@</code>
     prefix in C# for string literals. (But it is not <em>identical</em>; see explanations
     in <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">this issue</a>.)
@@ -24,10 +24,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>String.raw(<var>callSite</var>, <var>...substitutions</var>)
+<pre class="brush: js">String.raw(callSite, ...substitutions)
 
-String.raw`<var>templateString</var>`
-</code></pre>
+String.raw`templateString`
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +59,7 @@ String.raw`<var>templateString</var>`
 <p>In most cases, <code>String.raw()</code> is used with template literal. The first
   syntax mentioned above is only rarely used, because the JavaScript engine will call this
   with proper arguments for you, (just like with other <a
-    href="/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_literals">tag
+    href="/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals">tag
     functions</a>).</p>
 
 <p><code>String.raw()</code> is the only built-in tag function of template literals. It
@@ -126,7 +126,7 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Reference/template_strings">Template literals</a>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>
   </li>
   <li>{{jsxref("String")}}</li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a>

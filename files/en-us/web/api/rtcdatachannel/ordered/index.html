@@ -2,13 +2,13 @@
 title: RTCDataChannel.ordered
 slug: Web/API/RTCDataChannel/ordered
 tags:
-- Experimental
-- Property
-- RTCDataChannel
-- Read-only
-- Reference
-- WebRTC
-- ordered
+  - Experimental
+  - Property
+  - RTCDataChannel
+  - Read-only
+  - Reference
+  - WebRTC
+  - ordered
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
@@ -18,7 +18,7 @@ tags:
     indicates that the data channel is indeed ordered.</span> This is set when the
   {{domxref("RTCDataChannel")}} is created, by setting the <code>ordered</code> property
   on the
-  <code><a href="/en-US/docs/Web/API/RTCPeerConnection/createDataChannel#RTCDataChannelInit_dictionary">RTCDataChannelInit</a></code>
+  <code><a href="/en-US/docs/Web/API/RTCPeerConnection/createDataChannel#rtcdatachannelinit_dictionary">RTCDataChannelInit</a></code>
   object passed as {{domxref("RTCPeerConnection.createDataChannel()")}}'s
   <code>options</code> parameter.</p>
 
@@ -33,11 +33,11 @@ tags:
 <h2 id="Example">Example</h2>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
-<code>
+var dc = pc.createDataChannel(&quot;my channel&quot;);
+
 if (!dc.ordered) {
   // Handle unordered messaging
-}</code>
+}
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -67,7 +67,7 @@ if (!dc.ordered) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.createDataChannel()")}}</li>
 </ul>

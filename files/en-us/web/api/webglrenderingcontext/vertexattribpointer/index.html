@@ -2,11 +2,11 @@
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -25,13 +25,13 @@ tags:
 
 <dl>
   <dt><code>index</code></dt>
-  <dd>A {{domxref("GLuint")}} specifying the index of the vertex attribute that is to be
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the index of the vertex attribute that is to be
     modified.</dd>
   <dt><code>size</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the number of components per vertex attribute.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the number of components per vertex attribute.
     Must be 1, 2, 3, or 4.</dd>
   <dt><code>type</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the data type of each component in the array.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the data type of each component in the array.
     Possible values:
     <ul>
       <li><code>gl.BYTE</code>: signed 8-bit integer, with values in [-128, 127]</li>
@@ -51,7 +51,7 @@ tags:
     </ul>
   </dd>
   <dt><code>normalized</code></dt>
-  <dd>A {{domxref("GLboolean")}} specifying whether integer data values should be
+  <dd>A {{domxref("WebGL_API.Types")}} specifying whether integer data values should be
     normalized into a certain range when being cast to a float.
     <ul>
       <li>For types <code>gl.BYTE</code> and <code>gl.SHORT</code>, normalizes the values
@@ -63,13 +63,13 @@ tags:
     </ul>
   </dd>
   <dt><code>stride</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the offset in bytes between the beginning of
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the offset in bytes between the beginning of
     consecutive vertex attributes. Cannot be larger than 255. If stride is 0, the
     attribute is assumed to be tightly packed, that is, the attributes are not interleaved
     but each attribute is in a separate block, and the next vertex' attribute follows
     immediately after the current vertex.</dd>
   <dt><code>offset</code></dt>
-  <dd>A {{domxref("GLintptr")}} specifying an offset in bytes of the first component in
+  <dd>A {{domxref("WebGL_API.Types")}} specifying an offset in bytes of the first component in
     the vertex attribute array. Must be a multiple of the byte length
     of <code>type</code>.</dd>
 </dl>

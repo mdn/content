@@ -61,7 +61,7 @@ cross-fade( url(red.png) 33.33%, url(yellow.png) 33.33%, url(blue.png) 33.33%);<
 
 <pre class="brush: css">cross-fade( &lt;image&gt;, &lt;image&gt;, &lt;percentage&gt; )</pre>
 
-<p>The specification for the <code>cross-fade()</code> function allows for multiple images and for each image to have transparency values independent of the other values. This was not always the case. The <a href="/en-US/docs/">original syntax</a>, which has been implemented in some browsers, only allowed for two images, with the sum of the transparency of those two images being exactly 100%. The original syntax is supported in Safari and supported with the <code>-webkit-</code> prefix in Chrome, Opera, and other blink-based browsers.</p>
+<p>The specification for the <code>cross-fade()</code> function allows for multiple images and for each image to have transparency values independent of the other values. This was not always the case. The <a href="/en-US/docs/Web">original syntax</a>, which has been implemented in some browsers, only allowed for two images, with the sum of the transparency of those two images being exactly 100%. The original syntax is supported in Safari and supported with the <code>-webkit-</code> prefix in Chrome, Opera, and other blink-based browsers.</p>
 
 <pre class="brush: css">cross-fade(url(white.png), url(black.png), 0%);   /* fully black */
 cross-fade(url(white.png), url(black.png), 25%);  /* 25% white, 75% black */
@@ -79,7 +79,7 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document. When using background images, make sure the contrast in color is great enough that any text is legible over the image as well as if the images is missing.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a class="external external-icon" href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -141,10 +141,10 @@ cross-fade(url(white.png), url(black.png), 100%); /* fully white */
 
 <ul>
  <li>{{cssxref("image")}}</li>
- <li>{{cssxref("url")}}</li>
- <li>{{cssxref("_image", "image()")}}</li>
- <li>{{cssxref("image-set")}}</li>
- <li>{{cssxref("element")}}</li>
- <li><a href="/en-US/docs/CSS/Using_CSS_gradients" title="Using gradients">Using CSS gradients</a></li>
- <li>Gradient functions: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient", "conic-gradient()")}},</li>
+ <li>{{cssxref("url()")}}</li>
+ <li>{{cssxref("image()", "image()")}}</li>
+ <li>{{cssxref("image-set()")}}</li>
+ <li>{{cssxref("element()")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients" title="Using gradients">Using CSS gradients</a></li>
+ <li>Gradient functions: {{cssxref("linear-gradient()", "linear-gradient()")}}, {{cssxref("radial-gradient()", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("conic-gradient()", "conic-gradient()")}},</li>
 </ul>

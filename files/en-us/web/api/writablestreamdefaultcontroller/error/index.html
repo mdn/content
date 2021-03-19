@@ -2,13 +2,13 @@
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
 tags:
-- API
-- Error
-- Experimental
-- Method
-- Reference
-- Streams
-- WritableStreamDefaultController
+  - API
+  - Error
+  - Experimental
+  - Method
+  - Reference
+  - Streams
+  - WritableStreamDefaultController
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
@@ -48,23 +48,23 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre
-  class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// do stuff with controller</span>
+  class="brush: js line-numbers  language-js">const writableStream = new WritableStream({
+  start(controller) {
+    // do stuff with controller
 
-    <span class="comment token">// error stream if necessary</span>
-    controller<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'My error is broken'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">write</span><span class="punctuation token">(</span>chunk<span class="punctuation token">,</span> controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">close</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">abort</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+    // error stream if necessary
+    controller.error('My error is broken');
+  },
+  write(chunk, controller) {
+    ...
+  },
+  close(controller) {
+    ...
+  },
+  abort(err) {
+    ...
+  }
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

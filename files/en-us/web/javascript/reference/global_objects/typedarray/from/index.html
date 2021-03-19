@@ -2,17 +2,17 @@
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- TypedArray
-- TypedArrays
-- from
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - TypedArray
+  - TypedArrays
+  - from
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code><var>TypedArray</var>.from()</code></strong> method creates a new <a
-        href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
+        href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects">typed
         array</a> from an array-like or iterable object. This method is nearly the same as
     {{jsxref("Array.from()")}}.</p>
 
@@ -70,7 +70,7 @@ tags:
 <ul>
     <li>array-like objects (objects with a <code>length</code> property and indexed
         elements); or</li>
-    <li><a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable objects</a> (objects
+    <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterable objects</a> (objects
         where you can get its elements, such as {{jsxref("Map")}} and {{jsxref("Set")}}).
     </li>
 </ul>
@@ -105,8 +105,8 @@ tags:
     <li><code><var>TypedArray</var>.from()</code> uses <code>[[Put]]</code> where
         <code>Array.from()</code> uses <code>[[DefineProperty]]</code>. Hence, when
         working with {{jsxref("Proxy")}} objects, it calls
-        {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new
-        elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty",
+        {{jsxref("Global_Objects/Proxy/Proxy/set", "handler.set")}} to create new
+        elements rather than {{jsxref("Global_Objects/Proxy/Proxy/defineProperty",
         "handler.defineProperty()")}}.</li>
     <li>When the <code><var>source</var></code> parameter is an iterator, the
         <code><var>TypedArray</var>.from()</code> first collects all the values from the

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Grammar_and_types
 tags:
   - Guide
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}</div>
 
@@ -25,7 +25,7 @@ tags:
 <p>A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they <em>must</em> be separated by semicolons.</p>
 
 <div class="notecard note">
-<p>ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
+<p>ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
 </div>
 
 <p>It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.</p>
@@ -50,7 +50,7 @@ tags:
 <div class="notecard note">
 <p><strong>Note</strong>: You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: <code>#!/usr/bin/env node</code>.</p>
 
-<p>This is called <strong>hashbang comment</strong> syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments">Hashbang comments</a> for more details.</p>
+<p>This is called <strong>hashbang comment</strong> syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments">Hashbang comments</a> for more details.</p>
 </div>
 
 <h2 id="Declarations">Declarations</h2>
@@ -74,7 +74,7 @@ tags:
 
 <p>Because JavaScript is case sensitive, letters include the characters "<code>A</code>" through "<code>Z</code>" (uppercase) as well as "<code>a</code>" through "<code>z</code>" (lowercase).</p>
 
-<p>You can use most of ISO 8859-1 or Unicode letters such as <code>å</code> and <code>ü</code> in identifiers. (For more details, see <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">this blog post</a>.) You can also use the <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> as characters in identifiers.</p>
+<p>You can use most of ISO 8859-1 or Unicode letters such as <code>å</code> and <code>ü</code> in identifiers. (For more details, see <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">this blog post</a>.) You can also use the <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals">Unicode escape sequences</a> as characters in identifiers.</p>
 
 <p>Some examples of legal names are <code>Number_hits</code>, <code>temp99</code>, <code>$credit</code>, and <code>_name</code>.</p>
 
@@ -87,9 +87,9 @@ tags:
  <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#variable_scope">Variable scope</a> below.)</li>
 </ul>
 
-<p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
+<p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
 
-<p>You can also assign a value to a variable For example, <code>x = 42</code>. This form creates an <strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#Description">undeclared global</a></strong> variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.</p>
+<p>You can also assign a value to a variable For example, <code>x = 42</code>. This form creates an <strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#description">undeclared global</a></strong> variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.</p>
 
 <h3 id="Evaluating_variables">Evaluating variables</h3>
 
@@ -143,7 +143,7 @@ console.log(n * 32); // Will log 0 to the console
 
 <p>When you declare a variable outside of any function, it is called a <em>global</em> variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a <em>local</em> variable, because it is available only within that function.</p>
 
-<p>JavaScript before ECMAScript 2015 does not have <a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement">block statement</a> scope. Rather, a variable declared within a block is local to the <em>function (or global scope)</em> that the block resides within.</p>
+<p>JavaScript before ECMAScript 2015 does not have <a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement">block statement</a> scope. Rather, a variable declared within a block is local to the <em>function (or global scope)</em> that the block resides within.</p>
 
 <p>For example, the following code will log <code>5</code>, because the scope of <code>x</code> is the global context (or the function context if the code is part of a function). The scope of <code>x</code> is not limited to the immediate <code>if</code> statement block.</p>
 
@@ -382,7 +382,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 </pre>
 
 <div class="note">
-<p><strong>Note :</strong> An array literal is a type of <em>object initializer</em>. See <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers">Using Object Initializers</a>.</p>
+<p><strong>Note :</strong> An array literal is a type of <em>object initializer</em>. See <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">Using Object Initializers</a>.</p>
 </div>
 
 <p>If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.</p>
@@ -462,7 +462,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 0b11, 0b0011, -0b11, 0b11101001010101010101n  (binary, base 2)
 </pre>
 
-<p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
+<p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
 
 <h3 id="Floating-point_literals">Floating-point literals</h3>
 
@@ -684,7 +684,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
   <tr>
    <td><code>\u<em>XXXX</em></code></td>
    <td>The Unicode character specified by the four hexadecimal digits <em>XXXX</em>.<br>
-    For example, <code>\u00A9</code> is the Unicode sequence for the copyright symbol. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a>.</td>
+    For example, <code>\u00A9</code> is the Unicode sequence for the copyright symbol. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals">Unicode escape sequences</a>.</td>
   </tr>
   <tr>
    <td><code>\u<em>{XXXXX}</em></code></td>
@@ -732,7 +732,7 @@ Sugar is sweet,\n\
 and so is foo.'
 </pre>
 
-<p>ECMAScript 2015 introduces a new type of literal, namely <a href="/en-US/docs/Web/JavaScript/Reference/template_strings"><strong>template literals</strong></a>. This allows for many new features, including multiline strings!</p>
+<p>ECMAScript 2015 introduces a new type of literal, namely <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals"><strong>template literals</strong></a>. This allows for many new features, including multiline strings!</p>
 
 <pre class="brush: js">var poem =
 `Roses are red,

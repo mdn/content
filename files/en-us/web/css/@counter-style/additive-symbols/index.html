@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>additive-symbols</code></strong> descriptor lets you specify symbols when the value of a counter {{cssxref('system')}} descriptor is <code>additive</code>. The <code>additive-symbols</code> descriptor defines <em>additive tuples</em>, each of which is a pair containing a symbol and a non-negative integer weight. The additive system is used to construct <a href="https://en.wikipedia.org/wiki/Sign-value_notation">sign-value numbering</a> systems such as Roman numerals.</p>
+<p>The <strong><code>additive-symbols</code></strong> descriptor lets you specify symbols when the value of a counter {{cssxref('@counter-style/system')}} descriptor is <code>additive</code>. The <code>additive-symbols</code> descriptor defines <em>additive tuples</em>, each of which is a pair containing a symbol and a non-negative integer weight. The additive system is used to construct <a href="https://en.wikipedia.org/wiki/Sign-value_notation">sign-value numbering</a> systems such as Roman numerals.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,7 +20,7 @@ additive-symbols: 3 "0", 2 "\2E\20";
 additive-symbols: 3 "0", 2 url(symbol.png);
 </pre>
 
-<p>When the <code>system</code> descriptor is <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, or <code>fixed</code>, use the {{cssxref('symbols')}} descriptor instead of <code>additive-symbols</code>.</p>
+<p>When the <code>system</code> descriptor is <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, or <code>fixed</code>, use the {{cssxref('symbols()')}} descriptor instead of <code>additive-symbols</code>.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -85,5 +85,5 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 <ul>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>The {{cssxref("symbols", "symbols()")}}, functional notation is used for creating anonymous counter styles.</li>
+ <li>The {{cssxref("symbols()", "symbols()")}}, functional notation is used for creating anonymous counter styles.</li>
 </ul>

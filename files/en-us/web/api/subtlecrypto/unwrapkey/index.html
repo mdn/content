@@ -2,13 +2,13 @@
 title: SubtleCrypto.unwrapKey()
 slug: Web/API/SubtleCrypto/unwrapKey
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- unwrapKey
+  - API
+  - Method
+  - Reference
+  - Référence(2)
+  - SubtleCrypto
+  - Web Crypto API
+  - unwrapKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -21,7 +21,7 @@ tags:
 <p>As with
   <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>,
   you specify the key's <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">import format</a>
+    href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">import format</a>
   and other attributes of the key to import details such as whether it is extractable, and
   which operations it can be used for.</p>
 
@@ -35,15 +35,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.unwrapKey(
-<em>    format</em>,
-    <em>wrappedKey</em>,
-    <em>unwrappingKey</em>,
-    <em>unwrapAlgo</em>,
-    <em>unwrappedKeyAlgo</em>,
-    <em>extractable</em>,
-    <em>keyUsages</em>
-)</code>;
+<pre class="brush: js">const result = crypto.subtle.unwrapKey(
+    format,
+    wrappedKey,
+    unwrappingKey,
+    unwrapAlgo,
+    unwrappedKeyAlgo,
+    extractable,
+    keyUsages
+);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,15 +54,15 @@ tags:
 
     <ul>
       <li><code>raw</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#Raw">Raw</a> format.</li>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#raw">Raw</a> format.</li>
       <li><code>pkcs8</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#PKCS_8">PKCS #8</a> format.
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8">PKCS #8</a> format.
       </li>
       <li><code>spki</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#SubjectPublicKeyInfo">SubjectPublicKeyInfo</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
         format.</li>
       <li><code>jwk</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#JSON_Web_Key">JSON Web Key</a>
+          href="/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key">JSON Web Key</a>
         format.</li>
     </ul>
   </li>
@@ -71,26 +71,26 @@ tags:
   <li><code><em>unwrappingKey</em></code> is the {{domxref("CryptoKey")}} to use to
     decrypt the wrapped key. The key must have the <code>unwrapKey</code> usage set.</li>
   <li><code><em>unwrapAlgo</em></code> is an object specifying the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/encrypt#Supported_algorithms">algorithm</a>
+      href="/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms">algorithm</a>
     to be used to encrypt the exported key, and any extra parameters as required:
     <ul>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>,
         pass an <a href="/en-US/docs/Web/API/RsaOaepParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the RSA_OAEP algorithm."><code>RsaOaepParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>,
         pass an <a href="/en-US/docs/Web/API/AesCtrParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-CTR algorithm."><code>AesCtrParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>,
         pass an <a href="/en-US/docs/Web/API/AesCbcParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm."><code>AesCbcParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>,
         pass an <a href="/en-US/docs/Web/API/AesGcmParams"
           title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-GCM algorithm."><code>AesGcmParams</code></a>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#AES-KW">AES-KW</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw">AES-KW</a>,
         pass the string <code>"AES-KW"</code> or an object of the form
         <code>{ "name": "AES-KW }</code>.</li>
     </ul>
@@ -99,22 +99,22 @@ tags:
     key to unwrap and providing extra algorithm-specific parameters as required.
     <ul>
       <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>: Pass an
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: Pass an
         <code><a href="/en-US/docs/Web/API/RsaHashedImportParams">RsaHashedImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>: Pass
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: Pass
         an <code><a href="/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: Pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: Pass an
         <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: Pass the
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: Pass the
         string identifying the algorithm or an object of the form
         <code>{ "name": ALGORITHM }</code>, where <code>ALGORITHM </code>is the name of
         the algorithm.</li>
@@ -188,7 +188,7 @@ tags:
 <dl>
   <dt>{{exception("InvalidAccessError")}}</dt>
   <dd>Raised when the unwrapping key is not a key for the requested unwrap algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    the {{domxref("CryptoKey")}} value of that key doesn't contain
     <code>unwrap</code>.</dd>
   <dt>{{exception("NotSupported")}}</dt>
   <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
@@ -203,7 +203,7 @@ tags:
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
 <p>The <code>unwrapKey()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#Supported_algorithms">wrapKey()</a></code>
+  <code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#supported_algorithms">wrapKey()</a></code>
   method.</p>
 
 <h2 id="Examples">Examples</h2>

@@ -2,12 +2,12 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 tags:
-- Internationalization
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - Internationalization
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 ---
 <div>{{JSRef}}</div>
 
@@ -26,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><code><var>referenceStr</var>.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
+  class="brush: js">referenceStr.localeCompare(compareString[, locales[, options]])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +42,7 @@ tags:
       string returned are entirely implementation-dependent.</p>
 
     <p>See the <a
-        href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"><code>Intl.Collator()</code>
+        href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator"><code>Intl.Collator()</code>
         constructor</a> for details on these parameters and how to use them.</p>
   </dd>
 </dl>
@@ -80,8 +80,8 @@ tags:
 <h2 id="Performance">Performance</h2>
 
 <p>When comparing large numbers of strings, such as in sorting large arrays, it is better
-  to create an {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object and use the
-  function provided by its {{jsxref("Collator.prototype.compare", "compare")}} property.
+  to create an {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} object and use the
+  function provided by its {{jsxref("Intl/Collator/compare", "compare")}} property.
 </p>
 
 <h2 id="Examples">Examples</h2>
@@ -194,5 +194,5 @@ console.log(<span class="message-body-wrapper"><span class="message-flex-body"><
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</li>
+  <li>{{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}}</li>
 </ul>

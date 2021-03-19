@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <code><strong>Worker()</strong></code> constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the <a href="/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>.</p>
+<p>The <code><strong>Worker()</strong></code> constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the <a href="/en-US/docs/Web/Security/Same-origin_policy" title="Same origin policy for JavaScript">same-origin policy</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.</p>
@@ -39,7 +39,7 @@ tags:
 
 <ul>
  <li>A <code>SecurityError</code> is raised if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.</li>
- <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is incorrect. It <em>should</em> always be <code>text/javascript</code> (for historical reasons <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">other JavaScript MIME types</a> may be accepted).</li>
+ <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is incorrect. It <em>should</em> always be <code>text/javascript</code> (for historical reasons <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types">other JavaScript MIME types</a> may be accepted).</li>
  <li>A <code>SyntaxError</code> is raised if <em>aURL</em> cannot be parsed.</li>
 </ul>
 

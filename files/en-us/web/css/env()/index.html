@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>env()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to insert the value of a user agent-defined environment variable into your CSS, in a similar fashion to the {{cssxref("var")}} function and <a href="/en-US/docs/Web/CSS/--*">custom properties</a>. The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared. </span></p>
+<p><span class="seoSummary">The <strong><code>env()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> can be used to insert the value of a user agent-defined environment variable into your CSS, in a similar fashion to the {{cssxref("var()")}} function and <a href="/en-US/docs/Web/CSS/--*">custom properties</a>. The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped to the element(s) on which they are declared. </span></p>
 
 <p>To tell the browser to use the whole available space on the screen, and so enabling us to use the <code>env()</code> variables, we need to add a new viewport meta value:</p>
 
@@ -123,9 +123,9 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{CSSxRef("var", "var(…)")}}</li>
+ <li>{{CSSxRef("var()", "var(…)")}}</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Variables">CSS Custom Properties for Cascading Variables</a></li>
  <li><a href="/en-US/docs/Web/CSS/--*">Custom Properties (--*)</a></li>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS custom properties (variables)</a></li>
- <li>{{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">Using CSS custom properties (variables)</a></li>
+ <li>{{CSSxRef("@viewport", "viewport-fit (@viewport)")}}</li>
 </ul>

@@ -52,7 +52,7 @@ typeof BigInt('1') === 'bigint'  // true
 
 <p>The following operators may be used with <code>BigInt</code>s (or object-wrapped <code>BigInt</code>s): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Bitwise operators</a> are supported as well, except <code>&gt;&gt;&gt;</code> (zero-fill right shift) as all BigInts are signed.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">Bitwise operators</a> are supported as well, except <code>&gt;&gt;&gt;</code> (zero-fill right shift) as all BigInts are signed.</p>
 
 <p>Also unsupported is the unary operator (<code>+</code>), <a href="https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs">in order to not break asm.js</a>.</p>
 
@@ -156,7 +156,7 @@ o === o                    // true
 
 <ul>
  <li>it is converted to a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>: via the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> function;</li>
- <li>when used with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">logical operators</a> <code>||</code>, <code>&amp;&amp;</code>, and <code>!</code>; or</li>
+ <li>when used with <a href="/en-US/docs/Web/JavaScript/Reference/Operators">logical operators</a> <code>||</code>, <code>&amp;&amp;</code>, and <code>!</code>; or</li>
  <li>within a conditional test like an <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code></a> statement.</li>
 </ul>
 

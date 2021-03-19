@@ -8,7 +8,7 @@ tags:
   - Experimental
   - Reference
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -55,7 +55,7 @@ clip-path: unset;
 
 <dl>
  <dt><code><var>&lt;clip-source&gt;</var></code></dt>
- <dd>A {{cssxref("&lt;url&gt;")}} referencing an <a href="/en-US/docs/Web/SVG">SVG</a> {{SVGElement("clipPath")}} element.</dd>
+ <dd>A {{cssxref("url()")}} referencing an <a href="/en-US/docs/Web/SVG">SVG</a> {{SVGElement("clipPath")}} element.</dd>
  <dt>{{cssxref("&lt;basic-shape&gt;")}}</dt>
  <dd>A shape whose size and position is defined by the <code>&lt;geometry-box&gt;</code> value. If no geometry box is specified, the <code>border-box</code> will be used as the reference box.</dd>
  <dt><code><var>&lt;geometry-box&gt;</var></code></dt>
@@ -83,7 +83,7 @@ clip-path: unset;
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/CSS/Understanding_z-index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
+<p><strong>Note</strong>: A computed value other than <strong><code>none</code></strong> results in the creation of a new <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking context</a> the same way that CSS {{cssxref("opacity")}} does for values other than <code>1</code>.</p>
 </div>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -606,7 +606,7 @@ clipPathSelect.addEventListener("change", function (evt) {
 <ul>
  <li><a href="https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/">Shapes in clipping and masking – and how to use them</a></li>
  <li>CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}</li>
- <li><a href="/en-US/docs/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></li>
+ <li><a href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></li>
  <li>SVG attributes:
   <ul>
    <li>{{SVGAttr("clip-path")}}</li>

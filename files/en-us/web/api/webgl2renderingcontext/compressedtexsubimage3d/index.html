@@ -2,11 +2,11 @@
 title: WebGL2RenderingContext.compressedTexSubImage3D()
 slug: Web/API/WebGL2RenderingContext/compressedTexSubImage3D
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">// read from the buffer bound to gl.P<code>IXEL_UNPACK_BUFFER</code>
+<pre class="brush: js">// read from the buffer bound to gl.PIXEL_UNPACK_BUFFER
 void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset);
 
 void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
@@ -26,7 +26,7 @@ void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target) of the active texture.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target) of the active texture.
     Possible values:
     <ul>
       <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
@@ -34,25 +34,25 @@ void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
     </ul>
   </dd>
   <dt><code>level</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the level of detail. Level 0 is the base image
     level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
   <dt><code>xoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the x offset within the compressed texture image.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the x offset within the compressed texture image.
   </dd>
   <dt><code>yoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the y offset within the compressed texture image.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the y offset within the compressed texture image.
   </dd>
   <dt><code>zoffset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the z offset within the compressed texture image.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the z offset within the compressed texture image.
   </dd>
   <dt><code>width</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the width of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the texture.</dd>
   <dt><code>height</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the height of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the height of the texture.</dd>
   <dt><code>depth</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the depth of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the depth of the texture.</dd>
   <dt><code>format</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the compressed image format. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the compressed image format. Possible values:
     <ul>
       <li><code>gl.COMPRESSED_R11_EAC</code></li>
       <li><code>gl.COMPRESSED_SIGNED_R11_EAC</code></li>
@@ -67,10 +67,10 @@ void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
     </ul>
   </dd>
   <dt><code>imageSize</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the number of bytes to read from the buffer bound
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the number of bytes to read from the buffer bound
     to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>offset</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the offset in bytes from which to read from the
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the offset in bytes from which to read from the
     buffer bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
   <dt><code>srcData</code></dt>
   <dd>An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
@@ -122,5 +122,5 @@ void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
 
 <ul>
   <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
-  <li>{{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}</li>
+  <li>{{domxref("WebGLRenderingContext.compressedTexImage2D")}}</li>
 </ul>

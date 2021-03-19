@@ -2,18 +2,18 @@
 title: EffectTiming.duration
 slug: Web/API/EffectTiming/duration
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- duration
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - duration
+  - waapi
+  - web animations api
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
@@ -24,13 +24,13 @@ tags:
 
 <div class="note">
   <p>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including
     <code>duration</code>. The value of <code>duration</code> corresponds directly
     to {{domxref("AnimationEffectTimingReadOnly.duration")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
+    {{domxref("AnimationEffect/getTiming", "timing")}} objects returned by
+    {{domxref("AnimationEffect")}}, {{domxref("KeyframeEffect")}}, and
     {{domxref("KeyframeEffect")}}.</p>
 </div>
 
@@ -115,12 +115,12 @@ tears.forEach(function(el) {
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
   <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including this one.
   </li>
   <li>The value of this property corresponds to property of the same name in
-    {{domxref("AnimationEffectReadOnly.timing")}},
+    {{domxref("AnimationEffect.getTiming")}},
     {{domxref("KeyframeEffectReadOnly.timing")}},
     and {{domxref("KeyframeEffect.timing")}}).</li>
   <li>CSS's {{cssxref("transition-duration")}} and {{cssxref("animation-duration")}}

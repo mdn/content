@@ -2,11 +2,11 @@
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Object
-- Prototype
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
 ---
 <div>{{JSRef}}</div>
 
@@ -34,7 +34,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><code>Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>)</code></pre>
+  class="brush: js">Object.setPrototypeOf(obj, prototype)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -60,7 +60,7 @@ tags:
 
 <p><code>Object.setPrototypeOf()</code> is in the ECMAScript 2015 specification. It is
   generally considered the proper way to set the prototype of an object, vs. the more
-  controversial {{jsxref("Object.prototype.__proto__")}} property.</p>
+  controversial {{jsxref("Object/proto")}} property.</p>
 
 <h2 id="Appending_Prototype_Chains">Appending Prototype Chains</h2>
 
@@ -186,7 +186,7 @@ george(); // 'Hello guys!!'
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Using the older {{jsxref("Object.prototype.__proto__")}} property, we can easily define
+<p>Using the older {{jsxref("Object/proto")}} property, we can easily define
   <code>Object.setPrototypeOf</code> if it isn't available already:</p>
 
 <pre class="brush: js">if (!Object.setPrototypeOf) {
@@ -236,5 +236,5 @@ george(); // 'Hello guys!!'
   <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
   <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
   <li>{{jsxref("Object.getPrototypeOf()")}}</li>
-  <li>{{jsxref("Object.prototype.__proto__")}}</li>
+  <li>{{jsxref("Object/proto")}}</li>
 </ul>

@@ -12,7 +12,7 @@ tags:
 <p class="summary"><strong>Web Workers</strong> makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note:</strong> Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same <a href="/en-US/docs/Glossary/origin">origin</a> as the parent page). </p>
+<p class="summary"><strong>Note:</strong> Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same <a href="/en-US/docs/Glossary/Origin">origin</a> as the parent page). </p>
 </div>
 
 <h2 id="Web_Workers_concepts_and_usage">Web Workers concepts and usage</h2>
@@ -32,8 +32,8 @@ tags:
 <ul>
  <li>Dedicated workers are workers that are utilized by a single script. This context is represented by either a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.</li>
  <li>{{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.</li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.</li>
- <li>Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a> in your worker. See {{DOMxRef("ChromeWorker")}} for more details.</li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.</li>
+ <li>Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to <a href="/en-US/js-ctypes">js-ctypes</a> in your worker. See {{DOMxRef("ChromeWorker")}} for more details.</li>
 </ul>
 
 <div class="note">
@@ -47,10 +47,10 @@ tags:
 <ul>
  <li>{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers</li>
  <li>{{domxref("SharedWorkerGlobalScope")}} for shared workers</li>
- <li>{{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">service workers</a></li>
+ <li>{{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a></li>
 </ul>
 
-<p>Some of the functions (a subset) that are common to all workers and to the main thread (from {{domxref("WindowOrWorkerGlobalScope")}}) are: {{domxref("WindowBase64.atob", "atob()")}}, {{domxref("WindowBase64.btoa", "btoa()")}}, {{domxref("WindowTimers.clearInterval", "clearInterval()")}}, {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("WindowTimers.setInterval", "setInterval()")}}, {{domxref("WindowTimers.setTimeout", "setTimeout()")}}.</p>
+<p>Some of the functions (a subset) that are common to all workers and to the main thread (from {{domxref("WindowOrWorkerGlobalScope")}}) are: {{domxref("WindowOrWorkerGlobalScope/atob", "atob()")}}, {{domxref("WindowOrWorkerGlobalScope/btoa", "btoa()")}}, {{domxref("WindowOrWorkerGlobalScope/clearInterval", "clearInterval()")}}, {{domxref("WindowOrWorkerGlobalScope/clearTimeout", "clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("WindowOrWorkerGlobalScope/setInterval", "setInterval()")}}, {{domxref("WindowOrWorkerGlobalScope/setTimeout", "setTimeout()")}}.</p>
 
 <p>The following functions are <strong>only</strong> available to workers:</p>
 

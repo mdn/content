@@ -2,19 +2,19 @@
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 tags:
-- 3D
-- API
-- Attribute Array
-- Graphics
-- Method
-- Reference
-- Vertex Attributes
-- WebGL
-- WebGL API
-- WebGLRenderingContext
-- enableVertexAttribArray
-- vertex
-- vertex shader
+  - 3D
+  - API
+  - Attribute Array
+  - Graphics
+  - Method
+  - Reference
+  - Vertex Attributes
+  - WebGL
+  - WebGL API
+  - WebGLRenderingContext
+  - enableVertexAttribArray
+  - vertex
+  - vertex shader
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -30,7 +30,7 @@ tags:
 </div>
 
 <p>In WebGL, values that apply to a specific vertex are stored in <a
-    href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a>. These are only
+    href="/en-US/docs/Web/API/WebGL_API/Data#attributes">attributes</a>. These are only
   available to the JavaScript code and the vertex shader. Attributes are referenced by an
   index number into the list of attributes maintained by the GPU. Some vertex attribute
   indices may have predefined purposes, depending on the platform and/or the GPU. Others
@@ -53,7 +53,7 @@ tags:
 
 <dl>
   <dt><code>index</code></dt>
-  <dd>A {{domxref("GLuint")}} specifying the index number that uniquely identifies the
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the index number that uniquely identifies the
     vertex attribute to enable. If you know the name of the attribute but not its index,
     you can get the index by calling {{domxref("WebGLRenderingContext.getAttribLocation",
     "getAttribLocation()")}}.</dd>
@@ -97,7 +97,7 @@ gl.drawArrays(gl.TRIANGLES, 0, vertexCount);</pre>
 <div class="notecard note">
   <h3>Note</h3>
   <p>This code snippet is taken from <a
-    href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the
+    href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene">the
     function <code>animateScene()</code></a> in "A basic 2D WebGL animation example." See
   that article for the full sample and to see the resulting animation in action.</p>
 </div>

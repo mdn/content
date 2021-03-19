@@ -6,7 +6,7 @@ tags:
   - Guide
   - Overview
   - Reference
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{CSSRef}}</div>
 
@@ -45,7 +45,7 @@ div.menu-bar li:hover &gt; ul {
 }
 </pre>
 
-<p>For a beginner-level introduction to the syntax of selectors, see our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">guide on CSS Selectors</a>. Be aware that any <a href="/en-US/docs/Web/CSS/syntax">syntax</a> error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">text-based</a>, whereas DOM-CSS / CSSOM (the rule management system) is <a href="https://www.w3.org/TR/cssom/#introduction">object-based</a>.</p>
+<p>For a beginner-level introduction to the syntax of selectors, see our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">guide on CSS Selectors</a>. Be aware that any <a href="/en-US/docs/Web/CSS/Syntax">syntax</a> error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">text-based</a>, whereas DOM-CSS / CSSOM (the rule management system) is <a href="https://www.w3.org/TR/cssom/#introduction">object-based</a>.</p>
 
 <h3 id="At-rule_syntax">At-rule syntax</h3>
 
@@ -145,13 +145,13 @@ div.menu-bar li:hover &gt; ul {
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block formatting context</a></li>
- <li><a href="/en-US/docs/Web/CSS/box_model">Box model</a></li>
- <li><a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">Containing block</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Box model</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Containing_block">Containing block</a></li>
  <li><a href="/en-US/docs/Web/CSS/Layout_mode">Layout mode</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Margin collapsing</a></li>
  <li><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Stacking context</a></li>
- <li><a href="/en-US/docs/Web/Guide/CSS/Visual_formatting_model">Visual formatting model</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Visual_formatting_model">Visual formatting model</a></li>
 </ul>
 
 <h2 id="DOM-CSS_CSSOM">DOM-CSS / CSSOM</h2>
@@ -163,7 +163,7 @@ div.menu-bar li:hover &gt; ul {
  <li><code>{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}</code></li>
  <li><code>cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}</code> <span style="white-space: nowrap;">(selector &amp; style)</span></li>
  <li><code>cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}</code></li>
- <li>{{DOMxRef("HTMLElement.style")}}</li>
+ <li>{{DOMxRef("ElementCSSInlineStyle.style")}}</li>
  <li><code>HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}</code> (just style)</li>
  <li>{{DOMxRef("Element.className")}}</li>
  <li>{{DOMxRef("Element.classList")}}</li>

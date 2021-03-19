@@ -7,7 +7,7 @@ tags:
   - CSS Transforms
   - Reference
   - 'default value: center'
-  - 'recipe:css-property'
+  - recipe:css-property
   - transform-origin
 ---
 <div>{{ CSSRef }}</div>
@@ -16,7 +16,7 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/transform-origin.html")}}</div>
 
-<p>The transformation origin is the point around which a transformation is applied. For example, the transformation origin of the <code><a href="/en-US/docs/Web/CSS/transform-function/rotate">rotate()</a></code> function is the center of rotation.</p>
+<p>The transformation origin is the point around which a transformation is applied. For example, the transformation origin of the <code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate()</a></code> function is the center of rotation.</p>
 
 <p>This property is applied by first translating the element by the value of the property, then applying the element's transform, then translating by the negated property value.<br>
  This means, this definition</p>
@@ -322,8 +322,8 @@ width: 3em;
 height: 3em;
 border: solid 1px;
 background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+transform: scale(1.7);
+-webkit-transform: scale(1.7);
 }
 </pre>
     </div>
@@ -349,8 +349,8 @@ width: 3em;
 height: 3em;
 border: solid 1px;
 background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+transform: scale(1.7);
+-webkit-transform: scale(1.7);
 transform-origin: 0 0;
 -webkit-transform-origin: 0 0;
 }
@@ -378,8 +378,8 @@ width: 3em;
 height: 3em;
 border: solid 1px;
 background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+transform: scale(1.7);
+-webkit-transform: scale(1.7);
 transform-origin: 100% -30%;
 -webkit-transform-origin: 100% -30%;
 }

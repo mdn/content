@@ -2,11 +2,11 @@
 title: WebGLRenderingContext.stencilOpSeparate()
 slug: Web/API/WebGLRenderingContext/stencilOpSeparate
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -26,7 +26,7 @@ tags:
 
 <dl>
   <dt>face</dt>
-  <dd>A {{domxref("GLenum")}} specifying whether the front and/or back stencil state is
+  <dd>A {{domxref("WebGL_API.Types")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
     <ul>
       <li><code>gl.FRONT</code></li>
@@ -35,13 +35,13 @@ tags:
     </ul>
   </dd>
   <dt><code>fail</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the function to use when the stencil test fails.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the function to use when the stencil test fails.
     The default value is <code>gl.KEEP</code>.</dd>
   <dt><code>zfail</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the function to use when the stencil test passes,
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the function to use when the stencil test passes,
     but the depth test fails. The default value is <code>gl.KEEP</code>.</dd>
   <dt><code>zpass</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the function to use when both the stencil test
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the function to use when both the stencil test
     and the depth test pass, or when the stencil test passes and there is no depth buffer
     or depth testing is disabled. The default value is <code>gl.KEEP</code>.</dd>
 </dl>

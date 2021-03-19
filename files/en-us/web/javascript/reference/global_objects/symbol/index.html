@@ -137,7 +137,7 @@ typeof Symbol.iterator === 'symbol'
   (e.g. <code>+<var>sym</var></code> or <code><var>sym</var> | 0</code>).</li>
  <li>When using loose equality, <code>Object(<var>sym</var>) == <var>sym</var></code> returns <code>true</code>.</li>
  <li><code>Symbol("foo") + "bar" </code>throws a {{jsxref("TypeError")}} (can't convert symbol to string). This prevents you from silently creating a new string property name from a symbol, for example.</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(<var>sym</var>)</code> conversion</a> works like a call to {{jsxref("Symbol.prototype.toString()")}} with symbols, but note that <code>new String(<var>sym</var>)</code> will throw.</li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion">"safer" <code>String(<var>sym</var>)</code> conversion</a> works like a call to {{jsxref("Symbol.prototype.toString()")}} with symbols, but note that <code>new String(<var>sym</var>)</code> will throw.</li>
 </ul>
 
 <h3 id="Symbols_and_for...in_iteration">Symbols and for...in iteration</h3>

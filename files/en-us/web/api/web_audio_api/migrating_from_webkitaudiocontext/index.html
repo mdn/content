@@ -281,8 +281,8 @@ source.loop = true;
 
 <ul>
  <li>If you need to compare this attribute to <code>UNSCHEDULED_STATE</code>, you can basically remember whether you've called <code>start()</code> on the node or not.</li>
- <li>If you need to compare this attribute to <code>SCHEDULED_STATE</code>, you can basically remember whether you've called <code>start()</code> on the node or not.  You can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to <code>start()</code> to know whether playback has started or not.</li>
- <li>If you need to compare this attribute to <code>PLAYING_STATE</code>, you can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to <code>start()</code> to know whether playback has started or not.</li>
+ <li>If you need to compare this attribute to <code>SCHEDULED_STATE</code>, you can basically remember whether you've called <code>start()</code> on the node or not.  You can compare the value of {{domxref("BaseAudioContext.currentTime")}} to the first argument passed to <code>start()</code> to know whether playback has started or not.</li>
+ <li>If you need to compare this attribute to <code>PLAYING_STATE</code>, you can compare the value of {{domxref("BaseAudioContext.currentTime")}} to the first argument passed to <code>start()</code> to know whether playback has started or not.</li>
  <li>If you need to know when playback of the node is finished (which is the most significant use case of <code>playbackState</code>), there is a new ended event which you can use to know when playback is finished.  Please see this code example:</li>
 </ul>
 

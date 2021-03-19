@@ -17,7 +17,7 @@ tags:
 
 <p>The first thing to do is add code to load the textures. In our case, we'll be using a single texture, mapped onto all six sides of our rotating cube, but the same technique can be used for any number of textures.</p>
 
-<div class="note"><strong>Note:</strong> It's important to note that the loading of textures follows <a href="/en-US/docs/Web/HTTP/Access_control_CORS">cross-domain rules</a>; that is, you can only load textures from sites for which your content has CORS approval. See <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures">Cross-domain textures below</a> for details.</div>
+<div class="note"><strong>Note:</strong> It's important to note that the loading of textures follows <a href="/en-US/docs/Web/HTTP/CORS">cross-domain rules</a>; that is, you can only load textures from sites for which your content has CORS approval. See <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures">Cross-domain textures below</a> for details.</div>
 
 <p>The code that loads the texture looks like this:</p>
 
@@ -265,7 +265,7 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {
 
 <h2 id="Cross-domain_textures">Cross-domain textures</h2>
 
-<p>Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See <a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a> for details on CORS.</p>
+<p>Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See <a href="/en-US/docs/Web/HTTP/CORS">HTTP access control</a> for details on CORS.</p>
 
 <p>Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from <code>file:///</code> URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for help.</p>
 

@@ -15,12 +15,12 @@ tags:
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p>The <strong><code>IDBDatabase</code></strong> interface of the IndexedDB API provides a <a href="/en-US/docs/IndexedDB#database_connection">connection to a database</a>; you can use an <code>IDBDatabase</code> object to open a <a href="/en-US/docs/IndexedDB#gloss_transaction">transaction</a> on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.</p>
+<p>The <strong><code>IDBDatabase</code></strong> interface of the IndexedDB API provides a <a href="/en-US/docs/Web/API/IndexedDB_API#database_connection">connection to a database</a>; you can use an <code>IDBDatabase</code> object to open a <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_transaction">transaction</a> on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
+<p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
 </div>
 
 <p>{{InheritanceDiagram}}</p>
@@ -33,12 +33,12 @@ tags:
  <dt>{{domxref("IDBDatabase.version")}} {{readonlyInline}}</dt>
  <dd>A <a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit integer</a> that contains the version of the connected database. When a database is first created, this attribute is an empty string.</dd>
  <dt>{{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</dt>
- <dd>A {{ domxref("DOMStringList") }} that contains a list of the names of the <a href="/en-US/docs/IndexedDB#gloss_object_store">object stores</a> currently in the connected database.</dd>
+ <dd>A {{ domxref("DOMStringList") }} that contains a list of the names of the <a href="/en-US/docs/Web/API/IndexedDB_API#gloss_object_store">object stores</a> currently in the connected database.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p>Inherits from: <a href="/en-US/docs/DOM/EventTarget">EventTarget</a></p>
+<p>Inherits from: <a href="/en-US/docs/Web/API/EventTarget">EventTarget</a></p>
 
 <dl>
  <dt>{{domxref("IDBDatabase.close()")}}</dt>

@@ -2,13 +2,13 @@
 title: WritableStreamDefaultWriter.desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Streams
-- WritableStreamDefaultWriter
-- desiredSize
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Streams
+  - WritableStreamDefaultWriter
+  - desiredSize
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
@@ -38,26 +38,26 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">write</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">close</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">abort</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js">const writableStream = new WritableStream({
+  write(chunk) {
+    ...
+  },
+  close() {
+    ...
+  },
+  abort(err) {
+    ...
+  }
+}, queuingStrategy);
 
-<span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.
+...
 
-</span></code><code class="language-js"><span class="punctuation token">const writer = writableStream.getWriter();
+const writer = writableStream.getWriter();
 
-...</span></code><code class="language-js">
+...
 
-<span class="comment token">// return stream's desired size</span>
-let size = writer<span class="punctuation token">.</span>desiredSize;</code></pre>
+// return stream's desired size
+let size = writer.desiredSize;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

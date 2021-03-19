@@ -2,12 +2,12 @@
 title: WebGLRenderingContext.texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -39,7 +39,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target) of the active texture.
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target) of the active texture.
     Possible values:
     <ul>
       <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
@@ -58,10 +58,10 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     </ul>
   </dd>
   <dt><code>level</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the level of detail. Level 0 is the base image
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the level of detail. Level 0 is the base image
     level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
   <dt><code>internalformat</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the color components in the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the color components in the texture.</dd>
   <dd>Possible values in both WebGL1 and WebGL2</dd>
   <dt>
     <table>
@@ -756,19 +756,19 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 
 <dl>
   <dt><code>width</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the width of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the texture.</dd>
   <dt><code>height</code></dt>
-  <dd>A {{domxref("GLsizei")}} specifying the height of the texture.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the height of the texture.</dd>
   <dt><code>border</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the width of the border. Must be 0.</dd>
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the width of the border. Must be 0.</dd>
   <dt><code>format</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the format of the texel data. In WebGL 1, this
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the format of the texel data. In WebGL 1, this
     must be the same as <code>internalformat</code> (see above). in WebGL 2, the
     combinations are listed in <a
       href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE">this
       table</a>.</dd>
   <dt><code>type</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the data type of the texel data. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the data type of the texel data. Possible values:
     <ul>
       <li><code>gl.UNSIGNED_BYTE</code>: 8 bits per channel for <code>gl.RGBA</code></li>
       <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 5 red bits, 6 green bits, 5 blue bits.
@@ -840,7 +840,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     </ul>
   </dd>
   <dt>offset</dt>
-  <dd>(WebGL 2 only) A {{domxref("GLintptr")}} byte offset into the
+  <dd>(WebGL 2 only) A {{domxref("WebGL_API.Types")}} byte offset into the
     {{domxref("WebGLBuffer")}}'s data store. Used to upload data to the currently bound
     {{domxref("WebGLTexture")}} from the <code>WebGLBuffer</code> bound to the
     <code>PIXEL_UNPACK_BUFFER</code> target.</dd>

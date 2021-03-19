@@ -3,7 +3,7 @@ title: Mozilla CSS extensions
 slug: Web/CSS/Mozilla_Extensions
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla Extensions
   - Guide
   - Non-standard
   - Overview
@@ -28,12 +28,12 @@ tags:
  <li>{{CSSxRef("-moz-border-left-colors")}} {{Obsolete_Inline}}</li>
  <li>{{CSSxRef("-moz-border-right-colors")}} {{Obsolete_Inline}}</li>
  <li>{{CSSxRef("-moz-border-top-colors")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("-moz-box-align")}}</li>
- <li>{{CSSxRef("-moz-box-direction")}}</li>
- <li>{{CSSxRef("-moz-box-flex")}}</li>
- <li>{{CSSxRef("-moz-box-ordinal-group")}}</li>
- <li>{{CSSxRef("-moz-box-orient")}}</li>
- <li>{{CSSxRef("-moz-box-pack")}}</li>
+ <li>{{CSSxRef("box-align")}}</li>
+ <li>{{CSSxRef("box-direction")}}</li>
+ <li>{{CSSxRef("box-flex")}}</li>
+ <li>{{CSSxRef("box-ordinal-group")}}</li>
+ <li>{{CSSxRef("box-orient")}}</li>
+ <li>{{CSSxRef("box-pack")}}</li>
 </ul>
 
 <h3 id="C–I">C–I</h3>
@@ -49,7 +49,7 @@ tags:
 
 <ul>
  <li>{{CSSxRef("-moz-orient")}}</li>
- <li>{{CSSxRef("-moz-osx-font-smoothing")}}</li>
+ <li>{{CSSxRef("font-smooth")}}</li>
  <li>{{CSSxRef("-moz-outline-radius")}}</li>
  <li>{{CSSxRef("-moz-outline-radius-bottomleft")}}</li>
  <li>{{CSSxRef("-moz-outline-radius-bottomright")}}</li>
@@ -75,7 +75,7 @@ tags:
  <li>{{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{Obsolete_Inline}}</li>
  <li>{{CSSxRef("-moz-user-focus")}}</li>
  <li>{{CSSxRef("-moz-user-input")}}</li>
- <li>{{CSSxRef("-moz-user-modify")}}</li>
+ <li>{{CSSxRef("user-modify")}}</li>
  <li>{{CSSxRef("-moz-window-dragging")}}</li>
  <li>{{CSSxRef("-moz-window-shadow")}}</li>
 </ul>
@@ -108,7 +108,7 @@ tags:
  <li>{{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} [Prefixed version still accepted]</li>
  <li>{{CSSxRef("background-clip", "-moz-background-clip")}}{{Obsolete_Inline(2)}}</li>
  <li>{{CSSxRef("background-origin", "-moz-background-origin")}}{{Obsolete_Inline(2)}}</li>
- <li>{{CSSxRef("-moz-background-inline-policy")}}{{Obsolete_Inline(32)}} [Superseded by the standard version {{CSSxRef("box-decoration-break")}}]</li>
+ <li>{{CSSxRef("box-decoration-break")}}{{Obsolete_Inline(32)}} [Superseded by the standard version {{CSSxRef("box-decoration-break")}}]</li>
  <li>{{CSSxRef("background-size", "-moz-background-size")}}{{Obsolete_Inline(2)}}</li>
  <li>{{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} [Superseded by the standard version {{CSSxRef("border-inline-end")}}]</li>
  <li>{{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} [Superseded by the standard version {{CSSxRef("border-inline-end-color")}}]</li>
@@ -191,7 +191,7 @@ tags:
 </ul>
 </div>
 
-<h3 id="-moz-appearance">{{CSSxRef("-moz-appearance")}}</h3>
+<h3 id="-moz-appearance">{{CSSxRef("appearance")}}</h3>
 
 <div class="index">
 <ul>
@@ -287,22 +287,22 @@ tags:
 <div class="index">
 <ul>
  <li>
-  <h4 id="Gradients">Gradients{{Gecko_minversion_inline("1.9.2")}}</h4>
+  <h4 id="Gradients">Gradients</h4>
 
   <ul>
-   <li>{{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}</li>
-   <li>{{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}</li>
+   <li>{{CSSxRef("linear-gradient()","-moz-linear-gradient")}} {{Deprecated_Inline}}</li>
+   <li>{{CSSxRef("radial-gradient()","-moz-radial-gradient")}} {{Deprecated_Inline}}</li>
   </ul>
  </li>
  <li>
-  <h4 id="Elements">Elements{{gecko_minversion_inline("2.0")}}</h4>
+  <h4 id="Elements">Elements</h4>
 
   <ul>
-   <li>{{CSSxRef("element","-moz-element")}}</li>
+   <li>{{CSSxRef("element()","-moz-element")}}</li>
   </ul>
  </li>
  <li>
-  <h4 id="Sub-images">Sub-images{{gecko_minversion_inline("2.0")}}</h4>
+  <h4 id="Sub-images">Sub-images</h4>
 
   <ul>
    <li>{{CSSxRef("-moz-image-rect")}}</li>
@@ -339,8 +339,8 @@ tags:
  <li><code>-moz-buttondefault</code></li>
  <li><code>-moz-buttonhoverface</code></li>
  <li><code>-moz-buttonhovertext</code></li>
- <li><code>-moz-default-background-color</code>{{Gecko_minversion_inline("5.0")}}</li>
- <li><code>-moz-default-color</code>{{Gecko_minversion_inline("5.0")}}</li>
+ <li><code>-moz-default-background-color</code></li>
+ <li><code>-moz-default-color</code></li>
  <li><code>-moz-cellhighlight</code></li>
  <li><code>-moz-cellhighlighttext</code></li>
  <li><code>-moz-field</code></li>
@@ -355,8 +355,8 @@ tags:
  <li><code>-moz-mac-accentlightshadow</code></li>
  <li><code>-moz-mac-accentregularhighlight</code></li>
  <li><code>-moz-mac-accentregularshadow</code></li>
- <li><code>-moz-mac-chrome-active</code>{{Gecko_minversion_inline("1.9.1")}}</li>
- <li><code>-moz-mac-chrome-inactive</code>{{Gecko_minversion_inline("1.9.1")}}</li>
+ <li><code>-moz-mac-chrome-active</code></li>
+ <li><code>-moz-mac-chrome-inactive</code></li>
  <li><code>-moz-mac-focusring</code></li>
  <li><code>-moz-mac-menuselect</code></li>
  <li><code>-moz-mac-menushadow</code></li>
@@ -427,7 +427,7 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{CSSxRef("image-rendering","-moz-crisp-edges")}}{{Gecko_minversion_inline("1.9.2")}}</li>
+ <li>{{CSSxRef("image-rendering","-moz-crisp-edges")}}</li>
 </ul>
 </div>
 
@@ -435,7 +435,7 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{CSSxRef("-moz-calc")}}{{gecko_minversion_inline("2.0")}}</li>
+ <li>{{CSSxRef("calc()")}}</li>
 </ul>
 </div>
 
@@ -481,10 +481,10 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{CSSxRef("-moz-scrollbars-none")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("-moz-scrollbars-horizontal")}} {{Deprecated_Inline}}</li>
- <li>{{CSSxRef("-moz-scrollbars-vertical")}} {{Deprecated_Inline}}</li>
- <li>{{CSSxRef("-moz-hidden-unscrollable")}}</li>
+ <li>{{CSSxRef("overflow")}} {{Obsolete_Inline}}</li>
+ <li>{{CSSxRef("overflow")}} {{Deprecated_Inline}}</li>
+ <li>{{CSSxRef("overflow")}} {{Deprecated_Inline}}</li>
+ <li>{{CSSxRef("overflow")}}</li>
 </ul>
 </div>
 
@@ -506,7 +506,7 @@ tags:
 </ul>
 </div>
 
-<h3 id="-moz-user-select">{{CSSxRef("-moz-user-select")}}</h3>
+<h3 id="-moz-user-select">{{CSSxRef("user-select")}}</h3>
 
 <div class="index">
 <ul>
@@ -535,9 +535,9 @@ tags:
  </li>
  <li>{{CSSxRef("::-moz-anonymous-block")}} <span class="comment">eg@:- bug 331432</span></li>
  <li>{{CSSxRef("::-moz-anonymous-positioned-block")}}</li>
- <li>{{CSSxRef(":-moz-any")}}{{gecko_minversion_inline("2.0")}}</li>
- <li>{{CSSxRef(":-moz-any-link")}} [Matches <code>:link</code> and <code>:visited</code>]</li>
- <li>{{CSSxRef(":-moz-broken")}}{{gecko_minversion_inline("1.9")}}</li>
+ <li>{{CSSxRef(":is")}}</li>
+ <li>{{CSSxRef(":any-link")}} [Matches <code>:link</code> and <code>:visited</code>]</li>
+ <li>{{CSSxRef(":-moz-broken")}}</li>
  <li>{{CSSxRef("::-moz-canvas")}}</li>
  <li>{{CSSxRef("::-moz-color-swatch")}}</li>
  <li>{{CSSxRef("::-moz-cell-content")}}</li>
@@ -548,12 +548,12 @@ tags:
  <li>{{CSSxRef(":-moz-first-node")}}</li>
  <li>{{CSSxRef("::-moz-focus-inner")}}</li>
  <li>{{CSSxRef("::-moz-focus-outer")}}</li>
- <li>{{CSSxRef(":-moz-focusring")}}{{gecko_minversion_inline("2.0")}}</li>
- <li>{{CSSxRef(":-moz-full-screen")}}{{gecko_minversion_inline("9.0")}}</li>
- <li>{{CSSxRef(":-moz-full-screen-ancestor")}}{{gecko_minversion_inline("10.0")}}</li>
- <li>{{CSSxRef(":-moz-handler-blocked")}}{{gecko_minversion_inline("1.9.1")}}</li>
- <li>{{CSSxRef(":-moz-handler-crashed")}}{{gecko_minversion_inline("2.0")}}</li>
- <li>{{CSSxRef(":-moz-handler-disabled")}}{{gecko_minversion_inline("1.9.1")}}</li>
+ <li>{{CSSxRef(":-moz-focusring")}}</li>
+ <li>{{CSSxRef(":fullscreen")}}</li>
+ <li>{{CSSxRef(":-moz-full-screen-ancestor")}}</li>
+ <li>{{CSSxRef(":-moz-handler-blocked")}}</li>
+ <li>{{CSSxRef(":-moz-handler-crashed")}}</li>
+ <li>{{CSSxRef(":-moz-handler-disabled")}}</li>
  <li>{{CSSxRef("::-moz-inline-table")}}</li>
  <li>
   <h3 id="L">L</h3>
@@ -561,23 +561,23 @@ tags:
  <li>{{CSSxRef(":-moz-last-node")}}</li>
  <li>{{CSSxRef(":-moz-list-bullet")}}</li>
  <li>{{CSSxRef(":-moz-list-number")}}</li>
- <li>{{CSSxRef(":-moz-loading")}}{{gecko_minversion_inline("1.9")}}</li>
- <li>{{CSSxRef(":-moz-locale-dir(ltr)")}}{{gecko_minversion_inline("1.9.2")}}</li>
- <li>{{CSSxRef(":-moz-locale-dir(rtl)")}}{{gecko_minversion_inline("1.9.2")}}</li>
- <li>{{CSSxRef(":-moz-lwtheme")}}{{gecko_minversion_inline("1.9.2")}}</li>
- <li>{{CSSxRef(":-moz-lwtheme-brighttext")}}{{gecko_minversion_inline("1.9.2")}}</li>
- <li>{{CSSxRef(":-moz-lwtheme-darktext")}}{{gecko_minversion_inline("1.9.2")}}</li>
+ <li>{{CSSxRef(":-moz-loading")}}</li>
+ <li>{{CSSxRef(":-moz-locale-dir(ltr)")}}</li>
+ <li>{{CSSxRef(":-moz-locale-dir(rtl)")}}</li>
+ <li>{{CSSxRef(":-moz-lwtheme")}}</li>
+ <li>{{CSSxRef(":-moz-lwtheme-brighttext")}}</li>
+ <li>{{CSSxRef(":-moz-lwtheme-darktext")}}</li>
  <li>
   <h3 id="N_–_R">N – R</h3>
  </li>
- <li>{{CSSxRef(":-moz-native-anonymous")}}{{gecko_minversion_inline("36")}}</li>
+ <li>{{CSSxRef(":-moz-native-anonymous")}}</li>
  <li>{{CSSxRef(":-moz-only-whitespace")}}</li>
  <li>{{CSSxRef("::-moz-page")}}</li>
  <li>{{CSSxRef("::-moz-page-sequence")}}</li>
  <li>{{CSSxRef("::-moz-pagebreak")}}</li>
  <li>{{CSSxRef("::-moz-pagecontent")}}</li>
- <li>{{CSSxRef(":-moz-placeholder")}}{{gecko_minversion_inline("1.9")}}{{Obsolete_Inline("51")}}</li>
- <li>{{CSSxRef("::-moz-placeholder")}}{{gecko_minversion_inline("19")}}{{Deprecated_Inline("51")}}</li>
+ <li>{{CSSxRef(":placeholder-shown")}}{{Obsolete_Inline("51")}}</li>
+ <li>{{CSSxRef("::placeholder")}}{{Deprecated_Inline("51")}}</li>
  <li>{{CSSxRef("::-moz-progress-bar")}}</li>
  <li>{{CSSxRef("::-moz-range-progress")}}</li>
  <li>{{CSSxRef("::-moz-range-thumb")}}</li>
@@ -591,8 +591,8 @@ tags:
  <li>{{CSSxRef("::-moz-scrolled-content")}}</li>
  <li>{{CSSxRef("::-moz-scrolled-page-sequence")}}</li>
  <li>{{CSSxRef("::selection","::-moz-selection")}}{{Deprecated_Inline(62)}}</li>
- <li>{{CSSxRef(":-moz-submit-invalid")}}{{gecko_minversion_inline("2.0")}}</li>
- <li>{{CSSxRef(":-moz-suppressed")}}{{gecko_minversion_inline("1.9")}}</li>
+ <li>{{CSSxRef(":-moz-submit-invalid")}}</li>
+ <li>{{CSSxRef(":-moz-suppressed")}}</li>
  <li>{{CSSxRef("::-moz-svg-foreign-content")}}</li>
  <li>
   <h3 id="T">T</h3>
@@ -606,7 +606,7 @@ tags:
  <li>{{CSSxRef("::-moz-table-row-group")}}</li>
  <li>{{CSSxRef(":-moz-tree-cell")}}</li>
  <li>{{CSSxRef(":-moz-tree-cell-text")}}</li>
- <li>{{CSSxRef(":-moz-tree-cell-text(hover)")}}{{gecko_minversion_inline("1.9")}}</li>
+ <li>{{CSSxRef(":-moz-tree-cell-text(hover)")}}</li>
  <li>{{CSSxRef(":-moz-tree-checkbox")}}</li>
  <li>{{CSSxRef(":-moz-tree-column")}}</li>
  <li>{{CSSxRef(":-moz-tree-drop-feedback")}}</li>
@@ -615,18 +615,18 @@ tags:
  <li>{{CSSxRef(":-moz-tree-line")}}</li>
  <li>{{CSSxRef(":-moz-tree-progressmeter")}}</li>
  <li>{{CSSxRef(":-moz-tree-row")}}</li>
- <li>{{CSSxRef(":-moz-tree-row(hover)")}}{{gecko_minversion_inline("1.9")}}</li>
+ <li>{{CSSxRef(":-moz-tree-row(hover)")}}</li>
  <li>{{CSSxRef(":-moz-tree-separator")}}</li>
  <li>{{CSSxRef(":-moz-tree-twisty")}}</li>
  <li>
   <h3 id="U_–_X">U – X</h3>
  </li>
- <li>{{CSSxRef(":-moz-ui-invalid")}}{{gecko_minversion_inline("2.0")}}</li>
- <li>{{CSSxRef(":-moz-ui-valid")}}{{gecko_minversion_inline("2.0")}}</li>
- <li>{{CSSxRef(":-moz-user-disabled")}}{{gecko_minversion_inline("1.9")}}</li>
+ <li>{{CSSxRef(":user-invalid")}}</li>
+ <li>{{CSSxRef(":-moz-ui-valid")}}</li>
+ <li>{{CSSxRef(":-moz-user-disabled")}}</li>
  <li>{{CSSxRef("::-moz-viewport")}}</li>
  <li>{{CSSxRef("::-moz-viewport-scroll")}}</li>
- <li>{{CSSxRef(":-moz-window-inactive")}}{{gecko_minversion_inline("2.0")}}</li>
+ <li>{{CSSxRef(":-moz-window-inactive")}}</li>
  <li>{{CSSxRef("::-moz-xul-anonymous-block")}}</li>
 </ul>
 </div>
@@ -635,7 +635,7 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{CSSxRef("@-moz-document")}}</li>
+ <li>{{CSSxRef("@document")}}</li>
 </ul>
 </div>
 
@@ -643,9 +643,9 @@ tags:
 
 <div class="index">
 <ul>
- <li>{{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}{{gecko_minversion_inline("2.0")}}</li>
+ <li>{{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}</li>
  <li>{{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}</li>
- <li>{{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}{{gecko_minversion_inline("1.9.2")}}</li>
+ <li>{{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}</li>
  <li>{{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}</li>
 </ul>
 </div>

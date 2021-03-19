@@ -24,7 +24,7 @@ tags:
 
 <p>The <code>max()</code> function takes one or more comma-separated expressions as its parameter, with the largest (most positive) expression value used as the value of the property to which it is assigned.</p>
 
-<p>The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min", "min()")}} and <code>max()</code> functions.</p>
+<p>The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr()", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}), or nested {{CSSxRef("min()", "min()")}} and <code>max()</code> functions.</p>
 
 <p>You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.</p>
 
@@ -69,7 +69,7 @@ h1.responsive {
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>When <code>max()</code> is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a <code>max()</code> that has as its second value a <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a> that is always large enough to read. For example:</p>
+<p>When <code>max()</code> is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min()", "min()")}} function nested within a <code>max()</code> that has as its second value a <a href="/en-US/docs/Web/CSS/length#relative_length_units">relative length unit</a> that is always large enough to read. For example:</p>
 
 <pre class="brush: css;">small {
   font-size: max(min(0.5vw, 0.5em), 1rem);
@@ -108,8 +108,8 @@ h1.responsive {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{CSSxRef("calc", "calc()")}}</li>
- <li>{{CSSxRef("clamp", "clamp()")}}</li>
- <li>{{CSSxRef("min", "min()")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
+ <li>{{CSSxRef("calc()", "calc()")}}</li>
+ <li>{{CSSxRef("clamp()", "clamp()")}}</li>
+ <li>{{CSSxRef("min()", "min()")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Values</a></li>
 </ul>

@@ -2,11 +2,11 @@
 title: WebGLRenderingContext.stencilFuncSeparate()
 slug: Web/API/WebGLRenderingContext/stencilFuncSeparate
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -26,7 +26,7 @@ tags:
 
 <dl>
   <dt>face</dt>
-  <dd>A {{domxref("GLenum")}} specifying whether the front and/or back stencil state is
+  <dd>A {{domxref("WebGL_API.Types")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
     <ul>
       <li><code>gl.FRONT</code></li>
@@ -35,7 +35,7 @@ tags:
     </ul>
   </dd>
   <dt><code>func</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the test function. The default function is
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the test function. The default function is
     <code>gl.ALWAYS</code>. The possible values are:
     <ul>
       <li><code>gl.NEVER</code>:       Never pass.</li>
@@ -55,11 +55,11 @@ tags:
     </ul>
   </dd>
   <dt><code>ref</code></dt>
-  <dd>A {{domxref("GLint")}} specifying the reference value for the stencil test. This
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the reference value for the stencil test. This
     value is clamped to the range 0 to 2<sup>n</sup> -1 where n is the number of bitplanes
     in the stencil buffer. The default value is 0.</dd>
   <dt><code>mask</code></dt>
-  <dd>A {{domxref("GLuint")}} specifying a bit-wise mask that is used to AND the reference
+  <dd>A {{domxref("WebGL_API.Types")}} specifying a bit-wise mask that is used to AND the reference
     value and the stored stencil value when the test is done. The default value is all 1.
   </dd>
 </dl>

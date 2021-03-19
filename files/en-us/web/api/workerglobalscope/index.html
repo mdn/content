@@ -12,7 +12,7 @@ tags:
 
 <p>The <code><strong>WorkerGlobalScope</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by {{domxref("Window")}} objects — in this case event handlers, the console or the associated {{domxref("WorkerNavigator")}} object. Each <code>WorkerGlobalScope</code> has its own event loop.</p>
 
-<p>This interface is usually specialized by each worker type: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. The <code>self</code> property returns the specialized scope for each context.</p>
+<p>This interface is usually specialized by each worker type: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a>. The <code>self</code> property returns the specialized scope for each context.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -160,5 +160,5 @@ console.log(navigator);</pre>
 <ul>
  <li>Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}</li>
  <li>Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers.</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers.</a></li>
 </ul>

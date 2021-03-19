@@ -2,17 +2,17 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 tags:
-- ECMAScript 2015
-- ES6
-- JavaScript
-- Language feature
-- Reference
-- Statement
+  - ECMAScript 2015
+  - ES6
+  - JavaScript
+  - Language feature
+  - Reference
+  - Statement
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
 <p>The <strong><code>for...of</code> statement</strong> creates a loop iterating over <a
-    href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable
+    href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable
     objects</a>, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, array-like
   objects (e.g., {{jsxref("Functions/arguments", "arguments")}}
   or {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}},
@@ -254,7 +254,7 @@ for (const value of iterable) {
     properties</a> of an object, in an arbitrary order.</p>
 
 <p>The <code>for...of</code> statement iterates over values that the <a
-    href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">iterable
+    href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables">iterable
     object</a> defines to be iterated over.</p>
 
 <p>The following example shows the difference between a <code>for...of</code> loop and a
@@ -291,7 +291,7 @@ iterable.foo = 'hello';</pre>
 
 <p>Every object will inherit the <code>objCustom</code> property and every object that is
   an {{jsxref("Array")}} will inherit the <code>arrCustom</code> property since these
-  properties have been added to {{jsxref("Object.prototype")}} and
+  properties have been added to {{jsxref("Object")}} and
   {{jsxref("Array.prototype")}}, respectively. The object <code>iterable</code> inherits
   the properties <code>objCustom</code> and <code>arrCustom</code> because of <a
     href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">inheritance and
@@ -331,7 +331,7 @@ iterable.foo = 'hello';</pre>
 }</pre>
 
 <p>This loop iterates and logs <strong>values</strong> that <code>iterable</code>, as an
-  <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">iterable
+  <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables">iterable
     object</a>, defines to be iterated over. The object's <strong>elements</strong>
   <code>3</code>, <code>5</code>, <code>7</code> are shown, but none of the object's
   <strong>properties</strong>.</p>

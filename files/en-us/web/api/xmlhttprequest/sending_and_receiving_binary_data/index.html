@@ -72,7 +72,7 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (
 
 <h2 id="Sending_binary_data">Sending binary data</h2>
 
-<p>The <code>send</code> method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, or {{domxref("File")}} object.</p>
+<p>The <code>send</code> method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, or {{domxref("File")}} object.</p>
 
 <p>The following example creates a text file on-the-fly and uses the <code>POST</code> method to send the "file" to the server. This example uses plain text, but you can imagine the data being a binary file instead.</p>
 
@@ -106,10 +106,10 @@ xhr.send(myArray);
 
 <p>This is building a 512-byte array of 8-bit integers and sending it; you can use any binary data you'd like, of course.</p>
 
-<div class="note"><strong>Note:</strong> Support for sending <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
+<div class="note"><strong>Note:</strong> Support for sending <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><code>ArrayBuffer</code></a> objects using XMLHttpRequest was added to Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
 
 <h2 id="Submitting_forms_and_uploading_files">Submitting forms and uploading files</h2>
 
-<p>Please, read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
+<p>Please, read <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">this paragraph</a>.</p>
 
 <div>{{APIRef("XMLHttpRequest")}}</div>

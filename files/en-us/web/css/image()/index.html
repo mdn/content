@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>image()</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("&lt;url&gt;")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
+<p>The <strong><code>image()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url()")}} function, but with added functionality including specifying the image's directionality, specifying fallback images for when the preferred image is not supported, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.</p>
 
 <div class="notecard note">
 <p><strong>Disambiguation:</strong> {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.</p>
@@ -27,7 +27,7 @@ tags:
  <dt><code>image-tags</code>{{Optional_Inline}}</dt>
  <dd>The directionality of the image, either <code>ltr</code> for left-to-right or <code>rtl</code> for right-to-left.</dd>
  <dt><code>image-src</code> {{Optional_Inline}}</dt>
- <dd>Zero or more {{CSSxRef("&lt;url&gt;")}}s or {{CSSxRef("&lt;string&gt;")}}s specifying the image sources, with optional image fragment identifiers.</dd>
+ <dd>Zero or more {{CSSxRef("url()")}}s or {{CSSxRef("&lt;string&gt;")}}s specifying the image sources, with optional image fragment identifiers.</dd>
  <dt><code>color</code>{{Optional_Inline}}</dt>
  <dd>A color, specifying a solid background color to use as a fallback if no <code>image-src</code> is found, supported, or declared.</dd>
 </dl>
@@ -67,7 +67,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -163,11 +163,11 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <ul>
  <li>{{CSSxRef("&lt;image&gt;")}}</li>
- <li>{{CSSxRef("element")}}</li>
- <li>{{CSSxRef("&lt;url&gt;")}}</li>
+ <li>{{CSSxRef("element()")}}</li>
+ <li>{{CSSxRef("url()")}}</li>
  <li>{{CSSxRef("clip-path")}}</li>
  <li>{{CSSxRef("-moz-image-rect")}}</li>
  <li>{{CSSxRef("&lt;gradient&gt;")}}</li>
- <li>{{CSSxRef("image-set")}}</li>
- <li>{{CSSxRef("cross-fade")}}</li>
+ <li>{{CSSxRef("image-set()")}}</li>
+ <li>{{CSSxRef("cross-fade()")}}</li>
 </ul>

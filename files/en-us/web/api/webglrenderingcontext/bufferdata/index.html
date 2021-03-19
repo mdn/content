@@ -2,13 +2,13 @@
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
 tags:
-- API
-- Buffer
-- Graphics
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Buffer
+  - Graphics
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -31,7 +31,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 
 <dl>
 	<dt><code>target</code></dt>
-	<dd>A {{domxref("GLenum")}} specifying the binding point (target). Possible values:
+	<dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target). Possible values:
 		<ul>
 			<li><code>gl.ARRAY_BUFFER</code>: Buffer containing vertex attributes, such as
 				vertex coordinates, texture coordinate data, or vertex color data.</li>
@@ -57,7 +57,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 		</ul>
 	</dd>
 	<dt><code>size</code></dt>
-	<dd>A {{domxref("GLsizeiptr")}} setting the size in bytes of the buffer object's data
+	<dd>A {{domxref("WebGL_API.Types")}} setting the size in bytes of the buffer object's data
 		store.</dd>
 	<dt><code>srcData</code> {{optional_inline}}</dt>
 	<dd>An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} or one of the
@@ -65,7 +65,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 		store. If <code>null</code>, a data store is still created, but the content is
 		uninitialized and undefined.</dd>
 	<dt><code>usage</code></dt>
-	<dd>A {{domxref("GLenum")}} specifying the intended usage pattern of the data store
+	<dd>A {{domxref("WebGL_API.Types")}} specifying the intended usage pattern of the data store
 		for optimization purposes. Possible values:
 		<ul>
 			<li><code>gl.STATIC_DRAW</code>: The contents are intended to be specified
@@ -106,10 +106,10 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 		</ul>
 	</dd>
 	<dt><code>srcOffset</code></dt>
-	<dd>A {{domxref("GLuint")}} specifying the element index offset where to start reading
+	<dd>A {{domxref("WebGL_API.Types")}} specifying the element index offset where to start reading
 		the buffer.</dd>
 	<dt><code>length</code> {{optional_inline}}</dt>
-	<dd>A {{domxref("GLuint")}} defaulting to 0.</dd>
+	<dd>A {{domxref("WebGL_API.Types")}} defaulting to 0.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

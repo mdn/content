@@ -352,7 +352,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <h3 id="Explicit_restartIce_method_added">Explicit restartIce() method added</h3>
 
-<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
+<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
 
 <h4 id="The_old_way_2">The old way</h4>
 

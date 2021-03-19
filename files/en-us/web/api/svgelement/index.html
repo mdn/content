@@ -21,8 +21,8 @@ tags:
 <p><em>Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}, {{DOMxRef("SVGElementInstance")}}</em></p>
 
 <dl>
-	<dt>{{DOMxRef("SVGElement.dataset")}}{{ReadOnlyInline}}</dt>
-	<dd>A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to <a href="/en-US/docs/Web/Guide/HTML/Using_data_attributes">custom data attributes</a> attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where <code>*</code> is the key name for the pair. This works just like HTML's {{DOMxRef("HTMLElement.dataset")}} property and HTML's {{HTMLAttrxRef("data-*")}} global attribute.</dd>
+	<dt>{{DOMxRef("HTMLOrForeignElement.dataset")}}{{ReadOnlyInline}}</dt>
+	<dd>A {{DOMxRef("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to <a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">custom data attributes</a> attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where <code>*</code> is the key name for the pair. This works just like HTML's {{DOMxRef("HTMLOrForeignElement.dataset")}} property and HTML's {{HTMLAttrxRef("data-*")}} global attribute.</dd>
 	<dt>{{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
 	<dd>An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if <code>class</code> is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.</dd>
 	<dt>{{DOMxRef("SVGElement.ownerSVGElement")}}{{ReadOnlyInline}}</dt>
@@ -72,7 +72,7 @@ tags:
 		<tr>
 			<td>{{SpecName("SVG2", "types.html#InterfaceSVGElement", "SVGElement")}}</td>
 			<td>{{Spec2("SVG2")}}</td>
-			<td>Adds the {{DOMxRef("SVGElement.dataset", "dataset")}} property.</td>
+			<td>Adds the {{DOMxRef("HTMLOrForeignElement/dataset", "dataset")}} property.</td>
 		</tr>
 		<tr>
 			<td>{{SpecName("SVG1.1", "types.html#InterfaceSVGElement", "SVGElement")}}</td>
@@ -91,5 +91,5 @@ tags:
 <ul>
 	<li>HTML {{HTMLAttrxRef("data-*")}} attribute</li>
 	<li>SVG {{SVGAttr("data-*")}} attribute</li>
-	<li><a href="/en-US/docs/Web/Guide/HTML/Using_data_attributes">Using custom data attributes in HTML</a></li>
+	<li><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using custom data attributes in HTML</a></li>
 </ul>

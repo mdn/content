@@ -2,18 +2,18 @@
 title: EffectTiming.endDelay
 slug: Web/API/EffectTiming/endDelay
 tags:
-- API
-- Animation
-- EffectTiming
-- Experimental
-- KeyframeEffect
-- Property
-- Reference
-- Web Animations
-- animate
-- endDelay
-- waapi
-- web animations api
+  - API
+  - Animation
+  - EffectTiming
+  - Experimental
+  - KeyframeEffect
+  - Property
+  - Reference
+  - Web Animations
+  - animate
+  - endDelay
+  - waapi
+  - web animations api
 ---
 <div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
 
@@ -34,23 +34,23 @@ tags:
 
 <div class="note">
   <p>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including
     <code>endDelay.</code> The value of <code>endDelay</code> corresponds directly
     to {{domxref("AnimationEffectTimingReadOnly.endDelay")}} in
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} objects returned by
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}}, and
+    {{domxref("AnimationEffect/getTiming", "timing")}} objects returned by
+    {{domxref("AnimationEffect")}}, {{domxref("KeyframeEffect")}}, and
     {{domxref("KeyframeEffect")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <em>timingProperties</em> = {
-  endDelay: <em>delayInMilliseconds</em>
+<pre class="brush: js">var timingProperties = {
+  endDelay: delayInMilliseconds
 }
 
-<code><em>timingProperties</em>.endDelay = delayInMilliseconds;</code>
+timingProperties.endDelay = delayInMilliseconds;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -84,13 +84,13 @@ tags:
 <ul>
   <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
   <li>{{domxref("Element.animate()")}},
-    {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly",
+    {{domxref("KeyframeEffect/KeyframeEffect",
     "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect",
     "KeyframeEffect()")}} all accept an object of timing properties including this one.
   </li>
   <li>The value of this property corresponds to the one in
     {{domxref("AnimationEffectTimingReadOnly")}} (which is the
-    {{domxref("AnimationEffectReadOnly.timing", "timing")}} object for
-    {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}},
+    {{domxref("AnimationEffect/getTiming", "timing")}} object for
+    {{domxref("AnimationEffect")}}, {{domxref("KeyframeEffect")}},
     and {{domxref("KeyframeEffect")}}).</li>
 </ul>

@@ -2,11 +2,11 @@
 title: WebGLRenderingContext.getRenderbufferParameter()
 slug: Web/API/WebGLRenderingContext/getRenderbufferParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -23,20 +23,20 @@ tags:
 
 <dl>
   <dt>target</dt>
-  <dd>A {{domxref("Glenum")}} specifying the target renderbuffer object. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the target renderbuffer object. Possible values:
     <ul>
       <li><code>gl.RENDERBUFFER</code>: Buffer data storage for single images in a
         renderable internal format.</li>
     </ul>
   </dd>
   <dt>pname</dt>
-  <dd>A {{domxref("Glenum")}} specifying the information to query. Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the information to query. Possible values:
     <ul>
-      <li><code>gl.RENDERBUFFER_WIDTH</code>: Returns a {{domxref("GLint")}} indicating
+      <li><code>gl.RENDERBUFFER_WIDTH</code>: Returns a {{domxref("WebGL_API.Types")}} indicating
         the width of the image of the currently bound renderbuffer.</li>
-      <li><code>gl.RENDERBUFFER_HEIGHT</code>: Returns a {{domxref("GLint")}} indicating
+      <li><code>gl.RENDERBUFFER_HEIGHT</code>: Returns a {{domxref("WebGL_API.Types")}} indicating
         the height of the image of the currently bound renderbuffer.</li>
-      <li><code>gl.RENDERBUFFER_INTERNAL_FORMAT</code>: Returns a {{domxref("GLenum")}}
+      <li><code>gl.RENDERBUFFER_INTERNAL_FORMAT</code>: Returns a {{domxref("WebGL_API.Types")}}
         indicating the internal format of the currently bound renderbuffer. The default is
         <code>gl.RGBA4</code>. Possible return values:
         <ul>
@@ -49,22 +49,22 @@ tags:
           <li><code>gl.STENCIL_INDEX8</code>: 8 stencil bits.</li>
         </ul>
       </li>
-      <li><code>gl.RENDERBUFFER_GREEN_SIZE</code>: Returns a {{domxref("GLint")}} that is
+      <li><code>gl.RENDERBUFFER_GREEN_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}} that is
         the resolution size (in bits) for the green color.</li>
-      <li><code>gl.RENDERBUFFER_BLUE_SIZE</code>: Returns a {{domxref("GLint")}} that is
+      <li><code>gl.RENDERBUFFER_BLUE_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}} that is
         the resolution size (in bits) for the blue color.</li>
-      <li><code>gl.RENDERBUFFER_RED_SIZE</code>: Returns a {{domxref("GLint")}} that is
+      <li><code>gl.RENDERBUFFER_RED_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}} that is
         the resolution size (in bits) for the red color.</li>
-      <li><code>gl.RENDERBUFFER_ALPHA_SIZE</code>: Returns a {{domxref("GLint")}} that is
+      <li><code>gl.RENDERBUFFER_ALPHA_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}} that is
         the resolution size (in bits) for the alpha component.</li>
-      <li><code>gl.RENDERBUFFER_DEPTH_SIZE</code>: Returns a {{domxref("GLint")}} that is
+      <li><code>gl.RENDERBUFFER_DEPTH_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}} that is
         the resolution size (in bits) for the depth component.</li>
-      <li><code>gl.RENDERBUFFER_STENCIL_SIZE</code>: Returns a {{domxref("GLint")}} that
+      <li><code>gl.RENDERBUFFER_STENCIL_SIZE</code>: Returns a {{domxref("WebGL_API.Types")}} that
         is the resolution size (in bits) for the stencil component.</li>
       <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
         the following value is available additionally:
         <ul>
-          <li><code>gl.RENDERBUFFER_SAMPLES</code>: Returns a {{domxref("GLint")}}
+          <li><code>gl.RENDERBUFFER_SAMPLES</code>: Returns a {{domxref("WebGL_API.Types")}}
             indicating the number of samples of the image of the currently bound
             renderbuffer.</li>
         </ul>
@@ -76,7 +76,7 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>Depends on the requested information (as specified with <code>pname</code>). Either a
-  {{domxref("GLint")}} or a {{domxref("GLenum")}}.</p>
+  {{domxref("WebGL_API.Types")}} or a {{domxref("WebGL_API.Types")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 

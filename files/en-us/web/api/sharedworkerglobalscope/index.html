@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowOrWorkerGlobalScope")}}, {{domxref("WindowOrWorkerGlobalScope")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SharedWorkerGlobalScope.name")}} {{readOnlyinline}}</dt>
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="Event_handlers">Event handlers</h3>
 
-<p><em>This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements event handlers from {{domxref("WindowOrWorkerGlobalScope")}}, {{domxref("WindowOrWorkerGlobalScope")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SharedWorkerGlobalScope.onconnect")}}</dt>
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements methods from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements methods from {{domxref("WindowOrWorkerGlobalScope")}}, {{domxref("WindowOrWorkerGlobalScope")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SharedWorkerGlobalScope.close()")}}</dt>
@@ -70,17 +70,17 @@ tags:
 <h3 id="Implemented_from_other_places">Implemented from other places</h3>
 
 <dl>
- <dt>{{domxref("WindowBase64.atob()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.atob")}}</dt>
  <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("WindowBase64.btoa()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.btoa")}}</dt>
  <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("WindowTimers.clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowTimers.setInterval()")}}.</dd>
- <dt>{{domxref("WindowTimers.clearTimeout()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowTimers.setTimeout()")}}.</dd>
- <dt>{{domxref("WindowTimers.setInterval()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval")}}.</dd>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}.</dd>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</dt>
  <dd>Schedules the execution of a function every X milliseconds.</dd>
- <dt>{{domxref("WindowTimers.setTimeout()")}}</dt>
+ <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</dt>
  <dd>Sets a delay for executing a function.</dd>
 </dl>
 
@@ -123,5 +123,5 @@ tags:
  <li>{{domxref("SharedWorker")}}</li>
  <li>{{domxref("WorkerGlobalScope")}}</li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web workers</a></li>
- <li><a href="/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers">Functions available to workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a></li>
 </ul>

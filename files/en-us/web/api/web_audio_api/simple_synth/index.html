@@ -450,7 +450,7 @@ setup();</pre>
  <li>For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call <code>createKey()</code>, specifying the note string, octave, and frequency. The returned element is appended to the octave element created  in step 4.</li>
  <li>When each octave element has been built, it's appended to the keyboard.</li>
  <li>Once the keyboard has been constructed, we scroll the note "B" in octave 5 into view; this has the effect of ensuring that middle-C is visible along with its surrounding keys.</li>
- <li>Then a new custom waveform is built using {{domxref("AudioContext.createPeriodicWave()")}}. This waveform will be used any time the user selects "Custom" from the waveform picker control.</li>
+ <li>Then a new custom waveform is built using {{domxref("BaseAudioContext.createPeriodicWave")}}. This waveform will be used any time the user selects "Custom" from the waveform picker control.</li>
  <li>Finally, the oscillator list is initialized to ensure that it's ready to receive information identifiying which oscillators are associated with which keys.</li>
 </ol>
 
@@ -506,7 +506,7 @@ setup();</pre>
 }
 </pre>
 
-<p><code>playTone()</code> begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("AudioContext.createOscillator()")}} method. We then connect it to the master gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the master gain node will affect the volume of all tones being generated.</p>
+<p><code>playTone()</code> begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("BaseAudioContext.createOscillator")}} method. We then connect it to the master gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the master gain node will affect the volume of all tones being generated.</p>
 
 <p>Then we get the type of waveform to use by checking the value of the waveform picker control in the settings bar. If the user has it set to <code>"custom"</code>, we call {{domxref("OscillatorNode.setPeriodicWave()")}} to configure the oscillator to use our custom waveform. Doing this automatically sets the oscillator's {{domxref("OscillatorNode.type", "type")}} to <code>custom</code>. If any other waveform type is selected in the wave picker, we set the oscillator's type to the value of the picker; that value will be one of <code>sine</code>, <code>square</code>, <code>triangle</code>, and <code>sawtooth</code>.</p>
 

@@ -2,13 +2,13 @@
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- sign
+  - API
+  - Method
+  - Reference
+  - Référence(2)
+  - SubtleCrypto
+  - Web Crypto API
+  - sign
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>signature</em> = <em>crypto</em><code>.subtle.sign(<em>algorithm</em>, <em>key</em>, <em>data</em>)</code>;
+<pre class="brush: js">const signature = crypto.subtle.sign(algorithm, key, data);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -77,7 +77,7 @@ tags:
 <p>Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are
   {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private
   key for signing and the public key for verification. These systems all use a <a
-    href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest
+    href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">digest
     algorithm</a> to hash the message to a short fixed size before signing. The choice of
   digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()",
   "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
