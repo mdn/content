@@ -4,11 +4,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 ---
 <div class="note">
 <ul>
-	<li>This page is part of the <a href="/en-US/docs/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+	<li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
 </ul>
 
 <ul>
-	<li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+	<li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
 
 
 	</li>
@@ -20,9 +20,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 
 
 <hr>
-<h2 id="Chapter_2_Getting_Started_With_SSL">Chapter 2<br>
-<a id="1005439"> Getting Started With SSL</a></h2>
-
+<a id="1005439"></a>
+<h2 id="Chapter_2_Getting_Started_With_SSL">Chapter 2 Getting Started With SSL</h2>
 <p><a id="1006945"> This chapter describes how to set up your environment, including certificate and key databases.</a></p>
 
 <p><a id="1013252"> </a><a href="#1011970">SSL, PKCS #11, and the Default Security Databases</a><br>
@@ -30,10 +29,10 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 <a href="#1013274">Building NSS Programs</a></p>
 
 
+<a id="1011970"></a>
+<h2 id="SSL_PKCS_11_and_the_Default_Security_Databases">SSL, PKCS #11, and the Default Security Databases</h2>
 
-<h2 id="SSL_PKCS_11_and_the_Default_Security_Databases"><a id="1011970"> SSL, PKCS #11, and the Default Security Databases </a></h2>
-
-<p><a id="1011984"> The basic relationships among the NSS libraries are described in </a><a href="../../intro.html">Introduction to Network Security Services</a>. Before running the sample programs, it's important to understand the relationships between the SSL interface, the PKCS #11 interface, PKCS #11 modules, and the default Netscape security databases.</p>
+<p><a id="1011984"> The basic relationships among the NSS libraries are described in </a><a href="/en-US/docs/Mozilla/Projects/NSS/Introduction_to_Network_Security_Services">Introduction to Network Security Services</a>. Before running the sample programs, it's important to understand the relationships between the SSL interface, the PKCS #11 interface, PKCS #11 modules, and the default Netscape security databases.</p>
 
 <p><a id="1013023"> A <strong>PKCS #11 module</strong> (also called a <strong>cryptographic module</strong>) manages cryptographic services such as encryption and decryption via the PKCS #11 interface. PKCS #11 modules can be thought of as drivers for cryptographic devices that can be implemented in either hardware or software. Netscape provides a built-in PKCS #11 module with NSS. Other kinds of PKCS #11 modules include the Netscape FORTEZZA module, used by the government, and the Litronic PKCS #11 module for smart card readers.</a></p>
 
@@ -65,11 +64,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 
 <p><a id="1014136"> If you are creating a client application, you can use either the Certificate Database Tool or the Communicator security interface to create the database files and populate them with the appropriate certificates and keys. You can use Communicator to set up client certificate databases by obtaining certificates from either a public CA or from a certificate server such as Netscape Certificate Management System. The instructions that follow assume you are using the Certificate Database Tool to set up both the server and client databases for testing purposes.</a></p>
 
-<p><a id="1015405"> You can use the Security Module Database Tool, a command-line utility that comes with NSS, to manage PKCS #11 module information within s<code>ecmod.db</code> files. The Security Module Database Tool allows you to add and delete PKCS #11 modules, change passwords, set defaults, list module contents, enable or disable slots, enable or disable FIPS-140-1 compliance, and assign default providers for cryptographic operations. </a></p>
+<p><a id="1015405"> You can use the Security Module Database Tool, a command-line utility that comes with NSS, to manage PKCS #11 module information within <code>secmod.db</code> files. The Security Module Database Tool allows you to add and delete PKCS #11 modules, change passwords, set defaults, list module contents, enable or disable slots, enable or disable FIPS-140-1 compliance, and assign default providers for cryptographic operations. </a></p>
 
 
-
-<h2 id="Setting_Up_the_Certificate_and_Key_Databases"><a id="1011987"> Setting Up the Certificate and Key Databases </a></h2>
+<a id="1011987"></a>
+<h2 id="Setting_Up_the_Certificate_and_Key_Databases">Setting Up the Certificate and Key Databases</h2>
 
 <p><a id="1011996"> Before you can run the sample programs (<code>server.c</code> and <code>client.c</code>) that come with NSS, you must set up certificate, key, and security module databases for both the client and the server and populate them with valid CA, client SSL, and server SSL certificates. The following sections decribe how to the Certificate Database Tool to perform these tasks:</a></p>
 
@@ -88,11 +87,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 </ul>
 </blockquote>
 
-<p><a id="1012159"> For complete information about the command-line options used in the examples that follow, see </a><a href="../../tools/certutil.html">Using the Certificate Database Tool</a>.</p>
+<p><a id="1012159"> For complete information about the command-line options used in the examples that follow, see</a> <a href="../../tools/certutil.html">Using the Certificate Database Tool</a>.</p>
 
 
-
-<h3 id="Setting_Up_the_CA_DB_and_Certificate"><a id="1012301"> Setting Up the CA DB and Certificate </a></h3>
+<a id="1012301"></a>
+<h3 id="Setting_Up_the_CA_DB_and_Certificate">Setting Up the CA DB and Certificate</h3>
 
 <p><a id="1012312"> Set up the CA with its own separate set of databases. </a></p>
 
@@ -113,8 +112,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 <p><a id="1012503"> The trust flag settings <code>"CTu,u,u"</code> indicate that the certificate is a CA certificate that is trusted to issue both client (<code>C</code>) and server (<code>T</code>) SSL certificates. The <code>u</code> flag indicates that the private key for the CA certificate is present in this set of databases, so the CA can issue SSL client and server certificates with these databases.</a></p>
 
 
-
-<h3 id="Setting_Up_the_Server_DB_and_Certificate"><a id="1012351"> Setting Up the Server DB and Certificate </a></h3>
+<a id="1012351"></a>
+<h3 id="Setting_Up_the_Server_DB_and_Certificate">Setting Up the Server DB and Certificate</h3>
 
 <p><a id="1012317"> The sections that follow describe how to set up the Server DB and certificate:</a></p>
 
@@ -139,8 +138,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 <p><a id="1012604"> The trust flag settings <code>"u,u,u"</code> indicate that the server's databases contain the private key for this certificate. This is necessary for the SSL server to be able to do its job. </a></p>
 
 
-
-<h3 id="Setting_Up_the_Client_DB_and_Certificate"><a id="1012067"> Setting Up the Client DB and Certificate </a></h3>
+<a id="1012067"></a>
+<h3 id="Setting_Up_the_Client_DB_and_Certificate">Setting Up the Client DB and Certificate</h3>
 
 <p>Setting up the client certificate database involves three stages:</p>
 
@@ -165,8 +164,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/gtstd
 <p>The trust flag settings <code>"u,u,u"</code> indicate that the client's databases contain the private key for this certificate. This is necessary for the SSL client to be able to authenticate to the server.</p>
 
 
-
-<h3 id="Verifying_the_Server_and_Client_Certificates"><a id="1012108"> Verifying the Server and Client Certificates </a></h3>
+<a id="1012108"></a>
+<h3 id="Verifying_the_Server_and_Client_Certificates">Verifying the Server and Client Certificates</h3>
 
 <p><a id="1012833"> When you have finished setting up the server and client certificate databases, verify that the client and server certificates are valid, as follows:</a></p>
 
@@ -176,7 +175,8 @@ certutil: certificate is valid </code></a></p>
 <p><a id="1012112"><code>&gt;certutil -V -d client_db -u C -n "Joe Client"<br>
 certutil: certificate is valid </code></a></p>
 
-<h2 id="Building_NSS_Programs"><a id="1013274"> Building NSS Programs </a></h2>
+<a id="1013274"></a>
+<h2 id="Building_NSS_Programs">Building NSS Programs</h2>
 
 <p><a id="1013279"> On Unix, use the GNU utility <code>gmake</code> to run the makefile. On Windows NT, use the <code>nmake</code> utility that comes with Visual C++.</a></p>
 

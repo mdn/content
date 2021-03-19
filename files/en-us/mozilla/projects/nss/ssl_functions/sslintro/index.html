@@ -4,18 +4,18 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
 ---
 <div class="note">
   <ul>
-    <li>This page is part of the <a href="/en-US/docs/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+    <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
   </ul>
   <ul>
-    <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+    <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
     </li>
   </ul>
 </div>
 <h1 id="Overview_of_an_SSL_Application">Overview of an SSL Application</h1>
 <hr>
-<h2 id="Chapter_1_Overview_of_an_SSL_Application">Chapter 1<br>
-  <a id="1028068"> Overview of an SSL Application</a></h2>
-<p><a id="1028153"> SSL and related APIs allow compliant applications to configure sockets for authenticated, tamper-proof, and encrypted communications. This chapter introduces some of the basic SSL functions. </a><a href="gtstd.html#1005439">Chapter 2, "Getting Started With SSL"</a> illustrates their use in sample client and server applications.</p>
+<a id="1028068"></a>
+<h2 id="Chapter_1_Overview_of_an_SSL_Application">Chapter 1 Overview of an SSL Application</h2>
+<p><a id="1028153"> SSL and related APIs allow compliant applications to configure sockets for authenticated, tamper-proof, and encrypted communications. This chapter introduces some of the basic SSL functions. </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1005439">Chapter 2, "Getting Started With SSL"</a> illustrates their use in sample client and server applications.</p>
 <p><a id="1028234"> An SSL application typically includes five parts:</a></p>
 <p><a id="1028157"> </a><a href="#1027662">Initialization</a><br>
   <a href="#1027742">Configuration</a><br>
@@ -25,17 +25,21 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
 <p><a id="1027661"> Although the details differ somewhat for client and server applications, the concepts and many of the functions are the same for both.</a></p>
 <blockquote>
   <b>WARNING: </b><a id="1039443"> Some of the SSL header files provided as part of NSS 2.0 include both public APIs documented in the NSS 2.0 documentation set and private APIs intended for internal use by the NSS implementation of SSL. You should use only the SSL APIs (and related certificate, key, and PKCS #11 APIs) that are described in this document, the SSL Reference. Other APIs that may be exposed in the header files are not supported for application use. </a></blockquote>
-<h2 id="Initialization_2"><a id="Initialization"></a> <a id="1027662"> Initialization </a></h2>
+  <a id="1027662"></a>
+  <a id="Initialization"></a>
+<h2 id="Initialization_2">Initialization</h2>
 <p><a id="1027657"> Initialization includes setting up configuration files, setting global defaults, and setting up callback functions. Functions used in the initialization part of an application can include the following: </a></p>
 <ul>
   <li><a id="1027672"> </a><code><a href="../../../../../nspr/reference/html/prinit.html#15734">PR_Init</a></code>. Initializes NSPR. Must be called before any other NSS functions.</li>
-  <li><a id="1029290"> </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a>. Sets the global callback function to obtain passwords for PKCS #11 modules. Required.</li>
+  <li><a id="1029290"> </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"><code>PK11_SetPasswordFunc</code></a>. Sets the global callback function to obtain passwords for PKCS #11 modules. Required.</li>
   <li><a id="1029318"> </a><code><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1067601">NSS_Init</a></code>. Sets up configuration files and performs other tasks required to run Network Security Services. <code>NSS_Init</code> is <i>not</i> idempotent, so call it only once. Required.</li>
   <li><a id="1027703"> </a><code><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1068466">SSL_OptionSetDefault</a></code>. Changes default values for all subsequently opened sockets as long as the application is running (compare with <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1087792"><code>SSL_SetURL</code></a> which only configures the socket that is currently open). This function must be called once for each default value that needs to be changed. Optional.</li>
   <li><a id="1033790"> </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1228530"><code>NSS_SetDomesticPolicy</code></a>, <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1100285"><code>NSS_SetExportPolicy</code></a>, <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1105952"><code>NSS_SetFrancePolicy</code></a>, or <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1104647"><code>SSL_CipherPolicySet</code></a>. These functions tell the library which cipher suites are permitted by policy (for example, to comply with export restrictions). Cipher suites disabled by policy cannot be enabled by user preference. One of these functions must be called before any cryptographic operations can be performed with NSS.</li>
   <li><a id="1029367"> </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1084747"><code>SSL_CipherPrefSetDefault</code></a>. Enables all ciphers chosen by user preference. Optional.</li>
 </ul>
-<h3 id="Initializing_Caches"> <a id="1039943"> Initializing Caches </a></h3>
+
+<a id="1039943"></a>
+<h3 id="Initializing_Caches">Initializing Caches</h3>
 <p><a id="1039999"> SSL peers frequently reconnect after a relatively short time has passed. To avoid the overhead of repeating the full SSL handshake in situations like this, the SSL protocol supports the use of a session cache, which retains information about each connection, such as the master secret generated during the SSL handshake, for a predetermined length of time. If SSL can locate the information about a previous connection in the local session cache, it can reestablish the connection much more quickly than it can without the connection information.</a></p>
 <p><a id="1039954"> By default, SSL allocates one session cache. This default cache is called the <em>client session ID cache</em>, (also known as the client session cache, or simply the client cache). The client cache is used for all sessions where the program handshakes as an SSL client. It is not configurable. You can initialize the client cache with the function </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1138601"><code>SSL_ClearSessionCache</code></a>.</p>
 <p><a id="1040057"> If an application will use SSL sockets that handshake as a server, you must specifically create and configure a server cache, using either </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1143851"><code>SSL_ConfigServerSessionIDCache</code></a> or <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1142625"><code>SSL_ConfigMPServerSIDCache</code></a>. The server cache is used for all sessions where the program handshakes as an SSL server.</p>
@@ -44,7 +48,10 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
   <li><a id="1029411"> </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1143851"><code>SSL_ConfigServerSessionIDCache</code></a>. Sets up parameters for a server session cache for a single-process application. Required for single-process server applications.</li>
   <li><a id="1040019"> </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1142625"><code>SSL_ConfigMPServerSIDCache</code></a>. Sets up parameters for a server cache for a multi-process application. Required for multi-process server applications. You can use either this function or <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1143851"><code>SSL_ConfigServerSessionIDCache</code></a>, not both.</li>
 </ul>
-<h2 id="Configuration_2"><a id="Configuration"></a> <a id="1027742"> Configuration </a></h2>
+
+<a id="1027742"></a>
+<a id="Configuration"></a>
+<h2 id="Configuration_2">Configuration</h2>
 <p><a id="1027743"> The configuration portion of an SSL-enabled application typically begins by opening a new socket and then importing the new socket into the SSL environment:</a></p>
 <ul>
   <li><a id="1028523"> </a><code><a href="../../../../../nspr/reference/html/priofnc.html#18671">PR_NewTCPSocket</a></code>. Opens a new socket. A legal NSPR socket is required to be passed to <code><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1085950">SSL_ImportFD</a></code>, whether it is created with this function or by another method.</li>
@@ -67,7 +74,10 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
   <li><a id="1029579"> </a><code><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1126622">SSL_GetClientAuthDataHook</a></code>. Specifies a callback function for SSL to use when the server asks for client authentication information. This callback is required if you want to do client authentication. You can set the callback function to a standard one that is provided, <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1106762"><code>NSS_GetClientAuthData</code></a>.</li>
   <li><a id="1029583"> </a><code><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1112702">SSL_HandshakeCallback</a></code>. Specifies a callback function that will be used by SSL to inform either a client application or a server application when the SSL handshake is completed. Optional.</li>
 </ul>
-<h2 id="Communication_2"><a id="Communication"></a> <a id="1027816"> Communication </a></h2>
+
+<a id="Communication"></a>
+<a id="1027816"></a>
+<h2 id="Communication_2">Communication</h2>
 <p><a id="1027817"> At this point the application has set up the socket to communicate using SSL. For simple encrypted and authenticated communications, no further calls to SSL functions are required. A variety of additional SSL functions are available, however. These can be used, for example, when interrupting and restarting socket communications, when the application needs to change socket parameters, or when an application imports a socket into SSL after the TCP connection on that socket has already been established.</a></p>
 <p><a id="1028013"> Communication between SSL sockets always begins with the SSL handshake. The handshake occurs automatically the first time communication is requested with a socket read/write or send/receive call. It is also possible to force the handshake explicitly with </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1133431"><code>SSL_ForceHandshake</code></a> or repeat it explicitly with <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1232052"><code>SSL_ReHandshake</code></a>.</p>
 <p><a id="1027941"> Once the SSL sockets have been configured, authentication and encryption happen automatically whenever you use the communication functions from the NSPR library.</a></p>
@@ -99,7 +109,9 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
   <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1089420"><code>SSL_InvalidateSession</code></a></p>
 <p><a id="1041247"> After establishing a connection, an application first calls <code>PR_Send</code>, <code>PR_Recv</code>, <code>PR_Read</code>, <code>PR_Write</code>, or <code>SSL_ForceHandshake</code> to initiate the handshake. The application's protocol (for example, HTTP) determines which end has responsibility to talk first. The end that has to talk first should call <code>PR_Send</code> or <code>PR_Write</code>, and the other end should call <code>PR_Read</code> or <code>PR_Recv</code>. </a></p>
 <p><a id="1041377"> Use </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1133431"><code>SSL_ForceHandshake</code></a> when the socket has been prepared for a handshake but neither end has anything to say immediately. This occurs, for example, when an HTTPS server has received a request and determines that before it can answer the request, it needs to request an authentication certificate from the client. At the HTTP protocol level, nothing more is being said (that is, no HTTP request or response is being sent), so the server first uses <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1232052"><code>SSL_ReHandshake</code></a> to begin a new handshake and then call <code>SSL_ForceHandshake</code> to drive the handshake to completion.</p>
-<h2 id="Functions_Used_by_Callbacks"><a id="1027820"> Functions Used by Callbacks </a></h2>
+
+<a id="1027820"></a>
+<h2 id="Functions_Used_by_Callbacks">Functions Used by Callbacks</h2>
 <p><a id="1029817"> An SSL application typically provides one or more callback functions that are called by the SSL or PKCS #11 library code under certain circumstances. Numerous functions provided by the NSS libraries are useful for such application callback functions, including these:</a></p>
 <p><a id="1030355"> </a><a href="sslcrt.html#1056662"><code>CERT_CheckCertValidTimes</code></a><br>
   <a href="sslcrt.html#1052308"><code>CERT_GetDefaultCertDB</code></a><br>
@@ -110,9 +122,9 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
   <a href="sslcrt.html#1050346"><code>CERT_GetCertNicknames</code></a><br>
   <a href="sslcrt.html#1050342"><code>CERT_VerifyCertName</code></a><br>
   <a href="sslcrt.html#1058011"><code>CERT_VerifyCertNow</code></a><br>
-  <a href="pkfnc.html#1035673"><code>PK11_FindCertFromNickname</code></a><br>
-  <a href="pkfnc.html#1026891"><code>PK11_FindKeyByAnyCert</code></a><br>
-  <a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a><br>
+  <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1035673"><code>PK11_FindCertFromNickname</code></a><br>
+  <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026891"><code>PK11_FindKeyByAnyCert</code></a><br>
+  <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"><code>PK11_SetPasswordFunc</code></a><br>
   <code><a href="../../../../../nspr/reference/html/plstr.html#21732">PL_strcpy</a></code><br>
   <code><a href="../../../../../nspr/reference/html/plstr.html#21753">PL_strdup</a></code><br>
   <code><a href="../../../../../nspr/reference/html/plstr.html#21772">PL_strfree</a></code><br>
@@ -120,5 +132,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslintro
   <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1096168"><code>SSL_PeerCertificate</code></a> <br>
   <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1081175"><code>SSL_RevealURL</code></a><br>
   <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1123385"><code>SSL_RevealPinArg</code></a> </p>
-<h2 id="Cleanup_2"><a id="Cleanup"></a> <a id="1030535"> Cleanup </a></h2>
+
+  <a id="Cleanup"></a>
+  <a id="1030535"></a>  
+<h2 id="Cleanup_2">Cleanup</h2>
 <p><a id="1030536"> This portion of an SSL-enabled application consists primarily of closing the socket and freeing memory. After these tasks have been performed, call </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1061858"><code>NSS_Shutdown</code></a> to close the certificate and key databases opened by <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslfnc#1067601"><code>NSS_Init</code></a>, and <code><a href="../../../../../nspr/reference/html/prinit.html#15811">PR_Cleanup</a></code> to coordinate a graceful shutdown of NSPR.</p>

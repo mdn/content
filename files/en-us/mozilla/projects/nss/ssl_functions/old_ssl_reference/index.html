@@ -4,24 +4,25 @@ slug: Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference
 tags:
   - NSS
 ---
-<h1 id="OLD_SSL_Reference">OLD SSL Reference</h1>
 <div class="note">
   <ul>
     <li>We are migrating this SSL Reference into the format described in the <a
-        href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration,
+        href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration,
       your help would be very much appreciated.</li>
   </ul>
   <ul>
-    <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+    <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
     </li>
   </ul>
 </div>
-<h2 id="SSL_Reference"><a id="43011"> SSL Reference </a></h2>
+
+<a id="43011"></a>
+<h2 id="SSL_Reference">SSL Reference</h2>
 <p><i><a id="66305">Newsgroup:</a> <a
       href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a><br>
     Writer: Sean Cotter<br>
     Manager: Wan-Teh Chang </i></p>
-<h4 id="Chapter_1_Overview_of_an_SSL_Application"><a href="sslintro.html#1028068">Chapter 1  Overview of an SSL
+<h4 id="Chapter_1_Overview_of_an_SSL_Application"><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1028068">Chapter 1  Overview of an SSL
     Application </a></h4>
 <blockquote>
   SSL and related APIs allow compliant applications to configure sockets for authenticated, tamper-proof, and encrypted
@@ -29,55 +30,55 @@ tags:
   illustrates their use in sample client and server applications.</blockquote>
 <ul>
   <li>
-    <a href="sslintro.html#1027662">Initialization </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027662">Initialization </a>
     <ul>
       <li>
-        <a href="sslintro.html#1039943">Initializing Caches </a>
+        <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1039943">Initializing Caches </a>
       </li>
     </ul>
   </li>
   <li>
-    <a href="sslintro.html#1027742">Configuration </a><a href="sslintro.html#1027816"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027742">Configuration </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027816"> </a>
   </li>
   <li>
-    <a href="sslintro.html#1027816">Communication </a><a href="sslintro.html#1027820"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027816">Communication </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027820"> </a>
   </li>
   <li>
-    <a href="sslintro.html#1027820">Functions Used by Callbacks </a><a href="sslintro.html#1030535"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027820">Functions Used by Callbacks </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1030535"> </a>
   </li>
   <li>
-    <a href="sslintro.html#1030535">Cleanup </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1030535">Cleanup </a>
   </li>
 </ul>
-<h4 id="Chapter_2_Getting_Started_With_SSL"><a href="gtstd.html#1005439">Chapter 2  Getting Started With SSL </a></h4>
+<h4 id="Chapter_2_Getting_Started_With_SSL"><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1005439">Chapter 2  Getting Started With SSL </a></h4>
 <blockquote>
   This chapter describes how to set up your environment, including certificate and key databases, to run the NSS sample
   code. The sample code and makefiles are available via LXR in the SSLSamples directory.</blockquote>
 <ul>
 
   <li>
-    <a href="gtstd.html#1011970">SSL, PKCS #11, and the Default Security Databases</a> <a href="gtstd.html#1011987">
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1011970">SSL, PKCS #11, and the Default Security Databases</a> <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1011987">
     </a>
   </li>
   <li>
-    <a href="gtstd.html#1011987">Setting Up the Certificate and Key Databases </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1011987">Setting Up the Certificate and Key Databases </a>
     <ul>
       <li>
-        <a href="gtstd.html#1012301">Setting Up the CA DB and Certificate </a> <a href="gtstd.html#1012351"> </a>
+        <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012301">Setting Up the CA DB and Certificate </a> <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012351"> </a>
       </li>
       <li>
-        <a href="gtstd.html#1012351">Setting Up the Server DB and Certificate</a> <a href="gtstd.html#1012067"> </a>
+        <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012351">Setting Up the Server DB and Certificate</a> <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012067"> </a>
       </li>
       <li>
-        <a href="gtstd.html#1012067">Setting Up the Client DB and Certificate </a> <a href="gtstd.html#1012108"> </a>
+        <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012067">Setting Up the Client DB and Certificate </a> <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012108"> </a>
       </li>
       <li>
-        <a href="gtstd.html#1012108">Verifying the Server and Client Certificates </a>
+        <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1012108">Verifying the Server and Client Certificates </a>
       </li>
     </ul>
   </li>
   <li>
-    <a href="gtstd.html#1013274">Building NSS Programs</a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1013274">Building NSS Programs</a>
   </li>
 </ul>
 <h4 id="Chapter_3_Selected_SSL_Types_and_Structures"><a href="ssltyp.html#1029792">Chapter 3  Selected SSL Types and
@@ -434,60 +435,60 @@ tags:
     </ul>
   </li>
 </ul>
-<h4 id="Chapter_6_Key_Functions"><a href="sslkey.html#1047959">Chapter 6  Key Functions </a></h4>
+<h4 id="Chapter_6_Key_Functions"><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1047959">Chapter 6  Key Functions </a></h4>
 <blockquote>
   This chapter describes two functions used to manipulate private keys and key databases such as the key3.db database
   provided with Communicator.</blockquote>
 <ul>
 
   <li>
-    <a href="sslkey.html#1051479">SECKEY_GetDefaultKeyDB </a><a href="sslkey.html#1051017"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051479">SECKEY_GetDefaultKeyDB </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"> </a>
   </li>
   <li>
-    <a href="sslkey.html#1051017">SECKEY_DestroyPrivateKey </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017">SECKEY_DestroyPrivateKey </a>
   </li>
 </ul>
-<h4 id="Chapter_7_PKCS_11_Functions"><a href="pkfnc.html#1027946">Chapter 7  PKCS #11 Functions </a></h4>
+<h4 id="Chapter_7_PKCS_11_Functions"><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1027946">Chapter 7  PKCS #11 Functions </a></h4>
 <blockquote>
   This chapter describes the core PKCS #11 functions that an application needs for communicating with cryptographic
   modules. In particular, these functions are used for obtaining certificates, keys, and passwords.</blockquote>
 <ul>
 
   <li>
-    <a href="pkfnc.html#1035673">PK11_FindCertFromNickname </a><a href="pkfnc.html#1026891"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1035673">PK11_FindCertFromNickname </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026891"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1026891">PK11_FindKeyByAnyCert </a><a href="pkfnc.html#1030779"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026891">PK11_FindKeyByAnyCert </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1030779"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1030779">PK11_GetSlotName </a><a href="pkfnc.html#1026964"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1030779">PK11_GetSlotName </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026964"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1026964">PK11_GetTokenName </a><a href="pkfnc.html#1026762"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026964">PK11_GetTokenName </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026762"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1026762">PK11_IsHW </a><a href="pkfnc.html#1022948"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1026762">PK11_IsHW </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1022948"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1022948">PK11_IsPresent </a><a href="pkfnc.html#1022991"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1022948">PK11_IsPresent </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1022991"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1022991">PK11_IsReadOnly </a><a href="pkfnc.html#1023128"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1022991">PK11_IsReadOnly </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"> </a>
   </li>
   <li>
-    <a href="pkfnc.html#1023128">PK11_SetPasswordFunc </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128">PK11_SetPasswordFunc </a>
   </li>
 </ul>
-<h4 id="Chapter_8_NSS_and_SSL_Error_Codes"><a href="sslerr.html#1013897">Chapter 8  NSS and SSL Error Codes </a></h4>
+<h4 id="Chapter_8_NSS_and_SSL_Error_Codes"><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslerr#1013897">Chapter 8  NSS and SSL Error Codes </a></h4>
 <blockquote>
   NSS error codes are retrieved using the NSPR function PR_GetError. In addition to the error codes defined by NSPR,
   PR_GetError retrieves the error codes described in this chapter.</blockquote>
 <ul>
 
   <li>
-    <a href="sslerr.html#1040263">SSL Error Codes </a><a href="sslerr.html#1039257"> </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslerr#1040263">SSL Error Codes </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslerr#1039257"> </a>
   </li>
   <li>
-    <a href="sslerr.html#1039257">SEC Error Codes </a>
+    <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslerr#1039257">SEC Error Codes </a>
   </li>
 </ul>

@@ -107,7 +107,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/pkfnc
   <li><a id="1026921"> If unsuccessful, <code>NULL</code>. </a></li>
 </ul>
 <h5 id="Description_2"> <a id="1031834"> Description </a></h5>
-<p><a id="1035317"> When you are finished with the private key structure returned by <code>PK11_FindKeyByAnyCert</code>, you must free it by calling </a><a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
+<p><a id="1035317"> When you are finished with the private key structure returned by <code>PK11_FindKeyByAnyCert</code>, you must free it by calling </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
 <p><a id="1036323"> The <code>PK11_FindKeyByAnyCert</code> function calls the password callback function set with </a><a href="#1023128"><code>PK11_SetPasswordFunc</code></a> and passes it the pointer specified by the <code>wincx</code> parameter.</p>
 <h4 id="PK11_GetSlotName"> <a id="1030779"> PK11_GetSlotName </a></h4>
 <p><a id="1026930"> Gets the name of a slot.</a></p>

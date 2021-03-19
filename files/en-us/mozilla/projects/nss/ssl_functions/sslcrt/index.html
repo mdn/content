@@ -4,24 +4,26 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
 ---
 <div class="note">
   <ul>
-    <li>This page is part of the <a href="/en-US/docs/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+    <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
   </ul>
   <ul>
-    <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+    <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
     </li>
   </ul>
 </div>
 <h1 id="Certificate_Functions">Certificate Functions</h1>
 <hr>
-<p><a id="1022819"> </a></p>
-<h2 id="Chapter_5_Certificate_Functions">Chapter 5<br>
-  <a id="1047959"> Certificate Functions</a></h2>
+<a id="1022819"></a>
+<a id="1047959"></a>
+<h2 id="Chapter_5_Certificate_Functions">Chapter 5 Certificate Functions</h2>
 <p><a id="1052174"> This chapter describes the functions and related types used to work with a certificate database such as the <code>cert7.db</code> database provided with Communicator.</a></p>
 <p><a id="1060411"> </a><a href="#1060423">Validating Certificates</a><br>
   <a href="#1056436">Manipulating Certificates</a><br>
   <a href="#1056475">Getting Certificate Information</a><br>
   <a href="#1055384">Comparing SecItem Objects</a></p>
-<h2 id="Validating_Certificates"><a id="1060423"> Validating Certificates </a></h2>
+
+<a id="1060423"></a>
+<h2 id="Validating_Certificates">Validating Certificates</h2>
 <p><a id="1057997"> </a><a href="#1058011"><code>CERT_VerifyCertNow</code></a><br>
   <a href="#1050342"><code>CERT_VerifyCertName</code></a><br>
   <a href="#1056662"><code>CERT_CheckCertValidTimes</code></a><br>
@@ -233,7 +235,9 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
   <li><a id="1056778"> If successful, <code>SECSuccess</code>.</a></li>
   <li><a id="1056781"> If unsuccessful, <code>SECFailure</code>. Use </a><a href="../../../../../nspr/reference/html/prerr.html#26127"><code>PR_GetError</code></a> to obtain the error code.</li>
 </ul>
-<h2 id="Manipulating_Certificates"><a id="1056436"> Manipulating Certificates </a></h2>
+
+<a id="1056436"></a>
+<h2 id="Manipulating_Certificates">Manipulating Certificates</h2>
 <p><a id="1058315"> </a><a href="#1058344"><code>CERT_DupCertificate</code></a><br>
   <a href="#1050532"><code>CERT_DestroyCertificate</code></a></p>
 <h4 id="CERT_DupCertificate"> <a id="1058344"> CERT_DupCertificate </a></h4>
@@ -282,9 +286,11 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
   </tbody>
 </table>
 <h5 id="Description_4"> <a id="1050546"> Description </a></h5>
-<p><a id="1059763"> Certificate and key structures are shared objects. When an application makes a copy of a particular certificate or key structure that already exists in memory, SSL makes a <i>shallow</i> copy--that is, it increments the reference count for that object rather than making a whole new copy. When you call </a><a href="#1050532"><code>CERT_DestroyCertificate</code></a> or <a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>, the function decrements the reference count and, if the reference count reaches zero as a result, both frees the memory and sets all the bits to zero. The use of the word "destroy" in function names or in the description of a function implies reference counting.</p>
+<p><a id="1059763"> Certificate and key structures are shared objects. When an application makes a copy of a particular certificate or key structure that already exists in memory, SSL makes a <i>shallow</i> copy--that is, it increments the reference count for that object rather than making a whole new copy. When you call </a><a href="#1050532"><code>CERT_DestroyCertificate</code></a> or <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"><code>SECKEY_DestroyPrivateKey</code></a>, the function decrements the reference count and, if the reference count reaches zero as a result, both frees the memory and sets all the bits to zero. The use of the word "destroy" in function names or in the description of a function implies reference counting.</p>
 <p><a id="1059770"> Never alter the contents of a certificate or key structure. If you attempt to do so, the change affects all the shallow copies of that structure and can cause severe problems.</a></p>
-<h2 id="Getting_Certificate_Information"><a id="1056475"> Getting Certificate Information </a></h2>
+
+<a id="1056475"></a>
+<h2 id="Getting_Certificate_Information">Getting Certificate Information</h2>
 <p><a id="1058477"> </a><a href="#1050345"><code>CERT_FindCertByName</code></a><br>
   <a href="#1050346"><code>CERT_GetCertNicknames</code></a><br>
   <a href="#1050349"><code>CERT_FreeNicknames</code></a><br>
@@ -433,7 +439,9 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslcrt
   <li><a id="1056966"> <code>kt_fortezza</code> </a></li>
   <li><a id="1056967"> <code>kt_kea_size </code></a></li>
 </ul>
-<h2 id="Comparing_SecItem_Objects"><a id="1055384"> Comparing SecItem Objects </a></h2>
+
+<a id="1055384"></a>
+<h2 id="Comparing_SecItem_Objects">Comparing SecItem Objects</h2>
 <h4 id="SECITEM_CompareItem"> <a id="1057028"> SECITEM_CompareItem </a></h4>
 <p><a id="1057032"> Compares two </a><a href="ssltyp.html#1026076"><code>SECItem</code></a> objects and returns a <code>SECComparison</code> enumerator that shows the difference between them.</p>
 <h5 id="Syntax_12"> <a id="1057033"> Syntax </a></h5>

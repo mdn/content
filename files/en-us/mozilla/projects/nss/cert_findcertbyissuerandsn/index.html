@@ -16,14 +16,14 @@ CERTCertificate *CERT_FindCertByIssuerAndSN (
 </pre>
 <h3 id="Parameters"> Parameters </h3>
 <table>
-<tbody><tr><td><code>handle</code></td> <td><i>in</i> pointer to a <a href="/en-US/NSS/CERTCertDBHandle">CERTCertDBHandle</a> representing the certificate database to look in</td></tr> <tr><td><code>issuerAndSN</code></td> <td><i>in</i> pointer to a <a href="/en-US/NSS/CERTIssuerAndSN">CERTIssuerAndSN</a> that must be properly formed to contain the issuer name and the serial number (see {{ mediawiki.external('Example') }})</td></tr>
+<tbody><tr><td><code>handle</code></td> <td><i>in</i> pointer to a <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/ssltyp#1028465">CERTCertDBHandle</a> representing the certificate database to look in</td></tr> <tr><td><code>issuerAndSN</code></td> <td><i>in</i> pointer to a <a href="/en-US/NSS/CERTIssuerAndSN">CERTIssuerAndSN</a> that must be properly formed to contain the issuer name and the serial number (see {{ mediawiki.external('Example') }})</td></tr>
 </tbody></table>
 <h3 id="Description"> Description </h3>
 <p>This function creates a certificate key using the <code>issuerAndSN</code> and it then
 uses the key to find the matching certificate in the database.
 </p>
 <h3 id="Returns"> Returns </h3>
-<p>A pointer to a <a href="/en-US/NSS/CERTCertificate">CERTCertificate</a> representing the certificate in the database that matched the issuer and serial number, or <code>NULL</code> if none was found. The certificate is a shallow copy, use <a href="/en-US/NSS/CERT_DestroyCertificate">CERT_DestroyCertificate</a> to decrement the reference count on the certificate instance.
+<p>A pointer to a <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/ssltyp#1027387">CERTCertificate</a> representing the certificate in the database that matched the issuer and serial number, or <code>NULL</code> if none was found. The certificate is a shallow copy, use <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslcrt#1050532">CERT_DestroyCertificate</a> to decrement the reference count on the certificate instance.
 </p>
 <h3 id="Example"> Example </h3>
 <pre>CERTIssuerAndSN issuerSN;

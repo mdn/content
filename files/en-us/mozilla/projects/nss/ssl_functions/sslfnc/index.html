@@ -37,7 +37,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 <a id="1022864"></a>
 <h2 id="SSL_Initialization_Functions">SSL Initialization Functions</h2>
 
-<p><a id="1090069"> This section describes the initialization functions that are specific to SSL. For a complete list of NSS initialization functions, see </a><a href="sslintro.html#1027662">Initialization</a>.</p>
+<p><a id="1090069"> This section describes the initialization functions that are specific to SSL. For a complete list of NSS initialization functions, see </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027662">Initialization</a>.</p>
 
 <p><a id="1116142"> Note that at least one of the functions listed in </a><a href="#1098841">SSL Export Policy Functions</a> must also be called during NSS initialization.</p>
 
@@ -305,7 +305,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 <p><a id="1224898"> Enabling the <code>SSL_REQUIRE_CERTIFICATE</code> option is not recommended. If the client has no certificate and this option is enabled, the client's connection terminates with an error. The user is likely to think something is wrong with either the client or the server, and is unlikely to realize that the problem is the lack of a certificate. It is better to allow the SSL handshake to complete and then have your application return an error message to the client that informs the user of the need for a certificate.</a></p>
 
 <ul>
- <li><a id="1173455"> As mentioned in </a><a href="sslintro.html#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_Enable</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server. For a complete discussion of the use of <code>SSL_HANDSHAKE_AS_CLIENT</code> and <code>SSL_HANDSHAKE_AS_SERVER</code> with <code>SSL_EnableDefault</code> and <code>SSL_Enable</code>, see <a href="#1086543">SSL_OptionSet</a>.</li>
+ <li><a id="1173455"> As mentioned in </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <code>SSL_ResetHandshake</code> to determine whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_Enable</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server. For a complete discussion of the use of <code>SSL_HANDSHAKE_AS_CLIENT</code> and <code>SSL_HANDSHAKE_AS_SERVER</code> with <code>SSL_EnableDefault</code> and <code>SSL_Enable</code>, see <a href="#1086543">SSL_OptionSet</a>.</li>
  <li><a id="1185684"> The SSL protocol is defined to be able to handle simultaneous two-way communication between applications at each end of an SSL connection. Two-way simultaneous communication is also known as "Full Duplex", abbreviated FDX. However, most application protocols that use SSL are not two-way simultaneous, but two-way alternate, also known as "Half Dupled"; that is, each end takes turns sending, and each end is either sending, or receiving, but not both at the same time. </a></li>
 </ul>
 
@@ -1088,7 +1088,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 <a id="1163855"></a>
 <h2 id="SSL_Configuration_Functions">SSL Configuration Functions</h2>
 
-<p><a id="1090054"> SSL configuration involves several NSPR functions in addition to the SSL functions listed here. For a complete list of configuration functions, see </a><a href="sslintro.html#1027742">Configuration</a>.</p>
+<p><a id="1090054"> SSL configuration involves several NSPR functions in addition to the SSL functions listed here. For a complete list of configuration functions, see </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027742">Configuration</a>.</p>
 
 <p><a id="1090814"> </a><a href="#1090577">SSL Configuration</a><br>
  <a href="#1089578">Callback Configuration</a></p>
@@ -1258,7 +1258,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1192775"> Note that SSL3 and TLS share the same set of cipher suites. When both SSL3 and TLS are enabled, all SSL3/TLS cipher suites that are enabled are enabled for both SSL3 and TLS.</a></p>
 
-<p><a id="1167934"> As mentioned in </a><a href="sslintro.html#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <a href="#1058001">SSL_ResetHandshake</a> to indicate whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_OptionSet</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server.</p>
+<p><a id="1167934"> As mentioned in </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027816">Communication</a>, when an application imports a socket into SSL after the TCP connection on that socket has already been established, it must call <a href="#1058001">SSL_ResetHandshake</a> to indicate whether the socket is for a client or server. At first glance this may seem unnecessary, since <code>SSL_OptionSet</code> can set <code>SSL_HANDSHAKE_AS_CLIENT</code> or <code>SSL_HANDSHAKE_AS_SERVER</code>. However, these settings control the behavior of <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Connect"><code>PR_Connect</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSPR/Reference/PR_Accept"><code>PR_Accept</code></a> only; if you don't call one of those functions after importing a non-SSL socket with <code>SSL_Import</code> (as in the case of an already established TCP connection), SSL still needs to know whether the application is functioning as a client or server.</p>
 
 <p><a id="1164782"> If a socket file descriptor is imported as an SSL socket before it is connected, it is implicitly configured to handshake as a client or handshake as a server when the connection is made. If the application calls <code>PR_Connect</code> (connecting as a TCP client), then the SSL socket is (by default) configured to handshake as an SSL client. If the application calls <code>PR_Accept</code> (connecting the socket as a TCP server) then the SSL socket is (by default) configured to handshake as an SSL server. <code>SSL_HANDSHAKE_AS_CLIENT</code> and <code>SSL_HANDSHAKE_AS_SERVER</code> control this implicit configuration.</a></p>
 
@@ -1551,7 +1551,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1148755"> When the <code>keaType</code> is <code>kt_rsa</code>, this function generates a step-down key that is supplied as part of the handshake if needed. (A step-down key is needed when the server's public key is stronger than is allowed for export ciphers.) In this case, if the server is expected to continue running for a long time, you should call this function periodically (once a day, for example) to generate a new step-down key.</a></p>
 
-<p><a id="1127391"> SSL makes and keeps internal copies (or increments the reference counts, as appropriate) of certificate and key structures. The application should destroy its copies when it has no further use for them by calling </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a> and <a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
+<p><a id="1127391"> SSL makes and keeps internal copies (or increments the reference counts, as appropriate) of certificate and key structures. The application should destroy its copies when it has no further use for them by calling </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
 
 <h4 id="SSL_SetURL"> <a id="1087792"> SSL_SetURL </a></h4>
 
@@ -1607,7 +1607,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <h4 id="SSL_SetPKCS11PinArg"> <a id="1088040"> SSL_SetPKCS11PinArg </a></h4>
 
-<p><a id="1088041"> Sets the argument passed to the password callback function specified by a call to </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a>. </p>
+<p><a id="1088041"> Sets the argument passed to the password callback function specified by a call to </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"><code>PK11_SetPasswordFunc</code></a>. </p>
 
 <h5 id="Syntax_24"> <a id="1221656"> Syntax </a></h5>
 
@@ -1651,7 +1651,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <h5 id="Description_24"> <a id="1088065"> Description </a></h5>
 
-<p><a id="1088066"> During the course of an SSL operation, it may be necessary for the user to log in to a PKCS #11 token (either a smart card or soft token) to access protected information, such as a private key. Such information is protected with a password that can be retrieved by calling an application-supplied callback function. The callback function is specified in a call to </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a> that takes place during NSS initialization.</p>
+<p><a id="1088066"> During the course of an SSL operation, it may be necessary for the user to log in to a PKCS #11 token (either a smart card or soft token) to access protected information, such as a private key. Such information is protected with a password that can be retrieved by calling an application-supplied callback function. The callback function is specified in a call to </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"><code>PK11_SetPasswordFunc</code></a> that takes place during NSS initialization.</p>
 
 <p><a id="1123150"> Several functions in the NSS libraries use the password callback function to obtain the password before performing operations that involve the protected information. When NSS libraries call the password callback function, the value they pass in as the third parameter is the value of the <code>a</code> argument to <code>PK11_SetPKCS11PinArg</code>. The third parameter to the password callback function is application-defined and can be used for any purpose. For example, Communicator uses the parameter to pass information about which window is associated with the modal dialog box requesting the password from the user. </a></p>
 
@@ -1669,9 +1669,9 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
  <a href="#1106762"><code>NSS_GetClientAuthData</code></a><br>
  <a href="#1112702"><code>SSL_HandshakeCallback</code></a></p>
 
-<p><a id="1123332"> Setting up the callback functions described in this section may be optional for some applications. However, all applications must use </a><a href="pkfnc.html#1023128"><code>PK11_SetPasswordFunc</code></a> to set up the password callback function during NSS initialization.</p>
+<p><a id="1123332"> Setting up the callback functions described in this section may be optional for some applications. However, all applications must use </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/pkfnc#1023128"><code>PK11_SetPasswordFunc</code></a> to set up the password callback function during NSS initialization.</p>
 
-<p><a id="1126377"> For examples of the callback functions listed here, see </a><a href="gtstd.html#1005439">Chapter 2, "Getting Started With SSL."</a></p>
+<p><a id="1126377"> For examples of the callback functions listed here, see </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1005439">Chapter 2, "Getting Started With SSL."</a></p>
 
 <h4 id="SSL_AuthCertificateHook"> <a id="1088805"> SSL_AuthCertificateHook </a></h4>
 
@@ -1798,7 +1798,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <h5 id="See_Also_2"> <a id="1126522"> See Also </a></h5>
 
-<p><a id="1126559"> For examples of certificate authentication callback functions, see the sample code referenced from </a><a href="gtstd.html#1005439">Chapter 2, "Getting Started With SSL."</a></p>
+<p><a id="1126559"> For examples of certificate authentication callback functions, see the sample code referenced from </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/gtstd#1005439">Chapter 2, "Getting Started With SSL."</a></p>
 
 <h4 id="SSL_AuthCertificate"> <a id="1088888"> SSL_AuthCertificate </a></h4>
 
@@ -2270,7 +2270,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 <a id="1127321"></a>
 <h2 id="SSL_Communication_Functions">SSL Communication Functions</h2>
 
-<p><a id="1090925"> Most communication functions are described in the </a><a href="../../../../../nspr/reference/html/index.html">NSPR Reference</a>. For a complete list of communication functions used by SSL-enabled applications, see <a href="sslintro.html#1027816">Communication</a>.</p>
+<p><a id="1090925"> Most communication functions are described in the </a><a href="../../../../../nspr/reference/html/index.html">NSPR Reference</a>. For a complete list of communication functions used by SSL-enabled applications, see <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslintro#1027816">Communication</a>.</p>
 
 <p><a id="1092556"> </a><a href="#1089420"><code>SSL_InvalidateSession</code></a><br>
  <a href="#1092785"><code>SSL_DataPending</code></a><br>
@@ -2633,7 +2633,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/sslfnc
 
 <p><a id="1123398"> The <code>SSL_PeerCertificate</code> function is used by certificate authentication and bad-certificate callback functions to obtain the certificate under scrutiny. If the client calls <code>SSL_PeerCertificate</code>, it always returns the server's certificate. If the server calls <code>SSL_PeerCertificate</code>, it may return <code>NULL</code> if client authentication is not enabled or if the client had no certificate when asked. </a></p>
 
-<p><a id="1136356"> SSL makes and keeps internal copies (or increments the reference counts, as appropriate) of certificate and key structures. The application should destroy its copies when it has no further use for them by calling </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a> and <a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
+<p><a id="1136356"> SSL makes and keeps internal copies (or increments the reference counts, as appropriate) of certificate and key structures. The application should destroy its copies when it has no further use for them by calling </a><a href="sslcrt.html#1050532"><code>CERT_DestroyCertificate</code></a> and <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"><code>SECKEY_DestroyPrivateKey</code></a>.</p>
 
 <h4 id="SSL_RevealURL"> <a id="1081175"> SSL_RevealURL </a></h4>
 

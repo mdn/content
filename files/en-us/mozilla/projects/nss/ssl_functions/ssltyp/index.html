@@ -4,23 +4,25 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp
 ---
 <div class="note">
   <ul>
-    <li>This page is part of the <a href="/en-US/docs/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/Project:MDC_style_guide">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
+    <li>This page is part of the <a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/OLD_SSL_Reference">SSL Reference</a> that we are migrating into the format described in the <a href="/en-US/docs/MDN/Guidelines">MDN Style Guide</a>. If you are inclined to help with this migration, your help would be very much appreciated.</li>
   </ul>
   <ul>
-    <li>Upgraded documentation may be found in the <a href="/NSS_reference">Current NSS Reference</a>
+    <li>Upgraded documentation may be found in the <a href="/en-US/docs/Mozilla/Projects/NSS/Reference">Current NSS Reference</a>
     </li>
   </ul>
 </div>
 <h1 id="Selected_SSL_Types_and_Structures">Selected SSL Types and Structures</h1>
 <hr>
-<p><a id="1030507"></a></p>
-<h2 id="Chapter_3_Selected_SSL_Types_and_Structures">Chapter 3<br>
-  <a id="1029792"> Selected SSL Types and Structures </a></h2>
+<a id="1030507"></a>
+<a id="1029792"></a>
+<h2 id="Chapter_3_Selected_SSL_Types_and_Structures">Chapter 3 Selected SSL Types and Structures</h2>
 <p><a id="1029793"> This chapter describes some of the most important types and structures used with the functions described in the rest of this document, and how to manage the memory used for them. Additional types are described with the functions that use them or in the header files.</a></p>
-<p><a id="1030889"> </a><a href="#1030559">Types and Structures</a><br>
+<p><a id="1030889"></a><a href="#1030559">Types and Structures</a><br>
   <a href="#1029645">Managing SECItem Memory</a></p>
-<h2 id="Types_and_Structures"><a id="1030559"> Types and Structures </a></h2>
-<p><a id="1030587"> These types and structures are described here:</a></p>
+
+<a id="1030559"></a>
+<h2 id="Types_and_Structures">Types and Structures</h2>
+<p><a id="1030587">These types and structures are described here:</a></p>
 <p><a id="1028704"> </a><a href="#1028465"><code>CERTCertDBHandle</code></a><br>
   <a href="#1027387"><code>CERTCertificate</code></a><br>
   <a href="#1028593"><code>PK11SlotInfo</code></a><br>
@@ -80,7 +82,7 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp
 <pre><a id="1029314">#include &lt;<code>keyt.h&gt;</code></a></pre>
 <pre><a id="1027665">typedef struct SECKEYPrivateKeyStr SECKEYPrivateKey;</a></pre>
 <h5 id="Description_3"> <a id="1029925"> Description </a></h5>
-<p><a id="1029926"> Key structures are not shared objects. When an application makes a copy of a particular key structure that already exists in memory, SSL makes a <i>deep</i> copy--that is, it makes a whole new copy of that object. When you call </a><a href="sslkey.html#1051017"><code>SECKEY_DestroyPrivateKey</code></a>, the function both frees the memory and sets all the bits to zero.</p>
+<p><a id="1029926"> Key structures are not shared objects. When an application makes a copy of a particular key structure that already exists in memory, SSL makes a <i>deep</i> copy--that is, it makes a whole new copy of that object. When you call </a><a href="/en-US/docs/Mozilla/Projects/NSS/SSL_functions/sslkey#1051017"><code>SECKEY_DestroyPrivateKey</code></a>, the function both frees the memory and sets all the bits to zero.</p>
 <p><a id="1029933"> Never alter the contents of a key structure. Treat the structure as read only. </a></p>
 <h4 id="SECStatus"> <a id="1026722"> SECStatus </a></h4>
 <p><a id="1026094"> The return value for many SSL functions. </a></p>
@@ -124,7 +126,8 @@ slug: Mozilla/Projects/NSS/SSL_functions/ssltyp
     </tr>
   </tbody>
 </table>
-<h2 id="Managing_SECItem_Memory"><a id="1029645"> Managing SECItem Memory </a></h2>
+<a id="1029645"></a>
+<h2 id="Managing_SECItem_Memory">Managing SECItem Memory</h2>
 <p><a id="1030704"> These functions are available for managing the memory associated with <code>SECItem</code> structures and the structures to which they point.</a></p>
 <p><a id="1030852"> </a><a href="#1030620"><code>SECItem_FreeItem</code></a><br>
   <a href="#1030773"><code>SECItem_ZfreeItem</code></a></p>
