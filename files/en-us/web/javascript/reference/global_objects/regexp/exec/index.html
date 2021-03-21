@@ -109,7 +109,11 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
         Each substring match itself is an array where the first entry
         represents its start index and the second entry its end index.<br/>
         The <code>indices</code> array additionally has a <code>groups</code>
-        property.
+        property which holds an object of all named capturing groups. The keys
+        are the names of the capturing groups and each value is an array with
+        the first item being the start entry and the second entry being the
+        end index of the capturing group. If the regular expression doesn't
+        contain any capturing groups, <code>groups</code> is <code>undefined</code>.
       </td>
       <td>
         <p><code>indices[0] === Array [ 4, 25 ]</code></p>
