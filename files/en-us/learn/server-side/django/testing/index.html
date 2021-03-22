@@ -744,7 +744,7 @@ def renew_book_librarian(request, pk):
 
     return render(request, 'catalog/book_renew_librarian.html', context)</pre>
 
-<p>We'll need to test that the view is only available to users who have the <code>can_mark_returned </code>permission, and that users are redirected to an HTTP 404 error page if they attempt to renew a <code>BookInstance</code> that does not exist. We should check that the initial value of the form is seeded with a date three weeks in the future, and that if validation succeeds we're redirected to the "all-borrowed books" view. As part of checking the validation-fail tests we'll also check that our form is sending the appropriate error messages.</p>
+<p>We'll need to test that the view is only available to users who have the <code>can_mark_returned</code> permission, and that users are redirected to an HTTP 404 error page if they attempt to renew a <code>BookInstance</code> that does not exist. We should check that the initial value of the form is seeded with a date three weeks in the future, and that if validation succeeds we're redirected to the "all-borrowed books" view. As part of checking the validation-fail tests we'll also check that our form is sending the appropriate error messages.</p>
 
 <p>Add the first part of the test class (shown below) to the bottom of <strong>/catalog/tests/test_views.py</strong>. This creates two users and two book instances, but only gives one user the permission required to access the view. The code to grant permissions during tests is shown in bold:</p>
 
@@ -878,7 +878,7 @@ class RenewBookInstancesViewTest(TestCase):
  <strong>self.assertRedirects(response, '/catalog/')</strong></pre>
 </div>
 
-<p>Copy the last two functions into the class, as seen below. These again test <code>POST</code> requests, but in this case with invalid renewal dates. We use <code>assertFormError() </code>to verify that the error messages are as expected.</p>
+<p>Copy the last two functions into the class, as seen below. These again test <code>POST</code> requests, but in this case with invalid renewal dates. We use <code>assertFormError()</code> to verify that the error messages are as expected.</p>
 
 <pre class="brush: python">    def test_form_invalid_renewal_date_past(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&amp;3iD')
