@@ -41,6 +41,13 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
+      - name: Config git
+        run: |
+          git diff main... --name-only
+          # XXX EXPLAIN!
+          git config --global core.quotePath false
+          git diff main... --name-only
+
       - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_content
         with:
