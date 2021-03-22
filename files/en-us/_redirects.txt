@@ -7507,7 +7507,6 @@
 /en-US/docs/Web/API/Document/baseURI	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/API/Document/cancelFullscreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/charset	/en-US/docs/Web/API/document/characterSet
-/en-US/docs/Web/API/Document/childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/Document/children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/Document/defaultView/popstate_event	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/Document/defaultView/resize_event	/en-US/docs/Web/API/Window/resize_event
