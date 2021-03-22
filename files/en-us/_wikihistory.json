@@ -71118,29 +71118,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2020-10-15T21:05:55.635Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "adyouri",
-      "ExE-Boss",
-      "K-Gun",
-      "jszhou",
-      "uxfed",
-      "Alhadis",
-      "fscholz",
-      "jsx",
-      "411911.ca",
-      "Kartik_Chadha",
-      "teoli",
-      "ethertank",
-      "Sheppy",
-      "trevorh",
-      "ziyunfei",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/ParentNode/children": {
     "modified": "2020-10-15T21:05:52.672Z",
     "contributors": [
@@ -165769,6 +165746,29 @@
       "chrisdavidmills",
       "david_ross",
       "jpmedley"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2020-10-15T21:05:55.635Z",
+    "contributors": [
+      "sideshowbarker",
+      "mfluehr",
+      "adyouri",
+      "ExE-Boss",
+      "K-Gun",
+      "jszhou",
+      "uxfed",
+      "Alhadis",
+      "fscholz",
+      "jsx",
+      "411911.ca",
+      "Kartik_Chadha",
+      "teoli",
+      "ethertank",
+      "Sheppy",
+      "trevorh",
+      "ziyunfei",
+      "Jürgen Jeka"
     ]
   }
 }
