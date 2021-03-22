@@ -137,7 +137,7 @@ mySet1.has(document.querySelector('body')) // true
 // converting between Set and Array
 const mySet2 = new Set([1, 2, 3, 4])
 mySet2.size                    // 4
-[...mySet2]                    // [1, 2, 3, 4]
+mySet2                         // {1, 2, 3, 4}
 
 // intersect can be simulated via
 const intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
@@ -209,11 +209,11 @@ const setA = new Set([1, 2, 3, 4])
 const setB = new Set([2, 3])
 const setC = new Set([3, 4, 5, 6])
 
-isSuperset(setA, setB)          // =&gt; true
-union(setA, setC)               // =&gt; Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC)        // =&gt; Set [3, 4]
-symmetricDifference(setA, setC) // =&gt; Set [1, 2, 5, 6]
-difference(setA, setC)          // =&gt; Set [1, 2]
+isSuperset(setA, setB)          // returns true
+union(setA, setC)               // returns {1, 2, 3, 4, 5, 6}
+intersection(setA, setC)        // returns {3, 4}
+symmetricDifference(setA, setC) // returns {1, 2, 5, 6}
+difference(setA, setC)          // returns {1, 2}
 
 </pre>
 
@@ -226,6 +226,9 @@ let mySet = new Set(myArray)
 
 mySet.has('value1')     // returns true
 
+// Log the set in its standard format
+console.log(mySet) // eill log the sets normal format which looks similar to an object {...}
+
 // Use the spread operator to transform a set into an Array.
 console.log([...mySet]) // Will show you exactly the same Array as myArray
 </pre>
@@ -236,6 +239,9 @@ console.log([...mySet]) // Will show you exactly the same Array as myArray
 
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
+console.log(new Set(numbers)])
+// Set(7) {2, 3, 4, 5, 6, 7, 32}
+
 console.log([...new Set(numbers)])
 
 // [2, 3, 4, 5, 6, 7, 32]</pre>
@@ -244,12 +250,12 @@ console.log([...new Set(numbers)])
 
 <pre class="brush: js">let text = 'India'
 
-const mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
+const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
 //case sensitive &amp; duplicate ommision
-new Set("Firefox")  // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
-new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 </pre>
 
 <h3 id="Use_Set_to_ensure_the_uniqueness_of_a_list_of_values">Use Set to ensure the uniqueness of a list of values</h3>
