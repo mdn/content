@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.2.0.tgz#42b8f6c2866a77873a67d962428e417fd73201c2"
-  integrity sha512-pb3IvMWuDxNwWw8MfD7juJO8i5D0mo02LWNjV6T/LYzUeHSu/LL5e5ufUAyrDjsBw3T1+gqqmUBvj5WtuuPGgQ==
+"@mdn/browser-compat-data@3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.2.1.tgz#18707a79db035b430d6bab370d00cd14c39e0553"
+  integrity sha512-rIfqD67k64yP6RfFyZOVSLykDoNfAkeqRrTZnKs13rfa+EAFF/FOYAKTOpKMwMUfTM2/+FGYRGaiFmETnGRjsQ==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.300":
-  version "0.4.300"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.300.tgz#3d41de94b9aeadebda085e4da6d7317be3acea0d"
-  integrity sha512-xjQWSbm8ThTrRhrdo9bQCMlLmLoXjXgD6t9YVWfz2WVTU1HjnWENznFqhfeTESw4T1j6ezxmYjir4CC0HlCUtg==
+"@mdn/yari@0.4.303":
+  version "0.4.303"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.303.tgz#e9b2bda91485c314f2875f6566bb542668750592"
+  integrity sha512-MBZYxRbBTzn/+9CIgVdu994dcaTXu5fBJQZVNDeHjqo3+Xz3k6X6EPGu2qR6IYMYoLMKk/qv0FX2qldIY3eJ/w==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.2.0"
+    "@mdn/browser-compat-data" "3.2.1"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
@@ -80,7 +80,7 @@
     loglevel "^1.7.1"
     lru-cache "^6.0.0"
     mdn-data "2.0.17"
-    open "^7.4.2"
+    open "^8.0.3"
     open-editor "3.0.0"
     prismjs "1.23.0"
     read-chunk "3.2.0"
@@ -1047,6 +1047,11 @@ defer-to-connect@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-2.0.0.tgz#83d6b199db041593ac84d781b5222308ccf4c2c1"
   integrity sha512-bYL2d05vOSf1JEZNx5vSAtPuBMkX8K9EUutg7zlKvTqKXHt7RhWJFbmd7qakVuf13i+IkGmp6FwSsONOf6VYIg==
+
+define-lazy-prop@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz#3f7ae421129bcaaac9bc74905c98a0009ec9ee7f"
+  integrity sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==
 
 del@^6.0.0:
   version "6.0.0"
@@ -2103,7 +2108,7 @@ is-arrayish@^0.3.1:
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
   integrity sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
 
-is-docker@^2.0.0:
+is-docker@^2.0.0, is-docker@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.1.1.tgz#4125a88e44e450d384e09047ede71adc2d144156"
   integrity sha512-ZOoqiXfEwtGknTiuDEy8pN2CfE3TxMHprvNer1mXiqwkOT77Rw3YVrUQ52EqAOU3QAWDQ+bQdx7HJzrv7LS2Hw==
@@ -2214,7 +2219,7 @@ is-utf8@^0.2.0:
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
   integrity sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=
 
-is-wsl@^2.1.1:
+is-wsl@^2.1.1, is-wsl@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-2.2.0.tgz#74a4c76e77ca9fd3f932f290c17ea326cd157271"
   integrity sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==
@@ -2743,13 +2748,22 @@ open-editor@3.0.0:
     line-column-path "^2.0.0"
     open "^7.3.0"
 
-open@^7.3.0, open@^7.4.2:
+open@^7.3.0:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/open/-/open-7.4.2.tgz#b8147e26dcf3e426316c730089fd71edd29c2321"
   integrity sha512-MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q==
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
+
+open@^8.0.3:
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.0.4.tgz#2fb90debffcf20f4d7be537502ed3e3ee9e5dcbc"
+  integrity sha512-Txc9FOcvjrr5Kv+Zb3w89uKMKiP7wH8mLdYj1xJa+YnhhntEYhbB6cQHjS4O6P+jFwMEzEQVVcpfnu9WkKNuLQ==
+  dependencies:
+    define-lazy-prop "^2.0.0"
+    is-docker "^2.1.1"
+    is-wsl "^2.2.0"
 
 os-filter-obj@^2.0.0:
   version "2.0.0"
