@@ -43,10 +43,10 @@ jobs:
 
       - name: Config git
         run: |
-          git diff main... --name-only
+          git diff --name-only
           # XXX EXPLAIN!
           git config --global core.quotePath false
-          git diff main... --name-only
+          git diff --name-only
 
       - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_content
