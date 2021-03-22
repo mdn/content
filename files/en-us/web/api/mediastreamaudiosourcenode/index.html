@@ -75,9 +75,13 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Typically, you should probably not use this type of node. It has been replaced with the more predictable {{domxref("MediaStreamTrackAudioSourceNode")}}, which has better-defined rules for how it chooses the track to output.</p>
-
 <p>If you do chooose to use <code>MediaStreamAudioSourceNode</code>, you should keep the following in mind.</p>
+
+<div class="note">
+  <p><strong>Note</strong>: There is similar interface {{domxref("MediaStreamTrackAudioSourceNode")}}.
+    It lets you specifically state the track to use, rather than assuming the first audio track on a stream.
+  </p>
+</div>
 
 <h3 id="Track_ordering">Track ordering</h3>
 
