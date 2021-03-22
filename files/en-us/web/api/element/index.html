@@ -39,10 +39,6 @@ tags:
  <dd>Returns a {{jsxref("Number")}} representing the width of the top border of the element.</dd>
  <dt>{{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the inner width of the element.</dd>
- <dt>{{DOMxRef("Element.computedName")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.</dd>
- <dt>{{DOMxRef("Element.computedRole")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.</dd>
  <dt>{{DOMxRef("Element.id")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the id of the element.</dd>
  <dt>{{DOMxRef("Element.innerHTML")}}</dt>
@@ -87,10 +83,6 @@ tags:
  <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
  <dt>{{DOMxRef("Element.tagName")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("String")}} with the name of the tag for the given element.</dd>
- <dt>{{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("UndoManager")}} associated with the element.</dd>
- <dt>{{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.</dd>
 </dl>
 
 <div class="note">
@@ -248,8 +240,6 @@ tags:
  <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
  <dt>{{DOMxRef("Element.matches()")}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
- <dt>{{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.</dd>
  <dt>{{DOMxRef("Element.querySelector()")}}</dt>
  <dd>Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.querySelectorAll()")}}</dt>
@@ -470,19 +460,9 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName("CSS4 Pseudo-Elements", '#window-interface', 'Element')}}</td>
-   <td>{{Spec2("CSS4 Pseudo-Elements")}}</td>
-   <td>Added the <code>pseudo()</code> method.</td>
-  </tr>
-  <tr>
    <td>{{SpecName("Web Animations", '', '')}}</td>
    <td>{{Spec2("Web Animations")}}</td>
    <td>Added the <code>getAnimations()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Undo Manager', '', 'Element')}}</td>
-   <td>{{Spec2('Undo Manager')}}</td>
-   <td>Added the <code>undoScope</code> and <code>undoManager</code> properties.</td>
   </tr>
   <tr>
    <td>{{SpecName('Pointer Events 2', '#extensions-to-the-element-interface', 'Element')}}</td>
