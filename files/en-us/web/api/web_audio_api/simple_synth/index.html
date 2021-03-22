@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p>This article presents the code and working demo of a video keyboard you can play using the mouse. The keyboard allows you to switch among the standard waveforms as well as one custom waveform, and you can control the master gain using a volume slider beneath the keyboard. This example makes use of the following Web API interfaces: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, and {{domxref("GainNode")}}.</p>
+<p>This article presents the code and working demo of a video keyboard you can play using the mouse. The keyboard allows you to switch among the standard waveforms as well as one custom waveform, and you can control the main gain using a volume slider beneath the keyboard. This example makes use of the following Web API interfaces: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, and {{domxref("GainNode")}}.</p>
 
 <p>Because {{domxref("OscillatorNode")}} is based on {{domxref("AudioScheduledSourceNode")}}, this is to some extent an example for that as well.</p>
 
@@ -37,7 +37,7 @@ tags:
 
 <h4 id="The_settings_bar">The settings bar</h4>
 
-<p>Beneath the keyboard, we'll put some controls for configuring the layer. For now, we will have two controls: one to set the master volume and another to select what periodic waveform to use when generating notes.</p>
+<p>Beneath the keyboard, we'll put some controls for configuring the layer. For now, we will have two controls: one to set the main volume and another to select what periodic waveform to use when generating notes.</p>
 
 <h5 id="The_volume_control">The volume control</h5>
 
@@ -180,13 +180,13 @@ tags:
 
 <pre class="brush: js">let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 let oscList = [];
-let masterGainNode = null;
+let mainGainNode = null;
 </pre>
 
 <ol>
  <li><code>audioContext</code> is set to reference the global {{domxref("AudioContext")}} object (or <code>webkitAudioContext</code> if necessary).</li>
  <li><code>oscillators</code> is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.</li>
- <li><code>masterGainNode</code> is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.</li>
+ <li><code>mainGainNode</code> is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.</li>
 </ol>
 
 <pre class="brush: js">let keyboard = document.querySelector(".keyboard");
@@ -199,7 +199,7 @@ let volumeControl = document.querySelector("input[name='volume']");
 <ul>
  <li><code>keyboard</code> is the container element into which the keys will be placed.</li>
  <li><code>wavePicker</code> is the {{HTMLElement("select")}} element used to choose the waveform to use for the notes.</li>
- <li><code>volumeControl</code> is the {{HTMLElement("input")}} element (of type <code>"range"</code>) used to control the master audio volume.</li>
+ <li><code>volumeControl</code> is the {{HTMLElement("input")}} element (of type <code>"range"</code>) used to control the main audio volume.</li>
 </ul>
 
 <pre class="brush: js">let noteFreq = null;
@@ -407,9 +407,9 @@ let cosineTerms = null;
 
   volumeControl.addEventListener("change", changeVolume, false);
 
-  masterGainNode = audioContext.createGain();
-  masterGainNode.connect(audioContext.destination);
-  masterGainNode.gain.value = volumeControl.value;
+  mainGainNode = audioContext.createGain();
+  mainGainNode.connect(audioContext.destination);
+  mainGainNode.gain.value = volumeControl.value;
 
   // Create the keys; skip any that are sharp or flat; for
   // our purposes we don't need them. Each octave is inserted
@@ -444,7 +444,7 @@ setup();</pre>
 
 <ol>
  <li>The table which maps note names and octaves to their frequenies is created by calling <code>createNoteTable()</code>.</li>
- <li>An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the master gain control. This will update the master gain node's volume to the new value of the control.</li>
+ <li>An event handler is established (by calling our old friend {{domxref("EventTarget.addEventListener", "addEventListener()")}} to handle {{event("change")}} events on the main gain control. This will update the main gain node's volume to the new value of the control.</li>
  <li>Next, we iterate over each octave in the note frequencies table. For each octave, we use {{jsxref("Object.entries()")}} to get a list of the notes in that octave.</li>
  <li>Create a {{HTMLElement("div")}} to contain that octave's notes (so we can have a small bit of space drawn between octaves), and set its class name to "octave"</li>
  <li>For each key in the octave, we check to see if the note's name has more than one character. We skip these, because we're leaving out the sharp notes in this example. If the note's name is only one character, then we call <code>createKey()</code>, specifying the note string, octave, and frequency. The returned element is appended to the octave element created  in step 4.</li>
@@ -489,7 +489,7 @@ setup();</pre>
 
 <pre class="brush: js">function playTone(freq) {
   let osc = audioContext.createOscillator();
-  osc.connect(masterGainNode);
+  osc.connect(mainGainNode);
 
   let type = wavePicker.options[wavePicker.selectedIndex].value;
 
@@ -506,7 +506,7 @@ setup();</pre>
 }
 </pre>
 
-<p><code>playTone()</code> begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("AudioContext.createOscillator()")}} method. We then connect it to the master gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the master gain node will affect the volume of all tones being generated.</p>
+<p><code>playTone()</code> begins by creating a new {{domxref("OscillatorNode")}} by calling the {{domxref("AudioContext.createOscillator()")}} method. We then connect it to the main gain node by calling the new oscillator's {{domxref("OscillatorNode.connect()")}} method;, which tells the oscillator where to send its output to. By doing this, changing the gain of the main gain node will affect the volume of all tones being generated.</p>
 
 <p>Then we get the type of waveform to use by checking the value of the waveform picker control in the settings bar. If the user has it set to <code>"custom"</code>, we call {{domxref("OscillatorNode.setPeriodicWave()")}} to configure the oscillator to use our custom waveform. Doing this automatically sets the oscillator's {{domxref("OscillatorNode.type", "type")}} to <code>custom</code>. If any other waveform type is selected in the wave picker, we set the oscillator's type to the value of the picker; that value will be one of <code>sine</code>, <code>square</code>, <code>triangle</code>, and <code>sawtooth</code>.</p>
 
@@ -551,16 +551,16 @@ setup();</pre>
 
 <p><code>noteReleased()</code> uses the <code>data-octave</code> and <code>data-note</code> custom attributes to look up the key's oscillator, then calls the oscillator's inherited {{domxref("AudioScheduledSourceNode.stop", "stop()")}} method to stop playing the note. Finally, the <code>oscList</code> entry for the note is cleared and the <code>data-pressed</code> attribute is removed from the key element (as identified by {{domxref("event.target")}}), to indicate that the note is not currently playing.</p>
 
-<h4 id="Changing_the_master_volume">Changing the master volume</h4>
+<h4 id="main">Changing the main volume</h4>
 
-<p>The volume slider in the settings bar provides a simple interface to change the gain value on the master gain node, thereby changing the loudness of all playing notes. The <code>changeVolume()</code> method is the handler for the {{event("change")}} event on the slider.</p>
+<p>The volume slider in the settings bar provides a simple interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The <code>changeVolume()</code> method is the handler for the {{event("change")}} event on the slider.</p>
 
 <pre class="brush: js">function changeVolume(event) {
-  masterGainNode.gain.value = volumeControl.value
+  mainGainNode.gain.value = volumeControl.value
 }
 </pre>
 
-<p>This sets the value of the master gain node's <code>gain</code> {{domxref("AudioParam")}} to the slider's new value.</p>
+<p>This sets the value of the main` gain node's <code>gain</code> {{domxref("AudioParam")}} to the slider's new value.</p>
 
 <h3 id="Result">Result</h3>
 
