@@ -21,7 +21,7 @@ tags:
 
 <p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.</p>
 
-<p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in two main ways:</p>
+<p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in the following ways:</p>
 
 <ul>
  <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with <code>ok</code> status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
