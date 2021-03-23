@@ -50,7 +50,7 @@ tags:
 
 <h3 id="Sectioning_content">Sectioning content</h3>
 
-<p>Sectioning content is a subset of flow content. Elements belonging to the sectioning content model create a <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" title="Sections and Outlines of an HTML5 document">section in the current outline</a> that defines the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and <a href="#heading_content">heading content</a>.</p>
+<p>Sectioning content is a subset of flow content, and can be used everywhere flow content is expected. Elements belonging to the sectioning content model create a <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines" title="Sections and Outlines of an HTML5 document">section in the current outline</a> that defines the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and <a href="#heading_content">heading content</a>.</p>
 
 <p>Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <h3 id="Heading_content">Heading content</h3>
 
-<p>Heading content is a subset of flow content, which defines the title of a section, whether marked by an explicit <a href="#sectioning_content">sectioning content</a> element, or implicitly defined by the heading content itself.</p>
+<p>Heading content is a subset of flow content, which defines the title of a section, whether marked by an explicit <a href="#sectioning_content">sectioning content</a> element, or implicitly defined by the heading content itself. Heading content can be used everywhere flow content is expected.</p>
 
 <p>Elements belonging to this category are {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} and {{HTMLElement("hgroup")}}.</p>
 
@@ -74,7 +74,7 @@ tags:
 
 <h3 id="Phrasing_content">Phrasing content</h3>
 
-<p>Phrasing content is a subset of flow content that defines the text and the markup it contains. Runs of phrasing content make up paragraphs.</p>
+<p>Phrasing content is a subset of flow content that defines the text and the markup it contains, and can be used everywhere flow content is expected. Runs of phrasing content make up paragraphs.</p>
 
 <p>Elements belonging to this category are {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{ Obsolete_inline() }}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("picture")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} and plain text (not only consisting of white spaces characters).</p>
 
@@ -92,11 +92,11 @@ tags:
 
 <h3 id="Embedded_content">Embedded content</h3>
 
-<p>Embedded content is a subset of flow content that imports another resource or inserts content from another mark-up language or namespace into the document. Elements that belong to this category include: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("picture")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.</p>
+<p>Embedded content is a subset of flow content that imports another resource or inserts content from another mark-up language or namespace into the document, and can be used everywhere flow content is expected. Elements that belong to this category include: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{HTMLElement("picture")}}, {{SVGElement("svg")}}, {{HTMLElement("video")}}.</p>
 
 <h3 id="Interactive_content">Interactive content</h3>
 
-<p>Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction. Elements that belong to this category include: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.<br>
+<p>Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.<br>
  Some elements belong to this category only under specific conditions:</p>
 
 <ul>
@@ -114,7 +114,7 @@ tags:
 
 <h3 id="Form-associated_content">Form-associated content</h3>
 
-<p>Form-associated content is a subset of flow content comprising elements that have a form owner, exposed by a <strong>form</strong> attribute. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the <strong>form</strong> attribute.</p>
+<p>Form-associated content is a subset of flow content comprising elements that have a form owner, exposed by a <strong>form</strong> attribute, and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the <strong>form</strong> attribute.</p>
 
 <ul>
  <li>{{HTMLElement("button")}}</li>
