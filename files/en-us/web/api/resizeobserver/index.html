@@ -67,7 +67,7 @@ slider.addEventListener('input', () =&gt; {
 const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
-      // Checking for chrome as using a non-standard array
+      // Firefox implements `contentBoxSize` as a single content rect, rather than an array
       const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
       
       h1Elem.style.fontSize = Math.max(1.5, contentBoxSize.inlineSize / 200) + 'rem';
