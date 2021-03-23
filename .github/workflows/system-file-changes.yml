@@ -27,7 +27,7 @@ jobs:
           echo ${{ github.actor }}
           echo "Repository owner?"
           echo ${{ github.repository_owner }}
-          echo ${{ github.event.pull_request }}
+          echo ${{ toJson(github.event.pull_request) }}
 
           # XXX This is temporarily commented out until we understand better
           # how to actually works. We need to test what happens when
