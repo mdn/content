@@ -143,7 +143,7 @@ app.use('/wiki', wiki);</pre>
  <li><code>()</code> : Grouping match on a set of characters to perform another operation on, e.g. <code>'/ab(cd)?e'</code> will perform a <code>?</code>-match on the group <code>(cd)</code>—it will match <code>abe</code> and <code>abcde</code>.</li>
 </ul>
 
-<p>The route paths can also be JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, the route path below will match <code>catfish </code>and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
+<p>The route paths can also be JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, the route path below will match <code>catfish</code> and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
 
 <pre class="brush: js">app.get(/.*fish$/, function (req, res) {
   ...
