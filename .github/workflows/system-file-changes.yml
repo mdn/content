@@ -18,6 +18,7 @@ jobs:
     if: github.repository_owner == 'mdn' && github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
+      - uses: hmarr/debug-action@v2
       - name: Stop anything and everything
         run: |
           # echo "Any PR that edits these files should break the build and expect admin overrides"
@@ -28,9 +29,9 @@ jobs:
           echo "Repository owner?"
           echo ${{ github.repository_owner }}
           echo "PR head?"
-          echo ${{ github.event.pull_request.head }}
+          echo ${{ github.event.pull_request.head.repo.owner.login }}
           echo "PR base?"
-          echo ${{ github.event.pull_request.base }}
+          echo ${{ github.event.pull_request.base.user.login }}
 
           # XXX This is temporarily commented out until we understand better
           # how to actually works. We need to test what happens when
