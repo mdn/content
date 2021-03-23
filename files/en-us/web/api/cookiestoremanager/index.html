@@ -13,7 +13,7 @@ tags:
 
 <p>A <code>CookieStoreManager</code> has an associated {{domxref("ServiceWorkerRegistration")}}. Each service worker registration has a cookie change subscription list, which is a list of cookie change subscriptions each containing a name and url. The methods in this interface allow the service worker to add and remove subscriptions from this list, and to get a list of all subscriptions.</p>
 
-<p>The {{domxref("ServiceWorkerRegistration")}} interface is extended to give access to <code>CookieStoreManager</code> via <code>cookies</code>. Therefore, <code>CookieStoreManager</code> has no constructor.</p>
+<p>To get a <code>CookieStoreManager</code>, call {{domxref("ServiceWorkerRegistration.cookies")}}.</p>
 
 <h2 id="Methods">Methods</h2>
 
