@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.303":
-  version "0.4.303"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.303.tgz#e9b2bda91485c314f2875f6566bb542668750592"
-  integrity sha512-MBZYxRbBTzn/+9CIgVdu994dcaTXu5fBJQZVNDeHjqo3+Xz3k6X6EPGu2qR6IYMYoLMKk/qv0FX2qldIY3eJ/w==
+"@mdn/yari@0.4.309":
+  version "0.4.309"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.309.tgz#1d5b3bbfd500eb78730fbbd266aa26fe904e5443"
+  integrity sha512-ivtxL7rzeNLX9mXWEqoxOtmJxQdOzRDsf8r6VafBVXtd1SOlG0O1qMx7BVib1oIhKpn9R9KeMKJFMS1R6oCs8g==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -80,7 +80,7 @@
     loglevel "^1.7.1"
     lru-cache "^6.0.0"
     mdn-data "2.0.17"
-    open "^8.0.3"
+    open "^8.0.4"
     open-editor "3.0.0"
     prismjs "1.23.0"
     read-chunk "3.2.0"
@@ -2756,7 +2756,7 @@ open@^7.3.0:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-open@^8.0.3:
+open@^8.0.4:
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/open/-/open-8.0.4.tgz#2fb90debffcf20f4d7be537502ed3e3ee9e5dcbc"
   integrity sha512-Txc9FOcvjrr5Kv+Zb3w89uKMKiP7wH8mLdYj1xJa+YnhhntEYhbB6cQHjS4O6P+jFwMEzEQVVcpfnu9WkKNuLQ==
