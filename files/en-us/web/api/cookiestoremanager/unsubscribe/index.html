@@ -43,7 +43,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example the {{domxref("ServiceWorkerRegistration")}} represented by <code>registration</code> is unsubscribing from change events on the cookie name <code>cookie1</code> with a scope of <code>/path1</code>.</p>
+<p>In this example the {{domxref("ServiceWorkerRegistration")}} represented by <code>registration</code> is unsubscribing from change events on the cookie named <code>"cookie1"</code> with a scope of <code>"/path1"</code>.</p>
 
 <pre class="brush: js">const subscriptions = [{ name: 'cookie1', url: `/path1` }];
 await registration.cookies.unsubscribe(subscriptions);</pre>
