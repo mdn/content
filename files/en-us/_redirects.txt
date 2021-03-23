@@ -10776,6 +10776,7 @@
 /en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
+/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
