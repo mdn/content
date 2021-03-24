@@ -73,19 +73,20 @@ tags:
 
 <h3 id="Simple_example">Simple example</h3>
 
-<pre class="brush: js">function* idMaker() {
-  var index = 0;
-  while (true)
-    yield index++;
+<pre class="brush: js">async function* createAsyncGenerator() {
+  yield await Promise.resolve(1);
+  yield await Promise.resolve(2);
+  yield await Promise.resolve(3);
 }
 
-var gen = idMaker();
+const asyncGen = createAsyncGenerator(); // "AsyncGenerator { }"
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3
-// ...</pre>
+asyncGen.next()
+  .then(res => console.log(res.value)); // 1
+asyncGen.next()
+  .then(res => console.log(res.value)); // 2
+asyncGen.next()
+  .then(res => console.log(res.value)); // 3</pre>
 
 <h3 id="Example_with_yield*">Example with yield*</h3>
 
@@ -95,19 +96,19 @@ console.log(gen.next().value); // 3
   yield i + 3;
 }
 
-function* generator(i) {
-  yield i;
-  yield* anotherGenerator(i);
-  yield i + 10;
+async function* generator(i) {
+  yield await Promise.resolve(i);
+  yield* await anotherGenerator(i);
+  yield await Promise.resolve(i + 10);
 }
 
 var gen = generator(10);
 
-console.log(gen.next().value); // 10
-console.log(gen.next().value); // 11
-console.log(gen.next().value); // 12
-console.log(gen.next().value); // 13
-console.log(gen.next().value); // 20
+gen.next().then(res => console.log(res.value)); // 10
+gen.next().then(res => console.log(res.value)); // 11
+gen.next().then(res => console.log(res.value)); // 12
+gen.next().then(res => console.log(res.value)); // 13
+gen.next().then(res => console.log(res.value)); // 20
 </pre>
 
 <h3 id="Passing_arguments_into_Generators">Passing arguments into Generators</h3>
@@ -214,25 +215,56 @@ var obj = new f; // throws "TypeError: f is not a constructor
 const bar = foo();
 console.log(bar.next()); // {value: 10, done: false}</pre>
 
-<h3 id="Generator_example">Generator example</h3>
+<h3 id="async_generator_iteration">Async generator iteration</h3>
 
-<pre class="brush: js">function* powers(n){
-     //endless loop to generate
-     for(let current =n;; current *= n){
-         yield current;
-     }
+<pre class="brush: js;">
+function waitFor(time, value) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(value), time);
+  });
 }
 
-for(let power of powers(2)){
-     //controlling generator
-     if(power &gt; 32) break;
-     console.log(power)
-           //2
-          //4
-         //8
-        //16
-       //32
-}</pre>
+async function* generate() {
+  yield await waitFor(1000, 1);
+  yield await waitFor(2000, 2);
+  yield await waitFor(400, 3);
+  yield await waitFor(800, 4);
+  yield await waitFor(150, 5);
+  yield await waitFor(50, 6);
+  console.log('All done!');
+}
+
+async function main() {
+  for await (const value of generate()) {
+    console.log('value', value);
+  }
+}
+
+main()
+  .catch((e) => console.error('error', e));</pre>
+
+<h3 id="using_fetch_within_an_async_generator">Using fetch() within an async generator</h3>
+
+<pre class="brush: js">async function* randomNumbers() {
+  const url = 'https://www.random.org/decimal-fractions/?num=1&dec=10&col=1&format=plain&rnd=new';
+
+  while (true) {
+    const response = await fetch(url);
+    const text = await response.text();
+    yield Number(text);
+  }
+}
+
+// print random numbers until the number exceeds 0.95
+async function printRandoms() {
+  for await (const number of randomNumbers()) {
+    console.log(number);
+    if (number > 0.95) { break; }
+  }
+}
+
+printRandoms();
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
