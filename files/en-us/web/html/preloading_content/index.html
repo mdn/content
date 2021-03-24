@@ -118,7 +118,7 @@ tags:
 
 <h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
 
-<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
+<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
 
 <p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
 
@@ -141,7 +141,7 @@ tags:
 
 <h2 id="Including_media">Including media</h2>
 
-<p>One nice feature of <code>&lt;link&gt;</code> elements is their ability to accept {{htmlattrxref("media", "link")}} attributes. These can accept <a href="/en-US/docs/Web/CSS/@media#Media_types">media types</a> or full-blown <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, allowing you to do responsive preloading!</p>
+<p>One nice feature of <code>&lt;link&gt;</code> elements is their ability to accept {{htmlattrxref("media", "link")}} attributes. These can accept <a href="/en-US/docs/Web/CSS/@media#media_types">media types</a> or full-blown <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, allowing you to do responsive preloading!</p>
 
 <p>Let's look at an example (see it on GitHub — <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/media">source code</a>, <a href="https://mdn.github.io/html-examples/link-rel-preload/media/">live example</a>):</p>
 
@@ -181,19 +181,19 @@ tags:
 
 <p>Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:</p>
 
-<pre class="brush: js"><code class="language-javascript"><span class="keyword token">var</span> preloadLink <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"link"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-preloadLink<span class="punctuation token">.</span>href <span class="operator token">=</span> <span class="string token">"myscript.js"</span><span class="punctuation token">;</span>
-preloadLink<span class="punctuation token">.</span>rel <span class="operator token">=</span> <span class="string token">"preload"</span><span class="punctuation token">;</span>
-preloadLink<span class="punctuation token">.</span><span class="keyword token">as</span> <span class="operator token">=</span> <span class="string token">"script"</span><span class="punctuation token">;</span>
-document<span class="punctuation token">.</span>head<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>preloadLink<span class="punctuation token">)</span><span class="punctuation token">;</span>
-</code></pre>
+<pre class="brush: js">var preloadLink = document.createElement(&quot;link&quot;);
+preloadLink.href = &quot;myscript.js&quot;;
+preloadLink.rel = &quot;preload&quot;;
+preloadLink.as = &quot;script&quot;;
+document.head.appendChild(preloadLink);
+</pre>
 
 <p>This means that the browser will preload the <code>myscript.js</code> file, but not actually use it yet. To use it, you could do this:</p>
 
-<pre class="brush: js"><code class="language-javascript"><span class="keyword token">var</span> preloadedScript <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"script"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-preloadedScript<span class="punctuation token">.</span>src <span class="operator token">=</span> <span class="string token">"myscript.js"</span><span class="punctuation token">;</span>
-document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>preloadedScript<span class="punctuation token">)</span><span class="punctuation token">;</span>
-</code></pre>
+<pre class="brush: js">var preloadedScript = document.createElement(&quot;script&quot;);
+preloadedScript.src = &quot;myscript.js&quot;;
+document.body.appendChild(preloadedScript);
+</pre>
 
 <p>This is useful when you want to preload a script, but then defer execution until exactly when you need it.</p>
 
