@@ -36,7 +36,7 @@ Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev
 </h2><a id="1033678">
     To run the Security Module Database Tool, type the command</a>
 <a id="1033679">
-    <code>modutil </code><i>option</i><code> [</code><i>arguments</i><code>]</code></a>
+    <code>modutil</code><i>option</i><code> [</code><i>arguments</i><code>]</code></a>
 <a id="1028271">
     where <i>option</i> and <i>arguments</i> are combinations of the options and arguments listed in the following
     section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue
@@ -414,58 +414,58 @@ command are defined as follows:
             Adding a PKCS #11 module, which includes setting a supporting library file, enabling ciphers, and setting
             default provider status for various security mechanisms: </a>
         <blockquote><a id="1043245">
-                <code>-add </code><i>modulename</i><code> -libfile </code><i>library-file</i><code> [-ciphers </code><i>cipher-enable-list</i><code>]<br>
-[-mechanisms </code><i>mechanism-list</i><code>]
+                <code>-add</code><i>modulename</i><code> -libfile</code><i>library-file</i> <code>[-ciphers</code><i>cipher-enable-list</i><code>]<br>
+[-mechanisms</code><i>mechanism-list</i><code>]
 </code></a></blockquote>
     </li>
 
     <li><a id="1043246">
             Adding a PKCS #11 module from an existing JAR file: </a>
         <blockquote><a id="1043247">
-                <code>-jar </code><i>JAR-file</i><code> -installdir </code><i>root-installation-directory</i><code> <br>
-[-tempdir </code><i>temporary-directory</i><code>]
+                <code>-jar</code><i>JAR-file</i> <code>-installdir</code><i>root-installation-directory</i><br>
+                <code> [-tempdir</code><i>temporary-directory</i><code>]
 </code></a></blockquote>
     </li>
 
     <li><a id="1043248">
             Deleting a specific PKCS #11 module from a security module database: </a>
         <blockquote><a id="1043249">
-                <code>-delete </code><i>modulename
+                <code>-delete</code><i>modulename
                 </i></a></blockquote>
     </li>
 
     <li><a id="1043250">
             Initializing or changing a token's password: </a>
         <blockquote><a id="1043251">
-                <code>-changepw </code><i>tokenname</i><code> [-pwfile </code><i>old-password-file</i><code>] <br>
-[-newpwfile </code><i>new-password-file</i><code>]
+                <code>-changepw</code><i>tokenname</i> <code>[-pwfile</code><i>old-password-file</i><code>] <br>
+[-newpwfile</code><i>new-password-file</i><code>]
 </code></a></blockquote>
     </li>
 
     <li><a id="1043252">
             Setting the default provider status of various security mechanisms in an existing PKCS #11 module: </a>
         <blockquote><a id="1043253">
-                <code>-default </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i></a></blockquote>
+                <code>-default</code><i>modulename</i> <code>-mechanisms</code><i>mechanism-list</i></a></blockquote>
     </li>
 
     <li><a id="1043254">
             Clearing the default provider status of various security mechanisms in an existing PKCS #11 module: </a>
 
         <blockquote><a id="1043255">
-                <code>-undefault </code><i>modulename</i><code> -mechanisms </code><i>mechanism-list</i></a></blockquote>
+                <code>-undefault</code><i>modulename</i> <code>-mechanisms</code><i>mechanism-list</i></a></blockquote>
     </li>
 
     <li><a id="1043256">
             Enabling a specific slot or all slots within a module: </a>
         <blockquote><a id="1043257">
-                <code>-enable </code><i>modulename</i><code> [-slot </code><i>slotname</i><code>]
+                <code>-enable</code><i>modulename</i> <code>[-slot</code><i>slotname</i><code>]
 </code></a></blockquote>
     </li>
 
     <li><a id="1043258">
             Disabling a specific slot or all slots within a module: </a>
         <blockquote><a id="1043259">
-                <code>-disable </code><i>modulename</i><code> [-slot </code><i>slotname</i><code>]
+                <code>-disable</code><i>modulename</i> <code>[-slot</code><i>slotname</i><code>]
 </code></a></blockquote>
     </li>
 

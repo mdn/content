@@ -124,10 +124,28 @@ tags:
 
 <p>A check box is created using the {{HTMLElement("input")}} element with a <a href="/en-US/docs/Web/HTML/Attributes/type"><code>type</code></a> attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.</p>
 
-<pre class="brush: html">&lt;input type="checkbox" id="carrots" name="carrots" value="carrots" checked&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="questionOne" name="subscribe" value="yes" checked&gt;
 </pre>
 
-<p>Including the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.</p>
+<p>Related checkbox items should use the same {{htmlattrxref("name","input")}} attribute. Including the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.</p>
+
+<pre class="brush: html">&lt;fieldset&gt;
+  &lt;legend&gt;Choose all the vegetables you like to eat&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="carrots"&gt;Carrots&lt;/label&gt;
+      &lt;input type="checkbox" id="carrots" name="vegetable" value="carrots" checked&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="peas"&gt;Peas&lt;/label&gt;
+      &lt;input type="checkbox" id="peas" name="vegetable" value="peas"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="cabbage"&gt;Cabbage&lt;/label&gt;
+      &lt;input type="checkbox" id="cabbage" name="vegetable" value="cabbage"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/fieldset&gt;</pre>
 
 <p>The following screenshots show default, focused and disabled checkboxes in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10:</p>
 

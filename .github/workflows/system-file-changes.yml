@@ -22,18 +22,27 @@ jobs:
       - name: Stop anything and everything
         run: |
           # echo "Any PR that edits these files should break the build and expect admin overrides"
-          echo "PR user?"
-          echo ${{ github.event.pull_request.user.login }}
-          echo "PR actor?"
-          echo ${{ github.actor }}
-          echo "Repository owner?"
-          echo ${{ github.repository_owner }}
-          echo "PR head?"
-          echo ${{ github.event.pull_request.head.repo.owner.login }}
-          echo "PR base?"
-          echo ${{ github.event.pull_request.base.user.login }}
+          # echo "PR user?"
+          # echo ${{ github.event.pull_request.user.login }}
+          # echo "PR actor?"
+          # echo ${{ github.actor }}
+          # echo "Repository owner?"
+          # echo ${{ github.repository_owner }}
+          # echo "PR head?"
+          # echo ${{ github.event.pull_request.head.repo.owner.login }}
+          # echo "PR base?"
+          # echo ${{ github.event.pull_request.base.user.login }}
+          echo "github.event.pull_request.head.repo.full_name?"
+          echo ${{ github.event.pull_request.head.repo.full_name }}
+          echo "github.repository?"
+          echo ${{ github.repository }}
 
           # XXX This is temporarily commented out until we understand better
           # how to actually works. We need to test what happens when
           # PRs on forks come in that edit any of these files.
+          # exit 1
+      - name: Running on a fork?
+        if: github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          echo "Yes, this is fork"
           # exit 1

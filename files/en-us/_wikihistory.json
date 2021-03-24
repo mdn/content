@@ -68939,32 +68939,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Node/localName": {
-    "modified": "2020-10-15T21:04:20.872Z",
-    "contributors": [
-      "Mems",
-      "fscholz",
-      "abbycar",
-      "Sebastianz",
-      "jpmedley",
-      "teoli",
-      "kscarfone",
-      "khushboo_Dwivedi",
-      "gurdev_singh",
-      "Sheppy",
-      "ethertank",
-      "trevorh",
-      "ziyunfei",
-      "Hsivonen",
-      "Mgjbot",
-      "Taken",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/Node/lookupNamespaceURI": {
     "modified": "2020-10-15T21:04:19.741Z",
     "contributors": [
@@ -68997,31 +68971,6 @@
       "ziyunfei",
       "vali29",
       "Brettz9"
-    ]
-  },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2020-10-15T21:14:34.078Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "Sebastianz",
-      "stuart",
-      "timdown",
-      "teoli",
-      "kscarfone",
-      "Reachmeatshivam",
-      "Sheppy",
-      "ethertank",
-      "Jürgen Jeka",
-      "Hsivonen",
-      "Brettz9",
-      "Mgjbot",
-      "Nickolay",
-      "20after4",
-      "Ptak82",
-      "mindcrash",
-      "Dria",
-      "JesseW"
     ]
   },
   "Web/API/Node/nextSibling": {
@@ -69239,28 +69188,6 @@
       "Fguisset",
       "Dria",
       "Callek",
-      "JesseW"
-    ]
-  },
-  "Web/API/Node/prefix": {
-    "modified": "2020-10-15T21:04:24.519Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "flimzy",
-      "kscarfone",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "trevorh",
-      "Mgjbot",
-      "Federico",
-      "Ptak82",
-      "Nickolay",
-      "Swanky",
-      "Dria",
       "JesseW"
     ]
   },

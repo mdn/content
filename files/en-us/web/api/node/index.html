@@ -153,32 +153,6 @@ tags:
   <dd>Returns / Sets the textual content of an element and all its descendants.</dd>
 </dl>
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
-
-<dl>
-  <dt>{{DOMxRef("Node.localName")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{DOMxRef("DOMString")}} representing the local part of the qualified name
-    of an element.
-    <div class="notecard note">
-      <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the
-        local name for HTML elements (but not XHTML elements). In later versions, this
-        does not happen, so the property is in lower case for both HTML and XHTML.</p>
-    </div>
-  </dd>
-  <dt>{{DOMxRef("Node.namespaceURI")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>The namespace URI of this node, or <code>null</code> if it is no namespace.
-    <div class="notecard note">
-      <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no
-        namespace. In later versions, HTML elements are in the
-        <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>
-        namespace in both HTML and XML trees.</p>
-    </div>
-  </dd>
-  <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>Is a {{DOMxRef("DOMString")}} representing the namespace prefix of the node, or
-    <code>null</code> if no prefix is specified.</dd>
-</dl>
-
 <h2 id="Methods">Methods</h2>
 
 <p><em>In addition to the properties below, <code>Node</code> inherits methods from its
