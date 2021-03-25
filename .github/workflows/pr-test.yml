@@ -45,11 +45,17 @@ jobs:
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
 
-          # Some day, when our number of flaws have reached 0 we'll change
-          # this to "*:error" which means the slightest flaw in the build
-          # will break the build.
-          # See https://github.com/mdn/yari/issues/715
+          # This is so that if there's a single 'unsafe_html' flaw, it
+          # completely fails the build.
+          # But all other flaws should be 'warn' so that we can include
+          # information about the flaws when we analyze the built PR.
           BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
+
+          # Because we build these pages in a way that you get a toolbar,
+          # so the flaws can be displayed, but we don't want any of the
+          # other toolbar features like "Fix fixable flaws" or "Quick-edit"
+          # we set this to disable that stuff.
+          REACT_APP_CRUD_MODE_READONLY: true
 
           # Setting this to an empty string effectively means that the
           # <iframe> src will end up being the relative URL of the current
