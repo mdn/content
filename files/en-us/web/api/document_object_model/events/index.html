@@ -19,7 +19,7 @@ tags:
 
 <p>There are 3 ways to register event handlers for a DOM element.</p>
 
-<h3 id="EventTarget.addEventListener">{{domxref("EventTarget.addEventListener")}}</h3>
+<h3 id="EventTarget.addEventListener">EventTarget.addEventListener</h3>
 
 <pre class="brush: js">// Assuming myButton is a button element
 myButton.addEventListener('click', greet, false)
@@ -34,12 +34,13 @@ function greet(event){
 <p>This is the method you should use in modern web pages.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Internet Explorer 6–8 didn't support this method, offering a similar {{domxref("EventTarget.addEventListener")}} API instead. For cross-browser compatibility, use one of the many JavaScript libraries available.</p>
+  <h4>Note</h4>
+  <p>Internet Explorer 6–8 didn't support this method, offering a similar {{domxref("EventTarget.addEventListener")}} API instead. For cross-browser compatibility, use one of the many JavaScript libraries available.</p>
 </div>
 
 <p>More details can be found on the {{domxref("EventTarget.addEventListener")}} reference page.</p>
 
-<h3 id="HTML_attribute"><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_don't_use_these">HTML attribute</a></h3>
+<h3 id="HTML_attribute">HTML attribute</h3>
 
 <pre class="brush: html">&lt;button onclick="alert('Hello world!')"&gt;
 </pre>
@@ -47,8 +48,12 @@ function greet(event){
 <p>The JavaScript code in the attribute is passed the Event object via the <code>event</code> parameter. <a href="http://dev.w3.org/html5/spec/webappapis.html#the-event-handler-processing-algorithm">The return value is treated in a special way, described in the HTML specification</a>.</p>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> This method should be avoided! It inflates the markup, and makes it less readable. Concerns of content/structure and behavior are not well-separated, making a bug harder to find.</p>
+  <h4>Warning</h4>
+  <p>This method should be avoided! It inflates the markup, and makes it less readable. Concerns of content/structure and behavior are not well-separated, making a bug harder to find.</p>
+  <p>For more information see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_don't_use_these">Inline event handlers</a>.</p>
 </div>
+
+
 
 <h3 id="DOM_element_properties">DOM element properties</h3>
 
@@ -75,11 +80,3 @@ myButton.onclick = function(event){alert('Hello world')}
 // any function should have an appropriate name, that's what called semantic
 table_el.onclick = print
 </pre>
-
-<h2 id="Subnav">Subnav</h2>
-
-<ul>
-	<li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
-	<li><a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
-	<li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
-</ul>

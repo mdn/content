@@ -46,8 +46,8 @@ tags:
  <li>{{HTMLElement("link")}} (<code>href</code> attribute) (this includes CSS stylesheets)</li>
  <li>{{HTMLElement("iframe")}} (<code>src</code> attribute)</li>
  <li>{{domxref("XMLHttpRequest")}} requests</li>
- <li>{{domxref("GlobalFetch.fetch","fetch()")}} requests</li>
- <li>All cases in CSS where a {{cssxref("url")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} requests</li>
+ <li>All cases in CSS where a {{cssxref("url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).</li>
  <li>{{HTMLElement("object")}} (<code>data</code> attribute)</li>
  <li>{{domxref("Navigator.sendBeacon")}} (<code>url</code> attribute)</li>
 </ul>
@@ -79,7 +79,7 @@ tags:
 <ul>
  <li>If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.</li>
  <li>Console warnings indicate when content has been successfully upgraded.</li>
- <li>For more information see <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#Upgrading_mixed_display_content">Experimental features in Firefox &gt; Upgrading mixed display content</a>.</li>
+ <li>For more information see <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content">Experimental features in Firefox &gt; Upgrading mixed display content</a>.</li>
 </ul>
 </div>
 
@@ -87,13 +87,13 @@ tags:
 
 <p>The Firefox Web Console displays a mixed content warning message in the Net pane when a page on your website has this issue. The mixed content resource that was loaded via HTTP will show up in red, along with the text "mixed content", which links to this page.</p>
 
-<p><a class="internal" href="/files/12545/Mixed_content_-_Net_pane.png"><img alt="Screen shot of the web console displaying a mixed content warning." src="https://mdn.mozillademos.org/files/12545/Mixed_content_-_Net_pane.png" style="border-style: solid; border-width: 1px; height: 286px; width: 720px;"></a></p>
+<p><a class="internal" href="/files/12545/Mixed_content_-_Net_pane.png"><img alt="Screen shot of the web console displaying a mixed content warning." src="mixed_content_-_net_pane.png" style="border-style: solid; border-width: 1px;"></a></p>
 
 <p>As well as finding these warnings in the Web Console, you could use <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> to report issues. You could also use an online crawler like <a href="http://www.jitbit.com/sslcheck/" rel="noopener">SSL-check</a> or <a href="https://www.missingpadlock.com/" rel="noopener">Missing Padlock</a> that will check your website recursively and find links to insecure content.</p>
 
 <p>Starting in Firefox 23, mixed active content is blocked by default (and mixed display content can be blocked by setting a preference). To make it easier for web developers to find mixed content errors, all blocked mixed content requests are logged to the Security pane of the Web Console, as seen below:</p>
 
-<p><a href="/files/5261/blocked-mixed-content-errors.png"><img alt="A screenshot of blocked mixed content errors in the Security Pane of the Web Console" src="https://mdn.mozillademos.org/files/12543/mixed_content_webconsole.png" style="border-style: solid; border-width: 1px; height: 285px; width: 720px;"></a></p>
+<p><a href="/files/5261/blocked-mixed-content-errors.png"><img alt="A screenshot of blocked mixed content errors in the Security Pane of the Web Console" src="mixed_content_webconsole.png" style="border-style: solid; border-width: 1px;"></a></p>
 
 <p>To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.</p>
 
@@ -105,7 +105,7 @@ tags:
 
 <ul>
  <li><a href="https://w3c.github.io/webappsec/specs/mixedcontent/">Mixed Content - W3C Editor's Draft</a></li>
- <li><a href="/en-US/docs/Security/Mixed_content/How_to_fix_website_with_mixed_content">How to fix a website with blocked mixed content</a></li>
+ <li><a href="/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content">How to fix a website with blocked mixed content</a></li>
 </ul>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>X-Frame-Options</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid <a href="/en-US/docs/Web/Security/Types_of_attacks#Click-jacking">click-jacking</a> attacks, by ensuring that their content is not embedded into other sites.</p>
+<p>The <strong><code>X-Frame-Options</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid <a href="/en-US/docs/Web/Security/Types_of_attacks#click-jacking">click-jacking</a> attacks, by ensuring that their content is not embedded into other sites.</p>
 
 <p>The added security is provided only if the user accessing the document is using a browser that supports <code>X-Frame-Options</code>.</p>
 
@@ -149,7 +149,7 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 
 <ul>
  <li>{{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}</li>
- <li><a href="https://tools.ietf.org/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
+ <li><a href="https://datatracker.ietf.org/doc/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
  <li><a href="https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses">ClickJacking Defenses - IEBlog</a></li>
  <li><a href="https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options">Combating ClickJacking with X-Frame-Options - IEInternals</a></li>
 </ul>

@@ -47,7 +47,8 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>If the match succeeds, the <code>exec()</code> method returns an array (with extra
-  properties <code>index</code> and <code>input</code>; see below) and updates the
+  properties <code>index</code>, <code>input</code>, and if the <code>d</code> flag is
+  set, <code>indices</code>; see below) and updates the
   {{jsxref("RegExp.lastIndex", "lastIndex")}} property of the regular expression object.
   The returned array has the matched text as the first item, and then one item for each
   parenthetical capture group of the matched text.</p>
@@ -62,7 +63,7 @@ tags:
 <pre class="brush: js">// Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-let re = /quick\s(brown).+?(jumps)/ig;
+let re = /quick\s(brown).+?(jumps)/igd;
 let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 </pre>
 
@@ -79,7 +80,7 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
   </thead>
   <tbody>
     <tr>
-      <th rowspan="4" scope="row" style="vertical-align: top;"><code>result</code></th>
+      <th rowspan="5" scope="row" style="vertical-align: top;"><code>result</code></th>
       <td><code>[0]</code></td>
       <td>The full string of characters matched</td>
       <td><code>"Quick Brown Fox Jumps"</code></td>
@@ -103,12 +104,32 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
       <td><code>4</code></td>
     </tr>
     <tr>
+      <td><code id="indices">indices</code></td>
+      <td>An array where each entry represents a substring match.
+        Each substring match itself is an array where the first entry
+        represents its start index and the second entry its end index.<br/>
+        The <code>indices</code> array additionally has a <code>groups</code>
+        property which holds an object of all named capturing groups. The keys
+        are the names of the capturing groups and each value is an array with
+        the first item being the start entry and the second entry being the
+        end index of the capturing group. If the regular expression doesn't
+        contain any capturing groups, <code>groups</code> is <code>undefined</code>.
+      </td>
+      <td>
+        <p><code>indices[0] === Array [ 4, 25 ]</code></p>
+        <p><code>indices[1] === Array [ 10, 15 ]</code></p>
+        <p><code>indices[2] === Array [ 20, 25 ]</code></p>
+        <p><code>indices.groups === undefined</code></p>
+        <p><code>indices.length === 3</code></p>
+      </td>
+    </tr>
+    <tr>
       <td><code>input</code></td>
       <td>The original string that was matched against.</td>
       <td><code>The Quick Brown Fox Jumps Over The Lazy Dog</code></td>
     </tr>
     <tr>
-      <th rowspan="5" scope="row" style="vertical-align: top;"><code>re</code></th>
+      <th rowspan="9" scope="row" style="vertical-align: top;"><code>re</code></th>
       <td><code>lastIndex</code></td>
       <td>
         <p>The index at which to start the next match.</p>
@@ -116,6 +137,22 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
         <p>If <code>g</code> is absent, this will always be <code>0</code>.</p>
       </td>
       <td><code>25</code></td>
+    </tr>
+    <tr>
+      <td><code>dotAll</code></td>
+      <td>
+        Indicates if the <code>s</code> flag was used to let <code>.</code>
+        match newlines.
+      </td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>hasIndices</code></td>
+      <td>
+        Indicates if the <code>d</code> flag was used to generate an
+        <code>indices</code> property in the returned value containing
+        start and end indices of the substring matches.</td>
+      <td><code>true</code></td>
     </tr>
     <tr>
       <td><code>ignoreCase</code></td>
@@ -137,6 +174,23 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
       <td><code>source</code></td>
       <td>The text of the pattern.</td>
       <td><code>quick\s(brown).+?(jumps)</code></td>
+    </tr>
+    <tr>
+      <td><code>sticky</code></td>
+      <td>
+        Indicates if the <code>y</code> flag was used to match
+        only from the index indicated by the <code>lastIndex</code>
+        property.
+      </td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>unicode</code></td>
+      <td>
+        Indicates if the <code>u</code> flag was used to
+        treat the pattern as a sequence of Unicode code points.
+      </td>
+      <td><code>false</code></td>
     </tr>
   </tbody>
 </table>

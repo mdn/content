@@ -18,7 +18,7 @@ tags:
 <p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
- <dt>{{domxref("Element.accessKey")}}</dt>
+ <dt>{{domxref("HTMLElement.accessKey")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing a single character that switches input focus to the hyperlink.</dd>
  <dt>{{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.</dd>
@@ -50,7 +50,7 @@ tags:
  <dd>Returns a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, as a list of tokens.</dd>
  <dt>{{domxref("HTMLAnchorElement.search")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the search element, including leading question mark ('<code>?</code>'), if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLElement.tabindex")}}</dt>
+ <dt>{{domxref("HTMLOrForeignElement.tabIndex")}}</dt>
  <dd>Is a <code>long</code> containing the position of the element in the tabbing navigation order for the current document.</dd>
  <dt>{{domxref("HTMLAnchorElement.target")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("target", "a")}} HTML attribute, indicating where to display the linked resource.</dd>
@@ -84,9 +84,9 @@ tags:
 <p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
- <dt>{{domxref("HTMLElement.blur()")}}</dt>
+ <dt>{{domxref("HTMLOrForeignElement.blur")}}</dt>
  <dd>Removes the keyboard focus from the current element.</dd>
- <dt>{{domxref("HTMLElement.focus()")}}</dt>
+ <dt>{{domxref("HTMLOrForeignElement.focus")}}</dt>
  <dd>Gives the keyboard focus to the current element.</dd>
  <dt>{{domxref("HTMLAnchorElement.toString()")}}</dt>
  <dd>Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("HTMLAnchorElement.href")}}, though it can't be used to modify the value.</dd>

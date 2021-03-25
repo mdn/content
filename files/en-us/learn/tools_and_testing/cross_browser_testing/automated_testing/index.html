@@ -144,7 +144,7 @@ exports.default = function(cb) {
 
 <p>See the links above for full instructions on the different gulp packages we are using.</p>
 
-<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally export the name of your task to be availabe via gulp's command.</p>
+<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally export the name of your task to be available via gulp's command.</p>
 
 <h4 id="html-tidy">html-tidy</h4>
 
@@ -229,7 +229,7 @@ const csslint = require('gulp-csslint');</pre>
  </li>
 </ol>
 
-<p>Here we grab our <code>style.css</code> file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the <code>build </code>directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!</p>
+<p>Here we grab our <code>style.css</code> file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the <code>build</code> directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!</p>
 
 <h4 id="js-hint_and_babel">js-hint and babel</h4>
 

@@ -56,6 +56,14 @@ console.log(y); // 1
 console.log(z); // 2
 </pre>
 
+<p>Similarly, you can destructure arrays on the left-hand side of the assignment</p>
+
+<pre class="brush: js">const [firstElement, secondElement] = list;
+// is equivalent to:
+// const firstElement = list[0];
+// const secondElement = list[1];
+</pre>
+
 <p>This capability is similar to features present in languages such as Perl and Python.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -74,7 +82,7 @@ console.log(green); // "three"
 
 <h4 id="Assignment_separate_from_declaration">Assignment separate from declaration</h4>
 
-<p>A variable can be assigned its value via destructuring separate from the variable's declaration.</p>
+<p>A variable can be assigned its value via destructuring, separate from the variable's declaration.</p>
 
 <pre class="brush: js">let a, b;
 

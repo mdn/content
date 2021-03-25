@@ -31,7 +31,7 @@ tags:
  <dt>{{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}}</dt>
  <dd>Is a {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be <code>null</code>.</dd>
  <dt>{{DOMxRef("HTMLOrForeignElement.dataset")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's <a href="/en-US/docs/Web/Guide/HTML/Using_data_attributes">custom data attributes</a> (<code>data-*</code>) .</dd>
+ <dd>Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's <a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">custom data attributes</a> (<code>data-*</code>) .</dd>
  <dt>{{DOMxRef("HTMLElement.dir")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}}, reflecting the <code>dir</code> global attribute, representing the directionality of the element. Possible values are <code>"ltr"</code>, <code>"rtl"</code>, and <code>"auto"</code>.</dd>
  <dt>{{DOMxRef("HTMLElement.draggable")}}</dt>
@@ -74,9 +74,9 @@ tags:
  <dd>Returns a <code>double</code> containing the width of an element, relative to the layout.</dd>
  <dt>{{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("HTMLPropertiesCollection")}}…</dd>
- <dt>{{DOMxRef("HTMLElement.spellcheck")}}{{Gecko_MinVersion_Inline("1.9")}}</dt>
- <dd>Is a {{JSxRef("Boolean")}} that controls <a href="/en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms">spell-checking</a>. It is present on all HTML elements, though it doesn't have an effect on all of them.</dd>
- <dt>{{DOMxRef("HTMLElement.style")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.spellcheck")}}</dt>
+ <dd>Is a {{JSxRef("Boolean")}} that controls <a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">spell-checking</a>. It is present on all HTML elements, though it doesn't have an effect on all of them.</dd>
+ <dt>{{DOMxRef("ElementCSSInlineStyle.style")}}</dt>
  <dd>Is a {{DOMxRef("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.</dd>
  <dt>{{DOMxRef("HTMLOrForeignElement.tabIndex")}}</dt>
  <dd>Is a <code>long</code> representing the position of the element in the tabbing order.</dd>
@@ -133,7 +133,7 @@ tags:
 <p>Listen to these events using <code>addEventListener()</code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
 
 <dl>
- <dt>{{domxref("HTMLElement/invalid_event", "invalid")}}</dt>
+ <dt>{{domxref("HTMLInputElement/invalid_event", "invalid")}}</dt>
  <dd>Fired when an element does not satisfy its constraints during constraint validation.<br>
  Also available via the {{domxref("GlobalEventHandlers/oninvalid", "oninvalid")}} property.</dd>
 </dl>
@@ -174,7 +174,7 @@ tags:
  <dd>Fired when an element captures a pointer using {{domxref("Element/setPointerCapture", "setPointerCapture()")}}.<br>
  Also available via the {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} property.</dd>
  <dt>{{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#Pointer_capture">captured pointer</a> is released.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#pointer_capture">captured pointer</a> is released.<br>
  Also available via the {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.</dd>
  <dt>{{domxref("HTMLElement/pointercancel_event", "pointercancel")}}</dt>
  <dd>Fired when a pointer event is canceled.<br>

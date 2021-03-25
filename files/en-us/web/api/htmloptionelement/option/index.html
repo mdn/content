@@ -2,14 +2,14 @@
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
 tags:
-- API
-- Constructor
-- HTML DOM
-- HTMLOptionElement
-- NeedsBrowserCompatibility
-- NeedsContent
-- NeedsExample
-- NeedsSpecTable
+  - API
+  - Constructor
+  - HTML DOM
+  - HTMLOptionElement
+  - NeedsBrowserCompatibility
+  - NeedsContent
+  - NeedsExample
+  - NeedsSpecTable
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -67,8 +67,8 @@ options.forEach(function(element,key) {
 <h3 id="Append_options_with_different_parameters">Append options with different parameters
 </h3>
 
-<pre class="brush: js"><code class="language-js">/* assuming we have the following HTML
-&lt;select id="s"&gt;
+<pre class="brush: js">/* assuming we have the following HTML
+&lt;select id=&quot;s&quot;&gt;
     &lt;option&gt;First&lt;/option&gt;
     &lt;option&gt;Second&lt;/option&gt;
     &lt;option&gt;Third&lt;/option&gt;
@@ -76,27 +76,27 @@ options.forEach(function(element,key) {
 */
 
 var s = document.getElementById('s');
-</code>var options = [ 'zero', 'one', 'two' ];<code class="language-js">
+var options = [ 'zero', 'one', 'two' ];
 
-options.forEach(function(element, key) {</code>
+options.forEach(function(element, key) {
   if (element == 'zero') {
     s[s.options.length] = new Option(element, s.options.length, false, false);
   }
   if (element == 'one') {
-    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the "selected" attribute
+    s[s.options.length] = new Option(element, s.options.length, true, false); // Will add the &quot;selected&quot; attribute
   }
   if (element == 'two') {
-    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in "view"
+    s[s.options.length] = new Option(element, s.options.length, false, true); // Just will be selected in &quot;view&quot;
   }
-<code class="language-js">});
+});
 
 /* Result
-&lt;select id="s"&gt;
-  &lt;option value="0"&gt;zero&lt;/option&gt;
-  &lt;option value="1" selected=""&gt;one&lt;/option&gt;
-  &lt;option value="2"&gt;two&lt;/option&gt; // User will see this as 'selected'
+&lt;select id=&quot;s&quot;&gt;
+  &lt;option value=&quot;0&quot;&gt;zero&lt;/option&gt;
+  &lt;option value=&quot;1&quot; selected=&quot;&quot;&gt;one&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;two&lt;/option&gt; // User will see this as 'selected'
 &lt;/select&gt;
-</code>*/</pre>
+*/</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

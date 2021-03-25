@@ -166,7 +166,7 @@ tags:
 
 <p>If you want to follow along with the example, save the above our module into a file called <code>add.wat</code>, then convert it into a binary file called <code>add.wasm</code> using wabt (see <a href="/en-US/docs/WebAssembly/Text_format_to_wasm">Converting WebAssembly text format to wasm</a> for details).</p>
 
-<p>Next, we’ll load our binary into a typed array called <code>addCode</code> (as described in <a href="/en-US/docs/WebAssembly/Fetching_WebAssembly_bytecode">Fetching WebAssembly Bytecode</a>), compile and instantiate it, and execute our <code>add</code> function in JavaScript (we can now find <code>add()</code> in the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">exports</a></code> property of the instance):</p>
+<p>Next, we’ll load our binary into a typed array called <code>addCode</code> (as described in <a href="/en-US/docs/WebAssembly/Loading_and_running">Fetching WebAssembly Bytecode</a>), compile and instantiate it, and execute our <code>add</code> function in JavaScript (we can now find <code>add()</code> in the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">exports</a></code> property of the instance):</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('add.wasm'))
   .then(obj =&gt; {

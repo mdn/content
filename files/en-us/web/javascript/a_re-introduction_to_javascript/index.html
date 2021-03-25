@@ -61,7 +61,9 @@ tags:
 
 <h2 id="Numbers">Numbers</h2>
 
-<p>Numbers in JavaScript are "double-precision 64-bit format IEEE 754 values", according to the spec —  There's <strong><em>no such thing as an integer</em></strong> in JavaScript (except {{jsxref("BigInt")}}), so you have to be a little careful. See this example:</p>
+<p>ECMAScript has two built-in numeric types: <strong>Number</strong> and <strong>BigInt</strong>.</p>
+
+<p>The Number type is a <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision 64-bit binary format IEEE 754 value</a> (numbers between -(2<sup>53</sup> − 1) and 2<sup>53</sup> − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a <em>representation</em> of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:</p>
 
 <pre class="brush: js">console.log(3 / 2);             // 1.5, <em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1</pre>
@@ -75,7 +77,7 @@ console.log(Math.floor(3 / 2)); // 1</pre>
 
 <p>In practice, integer values are treated as 32-bit ints, and some implementations even store it that way until they are asked to perform an instruction that's valid on a Number but not on a 32-bit integer. This can be important for bit-wise operations.</p>
 
-<p>The standard <a href="/en-US/docs/Web/JavaScript/Reference/Operators#Arithmetic_operators">arithmetic operators</a> are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. There's also a built-in object that we did not mention earlier called {{jsxref("Math")}} that provides advanced mathematical functions and constants:</p>
+<p>The standard <a href="/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators">arithmetic operators</a> are supported, including addition, subtraction, modulus (or remainder) arithmetic, and so forth. There's also a built-in object that we did not mention earlier called {{jsxref("Math")}} that provides advanced mathematical functions and constants:</p>
 
 <pre class="brush: js">Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
@@ -119,9 +121,25 @@ parseInt('0x10'); // 16
 <pre class="brush: js">NaN + 5; // NaN
 </pre>
 
-<p>You can test for <code>NaN</code> using the built-in {{jsxref("Global_Objects/isNaN", "isNaN()")}} function:</p>
+<p>You can reliably test for <code>NaN</code> using the built-in {{jsxref("Number.isNaN", "Number.isNaN()")}} function, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN#description">which behaves just as its name implies</a>:</p>
 
-<pre class="brush: js">isNaN(NaN); // true
+<pre class="brush: js">Number.isNaN(NaN); // true
+Number.isNaN('hello'); // false
+Number.isNaN('1'); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN([1]) // false
+Number.isNaN([1,2]) // false
+</pre>
+
+<p>But don’t test for <code>NaN</code> using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior">which has unintuitive behavior</a>:</p>
+
+<pre class="brush: js">isNaN('hello'); // true
+isNaN('1'); // false
+isNaN(undefined); // true
+isNaN({}); // true
+isNaN([1]) // false
+isNaN([1,2]) // true
 </pre>
 
 <p>JavaScript also has the special values {{jsxref("Infinity")}} and <code>-Infinity</code>:</p>
@@ -141,7 +159,7 @@ isFinite(NaN); // false
 
 <h2 id="Strings">Strings</h2>
 
-<p>Strings in JavaScript are sequences of <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode characters</a>. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units.</p>
+<p>Strings in JavaScript are sequences of <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode">Unicode characters</a>. This should be welcome news to anyone who has had to deal with internationalization. More accurately, they are sequences of UTF-16 code units; each code unit is represented by a 16-bit number. Each Unicode character is represented by either 1 or 2 code units.</p>
 
 <p>If you want to represent a single character, you just use a string consisting of that single character.</p>
 
@@ -228,7 +246,7 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <h2 id="Operators">Operators</h2>
 
-<p>JavaScript's numeric operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and <code>%</code> which is the remainder operator (<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29">which is the same as modulo</a>.) Values are assigned using <code>=</code>, and there are also compound assignment statements such as <code>+=</code> and <code>-=</code>. These extend out to <code>x = x <em>operator</em> y</code>.</p>
+<p>JavaScript's numeric operators are <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and <code>%</code> which is the remainder operator (<a href="/en-US/docs/Web/JavaScript/Reference/Operators#remainder_%28%29">which is the same as modulo</a>.) Values are assigned using <code>=</code>, and there are also compound assignment statements such as <code>+=</code> and <code>-=</code>. These extend out to <code>x = x <em>operator</em> y</code>.</p>
 
 <pre class="brush: js">x += 5;
 x = x + 5;
@@ -236,7 +254,7 @@ x = x + 5;
 
 <p>You can use <code>++</code> and <code>--</code> to increment and decrement respectively. These can be used as a prefix or postfix operators.</p>
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"><code>+</code> operator</a> also does string concatenation:</p>
+<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators#addition"><code>+</code> operator</a> also does string concatenation:</p>
 
 <pre class="brush: js">'hello' + ' world'; // "hello world"
 </pre>
@@ -249,7 +267,7 @@ x = x + 5;
 
 <p>Adding an empty string to something is a useful way of converting it to a string itself.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparisons</a> in JavaScript can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code>. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">Comparisons</a> in JavaScript can be made using <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code> and <code>&gt;=</code>. These work for both strings and numbers. Equality is a little less straightforward. The double-equals operator performs type coercion if you give it different types, with sometimes interesting results:</p>
 
 <pre class="brush: js">123 == '123'; // true
 1 == true; // true
@@ -263,7 +281,7 @@ x = x + 5;
 
 <p>There are also <code>!=</code> and <code>!==</code> operators.</p>
 
-<p>JavaScript also has <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">bitwise operations</a>. If you want to use them, they're there.</p>
+<p>JavaScript also has <a href="/en-US/docs/Web/JavaScript/Reference/Operators">bitwise operations</a>. If you want to use them, they're there.</p>
 
 <h2 id="Control_structures">Control structures</h2>
 
@@ -441,7 +459,7 @@ var user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
 </pre>
 
-<p>These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">reserved words</a>:</p>
+<p>These are also semantically equivalent. The second method has the advantage that the name of the property is provided as a string, which means it can be calculated at run-time. However, using this method prevents some JavaScript engine and minifier optimizations being applied. It can also be used to set and get properties with names that are <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">reserved words</a>:</p>
 
 <pre class="brush: js">obj.for = 'Simon'; // Syntax error, because 'for' is a reserved word
 obj['for'] = 'Simon'; // works fine
@@ -451,7 +469,7 @@ obj['for'] = 'Simon'; // works fine
 <p>Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 <a href="https://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
-<p>For more on objects and prototypes see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>. For an explanation of object prototypes and the object prototype chains see <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
+<p>For more on objects and prototypes see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object.prototype</a>. For an explanation of object prototypes and the object prototype chains see <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
 
 <div class="note">
 <p>Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. <code>{[phoneType]: 12345}</code> is possible instead of just <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
@@ -663,7 +681,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 <p>The second argument to <code>apply()</code> is the array to use as arguments; the first will be discussed later on. This emphasizes the fact that functions are objects too.</p>
 
 <div class="note">
-<p>You can achieve the same result using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> in the function call.</p>
+<p>You can achieve the same result using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> in the function call.</p>
 
 <p>For instance: <code>avg(...numbers)</code></p>
 </div>
@@ -727,7 +745,7 @@ b; // 2
 
 <h2 id="Custom_objects">Custom objects</h2>
 
-<div class="note">For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">Introduction to Object-Oriented JavaScript</a>.</div>
+<div class="note">For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to Object-Oriented JavaScript</a>.</div>
 
 <p>In classic Object Oriented Programming, objects are collections of data and methods that operate on that data. JavaScript is a prototype-based language that contains no class statement, as you'd find in C++ or Java (this is sometimes confusing for programmers accustomed to languages with a class statement). Instead, JavaScript uses functions as classes. Let's consider a person object with first and last name fields. There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:</p>
 
@@ -769,7 +787,7 @@ s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 </pre>
 
-<p>Note on the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> keyword. Used inside a function, <code>this</code> refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Accessing_properties">dot notation or bracket notation</a> on an object, that object becomes <code>this</code>. If dot notation wasn't used for the call, <code>this</code> refers to the global object.</p>
+<p>Note on the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> keyword. Used inside a function, <code>this</code> refers to the current object. What that actually means is specified by the way in which you called that function. If you called it using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#accessing_properties">dot notation or bracket notation</a> on an object, that object becomes <code>this</code>. If dot notation wasn't used for the call, <code>this</code> refers to the global object.</p>
 
 <p>Note that <code>this</code> is a frequent cause of mistakes. For example:</p>
 

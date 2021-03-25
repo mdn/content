@@ -289,7 +289,7 @@ JSON.stringify([ obj ]);
 
 <p>Note that since the <a href="https://www.json.org/">JSON format</a> doesn't support
   object references (although an <a
-    href="https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF draft
+    href="https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03">IETF draft
     exists</a>), a {{JSxRef("TypeError")}} will be thrown if one attempts to encode an
   object with circular references.</p>
 
@@ -308,14 +308,12 @@ JSON.stringify(circularReference);
 <h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">Issue with plain
   JSON.stringify for use as JavaScript</h3>
 
-<p>Historically, JSON was <a
-    href="http://timelessrepo.com/json-isnt-a-javascript-subset">not a completely strict
-    subset of JavaScript</a>. The literal code points U+2028 LINE SEPARATOR and U+2029
-  PARAGRAPH SEPARATOR could appear literally in string literals and property names in JSON
-  text. But they could not appear literally in similar context in JavaScript text, only
-  using Unicode escapes as <code>\u2028</code> and <code>\u2029</code>. This recently
-  changed: now both code points may appear literally in strings in JSON and JavaScript
-  both.</p>
+<p>Historically, JSON was not a completely strict subset of JavaScript. The literal code 
+  points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in 
+  string literals and property names in JSON text. But they could not appear literally in 
+  similar context in JavaScript text, only using Unicode escapes as <code>\u2028</code> and 
+  <code>\u2029</code>. This recently changed: now both code points may appear literally in 
+  strings in JSON and JavaScript both.</p>
 
 <p>Therefore, if compatibility with older JavaScript engines is required, it is perilous
   to directly substitute the string returned by <code>JSON.stringify</code> into a

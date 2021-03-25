@@ -14,7 +14,7 @@ tags:
 
 <p>{{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}} are the most common event targets, but other objects can be event targets, too. For example {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, and others.</p>
 
-<p>Many event targets (including elements, documents, and windows) also support setting <a href="/en-US/docs/Web/Guide/DOM/Events/Event_handlers">event handlers</a> via <code>on<var>event</var></code> properties and attributes.</p>
+<p>Many event targets (including elements, documents, and windows) also support setting <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handlers</a> via <code>on<var>event</var></code> properties and attributes.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -36,16 +36,6 @@ tags:
 	<dd>Dispatches an event to this <code><var>EventTarget</var></code>.</dd>
 </dl>
 
-<h3 id="Additional_methods_in_Mozilla_chrome_codebase">Additional methods in Mozilla chrome codebase</h3>
-
-<p>Mozilla includes a couple of extensions for use by JS-implemented event targets to implement <code>on<var>event</var></code> properties.</p>
-
-<p>See also <a href="/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a>.</p>
-
-<ul>
-	<li><code>void <strong>setEventHandler</strong>(DOMString <var>type</var>, EventHandler <var>handler</var>)</code> {{non-standard_inline}}</li>
-	<li><code>EventHandler <strong>getEventHandler</strong>(DOMString <var>type</var>)</code> {{non-standard_inline}}</li>
-</ul>
 
 <h2 id="Example">Example</h2>
 
@@ -125,7 +115,7 @@ EventTarget.prototype.dispatchEvent = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Reference/Events">Event reference</a> - the events available in the platform.</li>
-	<li><a href="/en-US/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
+	<li><a href="/en-US/docs/Web/Events">Event reference</a> - the events available in the platform.</li>
+	<li><a href="/en-US/docs/Web/Guide/Events">Event developer guide</a></li>
 	<li>{{domxref("Event")}} interface</li>
 </ul>

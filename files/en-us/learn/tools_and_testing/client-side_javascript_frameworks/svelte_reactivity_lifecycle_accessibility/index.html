@@ -502,7 +502,7 @@ mounted: &lt;input id="todo-0" class="input input__lg" type="text" autocomplete=
 
 <p>So, what is happening here? When you update a component's state in Svelte, it doesn't update the DOM immediately. Instead, it waits until the next microtask to see if there are any other changes that need to be applied, including in other components. Doing so avoids unnecessary work and allows the browser to batch things more effectively.</p>
 
-<p>In this case, when <code>editing</code> is <code>false</code>, the edit <code>&lt;input&gt;</code> is not visible because it does not exist in the DOM. Inside the <code>onEdit()</code> function we set <code>editing = true</code> and immediately afterwards try to access the <code>nameEl </code>variable and execute <code>nameEl.focus()</code>. The problem here is that Svelte hasn't yet updated the DOM.</p>
+<p>In this case, when <code>editing</code> is <code>false</code>, the edit <code>&lt;input&gt;</code> is not visible because it does not exist in the DOM. Inside the <code>onEdit()</code> function we set <code>editing = true</code> and immediately afterwards try to access the <code>nameEl</code> variable and execute <code>nameEl.focus()</code>. The problem here is that Svelte hasn't yet updated the DOM.</p>
 
 <p>One way to solve this problem is to use <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> to delay the call to <code>nameEl.focus()</code> until the next event cycle, and give Svelte the opportunity to update the DOM.</p>
 

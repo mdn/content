@@ -98,7 +98,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <p class="note"><strong>Note:</strong> Insecure sites (<code>http:</code>) can't set cookies with the <code>Secure</code> attribute (since Chrome 52 and Firefox 52). For Firefox, the <code>https:</code> requirements are ignored when the <code>Secure</code> attribute is set by localhost (since Firefox 75).</p>
  </dd>
  <dt id="HttpOnly"><code>HttpOnly</code> {{optional_inline}}</dt>
- <dd>Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}. This mitigates attacks against cross-site scripting ({{Glossary("XSS")}}).</dd>
+ <dd>Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("WindowOrWorkerGlobalScope.fetch")}}. This mitigates attacks against cross-site scripting ({{Glossary("XSS")}}).</dd>
  <dt id="SameSite"><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
  <dd>Controls whether a cookie is sent with cross-origin requests, providing some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</dd>
  <dd>
@@ -111,7 +111,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
    also specify the <code>Secure</code> attribute (i.e. they require a secure context).</li>
  </ol>
 
- <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
+ <p>The options below covers the new behavior. See the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Browser compatibility</a> table for information about specific browser implementation (rows: "<code>SameSite</code>: Defaults to <code>Lax</code>" and "<code>SameSite</code>: Secure context required").</p>
  </div>
  Inline options are:
 
@@ -143,7 +143,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <h3 id="Invalid_domains">Invalid domains</h3>
 
-<p>A cookie for a domain that does not include the server that set it <a href="https://tools.ietf.org/html/rfc6265#section-4.1.2.3">should be rejected by the user agent</a>.</p>
+<p>A cookie for a domain that does not include the server that set it <a href="https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.2.3">should be rejected by the user agent</a>.</p>
 
 <p>The following cookie will be rejected if set by a server hosted on <code>originalcompany.com</code>:</p>
 
@@ -194,7 +194,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
    <td>HTTP State Management Mechanism</td>
   </tr>
   <tr>
-   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05">draft-ietf-httpbis-rfc6265bis-05</a></td>
+   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-05">draft-ietf-httpbis-rfc6265bis-05</a></td>
    <td>Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies</td>
   </tr>
  </tbody>

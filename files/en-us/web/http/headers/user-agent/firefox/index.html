@@ -32,7 +32,7 @@ tags:
  <li><code>Gecko/<var>geckotrail</var></code> indicates that the browser is based on Gecko.</li>
  <li>On Desktop, <code><var>geckotrail</var></code> is the fixed string "<code>20100101</code>"</li>
  <li><code>Firefox/<var>firefoxversion</var></code> indicates the browser is Firefox, and provides the version (such as "<code>17.0</code>").</li>
- <li>{{ gecko_minversion_inline("10.0") }} from Firefox 10 on mobile, <code><var>geckotrail</var></code> is the same as <code><var>firefoxversion</var></code>.</li>
+ <li>From Firefox 10 on mobile, <code><var>geckotrail</var></code> is the same as <code><var>firefoxversion</var></code>.</li>
 </ul>
 
 <div class="note">The recommended way of sniffing for Gecko-based browsers (if you <em>have to</em> sniff for the browser engine instead of using feature detection) is by the presence of the "<code>Gecko</code>" and "<code>rv:</code>" strings, since some other browsers include a "<code>like Gecko</code>" token.</div>
@@ -91,7 +91,9 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h2 id="Macintosh">Macintosh</h2>
 
-<p>Here, <em>x.y</em> is the version of Mac OS X (for instance, Mac OS X 10.6).</p>
+<p>Here, <em>x.y</em> is the version of Mac OS X (for instance, Mac OS X 10.15). Starting in Firefox 87, Firefox caps the reported Mac OS X version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string.</p>
+
+<p>Note that <a href="https://support.mozilla.org/kb/firefox-no-longer-works-mac-os-10-4-or-powerpc">Firefox no longer officially supports Mac OS X on PowerPC</a>.</p>
 
 <table class="standard-table">
  <thead>
@@ -450,7 +452,7 @@ Mozilla/5.0 (Android 4.4; <strong>Tablet</strong>; rv:41.0) Gecko/41.0 Firefox/4
 
 <h2 id="Implementation_notes_for_applications_vendors_and_extensions">Implementation notes for applications, vendors, and extensions</h2>
 
-<p>Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the <code>general.useragent.extra.<em>identifier</em></code> preferences, (see the <a href="/En/User_Agent_Strings_Reference">obsolete User Agent Strings Reference</a>). But that has not been possible since {{ Bug(581008) }}.</p>
+<p>Prior to Firefox 4 and Gecko 2.0, it was possible for extensions to add user agent parts through the <code>general.useragent.extra.<em>identifier</em></code> preferences, (see the <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">obsolete User Agent Strings Reference</a>). But that has not been possible since {{ Bug(581008) }}.</p>
 
 <p>In the past, specific plug-ins, add-ons or extensions added user agent parts to notify sites they were installed. The recommended way to do this, if it's absolutely necessary (remember that it slows down every request) is to <a href="/en-US/docs/Setting_HTTP_request_headers">set a custom HTTP header</a>.</p>
 

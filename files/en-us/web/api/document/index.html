@@ -34,6 +34,8 @@ tags:
  <dd>Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.</dd>
  <dt>{{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the character set being used by the document.</dd>
+ <dt>{{domxref("Document.childElementCount")}} {{readonlyInline}}</dt>
+ <dd>Returns the number of child elements of the current document.</dd>
  <dt>{{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Indicates whether the document is rendered in <em>quirks</em> or <em>strict</em> mode.</dd>
  <dt>{{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
@@ -82,15 +84,9 @@ tags:
  <dd>Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
  <dt>{{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns timeline as a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.</dd>
- <dt>{{DOMxRef("Document.undoManager")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>…</dd>
  <dt>{{DOMxRef("Document.visibilityState")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a <code>string</code> denoting the visibility state of the document. Possible values are <code>visible</code>, <code>hidden</code>, <code>prerender</code>, and <code>unloaded</code>.</dd>
 </dl>
-
-<p>The <code>Document</code> interface is extended with the {{DOMxRef("ParentNode")}} interface:</p>
-
-<p>{{page("/en-US/docs/Web/API/ParentNode","Properties")}}</p>
 
 <h3 id="Extensions_for_HTMLDocument">Extensions for HTMLDocument</h3>
 
@@ -208,6 +204,8 @@ tags:
  <dd>Adopt node from an external document.</dd>
  <dt>{{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}</dt>
  <dd>See {{DOMxRef("Window.captureEvents")}}.</dd>
+ <dt>{{DOMxRef("Document.caretPositionFromPoint()")}}</dt>
+ <dd>Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
  <dt>{{DOMxRef("Document.caretRangeFromPoint()")}} {{Non-standard_Inline}}</dt>
  <dd>Gets a {{DOMxRef("Range")}} object for the document fragment under the specified coordinates.</dd>
  <dt>{{DOMxRef("Document.createAttribute()")}}</dt>
@@ -242,6 +240,10 @@ tags:
  <dd>Creates a {{DOMxRef("TouchList")}} object.</dd>
  <dt>{{DOMxRef("Document.createTreeWalker()")}}</dt>
  <dd>Creates a {{DOMxRef("TreeWalker")}} object.</dd>
+ <dt>{{DOMxRef("Document.elementFromPoint()")}}</dt>
+ <dd>Returns the topmost element at the specified coordinates.</dd>
+ <dt>{{DOMxRef("Document.elementsFromPoint()")}}</dt>
+ <dd>Returns an array of all elements at the specified coordinates.</dd>
  <dt>{{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Obsolete_Inline}}</dt>
  <dd>Enables the style sheets for the specified style sheet set.</dd>
  <dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
@@ -329,19 +331,6 @@ tags:
  <dd>Writes text in a document.</dd>
  <dt>{{DOMxRef("Document.writeln()")}}</dt>
  <dd>Writes a line of text in a document.</dd>
-</dl>
-
-<h3 id="Methods_included_from_DocumentOrShadowRoot">Methods included from DocumentOrShadowRoot</h3>
-
-<p><em>The <code>Document</code> interface includes the following methods defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{DOMxRef("Document")}} interface.</em></p>
-
-<dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
- <dd>Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</dt>
- <dd>Returns the topmost element at the specified coordinates.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.elementsFromPoint()")}}</dt>
- <dd>Returns an array of all elements at the specified coordinates.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
