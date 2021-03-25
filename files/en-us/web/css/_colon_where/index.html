@@ -1,6 +1,6 @@
 ---
 title: ':where()'
-slug: 'Web/CSS/:where'
+slug: Web/CSS/:where
 tags:
   - ':where'
   - CSS
@@ -18,7 +18,7 @@ tags:
 
 <p>The <strong><code>:where()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.</p>
 
-<pre class="brush: css"><code>/* Selects any paragraph inside a header, main
+<pre class="brush: css">/* Selects any paragraph inside a header, main
    or footer element that is being hovered */
 :where(header, main, footer) p:hover {
   color: red;
@@ -31,7 +31,7 @@ main p:hover,
 footer p:hover {
   color: red;
   cursor: pointer;
-}</code></pre>
+}</pre>
 
 <p>The difference between <code>:where()</code> and {{CSSxRef(":is", ":is()")}} is that <code>:where()</code> always has 0 <a href="/en-US/docs/Web/CSS/Specificity">specificity</a>, whereas <code>:is()</code> takes on the specificity of the most specific selector in its arguments.</p>
 
