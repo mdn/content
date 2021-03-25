@@ -31275,15 +31275,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioContext/createWaveTable": {
-    "modified": "2019-03-23T23:13:58.026Z",
-    "contributors": [
-      "Sheppy",
-      "Jedipedia",
-      "teoli",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/AudioContext/getOutputTimestamp": {
     "modified": "2020-10-15T21:53:02.795Z",
     "contributors": [

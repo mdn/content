@@ -7134,7 +7134,7 @@
 /en-US/docs/Web/API/AudioContext.createScriptProcessor	/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor
 /en-US/docs/Web/API/AudioContext.createStereoPanner	/en-US/docs/Web/API/BaseAudioContext/createStereoPanner
 /en-US/docs/Web/API/AudioContext.createWaveShaper	/en-US/docs/Web/API/BaseAudioContext/createWaveShaper
-/en-US/docs/Web/API/AudioContext.createWaveTable	/en-US/docs/Web/API/AudioContext/createWaveTable
+/en-US/docs/Web/API/AudioContext.createWaveTable	/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave
 /en-US/docs/Web/API/AudioContext.currentTime	/en-US/docs/Web/API/BaseAudioContext/currentTime
 /en-US/docs/Web/API/AudioContext.decodeAudioData	/en-US/docs/Web/API/BaseAudioContext/decodeAudioData
 /en-US/docs/Web/API/AudioContext.destination	/en-US/docs/Web/API/BaseAudioContext/destination
@@ -7160,6 +7160,7 @@
 /en-US/docs/Web/API/AudioContext/createScriptProcessor	/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor
 /en-US/docs/Web/API/AudioContext/createStereoPanner	/en-US/docs/Web/API/BaseAudioContext/createStereoPanner
 /en-US/docs/Web/API/AudioContext/createWaveShaper	/en-US/docs/Web/API/BaseAudioContext/createWaveShaper
+/en-US/docs/Web/API/AudioContext/createWaveTable	/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave
 /en-US/docs/Web/API/AudioContext/currentTime	/en-US/docs/Web/API/BaseAudioContext/currentTime
 /en-US/docs/Web/API/AudioContext/decodeAudioData	/en-US/docs/Web/API/BaseAudioContext/decodeAudioData
 /en-US/docs/Web/API/AudioContext/destination	/en-US/docs/Web/API/BaseAudioContext/destination
