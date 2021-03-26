@@ -27,7 +27,7 @@ tags:
    <td><code>alternate</code></td>
    <td>
     <ul>
-     <li>If the element is {{HTMLElement("link")}} and the {{HTMLAttrxRef("rel", "link")}} attribute also contains the <code>stylesheet</code> type, the link defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</li>
+     <li>If the element is {{HTMLElement("link")}} and the {{HTMLAttrxRef("rel", "link")}} attribute also contains the <code>stylesheet</code> type, the link defines an <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</li>
      <li>If the {{HTMLAttrxRef("type","link")}} is set to <code>application/rss+xml</code> or <code>application/atom+xml</code>, the link defines a <a href="/en-US/docs/Archive/RSS/Getting_Started/Syndicating">syndication feed</a>. The first one defined on the page is the default.</li>
      <li>Otherwise, the link defines an alternative page, of one of these types:
       <ul>
@@ -62,7 +62,7 @@ tags:
   </tr>
   <tr>
    <td><code>bookmark</code></td>
-   <td>Indicates that the hyperlink is a <a href="/en-US/docs/Permalink">permalink</a> for the nearest ancestor {{HTMLElement("article")}} element. If none, it is a permalink for the <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document">section</a> that the element is most closely associated to.<br>
+   <td>Indicates that the hyperlink is a <a href="/en-US/docs/Permalink">permalink</a> for the nearest ancestor {{HTMLElement("article")}} element. If none, it is a permalink for the <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">section</a> that the element is most closely associated to.<br>
     <br>
     This allows for bookmarking a single article in a page containing multiple articles, such as on a monthly summary blog page, or a blog aggregator.</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
@@ -225,7 +225,7 @@ tags:
    <td><code><a href="/en-US/docs/Web/HTML/Link_types/prefetch">prefetch</a></code></td>
    <td>Suggests that the browser fetch the linked resource in advance, as it is likely to be requested by the user. Starting with Firefox 44, the value of the {{HTMLAttrxRef("crossorigin", "link")}} attribute is taken into consideration, making it possible to make anonymous prefetches.<br>
     <br>
-    <strong>Note:</strong> The <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
+    <strong>Note:</strong> The <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
@@ -255,7 +255,7 @@ tags:
    <td><code>search</code></td>
    <td>Indicates that the hyperlink references a document whose interface is specially designed for searching in this document, or site, and its resources.<br>
     <br>
-    If the {{HTMLAttrxRef("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
+    If the {{HTMLAttrxRef("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Web/OpenSearch">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}, {{HTMLElement("form")}}</td>
    <td><em>None.</em></td>
   </tr>
@@ -279,7 +279,7 @@ tags:
    <td><code>stylesheet</code></td>
    <td>Defines an external resource to be used as a stylesheet. If the <code>type</code> is not set, the browser should assume it is a <code>text/css</code> stylesheet until further inspection.<br>
     <br>
-    If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</td>
+    If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>

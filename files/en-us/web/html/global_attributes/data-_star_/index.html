@@ -14,7 +14,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
-<p>All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLElement.dataset")}} property gives access to them.<br>
+<p>All such custom data are available via the {{domxref("HTMLElement")}} interface of the element the attribute is set on. The {{domxref("HTMLOrForeignElement.dataset")}} property gives access to them.<br>
  The <code>*</code> may be replaced by any name following <a href="https://www.w3.org/TR/REC-xml/#NT-Name">the production rule of XML names</a> with the following restrictions:</p>
 
 <ul>
@@ -23,7 +23,7 @@ tags:
  <li>The name must not contain any capital letters.</li>
 </ul>
 
-<p>Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute <em>data-test-value</em> will be accessible via <code>HTMLElement.dataset.testValue</code> (or by <code>HTMLElement.dataset["<em>testValue</em>"]</code>) as any dash (<code>U+002D</code>) is replaced by the capitalization of the next letter, converting the name to camelcase.</p>
+<p>Note that the {{domxref("HTMLOrForeignElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute <em>data-test-value</em> will be accessible via <code>HTMLElement.dataset.testValue</code> (or by <code>HTMLElement.dataset["<em>testValue</em>"]</code>) as any dash (<code>U+002D</code>) is replaced by the capitalization of the next letter, converting the name to camelcase.</p>
 
 <h3 id="Usage">Usage</h3>
 
@@ -62,6 +62,6 @@ tags:
 
 <ul>
  <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
- <li>The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.</li>
+ <li>The {{domxref("HTMLOrForeignElement.dataset")}} property that allows to access and modify these values.</li>
  <li><a href="/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using data attributes</a></li>
 </ul>

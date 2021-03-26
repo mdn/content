@@ -18,7 +18,7 @@ tags:
 
 <h2 id="How_does_Mozilla_determine_which_mode_to_use.3F">How do browsers determine which mode to use?</h2>
 
-<p>For <a href="/en-US/docs/HTML">HTML</a> documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a DOCTYPE like in this example:</p>
+<p>For <a href="/en-US/docs/Web/HTML">HTML</a> documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a DOCTYPE like in this example:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -40,7 +40,7 @@ tags:
 
 <h3 id="XHTML">XHTML</h3>
 
-<p>If you serve your page as <a href="/en-US/docs/XHTML">XHTML</a> using the <code>application/xhtml+xml</code> MIME type in the <code>Content-Type</code> HTTP header, you do not need a DOCTYPE to enable standards mode, as such documents always use full standards mode. Note however that serving your pages as <code>application/xhtml+xml</code> will cause Internet Explorer 8 to <a href="/en-US/docs/XHTML#Support" title="XHTML">show a download dialog</a> box for an unknown format instead of displaying your page, as the first version of Internet Explorer with support for XHTML is Internet Explorer 9.</p>
+<p>If you serve your page as <a href="/en-US/docs/Glossary/XHTML">XHTML</a> using the <code>application/xhtml+xml</code> MIME type in the <code>Content-Type</code> HTTP header, you do not need a DOCTYPE to enable standards mode, as such documents always use full standards mode. Note however that serving your pages as <code>application/xhtml+xml</code> will cause Internet Explorer 8 to <a href="/en-US/docs/Glossary/XHTML#support" title="XHTML">show a download dialog</a> box for an unknown format instead of displaying your page, as the first version of Internet Explorer with support for XHTML is Internet Explorer 9.</p>
 
 <p>If you serve XHTML-like content using the <code>text/html</code> MIME type, browsers will read it as HTML, and you will need the DOCTYPE to use standards mode.</p>
 
