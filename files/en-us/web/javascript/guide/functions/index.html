@@ -398,7 +398,7 @@ A(1); // logs 6 (1 + 2 + 3)
 outside()(10); // returns 20 instead of 10
 </pre>
 
-<p>The name conflict happens at the statement <code>return x</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
+<p>The name conflict happens at the statement <code>return x * 2</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
 
 <h2 id="Closures">Closures</h2>
 
