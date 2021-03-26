@@ -68,6 +68,24 @@ tags:
 	<li>The browser assembles the small chunks into a complete web page and displays it to you (the goods arrive at your door — new shiny stuff, awesome!).</li>
 </ol>
 
+<h2 id="Order_in_which_component_files_are_parsed">Order in which component files are parsed</h2>
+
+<p>Once the client’s request is approved, the server firstly sends back the HTML file - this is also why it is commonly called index.html: index files are the first to be parsed by the server.</p>
+
+<p>The HTML file links CSS and JavaScript together via two elements called tags: link for CSS (see <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work">How does CSS actually work</a>for reference) and script for JavaScript (see <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript</a>for reference).</p>
+
+<p>CSS and JavaScript could be written internally to the HTML file or externally in a separate file but linked up to it via the tags mentioned above.</p>
+
+<p>From a server standpoint it is important to know the order in which these files are parsed: when sending back the approved request, the HTML file is parsed first and, by looking inside that file, the server recognises which CSS and JavaScript files are linked in there.</p>
+
+<p>After the HTML has been parsed and a DOM-tree structure has been generated from it, the linked CSS is then parsed, and applied to the appropriate parts of the DOM tree.</p>
+
+<p>At this point, the visual representation of the page is painted to the screen, and the user sees the page.</p>
+
+<p>The JavaScript usually gets parsed and applied to the page after this point.</p>
+
+<p>This is how the structure of a website is put together.</p>
+
 <h2 id="DNS_explained">DNS explained</h2>
 
 <p>Real web addresses aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: <code>63.245.215.20</code>.</p>
