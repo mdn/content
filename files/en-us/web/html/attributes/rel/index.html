@@ -13,7 +13,9 @@ tags:
 
 <p class="summary">The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
-<p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords, which are listed in the following table. Every keyword within a space-separated value should be unique within that value.</p>
+<p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a <code>class</code> name, which does not express semantics, the <code>rel</code> attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the <code>rel</code> attribute are the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relation registry</a>, the <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>, and the freely-editable <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values page</a> in the microformats wiki, <a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">as suggested</a> by the Living Standard. If a <code>rel</code> attribute not present in one of the three sources above is used some HTML validators (such as the <a href="https://validator.w3.org/">W3C Markup Validation Service</a>) will generate a warning.</p>
+
+<p>The following table lists some of the most important existing keywords. Every keyword within a space-separated value should be unique within that value.</p>
 
 <table class="standard-table">
 	<caption>Values for the <code>rel</code> attribute, and the elements for which each is relevant</caption>
