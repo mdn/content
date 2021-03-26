@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.2.1.tgz#18707a79db035b430d6bab370d00cd14c39e0553"
-  integrity sha512-rIfqD67k64yP6RfFyZOVSLykDoNfAkeqRrTZnKs13rfa+EAFF/FOYAKTOpKMwMUfTM2/+FGYRGaiFmETnGRjsQ==
+"@mdn/browser-compat-data@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.2.2.tgz#0d4ca55e796d96a4d15935b8e51535ced5380573"
+  integrity sha512-W+f7ZugkxsB2xvRLb283m/weDx58yatbJTDRS8FAO9kR7igrQsZeTFaUoYogw36ywzwuOSnY6vKPFHbF6Xhd5A==
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.318":
-  version "0.4.318"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.318.tgz#0fd5048bb22ca1e117ca3084130725a6a7e60e5a"
-  integrity sha512-QFaFoDsteX5BsZxwYK/Bxa2AMWuQiGiUPpNp3UJ3nPsdzWDZCBj/u70K659PxNWKIuiR/aDsPC3NKG1v5oRcWQ==
+"@mdn/yari@0.4.322":
+  version "0.4.322"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.322.tgz#7a89b5e299c42a867e566e9311b0dd4494e47066"
+  integrity sha512-tm42rgAeiQiKhAgD1e6hxn8SdIdJBQ5QxOxl2XcT9xf8GDMXMtSfBYLpupC+Fghbvz74r37O09T7jmZykh8idg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.2.1"
+    "@mdn/browser-compat-data" "3.2.2"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
@@ -84,7 +84,7 @@
     open-editor "3.0.0"
     prismjs "1.23.0"
     read-chunk "3.2.0"
-    rehype-raw "5.0.0"
+    rehype-raw "5.1.0"
     rehype-stringify "8.0.0"
     remark-gfm "1.0.0"
     remark-parse "9.0.0"
@@ -1949,7 +1949,7 @@ hast-util-parse-selector@^2.0.0:
   resolved "https://registry.yarnpkg.com/hast-util-parse-selector/-/hast-util-parse-selector-2.2.5.tgz#d57c23f4da16ae3c63b3b6ca4616683313499c3a"
   integrity sha512-7j6mrk/qqkSehsM92wQjdIgWM2/BW61u/53G6xmC8i1OmEdKLHbk419QKQUjz6LglWsfqoiHmyMRkP1BGjecNQ==
 
-hast-util-raw@^6.0.0:
+hast-util-raw@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/hast-util-raw/-/hast-util-raw-6.1.0.tgz#e16a3c2642f65cc7c480c165400a40d604ab75d0"
   integrity sha512-5FoZLDHBpka20OlZZ4I/+RBw5piVQ8iI1doEvffQhx5CbCyTtP8UCq8Tw6NmTAMtXgsQxmhW7Ly8OdFre5/YMQ==
@@ -3550,12 +3550,12 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
-rehype-raw@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-raw/-/rehype-raw-5.0.0.tgz#3688e3e1132e958761e677a1b9b2ba358a465af8"
-  integrity sha512-q/MOBj4fs1WF/LSCh5uOtNhnm5OESuDcSvq1mDQP4/2t6Q52E9MHeVoLeMy9vOn93BEcgVBm4FCokcK2iXRDvA==
+rehype-raw@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/rehype-raw/-/rehype-raw-5.1.0.tgz#66d5e8d7188ada2d31bc137bc19a1000cf2c6b7e"
+  integrity sha512-MDvHAb/5mUnif2R+0IPCYJU8WjHa9UzGtM/F4AVy5GixPlDZ1z3HacYy4xojDU+uBa+0X/3PIfyQI26/2ljJNA==
   dependencies:
-    hast-util-raw "^6.0.0"
+    hast-util-raw "^6.1.0"
 
 rehype-stringify@8.0.0:
   version "8.0.0"
