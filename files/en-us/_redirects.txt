@@ -3235,7 +3235,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Document_Object_Model_(DOM)/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Document_Object_Model_(DOM)/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Document_Object_Model_(DOM)/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/Document_Object_Model_(DOM)/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Document_Object_Model_(DOM)/UserDataHandler	/en-US/docs/Web/API/UserDataHandler
