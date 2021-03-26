@@ -80,7 +80,7 @@ tags:
 <p>BCP 47 extension sequences consist of a single digit or letter (other than <code>"x"</code>) and one or more two- to eight-letter or digit subtags separated by hyphens. Only one sequence is permitted for each digit or letter: "<code>de-a-foo-a-foo</code>" is invalid. BCP 47 extension subtags are defined in the <a href="https://github.com/unicode-org/cldr/tree/master/common/bcp47">Unicode CLDR Project</a>. Currently only two extensions have defined semantics:</p>
 
 <ul>
-	<li>The <code>"u"</code> (Unicode) extension can be used to request additional customization of {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, or {{jsxref("DateTimeFormat")}} objects. Examples:
+	<li>The <code>"u"</code> (Unicode) extension can be used to request additional customization of {{jsxref("Intl/Collator")}}, {{jsxref("Intl/NumberFormat")}}, or {{jsxref("Intl/DateTimeFormat")}} objects. Examples:
 
 		<ul>
 			<li>"<code>de-DE-u-co-phonebk</code>": Use the phonebook variant of the German sort order, which interprets umlauted vowels as corresponding character pairs: ä → ae, ö → oe, ü → ue.</li>
@@ -98,7 +98,7 @@ tags:
 
 <p>The list of locales specified by the <code>locales</code> argument, after Unicode extensions have been removed from them, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the "<code>lookup</code>" matcher follows the Lookup algorithm specified in <a href="https://datatracker.ietf.org/doc/html/rfc4647#section-3.4">BCP 47</a>; the "<code>best fit</code>" matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a <code>locales</code> argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the <code>options</code> argument (see below).</p>
 
-<p>If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the "<code>co</code>" key (collation) is only supported by {{jsxref("Collator")}}, and its "<code>phonebk</code>" value is only supported for German.</p>
+<p>If the selected locale identifier had a Unicode extension sequence, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the locale identifier. For example, the "<code>co</code>" key (collation) is only supported by {{jsxref("Intl/Collator")}}, and its "<code>phonebk</code>" value is only supported for German.</p>
 
 <h3 id="options_argument">options argument</h3>
 
@@ -153,13 +153,13 @@ log("de-DE");
 	<li>Introduction: <a href="https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html">The ECMAScript Internationalization API</a></li>
 	<li>Constructors
 		<ul>
-			<li>{{jsxref("Collator", "Intl.Collator")}}</li>
-			<li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-			<li>{{jsxref("ListFormat", "Intl.ListFormat")}}</li>
-			<li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
-			<li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
-			<li>{{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
-			<li>{{jsxref("Locale", "Intl.Locale")}}</li>
+			<li>{{jsxref("Intl/Collator", "Intl.Collator")}}</li>
+			<li>{{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+			<li>{{jsxref("Intl/ListFormat", "Intl.ListFormat")}}</li>
+			<li>{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}</li>
+			<li>{{jsxref("Intl/PluralRules", "Intl.PluralRules")}}</li>
+			<li>{{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
+			<li>{{jsxref("Intl/Locale", "Intl.Locale")}}</li>
 		</ul>
 	</li>
 	<li>Methods
