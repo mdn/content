@@ -557,4 +557,4 @@ After your pull request is merged, it may take up to 48 hours before the change 
 * The complete build runs every 24h at around 7PM US/Eastern time, and is then deployed.
 * Once deployment has occurred, it can take up to 24 hours for the associated CDN caches to replace their previously-cached content with the updates.
 
-You can use https://whatsdeployed.io/s/DLi/mdn/content to see if your change has been deployed to the production site.
+You can use https://firefox.io/mdn/content to see if your change has been deployed to the production site.
