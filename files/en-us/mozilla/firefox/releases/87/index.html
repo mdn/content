@@ -92,7 +92,14 @@ tags:
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
 
-<p><em>No changes.</em></p>
+<ul>
+  <li>The work of rewriting Marionette to support Fission (site-isolation) has been finished, so the old Marionette implementation has been removed. The <code>marionette.actors.enabled</code> preference, which toggled between the new and old implementations, has therefore also been removed ({{bug(1669172)}}).</li>
+  <li>WebDriver commands following a call to <code>WebDriver:SwitchToFrame</code> will no longer fail with a "no such window" error if the frame's content hasn't yet finished loading ({{bug(1691348)}}).</li>
+  <li>After a <a
+      href="https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations">cross-group
+      page navigation</a>, accessing a previously-retrieved element will now always raise a "stale element" error; there is no longer a chance that this action will lead to a "no such element" error ({{bug(1690308)}}).</li>
+  <li><code>Addon:Uninstall</code> now raises an <code>unknown error</code> when the id of the add-on to uninstall is unknown ({{bug(1693022)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
   <ul>
