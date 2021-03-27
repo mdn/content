@@ -2,16 +2,16 @@
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- TypedArray
-- TypedArrays
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - TypedArray
+  - TypedArrays
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code><var>TypedArray</var>.of()</code></strong> method creates a new <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects">typed
     array</a> from a variable number of arguments. This method is nearly the same as
   {{jsxref("Array.of()")}}.</p>
 
@@ -69,9 +69,9 @@ tags:
     {{jsxref("Array")}}.</li>
   <li><code><var>TypedArray</var>.of()</code> uses <code>[[Put]]</code> where
     <code>Array.of()</code> uses <code>[[DefineProperty]]</code>. Hence, when working with
-    {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/handler/set",
+    {{jsxref("Proxy")}} objects, it calls {{jsxref("Global_Objects/Proxy/Proxy/set",
     "handler.set")}} to create new elements rather than
-    {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}.
+    {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}.
   </li>
 </ul>
 
