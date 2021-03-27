@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>apply()</strong></code> method calls a function with a given <code>this</code> value, and <code>arguments</code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+<p>The <code><strong>apply()</strong></code> method calls a function with a given <code>this</code> value, and <code>arguments</code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects">array-like object</a>).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-apply.html")}}</div>
 
@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code><var>func</var></code>.apply(<var>thisArg,</var> [ <var>argsArray</var>])</pre>
+<pre class="brush: js">func.apply(thisArg, [ argsArray])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -149,7 +149,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 <div class="note" style="height: 250px; overflow: auto;">
 <p><strong>Note:</strong> The <code>Object.create()</code> method used above is relatively new. For alternative methods, please consider one of the following approaches:</p>
 
-<p>Using {{jsxref("Object/__proto__", "Object.__proto__")}}:</p>
+<p>Using {{jsxref("Object/proto", "Object.__proto__")}}:</p>
 
 <pre class="brush: js">Function.prototype.construct = function (aArgs) {
   let oNew = {};
