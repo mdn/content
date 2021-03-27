@@ -71,9 +71,9 @@ tags:
 
 <h3 id="Initializing_the_chroma-key_player">Initializing the chroma-key player</h3>
 
-<p>The <code>doLoad()</code> method is called when the XHTML document initially loads.  This method's job is to prepare the variables needed by the chroma-key processing code, and to set up an event listener so we can detect when the user starts playing the video.</p>
+<p>The <code>doLoad()</code> method is called when the HTML document initially loads.  This method's job is to prepare the variables needed by the chroma-key processing code, and to set up an event listener so we can detect when the user starts playing the video.</p>
 
-<pre class="brush: js">  var processor;
+<pre class="brush: js">  var processor = {};
 
   processor.doLoad = function doLoad() {
     this.video = document.getElementById('video');
@@ -87,10 +87,10 @@ tags:
         self.height = self.video.videoHeight / 2;
         self.timerCallback();
       }, false);
-  },
+  };
 </pre>
 
-<p>This code grabs references to the elements in the XHTML document that are of particular interest, namely the <code>video</code> element and the two <code>canvas</code> elements.  It also fetches references to the graphics contexts for each of the two canvases.  These will be used when we're actually doing the chroma-keying effect.</p>
+<p>This code grabs references to the elements in the HTML document that are of particular interest, namely the <code>video</code> element and the two <code>canvas</code> elements.  It also fetches references to the graphics contexts for each of the two canvases.  These will be used when we're actually doing the chroma-keying effect.</p>
 
 <p>Then <code>addEventListener()</code> is called to begin watching the <code>video</code> element so that we obtain notification when the user presses the play button on the video.  In response to the user beginning playback, this code fetches the width and height of the video, halving each (we will be halving the size of the video when we perform the chroma-keying effect), then calls the <code>timerCallback()</code> method to start watching the video and computing the visual effect.</p>
 
@@ -107,7 +107,7 @@ tags:
     setTimeout(function() {
         self.timerCallback();
       }, 0);
-  },
+  };
 </pre>
 
 <p>The first thing the callback does is check to see if the video is even playing; if it's not, the callback returns immediately without doing anything.</p>
@@ -125,16 +125,15 @@ tags:
     let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     let l = frame.data.length / 4;
 
-    for (let i = 0; i &lt; l; i++) {
-      let r = frame.data[i * 4 + 0];
-      let g = frame.data[i * 4 + 1];
-      let b = frame.data[i * 4 + 2];
+    for (let i = 0; i &lt; l; i += 4) {
+      let r = frame.data[i + 0];
+      let g = frame.data[i + 1];
+      let b = frame.data[i + 2];
       if (g &gt; 100 &amp;&amp; r &gt; 100 &amp;&amp; b &lt; 43)
-        frame.data[i * 4 + 3] = 0;
+        frame.data[i + 3] = 0;
     }
     this.ctx2.putImageData(frame, 0, 0);
-    return;
-  }
+  };
 </pre>
 
 <p>When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:</p>
