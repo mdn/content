@@ -62,8 +62,24 @@ tags:
 <ul>
  <li>It's not necessary for all links to be contained in a <code>&lt;nav&gt;</code> element. <code>&lt;nav&gt;</code> is intended only for major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a {{HTMLElement("nav")}} element.</li>
  <li>A document may have several {{HTMLElement("nav")}} elements, for example, one for site navigation and one for intra-page navigation. <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> can be used in such case to promote accessibility, see <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content">example</a>.</li>
- <li>The semantics of the <code>nav</code> element is that of providing links. However a <code>nav</code> element doesn&rsquo;t have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:
+ 
+ <li>User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.</li>
+</ul>
 
+<h2 id="Examples">Examples</h2>
+
+<p>In this example, a <code>&lt;nav&gt;</code> block is used to contain an unordered list ({{HTMLElement("ul")}}) of links. With appropriate CSS, this can be presented as a sidebar, navigation bar, or drop-down menu.</p>
+
+<pre class="brush: html">&lt;nav class="menu"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+
+<p>The semantics of the <code>nav</code> element is that of providing links. However a <code>nav</code> element doesn&rsquo;t have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:</p>
 <pre class="brush: html">&lt;nav&gt;
   &lt;h2&gt;Navigation&lt;/h2&gt;
   &lt;p&gt;You are on my home page. To the north lies &lt;a href="/blog"&gt;my
@@ -80,23 +96,6 @@ tags:
   page&lt;/a&gt;. Cobwebs cover its disused entrance, and at one point you
   see a rat run quickly out of the page.&lt;/p&gt;
 &lt;/nav&gt;</pre>
-
- </li>
- <li>User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.</li>
-</ul>
-
-<h2 id="Examples">Examples</h2>
-
-<p>In this example, a <code>&lt;nav&gt;</code> block is used to contain an unordered list ({{HTMLElement("ul")}}) of links. With appropriate CSS, this can be presented as a sidebar, navigation bar, or drop-down menu.</p>
-
-<pre class="brush: html">&lt;nav class="menu"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
