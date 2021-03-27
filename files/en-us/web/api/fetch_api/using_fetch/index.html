@@ -320,7 +320,7 @@ console.log(myHeaders.get('Content-Length')); // 11
 console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
 
 myHeaders.delete('X-Custom-Header');
-console.log(myHeaders.get('X-Custom-Header')); // [ ]
+console.log(myHeaders.get('X-Custom-Header')); // null
 </pre>
 
 <p>Some of these operations are only useful in {{domxref("Service_Worker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
