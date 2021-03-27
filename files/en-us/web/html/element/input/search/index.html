@@ -211,11 +211,11 @@ tags:
 
 <p>The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired. The following screenshot comes from Chrome:</p>
 
-<p><img alt="" src="chrome-cross-icon.png" style="display: block; height: 31px; margin: 0px auto; width: 144px;"></p>
+<p><img alt="" src="chrome-cross-icon.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:</p>
 
-<p><img alt="" src="firefox-auto-complete.png" style="display: block; height: 83px; margin: 0px auto; width: 171px;">At this point, let's look at some useful techniques you can apply to your search forms.</p>
+<p><img alt="" src="firefox-auto-complete.png" style="display: block; margin: 0px auto;">At this point, let's look at some useful techniques you can apply to your search forms.</p>
 
 <h3 id="Setting_placeholders">Setting placeholders</h3>
 
@@ -262,7 +262,7 @@ tags:
 <p>There is no visual difference from the previous example, but screenreader users have way more information available to them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">Signposts/Landmarks</a> for more information about such accessibility features.</p>
+<p><strong>Note</strong>: See <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks">Signposts/Landmarks</a> for more information about such accessibility features.</p>
 </div>
 
 <h3 id="Physical_input_element_size">Physical input element size</h3>
@@ -391,7 +391,7 @@ input:valid ~ span:after {
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course).</p>
+<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course).</p>
 
 <p>Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:</p>
 
