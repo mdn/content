@@ -14,12 +14,12 @@ tags:
 <div class="notecard note">
   <h3>Note</h3>
   <p>Sometimes you'll see the default, non-strict mode referred to as <strong>"<a
-      href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode">
+      href="/en-US/docs/Glossary/Sloppy_mode">
       sloppy mode</a>"</strong>. This isn't an official term, but be
   aware of it, just in case.</p>
 </div>
 
-<p>JavaScript's strict mode, introduced in ECMAScript 5, is a way to <em>opt in</em> to a restricted variant of JavaScript, thereby implicitly opting-out of "<a href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode">sloppy mode</a>". Strict mode isn't just a subset: it <em>intentionally</em> has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.</p>
+<p>JavaScript's strict mode, introduced in ECMAScript 5, is a way to <em>opt in</em> to a restricted variant of JavaScript, thereby implicitly opting-out of "<a href="/en-US/docs/Glossary/Sloppy_mode">sloppy mode</a>". Strict mode isn't just a subset: it <em>intentionally</em> has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.</p>
 
 <p>Strict mode makes several changes to normal JavaScript semantics:</p>
 
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Invoking_strict_mode">Invoking strict mode</h2>
 
-<p>Strict mode applies to <em>entire scripts</em> or to <em>individual functions</em>. It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowTimers.setTimeout()</code></a>, and related functions are entire scripts, and invoking strict mode in them works as expected.</p>
+<p>Strict mode applies to <em>entire scripts</em> or to <em>individual functions</em>. It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>WindowTimers.setTimeout()</code></a>, and related functions are entire scripts, and invoking strict mode in them works as expected.</p>
 
 <h3 id="Strict_mode_for_scripts">Strict mode for scripts</h3>
 
@@ -139,7 +139,7 @@ var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 </pre>
 
-<p>Sixth, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
+<p>Sixth, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/Primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
 <pre class="brush: js">(function() {
 'use strict';
