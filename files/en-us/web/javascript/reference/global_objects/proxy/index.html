@@ -54,7 +54,7 @@ const handler2 = {
 
 const proxy2 = new Proxy(target, handler2);</pre>
 
-<p>Here we've provided an implementation of the {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} handler, which intercepts attempts to access properties in the target.</p>
+<p>Here we've provided an implementation of the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.</p>
 
 <p>Handler functions are sometimes called <em>traps</em>, presumably because they trap calls to the target object. The very simple trap in <code>handler2</code> above redefines all property accessors:</p>
 
@@ -100,7 +100,7 @@ console.log(proxy3.message2); // world</pre>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} handler.</p>
+<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} handler.</p>
 
 <pre class="brush: js">const handler = {
   get: function(obj, prop) {
@@ -140,7 +140,7 @@ console.log(target.a);
 
 <h3 id="Validation">Validation</h3>
 
-<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/handler/set", "set()")}} handler.</p>
+<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.</p>
 
 <pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
@@ -171,7 +171,7 @@ person.age = 300;        // Throws an exception
 
 <h3 id="Extending_constructor">Extending constructor</h3>
 
-<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/handler/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/handler/apply", "apply()")}} handlers.</p>
+<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/Proxy/apply", "apply()")}} handlers.</p>
 
 <pre class="brush: js">function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
@@ -213,7 +213,7 @@ console.log(Peter.age);     // 13</pre>
 
 <h3 id="Manipulating_DOM_nodes">Manipulating DOM nodes</h3>
 
-<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/handler/set", "set()")}} handler.</p>
+<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.</p>
 
 <pre class="brush: js">let view = new Proxy({
   selected: null

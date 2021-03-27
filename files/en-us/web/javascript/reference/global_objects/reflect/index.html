@@ -11,13 +11,13 @@ browser-compat: javascript.builtins.Reflect
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong>Reflect</strong> is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handlers</a>. <code>Reflect</code> is not a function object, so it's not constructible.</span></p>
+<p><span class="seoSummary"><strong>Reflect</strong> is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy">proxy handlers</a>. <code>Reflect</code> is not a function object, so it's not constructible.</span></p>
 
 <h2 id="Description">Description</h2>
 
 <p>Unlike most global objects, <code>Reflect</code> is not a constructor. You cannot use it with a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> or invoke the <code>Reflect</code> object as a function. All properties and methods of <code>Reflect</code> are static (just like the {{jsxref("Math")}} object).</p>
 
-<p>The <code>Reflect</code> object provides the following static functions which have the same names as the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler methods</a>.</p>
+<p>The <code>Reflect</code> object provides the following static functions which have the same names as the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy">proxy handler methods</a>.</p>
 
 <p>Some of these methods are also the same as corresponding methods on {{jsxref("Object")}}, although they do have <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods">some subtle differences</a> between them.</p>
 
@@ -92,5 +92,5 @@ Reflect.has(duck, 'haircut');
 
 <ul>
  <li>The {{jsxref("Proxy")}} global object.</li>
- <li>The {{jsxref("Proxy.handler", "handler")}} object.</li>
+ <li>The {{jsxref("Proxy/Proxy", "handler")}} object.</li>
 </ul>
