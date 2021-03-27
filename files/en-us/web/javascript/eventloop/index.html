@@ -97,7 +97,7 @@ while (true) {
 
 <h3 id="Zero_delays">Zero delays</h3>
 
-<p>Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout</code></a> with a delay of <code>0</code> (zero) milliseconds doesn't execute the callback function after the given interval.</p>
+<p>Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout</code></a> with a delay of <code>0</code> (zero) milliseconds doesn't execute the callback function after the given interval.</p>
 
 <p>The execution depends on the number of waiting tasks in the queue. In the example below, the message <code>''this is just a message''</code> will be written to the console before the message in the callback gets processed, because the delay is the <em>minimum</em> time required for the runtime to process the request (not a <em>guaranteed</em> time).</p>
 
