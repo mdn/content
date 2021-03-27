@@ -13,7 +13,7 @@ tags:
 
 <p>It is the responsibility of the application on the server to implement the safe semantic correctly, the webserver itself, being Apache, Nginx or IIS, can't enforce it by itself. In particular, an application should not allow {{HTTPMethod("GET")}} requests to alter its state.</p>
 
-<p>A call to a safe method, not changing the state for the server:</p>
+<p>A call to a safe method, not changing the state of the server:</p>
 
 <pre>GET /pageX.html HTTP/1.1
 </pre>
