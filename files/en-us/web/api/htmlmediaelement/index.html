@@ -149,8 +149,8 @@ tags:
  <dd>Returns {{domxref("MediaStream")}}, captures a stream of the media content.</dd>
  <dt>{{domxref("HTMLMediaElement.canPlayType()")}}</dt>
  <dd>Given a string specifying a MIME media type (potentially with the <a href="/en-US/docs/Web/Media/Formats/codecs_parameter"><code>codecs</code> parameter</a> included), <code>canPlayType()</code> returns the string <code>probably</code> if the media should be playable, <code>maybe</code> if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.</dd>
- <dt>{{domxref("HTMLMediaElement.fastSeek()")}}</dt>
- <dd>Directly seeks to the given time.</dd>
+ <dt>{{domxref("HTMLMediaElement.fastSeek()")}} {{experimental_inline}}</dt>
+ <dd>Quickly seeks to the given time with low precision.</dd>
  <dt>{{domxref("HTMLMediaElement.load()")}}</dt>
  <dd>Resets the media to the beginning and selects the best available source from the sources provided using the {{htmlattrxref("src", "video")}} attribute or the {{HTMLElement("source")}} element.</dd>
  <dt>{{domxref("HTMLMediaElement.pause()")}}</dt>
