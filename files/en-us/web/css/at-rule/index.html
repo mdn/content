@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><strong>At-rules</strong> are <a href="/en-US/docs/Web/CSS/Syntax#CSS_statements">CSS statements</a> that instructs CSS how to behave. They begin with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and includes everything up to the next semicolon, '<code>;</code>' (<code>U+003B SEMICOLON</code>), or the next <a href="/en-US/docs/Web/CSS/Syntax#CSS_declarations_blocks">CSS block</a>, whichever comes first.</span></p>
+<p><span class="seoSummary"><strong>At-rules</strong> are <a href="/en-US/docs/Web/CSS/Syntax#css_statements">CSS statements</a> that instructs CSS how to behave. They begin with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and includes everything up to the next semicolon, '<code>;</code>' (<code>U+003B SEMICOLON</code>), or the next <a href="/en-US/docs/Web/CSS/Syntax#css_declarations_blocks">CSS block</a>, whichever comes first.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,6 +47,7 @@ tags:
 	<li>{{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles. <em>(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)</em></li>
 	<li>{{cssxref("@font-feature-values")}} (plus <code>@swash</code>, <code>@ornaments</code>, <code>@annotation</code>, <code>@stylistic</code>, <code>@styleset</code> and <code>@character-variant</code>) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType. <em>(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)</em></li>
 	<li>{{cssxref("@property")}} {{experimental_inline}} — Describes the aspect of custom properties and variables. <em>(currently at the Working Draft stage)</em></li>
+  <li>{{cssxref("@color-profile")}} {{experimental_inline}} — Allows a color profile to be defined for use by the {{cssxref("color_value/color()", "color()")}} function.</li>
 </ul>
 
 <h2 id="Conditional_group_rules">Conditional group rules</h2>
@@ -69,6 +70,7 @@ tags:
 
 <ul>
 	<li>{{cssxref("@charset")}}</li>
+  <li>{{cssxref("@color-profile")}} {{experimental_inline}}</li>
 	<li>{{cssxref("@counter-style")}}</li>
 </ul>
 <span>D</span>
