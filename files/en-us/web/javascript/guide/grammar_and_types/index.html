@@ -578,17 +578,17 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 "John's cat"
 </pre>
 
+<p>You should use string literals unless you specifically need to use a <code>String</code> object. See {{jsxref("String")}} for details on <code>String</code> objects.</p>
+
 <p>You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the <code>String.length</code> property with a string literal:</p>
 
 <pre class="brush: js">// Will print the number of symbols in the string including whitespace.
 console.log("John's cat".length)  // In this case, 10.
 </pre>
 
-<p>In ES2015, <em>template literals</em> are also available. Template literals are enclosed by the back-tick (<code>`</code>) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent" rel="noopener">grave accent</a>) character instead of double or single quotes.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a> are also available. Template literals are enclosed by the back-tick (<code>`</code>) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent" rel="noopener">grave accent</a>) character instead of double or single quotes.</p>
 
-<p>Template strings provide syntactic sugar for constructing strings. (This is similar to string interpolation features in Perl, Python, and more.)</p>
-
-<p>Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks, or constructing higher-level data structures from string contents.</p>
+<p>Template literals provide syntactic sugar for constructing strings. (This is similar to string interpolation features in Perl, Python, and more.)</p>
 
 <pre class="brush: js">// Basic literal string creation
 `In JavaScript '\n' is a line-feed.`
@@ -600,16 +600,15 @@ console.log("John's cat".length)  // In this case, 10.
 
 // String interpolation
 var name = 'Bob', time = 'today';
-`Hello ${name}, how are you ${time}?`
+`Hello ${name}, how are you ${time}?`</pre>
 
-// Construct an HTTP request prefix used to interpret the replacements and construction
-POST`http://foo.org/bar?a=${a}&amp;b=${b}
-     Content-Type: application/json
-     X-Credentials: ${credentials}
-     { "foo": ${foo},
-       "bar": ${bar}}`(myOnReadyStateChangeHandler);</pre>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template">Tagged templates</a> are a compact syntax for specifying a template literal along with a call to a “tag” function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "<code>myTag</code>":</p>
 
-<p>You should use string literals unless you specifically need to use a <code>String</code> object. See {{jsxref("String")}} for details on <code>String</code> objects.</p>
+<pre class="brush: js">let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;
+let [name, age] = ['Mika', 28];
+myTag`Participant "${ name }" is ${ age } years old.`;
+// Participant "Mika" is 28 years old.
+</pre>
 
 <h4 id="Using_special_characters_in_strings">Using special characters in strings</h4>
 
