@@ -12,7 +12,7 @@ tags:
 
 <p class="summary">The static <strong><code>AbortSignal.abort()</code></strong> method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an abort event).</p>
 
-<p>This is useful because the {{domxref("AbortSignal")}} is lazily created when first requested, and might not be called for until after the associated operation, for example an HTTP request, has <em>already</em> been aborted. This method allows code to return an aborted signal instance rather than an undefined object, or raising an exception.</p>
+<p>This is useful because the {{domxref("AbortSignal")}} is lazily created when first requested, and might not be accessed until after the associated operation has <em>already</em> been aborted (for example an HTTP request). This method allows code to return an aborted signal instance rather than an undefined object, or raising an exception.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
