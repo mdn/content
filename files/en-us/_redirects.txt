@@ -1825,7 +1825,7 @@
 /en-US/docs/DOM/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/DOM/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/DOM/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)
+/en-US/docs/DOM/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/DOM/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/UserDataHandler	/en-US/docs/Web/API/UserDataHandler
@@ -3235,7 +3235,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Document_Object_Model_(DOM)/TouchList.length	/en-US/docs/Web/API/TouchList/length
 /en-US/docs/Document_Object_Model_(DOM)/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Document_Object_Model_(DOM)/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)
 /en-US/docs/Document_Object_Model_(DOM)/TypeInfo	/en-US/docs/Web/API/TypeInfo
 /en-US/docs/Document_Object_Model_(DOM)/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Document_Object_Model_(DOM)/UserDataHandler	/en-US/docs/Web/API/UserDataHandler
@@ -10691,7 +10690,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)
+/en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/API/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
@@ -10765,7 +10764,7 @@
 /en-US/docs/Web/Guide/DOM/Events/Mutation_events	/en-US/docs/Web/Guide/Events/Mutation_events
 /en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
-/en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)
+/en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/Web/Guide/DOM/Gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
@@ -10778,6 +10777,7 @@
 /en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
+/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/File_System_API/FileError	/en-US/docs/Web/API/FileError
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
