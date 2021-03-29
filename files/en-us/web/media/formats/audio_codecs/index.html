@@ -45,47 +45,47 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row">{{anch("AAC Advanced Audio Coding")}}</th>
+   <th scope="row"><a href="#AAC">AAC</a></th>
    <td>Advanced Audio Coding</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("ALAC Apple Lossless Audio Codec")}}</th>
+   <th scope="row"><a href="#ALAC">ALAC</a></th>
    <td>Apple Lossless Audio Codec</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a> (MOV)</td>
   </tr>
   <tr>
-   <th scope="row">{{anch("AMR Adaptive Multi-Rate")}}</th>
+   <th scope="row"><a href="#AMR">AMR</a></th>
    <td>Adaptive Multi-Rate</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("FLAC Free Lossless Audio Codec")}}</th>
+   <th scope="row"><a href="#FLAC">FLAC</a></th>
    <td>Free Lossless Audio Codec</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#flac">FLAC</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("G.711 Pulse Code Modulation of Voice Frequencies")}}</th>
+   <th scope="row"><a href="#G.711">G.711</a></th>
    <td>Pulse Code Modulation (PCM) of Voice Frequencies</td>
    <td>{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("G.722 64 kbps 7 khz Audio Coding")}}</th>
+   <th scope="row"><a href="#G.722">G.722</a></th>
    <td>7 kHz Audio Coding Within 64 kbps (for telephony/{{Glossary("VoIP")}})</td>
    <td>{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("MP3 MPEG-1 Audio Layer III")}}</th>
+   <th scope="row"><a href="#MP3">MP3</a></th>
    <td>MPEG-1 Audio Layer III</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a><sup><a href="#in-brief-footnote1">1</a></sup>, <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("Opus")}}</th>
+   <th scope="row"><a href="#opus">Opus</a></th>
    <td>Opus</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("Vorbis")}}</th>
+   <th scope="row"><a href="#vorbis">Vorbis</a></th>
    <td>Vorbis</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
   </tr>
@@ -196,7 +196,7 @@ tags:
 
 <h4 id="Lossless_versus_lossy_codecs">Lossless versus lossy codecs</h4>
 
-<p>There are two basic categories of audio compression. <strong>Lossless</strong> compression algorithms reduce the size of the audio without compromising the quality or fidelity of the sound. Upon decoding audio compressed with a lossless codec such as {{anch("FLAC")}} or {{anch("ALAC")}}, the result is identical in every way to the original sound, down to the bit.</p>
+<p>There are two basic categories of audio compression. <strong>Lossless</strong> compression algorithms reduce the size of the audio without compromising the quality or fidelity of the sound. Upon decoding audio compressed with a lossless codec such as <a href="#FLAC">FLAC</a> or <a href="#ALAC">ALAC</a>, the result is identical in every way to the original sound, down to the bit.</p>
 
 <p><strong>Lossy</strong> codecs, on the other hand, take advantage of the fact that the human ear is not a perfect interpreter of audio, and of the fact that the human brain can pluck the important information out of imperfect or noisy audio. They strip away audio frequencies that aren't used much, tolerate loss of precision in the decoded output, and use other methods to lose audio content, quality, and fidelity to produce smaller encoded media. Upon decoding, the output is, to varying degrees, still understandable. The specific codec used—and the compression configuration selected—determine how close to the original, uncompressed audio signal the output seems to be when heard by the human ear.</p>
 
@@ -1234,7 +1234,7 @@ tags:
 
 <p>The voice-specific codecs are all inherently very lossy, however, and any sound with significant information in the frequency bands outside the vocal range captured will be entirely lost. This makes these codecs completely unsuitable for anything but spoken words. Even audio that contains only voices, but singing rather than speaking, will likely not be of acceptable quality in one of these formats.</p>
 
-<p>Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, {{anch("G.722")}}, for example, has 4 ms latency (compared with over 100 ms for MP3), and {{anch("AMR")}}'s latency is around 25 ms.</p>
+<p>Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, <a href="#G.722">G.722</a>, for example, has 4 ms latency (compared with over 100 ms for MP3), and <a href="#AMR">AMR</a>'s latency is around 25 ms.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> For more about WebRTC and the codecs it can use, see <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a>.</p>
