@@ -14,7 +14,8 @@ tags:
 
 <p>The <strong><code>downlink</code></strong> read-only property of the
   {{domxref("NetworkInformation")}} interface returns the effective bandwidth estimate in
-  megabits per second, rounded to the nearest multiple of 25 kilobits per seconds. This
+  megabits per second, rounded to the nearest multiple of <a href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/platform/network/network_state_notifier.cc;l=470;drc=effdbe12c7d315055a0a4ddfea3770f2dc2cf84d;bpv=1;bpt=1?originalUrl=https:%2F%2Fcs.chromium.org%2F">
+  50</a> kilobits per seconds. This
   value is based on recently observed application layer throughput across recently active
   connections, excluding connections made to a private address space. In the absence of
   recent bandwidth measurement data, the attribute value is determined by the properties
