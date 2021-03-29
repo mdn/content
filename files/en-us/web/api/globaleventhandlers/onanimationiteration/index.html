@@ -104,11 +104,9 @@ tags:
 </pre>
 </div>
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take
-  a look at the styles for the box that we're animating. First is the box itself. We set
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set
   its size, position, color, and layout. Note that there's nothing there about animation.
-  That's because we don't want the box to start animating right away. We'll add the
-  {{cssxref("animation")}} style later to start animating the box.</p>
+  That's because we don't want the box to start animating right away. We'll add the {{cssxref("animation")}} style later to start animating the box.</p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -159,8 +157,7 @@ box.onanimationiteration = function(event) {
   which is initially zero, which indicates how many iterations of the animation have
   occurred.</p>
 
-<p>The onanimationiteration event handler is then set up. It sets the box's
-  {{cssxref("animation-play-state")}} to "paused", then updates the text displayed in the
+<p>The onanimationiteration event handler is then set up. It sets the box's {{cssxref("animation-play-state")}} to "paused", then updates the text displayed in the
   button to indicate that clicking the button will start playing the next iteration of
   the animation.</p>
 
@@ -194,8 +191,7 @@ box.onanimationiteration = function(event) {
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('CSS3
-        Animations','#eventdef-animationevent-animationiteration','onanimationiteration')}}
+      <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationiteration','onanimationiteration')}}
       </td>
       <td>{{Spec2('CSS3 Animations')}}</td>
       <td></td>

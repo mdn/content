@@ -45,13 +45,11 @@ tags:
   where the target object is an HTML element ({{domxref("HTMLElement")}}), document
   ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
   input a single parameter: a {{domxref("TransitionEvent")}} object describing the event
-  which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value
-  should be the same as the value of {{cssxref("transition-duration")}}.</p>
+  which occurred; the event's {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the value of {{cssxref("transition-duration")}}.</p>
 
 <div class="note">
   <p><code>elapsedTime</code> does not include time prior to the transition effect
-    beginning; that means that the value of {{cssxref("transition-delay")}} doesn't affect
-    the value of <code>elapsedTime</code>, which is zero until the delay period ends and
+    beginning; that means that the value of {{cssxref("transition-delay")}} doesn't affect the value of <code>elapsedTime</code>, which is zero until the delay period ends and
     the animation begins.</p>
 </div>
 
@@ -64,16 +62,14 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a
-  box that resizes and changes color and such.</p>
+<p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a box that resizes and changes color and such.</p>
 
 <pre class="brush: html;">&lt;div class="box"&gt;&lt;/div&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
-<p>The CSS below styles the box and applies a transition effect which makes the box's
-  color and size change, and causes the box to rotate, while the mouse cursor hovers over
+<p>The CSS below styles the box and applies a transition effect which makes the box's color and size change, and causes the box to rotate, while the mouse cursor hovers over
   it.</p>
 
 <pre class="brush: css highlight:[13,14]">.box {
@@ -135,8 +131,7 @@ box.ontransitionend = function(event) {
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName('CSS3
-        Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}}</td>
+      <td>{{SpecName('CSS3 Transitions','#dom-globaleventhandlers-ontransitionend','ontransitionend')}}</td>
       <td>{{Spec2('CSS3 Transitions')}}</td>
       <td></td>
     </tr>

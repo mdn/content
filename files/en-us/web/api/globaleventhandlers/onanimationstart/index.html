@@ -94,11 +94,9 @@ tags:
  </pre>
 </div>
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take
-  a look at the styles for the box that we're animating. First is the box itself. We set
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set
   its size, position, color, and layout. Note that there's nothing there about animation.
-  That's because we don't want the box to start animating right away. We'll add the
-  {{cssxref("animation")}} style later to start animating the box.</p>
+  That's because we don't want the box to start animating right away. We'll add the {{cssxref("animation")}} style later to start animating the box.</p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -137,14 +135,12 @@ tags:
 }
 </pre>
 
-<p>Since the CSS describes the animation but doesn't connect it to the box, we'll need
-  some JavaScript code to do that.  We'll get to that shortly.</p>
+<p>Since the CSS describes the animation but doesn't connect it to the box, we'll need some JavaScript code to do that.  We'll get to that shortly.</p>
 
 <h3 id="JavaScript_content">JavaScript content</h3>
 
 <p>Before we get to the animation code, we define a function which logs information to a
-  box on the user's screen. We'll use this to show information about the events we
-  receive. Note the use of {{domxref("AnimationEvent.animationName")}} and
+  box on the user's screen. We'll use this to show information about the events we receive. Note the use of {{domxref("AnimationEvent.animationName")}} and
   {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which
   occurred.</p>
 
@@ -207,8 +203,7 @@ box.onanimationend = function(event) {
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('CSS3
-        Animations','#eventdef-animationevent-animationstart','onanimationstart')}}</td>
+      <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationstart','onanimationstart')}}</td>
       <td>{{Spec2('CSS3 Animations')}}</td>
       <td></td>
     </tr>
