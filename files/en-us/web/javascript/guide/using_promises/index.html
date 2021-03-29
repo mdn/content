@@ -8,7 +8,7 @@ tags:
   - Promise
   - Promises
   - asynchronous
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
 
@@ -42,7 +42,7 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback);
 <p>Unlike old-fashioned <em>passed-in</em> callbacks, a promise comes with some guarantees:</p>
 
 <ul>
- <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be invoked before the <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
+ <li>Callbacks added with <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> will never be invoked before the <a href="/en-US/docs/Web/JavaScript/EventLoop#run-to-completion">completion of the current run</a> of the JavaScript event loop.</li>
  <li>These callbacks will be invoked even if they were added <em>after</em> the success or failure of the asynchronous operation that the promise represents.</li>
  <li>Multiple callbacks may be added by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> several times. They will be invoked one after another, in the order in which they were inserted.</li>
 </ul>
@@ -308,7 +308,7 @@ Promise (pending) Promise {&lt;pending&gt;}
 Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
-<p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#Tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
+<p>For more details, refer to <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks">Tasks vs microtasks</a>.</p>
 
 <h2 id="Nesting">Nesting</h2>
 

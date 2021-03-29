@@ -5,7 +5,7 @@ tags:
   - Guide
   - Intermediate
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}</div>
 
@@ -26,7 +26,7 @@ tags:
 
 <p>In JavaScript an <strong>iterator</strong> is an object which defines a sequence and potentially a return value upon its termination.</p>
 
-<p>Specifically, an iterator is any object which implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">Iterator protocol</a> by having a <code>next()</code> method that returns an object with two properties:</p>
+<p>Specifically, an iterator is any object which implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol">Iterator protocol</a> by having a <code>next()</code> method that returns an object with two properties:</p>
 
 <dl>
  <dt><code><var>value</var></code></dt>
@@ -104,7 +104,7 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>An object is <strong>iterable</strong> if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.</p>
 
-<p>In order to be <strong>iterable</strong>, an object must implement the <strong>@@iterator</strong> method. This means that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a {{jsxref("Symbol.iterator")}} key.</p>
+<p>In order to be <strong>iterable</strong>, an object must implement the <strong>@@iterator</strong> method. This means that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a {{jsxref("Symbol.iterator")}} key.</p>
 
 <p>It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.</p>
 
