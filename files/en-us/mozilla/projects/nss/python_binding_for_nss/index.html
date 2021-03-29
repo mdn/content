@@ -1122,7 +1122,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
      <li>Add AddrInfo class to support IPv6 address resolution. Supports iteration over it's set of NetworkAddress objects and provides hostname, canonical_name object properties.</li>
      <li>Add PR_AI_* constants.</li>
      <li>NetworkAddress constructor and NetworkAddress.set_from_string() added optional family parameter. This is necessary for utilizing PR_GetAddrInfoByName().</li>
-     <li>NetworkAddress initialized via a string parameter are now initalized via PR_GetAddrInfoByName using family.</li>
+     <li>NetworkAddress initialized via a string parameter are now initialized via PR_GetAddrInfoByName using family.</li>
      <li>Add NetworkAddress.address property to return the address sans the port as a string. NetworkAddress.str() includes the port. For IPv6 the a hex string must be enclosed in brackets if a port is appended to it, the bracketed hex address with appended with a port is unappropriate in some circumstances, hence the new address property to permit either the address string with a port or without a port.</li>
      <li>Fix the implementation of the NetworkAddress.family property, it was returning bogus data due to wrong native data size.</li>
      <li>HostEntry objects now support iteration and indexing of their NetworkAddress members.</li>
