@@ -26,7 +26,18 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<p>In this example an individual <code>BackgroundFetchRecord</code> is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.</p>
 
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
+
+  console.log(`Here's the request`, record.request);
+  const response = await record.responseReady;
+  console.log(`And here's the response`, response);
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

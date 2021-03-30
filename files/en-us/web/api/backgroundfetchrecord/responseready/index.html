@@ -12,8 +12,6 @@ tags:
 
 <p class="summary">The <strong><code>responseReady</code></strong> read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.</p>
 
-<p></p>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <var>response</var> = <var>BackgroundFetchRecord</var>.responseReady;</pre>
@@ -23,7 +21,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<p>In this example an individual <code>BackgroundFetchRecord</code> is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The value of <code>responseReady</code> is returned and logged to the console.</p>
 
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
+
+  const response = await record.responseReady;
+  console.log(`Here's the response`, response);
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
