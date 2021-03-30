@@ -49,6 +49,10 @@ tags:
 
 <h3 id="HTTP">HTTP</h3>
 
+<ul>
+  <li>FTP has been disabled on all releases (preference <code>network.ftp.enabled</code> now defaults to <code>false</code>), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). As part of this change the extension setting <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a> has now become read-only ({{bug(1626365)}}).</li>
+</ul>
+
 <h4 id="removals_http">Removals</h4>
 
 <h3 id="Security">Security</h3>
