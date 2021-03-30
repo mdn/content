@@ -83,7 +83,7 @@ tags:
 
 <p>As an example, if you were to set <code>width: 100%</code> on an image, and its intrinsic width was smaller than its container, the image would be forced to stretch and become larger, causing it to look pixelated.</p>
 
-<p>If you instead use <code>max-width: 100%</code>, the image is able to become smaller than its intrinsic size, but will stop at 100% of its size.</p>
+<p>If you instead use <code>max-width: 100%</code>, and its intrinsic width was greater than its container, the image is able to become smaller than its container size, and will stop at 100% of its container size.</p>
 
 <p>In the example below, we have used the same image three times. The first image has been given <code>width: 100%</code> and is in a container which is larger than it, therefore it stretches to the container width. The second image has <code>max-width: 100%</code> set on it and therefore does not stretch to fill the container. The third box contains the same image again, also with <code>max-width: 100%</code> set; in this case you can see how it has scaled down to fit into the box.</p>
 
