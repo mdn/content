@@ -35,7 +35,10 @@ tags:
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
  <dd>A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
- <div class="note"><strong>Note</strong>: Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</div>
+   <div class="notecard note">
+     <h4>Note</h4>
+     <p>Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</p>
+   </div>
  </dd>
  <dt>{{htmlattrdef("controls")}}</dt>
  <dd>If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.</dd>
@@ -56,7 +59,10 @@ tags:
  </dd>
  <dt>{{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}</dt>
  <dd>A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See <a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">this proposed specification</a> for more information.
- <p class="note">In Safari, you can use <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> as a fallback.</p>
+   <div class="notecard note">
+     <h4>Note</h4>
+     <p>In Safari, you can use <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> as a fallback.</p>
+   </div>
  </dd>
  <dt>{{htmlattrdef("duration")}} {{ReadOnlyInline}}</dt>
  <dd>A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
@@ -75,12 +81,12 @@ tags:
 
  <p>The default value is different for each browser. The spec advises it to be set to <code>metadata</code>.</p>
 
- <div class="note"><strong>Usage notes:</strong>
-
- <ul>
-  <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the audio for playback.</li>
-  <li>The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.</li>
- </ul>
+ <div class="notecard note">
+   <h4>Note</h4>
+   <ul>
+     <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the audio for playback.</li>
+     <li>The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.</li>
+    </ul>
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
@@ -197,7 +203,7 @@ tags:
 
 <ul>
  <li>If you don't specify the <code>controls</code> attribute, the audio player won't include the browser's default controls. You can, however, create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API.</li>
- <li>To allow precise control over your audio content, <code>HTMLMediaElement</code>s fire many different <a href="/en-US/docs/Web/Guide/Events/Media_events">events</a>. This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.</li>
+ <li>To allow precise control over your audio content, <code>HTMLMediaElement</code>s fire many different <a href="/en-US/docs/Web/API/HTMLMediaElement#events">events</a>. This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.</li>
  <li>You can also use the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.</li>
  <li><code>&lt;audio&gt;</code> elements can't have subtitles or captions associated with them in the same way that <code>&lt;video&gt;</code> elements can. See <a href="https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio">WebVTT and Audio</a> by Ian Devlin for some useful information and workarounds.</li>
 </ul>
@@ -229,8 +235,9 @@ tags:
  <dd>Add an <code>addtrack</code> event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.</dd>
 </dl>
 
-<div class="note">
-<p><strong>Note:</strong> Even though it's an <code>&lt;audio&gt;</code> element, it still has video and text track lists, and can in fact be used to present video, although the use interface implications can be odd.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Even though it's an <code>&lt;audio&gt;</code> element, it still has video and text track lists, and can in fact be used to present video, although the use interface implications can be odd.</p>
 </div>
 
 <p>For example, to detect when audio tracks are added to or removed from an <code>&lt;audio&gt;</code> element, you can use code like this:</p>
