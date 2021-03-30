@@ -11,19 +11,21 @@ tags:
 ---
 <div>{{APIRef("DOM Events")}}{{Deprecated_Header}}</div>
 
+<div class="notecard note">
+  <h4>Note</h4>
+  <p><a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">Mutation Events</a> (W3C DOM Level 3 Events) have been deprecated in favor of <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> (W3C DOM4).</p>
+</div>
+
 <p>The <code><strong>MutationEvent</strong></code> interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.</p>
 
-<div class="notecard note">
-<p><strong>Note:</strong> <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">Mutation Events</a> (W3C DOM Level 3 Events) have been deprecated in favor of <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> (W3C DOM4).</p>
-</div>
 
 <h2 id="Preface">Preface</h2>
 
-<p id="Replacement.3A_mutation_observers">The mutation events have been marked as deprecated in <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">the DOM Events specification</a>, as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to <span id="to"><a href="http://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html">public-webapps</a>)</span>.</p>
+<p id="Replacement.3A_mutation_observers">The mutation events have been marked as deprecated in <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">the DOM Events specification</a>, as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to <a href="http://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html">public-webapps</a>).</p>
 
-<p><a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> are the proposed replacement for mutation events in DOM4. They are expected to be included in Firefox 14 and <a href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">Chrome 18</a>.</p>
+<p><a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> have replaced mutation events in DOM4. They have been supported in <a href="/en-US/docs/Web/API/MutationObserver#browser_compatibility">most popular browsers for some years</a>.</p>
 
-<p>The practical reasons to avoid the mutation events are <strong>performance issues</strong> and <strong>cross-browser support</strong>.</p>
+<p>In addition, they should be avoided because they have <strong>performance issues</strong> and <strong>poor cross-browser support</strong> (as described in the following sections).</p>
 
 <h3 id="Performance">Performance</h3>
 
@@ -79,5 +81,4 @@ tags:
 
 <ul>
  <li>{{DOMxRef("MutationNameEvent")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Mutation_events">Using mutation events</a></li>
 </ul>
