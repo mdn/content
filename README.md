@@ -557,7 +557,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
     ```sh
     yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
     ```
-    
+
     Note that the target page can be an external URL or another page.
 
 1. Add and commit all of the deleted files, as well as
