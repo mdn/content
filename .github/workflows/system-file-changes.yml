@@ -26,9 +26,6 @@ jobs:
           # can'd do that :(
           # See https://github.community/t/how-do-you-figure-out-if-a-pr-is-from-a-work-in-pull-request-target-workflows/170001
 
-          # XXX This is temporarily commented out until we understand better
-          # how to actually works. We need to test what happens when
-          # PRs on forks come in that edit any of these files.
           echo "If you're an admin, you have you use your admin privileges to override."
           echo "If you're not an admin, please ping someone for a review."
           exit 1
