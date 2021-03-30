@@ -74,7 +74,7 @@ tags:
      WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
   </li>
   <li>
-    The order in which you include font files is important. If you provide the browser with multiple options as to which font file to download, it will choose the first one it is able to use. That's why you should write the "best" format first, e.g. WOFF2, and then write older formats later. Browsers that don't understand one format will then fall back to the next in line.
+    The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it’s able to use. That's why the format you list first should be the best, preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
   </li>
   <li>If you need to work with legacy browsers, you need to provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. We included tools to generate the required files.</li>
 </ol>
