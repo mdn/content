@@ -535,12 +535,12 @@ push your branch to your fork:
 
 ### Redirecting a document
 
-If you [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
-However you may need to when [deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
+If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
+However, you may need to when [deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
 
 The best way to do this is to use the `yarn content add-redirect` command:
 
-1. Start a fresh branch to work within:
+1. Start a fresh branch to work in:
 
     ```sh
     cd ~/repos/mdn/content
@@ -560,7 +560,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
     Note that the target page can be an external URL or another page.
 
 1. Add and commit all of the deleted files, as well as
-push your branch to your fork:
+pushing your branch to your fork:
 
     ```sh
     git commit -a
