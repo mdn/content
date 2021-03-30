@@ -176,11 +176,11 @@ tags:
 
 <p>This error generally means that you have missed a semicolon at the end of one of your lines of code, but it can sometimes be more cryptic. For example, if we change this line inside the <code>checkGuess()</code> function:</p>
 
-<pre class="brush: js">var userGuess = Number(guessField.value);</pre>
+<pre class="brush: js">let userGuess = Number(guessField.value);</pre>
 
 <p>to</p>
 
-<pre class="brush: js">var userGuess === Number(guessField.value);</pre>
+<pre class="brush: js">let userGuess === Number(guessField.value);</pre>
 
 <p>It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (<code>=</code>) — which sets a variable to be equal to a value — with the strict equality operator (<code>===</code>), which tests whether one value is equal to another, and returns a <code>true</code>/<code>false</code> result.</p>
 
