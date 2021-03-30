@@ -57,8 +57,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
            repository: mdn/yari
-          #  repository: peterbe/yari
-          #  ref: analyze-pr-build
            path: yari
 
       - name: Install Python
