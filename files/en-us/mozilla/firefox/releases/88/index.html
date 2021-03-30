@@ -63,6 +63,10 @@ tags:
 
 <h4 id="DOM">DOM</h4>
 
+<ul>
+  <li>Code can now use the new static method <a href="/en-US/docs/Web/API/AbortSignal/abort"><code>AbortSignal.abort()</code></a> to return an {{domxref("AbortSignal")}} that is already set as <a href="/en-US/docs/Web/API/AbortSignal/aborted">aborted</a>. This is useful when the signal is requested/created after the associated operation has <em>already</em> been aborted. For more information see {{bug(1698468)}}.</li>
+</ul>
+
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 
 <h4 id="removals_media">Removals</h4>
