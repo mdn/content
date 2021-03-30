@@ -29,8 +29,8 @@ tags:
     data and give back decoded samples, but this ability was removed from the specification,
     because all the decoding was done on the main thread, so
     <code>createBuffer()</code> was blocking other code execution. The asynchronous method
-    <code>decodeAudioData()</code> does the same thing: it takes compressed audio, say, an
-    MP3 file, and it directly gives back an {{ domxref("AudioBuffer") }} that can
+    <code>decodeAudioData()</code> does the same thing — takes compressed audio, such as an
+    MP3 file, and directly gives you back an {{ domxref("AudioBuffer") }} that you can
     then play via an {{ domxref("AudioBufferSourceNode") }}. For simple use cases
     like playing an MP3, <code>decodeAudioData()</code> is what you should be using.</p>
 </div>
