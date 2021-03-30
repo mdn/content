@@ -26,7 +26,7 @@ tags:
 
 <div class="note">
   <p><strong>Note</strong>: <code>createBuffer()</code> used to be able to take compressed
-    data and give back decoded samples, but this ability is no longer in the specification,
+    data and give back decoded samples, but this ability was removed from the specification,
     because all the decoding was done on the main thread, so
     <code>createBuffer()</code> was blocking other code execution. The asynchronous method
     <code>decodeAudioData()</code> does the same thing: it takes compressed audio, say, an
