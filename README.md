@@ -503,7 +503,7 @@ necessary changes such as updating the `_wikihistory.json` file.**
 For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
-1. First, as we've outlined above, you'll start a fresh branch to work within:
+1. First, as we've outlined above, you'll start a fresh branch to work in:
 
     ```sh
     cd ~/repos/mdn/content
@@ -560,7 +560,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
 
     Note that the target page can be an external URL or another page.
 
-1. Add and commit all of the deleted files, as well as
+1. Commit all of the changed files, as well as
 pushing your branch to your fork:
 
     ```sh
