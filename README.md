@@ -532,11 +532,11 @@ push your branch to your fork:
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-
 ### Redirecting a document
 
-If you are [moving a document](#moving-one-or-more-documents) as shown above you don't need to create a redirect.
-However, you may need to when [deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
+If you are [moving a document](#moving-one-or-more-documents) as shown
+above you don't need to create a redirect. However, you may need to when
+[deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
 
 The best way to do this is to use the `yarn content add-redirect` command:
 
@@ -557,6 +557,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
     ```sh
     yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
     ```
+    
     Note that the target page can be an external URL or another page.
 
 1. Add and commit all of the deleted files, as well as
