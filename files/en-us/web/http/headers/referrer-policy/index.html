@@ -222,8 +222,7 @@ Referrer-Policy: unsafe-url
 
 <p>Firefox preferences can be used to configure the <em>default</em> referrer policy. The preference names are version specific:</p>
 <ul>
-  <li>Firefox version 87: <code>network.http.referer.userControlPolicy</code></li>
-  <li>Firefox versions 59 to 86: <code>network.http.referer.defaultPolicy</code> (and <code>network.http.referer.defaultPolicy.pbmode</code> for private networks)</li>
+  <li>Firefox version 59 and later: <code>network.http.referer.defaultPolicy</code> (and <code>network.http.referer.defaultPolicy.pbmode</code> for private networks)</li>
   <li>Firefox versions 53 to 58: <code>network.http.referer.userControlPolicy</code></li>
 </ul>
 <p>All of these settings take the same set of values: <code>0 = no-referrer</code>, <code>1 = same-origin</code>, <code>2 = strict-origin-when-cross-origin</code>, <code>3 = no-referrer-when-downgrade</code>.</p>

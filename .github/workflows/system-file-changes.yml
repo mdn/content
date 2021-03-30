@@ -12,44 +12,20 @@ on:
       - yarn.lock
 
 jobs:
-  triage:
+  block:
     # This make sure it only runs on our origin repo
     # and make an exception for Dependabot.
     if: github.repository_owner == 'mdn' && github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: hmarr/debug-action@v2
+      # - uses: hmarr/debug-action@v2
       - name: Stop anything and everything
         run: |
-          # echo "Any PR that edits these files should break the build and expect admin overrides"
-          # echo "PR user?"
-          # echo ${{ github.event.pull_request.user.login }}
-          # echo "PR actor?"
-          # echo ${{ github.actor }}
-          # echo "Repository owner?"
-          # echo ${{ github.repository_owner }}
-          # echo "PR head?"
-          # echo ${{ github.event.pull_request.head.repo.owner.login }}
-          # echo "PR base?"
-          # echo ${{ github.event.pull_request.base.user.login }}
-          echo "github.event.pull_request.head.repo.full_name?"
-          echo ${{ github.event.pull_request.head.repo.full_name }}
-          echo "github.repository?"
-          echo ${{ github.repository }}
+          # It would be nice if we could disable this workflow if the PR
+          # was made from a branch within the origin repo. But it seems you
+          # can'd do that :(
+          # See https://github.community/t/how-do-you-figure-out-if-a-pr-is-from-a-work-in-pull-request-target-workflows/170001
 
-          # XXX This is temporarily commented out until we understand better
-          # how to actually works. We need to test what happens when
-          # PRs on forks come in that edit any of these files.
-          # exit 1
-
-      - name: Repositories
-        run: |
-          echo "Base: ${{ github.event.pull_request.base.repo.full_name }}"
-          echo "Head: ${{ github.event.pull_request.head.repo.full_name }}"
-          echo "Repo: ${{ github.repository }}"
-
-      - name: Running on a fork?
-        if: github.event.pull_request.head.repo.full_name != github.repository
-        run: |
-          echo "Yes, this is fork"
-          # exit 1
+          echo "If you're an admin, you have you use your admin privileges to override."
+          echo "If you're not an admin, please ping someone for a review."
+          exit 1

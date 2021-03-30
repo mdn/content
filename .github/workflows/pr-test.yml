@@ -34,6 +34,27 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
+      - name: Config git core.quotePath
+        run: |
+          # If you don't do this, the get-diff-action won't be able to
+          # notice files that contain non-ascii characters.
+          # I.e.
+          #
+          #    ▶ git status
+          #    Changes not staged for commit:
+          #    ...
+          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
+          #
+          # But after you set `core.quotePath` you get:
+          #
+          #    ▶ git status
+          #    Changes not staged for commit:
+          #    ...
+          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
+          #
+          # Now, this gets used by the `git diff ...` inside get-diff-action.
+          git config --global core.quotePath false
+
       - uses: technote-space/get-diff-action@v4.0.6
         id: git_diff_content
         with:

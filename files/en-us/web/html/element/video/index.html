@@ -38,7 +38,10 @@ tags:
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
  <dd>A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
- <div class="note"><strong>Note</strong>: Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</div>
+   <div class="notecard note">
+     <h4>Note</h4>
+     <p>Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</p>
+   </div>
 
  <p>To disable video autoplay, <code>autoplay="false"</code> will not work; the video will autoplay if the attribute is there in the <code>&lt;video&gt;</code> tag at all. To remove autoplay, the attribute needs to be removed altogether.</p>
 
@@ -101,12 +104,12 @@ tags:
 
  <p>The default value is different for each browser. The spec advises it to be set to <code>metadata</code>.</p>
 
- <div class="notecard note"><strong>Note:</strong>
-
- <ul>
-  <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the video for playback.</li>
-  <li>The specification does not force the browser to follow the value of this attribute; it is a mere hint.</li>
- </ul>
+ <div class="notecard note">
+   <h4>Note</h4>
+   <ul>
+       <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the video for playback.</li>
+       <li>The specification does not force the browser to follow the value of this attribute; it is a mere hint.</li>
+     </ul>
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
@@ -229,7 +232,7 @@ tags:
 
 <ul>
  <li>If you don't specify the <code>controls</code> attribute, the video won't include the browser's default controls; you can create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for more details.</li>
- <li>To allow precise control over your video (and audio) content, <code>HTMLMediaElement</code>s fire many different <a href="/en-US/docs/Web/Guide/Events/Media_events">events</a>. In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.</li>
+ <li>To allow precise control over your video (and audio) content, <code>HTMLMediaElement</code>s fire many different <a href="/en-US/docs/Web/API/HTMLMediaElement#events">events</a>. In addition to providing controllability, these events let you monitor the progress of both download and playback of the media, as well as the playback state and position.</li>
  <li>You can use the {{cssxref("object-position")}} property to adjust the positioning of the video within the element's frame, and the {{cssxref("object-fit")}} property to control how the video's size is adjusted to fit within the frame.</li>
  <li>To show subtitles/captions along with your video, you can use some JavaScript along with the {{htmlelement("track")}} element and the <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> format. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a> for more information.</li>
  <li>You can play audio files using a <code>&lt;video&gt;</code> element. This can be useful if, for example, you need to perform audio with a <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.</li>
@@ -321,9 +324,9 @@ and watch it with your favorite video player!
 
 <p>{{EmbedLiveSample('Multiple_sources_example', '640', '370')}}</p>
 
-<p>First <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> is tried. If that can't be played, then <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a> is tried. Finally, <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a> is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.</p>
+<p>First <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a> is tried. If that can't be played, then <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a> is tried. Finally, <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a> is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.</p>
 
-<p>Some media file types let you provide more specific information using the <code><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">codecs</a></code> parameter as part of the file's type string. A relatively simple example is <code>video/webm; codecs="vp8, vorbis"</code>, which says that the file is a <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> video using <a href="/en-US/docs/Web/Media/Formats/Video_codecs#VP8">VP8</a> for its video and <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> for audio.</p>
+<p>Some media file types let you provide more specific information using the <code><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">codecs</a></code> parameter as part of the file's type string. A relatively simple example is <code>video/webm; codecs="vp8, vorbis"</code>, which says that the file is a <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a> video using <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> for its video and <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis">Vorbis</a> for audio.</p>
 
 <h3 id="Server_support_for_video">Server support for video</h3>
 
@@ -370,13 +373,13 @@ It's… it's a…
 [Dishes clattering]
 </pre>
 
-<p>Captions should not obstruct the main subject of the video. They can be positioned using <a href="/en-US/docs/Web/API/WebVTT_API#Cue_settings">the <code>align</code> VTT cue setting</a>.</p>
+<p>Captions should not obstruct the main subject of the video. They can be positioned using <a href="/en-US/docs/Web/API/WebVTT_API#cue_settings">the <code>align</code> VTT cue setting</a>.</p>
 
 <ul>
  <li><a href="/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions">MDN Subtitles and closed caption — Plugins</a></li>
  <li><a href="/en-US/docs/Web/API/WebVTT_API">Web Video Text Tracks Format (WebVTT)</a></li>
  <li><a href="https://webaim.org/techniques/captions/">WebAIM: Captions, Transcripts, and Audio Descriptions</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.2_—_Providing_text_alternatives_for_time-based_media">MDN Understanding WCAG, Guideline 1.2 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media">MDN Understanding WCAG, Guideline 1.2 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html">Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html">Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
@@ -387,7 +390,7 @@ It's… it's a…
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, phrasing content, embedded content. If it has a {{htmlattrxref("controls", "video")}} attribute: interactive content and palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, phrasing content, embedded content. If it has a {{htmlattrxref("controls", "video")}} attribute: interactive content and palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>

@@ -6,7 +6,7 @@ tags:
   - Functions
   - Guide
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</div>
 
@@ -110,7 +110,7 @@ if (num === 0) {
   }
 }</pre>
 
-<p>In addition to defining functions as described here, you can also use the {{jsxref("Function")}} constructor to create functions from a string at runtime, much like {{jsxref("eval", "eval()")}}.</p>
+<p>In addition to defining functions as described here, you can also use the {{jsxref("Function")}} constructor to create functions from a string at runtime, much like {{jsxref("Global_Objects/eval", "eval()")}}.</p>
 
 <p>A <strong>method</strong> is a function that is a property of an object. Read more about objects and methods in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a>.</p>
 
@@ -147,7 +147,7 @@ const square = function(n) {
 </pre>
 </div>
 
-<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>showProps()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
+<p>The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The <code>showProps()</code> function (defined in <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">Working with objects</a>) is an example of a function that takes an object as an argument.</p>
 
 <p>A function can call itself. For example, here is a function that computes factorials recursively:</p>
 
@@ -255,7 +255,7 @@ while (x &lt; 10) { // "x &lt; 10" is the loop condition
 loop(0);
 </pre>
 
-<p>However, some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the <a href="/en-US/docs/DOM">DOM</a>) is easier via recursion:</p>
+<p>However, some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>) is easier via recursion:</p>
 
 <pre class="brush: js">function walkTree(node) {
   if (node == null) //
@@ -398,7 +398,7 @@ A(1); // logs 6 (1 + 2 + 3)
 outside()(10); // returns 20 instead of 10
 </pre>
 
-<p>The name conflict happens at the statement <code>return x</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
+<p>The name conflict happens at the statement <code>return x * 2</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
 
 <h2 id="Closures">Closures</h2>
 
@@ -665,7 +665,7 @@ var p = new Person();</pre>
 	</dd>
 	<dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
 	<dd>
-	<p>The <code><strong>isNaN()</strong></code> function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the <code>isNaN</code> function has <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">interesting</a> rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> to determine if the value is Not-A-Number.</p>
+	<p>The <code><strong>isNaN()</strong></code> function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the <code>isNaN</code> function has <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description">interesting</a> rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> to determine if the value is Not-A-Number.</p>
 	</dd>
 	<dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
 	<dd>

@@ -107,19 +107,17 @@ tags:
 
 <h3 id="Using_split">Using <code>split()</code></h3>
 
-<div id="split_empty_string">
-  <p>When the string is empty, <code>split()</code> returns an array containing one empty
-    string, rather than an empty array. If the string and separator are both empty
-    strings, an empty array is returned.</p>
+<p>When the string is empty, <code>split()</code> returns an array containing one empty
+  string, rather than an empty array. If the string and separator are both empty
+  strings, an empty array is returned.</p>
 
-  <pre class="brush: js">const myString = ''
+<pre class="brush: js">const myString = ''
 const splits = myString.split()
 
 console.log(splits)
 
 // ↪ [""]
 </pre>
-</div>
 
 <p>The following example defines a function that splits a string into an array of strings
   using <code><var>separator</var></code>. After splitting the string, the function logs

@@ -57188,17 +57188,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/HTMLObjectElement/typeMustMatch": {
-    "modified": "2020-10-15T21:29:52.384Z",
-    "contributors": [
-      "sideshowbarker",
-      "jpmedley",
-      "mfluehr",
-      "connorshea",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/HTMLObjectElement/useMap": {
     "modified": "2020-10-15T22:17:32.888Z",
     "contributors": [
@@ -122484,34 +122473,6 @@
       "chrisAnderson",
       "Jeremie",
       "Bzbarsky"
-    ]
-  },
-  "Web/Guide/Events/Media_events": {
-    "modified": "2019-10-28T04:38:58.394Z",
-    "contributors": [
-      "MichalKrasowski",
-      "sideshowbarker",
-      "leandroruel",
-      "albinlarsson",
-      "fscholz",
-      "Y.Young",
-      "KevinBrogan",
-      "AlexanderEllis",
-      "Michael_Stanford",
-      "magic96",
-      "fabianTMC",
-      "teoli",
-      "markg",
-      "spicyj",
-      "jpmedley",
-      "mavsic",
-      "SBoudrias",
-      "chrisdavidmills",
-      "Jeremie",
-      "oncletom",
-      "Sheppy",
-      "Aria",
-      "jswisher"
     ]
   },
   "Web/Guide/Events/Mouse_gesture_events": {

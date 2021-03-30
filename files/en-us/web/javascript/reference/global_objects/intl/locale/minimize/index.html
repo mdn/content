@@ -2,19 +2,19 @@
 title: Intl.Locale.prototype.minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
 <p><span class="seoSummary">The
 		<strong><code>Intl.Locale.prototype.minimize()</code></strong> method attempts to
 		remove information about the locale that would be added by calling
-		{{jsxref("Locale/maximize", "Locale.maximize()")}}.</span></p>
+		{{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
 </div>
@@ -26,15 +26,15 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Locale", "Locale")}} instance whose <code>baseName</code> property returns
+<p>A {{jsxref("Intl/Locale", "Locale")}} instance whose <code>baseName</code> property returns
 	the result of the <a
 		href="https://www.unicode.org/reports/tr35/#Likely_Subtags">Remove Likely
-		Subtags</a> algorithm executed against <em>{{jsxref("Locale/baseName",
+		Subtags</a> algorithm executed against <em>{{jsxref("Intl/Locale/baseName",
 		"locale.baseName")}}</em>.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>This method carries out the reverse of {{jsxref("Locale/maximize", "maximize()")}},
+<p>This method carries out the reverse of {{jsxref("Intl/Locale/maximize", "maximize()")}},
 	removing any language, script, or region subtags from the locale language identifier
 	(essentially the contents of <code>baseName</code>). This is useful when there are
 	superfluous subtags in the language identifier; for instance, "en-Latn" can be
@@ -44,8 +44,8 @@ tags:
 		identifier</a>: language, script, and region subtags. Other subtags after the "-u"
 	in the locale identifier are called extension subtags and are not affected by the
 	<code>minimize()</code> method. Examples of these subtags include
-	{{jsxref("Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Locale/calendar",
-	"Locale.calendar")}}, and {{jsxref("Locale/numeric", "Locale.numeric")}}.</p>
+	{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Intl/Locale/calendar",
+	"Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric", "Locale.numeric")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -88,5 +88,5 @@ console.log(myLocMinimized.toString());</pre>
 
 <ul>
 	<li>{{jsxref("Intl.Locale")}}</li>
-	<li>{{jsxref("Locale/baseName", "Intl.Locale.baseName")}}</li>
+	<li>{{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}</li>
 </ul>

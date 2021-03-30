@@ -39,9 +39,9 @@ tags:
 
 <p>We won't be teaching you how to produce audio and video files — that requires a completely different skillset. We have provided you with <a href="https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content">sample audio and video files and example code</a> for your own experimentation, in case you are unable to get hold of your own.</p>
 
-<div class="note">
-  <h3>Note</h3>
-<p>Before you begin here, you should also know that there are quite a few OVPs (online video providers) like <a href="https://www.youtube.com/">YouTube</a>, <a href="https://www.dailymotion.com">Dailymotion</a>, and <a href="https://vimeo.com/">Vimeo</a>, and online audio providers like <a href="https://soundcloud.com/">Soundcloud</a>. Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Before you begin here, you should also know that there are quite a few OVPs (online video providers) like <a href="https://www.youtube.com/">YouTube</a>, <a href="https://www.dailymotion.com">Dailymotion</a>, and <a href="https://vimeo.com/">Vimeo</a>, and online audio providers like <a href="https://soundcloud.com/">Soundcloud</a>. Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.</p>
 </div>
 
 <h3 id="The_&lt;video&gt;_element">The &lt;video&gt; element</h3>
@@ -101,9 +101,9 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-<p>Why do we have this problem? It turns out that several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.</p>
-
-<p>Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.</p>
+  <p>Why do we have this problem? It turns out that several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.</p>
+  
+  <p>Because of those patents, browsers that wish to implement support for those codecs must pay typically enormous license fees. In addition, some people prefer to avoid restricted software and prefer to use only open formats. Due to these legal and preferential reasons, web developers find themselves having to support multiple formats to capture their entire audience.</p>
 </div>
 
 <p>The codecs described in the previous section exist to compress video and audio into manageable files, since raw audio and video are both exceedingly large. Each web browser supports an assortment of <strong>{{Glossary("Codec","codecs")}}</strong>, like Vorbis or H.264, which are used to convert the compressed audio and video into binary data and back. Each codec offers its own advantages and drawbacks, and each container may also offer its own positive and negative features affecting your decisions about which to use.</p>
@@ -186,8 +186,9 @@ tags:
 
 <p><img alt="A simple audio player with a play button, timer, volume control, and progress bar" src="audio-player.png" style="display: block; margin: 0px auto;"></p>
 
-<div class="note">
-<p><strong>Note</strong>: You can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">run the audio demo live</a> on Github (also see the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">audio player source code</a>.)</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">run the audio demo live</a> on Github (also see the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html">audio player source code</a>.)</p>
 </div>
 
 <p>This takes up less space than a video player, as there is no visual component — you just need to display controls to play the audio. Other differences from HTML video are as follows:</p>
@@ -212,8 +213,9 @@ tags:
 
 <p>Wouldn't it be nice to be able to provide these people with a transcript of the words being spoken in the audio/video? Well, thanks to HTML video, you can. To do so we use the <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> file format and the {{htmlelement("track")}} element.</p>
 
-<div class="note">
-<p><strong>Note</strong>: "Transcribe" means "to write down spoken words as text." The resulting text is a "transcript."</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>"Transcribe" means "to write down spoken words as text." The resulting text is a "transcript."</p>
 </div>
 
 <p>WebVTT is a format for writing text files containing multiple strings of text along with metadata such as the time in the video at which each text string should be displayed, and even limited styling/positioning information. These text strings are called <strong>cues</strong>, and there are several kinds of cues which are used for different purposes. The most common cues are:</p>
@@ -263,8 +265,9 @@ This is the second.
 
 <p>For more details, including on how to add labels please read <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>. You can <a href="https://iandevlin.github.io/mdn/video-player-with-captions/">find the example</a> that goes along with this article on Github, written by Ian Devlin (see the <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source code</a> too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.</p>
 </div>
 
 <h3 id="Active_learning_Embedding_your_own_audio_and_video">Active learning: Embedding your own audio and video</h3>
@@ -303,6 +306,7 @@ This is the second.
  <li>Automated options to <a href="http://www.inwhatlanguage.com/blog/translate-video-audio/">translate multimedia</a>.</li>
  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
  <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
+ <li><a href="/en-US/docs/Web/Events#media">Event reference > Media</a></li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}</p>

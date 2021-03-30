@@ -182,8 +182,8 @@ isFinite(NaN); // false
 <p>JavaScript has a boolean type, with possible values <code>true</code> and <code>false</code> (both of which are keywords.) Any value can be converted to a boolean according to the following rules:</p>
 
 <ol>
- <li><code>false</code>, <code>0</code>, empty strings (<code>""</code>), <code>NaN</code>, <code>null</code>, and <code>undefined</code> all become <code>false.</code></li>
- <li>All other values become <code>true.</code></li>
+ <li><code>false</code>, <code>0</code>, empty strings (<code>""</code>), <code>NaN</code>, <code>null</code>, and <code>undefined</code> all become <code>false</code>.</li>
+ <li>All other values become <code>true</code>.</li>
 </ol>
 
 <p>You can perform this conversion explicitly using the <code>Boolean()</code> function:</p>
@@ -288,14 +288,14 @@ x = x + 5;
 <p>JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by <code>if</code> and <code>else</code>; you can chain them together if you like:</p>
 
 <pre class="brush: js">var name = 'kittens';
-if (name == 'puppies') {
+if (name === 'puppies') {
   name += ' woof';
-} else if (name == 'kittens') {
+} else if (name === 'kittens') {
   name += ' meow';
 } else {
   name += '!';
 }
-name == 'kittens meow';
+name === 'kittens meow';
 </pre>
 
 <p>JavaScript has <code>while</code> loops and <code>do-while</code> loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:</p>
