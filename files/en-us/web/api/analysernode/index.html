@@ -103,12 +103,12 @@ tags:
 var analyser = audioCtx.createAnalyser();
 analyser.fftSize = 2048;
 
-// Connect the source to be analysed
-source.connect( analyser ); 
-
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
+
+// Connect the source to be analysed
+source.connect(analyser);
 
 // Get a canvas defined with ID "oscilloscope"
 var canvas = document.getElementById("oscilloscope");
