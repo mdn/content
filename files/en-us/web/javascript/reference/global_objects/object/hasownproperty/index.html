@@ -2,11 +2,11 @@
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 tags:
-- JavaScript
-- Method
-- Object
-- Prototype
-- hasOwnProperty
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+  - hasOwnProperty
 ---
 <div>{{JSRef}}</div>
 
@@ -47,27 +47,6 @@ tags:
   this method does not check for a property in the object's prototype chain. If an
   {{jsxref("Object")}} is an {{jsxref("Array")}}, <code>hasOwnProperty</code> method can
   check whether an index exists.</p>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">;(function(hasOwnProp) { // IIFE with guarding semicolon
-  function hasOwnProperty(name) {
-    if (this == null) { throw new TypeError("Cannot convert undefined or null to object!") }
-    var O = Object(this), key = String(name);
-    var _proto = O.__proto__ || O.constructor.prototype || {}; // Object.prototype
-    return key in O &amp;&amp; ( !(key in _proto) || O[key] !== _proto[key] );
-  }
-  if (!hasOwnProp) {
-    try {
-      Object.defineProperty( Object.prototype, 'hasOwnProperty', {
-        enumerable: false, configurable: true, writable: true,
-        value: hasOwnProperty
-      });
-    } catch (e) { // Object.defineProperty isn't supported
-      Object.prototype['hasOwnProperty'] = hasOwnProperty;
-    }
-  }
-})(Object.prototype.hasOwnProperty);</pre>
 
 <h2 id="Note">Note</h2>
 
@@ -182,7 +161,7 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and
+  <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and
       ownership of properties</a></li>
   <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
   <li>{{jsxref("Statements/for...in", "for...in")}}</li>
