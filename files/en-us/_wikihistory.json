@@ -57188,17 +57188,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/HTMLObjectElement/typeMustMatch": {
-    "modified": "2020-10-15T21:29:52.384Z",
-    "contributors": [
-      "sideshowbarker",
-      "jpmedley",
-      "mfluehr",
-      "connorshea",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/HTMLObjectElement/useMap": {
     "modified": "2020-10-15T22:17:32.888Z",
     "contributors": [
