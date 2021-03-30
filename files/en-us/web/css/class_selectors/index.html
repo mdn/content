@@ -66,6 +66,38 @@ li.spacious.elegant {
 
 <p>{{EmbedLiveSample('Examples')}}</p>
 
+<h2 id="Naming_conventions">Naming conventions</h2>
+
+<h3 id="Nouns_or_adjectives">Nouns or adjectives?</h3>
+
+<p>When designing a CSS it comes a moment where the names that will identify the classes need to be chosen. The choice will usually fall upon a noun or an adjective. It can be useful to reserve nouns for main classes (<code>.class</code>) and adjectives for sub-classes (<code>.class.subclass</code>) in order to keep maximum portability. In this way common adjectives can have different meanings and avoid collisions among different stylesheets, since they can be declared specifically for their main classes as class-modifiers.</p>
+
+<p>For instance, imagine a CSS intended to style font, margins and paragraphs of all text containers of the elements with class <code>"book"</code> in a book-fashion style. In this context a <code>"red"</code> sub-class can be used for changing the font color to red:</p>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">.book.red { 
+  color: red; 
+}</pre>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;article class="red book"&gt;...&lt;/article&gt;</pre>
+
+<p>Now imagine another unrelated CSS that declares the class <code>"lighbox"</code>, intended to display any element in a <code>fixed</code> position as a semi-transparent layer covering the entire size of the viewport. In this context a <code>"red"</code> sub-class can be used for changing the layer to a more reddish tonality via <code>background-color</code>:</p>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">.lighbox.red { 
+  background-color: rgba(33, 0, 0, .9); 
+}</pre>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;figure class="red lightbox"&gt;...&lt;/figure&gt;</pre>
+
+<p>The common adjective <code>"red"</code> has been declared by two unrelated stylesheets with different meanings (in one case it refers to the <code>color</code> while in the other case it refers to the <code>background-color</code>). Collisions however are avoided thanks to the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> whereby the subclass has been declared.</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
