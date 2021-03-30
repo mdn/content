@@ -39,7 +39,7 @@ tags:
 
 <p>To allow the server to support signaling and ICE negotiation, we need to update the code. We'll have to allow directing messages to one specific user instead of broadcasting to all connected users, and ensure unrecognized message types are passed through and delivered, without the server needing to know what they are. This lets us send signaling messages using this same server, instead of needing a separate server.</p>
 
-<p>Let's take a look which changes we need to make to the chat server support WebRTC signaling. This is in the file <code><a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chatserver.js">chatserver.js</a></code>.</p>
+<p>Let's take a look at changes we need to make to the chat server to support WebRTC signaling. This is in the file <code><a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chatserver.js">chatserver.js</a></code>.</p>
 
 <p>First up is the addition of the function <code>sendToOneUser()</code>. As the name suggests, this sends a stringified JSON message to a particular username.</p>
 
