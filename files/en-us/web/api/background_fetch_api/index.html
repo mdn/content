@@ -19,7 +19,7 @@ tags:
 
 <p>The Background Fetch API solves this problem. It creates a way for a web developer to tell the browser to perform some fetches in the background, for example when the user clicks a button to download a video file. The browser then performs the fetches in a user-visible way, displaying progress to the user and giving them a method to cancel the download. Once the download is complete the browser then opens the service worker, at which point your application can do something with the response if required.</p>
 
-<p>The Background Fetch API will enable the fetch to happen if the user starts the process while offline, once they are connected it will begin. The process will also resume if is pauses due to the user going offline.</p>
+<p>The Background Fetch API will enable the fetch to happen if the user starts the process while offline. Once they are connected it will begin. If the user goes off line, the process pauses until the user is on again.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
