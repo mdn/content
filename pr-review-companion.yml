@@ -3,7 +3,7 @@
 # worth considering to break it up so there's a dedicated post-PR
 # workflow just to posting PR comments about flaws, for example.
 
-name: Post-PR
+name: PR review companion
 
 on:
   workflow_run:
@@ -12,7 +12,7 @@ on:
       - completed
 
 jobs:
-  tests:
+  review:
     runs-on: ubuntu-latest
 
     if: >
