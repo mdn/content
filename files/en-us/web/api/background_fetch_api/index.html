@@ -44,7 +44,7 @@ tags:
   // Provide fallback downloading.
 }</pre>
 
-<p>To begin using Background Fetch you need to have already registered a service worker. Then use <code>backgroundFetch.fetch()</code> to perform a fetch. This
+<p>Using Background Fetch requires a registered a service worker. Then call <code>backgroundFetch.fetch()</code> to perform a fetch. This
 returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}}.</p>
 
 <p>A background fetch may fetch a number of files. In our example the fetch requests an MP3 and a JPEG, this enables a package of files that the user sees as one item (for example a podcast and artwork) to be downloaded at once.</p>
