@@ -13,7 +13,7 @@ tags:
 
 <h2>Concepts and Usage</h2>
 
-<p>When a web application requires the user to download some large files, this often presents a problem in that the user needs to stay connected to the page for the download to complete. If they lose connectivity, close the tabm or navigate away from the page the download stops.</p>
+<p>When a web application requires the user to download large files, this often presents a problem in that the user needs to stay connected to the page for the download to complete. If they lose connectivity, close the tab or navigate away from the page the download stops.</p>
 
 <p>The {{domxref("Background Sync API")}} provides a way for service workers to defer processing until a user is connected, however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and in order to conserve battery life and to prevent unwanted taks happening in the background the browser will at some point terminate the task.</p>
 
