@@ -18,7 +18,7 @@ tags:
 
 <p>A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses <code>port1</code>, and the app at the other end of the port uses <code>port2</code> — you send a message to <code>port2</code>, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)</p>
 
-<p>When these transferable objects are transferred, they are deactivated on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.</p>
+<p>When these transferable objects are transferred, they are no longer usable on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.</p>
 
 <p>The other browsing context can listen for the message using {{domxref("MessagePort.onmessage")}}, and grab the contents of the message using the event's <code>data</code> attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.</p>
 
