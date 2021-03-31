@@ -137,7 +137,7 @@ mySet1.has(document.querySelector('body')) // true
 // converting between Set and Array
 const mySet2 = new Set([1, 2, 3, 4])
 mySet2.size                    // 4
-mySet2                         // {1, 2, 3, 4}
+[...mySet2]                    // [1, 2, 3, 4]
 
 // intersect can be simulated via
 const intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
