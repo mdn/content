@@ -11,11 +11,15 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code>TimeRanges</code> interface is used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements.</p>
+<p>When loading a media resource for use by an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the <strong><code>TimeRanges</code></strong> interface is used for representing the time ranges of the media resource that have been buffered, the time ranges that have been played, and the time ranges that are seekable.</p>
 
-<p>A <code>TimeRanges</code> object includes one or more ranges of time, each specified by a starting and ending time offset. You reference each time range by using the <code>start()</code> and <code>end()</code> methods, passing the index number of the time range you want to retrieve.</p>
+<p>A <code>TimeRanges</code> object includes one or more ranges of time, each specified by a starting time offset and an ending time offset. You reference each time range by using the <code>start()</code> and <code>end()</code> methods, passing the index number of the time range you want to retrieve.</p>
 
-<p>The term "<a href="https://www.w3.org/TR/html52/semantics-embedded-content.html#normalized-timeranges-object">normalized TimeRanges object</a>" indicates that ranges in such an object are ordered, don't overlap, aren't empty, and don't touch (adjacent ranges are folded into one bigger range).</p>
+<h2>Normalized TimeRanges objects</h2>
+
+<p>The {{domxref("HTMLMediaElement.buffered", "buffered")}}, {{domxref("HTMLMediaElement.played", "played")}}, and {{domxref("HTMLMediaElement.seekable", "seekable")}} properties of {{domxref("HTMLMediaElement")}} objects all return a <strong>normalized TimeRanges object</strong> — which <a href="https://html.spec.whatwg.org/multipage/media.html#normalised-timeranges-object">the spec describes</a> as having the following characteristics:</p>
+
+<p><em>The ranges in such an object are ordered, don't overlap, and don't touch (adjacent ranges are folded into one bigger range). A range can be empty (referencing just a single moment in time).</em></p>
 
 <h2 id="Properties">Properties</h2>
 

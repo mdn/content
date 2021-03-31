@@ -11,10 +11,7 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>HTMLMediaElement.buffered</code></strong> read-only property returns
-  a new {{domxref("TimeRanges")}} object that indicates the ranges of the media source
-  that the browser has buffered (if any) at the moment the <code>buffered</code> property
-  is accessed.</p>
+<p>The <strong><code>buffered</code></strong> read-only property of {{domxref("HTMLMediaElement")}} objects returns a new static <a href="/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects">normalized TimeRanges object</a> that represents the ranges of the media resource, if any, that the user agent has buffered at the moment the <code>buffered</code> property is accessed.</p>
 
 <div class="note"><strong>Note:</strong> This feature is not available in <a
     href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</div>
@@ -26,10 +23,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("TimeRanges")}} object. This object is <a
-    href="/en-US/docs/Web/API/TimeRanges">normalized</a>, which means that ranges are
-  ordered, don't overlap, aren't empty, and don't touch (adjacent ranges are folded into
-  one bigger range).</p>
+<p>A new static <a href="/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects">normalized TimeRanges object</a> that represents the ranges of the media resource, if any, that the user agent has buffered at the moment the <code>buffered</code> property is accessed.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -47,16 +41,14 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('HTML WHATWG', "embedded-content.html#media-elements",
-        "HTMLMediaElement.buffered")}}</td>
+      <td>{{SpecName('HTML WHATWG', "https://html.spec.whatwg.org/multipage/media.html#dom-media-buffered", "buffered")}}</td>
       <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change from {{SpecName('HTML5 W3C')}}</td>
+      <td></td>
     </tr>
     <tr>
-      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement",
-        "HTMLMediaElement.buffered")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
+      <td>{{SpecName('Media Source Extensions','#htmlmediaelement-extensions')}}</td>
+      <td>{{Spec2('Media Source Extensions')}}</td>
+      <td>Specifies a new algorithm for returning the buffered ranges of an element whose source is a {{domxref("MediaSource")}} object.</td>
     </tr>
   </tbody>
 </table>
