@@ -7,9 +7,6 @@ name: Post-PR
 
 on:
   workflow_run:
-    # Once we have it, this should always depend on that workflow check
-    # that assures there wasn't any editing of the non-content files.
-    # I.e. https://github.com/mdn/content/issues/2985
     workflows: ["PR Test"]
     types:
       - completed
