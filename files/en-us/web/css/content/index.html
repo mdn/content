@@ -7,7 +7,7 @@ tags:
   - CSS Property
   - Generated Content
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,23 +17,24 @@ tags:
 content: normal;
 content: none;
 
-/* <a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a> values */
-content: url("http://www.example.com/test.png");
+/* &lt;image&gt; values */
+content: url(&quot;http://www.example.com/test.png&quot;);
 content: linear-gradient(#e66465, #9198e5);
+content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* alt text for generated content, added in the Level 3 specification */
-content: url("http://www.example.com/test.png") / "This is the alt text";
+content: url(&quot;http://www.example.com/test.png&quot;) / &quot;This is the alt text&quot;;
 
 /* &lt;string&gt; value */
-content: "prefix";
+content: &quot;prefix&quot;;
 
-/* <a href="/en-US/docs/Web/CSS/counter">&lt;counter&gt;</a> values, optionally with <a href="/en-US/docs/Web/CSS/list-style-type">&lt;list-style-type&gt; </a>*/
+/* &lt;counter&gt; values, optionally with &lt;list-style-type&gt; */
 content: counter(chapter_counter);
 content: counter(chapter_counter, upper-roman);
-content: counters(section_counter, ".");
-content: counters(section_counter, ".", <code>decimal-leading-zero</code>);
+content: counters(section_counter, &quot;.&quot;);
+content: counters(section_counter, &quot;.&quot;, decimal-leading-zero);
 
-/* <a href="/en-US/docs/Web/CSS/attr">attr()</a> value linked to the HTML attribute value */
+/* attr() value linked to the HTML attribute value */
 content: attr(value string);
 
 /* Language- and position-dependent keywords */
@@ -63,13 +64,13 @@ content: unset;
  <dt>{{cssxref("&lt;string&gt;")}}</dt>
  <dd>Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, <code>\000A9</code> represents the copyright symbol.</dd>
  <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("&lt;url&gt;")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.</dd>
- <dt>{{cssxref("&lt;counter&gt;")}}</dt>
- <dd>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter")}} or {{cssxref("counters")}} function.</dd>
+ <dd>An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element()", "element()")}} function, denoting the content to display.</dd>
+ <dt>{{cssxref("counter()")}}</dt>
+ <dd>The value of a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS counter</a>, generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.</dd>
  <dd>
- <p>The {{cssxref("counter")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
+ <p>The {{cssxref("counter()")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
 
- <p>The {{cssxref("counters")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
+ <p>The {{cssxref("counters()")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (<code>decimal</code> by default).</p>
  </dd>
  <dt><code>attr(x)</code></dt>
  <dd>The value of the element's attribute <code>x</code> as a string. If there is no attribute <code>x</code>, an empty string is returned. The case-sensitivity of attribute names depends on the document language.</dd>
@@ -81,11 +82,11 @@ content: unset;
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>CSS-generated content is not included in the <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM</a>. Because of this, it will not be represented in the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">accessibility tree</a> and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.</p>
+<p>CSS-generated content is not included in the <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM</a>. Because of this, it will not be represented in the <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">accessibility tree</a> and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.</p>
 
 <ul>
  <li><a href="https://tink.uk/accessibility-support-for-css-generated-content/">Accessibility support for CSS generated content – Tink</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">Explanation of WCAG, Guideline 1.3 – MDN</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways">Explanation of WCAG, Guideline 1.3 – MDN</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -237,7 +238,7 @@ li {
 
 <h3 id="Element_replacement">Element replacement</h3>
 
-<p>This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("&lt;url&gt;")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with <code>::before</code> or <code>::after</code> will not be generated as the contents of the element have been replaced.</p>
+<p>This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with <code>::before</code> or <code>::after</code> will not be generated as the contents of the element have been replaced.</p>
 
 <h4 id="HTML_5">HTML</h4>
 
