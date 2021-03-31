@@ -333,6 +333,8 @@ function promiseGetWord(parityInfo) {
 
 <p>The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
 
+<p>By clicking the button several times in a short amount of time, you'll even see the different promises being fulfilled one after another.</p>
+
 <h4>HTML</h4>
 
 <pre class="brush: html">&lt;button id="make-promise"&gt;Make a promise!&lt;/button&gt;
@@ -382,9 +384,7 @@ if ("Promise" in window) {
 }
 </pre>
 
-<p>This example is started by clicking the button. (You need a browser that supports <code>Promise</code>. )</p>
-
-<p>By clicking the button several times in a short amount of time, you'll even see the different promises being fulfilled one after another.</p>
+<h4>Result</h4>
 
 <p>{{EmbedLiveSample("Advanced_Example", "500", "200")}}</p>
 
