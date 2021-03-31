@@ -26,8 +26,8 @@ tags:
  <dt><em>aMessage</em></dt>
  <dd>The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
  <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (<em>neutered</em>) in the context it was sent from and it becomes available only to the main thread it was sent to.</dd>
- <dd>Only {{domxref("MessagePort")}} and {{domxref("ArrayBuffer")}} objects can be transferred.</dd>
+ <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.</dd>
+ <dd>Only {{domxref("MessagePort")}} and {{jsxref("ArrayBuffer")}} objects can be transferred.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
