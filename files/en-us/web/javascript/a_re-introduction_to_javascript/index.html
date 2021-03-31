@@ -686,7 +686,20 @@ avgArray([2, 3, 4, 5]); // 3.5
 <p>For instance: <code>avg(...numbers)</code></p>
 </div>
 
-<p>JavaScript lets you create anonymous functions.</p>
+<h3 id="anonymous_functions">Anonymous functions</h3>
+
+<p>JavaScript lets you create anonymous functions — that is, functions without names:</p>
+
+<pre class="brush: js">function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+</pre>
+
+<p>But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:</p>
 
 <pre class="brush: js">var avg = function() {
   var sum = 0;
@@ -697,19 +710,18 @@ avgArray([2, 3, 4, 5]); // 3.5
 };
 </pre>
 
-<p>This is semantically equivalent to the <code>function avg()</code> form. It's extremely powerful, as it lets you put a full function definition anywhere that you would normally put an expression. This enables all sorts of clever tricks. Here's a way of "hiding" some local variables — like block scope in C:</p>
+<p>That makes the anonymous function invocable by calling <code>avg()</code> with some arguments — that is, it’s semantically equivalent to declaring the function using the <code>function avg()</code> named-function form.</p>
 
-<pre class="brush: js">var a = 1;
-var b = 2;
+<p>But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript  provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an <a href="/en-US/docs/Glossary/IIFE">Immediately invoked function expression (IIFE)</a>, and the syntax for using it with an anonymous function looks like this:
 
-(function() {
-  var b = 3;
-  a += b;
+<pre class="brush: js">(function() {
+  // …
 })();
-
-a; // 4
-b; // 2
 </pre>
+
+<p>Further details on IIFEs are out of scope for this introductory article — but a good example of what they’re particularly useful for is in the <a href="/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">Emulating private methods with closures</a> section of the <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a> article.</p>
+
+<h3 id="recursive_functions">Recursive functions</h3>
 
 <p>JavaScript allows you to call functions recursively. This is particularly useful for dealing with tree structures, such as those found in the browser DOM.</p>
 
