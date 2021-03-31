@@ -74,40 +74,24 @@ jobs:
           cd yari/deployer
           poetry install
 
-      - name: Analyze built content
+      - name: Deploy and analyze built content
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
-        run: |
-          PR_NUMBER=`cat build/NR`
 
-          cd yari/deployer
-          poetry run deployer analyze-pr-build \
-            --analyze-flaws --analyze-dangerous-content \
-            --github-token="${{secrets.GITHUB_TOKEN}}" \
-            --repo=$GITHUB_REPOSITORY \
-            --pr-number=$PR_NUMBER \
-            $BUILD_OUT_ROOT
-
-      - name: Deploy built content
-        env:
           DEPLOYER_BUCKET_NAME: mdn-content-dev
-
           AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
-
-          BUILD_OUT_ROOT: ${{ github.workspace }}/build
-
           DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
 
         run: |
           PR_NUMBER=`cat build/NR`
 
           cd yari/deployer
-
           poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
           poetry run deployer analyze-pr-build \
-            --github-token="${{secrets.GITHUB_TOKEN}}" \
             --prefix="pr$PR_NUMBER" \
+            --analyze-flaws --analyze-dangerous-content \
+            --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
             $BUILD_OUT_ROOT
