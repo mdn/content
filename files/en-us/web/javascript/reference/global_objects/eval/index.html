@@ -2,12 +2,12 @@
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
 tags:
-- Evaluating JavaScript
-- JavaScript
-- Method
-- Reference
-- Warning
-- eval
+  - Evaluating JavaScript
+  - JavaScript
+  - Method
+  - Reference
+  - Warning
+  - eval
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>eval(<em>string</em>)</code></pre>
+<pre class="brush: js">eval(string)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -288,9 +288,7 @@ elt.addEventListener('click', function() { ... } , false); </pre>
 <p>If the string you're calling <code>eval()</code> on contains data (for example, an
   array: <code>"[1, 2, 3]"</code>), as opposed to code, you should consider switching to
   {{Glossary("JSON")}}, which allows the string to use a subset of JavaScript syntax to
-  represent data. See also <a
-    href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and
-    JavaScript in extensions</a>.</p>
+  represent data.</p>
 
 <p>Note that since JSON syntax is limited compared to JavaScript syntax, many valid
   JavaScript literals will not parse as JSON. For example, trailing commas are not allowed
@@ -300,16 +298,8 @@ elt.addEventListener('click', function() { ... } , false); </pre>
 <h3 id="Pass_data_instead_of_code">Pass data instead of code</h3>
 
 <p>For example, an extension designed to scrape contents of web-pages could have the
-  scraping rules defined in <a href="/en-US/docs/XPath">XPath</a> instead of JavaScript
+  scraping rules defined in <a href="/en-US/docs/Web/XPath">XPath</a> instead of JavaScript
   code.</p>
-
-<h3 id="Run_code_with_limited_privileges">Run code with limited privileges</h3>
-
-<p>If you must run the code, consider running it with reduced privileges. This advice
-  applies mainly to extensions and XUL applications, which can use <a
-    href="/en-US/docs/Components.utils.evalInSandbox"
-    title="Components.utils.evalInSandbox">Components.utils.evalInSandbox</a> for this.
-</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -400,6 +390,6 @@ var fct2 = eval(fctStr2)  // return a function
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property
       accessors</a></li>
   <li><a
-      href="/en-US/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts">WebExtensions:
+      href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#using_eval()_in_content_scripts">WebExtensions:
       Using eval in content scripts</a></li>
 </ul>
