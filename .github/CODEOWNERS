@@ -95,3 +95,5 @@
 # and if we add another reviewer, the auto-merge will cease to be automatic.
 /package.json @peterbe
 /yarn.lock    @peterbe
+
+# Test sensitive code PR job
