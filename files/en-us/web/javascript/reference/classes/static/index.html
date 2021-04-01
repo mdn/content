@@ -46,31 +46,32 @@ static <var>propertyName </var>[= <var>value</var>];
 <pre class="brush: js">class Triple {
   static customName = 'Tripler';
   static description = 'I triple any number you provide';
-  static triple(n = 1) {
+  static calculate(n = 1) {
     return n * 3;
   }
 }
 
-class BiggerTriple extends Triple {
+class SquaredTriple extends Triple {
   static longDescription;
   static description = 'I square the triple of any number you provide';
-  static triple(n) {
-    return super.triple(n) * super.triple(n);
+  static calculate(n) {
+    return super.calculate(n) * super.calculate(n);
   }
 }
 
-console.log(Triple.description);   // 'I triple any number you provide'
-console.log(Triple.triple());      // 3
-console.log(Triple.triple(6));     // 18
+console.log(Triple.description);            // 'I triple any number you provide'
+console.log(Triple.calculate());            // 3
+console.log(Triple.calculate(6));           // 18
 
-var tp = new Triple();
+const tp = new Triple();
 
-console.log(BiggerTriple.triple(3));        // 81 (not affected by parent's instantiation)
-console.log(BiggerTriple.description);      // 'I square the triple of any number you provide'
-console.log(BiggerTriple.longDescription);  // undefined
-console.log(BiggerTriple.customName);       // 'Tripler'
+console.log(SquaredTriple.calculate(3));    // 81 (not affected by parent's instantiation)
+console.log(SquaredTriple.description);     // 'I square the triple of any number you provide'
+console.log(SquaredTriple.longDescription); // undefined
+console.log(SquaredTriple.customName);      // 'Tripler'
 
-console.log(tp.triple());         // 'tp.triple is not a function'.
+// This throws because calculate() is a static member, not an instance member.
+console.log(tp.calculate());                // 'tp.calculate is not a function'
 </pre>
 
 <h3 id="Calling_static_members_from_another_static_method">Calling static members from
@@ -99,7 +100,7 @@ StaticMethodCall.anotherStaticMethod();
 <h3 id="Calling_static_members_from_a_class_constructor_and_other_methods">Calling static
   members from a class constructor and other methods</h3>
 
-<p>Static members are not directly accessible using the {{jsxref("this")}} keyword from
+<p>Static members are not directly accessible using the {{JSxRef("Operators/this", "this")}} keyword from
   non-static methods. You need to call them using the class name:
   <code>CLASSNAME.STATIC_METHOD_NAME()</code> /
   <code>CLASSNAME.STATIC_PROPERTY_NAME</code> or by calling the method as a property of
