@@ -53,32 +53,6 @@ tags:
   as <code>Math.sign()</code>, rather than as a method of a <code>Math</code> object you
   created (<code>Math</code> is not a constructor).</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">if (!Math.sign) {
-  Math.sign = function(x) {
-    // If x is NaN, the result is NaN.
-    // If x is -0, the result is -0.
-    // If x is +0, the result is +0.
-    // If x is negative and not -0, the result is -1.
-    // If x is positive and not +0, the result is +1.
-    return ((x &gt; 0) - (x &lt; 0)) || +x;
-    // A more aesthetic pseudo-representation:
-    //
-    // ( (x &gt; 0) ? 1 : 0 )  // if x is positive, then positive one
-    //          +           // else (because you can't be both - and +)
-    // ( (x &lt; 0) ? -1 : 0 ) // if x is negative, then negative one
-    //         ||           // if x is 0, -0, or NaN, or not a number,
-    //         +x           // then the result will be x, (or) if x is
-    //                      // not a number, then x converts to number
-  };
-}
-</pre>
-
-<p>In the above polyfill, no extra type-coercing is needed to make <code>(x &gt; 0)</code>
-  or <code>(x &lt; 0)</code> numbers because subtracting them from each other forces a
-  type conversion from booleans to numbers.</p>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Math.sign">Using Math.sign()</h3>
@@ -119,6 +93,8 @@ Math.sign();      // NaN
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Math.abs()")}}</li>
   <li>{{jsxref("Math.ceil()")}}</li>
   <li>{{jsxref("Math.floor()")}}</li>
