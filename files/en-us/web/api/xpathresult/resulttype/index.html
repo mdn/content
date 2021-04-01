@@ -2,12 +2,12 @@
 title: XPathResult.resultType
 slug: Web/API/XPathResult/resultType
 tags:
-- API
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathResult
 ---
 <div>{{APIRef("DOM XPath")}}</div>
 
@@ -116,11 +116,11 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">var xpath = "//div";
+<pre class="brush: js">var xpath = &quot;//div&quot;;
 var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
-document.querySelector("output").textContent =
-  result.resultType &gt;= XPathResult.<code>UNORDERED_NODE_ITERATOR_TYPE &amp;&amp;
-  </code>result.resultType &lt;= XPathResult.<code>FIRST_ORDERED_NODE_TYPE</code>;
+document.querySelector(&quot;output&quot;).textContent =
+  result.resultType &gt;= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &amp;&amp;
+  result.resultType &lt;= XPathResult.FIRST_ORDERED_NODE_TYPE;
 </pre>
 
 <h3 id="Result">Result</h3>

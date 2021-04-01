@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p>The read-only <code><strong>XMLHttpRequest.statusText</strong></code> property returns a <a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the response's status message as returned by the HTTP server. Unlike <a href="/en-US/docs/Web/API/XMLHTTPRequest/status" title="The XMLHttpRequest.status property returns an unsigned short with the status of the response of the request. These are the standard HTTP status codes. For example, status is 200 denotes a successful request. Before the request is complete, the value of status will be 0."><code>XMLHTTPRequest.status</code></a> which indicates a numerical status code, this property contains the <em>text</em> of the response status, such as "OK" or "Not Found". If the request's <code><a href="/en-US/docs/Web/API/XMLHttpRequest/readyState">readyState</a></code> is in <code>UNSENT</code> or <code>OPENED</code> state, the value of <code>statusText</code> will be an empty string.</p>
+<p>The read-only <code><strong>XMLHttpRequest.statusText</strong></code> property returns a <a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the response's status message as returned by the HTTP server. Unlike <a href="/en-US/docs/Web/API/XMLHttpRequest/status"><code>XMLHTTPRequest.status</code></a> which indicates a numerical status code, this property contains the <em>text</em> of the response status, such as "OK" or "Not Found". If the request's <code><a href="/en-US/docs/Web/API/XMLHttpRequest/readyState">readyState</a></code> is in <code>UNSENT</code> or <code>OPENED</code> state, the value of <code>statusText</code> will be an empty string.</p>
 
 <p>If the server response doesn't explicitly specify a status text, <code>statusText</code> will assume the default value "OK".</p>
 
@@ -72,7 +72,7 @@ xhr.send(null);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>List of <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
+ <li>List of <a href="/en-US/docs/Web/HTTP/Status">HTTP response codes</a></li>
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
  <li><a href="https://fetch.spec.whatwg.org/#concept-response-status-message">WHATWG Fetch Living Standard</a></li>
 </ul>

@@ -80,7 +80,7 @@ tags:
   </tr>
   <tr>
    <td>{{domxref("XRSession.select_event", "select")}}</td>
-   <td>An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session when one of the session's input sources has successfully completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions">primary action</a>. This generally corresponds to the user pressing a trigger, touchpad, or button, speaks a command, or performs a recognizable gesture. The <code>select</code> event is sent after the <code>selectstart</code> event is sent and immediately before the <code>selectend</code> event is sent. If <code>select</code> is <em>not</em> sent, then the select action was aborted before being completed.<br>
+   <td>An event of type {{domxref("XRInputSourceEvent")}} which is sent to the session when one of the session's input sources has successfully completed a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions">primary action</a>. This generally corresponds to the user pressing a trigger, touchpad, or button, speaks a command, or performs a recognizable gesture. The <code>select</code> event is sent after the <code>selectstart</code> event is sent and immediately before the <code>selectend</code> event is sent. If <code>select</code> is <em>not</em> sent, then the select action was aborted before being completed.<br>
     Also available through the {{domxref("XRSession.onselect", "onselect")}} event handler property.</td>
   </tr>
   <tr>
@@ -95,12 +95,12 @@ tags:
   </tr>
   <tr>
    <td>{{domxref("XRSession.squeeze_event", "squeeze")}}</td>
-   <td>An {{domxref("XRInputSourceEvent")}} sent to indicate that a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a> has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the <code>squeezeend</code> event is sent to indicate that the squeeze action is over.<br>
+   <td>An {{domxref("XRInputSourceEvent")}} sent to indicate that a <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions">primary squeeze action</a> has successfully completed. This indicates that the device being squeezed has been released, and may represent dropping a grabbed object, for example. It is sent immediately before the <code>squeezeend</code> event is sent to indicate that the squeeze action is over.<br>
     Also available through the {{domxref("XRSession.onsqueeze", "onsqueeze")}} event handler property.</td>
   </tr>
   <tr>
    <td>{{domxref("XRSession.squeezeend_event", "squeezeend")}}</td>
-   <td>An {{domxref("XRInputSourceEvent")}} sent to the <code>XRSession</code> when the <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_squeeze_actions">primary squeeze action</a> ends, whether or not the action was successful.<br>
+   <td>An {{domxref("XRInputSourceEvent")}} sent to the <code>XRSession</code> when the <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions">primary squeeze action</a> ends, whether or not the action was successful.<br>
     Also available using the {{domxref("XRSession.onsqueezeend", "onsqueezeend")}} event handler property.</td>
   </tr>
   <tr>
