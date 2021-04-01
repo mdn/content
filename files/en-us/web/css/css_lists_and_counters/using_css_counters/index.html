@@ -60,9 +60,9 @@ h3::before {
 
 <p>A counter must not necessarily be shown every time is incremented. This example counts all links, however the counter is shown only when a link has no text, as a convenient replacement.</p>
 
-<h4 id="CSS">CSS</h4>
+<h4 id="CSS2">CSS</h4>
 
-<pre class="brush: css"><p>:root {
+<pre class="brush: css">:root {
   counter-reset: link;
 }
 
@@ -72,15 +72,15 @@ a[href] {
 
 a[href]:empty::after {
   content: "[" counter(link) "]";
-}</p></pre>
+}</pre>
 
-<h4 id="HTML">HTML</h4>
+<h4 id="HTML2">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;See &lt;a href="https://www.mozilla.org/"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Do not forget to &lt;a href="contact-me.html"&gt;leave a message&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;See also &lt;a href="https://developer.mozilla.org/"&gt;&lt;/a&gt;&lt;/p&gt;</pre>
 
-<h4 id="Result">Result</h4>
+<h4 id="Result2">Result</h4>
 
 <p>{{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}</p>
 
