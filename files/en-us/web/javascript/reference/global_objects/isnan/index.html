@@ -10,7 +10,7 @@ tags:
 
 <p>The <code><strong>isNaN()</strong></code> function determines whether a value is
   {{jsxref("NaN")}} or not. Note, coercion inside the <code>isNaN</code> function has <a
-    href="#description">interesting</a> rules; you may alternatively want to use
+    href="#Description">interesting</a> rules; you may alternatively want to use
   {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</div>
@@ -79,8 +79,8 @@ tags:
 <p>A polyfill for <code>isNaN</code> would be (the polyfill leverages the unique
   never-equal-to-itself characteristic of <code>NaN</code>):</p>
 
-<pre class="brush: js">var isNaN = function(value) {
-    var n = Number(value);
+<pre class="brush: js">const isNaN = function(value) {
+    const n = Number(value);
     return n !== n;
 };</pre>
 
