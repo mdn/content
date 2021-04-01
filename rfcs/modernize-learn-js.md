@@ -27,6 +27,14 @@ Examples:
   old-school constructors and prototypes are introduced first, and ES class
   syntax is tacked on the end as an afterthought. This should be the other way
   round.
+- We did some work on making sure that `const`/`let` is used in appropriate
+  Places instead of `var`. We should check to see if there is any more work to
+  do here.
+- We should include a guide early on about targeting browsers, where we could
+  cover things like considering which browsers/non-browser runtimes you need to
+  support, making it clear that we only support modern browsers in these guides,
+  and setting up tools like Babel.js if you want to support ancient engines.
+
 
 ## Priority assessment
 
