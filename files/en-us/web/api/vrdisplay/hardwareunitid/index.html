@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>hardwareUnitId</code></strong> read-only property of the {{domxref("VRDevice")}} interface returns the distinct hardware ID for the overall hardware unit that this <code>VRDevice</code> is a part of. All devices that are part of the same physical piece of hardware will have the same <code>hardwareUnitId</code>.</p>
+<p>The <strong><code>hardwareUnitId</code></strong> read-only property of the {{domxref("VRDisplay")}} interface returns the distinct hardware ID for the overall hardware unit that this <code>VRDevice</code> is a part of. All devices that are part of the same physical piece of hardware will have the same <code>hardwareUnitId</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following snippet (see our <a href="https://mdn.github.io/webvr-tests/vrdevice/">VRDevice example</a>) returns an array of all the {{domxref("VRDevice")}}s connected to your computer via {{domxref("Navigator.getVRDevices()")}}. For each connected device it then prints out the <code>hardwareUnitId</code>, {{domxref("VRDevice.deviceId")}}, and {{domxref("VRDevice.deviceName")}}.</p>
+<p>The following snippet (see our <a href="https://mdn.github.io/webvr-tests/vrdevice/">VRDevice example</a>) returns an array of all the {{domxref("VRDisplay")}}s connected to your computer via {{domxref("Navigator.getVRDisplays")}}. For each connected device it then prints out the <code>hardwareUnitId</code>, {{domxref("VRDisplay.displayId")}}, and {{domxref("VRDisplay.displayName")}}.</p>
 
 <pre class="brush: js">var list = document.querySelector('ul');
 var info = document.querySelector('p');
