@@ -29,9 +29,12 @@ jobs:
                repo: context.repo.repo,
                run_id: ${{github.event.workflow_run.id }},
             });
-            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+            var matchArtifacts = artifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "build"
-            })[0];
+            });
+            console.log(matchArtifacts);
+            console.log(matchArtifacts.length);
+            var matchArtifact = matchArtifacts[0];
             var download = await github.actions.downloadArtifact({
                owner: context.repo.owner,
                repo: context.repo.repo,
