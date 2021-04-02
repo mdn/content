@@ -39,7 +39,7 @@ tags:
 
 <ol>
  <li>The caller captures local Media via {{domxref("MediaDevices.getUserMedia")}} </li>
- <li>The caller creates <code>RTCPeerConnection</code> and called {{domxref("RTCPeerConnection.addTrack()")}} (Since <code>addStream</code> is deprecating)</li>
+ <li>The caller creates <code>RTCPeerConnection</code> and calls {{domxref("RTCPeerConnection.addTrack()")}} (Since <code>addStream</code> is deprecating)</li>
  <li>The caller calls {{domxref("RTCPeerConnection.createOffer()")}} to create an offer.</li>
  <li>The caller calls {{domxref("RTCPeerConnection.setLocalDescription()")}} to set that offer as the <em>local description</em> (that is, the description of the local end of the connection).</li>
  <li>After setLocalDescription(), the caller asks STUN servers to generate the ice candidates</li>
