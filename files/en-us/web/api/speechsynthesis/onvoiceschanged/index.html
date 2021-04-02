@@ -40,7 +40,8 @@ tags:
   With Chrome however, you have to wait for the event to fire before populating the list,
   hence the bottom if statement seen below.</p>
 
-<pre class="brush: js">var voices = [];
+<pre class="brush: js">var synth = window.speechSynthesis;
+var voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();

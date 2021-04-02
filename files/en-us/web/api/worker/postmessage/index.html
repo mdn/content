@@ -6,14 +6,13 @@ tags:
   - JavaScript
   - Method
   - Reference
-  - Référence(2)
   - Web Workers
   - Worker
   - postMessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
+<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
 
 <p>Note this method blocks the thread which receives the message.</p>
 
@@ -27,11 +26,11 @@ tags:
 
 <dl>
  <dt><em>message</em></dt>
- <dd>The object to deliver to the worker; this will be in the <code>data</code> field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
+ <dd>The object to deliver to the worker; this will be in the <code>data</code> field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
  <dd>If the <code>message</code> parameter is <em>not</em> provided, a <code>TypeError</code> will be thrown. If the data to be passed to the worker is unimportant, <code>null</code> or <code>undefined</code> can be passed explicitly.</dd>
  <dt><em>transfer</em> {{optional_inline}}</dt>
- <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (<em>neutered</em>) in the context it was sent from and becomes available only to the worker it was sent to.</dd>
- <dd>Transferable objects are instances of classes like {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. <code>null</code> is not an acceptable value for <code>transfer</code>.</dd>
+ <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.</dd>
+ <dd>Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. <code>null</code> is not an acceptable value for <code>transfer</code>.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -55,7 +54,7 @@ second.onchange = function() {
 }
 </pre>
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+<p>For a full example, see our <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">simple worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run example</a>).</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>postMessage()</code> can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.</p>

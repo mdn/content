@@ -31275,15 +31275,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioContext/createWaveTable": {
-    "modified": "2019-03-23T23:13:58.026Z",
-    "contributors": [
-      "Sheppy",
-      "Jedipedia",
-      "teoli",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/AudioContext/getOutputTimestamp": {
     "modified": "2020-10-15T21:53:02.795Z",
     "contributors": [
@@ -57197,17 +57188,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/HTMLObjectElement/typeMustMatch": {
-    "modified": "2020-10-15T21:29:52.384Z",
-    "contributors": [
-      "sideshowbarker",
-      "jpmedley",
-      "mfluehr",
-      "connorshea",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/HTMLObjectElement/useMap": {
     "modified": "2020-10-15T22:17:32.888Z",
     "contributors": [
@@ -68939,32 +68919,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Node/localName": {
-    "modified": "2020-10-15T21:04:20.872Z",
-    "contributors": [
-      "Mems",
-      "fscholz",
-      "abbycar",
-      "Sebastianz",
-      "jpmedley",
-      "teoli",
-      "kscarfone",
-      "khushboo_Dwivedi",
-      "gurdev_singh",
-      "Sheppy",
-      "ethertank",
-      "trevorh",
-      "ziyunfei",
-      "Hsivonen",
-      "Mgjbot",
-      "Taken",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/Node/lookupNamespaceURI": {
     "modified": "2020-10-15T21:04:19.741Z",
     "contributors": [
@@ -68997,31 +68951,6 @@
       "ziyunfei",
       "vali29",
       "Brettz9"
-    ]
-  },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2020-10-15T21:14:34.078Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "Sebastianz",
-      "stuart",
-      "timdown",
-      "teoli",
-      "kscarfone",
-      "Reachmeatshivam",
-      "Sheppy",
-      "ethertank",
-      "Jürgen Jeka",
-      "Hsivonen",
-      "Brettz9",
-      "Mgjbot",
-      "Nickolay",
-      "20after4",
-      "Ptak82",
-      "mindcrash",
-      "Dria",
-      "JesseW"
     ]
   },
   "Web/API/Node/nextSibling": {
@@ -69239,28 +69168,6 @@
       "Fguisset",
       "Dria",
       "Callek",
-      "JesseW"
-    ]
-  },
-  "Web/API/Node/prefix": {
-    "modified": "2020-10-15T21:04:24.519Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "Sebastianz",
-      "flimzy",
-      "kscarfone",
-      "Khodaidad_Basharmand",
-      "Sheppy",
-      "ethertank",
-      "ziyunfei",
-      "trevorh",
-      "Mgjbot",
-      "Federico",
-      "Ptak82",
-      "Nickolay",
-      "Swanky",
-      "Dria",
       "JesseW"
     ]
   },
@@ -71116,29 +71023,6 @@
       "valtlai",
       "jpmedley",
       "fscholz"
-    ]
-  },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2020-10-15T21:05:55.635Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "adyouri",
-      "ExE-Boss",
-      "K-Gun",
-      "jszhou",
-      "uxfed",
-      "Alhadis",
-      "fscholz",
-      "jsx",
-      "411911.ca",
-      "Kartik_Chadha",
-      "teoli",
-      "ethertank",
-      "Sheppy",
-      "trevorh",
-      "ziyunfei",
-      "Jürgen Jeka"
     ]
   },
   "Web/API/ParentNode/children": {
@@ -122591,34 +122475,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/Guide/Events/Media_events": {
-    "modified": "2019-10-28T04:38:58.394Z",
-    "contributors": [
-      "MichalKrasowski",
-      "sideshowbarker",
-      "leandroruel",
-      "albinlarsson",
-      "fscholz",
-      "Y.Young",
-      "KevinBrogan",
-      "AlexanderEllis",
-      "Michael_Stanford",
-      "magic96",
-      "fabianTMC",
-      "teoli",
-      "markg",
-      "spicyj",
-      "jpmedley",
-      "mavsic",
-      "SBoudrias",
-      "chrisdavidmills",
-      "Jeremie",
-      "oncletom",
-      "Sheppy",
-      "Aria",
-      "jswisher"
-    ]
-  },
   "Web/Guide/Events/Mouse_gesture_events": {
     "modified": "2019-03-24T00:16:25.836Z",
     "contributors": [
@@ -165769,6 +165625,29 @@
       "chrisdavidmills",
       "david_ross",
       "jpmedley"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2020-10-15T21:05:55.635Z",
+    "contributors": [
+      "sideshowbarker",
+      "mfluehr",
+      "adyouri",
+      "ExE-Boss",
+      "K-Gun",
+      "jszhou",
+      "uxfed",
+      "Alhadis",
+      "fscholz",
+      "jsx",
+      "411911.ca",
+      "Kartik_Chadha",
+      "teoli",
+      "ethertank",
+      "Sheppy",
+      "trevorh",
+      "ziyunfei",
+      "Jürgen Jeka"
     ]
   }
 }

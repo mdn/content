@@ -51,39 +51,6 @@ tags:
   as <code>Math.trunc()</code>, rather than as a method of a <code>Math</code> object you
   created (<code>Math</code> is not a constructor).</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">if (!Math.trunc) {
-  Math.trunc = function(v) {
-    v = +v;
-    if (!isFinite(v)) return v;
-
-    return (v - v % 1)   ||   (v &lt; 0 ? -0 : v === 0 ? v : 0);
-
-    // returns:
-    //  0        -&gt;  0
-    // -0        -&gt; -0
-    //  0.2      -&gt;  0
-    // -0.2      -&gt; -0
-    //  0.7      -&gt;  0
-    // -0.7      -&gt; -0
-    //  Infinity -&gt;  Infinity
-    // -Infinity -&gt; -Infinity
-    //  NaN      -&gt;  NaN
-    //  null     -&gt;  0
-  };
-}
-</pre>
-
-<p>or:</p>
-
-<pre class="brush: js">if (!Math.trunc) {
-  Math.trunc = function (v) {
-    return v &lt; 0 ? Math.ceil(v) : Math.floor(v);
-  };
-}
-</pre>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Math.trunc">Using Math.trunc()</h3>
@@ -120,6 +87,8 @@ Math.trunc();         // NaN
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Math.abs()")}}</li>
   <li>{{jsxref("Math.ceil()")}}</li>
   <li>{{jsxref("Math.floor()")}}</li>

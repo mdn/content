@@ -2,25 +2,25 @@
 title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 tags:
-- Error
-- Errors
-- JavaScript
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
 <p>The JavaScript strict mode exception "can't assign to property" occurs when attempting
-  to create a property on <a href="/en-US/docs/Glossary/primitive">primitive</a> value
-  such as a <a href="/en-US/docs/Glossary/symbol">symbol</a>, a <a
-    href="/en-US/docs/Glossary/string">string</a>, a <a
-    href="/en-US/docs/Glossary/number">number</a> or a <a
-    href="/en-US/docs/Glossary/boolean">boolean</a>. <a
+  to create a property on <a href="/en-US/docs/Glossary/Primitive">primitive</a> value
+  such as a <a href="/en-US/docs/Glossary/Symbol">symbol</a>, a <a
+    href="/en-US/docs/Glossary/String">string</a>, a <a
+    href="/en-US/docs/Glossary/Number">number</a> or a <a
+    href="/en-US/docs/Glossary/Boolean">boolean</a>. <a
     href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a
     href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js">TypeError: <code class="highlighted" id="line-87">can't assign to property "x" on {y}: not an object</code> (Firefox)
+<pre class="brush: js">TypeError: can't assign to property &quot;x&quot; on {y}: not an object (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
 </pre>
 
@@ -31,11 +31,11 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 <h2 id="What_went_wrong">What went wrong?</h2>
 
 <p>In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to
-  create a property on <a href="/en-US/docs/Glossary/primitive">primitive</a> value such
-  as a <a href="/en-US/docs/Glossary/symbol">symbol</a>, a <a
-    href="/en-US/docs/Glossary/string">string</a>, a <a
-    href="/en-US/docs/Glossary/number">number</a> or a <a
-    href="/en-US/docs/Glossary/boolean">boolean</a>. <a
+  create a property on <a href="/en-US/docs/Glossary/Primitive">primitive</a> value such
+  as a <a href="/en-US/docs/Glossary/Symbol">symbol</a>, a <a
+    href="/en-US/docs/Glossary/String">string</a>, a <a
+    href="/en-US/docs/Glossary/Number">number</a> or a <a
+    href="/en-US/docs/Glossary/Boolean">boolean</a>. <a
     href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a
     href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
 
@@ -57,7 +57,7 @@ foo.bar = {}; // <span class="message-body-wrapper"><span class="message-flex-bo
 <h3 id="Fixing_the_issue">Fixing the issue</h3>
 
 <p>Either fix the code to prevent the <a
-    href="/en-US/docs/Glossary/primitive">primitive</a> from being used in such places, or
+    href="/en-US/docs/Glossary/Primitive">primitive</a> from being used in such places, or
   fix the issue is to create the object equivalent {{jsxref("Object")}}.</p>
 
 <pre class="brush: js example-good">'use strict';
@@ -70,5 +70,5 @@ foo.bar = {};
 
 <ul>
   <li>{{jsxref("Strict_mode")}}</li>
-  <li><a href="/en-US/docs/Glossary/primitive">primitive</a></li>
+  <li><a href="/en-US/docs/Glossary/Primitive">primitive</a></li>
 </ul>

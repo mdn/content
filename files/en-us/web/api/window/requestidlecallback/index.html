@@ -51,7 +51,7 @@ tags:
     <ul>
       <li><code>timeout</code>: If <code>timeout</code> is specified and has a positive
         value, and the callback has not already been called by the time <em>timeout</em>
-        milliseconds have passed, the callback will be called during the next idle period,
+        milliseconds have passed, a task to execute the callback is queued in the event loop,
         even if doing so risks causing a negative performance impact.</li>
     </ul>
   </dd>

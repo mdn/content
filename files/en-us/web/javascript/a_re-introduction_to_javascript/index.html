@@ -61,7 +61,9 @@ tags:
 
 <h2 id="Numbers">Numbers</h2>
 
-<p>Numbers in JavaScript are "double-precision 64-bit format IEEE 754 values", according to the spec —  There's <strong><em>no such thing as an integer</em></strong> in JavaScript (except {{jsxref("BigInt")}}), so you have to be a little careful. See this example:</p>
+<p>ECMAScript has two built-in numeric types: <strong>Number</strong> and <strong>BigInt</strong>.</p>
+
+<p>The Number type is a <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision 64-bit binary format IEEE 754 value</a> (numbers between -(2<sup>53</sup> − 1) and 2<sup>53</sup> − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a <em>representation</em> of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:</p>
 
 <pre class="brush: js">console.log(3 / 2);             // 1.5, <em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1</pre>
@@ -180,8 +182,8 @@ isFinite(NaN); // false
 <p>JavaScript has a boolean type, with possible values <code>true</code> and <code>false</code> (both of which are keywords.) Any value can be converted to a boolean according to the following rules:</p>
 
 <ol>
- <li><code>false</code>, <code>0</code>, empty strings (<code>""</code>), <code>NaN</code>, <code>null</code>, and <code>undefined</code> all become <code>false.</code></li>
- <li>All other values become <code>true.</code></li>
+ <li><code>false</code>, <code>0</code>, empty strings (<code>""</code>), <code>NaN</code>, <code>null</code>, and <code>undefined</code> all become <code>false</code>.</li>
+ <li>All other values become <code>true</code>.</li>
 </ol>
 
 <p>You can perform this conversion explicitly using the <code>Boolean()</code> function:</p>
@@ -286,14 +288,14 @@ x = x + 5;
 <p>JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by <code>if</code> and <code>else</code>; you can chain them together if you like:</p>
 
 <pre class="brush: js">var name = 'kittens';
-if (name == 'puppies') {
+if (name === 'puppies') {
   name += ' woof';
-} else if (name == 'kittens') {
+} else if (name === 'kittens') {
   name += ' meow';
 } else {
   name += '!';
 }
-name == 'kittens meow';
+name === 'kittens meow';
 </pre>
 
 <p>JavaScript has <code>while</code> loops and <code>do-while</code> loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:</p>
@@ -684,7 +686,20 @@ avgArray([2, 3, 4, 5]); // 3.5
 <p>For instance: <code>avg(...numbers)</code></p>
 </div>
 
-<p>JavaScript lets you create anonymous functions.</p>
+<h3 id="anonymous_functions">Anonymous functions</h3>
+
+<p>JavaScript lets you create anonymous functions — that is, functions without names:</p>
+
+<pre class="brush: js">function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+</pre>
+
+<p>But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:</p>
 
 <pre class="brush: js">var avg = function() {
   var sum = 0;
@@ -695,19 +710,18 @@ avgArray([2, 3, 4, 5]); // 3.5
 };
 </pre>
 
-<p>This is semantically equivalent to the <code>function avg()</code> form. It's extremely powerful, as it lets you put a full function definition anywhere that you would normally put an expression. This enables all sorts of clever tricks. Here's a way of "hiding" some local variables — like block scope in C:</p>
+<p>That makes the anonymous function invocable by calling <code>avg()</code> with some arguments — that is, it’s semantically equivalent to declaring the function using the <code>function avg()</code> named-function form.</p>
 
-<pre class="brush: js">var a = 1;
-var b = 2;
+<p>But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript  provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an <a href="/en-US/docs/Glossary/IIFE">Immediately invoked function expression (IIFE)</a>, and the syntax for using it with an anonymous function looks like this:
 
-(function() {
-  var b = 3;
-  a += b;
+<pre class="brush: js">(function() {
+  // …
 })();
-
-a; // 4
-b; // 2
 </pre>
+
+<p>Further details on IIFEs are out of scope for this introductory article — but a good example of what they’re particularly useful for is in the <a href="/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">Emulating private methods with closures</a> section of the <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a> article.</p>
+
+<h3 id="recursive_functions">Recursive functions</h3>
 
 <p>JavaScript allows you to call functions recursively. This is particularly useful for dealing with tree structures, such as those found in the browser DOM.</p>
 

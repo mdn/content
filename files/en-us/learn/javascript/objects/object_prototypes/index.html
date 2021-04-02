@@ -109,7 +109,7 @@ tags:
 <div class="note">
 <p><strong>Note</strong>: Before ECMAScript 2015, there wasn't officially a way to access an object's <code>prototype</code> directly — the "links" between the items in the chain are defined in an internal property, referred to as <code>[[prototype]]</code> in the specification for the JavaScript language (see {{glossary("ECMAScript")}}).</p>
 
-<p>Most modern browsers, however, do offer property available called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (that's 2 underscores either side), which contains the object's constructor's <code>prototype </code>object. For example, try <code>person1.__proto__</code> and <code>person1.__proto__.__proto__</code> to see what the chain looks like in code!</p>
+<p>Most modern browsers, however, do offer property available called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (that's 2 underscores either side), which contains the object's constructor's <code>prototype</code> object. For example, try <code>person1.__proto__</code> and <code>person1.__proto__.__proto__</code> to see what the chain looks like in code!</p>
 
 <p>Since ECMAScript 2015, you can access an object's prototype object indirectly via <code>Object.getPrototypeOf(obj)</code>.</p>
 </div>

@@ -151,7 +151,7 @@ users=gps
 
 <p><strong>Note: this assumes a generic sources list. If you have modified this file yourself, you may wish to ensure the contents are accurate when you perform the copy.</strong></p>
 
-<p>The reason we copy the APT sources is because <code>debootstrap </code>does not appear to configure all the sources by default (it doesn't define the "sources" sources, for example).</p>
+<p>The reason we copy the APT sources is because <code>debootstrap</code> does not appear to configure all the sources by default (it doesn't define the "sources" sources, for example).</p>
 
 <p>Once your sources list is copied over, enter your new environment and configure things:</p>
 
@@ -170,7 +170,7 @@ $ sudo apt-get build-dep firefox
 
 <p>Now, your new 32-bit operating system should be ready for building Firefox!</p>
 
-<p>One last step is ensuring that <code>configure </code>detects the proper system type. Since you are technically running on a 64-bit kernel, things could still be fooled.<br>
+<p>One last step is ensuring that <code>configure</code> detects the proper system type. Since you are technically running on a 64-bit kernel, things could still be fooled.<br>
   Run the following program from your mozilla source tree:</p>
 
 <pre>$ ./build/autoconf/config.guess

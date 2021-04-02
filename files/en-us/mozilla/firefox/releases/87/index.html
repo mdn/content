@@ -9,7 +9,12 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">March 23, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 was released on March 23, 2021.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p class="summary">See also <a href="https://hacks.mozilla.org/2021/03/in-march-we-see-firefox-87/">In March, we see Firefox 87</a> on Mozilla Hacks.</p>
+</div>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -87,11 +92,19 @@ tags:
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
 
-<p><em>No changes.</em></p>
+<ul>
+  <li>The work of rewriting Marionette to support Fission (site-isolation) has been finished, so the old Marionette implementation has been removed. The <code>marionette.actors.enabled</code> preference, which toggled between the new and old implementations, has therefore also been removed ({{bug(1669172)}}).</li>
+  <li>WebDriver commands following a call to <code>WebDriver:SwitchToFrame</code> will no longer fail with a "no such window" error if the frame's content hasn't yet finished loading ({{bug(1691348)}}).</li>
+  <li>After a <a
+      href="https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations">cross-group
+      page navigation</a>, accessing a previously-retrieved element will now always raise a "stale element" error; there is no longer a chance that this action will lead to a "no such element" error ({{bug(1690308)}}).</li>
+  <li><code>Addon:Uninstall</code> now raises an <code>unknown error</code> when the id of the add-on to uninstall is unknown ({{bug(1693022)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
-
-<p><em>No changes.</em></p>
+  <ul>
+    <li><a href="en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">nativeMessaging</a> is now an <a href="en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional permission</a> ({{bug(1630415)}}).</li>
+  </ul>
 
 <h2 id="Older_versions">Older versions</h2>
 

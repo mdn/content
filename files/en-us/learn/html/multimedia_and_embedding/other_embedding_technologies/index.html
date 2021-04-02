@@ -330,10 +330,6 @@ textarea.onkeyup = function(){
  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note</strong>: <code>&lt;object&gt;</code> requires a <code>data</code> attribute, a <code>type</code> attribute, or both. If you use both, you may also use the {{htmlattrxref('typemustmatch','object')}} attribute (only implemented in Firefox and Chrome, as of this writing). <code>typemustmatch</code> keeps the embedded file from running unless the <code>type</code> attribute provides the correct media type. <code>typemustmatch</code> can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).</p>
-</div>
-
 <p>Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a> too):</p>
 
 <pre class="brush: html">&lt;embed src="whoosh.swf" quality="medium"
@@ -347,7 +343,7 @@ textarea.onkeyup = function(){
 <p>Now let's look at an <code>&lt;object&gt;</code> example that embeds a PDF into a page (see the <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> and the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
 
 <pre class="brush: html">&lt;object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch&gt;
+        width="800" height="1200"&gt;
   &lt;p&gt;You don't have a PDF plugin, but you can
     &lt;a href="mypdf.pdf"&gt;download the PDF file.
     &lt;/a&gt;

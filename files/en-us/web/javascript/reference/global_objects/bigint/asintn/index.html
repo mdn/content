@@ -10,8 +10,7 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>BigInt.asIntN</code></strong> static method is used to wrap a BigInt
-  value to a signed integer between -2<sup>width-1</sup> and 2<sup>width-1</sup>-1.</p>
+<p>The <strong><code>BigInt.asIntN</code></strong> static method clamps a BigInt value to a signed integer value, and returns that value.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/bigint-asintn.html", "taller")}}</div>
 
@@ -24,21 +23,21 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">BigInt.asIntN(<var>width</var>, <var>bigint</var>);</pre>
+  class="brush: js">BigInt.asIntN(<var>bits</var>, <var>bigint</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>width</var></code></dt>
+  <dt><code><var>bits</var></code></dt>
   <dd>The amount of bits available for the integer size.</dd>
   <dt><code><var>bigint</var></code></dt>
-  <dd>The integer to clamp to fit into the supplied bits.</dd>
+  <dd>The BigInt value to clamp to fit into the supplied bits.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
 
 <p>The value of <code><var>bigint</var></code> modulo
-  2<sup><code><var>width</var></code></sup> as a signed integer.</p>
+  2<sup><code><var>bits</var></code></sup>, as a signed integer.</p>
 
 <h2 id="Examples">Examples</h2>
 

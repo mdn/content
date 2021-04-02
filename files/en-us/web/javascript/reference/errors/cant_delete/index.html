@@ -2,17 +2,17 @@
 title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
 tags:
-- Error
-- Errors
-- JavaScript
-- Strict Mode
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - Strict Mode
+  - TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
 <p>The JavaScript exception "property is non-configurable and can't be deleted" occurs
   when it was attempted to delete a property, but that property is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.</p>
+    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -28,7 +28,7 @@ TypeError: Cannot delete property 'x' of #&lt;Object&gt; (Chrome)
 <h2 id="What_went_wrong">What went wrong?</h2>
 
 <p>It was attempted to delete a property, but that property is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>. The
+    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>. The
   <code>configurable</code> attribute controls whether the property can be deleted from
   the object and whether its attributes (other than <code>writable</code>) can be changed.
 </p>
