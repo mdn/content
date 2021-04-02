@@ -209,11 +209,11 @@ const setA = new Set([1, 2, 3, 4])
 const setB = new Set([2, 3])
 const setC = new Set([3, 4, 5, 6])
 
-isSuperset(setA, setB)          // =&gt; true
-union(setA, setC)               // =&gt; Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC)        // =&gt; Set [3, 4]
-symmetricDifference(setA, setC) // =&gt; Set [1, 2, 5, 6]
-difference(setA, setC)          // =&gt; Set [1, 2]
+isSuperset(setA, setB)          // returns true
+union(setA, setC)               // returns Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC)        // returns Set {3, 4}
+symmetricDifference(setA, setC) // returns Set {1, 2, 5, 6}
+difference(setA, setC)          // returns Set {1, 2}
 
 </pre>
 
@@ -244,12 +244,12 @@ console.log([...new Set(numbers)])
 
 <pre class="brush: js">let text = 'India'
 
-const mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
+const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
 //case sensitive &amp; duplicate ommision
-new Set("Firefox")  // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
-new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 </pre>
 
 <h3 id="Use_Set_to_ensure_the_uniqueness_of_a_list_of_values">Use Set to ensure the uniqueness of a list of values</h3>
