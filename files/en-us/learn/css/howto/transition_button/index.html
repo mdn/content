@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{LearnSidebar}}</p>
 
-<p class="summary">In this guide you can find out how to do a gentle fade between two colors when hovering over a button or other element.</p>
+<p class="summary">In this guide you can find out how to do a gentle fade between two colors when hovering over a button.</p>
 
 <p>In our button example, we can change the background of our button by defining a different background color for the <code>:hover</code> dynamic pseudo-class. However, hovering over the button will cause the background-color to snap to the new color. To create a more gentle change between the two, we can use CSS Transitions.</p>
 
@@ -19,7 +19,9 @@ tags:
 
 <p>After adding the desired color for the hover state, add the {{cssxref("transition")}} property to the rules for the button. For a simple transition, the value of <code>transition</code> is the name of the property or properties you wish this transition to apply to, and the time that the transition should take.</p>
 
-<p>In the example I have made the transition take 2 seconds, you can try changing this to see the difference a change in speed makes.</p>
+<p>For the <code>:active</code> and <code>:focus</code> pseudo-classes the {{cssxref("transition")}} property is set to none, so that the button snaps to the active state when clicked.</p>
+
+<p>In the example the transition takes 1 second, you can try changing this to see the difference a change in speed makes.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/howto/transition-button.html", '100%', 700)}}</p>
 
