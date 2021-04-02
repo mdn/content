@@ -127,7 +127,7 @@ pc.onnegotiationneeded = async () =&gt; {
 };
 </pre>
 
-<p>Note that <code>setLocalDescription()</code> without arguments automatically creates and sets the appropriate description based on the current {{domxref("RTCPeerConnection.signalingState", "signalingState")}}. The set description is either an answer to the most recent offer from the remote peer <em>or</em> a freshly-created offer if there's no negotiation underway. Here, it will be always be an <code>offer</code>, because the negotiationneeded event is only fired in <code>stable</code> state.</p>
+<p>Note that <code>setLocalDescription()</code> without arguments automatically creates and sets the appropriate description based on the current {{domxref("RTCPeerConnection.signalingState", "signalingState")}}. The set description is either an answer to the most recent offer from the remote peer <em>or</em> a freshly-created offer if there's no negotiation underway. Here, it will always be an <code>offer</code>, because the negotiationneeded event is only fired in <code>stable</code> state.</p>
 
 <p>We set a Boolean variable, <code>makingOffer</code> to <code>true</code> to mark that we're preparing an offer. To avoid races, we'll use this value later instead of the signaling state to determine whether or not an offer is being processed because the value of {{domxref("RTCPeerConnection.signalingState", "signalingState")}} changes asynchronously, introducing a glare opportunity.</p>
 
