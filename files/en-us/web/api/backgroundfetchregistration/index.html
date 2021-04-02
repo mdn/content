@@ -1,0 +1,82 @@
+---
+title: BackgroundFetchRegistration
+slug: Web/API/BackgroundFetchRegistration
+tags:
+  - API
+  - Interface
+  - Reference
+  - BackgroundFetchRegistration
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>BackgroundFetchRegistration</code></strong> interface of the {{domxref('null','','',' ')}} null</p>
+
+<p>A <code>BackgroundFetchRegistration</code> instance is returned by the {{domxref("BackgroundFetchManager.fetch()")}} or {{domxref("BackgroundFetchManager.get()")}} methods, therefore there is no constructor.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<p>The following properties are copies of those in the <code>BackgroundFetchRegistration</code> instance, in order that they may be available synchronously.</p>
+
+<dl>
+  <dt>{{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}</dt>
+  <dd>A {{domxref("DOMString","string")}} a copy of the background fetch's id.</dd>
+  <dt>{{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}</dt>
+  <dd>A {{jsxref("number")}} which initially contains a copy of the background fetch's stored budy bytes total.</dd>
+  <dt>{{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}</dt>
+  <dd></dd>
+</dl>
+
+<h3 id="Event_handlers">Event handlers</h3>
+
+<dl>
+  <dt>{{domxref("BackgroundFetchRegistration.onprogress")}}</dt>
+  <dd></dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}}</dt>
+  <dd></dd>
+  <dt>{{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}</dt>
+  <dd></dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+     <td>{{SpecName('Background Fetch','#background-fetch-registration','BackgroundFetchRegistration')}}</td>
+     <td>{{Spec2('Background Fetch')}}</td>
+     <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchRegistration")}}</p>
