@@ -2,12 +2,12 @@
 title: SubtleCrypto.importKey()
 slug: Web/API/SubtleCrypto/importKey
 tags:
-- API
-- Method
-- Reference
-- SubtleCrypto
-- Web Crypto API
-- importKey
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - importKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -17,18 +17,18 @@ tags:
     href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a>.</p>
 
 <p>The function accepts several import formats: see <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">Supported
     formats</a> for details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.importKey(
-<em>    format</em>,
-    <em>keyData</em>,
-    <em>algorithm</em>,
-    <em>extractable</em>,
-    <em>keyUsages
-</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.importKey(
+    format,
+    keyData,
+    algorithm,
+    extractable,
+    keyUsages
+);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -53,28 +53,28 @@ tags:
     import and providing extra algorithm-specific parameters.
     <ul>
       <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>: Pass an
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: Pass an
         <code><a href="/en-US/docs/Web/API/RsaHashedImportParams">RsaHashedImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>: Pass
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: Pass
         an <code><a href="/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: Pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: Pass an
         <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: Pass the
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: Pass the
         string identifying the algorithm or an object of the form
         <code>{ "name": ALGORITHM }</code>, where <code>ALGORITHM </code>is the name of
         the algorithm.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a> :
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a> :
         Pass the string <code>PBKDF2</code>.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>: Pass the
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a>: Pass the
         string <code>HKDF</code>.</li>
     </ul>
   </li>
@@ -165,7 +165,7 @@ tags:
     href="https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail">PEM format</a>. PEM format
   is a way to encode binary data in ASCII. It consists of a header and a footer, and in
   between, the <a
-    href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64-encoded</a>
+    href="/en-US/docs/Glossary/Base64">base64-encoded</a>
   binary data. A PEM-encoded <code>PrivateKeyInfo</code> looks like this:</p>
 
 <pre class="brush: plain">-----BEGIN PRIVATE KEY-----

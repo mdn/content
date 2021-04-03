@@ -18,7 +18,7 @@ tags:
 <p class="summary">As a JavaScript developer, programmatically reading and manipulating streams of data received over the network, chunk by chunk, is very useful! But how do you use the Streams API’s readable stream functionality? This article explains the basics.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#Concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
+<p><strong>Note</strong>: This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
 </div>
 
 <div class="note">
@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Browser_support">Browser support</h2>
 
-<p>You can consume Fetch {{domxref("Body")}} objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). <a href="/en-US/docs/Web/API/Streams_API/Concepts#Pipe_chains">Pipe chains</a> are only supported in Chrome at the moment, and that functionality is subject to change.</p>
+<p>You can consume Fetch {{domxref("Body")}} objects as streams and create your own custom readable streams in Firefox 65+ and Chrome 42+ (and equivalent Chromium-based browsers). <a href="/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains">Pipe chains</a> are only supported in Chrome at the moment, and that functionality is subject to change.</p>
 
 <h2 id="Finding_some_examples">Finding some examples</h2>
 
@@ -162,7 +162,7 @@ return pump();</pre>
   size()
 });</pre>
 
-<p>The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a <a href="/en-US/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies">custom queuing strategy</a> to use for your stream. You’ll rarely have to do this, so we’ll just concentrate on the first one for now.</p>
+<p>The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying source the data is being read from. The second object is optional, and allows you to specify a <a href="/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies">custom queuing strategy</a> to use for your stream. You’ll rarely have to do this, so we’ll just concentrate on the first one for now.</p>
 
 <p>The first object can contain up to five members, only the first of which is required:</p>
 
@@ -219,7 +219,7 @@ return pump();</pre>
 <p><strong>Note:</strong> In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.</p>
 </div>
 
-<p>The custom stream constructor has a <code>start()</code> method that uses a {{domxref("WindowTimers.setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called <code>readStream()</code> is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.</p>
+<p>The custom stream constructor has a <code>start()</code> method that uses a {{domxref("WindowOrWorkerGlobalScope.setInterval")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called <code>readStream()</code> is invoked to read the data back out of the stream again. We also close the stream, as we’ve stopped enqueuing chunks to it.</p>
 
 <pre class="brush: js">const stream = new ReadableStream({
   start(controller) {
@@ -302,7 +302,7 @@ return pump();</pre>
 
 <h2 id="Pipe_chains">Pipe chains</h2>
 
-<p>One very experimental feature of streams is the ability to pipe streams into one another (called a <a href="/en-US/docs/Web/API/Streams_API/Concepts#Pipe_chains">pipe chain</a>). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.</p>
+<p>One very experimental feature of streams is the ability to pipe streams into one another (called a <a href="/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains">pipe chain</a>). This involves two methods — {{domxref("ReadableStream.pipeThrough()")}}, which pipes a readable stream through a writer/reader pair to transform one data format into another, and {{domxref("ReadableStream.pipeTo()")}}, which pipes a readable stream to a writer acting as an end point for the pipe chain.</p>
 
 <p>This functionality is at a very experimental stage and is subject to change, so we have no explored it too deeply as of yet.</p>
 

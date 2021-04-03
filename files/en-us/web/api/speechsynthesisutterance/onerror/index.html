@@ -2,14 +2,14 @@
 title: SpeechSynthesisUtterance.onerror
 slug: Web/API/SpeechSynthesisUtterance/onerror
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesisUtterance
-- onerror
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesisUtterance
+  - onerror
+  - speech
+  - synthesis
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
@@ -25,13 +25,13 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> synth <span class="operator token">=</span> window<span class="punctuation token">.</span>speechSynthesis<span class="punctuation token">;</span>
+<pre class="brush: js">var synth = window.speechSynthesis;
 
-<span class="keyword token">var</span> inputForm <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'form'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> inputTxt <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> voiceSelect <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'select'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+var inputForm = document.querySelector('form');
+var inputTxt = document.querySelector('input');
+var voiceSelect = document.querySelector('select');
 
-<span class="keyword token">var</span> voices <span class="operator token">=</span> synth<span class="punctuation token">.</span><span class="function token">getVoices</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+var voices = synth.getVoices();
 
   ...
 

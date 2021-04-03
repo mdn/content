@@ -2,12 +2,12 @@
 title: SubtleCrypto.decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 tags:
-- API
-- Decrypt
-- Method
-- Reference
-- SubtleCrypto
-- Web Crypto API
+  - API
+  - Decrypt
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -19,14 +19,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = crypto<code>.subtle.decrypt(<em>algorithm</em>, <em>key</em>, <em>data</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.decrypt(algorithm, key, data);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
   <li><em><code>algorithm</code></em> is an object specifying the <a
-      href="#Supported_algorithms">algorithm</a> to be used, and any extra parameters as
+      href="#supported_algorithms">algorithm</a> to be used, and any extra parameters as
     required. The values given for the extra parameters must match those passed into the
     corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
 
@@ -72,7 +72,7 @@ tags:
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
 <p>The <code>decrypt()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#Supported_algorithms">encrypt()</a></code>
+  <code><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms">encrypt()</a></code>
   method.</p>
 
 <h2 id="Examples">Examples</h2>

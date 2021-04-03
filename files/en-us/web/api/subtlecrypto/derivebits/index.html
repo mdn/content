@@ -2,12 +2,12 @@
 title: SubtleCrypto.deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
 tags:
-- API
-- Crypto
-- Method
-- Reference
-- SubtleCrypto
-- deriveBits
+  - API
+  - Crypto
+  - Method
+  - Reference
+  - SubtleCrypto
+  - deriveBits
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -33,7 +33,7 @@ tags:
 
 <p>This function supports the same derivation algorithms as <code>deriveKey()</code>:
   ECDH, HKDF, and PBKDF2. See <a
-    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported
     algorithms</a> for some more detail on these algorithms.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -49,18 +49,18 @@ tags:
 
 <ul>
   <li><code><em>algorithm</em></code> is an object defining the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">derivation
+      href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">derivation
       algorithm</a> to use.
 
     <ul>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>, pass
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>, pass
         an
         <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code>
         object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>, pass
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a>, pass
         an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.
       </li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a>,
+      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a>,
         pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code>
         object.</li>
     </ul>
@@ -95,7 +95,7 @@ tags:
 <dl>
   <dt>{{exception("InvalidAccessError")}}</dt>
   <dd>Raised when the base key is not a key for the requested derivation algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
+    the {{domxref("CryptoKey")}} value of that key doesn't contain
     <code>deriveKey</code>.</dd>
   <dt>{{exception("NotSupported")}}</dt>
   <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
@@ -106,7 +106,7 @@ tags:
 <h2 id="Supported_algorithms">Supported algorithms</h2>
 
 <p>See the <a
-    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#Supported_algorithms">Supported
+    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported
     algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
 
 <h2 id="Examples">Examples</h2>

@@ -15,7 +15,7 @@ tags:
 <p>As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a>’s writable stream functionality.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#Concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
+<p><strong>Note</strong>: This article assumes that you understand the use cases of writable streams, and are aware of the high-level concepts. If not, we suggest that you first read the <a href="/en-US/docs/Web/API/Streams_API#concepts_and_usage">Streams concepts and usage overview</a> and dedicated <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a> article, then come back.</p>
 </div>
 
 <div class="note">
@@ -58,7 +58,7 @@ tags:
   size()
 });</pre>
 
-<p>The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a <a href="/en-US/docs/Web/API/Streams_API/Concepts#Internal_queues_and_queuing_strategies">custom queueing strategy</a> to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.</p>
+<p>The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a <a href="/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies">custom queueing strategy</a> to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.</p>
 
 <p>The first object can contain up to four members, all of which are optional:</p>
 
