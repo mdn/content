@@ -7,7 +7,6 @@ tags:
 - JavaScript
 - Method
 - Reference
-- polyfill
 ---
 <div>{{JSRef}}</div>
 
@@ -45,18 +44,6 @@ Array.isArray(undefined);  // false
     absolute accuracy whether or not a JavaScript object is an array”</a> for more
   details. Given a {{jsxref("TypedArray")}} instance, <code>false</code> is always
   returned.</p>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Running the following code before any other code will create
-  <code>Array.isArray()</code> if it's not natively available.</p>
-
-<pre class="brush: js">if (!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
-  };
-}
-</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -120,5 +107,7 @@ arr instanceof Array; // false
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Array")}}</li>
 </ul>
