@@ -2,11 +2,11 @@
 title: performance.now()
 slug: Web/API/Performance/now
 tags:
-- API
-- Method
-- Performance
-- Reference
-- Web Performance API
+  - API
+  - Method
+  - Performance
+  - Reference
+  - Web Performance API
 ---
 <div>{{APIRef("High Resolution Timing")}}</div>
 
@@ -16,7 +16,7 @@ tags:
 <p>{{AvailableInWorkers}}</p>
 
 <p>The returned value represents the time elapsed since the <a
-    href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>.</p>
+    href="/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin">time origin</a>.</p>
 
 <p>Bear in mind the following points:</p>
 
@@ -51,7 +51,7 @@ console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 </pre>
 
 <p>Unlike other timing data available to JavaScript (for example <a
-    href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>),
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>),
   the timestamps returned by <code>performance.now()</code> are not limited to
   one-millisecond resolution. Instead, they represent times as floating-point numbers with
   up to microsecond precision.</p>
