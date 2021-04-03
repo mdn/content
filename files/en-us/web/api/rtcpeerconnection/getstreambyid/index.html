@@ -2,11 +2,11 @@
 title: RTCPeerConnection.getStreamById()
 slug: Web/API/RTCPeerConnection/getStreamById
 tags:
-- Experimental
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
+  - Experimental
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
 ---
 <p>{{APIRef}}{{SeeCompatTable}}</p>
 
@@ -20,16 +20,16 @@ tags:
 
 <div class="warning">
   <p>This property has been replaced with the
-    {{domxref("RTCPeerConnection.getLocalStreams")}} and
-    {{domxref("RTCPeerConnection.getRemoteStreams")}} properties. If you have code that
+    {{domxref("RTCPeerConnection.getSenders")}} and
+    {{domxref("RTCPeerConnection.getReceivers")}} properties. If you have code that
     uses <code>stream</code>, you will need to update, since browsers have begun to remove
     support for <code>stream</code>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>var <em>mediaStream</em> = <em>pc</em>.getStream(id);
-</code></pre>
+<pre class="brush: js">var mediaStream = pc.getStream(id);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -77,5 +77,5 @@ RTCPeerConnection.prototype.getStreamById = function(id) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
 </ul>
