@@ -6,7 +6,6 @@ tags:
 - ECMAScript 2015
 - JavaScript
 - Method
-- polyfill
 ---
 <div>{{JSRef}}</div>
 
@@ -59,24 +58,6 @@ Array(1, 2, 3);    // [1, 2, 3]
       polyfill</a></li>
 </ul>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Running the following code before any other code will create <code>Array.of()</code> if
-  it's not natively available.</p>
-
-<pre class="brush: js">if (!Array.of) {
-  Array.of = function() {
-    return Array.prototype.slice.call(arguments);
-    // Or
-    let vals = [];
-    for(let prop in arguments){
-        vals.push(arguments[prop]);
-    }
-    return vals;
-  }
-}
-</pre>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Array.of">Using Array.of</h3>
@@ -108,6 +89,8 @@ Array.of(undefined); // [undefined]
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Array")}}</li>
   <li>{{jsxref("Array.from()")}}</li>
   <li>{{jsxref("TypedArray.of()")}}</li>
