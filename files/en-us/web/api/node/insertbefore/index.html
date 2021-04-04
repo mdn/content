@@ -2,11 +2,11 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -124,7 +124,7 @@ parentDiv.insertBefore(sp1, sp2)
 <p>In the previous example, <code>sp1</code> could be inserted after <code>sp2</code>
   using:</p>
 
-<pre class="brush: js"><code>parentDiv.insertBefore(sp1, sp2.nextSibling)</code></pre>
+<pre class="brush: js">parentDiv.insertBefore(sp1, sp2.nextSibling)</pre>
 
 <p>If <code>sp2</code> does not have a next sibling, then it must be the last child —
   <code>sp2.nextSibling</code> returns <code>null</code>, and <code>sp1</code> is inserted

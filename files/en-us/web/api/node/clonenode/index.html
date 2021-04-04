@@ -2,12 +2,12 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- NeedsBrowserCompatibility
-- Reference
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - NeedsBrowserCompatibility
+  - Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -76,7 +76,7 @@ let p_prime = p.cloneNode(true)
 <p id="not-event-listeners">Cloning a node copies all of its attributes and their values,
   including intrinsic (inline) listeners. It does <em>not</em> copy event listeners added
   using <a
-    href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> or
+    href="/en-US/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a> or
   those assigned to element properties (e.g.,
   <code><var>node</var>.onclick = <var>someFunction</var></code>). Additionally, for a
   {{HTMLElement("canvas")}} element, the painted image is not copied.</p>
