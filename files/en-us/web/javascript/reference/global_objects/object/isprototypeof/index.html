@@ -2,12 +2,12 @@
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 tags:
-- JavaScript
-- Method
-- Object
-- Prototype
-- Reference
-- isPrototype
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+  - Reference
+  - isPrototype
 ---
 <div>{{JSRef}}</div>
 
@@ -75,20 +75,23 @@ function Baz() {}
 Bar.prototype = Object.create(Foo.prototype);
 Baz.prototype = Object.create(Bar.prototype);
 
-var baz = new Baz();
+const foo = new Foo();
+const bar = new Bar();
+const baz = new Baz();
 
-console.log(Baz.prototype.isPrototypeOf(baz)); // true
-console.log(Bar.prototype.isPrototypeOf(baz)); // true
-console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(baz));    // true
+console.log(Baz.prototype.isPrototypeOf(bar));    // false
+console.log(Baz.prototype.isPrototypeOf(foo));    // false
+console.log(Bar.prototype.isPrototypeOf(baz));    // true
+console.log(Bar.prototype.isPrototypeOf(foo));    // false
+console.log(Foo.prototype.isPrototypeOf(baz));    // true
+console.log(Foo.prototype.isPrototypeOf(bar));    // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 </pre>
 
-<p><code>isPrototypeOf()</code> method, along with the {{jsxref("Operators/instanceof",
-  "instanceof")}} operator particularly comes in handy if you have code that can only
-  function when dealing with objects descended from a specific prototype chain, e.g., to
-  guarantee that certain methods or properties will be present on that object.</p>
+<p>The <code>isPrototypeOf()</code> method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.</p>
 
-<p>For example, check if <code>baz</code> object descends from <code>Foo.prototype</code>:
+<p>For example, to execute some code that’s only safe to run if a <code>baz</code> object has <code>Foo.prototype</code> in its prototype chain, you can do this:
 </p>
 
 <pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
@@ -124,5 +127,5 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
   <li>
     <div>{{jsxref("Object.setPrototypeOf()")}}</div>
   </li>
-  <li>{{jsxref("Object.prototype.__proto__")}} </li>
+  <li>{{jsxref("Object/proto")}} </li>
 </ul>
