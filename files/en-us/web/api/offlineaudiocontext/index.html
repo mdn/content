@@ -57,7 +57,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>resume()</code> method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("BaseAudioContext.resume()")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.</p>
+<p><strong>Note</strong>: The <code>resume()</code> method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.</p>
 </div>
 
 <h2 id="Events">Events</h2>
@@ -72,7 +72,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this simple example, we declare both an {{domxref("AudioContext")}} and an <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an audio track via XHR ({{domxref("AudioContext.decodeAudioData")}}), then the <code>OfflineAudioContext</code> to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.</p>
+<p>In this simple example, we declare both an {{domxref("AudioContext")}} and an <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the <code>OfflineAudioContext</code> to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.</p>
 
 <p>When the <code>startRendering()</code> promise resolves, rendering has completed and the output <code>AudioBuffer</code> is returned out of the promise.</p>
 
@@ -156,5 +156,5 @@ getData();</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>
