@@ -11,7 +11,7 @@ tags:
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p>The <code>MediaStreamAudioDestinationNode</code> interface represents an audio destination consisting of a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a <code>MediaStream</code> obtained from {{ domxref("Navigator.getUserMedia()") }}.</p>
+<p>The <code>MediaStreamAudioDestinationNode</code> interface represents an audio destination consisting of a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("MediaStream")}} with a single <code>AudioMediaStreamTrack</code>, which can be used in a similar way to a <code>MediaStream</code> obtained from {{ domxref("Navigator.getUserMedia()") }}.</p>
 
 <p>It is an {{domxref("AudioNode")}} that acts as an audio destination, created using the {{domxref("AudioContext.createMediaStreamDestination()")}} method.</p>
 </div>
@@ -54,7 +54,7 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaStreamAudioDestinationNode.stream")}}</dt>
- <dd>A {{domxref("MediaStream")}} containing a single {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code> and with the same number of channels as the node. You can use this property to get a stream out of the audio graph and feed it into another construct, such as a <a href="/en-US/docs/Web/API/MediaRecorder_API">Media Recorder</a>.</dd>
+ <dd>A {{domxref("MediaStream")}} containing a single {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code> and with the same number of channels as the node. You can use this property to get a stream out of the audio graph and feed it into another construct, such as a <a href="/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder</a>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -89,5 +89,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>
