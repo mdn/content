@@ -2,12 +2,12 @@
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 tags:
-- API
-- DOM
-- KeyboardEvent
-- Method
-- Reference
-- getModifierState
+  - API
+  - DOM
+  - KeyboardEvent
+  - Method
+  - Reference
+  - getModifierState
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">var <code><em>active</em> = <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
+  class="brush: js">var active = event.getModifierState(keyArg);</pre>
 
 <h3 id="Returns">Returns </h3>
 
@@ -66,8 +66,7 @@ tags:
         <p>Both <kbd>Alt</kbd> and <kbd>Ctrl</kbd> keys are pressed, or <kbd>AltGr</kbd>
           key is pressed</p>
       </td>
-      <td><kbd>Level 3 Shift</kbd> key (or <kbd>Level 5 Shift</kbd> key
-        {{gecko_minversion_inline("20.0")}}) pressed</td>
+      <td><kbd>Level 3 Shift</kbd> key (or <kbd>Level 5 Shift</kbd> key) pressed</td>
       <td><kbd>⌥ Option</kbd> key pressed</td>
       <td colspan="2" style="background-color: rgb(204, 204, 204); text-align: center;">
         <em>Not supported</em></td>
@@ -78,7 +77,7 @@ tags:
         turned on</td>
       <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
           supported</em></td>
-      <td>While <kbd>CapsLock</kbd> is locked {{gecko_minversion_inline("29.0")}}</td>
+      <td>While <kbd>CapsLock</kbd> is locked</td>
     </tr>
     <tr>
       <th scope="row"><code>"Control"</code></th>
@@ -94,7 +93,7 @@ tags:
         <em>Not supported</em></td>
       <td><kbd>Function</kbd> key is pressed, but we're not sure what key makes the
         modifier state active. <kbd>Fn</kbd> key on Mac keyboard doesn't cause this
-        active. {{gecko_minversion_inline("29.0")}}</td>
+        active.</td>
     </tr>
     <tr>
       <th scope="row"><code>"FnLock"</code></th>
@@ -110,8 +109,7 @@ tags:
       <th scope="row"><code>"Meta"</code></th>
       <td style="background-color: rgb(204, 204, 204); text-align: center;"><em>Not
           supported</em></td>
-      <td style="text-align: center;"><kbd>Meta</kbd> key pressed
-        {{gecko_minversion_inline("17.0")}}</td>
+      <td style="text-align: center;"><kbd>Meta</kbd> key pressed</td>
       <td><kbd>⌘ Command</kbd> key pressed</td>
       <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
           supported</em></td>
@@ -124,7 +122,7 @@ tags:
       <td>A key on numpad pressed</td>
       <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
           supported</em></td>
-      <td>While <kbd>NumLock</kbd> is locked {{gecko_minversion_inline("29.0")}}</td>
+      <td>While <kbd>NumLock</kbd> is locked</td>
     </tr>
     <tr>
       <th scope="row"><code>"OS"</code></th>
@@ -141,7 +139,7 @@ tags:
         supported by platform</td>
       <td colspan="2" style="background-color: rgb(204, 204, 204); text-align: center;">
         <em>Not supported</em></td>
-      <td>While <kbd>ScrollLock</kbd> is locked {{gecko_minversion_inline("29.0")}}</td>
+      <td>While <kbd>ScrollLock</kbd> is locked</td>
     </tr>
     <tr>
       <th scope="row"><code>"Shift"</code></th>
