@@ -9,11 +9,6 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div class="notecard warning">
-<p><strong>Warning</strong><br>
- You should not use the {{WebExtAPIRef("proxy.register()")}} or {{WebExtAPIRef("proxy.unregister()")}} function to register and remove extended <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification">Proxy Auto-Configuration (PAC) file</a>. This API was deprecated in Firefox 68 and will be removed from Firefox 71.</p>
-</div>
-
 <p>Use the proxy API to proxy web requests. You can use the {{WebExtAPIRef("proxy.onRequest")}} event listener to intercept web requests, and return an object that describes whether and how to proxy them.</p>
 
 <p>The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the code that implements your proxy policy runs in your extension's background script, so it gets full access to the WebExtension APIs available to your extension (including, for example, access to your extension's <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> and networking APIs like <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns">dns</a></code>).</p>
@@ -43,6 +38,11 @@ tags:
 </dl>
 
 <h2 id="Functions">Functions</h2>
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>You should not use these methods ({{WebExtAPIRef("proxy.register()")}} or {{WebExtAPIRef("proxy.unregister()")}}) to register and remove an extended <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification">Proxy Auto-Configuration (PAC) file</a>. They were deprecated in Firefox 68 and removed in Firefox 71.</p>
+</div>
 
 <dl>
  <dt>{{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}</dt>
