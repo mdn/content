@@ -13,7 +13,7 @@ tags:
 <p>{{APIRef("DOM")}}</p>
 
 <p>The <code><strong>keys()</strong></code> method of the {{domxref("DOMTokenList")}}
-  interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing to go through
+  interface returns an {{jsxref("Iteration_protocols",'iterator',"",1)}} allowing to go through
   all keys contained in this object. The keys are of type <code>unsigned integer</code>.
 </p>
 
@@ -27,14 +27,14 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+<p>Returns an {{jsxref("Iteration_protocols","iterator","",1)}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>In the following example we retrieve the list of classes set on a
   {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
   {{domxref("Element.classList")}}. We when retrieve an iterator containing the keys using
-  <code>values()</code>, then iterate through those keys using a <a
+  <code>keys()</code>, then iterate through those keys using a <a
     href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> loop,
   writing each one to the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
 
@@ -59,13 +59,15 @@ for(var value of iterator) {
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
       <th scope="col">Specification</th>
       <th scope="col">Status</th>
       <th scope="col">Comment</th>
     </tr>
-    <tr>
+  </thead>
+  <tbody>
+  <tr>
       <td>{{SpecName('DOM WHATWG','#domtokenlist','keys() (as iterable&lt;Node&gt;)')}}
       </td>
       <td>{{Spec2('DOM WHATWG')}}</td>
