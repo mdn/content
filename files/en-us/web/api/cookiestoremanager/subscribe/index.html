@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = <var>registration</var>.cookies.subscribe(<var>subscriptions</var>);</pre>
+<pre class="syntaxbox notranslate">let promise = registration.cookies.subscribe(subscriptions);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -25,7 +25,7 @@ tags:
       <dt><code>name</code></dt>
       <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
       <dt><code>url</code></dt>
-      <dd>A {{domxref("USVString")}} with the url of a cookie.</dd>
+      <dd>A {{domxref("USVString")}} with the url of a cookie scope. This may be narrower than the scope of the service worker registration.</dd>
     </dl>
   </dd>
 </dl>
@@ -47,6 +47,12 @@ tags:
 
 <pre class="brush: js">const subscriptions = [{ name: 'cookie1', url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);</pre>
+
+<p>The url passed to the <code>subscribe()</code> method, may be narrower than the service worker registration scope. In the following example the subscription is for <code>/path/one/</code>, so it will receive change events for changes on the first cookie, but not the second.</p>
+
+<pre class="brush: js">registration.cookies.subscribe([{name: 'cookie1', url: '/path/one/'}]); // subscription
+cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/one/'}); // recieves a change event
+cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/two/'}); // does not receive a change event</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
