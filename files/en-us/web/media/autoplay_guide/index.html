@@ -21,7 +21,7 @@ tags:
 ---
 <p>Automatically starting the playback of audio (or videos with audio tracks) immediately upon page load can be an unwelcome surprise to users. While autoplay of media serves a useful purpose, it should be used carefully and only when needed. In order to give users control over this, browsers often provide various forms of autoplay blocking. <span class="seoSummary">In this guide, we'll cover autoplay functionality in the various media and Web Audio APIs, including a brief overview of how to use autoplay and how to work with browsers to handle autoplay blocking gracefully.</span></p>
 
-<p>Autoplay blocking is <em>not</em> applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be <strong>audible</strong>, and autoplay blocking applies to them. <strong>Inaudible</strong> media are not affected by autoplay blocking.</p>
+<p>On desktop autoplay blocking is <em>not</em> applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be <strong>audible</strong>, and autoplay blocking applies to them. On desktop <strong>inaudible</strong> media are not affected by autoplay blocking.</p>
 
 <h2 id="Autoplay_and_autoplay_blocking">Autoplay and autoplay blocking</h2>
 
@@ -57,6 +57,8 @@ tags:
 
 <p>Otherwise, the playback will likely be blocked. The exact situations that result in blocking, and the specifics of how sites become whitelisted vary from browser to browser, but the above are good guidelines to go by.</p>
 
+<p>Firefox on Android blocks all autoplay by default. This behavior can be changed by the user in the browser settings under site permissions.</p> 
+  
 <p>For details, see the auto-play policies for <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> and <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a>.</p>
 
 <div class="notecard note">
