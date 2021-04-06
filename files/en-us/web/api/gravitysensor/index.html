@@ -19,8 +19,6 @@ tags:
 
 <p>To use this sensor, the user must grant permission to the <code>'accelerometer'</code> device sensor through the {{domxref('Permissions')}} API.</p>
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
-
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
@@ -38,12 +36,13 @@ tags:
 
 <pre class="brush: js">let gravitySensor = new GravitySensor({frequency: 60});
 
-gravitySensor.addEventListener('reading', e =&gt; {
-  console.log("Gravity along the X-axis " + gravitySensor.x);
-  console.log("Gravity along the Y-axis " + gravitySensor.y);
-  console.log("Gravity along the Z-axis " + gravitySensor.z);
+gravitySensor.addEventListener("reading", e =&gt; {
+  console.log(`Gravity along the X-axis ${gravitySensor.x}`);
+  console.log(`Gravity along the Y-axis ${gravitySensor.y}`);
+  console.log(`Gravity along the Z-axis ${gravitySensor.z}`);
 });
-laSensor.start();</pre>
+
+gravitySensor.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

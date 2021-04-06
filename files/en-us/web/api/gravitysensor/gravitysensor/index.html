@@ -18,10 +18,6 @@ tags:
     constructor creates a new {{domxref("GravitySensor")}} object which
     provides on each reading the gravity applied to the device along all three axes.</span></p>
 
-<p>If a feature policy blocks use of a feature, it is because your code is inconsistent
-  with the policies set on your server. This is not something that would ever be shown to
-  a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre
@@ -37,11 +33,22 @@ tags:
         be taken, meaning the number of times per second that
         {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be
         used, the latter for frequencies less than a second. The actual reading frequency
-        depends on device hardware and consequently may be less than requested.</li>
-      <li><code>referenceFrame</code>: Either <code>'device'</code> or
+        depends on device hardware and consequently may be less than requested. The default
+        frequency is the one defined by the underlying platform</li>
+      <li><code>referenceFrame</code>: The local coordinate system represents 
+        the reference frame. It can be either  <code>'device'</code> or
         <code>'screen'</code>. The default is <code>'device'</code>.</li>
     </ul>
   </dd>
+</dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>SecurityError</dt>
+  <dd>If a feature policy blocks use of a feature, it is because your code is inconsistent
+    with the policies set on your server. This is not something that would ever be shown to
+    a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
