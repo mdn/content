@@ -21,7 +21,7 @@ tags:
  </tbody>
 </table>
 
-<p>The <code>protocol_handlers</code> member specifies an array of objects that are protocols, which this web app can register and handle. Protocol handlers register the application with an <abbr title="operating system">OS</abbr>'s protocol activation system that launches a specific application for the given URL. Protocol handlers register the application in an <abbr title="operating system">OS</abbr>'s application preferences. For example, when using the protocol handler <code>mailto://</code> on a web page, registered email applications open.</p>
+<p>The <code>protocol_handlers</code> member specifies an array of objects that are protocols which this web app can register and handle. Protocol handlers register the application in an <abbr title="operating system">OS</abbr>'s application preferences; the registration associates a specific application with the given protocol scheme. For example, when using the protocol handler <code>mailto://</code> on a web page, registered email applications open.</p>
 
 After registering a web app as a protocol handler, when a user clicks on a hyperlink with a specific scheme such as <code>mailto://</code> or <code>web+music://</code> from a browser or native app, the registered PWA would open and receive the URL.
 
