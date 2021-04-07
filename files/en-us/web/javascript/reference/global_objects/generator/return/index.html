@@ -51,8 +51,7 @@ g.next();        // { value: undefined, done: true }
 <p>If <code>return(<var>value</var>)</code> is called on a generator that is already in
   "completed" state, the generator will remain in "completed" state.</p>
 
-<p>If no argument is provided, the <code>value</code> property of returned object is the
-  same as if <code>.next()</code>. If an argument is provided, it will be set to the value
+<p>If no argument is provided, the <code>value</code> property of the returned object will be "<code>undefined</code>". If an argument is provided, it will be set to the value
   of the <code>value</code> property of the returned object.</p>
 
 <pre class="brush: js">function* gen() {
