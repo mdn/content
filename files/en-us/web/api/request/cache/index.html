@@ -26,7 +26,7 @@ tags:
  <li><code>default</code> — The browser looks for a matching request in its HTTP cache.
 
   <ul>
-   <li>If there is a match and it is <a href="/en-US/docs/Web/HTTP/Caching#Freshness">fresh</a>, it will be returned from the cache.</li>
+   <li>If there is a match and it is <a href="/en-US/docs/Web/HTTP/Caching#freshness">fresh</a>, it will be returned from the cache.</li>
    <li>If there is a match but it is stale, the browser will make a <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
    <li>If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.</li>
   </ul>
@@ -134,7 +134,7 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

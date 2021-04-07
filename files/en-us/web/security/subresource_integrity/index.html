@@ -43,11 +43,13 @@ tags:
 
 <h3 id="Tools_for_generating_SRI_hashes">Tools for generating SRI hashes</h3>
 
-<p>You can generate SRI hashes from the command-line with <strong>openssl</strong> using a command invocation such as this:</p>
+<p>The <a href="https://www.srihash.org/">SRI Hash Generator</a> is an online tool you can use to generate SRI hashes.</p>
+
+<p>You can generate SRI hashes from the command-line with <strong>openssl</strong> using a command invocation such as:</p>
 
 <pre class="brush: bash">cat <strong>FILENAME.js</strong> | openssl dgst -sha384 -binary | openssl base64 -A</pre>
 
-<p>or with <strong>shasum</strong> using a command invocation such as this:</p>
+<p>…or with <strong>shasum</strong> using a command invocation such as:</p>
 
 <pre class="brush: bash">shasum -b -a 384 <strong>FILENAME.js</strong> | awk '{ print $1 }' | xxd -r -p | base64
 </pre>
@@ -61,7 +63,24 @@ tags:
 </ul>
 </div>
 
-<p>Additionally, the <strong>SRI Hash Generator</strong> at <a href="https://www.srihash.org/">https://www.srihash.org/</a> is an online tool you can use to generate SRI hashes.</p>
+<p>In a Windows environment, you can create a tool for generating SRI hashes with the following code:</p>
+
+<pre>@echo off
+set bits=384
+openssl dgst -sha%bits% -binary %1% | openssl base64 -A &gt; tmp
+set /p a= &lt; tmp
+del tmp
+echo sha%bits%-%a%
+pause
+</pre>
+
+<p>To use that code:</p>
+  <ol>
+    <li>Save that code in a file named <code>sri-hash.bat</code> in the Windows SendTo folder in your environment (for example, <code>C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo</code>).
+    <li>Right-click a file in the File Explorer, select <strong>Send to...</strong>, and then select <code>sri-hash</code>. You will see the integrity value in a command box.</li>
+    <li>Select the integrity value and right-click to copy it to the Clipboard.</li>
+    <li>Press any key to dismiss the command box.</li>
+  </ol>
 
 <h3 id="Cross-Origin_Resource_Sharing_and_Subresource_Integrity">Cross-Origin Resource Sharing and Subresource Integrity</h3>
 
@@ -82,7 +101,7 @@ tags:
         crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more details on the purpose of the <code>crossorigin</code> attribute, see <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a>.</p>
+<p><strong>Note</strong>: For more details on the purpose of the <code>crossorigin</code> attribute, see <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a>.</p>
 </div>
 
 <h2 id="How_browsers_handle_Subresource_Integrity">How browsers handle Subresource Integrity</h2>
@@ -129,12 +148,6 @@ tags:
 <p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("html.elements.script.integrity")}}</p>
-
-<h3 id="CSP_require-sri-for">CSP: require-sri-for</h3>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("http.headers.csp.require-sri-for")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -105,7 +105,7 @@ while (true) {
 
 <h2 id="Error_handling">Error handling</h2>
 
-<p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/HTTP/Access_control_CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
+<p>When problems occur (such as a network timeout or issues pertaining to <a href="/en-US/docs/Web/HTTP/CORS">access control</a>), an error event is generated. You can take action on this programmatically by implementing the <code>onerror</code> callback on the <code>EventSource</code> object:</p>
 
 <pre class="brush: js">evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);
@@ -136,7 +136,7 @@ while (true) {
  <dt><code>data</code></dt>
  <dd>The data field for the message. When the <code>EventSource</code> receives multiple consecutive lines that begin with <code>data:</code>, <a href="https://www.w3.org/TR/eventsource/#dispatchMessage">it concatenates them</a>, inserting a newline character between each one. Trailing newlines are removed.</dd>
  <dt><code>id</code></dt>
- <dd>The event ID to set the <a href="/en-US/docs/Server-sent_events/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
+ <dd>The event ID to set the <a href="/en-US/docs/Web/API/EventSource"><code>EventSource</code></a> object's last event ID value.</dd>
  <dt><code>retry</code></dt>
  <dd>The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.</dd>
 </dl>

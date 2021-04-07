@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The <strong><code>OverconstrainedError</code></strong> interface of the <a href="/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> indicates that the set of desired capabilities for the current {{domxref('MediaStreamTrack')}} cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.</p>
+<p class="summary">The <strong><code>OverconstrainedError</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> indicates that the set of desired capabilities for the current {{domxref('MediaStreamTrack')}} cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -28,9 +28,9 @@ tags:
 <dl>
  <dt>{{domxref("OverconstrainedError.constraint")}} {{readonlyInline}}</dt>
  <dd>Returns the constraint that was supplied in the constructor, meaning the constraint that was not satisfied.</dd>
- <dt>{{domxref("OverconstrainedError.message")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("DOMException.message")}} {{readonlyInline}}</dt>
  <dd>Returns the text supplied in the constructor.</dd>
- <dt>{{domxref("OverconstrainedError.name")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("DOMException.name")}} {{readonlyInline}}</dt>
  <dd>Will always return <code>OverconstrainedError</code>.</dd>
 </dl>
 
