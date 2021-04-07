@@ -39,7 +39,7 @@ tags:
 
 <p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
-<pre class="language-js">if ("geolocation" in navigator) {
+<pre class="brush: js">if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
   });
