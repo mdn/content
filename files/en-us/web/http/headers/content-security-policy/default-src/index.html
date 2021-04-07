@@ -71,6 +71,10 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
   <li><code>https://store.example.com</code>: Matches all attempts to access store.example.com using <code>https:</code>.</li>
   <li><code>*.example.com</code>: Matches all attempts to load from any subdomain of example.com using the current protocol.</li>
  </ul>
+ <div class="notecard warning">
+ <p>For an iframe, if no URL scheme is specified for a <code>host-source</code> and the iframe is loaded from an <code>https</code> URL, the URL for the page loading the iframe must also be <code>https</code>, per the W3C spec on <a href="https://w3c.github.io/webappsec-csp/2/#match-source-expression">matching source expressions</a>.</p>
+ </div>
+ </dd>
  </dd>
  <dt>&lt;scheme-source&gt;</dt>
  <dd>A scheme such as <code>http:</code> or <code>https:</code>. The colon is required. Unlike other values below, single quotes shouldn't be used. You can also specify data schemes (not recommended).
