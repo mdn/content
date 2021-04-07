@@ -12,8 +12,8 @@ tags:
 ---
 <div>{{ApiRef("Window")}}</div>
 
-<p>The <code>Window.prompt()</code> displays a dialog with an optional message prompting
-  the user to input some text.</p>
+<p>The <code>Window.prompt()</code> method displays a dialog box with an optional message prompting
+  the user to enter text.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,17 +24,15 @@ tags:
 
 <dl>
   <dt><code>message</code> {{optional_inline}}</dt>
-  <dd>A string of text to display to the user. Can be omitted if there is nothing to show
-    in the prompt window.</dd>
+  <dd>This parameter is the text displayed in the prompt's dialog box. Typically, the text asks for input.</dd>
   <dt><code>default</code> {{optional_inline}}</dt>
-  <dd>A string containing the default value displayed in the text input field. Note that
-    in Internet Explorer 7 and 8, if you do not provide this parameter, the string
-    <code>"undefined"</code> is the default value.</dd>
+  <dd>This parameter can contain a default value to display in the input field of the prompt's dialog box. For Internet Explorer 7 and 8, the default value is <code>"undefined"</code> if this parameter is absent.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A string containing the text entered by the user, or <code>null</code>.</p>
+<p>A string containing input, or a <code>null</code> value.</p>
 
 <h2 id="Example">Example</h2>
 
