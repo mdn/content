@@ -51,30 +51,59 @@ tags:
 
 <h3>Varied results in Daylight Saving Time (DST) time zones</h3>
 
-<p>In a time zone that annually shifts in and out of Daylight Saving Time (DST), the number of minutes returned by calling <code>getTimezoneOffset()</code> can vary.</p>
-<p>Consider a given local time zone and a date <var>date1</var> that are both in DST, and consider <var>minutes</var>, the number of minutes returned by calling <code><var>date1</var>.getTimezoneOffset()</code>; then:</p>
+<p>In a time zone that annually shifts in and out of Daylight Saving Time (DST), the number of minutes returned by calling <code>getTimezoneOffset()</code> can vary. Here’s an example:</p>
+
+<pre class="brush: js">// On a host system running in the 'Europe/Berlin' time zone
+
+const dateBeforeDST = new Date('2021-03-01');
+dateBeforeDST.toISOString();                      // Returns '2021-03-01T00:00:00.000Z'
+dateBeforeDST.getTimezoneOffset();                // Returns -60
+Intl.DateTimeFormat().resolvedOptions().timeZone; // Returns 'Europe/Berlin'
+
+const dateDuringDST = new Date('2021-05-01');
+dateDuringDST.toISOString();                      // Returns '2021-05-01T00:00:00.000Z'
+dateDuringDST.getTimezoneOffset();                // Returns -120
+Intl.DateTimeFormat().resolvedOptions().timeZone; // Returns 'Europe/Berlin'
+</pre>
+
+<p>From that example, here are some key points:</p>
 
 <ul>
- <li>If the local time zone is currently in DST, but a given date <var>date2</var> is <em>not</em> in DST, then the number of minutes returned by <code><var>date2</var>.getTimezoneOffset()</code> is <var>minutes</var> ± 60.</li>
- <li>If the local time zone is <em>not</em> currently in DST, but a given date <var>date3</var> is in DST, then the number of minutes returned by <code><var>date3</var>.getTimezoneOffset()</code> is <var>minutes</var> ± 60.</li>
+  <li>The time zone doesn’t change; it’s Europe/Berlin regardless of the date being evaluated.</li>
+  <li>The created <code>Date</code> objects (<code>dateBeforeDST</code> and <code>dateDuringDST</code>) carry no time zone offset.</li>
+  <li>The time zone offset is evaluated on the basis of <em>what the local time was or will be on the given date</em>: specifically, on the difference between what the time in the UTC time zone was or will be on the given date, and what the local time in the Europe/Berlin time zone was or will be on the given date.</li> 
 </ul>
 
-<p>In a time zone that doesn’t annually shift in and out of Daylight Saving Time (DST), the number of minutes returned by calling <code>getTimezoneOffset()</code> always returns the same number of minutes, regardless of the <var>date</var> instance it’s called from.</p>
+<p>In other words: The time zone offset comes from the environment in which the <code>Date</code> object is evaluated, not from the <code>Date</code> object itself. So, doing an evaluation in the Europe/Berlin time zone of a date that takes place before the period when the Europe/Berlin time zone has shifted into DST produces the time zone offset "<code>-60</code>", while doing an evaluation in the Europe/Berlin time zone of a date that takes place <em>during</em> the period when the Europe/Berlin time zone has shifted into DST produces the time zone offset "<code>-120</code>".</p>
 
-<div class="notecard note">
- <p><strong>Note:</strong> The above description is a simplification. In implementations, the {{InterWiki("wikipedia", "Daylight_saving_time#IANA_time_zone_database", "IANA time zone database")}} (tzdata) is used for precisely determining the effect of DST on the calculation of the time-zone difference.</p>
-</div>
+</ul>
 
-<h2 id="Examples">Examples</h2>
+<p>Contrast that Europe/Berlin time zone example with the following Asia/Tokyo example:</p>
 
-<pre class="brush: js notranslate">// Create a Date instance for the current time
-let currentLocalDate = new Date();
-// Create a Date instance for 03:24 GMT-0200 on May 1st in 2016
-let laborDay2016at0324GMTminus2 = new Date('May 1, 2016 03:24:00 GMT-0200');
-currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
-// true, always, in any timezone that doesn't annually shift in and out of DST
-// false, sometimes, in any timezone that annually shifts in and out of DST
+<pre class="brush: js">// On a host system running in the 'Asia/Tokyo' time zone
+
+const dateBeforeDST = new Date('2021-03-01');
+dateBeforeDST.toISOString();                      // Returns '2021-03-01T00:00:00.000Z'
+dateBeforeDST.getTimezoneOffset();                // Returns -540
+Intl.DateTimeFormat().resolvedOptions().timeZone; // Returns 'Asia/Tokyo'
+
+const dateDuringDST = new Date('2021-05-01');
+dateDuringDST.toISOString();                      // Returns '2021-05-01T00:00:00.000Z'
+dateBeforeDST.getTimezoneOffset();                // Returns -540
+Intl.DateTimeFormat().resolvedOptions().timeZone; // Returns 'Asia/Tokyo'
 </pre>
+
+<p>So in an Asia/Tokyo time zone environment, which doesn’t annually shift in and out of DST, calling <code>getTimezoneOffset()</code> will always return the same time zone offset, "<code>-540</code>", regardless of the date.</p>
+
+<ul>
+  <li>A <em><a href="https://en.wikipedia.org/wiki/UTC_offset">time zone offset</a></em> is simply a number indicating a difference in time relative to the UTC time zone. A time zone offset can be either a positive or negative number, and can be represented as a number of hours (as in, for example, <code>GMT+0900</code>) or — as is the case with <code>getTimezoneOffset()</code> — as a number of minutes (for example, <code>-540</code>).</li>
+</ul>
+
+ <p>Keep in mind, though, that the above explanations are a simplification. In implementations, the <a href="https://en.wikipedia.org/wiki/Tz_database">IANA time zone database</a> is used to determine the effect of DST on the calculation of the time-zone difference.</p>
+
+<p>And also keep in mind that <code>getTimezoneOffset()</code> doesn’t return a {{Glossary("time zone")}} — instead it returns a {{Glossary("time zone offset")}}. To determine the configured time zone, you can use the following code:</p>
+
+<pre class="brush: js">Intl.DateTimeFormat().resolvedOptions().timeZone</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
