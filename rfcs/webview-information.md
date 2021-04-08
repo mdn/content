@@ -1,7 +1,7 @@
 # MDN content project: ARIA roles reference docs
 
 This RFC proposes that we work on adding WebView documentation to MDN, to help
-web developers figure out how test and support WebView environments (i.e. iOS
+web developers figure out how to test and support WebView environments (i.e. iOS
 and Android WebView-based "mega app" type environments).
 
 This would include:
