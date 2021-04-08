@@ -6,7 +6,7 @@ and Android WebView-based "mega app" type environments).
 
 This would include:
 
-- What is a WebView envrionment?
+- What is a WebView environment?
 - How frequently WebView environments are used and in what regions they are
   used the most.
 - How WebView environments differ from their browser counterparts.
