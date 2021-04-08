@@ -17,11 +17,11 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p>A valid configuration includes a valid encoding configuration type or decoding configuration type and a valid <a href="/en-US/docs/Web/API/audioConfiguration">audio configuration</a> or <a href="/en-US/docs/Web/API/videoConfiguration">video configuration</a>. If you plan on querying <a href="/en-US/docs/Web/API/MediaEncodingConfiguration">encoding</a> information, set the media type to record or transmission.</p>
+<p>A valid configuration includes a valid encoding configuration type or decoding configuration type and a valid <a href="/en-US/docs/Web/API/AudioConfiguration">audio configuration</a> or <a href="/en-US/docs/Web/API/VideoConfiguration">video configuration</a>. If you plan on querying <a href="/en-US/docs/Web/API/MediaEncodingConfiguration">encoding</a> information, set the media type to record or transmission.</p>
 
 <p>For <a href="/en-US/docs/Web/API/MediaDecodingConfiguration">decoding</a>, set the type to <code>file</code> or <code>media-source</code>.</p>
 
-<p>If the media is an audio file, the <a href="/en-US/docs/Web/API/audioConfiguration">audio configuration</a> must include a valid audio MIME type as <code>contentType</code>, the number of channels, the bitrate, and the sample rate. <a href="/en-US/docs/Web/API/videoConfiguration">Video configurations</a> mush include a valid video MIME type as contentType, the bitrate, and framerate, along with the width and the height of the video file. All of these must be present, as in the examples below, or a TypeError will occur.</p>
+<p>If the media is an audio file, the <a href="/en-US/docs/Web/API/AudioConfiguration">audio configuration</a> must include a valid audio MIME type as <code>contentType</code>, the number of channels, the bitrate, and the sample rate. <a href="/en-US/docs/Web/API/VideoConfiguration">Video configurations</a> mush include a valid video MIME type as contentType, the bitrate, and framerate, along with the width and the height of the video file. All of these must be present, as in the examples below, or a TypeError will occur.</p>
 
 <p>A valid media decoding configuration, to be submitted as the parameter for {{domxref("mediaCapabilities.decodingInfo", "mediaCapabilities.decodingInfo()")}} method, has it's `type` set as:</p>
 
@@ -37,7 +37,7 @@ tags:
   <li><strong>transmission</strong>: For media to be electronically transmitted.</li>
 </ul>
 
-<p>A valid <a href="/en-US/docs/Web/API/audioConfiguration">audio configuration</a> includes:</p>
+<p>A valid <a href="/en-US/docs/Web/API/AudioConfiguration">audio configuration</a> includes:</p>
 
 <ul>
   <li><strong>contentType</strong>: Valid audio MIME type.</li>
@@ -46,7 +46,7 @@ tags:
   <li><strong>samplerate</strong>: Number of audio samples making up one second of the audio file.</li>
 </ul>
 
-<p>A valid <a href="/en-US/docs/Web/API/videoConfiguration">video configuration</a> includes:</p>
+<p>A valid <a href="/en-US/docs/Web/API/VideoConfiguration">video configuration</a> includes:</p>
 
 <ul>
   <li><strong>contentType</strong>: Valid video MIME type.</li>
