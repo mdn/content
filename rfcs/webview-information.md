@@ -10,8 +10,8 @@ This would include:
 - How frequently WebView environments are used and in what regions they are
   used the most.
 - How WebView environments differ from their browser counterparts.
-- How to test a site in WebView environments?
-- How to detect whether a site is running in a WebView environment at runtime?
+- How to test a site in WebView environments.
+- How to detect whether a site is running in a WebView environment at runtime.
 - General overview of WebView API compatibility patterns, exceptions, and pain
   points, e.g. how to handle feature detection false positives.
 
