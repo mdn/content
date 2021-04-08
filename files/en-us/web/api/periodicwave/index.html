@@ -18,13 +18,13 @@ tags:
 <p>The <strong><code>PeriodicWave</code></strong> interface defines a periodic waveform that can be used to shape the output of an {{domxref("OscillatorNode")}}.</p>
 </div>
 
-<p><code>PeriodicWave</code> has no inputs or outputs; it is used to define custom oscillators when calling {{domxref("OscillatorNode.setPeriodicWave()")}}. The <code>PeriodicWave</code> itself is created/returned by {{domxref("AudioContext.createPeriodicWave()")}}.</p>
+<p><code>PeriodicWave</code> has no inputs or outputs; it is used to define custom oscillators when calling {{domxref("OscillatorNode.setPeriodicWave()")}}. The <code>PeriodicWave</code> itself is created/returned by {{domxref("BaseAudioContext.createPeriodicWave")}}.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
 	<dt>{{domxref("PeriodicWave.PeriodicWave()")}}</dt>
-	<dd>Creates a new <code>PeriodicWave</code> object instance using the default values for all properties. If you wish to establish custom property values at the outset, use the {{domxref("AudioContext.createPeriodicWave()")}} factory method instead.</dd>
+	<dd>Creates a new <code>PeriodicWave</code> object instance using the default values for all properties. If you wish to establish custom property values at the outset, use the {{domxref("BaseAudioContext.createPeriodicWave")}} factory method instead.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -63,5 +63,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

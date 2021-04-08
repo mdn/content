@@ -2,10 +2,10 @@
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
@@ -30,7 +30,7 @@ tags:
     {{domxref("PerformanceNavigationTiming.loadEventEnd")}} and
     {{domxref("PerformanceEntry.startTime")}} properties, respectively.</li>
   <li>"<code>resource</code>" - returns the difference between the resource's
-    {{domxref("PerformanceEntry.responseEnd","responseEnd")}}
+    {{domxref("PerformanceResourceTiming/responseEnd","responseEnd")}}
     {{domxref("DOMHighResTimeStamp","timestamp")}} and its
     {{domxref("PerformanceEntry.startTime","startTime")}}
     {{domxref("DOMHighResTimeStamp","timestamp")}}.</li>
@@ -52,7 +52,7 @@ tags:
 <p class="note">Note: if the performance entry has an
   {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e.
   the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns
-  the difference between the {{domxref("PerformanceEntry.responseEnd")}} and
+  the difference between the {{domxref("PerformanceResourceTiming.responseEnd")}} and
   {{domxref("PerformanceEntry.startTime")}}
   {{domxref("DOMHighResTimeStamp","timestamps")}}.</p>
 

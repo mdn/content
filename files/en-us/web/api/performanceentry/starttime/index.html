@@ -2,10 +2,10 @@
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
@@ -30,7 +30,7 @@ tags:
   <li>"<code>navigation</code>" - returns the
     {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "<code>0</code>".</li>
   <li>"<code>resource</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-    immediately before the browser {{domxref("PerformanceEntry.fetchStart","starts
+    immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
     fetching the resource")}}.</li>
 </ul>
 
@@ -48,7 +48,7 @@ tags:
 <p class="note">Note: if the performance entry has an
   {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e.
   the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns
-  the {{domxref("PerformanceEntry.fetchStart")}}
+  the {{domxref("PerformanceResourceTiming.fetchStart")}}
   {{domxref("DOMHighResTimeStamp","timestamp")}}.</p>
 
 <h2 id="Example">Example</h2>
