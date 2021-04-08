@@ -1,4 +1,4 @@
-# MDN content project: ARIA roles reference docs
+# MDN content project: WebView information on MDN
 
 This RFC proposes that we work on adding WebView documentation to MDN, to help
 web developers figure out how to test and support WebView environments (i.e. iOS
