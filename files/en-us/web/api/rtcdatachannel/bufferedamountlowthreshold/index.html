@@ -2,12 +2,12 @@
 title: RTCDataChannel.bufferedAmountLowThreshold
 slug: Web/API/RTCDataChannel/bufferedAmountLowThreshold
 tags:
-- Experimental
-- Property
-- RTCDataChannel
-- Reference
-- WebRTC
-- bufferedAmountLowThreshold
+  - Experimental
+  - Property
+  - RTCDataChannel
+  - Reference
+  - WebRTC
+  - bufferedAmountLowThreshold
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
@@ -51,12 +51,12 @@ tags:
   send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send()")}}.
 </p>
 
-<pre class="brush: js">var dc = peerConnection.createDataChannel("File Transfer");
-<code>dc.bufferedAmountLowThreshold = 65535;
+<pre class="brush: js">var dc = peerConnection.createDataChannel(&quot;File Transfer&quot;);
+dc.bufferedAmountLowThreshold = 65535;
 
 dc.onbufferedamountlow = function() {
   /* use send() to queue more data to be sent */
-};</code>
+};
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -86,7 +86,7 @@ dc.onbufferedamountlow = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
