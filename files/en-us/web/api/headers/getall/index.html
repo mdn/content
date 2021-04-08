@@ -53,8 +53,17 @@ myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Use {{domxref("Headers.get")}} to return only the first value added to the <code>Headers</code> object.</p>
+<p><strong>Note</strong>: Use {{domxref("Headers.get")}} to get the values as a single string with comma separators.</p>
 </div>
+
+<h2 id="JavaScript_polyfill">JavaScript polyfill</h2>
+
+You can use the following JavaScript polyfill to reimplement the feature in a modern browser.
+
+<pre class="brush: js">
+Headers.prototype.getAll = function(name) {
+  return this.get(name).split(',').map(v => v.trimStart());
+}</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
