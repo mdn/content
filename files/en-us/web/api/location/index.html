@@ -76,7 +76,7 @@ body {display:table-cell; text-align:center; vertical-align:middle; font-family:
  <dt>{{domxref("Location.pathname")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of the URL, not including the query string or fragment.</dd>
  <dt>{{domxref("Location.search")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing a <code>'?'</code> followed by the parameters or "querystring" of the URL. Modern browsers provide <a href="/en-US/docs/Web/API/URLSearchParams/get#Example">URLSearchParams</a> and <a href="/en-US/docs/Web/API/URL/searchParams#Example">URL.searchParams</a> to make it easy to parse out the parameters from the querystring.</dd>
+ <dd>Is a {{domxref("USVString")}} containing a <code>'?'</code> followed by the parameters or "querystring" of the URL. Modern browsers provide <a href="/en-US/docs/Web/API/URLSearchParams/get#example">URLSearchParams</a> and <a href="/en-US/docs/Web/API/URL/searchParams#example">URL.searchParams</a> to make it easy to parse out the parameters from the querystring.</dd>
  <dt>{{domxref("Location.hash")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing a <code>'#'</code> followed by the fragment identifier of the URL.</dd>
  <dt>{{domxref("Location.origin")}} {{readOnlyInline}}</dt>
@@ -93,7 +93,7 @@ body {display:table-cell; text-align:center; vertical-align:middle; font-family:
  <dt>{{domxref("Location.replace()")}}</dt>
  <dd>Replaces the current resource with the one at the provided URL (redirects to the provided URL). The difference from the <code>assign()</code> method and setting the <code>href</code> property is that after using <code>replace()</code> the current page will not be saved in session {{domxref("History")}}, meaning the user won't be able to use the <em>back</em> button to navigate to it.</dd>
  <dt>{{domxref("Location.toString()")}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("HTMLHyperlinkElementUtils.href")}}, though it can't be used to modify the value.</dd>
+ <dd>Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("HTMLAnchorElement.href")}}, though it can't be used to modify the value.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
