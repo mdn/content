@@ -79,6 +79,10 @@ const foo = new Foo();
 const bar = new Bar();
 const baz = new Baz();
 
+// prototype chains:
+// foo: Foo <- Object
+// bar: Bar <- Foo <- Object
+// baz: Baz <- Bar <- Foo <- Object
 console.log(Baz.prototype.isPrototypeOf(baz));    // true
 console.log(Baz.prototype.isPrototypeOf(bar));    // false
 console.log(Baz.prototype.isPrototypeOf(foo));    // false
