@@ -20,9 +20,8 @@ tags:
 
 <p class="summary"><span class="seoSummary">Permissions Policy allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to {{Glossary("CSP", "Content Security Policy")}} but controls features instead of security behavior.</span></p>
 
-<div class="notecard warning">
-  <h4>Warning</h4>
-  <p>The {{httpheader("Permissions-Policy")}} header was previously named <coce>Feature-Policy</coce> in the spec. You may still find references to it under that name.</p>
+<div class="note">
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. Some linked-to articles and demos still refer to it by that name. As of April 2021, the {{domxref('FeaturePolicy')}} API has not been updated to reflect this change.</p>
 </div>
 
 <h2 id="In_a_nutshell">In a nutshell</h2>
@@ -110,7 +109,7 @@ tags:
 
 <p>The web provides functionality and APIs that may have privacy or security risks if abused. In some cases, you may wish to strictly limit how such functionality is used on a website. There are policy-controlled features to allow functionality to be enabled/disabled for specific origins or frames within a website. Where available, the feature integrates with the Permissions API, or feature-specific mechanisms to check if the feature is available.</p>
 
-<p>The features include (see <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#directives">Features list</a>):</p>
+<p>The features include (see <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives">Features list</a>):</p>
 
 <ul>
  <li>accelerometer</li>
@@ -162,8 +161,8 @@ tags:
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName("Permissions Policy","#feature-policy-http-header-field","Feature-Policy")}}</td>
-   <td>{{Spec2("Permissions Policy")}}</td>
+   <td>{{SpecName("Feature Policy","#permissions-policy-http-header-field","Permissions-Policy")}}</td>
+   <td>{{Spec2("Feature Policy")}}</td>
    <td>Initial definition. Defines the {{httpheader("Feature-Policy")}} header. Directives are defined in the specs for the features they control. See individual directive pages for details.</td>
   </tr>
  </tbody>
@@ -180,7 +179,7 @@ tags:
  <li>{{HTTPHeader("Permissions-Policy")}} HTTP header</li>
  <li>{{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes</li>
  <li><a href="https://developers.google.com/web/updates/2018/06/feature-policy">Introduction to Feature Policy</a></li>
- <li><a href="https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy">Feature policies on www.chromestatus.com</a></li>
+ <li><a href="https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy">Permissions (feature) policies on www.chromestatus.com</a></li>
  <li><a href="https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop">Feature-Policy Tester (Chrome Developer Tools extension)</a></li>
  <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a></li>
 </ul>

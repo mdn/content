@@ -3,7 +3,7 @@ title: Using Permissions Policy
 slug: Web/HTTP/Permissions_Policy/Using_Permissions_Policy
 tags:
   - Permissions Policy
-  - Feature-Policy
+  - Permissions-Policy
   - HTTP
   - Permissions
   - Privileges
@@ -20,7 +20,7 @@ tags:
 <p>For each policy-controlled feature, the browser maintains a list of origins for which the feature is enabled, known as an allowlist. If you do not specify a policy for a feature, then a default allowlist will be used. The default allowlist is specific to each feature.</p>
 
 <div class="note">
-<p>The <code>Feature-Policy</code> header has now been renamed to <code>Permissions-Policy</code> in the spec, and this article will eventually be updated to reflect that change.</p>
+  <p>The <code>Permissions-Policy</code> header was previously named <code>Feature-Policy</code>. Some linked-to articles and demos still refer to it by that name. As of April 2021, the {{domxref('FeaturePolicy')}} API has not been updated to reflect this change.</p>
 </div>
 
 <h2 id="Writing_a_policy">Writing a policy</h2>
@@ -29,7 +29,7 @@ tags:
 
 <h3 id="allowlist">allowlist</h3>
 
-<p>An <code>allowlist</code> is a list of origins that takes one or more of the following values, separated by spaces:</p>
+<p>An allowlist is a list of origins that takes one or more of the following values, separated by spaces:</p>
 
 <ul>
  <li><code>*</code>: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.</li>
@@ -56,31 +56,31 @@ tags:
 <p>Permissions Policy provides two ways to specify policies to control features:</p>
 
 <ul>
- <li>The {{httpheader('Feature-Policy')}} HTTP header.</li>
+ <li>The {{httpheader('Permissions-Policy')}} HTTP header.</li>
  <li>The {{htmlattrxref("allow", "iframe")}} attribute on {{htmlelement("iframe")}}s.</li>
 </ul>
 
 <p>The primary difference between the HTTP header and the <code>allow</code> attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.</p>
 
-<h3 id="The_Feature-Policy_HTTP_header">The Feature-Policy HTTP header</h3>
+<h3 id="The_Permissions-Policy_HTTP_header">The Permissions-Policy HTTP header</h3>
 
-<p>You can send the <code>Feature-Policy</code> HTTP header with the response of a page. The value of this header is a policy to be enforced by the browser for the given page. It has the following structure.</p>
+<p>You can send the <code>Permissions-Policy</code> HTTP header with the response of a page. The value of this header is a policy to be enforced by the browser for the given page. It has the following structure.</p>
 
-<pre class="brush: bash">Feature-Policy: &lt;feature name&gt; &lt;allowlist of origin(s)&gt;</pre>
+<pre class="brush: bash">Permissions-Policy: &lt;feature name&gt; &lt;allowlist of origin(s)&gt;</pre>
 
 <p>For example, to block all content from using the Geolocation API across your site:</p>
 
-<pre class="brush: bash">Feature-Policy: geolocation 'none'</pre>
+<pre class="brush: bash">Permissions-Policy: geolocation 'none'</pre>
 
 <p>Several features can be controlled at the same time by sending the HTTP header with a semicolon-separated list of policy directives, or by sending a separate header for each policy.</p>
 
 <p>For example, the following are equivalent:</p>
 
-<pre class="brush: bash">Feature-Policy: unsized-media 'none'; geolocation 'self' https://example.com; camera *;
+<pre class="brush: bash">Permissions-Policy: unsized-media 'none'; geolocation 'self' https://example.com; camera *;
 
-Feature-Policy: unsized-media 'none'
-Feature-Policy: geolocation 'self' https://example.com
-Feature-Policy: camera *;
+Permissions-Policy: unsized-media 'none'
+Permissions-Policy: geolocation 'self' https://example.com
+Permissions-Policy: camera *;
 </pre>
 
 <h3 id="The_iframe_allow_attribute">The iframe allow attribute</h3>
@@ -139,7 +139,7 @@ Feature-Policy: camera *;
 
 <p>Send the following the HTTP header:</p>
 
-<pre class="brush: bash">Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';</pre>
+<pre class="brush: bash">Permissions-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';</pre>
 
 <p>Using the <code>&lt;iframe&gt;</code> <code>allow</code> attribute:</p>
 
@@ -149,7 +149,7 @@ Feature-Policy: camera *;
 
 <ul>
  <li><a href="/en-US/docs/Web/HTTP/Permissions_Policy">Permissions Policy</a></li>
- <li>{{HTTPHeader("Feature-Policy")}} header</li>
+ <li>{{HTTPHeader("Permissions-Policy")}} header</li>
  <li>{{HTMLElement('iframe','allow','#Attributes')}} attribute on iframes</li>
  <li>{{HTTPHeader("Content-Security-Policy")}} header</li>
  <li>{{HTTPHeader("Referrer-Policy")}} header</li>
