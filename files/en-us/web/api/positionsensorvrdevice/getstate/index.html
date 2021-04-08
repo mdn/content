@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p>The <strong><code>getState()</code></strong> method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPositionState")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.</p>
+<p>The <strong><code>getState()</code></strong> method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +26,7 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("VRPositionState")}} object.</p>
+<p>A {{domxref("VRPose")}} object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,7 +58,7 @@ tags:
   }
 }</pre>
 
-<p>Here we are grabbing a {{domxref("VRPositionState")}} object using <code>getState()</code> and storing it in <code>posState</code>. We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPositionState.hasPosition")}} and {{domxref("VRPositionState.hasOrientation")}} (these return <code>null</code> if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)</p>
+<p>Here we are grabbing a {{domxref("VRPose")}} object using <code>getState()</code> and storing it in <code>posState</code>. We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return <code>null</code> if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)</p>
 
 <p>We then output the x, y and z position and orientation values for informational purposes, and use those values to update the <code>xPos</code>, <code>yPos</code>, <code>zPos, </code><code>xOrient</code>, <code>yOrient</code>, and <code>zOrient</code> variables, which are used to update the scene rendering on each frame.</p>
 
