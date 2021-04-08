@@ -358,7 +358,7 @@ function startup() {
  <dd>The total number of milliseconds the ad has been visible.</dd>
 </dl>
 
-<p>These are accessed through each ad's {{domxref("HTMLElement.dataset")}} attribute, which provides a {{domxref("DOMStringMap")}} mapping each custom attribute's name to its value. The values are strings, but we can convert those to numbers easily enough—in fact, JavaScript generally does it automatically, although we'll have one instance where we have to do it ourselves.</p>
+<p>These are accessed through each ad's {{domxref("HTMLOrForeignElement.dataset")}} attribute, which provides a {{domxref("DOMStringMap")}} mapping each custom attribute's name to its value. The values are strings, but we can convert those to numbers easily enough—in fact, JavaScript generally does it automatically, although we'll have one instance where we have to do it ourselves.</p>
 
 <p>We start by fetching the time at which the ad's previous visibility status check time (<code>adBox.dataset.lastViewStarted</code>) into a local variable named <code>lastStarted</code>. We also get the current time-since-creation value using {{domxref("Performance.now", "performance.now()")}} into <code>currentTime</code>.</p>
 
@@ -379,7 +379,7 @@ function startup() {
   timerBox.innerText = min + ":" + sec.toString().padStart(2, "0");
 }</pre>
 
-<p>This code finds the ad's timer using its ID, <code>"timer"</code>, and computes the number of seconds elapsed by dividing the ad's <code>totalViewTime</code> by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("Node.innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.</p>
+<p>This code finds the ad's timer using its ID, <code>"timer"</code>, and computes the number of seconds elapsed by dividing the ad's <code>totalViewTime</code> by 1000. Then it calculates the number of minutes and seconds elapsed before setting the timer's {{domxref("HTMLElement/innerText", "innerText")}} to a string representing that time in the form m:ss. The {{jsxref("String.padStart()")}} method is used to ensure that the number of seconds is padded out to two digits if it's less than 10.</p>
 
 <h3 id="Building_the_page_contents">Building the page contents</h3>
 
