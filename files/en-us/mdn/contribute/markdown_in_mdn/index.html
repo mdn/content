@@ -22,36 +22,7 @@ tags:
 
 <p>The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <a href="https://github.github.com/gfm/">https://github.github.com/gfm/</a>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark (<a href="http://spec.commonmark.org/">http://spec.commonmark.org/</a>).</p>
 
-<p>GFM and CommonMark describe some extensions to <a href="https://daringfireball.net/projects/markdown/syntax">the original Markdown description</a>). We'll highlight three that are going to be important to us.
-
-<h3>Markdown in HTML blocks</h3>
-
-<p>In GFM and CommonMark, HTML blocks may contain Markdown formatting. So:</p>
-
-<pre>
-&lt;div style="background-color: pink"&gt;
-
-Hello **there**, `Markdown` formatting.
-
-* one
-* two
-* three
-
-&lt;/div&gt;
-</pre>
-
-<p>produces:</p>
-
-<pre>
-&lt;div style="background-color: pink"&gt;
-  &lt;p&gt;Hello &lt;strong&gt;there&lt;/strong&gt;, &lt;code&gt;Markdown&lt;/code&gt; formatting.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;one&lt;/li&gt;
-    &lt;li&gt;two&lt;/li&gt;
-    &lt;li&gt;three&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+<p>GFM and CommonMark describe some extensions to <a href="https://daringfireball.net/projects/markdown/syntax">the original Markdown description</a>). We'll highlight two that are going to be important to us.
 
 <h3>Code fences and info strings</h3>
 
