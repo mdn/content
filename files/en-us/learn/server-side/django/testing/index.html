@@ -321,7 +321,7 @@ class AuthorModelTest(TestCase):
         self.assertEqual(field_label, 'first name')
 
     def test_date_of_death_label(self):
-        author=Author.objects.get(id=1)
+        author = Author.objects.get(id=1)
         field_label = author._meta.get_field('date_of_death').verbose_name
         self.assertEqual(field_label, 'died')
 
@@ -436,7 +436,7 @@ from catalog.forms import RenewBookForm
 class RenewBookFormTest(TestCase):
     def test_renew_form_date_field_label(self):
         form = RenewBookForm()
-        self.assertTrue(form.fields['renewal_date'].label == None or form.fields['renewal_date'].label == 'renewal date')
+        self.assertTrue(form.fields['renewal_date'].label is None or form.fields['renewal_date'].label == 'renewal date')
 
     def test_renew_form_date_field_help_text(self):
         form = RenewBookForm()
