@@ -45,18 +45,18 @@ tags:
   contain: layout inline-size;
 }</pre>
 
-<p>Adding the contain property with layout and a size value creates a <strong>containment context</strong>. You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.</p>
+<p>Adding the contain property with layout and a size value creates a <strong>containment context</strong> on that element. This means that the browser knows we might want to query this container later. You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.</p>
 
 <p>A container query is created using <code>@container</code>. This will query the nearest containment context. To cause the card to display as two columns only if the sidebar is wider than 700px, we use the following CSS:</p>
 
-<pre class="brush:css">@container (max-width: 700px){
+<pre class="brush:css">@container (min-width: 700px){
   .card {
     display: grid;
-	grid-template-columns: 2fr 1fr;
+	  grid-template-columns: 2fr 1fr;
   }
 }</pre>
 
-<p>If other areas of the layout are also a containment context then we can drop the component into those areas and it will respond to the relevant containment context. This makes the various components that we might create in our pattern library truly reusable, without us needing to know the context that they are in.</p>
+<p>If other areas of the layout are also containment contexts then we can drop the component into those areas and it will respond to the relevant containment context. This makes the various components that we might create in our pattern library truly reusable, without us needing to know the context that they are in.</p>
 
 <p>There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome Canary. <a href="https://www.google.com/intl/en_uk/chrome/canary/">Download Canary</a>, then go to <kbd>chrome://flags</kbd>, search for Container Queries and enable that flag.</p>
 
@@ -64,7 +64,7 @@ tags:
 
 <h2>Share your feedback</h2>
 
-<p>At this early stage of development it is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping <a href="https://css.oddbird.net/rwd/query/explainer/">a list of open questions</a>. Issues raised against the feature can be found in <a href="https://github.com/w3c/csswg-drafts/projects/18">a project</a> on the CSS Working Group Github. If you have thoughts on any of these questions, or want to raise something new, please do!</p>
+<p>This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping <a href="https://css.oddbird.net/rwd/query/explainer/">a list of open questions</a>. Issues raised against the feature can be found in <a href="https://github.com/w3c/csswg-drafts/projects/18">a project</a> on the CSS Working Group Github. If you have thoughts on any of these questions, or want to raise something new, please do!</p>
 
 <p>It is always helpful to see use cases, particularly those that might not be solved by the current proposal. Any feedback will be very welcome and will help make the feature even better once in lands in release versions of browsers.</p>
 
@@ -75,3 +75,9 @@ tags:
 <p>As already discussed, one solution for components that may occupy different locations, is to use a class or a selector that targets them based on document location.</p>
 
 <p>Another solution is to rely on grid or flex layout. The component used in my demo could be laid out using flexbox, which would give it some ability to display as one or two columns based on available width. You don't have the ability to make larger layout changes using this method, however in many cases you can achieve an acceptable result. As container queries become available you could maintain the grid or flex version as the fallback for non-supporting browsers.</p>
+
+<h2>See also</h2>
+
+<ul>
+  <li><a href="https://www.oddbird.net/2021/04/05/containerqueries/">Container Queries: a Quick Start Guide</a></li>
+</ul>
