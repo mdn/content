@@ -36,13 +36,13 @@ tags:
 
 <p>In the below example the constant <code>html</code> was created by a policy, and therefore <code>isHTML()</code> returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to <code>isHTML()</code>.</p>
 
-<pre class="brush: js">const html = policy.createHTML('<div>');
+<pre class="brush: js">const html = policy.createHTML('&gt;div&lt;');
 console.log(trustedTypes.isHTML(html)) // true;
 
 const fake = Object.create(TrustedHTML.prototype);
 console.log(trustedTypes.isHTML(fake)); // false
 
-console.log(trustedTypes.isHTML("<div>plain string</div>")); // false</pre>
+console.log(trustedTypes.isHTML("&gt;div&lt;plain string&gt;/div&lt;")); // false</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

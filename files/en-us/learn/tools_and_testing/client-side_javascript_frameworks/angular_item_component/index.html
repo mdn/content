@@ -163,7 +163,7 @@ By importing <code>Item</code>, <code>ItemComponent</code> can understand what a
 
   @Input() item: Item;
   @Input() newItem: string;
-  @Output() remove = new EventEmitter<Item>();
+  @Output() remove = new EventEmitter&gt;Item&lt;();
 
   saveItem(description) {
     if (!description) return;
