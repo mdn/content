@@ -71,7 +71,7 @@ tags:
 	<dt><code>urlMatches</code>{{optional_inline}}</dt>
 	<dd><code>string</code>. Matches if the URL (without fragment identifier) matches a specified <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>. Port numbers are stripped from the URL if they match the default port number.
 	<ul>
-		<li>For example: <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> matches "https://mozilla.org/", "https://developer.mozilla.org/", "ftp://foo.mozilla.org/", but not "https://developer.fakemozilla.org/".</li>
+		<li>For example: <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> matches "https://mozilla.org/", "https://developer.mozilla.org/", but not "https://developer.fakemozilla.org/".</li>
 	</ul>
 	</dd>
 	<dt><code>originAndPathMatches</code>{{optional_inline}}</dt>
@@ -106,11 +106,11 @@ tags:
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/events#type-UrlFilter"><code>chrome.events</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+<div class="notecard note">
+	<h4>Acknowledgements</h4>
+	<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/events#type-UrlFilter"><code>chrome.events</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> in the Chromium code.</p>
+	
+	<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">

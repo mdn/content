@@ -1626,7 +1626,6 @@
 /en-US/docs/DOM/Mozilla_event_reference/waiting	/en-US/docs/Web/API/HTMLMediaElement/waiting_event
 /en-US/docs/DOM/Mozilla_event_reference/wheel	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/DOM/MutationObserver	/en-US/docs/Web/API/MutationObserver
-/en-US/docs/DOM/Mutation_events	/en-US/docs/Web/Guide/Events/Mutation_events
 /en-US/docs/DOM/NamedNodeMap	/en-US/docs/Web/API/NamedNodeMap
 /en-US/docs/DOM/Node	/en-US/docs/Web/API/Node
 /en-US/docs/DOM/Node.appendChild	/en-US/docs/Web/API/Node/appendChild
@@ -10687,7 +10686,6 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
-/en-US/docs/Web/Guide/API/DOM/Events/Mutation_events	/en-US/docs/Web/Guide/Events/Mutation_events
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -10761,7 +10759,6 @@
 /en-US/docs/Web/Guide/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
 /en-US/docs/Web/Guide/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
-/en-US/docs/Web/Guide/DOM/Events/Mutation_events	/en-US/docs/Web/Guide/Events/Mutation_events
 /en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
@@ -10777,6 +10774,7 @@
 /en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Media_events	/en-US/docs/Web/Events#media
+/en-US/docs/Web/Guide/Events/Mutation_events	/en-US/docs/Web/API/MutationEvent
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction

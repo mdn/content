@@ -298,8 +298,8 @@ function b() {
   let z = 3;
   output(x);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
   <pre class="brush: js">a();
 b();</pre>
   Both the <code>a()</code> and <code>b()</code> call should output the value of x — 1. These work fine because even though the <code>output()</code> calls are not in the same scope as <code>x</code> is defined in, <code>x</code> is a global variable so is available inside all code, everywhere.</li>
@@ -313,8 +313,8 @@ function b() {
   let z = 3;
   output(y);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
   <pre class="brush: js">a();
 b();</pre>
   This time the <code>a()</code> and <code>b()</code> calls will both return an annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>

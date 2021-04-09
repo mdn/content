@@ -95,14 +95,14 @@ tags:
 
 <ul>
   <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}}
-    {{HTTPHeader("Feature-Policy")}} is enabled</li>
-  <li>The document is inside a sandboxed {{htmlelement("iframe")}}</li>
-  <li>The document has no {{glossary("browsing context")}}</li>
+    {{HTTPHeader("Feature-Policy")}} is disabled.</li>
+  <li>The document is inside a sandboxed {{htmlelement("iframe")}}.</li>
+  <li>The document has no {{glossary("browsing context")}}.</li>
   <li>The document's <a
       href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective
-      domain</a> is <code>null</code></li>
+      domain</a> is <code>null</code>.</li>
   <li>The given value is neither the same as the page's current hostname, nor a parent
-    domain of it</li>
+    domain of it.</li>
 </ul>
 
 <p>As an example of this last failure case, trying to set <code>document.domain</code> to

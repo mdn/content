@@ -13,7 +13,7 @@ tags:
 
 <p>The <code><strong>toggle()</strong></code> method of the {{domxref("DOMTokenList")}}
   interface removes a given <code><var>token</var></code> from the list and returns
-  <code>false</code>. If <em>token</em> doesn't exist it's added and the function returns
+  <code>false</code>. If <code><var>token</var></code> doesn't exist it's added and the function returns
   <code>true</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -27,7 +27,7 @@ tags:
   <dt><code><var>token</var></code></dt>
   <dd>A {{domxref("DOMString")}} representing the token you want to toggle.</dd>
   <dt><code><var>force</var></code> {{optional_inline}}</dt>
-  <dd>A {{domxref("Boolean")}} that, if included, turns the toggle into a one way-only
+  <dd>A {{jsxref("Boolean")}} that, if included, turns the toggle into a one way-only
     operation. If set to <code>false</code>, then <code><var>token</var></code> will
     <em>only</em> be removed, but not added. If set to <code>true</code>, then
     <code><var>token</var></code> will <em>only</em> be added, but not removed.</dd>
@@ -35,7 +35,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Boolean")}} indicating whether <code><var>token</var></code> is in the
+<p>A {{jsxref("Boolean")}} indicating whether <code><var>token</var></code> is in the
   list after the call.</p>
 
 <h2 id="Examples">Examples</h2>
