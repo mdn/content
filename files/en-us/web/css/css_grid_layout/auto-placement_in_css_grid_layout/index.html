@@ -99,7 +99,7 @@ tags:
 <p>{{ EmbedLiveSample('placement_2', '500', '330') }}</p>
 </div>
 
-<p>You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
+<p>You can use {{cssxref("minmax()","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
 
 <div id="placement_3">
 <div class="hidden">
@@ -459,46 +459,10 @@ tags:
 
 <p>Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of <code>landscape</code> to span two column tracks. I then use <code>grid-auto-flow: dense</code> to create a densely packed grid.</p>
 
+<p>Try removing the line <code>grid-auto-flow: dense</code> to see the content reflow to leave gaps in the layout.</p>
+
 <div id="placement_9">
-<pre class="brush: css">.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-    grid-auto-flow: dense;
-    list-style: none;
-    margin: 1em auto;
-    padding: 0;
-    max-width: 800px;
-}
-.wrapper li {
-    border: 1px solid #ccc;
-}
-.wrapper li.landscape {
-    grid-column-end: span 2;
-}
-.wrapper li img {
-   display: block;
-   object-fit: cover;
-   width: 100%;
-   height: 100%;
-}
-</pre>
-
-<pre class="brush: html">&lt;ul class="wrapper"&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li class="landscape"&gt;&lt;img src="https://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;img src="https://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('placement_9', '500', '1300') }}</p>
+<p>{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}</p>
 </div>
 
 <p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
