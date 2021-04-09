@@ -8,7 +8,9 @@ tags:
 
 <div class="notecard warning">
 
-<p><strong>This document is a work-in-progress draft at the moment.</strong></p>
+<h4>Warning</h4>
+
+<p>This document is a work-in-progress draft at the moment.</p>
 
 <p>It's not actually possible, yet, to write MDN documentation using Markdown, so at the moment this document is used to record the decisions we've made about how we will expect Markdown to be written, when it is supported.</p>
 
@@ -154,13 +156,10 @@ const greeting = "I'm a good example";
 
 <pre>
 
-The **`margin-right`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-property sets the margin area on the right side of an element. A positive value
-places it farther from its neighbors, while a negative value places it closer.
+The **`margin`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property sets the [margin area](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) on all four sides of an element. It is a shorthand for {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}.
 
-\{{EmbedInteractiveExample("pages/css/margin-right.html")}}
+\{{EmbedInteractiveExample("pages/css/margin.html")}}
 
-The vertical margins of two adjacent boxes may fuse. This is called
-[*margin collapsing*](https://developer.mozilla.org/en-US/docs/CSS/margin_collapsing).
+The top and bottom margins have no effect on replaced inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 </pre>
