@@ -70,7 +70,7 @@ console.log('Removed this element:', shifted);
 
 <pre class="brush: js">var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
 
-while( (i = names.shift()) !== undefined ) {
+while( typeof (i = names.shift()) !== 'undefined' ) {
     console.log(i);
 }
 // Andrew, Edward, Paul, Chris, John
