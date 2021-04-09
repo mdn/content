@@ -1,70 +1,176 @@
 ---
-title: Vue resources
-slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
+title: Styling our Angular app
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
 tags:
   - Beginner
+  - Frameworks
   - JavaScript
   - Learn
+  - client-side
+  - Angular
+  - Styling
 ---
 <div>{{LearnSidebar}}</div>
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.</p>
+<p>Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
+   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.
    </td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
-   <td>To learn where to go to find further information on Vue, to continue your learning.</td>
+   <td>To learn how to style an Angular app.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Further_resources">Further resources</h2>
+<h2 id="adding_some_style_to_angular">Adding some style to Angular</h2>
 
-<p>Here’s where you should go to learn more about Vue:</p>
-
-<ul>
- <li><a href="https://vuejs.org/">Vue Docs</a> — The main Vue site. Contains comprehensive documentation, including examples, cookbooks, and reference material. This is the best place to start learning Vue in depth.</li>
- <li><a href="https://github.com/vuejs/vue">Vue Github Repo</a> — The Vue code itself. This is where you can report issues and/or contribute directly to the Vue codebase. Studying the Vue source code can help you better understand how the framework works, and write better code.</li>
- <li><a href="https://forum.vuejs.org/">Vue Forum</a> — The official forum for getting help with Vue.</li>
- <li><a href="https://cli.vuejs.org/">Vue CLI Docs</a> — Documentation for the Vue CLI. This contains information on customizing and extending the output you are generating via the CLI.</li>
- <li><a href="https://nuxtjs.org/">NuxtJS</a> — NuxtJS is a Server-Side Vue Framework, with some architectural opinions that can be useful to creating maintainable applications, even if you don’t use any of the Server Side Rendering features it provides. This site provides detailed documentation on using NuxtJS.</li>
- <li><a href="https://www.vuemastery.com/courses/">Vue Mastery</a> — A paid education platform that specializes in Vue, including some free lessons.</li>
- <li><a href="https://vueschool.io/">Vue School</a> — Another paid education platform specializing in Vue.</li>
-</ul>
-
-<h2 id="Building_and_publishing_your_Vue_app">Building and publishing your Vue app</h2>
-
-<p>The Vue CLI also provides us with tools for preparing our app for publishing to the web. You can do this like so:</p>
+<p>The Angular CLI generates two types of style files:</p>
 
 <ul>
- <li>If your local server is still running, end it by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> in the terminal.</li>
- <li>Next, run the <code>npm run build</code> (or <code>yarn build</code>) in the console.</li>
+  <li>Component styles: The Angular CLI gives each component its own file for styles.
+The styles in this file apply only to its component.</li>
+  <li><code>styles.css</code>: In the <code>src</code> directory, the styles in this file apply to your entire application unless you specify styles at the component level.</li>
 </ul>
 
-<p>This will create a new <code>dist</code> directory containing all of your production ready files. To publish your site to the web, copy the contents of this folder to your hosting environment.</p>
+<p>Depending on whether you are using a CSS preprocessor, the extension on your CSS files can vary.
+Angular supports plain CSS, SCSS, Sass, Less, and Stylus.</p>
 
-<div class="notecard note">
-<p><strong>Note</strong>: The Vue CLI docs also include a <a href="https://cli.vuejs.org/guide/deployment.html#platform-guides">specific guide on how to publish your app</a> to many of the common hosting platforms.</p>
-</div>
+<p>In <code>src/styles.css</code>, paste the following styles:</p>
 
-<h2 id="Vue_3">Vue 3</h2>
+<pre class="brush: css">body {
+  font-family: Helvetica, Arial, sans-serif;
+}
 
-<p>Vue 3 is a major release of the framework with a lot of major changes. It went into active beta in April, 2020. The biggest change is a new Composition API that works as an alternative to the current property-based API. In this new API, a single <code>setup()</code> function is used on the component. Only what you return from this function is available in your <code>&lt;template&gt;</code>s. You are required to be explicit about "reactive" properties when using this API. Vue handles this for you using the Options API. This makes the new API typically considered a more advanced use case.</p>
+.btn-wrapper {
+  /* flexbox */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 
-<p>There are also a handful of other changes, including a change in how Apps are initialized in Vue. To read more about the changes involved with Vue 3, refer to <a href="https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/">this article by Vue School which goes over most of the major changes in Vue 3</a>.</p>
+.btn {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #cecece;
+  padding: .35rem 1rem .25rem 1rem;
+  font-size: 1rem;
+}
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+.btn:hover {
+  background-color: #ecf2fd;
+}
+
+.btn:active {
+  background-color: #d1e0fe;
+}
+
+.btn:focus {
+  outline: none;
+  border: black solid 2px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+  padding: .75rem;
+  font-size: 1.3rem;
+  border: black solid 2px;
+  margin: 1rem 0;
+}
+
+.btn-primary:hover {
+  background-color: #444242;
+}
+
+.btn-primary:focus {
+  color: #000;
+  outline: none;
+  border: #000 solid 2px;
+  background-color: #d7ecff;
+}
+
+.btn-primary:active {
+  background-color: #212020;
+}</pre>
+
+<p>The CSS in <code>src/styles.css</code> apply to the entire application, however, these styles don&#39;t effect everything on the page.
+The next step is to add styles that apply specifically to the <code>AppComponent</code>.</p>
+
+<p>In <code>app.component.css</code>, add the following styles:</p>
+
+<pre class="brush: css">body {
+  color: #4d4d4d;
+  background-color: #f5f5f5;
+  color: #4d4d4d;
+}
+
+.main {
+  max-width: 500px;
+  width: 85%;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 2.5rem 5rem 0 rgba(0,0,0,.1);
+}
+
+@media screen and (min-width: 600px) {
+  .main {
+    width: 70%;
+  }
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display:block;
+  padding-bottom: 1rem;
+}
+
+.lg-text-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #000;
+  display: block;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.btn-wrapper {
+  margin-bottom: 2rem;
+}
+
+.btn-menu {
+  flex-basis: 32%;
+}
+
+.active {
+  color: green;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+ ul li {
+    list-style: none;
+}</pre>
+
+<p>The last step is to revisit your browser and look at how the styling has updated. Things now make a bit more sense.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Now that our brief tour of styling in Angular is done with, let's return to creating our app functionality. In the next article we will create a proper component for to-do items, and make it so that you can check, edit, and delete to-do items.</p>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
 <h2 id="In_this_module">In this module</h2>
 
