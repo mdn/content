@@ -2,12 +2,12 @@
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/Trim
 tags:
-- ECMAScript 5
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
 ---
 <div>{{JSRef}}</div>
 
@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code><var>str</var>.trim()</code></pre>
+<pre class="brush: js">str.trim()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -31,6 +31,8 @@ tags:
 <p>The <code>trim()</code> method returns the string stripped of whitespace from both
   ends. <code>trim()</code> does not affect the value of the <code><var>str</var></code>
   itself.</p>
+
+<p>To return a new string with whitespace trimmed from just one end, use {{jsxref("String.prototype.trimStart()", "trimStart()")}} or {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}.</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -51,11 +53,6 @@ tags:
 <p>The following example displays the lowercase string <code>'foo'</code>:</p>
 
 <pre class="brush: js">var orig = '   foo  ';
-console.log(orig.trim()); // 'foo'
-
-// Another example of .trim() removing whitespace from just one side.
-
-var orig = 'foo    ';
 console.log(orig.trim()); // 'foo'
 </pre>
 
