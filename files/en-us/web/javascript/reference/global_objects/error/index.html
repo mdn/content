@@ -59,17 +59,17 @@ tags:
  <dd>Error message.</dd>
  <dt>{{jsxref("Error.prototype.name")}}</dt>
  <dd>Error name.</dd>
- <dt>{{jsxref("Error.prototype.description")}}</dt>
+ <dt>{{jsxref("Error.prototype.description")}} {{non-standard_inline}}</dt>
  <dd>A non-standard Microsoft property for the error description. Similar to {{jsxref("Error.prototype.message", "message")}}.</dd>
- <dt>{{jsxref("Error.prototype.number")}}</dt>
+ <dt>{{jsxref("Error.prototype.number")}} {{non-standard_inline}}</dt>
  <dd>A non-standard Microsoft property for an error number.</dd>
- <dt>{{jsxref("Error.prototype.fileName")}}</dt>
+ <dt>{{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}</dt>
  <dd>A non-standard Mozilla property for the path to the file that raised this error.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber")}}</dt>
+ <dt>{{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}</dt>
  <dd>A non-standard Mozilla property for the line number in the file that raised this error.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber")}}</dt>
+ <dt>{{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}</dt>
  <dd>A non-standard Mozilla property for the column number in the line that raised this error.</dd>
- <dt>{{jsxref("Error.prototype.stack")}}</dt>
+ <dt>{{jsxref("Error.prototype.stack")}} {{non-standard_inline}}</dt>
  <dd>A non-standard Mozilla property for a stack trace.</dd>
 </dl>
 
@@ -111,7 +111,7 @@ tags:
 
 <h3 id="Custom_Error_Types">Custom Error Types</h3>
 
-<p>You might want to define your own error types deriving from <code>Error</code> to be able to <code>throw new MyError()</code> and use <code>instanceof MyError</code> to check the kind of error in the exception handler.  This results in cleaner and more consistent error handling code. </p>
+<p>You might want to define your own error types deriving from <code>Error</code> to be able to <code>throw new MyError()</code> and use <code>instanceof MyError</code> to check the kind of error in the exception handler.  This results in cleaner and more consistent error handling code.</p>
 
 <p>See <a href="http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">"What's a good way to extend Error in JavaScript?"</a> on StackOverflow for an in-depth discussion.</p>
 
