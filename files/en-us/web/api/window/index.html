@@ -27,19 +27,19 @@ tags:
 
 <h2 id="Constructors">Constructors</h2>
 
-<p>See also the <a href="/en-US/docs/DOM/DOM_Reference">DOM Interfaces</a>.</p>
+<p>See also the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM Interfaces</a>.</p>
 
 <dl>
  <dt>{{domxref("DOMParser")}}</dt>
- <dd><code>DOMParser</code> can parse XML or HTML source stored in a string into a DOM <a href="/en-US/docs/DOM/document">Document</a>. <code>DOMParser</code> is specified in <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</dd>
- <dt>{{domxref("Image")}}</dt>
+ <dd><code>DOMParser</code> can parse XML or HTML source stored in a string into a DOM <a href="/en-US/docs/Web/API/Document">Document</a>. <code>DOMParser</code> is specified in <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</dd>
+ <dt>{{domxref("HTMLImageElement.Image")}}</dt>
  <dd>Used for creating an {{domxref("HTMLImageElement")}}.</dd>
- <dt>{{domxref("Option")}}</dt>
+ <dt>{{domxref("HTMLOptionElement.Option")}}</dt>
  <dd>Used for creating an {{domxref("HTMLOptionElement")}}.</dd>
  <dt>{{domxref("StaticRange")}} {{experimental_inline}} {{readonlyinline}}</dt>
  <dd>Returns a {{domxref('StaticRange.StaticRange','StaticRange()')}} constructor which creates a {{domxref('StaticRange')}} object.</dd>
  <dt>{{domxref("Worker")}}</dt>
- <dd>Used for creating a <a href="/en-US/docs/DOM/Using_web_workers">Web worker.</a></dd>
+ <dd>Used for creating a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker.</a></dd>
  <dt>{{domxref("XMLSerializer")}}</dt>
  <dd>Converts a DOM tree into XML or HTML source.</dd>
 </dl>
@@ -128,7 +128,7 @@ tags:
  <dt>{{domxref("Window.parent")}} {{readOnlyInline}}</dt>
  <dd>Returns a reference to the parent of the current window or subframe.</dd>
  <dt>{{domxref("Window.performance")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing <a href="/en-US/docs/Navigation_timing">performance-related</a> data. See also <a href="/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing">Using Navigation Timing</a> for additional information and examples.</dd>
+ <dd>Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing <a href="/en-US/docs/Web/API/Navigation_timing_API">performance-related</a> data. See also <a href="/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing">Using Navigation Timing</a> for additional information and examples.</dd>
  <dt>{{domxref("Window.personalbar")}} {{readOnlyInline}}</dt>
  <dd>Returns the personalbar object, whose visibility can be toggled in the window.</dd>
  <dt>{{domxref("Window.screen")}} {{readOnlyInline}}</dt>
@@ -366,10 +366,10 @@ tags:
  <dt>{{domxref("Window.ongamepaddisconnected")}}</dt>
  <dd>Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).</dd>
  <dt>{{domxref("Window.onmozbeforepaint")}}</dt>
- <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.</dd>
+ <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("window.requestAnimationFrame")}} method.</dd>
  <dt>{{domxref("Window.onpaint")}}</dt>
  <dd>An event handler property for paint events on the window.</dd>
- <dt>{{domxref("Window.onrejectionhandled")}}</dt>
+ <dt>{{domxref("WindowEventHandlers.onrejectionhandled")}}</dt>
  <dd>An event handler for handled {{jsxref("Promise")}} rejection events.</dd>
  <dt>{{domxref("Window.onuserproximity")}}</dt>
  <dd>An event handler property for user proximity events.</dd>
@@ -492,10 +492,10 @@ tags:
  <dd>Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.</dd>
  <dt>{{domxref("Window/deviceorientation_event", "deviceorientation")}}</dt>
  <dd>Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.</dd>
- <dt>{{domxref("Document/defaultView/resize_event", "resize")}}</dt>
+ <dt>{{domxref("Window/resize_event", "resize")}}</dt>
  <dd>Fired when the window has been resized.<br>
  Also available via the {{domxref("GlobalEventHandlers/onresize", "onresize")}} property.</dd>
- <dt>{{domxref("Document/defaultView/storage_event", "storage")}}</dt>
+ <dt>{{domxref("Window/storage_event", "storage")}}</dt>
  <dd>Fired when a storage area (<code>localStorage</code> or <code>sessionStorage</code>) has been modified in the context of another document.<br>
  Also available via the {{domxref("WindowEventHandlers/onstorage", "onstorage")}} property.</dd>
 </dl>
@@ -645,16 +645,16 @@ tags:
 
 <dl>
  <dt>{{domxref("Window/transitioncancel_event", "transitioncancel")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is canceled.<br>
  Also available via the {{domxref("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} property.</dd>
  <dt>{{domxref("Window/transitionend_event", "transitionend")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has completed.<br>
  Also available via the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}} property.</dd>
  <dt>{{domxref("Window/transitionrun_event", "transitionrun")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is first created.<br>
  Also available via the {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property.</dd>
  <dt>{{domxref("Window/transitionstart_event", "transitionstart")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has actually started.<br>
  Also available via the {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.</dd>
 </dl>
 
@@ -692,7 +692,7 @@ tags:
 
 <h2 id="Interfaces">Interfaces</h2>
 
-<p>See <a href="/en-US/docs/DOM/DOM_Reference">DOM Reference</a>.</p>
+<p>See <a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
