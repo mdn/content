@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.358":
-  version "0.4.358"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.358.tgz#023b4766eca2a8f662745ae577093d2dc476a785"
-  integrity sha512-Y6tu6j28X6bsr4SyCYdV8ecPryzZG7oVn1P/X79Dbb0NpMnWA/inSGTW/B9nV05RWSVu2Ry9rGa23ZTR+oSZ3g==
+"@mdn/yari@0.4.359":
+  version "0.4.359"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.359.tgz#b6c40c5be85fa0e0a0c45f10b194c9ff67571bfd"
+  integrity sha512-GI8n2wysvdv9/aI2dBWef3sDzpzQjoDM7bba/ecPCjXCVkAPpm62cr3ZCwt5DM9iMu77wV01itL4w1o3ErY7VA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -69,7 +69,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.2"
     hast-util-to-text "^2.0.1"
-    http-proxy-middleware "1.1.0"
+    http-proxy-middleware "1.1.1"
     image-size "0.9.7"
     image-type "4.1.0"
     imagemin "7.0.1"
@@ -627,11 +627,6 @@ camelcase@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
   integrity sha1-fB0W1nmhu+WcoCys7PsBHiAfWh8=
-
-camelcase@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.2.0.tgz#924af881c9d525ac9d87f40d964e5cea982a1809"
-  integrity sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==
 
 caw@^2.0.0, caw@^2.0.1:
   version "2.0.1"
@@ -2181,13 +2176,12 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.1.0.tgz#b896b2cc6836019af4a4f2d5f7b21b99c77ea13f"
-  integrity sha512-OnjU5vyVgcZVe2AjLJyMrk8YLNOC2lspCHirB5ldM+B/dwEfZ5bgVTrFyzE9R7xRWAP/i/FXtvIqKjTNEZBhBg==
+http-proxy-middleware@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.1.1.tgz#48900a68cd9d388c735d1dd97302c919b7e94a13"
+  integrity sha512-FIDg9zPvOwMhQ3XKB2+vdxK6WWbVAH7s5QpqQCif7a1TNL76GNAATWA1sy6q2gSfss8UJ/Nwza3N6QnFkKclpA==
   dependencies:
     "@types/http-proxy" "^1.17.5"
-    camelcase "^6.2.0"
     http-proxy "^1.18.1"
     is-glob "^4.0.1"
     is-plain-obj "^3.0.0"
