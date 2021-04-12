@@ -1,6 +1,6 @@
 ---
 title: ':invalid'
-slug: 'Web/CSS/:invalid'
+slug: Web/CSS/:invalid
 tags:
   - CSS
   - Layout
@@ -90,7 +90,7 @@ input:required:invalid {
 <p>The color red is commonly used to indicate invalid input. People who have certain types of color blindness will be unable to determine the input's state unless it is accompanied by an additional indicator that does not rely on color to convey meaning. Typically, descriptive text and/or an icon are used.</p>
 
 <ul>
-	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
 	<li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -102,7 +102,7 @@ input:required:invalid {
 
 <h3 id="Gecko_defaults">Gecko defaults</h3>
 
-<p>By default, Gecko does not apply a style to the <code>:invalid</code> pseudo-class. However, it does apply a style (a red "glow" using the {{Cssxref("box-shadow")}} property) to the {{cssxref(":-moz-ui-invalid")}} pseudo-class, which applies in a subset of cases for <code>:invalid</code>.</p>
+<p>By default, Gecko does not apply a style to the <code>:invalid</code> pseudo-class. However, it does apply a style (a red "glow" using the {{Cssxref("box-shadow")}} property) to the {{cssxref(":user-invalid")}} pseudo-class, which applies in a subset of cases for <code>:invalid</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -141,7 +141,7 @@ input:required:invalid {
 
 <ul>
 	<li>Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}</li>
-	<li>Related Mozilla pseudo-classes: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}</li>
-	<li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
+	<li>Related Mozilla pseudo-classes: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}</li>
+	<li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
 	<li>Accessing the <a href="/en-US/docs/Web/API/ValidityState">validity state</a> from JavaScript</li>
 </ul>
