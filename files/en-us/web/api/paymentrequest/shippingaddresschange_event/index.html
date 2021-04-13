@@ -52,7 +52,7 @@ tags:
 
 paymentRequest.addEventListener("shippingaddresschange", event =&gt; {
   let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-  event.updateWith(detailsUpate);
+  event.updateWith(detailsUpdate);
 }, false);
 
 const checkAddress = theAddress =&gt; {
