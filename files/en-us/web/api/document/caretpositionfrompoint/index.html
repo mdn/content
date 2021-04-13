@@ -59,9 +59,9 @@ tags:
     textNode = range.offsetNode;
     offset = range.offset;
   } else {
-    document.body.innerHTML = "[This browser supports neither"
-      + " &lt;code&gt;document.caretRangeFromPoint&lt;/code&gt;"
-      + " nor &lt;code&gt;document.caretPositionFromPoint&lt;/code&gt;.]";
+    document.body.textContent = "[This browser supports neither"
+      + " document.caretRangeFromPoint"
+      + " nor document.caretPositionFromPoint.]";
     return;
   }
   // Only split TEXT_NODEs
