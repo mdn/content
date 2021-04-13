@@ -71025,26 +71025,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2020-10-15T21:05:51.183Z",
-    "contributors": [
-      "sideshowbarker",
-      "alattalatta",
-      "ExE-Boss",
-      "K-Gun",
-      "Alhadis",
-      "LouisLazaris",
-      "fscholz",
-      "kollishivagangadhar",
-      "khushboo_Dwivedi",
-      "teoli",
-      "Sheppy",
-      "ziyunfei",
-      "BillyRayPreachersSon",
-      "RobG",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/ParentNode/prepend": {
     "modified": "2020-11-27T11:36:17.341Z",
     "contributors": [
@@ -165631,6 +165611,26 @@
       "teoli",
       "Sheppy",
       "ziyunfei",
+      "Jürgen Jeka"
+    ]
+  },
+  "Web/API/Element/lastElementChild": {
+    "modified": "2020-10-15T21:05:51.183Z",
+    "contributors": [
+      "sideshowbarker",
+      "alattalatta",
+      "ExE-Boss",
+      "K-Gun",
+      "Alhadis",
+      "LouisLazaris",
+      "fscholz",
+      "kollishivagangadhar",
+      "khushboo_Dwivedi",
+      "teoli",
+      "Sheppy",
+      "ziyunfei",
+      "BillyRayPreachersSon",
+      "RobG",
       "Jürgen Jeka"
     ]
   }

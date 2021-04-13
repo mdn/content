@@ -1359,7 +1359,7 @@
 /en-US/docs/DOM/Element.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/DOM/Element.getElementsByClassName	/en-US/docs/Web/API/Element/getElementsByClassName
 /en-US/docs/DOM/Element.isContentEditable	/en-US/docs/Web/API/HTMLElement/isContentEditable
-/en-US/docs/DOM/Element.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/DOM/Element.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/DOM/Element.mozMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/DOM/Element.mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/DOM/Element.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
@@ -2975,7 +2975,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Element.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Document_Object_Model_(DOM)/Element.getElementsByClassName	/en-US/docs/Web/API/Element/getElementsByClassName
 /en-US/docs/Document_Object_Model_(DOM)/Element.isContentEditable	/en-US/docs/Web/API/HTMLElement/isContentEditable
-/en-US/docs/Document_Object_Model_(DOM)/Element.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Document_Object_Model_(DOM)/Element.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Document_Object_Model_(DOM)/Element.mozMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Document_Object_Model_(DOM)/Element.mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Document_Object_Model_(DOM)/Element.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
@@ -7510,7 +7510,7 @@
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Document/domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
-/en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
@@ -7543,7 +7543,7 @@
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
 /en-US/docs/Web/API/DocumentFragment.querySelectorAll	/en-US/docs/Web/API/DocumentFragment/querySelectorAll
-/en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/en-US/docs/Web/API/Document/caretPositionFromPoint
 /en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
@@ -7581,7 +7581,7 @@
 /en-US/docs/Web/API/Element.getElementsByTagName	/en-US/docs/Web/API/Element/getElementsByTagName
 /en-US/docs/Web/API/Element.hasAttributes	/en-US/docs/Web/API/Element/hasAttributes
 /en-US/docs/Web/API/Element.isContentEditable	/en-US/docs/Web/API/HTMLElement/isContentEditable
-/en-US/docs/Web/API/Element.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/Element.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/Element.matches	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/Element.matrches	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/Element.mozMatchesSelector	/en-US/docs/Web/API/Element/matches
@@ -7611,7 +7611,6 @@
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/gotpointercapture_event	/en-US/docs/Web/API/HTMLElement/gotpointercapture_event
-/en-US/docs/Web/API/Element/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/Element/lostpointercapture_event	/en-US/docs/Web/API/HTMLElement/lostpointercapture_event
 /en-US/docs/Web/API/Element/mozRequestFullScreen	/en-US/docs/Web/API/Element/requestFullScreen
 /en-US/docs/Web/API/Element/msMatchesSelector	/en-US/docs/Web/API/Element/matches
@@ -7632,7 +7631,7 @@
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
-/en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/ElementTraversal.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/ElementTraversal.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
 /en-US/docs/Web/API/EncryptedMediaExtensions	/en-US/docs/Web/API/Encrypted_Media_Extensions_API
@@ -8459,10 +8458,11 @@
 /en-US/docs/Web/API/ParentNode.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
-/en-US/docs/Web/API/ParentNode.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
+/en-US/docs/Web/API/ParentNode.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/ParentNode/childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode/firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
+/en-US/docs/Web/API/ParentNode/lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/PasswordCredential/additionalData	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/PasswordCredential/idName	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/PasswordCredential/passwordName	/en-US/docs/Web/API/PasswordCredential
