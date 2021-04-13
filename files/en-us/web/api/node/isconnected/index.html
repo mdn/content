@@ -75,33 +75,6 @@ style.textContent = `
 shadow.appendChild(style);
 console.log(style.isConnected); // Returns true</pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Node.isConnected can be polyfilled with the following code for IE10 and EdgeHTML:</p>
-
-<pre>/*
- * Node.isConnected polyfill for IE and EdgeHTML
- * 2020-02-04
- *
- * By Eli Grey, https://eligrey.com
- * Public domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
- */
-
-if (!('isConnected' in Node.prototype)) {
-  Object.defineProperty(Node.prototype, 'isConnected', {
-    get() {
-      return (
-        !this.ownerDocument ||
-        !(
-          this.ownerDocument.compareDocumentPosition(this) &amp;
-          this.DOCUMENT_POSITION_DISCONNECTED
-        )
-      );
-    },
-  });
-}</pre>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -122,3 +95,9 @@ if (!('isConnected' in Node.prototype)) {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.Node.isConnected")}}</p>
+
+<h2 id="see_also">See also</h2>
+
+<ul>
+  <li><a href="https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f">Node.prototype.isConnected polyfill</a></li>
+</ul>
