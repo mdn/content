@@ -7510,7 +7510,6 @@
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
 /en-US/docs/Web/API/Document/domConfig	/en-US/docs/Web/API/Document
 /en-US/docs/Web/API/Document/inputEncoding	/en-US/docs/Web/API/document/characterSet
-/en-US/docs/Web/API/Document/lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled
@@ -7543,7 +7542,6 @@
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
 /en-US/docs/Web/API/DocumentFragment.querySelectorAll	/en-US/docs/Web/API/DocumentFragment/querySelectorAll
-/en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
 /en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/en-US/docs/Web/API/Document/caretPositionFromPoint
 /en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/en-US/docs/Web/API/Document/elementFromPoint
