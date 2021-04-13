@@ -130,7 +130,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h4 id="SameSite_attribute">SameSite attribute</h4>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite"><code>SameSite</code> </a>attribute lets servers specify whether/when cookies are sent with cross-origin requests (where {{Glossary("Site")}} is defined by the registrable domain), which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</p>
+<p>The <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite"><code>SameSite</code> </a>attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain), which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</p>
 
 <p>It takes three possible values: <code>Strict</code>, <code>Lax</code>, and <code>None</code>. With <code>Strict</code>, the cookie is sent only to the same site as the one that originated it; <code>Lax</code> is similar, except that cookies are sent when the user <em>navigates</em> to the cookie's origin site, for example, by following a link from an external site; <code>None</code> specifies that cookies are sent on both originating and cross-site requests, but <em>only in secure contexts</em> (i.e. if <code>SameSite=None</code> then the <code>Secure</code> attribute must also be set). If no <code>SameSite</code> attribute is set then the cookie is treated as <code>Lax</code>.</p>
 
