@@ -71025,26 +71025,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2020-10-15T21:06:48.193Z",
-    "contributors": [
-      "Krinkle",
-      "akovantsev",
-      "Mems",
-      "ExE-Boss",
-      "K-Gun",
-      "kevin_martinez",
-      "Alhadis",
-      "fscholz",
-      "kollishivagangadhar",
-      "Loiro",
-      "khushboo_Dwivedi",
-      "teoli",
-      "Sheppy",
-      "ziyunfei",
-      "Jürgen Jeka"
-    ]
-  },
   "Web/API/ParentNode/lastElementChild": {
     "modified": "2020-10-15T21:05:51.183Z",
     "contributors": [
@@ -165632,6 +165612,26 @@
       "Philip Chee",
       "paul.irish",
       "janmoesen"
+    ]
+  },
+  "Web/API/Element/firstElementChild": {
+    "modified": "2020-10-15T21:06:48.193Z",
+    "contributors": [
+      "Krinkle",
+      "akovantsev",
+      "Mems",
+      "ExE-Boss",
+      "K-Gun",
+      "kevin_martinez",
+      "Alhadis",
+      "fscholz",
+      "kollishivagangadhar",
+      "Loiro",
+      "khushboo_Dwivedi",
+      "teoli",
+      "Sheppy",
+      "ziyunfei",
+      "Jürgen Jeka"
     ]
   }
 }
