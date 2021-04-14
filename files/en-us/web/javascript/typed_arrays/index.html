@@ -7,9 +7,9 @@ tags:
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p><span class="seoSummary"><strong>JavaScript typed arrays</strong> are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.</span> As you may already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast.</p>
+<p><strong>JavaScript typed arrays</strong> are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.</p>
 
-<p>However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data. This is where typed arrays come in. Each entry in a JavaScript typed array is a raw binary value in one of a number of supported formats, from 8-bit integers to 64-bit floating-point numbers.</p>
+<p>{{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data. This is where typed arrays come in. Each entry in a JavaScript typed array is a raw binary value in one of a number of supported formats, from 8-bit integers to 64-bit floating-point numbers.</p>
 
 <p>However, typed arrays are <em>not</em> to be confused with normal arrays, as calling {{jsxref("Array.isArray()")}} on a typed array returns <code>false</code>. Moreover, not all methods available for normal arrays are supported by typed arrays (e.g. push and pop).</p>
 
