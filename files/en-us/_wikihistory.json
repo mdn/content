@@ -71025,35 +71025,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/children": {
-    "modified": "2020-10-15T21:05:52.672Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "mfluehr",
-      "ExE-Boss",
-      "Sheppy",
-      "Pbb",
-      "jackblackevo",
-      "Delapouite",
-      "idontusenumbers",
-      "K-Gun",
-      "jonkee",
-      "vedmack",
-      "Robg1",
-      "fscholz",
-      "Prome",
-      "ziyunfei",
-      "danburzo",
-      "Kartik_Chadha",
-      "teoli",
-      "Krinkle",
-      "Dan-Dascalescu",
-      "fryn",
-      "Philip Chee",
-      "paul.irish",
-      "janmoesen"
-    ]
-  },
   "Web/API/ParentNode/firstElementChild": {
     "modified": "2020-10-15T21:06:48.193Z",
     "contributors": [
@@ -165632,6 +165603,35 @@
       "trevorh",
       "ziyunfei",
       "Jürgen Jeka"
+    ]
+  },
+  "Web/API/Element/children": {
+    "modified": "2020-10-15T21:05:52.672Z",
+    "contributors": [
+      "Zearin_Galaurum",
+      "mfluehr",
+      "ExE-Boss",
+      "Sheppy",
+      "Pbb",
+      "jackblackevo",
+      "Delapouite",
+      "idontusenumbers",
+      "K-Gun",
+      "jonkee",
+      "vedmack",
+      "Robg1",
+      "fscholz",
+      "Prome",
+      "ziyunfei",
+      "danburzo",
+      "Kartik_Chadha",
+      "teoli",
+      "Krinkle",
+      "Dan-Dascalescu",
+      "fryn",
+      "Philip Chee",
+      "paul.irish",
+      "janmoesen"
     ]
   }
 }

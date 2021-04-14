@@ -1354,7 +1354,7 @@
 /en-US/docs/DOM/DocumentType	/en-US/docs/Web/API/DocumentType
 /en-US/docs/DOM/DynamicsCompressorNode	/en-US/docs/Web/API/DynamicsCompressorNode
 /en-US/docs/DOM/Element.childElementCount	/en-US/docs/Web/API/Element/childElementCount
-/en-US/docs/DOM/Element.children	/en-US/docs/Web/API/ParentNode/children
+/en-US/docs/DOM/Element.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/DOM/Element.contentEditable	/en-US/docs/Web/API/HTMLElement/contentEditable
 /en-US/docs/DOM/Element.firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/DOM/Element.getElementsByClassName	/en-US/docs/Web/API/Element/getElementsByClassName
@@ -2970,7 +2970,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Document_Object_Model_(DOM)/DocumentType	/en-US/docs/Web/API/DocumentType
 /en-US/docs/Document_Object_Model_(DOM)/Element.childElementCount	/en-US/docs/Web/API/Element/childElementCount
-/en-US/docs/Document_Object_Model_(DOM)/Element.children	/en-US/docs/Web/API/ParentNode/children
+/en-US/docs/Document_Object_Model_(DOM)/Element.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Document_Object_Model_(DOM)/Element.contentEditable	/en-US/docs/Web/API/HTMLElement/contentEditable
 /en-US/docs/Document_Object_Model_(DOM)/Element.firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Document_Object_Model_(DOM)/Element.getElementsByClassName	/en-US/docs/Web/API/Element/getElementsByClassName
@@ -7505,7 +7505,6 @@
 /en-US/docs/Web/API/Document/baseURI	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/API/Document/cancelFullscreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/charset	/en-US/docs/Web/API/document/characterSet
-/en-US/docs/Web/API/Document/children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/Document/defaultView/popstate_event	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/API/Document/defaultView/resize_event	/en-US/docs/Web/API/Window/resize_event
 /en-US/docs/Web/API/Document/defaultView/storage_event	/en-US/docs/Web/API/Window/storage_event
@@ -7545,7 +7544,6 @@
 /en-US/docs/Web/API/DocumentFragment.DocumentFragment	/en-US/docs/Web/API/DocumentFragment/DocumentFragment
 /en-US/docs/Web/API/DocumentFragment.querySelector	/en-US/docs/Web/API/DocumentFragment/querySelector
 /en-US/docs/Web/API/DocumentFragment.querySelectorAll	/en-US/docs/Web/API/DocumentFragment/querySelectorAll
-/en-US/docs/Web/API/DocumentFragment/children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/DocumentFragment/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/DocumentFragment/lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/DocumentOrShadowRoot/activeElement	/en-US/docs/Web/API/Document/activeElement
@@ -7575,7 +7573,7 @@
 /en-US/docs/Web/API/DynamicsCompressorNode.threshold	/en-US/docs/Web/API/DynamicsCompressorNode/threshold
 /en-US/docs/Web/API/Element.attributes	/en-US/docs/Web/API/Element/attributes
 /en-US/docs/Web/API/Element.childElementCount	/en-US/docs/Web/API/Element/childElementCount
-/en-US/docs/Web/API/Element.children	/en-US/docs/Web/API/ParentNode/children
+/en-US/docs/Web/API/Element.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/Element.clientLeft	/en-US/docs/Web/API/Element/clientLeft
 /en-US/docs/Web/API/Element.clientTop	/en-US/docs/Web/API/Element/clientTop
 /en-US/docs/Web/API/Element.closest	/en-US/docs/Web/API/Element/closest
@@ -7613,7 +7611,6 @@
 /en-US/docs/Web/API/Element/animationiteration_event	/en-US/docs/Web/API/HTMLElement/animationiteration_event
 /en-US/docs/Web/API/Element/animationstart_event	/en-US/docs/Web/API/HTMLElement/animationstart_event
 /en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
-/en-US/docs/Web/API/Element/children	/en-US/docs/Web/API/ParentNode/children
 /en-US/docs/Web/API/Element/firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/Element/fullscreenchange	/en-US/docs/Web/API/Element/fullscreenchange_event
 /en-US/docs/Web/API/Element/gotpointercapture_event	/en-US/docs/Web/API/HTMLElement/gotpointercapture_event
@@ -8463,10 +8460,11 @@
 /en-US/docs/Web/API/PannerNode.setPosition	/en-US/docs/Web/API/PannerNode/setPosition
 /en-US/docs/Web/API/PannerNode.setVelocity	/en-US/docs/Web/API/PannerNode/setVelocity
 /en-US/docs/Web/API/ParentNode.childElementCount	/en-US/docs/Web/API/Element/childElementCount
-/en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/ParentNode/children
+/en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/ParentNode/firstElementChild
 /en-US/docs/Web/API/ParentNode.lastElementChild	/en-US/docs/Web/API/ParentNode/lastElementChild
 /en-US/docs/Web/API/ParentNode/childElementCount	/en-US/docs/Web/API/Element/childElementCount
+/en-US/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/PasswordCredential/additionalData	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/PasswordCredential/idName	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/PasswordCredential/passwordName	/en-US/docs/Web/API/PasswordCredential
