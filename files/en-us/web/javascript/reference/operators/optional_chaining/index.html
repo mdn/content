@@ -12,13 +12,14 @@ tags:
 <div>{{JSSidebar("Operators")}}</div>
 
 <p>The <strong>optional chaining</strong> operator (<strong><code>?.</code></strong>)
-  permits reading the value of a property located deep within a chain of connected objects
-  without having to expressly validate that each reference in the chain is valid. <span
-    class="seoSummary">The <code>?.</code> operator functions similarly to the
+  enables you to read the value of a property located deep within a chain of connected objects
+  without having to check that each reference in the chain is valid.</p>
+
+<p>The <code>?.</code> operator is like the
     <code>.</code> chaining operator, except that instead of causing an error if a
     reference is <a href="/en-US/docs/Glossary/Nullish">nullish</a> ({{JSxRef("null")}} or
     {{JSxRef("undefined")}}), the expression short-circuits with a return value of
-    <code>undefined</code>.</span> When used with function calls, it returns
+    <code>undefined</code>. When used with function calls, it returns
   <code>undefined</code> if the given function does not exist.</p>
 
 <p>This results in shorter and simpler expressions when accessing chained properties when
