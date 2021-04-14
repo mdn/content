@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Background Fetch API")}}</div>
 
-<p class="summary">The <strong><code>BackgroundFetchRegistration</code></strong> interface of the {{domxref('null','','',' ')}} null</p>
+<p class="summary">The <strong><code>BackgroundFetchRegistration</code></strong> interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual background fetch.</p>
 
 <p>A <code>BackgroundFetchRegistration</code> instance is returned by the {{domxref("BackgroundFetchManager.fetch()")}} or {{domxref("BackgroundFetchManager.get()")}} methods, therefore there is no constructor.</p>
 
@@ -21,42 +21,94 @@ tags:
   <dt>{{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}</dt>
   <dd>A {{domxref("DOMString","string")}} containing a copy of the background fetch's id.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref("number")}} which initially contains a copy of the background fetch's stored body bytes total.</dd>
+  <dd>A {{jsxref("number")}} containing the total number of bytes to be uploaded.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref("number")}} which contains the size in bytes that has been uploaded, initially <code>0</code>.</dd>
+  <dd>A {{jsxref("number")}} which contains the size in bytes successfully sent, initially <code>0</code>.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref("number")}} which contains the total size in bytes of this download.</dd>
+  <dd>A {{jsxref("number")}} which contains the total size in bytes of this download. Set when the background fetch was registered, or <code>0</code>.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}</dt>
-  <dd></dd>
+  <dd>A {{jsxref("number")}} which contains the size in bytes that has been downloaded, initially <code>0</code>.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}</dt>
-  <dd></dd>
+  <dd>Returns an empty string initially, on completion either the string <code>"success"</code> or <code>"failure"</code>.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}</dt>
-  <dd></dd>
+  <dd>One of the following strings:
+    <dl>
+      <dt><code>""</code></dt>
+      <dd>The background fetch has not completed, or was successful.</dd>
+      <dt><code>"aborted"</code></dt>
+      <dd>The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.</dd>
+      <dt><code>"bad-status"</code></dt>
+      <dd>A response had a not-ok status.</dd>
+      <dt><code>"fetch-error"</code></dt>
+      <dd>A fetch failed for other reasons, for example CORS, or a network failure.</dd>
+      <dt><code>quota-exceeded</code></dt>
+      <dd>Storage quota was reached during the operation.</dd>
+      <dt><code>download-total-exceeded</code></dt>
+      <dd>The downloadTotal provided was exceeded.</dd>
+    </dl>
+  </dd>
   <dt>{{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}</dt>
-  <dd></dd>
+  <dd>A {{jsxref("boolean")}}. True if the <code>recordsAvailable</code> flag is set, otherwise false.</dd>
 </dl>
 
 <h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
   <dt>{{domxref("BackgroundFetchRegistration.onprogress")}}</dt>
-  <dd></dd>
+  <dd>Fired when there is a change to any of the following properties:
+    <ul>
+      <li>uploaded</li>
+      <li>downloaded</li>
+      <li>result</li>
+      <li>failureReason</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
   <dt>{{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}}</dt>
-  <dd></dd>
+  <dd>Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with <code>true</code> if the fetch was successfully aborted.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}}</dt>
-  <dd></dd>
+  <dd>Returns a single {{domxref("BackgroundFetchRecord")}} object which is the first match for the arguments.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}</dt>
-  <dd></dd>
+  <dd>Get the requests and responses. Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
+<p>The following code creates a <code>BackGroundFetchRegistration</code> as <code>bgFetch</code>, with an <code>id</code> of <code>"my-fetch"</code>.</code></p>
 
+<pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
+  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
+    title: 'Episode 5: Interesting things.',
+    icons: [{
+      sizes: '300x300',
+      src: '/ep-5-icon.png',
+      type: 'image/png',
+    }],
+    downloadTotal: 60 * 1024 * 1024,
+  });
+});
+</pre>
+
+<p>Logging the {{domxref("BackgroundFetchRegistration.id","id")}} to the console returns <code>"my-fetch"</code>.</p>
+
+<pre class="brush: js">console.log(bgFetch.id); // "my-fetch"</pre>
+
+<p>The {{domxref("BackgroundFetchRegistration.match","match()")}} method can be used to find a particular {{domxref("BackgroundFetchRecord")}} from those that are part of the registration.</p>
+
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
+
+  console.log(`Here's the request`, record.request);
+  const response = await record.responseReady;
+  console.log(`And here's the response`, response);
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

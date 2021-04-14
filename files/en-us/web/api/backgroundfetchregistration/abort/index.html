@@ -10,40 +10,25 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Background Fetch API")}}</div>
 
-<p class="summary">The <strong><code>abort()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface null </p>
+<p class="summary">The <strong><code>abort()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>null</var> = BackgroundFetchRegistration.abort();</pre>
+<pre class="syntaxbox">let status = BackgroundFetchRegistration.abort();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-null
+<p>None.</p>
 
 <h3 id="Returns">Return value</h3>
 
-<p>null</p>
-
-<h3 id="Exceptions">Exceptions</h3>
-
-null
+<p>A {{jsxref("Promise")}} that resolves with <code>true</code> if the fetch is successfulled aborted.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>Use <code>abort()</code> to terminate a background fetch that is in progress.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
-
-<pre class="brush: js">
-my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+<pre class="brush: js">bgFetch.abort();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

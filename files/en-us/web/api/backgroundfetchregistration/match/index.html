@@ -10,40 +10,75 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Background Fetch API")}}</div>
 
-<p class="summary">The <strong><code>match()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface null </p>
+<p class="summary">The <strong><code>match()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">var <var>null</var> = BackgroundFetchRegistration.match();</pre>
+<pre class="syntaxbox">let record = BackgroundFetchRegistration.match(request,options);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-null
+<dl>
+  <dt>request</dt>
+  <dd>The {{domxref("Request")}} for which you are attempting to find records.
+    This can be a {{domxref("Request")}} object or a URL.</dd>
+  <dt>options {{optional_inline}}</dt>
+  <dd>An object that sets options for the <code>match</code> operation. The available
+    options are:
+    <dl>
+      <dt><code>ignoreSearch</code></dt>
+      <dd>A {{jsxref("Boolean")}} that specifies whether to
+        ignore the query string in the URL.  For example, if set to
+        <code>true</code> the <code>?value=bar</code> part of
+        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
+        It defaults to <code>false</code>.</dd>
+      <dt><code>ignoreMethod</code></dt>
+      <dd>A {{jsxref("Boolean")}} that, when set to
+        <code>true</code>, prevents matching operations from validating the
+        {{domxref("Request")}} <code>http</code> method (normally only <code>GET</code>
+        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</dd>
+      <dt><code>ignoreVary</code></dt>
+      <dd>A {{jsxref("Boolean")}} that when set to
+        <code>true</code> tells the matching operation not to perform <code>VARY</code>
+        header matching — i.e. if the URL matches you will get a match regardless of
+        whether the {{domxref("Response")}} object has a <code>VARY</code> header. It
+        defaults to <code>false</code>.</dd>
+    </dl>
+  </dd>
+</dl>
 
 <h3 id="Returns">Return value</h3>
 
-<p>null</p>
+<p>A {{jsxref("Promise")}} that resolves to the first {{domxref("BackgroundFetchRecord")}} that matches
+  the request or to {{jsxref("undefined")}} if no match is found.</p>
+
+<div class="notecard note">
+  <p><strong>Note</strong>: <code>BackgroundFetchRegistration.match()</code> is basically identical to
+    {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
+    all matching records, it resolves with the first matching record only.</p>
+</div>
 
 <h3 id="Exceptions">Exceptions</h3>
 
-null
+<dl>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>If the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is <code>false</code> return a promise that resolves with an <code>InvalidStateError</code> {{domxref("DOMException")}}.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>In this example we look for a record with the url "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
 
-<pre class="brush: js">
-my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+  console.log(`Here's the request`, record.request);
+  const response = await record.responseReady;
+  console.log(`And here's the response`, response);
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
