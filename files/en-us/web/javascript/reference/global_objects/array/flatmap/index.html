@@ -20,9 +20,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
-    // return element for new_array
-}</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+flatMap((currentValue) => { ... } )
+flatMap((currentValue, index) => { ... } )
+flatMap((currentValue, index, array) => { ... } )
+
+// Callback function
+flatMap(callbackFn)
+flatMap(callbackFn, thisArg)
+
+// Inline callback function
+flatMap(function callbackFn(currentValue) { ... })
+flatMap(function callbackFn(currentValue, index) { ... })
+flatMap(function callbackFn(currentValue, index, array){ ... })
+flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

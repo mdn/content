@@ -25,7 +25,21 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>arr</var>.findIndex(<var>callback</var>( <var>element</var>[, <var>index</var>[, <var>array</var>]] )[, <var>thisArg</var>])
+<pre class="brush: js">
+// Arrow function
+findIndex((element) => { ... } )
+findIndex((element, index) => { ... } )
+findIndex((element, index, array) => { ... } )
+
+// Callback function
+findIndex(callbackFn)
+findIndex(callbackFn, thisArg)
+
+// Inline callback function
+findIndex(function callbackFn(element) { ... })
+findIndex(function callbackFn(element, index) { ... })
+findIndex(function callbackFn(element, index, array){ ... })
+findIndex(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
