@@ -19,10 +19,10 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt>request</dt>
+  <dt><code>request</code></dt>
   <dd>The {{domxref("Request")}} for which you are attempting to find records.
     This can be a {{domxref("Request")}} object or a URL.</dd>
-  <dt>options {{optional_inline}}</dt>
+  <dt><code>options</code> {{optional_inline}}</dt>
   <dd>An object that sets options for the <code>match</code> operation. The available
     options are:
     <dl>
@@ -33,16 +33,13 @@ tags:
         <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
         It defaults to <code>false</code>.</dd>
       <dt><code>ignoreMethod</code></dt>
-      <dd>A {{jsxref("Boolean")}} that, when set to
-        <code>true</code>, prevents matching operations from validating the
-        {{domxref("Request")}} <code>http</code> method (normally only <code>GET</code>
-        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</dd>
+      <dd>A {{jsxref("Boolean")}}. When <code>true</code>,
+        prevents matching operations from validating the {{domxref("Request")}} <code>http</code> method.
+        If <code>false</code> (the default) only <code>GET</code> and <code>HEAD</code> are allowed.</dd>
       <dt><code>ignoreVary</code></dt>
-      <dd>A {{jsxref("Boolean")}} that when set to
-        <code>true</code> tells the matching operation not to perform <code>VARY</code>
-        header matching — i.e. if the URL matches you will get a match regardless of
-        whether the {{domxref("Response")}} object has a <code>VARY</code> header. It
-        defaults to <code>false</code>.</dd>
+      <dd>A {{jsxref("Boolean")}}. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
+        header should be ignored.
+        It defaults to <code>false</code>.</dd>
     </dl>
   </dd>
 </dl>

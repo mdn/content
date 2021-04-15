@@ -38,13 +38,13 @@ tags:
       <dt><code>"aborted"</code></dt>
       <dd>The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.</dd>
       <dt><code>"bad-status"</code></dt>
-      <dd>A response had a not-ok status.</dd>
+      <dd>A response had a not-ok status (a status outside the range 200-299).</dd>
       <dt><code>"fetch-error"</code></dt>
       <dd>A fetch failed for other reasons, for example CORS, or a network failure.</dd>
       <dt><code>"quota-exceeded"</code></dt>
       <dd>Storage quota was reached during the operation.</dd>
       <dt><code>"download-total-exceeded"</code></dt>
-      <dd>The  provided <code>downloadTotal</code> was exceeded. This value was set when the background fetch was registered.</dd>
+      <dd>The provided <code>downloadTotal</code> was exceeded. This value was set when the background fetch was registered.</dd>
     </dl>
   </dd>
   <dt>{{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}</dt>
@@ -73,7 +73,7 @@ tags:
   <dt>{{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}}</dt>
   <dd>Returns a single {{domxref("BackgroundFetchRecord")}} object which is the first match for the arguments.</dd>
   <dt>{{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}</dt>
-  <dd>Get the requests and responses. Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects.</dd>
+  <dd>Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects containing requests and responses.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
