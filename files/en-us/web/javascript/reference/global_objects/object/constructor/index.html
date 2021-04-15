@@ -56,7 +56,7 @@ console.log('theTree.constructor is ' + theTree.constructor)
 
 <h3 id="Changing_the_constructor_of_an_object">Changing the constructor of an object</h3>
 
-<p>One can assign the <code>constructor</code> property for any value except <code>null</code> and <code>undefined</code> since those don't have a corresponding constructor function (like <code>String</code>, <code>Number</code>, <code>Boolean</code> etc.), but values which are primitives won't keep the change (with no exception thrown). This is due to the same mechanism, which allows one to set any property on primitive values (except <code>null</code> and <code>undefined</code>) with no effect. namely wherenever one uses such a primitive as an object an instance of the corresponding constructor is created and discarded right after the statement was executed.</p>
+<p>One can assign the <code>constructor</code> property for any value except <code>null</code> and <code>undefined</code> since those don't have a corresponding constructor function (like <code>String</code>, <code>Number</code>, <code>Boolean</code> etc.), but values which are primitives won't keep the change (with no exception thrown). This is due to the same mechanism, which allows one to set any property on primitive values (except <code>null</code> and <code>undefined</code>) with no effect. Namely whenever one uses such a primitive as an object an instance of the corresponding constructor is created and discarded right after the statement was executed.</p>
 
 <pre class="brush: js">let val = null;
 val.constructor = 1; //<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">var is null</span></span></span></span></span>
@@ -187,7 +187,7 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 </pre>
 
 <div class="notecard note">
-<p><strong>Summary</strong>: Manually updating or setting the constructor can lead to differrent and sometimes confusing consequences. To prevent this, just define the role of <code>constructor</code> in each specific case. In most cases, <code>constructor</code> is not used and reassignment of it is not necessary.</p>
+<p><strong>Summary</strong>: Manually updating or setting the constructor can lead to different and sometimes confusing consequences. To prevent this, just define the role of <code>constructor</code> in each specific case. In most cases, <code>constructor</code> is not used and reassignment of it is not necessary.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

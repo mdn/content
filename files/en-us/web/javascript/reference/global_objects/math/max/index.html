@@ -2,17 +2,17 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 tags:
-- JavaScript
-- Largest Number
-- Largest Value
-- Math
-- Method
-- Maximum
-- Reference
-- Largest
-- Largest Number
-- Largest Value
-- max
+  - JavaScript
+  - Largest Number
+  - Largest Value
+  - Math
+  - Method
+  - Maximum
+  - Reference
+  - Largest
+  - Largest Number
+  - Largest Value
+  - max
 ---
 <div>{{JSRef}}</div>
 
@@ -83,7 +83,7 @@ var max = arr.reduce(function(a, b) {
   return Math.max.apply(null, numArray);
 }</pre>
 
-<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread
+<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread
     operator</a> is a shorter way of writing the <code>apply</code> solution to get the
   maximum of an array:</p>
 
@@ -94,7 +94,7 @@ var max = Math.max(...arr);
 <p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or
   return the wrong result if the array has too many elements, because they try to pass the
   array elements as function parameters. See <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions">Using
     apply and built-in functions</a> for more details. The <code>reduce</code> solution
   does not have this problem.</p>
 
