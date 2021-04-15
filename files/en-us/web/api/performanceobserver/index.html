@@ -46,8 +46,8 @@ tags:
 <pre class="brush: js">function perf_observer(list, observer) {
    // Process the "measure" event
 }
-var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});</pre>
+let observer = new PerformanceObserver(perf_observer);
+observer.observe({entryTypes: ["measure"]});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
