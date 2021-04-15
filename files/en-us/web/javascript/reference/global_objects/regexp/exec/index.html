@@ -67,12 +67,11 @@ let re = /quick\s(brown).+?(jumps)/igd;
 let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 </pre>
 
-<p>The following table shows the results for this script:</p>
+<p>The following table shows the state of <code>result</code> after running this script:</p>
 
-<table class="fullwidth-table standard-table">
+<table class="standard-table">
   <thead>
     <tr>
-      <th scope="row">Object</th>
       <th scope="col">Property/Index</th>
       <th scope="col">Description</th>
       <th scope="col">Example</th>
@@ -80,7 +79,6 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
   </thead>
   <tbody>
     <tr>
-      <th rowspan="5" scope="row" style="vertical-align: top;"><code>result</code></th>
       <td><code>[0]</code></td>
       <td>The full string of characters matched</td>
       <td><code>"Quick Brown Fox Jumps"</code></td>
@@ -128,8 +126,21 @@ let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
       <td>The original string that was matched against.</td>
       <td><code>The Quick Brown Fox Jumps Over The Lazy Dog</code></td>
     </tr>
+  </tbody>
+</table>
+
+<p>The following table shows the state of <code>re</code> after running this script:</p>
+
+<table class="standard-table">
+  <thead>
     <tr>
-      <th rowspan="9" scope="row" style="vertical-align: top;"><code>re</code></th>
+      <th scope="col">Property/Index</th>
+      <th scope="col">Description</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td><code>lastIndex</code></td>
       <td>
         <p>The index at which to start the next match.</p>
