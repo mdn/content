@@ -43,10 +43,10 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">function perf_observer(list, observer) {
+<pre class="brush: js">function observer_callback(list, observer) {
    // Process the "measure" event
 }
-let observer = new PerformanceObserver(perf_observer);
+let observer = new PerformanceObserver(observer_callback);
 observer.observe({entryTypes: ["measure"]});</pre>
 
 <h2 id="Specifications">Specifications</h2>
