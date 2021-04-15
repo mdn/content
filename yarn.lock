@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.366":
-  version "0.4.366"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.366.tgz#8fc51b48f79b99d6d9ecced454821a13958462f4"
-  integrity sha512-RGVLtJV3GM5dAlbP9YQalUNIOK8GU+pDx8mcKvsbQLQn7Bd2XswQGwS8AHr2coFLG6m573VTtx2Tk6GjgrfDrg==
+"@mdn/yari@0.4.370":
+  version "0.4.370"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.370.tgz#75b43b191671f67290a39ee29bd8b98d69f4250b"
+  integrity sha512-5dNwp82QP1xLkSGDn2Jh59ErrGAzUfb/CUcqItal2NWyKs4TqaVOrGa0sUDwIbTsehbYUC+EsbWI+2TGDY8ZMw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -94,7 +94,7 @@
     rehype-stringify "^8.0.0"
     remark-gfm "^1.0.0"
     remark-parse "^9.0.0"
-    remark-rehype "^8.0.0"
+    remark-rehype "^8.1.0"
     remark-stringify "^9.0.1"
     sanitize-filename "^1.6.3"
     send "0.17.1"
@@ -2897,7 +2897,7 @@ mdast-util-phrasing@^2.0.0:
   dependencies:
     unist-util-is "^4.0.0"
 
-mdast-util-to-hast@^10.0.0:
+mdast-util-to-hast@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-10.2.0.tgz#61875526a017d8857b71abc9333942700b2d3604"
   integrity sha512-JoPBfJ3gBnHZ18icCwHR50orC9kNH81tiR1gs01D8Q5YpV6adHNO9nKNuFBCJQ941/32PT1a63UF/DitmS3amQ==
@@ -3745,12 +3745,12 @@ remark-parse@^9.0.0:
   dependencies:
     mdast-util-from-markdown "^0.8.0"
 
-remark-rehype@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/remark-rehype/-/remark-rehype-8.0.0.tgz#5a8afc8262a59d205fba21dafb27a673fb3b92fa"
-  integrity sha512-gVvOH02TMFqXOWoL6iXU7NXMsDJguNkNuMrzfkQeA4V6WCyHQnOKptn+IQBVVPuIH2sMJBwo8hlrmtn1MLTh9w==
+remark-rehype@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/remark-rehype/-/remark-rehype-8.1.0.tgz#610509a043484c1e697437fa5eb3fd992617c945"
+  integrity sha512-EbCu9kHgAxKmW1yEYjx3QafMyGY3q8noUbNUI5xyKbaFP89wbhDrKxyIQNukNYthzjNHZu6J7hwFg7hRm1svYA==
   dependencies:
-    mdast-util-to-hast "^10.0.0"
+    mdast-util-to-hast "^10.2.0"
 
 remark-stringify@^9.0.1:
   version "9.0.1"
