@@ -121805,25 +121805,6 @@
       "Pomax"
     ]
   },
-  "Web/Events/Index": {
-    "modified": "2020-08-11T05:37:08.660Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/Events/periodicsync": {
-    "modified": "2020-10-15T22:33:55.780Z",
-    "contributors": [
-      "Rumyra"
-    ]
-  },
-  "Web/Events/touchstart": {
-    "modified": "2020-10-15T22:15:00.626Z",
-    "contributors": [
-      "mfuji09",
-      "irenesmith"
-    ]
-  },
   "Web/Guide": {
     "modified": "2020-12-10T17:35:22.294Z",
     "contributors": [
@@ -122331,49 +122312,6 @@
       "Jeremie",
       "Sheppy",
       "acuster"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2020-06-30T17:30:47.991Z",
-    "contributors": [
-      "drklee3",
-      "AAlakkad",
-      "sunnykgupta",
-      "ciffelia",
-      "depthdev",
-      "yanlee26",
-      "fscholz",
-      "Tombez",
-      "napengam",
-      "vp2177",
-      "pawlufelice",
-      "deebloo",
-      "Nickolay",
-      "ziyunfei",
-      "matajm",
-      "swrobel",
-      "lukaszzdanikowski",
-      "soren121",
-      "Andreas-Hjortland",
-      "alexilyaev",
-      "DiegoYungh",
-      "chrisra",
-      "ratcliffe_mike",
-      "guest0430",
-      "mnoorenberghe",
-      "Jeremie",
-      "Sheppy",
-      "diego.perini",
-      "cHao",
-      "kscarfone",
-      "Ms2ger",
-      "Brettz9",
-      "ebidel",
-      "paul.irish",
-      "jeremyfifty9",
-      "Sertion",
-      "Sephr",
-      "ernestd"
     ]
   },
   "Web/Guide/Events/Event_handlers": {
@@ -165632,6 +165570,56 @@
       "BillyRayPreachersSon",
       "RobG",
       "Jürgen Jeka"
+    ]
+  },
+  "Web/Events/Creating_and_triggering_events": {
+    "modified": "2020-06-30T17:30:47.991Z",
+    "contributors": [
+      "drklee3",
+      "AAlakkad",
+      "sunnykgupta",
+      "ciffelia",
+      "depthdev",
+      "yanlee26",
+      "fscholz",
+      "Tombez",
+      "napengam",
+      "vp2177",
+      "pawlufelice",
+      "deebloo",
+      "Nickolay",
+      "ziyunfei",
+      "matajm",
+      "swrobel",
+      "lukaszzdanikowski",
+      "soren121",
+      "Andreas-Hjortland",
+      "alexilyaev",
+      "DiegoYungh",
+      "chrisra",
+      "ratcliffe_mike",
+      "guest0430",
+      "mnoorenberghe",
+      "Jeremie",
+      "Sheppy",
+      "diego.perini",
+      "cHao",
+      "kscarfone",
+      "Ms2ger",
+      "Brettz9",
+      "ebidel",
+      "paul.irish",
+      "jeremyfifty9",
+      "Sertion",
+      "Sephr",
+      "ernestd",
+      "hamishwillee"
+    ]
+  },
+  "Web/API/ServiceWorkerGlobalScope/periodicsync": {
+    "modified": "2020-10-15T22:33:55.780Z",
+    "contributors": [
+      "Rumyra"
     ]
   }
 }
