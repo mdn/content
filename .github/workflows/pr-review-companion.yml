@@ -81,11 +81,16 @@ jobs:
           # Make sure to reflect the version of `snok/install-poetry` in the key
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-v1.1.3
 
-      - name: Install deployer
+      - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           cd yari/deployer
           poetry install --no-interaction --no-root
+
+      - name: Install library
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
 
       - name: Deploy and analyze built content
         env:
@@ -98,6 +103,9 @@ jobs:
 
         run: |
           PR_NUMBER=`cat build/NR`
+
+          echo "Pull request:"
+          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
           cd yari/deployer
           poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
