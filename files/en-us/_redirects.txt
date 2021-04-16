@@ -1615,7 +1615,7 @@
 /en-US/docs/DOM/Mozilla_event_reference/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/DOM/Mozilla_event_reference/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/DOM/Mozilla_event_reference/touchmove	/en-US/docs/Web/API/Document/touchmove_event
-/en-US/docs/DOM/Mozilla_event_reference/touchstart	/en-US/docs/Web/Events/touchstart
+/en-US/docs/DOM/Mozilla_event_reference/touchstart	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/DOM/Mozilla_event_reference/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
 /en-US/docs/DOM/Mozilla_event_reference/underflow	/en-US/docs/Web/API/Element/underflow_event
 /en-US/docs/DOM/Mozilla_event_reference/unload	/en-US/docs/Web/API/Window/unload_event
@@ -6109,7 +6109,7 @@
 /en-US/docs/Mozilla_event_reference/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Mozilla_event_reference/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Mozilla_event_reference/touchmove	/en-US/docs/Web/API/Document/touchmove_event
-/en-US/docs/Mozilla_event_reference/touchstart	/en-US/docs/Web/Events/touchstart
+/en-US/docs/Mozilla_event_reference/touchstart	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Mozilla_event_reference/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
 /en-US/docs/Mozilla_event_reference/underflow	/en-US/docs/Web/API/Element/underflow_event
 /en-US/docs/Mozilla_event_reference/unload	/en-US/docs/Web/API/Window/unload_event
@@ -11388,7 +11388,7 @@
 /en-US/docs/Web/Reference/Events/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/Reference/Events/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Web/Reference/Events/touchmove	/en-US/docs/Web/API/Document/touchmove_event
-/en-US/docs/Web/Reference/Events/touchstart	/en-US/docs/Web/Events/touchstart
+/en-US/docs/Web/Reference/Events/touchstart	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Web/Reference/Events/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
 /en-US/docs/Web/Reference/Events/underflow	/en-US/docs/Web/API/Element/underflow_event
 /en-US/docs/Web/Reference/Events/unload	/en-US/docs/Web/API/Window/unload_event
