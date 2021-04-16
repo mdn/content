@@ -20,8 +20,9 @@ tags:
  <br>
  The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
 
-<div class="note">
-<p><strong>Note</strong>: From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
 </div>
 
 <p>Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as <a href="http://offlinefirst.org/">Offline First</a>). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.</p>
@@ -81,7 +82,11 @@ tags:
  <br>
  Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/js-examples/tree/master/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/js-examples/promises-test/">look at it running live</a>.)</p>
 
-<p>{{note("A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.")}}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.</p>
+</div>
+
 
 <pre class="brush: js">const imgLoad = (url) =&gt; {
   return new Promise((resolve, reject) =&gt; {

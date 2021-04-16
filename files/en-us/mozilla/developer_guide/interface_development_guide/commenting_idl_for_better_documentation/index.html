@@ -8,8 +8,12 @@ tags:
 ---
 <p>Doxygen is a system of generating documentation from source code. The documentation team has tools that convert comments from the Doxygen format into the standard reference article format we use here on MDN, with certain limitations. This article will help you understand how you can format your comments to help ensure that the conversion process can be automated as much as possible in order to ensure that your interface gets properly documented.</p>
 <p>Happily, following these recommendations will also help ensure your comments are extremely human-readable, too.</p>
+
 <h2 id="Don't_worry!">Don't worry!</h2>
+
 <p>You don't need to write perfect documentation. That is why Mozilla has a couple of writers on-staff as well as a horde of happy volunteers. We will take your comments and notes and turn them into beautiful, easy to search and read documentation. But by following the guidelines here, you can help make sure that our tools can generate a "good start" version of the documentation for your interfaces, and that the writers will be able to easily figure out what the tools are not able to do automatically.</p>
+
+
 <h2 id="Comment_format">Comment format</h2>
 <p>Doxygen supports several comment formats; for style and consistency reasons, we use the following:</p>
 <pre class="eval">/**
@@ -20,14 +24,42 @@ tags:
 <p>Following the rules below will ensure that our tools are able to produce the best possible results, and will have the added bonus of making your comments easier to read!</p>
 <ul> <li>Include documentation comments for everything, even if you think it is obvious what it means. Automatic documentation generation tools can not see what is obvious to human brains. Plus, what is obvious to you is likely not obvious to everyone.</li> <li>Use Doxygen style comments <strong>only</strong> for information that is directly useful to someone using or implementing the interface. This helps keep the documentation tidy.</li> <li>Be concise and to the point. Writers will expand upon your documentation if necessary.</li> <li>Keep in mind that people for whom English is not their native language will be reading your comments (as well as the generated documentation), so try to avoid slang and abbreviations when possible.</li> <li>If possible, avoid putting comments in the middle of the definitions of APIs.</li> <li>If an interface is used as a parameter or as the type of the value returned by a method, please use the full name of the interface in the description of the method. This will help the tools generate proper links to help make the documentation easier to read and browse through.</li>
 </ul>
+
 <h2 id="Special_commands">Special commands</h2>
+
 <p>You can use special commands in your Doxygen comments; the ones listed below are interpreted by our tools. Using these will help generate much higher quality documentation, faster, with less human intervention required.</p>
-<table class="standard-table"> <tbody> <tr> <td class="header">Command</td> <td class="header">Details</td> </tr> <tr> <td>@brief <em>description</em></td> <td>Please only use this to provide a brief description of the interface, keep it short and to the point. Do not include more than one brief per interface.</td> </tr> <tr> <td>@param <em>parameter</em> <em>description</em></td> <td>Every parameter of a method should be documented, only use the parameter name, leave out things like [in]/[out].</td> </tr> <tr> <td>@returns <em>description</em></td> <td>If the method returns something then this should be included.</td> </tr> <tr> <td>@throws <em>ERROR</em> <em>description</em></td> <td>The error should be the actual name of the error constant, in all caps.</td> </tr> <tr> <td>@note <em>description</em></td> <td>Used to include a note styled paragraph.</td> </tr> <tr> <td>@remarks <em>remark</em></td> <td> <p>A remark paragraph to be included in the Remarks section of the documentation.</p> {{ note("This is not yet supported by our documentation tool. Using it will make it easier for documenters.") }}</td> </tr> <tr> <td>@see <em>description</em></td> <td> <p>Either an interface or a HTML link.</p> {{ note("This is not yet supported by our documentation tool. Using it will make it easier for documenters.") }}</td> </tr> <tr> <td>- or .</td> <td>Used at the beginning of a comment line to indicate an unordered list item. There must be a space between the list marker and the item. Nested lists should be indented from the previous level by two spaces.</td> </tr> <tr> <td>-#</td> <td>Used at the beginning of a comment line to indicate an ordered list item. There must be a space between the list marker and the item. Nested lists should be indented from the previous level by two spaces.</td> </tr> </tbody>
+
+<table class="standard-table"> <tbody> <tr> <td class="header">Command</td> <td class="header">Details</td> </tr> <tr> <td>@brief <em>description</em></td> <td>Please only use this to provide a brief description of the interface, keep it short and to the point. Do not include more than one brief per interface.</td> </tr> <tr> <td>@param <em>parameter</em> <em>description</em></td> <td>Every parameter of a method should be documented, only use the parameter name, leave out things like [in]/[out].</td> </tr> <tr> <td>@returns <em>description</em></td> <td>If the method returns something then this should be included.</td> </tr> <tr> <td>@throws <em>ERROR</em> <em>description</em></td> <td>The error should be the actual name of the error constant, in all caps.</td> </tr> <tr> <td>@note <em>description</em></td> <td>Used to include a note styled paragraph.</td> </tr> 
+  <tr>
+    <td>@remarks <em>remark</em></td>
+    <td>
+      <p>A remark paragraph to be included in the Remarks section of the documentation.</p>
+      <div class="notecard note">
+        <h4>Note</h4>
+        <p>This is not yet supported by our documentation tool. Using it will make it easier for documenters.</p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>@see <em>description</em></td>
+    <td>
+      <p>Either an interface or a HTML link.</p>
+      <div class="notecard note">
+        <h4>Note</h4>
+        <p>This is not yet supported by our documentation tool. Using it will make it easier for documenters.</p>
+      </div>
+    </td> 
+  </tr> 
+  <tr> <td>- or .</td> <td>Used at the beginning of a comment line to indicate an unordered list item. There must be a space between the list marker and the item. Nested lists should be indented from the previous level by two spaces.</td> </tr> <tr> <td>-#</td> <td>Used at the beginning of a comment line to indicate an ordered list item. There must be a space between the list marker and the item. Nested lists should be indented from the previous level by two spaces.</td>
+  </tr> 
+  </tbody>
 </table>
+
 <h2 id="Other_tips">Other tips</h2>
 <p>Some other helpful writing style tips that will help you make your comments cleaner and easier to read and understand:</p>
 <ul> <li>You don't need to include what a method returns in the description. Just include the @returns line. This helps avoid repetition and keeps your comment more streamlined.</li> <li>Everything in the Doxygen comment before a method, attribute, constant, or whatnot will be used as part of its description when the automatic documentation generator tool scans your IDL, so if you don't want it in the docs, you probably shouldn't put it there. Use a different format of comment instead, such as <code>/* ... */</code> or even <code>// comment</code>.</li>
 </ul>
+
 <h2 id="Example">Example</h2>
 <p>This is an example of what the <a href="/Project:en/Sample_interface_document" title="Project:En/Sample interface document">Sample interface document</a> IDL would look like:</p>
 <pre class="eval">/**
