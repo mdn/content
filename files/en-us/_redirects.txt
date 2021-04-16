@@ -8753,6 +8753,7 @@
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/claim	/en-US/docs/Web/API/Clients/claim
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/install	/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event
+/en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync	/en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange	/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/update	/en-US/docs/Web/API/ServiceWorkerRegistration/update
 /en-US/docs/Web/API/ServiceWorkerRegistration.active	/en-US/docs/Web/API/ServiceWorkerRegistration/active
@@ -10573,7 +10574,7 @@
 /en-US/docs/Web/Events/payerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/Events/paymentmethodchange	/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event
 /en-US/docs/Web/Events/peeridentity	/en-US/docs/Web/API/RTCPeerConnection/peeridentity_event
-/en-US/docs/Web/Events/periodicsync	/en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync
+/en-US/docs/Web/Events/periodicsync	/en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event
 /en-US/docs/Web/Events/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/Web/Events/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
 /en-US/docs/Web/Events/pointercancel	/en-US/docs/Web/API/HTMLElement/pointercancel_event
