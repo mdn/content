@@ -12,7 +12,13 @@ tags:
 
 <p class="summary">The static <strong><code>AbortSignal.abort()</code></strong> method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an abort event).</p>
 
-<p>This is useful because the {{domxref("AbortSignal")}} is lazily created when first requested, and might not be accessed until after the associated operation has <em>already</em> been aborted (for example an HTTP request). This method allows code to return an aborted signal instance rather than an undefined object, or raising an exception.</p>
+<p>This is shorthand for the following code:</p>
+
+<pre class="brush: js">const controller = new AbortController();
+  controller.abort();
+  return controller.signal;</pre>
+
+<p>This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organised such that this code should be run even if the intended fetch operation has not been started).</p>
 
 <div class="notecard note">
   <h4>Note</h4>
