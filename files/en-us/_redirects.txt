@@ -1486,7 +1486,7 @@
 /en-US/docs/DOM/MouseEvent	/en-US/docs/Web/API/MouseEvent
 /en-US/docs/DOM/MouseScrollEvent	/en-US/docs/Web/API/MouseScrollEvent
 /en-US/docs/DOM/MouseWheelEvent	/en-US/docs/Web/API/MouseWheelEvent
-/en-US/docs/DOM/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
+/en-US/docs/DOM/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/DOM/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
@@ -3064,7 +3064,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryList	/en-US/docs/Web/API/MediaQueryList
 /en-US/docs/Document_Object_Model_(DOM)/MediaQueryListListener	/en-US/docs/Web/API/MediaQueryList
-/en-US/docs/Document_Object_Model_(DOM)/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
+/en-US/docs/Document_Object_Model_(DOM)/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Document_Object_Model_(DOM)/NamedNodeMap	/en-US/docs/Web/API/NamedNodeMap
 /en-US/docs/Document_Object_Model_(DOM)/Node.appendChild	/en-US/docs/Web/API/Node/appendChild
 /en-US/docs/Document_Object_Model_(DOM)/Node.attributes	/en-US/docs/Web/API/Element/attributes
@@ -5843,7 +5843,7 @@
 /en-US/docs/Merging_client.mk_changes_from_CVS_to_mozilla-central	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Updating_NSPR_or_NSS_in_mozilla-central
 /en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Web/Guide/Mobile
 /en-US/docs/MouseEvent.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
-/en-US/docs/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
+/en-US/docs/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/update	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update
@@ -10677,7 +10677,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
-/en-US/docs/Web/Guide/API/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
+/en-US/docs/Web/Guide/API/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -10750,12 +10750,12 @@
 /en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
-/en-US/docs/Web/Guide/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
+/en-US/docs/Web/Guide/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/DOM/Gesture_events	/en-US/docs/Web/Guide/Events/Mouse_gesture_events
+/en-US/docs/Web/Guide/DOM/Gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Example
@@ -10767,6 +10767,7 @@
 /en-US/docs/Web/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Media_events	/en-US/docs/Web/Events#media
+/en-US/docs/Web/Guide/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/Events/Mutation_events	/en-US/docs/Web/API/MutationEvent
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
