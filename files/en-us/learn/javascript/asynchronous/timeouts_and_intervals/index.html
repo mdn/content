@@ -397,11 +397,9 @@ let rAF;
 </pre>
  </li>
  <li>
-  <p>Below the previous line inside <code>draw()</code>, add the following block — this checks to see if the value of <code>rotateCount</code> is above <code>359</code> (e.g. <code>360</code>, a full circle). If so, it sets the value to its modulo of 360 (i.e. the remainder left over when the value is divided by <code>360</code>) so the circle animation can continue uninterrupted, at a sensible, low value. Note that this isn't strictly necessary, but it is easier to work with values of 0–359 degrees than values like <code>"128000 degrees"</code>.</p>
+  <p>Below the previous line inside <code>draw()</code>, add the following block — this ensures that the value of <code>rotateCount</code> is between <code>0</code> and <code>359</code> by setting the value to its modulo of 360 (i.e. the remainder left over when the value is divided by <code>360</code>) so the circle animation can continue uninterrupted, at a sensible, low value. Note that this isn't strictly necessary, but it is easier to work with values of 0–359 degrees than values like <code>"128000 degrees"</code>.</p>
 
-  <pre class="brush: js">if (rotateCount &gt; 359) {
-  rotateCount %= 360;
-}</pre>
+  <pre class="brush: js">  rotateCount %= 360; </pre>
  </li>
  <li>Next, below the previous block add the following line to actually rotate the spinner:
   <pre class="brush: js">spinner.style.transform = `rotate(${rotateCount}deg)`;</pre>
@@ -534,10 +532,8 @@ const result = document.querySelector('.result');</pre>
 
   rotateCount = (timestamp - startTime) / 3;
 
-  if(rotateCount &gt; 359) {
-    rotateCount %= 360;
-  }
-
+  rotateCount %= 360;
+  
   spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
   rAF = requestAnimationFrame(draw);
 }</pre>
