@@ -43,7 +43,10 @@ tags:
 
 <p>GCC and binutils will expect to find the system headers and libraries under ${xprefix}/${xtarget_arch} so you will need to copy those files from the target system, preserving directory structure and modify any scripts as necessary. You should copy over the X11 lib and include dirs as well.</p>
 
-<p>{{ Note("If your target system uses glibc, you must take special care to modify the local copy of the target\'s <code>/usr/lib/libc.so</code> file (which is actually a script) so that it looks for its files under $xprefix/$target_arch rather than /usr.") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>If your target system uses glibc, you must take special care to modify the local copy of the target\'s <code>/usr/lib/libc.so</code> file (which is actually a script) so that it looks for its files under $xprefix/$target_arch rather than /usr.</p>
+</div>
 
 <p>If you already have rpms for the target system and rpm installed on the build system, then you can use this <a class="external" href="https://www.mozilla.org/build/setup-xrpms.sh.txt">shortcut script</a> which should install the rpms into $xprefix/$xtarget_arch using rpm2cpio.</p>
 

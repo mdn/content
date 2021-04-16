@@ -23,10 +23,11 @@ tags:
   the <code><a href="/en-US/docs/Web/API/IDBRequest#attr_result">result</a></code> of the
   request object.</p>
 
-<p>{{ Note("This method produces the same result for: a) a record that doesn't exist in
-  the database and b) a record that has an undefined value. To tell these situations
-  apart, call the <code>openCursor()</code> method with the same key. That method provides
-  a cursor if the record exists, and no cursor if it does not.") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
+    To tell these situations apart, call the <code>openCursor()</code> method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.</p>
+</div>
 
 <p>{{AvailableInWorkers}}</p>
 
