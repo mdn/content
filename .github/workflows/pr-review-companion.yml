@@ -78,13 +78,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          # Make sure to reflect the version of `snok/install-poetry` in the key
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-v1.1.3
 
       - name: Install deployer
-        # if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           cd yari/deployer
-          poetry install
+          poetry install --no-interaction --no-root
 
       - name: Deploy and analyze built content
         env:
