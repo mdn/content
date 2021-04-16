@@ -41,10 +41,10 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.370":
-  version "0.4.370"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.370.tgz#75b43b191671f67290a39ee29bd8b98d69f4250b"
-  integrity sha512-5dNwp82QP1xLkSGDn2Jh59ErrGAzUfb/CUcqItal2NWyKs4TqaVOrGa0sUDwIbTsehbYUC+EsbWI+2TGDY8ZMw==
+"@mdn/yari@0.4.373":
+  version "0.4.373"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.373.tgz#e32cf4fd0830985f627189cf15a45b20db1280ba"
+  integrity sha512-VKV6r3wGWtyaDOh60Qyo04iXvFaTL1V8INAdjrmcwlMDs3UcNKdKx7Sc7unwIkKq9YUn8SCNUhkqt91cgWVR/A==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -69,8 +69,8 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.2"
     hast-util-to-text "^2.0.1"
-    http-proxy-middleware "1.1.1"
-    image-size "0.9.7"
+    http-proxy-middleware "1.1.2"
+    image-size "1.0.0"
     image-type "4.1.0"
     imagemin "7.0.1"
     imagemin-gifsicle "7.0.0"
@@ -79,7 +79,7 @@
     imagemin-svgo "9.0.0"
     inquirer "^8.0.0"
     is-svg "4.2.2"
-    js-yaml "4.0.0"
+    js-yaml "4.1.0"
     loglevel "^1.7.1"
     lru-cache "^6.0.0"
     mdn-data "2.0.17"
@@ -2176,10 +2176,10 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.1.1.tgz#48900a68cd9d388c735d1dd97302c919b7e94a13"
-  integrity sha512-FIDg9zPvOwMhQ3XKB2+vdxK6WWbVAH7s5QpqQCif7a1TNL76GNAATWA1sy6q2gSfss8UJ/Nwza3N6QnFkKclpA==
+http-proxy-middleware@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.1.2.tgz#38d062ce4182b2931442efc2d9a0c429cab634f8"
+  integrity sha512-YRFUeOG3q85FJjAaYVJUoNRW9a73SDlOtAyQOS5PHLr18QeZ/vEhxywNoOPiEO8BxCegz4RXzTHcvyLEGB78UA==
   dependencies:
     "@types/http-proxy" "^1.17.5"
     http-proxy "^1.18.1"
@@ -2231,10 +2231,10 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-image-size@0.9.7:
-  version "0.9.7"
-  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.9.7.tgz#43b4ead4b1310d5ae310a559d52935a347e47c09"
-  integrity sha512-KRVgLNZkr00YGN0qn9MlIrmlxbRhsCcEb1Byq3WKGnIV4M48iD185cprRtaoK4t5iC+ym2Q5qlArxZ/V1yzDgA==
+image-size@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-1.0.0.tgz#58b31fe4743b1cec0a0ac26f5c914d3c5b2f0750"
+  integrity sha512-JLJ6OwBfO1KcA+TvJT+v8gbE6iWbj24LyDNFgFEN0lzegn6cC6a/p3NIDaepMsJjQjlUWqIC7wJv8lBFxPNjcw==
   dependencies:
     queue "6.0.2"
 
@@ -2585,10 +2585,10 @@ jake@^10.6.1:
     filelist "^1.0.1"
     minimatch "^3.0.4"
 
-js-yaml@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.0.0.tgz#f426bc0ff4b4051926cd588c71113183409a121f"
-  integrity sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
+js-yaml@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  integrity sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==
   dependencies:
     argparse "^2.0.1"
 
