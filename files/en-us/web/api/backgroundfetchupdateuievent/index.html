@@ -1,0 +1,83 @@
+---
+title: BackgroundFetchUpdateUIEvent
+slug: Web/API/BackgroundFetchUpdateUIEvent
+tags:
+  - API
+  - Interface
+  - Reference
+  - BackgroundFetchUpdateUIEvent
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>BackgroundFetchUpdateUIEvent</code></strong> interface of the {{domxref('Background Fetch API','','',' ')}} is an event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.</p>
+
+<p>It is the event type passed to <code>onbackgroundfetchsuccess</code> and <code>onbackgroundfetchfail</code>, and provides methods for updating the user interface to give information to the user.</p>
+
+<p>A <code>BackgroundFetchUpdateUIEvent</code> has an internal flag <code>UI updated</code>, which is initially unset. This cannot be updated by a web developer but is set when the {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method runs successfully.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+ <dt>{{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}}</dt>
+ <dd>Creates a new <code>BackgroundFetchUIEvent</code> object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}.</em></p>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}</dt>
+  <dd>Provides a method to update the title and icon in the user interface in order to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example, the <code>backgroundfetchsuccess</code> event is listened for, indicating that a fetch has completed successfully. The {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method is then called, with a message to let the user know the episode they downloaded is ready.</p>
+
+<pre class="brush: js">addEventListener('backgroundfetchsuccess', (event) => {
+  const bgFetch = event.registration;
+
+  event.waitUntil(async function() {
+    // Create/open a cache.
+    const cache = await caches.open('downloads');
+    // Get all the records.
+    const records = await bgFetch.matchAll();
+    // Copy each request/response across.
+    const promises = records.map(async (record) => {
+      const response = await record.responseReady;
+      await cache.put(record.request, response);
+    });
+
+    // Wait for the copying to complete.
+    await Promise.all(promises);
+
+    // Update the progress notification.
+    event.updateUI({ title: 'Episode 5 ready to listen!' });
+  }());
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Background Fetch','#background-fetch-update-ui-event','BackgroundFetchUpdateUIEvent')}}</td>
+    <td>{{Spec2('Background Fetch')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchUpdateUIEvent")}}</p>
