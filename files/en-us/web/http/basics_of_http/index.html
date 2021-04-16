@@ -25,8 +25,6 @@ tags:
  <dd>A specific kind of URI that directly embeds the resource it represents. Data URIs are very convenient, but have some caveats.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs">Resource URLs</a> {{Non-standard_Inline}}</dt>
  <dd>Resource URLs, those prefixed with the <code>resource</code> scheme are used by Firefox and Firefox browser extensions to load resources internally, but is also available to some sites the browser connects to as well.</dd>
- <dt>Separating identity and location of a resource: The Alt-Svc HTTP header</dt>
- <dd>Most of the time the identity and location of a web resource are shared, this can be changed with the {{HTTPHeader("Alt-Svc")}} header.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a></dt>
  <dd>Since HTTP/1.0, different types of content can be transmitted. This article explains how this is accomplished using the {{HTTPHeader("Content-Type")}} header and the MIME standard.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs">Choosing between www and non-www URLs</a></dt>
@@ -43,4 +41,6 @@ tags:
  <dd>HTTP/2 completely revisited how connections are created and maintained. This article explains how HTTP frames allow multiplexing and solve the 'head-of-line' blocking problem of former HTTP versions.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Content_negotiation">Content Negotiation</a></dt>
  <dd>HTTP introduces a set of headers, starting with <code><a href="/en-US/docs/Web/HTTP/Headers/Accept">Accept</a></code> as a way for a browser to announce the format, language, or encoding it prefers. This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response.</dd>
+ <dt>Specifying an alternative server for a resource: the Alt-Svc HTTP header</dt>
+ <dd>Sometimes a server wants to indicate that a particular resource should be loaded from a different server — while still appearing to the user as if were loaded from the same server. That can be accomplished using the {{HTTPHeader("Alt-Svc")}} header.</dd>
 </dl>
