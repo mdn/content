@@ -8457,10 +8457,12 @@
 /en-US/docs/Web/API/ParentNode.children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Web/API/ParentNode.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
+/en-US/docs/Web/API/ParentNode/append	/en-US/docs/Web/API/Element/append
 /en-US/docs/Web/API/ParentNode/childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ParentNode/children	/en-US/docs/Web/API/Element/children
 /en-US/docs/Web/API/ParentNode/firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Web/API/ParentNode/lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
+/en-US/docs/Web/API/ParentNode/prepend	/en-US/docs/Web/API/Element/prepend
 /en-US/docs/Web/API/PasswordCredential/additionalData	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/PasswordCredential/idName	/en-US/docs/Web/API/PasswordCredential
 /en-US/docs/Web/API/PasswordCredential/passwordName	/en-US/docs/Web/API/PasswordCredential

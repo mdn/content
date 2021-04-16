@@ -71004,48 +71004,6 @@
       "teoli"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-11-27T11:36:02.538Z",
-    "contributors": [
-      "TrevorKarjanis",
-      "mfuji09",
-      "beingmrkenny",
-      "Zearin_Galaurum",
-      "timtim17",
-      "matthewp",
-      "mfluehr",
-      "ExE-Boss",
-      "raidiun",
-      "stevenwdv",
-      "Delapouite",
-      "gretencord",
-      "jszhou",
-      "valtlai",
-      "jpmedley",
-      "fscholz"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-11-27T11:36:17.341Z",
-    "contributors": [
-      "TrevorKarjanis",
-      "mfuji09",
-      "beingmrkenny",
-      "sideshowbarker",
-      "rysmax",
-      "matthewp",
-      "mfluehr",
-      "krosylight",
-      "ExE-Boss",
-      "merih",
-      "stevenwdv",
-      "CollinGrimm",
-      "Sheppy",
-      "jszhou",
-      "jpmedley",
-      "fscholz"
-    ]
-  },
   "Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:11:25.046Z",
     "contributors": [
@@ -165622,6 +165580,48 @@
       "dflanagan",
       "Midnightaz",
       "hamishwillee"
+    ]
+  },
+  "Web/API/Element/append": {
+    "modified": "2020-11-27T11:36:02.538Z",
+    "contributors": [
+      "TrevorKarjanis",
+      "mfuji09",
+      "beingmrkenny",
+      "Zearin_Galaurum",
+      "timtim17",
+      "matthewp",
+      "mfluehr",
+      "ExE-Boss",
+      "raidiun",
+      "stevenwdv",
+      "Delapouite",
+      "gretencord",
+      "jszhou",
+      "valtlai",
+      "jpmedley",
+      "fscholz"
+    ]
+  },
+  "Web/API/Element/prepend": {
+    "modified": "2020-11-27T11:36:17.341Z",
+    "contributors": [
+      "TrevorKarjanis",
+      "mfuji09",
+      "beingmrkenny",
+      "sideshowbarker",
+      "rysmax",
+      "matthewp",
+      "mfluehr",
+      "krosylight",
+      "ExE-Boss",
+      "merih",
+      "stevenwdv",
+      "CollinGrimm",
+      "Sheppy",
+      "jszhou",
+      "jpmedley",
+      "fscholz"
     ]
   }
 }
