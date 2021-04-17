@@ -197,6 +197,8 @@ console.log(obj === undefined); // false
  </tbody>
 </table>
 
+<p>In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.</p>
+
 <h3 id="examples">Examples</h3>
 
 <p>The following example demonstrates loose equality comparisons involving the number primitive <code>0</code>, the bigint primitive <code>0n</code>, the string primitive <code>'0'</code>, and an object whose <code>toString()</code> value is <code>'0'</code>.</p>
@@ -214,8 +216,6 @@ console.log(num == obj); // true
 console.log(big == obj); // true
 console.log(str == obj); // true
 </pre>
-
-<p>In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.</p>
 
 <h2 id="Same-value_equality">Same-value equality</h2>
 
