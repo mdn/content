@@ -201,10 +201,10 @@ console.log(obj === undefined); // false
 
 <p>The following example demonstrates loose equality comparisons involving the number primitive <code>0</code>, the bigint primitive <code>0n</code>, the string primitive <code>'0'</code>, and an object whose <code>toString()</code> value is <code>'0'</code>.</p>
 
-<pre class="brush: js">var num = 0;
-var big = 0n;
-var str = '0';
-var obj = new String('0');
+<pre class="brush: js">const num = 0;
+const big = 0n;
+const str = '0';
+const obj = new String('0');
 
 console.log(num == str); // true
 console.log(big == num); // true
