@@ -172,7 +172,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
 <p>Chrome  handles the passed arguments differently:</p>
 
 <ul>
- <li>On Linux and Mac, Chrome passes <em>one</em> argument: the origin of the extension that started it (in the form <code>chrome-extension://[extensionID]/</code> – the trailing slash is required). This enables the app to identify the extension.</li>
+ <li>On Linux and Mac, Chrome passes <em>one</em> argument: the origin of the extension that started it (in the form <code>chrome-extension://[extensionID]</code>). This enables the app to identify the extension.</li>
  <li>On Windows, Chrome passes <em>two</em> arguments: the first is the origin of the extension, and the second is a handle to the Chrome native window that started the app.</li>
 </ul>
 </div>
