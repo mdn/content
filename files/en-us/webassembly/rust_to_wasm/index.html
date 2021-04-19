@@ -279,7 +279,7 @@ module.exports = {
   mode: "development"
 };</pre>
 
-<p>Finally, create the <code>index.js</code> referenced in the HTML file and give it these contents:</p>
+<p>Next, create a file named <code>index.js</code>, and give it these contents:</p>
 
 <pre class="brush: js">import("./node_modules/hello-wasm/hello_wasm.js").then((js) =&gt; {
   js.greet("WebAssembly with NPM");
@@ -287,7 +287,7 @@ module.exports = {
 
 <p>This imports the new module from the <code>node_modules</code> folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the <code>greet</code> function from that module, passing <code>"WebAssembly"</code> as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.</p>
 
-<p>Now we need to modify the HTML file; open the <code>index.html</code> file and replace the current contents with the following:</p>
+<p>Finally, we need to modify the HTML file; open the <code>index.html</code> file and replace the current contents with the following:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
