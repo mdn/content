@@ -131202,17 +131202,6 @@
       "bershanskiy"
     ]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:48:48.975Z",
-    "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "ottaviano",
-      "Minstel",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:23.076Z",
     "contributors": [
