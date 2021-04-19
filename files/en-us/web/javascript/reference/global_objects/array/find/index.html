@@ -34,8 +34,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.find(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+find((element) => { ... } )
+find((element, index) => { ... } )
+find((element, index, array) => { ... } )
+
+// Callback function
+find(callbackFn)
+find(callbackFn, thisArg)
+
+// Inline callback function
+find(function callbackFn(element) { ... })
+find(function callbackFn(element, index) { ... })
+find(function callbackFn(element, index, array){ ... })
+find(function callbackFn(element, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
