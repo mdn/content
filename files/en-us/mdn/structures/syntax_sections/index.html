@@ -109,6 +109,37 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <pre class="brush: js">match(request, options);</pre>
 
+<h5 id="Callback_syntax_blocks">Callback syntax blocks</h5>
+
+<p>For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:</p>
+
+<pre class="brush: js">
+// Arrow function
+filter((currentValue) => { ... } )
+filter((currentValue, index) => { ... } )
+filter((currentValue, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(currentValue) { ... })
+filter(function callbackFn(currentValue, index) { ... })
+filter(function callbackFn(currentValue, index, array){ ... })
+filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
+
+<h5 id="Syntax_for_arbitrary_number_of_parameters">Syntax for arbitrary number of parameters</h5>
+
+<p>For methods that accept an arbitrary number of parameters, the syntax block is written like this:</p>
+
+<pre class="brush: js">
+unshift(element0)
+unshift(element0, element1)
+unshift(element0, element1, ... , elementN)
+</pre>
+
 <h4 id="Parameters_section">Parameters section</h4>
 
 <p>Next, include a "Parameters" subsection, which explains what each parameter should be, in a description list. Parameters that are objects containing multiple members can include a nested description list, which itself includes an explanation of what each member should be. Optional parameters should be marked with an \{{optional_inline}} macro call next to their name in the description term.</p>
