@@ -193,7 +193,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>Now that we've got a compiled wasm module. let’s run it in the browser.</p>
 
-<p>Lets start by creating a file named <code>index.html</code> in the root of the project, and give it the following contents:</p>
+<p>Let’s start by creating a file named <code>index.html</code> in the root of the project, and give it the following contents:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -214,7 +214,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>The script in this file will import the js glue code, initialize the wasm module, and call the <code>greet</code> function we wrote in rust.</p>
 
-<p>Serve the root directory of the project with a local web server, (e.g. <code>python3 -m http.server</code>). If you're not sure how to do, that refer to <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server">Running a simple local HTTP server</a>.</p>
+<p>Serve the root directory of the project with a local web server, (e.g. <code>python3 -m http.server</code>). If you're not sure how to do that, refer to <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server">Running a simple local HTTP server</a>.</p>
 
 <p>Load <code>index.html</code> from the web server (if you used the python3 example: <a href="http://localhost:8000">http://localhost:8000</a>). An alert box appears on the screen, with <code>Hello, WebAssembly!</code> in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.</p>
 
