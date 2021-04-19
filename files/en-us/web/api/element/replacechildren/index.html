@@ -1,25 +1,25 @@
 ---
-title: ParentNode.replaceChildren()
-slug: Web/API/ParentNode/replaceChildren
+title: Element.replaceChildren()
+slug: Web/API/Element/replaceChildren
 tags:
-- API
-- DOM
-- Method
-- Node
-- ParentNode
-- Reference
-- replaceChildren
+  - API
+  - DOM
+  - Method
+  - Node
+  - Element
+  - Reference
+  - replaceChildren
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <strong><code>ParentNode.replaceChildren()</code></strong> method replaces the
+<p>The <strong><code>Element.replaceChildren()</code></strong> method replaces the
   existing children of a {{domxref("Node")}} with a specified new set of children. These
   can be {{domxref("DOMString")}} or {{domxref("Node")}} objects.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">// [Throws, Unscopable]
-ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
+<pre class="brush: js">
+replaceChildren(...nodesOrDOMStrings)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -27,8 +27,8 @@ ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
 <dl>
   <dt><code><var>nodesOrDOMStrings</var></code></dt>
   <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
-    <code>ParentNode</code>'s existing children with. If no replacement objects are
-    specified, then the <code>ParentNode</code> is emptied of all child nodes.</dd>
+    <code>Element</code>'s existing children with. If no replacement objects are
+    specified, then the <code>Element</code> is emptied of all child nodes.</dd>
 </dl>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -48,9 +48,9 @@ ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // returns undefined
 
 <pre class="brush: js">myNode.replaceChildren();</pre>
 
-<h3 id="Transferring_nodes_between_parents">Transferring nodes between parents</h3>
+<h3 id="Transferring_nodes_between_elements">Transferring nodes between elements</h3>
 
-<p><code>replaceChildren()</code> enables you to easily transfer nodes between parents,
+<p><code>replaceChildren()</code> enables you to easily transfer nodes between elements,
   without having to resort to verbose looping code. For example, say we have a simple
   application allowing you to choose what food you want for your party. This HTML might
   look something like this:</p>
@@ -150,7 +150,7 @@ noBtn.addEventListener('click', () =&gt; {
 
 <p>The end result looks like this:</p>
 
-<p>{{EmbedLiveSample('Transferring_nodes_between_parents', '100%', '350')}}</p>
+<p>{{EmbedLiveSample('Transferring_nodes_between_elements', '100%', '350')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -158,21 +158,16 @@ noBtn.addEventListener('click', () =&gt; {
   <tbody>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-parentnode-replacechildren',
-        'ParentNode.replaceChildren()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition.</td>
+      <td>{{SpecName('DOM WHATWG', '#dom-parentnode-replacechildren', 'ParentNode.replaceChildren()')}}</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ParentNode.replaceChildren")}}</p>
+<p>{{Compat("api.Element.replaceChildren")}}</p>
 
 <h2 id="See_also">See also</h2>
 

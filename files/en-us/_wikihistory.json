@@ -71020,13 +71020,6 @@
       "Sebastianz"
     ]
   },
-  "Web/API/ParentNode/replaceChildren": {
-    "modified": "2020-12-04T06:12:44.865Z",
-    "contributors": [
-      "chrisdavidmills",
-      "krosylight"
-    ]
-  },
   "Web/API/PasswordCredential": {
     "modified": "2020-10-15T21:44:48.781Z",
     "contributors": [
@@ -165622,6 +165615,13 @@
       "jszhou",
       "jpmedley",
       "fscholz"
+    ]
+  },
+  "Web/API/Element/replaceChildren": {
+    "modified": "2020-12-04T06:12:44.865Z",
+    "contributors": [
+      "chrisdavidmills",
+      "krosylight"
     ]
   }
 }
