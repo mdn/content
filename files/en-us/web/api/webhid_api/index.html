@@ -1,0 +1,75 @@
+---
+title: WebHID API
+slug: Web/API/WebHID_API
+tags:
+  - API
+  - Advanced
+  - WebHID
+  - WebHID API
+---
+<div>{{DefaultAPISidebar("WebHID API")}}</div>
+
+<p>A HID (Human Interface Device) is a type of device that takes input from or provides output to humans. It also refers to the HID protocol, a standard for bi-directional communication between a host and a device that is designed to simplify the installation procedure. The HID protocol was originally developed for USB devices but has since been implemented over many other protocols, including Bluetooth.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<dl>
+    <dt>{{domxref("HID")}}</dt>
+    <dd>The global HID interface.</dd>
+</dl>
+<dl>
+    <dt>{{domxref("HIDDevice")}}</dt>
+    <dd>Filter the device. Valid if filter.productId, filter.vendorId, filter.invalid and filter.usage exist.</dd>
+</dl>
+<dl>
+    <dt>{{domxref("HIDInputReportEvent")}}</dt>
+    <dd>The Event about HID Input Report.</dd>
+</dl>
+<dl>
+    <dt>{{domxref("HIDConnectionEvent")}}</dt>
+    <dd>The Event about HID Connection.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Retrieve devices and log the device names to the console.</p>
+
+<pre class="brush: js">document.addEventListener('DOMContentLoaded', async () => {
+    let devices = await navigator.hid.getDevices();
+    devices.forEach(device => {
+        console.log(`HID: ${device.productName}`);
+    });
+});</pre>
+
+<p>Register event listeners for connection and disconnection of HID devices.</p>
+
+<pre class="brush: js">navigator.hid.addEventListener('connect', ({device}) => {
+    console.log(`HID connected: ${device.productName}`);
+    });
+
+    navigator.hid.addEventListener('disconnect', ({device}) => {
+    console.log(`HID disconnected: ${device.productName}`);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+    <td>{{SpecName('WebHID API')}}</td>
+    <td>{{Spec2('WebHID API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HID")}}</p>
