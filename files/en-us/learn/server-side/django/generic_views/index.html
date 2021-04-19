@@ -282,7 +282,7 @@ class BookListView(generic.ListView):
   </tr>
   <tr>
    <td>(?P&lt;<em>name</em>&gt;...)</td>
-   <td>Capture the pattern (indicated by ...) as a named variable (in this case "name"). The captured values are passed to the view with the name specified. Your view must therefore declare an argument with the same name!</td>
+   <td>Capture the pattern (indicated by ...) as a named variable (in this case "name"). The captured values are passed to the view with the name specified. Your view must therefore declare a parameter with the same name!</td>
   </tr>
   <tr>
    <td>[  ]</td>
@@ -420,10 +420,16 @@ def book_detail_view(request, primary_key):
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:</p>
-
-  <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
-  </pre>
+  <p>The author link in the template above has an empty URL because we've not yet created an author detail page to link to. Once the detail page exists we can get its URL with either of these two approaches:</p>
+  <ul>
+    <li>Use the <code>url</code> template tag to reverse the 'author-detail' URL (defined in the URL mapper), passing it the author instance for the book: 
+      <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+    </li>
+    <li>Call the author model's <code>get_absolute_url()</code> method (this performs the same reversing operation):
+      <pre>&lt;a href="<strong>{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+    </li>
+  </ul>
+  <p>While both methods effectively do the same thing, <code>get_absolute_url()</code> is preferred because it helps you write more consistent and maintainable code (any changes only need to be done in one place: the author model).</p>
 </div>
 
 <p>Though a little larger, almost everything in this template has been described previously:</p>
@@ -580,17 +586,15 @@ def book_detail_view(request, primary_key):
 <p>The code required for the URL mappers and the views should be virtually identical to the <code>Book</code> list and detail views we created above. The templates will be different but will share similar behavior.</p>
 
 <div class="note notecard">
-<p><strong>Note</strong>:</p>
-
-<ul>
- <li>Once you've created the URL mapper for the author list page you will also need to update the <strong>All authors</strong> link in the base template. Follow the <a href="#update_the_base_template">same process</a> as we did when we updated the <strong>All books</strong> link.</li>
- <li>Once you've created the URL mapper for the author detail page, you should also update the <a href="#creating_the_detail_view_template">book detail view template</a> (<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
-  <pre class="brush: html">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt;
-</pre>
- </li>
-</ul>
+  <h4>Note</h4>
+  <ul>
+    <li>Once you've created the URL mapper for the author list page you will also need to update the <strong>All authors</strong> link in the base template. Follow the <a href="#update_the_base_template">same process</a> as we did when we updated the <strong>All books</strong> link.</li>
+    <li>Once you've created the URL mapper for the author detail page, you should also update the <a href="#creating_the_detail_view_template">book detail view template</a> (<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) so that the author link points to your new author detail page (rather than being an empty URL). The recommended way to do this is to call <code>get_absolute_url()</code> on the author model as shown below.
+      <pre class="brush: html">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt;
+    </pre>
+    </li>
+  </ul>
 </div>
-
 
 <p>When you are finished, your pages should look something like the screenshots below.</p>
 
