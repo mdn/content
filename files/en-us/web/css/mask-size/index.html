@@ -107,47 +107,7 @@ mask-size: unset;
 
 <h3 id="Setting_mask_size_as_a_percentage">Setting mask size as a percentage</h3>
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css; highlight[6]">#masked {
-  width: 200px;
-  height: 200px;
-  background: blue linear-gradient(red, blue);
-  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
-  mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
-  -webkit-mask-size: 50%;
-  mask-size: 50%; /* Can be changed in the live sample */
-  margin-bottom: 10px;
-}
-</pre>
-
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="maskSize"&gt;
-  &lt;option value="auto"&gt;auto&lt;/option&gt;
-  &lt;option value="40% 80%"&gt;40% 80%&lt;/option&gt;
-  &lt;option value="50%" selected&gt;50%&lt;/option&gt;
-  &lt;option value="200px 100px"&gt;200px 100px&lt;/option&gt;
-  &lt;option value="cover"&gt;cover&lt;/option&gt;
-  &lt;option value="contain"&gt;contain&lt;/option&gt;
-&lt;/select&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var maskSize = document.getElementById("maskSize");
-maskSize.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskSize = evt.target.value;
-});
-</pre>
-</div>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Setting_mask_size_as_a_percentage", 210, 240)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/masking/mask-size.html", '100%', 700)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
