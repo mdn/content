@@ -122272,36 +122272,6 @@
       "acuster"
     ]
   },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-08-24T04:12:31.453Z",
-    "contributors": [
-      "mfuji09",
-      "EdgarBarrantes",
-      "chrisdavidmills",
-      "gliesefire",
-      "zin445",
-      "Nozomi3",
-      "Sheppy",
-      "HiEv",
-      "Tigt",
-      "jswisher",
-      "nadieenespecial",
-      "mvasin",
-      "fscholz",
-      "Onkar316",
-      "wxdude225",
-      "DailyAlice",
-      "david_ross",
-      "rolfedh",
-      "Nickolay",
-      "pcat",
-      "majido",
-      "markg",
-      "chrisAnderson",
-      "Jeremie",
-      "Bzbarsky"
-    ]
-  },
   "Web/Guide/Events/Orientation_and_motion_data_explained": {
     "modified": "2020-01-18T20:53:28.435Z",
     "contributors": [
@@ -165622,6 +165592,36 @@
       "jszhou",
       "jpmedley",
       "fscholz"
+    ]
+  },
+  "Web/Events/Event_handlers": {
+    "modified": "2020-08-24T04:12:31.453Z",
+    "contributors": [
+      "mfuji09",
+      "EdgarBarrantes",
+      "chrisdavidmills",
+      "gliesefire",
+      "zin445",
+      "Nozomi3",
+      "Sheppy",
+      "HiEv",
+      "Tigt",
+      "jswisher",
+      "nadieenespecial",
+      "mvasin",
+      "fscholz",
+      "Onkar316",
+      "wxdude225",
+      "DailyAlice",
+      "david_ross",
+      "rolfedh",
+      "Nickolay",
+      "pcat",
+      "majido",
+      "markg",
+      "chrisAnderson",
+      "Jeremie",
+      "Bzbarsky"
     ]
   }
 }

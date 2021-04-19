@@ -1298,7 +1298,7 @@
 /en-US/docs/DOM/DOM_Reference/style	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/DOM/DOM_Reference/window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/DOM_Reference/window/clearInterval	/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
-/en-US/docs/DOM/DOM_event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
+/en-US/docs/DOM/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/DOM/DOM_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/DOM_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/DOM/DOM_event_reference/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
@@ -2938,7 +2938,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/DOMTimeStamp	/en-US/docs/Web/API/DOMTimeStamp
 /en-US/docs/Document_Object_Model_(DOM)/DOMTokenList	/en-US/docs/Web/API/DOMTokenList
 /en-US/docs/Document_Object_Model_(DOM)/DOMUserData	/en-US/docs/Web/API/DOMUserData
-/en-US/docs/Document_Object_Model_(DOM)/DOM_event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
+/en-US/docs/Document_Object_Model_(DOM)/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Document_Object_Model_(DOM)/DeviceAcceleration	/en-US/docs/Web/API/DeviceMotionEventAcceleration
 /en-US/docs/Document_Object_Model_(DOM)/DeviceAcceleration.x	/en-US/docs/Web/API/DeviceMotionEventAcceleration/x
 /en-US/docs/Document_Object_Model_(DOM)/DeviceAcceleration.y	/en-US/docs/Web/API/DeviceMotionEventAcceleration/y
@@ -7649,7 +7649,7 @@
 /en-US/docs/Web/API/Event/deepPath	/en-US/docs/Web/API/Event/composedPath
 /en-US/docs/Web/API/Event/detail	/en-US/docs/Web/API/UIEvent/detail
 /en-US/docs/Web/API/Event/scoped	/en-US/docs/Web/API/Event/composed
-/en-US/docs/Web/API/EventHandler	/en-US/docs/Web/Guide/Events/Event_handlers
+/en-US/docs/Web/API/EventHandler	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/API/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/EventTarget.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
@@ -10678,7 +10678,7 @@
 /en-US/docs/Web/Guide/API/DOM/Events	/en-US/docs/Web/Guide/Events
 /en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
-/en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
+/en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/API/DOM/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
@@ -10751,7 +10751,7 @@
 /en-US/docs/Web/Guide/DOM/Events	/en-US/docs/Web/Guide/Events
 /en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
-/en-US/docs/Web/Guide/DOM/Events/Event_handlers	/en-US/docs/Web/Guide/Events/Event_handlers
+/en-US/docs/Web/Guide/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/Guide/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /en-US/docs/Web/Guide/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
@@ -10768,6 +10768,7 @@
 /en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
+/en-US/docs/Web/Guide/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/Guide/Events/Media_events	/en-US/docs/Web/Events#media
 /en-US/docs/Web/Guide/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/Events/Mutation_events	/en-US/docs/Web/API/MutationEvent
