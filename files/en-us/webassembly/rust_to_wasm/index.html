@@ -191,7 +191,7 @@ wasm-bindgen = "0.2"</pre>
 
 <h2 id="Using_the_package_on_the_web">Using the package on the web</h2>
 
-<p>Now that we've got a compiled wasm module lets run it in the browser.</p>
+<p>Now that we've got a compiled wasm module. let’s run it in the browser.</p>
 
 <p>Lets start by creating a file named <code>index.html</code> in the root of the project, and give it the following contents:</p>
 
@@ -212,17 +212,17 @@ wasm-bindgen = "0.2"</pre>
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>The script in this file will import the js glue-code, initialize the wasm module, and call the <code>greet</code> function we wrote in rust.</p>
+<p>The script in this file will import the js glue code, initialize the wasm module, and call the <code>greet</code> function we wrote in rust.</p>
 
-<p>Serve the root directory of the project with a local web server, (e.g. <code>python3 -m http.server</code>), if you're not sure how to do that refer to <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server">Running a simple local HTTP server</a></p>
+<p>Serve the root directory of the project with a local web server, (e.g. <code>python3 -m http.server</code>). If you're not sure how to do, that refer to <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server">Running a simple local HTTP server</a>.</p>
 
-<p>Load <code>index.html</code> from the web server (if you used the python3 example: <a href="http://localhost:8000">http://localhost:8000</a>), an alert box appears on the screen, with <code>Hello, WebAssembly!</code> in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.</p>
+<p>Load <code>index.html</code> from the web server (if you used the python3 example: <a href="http://localhost:8000">http://localhost:8000</a>). An alert box appears on the screen, with <code>Hello, WebAssembly!</code> in it. We've successfully called from JavaScript into Rust, and from Rust into JavaScript.</p>
 
 <h2 id="Making_our_package_available_to_npm">Making our package available to npm</h2>
 
-<p>If you want to use the WebAssembly module with npm we'll need to make a few changes.</p>
+<p>If you want to use the WebAssembly module with npm, we'll need to make a few changes.</p>
 
-<p>Lets start by recompiling out Rust with the target bundler option:</p>
+<p>Let’s start by recompiling out Rust with the target bundler option:</p>
 
 <pre class="brush: bash no-line-numbers">$ wasm-pack build --target bundler</pre>
 
@@ -232,7 +232,7 @@ wasm-bindgen = "0.2"</pre>
 
 <p>To get Node.js and npm, go to the <a href="https://www.npmjs.com/get-npm">Get npm!</a> page and follow the instructions. When it comes to picking a version, choose any one you'd like; this tutorial isn't version-specific.</p>
 
-<p>Next, let's use `npm link` to make this package available to other javascript packages installed</p>
+<p>Next, let's use `npm link` to make this package available to other JavaScript packages installed</p>
 
 <pre class="brush: bash no-line-numbers">$ cd pkg
 $ npm link</pre>
@@ -287,7 +287,7 @@ module.exports = {
 
 <p>This imports the new module from the <code>node_modules</code> folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the <code>greet</code> function from that module, passing <code>"WebAssembly"</code> as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.</p>
 
-<p>Now we need to modify the HTML file; open <code>index.html</code> and replace the current contents with the following:</p>
+<p>Now we need to modify the HTML file; open the <code>index.html</code> file and replace the current contents with the following:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
