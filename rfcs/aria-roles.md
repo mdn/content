@@ -52,3 +52,59 @@ We need to write those pages.
 - Contact folks in the a11y community who might be willing to help write such
   pages. Get them working on pages.
 - Create a spreadsheet to track progress on each page.
+
+### Unwritten role pages
+
+Using [categorization of roles](https://www.w3.org/TR/wai-aria-1.1/#roles_categorization)
+as an exhaustive list, the following roles lack a page:
+
+* command (abstract, should not be used in content)
+* composite (abstract, should not be used in content)
+* input (abstract, should not be used in content)
+* landmark (abstract, should not be used in content)
+* range (abstract, should not be used in content)
+* roletype (abstract, should not be used in content)
+* section (abstract, should not be used in content)
+* sectionhead (abstract, should not be used in content)
+* select (abstract, should not be used in content)
+* structure (abstract, should not be used in content)
+* widget (abstract, should not be used in content)
+* window (abstract, should not be used in content)
+* menuitem (widget role)
+* menuitemcheckbox (widget role)
+* menuitemradio (widget role)
+* option (widget role)
+* scrollbar (widget role)
+* searchbox (widget role)
+* separator (when focusable, widget role)
+* spinbutton (widget role)
+* treeitem (widget role)
+* combobox (composite role)
+* menu (composite role)
+* menubar (composite role)
+* tablist (composite role)
+* tree (composite role)
+* treegrid (composite role)
+* columnheader (document structure role)
+* definition (document structure role)
+* directory (document structure role)
+* feed (document structure role)
+* math (document structure role)
+* none (document structure role)
+* note (document structure role)
+* rowheader (document structure role)
+* separator (when not focusable, document structure role)
+* term (document structure role)
+* tooltip (document structure role)
+* marquee (live region role)
+
+Don't forget to update the link in
+[MDN's list of ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+once these pages were written!
+
+### Related issues
+
+Some role pages have opened issues already. This is a list to keep track of
+them, until the spreadsheet was created:
+
+- [ ] [Content suggestion: Aria tabpanel and tablist role #3924](https://github.com/mdn/content/issues/3924)
