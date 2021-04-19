@@ -107,7 +107,13 @@ jobs:
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
+
+          poetry run deployer upload \
+            --prefix="pr$PR_NUMBER" \
+            --no-redirects \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
+
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
             --analyze-flaws --analyze-dangerous-content \
