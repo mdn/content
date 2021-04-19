@@ -18,18 +18,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p><strong>Since ECMAScript 2017:</strong></p>
-
-<pre
-  class="brush: js">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
-
-<p><strong>ECMAScript 2016 and earlier:</strong> <em>(<code><var>month</var></code> used
-    to be required)</em></p>
-
-<pre
-  class="brush: js">Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</pre>
-
-<h3 id="Parameters">Parameters</h3>
+<pre class="brush: js">
+Date.UTC(year)
+Date.UTC(year, month)
+Date.UTC(year, month, day)
+Date.UTC(year, month, day, hour)
+Date.UTC(year, month, day, hour, minute)
+Date.UTC(year, month, day, hour, minute, second)
+Date.UTC(year, month, day, hour, minute, second, millisecond)
+</pre>
 
 <dl>
   <dt><code><var>year</var></code></dt>
