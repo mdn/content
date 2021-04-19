@@ -9,9 +9,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code style="white-space: nowrap;">Alt-Svc</code></strong> HTTP response
-  header is used to advertise alternative services through which the same resource can be
-  reached. An alternative service is defined by a protocol/host/port combination.</p>
+<p>The {{HTTPHeader("Alt-Svc")}} HTTP header allows a server to indicate that a particular resource should be loaded from a different server — while still appearing to the user as if were loaded from the same server.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -84,7 +82,5 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying
-      resources on the Web</a></li>
+  <li><a href="https://www.mnot.net/blog/2016/03/09/alt-svc"> Alternative Services</a> (article about <code>Alt-Svc</code> by HTTP Working Group chair Mark Nottingham)</li>
 </ul>
