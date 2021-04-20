@@ -12,7 +12,7 @@ tags:
 
 <p class="summary">The <strong><code>updateUI()</code></strong> method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.</p>
 
-<p>After this method has run successfully, the UI Updated flag of the {{domxref("BackgroundFetchUpdateUIEvent")}} is set.</p>
+<p>This method may only be run once, to notify the user on a failed or a successful fetch.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -54,7 +54,7 @@ tags:
   <dd>Thrown if any of the following are true:
     <ul>
       <li>The {{domxref("Event.isTrusted","isTrusted")}} property is <code>false</code>.</li>
-      <li>The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set.</li>
+      <li>The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the <code>updateUI()</code> method has already been called.</li>
       <li>The {{domxref("BackgroundFetchUpdateUIEvent")}} is not active.</li>
     </ul>
   </dd>
