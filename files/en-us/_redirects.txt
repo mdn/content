@@ -7557,6 +7557,7 @@
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTraversal	/en-US/docs/Web/API/ElementTraversal
 /en-US/docs/Web/API/DocumentType/remove	/en-US/docs/Web/API/ChildNode/remove
+/en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
 /en-US/docs/Web/API/DynamicsCompressorNode.attack	/en-US/docs/Web/API/DynamicsCompressorNode/attack
