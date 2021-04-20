@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.0.tgz#00259cedef91cd4ea253d861fc68ad49b3d113ec"
   integrity sha512-VtD1pp8/DaOzvONz/I9RHFKB6/SkFsckDy3+0Zm3zXjqnkOEvvoJlaCxWskoyvEoFapkktx0ghA7Avi49EnEUA==
 
-"@mdn/yari@0.4.378":
-  version "0.4.378"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.378.tgz#52e62cad55922f5cb6fe52c3dd9028fc178ca6cc"
-  integrity sha512-kiX4IZLhrdSx4hrtg3TNbSTYOLGKFBNjRed2cyfjJnduUK+EExPzZo/rqtkgfCGADTJ5XV5jSfbUR8wQ0Ng7+w==
+"@mdn/yari@0.4.383":
+  version "0.4.383"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.383.tgz#0545511e3f9e6c123df39f87df6c459032cc911e"
+  integrity sha512-KYVOKBrSkXNT3Oef0kgeb/qJKlQ+bmhjJlLlkFDTe9TavmXqXZrk+rCB+I0dEH24zCckyJBAWogtQcqetyUpiA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -67,7 +67,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.2"
     hast-util-to-text "^2.0.1"
-    http-proxy-middleware "1.1.2"
+    http-proxy-middleware "1.2.0"
     image-size "1.0.0"
     image-type "4.1.0"
     imagemin "7.0.1"
@@ -2174,10 +2174,10 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.1.2.tgz#38d062ce4182b2931442efc2d9a0c429cab634f8"
-  integrity sha512-YRFUeOG3q85FJjAaYVJUoNRW9a73SDlOtAyQOS5PHLr18QeZ/vEhxywNoOPiEO8BxCegz4RXzTHcvyLEGB78UA==
+http-proxy-middleware@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.2.0.tgz#87776ea3d4d8dda3dc2594a076787bbc6fe4d995"
+  integrity sha512-vNw+AxT0+6VTM1rCJw1bpiIaUQ1Ww/vTyIEOUzdW9kNX4yuhhqV3jLSKDJo/Y/lqEIshaKCDujtvEqWiD9Dn6Q==
   dependencies:
     "@types/http-proxy" "^1.17.5"
     http-proxy "^1.18.1"
