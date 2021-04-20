@@ -10674,7 +10674,6 @@
 /en-US/docs/Web/Events/wheel	/en-US/docs/Web/API/Element/wheel_event
 /en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /en-US/docs/Web/Guide/API/DOM	/en-US/docs/Web/API/Document_Object_Model
-/en-US/docs/Web/Guide/API/DOM/Events	/en-US/docs/Web/Guide/Events
 /en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
@@ -10746,7 +10745,6 @@
 /en-US/docs/Web/Guide/CSS/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 /en-US/docs/Web/Guide/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/Visual_formatting_model
 /en-US/docs/Web/Guide/DOM	/en-US/docs/Web/API/Document_Object_Model
-/en-US/docs/Web/Guide/DOM/Events	/en-US/docs/Web/Guide/Events
 /en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
@@ -10764,6 +10762,7 @@
 /en-US/docs/Web/Guide/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
+/en-US/docs/Web/Guide/Events	/en-US/docs/Web/Events
 /en-US/docs/Web/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers

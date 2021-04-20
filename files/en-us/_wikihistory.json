@@ -122242,19 +122242,6 @@
       "jswisher"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2019-03-22T20:40:35.279Z",
-    "contributors": [
-      "9999472",
-      "mfuji09",
-      "SphinxKnight",
-      "stef4412",
-      "gportioli",
-      "Jeremie",
-      "Sheppy",
-      "acuster"
-    ]
-  },
   "Web/Guide/Events/Touch_events_(Mozilla_experimental)": {
     "modified": "2019-03-24T00:14:42.156Z",
     "contributors": [
