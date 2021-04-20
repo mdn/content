@@ -44412,23 +44412,6 @@
       "Dria"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2020-08-30T22:38:42.198Z",
-    "contributors": [
-      "bermarques",
-      "Zearin_Galaurum",
-      "chrisdavidmills",
-      "sukhbatth",
-      "mfuji09",
-      "SphinxKnight",
-      "Aman_Djenner",
-      "lishiyun",
-      "recortes",
-      "cvrebert",
-      "AlfredoLlaquet",
-      "teoli"
-    ]
-  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2020-05-26T10:30:16.020Z",
     "contributors": [
@@ -122272,36 +122255,6 @@
       "acuster"
     ]
   },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-08-24T04:12:31.453Z",
-    "contributors": [
-      "mfuji09",
-      "EdgarBarrantes",
-      "chrisdavidmills",
-      "gliesefire",
-      "zin445",
-      "Nozomi3",
-      "Sheppy",
-      "HiEv",
-      "Tigt",
-      "jswisher",
-      "nadieenespecial",
-      "mvasin",
-      "fscholz",
-      "Onkar316",
-      "wxdude225",
-      "DailyAlice",
-      "david_ross",
-      "rolfedh",
-      "Nickolay",
-      "pcat",
-      "majido",
-      "markg",
-      "chrisAnderson",
-      "Jeremie",
-      "Bzbarsky"
-    ]
-  },
   "Web/Guide/Events/Orientation_and_motion_data_explained": {
     "modified": "2020-01-18T20:53:28.435Z",
     "contributors": [
@@ -122312,24 +122265,6 @@
       "Jeremie",
       "Sheppy",
       "kohei.yoshino"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2020-04-10T14:53:37.678Z",
-    "contributors": [
-      "blueblots",
-      "avinashgurumurthy",
-      "steltenpower",
-      "cpasillas",
-      "christieewen",
-      "dphenderson",
-      "deveedutta",
-      "bhanubais",
-      "groovecoder",
-      "aosmond",
-      "Jeremie",
-      "Sheppy",
-      "acuster"
     ]
   },
   "Web/Guide/Events/Touch_events_(Mozilla_experimental)": {
@@ -165622,6 +165557,36 @@
       "jszhou",
       "jpmedley",
       "fscholz"
+    ]
+  },
+  "Web/Events/Event_handlers": {
+    "modified": "2020-08-24T04:12:31.453Z",
+    "contributors": [
+      "mfuji09",
+      "EdgarBarrantes",
+      "chrisdavidmills",
+      "gliesefire",
+      "zin445",
+      "Nozomi3",
+      "Sheppy",
+      "HiEv",
+      "Tigt",
+      "jswisher",
+      "nadieenespecial",
+      "mvasin",
+      "fscholz",
+      "Onkar316",
+      "wxdude225",
+      "DailyAlice",
+      "david_ross",
+      "rolfedh",
+      "Nickolay",
+      "pcat",
+      "majido",
+      "markg",
+      "chrisAnderson",
+      "Jeremie",
+      "Bzbarsky"
     ]
   }
 }
