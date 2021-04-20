@@ -19,7 +19,7 @@ tags:
 
 <dl>
  <dt>{{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}}</dt>
- <dd>Creates a new <code>BackgroundFetchUIEvent</code> object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.</dd>
+ <dd>Creates a new <code>BackgroundFetchUIEvent</code> object. This constructor is not typically used, as the browser creates these objects itself and passed them to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
