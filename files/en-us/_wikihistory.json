@@ -122342,18 +122342,6 @@
       "jswisher"
     ]
   },
-  "Web/Guide/Events/Using_device_orientation_with_3D_transforms": {
-    "modified": "2020-12-08T08:00:07.314Z",
-    "contributors": [
-      "rakuco",
-      "chrisdavidmills",
-      "jswisher",
-      "cxoon",
-      "Jeremie",
-      "Sheppy",
-      "louisremi"
-    ]
-  },
   "Web/Guide/Graphics": {
     "modified": "2019-10-25T14:14:58.592Z",
     "contributors": [
@@ -165622,6 +165610,18 @@
       "jszhou",
       "jpmedley",
       "fscholz"
+    ]
+  },
+  "Web/Events/Using_device_orientation_with_3D_transforms": {
+    "modified": "2020-12-08T08:00:07.314Z",
+    "contributors": [
+      "rakuco",
+      "chrisdavidmills",
+      "jswisher",
+      "cxoon",
+      "Jeremie",
+      "Sheppy",
+      "louisremi"
     ]
   }
 }
