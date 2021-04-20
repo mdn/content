@@ -40455,47 +40455,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2020-12-12T15:14:52.846Z",
-    "contributors": [
-      "bershanskiy",
-      "rakuco",
-      "MasterOdin",
-      "henchies",
-      "fscholz",
-      "dylanpyle",
-      "psimyn",
-      "rileym7",
-      "cthorner",
-      "Sheppy",
-      "newyork-anthonyng",
-      "timdream",
-      "erikadoyle",
-      "Sebastianz",
-      "mocas0",
-      "andregarzia",
-      "kscarfone",
-      "chrisdavidmills",
-      "SpencerG",
-      "teoli",
-      "Jeremie",
-      "Maroosko",
-      "Seta00",
-      "jrubenoff",
-      "ethertank",
-      "justinpotts",
-      "FredB",
-      "Maheswaran.Shenthuran",
-      "ziyunfei",
-      "kohei.yoshino",
-      "tallowen",
-      "louisremi",
-      "cgack",
-      "paul.irish",
-      "inma_610",
-      "fryn"
-    ]
-  },
   "Web/API/DeviceLightEvent": {
     "modified": "2020-10-15T21:19:58.928Z",
     "contributors": [
@@ -122242,31 +122201,6 @@
       "jswisher"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2019-03-22T20:40:35.279Z",
-    "contributors": [
-      "9999472",
-      "mfuji09",
-      "SphinxKnight",
-      "stef4412",
-      "gportioli",
-      "Jeremie",
-      "Sheppy",
-      "acuster"
-    ]
-  },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2020-01-18T20:53:28.435Z",
-    "contributors": [
-      "gerfolder",
-      "sideshowbarker",
-      "jdashg",
-      "dphenderson",
-      "Jeremie",
-      "Sheppy",
-      "kohei.yoshino"
-    ]
-  },
   "Web/Guide/Events/Touch_events_(Mozilla_experimental)": {
     "modified": "2019-03-24T00:14:42.156Z",
     "contributors": [
@@ -122275,18 +122209,6 @@
       "mkato",
       "MattBrubeck",
       "jswisher"
-    ]
-  },
-  "Web/Guide/Events/Using_device_orientation_with_3D_transforms": {
-    "modified": "2020-12-08T08:00:07.314Z",
-    "contributors": [
-      "rakuco",
-      "chrisdavidmills",
-      "jswisher",
-      "cxoon",
-      "Jeremie",
-      "Sheppy",
-      "louisremi"
     ]
   },
   "Web/Guide/Graphics": {
@@ -165587,6 +165509,71 @@
       "chrisAnderson",
       "Jeremie",
       "Bzbarsky"
+    ]
+  },
+  "Web/Events/Using_device_orientation_with_3D_transforms": {
+    "modified": "2020-12-08T08:00:07.314Z",
+    "contributors": [
+      "rakuco",
+      "chrisdavidmills",
+      "jswisher",
+      "cxoon",
+      "Jeremie",
+      "Sheppy",
+      "louisremi"
+    ]
+  },
+  "Web/Events/Orientation_and_motion_data_explained": {
+    "modified": "2020-01-18T20:53:28.435Z",
+    "contributors": [
+      "gerfolder",
+      "sideshowbarker",
+      "jdashg",
+      "dphenderson",
+      "Jeremie",
+      "Sheppy",
+      "kohei.yoshino"
+    ]
+  },
+  "Web/Events/Detecting_device_orientation": {
+    "modified": "2020-12-12T15:14:52.846Z",
+    "contributors": [
+      "bershanskiy",
+      "rakuco",
+      "MasterOdin",
+      "henchies",
+      "fscholz",
+      "dylanpyle",
+      "psimyn",
+      "rileym7",
+      "cthorner",
+      "Sheppy",
+      "newyork-anthonyng",
+      "timdream",
+      "erikadoyle",
+      "Sebastianz",
+      "mocas0",
+      "andregarzia",
+      "kscarfone",
+      "chrisdavidmills",
+      "SpencerG",
+      "teoli",
+      "Jeremie",
+      "Maroosko",
+      "Seta00",
+      "jrubenoff",
+      "ethertank",
+      "justinpotts",
+      "FredB",
+      "Maheswaran.Shenthuran",
+      "ziyunfei",
+      "kohei.yoshino",
+      "tallowen",
+      "louisremi",
+      "cgack",
+      "paul.irish",
+      "inma_610",
+      "fryn"
     ]
   }
 }
