@@ -122284,24 +122284,6 @@
       "kohei.yoshino"
     ]
   },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2020-04-10T14:53:37.678Z",
-    "contributors": [
-      "blueblots",
-      "avinashgurumurthy",
-      "steltenpower",
-      "cpasillas",
-      "christieewen",
-      "dphenderson",
-      "deveedutta",
-      "bhanubais",
-      "groovecoder",
-      "aosmond",
-      "Jeremie",
-      "Sheppy",
-      "acuster"
-    ]
-  },
   "Web/Guide/Events/Touch_events_(Mozilla_experimental)": {
     "modified": "2019-03-24T00:14:42.156Z",
     "contributors": [

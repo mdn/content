@@ -2826,14 +2826,12 @@
 /en-US/docs/DOMParser	/en-US/docs/Web/API/DOMParser
 /en-US/docs/DOMTokenList.supports()	/en-US/docs/Web/API/DOMTokenList/supports
 /en-US/docs/DOM_Client_Object_Cross-Reference	/en-US/docs/Web/API/Document_Object_Model
-/en-US/docs/DOM_Client_Object_Cross-Reference/DOM_Events	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
 /en-US/docs/DOM_Client_Object_Cross-Reference/document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM_Client_Object_Cross-Reference/location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM_Client_Object_Cross-Reference/navigator	/en-US/docs/Web/API/Navigator
 /en-US/docs/DOM_Client_Object_Cross-Reference/screen	/en-US/docs/Web/API/Window/screen
 /en-US/docs/DOM_Client_Object_Cross-Reference/style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
 /en-US/docs/DOM_Client_Object_Cross-Reference/window	/en-US/docs/Web/API/Window
-/en-US/docs/DOM_Client_Object_Cross-Reference:DOM_Events	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
 /en-US/docs/DOM_Client_Object_Cross-Reference:document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM_Client_Object_Cross-Reference:location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM_Client_Object_Cross-Reference:navigator	/en-US/docs/Web/API/Navigator
@@ -10681,7 +10679,6 @@
 /en-US/docs/Web/Guide/API/DOM/Events/Event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained	/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained
-/en-US/docs/Web/Guide/API/DOM/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms
