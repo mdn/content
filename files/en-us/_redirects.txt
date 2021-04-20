@@ -10769,6 +10769,7 @@
 /en-US/docs/Web/Guide/Events/Media_events	/en-US/docs/Web/Events#media
 /en-US/docs/Web/Guide/Events/Mouse_gesture_events	/en-US/docs/Web/Events/Mouse_gesture_events
 /en-US/docs/Web/Guide/Events/Mutation_events	/en-US/docs/Web/API/MutationEvent
+/en-US/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/en-US/docs/Web/Events
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events
 /en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
