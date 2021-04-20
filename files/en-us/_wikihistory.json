@@ -122255,18 +122255,6 @@
       "acuster"
     ]
   },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2020-01-18T20:53:28.435Z",
-    "contributors": [
-      "gerfolder",
-      "sideshowbarker",
-      "jdashg",
-      "dphenderson",
-      "Jeremie",
-      "Sheppy",
-      "kohei.yoshino"
-    ]
-  },
   "Web/Guide/Events/Touch_events_(Mozilla_experimental)": {
     "modified": "2019-03-24T00:14:42.156Z",
     "contributors": [
@@ -165587,6 +165575,18 @@
       "Jeremie",
       "Sheppy",
       "louisremi"
+    ]
+  },
+  "Web/Events/Orientation_and_motion_data_explained": {
+    "modified": "2020-01-18T20:53:28.435Z",
+    "contributors": [
+      "gerfolder",
+      "sideshowbarker",
+      "jdashg",
+      "dphenderson",
+      "Jeremie",
+      "Sheppy",
+      "kohei.yoshino"
     ]
   }
 }
