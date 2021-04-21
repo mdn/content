@@ -31,11 +31,11 @@ tags:
  <dt>{{cssxref("@font-face/font-family", "font-family")}}</dt>
  <dd>Specifies a name that will be used as the font face value for font properties.</dd>
  <dt>{{cssxref("@font-face/font-stretch", "font-stretch")}}</dt>
- <dd>A {{cssxref("font-stretch")}} value. Since Firefox 61 (and in other modern browsers) this also accepts two values to specify a range that is supported by a font-face, for example <code>font-stretch: 50% 200%;</code></dd>
+ <dd>A {{cssxref("font-stretch")}} value. Accepts two values to specify a range that is supported by a font-face, for example <code>font-stretch: 50% 200%;</code></dd>
  <dt>{{cssxref("@font-face/font-style", "font-style")}}</dt>
- <dd>A {{cssxref("font-style")}} value. Since Firefox 61 (and in other modern browsers) this also accepts two values to specify a range that is supported by a font-face, for example <code>font-style: oblique 20deg 50deg;</code></dd>
+ <dd>A {{cssxref("font-style")}} value. Accepts two values to specify a range that is supported by a font-face, for example <code>font-style: oblique 20deg 50deg;</code></dd>
  <dt>{{cssxref("@font-face/font-weight", "font-weight")}}</dt>
- <dd>A {{cssxref("font-weight")}} value. Since Firefox 61 (and in other modern browsers) this also accepts two values to specify a range that is supported by a font-face, for example <code>font-weight: 100 400;</code></dd>
+ <dd>A {{cssxref("font-weight")}} value. Accepts two values to specify a range that is supported by a font-face, for example <code>font-weight: 100 400;</code></dd>
  <dt>{{cssxref("@font-face/font-variant", "font-variant")}}</dt>
  <dd>A {{cssxref("font-variant")}} value.</dd>
  <dt>{{cssxref("font-feature-settings", "font-feature-settings")}}</dt>
@@ -53,6 +53,8 @@ tags:
 
  <p>The available types are: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, and <code>"svg"</code>.</p>
  </dd>
+ <dt>{{cssxref("@font-face/size-adjust", "size-adjust")}}{{experimental_inline}}</dt>
+ <dd>Defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font-size.</dd>
  <dt>{{cssxref("@font-face/unicode-range", "unicode-range")}}</dt>
  <dd>The range of Unicode code points to be used from the font.</dd>
 </dl>
@@ -169,6 +171,16 @@ tags:
   </tr>
  </thead>
  <tbody>
+  <tr>
+    <td>{{SpecName('CSS5 Fonts', '#font-face-rule', '@font-face')}}</td>
+    <td>{{Spec2('CSS5 Fonts')}}</td>
+    <td>Adds the <code>size-adjust</code> descriptor.</td>
+   </tr>
+  <tr>
+    <td>{{SpecName('CSS4 Fonts', '#font-face-rule', '@font-face')}}</td>
+    <td>{{Spec2('CSS4 Fonts')}}</td>
+    <td>Definition in this version of the specification.</td>
+   </tr>
   <tr>
    <td>{{SpecName('WOFF2.0', '', 'WOFF2 font format')}}</td>
    <td>{{Spec2('WOFF2.0')}}</td>
