@@ -35,47 +35,47 @@ tags:
 <p>You can connect to a device with {{domxref("HID.requestDevices")}}. In this case, we gonna select from all the available devices.</p>
 
 <pre class="brush: js">
-    const device = await navigator.hid.requestDevice({filters: []})
-    // A popup titled `... wants to connect to a HID Device` with `Cancel` and `Connect` buttons will show up with a device list to select from.
-    // Select one and click on `Connect` button. Then the device will be an array with the selected device in it.
+const device = await navigator.hid.requestDevice({filters: []})
+// A popup titled `... wants to connect to a HID Device` with `Cancel` and `Connect` buttons will show up with a device list to select from.
+// Select one and click on `Connect` button. Then the device will be an array with the selected device in it.
 </pre>
 
 <p>We can retrieve all the connected devices and log the device names to the console.</p>
 
 <pre class="brush: js">
-    let devices = await navigator.hid.getDevices();
-    devices.forEach(device => {
-        console.log(`HID: ${device.productName}`);
-    });
+let devices = await navigator.hid.getDevices();
+devices.forEach(device => {
+    console.log(`HID: ${device.productName}`);
+});
 </pre>
 
 <p>We can register event listeners for disconnection of any HID devices.</p>
 
 <pre class="brush: js">
-    navigator.hid.addEventListener('disconnect', (event) => {
-        console.log(`HID disconnected: ${event.device.productName}`);
-        console.dir(event)
-    });
-    // For example, when my connected keyboard gets disconnected, the log in the console will show:
-    // HID disconnected: USB USB Keyboard
-    // {
-    //    bubbles: false
-    //    cancelBubble: false
-    //    cancelable: false
-    //    composed: false
-    //    currentTarget: HID {onconnect: null, ondisconnect: null}
-    //    defaultPrevented: false
-    //    device: HIDDevice {oninputreport: null, opened: false, vendorId: 6700, productId: 11555, productName: "USB USB Keyboard", …}
-    //    eventPhase: 0
-    //    isTrusted: true
-    //    path: []
-    //    returnValue: true
-    //    srcElement: HID {onconnect: null, ondisconnect: null}
-    //    target: HID {onconnect: null, ondisconnect: null}
-    //    timeStamp: 18176.600000023842
-    //    type: "disconnect"
-    // }
-    // The event is an instance of the HIDConnectionEvent interface.
+navigator.hid.addEventListener('disconnect', (event) => {
+    console.log(`HID disconnected: ${event.device.productName}`);
+    console.dir(event)
+});
+// For example, when my connected keyboard gets disconnected, the log in the console will show:
+// HID disconnected: USB USB Keyboard
+// {
+//    bubbles: false
+//    cancelBubble: false
+//    cancelable: false
+//    composed: false
+//    currentTarget: HID {onconnect: null, ondisconnect: null}
+//    defaultPrevented: false
+//    device: HIDDevice {oninputreport: null, opened: false, vendorId: 6700, productId: 11555, productName: "USB USB Keyboard", …}
+//    eventPhase: 0
+//    isTrusted: true
+//    path: []
+//    returnValue: true
+//    srcElement: HID {onconnect: null, ondisconnect: null}
+//    target: HID {onconnect: null, ondisconnect: null}
+//    timeStamp: 18176.600000023842
+//    type: "disconnect"
+// }
+// The event is an instance of the HIDConnectionEvent interface.
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
