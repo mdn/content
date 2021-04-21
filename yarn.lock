@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.0.tgz#00259cedef91cd4ea253d861fc68ad49b3d113ec"
   integrity sha512-VtD1pp8/DaOzvONz/I9RHFKB6/SkFsckDy3+0Zm3zXjqnkOEvvoJlaCxWskoyvEoFapkktx0ghA7Avi49EnEUA==
 
-"@mdn/yari@0.4.383":
-  version "0.4.383"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.383.tgz#0545511e3f9e6c123df39f87df6c459032cc911e"
-  integrity sha512-KYVOKBrSkXNT3Oef0kgeb/qJKlQ+bmhjJlLlkFDTe9TavmXqXZrk+rCB+I0dEH24zCckyJBAWogtQcqetyUpiA==
+"@mdn/yari@0.4.389":
+  version "0.4.389"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.389.tgz#845b430d2ab241132f3d18ce324b109f87edbfa1"
+  integrity sha512-aBbs39/agbdOfdpBCzCsfFdwGFSj6EZgXLD1l7jEEwywZcwUvQ5/y6zCKs24bxtdq/xxzXfFMGgvxsJZ3h5+sA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -59,6 +59,7 @@
     ejs "3.1.6"
     express "4.17.1"
     fast-xml-parser "3.19.0"
+    fdir "5.0.0"
     file-type "16.3.0"
     front-matter "^4.0.2"
     fs-extra "9.1.0"
@@ -1581,6 +1582,11 @@ fd-slicer@~1.1.0:
   integrity sha1-JcfInLH5B3+IkbvmHY85Dq4lbx4=
   dependencies:
     pend "~1.2.0"
+
+fdir@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-5.0.0.tgz#a40b5d9adfb530daeca55558e8ad87ec14a44769"
+  integrity sha512-cteqwWMA43lEmgwOg5HSdvhVFD39vHjQDhZkRMlKmeoNPtSSgUw1nUypydiY2upMdGiBFBZvNBDbnoBh0yCzaQ==
 
 fecha@^4.2.0:
   version "4.2.0"
