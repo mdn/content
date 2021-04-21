@@ -41,7 +41,7 @@ function greet(event){
   // print the event object to console
   console.log('greet:', arguments)
   }
-  
+
   btn.onclick = greet;
 </pre>
 
@@ -64,12 +64,12 @@ function greet(event){
   // print the event object to console
   console.log('greet:', arguments)
   }
-  
+
 btn.addEventListener('click', greet);</pre>
 
 <p>The method can also take additional arguments/options to control aspects of how the events are captured and removed. More information can be found on the {{domxref("EventTarget.addEventListener")}} reference page.</p>
 
-<h4 id="Using_an_abort_signal">Using an Abort Signal</h3>
+<h4 id="Using_an_abort_signal">Using an Abort Signal</h4>
 
 <p>A notable event listener feature is the ability to use an abort signal to clean up multiple event handlers at the same time.</p>
 
