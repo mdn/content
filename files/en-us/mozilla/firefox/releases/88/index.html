@@ -75,8 +75,8 @@ tags:
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
 
 <ul>
-  <li>Marionette will no longer be enabled unless the <code>--marionette</code> command line argument or the <code>MOZ_MARIONETTE</code> environment variable have been specified. As such the <code>marionette.enabled</code> preference is no longer used. With this change the state of <code>navigator.webdriver</code> now correctly reflects the enabled state of Marionette ({{bug(1593343)}}).</li>
-  <li>Fixed a bug where pointer actions other than <code>down</code> and <code>up</code> inappropriately lead to buttons to be pressed ({{bug(1686361)}}).</li>
+  <li>Marionette will no longer be enabled unless the <code>--marionette</code> command line argument or the <code>MOZ_MARIONETTE</code> environment variable is specified. As such the <code>marionette.enabled</code> preference is no longer used. With this change the state of <code>navigator.webdriver</code> now correctly reflects the enabled state of Marionette ({{bug(1593343)}}).</li>
+  <li>Fixed a bug where pointer actions other than <code>down</code> and <code>up</code> inappropriately led to buttons being pressed ({{bug(1686361)}}).</li>
   <li>Fixed a race condition in <code>WebDriver:GetCurrentURL</code> that could have led the command to return the URL of the previously opened page, or even a hang in Marionette ({{bug(1664881)}}).</li>
 </ul>
 
