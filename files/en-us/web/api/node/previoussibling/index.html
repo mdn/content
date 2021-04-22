@@ -56,10 +56,7 @@ console.log(document.getElementById("b2").previousSibling.id); // "b1"
     or <a href="/en-US/docs/Web/API/Node/previousSibling"
       title="The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."><code>Node.previousSibling</code></a>
     may refer to a whitespace text node rather than the actual element the author intended
-    to get. One could use <a
-    href="/en-US/docs/Web/API/Element/previousElementSibling"><code><strong>Element.previousElementSibling</strong></code></a> to get an element node.
-  
-  </p>
+    to get. You can use <code><a href="/en-US/docs/Web/API/Element/previousElementSibling">previousElementSibling</a></code> to get the previous element node (skipping text nodes and any other non-element nodes).</p>
 
   <p>See <a href="/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM">Whitespace in the
       DOM</a> and <a href="https://www.w3.org/DOM/faq.html#emptytext"
