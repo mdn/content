@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.0.tgz#00259cedef91cd4ea253d861fc68ad49b3d113ec"
   integrity sha512-VtD1pp8/DaOzvONz/I9RHFKB6/SkFsckDy3+0Zm3zXjqnkOEvvoJlaCxWskoyvEoFapkktx0ghA7Avi49EnEUA==
 
-"@mdn/yari@0.4.378":
-  version "0.4.378"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.378.tgz#52e62cad55922f5cb6fe52c3dd9028fc178ca6cc"
-  integrity sha512-kiX4IZLhrdSx4hrtg3TNbSTYOLGKFBNjRed2cyfjJnduUK+EExPzZo/rqtkgfCGADTJ5XV5jSfbUR8wQ0Ng7+w==
+"@mdn/yari@0.4.393":
+  version "0.4.393"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.393.tgz#c0b105015f308ae896e9e9fbbcdaddfb980ff492"
+  integrity sha512-n1j3dEfRlRlISygGAafbrTFUjSAeeGiSt07EhoxRDcAcyxnFs/ZriMiu3cJg0tf8VnL/nSd5SzsuHFO5JCkNEA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -59,6 +59,7 @@
     ejs "3.1.6"
     express "4.17.1"
     fast-xml-parser "3.19.0"
+    fdir "5.0.0"
     file-type "16.3.0"
     front-matter "^4.0.2"
     fs-extra "9.1.0"
@@ -67,7 +68,7 @@
     hast-util-is-element "^1.1.0"
     hast-util-to-html "^7.1.2"
     hast-util-to-text "^2.0.1"
-    http-proxy-middleware "1.1.2"
+    http-proxy-middleware "1.2.0"
     image-size "1.0.0"
     image-type "4.1.0"
     imagemin "7.0.1"
@@ -1582,6 +1583,11 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+fdir@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-5.0.0.tgz#a40b5d9adfb530daeca55558e8ad87ec14a44769"
+  integrity sha512-cteqwWMA43lEmgwOg5HSdvhVFD39vHjQDhZkRMlKmeoNPtSSgUw1nUypydiY2upMdGiBFBZvNBDbnoBh0yCzaQ==
+
 fecha@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/fecha/-/fecha-4.2.0.tgz#3ffb6395453e3f3efff850404f0a59b6747f5f41"
@@ -2174,10 +2180,10 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.1.2.tgz#38d062ce4182b2931442efc2d9a0c429cab634f8"
-  integrity sha512-YRFUeOG3q85FJjAaYVJUoNRW9a73SDlOtAyQOS5PHLr18QeZ/vEhxywNoOPiEO8BxCegz4RXzTHcvyLEGB78UA==
+http-proxy-middleware@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.2.0.tgz#87776ea3d4d8dda3dc2594a076787bbc6fe4d995"
+  integrity sha512-vNw+AxT0+6VTM1rCJw1bpiIaUQ1Ww/vTyIEOUzdW9kNX4yuhhqV3jLSKDJo/Y/lqEIshaKCDujtvEqWiD9Dn6Q==
   dependencies:
     "@types/http-proxy" "^1.17.5"
     http-proxy "^1.18.1"

@@ -9,7 +9,12 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">April 19, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.</p>
+
+<div class="note notecard">
+  <h4>Note</h4>
+  <p>See also <a href="https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/">Never too late for Firefox 88</a> on Mozilla Hacks.</p>
+</div>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -52,7 +57,7 @@ tags:
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
-  <li>FTP has been disabled on all releases (preference <code>network.ftp.enabled</code> now defaults to <code>false</code>), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). Complementing this change, the extension setting <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a> has been made read-only, and web extensions can now register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol handlers</a> for FTP ({{bug(1626365)}}).</li>
+  <li>FTP has been disabled on all releases (preference <code>network.ftp.enabled</code> now defaults to <code>false</code>), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). Complementing this change, the extension setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a></code> has been made read-only, and web extensions can now register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol handlers</a> for FTP ({{bug(1626365)}}).</li>
 </ul>
 
 <h3 id="Security">Security</h3>
@@ -69,7 +74,11 @@ tags:
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
 
-<p><em>No changes.</em></p>
+<ul>
+  <li>Marionette will no longer be enabled unless the <code>--marionette</code> command line argument or the <code>MOZ_MARIONETTE</code> environment variable is specified. As such the <code>marionette.enabled</code> preference is no longer used. With this change the state of <code>navigator.webdriver</code> now correctly reflects the enabled state of Marionette ({{bug(1593343)}}).</li>
+  <li>Fixed a bug where pointer actions other than <code>down</code> and <code>up</code> inappropriately led to buttons being pressed ({{bug(1686361)}}).</li>
+  <li>Fixed a race condition in <code>WebDriver:GetCurrentURL</code> that could have led the command to return the URL of the previously opened page, or even a hang in Marionette ({{bug(1664881)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 

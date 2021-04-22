@@ -52,3 +52,9 @@ We need to write this content.
 - Contact folks in the community who might be willing to help write such
   pages. Get them working on pages.
 - Create a spreadsheet to track progress on each page.
+
+## Useful links
+
+- [What is in a Web View? An Analysis of Progressive Web App Features When the Means
+  of Web Access is not a Web Browser](https://research.google/pubs/pub46739/) by 
+  Thomas Steiner.

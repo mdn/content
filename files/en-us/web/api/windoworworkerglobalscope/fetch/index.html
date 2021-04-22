@@ -187,7 +187,7 @@ fetch(myRequest)
 <pre class="brush: js">const myImage = document.querySelector('img');
 
 let myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append('Accept', 'image/jpeg');
 
 const myInit = {
   method: 'GET',
@@ -214,7 +214,7 @@ fetch(myRequest, myInit).then(function(response) {
 <pre class="brush: js">const myInit = {
   method: 'GET',
   headers: {
-    'Content-Type': 'image/jpeg'
+    'Accept': 'image/jpeg'
   },
   mode: 'cors',
   cache: 'default'

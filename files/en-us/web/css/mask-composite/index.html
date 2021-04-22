@@ -56,44 +56,7 @@ mask-composite: unset;
 
 <h3 id="Compositing_mask_layers_with_addition">Compositing mask layers with addition</h3>
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css; highlight[7]">#masked {
-  width: 100px;
-  height: 100px;
-  background-color: #8cffa0;
-  mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg),
-              url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-size: 100% 100%;
-  mask-composite: add; /* Can be changed in the live sample */
-}
-</pre>
-
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="compositeMode"&gt;
-  &lt;option value="add"&gt;add&lt;/option&gt;
-  &lt;option value="subtract"&gt;subtract&lt;/option&gt;
-  &lt;option value="intersect"&gt;intersect&lt;/option&gt;
-  &lt;option value="exclude"&gt;exclude&lt;/option&gt;
-&lt;/select&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var clipBox = document.getElementById("compositeMode");
-clipBox.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskComposite = evt.target.value;
-});
-</pre>
-</div>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Compositing_mask_layers_with_addition", "100px", "130px")}}</p>
+<p>{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
