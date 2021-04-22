@@ -38,11 +38,11 @@ console.log(document.getElementById("b2").previousSibling.id); // "b1"
 </pre>
 
 <pre class="brush:js">
-    console.log(document.getElementById("b1").previousSibling); // #text
-    console.log(document.getElementById("b1").previousSibling.previousSibling); // &lt;img id="b0"&gt;
-    console.log(document.getElementById("b2").previousSibling.previousSibling); // &lt;img id="b1"&gt;
-    console.log(document.getElementById("b2").previousSibling); // #text
-    console.log(document.getElementById("b2").previousSibling.id); // undefined
+document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling.previousSibling; // &lt;img id="b0"&gt;
+document.getElementById("b2").previousSibling.previousSibling; // &lt;img id="b1"&gt;
+document.getElementById("b2").previousSibling;                 // #text
+document.getElementById("b2").previousSibling.id;              // undefined
 </pre>
 
 <h2 id="Notes">Notes</h2>
