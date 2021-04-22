@@ -25,8 +25,9 @@ tags:
 <h3>First example</h3>
 <pre class="brush: html">&lt;img id="b0"&gt;&lt;img id="b1"&gt;&lt;img id="b2"&gt;</pre>
 
-<pre class="brush:js">console.log(document.getElementById("b1").previousSibling); // &lt;img id="b0"&gt;
-console.log(document.getElementById("b2").previousSibling.id); // "b1"
+<pre class="brush:js">
+document.getElementById("b1").previousSibling;    // &lt;img id="b0"&gt;
+document.getElementById("b2").previousSibling.id; // "b1"
 </pre>
 <h3>Second example</h3>
 
