@@ -2,20 +2,20 @@
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Method
-- NumberFormat
-- Prototype
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - NumberFormat
+  - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Intl.NumberFormat.prototype.format()</code></strong> method formats a
 	number according to the locale and formatting options of this
-	{{jsxref("NumberFormat")}} object.</p>
+	{{jsxref("Intl/NumberFormat")}} object.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html",
 	"taller")}}</div>
@@ -35,7 +35,7 @@ tags:
 <h2 id="Description">Description</h2>
 
 <p>The <code>format</code> getter function formats a number into a string according to the
-	locale and formatting options of this {{jsxref("NumberFormat")}} object.</p>
+	locale and formatting options of this {{jsxref("Intl/NumberFormat")}} object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -53,7 +53,7 @@ console.log(numberFormat.format(654321.987));
 <h3 id="Using_format_with_map">Using format with map</h3>
 
 <p>Use the <code>format</code> getter function for formatting all numbers in an array.
-	Note that the function is bound to the {{jsxref("NumberFormat")}} from which it was
+	Note that the function is bound to the {{jsxref("Intl/NumberFormat")}} from which it was
 	obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}. This is
 	considered a historical artefact, as part of a convention which is no longer followed
 	for new features, but is preserved to maintain compatibility with existing programs.
@@ -89,6 +89,6 @@ console.log(formatted.join('; '));
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
+	<li>{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}</li>
 	<li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
 </ul>

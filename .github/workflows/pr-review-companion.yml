@@ -68,7 +68,7 @@ jobs:
           python-version: "3.8"
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.2
+        uses: snok/install-poetry@v1.1.4
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
@@ -78,13 +78,18 @@ jobs:
         uses: actions/cache@v2
         with:
           path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
 
-      - name: Install deployer
+      - name: Install poetry dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           cd yari/deployer
-          poetry install
+          poetry install --no-interaction --no-root
+
+      - name: Install Deployer
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
 
       - name: Deploy and analyze built content
         env:
@@ -98,8 +103,17 @@ jobs:
         run: |
           PR_NUMBER=`cat build/NR`
 
+          echo "Pull request:"
+          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
+
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
+
+          poetry run deployer upload \
+            --prefix="pr$PR_NUMBER" \
+            --no-redirects \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
+
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
             --analyze-flaws --analyze-dangerous-content \

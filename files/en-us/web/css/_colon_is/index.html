@@ -1,6 +1,6 @@
 ---
 title: ':is() (:matches(), :any())'
-slug: 'Web/CSS/:is'
+slug: Web/CSS/:is
 tags:
   - ':is'
   - CSS
@@ -35,7 +35,7 @@ footer p:hover {
 }
 </pre>
 
-<p>Note that older browsers support this functionality as <code>:matches()</code>, or through an older, prefixed pseudo-class — <code>:any()</code>, including older versions of Chrome, Firefox, and Safari. <code>:any()</code> works in exactly the same way as <code>:matches()</code>/<code>:is()</code>, except that it requires vendor prefixes and doesn't support <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">complex selectors</a>.</p>
+<p>Note that older browsers support this functionality as <code>:matches()</code>, or through an older, prefixed pseudo-class — <code>:any()</code>, including older versions of Chrome, Firefox, and Safari. <code>:any()</code> works in exactly the same way as <code>:matches()</code>/<code>:is()</code>, except that it requires vendor prefixes and doesn't support <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">complex selectors</a>.</p>
 
 <p>These legacy pseudo-classes can be used to provide backwards compatibility.</p>
 
@@ -176,7 +176,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <h3 id="Simplifying_section_selectors">Simplifying section selectors</h3>
 
-<p>The <code>:is()</code> pseudo-class is particularly useful when dealing with HTML5 <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections and headings</a>. Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without <code>:is()</code>, styling them to match one another can be tricky.</p>
+<p>The <code>:is()</code> pseudo-class is particularly useful when dealing with HTML5 <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">sections and headings</a>. Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without <code>:is()</code>, styling them to match one another can be tricky.</p>
 
 <p>For example, without <code>:is()</code>, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:</p>
 
@@ -224,7 +224,7 @@ h1 {
 
 <h3 id="Difference_between_is_and_where">Difference between :is() and :where()</h3>
 
-<p>The difference between the two is that <code>:is()</code> counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas <code><a href="/en-US/docs/Web/CSS/:where">:where()</a></code> has a specificity value of 0. This is demonstrated by the <a href="/en-US/docs/Web/CSS/:where#Examples">example on the <code>:where()</code> reference page</a>.</p>
+<p>The difference between the two is that <code>:is()</code> counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas <code><a href="/en-US/docs/Web/CSS/:where">:where()</a></code> has a specificity value of 0. This is demonstrated by the <a href="/en-US/docs/Web/CSS/:where#examples">example on the <code>:where()</code> reference page</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 

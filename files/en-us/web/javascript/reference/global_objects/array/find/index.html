@@ -2,13 +2,12 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 tags:
-- Array
-- ECMAScript 2015
-- JavaScript
-- Method
-- Prototype
-- Reference
-- polyfill
+  - Array
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
 ---
 <div>{{JSRef}}</div>
 
@@ -34,8 +33,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.find(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+find((element) => { ... } )
+find((element, index) => { ... } )
+find((element, index, array) => { ... } )
+
+// Callback function
+find(callbackFn)
+find(callbackFn, thisArg)
+
+// Inline callback function
+find(function callbackFn(element) { ... })
+find(function callbackFn(element, index) { ... })
+find(function callbackFn(element, index, array){ ... })
+find(function callbackFn(element, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,14 +74,12 @@ tags:
 <p>The <strong>value</strong> of the <strong>first element</strong> in the array that
   satisfies the provided testing function. Otherwise, {{jsxref("undefined")}} is returned.
 </p>
-<p class="warning">Index <code>0</code> will be interpreted as a {{Glossary("Falsy")}}
-  value in conditional statements.</p>
 
 <h2 id="Description">Description</h2>
 
 <p>The <code>find</code> method executes the <code><var>callback</var></code> function
   once for each index of the array until the <code><var>callback</var></code> returns a <a
-    href="/en-US/docs/Glossary/truthy">truthy</a> value. If so, <code>find</code>
+    href="/en-US/docs/Glossary/Truthy">truthy</a> value. If so, <code>find</code>
   immediately returns the value of that element. Otherwise, <code>find</code> returns
   {{jsxref("undefined")}}.</p>
 
@@ -93,67 +104,8 @@ tags:
     <code><var>callback</var></code>, its value passed to the
     <code><var>callback</var></code> will be the value at the time <code>find</code>
     visits that element's index.</li>
-  <li>Elements that are {{jsxref("delete", "deleted")}} are still visited.</li>
+  <li>Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.</li>
 </ul>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>This method has been added to the ECMAScript 2015 specification and may not be
-  available in all JavaScript implementations yet. However, you can polyfill
-  <code>Array.prototype.find</code> with the following snippet:</p>
-
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.find
-if (!Array.prototype.find) {
-  Object.defineProperty(Array.prototype, 'find', {
-    value: function(predicate) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw TypeError('"this" is null or not defined');
-      }
-
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
-
-      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw TypeError('predicate must be a function');
-      }
-
-      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
-      var thisArg = arguments[1];
-
-      // 5. Let k be 0.
-      var k = 0;
-
-      // 6. Repeat, while k &lt; len
-      while (k &lt; len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kValue be ? Get(O, Pk).
-        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
-        // d. If testResult is true, return kValue.
-        var kValue = o[k];
-        if (predicate.call(thisArg, kValue, k, o)) {
-          return kValue;
-        }
-        // e. Increase k by 1.
-        k++;
-      }
-
-      // 7. Return undefined.
-      return undefined;
-    },
-    configurable: true,
-    writable: true
-  });
-}
-</pre>
-
-<p>If you need to support truly obsolete JavaScript engines that don't support
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>,
-  it is best not to polyfill <code>Array.prototype</code> at all, as you cannot make it
-  non-enumerable.</p>
 
 <h2 id="Examples">Examples</h2>
 

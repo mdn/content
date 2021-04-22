@@ -145,41 +145,6 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 };
 </pre>
 
-<div class="note" style="height: 250px; overflow: auto;">
-<p><strong>Note:</strong> The <code>Object.create()</code> method used above is relatively new. For alternative methods, please consider one of the following approaches:</p>
-
-<p>Using {{jsxref("Object/proto", "Object.__proto__")}}:</p>
-
-<pre class="brush: js">Function.prototype.construct = function (aArgs) {
-  let oNew = {};
-  oNew.__proto__ = this.prototype;
-  this.apply(oNew, aArgs);
-  return oNew;
-};
-</pre>
-
-<p>Using <a href="/en-US/docs/Web/JavaScript/Closures">closures</a>:</p>
-
-<pre class="brush: js">Function.prototype.construct = function(aArgs) {
-  let fConstructor = this, fNewConstr = function() {
-    fConstructor.apply(this, aArgs);
-  };
-  fNewConstr.prototype = fConstructor.prototype;
-  return new fNewConstr();
-};</pre>
-
-<p>Using the {{jsxref("Function")}} constructor:</p>
-
-<pre class="brush: js">Function.prototype.construct = function (aArgs) {
-  let fNewConstr = new Function("");
-  fNewConstr.prototype = this.prototype;
-  let oNew = new fNewConstr();
-  this.apply(oNew, aArgs);
-  return oNew;
-};
-</pre>
-</div>
-
 <p>Example usage:</p>
 
 <pre class="brush: js">function MyConstructor() {

@@ -1,0 +1,140 @@
+---
+title: Markdown in MDN
+slug: MDN/Contribute/Markdown_in_MDN
+tags:
+  - MDN
+---
+<div>{{MDNSidebar}}</div>
+
+<div class="notecard warning">
+
+<h4>Warning</h4>
+
+<p>This document is a work-in-progress draft at the moment.</p>
+
+<p>It's not actually possible, yet, to write MDN documentation using Markdown, so at the moment this document is used to record the decisions we've made about how we will expect Markdown to be written, when it is supported.</p>
+
+</div>
+
+<p>This page describes how we use Markdown to write documentation on MDN. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.</p>
+
+<h2>Baseline: GitHub-Flavored Markdown</h2>
+
+<p>The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <a href="https://github.github.com/gfm/">https://github.github.com/gfm/</a>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark (<a href="http://spec.commonmark.org/">http://spec.commonmark.org/</a>).</p>
+
+<p>GFM and CommonMark describe some extensions to <a href="https://daringfireball.net/projects/markdown/syntax">the original Markdown description</a>). We'll highlight two that are going to be important to us.
+
+<h3>Code fences and info strings</h3>
+
+<p>In GFM and CommonMark, authors can use "code fences" to demarcate <code>&lt;pre&gt;</code> blocks. The opening code fence may be followed by some text that is called the "info string". From the spec:</p>
+
+<blockquote>
+  <p> The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.</p>
+</blockquote>
+
+<p>It's permissible for the info string to contain multiple words, like:</p>
+
+<pre>
+```fee fi fo fum
+// some example code
+```
+</pre>
+
+<h3>Tables</h3>
+
+<p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but it should be noted that this syntax imposes limitations on the kinds of tables we can write, so in many cases this syntax will not be appropriate and we will need alternative ways of authoring tables.</p>
+
+<p>In particular:</p>
+
+<ul>
+  <li>GFM tables must have a header row.</li>
+  <li>GFM tables may not have a header column.</li>
+  <li>GFM won't parse GFM block elements in table cells.</li>
+</ul>
+
+<p>This last point means that if you write:</p>
+
+<pre>
+--------------------------------------
+|  i'm a test    | yes i am          |
+|----------------|-------------------|
+| `inline` is ok | * lists aren't    |
+--------------------------------------
+</pre>
+
+<p>...then the attempt to write a list in the bottom-right cell will just generate <code>&lt;td&gt;* lists aren't&lt;/td&gt;</code> in the output.</p>
+
+
+<h2>Extensions to GFM</h2>
+
+<p>In this section we'll outline ways in which writers will be able to go beyond the syntax defined in the GFM spec.</p>
+
+
+<h3>Example code blocks</h3>
+
+Writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words will be supported:
+
+<ul>
+  <li><code>bash</code></li>
+  <li><code>cpp</code> (for C/C++)</li>
+  <li><code>css</code></li>
+  <li><code>html</code></li>
+  <li><code>java</code></li>
+  <li><code>js</code> (for JavaScript)</li>
+  <li><code>json</code></li>
+  <li><code>php</code></li>
+  <li><code>python</code></li>
+  <li><code>sql</code></li>
+  <li><code>xml</code></li>
+  <li><code>wasm</code> (for WebAssembly text format)</li>
+</ul>
+
+For example:
+
+<pre>
+```js
+const greeting = "I will get syntax highlighting";
+```
+</pre>
+
+<p>Writers will be able to supply any one of the following additional words, which must come after the language word:</p>
+
+<ul>
+  <li><code>example-good</code>: style this example as a good example (one to follow)</li>
+  <li><code>example-bad</code>: style this example as a bad example (one to avoid)</li>
+  <li><code>hidden</code>: don't render this code block in the page. This is for use in live samples.</li>
+</ul>
+
+For example:
+
+<pre>
+```js example-good
+const greeting = "I'm a good example";
+```
+</pre>
+
+<h3>Notes and warnings</h3>
+
+<h3>Definition lists</h3>
+
+<h3>Tables</h3>
+
+<h3>Heading IDs</h3>
+
+<h3>Live samples</h3>
+
+<h3>Inline styles</h3>
+
+<h3>KumaScript</h3>
+
+<p>Writers will be able to include KumaScript macro calls in prose content:</p>
+
+<pre>
+
+The **`margin`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property sets the [margin area](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) on all four sides of an element. It is a shorthand for {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}.
+
+\{{EmbedInteractiveExample("pages/css/margin.html")}}
+
+The top and bottom margins have no effect on replaced inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+
+</pre>

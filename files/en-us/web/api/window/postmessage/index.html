@@ -26,15 +26,12 @@ tags:
 <p>Broadly, one window may obtain a reference to another (<em>e.g.,</em> via
   <code>targetWindow = window.opener</code>), and then dispatch a
   {{domxref("MessageEvent")}} on it with <code>targetWindow.postMessage()</code>. The
-  receiving window is then free to <a href="/en-US/docs/Web/Guide/Events">handle this
-    event</a> as needed. The arguments passed to <code>window.postMessage()</code>
-  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the
-    receiving window through the event object</a>.</p>
+  receiving window is then free to <a href="/en-US/docs/Web/Events/Event_handlers">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code>
+  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the receiving window through the event object</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
+<pre class="brush: js"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
 
 <dl>
   <dt><code><em>targetWindow</em></code></dt>

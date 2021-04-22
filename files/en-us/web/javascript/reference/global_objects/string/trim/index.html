@@ -23,14 +23,9 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A new string representing the <code><var>str</var></code> stripped of whitespace from
-  both ends.</p>
+<p>A new string representing <code><var>str</var></code> stripped of whitespace from both its beginning and end.</p>
 
-<h2 id="Description">Description</h2>
-
-<p>The <code>trim()</code> method returns the string stripped of whitespace from both
-  ends. <code>trim()</code> does not affect the value of the <code><var>str</var></code>
-  itself.</p>
+<p>If neither the beginning or end of <code><var>str</var></code> has any whitespace, a new string is still returned (essentially a copy of <code><var>str</var></code>), with no exception being thrown.</p>
 
 <p>To return a new string with whitespace trimmed from just one end, use {{jsxref("String.prototype.trimStart()", "trimStart()")}} or {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}.</p>
 

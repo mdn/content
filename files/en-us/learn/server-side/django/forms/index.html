@@ -379,7 +379,7 @@ def renew_book_librarian(request, pk):
 {% block content %}
   &lt;h1&gt;Renew: \{{ book_instance.book.title }}&lt;/h1&gt;
   &lt;p&gt;Borrower: \{{ book_instance.borrower }}&lt;/p&gt;
-  &lt;p&gt;{% if book_instance.is_overdue %} class="text-danger"{% endif %}&gt;Due date: \{{ book_instance.due_back }}&lt;/p&gt;
+  &lt;p{% if book_instance.is_overdue %} class="text-danger"{% endif %}&gt;Due date: \{{ book_instance.due_back }}&lt;/p&gt;
 
 <strong>  &lt;form action="" method="post"&gt;
     {% csrf_token %}

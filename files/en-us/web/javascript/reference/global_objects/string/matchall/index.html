@@ -60,7 +60,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a>
   (and regexes with the <code>/g</code> flag) in a loop to obtain all the matches:</p>
 
-<pre class="brush: js">const regexp = RegExp('foo[a-z]*','g');
+<pre class="brush: js">const regexp = new RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
 let match;
 
@@ -78,7 +78,7 @@ while ((match = regexp.exec(str)) !== null) {
   {{jsxref("Operators/Spread_syntax", "array spread")}}, or {{jsxref("Array.from()")}}
   constructs:</p>
 
-<pre class="brush: js">const regexp = RegExp('foo[a-z]*','g');
+<pre class="brush: js">const regexp = new RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
 const matches = str.matchAll(regexp);
 
@@ -96,7 +96,7 @@ Array.from(str.matchAll(regexp), m =&gt; m[0]);
 <p><code>matchAll</code> will throw an exception if the <code>g</code> flag is missing.
 </p>
 
-<pre class="brush: js">const regexp = RegExp('[a-c]','');
+<pre class="brush: js">const regexp = new RegExp('[a-c]','');
 const str = 'abc';
 str.matchAll(regexp);
 // TypeError
@@ -106,7 +106,7 @@ str.matchAll(regexp);
   <code><var>regexp</var></code>—so, unlike {{jsxref("Global_Objects/RegExp/exec",
   "regexp.exec()")}}, <code>lastIndex</code> does not change as the string is scanned.</p>
 
-<pre class="brush: js">const regexp = RegExp('[a-c]','g');
+<pre class="brush: js">const regexp = new RegExp('[a-c]','g');
 regexp.lastIndex = 1;
 const str = 'abc';
 Array.from(str.matchAll(regexp), m =&gt; `${regexp.lastIndex} ${m[0]}`);

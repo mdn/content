@@ -29,6 +29,8 @@ tags:
  <dd>Returns a {{DOMxRef("NamedNodeMap")}} object containing the assigned attributes of the corresponding HTML element.</dd>
  <dt>{{domxref("Element.childElementCount")}} {{readonlyInline}}</dt>
  <dd>Returns the number of child elements of this element.</dd>
+ <dt>{{domxref("Element.children")}} {{readonlyInline}}</dt>
+ <dd>Returns the child elements of this element.</dd>
  <dt>{{DOMxRef("Element.classList")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMTokenList")}} containing the list of class attributes.</dd>
  <dt>{{DOMxRef("Element.className")}}</dt>
@@ -41,10 +43,14 @@ tags:
  <dd>Returns a {{jsxref("Number")}} representing the width of the top border of the element.</dd>
  <dt>{{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the inner width of the element.</dd>
+ <dt>{{domxref("Element.firstElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the first child element of this element.</dd>
  <dt>{{DOMxRef("Element.id")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the id of the element.</dd>
  <dt>{{DOMxRef("Element.innerHTML")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the markup of the element's content.</dd>
+ <dt>{{domxref("Element.lastElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the last child element of this element.</dd>
  <dt>{{DOMxRef("Element.localName")}} {{readOnlyInline}}</dt>
  <dd>A {{DOMxRef("DOMString")}} representing the local part of the qualified name of the element.</dd>
  <dt>{{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}</dt>
@@ -194,6 +200,8 @@ tags:
  <dd>Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.</dd>
  <dt>{{DOMxRef("Element.animate()")}} {{Experimental_Inline}}</dt>
  <dd>A shortcut method to create and run an animation on an element. Returns the created Animation object instance.</dd>
+ <dt>{{DOMxRef("Element.append()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the element.</dd>
  <dt>{{DOMxRef("Element.closest()")}}</dt>
  <dd>Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.</dd>
  <dt>{{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
@@ -236,6 +244,8 @@ tags:
  <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
  <dt>{{DOMxRef("Element.matches()")}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
+ <dt>{{DOMxRef("Element.prepend()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the element.</dd>
  <dt>{{DOMxRef("Element.querySelector()")}}</dt>
  <dd>Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.querySelectorAll()")}}</dt>
@@ -250,6 +260,8 @@ tags:
  <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("EventTarget.removeEventListener()")}}</dt>
  <dd>Removes an event listener from the element.</dd>
+ <dt>{{DOMxRef("Element.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.</dd>
  <dt>{{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}</dt>
  <dd>Asynchronously asks the browser to make the element full-screen.</dd>
  <dt>{{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}</dt>

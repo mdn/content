@@ -9,9 +9,9 @@ tags:
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">Creates a JavaScript <strong><code>Date</code></strong>
+<p>Creates a JavaScript <strong><code>Date</code></strong>
     instance that represents a single moment in time in a platform-independent
-    format.</span> <code>Date</code> objects contain a <code>Number</code> that represents
+    format.<code>Date</code> objects contain a <code>Number</code> that represents
   milliseconds since 1 January 1970 UTC.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-constructor.html")}}</div>
@@ -20,9 +20,15 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">new Date()
-new Date(<var>value</var>)
-new Date(<var>dateString</var>)
-new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]])
+new Date(value)
+new Date(dateString)
+
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 </pre>
 
 <div class="notecard note">

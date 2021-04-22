@@ -2,14 +2,14 @@
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 tags:
-- Comparison
-- Condition
-- Conditional
-- ECMAScript 2015
-- Equality
-- JavaScript
-- Method
-- Object
+  - Comparison
+  - Condition
+  - Conditional
+  - ECMAScript 2015
+  - Equality
+  - JavaScript
+  - Method
+  - Object
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><code>Object.is(<var>value1</var>, <var>value2</var>);</code></pre>
+  class="brush: js">Object.is(value1, value2);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -60,14 +60,14 @@ tags:
 </ul>
 
 <p>This is <em>not</em> the same as being equal according to the
-  {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} operator. The
+  {{jsxref("Operators", "==", "#Equality")}} operator. The
   <code>==</code> operator applies various coercions to both sides (if they are not the
   same Type) before testing for equality (resulting in such behavior as
   <code>"" == false</code> being <code>true</code>), but <code>Object.is</code> doesn't
   coerce either value.</p>
 
 <p>This is also <em>not</em> the same as being equal according to the
-  {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} operator. The
+  {{jsxref("Operators", "===", "#Identity")}} operator. The
   only difference between <code>Object.is()</code> and <code>===</code> is in
   their treatment of signed zeroes and NaNs. For example, the <code>===</code>
   operator (and the <code>==</code> operator) treats the number values <code>-0</code>

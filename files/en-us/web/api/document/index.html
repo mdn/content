@@ -36,6 +36,8 @@ tags:
  <dd>Returns the character set being used by the document.</dd>
  <dt>{{domxref("Document.childElementCount")}} {{readonlyInline}}</dt>
  <dd>Returns the number of child elements of the current document.</dd>
+ <dt>{{domxref("Document.children")}} {{readonlyInline}}</dt>
+ <dd>Returns the child elements of the current document.</dd>
  <dt>{{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Indicates whether the document is rendered in <em>quirks</em> or <em>strict</em> mode.</dd>
  <dt>{{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
@@ -48,6 +50,8 @@ tags:
  <dd>Returns the document location as a string.</dd>
  <dt>{{DOMxRef("Document.embeds")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the embedded {{HTMLElement('embed')}} elements within the current document.</dd>
+ <dt>{{domxref("Document.firstElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the first child element of the current document.</dd>
  <dt>{{DOMxRef("Document.fonts")}}</dt>
  <dd>Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.</dd>
  <dt>{{DOMxRef("Document.forms")}}{{ReadOnlyInline}}</dt>
@@ -62,6 +66,8 @@ tags:
  <dd>Returns a list of the images in the current document.</dd>
  <dt>{{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the DOM implementation associated with the current document.</dd>
+ <dt>{{domxref("Document.lastElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the last child element of the current document.</dd>
  <dt>{{DOMxRef("Document.links")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of all the hyperlinks in the document.</dd>
  <dt>{{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}</dt>
@@ -202,6 +208,8 @@ tags:
 <dl>
  <dt>{{DOMxRef("Document.adoptNode()")}}</dt>
  <dd>Adopt node from an external document.</dd>
+ <dt>{{DOMxRef("Document.append()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document.</dd>
  <dt>{{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}</dt>
  <dd>See {{DOMxRef("Window.captureEvents")}}.</dd>
  <dt>{{DOMxRef("Document.caretPositionFromPoint()")}}</dt>
@@ -266,10 +274,14 @@ tags:
  <dd>Returns a clone of a node from an external document.</dd>
  <dt>{{DOMxRef("Document.normalizeDocument()")}} {{Obsolete_Inline}}</dt>
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
+ <dt>{{DOMxRef("Document.prepend()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.</dd>
  <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}</dt>
  <dd>Releases the current mouse capture if it's on an element in this document.</dd>
  <dt>{{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
  <dd>See {{DOMxRef("Window.releaseEvents()")}}.</dd>
+ <dt>{{DOMxRef("Document.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a document with a specified new set of children.</dd>
  <dt>{{DOMxRef("Document.requestStorageAccess()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.</dd>
  <dt>{{DOMxRef("Document.routeEvent()")}} {{Non-standard_Inline}} {{Obsolete_Inline("Gecko24")}}</dt>

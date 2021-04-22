@@ -15,13 +15,13 @@ tags:
 
 <p class="summary">The <strong><code>at()</code></strong> method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.</p>
 
-<p>This is not to suggest there is anything wrong with using the square bracket notation. For example <code>array[0]</code> would return the first item. However instead of using {{jsxref('Array.prototype.length','array.length')}} for latter items; e.g. <code>array[array.length-1]</code> for the last item, you can call <code>array.at(-1)</code>. <a href="#Examples">(See the examples below)</a></p>
+<p>This is not to suggest there is anything wrong with using the square bracket notation. For example <code>array[0]</code> would return the first item. However instead of using {{jsxref('Array.prototype.length','array.length')}} for latter items; e.g. <code>array[array.length-1]</code> for the last item, you can call <code>array.at(-1)</code>. <a href="#examples">(See the examples below)</a></p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-at.html")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">arr.at(index)</pre>
+<pre class="brush: js">at(index)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,7 +62,7 @@ console.log(item2); // Logs: 'orange'
 
 <h3>Comparing methods</h3>
 
-<p>Here we compare different ways to select the penultimate (last but one) item of an {{jsxref('Array')}}. Whilst all below methods are valid, it highlights the succinctness and readability of the <code>at()</code> method.</p>
+<p>This example compares different ways to select the penultimate (last but one) item of an {{jsxref('Array')}}. While all the methods shown below are valid, this example highlights the succinctness and readability of the <code>at()</code> method.</p>
 
 <pre class="brush: js">
 // Our array with items
@@ -81,6 +81,7 @@ const atWay = colors.at(-2);
 console.log(atWay); // Logs: 'green'
 </pre>
 
+<h2>Specifications</h2>
 
 <table class="standard-table">
   <thead>

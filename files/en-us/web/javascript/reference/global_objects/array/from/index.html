@@ -19,7 +19,21 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">Array.from(<var>arrayLike </var>[, <var>mapFn </var>[, <var>thisArg</var>]])
+<pre class="brush: js">
+// Arrow function
+Array.from(arrayLike, (currentValue) => { ... } )
+Array.from(arrayLike, (currentValue, index) => { ... } )
+Array.from(arrayLike, (currentValue, index, array) => { ... } )
+
+// Mapping function
+Array.from(arrayLike, mapFn)
+Array.from(arrayLike, mapFn, thisArg)
+
+// Inline mapping function
+Array.from(arrayLike, function mapFn(currentValue) { ... })
+Array.from(arrayLike, function mapFn(currentValue, index) { ... })
+Array.from(arrayLike, function mapFn(currentValue, index, array){ ... })
+Array.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

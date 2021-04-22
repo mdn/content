@@ -21,8 +21,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.some(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+some((element) => { ... } )
+some((element, index) => { ... } )
+some((element, index, array) => { ... } )
+
+// Callback function
+some(callbackFn)
+some(callbackFn, thisArg)
+
+// Inline callback function
+some(function callbackFn(element) { ... })
+some(function callbackFn(element, index) { ... })
+some(function callbackFn(element, index, array){ ... })
+some(function callbackFn(element, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

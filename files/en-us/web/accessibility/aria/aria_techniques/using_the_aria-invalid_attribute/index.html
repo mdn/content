@@ -52,7 +52,7 @@ tags:
 
 <h4 id="Example_1_Simple_form_validation">Example 1: Simple form validation</h4>
 
-<p>The following snippet shows a simplified version of two form fields with a validation function attached to the blur event. Note that since the default value for <code>aria-required</code> is <code>false</code>, it is not strictly necessary to add the attribute to input.</p>
+<p>The following snippet shows a simplified version of two form fields with a validation function attached to the blur event. Note that since the default value for <code>aria-invalid</code> is <code>false</code>, it is not strictly necessary to add the attribute to input.</p>
 
 <pre class="brush: html"> &lt;input name="name" id="name" aria-required="true" aria-invalid="false"
         onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');"/&gt;

@@ -99,7 +99,7 @@ console.log(proxy3.message2); // world</pre>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/handler/get", "get")}} handler.</p>
+<p>In this simple example, the number <code>37</code> gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} handler.</p>
 
 <pre class="brush: js">const handler = {
   get: function(obj, prop) {
@@ -139,7 +139,7 @@ console.log(target.a);
 
 <h3 id="Validation">Validation</h3>
 
-<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler.</p>
+<p>With a <code>Proxy</code>, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/handler/set", "set()")}} handler.</p>
 
 <pre class="brush: js">let validator = {
   set: function(obj, prop, value) {
@@ -170,7 +170,7 @@ person.age = 300;        // Throws an exception
 
 <h3 id="Extending_constructor">Extending constructor</h3>
 
-<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/handler/construct", "construct")}} and {{jsxref("Global_Objects/Proxy/handler/apply", "apply")}} handlers.</p>
+<p>A function proxy could easily extend a constructor with a new constructor. This example uses the {{jsxref("Global_Objects/Proxy/handler/construct", "construct()")}} and {{jsxref("Global_Objects/Proxy/handler/apply", "apply()")}} handlers.</p>
 
 <pre class="brush: js">function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
@@ -212,7 +212,7 @@ console.log(Peter.age);     // 13</pre>
 
 <h3 id="Manipulating_DOM_nodes">Manipulating DOM nodes</h3>
 
-<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler.</p>
+<p>Sometimes you want to toggle the attribute or class name of two different elements. Here's how using the {{jsxref("Global_Objects/Proxy/handler/set", "set()")}} handler.</p>
 
 <pre class="brush: js">let view = new Proxy({
   selected: null
@@ -307,7 +307,7 @@ console.log(products.latestBrowser);
 
 <h3 id="Finding_an_array_item_object_by_its_property">Finding an array item object by its property</h3>
 
-<p>This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.</p>
+<p>This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.</p>
 
 <pre class="brush: js">let products = new Proxy([
   { name: 'Firefox', type: 'browser' },

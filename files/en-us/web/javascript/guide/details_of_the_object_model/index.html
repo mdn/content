@@ -100,14 +100,10 @@ tags:
 
 <p>The remainder of this chapter uses the employee hierarchy shown in the following figure.</p>
 
-<div style="display: table-row;">
-<div style="display: table-cell; width: 350px; text-align: center; vertical-align: middle; padding: 10px;">
-<p>A simple object hierarchy with the following objects:</p>
-
 <p><img alt="" src="figure8.1.png"></p>
-</div>
 
-<div style="display: table-cell; vertical-align: middle; padding: 10px;">
+<p>This shows an object hierarchy with the following objects:</p>
+
 <ul>
  <li><code>Employee</code> has the properties <code>name</code> (whose value defaults to the empty string) and <code>dept</code> (whose value defaults to "general").</li>
  <li><code>Manager</code> is based on <code>Employee</code>. It adds the <code>reports</code> property (whose value defaults to an empty array, intended to have an array of <code>Employee</code> objects as its value).</li>
@@ -115,8 +111,7 @@ tags:
  <li><code>SalesPerson</code> is based on <code>WorkerBee</code>. It adds the <code>quota</code> property (whose value defaults to 100). It also overrides the <code>dept</code> property with the value "sales", indicating that all salespersons are in the same department.</li>
  <li><code>Engineer</code> is based on <code>WorkerBee</code>. It adds the <code>machine</code> property (whose value defaults to the empty string) and also overrides the <code>dept</code> property with the value "engineering".</li>
 </ul>
-</div>
-</div>
+
 
 <h2 id="Creating_the_hierarchy">Creating the hierarchy</h2>
 

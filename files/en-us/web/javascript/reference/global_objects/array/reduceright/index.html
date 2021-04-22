@@ -21,8 +21,23 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.reduceRight(<var>callback</var>(<var>accumulator</var>, <var>currentValue</var>[, <var>index</var>[, <var>array</var>]])[, <var>initialValue</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+reduceRight((accumulator, currentValue) => { ... } )
+reduceRight((accumulator, currentValue, index) => { ... } )
+reduceRight((accumulator, currentValue, index, array) => { ... } )
+reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
+
+// Reducer function
+reduceRight(reducerFn)
+reduceRight(reducerFn, initialValue)
+
+// Inline reducer function
+reduceRight(function reducerFn(accumulator, currentValue) { ... })
+reduceRight(function reducerFn(accumulator, currentValue, index) { ... })
+reduceRight(function reducerFn(accumulator, currentValue, index, array){ ... })
+reduceRight(function reducerFn(accumulator, currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
