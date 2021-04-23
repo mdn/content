@@ -45,37 +45,37 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="#AAC">AAC</a></th>
+   <th scope="row"><a href="#aac_advanced_audio_coding">AAC</a></th>
    <td>Advanced Audio Coding</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
   </tr>
   <tr>
-   <th scope="row"><a href="#ALAC">ALAC</a></th>
+   <th scope="row"><a href="#alac_apple_lossless_audio_codec">ALAC</a></th>
    <td>Apple Lossless Audio Codec</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a> (MOV)</td>
   </tr>
   <tr>
-   <th scope="row"><a href="#AMR">AMR</a></th>
+   <th scope="row"><a href="#amr_adaptive_multi-rate">AMR</a></th>
    <td>Adaptive Multi-Rate</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
   </tr>
   <tr>
-   <th scope="row"><a href="#FLAC">FLAC</a></th>
+   <th scope="row"><a href="#flac_free_lossless_audio_codec">FLAC</a></th>
    <td>Free Lossless Audio Codec</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#flac">FLAC</a></td>
   </tr>
   <tr>
-   <th scope="row"><a href="#G.711">G.711</a></th>
+   <th scope="row"><a href="#g.711_pulse_code_modulation_of_voice_frequencies">G.711</a></th>
    <td>Pulse Code Modulation (PCM) of Voice Frequencies</td>
    <td>{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></td>
   </tr>
   <tr>
-   <th scope="row"><a href="#G.722">G.722</a></th>
+   <th scope="row"><a href="#g.722_64_kbps_7_khz_audio_coding">G.722</a></th>
    <td>7 kHz Audio Coding Within 64 kbps (for telephony/{{Glossary("VoIP")}})</td>
    <td>{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></td>
   </tr>
   <tr>
-   <th scope="row"><a href="#MP3">MP3</a></th>
+   <th scope="row"><a href="#mp3_mpeg-1_audio_layer_iii">MP3</a></th>
    <td>MPEG-1 Audio Layer III</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a><sup><a href="#in-brief-footnote1">1</a></sup>, <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a></td>
   </tr>
@@ -196,7 +196,7 @@ tags:
 
 <h4 id="Lossless_versus_lossy_codecs">Lossless versus lossy codecs</h4>
 
-<p>There are two basic categories of audio compression. <strong>Lossless</strong> compression algorithms reduce the size of the audio without compromising the quality or fidelity of the sound. Upon decoding audio compressed with a lossless codec such as <a href="#FLAC">FLAC</a> or <a href="#ALAC">ALAC</a>, the result is identical in every way to the original sound, down to the bit.</p>
+<p>There are two basic categories of audio compression. <strong>Lossless</strong> compression algorithms reduce the size of the audio without compromising the quality or fidelity of the sound. Upon decoding audio compressed with a lossless codec such as <a href="#flac_free_lossless_audio_codec">FLAC</a> or <a href="#alac_apple_lossless_audio_codec">ALAC</a>, the result is identical in every way to the original sound, down to the bit.</p>
 
 <p><strong>Lossy</strong> codecs, on the other hand, take advantage of the fact that the human ear is not a perfect interpreter of audio, and of the fact that the human brain can pluck the important information out of imperfect or noisy audio. They strip away audio frequencies that aren't used much, tolerate loss of precision in the decoded output, and use other methods to lose audio content, quality, and fidelity to produce smaller encoded media. Upon decoding, the output is, to varying degrees, still understandable. The specific codec used—and the compression configuration selected—determine how close to the original, uncompressed audio signal the output seems to be when heard by the human ear.</p>
 
@@ -224,7 +224,8 @@ tags:
 
 <p>Below we take a brief look at each of these codecs, looking at their basic capabilities and their primary use cases.</p>
 
-<h3 id="AAC_Advanced_Audio_Coding"><a id="AAC">AAC</a> (Advanced Audio Coding)</h3>
+<a id="AAC"></a>
+<h3 id="aac_advanced_audio_coding">AAC (Advanced Audio Coding)</h3>
 
 <p>The <strong>Advanced Audio Coding</strong> (<strong>AAC</strong>) codec is defined as part of the MPEG-4 (H.264) standard; specifically, as part of <a href="https://www.iso.org/standard/53943.html">MPEG-4 Part 3</a> and <a href="https://www.iso.org/standard/43345.html">MPEG-2 Part 7</a>. Designed to be able to provide more compression with higher audio fidelity than MP3, AAC has become a popular choice, and is the standard format for audio in many types of media, including Blu-Ray discs and HDTV, as well as being the format used for songs purchased from online vendors including iTunes.</p>
 
@@ -346,7 +347,8 @@ tags:
 
 <p><a id="aac-foot-2">[2]</a> Chrome supports AAC only in MP4 containers, and only supports AAC's Main Profile. In addition, AAC is not available in Chromium builds.</p>
 
-<h3 id="ALAC_Apple_Lossless_Audio_Codec"><a id="ALAC">ALAC</a> (Apple Lossless Audio Codec)</h3>
+<a id="alac"></a>
+<h3 id="alac_apple_lossless_audio_codec">ALAC (Apple Lossless Audio Codec)</h3>
 
 <p>The <strong>Apple Lossless Audio Codec</strong> (<strong>ALAC</strong> or <strong>Apple Lossless</strong>) is a lossless codec developed by Apple. After initially being a closed format, Apple opened it up under an Apache license.</p>
 
@@ -434,7 +436,8 @@ tags:
  </tbody>
 </table>
 
-<h3 id="AMR_Adaptive_Multi-Rate"><a id="AMR">AMR</a> (Adaptive Multi-Rate)</h3>
+<a id="AMR"></a>
+<h3 id="AMR_Adaptive_Multi-Rate">AMR (Adaptive Multi-Rate)</h3>
 
 <p>The <strong><a href="http://www.voiceage.com/AMR-NB.AMR.html">Adaptive Multi-Rate audio codec</a></strong> is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both {{interwiki("wikipedia", "GSM")}} and {{interwiki("wikipedia", "UMTS")}} cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.</p>
 
@@ -529,7 +532,8 @@ tags:
 
 <p><a id="amr-foot-2">[2]</a> The Firefox browser doesn't support AMR; however, the Boot to Gecko platform does support both narrow and wideband AMR in 3GP containers.</p>
 
-<h3 id="FLAC_Free_Lossless_Audio_Codec"><a id="FLAC">FLAC</a> (Free Lossless Audio Codec)</h3>
+<a id="flac"></a>
+<h3 id="flac_free_lossless_audio_codec">FLAC (Free Lossless Audio Codec)</h3>
 
 <p><strong>FLAC </strong>(<strong>Free Lossless Audio Codec</strong>) is a lossless audio codec published by the <a href="https://xiph.org/">Xiph.org Foundation</a>. It provides good compression rates with no loss of audio fidelity; that is, the decompressed audio is identical to the original. Because the compression algorithm is specifically designed for audio, it gives better results than would be achieved using a general-purpose compression algorithm.</p>
 
@@ -616,7 +620,8 @@ tags:
  </tbody>
 </table>
 
-<h3 id="G.711_Pulse_Code_Modulation_of_Voice_Frequencies"><a id="G.711">G.711</a> (Pulse Code Modulation of Voice Frequencies)</h3>
+<a id="g.711"></a>
+<h3 id="g.711_pulse_code_modulation_of_voice_frequencies">G.711 (Pulse Code Modulation of Voice Frequencies)</h3>
 
 <p>The <strong>G.711</strong> specification, published by the International Telecommunications Union (ITU), was initially created in 1972 to define standards for encoding the voice frequencies on telephone lines into digital form. The audio is encoded using Pulse Code Modulation (PCM) with either {{interwiki("wikipedia", "M-law", "µ-law")}} or {{interwiki("wikipedia", "A-law")}} encoding.</p>
 
@@ -708,7 +713,8 @@ tags:
 
 <p><a id="g711-foot-1">[1]</a> G.711 is supported only for WebRTC connections.</p>
 
-<h3 id="G.722_64_kbps_7_kHz_audio_coding"><a id="G.722">G.722</a> (64 kbps (7 kHz) audio coding)</h3>
+<a id="G.722"></a>
+<h3 id="g.722_64_kbps_7_khz_audio_coding">G.722 (64 kbps (7 kHz) audio coding)</h3>
 
 <p>Published by the International Telecommunications Union (ITU), the <strong>G.722</strong> codec is designed specifically for voice compression. Its audio coding bandwidth is limited to the 50 Hz to 7,000 Hz range, which covers most of the frequency range of typical human vocalization. This makes it ill-suited for handling any audio that might range outside the human speech range, such as music.</p>
 
@@ -801,7 +807,8 @@ tags:
 
 <p><a id="g722-foot-1">[1]</a> WebRTC only.</p>
 
-<h3 id="MP3_MPEG-1_Audio_Layer_III"><a id="MP3">MP3</a> (MPEG-1 Audio Layer III)</h3>
+<a id="MP3"></a>
+<h3 id="mp3_mpeg-1_audio_layer_iii">MP3 (MPEG-1 Audio Layer III)</h3>
 
 <p>Of the audio formats specified by the MPEG/MPEG-2 standards, <strong>MPEG-1 Audio Layer III</strong>—otherwise known as <strong>{{interwiki("wikipedia", "MP3")}}</strong>—is by far the most widely used and best-known. The MP3 codec is defined by <a href="https://www.iso.org/standard/22412.html">MPEG-1 Part 3</a> and <a href="https://www.iso.org/standard/26797.html">MPEG-2 Part 3</a>, and was introduced in 1991 (and finalized in 1992).</p>
 
@@ -931,7 +938,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="Opus">Opus</h3>
+<h3 id="opus">Opus</h3>
 
 <p>The {{interwiki("wikipedia", "Opus (audio format)", "Opus")}} audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by <a href="https://www.ietf.org/">IETF</a> as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle both low-complexity audio such as speech as well as music and other high-complexity sounds.</p>
 
@@ -1087,7 +1094,7 @@ tags:
 
 <p><a id="opus-foot-3">[3]</a> Although the {{interwiki("wikipedia", "Nyquist–Shannon sampling theorem")}} shows that audio bandwidth can be as much as one half of the sampling rate, Opus doesn't allow encoding outside a maximum 20 kHz audio frequency band, since the human ear can't percieve anything above the 20 kHz point anyway. This saves some space in the encoded audio.</p>
 
-<h3 id="Vorbis">Vorbis</h3>
+<h3 id="vorbis">Vorbis</h3>
 
 <p><a href="https://www.xiph.org/vorbis/">Vorbis</a> is an open format from the <a href="https://xiph.org/">Xiph.org Foundation</a> which supports a wide range of channel combinations, including monaural, stereo, polyphonic, quadraphonic, 5.1 surround, ambisonic, or up to 255 discrete audio channels. Depending on the quality setting used during encoding, the resulting bit rate can vary from around 45 kbps to 500 kbps. Vorbis inherently uses variable bit rate encoding; the bit rate can vary from one sample to the next as needed during the compression process.</p>
 
@@ -1215,7 +1222,8 @@ tags:
 <p>If you need to minimize latency during music playback, you should strongly consider Opus, which has the lowest range of latencies of the general-purpose codecs (5 ms to 66.5 ms, compared to at least 100 ms for the others).</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Compatibility information described here is generally correct as of the time this article was written; however, there may be caveats and exceptions. Be sure to refer to the compatibility tables before committing to a given media format.</p>
+  <h4>Note</h4>
+  <p>Compatibility information described here is generally correct as of the time this article was written; however, there may be caveats and exceptions. Be sure to refer to the compatibility tables before committing to a given media format.</p>
 </div>
 
 <p>Based on this, AAC is likely your best choice if you can only support one audio format. Of course, if you can provide multiple formats (for example, by using the {{HTMLElement("source")}} element within your {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements), you can avoid many or all of those exceptions.</p>
@@ -1234,7 +1242,7 @@ tags:
 
 <p>The voice-specific codecs are all inherently very lossy, however, and any sound with significant information in the frequency bands outside the vocal range captured will be entirely lost. This makes these codecs completely unsuitable for anything but spoken words. Even audio that contains only voices, but singing rather than speaking, will likely not be of acceptable quality in one of these formats.</p>
 
-<p>Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, <a href="#G.722">G.722</a>, for example, has 4 ms latency (compared with over 100 ms for MP3), and <a href="#AMR">AMR</a>'s latency is around 25 ms.</p>
+<p>Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, <a href="#g.722_64_kbps_7_khz_audio_coding">G.722</a>, for example, has 4 ms latency (compared with over 100 ms for MP3), and <a href="#amr_adaptive_multi-rate">AMR</a>'s latency is around 25 ms.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> For more about WebRTC and the codecs it can use, see <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a>.</p>
