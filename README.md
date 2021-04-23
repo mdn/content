@@ -764,4 +764,4 @@ to the license so we can check whether it is compatible with [MDN's license](htt
 1. @-mention chrisdavidmills on the issue, so he can review the request.
 
 Be warned that unless there is a good reason to republish the content, we will
-probably say "no". The MDN writing team's decision is final.
+probably say "_NO_". The MDN writing team's decision is final.
