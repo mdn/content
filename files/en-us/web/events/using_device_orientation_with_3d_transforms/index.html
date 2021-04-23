@@ -15,7 +15,7 @@ tags:
 
 <p>The easiest way to convert <a href="/en-US/docs/Web/API/Window/deviceorientation_event">orientation data</a> to a <a href="/en-US/docs/Web/CSS/transform" title="CSS Reference Project">3D transform</a> is basically to use the alpha, gamma, and beta values as <code>rotateZ</code>, <code>rotateX</code> and <code>rotateY</code> values.</p>
 
-<p>It is important to keep in mind, however, that the <a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Device Orientation coordinate system</a> is different from the <a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">CSS coordinate system</a>. Namely, the former is {{interwiki("wikipedia", "Right-hand_rule", "right-handed")}} and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a>. These are some of the practical consequences of these differences:</p>
+<p>It is important to keep in mind, however, that the <a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained">Device Orientation coordinate system</a> is different from the <a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">CSS coordinate system</a>. Namely, the former is {{interwiki("wikipedia", "Right-hand_rule", "right-handed")}} and its Y axis is positive upwards, while the latter is a left-handed coordinate system whose Y axis is positive to the bottom. Furthermore, the Device Orientation angle rotations should always be done in a Z - X' - Y'' order that does not match the order of some <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a>. These are some of the practical consequences of these differences:</p>
 
 <ul>
 	<li>The order of angle rotations matters, so make sure the alpha, beta and gamma rotations are applied in this order.</li>
@@ -82,7 +82,7 @@ function orient( aa ) {
 
 <ul>
 	<li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
-	<li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
+	<li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></li>
 </ul>
 
 
