@@ -64,7 +64,7 @@ tags:
 
 <h2 id="Flexible_layout_before_responsive_design">Flexible layout before responsive design</h2>
 
-<p>A number of approaches were developed to try to solve the downsides of the liquid or fixed-width methods of building websites. In 2004 Cameron Adams wrote a post entitled <a href="http://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a>, describing a method of creating a design that could adapt to different screen resolutions. This approach required JavaScript to detect the screen resolution and load the correct CSS.</p>
+<p>A number of approaches were developed to try to solve the downsides of the liquid or fixed-width methods of building websites. In 2004 Cameron Adams wrote a post entitled <a href="https://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a>, describing a method of creating a design that could adapt to different screen resolutions. This approach required JavaScript to detect the screen resolution and load the correct CSS.</p>
 
 <p>Zoe Mickley Gillenwater was instrumental in <a href="http://zomigi.com/blog/voices-that-matter-slides-available/">her work</a> to describe and formalize the different ways in which flexible sites could be created, attempting to find a happy medium between filling the screen or being completely fixed in size.</p>
 
@@ -74,7 +74,7 @@ tags:
 
 <ol>
  <li>The first was the idea of fluid grids, something which was already being explored by Gillenwater, and can be read up on in Marcotte's article, <a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a> (published in 2009 on A List Apart).</li>
- <li>The second technique was the idea of <a href="http://unstoppablerobotninja.com/entry/fluid-images">fluid images</a>. Using a very simple technique of setting the <code>max-width</code> property to <code>100%</code>, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become pixelated if the column becomes wider than the image.</li>
+ <li>The second technique was the idea of <a href="https://unstoppablerobotninja.com/entry/fluid-images">fluid images</a>. Using a very simple technique of setting the <code>max-width</code> property to <code>100%</code>, images would scale down smaller if their containing column became narrower than the image's intrinsic size, but never grow larger. This enables an image to scale down to fit in a flexibly-sized column, rather than overflow it, but not grow larger and become pixelated if the column becomes wider than the image.</li>
  <li>The third key component was the <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. Media Queries enable the type of layout switch that Cameron Adams had previously explored using JavaScript, using only CSS. Rather than having one layout for all screen sizes, the layout could be changed. Sidebars could be repositioned for the smaller screen, or alternate navigation could be displayed.</li>
 </ol>
 
