@@ -10843,6 +10843,8 @@
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Web/Guide/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
+/en-US/docs/Web/HTML/Attributes/formnovalidate	/en-US/docs/Web/HTML/Element/button#attr-formnovalidate
+/en-US/docs/Web/HTML/Attributes/novalidate	/en-US/docs/Web/HTML/Element/form#attr-novalidate
 /en-US/docs/Web/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Attributes/crossorigin
 /en-US/docs/Web/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
