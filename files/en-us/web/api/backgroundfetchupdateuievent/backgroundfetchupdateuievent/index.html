@@ -26,7 +26,22 @@ tags:
     </ul>
   </dd>
   <dt><code>BackgroundFetchEventInit</code></dt>
-  <dd>A {{domxref("BackgroundFetchRegistration")}}.</dd>
+  <dd>An object including the following:
+    <dl>
+      <dt>A {{domxref("BackgroundFetchRegistration")}}.</dt>
+      <dd>The background fetch registration instance.</dd>
+      <dt><code>bubbles</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
+        <code>false</code>.</dd>
+      <dt><code>cancelable</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
+        default is <code>false</code>.</dd>
+      <dt><code>composed</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
+        outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
+        default is <code>false</code>.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
