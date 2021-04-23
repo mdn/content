@@ -14,8 +14,9 @@ tags:
 
 <p>The <code>forwardX</code> read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the x value of the direction vector defining the forward direction the listener is pointing in.</p>
 
-<div class="note">
-<p><strong>Note</strong>: The parameter is <em>a-rate</em> when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or <em>k-rate</em> otherwise.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The parameter is <em>a-rate</em> when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or <em>k-rate</em> otherwise.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -23,7 +24,7 @@ tags:
 <pre class="brush: js">var audioCtx = new AudioContext();
 var myListener = audioCtx.listener;
 myListener.forwardX.value = 0;
-</pre>
+</pre> 
 
 <h3 id="Value">Value</h3>
 
@@ -31,7 +32,12 @@ myListener.forwardX.value = 0;
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioListener","Example")}}</p>
+<pre class="brush: js">let audioCtx = new AudioContext();
+let myListener = audioCtx.listener;
+myListener.forwardX.value = 0;
+</pre>
+
+<p>For more detailed example code see <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
