@@ -45,6 +45,8 @@ console.log(generator().next().value); // 1</pre>
 
 <h3 id="An_infinite_iterator">An infinite iterator</h3>
 
+<p>With a generator function, values are not evaluated until it is needed. Therefore it allows us to define a potentially infinite data structure.</p>
+
 <pre class="brush: js;">function* infinite() {
     let index = 0;
 
