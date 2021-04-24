@@ -184,7 +184,7 @@ Promise.race([promise1, promise2]).then((value) => {
 // expected output: "failed with reason: two"
 </pre>
 
-<p>{{jsxref("Promise.any")}} takes first fulfilled {{jsxref("Promise")}}.</p>
+<p>{{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.</p>
 
 <pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 500, 'one');
