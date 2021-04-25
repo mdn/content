@@ -154,8 +154,8 @@ gods.forEach(function (eachName, index){
 <pre class="brush: js">fetch('products.json').then(function(response) {
   return response.json();
 }).then(function(json) {
-  products = json;
-  initialize();
+  let products = json;
+  initialize(products);
 }).catch(function(err) {
   console.log('Fetch problem: ' + err.message);
 });</pre>
