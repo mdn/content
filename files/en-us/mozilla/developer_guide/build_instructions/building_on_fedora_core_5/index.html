@@ -8,7 +8,7 @@ tags:
 <p>Building Mozilla applications (Firefox, Thunderbird, SeaMonkey, etc.) on modern Linux distributions is generally relatively trouble-free, although each new distribution tends to introduce a few new issues that need to be fixed in the source. Fedora Core 5 introduces a few of these issues:
 </p>
 <h3 id="SELinux_execmod_denials"> SELinux execmod denials </h3>
-<p>For those with SELinux in enforcing mode, you are likely to run into problems both with the shlibsign during the build process and with the running the final build related to SELinux denying <a class="external" href="http://people.redhat.com/~drepper/selinux-mem.html">execmod permission</a> due at least primarily (if not completely) to <a class="link-https" href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=175442">a compiler bug</a>. </p><p>This problem can be worked around in one of the following two ways
+<p>For those with SELinux in enforcing mode, you are likely to run into problems both with the shlibsign during the build process and with the running the final build related to SELinux denying <a class="external" href="https://people.redhat.com/~drepper/selinux-mem.html">execmod permission</a> due at least primarily (if not completely) to <a class="link-https" href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=175442">a compiler bug</a>. </p><p>This problem can be worked around in one of the following two ways
 </p>
 <h4 id="Workaround_.231_.28sacrifice_performance.29"> Workaround #1 (sacrifice performance) </h4>
 <p>Disable the visibility optimizations by adding the following line to your mozconfig:

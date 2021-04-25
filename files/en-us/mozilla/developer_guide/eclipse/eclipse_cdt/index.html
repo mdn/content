@@ -33,7 +33,7 @@ tags:
 
 <p>Before you use Eclipse with the Mozilla source you must increase its memory limits. When Eclipse's indexer tries to process the Mozilla source, Eclipse will need considerably more memory than the limits imposed by its default configuration.</p>
 
-<p>You can <a class="external" href="http://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F">increase Eclipse's memory limits using the <code>eclipse.ini</code></a> that lives alongside the eclipse binary. Set an initial heap space of 1 GB and max heap space of 5 GB, say, by modifying the values of the following two lines in eclipse.ini:</p>
+<p>You can <a class="external" href="https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F">increase Eclipse's memory limits using the <code>eclipse.ini</code></a> that lives alongside the eclipse binary. Set an initial heap space of 1 GB and max heap space of 5 GB, say, by modifying the values of the following two lines in eclipse.ini:</p>
 
 <pre>-Xms1G
 -Xmx5G</pre>
@@ -73,7 +73,7 @@ tags:
 
 <h2 id="Usage_tips">Usage tips</h2>
 
-<p>Below are some of the more useful user tips. (If you're thinking of adding tips, please first consider how widely useful they'll be before adding to this already lengthy page.) For further documentation see the official <a class="external" href="http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.user/gettingStarted/intro/overview.htm">Eclipse user guide</a> and <a class="external" href="http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.cdt.doc.user/getting_started/cdt_o_tutorial.htm">Eclipse CDT user guide</a>.</p>
+<p>Below are some of the more useful user tips. (If you're thinking of adding tips, please first consider how widely useful they'll be before adding to this already lengthy page.) For further documentation see the official <a class="external" href="https://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.user/gettingStarted/intro/overview.htm">Eclipse user guide</a> and <a class="external" href="http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.cdt.doc.user/getting_started/cdt_o_tutorial.htm">Eclipse CDT user guide</a>.</p>
 
 <h3 id="Keyboard_shortcuts">Keyboard shortcuts</h3>
 
@@ -151,7 +151,7 @@ export CPPFLAGS="-fmessage-length=0"
 
 <h3 id="Upgrading_GDB_on_Mac">Upgrading GDB on Mac</h3>
 
-<p>The ancient, barely maintained Apple fork of GDB that comes with Xcode on Mac is really horrible. If you use Mac, you may want to <a class="external" href="http://sourceware.org/gdb/wiki/BuildingOnDarwin">build the latest FSF version of GDB</a> and set Eclipse to use that GDB for debugging. One suggested configuration for building GDB is '--prefix="$HOME" --disable-debug --with-python=/usr' (create an optimized build with <a class="external" href="http://sourceware.org/gdb/wiki/PythonGdbTutorial">support for Python</a> (so that you can use python to much better control when you break etc.), and install it in $HOME/bin). That done, open the workspace preferences, select "C/C++ &gt; Debug &gt; GDB", and set "GDB Debugger" to the full path of your new gdb executable.</p>
+<p>The ancient, barely maintained Apple fork of GDB that comes with Xcode on Mac is really horrible. If you use Mac, you may want to <a class="external" href="https://sourceware.org/gdb/wiki/BuildingOnDarwin">build the latest FSF version of GDB</a> and set Eclipse to use that GDB for debugging. One suggested configuration for building GDB is '--prefix="$HOME" --disable-debug --with-python=/usr' (create an optimized build with <a class="external" href="http://sourceware.org/gdb/wiki/PythonGdbTutorial">support for Python</a> (so that you can use python to much better control when you break etc.), and install it in $HOME/bin). That done, open the workspace preferences, select "C/C++ &gt; Debug &gt; GDB", and set "GDB Debugger" to the full path of your new gdb executable.</p>
 
 <h3 id="GDB_unexpectedly_detaching">GDB unexpectedly detaching</h3>
 
@@ -252,7 +252,7 @@ subprocess.Popen([eclipse_app_path, "-data", workspace_path])
 
 <h3 id="Is_there_a_Mercurial_plugin_for_Eclipse">Is there a Mercurial plugin for Eclipse?</h3>
 
-<p>There is <a class="external" href="http://www.intland.com/products/mercurialeclipse/download">MercurialEclipse</a>, but probably most Mozilla developers will just prefer to use the command line. If you think we need our own documentation on MercurialEclipse, please consider adding a separate page for that tool since this page is already pretty long.</p>
+<p>There is <a class="external" href="https://www.intland.com/products/mercurialeclipse/download">MercurialEclipse</a>, but probably most Mozilla developers will just prefer to use the command line. If you think we need our own documentation on MercurialEclipse, please consider adding a separate page for that tool since this page is already pretty long.</p>
 
 <h3 id="How_can_I_delete_my_Eclipse_project_and_start_over">How can I delete my Eclipse project and start over?</h3>
 
@@ -264,7 +264,7 @@ subprocess.Popen([eclipse_app_path, "-data", workspace_path])
 
 <h3 id="How_can_I_run_a_more_recent_CDT_version">How can I run a more recent CDT version?</h3>
 
-<p>This can be useful if you need to get certain bug fixes, or to help with testing to make sure that new Eclipse bugs that affect its use with Mozilla don't get shipped. If you've downloaded an <a class="external" href="http://www.eclipse.org/downloads/index-developer.php">Eclipse Developer build</a> then you can use Eclipse's software update mechanism to update your developer snapshot to the latest nightly for that developer branch. To do that, carry out the following steps.</p>
+<p>This can be useful if you need to get certain bug fixes, or to help with testing to make sure that new Eclipse bugs that affect its use with Mozilla don't get shipped. If you've downloaded an <a class="external" href="https://www.eclipse.org/downloads/index-developer.php">Eclipse Developer build</a> then you can use Eclipse's software update mechanism to update your developer snapshot to the latest nightly for that developer branch. To do that, carry out the following steps.</p>
 
 <p>From Eclipse's "Help" menu select "Install New Software...", then in the "Install" window that opens, click "Available Software Sites". In the window that opens, click "Add", and in the prompt set Name to something like "Nightly" and Location to something like "<a class="external" href="http://download.eclipse.org/tools/cdt/builds/juno/nightly">http://download.eclipse.org/tools/cd...s/juno/nightly</a>" (change "juno" to the current developer branch). Click "OK", then "OK" again. Type "Nightly" into the "Work with" field and select the repository that you just added. (If it doesn't appear, close the window, reopen it from the Help menu, and try again.) A "CDT Main Features" option should now have been added in the area below. Tick this (<em>all</em> of its sub-options should then be ticked), click "Next" twice, accept the license agreement, and then click "Finish". Eclipse should now update itself and ask you to restart.</p>
 

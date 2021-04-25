@@ -27,7 +27,7 @@ tags:
 
 <h3 id="Phase_1_configure">Phase 1: configure</h3>
 
-<p>Phase 1 centers around the <strong>configure</strong> script. The <strong>configure</strong> script is a bash shell script. The file is generated from a file called <strong>configure.in</strong>, which is written in <a href="http://www.seindal.dk/rene/gnu/">M4</a> and processed using <a href="http://www.gnu.org/software/autoconf/">Autoconf 2.13</a> to create the final <strong>configure</strong> script. You don't have to worry about how you obtain a <strong>configure</strong> file: the build system does this for you.</p>
+<p>Phase 1 centers around the <strong>configure</strong> script. The <strong>configure</strong> script is a bash shell script. The file is generated from a file called <strong>configure.in</strong>, which is written in <a href="https://www.seindal.dk/rene/gnu/">M4</a> and processed using <a href="http://www.gnu.org/software/autoconf/">Autoconf 2.13</a> to create the final <strong>configure</strong> script. You don't have to worry about how you obtain a <strong>configure</strong> file: the build system does this for you.</p>
 
 <p>The primary job of <strong>configure</strong> is to determine characteristics of the system and compiler, apply options passed into it, and validate everything looks OK to build. The primary output of the <strong>configure</strong> script is an executable file in the object directory called <strong>config.status</strong>. <strong>configure</strong> also produces some additional files (like <strong>autoconf.mk</strong>). However, the most important file in terms of architecture is <strong>config.status</strong>.</p>
 

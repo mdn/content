@@ -70,7 +70,7 @@ tags:
 </ul>
 <p>If you plan to modify the build system's configure.in files, you will need to install an editor (such as xemacs or joe) and the autoconf-2.13 (autoconf-2.5x and 2.60 doesn't work) packages as well.</p>
 <p>For non-debug builds, it's recommended that you install the binutils package to make strip.exe available.</p>
-<p>You may use <a class="external" href="http://activestate.com/Products/ActivePerl/">ActivePerl from ActiveState</a> instead of the perl package in Cygwin if you prefer.</p>
+<p>You may use <a class="external" href="https://activestate.com/Products/ActivePerl/">ActivePerl from ActiveState</a> instead of the perl package in Cygwin if you prefer.</p>
 
 <h3 id="make">make</h3>
 <p>make 3.80 is no longer available in the cygwin installer (version 3.81 will <strong>not</strong> work), so get it from <a class="external" href="http://cygwin.paracoda.com/release/make/make-3.80-1.tar.bz2">paracoda</a> or <a class="external" href="http://www.go-mono.com/archive/helper/make-3.80-1.tar.bz2">go-Mono</a> and place the included make.exe in your %cygwin%\bin\ directory, e.g. by starting a cygwin bash shell and executing</p>
@@ -167,8 +167,8 @@ bin/make.exe --version
 <h3 id="NSIS">NSIS</h3>
 <p>Some applications built from the Mozilla codebase now use NSIS for their installer, notably the toolkit apps Firefox, Thunderbird and Sunbird. NSIS is already required during the normal build process because the uninstaller is built with the help of NSIS. If you do not disable building the installer with <code>ac_add_options --disable-installer</code> in your <code>.mozconfig</code> then install <a class="external" href="http://nsis.sourceforge.net/Download">NSIS</a> and ensure its install directory (not the 'Bin' directory in the install directory) is in your PATH. Version 2.17 or greater is recommended.</p>
 <h3 id="7-Zip_and_UPX">7-Zip and UPX</h3>
-<p>If you want to make the highly compressed installer used by Firefox and Thunderbird, you need to install the <a class="external" href="http://www.7-zip.org/">7-zip</a> and <a class="external" href="http://upx.sourceforge.net/">UPX</a> utilities, make sure they are in your path, and export MOZ_INSTALLER_USE_7ZIP in your environment.</p>
-<p>The UPX package is available in <a class="external" href="http://cygwin.com/">Cygwin</a> setup under the Utils category. Do not use the DOS version, as it will not work.</p>
+<p>If you want to make the highly compressed installer used by Firefox and Thunderbird, you need to install the <a class="external" href="https://www.7-zip.org/">7-zip</a> and <a class="external" href="http://upx.sourceforge.net/">UPX</a> utilities, make sure they are in your path, and export MOZ_INSTALLER_USE_7ZIP in your environment.</p>
+<p>The UPX package is available in <a class="external" href="https://cygwin.com/">Cygwin</a> setup under the Utils category. Do not use the DOS version, as it will not work.</p>
 
 <h2 id="Configure_the_Environment">Configure the Environment</h2>
 <p>The build environment must be configured so that the mozilla build system can find the proper compiler and libraries. This is best done with a DOS batch script. Your build may fail if your paths have spaces or other special characters. Make sure that you did not install software into locations with such paths, except Visual C++.</p>

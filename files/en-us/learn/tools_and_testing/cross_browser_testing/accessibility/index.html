@@ -265,7 +265,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>One of the main areas problematic for accessibility is complex apps that involve complicated form controls (such as date pickers) and dynamic content that is updated often and incrementally.</p>
 
-<p>Non-native complicated form controls are problematic because they tend to involve a lot of nested <code>&lt;div&gt;</code>s, and the browser does not know what to do with them by default. If you are inventing them yourself, you need to make sure that they are keyboard accessible; if you are using some kind of third-party framework, carefully review the options available to see how accessible they are before diving in. <a href="http://getbootstrap.com/">Bootstrap</a> looks to be fairly good for accessibility, for example, although <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a> by Rhiana Heath explores some of its issues (mainly related to color contrast), and looks at some solutions.</span></p>
+<p>Non-native complicated form controls are problematic because they tend to involve a lot of nested <code>&lt;div&gt;</code>s, and the browser does not know what to do with them by default. If you are inventing them yourself, you need to make sure that they are keyboard accessible; if you are using some kind of third-party framework, carefully review the options available to see how accessible they are before diving in. <a href="https://getbootstrap.com/">Bootstrap</a> looks to be fairly good for accessibility, for example, although <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a> by Rhiana Heath explores some of its issues (mainly related to color contrast), and looks at some solutions.</span></p>
 
 <p>Regularly updated dynamic content can be a problem because screenreader users might miss it, especially if it updates unexpectedly. If you have a single-page app with a main content panel that is regularly updated using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>, a screenreader user might miss those updates.</p>
 
@@ -301,7 +301,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>There are a number of auditing tools available that you can feed your web pages into. They will look over them and return a list of accessibility issues present on the page. Examples include:</p>
 
 <ul>
- <li><a href="http://wave.webaim.org/">Wave</a>: A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.</li>
+ <li><a href="https://wave.webaim.org/">Wave</a>: A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.</li>
  <li><a href="https://tenon.io">Tenon</a>: Another nice online tool that goes through the code at a provided URL and returns results on accessibility errors including metrics, specific errors along with the WCAG criteria they affect, and suggested fixes. It requires a free trial signup to view the results.</li>
  <li><a href="https://khan.github.io/tota11y/">tota11y</a>: An accessibility tool from the Khan Academy that takes the form of a JavaScript library that you attach to your page to provide a number of accessibility tools.</li>
 </ul>
@@ -309,7 +309,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Let's look at an example, using Wave.</p>
 
 <ol>
- <li>Go to the <a href="http://wave.webaim.org/">Wave homepage</a>.</li>
+ <li>Go to the <a href="https://wave.webaim.org/">Wave homepage</a>.</li>
  <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.</li>
  <li>The site should respond with a description of the accessibility problems. Click the icons displayed to see more information about each of the issues identified by Wave's evaluation.</li>
 </ol>
@@ -323,15 +323,15 @@ a:focus, input:focus, button:focus, select:focus {
 <p><a href="https://www.deque.com/products/axe/">Deque's aXe tool</a> goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:</p>
 
 <ul>
- <li><a href="http://bitly.com/aXe-Chrome">aXe for Chrome</a></li>
- <li><a href="http://bit.ly/aXe-Firefox">aXe for Firefox</a></li>
+ <li><a href="https://bitly.com/aXe-Chrome">aXe for Chrome</a></li>
+ <li><a href="https://bit.ly/aXe-Firefox">aXe for Firefox</a></li>
 </ul>
 
 <p>These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> example. We got the following results:</p>
 
 <p><img alt="" src="axe-screenshot.png" style="display: block; margin: 0px auto;"></p>
 
-<p>aXe is also installable using <code>npm</code>, and can be integrated with task runners like <a href="http://gruntjs.com/">Grunt</a> and <a href="http://gulpjs.com/">Gulp</a>, automation frameworks like <a href="http://www.seleniumhq.org/">Selenium</a> and <a href="https://cucumber.io/">Cucumber</a>, unit testing frameworks like <a href="https://jasmine.github.io/">Jasmin</a>, and more besides (again, see the <a href="https://www.deque.com/products/axe/">main aXe page</a> for details).</p>
+<p>aXe is also installable using <code>npm</code>, and can be integrated with task runners like <a href="https://gruntjs.com/">Grunt</a> and <a href="https://gulpjs.com/">Gulp</a>, automation frameworks like <a href="https://www.seleniumhq.org/">Selenium</a> and <a href="https://cucumber.io/">Cucumber</a>, unit testing frameworks like <a href="https://jasmine.github.io/">Jasmin</a>, and more besides (again, see the <a href="https://www.deque.com/products/axe/">main aXe page</a> for details).</p>
 
 <h3 id="Screenreaders">Screenreaders</h3>
 
@@ -339,7 +339,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <ul>
  <li>Some are paid-for commercial products, like <a href="http://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a> (Windows) and <a href="http://www.gwmicro.com/window-eyes/">Window Eyes</a> (Windows).</li>
- <li>Some are free products, like <a href="http://www.nvaccess.org/">NVDA</a> (Windows), <a href="http://www.chromevox.com/">ChromeVox</a> (Chrome, Windows, and Mac OS X), and <a href="https://wiki.gnome.org/Projects/Orca">Orca</a> (Linux).</li>
+ <li>Some are free products, like <a href="https://www.nvaccess.org/">NVDA</a> (Windows), <a href="http://www.chromevox.com/">ChromeVox</a> (Chrome, Windows, and Mac OS X), and <a href="https://wiki.gnome.org/Projects/Orca">Orca</a> (Linux).</li>
  <li>Some are built into the operating system, like <a href="http://www.apple.com/accessibility/osx/voiceover/">VoiceOver</a> (Mac OS X and iOS), <a href="http://www.chromevox.com/">ChromeVox</a> (on Chromebooks), and <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">TalkBack</a> (Android).</li>
 </ul>
 
@@ -456,7 +456,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>NVDA is Windows-only, and you'll need to install it.</p>
 
 <ol>
- <li>Download it from <a href="http://www.nvaccess.org/">nvaccess.org</a>. You can choose whether to make a donation or download it for free; you'll also need to give them your e-mail address before you can download it.</li>
+ <li>Download it from <a href="https://www.nvaccess.org/">nvaccess.org</a>. You can choose whether to make a donation or download it for free; you'll also need to give them your e-mail address before you can download it.</li>
  <li>Once downloaded, install it — you double click the installer, accept the license and follow the prompts.</li>
  <li>To start NVDA, double click on the program file/shortcut, or use the keyboard shortcut Ctrl + Alt + N. You'll see the NVDA welcome dialog when you start it. Here you can choose from a couple of options, then press the <em>OK</em> button to get going.</li>
 </ol>
