@@ -81,7 +81,7 @@ them, we would like them to alert 0 and 1. The following code doesn't work:
 <pre class="brush: js">
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerHTML = "Button " + i;
+  button.innerText = "Button " + i;
   button.onclick = function () {
     alert(i);
   };
@@ -95,7 +95,7 @@ console.log(i); // 2
 <pre class="brush: js">
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerHTML = "Button " + i;
+  button.innerText = "Button " + i;
   button.onclick = (function (copyOfI) {
     return function() {alert(copyOfI);};
   }(i));
@@ -111,7 +111,7 @@ Using the statement <strong>let</strong>, we could simply do:
 <pre class="brush: js">
 for (let i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerHTML = "Button " + i;
+  button.innerText = "Button " + i;
   button.onclick = function () {
     alert(i);
   };
