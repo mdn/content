@@ -7,26 +7,20 @@ tags:
   - Proximity Events
   - Reference
 ---
-<div>{{DefaultAPISidebar("Proximity Events")}}{{ SeeCompatTable }}</div>
+<div>{{DefaultAPISidebar("Proximity Events")}}{{Deprecated_Header}}</div>
 
 <p>The <strong>proximity events</strong> are a handy way to know when a user is close to a device. These events make it possible to react to such a change, for example by shutting down the screen of a smartphone when the user is having a phone call with the device close to their ear.</p>
 
-<div class="note">
-<p><strong>Note:</strong> Obviously, the API requires the device to have a proximity sensor, which are mostly available only on mobile devices. Devices without such a sensor may support those events but will never fire them.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Obviously, the API requires the device to have a proximity sensor, which are mostly available only on mobile devices. Devices without such a sensor may support those events but will never fire them.</p>
 </div>
 
 <h2 id="Proximity_Events">Proximity Events</h2>
 
-<p>When the device proximity sensor detects a change between the device and an object, it notifies the browser of that change. When the browser gets such a notification, it fires a {{domxref("DeviceProximityEvent")}} for any change, and a {{domxref("UserProximityEvent")}} event in the case of a more rough change.</p>
+<p>When the device proximity sensor detects a change between the device and an object, it notifies the browser of that change. When the browser gets such a notification, it fires a {{domxref("UserProximityEvent")}} event. The {{domxref("UserProximityEvent.near")}} property is <code>true</code> if the object is close or <code>false</code> if the object is far.</p>
 
-<p>This event can be captured at the <code>window</code> object level by using the {{domxref("EventTarget.addEventListener","addEventListener")}} method (using the {{event("deviceproximity")}} or {{event("userproximity")}} event name) or by attaching an event handler to the {{domxref("window.ondeviceproximity")}} or {{domxref("window.onuserproximity")}} properties.</p>
-
-<p>Once captured, the event object gives access to different kinds of information:</p>
-
-<ul>
- <li>The {{domxref("DeviceProximityEvent")}} event provides an exact match for the distance between the device and the object through its {{domxref("DeviceProximityEvent.value","value")}} property. It also provides the closest and farthest distance the device is able to detect something through its {{domxref("DeviceProximityEvent.min","min")}} and {{domxref("DeviceProximityEvent.max","max")}} properties.</li>
- <li>The {{domxref("UserProximityEvent")}} event provides a rough approximation of the distance, expressed through a boolean. The {{domxref("UserProximityEvent.near")}} property is <code>true</code> if the object is close or <code>false</code> if the object is far.</li>
-</ul>
+<p>This event can be captured at the <code>window</code> object level by using the {{domxref("EventTarget.addEventListener","addEventListener")}} method (using the <code>userproximity</code> event name) or by attaching an event handler to the  {{domxref("window.onuserproximity")}} property.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -61,10 +55,6 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<h3 id="DeviceProximityEvent"><code>DeviceProximityEvent</code></h3>
-
-<p>{{Compat("api.DeviceProximityEvent")}}</p>
-
 <h3 id="UserProximityEvent"><code>UserProximityEvent</code></h3>
 
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
@@ -74,8 +64,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("DeviceProximityEvent")}}</li>
  <li>{{domxref("UserProximityEvent")}}</li>
- <li>{{event("deviceproximity")}}</li>
- <li>{{event("userproximity")}}</li>
+ <li>{{domxref("DeviceProximityEvent")}}</li>
 </ul>
