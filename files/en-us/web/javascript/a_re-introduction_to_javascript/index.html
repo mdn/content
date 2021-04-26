@@ -18,7 +18,7 @@ tags:
 <p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a href="http://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href="/en-US/docs/Glossary/ECMAScript">ECMAScript</a> standard that year. The standard received a significant update as <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
 
 <div class="note">
-<p>Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.</p>
+<p><strong>Note:</strong> Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.</p>
 </div>
 
 <p>Unlike most programming languages, the JavaScript language has no concept of input or output. It is designed to run as a scripting language in a host environment, and it is up to the host environment to provide mechanisms for communicating with the outside world. The most common host environment is the browser, but JavaScript interpreters can also be found in a huge list of other places, including Adobe Acrobat, Adobe Photoshop, SVG images, Yahoo's Widget engine, server-side environments such as <a href="http://nodejs.org/">Node.js</a>, NoSQL databases like the open source <a href="http://couchdb.apache.org/">Apache CouchDB</a>, embedded computers, complete desktop environments like <a href="http://www.gnome.org/">GNOME</a> (one of the most popular GUIs for GNU/Linux operating systems), and others.</p>
@@ -155,7 +155,7 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 </pre>
 
-<div class="note">The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator converts the string to <code>NaN</code> if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.</div>
+<div class="note"><strong>Note:</strong> The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator converts the string to <code>NaN</code> if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.</div>
 
 <h2 id="Strings">Strings</h2>
 
@@ -466,13 +466,13 @@ obj['for'] = 'Simon'; // works fine
 </pre>
 
 <div class="note">
-<p>Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 <a href="https://es5.github.io/#x7.6.1">Spec</a>.</p>
+<p><strong>Note:</strong> Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 <a href="https://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
 <p>For more on objects and prototypes see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object.prototype</a>. For an explanation of object prototypes and the object prototype chains see <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
 
 <div class="note">
-<p>Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. <code>{[phoneType]: 12345}</code> is possible instead of just <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
+<p><strong>Note:</strong> Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. <code>{[phoneType]: 12345}</code> is possible instead of just <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
 </div>
 
 <h2 id="Arrays">Arrays</h2>
@@ -658,7 +658,7 @@ avg(2, 3, 4, 5); // 3.5
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<div class="note">In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.<br>
+<div class="note"><strong>Note:</strong> In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.<br>
 <br>
 It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. <em>i.e. function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em> will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</div>
 
@@ -681,7 +681,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 <p>The second argument to <code>apply()</code> is the array to use as arguments; the first will be discussed later on. This emphasizes the fact that functions are objects too.</p>
 
 <div class="note">
-<p>You can achieve the same result using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> in the function call.</p>
+<p><strong>Note:</strong> You can achieve the same result using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> in the function call.</p>
 
 <p>For instance: <code>avg(...numbers)</code></p>
 </div>
@@ -757,7 +757,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <h2 id="Custom_objects">Custom objects</h2>
 
-<div class="note">For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to Object-Oriented JavaScript</a>.</div>
+<div class="note"><strong>Note:</strong> For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to Object-Oriented JavaScript</a>.</div>
 
 <p>In classic Object Oriented Programming, objects are collections of data and methods that operate on that data. JavaScript is a prototype-based language that contains no class statement, as you'd find in C++ or Java (this is sometimes confusing for programmers accustomed to languages with a class statement). Instead, JavaScript uses functions as classes. Let's consider a person object with first and last name fields. There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:</p>
 

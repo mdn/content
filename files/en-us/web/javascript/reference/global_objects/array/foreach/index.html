@@ -104,7 +104,7 @@ forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
   <code><var>callback</var></code> may do so)</p>
 
 <div class="note">
-  <p>There is no way to stop or break a <code>forEach()</code> loop other than by throwing
+  <p><strong>Note:</strong> There is no way to stop or break a <code>forEach()</code> loop other than by throwing
     an exception. If you need such behavior, the <code>forEach()</code> method is the
     wrong tool.</p>
 
@@ -130,12 +130,9 @@ forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
 </div>
 
 <div class="note">
-  <h4 id="forEach_expects_a_synchronous_function">forEach expects a synchronous function
-  </h4>
-  <code>forEach</code> does not wait for promises. Kindly make sure you are aware of the
-  implications while using promises(or async functions) as <code>forEach</code> callback.
-
-  <h5 id="Example_Code">Example Code</h5>
+  <p><strong>Note:</strong> <code>forEach</code> expects a synchronous function.</p>
+  <p><code>forEach</code> does not wait for promises. Make sure you are aware of the
+  implications while using promises (or async functions) as <code>forEach</code> callback.</p>
 
   <pre class="brush: js">let ratings = [5, 4, 5];
 let sum = 0;

@@ -48,12 +48,12 @@ tags:
 <p>Async functions can contain zero or more {{jsxref("Operators/await", "await")}} expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of <code>async</code> and <code>await</code> enables the use of ordinary <code>try</code> / <code>catch</code> blocks around asynchronous code.</p>
 
 <div class="note">
-  <p>The <code>await</code> keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.</p>
+  <p><strong>Note:</strong> The <code>await</code> keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.</p>
   <p><code>await</code> can be used on its own with <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules.</a></p>
 </div>
 
 <div class="note">
-  <p>The purpose of <code>async</code>/<code>await</code> is to simplify the syntax
+  <p><strong>Note:</strong> The purpose of <code>async</code>/<code>await</code> is to simplify the syntax
     necessary to consume promise-based APIs. The behavior
     of <code>async</code>/<code>await</code> is similar to combining <a
       href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">generators</a> and
@@ -294,10 +294,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
   it's not already a promise itself (as in this example).</p>
 
 <div class="notecard note">
-  <h4 id="return_await_promiseValue_vs._return_promiseValue">return await promiseValue vs.
-    return promiseValue</h4>
-
-  <p>The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not
+  <p><strong>Note:</strong> The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not
     imply that <code>return await promiseValue</code> is functionally equivalent to
     <code>return promiseValue</code>.</p>
 

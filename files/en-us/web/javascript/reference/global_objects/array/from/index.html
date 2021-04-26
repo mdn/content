@@ -73,7 +73,7 @@ Array.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisAr
     as <code>Array.from(<var>obj</var>).map(<var>mapFn</var>, <var>thisArg</var>)</code>,<br>
     except that it does not create an intermediate array.</p>
 
-<div class="note">This is especially important for certain array subclasses, like <a
+<div class="note"><strong>Note:</strong> This is especially important for certain array subclasses, like <a
         href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>, since the
     intermediate array would necessarily have values truncated to fit into the appropriate
     type.</div>
@@ -196,7 +196,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
     natively support it.</p>
 
 <div class="notecard note">
-    <p><strong>Polyfill Notes:</strong> This algorithm is exactly as specified in
+    <p><strong>Note:</strong> This algorithm is exactly as specified in
         ECMA-262 6<sup>th</sup> Edition (assuming <code>Object</code> and
         <code>TypeError</code> have their original values and that
         <code><var>callback</var>.call()</code> evaluates to the original value of
