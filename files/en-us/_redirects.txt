@@ -434,6 +434,7 @@
 /en-US/docs/CSS/:-moz-suppressed	/en-US/docs/Web/CSS/:-moz-suppressed
 /en-US/docs/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:-moz-ui-valid
+/en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:user-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
 /en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
