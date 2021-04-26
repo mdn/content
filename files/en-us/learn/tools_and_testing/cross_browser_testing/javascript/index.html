@@ -96,11 +96,11 @@ tags:
  <li>After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.</li>
 </ol>
 
-<p><img alt="" src="jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="http://jshint.com/install/">JSHint install page</a>.</p>
+<p><img alt="" src="jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="https://jshint.com/install/">JSHint install page</a>.</p>
 
 <h4 id="Other_uses">Other uses</h4>
 
-<p>There are other ways to use such linters; you can read about them on the <a href="http://jshint.com/install/">JSHint</a> and <a href="http://eslint.org/docs/user-guide/getting-started">ESLint</a> install pages.</p>
+<p>There are other ways to use such linters; you can read about them on the <a href="https://jshint.com/install/">JSHint</a> and <a href="https://eslint.org/docs/user-guide/getting-started">ESLint</a> install pages.</p>
 
 <p>It is worth mentioning command line uses — you can install these tools as command line utilities (available via the CLI — command line interface) using npm (Node Package Manager — you'll have to install <a href="https://nodejs.org/en/">NodeJS</a> first). For example, the following command installs JSHint:</p>
 
@@ -109,7 +109,7 @@ tags:
 
 <p>You can then point these tools at JavaScript files you want to lint, for example:</p>
 
-<p><img alt="" src="js-hint-commandline.png" style="display: block; margin: 0px auto;">You can also use these tools with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="http://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
+<p><img alt="" src="js-hint-commandline.png" style="display: block; margin: 0px auto;">You can also use these tools with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="https://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.</p>
@@ -454,7 +454,7 @@ if(ua.indexOf('Firefox') !== -1) {
 <p>Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless. </p>
 
 <div class="note">
-<p><strong>Note</strong>: You should read <a href="http://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
+<p><strong>Note</strong>: You should read <a href="https://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
 </div>
 
 <p>The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. {{anch("Feature detection")}} is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.</p>

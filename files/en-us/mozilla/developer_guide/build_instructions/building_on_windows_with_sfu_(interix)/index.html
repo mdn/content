@@ -11,8 +11,8 @@ tags:
 <h3 id="Software_Requirements">Software Requirements</h3>
 <p>The following software needs to be installed for a standard Windows build using SFU.</p>
 <h4 id="Windows_Services_for_Unix">Windows Services for Unix</h4>
-<p><a class="external" href="http://www.microsoft.com/technet/interopmigration/unix/sfu/default.mspx">Windows Services for UNIX</a> version provides a full range of cross-platform services for integrating Windows into existing UNIX-based environments.</p>
-<p>Download the self-extracting archive of the Windows Services for UNIX 3.5 product from <a class="external" href="http://www.microsoft.com/downloads/details.aspx?familyid=896C9688-601B-44F1-81A4-02878FF11778&amp;displaylang=en">here</a>. If you choose to include the development tools this will automatically install host gcc for you, but you will still need MSVC to produce the Windows binary.</p>
+<p><a class="external" href="https://www.microsoft.com/technet/interopmigration/unix/sfu/default.mspx">Windows Services for UNIX</a> version provides a full range of cross-platform services for integrating Windows into existing UNIX-based environments.</p>
+<p>Download the self-extracting archive of the Windows Services for UNIX 3.5 product from <a class="external" href="https://www.microsoft.com/downloads/details.aspx?familyid=896C9688-601B-44F1-81A4-02878FF11778&amp;displaylang=en">here</a>. If you choose to include the development tools this will automatically install host gcc for you, but you will still need MSVC to produce the Windows binary.</p>
 <p>The terminal configuration files provided with SFU do not work correctly. If you intend to do a lot of editing then you will probably appreciate the following:</p>
 <h5 id="Patch_for_usrsharetermcap">Patch for /usr/share/termcap</h5>
 <pre class="eval">--- termcap
@@ -95,7 +95,7 @@ set shiftwidth=2
 set smartindent
 </pre>
 <h4 id="SFU_Packages">SFU Packages</h4>
-<p>Once you have installed SFU, you will then need to register and log into the <a class="external" href="http://www.interopsystems.com/tools/default.aspx">Interix Tools Warehouse</a>. First download the Bootstrap installer, then install the following packages using pkg_update -L:</p>
+<p>Once you have installed SFU, you will then need to register and log into the <a class="external" href="https://www.interopsystems.com/tools/default.aspx">Interix Tools Warehouse</a>. First download the Bootstrap installer, then install the following packages using pkg_update -L:</p>
 <ul> <li>bash (optional; does not work with DEP)</li> <li>cvs</li> <li>flip</li> <li>gmake</li> <li>libncurses</li> <li>m4_gnu</li> <li>python</li> <li>unzip</li> <li>wget</li> <li>zip</li>
 </ul>
 <p>You will also need to use pkg_add to install the autoconf-2.13 package. There is a bug in the package and it will not install the autoconf macros.</p>

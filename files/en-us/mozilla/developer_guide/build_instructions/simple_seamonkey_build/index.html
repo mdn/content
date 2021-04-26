@@ -75,10 +75,10 @@ sudo port install mercurial libidl autoconf213 yasm</pre>
 			<td style="vertical-align: baseline;">Windows:</td>
 			<td>
 			<ul>
-				<li>Install Visual C++ 2013. Both the professional edition and the <a class="external" href="http://www.microsoft.com/Express/vc/">express edition</a> will work.</li>
+				<li>Install Visual C++ 2013. Both the professional edition and the <a class="external" href="https://www.microsoft.com/Express/vc/">express edition</a> will work.</li>
 				<li>You may need to install one or more Windows SDKs. See <a class="internal" href="/en-US/Windows_SDK_versions">Windows SDK versions</a> for a quick guide.</li>
 				<li>If you decided on the Windows 8 SDK, you also need the Outlook 2010 MAPI Header Files from Microsoft.</li>
-				<li>Install <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe">MozillaBuild</a>, a package of additional build tools. (If you get a message saying this application did not install properly then you should see a windows dialog giving you the option to re-install with the 'correct settings'. After that all should be well.)</li>
+				<li>Install <a class="external" href="https://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/MozillaBuildSetup-Latest.exe">MozillaBuild</a>, a package of additional build tools. (If you get a message saying this application did not install properly then you should see a windows dialog giving you the option to re-install with the 'correct settings'. After that all should be well.)</li>
 				<li>Open a shell window by running: <code>c:\mozilla-build\start-msvc2013.bat</code>. <strong>Even if you're on 64-bit Windows, do not use the files ending in <code>-x64.bat</code>.</strong></li>
 				<li>By default you will arrive in your Windows user home directory which is likely to contain spaces in its path (e.g. C:\Users\myaccount). This can lead to problems later in the building stage. To avoid that, create a directory without spaces in its path (e.g. <code>mkdir <span style="font-family: verdana,tahoma,sans-serif;">/c/mozilla-src</span></code>) and switch to it before building (<code>cd /c/mozilla-src</code>).</li>
 			</ul>

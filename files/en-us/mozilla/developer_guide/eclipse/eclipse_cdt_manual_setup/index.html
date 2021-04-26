@@ -153,7 +153,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p><a href="/en-US/docs/Using_CXX_in_Mozilla_code">As of Mozilla 25</a>, Mozilla is built in C++11 mode. When GCC is invoked in C++11 mode, it defines pre-processor symbols that enable conditional compilation of C++11 code in its standard library. To correctly parse this code, Eclipse CDT needs to know about these symbols. Unfortunately, the build option discovery process outlined above does not pick up this information, so CDT needs to be told separately about C++11 mode. To do this, go to "Preferences -&gt; C/C++ -&gt; Build -&gt; Settings -&gt; [Discovery] tab -&gt; CDT GCC Built-in Compiler Settings" and add the flag "-std=c++11" at the end of the field labeled "Command to get compiler specs".</p>
 
-<div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
+<div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="https://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
 
 <h3 id="Building_the_index">Building the index</h3>
 

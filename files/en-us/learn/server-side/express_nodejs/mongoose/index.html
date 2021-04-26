@@ -91,7 +91,7 @@ tags:
 
 <div class="notecard note">
   <h4>Tip</h4>
-  <p>You don't need to know MongoDB in order to use Mongoose, although parts of the <a href="http://mongoosejs.com/docs/guide.html">Mongoose documentation</a> <em>are</em> easier to use and understand if you are already familiar with MongoDB.</p>
+  <p>You don't need to know MongoDB in order to use Mongoose, although parts of the <a href="https://mongoosejs.com/docs/guide.html">Mongoose documentation</a> <em>are</em> easier to use and understand if you are already familiar with MongoDB.</p>
 </div>
 
 <p>The rest of this tutorial shows how to define and access the Mongoose schema and models for the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary website</a> example.</p>
@@ -130,7 +130,7 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>This primer is heavily influenced by the <a href="https://www.npmjs.com/package/mongoose">Mongoose quick start</a> on <em>npm</em> and the <a href="http://mongoosejs.com/docs/guide.html">official documentation</a>.</p>
+  <p>This primer is heavily influenced by the <a href="https://www.npmjs.com/package/mongoose">Mongoose quick start</a> on <em>npm</em> and the <a href="https://mongoosejs.com/docs/guide.html">official documentation</a>.</p>
 </div>
 
 <h3 id="Installing_Mongoose_and_MongoDB">Installing Mongoose and MongoDB</h3>
@@ -240,11 +240,11 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
   nested: { stuff: { type: <strong>String</strong>, lowercase: true, trim: true } }
 })</pre>
 
-<p>Most of the <a href="http://mongoosejs.com/docs/schematypes.html">SchemaTypes</a> (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:</p>
+<p>Most of the <a href="https://mongoosejs.com/docs/schematypes.html">SchemaTypes</a> (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:</p>
 
 <ul>
  <li><code>ObjectId</code>: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (<code>_id</code>) for the specified object. We can use the <code>populate()</code> method to pull in the associated information when needed.</li>
- <li><code><a href="http://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a></code>: An arbitrary schema type.</li>
+ <li><code><a href="https://mongoosejs.com/docs/schematypes.html#mixed">Mixed</a></code>: An arbitrary schema type.</li>
  <li><code>[]</code>: An array of items. You can perform JavaScript array operations on these models (push, pop, unshift, etc.). The examples above show an array of objects without a specified type and an array of <code>String</code> objects, but you can have an array of any type of object.</li>
 </ul>
 
@@ -262,7 +262,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
  </li>
 </ul>
 
-<p>For more information about options see <a href="http://mongoosejs.com/docs/schematypes.html">SchemaTypes</a> (Mongoose docs).</p>
+<p>For more information about options see <a href="https://mongoosejs.com/docs/schematypes.html">SchemaTypes</a> (Mongoose docs).</p>
 
 <h4 id="Validation">Validation</h4>
 
@@ -271,13 +271,13 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 <p>The built-in validators include:</p>
 
 <ul>
- <li>All <a href="http://mongoosejs.com/docs/schematypes.html">SchemaTypes</a> have the built-in <a href="http://mongoosejs.com/docs/api.html#schematype_SchemaType-required">required</a> validator. This is used to specify whether the field must be supplied in order to save a document.</li>
- <li><a href="http://mongoosejs.com/docs/api.html#schema-number-js">Numbers</a> have <a href="http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min">min</a> and <a href="http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max">max</a> validators.</li>
- <li><a href="http://mongoosejs.com/docs/api.html#schema-string-js">Strings</a> have:
+ <li>All <a href="https://mongoosejs.com/docs/schematypes.html">SchemaTypes</a> have the built-in <a href="https://mongoosejs.com/docs/api.html#schematype_SchemaType-required">required</a> validator. This is used to specify whether the field must be supplied in order to save a document.</li>
+ <li><a href="https://mongoosejs.com/docs/api.html#schema-number-js">Numbers</a> have <a href="https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min">min</a> and <a href="https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max">max</a> validators.</li>
+ <li><a href="https://mongoosejs.com/docs/api.html#schema-string-js">Strings</a> have:
   <ul>
-   <li><a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum">enum</a>: specifies the set of allowed values for the field.</li>
-   <li><a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match">match</a>: specifies a regular expression that the string must match.</li>
-   <li><a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength">maxLength</a> and <a href="http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength">minLength</a> for the string.</li>
+   <li><a href="https://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum">enum</a>: specifies the set of allowed values for the field.</li>
+   <li><a href="https://mongoosejs.com/docs/api.html#schema_string_SchemaString-match">match</a>: specifies a regular expression that the string must match.</li>
+   <li><a href="https://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength">maxLength</a> and <a href="https://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength">minLength</a> for the string.</li>
   </ul>
  </li>
 </ul>
@@ -298,7 +298,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
 });
 </pre>
 
-<p>For complete information on field validation see <a href="http://mongoosejs.com/docs/validation.html">Validation</a> (Mongoose docs).</p>
+<p>For complete information on field validation see <a href="https://mongoosejs.com/docs/validation.html">Validation</a> (Mongoose docs).</p>
 
 <h4 id="Virtual_properties">Virtual properties</h4>
 
@@ -309,17 +309,17 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );</strong></pre>
   <p>We will use a virtual property in the library to define a unique URL for each model record using a path and the record's <code>_id</code> value.</p>
 </div>
 
-<p>For more information see <a href="http://mongoosejs.com/docs/guide.html#virtuals">Virtuals</a> (Mongoose documentation).</p>
+<p>For more information see <a href="https://mongoosejs.com/docs/guide.html#virtuals">Virtuals</a> (Mongoose documentation).</p>
 
 <h4 id="Methods_and_query_helpers">Methods and query helpers</h4>
 
-<p>A schema can also have <a href="http://mongoosejs.com/docs/guide.html#methods">instance methods</a>, <a href="http://mongoosejs.com/docs/guide.html#statics">static methods</a>, and <a href="http://mongoosejs.com/docs/guide.html#query-helpers">query helpers</a>. The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's <a href="http://mongoosejs.com/docs/queries.html">chainable query builder API</a> (for example, allowing you to add a query "byName" in addition to the <code>find()</code>, <code>findOne()</code> and <code>findById()</code> methods).</p>
+<p>A schema can also have <a href="https://mongoosejs.com/docs/guide.html#methods">instance methods</a>, <a href="https://mongoosejs.com/docs/guide.html#statics">static methods</a>, and <a href="https://mongoosejs.com/docs/guide.html#query-helpers">query helpers</a>. The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's <a href="https://mongoosejs.com/docs/queries.html">chainable query builder API</a> (for example, allowing you to add a query "byName" in addition to the <code>find()</code>, <code>findOne()</code> and <code>findById()</code> methods).</p>
 
 <h3 id="Using_models">Using models</h3>
 
 <p>Once you've created a schema you can use it to create models. The model represents a collection of documents in the database that you can search, while the model's instances represent individual documents that you can save and retrieve.</p>
 
-<p>We provide a brief overview below. For more information see: <a href="http://mongoosejs.com/docs/models.html">Models</a> (Mongoose docs).</p>
+<p>We provide a brief overview below. For more information see: <a href="https://mongoosejs.com/docs/models.html">Models</a> (Mongoose docs).</p>
 
 <h4 id="Creating_and_modifying_documents">Creating and modifying documents</h4>
 
@@ -382,7 +382,7 @@ Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
   <p>It is important to remember that not finding any results is <strong>not an error</strong> for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (<code>results==null</code>) or daisy chain the <a href="https://mongoosejs.com/docs/api.html#query_Query-orFail">orFail()</a> method on the query. </p>
 </div>
 
-<p>If you don't specify a callback then the API will return a variable of type <a href="http://mongoosejs.com/docs/api.html#query-js">Query</a>. You can use this query object to build up your query and then execute it (with a callback) later using the <code>exec()</code> method.</p>
+<p>If you don't specify a callback then the API will return a variable of type <a href="https://mongoosejs.com/docs/api.html#query-js">Query</a>. You can use this query object to build up your query and then execute it (with a callback) later using the <code>exec()</code> method.</p>
 
 <pre class="brush: js">// find all athletes that play tennis
 var query = Athlete.find({ 'sport': 'Tennis' });
@@ -413,24 +413,24 @@ query.exec(function (err, athletes) {
   select('name age').
   exec(callback); // where callback is the name of our callback function.</pre>
 
-<p>The <a href="http://mongoosejs.com/docs/api.html#query_Query-find">find()</a> method gets all matching records, but often you just want to get one match. The following methods query for a single record:</p>
+<p>The <a href="https://mongoosejs.com/docs/api.html#query_Query-find">find()</a> method gets all matching records, but often you just want to get one match. The following methods query for a single record:</p>
 
 <ul>
- <li><code><a href="http://mongoosejs.com/docs/api.html#model_Model.findById">findById()</a></code>: Finds the document with the specified <code>id</code> (every document has a unique <code>id</code>).</li>
- <li><code><a href="http://mongoosejs.com/docs/api.html#query_Query-findOne">findOne()</a></code>: Finds a single document that matches the specified criteria.</li>
- <li><code><a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove">findByIdAndRemove()</a></code>, <code><a href="http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate">findByIdAndUpdate()</a></code>, <code><a href="http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove">findOneAndRemove()</a></code>, <code><a href="http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate">findOneAndUpdate()</a></code>: Finds a single document by <code>id</code> or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.</li>
+ <li><code><a href="https://mongoosejs.com/docs/api.html#model_Model.findById">findById()</a></code>: Finds the document with the specified <code>id</code> (every document has a unique <code>id</code>).</li>
+ <li><code><a href="https://mongoosejs.com/docs/api.html#query_Query-findOne">findOne()</a></code>: Finds a single document that matches the specified criteria.</li>
+ <li><code><a href="https://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove">findByIdAndRemove()</a></code>, <code><a href="https://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate">findByIdAndUpdate()</a></code>, <code><a href="https://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove">findOneAndRemove()</a></code>, <code><a href="https://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate">findOneAndUpdate()</a></code>: Finds a single document by <code>id</code> or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.</li>
 </ul>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>There is also a <code><a href="http://mongoosejs.com/docs/api.html#model_Model.count">count()</a></code> method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.</p>
+  <p>There is also a <code><a href="https://mongoosejs.com/docs/api.html#model_Model.count">count()</a></code> method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.</p>
 </div>
 
-<p>There is a lot more you can do with queries. For more information see: <a href="http://mongoosejs.com/docs/queries.html">Queries</a> (Mongoose docs).</p>
+<p>There is a lot more you can do with queries. For more information see: <a href="https://mongoosejs.com/docs/queries.html">Queries</a> (Mongoose docs).</p>
 
 <h4 id="Working_with_related_documents_—_population">Working with related documents — population</h4>
 
-<p>You can create references from one document/model instance to another using the <code>ObjectId</code> schema field, or from one document to many using an array of <code>ObjectIds</code>. The field stores the id of the related model. If you need the actual content of the associated document, you can use the <code><a href="http://mongoosejs.com/docs/api.html#query_Query-populate">populate()</a></code> method in a query to replace the id with the actual data.</p>
+<p>You can create references from one document/model instance to another using the <code>ObjectId</code> schema field, or from one document to many using an array of <code>ObjectIds</code>. The field stores the id of the related model. If you need the actual content of the associated document, you can use the <code><a href="https://mongoosejs.com/docs/api.html#query_Query-populate">populate()</a></code> method in a query to replace the id with the actual data.</p>
 
 <p>For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of <code>ObjectId</code>. Each story can have a single author. The "ref" (highlighted in bold below) tells the schema which model can be assigned to this field.</p>
 
@@ -495,7 +495,7 @@ bob.save(function (err) {
 </pre>
 </div>
 
-<p>This is almost everything you need to know about working with related items <em>for this tutorial</em>. For more detailed information see <a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs).</p>
+<p>This is almost everything you need to know about working with related items <em>for this tutorial</em>. For more detailed information see <a href="https://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs).</p>
 
 <h3 id="One_schemamodel_per_file">One schema/model per file</h3>
 
@@ -831,12 +831,12 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 <ul>
  <li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> (Express docs)</li>
  <li><a href="https://mongoosejs.com/">Mongoose website</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/guide.html">Mongoose Guide</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/validation.html">Validation</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/schematypes.html">Schema Types</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/models.html">Models</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/queries.html">Queries</a> (Mongoose docs)</li>
- <li><a href="http://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs)</li>
+ <li><a href="https://mongoosejs.com/docs/guide.html">Mongoose Guide</a> (Mongoose docs)</li>
+ <li><a href="https://mongoosejs.com/docs/validation.html">Validation</a> (Mongoose docs)</li>
+ <li><a href="https://mongoosejs.com/docs/schematypes.html">Schema Types</a> (Mongoose docs)</li>
+ <li><a href="https://mongoosejs.com/docs/models.html">Models</a> (Mongoose docs)</li>
+ <li><a href="https://mongoosejs.com/docs/queries.html">Queries</a> (Mongoose docs)</li>
+ <li><a href="https://mongoosejs.com/docs/populate.html">Population</a> (Mongoose docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}</p>

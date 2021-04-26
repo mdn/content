@@ -63,13 +63,13 @@ bin/make.exe --version
 
 <h4 id="Netscape_wintools">Netscape wintools</h4>
 
-<p><strong>If you are building the 1.8 branch or trunk</strong> (not 1.8.0 or any earlier branches, see below), you should use the special <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/moztools-static.zip">moztools-static</a> package which has a static version of the moztools, glib, and libIDL for all MSVC versions.</p>
+<p><strong>If you are building the 1.8 branch or trunk</strong> (not 1.8.0 or any earlier branches, see below), you should use the special <a class="external" href="https://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/moztools-static.zip">moztools-static</a> package which has a static version of the moztools, glib, and libIDL for all MSVC versions.</p>
 
 <p>The zip file contains a single folder named <em>moztools</em> that you should preserve. Unpack the zip file wherever you want the tools to be installed; however, Mozilla may not build if you install the moztools directory inside the cygwin directory. The MOZ_TOOLS environment variable should be set to point to this moztools folder. (You may rename the folder, as long as you update $MOZ_TOOLS accordingly.)</p>
 
 <p>The moztools zip file does not contain the source for the components; if you are interested in building them from scratch, you can obtain the source <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic/src/">here</a>. The <a class="external" href="http://www.go-oo.org/">ooo-build</a> system for building OpenOffice.org builds the tools from scratch using this code and contains some relevant <a class="external" href="http://go-oo.org/ooo-build/patches/src680/">patches</a> for anyone who doesn't want to use the binaries provided.</p>
 
-<p><strong>If you are building the 1.8.0 branch or earlier,</strong> Netscape's <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/wintools.zip">wintools.zip</a> contains pre-built libraries and tools which are needed to build Mozilla. When building with MSVC++ 7, you must install additional glib and libidl libraries, see below.</p>
+<p><strong>If you are building the 1.8.0 branch or earlier,</strong> Netscape's <a class="external" href="https://ftp.mozilla.org/pub/mozilla.org/mozilla/source/wintools.zip">wintools.zip</a> contains pre-built libraries and tools which are needed to build Mozilla. When building with MSVC++ 7, you must install additional glib and libidl libraries, see below.</p>
 
 <p>If you are building 1.8.0 or any earlier branch, you will have to download wintools as well as possibly an appropriate version for MSVC++ 7.</p>
 
@@ -88,7 +88,7 @@ install.bat
 
 <h4 id="glib.2FlibIDL_for_MSVC7.2F7.1">glib/libIDL for MSVC7/7.1</h4>
 
-<p>When building with MSVC++ 7 or 7.1, you must install pre-built versions of the glib &amp; libIDL libraries. The static moztools package includes these libraries, so you if you're using that, you don't need to do anything more to obtain them. Otherwise, you can find the prebuilt versions of these libraries on <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic">the mozilla.org FTP servers</a>. Do NOT install these libraries over your existing moztools directory; instead, pick a separate location and set GLIB_PREFIX, LIBIDL_PREFIX, and PATH appropriately in your environment (see below).</p>
+<p>When building with MSVC++ 7 or 7.1, you must install pre-built versions of the glib &amp; libIDL libraries. The static moztools package includes these libraries, so you if you're using that, you don't need to do anything more to obtain them. Otherwise, you can find the prebuilt versions of these libraries on <a class="external" href="https://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic">the mozilla.org FTP servers</a>. Do NOT install these libraries over your existing moztools directory; instead, pick a separate location and set GLIB_PREFIX, LIBIDL_PREFIX, and PATH appropriately in your environment (see below).</p>
 
 <h4 id="cvs">cvs</h4>
 
@@ -102,7 +102,7 @@ install.bat
 
 <p>It is also possible to compile these branches using newer Microsoft visual C++ compilers such as edition 2002 (VC7.0), 2003 (VC7.1). Using version 2005 (VC8) is not possible.</p>
 
-<p>It is also possible (but not recommended) to compile Mozilla using the mingw gcc compiler: see <a class="external" href="http://gemal.dk/mozilla/build.html">Compiling Mozilla with mingw</a>.</p>
+<p>It is also possible (but not recommended) to compile Mozilla using the mingw gcc compiler: see <a class="external" href="https://gemal.dk/mozilla/build.html">Compiling Mozilla with mingw</a>.</p>
 
 <h4 id="Platform_SDK">Platform SDK</h4>
 
@@ -110,9 +110,9 @@ install.bat
 
 <p>When using Visual C++ 6, you need to get either the october 2002 or the february 2003 version of the platform SDK. The latest versions can not be used with Visual C++ 6 at all, and some intermediate versions have incompatible debug information, allowing only the release mode to work properly. In fact, even the version of february 2003 has one debug file that is incompatible with Visual C++ 6, but this does not impact mozilla.</p>
 
-<p>The Platform SDK can be obtained from the <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5&amp;displaylang=en">Microsoft Download Center</a>. You must install the "Windows Core SDK" (Tools, Build Environment, and Redistributable Components) and the "Web Workshop SDK" or (in the Feb. 2003 version) the "Internet Development SDK" (Build Environment).</p>
+<p>The Platform SDK can be obtained from the <a class="external" href="https://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5&amp;displaylang=en">Microsoft Download Center</a>. You must install the "Windows Core SDK" (Tools, Build Environment, and Redistributable Components) and the "Web Workshop SDK" or (in the Feb. 2003 version) the "Internet Development SDK" (Build Environment).</p>
 
-<p>Those who need an old version can find <a class="external" href="http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdk-full.htm">the february 2003 PSDK here</a>. It is also possible to order CD version of several old version of the PDSK here .</p>
+<p>Those who need an old version can find <a class="external" href="https://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdk-full.htm">the february 2003 PSDK here</a>. It is also possible to order CD version of several old version of the PDSK here .</p>
 
 <p>The build environment must be altered to pick up the SDK paths, see the examples below.</p>
 
@@ -134,7 +134,7 @@ install.bat
 
 <pre class="eval">rem --- Set HOME so that cvs and ssh work correctly
 rem --- cvs uses HOME to locate your .cvspass file, and ssh to locate your .ssh file
-rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
+rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="https://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
 set HOME=C:\home
 
 rem --- Set VCVARS to wherever the MSVC vcvars.bat file is found

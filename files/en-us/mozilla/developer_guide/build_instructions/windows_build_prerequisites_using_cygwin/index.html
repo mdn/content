@@ -80,7 +80,7 @@ bin/make.exe --version
 </pre>
 
 <h3 id="moztools">moztools</h3>
-<p>The moztools package contains binaries and libraries necessary to build Mozilla. A single zip file containing all moztools which works with all versions of MSVC is available at <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/moztools-static.zip">moztools-static.zip</a>.</p>
+<p>The moztools package contains binaries and libraries necessary to build Mozilla. A single zip file containing all moztools which works with all versions of MSVC is available at <a class="external" href="https://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/moztools-static.zip">moztools-static.zip</a>.</p>
 <p>The zip file contains a single folder named <em>moztools</em> that you should preserve. Unpack the zip file wherever you want the tools to be installed; however, Mozilla may not build if you install the moztools directory inside the cygwin directory. The MOZ_TOOLS environment variable should be set to point to this moztools folder. (You may rename the folder, as long as you update $MOZ_TOOLS accordingly.)</p>
 <p>Note: The 1.8.1 branch (Firefox 2) is compatible with the moztools-static package. Older branches (including the 1.8.0 branch) are not; see the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Build_Prerequisites_(1.7_and_1.8_Branches)" title="Windows_Build_Prerequisites_(1.7_&amp;_1.8_Branches)">historical build prerequisites</a> for details.</p>
 <p>The moztools zip file does not contain the source for the components; if you are interested in building them from scratch, you can obtain the source <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/libraries/win32/historic/src/">here</a>. The <a class="external" href="http://www.go-oo.org/">ooo-build</a> system for building OpenOffice.org builds the tools from scratch using this code and contains some relevant <a class="external" href="http://go-oo.org/ooo-build/patches/src680/">patches</a> for anyone who doesn't want to use the binaries provided.</p>
@@ -92,7 +92,7 @@ bin/make.exe --version
 <h3 id="Compiler_&amp;_Linker">Compiler &amp; Linker</h3>
 <p>For doing development on the CVS trunk (Mozilla 1.9 or higher), the standard compiler is Microsoft Visual C++, version 8. The free Express edition of Microsoft Visual C++ 8 (aka Visual C++ 2005 Express Edition) will work with some <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites" title="Windows_Build_Prerequisites">extra tools and configure options</a>. Visual C++ 7.1 will also work. VC++ 7 is not recommended, and VC6 is not supported and will produce unusable builds.</p>
 <p>The build may occur from within either a Windows command line shell or from a cygwin shell; if you use the Windows shell, you need to set up the compiler environment variables using the vcvars32.bat script that is installed along with Visual Studio (selecting "Visual C++ Command Prompt" from the Start menu entries for VS will execute this script for you in a new shell).</p>
-<p>It is also possible (but not recommended) to compile Mozilla using the MinGW gcc compiler: see <a class="external" href="http://gemal.dk/mozilla/build.html">Compiling Mozilla with MinGW</a>.</p>
+<p>It is also possible (but not recommended) to compile Mozilla using the MinGW gcc compiler: see <a class="external" href="https://gemal.dk/mozilla/build.html">Compiling Mozilla with MinGW</a>.</p>
 
 <h4 id="Table_of_supported_Visual_Studio_compilers">Table of supported Visual Studio compilers</h4>
 <table class="standard-table">
@@ -161,7 +161,7 @@ bin/make.exe --version
 
 <h3 id="Platform_SDK">Platform SDK</h3>
 <p>Skip this step, if you are using Visual Studio .NET 2003 or later, because you already have all the necessary SDKs for building Mozilla. For older compilers, as well as for the free Visual Studio Express Editions, you need to download SDKs from Microsoft to have the GDI+ headers and library.</p>
-<p>You can download the <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5&amp;displaylang=en">Windows Server 2003 SP1 Platform SDK</a>, or the <a class="external" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0baf2b35-c656-4969-ace8-e4c0c0716adb&amp;DisplayLang=en">Windows Server 2003 R2 Platform SDK</a>. You must install the "Windows Core SDK" (Tools, Build Environment, and Redistributable Components) and the "Web Workshop SDK" (Build Environment).</p>
+<p>You can download the <a class="external" href="https://www.microsoft.com/downloads/details.aspx?FamilyId=A55B6B43-E24F-4EA3-A93E-40C0EC4F68E5&amp;displaylang=en">Windows Server 2003 SP1 Platform SDK</a>, or the <a class="external" href="https://www.microsoft.com/downloads/details.aspx?FamilyID=0baf2b35-c656-4969-ace8-e4c0c0716adb&amp;DisplayLang=en">Windows Server 2003 R2 Platform SDK</a>. You must install the "Windows Core SDK" (Tools, Build Environment, and Redistributable Components) and the "Web Workshop SDK" (Build Environment).</p>
 <p>In order for the build environment to pick up this SDK, the SDK must be added to the build environment (see below).</p>
 
 <h3 id="NSIS">NSIS</h3>
@@ -175,7 +175,7 @@ bin/make.exe --version
 <p>The following is a batch script (run with cmd.exe or modify the cygwin.bat file) which should be used to configure environment variables:</p>
 <pre>rem --- Set HOME so that cvs and ssh work correctly
 rem --- cvs uses HOME to locate your .cvspass file, and ssh to locate your .ssh file
-rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="http://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
+rem --- if you are using ssh, your HOME should match the home directory specified in /etc/passwd. See <a class="external" href="https://www.cygwin.com/faq/faq0.html">http://www.cygwin.com/faq/faq0.html</a>.
 set HOME=C:\home
 
 rem --- Set VCVARS to wherever the MSVC vcvars.bat file is found
@@ -218,7 +218,7 @@ rem --- Typically the last thing the script does is launch a cygwin shell
 rem --- watch for your ~/.profile and /etc/profile which may overwrite your carefully setup PATH!
 bash --login -i
 </pre>
-<p>For a better terminal, check out <a class="external" href="http://web.gccaz.edu/~medgar/puttycyg/">PuTTYcyg</a>, a build of the PuTTY SSH client that can serve as a terminal for Cygwin. You can use the same batch file, just install PuTTYcyg somewhere on your path, then replace the last command of the batch file with this one, which starts Cygwin in a PuTTY shell:</p>
+<p>For a better terminal, check out <a class="external" href="https://web.gccaz.edu/~medgar/puttycyg/">PuTTYcyg</a>, a build of the PuTTY SSH client that can serve as a terminal for Cygwin. You can use the same batch file, just install PuTTYcyg somewhere on your path, then replace the last command of the batch file with this one, which starts Cygwin in a PuTTY shell:</p>
 <pre>start putty -cygterm -
 </pre>
 

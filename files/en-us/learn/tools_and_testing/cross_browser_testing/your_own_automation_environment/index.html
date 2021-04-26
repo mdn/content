@@ -37,7 +37,7 @@ tags:
 
 <p><a href="https://www.seleniumhq.org/">Selenium</a> is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.</p>
 
-<p>How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project">Setting Up a Selenium-WebDriver Project</a> for more details of Selenium setups for different languages.</p>
+<p>How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project">Setting Up a Selenium-WebDriver Project</a> for more details of Selenium setups for different languages.</p>
 
 <p>Different browsers require different drivers to allow WebDriver to communicate with and control them. See <a href="https://www.selenium.dev/downloads/">Platforms Supported by Selenium</a> for more information on where to get browser drivers from, etc.</p>
 
@@ -75,7 +75,7 @@ tags:
 <p>To set your <code>PATH</code> variable on Mac OS X/most Linux systems:</p>
 
 <ol>
- <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="http://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
+ <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
  <li>Paste the following into the bottom of your file (updating the path as it actually is on your machine):
   <pre class="brush: bash">#Add WebDriver browser drivers to PATH
 
@@ -190,7 +190,7 @@ function searchTest(driver) {
 
 <h2 id="WebDriver_syntax_crash_course">WebDriver syntax crash course</h2>
 
-<p>Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/">selenium-webdriver JavaScript API reference</a> for a detailed reference, and the Selenium main documentation's <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp">Selenium WebDriver</a> and <a href="http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp">WebDriver: Advanced Usage</a> pages, which contain multiple examples to learn from written in different languages.</p>
+<p>Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/">selenium-webdriver JavaScript API reference</a> for a detailed reference, and the Selenium main documentation's <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp">Selenium WebDriver</a> and <a href="https://www.seleniumhq.org/docs/04_webdriver_advanced.jsp">WebDriver: Advanced Usage</a> pages, which contain multiple examples to learn from written in different languages.</p>
 
 <h3 id="Starting_a_new_test">Starting a new test</h3>
 
@@ -252,7 +252,7 @@ var driver = new webdriver.Builder()
 
 <h3 id="Interacting_with_the_document">Interacting with the document</h3>
 
-<p>Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">select UI elements in many ways</a> in WebDriver, including by ID, class, element name, etc. The actual selection is done by the <code>findElement()</code> method, which accepts as a parameter a selection method. For example, to select an element by ID:</p>
+<p>Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">select UI elements in many ways</a> in WebDriver, including by ID, class, element name, etc. The actual selection is done by the <code>findElement()</code> method, which accepts as a parameter a selection method. For example, to select an element by ID:</p>
 
 <pre class="brush: js"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
 
@@ -264,7 +264,7 @@ var driver = new webdriver.Builder()
 
 <h3 id="Testing_your_element"><span class="p">Testing your element</span></h3>
 
-<p><span class="p">There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">Getting text values</a> on the </span>WebDriver docs.</p>
+<p><span class="p">There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">Getting text values</a> on the </span>WebDriver docs.</p>
 
 <p>If we wanted to get the text inside our button, we could do this:</p>
 
@@ -353,7 +353,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <h2 id="Test_best_practices">Test best practices</h2>
 
-<p>There has been a lot written about best practices for writing tests. You can find some good background information at <a href="http://www.seleniumhq.org/docs/06_test_design_considerations.jsp">Test Design Considerations</a>. In general, you should make sure that your tests are:</p>
+<p>There has been a lot written about best practices for writing tests. You can find some good background information at <a href="https://www.seleniumhq.org/docs/06_test_design_considerations.jsp">Test Design Considerations</a>. In general, you should make sure that your tests are:</p>
 
 <ol>
  <li>Using good locator strategies: When you are {{anch("Interacting with the document")}}, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.</li>
