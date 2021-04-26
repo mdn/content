@@ -13,7 +13,7 @@ The name IIFE is promoted by Ben Alman in <a href="https://web.archive.org/web/2
 </p>
 
 <pre class="brush: js">(function () {
-    statements
+  statements
 })();</pre>
 
 <p>It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:</p>
@@ -29,21 +29,22 @@ The name IIFE is promoted by Ben Alman in <a href="https://web.archive.org/web/2
 <p>Because our application could include many functions and global variables from different source files, it's 
 important to limit the number of global variables. If we have some initiation code that we don't need to use
 again, we could use the IIFE pattern. As we will not reuse the code again, using IIFE in this case is better than 
-using a function declaration or a function expression. 
-</p>
+using a function declaration or a function expression.</p>
+
 <pre class="brush: js">
 (function () {
-// some initiation code 
-let firstVariable;
-let secondVariable; 
+  // some initiation code 
+  let firstVariable;
+  let secondVariable; 
 })();
-// firstVariable and secondVariable will be discarded after the function is executed.  
-</pre>
-<!--***************************************************** -->
+
+// firstVariable and secondVariable will be discarded after the function is executed.</pre>
+
 <h3 id="the_module_pattern">The module pattern</h3>
+
 <p>We would also use IIFE to create private and public variables and methods. For a more sophisticated use of the module
-pattern and other use of IIFE, you could see the book Learning JavaScript Design Patterns by Addy Osmani.
-</p>
+pattern and other use of IIFE, you could see the book Learning JavaScript Design Patterns by Addy Osmani.</p>
+
 <pre class="brush: js">
 const makeWithdraw = balance => (function(copyBalance) {
   let balance = copyBalance; // This variable is private
@@ -52,16 +53,17 @@ const makeWithdraw = balance => (function(copyBalance) {
   };
   doBadThings();
   return {
-          withdraw: function(amount) {
-            if (balance >= amount) {
-              balance -= amount;
-              return balance;
-            } else {
-              return "Insufficient money";
-            }
-              }, 
-        }
-  })(balance);
+    withdraw: function(amount) {
+      if (balance >= amount) {
+        balance -= amount;
+        return balance;
+      } else {
+        return "Insufficient money";
+      }
+    }, 
+  }
+})(balance);
+
 const firstAccount = makeWithdraw(100); // "I will do bad things with your money"
 console.log(firstAccount.balance); // undefined
 console.log(firstAccount.withdraw(20)); // 80
@@ -69,15 +71,15 @@ console.log(firstAccount.withdraw(30)); // 50
 console.log(firstAccount.doBadThings); // undefined, this method is private  
 const secondAccount = makeWithdraw(20);
 secondAccount.withdraw(30); // "Insufficient money"
-secondAccount.withdraw(20);  // 0
-</pre>
-<!--***************************************************** -->
+secondAccount.withdraw(20);  // 0</pre>
+
 <h3 id="for_loop_with_var_before_es6">For loop with var before ES6</h3>
+
 <p>We could see the following use of IIFE in some old code, before the introduction of the statements <strong>let</strong> and <strong>const</strong> 
 in <strong>ES6</strong> and the block scope. With the statement <strong>var</strong>, we have only function scopes and the global scope. 
 Suppose we want to create 2 buttons with the texts Button 0 and Button 1 and we click
-them, we would like them to alert 0 and 1. The following code doesn't work:
-</p>
+them, we would like them to alert 0 and 1. The following code doesn't work:</p>
+
 <pre class="brush: js">
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
@@ -87,11 +89,11 @@ for (var i = 0; i < 2; i++) {
   };
   document.body.appendChild(button);
 }
-console.log(i); // 2
-</pre>
+console.log(i); // 2</pre>
+
 <p>When clicked, both Button 0 and Button 1 alert 2 because <code>i</code> is global, 
-  with the last value 2. To fix this problem before ES6, we could use the IIFE pattern: 
-</p>
+with the last value 2. To fix this problem before ES6, we could use the IIFE pattern:</p>
+
 <pre class="brush: js">
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
@@ -101,12 +103,11 @@ for (var i = 0; i < 2; i++) {
   }(i));
   document.body.appendChild(button);
 }
-console.log(i); // 2
-</pre>
+console.log(i); // 2</pre>
+
 <p>When clicked, Buttons 0 and 1 alert 0 and 1. 
 The variable <code>i</code> is globally defined. 
-Using the statement <strong>let</strong>, we could simply do:
-</p>
+Using the statement <strong>let</strong>, we could simply do:</p>
 
 <pre class="brush: js">
 for (let i = 0; i < 2; i++) {
@@ -117,8 +118,7 @@ for (let i = 0; i < 2; i++) {
   };
   document.body.appendChild(button);
 }
-console.log(i); // Uncaught ReferenceError: i is not defined.
-</pre>
+console.log(i); // Uncaught ReferenceError: i is not defined.</pre>
 
 <p>When clicked, these buttons alert 0 and 1.</p>
 <section id="Quick_links">
