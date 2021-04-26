@@ -169,7 +169,7 @@ for (let numOrPromise of generator()) {
   <p><strong>Note</strong>: be aware of yielding rejected promises from sync generator. In
     such case <code>for await...of</code> throws when consuming rejected promise and
     DOESN'T CALL <code>finally</code> blocks within that generator. This can be
-    undesireable if you need to free some allocated resources with
+    undesirable if you need to free some allocated resources with
     <code>try/finally</code>.</p>
 </div>
 
