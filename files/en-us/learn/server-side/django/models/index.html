@@ -53,14 +53,15 @@ tags:
 
 <p>With that in mind, the UML association diagram below shows the models we'll define in this case (as boxes).</p>
 
-<p><img alt="LocalLibrary Model UML with fixed Author multiplicity inside the Book class" src="local_library_model_uml.png"></p>
+<p><img alt="LocalLibrary Model UML with fixed Author multiplicity inside the Book class" src="local_library_model_uml.svg"></p>
 
 <p>We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the <code>BookInstance:status</code> — we've hardcoded the values (<code>LOAN_STATUS</code>) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.</p>
 
 <p>The diagram also shows the relationships between the models, including their <em>multiplicities</em>. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that Book and a Genre are related. The numbers close to the Genre model show that a book must have one or more Genres (as many as you like), while the numbers on the other end of the line next to the Book model show that a Genre can have zero or many associated books.</p>
 
-<div class="note">
-<p><strong>Note</strong>: The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.</p>
 </div>
 
 <h2 id="Model_primer">Model primer</h2>
@@ -188,10 +189,10 @@ class MyModelName(models.Model):
     return reverse('model-detail-view', args=[str(self.id)])
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: Assuming you will use URLs like <code>/myapplication/mymodelname/2</code> to display individual records for your model (where "2" is the <code>id</code> for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The <code>reverse()</code> function above is able to "reverse" your url mapper (in the above case named <em>'model-detail-view'</em>) in order to create a URL of the right format.</p>
-
-<p>Of course to make this work you still have to write the URL mapping, view, and template!</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>Assuming you will use URLs like <code>/myapplication/mymodelname/2</code> to display individual records for your model (where "2" is the <code>id</code> for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The <code>reverse()</code> function above is able to "reverse" your url mapper (in the above case named <em>'model-detail-view'</em>) in order to create a URL of the right format.</p>
+    <p>Of course to make this work you still have to write the URL mapping, view, and template!</p>
 </div>
 
 <p>You can also define any other methods you like, and call them from your code or templates (provided that they don't take any parameters).</p>
@@ -211,8 +212,9 @@ record = MyModelName(my_field_name="Instance #1")
 record.save()
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: If you haven't declared any field as a <code>primary_key</code>, the new record will be given one automatically, with the field name <code>id</code>. You could query this field after saving the above record, and it would have a value of 1.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>If you haven't declared any field as a <code>primary_key</code>, the new record will be given one automatically, with the field name <code>id</code>. You could query this field after saving the above record, and it would have a value of 1.</p>
 </div>
 
 <p>You can access the fields in this new record using the dot syntax, and change the values. You have to call <code>save()</code> to store modified values to the database.</p>
@@ -229,8 +231,9 @@ record.save()</pre>
 
 <p>You can search for records that match certain criteria using the model's <code>objects</code> attribute (provided by the base class).</p>
 
-<div class="note">
-<p><strong>Note</strong>: Explaining how to search for records using "abstract" model and field names can be a little confusing. In the discussion below we'll refer to a <code>Book</code> model with <code>title</code> and <code>genre</code> fields, where genre is also a model with a single field <code>name</code>.</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>Explaining how to search for records using "abstract" model and field names can be a little confusing. In the discussion below we'll refer to a <code>Book</code> model with <code>title</code> and <code>genre</code> fields, where genre is also a model with a single field <code>name</code>.</p>
 </div>
 
 <p>We can get all records for a model as a <code>QuerySet</code>, using <code>objects.all()</code>. The <code>QuerySet</code> is an iterable object, meaning that it contains a number of objects that we can iterate/loop through.</p>
@@ -252,8 +255,9 @@ number_wild_books = wild_books.count()
 books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong>__</strong>icontains='fiction')
 </pre>
 
-<div class="note">
-<p><strong>Note</strong>: You can use underscores (__) to navigate as many levels of relationships (<code>ForeignKey</code>/<code>ManyToManyField</code>) as you like. For example, a <code>Book</code> that had different types, defined using a further "cover" relationship might have a parameter name: <code>type__cover__name__exact='hard'.</code></p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>You can use underscores (__) to navigate as many levels of relationships (<code>ForeignKey</code>/<code>ManyToManyField</code>) as you like. For example, a <code>Book</code> that had different types, defined using a further "cover" relationship might have a parameter name: <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
 <p>There is a lot more you can do with queries, including backwards searches from related models, chaining filters, returning a smaller set of values etc. For more information see <a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">Making queries</a> (Django Docs).</p>
@@ -376,7 +380,7 @@ class BookInstance(models.Model):
 
 <div class="notecard note">
     <h4>Note</h4>
-    <p> A little Python:</p>
+    <p>A little Python:</p>
     <ul>
         <li>Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
         <li>In older versions of this tutorial, we were using a <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a> syntax, which is also a valid way of formatting strings in Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
