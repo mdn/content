@@ -116,7 +116,7 @@ tags:
 <h4 id="Using_express-validator">Using express-validator</h4>
 
 <div class="note">
-<p><strong>Note:</strong> The <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> guide on  Github provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using <a href="https://express-validator.github.io/docs/schema-validation.html">schema validation</a> and <a href="https://express-validator.github.io/docs/custom-validators-sanitizers.html">creating custom validators</a>). Below we cover just a subset that is useful for the <em>LocalLibrary</em>.</p>
+<p><strong>Note:</strong> The <a href="https://express-validator.github.io/docs/#basic-guide">express-validator</a> guide on  Github provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using <a href="https://express-validator.github.io/docs/schema-validation.html">schema validation</a> and <a href="https://express-validator.github.io/docs/custom-validators-sanitizers.html">creating custom validators</a>). Below we cover just a subset that is useful for the <em>LocalLibrary</em>.</p>
 </div>
 
 <p>To use the validator in our controllers, we specify the particular functions we want to import from the <a href="https://www.npmjs.com/package/express-validator">express-validator</a> module, as shown below:</p>
@@ -129,7 +129,7 @@ tags:
 <p>The functions are defined as below:</p>
 
 <ul>
- <li><code><a href="https://github.com/ctavan/express-validator#bodyfields-message">body([fields, message])</a></code>: Specifies a set of fields in the request body (a <code>POST</code> parameter) to validate and/or sanitise along with an optional error message that can be displayed if it fails the tests. The validation and sanitise criteria are daisy-chained to the <code>body()</code> method.<br>
+ <li><code><a href="https://express-validator.github.io/docs/check-api.html#bodyfields-message">body([fields, message])</a></code>: Specifies a set of fields in the request body (a <code>POST</code> parameter) to validate and/or sanitise along with an optional error message that can be displayed if it fails the tests. The validation and sanitise criteria are daisy-chained to the <code>body()</code> method.<br>
   <br>
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method <code>trim()</code> to remove whitespace from the start and end of the string, and then <code>isLength()</code> to check the resulting string isn't empty. Finally, we call <code>escape()</code> to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
@@ -144,7 +144,7 @@ tags:
     .isAlpha().withMessage('Name must be alphabet letters.'),
 </pre>
  </li>
- <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: Runs the validation, making errors available in the form of a <code>validation</code> result object. This is invoked in a separate callback, as shown below:
+ <li><code><a href="https://express-validator.github.io/docs/validation-result-api.html#validationresultreq">validationResult(req)</a></code>: Runs the validation, making errors available in the form of a <code>validation</code> result object. This is invoked in a separate callback, as shown below:
   <pre class="brush: js">(req, res, next) =&gt; {
     // Extract the validation errors from a request.
     const errors = validationResult(req);
@@ -157,7 +157,7 @@ tags:
         // Data from form is valid.
     }
 }</pre>
-  We use the validation result's <code>isEmpty()</code> method to check if there were errors, and its <code>array()</code> method to get the set of error messages. See the <a href="https://github.com/ctavan/express-validator#validation-result-api">Validation Result API</a> for more information.</li>
+  We use the validation result's <code>isEmpty()</code> method to check if there were errors, and its <code>array()</code> method to get the set of error messages. See the <a href="https://express-validator.github.io/docs/validation-result-api.html">Validation Result API</a> for more information.</li>
 </ul>
 
 <p>The validation and sanitization chains are middleware that should be passed to the Express route handler (we do this indirectly, via the controller). When the middleware runs, each validator/sanitizer is run in the order specified.</p>

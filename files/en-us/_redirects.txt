@@ -433,7 +433,7 @@
 /en-US/docs/CSS/:-moz-submit-invalid	/en-US/docs/Web/CSS/:-moz-submit-invalid
 /en-US/docs/CSS/:-moz-suppressed	/en-US/docs/Web/CSS/:-moz-suppressed
 /en-US/docs/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
-/en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:-moz-ui-valid
+/en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:user-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
 /en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
@@ -1331,9 +1331,6 @@
 /en-US/docs/DOM/DeviceOrientationEvent.beta	/en-US/docs/Web/API/DeviceOrientationEvent/beta
 /en-US/docs/DOM/DeviceOrientationEvent.gamma	/en-US/docs/Web/API/DeviceOrientationEvent/gamma
 /en-US/docs/DOM/DeviceProximityEvent	/en-US/docs/Web/API/DeviceProximityEvent
-/en-US/docs/DOM/DeviceProximityEvent.max	/en-US/docs/Web/API/DeviceProximityEvent/max
-/en-US/docs/DOM/DeviceProximityEvent.min	/en-US/docs/Web/API/DeviceProximityEvent/min
-/en-US/docs/DOM/DeviceProximityEvent.value	/en-US/docs/Web/API/DeviceProximityEvent/value
 /en-US/docs/DOM/DeviceRotationRate	/en-US/docs/Web/API/DeviceMotionEventRotationRate
 /en-US/docs/DOM/DeviceRotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /en-US/docs/DOM/DeviceRotationRate.beta	/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta
@@ -7477,9 +7474,7 @@
 /en-US/docs/Web/API/DeviceOrientationEvent.alpha	/en-US/docs/Web/API/DeviceOrientationEvent/alpha
 /en-US/docs/Web/API/DeviceOrientationEvent.beta	/en-US/docs/Web/API/DeviceOrientationEvent/beta
 /en-US/docs/Web/API/DeviceOrientationEvent.gamma	/en-US/docs/Web/API/DeviceOrientationEvent/gamma
-/en-US/docs/Web/API/DeviceProximityEvent.max	/en-US/docs/Web/API/DeviceProximityEvent/max
-/en-US/docs/Web/API/DeviceProximityEvent.min	/en-US/docs/Web/API/DeviceProximityEvent/min
-/en-US/docs/Web/API/DeviceProximityEvent.value	/en-US/docs/Web/API/DeviceProximityEvent/value
+/en-US/docs/Web/API/DeviceProximityEvent/max	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/DeviceRotationRate	/en-US/docs/Web/API/DeviceMotionEventRotationRate
 /en-US/docs/Web/API/DeviceRotationRate.alpha	/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /en-US/docs/Web/API/DeviceRotationRate.beta	/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta

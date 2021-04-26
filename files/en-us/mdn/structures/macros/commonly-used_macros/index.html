@@ -147,24 +147,20 @@ tags:
 
 <h3 id="Inline_indicators_that_support_specifying_the_technology">Inline indicators that support specifying the technology</h3>
 
-<p>In these macros the parameter (when specified) should be one of the strings "html", "js", "css", or "gecko", followed by the version number.</p>
-
 <h4 id="Deprecated">Deprecated</h4>
 
-<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_inline.ejs">deprecated_inline</a></code> inserts an in-line deprecated mark to discourage the use of an API that is officially deprecated. <strong>Note:</strong> "Deprecated" means that the item should no longer be used, but still functions. If you mean that it no longer works at all, use the term "obsolete."</p>
-
-<p>Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_inline.ejs">deprecated_inline</a></code> inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).</p>
 
 <h5 id="Syntax_3">Syntax</h5>
 
-<p><code>\{{Deprecated_Inline}}</code> or<code> \{{Deprecated_Inline("gecko5")}}</code></p>
+<p><code>\{{Deprecated_Inline}}</code></p>
 
 <h5 id="Examples_3">Examples</h5>
 
 <ul>
  <li>Icon: {{Deprecated_Inline}}</li>
- <li>Badge:{{Deprecated_Inline("gecko5")}}</li>
 </ul>
+
 
 <h3 id="Page_or_section_header_indicators">Page or section header indicators</h3>
 
@@ -174,7 +170,7 @@ tags:
  <li>{{TemplateLink("non-standard_header")}}: <code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SeeCompatTable.ejs">SeeCompatTable</a></code> should be used on pages that document <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code>: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code> with parameter: <code>\{{Deprecated_Header("gecko5")}}</code> {{Deprecated_Header("gecko5")}} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</li>
+
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/secureContext_header.ejs">secureContext_header</a></code>: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
 </ul>
 

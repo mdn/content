@@ -163,6 +163,46 @@ Promise.race([p5, p6])
 });
 </pre>
 
+<h3 id="Comparison_with_Promise.any">Comparison with Promise.any</h3>
+
+<p><code>Promise.race</code> takes the first settled {{jsxref("Promise")}}.</p>
+
+<pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log('succeeded with value:', value);
+}).catch((reason) => {
+  // Only promise1 is fulfilled, but promise2 is faster
+  console.log('failed with reason:', reason);
+});
+// expected output: "failed with reason: two"
+</pre>
+
+<p>{{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.</p>
+
+<pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'two');
+});
+
+Promise.any([promise1, promise2]).then((value) => {
+  // Only promise1 is fulfilled, even though promise2 settled sooner
+  console.log('succeeded with value:', value);
+}).catch((reason) => {
+  console.log('failed with reason:', reason);
+});
+// expected output: "succeeded with value: one"
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">

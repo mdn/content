@@ -98,8 +98,8 @@ tags:
 <p>For this example, we'll use two web fonts, one for the headings, and one for the body text. To start with, we need to find the font files that contain the fonts. Fonts are created by font foundries and are stored in different file formats. There are generally three types of sites where you can obtain fonts:</p>
 
 <ul>
- <li>A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include <a href="https://www.fontsquirrel.com/">Font Squirrel</a>, <a href="http://www.dafont.com/">dafont</a>, and <a href="https://everythingfonts.com/">Everything Fonts</a>.</li>
- <li>A paid font distributor: This is a site that makes fonts available for a charge, such as <a href="http://www.fonts.com/">fonts.com</a> or <a href="http://www.myfonts.com/">myfonts.com</a>. You can also buy fonts directly from font foundries, for example <a href="https://www.linotype.com/">Linotype</a>, <a href="http://www.monotype.com">Monotype</a>, or <a href="http://www.exljbris.com/">Exljbris</a>.</li>
+ <li>A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include <a href="https://www.fontsquirrel.com/">Font Squirrel</a>, <a href="https://www.dafont.com/">dafont</a>, and <a href="https://everythingfonts.com/">Everything Fonts</a>.</li>
+ <li>A paid font distributor: This is a site that makes fonts available for a charge, such as <a href="https://www.fonts.com/">fonts.com</a> or <a href="https://www.myfonts.com/">myfonts.com</a>. You can also buy fonts directly from font foundries, for example <a href="https://www.linotype.com/">Linotype</a>, <a href="https://www.monotype.com">Monotype</a>, or <a href="https://www.exljbris.com/">Exljbris</a>.</li>
  <li>An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the {{anch("Using an online font service")}} section for more details.</li>
 </ul>
 
@@ -131,7 +131,7 @@ tags:
 <ol>
   <li><a href="https://github.com/bramstein/sfnt2woff-zopfli">sfnt2woff-zopfli</a> for converting ttf to woff</li>
   <li><a href="https://fontforge.org/">fontforge</a> for converting from ttf to svg</li>
-  <li><a href="http://people.apache.org/~clay/batik/ttf2svg.html">batik ttf2svf</a>for converting from ttf to svg</li>
+  <li><a href="https://people.apache.org/~clay/batik/ttf2svg.html">batik ttf2svf</a>for converting from ttf to svg</li>
   <li><a href="https://github.com/google/woff2">woff2</a>for converting from ttf to woff2</li>
 </ol>
 
@@ -173,7 +173,7 @@ tags:
 
 <h2 id="Using_an_online_font_service">Using an online font service</h2>
 
-<p>Online font services generally store and serve fonts for you, so you don't have to worry about writing the <code>@font-face</code> code, and generally just need to insert a simple line or two of code into your site to make everything work. Examples include <a href="https://fonts.adobe.com/">Adobe Fonts</a> and <a href="http://www.typography.com/cloud/welcome/">Cloud.typography</a>. Most of these services are subscription-based, with the notable exception of <a href="https://www.google.com/fonts">Google Fonts</a>, a useful free service, especially for rapid testing work and writing demos.</p>
+<p>Online font services generally store and serve fonts for you, so you don't have to worry about writing the <code>@font-face</code> code, and generally just need to insert a simple line or two of code into your site to make everything work. Examples include <a href="https://fonts.adobe.com/">Adobe Fonts</a> and <a href="https://www.typography.com/cloud/welcome/">Cloud.typography</a>. Most of these services are subscription-based, with the notable exception of <a href="https://www.google.com/fonts">Google Fonts</a>, a useful free service, especially for rapid testing work and writing demos.</p>
 
 <p>Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google fonts, so you can get the idea. Again, use copies of <code>web-font-start.html</code> and <code>web-font-start.css</code> as your starting point.</p>
 
@@ -207,7 +207,7 @@ tags:
 <ul>
  <li><code>font-family</code>: This line specifies the name you want to refer to the font as. You can put this as anything you like, as long as you use it consistently throughout your CSS.</li>
  <li><code>src</code>: These lines specify the paths to the font files to be imported into your CSS (the <code>url</code> part), and the format of each font file (the <code>format</code> part). The latter part in each case is optional, but it is useful to declare it because it allows browsers to find a font they can use faster. Multiple declarations can be listed, separated by commas. As the browser will search through them and use the first one it can find that it understands, it is best to put newer, better formats like WOFF2 earlier on.</li>
- <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
+ <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
 </ul>
 
 <div class="note">

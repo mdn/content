@@ -91,7 +91,7 @@ tags:
 
 <ol>
  <li>Browser support is generally quite good — at the time of writing, <a href="https://caniuse.com/#feat=wai-aria">caniuse.com</a> stated that global browser support for WAI-ARIA was around 88%.</li>
- <li>Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA Screen reader compatibility</a> article.</li>
+ <li>Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's <a href="https://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA Screen reader compatibility</a> article.</li>
 </ol>
 
 <p>In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.</p>
@@ -233,7 +233,7 @@ tags:
 <p>This will cause a screenreader to read out the content as it is updated.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Most browsers will throw a security exception if you try to do an <code>XMLHttpRequest</code> call from a <code>file://</code> URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">using GitHub</a>, or a local web server like <a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's SimpleHTTPServer</a>.</p>
+<p><strong>Note</strong>: Most browsers will throw a security exception if you try to do an <code>XMLHttpRequest</code> call from a <code>file://</code> URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). To get it to run, you will need to upload it to a web server, for example <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">using GitHub</a>, or a local web server like <a href="https://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python's SimpleHTTPServer</a>.</p>
 </div>
 
 <p>There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-atomic">aria-atomic</a></code> property to the section. Update your <code>&lt;section&gt;</code> tag again, like so:</p>
