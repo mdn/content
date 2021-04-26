@@ -140,6 +140,17 @@ h1 {
 
 <p>{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}</p>
 
+<p>One way to fix the bad inheritance behaviour would be to use a css variable:</p>
+
+<pre class="brush: css">* {
+  line-height:var(--line-height);
+}
+html {
+  --line-height: calc(0.8em + 0.5rem);
+}
+</pre>
+
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
