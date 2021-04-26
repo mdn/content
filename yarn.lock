@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.0.tgz#00259cedef91cd4ea253d861fc68ad49b3d113ec"
   integrity sha512-VtD1pp8/DaOzvONz/I9RHFKB6/SkFsckDy3+0Zm3zXjqnkOEvvoJlaCxWskoyvEoFapkktx0ghA7Avi49EnEUA==
 
-"@mdn/yari@0.4.400":
-  version "0.4.400"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.400.tgz#966842eb434ac0947a746f1d683f767e7c749ff1"
-  integrity sha512-IV4egyVstW+sNnL5HanwtvmudYK6m94NiKvaWpzmzUaMBXc6m3A+G7uP+Iwm6HmDqCl9T9QaktHUM7WG9DmL5Q==
+"@mdn/yari@0.4.403":
+  version "0.4.403"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.403.tgz#b826f7132d0fc1d0965af75ba6b42b7c5fbb10e0"
+  integrity sha512-cF/tOa+Ip42eVK7BrP1Qx6bAQ4k/Qsv2dJ2DHRGN70mA8xrwdPvP9D17QNO7kVPNp5V0PUn85D1eoXIhp/zZvA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -66,9 +66,9 @@
     glob "^7.1.6"
     got "11.8.2"
     hast-util-is-element "^1.1.0"
-    hast-util-to-html "^7.1.2"
+    hast-util-to-html "^7.1.3"
     hast-util-to-text "^2.0.1"
-    http-proxy-middleware "1.2.0"
+    http-proxy-middleware "1.3.0"
     image-size "1.0.0"
     image-type "4.1.0"
     imagemin "7.0.1"
@@ -2048,10 +2048,10 @@ hast-util-raw@^6.1.0:
     xtend "^4.0.0"
     zwitch "^1.0.0"
 
-hast-util-to-html@^7.1.1, hast-util-to-html@^7.1.2:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/hast-util-to-html/-/hast-util-to-html-7.1.2.tgz#db677f0ee483658cea0eecc9dec30aba42b67111"
-  integrity sha512-pu73bvORzdF6XZgwl9eID/0RjBb/jtRfoGRRSykpR1+o9rCdiAHpgkSukZsQBRlIqMg6ylAcd7F0F7myJUb09Q==
+hast-util-to-html@^7.1.1, hast-util-to-html@^7.1.3:
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/hast-util-to-html/-/hast-util-to-html-7.1.3.tgz#9f339ca9bea71246e565fc79ff7dbfe98bb50f5e"
+  integrity sha512-yk2+1p3EJTEE9ZEUkgHsUSVhIpCsL/bvT8E5GzmWc+N1Po5gBw+0F8bo7dpxXR0nu0bQVxVZGX2lBGF21CmeDw==
   dependencies:
     ccount "^1.0.0"
     comma-separated-tokens "^1.0.0"
@@ -2180,10 +2180,10 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.2.0.tgz#87776ea3d4d8dda3dc2594a076787bbc6fe4d995"
-  integrity sha512-vNw+AxT0+6VTM1rCJw1bpiIaUQ1Ww/vTyIEOUzdW9kNX4yuhhqV3jLSKDJo/Y/lqEIshaKCDujtvEqWiD9Dn6Q==
+http-proxy-middleware@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.3.0.tgz#eda5e0b7d1f27ac82bd11eb5099d8c309d30cf30"
+  integrity sha512-nHn8lcFNmxCalzHGXMn0ojKunXC9twBvJ+y7QNhvK/ep7ZDOXvO7Gph01rSwsMOrG4m6N72gAAWXMYhPZvK6OA==
   dependencies:
     "@types/http-proxy" "^1.17.5"
     http-proxy "^1.18.1"
