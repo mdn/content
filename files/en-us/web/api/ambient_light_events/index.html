@@ -4,21 +4,26 @@ slug: Web/API/Ambient_Light_Events
 tags:
   - Ambient Light
 ---
-<div>{{DefaultAPISidebar("Ambient Light Events")}}{{SeeCompatTable}}</div>
+<div>{{DefaultAPISidebar("Ambient Light Events")}}{{Deprecated_Header}}</div>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>Ambient Light Events not supported by any current major browser, and should not be used.</p>
+</div>
 
 <p>The ambient light events are a handy way to make a web page or an application aware of any change in the light intensity. It allows them to react to such a change, for example by changing the color contrast of the User Interface (UI) or by changing the exposure necessary to take a picture.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (it is not exposed in the <a href="/en-US/docs/Web/API/Web_Workers_API#worker_global_contexts_and_functions">worker global context</a>).</p>
+  <h4>Note</h4>
+  <p>This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (it is not exposed in the <a href="/en-US/docs/Web/API/Web_Workers_API#worker_global_contexts_and_functions">worker global context</a>).</p>
 </div>
 
 <h2 id="Light_Events">Light Events</h2>
 
 <p>When the light sensor of a device detects a change in the light level, it notifies the browser of that change. When the browser gets such a notification, it fires a {{domxref("DeviceLightEvent")}} event that provides information about the exact light intensity (in lux units).</p>
 
-<p>This event can be captured at the <code>window</code> object level by using the {{domxref("EventTarget.addEventListener","addEventListener")}} method (using the {{event("devicelight")}} event name) or by attaching an event handler to the {{domxref("window.ondevicelight")}} property.</p>
+<p>This event can be captured at the <code>window</code> object level by using the {{domxref("EventTarget.addEventListener","addEventListener")}} method (using the <code>devicelight</code> event name) or by attaching an event handler to the <code>window.ondevicelight</code> property.</p>
 
-<p>Once captured, the event object gives access to the light intensity expressed in {{interwiki("wikipedia", "lux")}} through the {{domxref("DeviceLightEvent.value")}} property.</p>
+<p>Once captured, the event object gives access to the light intensity expressed in {{interwiki("wikipedia", "lux")}} through the <code>DeviceLightEvent.value</code>  property.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -65,5 +70,4 @@ tags:
 
 <ul>
  <li>{{domxref("DeviceLightEvent")}}</li>
- <li>{{event("devicelight")}}</li>
 </ul>
