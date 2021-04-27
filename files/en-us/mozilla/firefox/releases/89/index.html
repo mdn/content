@@ -50,6 +50,17 @@ tags:
 
 <h4 id="removals_media">Removals</h4>
 
+<ul>
+  <li>The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
+     <ul>
+       <li>{{domxref("DeviceProximityEvent")}} and its event handler <code>window.ondeviceproximity</code> ({{bug(1699707)}}).</li>
+       <li>{{domxref("UserProximityEvent")}} and its event handler <code>window.onuserproximity</code>) ({{bug(1699707)}})</li>
+       <li>{{domxref("DeviceLightEvent")}} and its event handler <code>window.ondevicelight</code> ({{bug(1701824)}}).</li>
+     </ul>
+  </li>
+ </ul>
+
+
 <h3 id="WebAssembly">WebAssembly</h3>
 
 <h4 id="removals_wasm">Removals</h4>
