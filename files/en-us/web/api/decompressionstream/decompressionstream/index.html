@@ -1,25 +1,25 @@
 ---
-title: CompressionStream.CompressionStream()
-slug: Web/API/CompressionStream/CompressionStream
+title: DecompressionStream.DecompressionStream()
+slug: Web/API/DecompressionStream/DecompressionStream
 tags:
   - API
   - Constructor
   - Reference
-  - CompressionStream
+  - DecompressionStream
 ---
 <div>{{DefaultAPISidebar("Compression Streams API")}}</div>
 
-<p class="summary">The <strong><code>CompressionStream()</code></strong> constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.</p>
+<p class="summary">The <strong><code>DecompressionStream()</code></strong> constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let CompressionStream = new CompressionStream(format);</pre>
+<pre class="syntaxbox">let DecompressionStream = new DecompressionStream(format);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>format</code></dt>
-  <dd>One of the following allowed compression formats:
+  <dd>One of the following compression formats:
     <ul>
       <li><code>"gzip"</code></li>
       <li><code>"deflate"</code></li>
@@ -36,9 +36,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example a stream is compressed using gzip compression.</p>
+<p>In this example a blob is decompressed using gzip compression.</p>
 
-<pre class="brush: js">const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));</pre>
+<pre class="brush: js">const ds = new DecompressionStream('gzip');
+const decompressedStream = blob.stream().pipeThrough(ds);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -50,7 +51,7 @@ tags:
     <th scope="col">Comment</th>
    </tr>
    <tr>
-    <td>{{SpecName('Compression Streams','#dom-compressionstream-compressionstream','CompressionStream()')}}</td>
+    <td>{{SpecName('Compression Streams','#dom-decompressionstream-decompressionstream','DecompressionStream()')}}</td>
     <td>{{Spec2('Compression Streams')}}</td>
     <td>Initial definition.</td>
    </tr>
@@ -61,4 +62,4 @@ tags:
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.CompressionStream.CompressionStream")}}</p>
+<p>{{Compat("api.DecompressionStream.DecompressionStream")}}</p>

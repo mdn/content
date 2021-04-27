@@ -1,29 +1,29 @@
 ---
-title: CompressionStream.writable
-slug: Web/API/CompressionStream/writable
+title: DecompressionStream.writable
+slug: Web/API/DecompressionStream/writable
 tags:
   - API
   - Property
   - Reference
   - writable
-  - CompressionStream
+  - DecompressionStream
 ---
 <div>{{DefaultAPISidebar("Compression Streams API")}}</div>
 
-<p class="summary">The <strong><code>writable</code></strong> read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("WritableStream")}}.</p>
+<p class="summary">The <strong><code>writable</code></strong> read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let writableStream = CompressionStream.writable;</pre>
+<pre class="syntaxbox">let writableStream = DecompressionStream.writable;</pre>
 
 <h3>Value</h3>
 <p>A {{domxref("WritableStream")}}.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example returns a {{domxref("WritableStream")}} from a <code>CompressionStream</code>.</p>
+<p>The following example returns a {{domxref("WritableStream")}} from a <code>DecompressionStream</code>.</p>
 
-<pre class="brush:js">let stream = new CompressionStream('gzip');
+<pre class="brush:js">let stream = new DecompressionStream('gzip');
 console.log(stream.writeable); //a WritableStream</pre>
 
 <table class="standard-table">
@@ -45,4 +45,4 @@ console.log(stream.writeable); //a WritableStream</pre>
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.CompressionStream.writable")}}</p>
+<p>{{Compat("api.DecompressionStream.writable")}}</p>
