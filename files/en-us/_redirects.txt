@@ -5946,6 +5946,7 @@
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS_2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build/Windows_Firefox_build	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build
 /en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
+/en-US/docs/Mozilla/Firefox/Privacy/State_Partitioning	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/firefox/privacy/state_partitioning
 /en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility_for_Firefox_36	/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
