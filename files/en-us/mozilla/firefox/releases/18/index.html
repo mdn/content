@@ -80,8 +80,7 @@ tags:
  <dt>{{interface("nsIEditor")}}</dt>
  <dd><code>addEditorObserver()</code> has been removed, use <code>setEditorObserver()</code> instead, <code>removeEditorObserver()</code> no longer takes a {{interface("nsIEditorObserver")}} parameter ({{bug("785091")}})</dd>
  <dt>{{interface("nsIHttpProtocolHandler")}}</dt>
- <dd><code>http-on-modify-request</code> observers are no longer guaranteed to be called synchronously during<br>
- <code>nsIChannel.asyncOpen(). </code>For observers that need to be called during <code>asyncOpen</code>(), the new <code>http-on-opening-request</code> observer topic has been added. <code>See</code> ({{bug("800799")}})</dd>
+ <dd><code>http-on-modify-request</code> observers are no longer guaranteed to be called synchronously during <code>nsIChannel.asyncOpen()</code>.<br> For observers that need to be called during <code>asyncOpen</code>(), the new <code>http-on-opening-request</code> observer topic has been added. <code>See</code> ({{bug("800799")}})</dd>
  <dt>{{interface("nsIProtocolProxyService")}}</dt>
  <dd>The <code>resolve</code> method has been removed. Now, only the <code>asyncResolve</code> method can be used. See ({{bug("769764")}})</dd>
 </dl>

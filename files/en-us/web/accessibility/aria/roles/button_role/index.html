@@ -113,7 +113,7 @@ tags:
     &lt;ul id="nameList"&gt;&lt;/ul&gt;
     &lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
     &lt;input type="text" id="newName"&gt;
-    &lt;span role="button" tabindex="0" onclick="handleCommand()" onKeyDown="handleCommand()"&gt;Add Name&lt;/span&gt;</pre>
+    &lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -138,6 +138,11 @@ ul {
 <pre class="brush: js">function handleCommand(event) {
     // Handles both mouse clicks and keyboard
     // activate with Enter or Space
+    
+    // Keypresses other then Enter and Space should not trigger a command
+    if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
+        return;
+    }
 
     // Get the new name value from the input element
     let newNameInput = document.getElementById('newName');
@@ -278,3 +283,10 @@ function toggleButton(element) {
  <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">Official WAI-ARIA example code</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role">ARIA menubutton role</a></li>
 </ul>
+
+
+<section id="Quick_links">
+  <ol>
+   <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

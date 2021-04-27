@@ -68,7 +68,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p>Turning off automatic indexing prevents the CPU intensive indexer from running at various stages during the steps below before we're ready.</p>
 
-<p>Select "General &gt; Content Types", expand "Text &gt; C Source File &gt; C++ Source File", click "Add" and add "*.mm". Eclipse CDT doesn't currently understand Objective-C files (although there is <a class="external" href="http://code.google.com/p/objectiveclipse/">a project that promises to add Objective-C support</a>), so for now, this is the best we can do to give Eclipse a chance of expanding its understanding of the source into the Objective-C files.</p>
+<p>Select "General &gt; Content Types", expand "Text &gt; C Source File &gt; C++ Source File", click "Add" and add "*.mm". Eclipse CDT doesn't currently understand Objective-C files (although there is <a class="external" href="https://code.google.com/p/objectiveclipse/">a project that promises to add Objective-C support</a>), so for now, this is the best we can do to give Eclipse a chance of expanding its understanding of the source into the Objective-C files.</p>
 
 <p>Select "General &gt; Editors &gt; Text Editors". If you want line numbers, tick "Show line numbers". If you want a column marker to mark the 80th column to help with formatting code to Mozilla's 80 character line limit, tick "Show print margin" and set the value to 80.</p>
 
@@ -153,7 +153,7 @@ slug: Mozilla/Developer_guide/Eclipse/Eclipse_CDT_Manual_Setup
 
 <p><a href="/en-US/docs/Using_CXX_in_Mozilla_code">As of Mozilla 25</a>, Mozilla is built in C++11 mode. When GCC is invoked in C++11 mode, it defines pre-processor symbols that enable conditional compilation of C++11 code in its standard library. To correctly parse this code, Eclipse CDT needs to know about these symbols. Unfortunately, the build option discovery process outlined above does not pick up this information, so CDT needs to be told separately about C++11 mode. To do this, go to "Preferences -&gt; C/C++ -&gt; Build -&gt; Settings -&gt; [Discovery] tab -&gt; CDT GCC Built-in Compiler Settings" and add the flag "-std=c++11" at the end of the field labeled "Command to get compiler specs".</p>
 
-<div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
+<div class="note">In CDT 8.3 (unreleased as of August 2013), there will be a more user-friendly way to specify this (see <a href="https://wiki.eclipse.org/CDT/User/NewIn83#Toolchains">http://wiki.eclipse.org/CDT/User/NewIn83#Toolchains</a>).</div>
 
 <h3 id="Building_the_index">Building the index</h3>
 

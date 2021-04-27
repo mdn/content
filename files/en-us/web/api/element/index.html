@@ -27,6 +27,10 @@ tags:
  <dd>Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
  <dt>{{DOMxRef("Element.attributes")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("NamedNodeMap")}} object containing the assigned attributes of the corresponding HTML element.</dd>
+ <dt>{{domxref("Element.childElementCount")}} {{readonlyInline}}</dt>
+ <dd>Returns the number of child elements of this element.</dd>
+ <dt>{{domxref("Element.children")}} {{readonlyInline}}</dt>
+ <dd>Returns the child elements of this element.</dd>
  <dt>{{DOMxRef("Element.classList")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMTokenList")}} containing the list of class attributes.</dd>
  <dt>{{DOMxRef("Element.className")}}</dt>
@@ -39,14 +43,14 @@ tags:
  <dd>Returns a {{jsxref("Number")}} representing the width of the top border of the element.</dd>
  <dt>{{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the inner width of the element.</dd>
- <dt>{{DOMxRef("Element.computedName")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.</dd>
- <dt>{{DOMxRef("Element.computedRole")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.</dd>
+ <dt>{{domxref("Element.firstElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the first child element of this element.</dd>
  <dt>{{DOMxRef("Element.id")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the id of the element.</dd>
  <dt>{{DOMxRef("Element.innerHTML")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the markup of the element's content.</dd>
+ <dt>{{domxref("Element.lastElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the last child element of this element.</dd>
  <dt>{{DOMxRef("Element.localName")}} {{readOnlyInline}}</dt>
  <dd>A {{DOMxRef("DOMString")}} representing the local part of the qualified name of the element.</dd>
  <dt>{{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}</dt>
@@ -87,17 +91,7 @@ tags:
  <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
  <dt>{{DOMxRef("Element.tagName")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("String")}} with the name of the tag for the given element.</dd>
- <dt>{{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("UndoManager")}} associated with the element.</dd>
- <dt>{{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.</dd>
 </dl>
-
-<div class="note">
-<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the {{DOMxRef("Node")}} interface. In DOM4 they were moved to <code>Element</code>.</p>
-
-<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
-</div>
 
 <h3 id="Properties_included_from_Aria">Properties included from ARIA</h3>
 
@@ -206,6 +200,8 @@ tags:
  <dd>Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.</dd>
  <dt>{{DOMxRef("Element.animate()")}} {{Experimental_Inline}}</dt>
  <dd>A shortcut method to create and run an animation on an element. Returns the created Animation object instance.</dd>
+ <dt>{{DOMxRef("Element.append()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the element.</dd>
  <dt>{{DOMxRef("Element.closest()")}}</dt>
  <dd>Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.</dd>
  <dt>{{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
@@ -248,8 +244,8 @@ tags:
  <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
  <dt>{{DOMxRef("Element.matches()")}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
- <dt>{{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.</dd>
+ <dt>{{DOMxRef("Element.prepend()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the element.</dd>
  <dt>{{DOMxRef("Element.querySelector()")}}</dt>
  <dd>Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.querySelectorAll()")}}</dt>
@@ -264,6 +260,8 @@ tags:
  <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("EventTarget.removeEventListener()")}}</dt>
  <dd>Removes an event listener from the element.</dd>
+ <dt>{{DOMxRef("Element.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.</dd>
  <dt>{{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}</dt>
  <dd>Asynchronously asks the browser to make the element full-screen.</dd>
  <dt>{{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}</dt>
@@ -280,7 +278,7 @@ tags:
  <dd>Sets the value of a named attribute of the current node.</dd>
  <dt>{{DOMxRef("Element.setAttributeNS()")}}</dt>
  <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}</dt>
+ <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}</dt>
  <dd>Sets up mouse event capture, redirecting all mouse events to this element.</dd>
  <dt>{{DOMxRef("Element.setPointerCapture()")}}</dt>
  <dd>Designates a specific element as the capture target of future <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a>.</dd>
@@ -470,19 +468,9 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName("CSS4 Pseudo-Elements", '#window-interface', 'Element')}}</td>
-   <td>{{Spec2("CSS4 Pseudo-Elements")}}</td>
-   <td>Added the <code>pseudo()</code> method.</td>
-  </tr>
-  <tr>
    <td>{{SpecName("Web Animations", '', '')}}</td>
    <td>{{Spec2("Web Animations")}}</td>
    <td>Added the <code>getAnimations()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Undo Manager', '', 'Element')}}</td>
-   <td>{{Spec2('Undo Manager')}}</td>
-   <td>Added the <code>undoScope</code> and <code>undoManager</code> properties.</td>
   </tr>
   <tr>
    <td>{{SpecName('Pointer Events 2', '#extensions-to-the-element-interface', 'Element')}}</td>

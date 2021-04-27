@@ -14,16 +14,11 @@ tags:
 <div>{{JSRef}}</div>
 
 <p>The <code><strong>reduce()</strong></code> method executes a <strong>reducer</strong>
-  function (that you provide) on each element of the array, resulting in single output
+  function (that you provide) on each element of the array, resulting in a single output
   value.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a Pull Request.</div>
 
 <p>The <strong>reducer</strong> function takes four arguments:</p>
 
@@ -40,8 +35,23 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.reduce(<var>callback</var>( <var>accumulator</var>, <var>currentValue, </var>[, <var>index</var>[, <var>array</var>]] )[, <var>initialValue</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+reduce((accumulator, currentValue) => { ... } )
+reduce((accumulator, currentValue, index) => { ... } )
+reduce((accumulator, currentValue, index, array) => { ... } )
+reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
+
+// Reducer function
+reduce(reducerFn)
+reduce(reducerFn, initialValue)
+
+// Inline reducer function
+reduce(function reducerFn(accumulator, currentValue) { ... })
+reduce(function reducerFn(accumulator, currentValue, index) { ... })
+reduce(function reducerFn(accumulator, currentValue, index, array){ ... })
+reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

@@ -2,12 +2,12 @@
 title: Request()
 slug: Web/API/Request/Request
 tags:
-- API
-- Constructor
-- Experimental
-- Fetch
-- Reference
-- request
+  - API
+  - Constructor
+  - Experimental
+  - Fetch
+  - Reference
+  - request
 ---
 <div>{{APIRef("Fetch API")}}</div>
 
@@ -100,7 +100,7 @@ tags:
     Request example</a> (see <a
     href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) we
   create a new <code>Request</code> object using the constructor, then fetch it using a
-  {{domxref("GlobalFetch.fetch")}} call. Since we are fetching an image, we run
+  {{domxref("WindowOrWorkerGlobalScope.fetch")}} call. Since we are fetching an image, we run
   {{domxref("Body.blob")}} on the response to give it the proper MIME type so it will be
   handled properly, then create an Object URL of it and display it in an
   {{htmlelement("img")}} element.</p>
@@ -169,7 +169,7 @@ var myRequest = new Request('flowers.jpg', myInit);
 
 <div class="note">
   <p><strong>Note</strong>: This last usage is probably only useful in <a
-      href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>
+      href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -198,8 +198,8 @@ var myRequest = new Request('flowers.jpg', myInit);
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

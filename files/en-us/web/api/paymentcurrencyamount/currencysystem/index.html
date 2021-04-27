@@ -15,7 +15,15 @@ tags:
 - Reference
 - payment
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p> {{APIRef("Payment Request API")}} {{Deprecated_Header}}</p>
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This property has been removed from the specification and should no longer be used;
+    the currency is now <em>always</em> specified using ISO 4127.</p>
+</div>
+
+<p>{{securecontext_header}}</p>
 
 <p><span class="seoSummary">The <em>obsolete</em> {{domxref("PaymentCurrencyAmount")}}
     property <strong><code>currencySystem</code></strong> is a string which specifies the
@@ -23,12 +31,6 @@ tags:
     "currency")}} the {{domxref("PaymentCurrencyAmount.value", "value")}} is specified
     in.</span> For example, the default is <code>urn:iso:std:iso:4217</code>, which
   specifies that the standard used is {{interwiki("wikipedia", "ISO 4217")}}.</p>
-
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This property has been removed from the specification and
-    should no longer be used; the currency is now <em>always</em> specified using ISO
-    4127.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 

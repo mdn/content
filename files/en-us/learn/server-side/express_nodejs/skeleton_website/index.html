@@ -85,7 +85,7 @@ tags:
 
 <h3 id="What_view_engine_should_I_use">What view engine should I use?</h3>
 
-<p>The <em>Express Application Generator</em> allows you to configure a number of popular view/templating engines, including <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="http://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, and <a href="https://www.npmjs.com/package/vash">Vash</a>, although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages <a href="https://github.com/expressjs/express/wiki#template-engines">out of the box</a>.</p>
+<p>The <em>Express Application Generator</em> allows you to configure a number of popular view/templating engines, including <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="https://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, and <a href="https://www.npmjs.com/package/vash">Vash</a>, although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages <a href="https://github.com/expressjs/express/wiki#template-engines">out of the box</a>.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -122,7 +122,7 @@ tags:
 
 <h3 id="What_CSS_stylesheet_engine_should_I_use">What CSS stylesheet engine should I use?</h3>
 
-<p>The <em>Express Application Generator</em> allows you to create a project that is configured to use the most common CSS stylesheet engines: <a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://stylus-lang.com/">Stylus</a>.</p>
+<p>The <em>Express Application Generator</em> allows you to create a project that is configured to use the most common CSS stylesheet engines: <a href="https://lesscss.org/">LESS</a>, <a href="https://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="https://stylus-lang.com/">Stylus</a>.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -365,7 +365,7 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 
 <h3 id="www_file">www file</h3>
 
-<p>The file <strong>/bin/www</strong> is the application entry point! The very first thing this does is <code>require()</code> the "real" application entry point (<strong>app.js</strong>, in the project root) that sets up and returns the <code><a href="http://expressjs.com/en/api.html">express()</a></code> application object.</p>
+<p>The file <strong>/bin/www</strong> is the application entry point! The very first thing this does is <code>require()</code> the "real" application entry point (<strong>app.js</strong>, in the project root) that sets up and returns the <code><a href="https://expressjs.com/en/api.html">express()</a></code> application object.</p>
 
 <pre class="brush: js">#!/usr/bin/env node
 
@@ -494,7 +494,7 @@ module.exports = router;
 
 <h3 id="Views_templates">Views (templates)</h3>
 
-<p>The views (templates) are stored in the <strong>/views</strong> directory (as specified in <strong>app.js</strong>) and are given the file extension <strong>.pug</strong>. The method <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from <strong>/routes/index.js</strong> you can see how that route renders a response using the template "index" passing the template variable "title".</p>
+<p>The views (templates) are stored in the <strong>/views</strong> directory (as specified in <strong>app.js</strong>) and are given the file extension <strong>.pug</strong>. The method <code><a href="https://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from <strong>/routes/index.js</strong> you can see how that route renders a response using the template "index" passing the template variable "title".</p>
 
 <pre class="brush: js">/* GET home page. */
 router.get('/', function(req, res, next) {

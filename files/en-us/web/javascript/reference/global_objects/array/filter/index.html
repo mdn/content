@@ -16,13 +16,24 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[<var>, array</var>]]) {
-  // return element for <var>newArray,</var> if true
-}[, <var>thisArg</var>]);
+<pre class="brush: js">
+// Arrow function
+filter((currentValue) => { ... } )
+filter((currentValue, index) => { ... } )
+filter((currentValue, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(currentValue) { ... })
+filter(function callbackFn(currentValue, index) { ... })
+filter(function callbackFn(currentValue, index, array){ ... })
+filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

@@ -6,7 +6,6 @@ tags:
 - ECMAScript 2015
 - JavaScript
 - Method
-- polyfill
 ---
 <div>{{JSRef}}</div>
 
@@ -31,8 +30,11 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>element<em>N</em></var>]]])</pre>
+<pre class="brush: js">
+Array.of(element0)
+Array.of(element0, element1)
+Array.of(element0, element1, ... , elementN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,24 +60,6 @@ Array(1, 2, 3);    // [1, 2, 3]
   <li><a href="https://gist.github.com/rwaldron/3186576"><code>Array.of()</code>
       polyfill</a></li>
 </ul>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Running the following code before any other code will create <code>Array.of()</code> if
-  it's not natively available.</p>
-
-<pre class="brush: js">if (!Array.of) {
-  Array.of = function() {
-    return Array.prototype.slice.call(arguments);
-    // Or
-    let vals = [];
-    for(let prop in arguments){
-        vals.push(arguments[prop]);
-    }
-    return vals;
-  }
-}
-</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -108,6 +92,8 @@ Array.of(undefined); // [undefined]
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Array")}}</li>
   <li>{{jsxref("Array.from()")}}</li>
   <li>{{jsxref("TypedArray.of()")}}</li>

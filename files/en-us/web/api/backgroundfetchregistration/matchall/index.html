@@ -1,0 +1,87 @@
+---
+title: BackgroundFetchRegistration.matchAll()
+slug: Web/API/BackgroundFetchRegistration/matchAll
+tags:
+  - API
+  - Method
+  - Reference
+  - matchAll
+  - BackgroundFetchRegistration
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>matchAll()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let records = BackgroundFetchRegistration.matchAll(request,options);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>request</code></dt>
+  <dd>The {{domxref("Request")}} for which you are attempting to find records.
+    This can be a {{domxref("Request")}} object or a URL.</dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>An object that sets options for the <code>match</code> operation. The available
+    options are:
+    <dl>
+      <dt><code>ignoreSearch</code></dt>
+      <dd>A {{jsxref("Boolean")}} that specifies whether to
+        ignore the query string in the URL.  For example, if set to
+        <code>true</code> the <code>?value=bar</code> part of
+        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
+        It defaults to <code>false</code>.</dd>
+      <dt><code>ignoreMethod</code></dt>
+      <dd>A {{jsxref("Boolean")}}. When <code>true</code>,
+        prevents matching operations from validating the {{domxref("Request")}} <code>http</code> method.
+        If <code>false</code> (the default) only <code>GET</code> and <code>HEAD</code> are allowed.</dd>
+      <dt><code>ignoreVary</code></dt>
+      <dd>A {{jsxref("Boolean")}}. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
+        header should be ignored.
+        It defaults to <code>false</code>.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("BackgroundFetchRecord")}} objects.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>If the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is <code>false</code>, indicating that there is not a fetch in progress, return a promise that resolves with an <code>InvalidStateError</code> {{domxref("DOMException")}}.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Use <code>matchAll()</code> with no parameters to return all of the records in a background fetch.</p>
+
+<pre class="brush: js">const records = await bgFetch.matchAll();
+console.log(records); // an array of BackgroundFetchRecord objects
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+     <td>{{SpecName('Background Fetch','#dom-backgroundfetchregistration-matchall','BackgroundFetchRegistration.matchAll')}}</td>
+     <td>{{Spec2('Background Fetch')}}</td>
+     <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchRegistration.matchAll")}}</p>

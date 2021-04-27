@@ -5,7 +5,7 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p>For information on cross-compiling in general, see the chapter titled <a class="external" href="http://www.airs.com/ian/configure/configure_5.html#SEC28">Cross Compilation Tools</a> in <a class="external" href="http://www.airs.com/ian/configure/">The GNU configure and build system</a> document.</p>
+<p>For information on cross-compiling in general, see the chapter titled <a class="external" href="https://www.airs.com/ian/configure/configure_5.html#SEC28">Cross Compilation Tools</a> in <a class="external" href="https://www.airs.com/ian/configure/">The GNU configure and build system</a> document.</p>
 
 <p>If you are trying to compile 32-bit Firefox on a 64-bit Linux OS, you don't need to do a full cross-compile... see <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Compiling_32-bit_Firefox_on_a_Linux_64-bit_OS">these simpler instructions</a>.</p>
 
@@ -32,7 +32,7 @@ tags:
 
 <h4 id="Cross-compile_binutils">Cross-compile binutils (if needed)</h4>
 
-<p>Download binutils and apply the <a class="external" href="http://www-archive.mozilla.org/build/binutils-cross-libpath.patch">binutils-cross-libpath.patch</a>, which will make installing prebuilt libraries easier. Run configure using the following command:</p>
+<p>Download binutils and apply the <a class="external" href="https://www-archive.mozilla.org/build/binutils-cross-libpath.patch">binutils-cross-libpath.patch</a>, which will make installing prebuilt libraries easier. Run configure using the following command:</p>
 
 <pre class="eval">env CROSS_LIB_PATH="${xprefix}/${xtarget_arch}/lib:${xprefix}/${xtarget_arch}/usr/lib" ./configure --prefix=${xprefix} --target=${xtarget_arch}
 </pre>
@@ -43,7 +43,10 @@ tags:
 
 <p>GCC and binutils will expect to find the system headers and libraries under ${xprefix}/${xtarget_arch} so you will need to copy those files from the target system, preserving directory structure and modify any scripts as necessary. You should copy over the X11 lib and include dirs as well.</p>
 
-<p>{{ Note("If your target system uses glibc, you must take special care to modify the local copy of the target\'s <code>/usr/lib/libc.so</code> file (which is actually a script) so that it looks for its files under $xprefix/$target_arch rather than /usr.") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>If your target system uses glibc, you must take special care to modify the local copy of the target\'s <code>/usr/lib/libc.so</code> file (which is actually a script) so that it looks for its files under $xprefix/$target_arch rather than /usr.</p>
+</div>
 
 <p>If you already have rpms for the target system and rpm installed on the build system, then you can use this <a class="external" href="https://www.mozilla.org/build/setup-xrpms.sh.txt">shortcut script</a> which should install the rpms into $xprefix/$xtarget_arch using rpm2cpio.</p>
 

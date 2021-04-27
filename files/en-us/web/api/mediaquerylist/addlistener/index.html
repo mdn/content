@@ -2,25 +2,25 @@
 title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
 tags:
-- API
-- CSSOM View
-- Media Queries
-- MediaQueryList
-- Method
-- Reference
-- addListener
+  - API
+  - CSSOM View
+  - Media Queries
+  - MediaQueryList
+  - Method
+  - Reference
+  - addListener
 ---
-<p>{{APIRef("CSSOM")}}</p>
+<p>{{APIRef("CSSOM")}}{{Deprecated_Header}}</p>
 
 <p>The deprecated <code><strong>addListener()</strong></code> method of the
   {{DOMxRef("MediaQueryList")}} interface adds a listener to the
   <code>MediaQueryListener</code> that will run a custom callback function in response to
   the media query status changing.</p>
 
-<p>This is basically an alias of {{DOMxRef("EventTarget.addEventListener()")}}, retained for
-  backwards compatibility purposes. Older browsers should use <code>addListener</code>
-  instead of <code>addEventListener</code> since <code>MediaQueryList</code> only inherits
-  from <code>EventTarget</code> in newer browsers.</p>
+<p>In older browsers <code>MediaQueryList</code> did not yet inherit from {{DOMxRef("EventTarget")}},
+  so this method was provided as an alias of {{DOMxRef("EventTarget.addEventListener()")}}.
+  Use <code>addEventListener()</code> instead of <code>addListener()</code> if it is
+  available in the browsers you need to support.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -82,8 +82,8 @@ mediaQueryList.addListener(screenTest);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
       code</a></li>
   <li>{{DOMxRef("window.matchMedia()")}}</li>
   <li>{{DOMxRef("MediaQueryList")}}</li>

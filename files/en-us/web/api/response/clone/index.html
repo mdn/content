@@ -2,13 +2,13 @@
 title: Response.clone()
 slug: Web/API/Response/clone
 tags:
-- API
-- Experimental
-- Fetch
-- Method
-- Reference
-- Response
-- clone
+  - API
+  - Experimental
+  - Fetch
+  - Method
+  - Reference
+  - Response
+  - clone
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -42,7 +42,7 @@ tags:
     href="https://mdn.github.io/fetch-examples/fetch-response-clone/">Fetch Response clone
     live</a>) we create a new {{domxref("Request")}} object using the
   {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-  fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}. When the fetch
+  fetch this request using {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}. When the fetch
   resolves successfully, we clone it, extract a blob from both responses using two
   {{domxref("Body.blob")}} calls, create object URLs out of the blobs using
   {{domxref("URL.createObjectURL")}}, and display them in two separate
@@ -91,8 +91,8 @@ fetch(myRequest).then(function(response) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

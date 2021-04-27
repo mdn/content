@@ -40,28 +40,6 @@ el.remove(); // Removes the div with the 'div-02' id
 }
 // ReferenceError: remove is not defined </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>You can polyfill the <code>remove()</code> method in Internet Explorer 9 and higher
-  with the following code:</p>
-
-<pre class="brush: js">// from:https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty('remove')) {
-      return;
-    }
-    Object.defineProperty(item, 'remove', {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function remove() {
-        this.parentNode.removeChild(this);
-      }
-    });
-  });
-})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);</pre>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
@@ -94,4 +72,5 @@ el.remove(); // Removes the div with the 'div-02' id
       {{domxref("CharacterData")}}, {{domxref("Element")}}, and
       {{domxref("DocumentType")}}.</div>
   </li>
+  <li><a href="https://github.com/chenzhenxi/element-remove">Polyfill</a></li>
 </ul>

@@ -12,14 +12,23 @@ tags:
 
 <h2 id="Getting_Started">Getting Started</h2>
 
-<p>In order to build Firefox with Profile Guided Optimizations, you should first make sure that you can do a <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build">simple build of Firefox</a>.  You need to set up the build prerequisites and environment.  You must have tests enabled (do not include <code>--disable-tests </code>in your build configuration). Then run <code>make -f client.mk profiledbuild</code> (see the <a href="#building">Building</a> section below.)</p>
+<p>In order to build Firefox with Profile Guided Optimizations, you should first make sure that you can do a <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build">simple build of Firefox</a>.  You need to set up the build prerequisites and environment.  You must have tests enabled (do not include <code>--disable-tests</code> in your build configuration). Then run <code>make -f client.mk profiledbuild</code> (see the <a href="#building">Building</a> section below.)</p>
 
 <h2 id="The_profile_generation_script">The profile generation script</h2>
 
 <p>The Mozilla build system will run the <code>pgo-profile-run</code> make rule from <code>testing/testsuite-targets.mk</code>, which in turn runs the <code>build/pgo/profileserver.py</code> script. You can customize any of these two if you need the profile generation to happen differently from the default.</p>
 
-<h2 id="Building"><a name="Building"></a>Building</h2>
+<h2 id="Building">Building</h2>
 
-<p>PGO builds require you to start your build from a different target in client.mk. Instead of the usual <code>make -f client.mk build</code>, you do <code>make -f client.mk profiledbuild</code>. {{ Note("PGO builds will take much longer than normal builds! With GCC, you will wind up doing two complete clobber builds. With MSVC, you will only do one full build, and then another pass of re-linking, but re-linking libxul can take over a half hour on a fast machine, and use over one gigabyte of RAM.") }}</p>
+<p>PGO builds require you to start your build from a different target in client.mk. Instead of the usual <code>make -f client.mk build</code>, you do <code>make -f client.mk profiledbuild</code>.</p>
 
-<div class="warning">Linking a PGO build is known to exhaust the 32 bit address space on Win32.  To work around this either use a 64 bit compiler or use the /3GB boottime switch to give the linker more address space.  See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=543034">Bug 543034</a> for details.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>PGO builds will take much longer than normal builds! With GCC, you will wind up doing two complete clobber builds. With MSVC, you will only do one full build, and then another pass of re-linking, but re-linking libxul can take over a half hour on a fast machine, and use over one gigabyte of RAM.</p>
+</div>
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>Linking a PGO build is known to exhaust the 32 bit address space on Win32.  To work around this either use a 64 bit compiler or use the /3GB boottime switch to give the linker more address space.  See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=543034">Bug 543034</a> for details.</p>
+</div>
+

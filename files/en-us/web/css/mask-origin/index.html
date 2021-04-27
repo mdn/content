@@ -80,48 +80,9 @@ mask-origin: unset;
 
 <h3 id="Setting_mask_origin_to_border-box">Setting mask origin to border-box</h3>
 
-<h4 id="CSS">CSS</h4>
+<p>Try some of the other possible values by updating the CSS in the box below.</p>
 
-<pre class="brush: css; highlight[9]">#masked {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border: 10px solid blue;
-  background-color: #8cffa0;
-  padding: 10px;
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-origin: border-box; /* Can be changed in the live sample */
-}
-</pre>
-
-<div class="hidden">
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="origin"&gt;
-  &lt;option value="content-box"&gt;content-box&lt;/option&gt;
-  &lt;option value="padding-box"&gt;padding-box&lt;/option&gt;
-  &lt;option value="border-box" selected&gt;border-box&lt;/option&gt;
-  &lt;option value="margin-box"&gt;margin-box&lt;/option&gt;
-  &lt;option value="fill-box"&gt;fill-box&lt;/option&gt;
-  &lt;option value="stroke-box"&gt;stroke-box&lt;/option&gt;
-  &lt;option value="view-box"&gt;view-box&lt;/option&gt;
-&lt;/select&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var origin = document.getElementById("origin");
-origin.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskOrigin = evt.target.value;
-});
-</pre>
-</div>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Setting_mask_origin_to_border-box", 160, 200)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

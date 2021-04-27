@@ -2,7 +2,7 @@
 title: Using NetBeans with Mozilla
 slug: Mozilla/Developer_guide/Using_NetBeans_with_Mozilla
 ---
-<div class="warning"><a class="external" href="http://netbeans.org/downloads/">NetBeans IDE for C++</a> (as of version 7.1) doesn't work perfectly with the Mozilla C/C++ source code (see <a class="link-https" href="https://netbeans.org/bugzilla/show_bug.cgi?id=197297">NetBeans Bugzilla, bug 197297</a>), but it works well enough to be a useful tool as long as you have enough RAM to run it (see below). If you have any problems with or questions about this page, contact <a href="/User:Jonathan_Watt" title="User:Jonathan Watt">Jonathan Watt</a> for help.</div>
+<div class="warning"><a class="external" href="https://netbeans.org/downloads/">NetBeans IDE for C++</a> (as of version 7.1) doesn't work perfectly with the Mozilla C/C++ source code (see <a class="link-https" href="https://netbeans.org/bugzilla/show_bug.cgi?id=197297">NetBeans Bugzilla, bug 197297</a>), but it works well enough to be a useful tool as long as you have enough RAM to run it (see below).</div>
 
 <h2 id="Building_the_Firefox_source">Building the Firefox source</h2>
 
@@ -23,7 +23,7 @@ mk_add_options MOZ_MAKE_FLAGS="-j4 -s"
 
 <h2 id="Installing_NetBeans">Installing NetBeans</h2>
 
-<p>Download and install one of the NetBeans installers that supports C/C++. You can try the <a class="external" href="http://netbeans.org/downloads/">latest NetBeans release</a>, but you're more likely to get a better results using the <a href="http://bits.netbeans.org/dev/nightly/latest/">latest NetBeans nightly</a> since the NetBeans team has recently been working on fixing the issues that prevent it working well with the Mozilla source.</p>
+<p>Download and install one of the NetBeans installers that supports C/C++. You can try the <a class="external" href="https://netbeans.org/downloads/">latest NetBeans release</a>, but you're more likely to get a better results using the <a href="https://bits.netbeans.org/dev/nightly/latest/">latest NetBeans nightly</a> since the NetBeans team has recently been working on fixing the issues that prevent it working well with the Mozilla source.</p>
 
 <p>Choose a JVM. For example, Fedora 21 comes with OpenJDK 64-Bit Server VM (build 25.31-b07, mixed mode), which made debugging very slow and not responsive. NetBeans for PHP/C++ x64 comes with Oracle Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode). That was better than OpenJDK. Installing Oracle’s JDK 1.8.0_40 x64 as an RPM seems even better. Beware that development versions of NetBeans may contain bugs (e.g. netbeans-dev-201504030001-x64 showed strange exceptions, sometimes so many times that it was unusable).</p>
 
@@ -45,7 +45,7 @@ mk_add_options MOZ_MAKE_FLAGS="-j4 -s"
 <pre>java -d64 -XX:+UseCompressedOops
 </pre>
 
-<p>With these two pieces of information obtained, <a class="external" href="http://wiki.netbeans.org/FaqSettingHeapSize">edit the netbeans.conf file</a> in your NetBeans installation to increase the maximum heap space, to choose between the 32-bit or 64-bit JDK, and to pass <code>UseCompressedOops</code> if you chose the 64-bit JVM and it supports that option. If you're using a 32-bit JVM, set the maximum heap space to 3 GB, and if you're using a 64-bit JVM set it to at least 4 GB. <u>Note that you must prepend "-J" to the JVM options so that NetBeans knows to pass them on to the JVM -- so '-XX:+UseCompressedOops' would become '-J-XX:+UseCompressedOops', for example.</u></p>
+<p>With these two pieces of information obtained, <a class="external" href="https://wiki.netbeans.org/FaqSettingHeapSize">edit the netbeans.conf file</a> in your NetBeans installation to increase the maximum heap space, to choose between the 32-bit or 64-bit JDK, and to pass <code>UseCompressedOops</code> if you chose the 64-bit JVM and it supports that option. If you're using a 32-bit JVM, set the maximum heap space to 3 GB, and if you're using a 64-bit JVM set it to at least 4 GB. <u>Note that you must prepend "-J" to the JVM options so that NetBeans knows to pass them on to the JVM -- so '-XX:+UseCompressedOops' would become '-J-XX:+UseCompressedOops', for example.</u></p>
 
 <h2 id="Creating_a_NetBeans_project">Creating a NetBeans project</h2>
 

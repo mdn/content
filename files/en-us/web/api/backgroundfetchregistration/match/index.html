@@ -1,0 +1,101 @@
+---
+title: BackgroundFetchRegistration.match()
+slug: Web/API/BackgroundFetchRegistration/match
+tags:
+  - API
+  - Method
+  - Reference
+  - match
+  - BackgroundFetchRegistration
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>match()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let record = BackgroundFetchRegistration.match(request, options);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>request</code></dt>
+  <dd>The {{domxref("Request")}} for which you are attempting to find records.
+    This can be a {{domxref("Request")}} object or a URL.</dd>
+  <dt><code>options</code> {{optional_inline}}</dt>
+  <dd>An object that sets options for the <code>match</code> operation. The available
+    options are:
+    <dl>
+      <dt><code>ignoreSearch</code></dt>
+      <dd>A {{jsxref("Boolean")}} that specifies whether to
+        ignore the query string in the URL.  For example, if set to
+        <code>true</code> the <code>?value=bar</code> part of
+        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
+        It defaults to <code>false</code>.</dd>
+      <dt><code>ignoreMethod</code></dt>
+      <dd>A {{jsxref("Boolean")}}. When <code>true</code>,
+        prevents matching operations from validating the {{domxref("Request")}} <code>http</code> method.
+        If <code>false</code> (the default) only <code>GET</code> and <code>HEAD</code> are allowed.</dd>
+      <dt><code>ignoreVary</code></dt>
+      <dd>A {{jsxref("Boolean")}}. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
+        header should be ignored.
+        It defaults to <code>false</code>.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
+  the request or {{jsxref("undefined")}} if no match is found.</p>
+
+<div class="notecard note">
+  <p><strong>Note</strong>: <code>BackgroundFetchRegistration.match()</code> is basically identical to
+    {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
+    all matching records, it resolves with the first matching record only.</p>
+</div>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>A {{domxref("DOMException")}} indicating that you called <code>match()</code> when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to <code>false</code></dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we look for a record with the url "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.</p>
+
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
+
+  console.log(`Here's the request`, record.request);
+  const response = await record.responseReady;
+  console.log(`And here's the response`, response);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+     <td>{{SpecName('Background Fetch','#dom-backgroundfetchregistration-match','BackgroundFetchRegistration.match')}}</td>
+     <td>{{Spec2('Background Fetch')}}</td>
+     <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchRegistration.match")}}</p>

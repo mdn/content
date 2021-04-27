@@ -18,9 +18,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>arr</var>.forEach(<var>callback(currentValue[, index[, array]]) {
-</var>  // execute something
-<var>}</var>[, <var>thisArg</var>]);</pre>
+<pre class="brush: js">
+// Arrow function
+forEach((currentValue) => { ... } )
+forEach((currentValue, index) => { ... } )
+forEach((currentValue, index, array) => { ... } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function callbackFn(currentValue) { ... })
+forEach(function callbackFn(currentValue, index) { ... })
+forEach(function callbackFn(currentValue, index, array){ ... })
+forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>HTMLOptionElement</code></strong> interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.</p>
+<p>The <strong><code>HTMLOptionElement</code></strong> interface represents {{HTMLElement("option")}} elements and inherits all properties and methods of the {{domxref("HTMLElement")}} interface.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -20,10 +20,10 @@ tags:
 
 <dl>
  <dt>{{domxref("HTMLOptionElement.defaultSelected")}}</dt>
- <dd>Is a {{domxref("Boolean")}} that contains the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.</dd>
+ <dd>Has a value of either <code>true</code> or <code>false</code> that shows the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.</dd>
 
  <dt>{{domxref("HTMLOptionElement.disabled")}}</dt>
- <dd>Is a {{domxref("Boolean")}} representing the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.</dd>
+ <dd>Has a value of either <code>true</code> or <code>false</code> representing the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.</dd>
 
  <dt>{{domxref("HTMLOptionElement.form")}} {{readonlyInline}}</dt>
  <dd>Is a {{domxref("HTMLFormElement")}} representing the same value as the <code>form</code> of the corresponding {{HTMLElement("select")}} element, if the option is a descendant of a {{HTMLElement("select")}} element, or null if none is found. </dd>
@@ -35,7 +35,7 @@ tags:
  <dd>Is a {{domxref("DOMString")}} that reflects the value of the {{htmlattrxref("label", "option")}} HTML attribute, which provides a label for the option. If this attribute isn't specifically set, reading it returns the element's text content.</dd>
 
  <dt>{{domxref("HTMLOptionElement.selected")}}</dt>
- <dd>Is a {{domxref("Boolean")}} that indicates whether the option is currently selected.</dd>
+ <dd>Has a value of either <code>true</code> or <code>false</code> that indicates whether the option is currently selected.</dd>
  <dt>{{domxref("HTMLOptionElement.text")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that contains the text content of the element.</dd>
  <dt>{{domxref("HTMLOptionElement.value")}}</dt>
@@ -74,7 +74,7 @@ tags:
   <tr>
    <td>{{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}</td>
    <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The <code>selected</code> property changed its meaning: it now indicates if the option is currently selected and no longer if it was initally selected.<br>
+   <td>The <code>selected</code> property changed its meaning: it now indicates if the option is currently selected and no longer if it was initially selected.<br>
     The <code>defaultSelected</code> property is no longer read-only.</td>
   </tr>
   <tr>

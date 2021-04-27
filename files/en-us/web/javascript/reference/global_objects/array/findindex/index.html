@@ -8,7 +8,6 @@ tags:
 - Method
 - Prototype
 - Reference
-- polyfill
 ---
 <div>{{JSRef}}</div>
 
@@ -19,18 +18,27 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <p>See also the {{jsxref("Array.find", "find()")}} method, which returns the
   <strong>value</strong> of an array element, instead of its index.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>arr</var>.findIndex(<var>callback</var>( <var>element</var>[, <var>index</var>[, <var>array</var>]] )[, <var>thisArg</var>])
+<pre class="brush: js">
+// Arrow function
+findIndex((element) => { ... } )
+findIndex((element, index) => { ... } )
+findIndex((element, index, array) => { ... } )
+
+// Callback function
+findIndex(callbackFn)
+findIndex(callbackFn, thisArg)
+
+// Inline callback function
+findIndex(function callbackFn(element) { ... })
+findIndex(function callbackFn(element, index) { ... })
+findIndex(function callbackFn(element, index, array){ ... })
+findIndex(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -61,6 +69,8 @@ tags:
 
 <p>The index of the first element in the array that passes the test. Otherwise,
   <code>-1</code>.</p>
+
+<p>Note: if the index of the first element in the array that passes the test is <code>0</code>, the return value of <code>findIndex</code> will be interpreted as {{Glossary("Falsy")}} in conditional statements.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -100,63 +110,7 @@ tags:
   <code><var>callback</var></code> will be the value at the time <code>findIndex()</code>
   visits the element's index.</p>
 
-<p>Elements that are <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">deleted</a> are still
-  visited.</p>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.findindex
-if (!Array.prototype.findIndex) {
-  Object.defineProperty(Array.prototype, 'findIndex', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
-      }
-
-      var o = Object(this);
-
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
-
-      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
-      }
-
-      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
-      var thisArg = arguments[1];
-
-      // 5. Let k be 0.
-      var k = 0;
-
-      // 6. Repeat, while k &lt; len
-      while (k &lt; len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kValue be ? Get(O, Pk).
-        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
-        // d. If testResult is true, return k.
-        var kValue = o[k];
-        if (predicate.call(thisArg, kValue, k, o)) {
-          return k;
-        }
-        // e. Increase k by 1.
-        k++;
-      }
-
-      // 7. Return -1.
-      return -1;
-    },
-    configurable: true,
-    writable: true
-  });
-}
-</pre>
-
-<p>If you need to support truly obsolete JavaScript engines that do not support
-  {{jsxref("Object.defineProperty")}}, it is best not to polyfill
-  <code>Array.prototype</code> methods at all, as you cannot make them non-enumerable.</p>
+<p>Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.</p>
 
 <h2 id="Examples">Examples</h2>
 

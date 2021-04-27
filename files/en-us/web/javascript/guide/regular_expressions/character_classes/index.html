@@ -17,7 +17,6 @@ tags:
 
 <h2 id="Types">Types</h2>
 
-<div class="hidden">The following table is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
 <table class="standard-table">
  <thead>
@@ -102,7 +101,7 @@ tags:
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>Matches a backspace. If you're looking for the word-boundary character (<code>\b</code>), see <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Boundaries</a>.</td>
+   <td>Matches a backspace. If you're looking for the word-boundary character (<code>\b</code>), see <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a>.</td>
   </tr>
   <tr>
    <td><code>\0</code></td>
@@ -125,6 +124,10 @@ tags:
   <tr>
    <td><code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code></td>
    <td>(Only when the <code>u</code> flag is set.) Matches the character with the Unicode value <code>U+<em>hhhh</em></code> or <code>U+<em>hhhhh</em></code> (hexadecimal digits).</td>
+  </tr>
+  <tr>
+   <td><code>\p{<em>UnicodeProperty</em>}</code>, <code>\P{<em>UnicodeProperty</em>}</code></td>
+   <td>Matches a character based on its <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode character properties</a> (to match just, for example, emoji characters, or Japanese <em>katakana</em> characters, or Chinese/Japanese Han/Kanji characters, etc.).</td>
   </tr>
   <tr>
    <td><code>\</code></td>
@@ -182,9 +185,6 @@ console.table(nonEnglishText.match(regexpBMPWord));
 [ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
 </pre>
 
-<div class="hidden">
-<p>Note for MDN editors: please do not try to add funny examples with emoji as those characters are not handled by the platform (Kuma).</p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -201,7 +201,7 @@ console.table(nonEnglishText.match(regexpBMPWord));
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>For browser compatibility information, check out the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
+<p>For browser compatibility information, check out the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#browser_compatibility">main Regular Expressions compatibility table</a>.</p>
 
 <h2 id="See_also">See also</h2>
 

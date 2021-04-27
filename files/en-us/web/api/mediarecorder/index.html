@@ -60,7 +60,7 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaRecorder.isTypeSupported()")}}</dt>
- <dd>A static method which returns a {{domxref("Boolean")}} value indicating if the given MIME media type is supported by the current user agent. </dd>
+ <dd>A static method which returns a <code>true</code> or <code>false</code> value indicating if the given MIME media type is supported by the current user agent. </dd>
 </dl>
 
 <h2 id="Event_handlers">Event handlers</h2>
@@ -69,7 +69,7 @@ tags:
  <dt>{{domxref("MediaRecorder.ondataavailable")}}</dt>
  <dd>Called to handle the {{event("dataavailable")}} event, which is periodically triggered each time <code>timeslice</code> milliseconds of media have been recorded (or when the entire media has been recorded, if <code>timeslice</code> wasn't specified). The event, of type {{domxref("BlobEvent")}}, contains the recorded media in its {{domxref("BlobEvent.data", "data")}} property. You can then collect and act upon that recorded media data using this event handler.</dd>
  <dt>{{domxref("MediaRecorder.onerror")}}</dt>
- <dd>An {{domxref("EventHandler")}} called to handle the {{event("error")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording. The received event is based on the {{domxref("MediaRecorderErrorEvent")}} interface, whose {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a {{domxref("DOMException")}} that describes the actual error that occurred.</dd>
+ <dd>An {{domxref("EventHandler")}} called to handle the {{event("error")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording. The received event is based on the {{domxref("MediaRecorderErrorEvent")}} interface, whose {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a {{domxref("DOMException")}} that describes the actual error that occurred.</dd> 
  <dt>{{domxref("MediaRecorder.onpause")}}</dt>
  <dd>An {{domxref("EventHandler")}} called to handle the {{event("pause")}} event, which occurs when media recording is paused.</dd>
  <dt>{{domxref("MediaRecorder.onresume")}}</dt>
@@ -78,6 +78,9 @@ tags:
  <dd>An {{domxref("EventHandler")}} called to handle the {{event("start")}} event, which occurs when media recording starts.</dd>
  <dt>{{domxref("MediaRecorder.onstop")}}</dt>
  <dd>An {{domxref("EventHandler")}} called to handle the {{event("stop")}} event, which occurs when media recording ends, either when the {{domxref("MediaStream")}} ends — or after the {{domxref("MediaRecorder.stop()")}} method is called.</dd>
+
+ <dt>{{domxref("MediaRecorder.onwarning")}} {{deprecated_inline}}</dt>
+ <dd>An {{domxref("EventHandler")}} called to handle the {{event("warning")}} event, which occurs when media recording has a non-fatal error, or after the {{domxref("MediaRecorder.onwarning()")}} method is called.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -88,6 +91,10 @@ tags:
  <dt><code><a href="/en-US/docs/Web/API/MediaRecorder/error_event">error</a></code></dt>
  <dd>Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/MediaRecorder/onerror">onerror</a></code> property.</dd>
+
+ <dt><code><a href="/en-US/docs/Web/API/MediaRecorder/warning_event">warning</a></code>{{deprecated_inline}}</dt>
+ <dd>Fired when a problem occurs that does not halt recording.<br>
+ Also available via the <code><a href="/en-US/docs/Web/API/MediaRecorder/onwarning">onwarning</a></code> property.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -193,10 +200,10 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using the MediaRecorder API</a></li>
+ <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaRecorder API</a></li>
  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a></li>
  <li><a href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("navigator.mediaDevices.getUserMedia")}}</li>
+ <li>{{domxref("MediaDevices.getUserMedia")}}</li>
  <li><a href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording (<a href="https://github.com/chrisjohndigital/OpenLang">source on GitHub</a>)</li>
 </ul>

@@ -41,7 +41,7 @@ symbols: url('first.svg') url('second.svg') url('third.svg');
 symbols: indic-numbers;
 </pre>
 
-<p>The <code>symbols</code> descriptor must be specified when the value of the {{cssxref('system')}} descriptor is <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, or <code>fixed</code>. When the <code>additive</code> system is used, use the {{cssxref('additive-symbols')}} descriptor instead to specify the symbols.</p>
+<p>The <code>symbols</code> descriptor must be specified when the value of the {{cssxref('@counter-style/system')}} descriptor is <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, or <code>fixed</code>. When the <code>additive</code> system is used, use the {{cssxref('@counter-style/additive-symbols')}} descriptor instead to specify the symbols.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -108,6 +108,6 @@ symbols: indic-numbers;
 <ul>
  <li>The <code>symbols</code> descriptor is used within the {{cssxref("@counter-style")}} at-rule.</li>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles</li>
+ <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles</li>
  <li>{{cssxref("url()", "url()")}} function</li>
 </ul>

@@ -18,7 +18,7 @@ tags:
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p>The <strong><code>setTimeout()</code></strong> method of the
-  {{domxref("WindowOrWorkerGlobalScope")}} mixin (and successor to
+  {{domxref("WindowOrWorkerGlobalScope")}} {{Glossary("mixin")}} (and successor to
   <code>Window.setTimeout()</code>) sets a timer which executes a function or specified
   piece of code once the timer expires.</p>
 
@@ -111,7 +111,7 @@ function clearAlert() {
 <p>{{EmbedLiveSample('Timeouts')}}</p>
 
 <p>See also <a
-    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Example"><code>clearTimeout()</code>
+    href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#example"><code>clearTimeout()</code>
     example</a>.</p>
 
 <h2 id="Timeouts_throttled">2: Timeouts throttled</h2>
@@ -302,7 +302,7 @@ var a=[].slice.call(arguments,2);return f(function(){c instanceof Function?c.app
 <p>When you pass a method to <code>setTimeout()</code> (or any other function, for that
   matter), it will be invoked with a <code>this</code> value that may differ from your
   expectation. This issue is explained in detail in the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method">JavaScript
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method">JavaScript
     reference</a>.</p>
 
 <h3 id="Explanation">Explanation</h3>
@@ -433,7 +433,7 @@ setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
 
 <p>Passing a string instead of a function to <code>setTimeout()</code> has the same
   associated problems as using
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21">eval</a>. </code>
+  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#don.27t_use_eval.21">eval</a>. </code>
 </p>
 
 <pre class="brush: js">// Recommended

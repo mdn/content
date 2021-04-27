@@ -18,8 +18,8 @@ tags:
 <h3 id="Get_the_GNU_tools_for_Microsoft_Windows_.28Cygwin.29">Get the GNU tools for Microsoft Windows (Cygwin)</h3>
 <p>Download the Cygwin tools for Windows. This is a special version of the GNU tools that runs on Windows:</p>
 <ul>
- <li><a class="external" href="http://www.cygwin.com/setup.exe">Download</a></li>
- <li><a class="external" href="http://www.cygwin.com/">Information</a></li>
+ <li><a class="external" href="https://www.cygwin.com/setup.exe">Download</a></li>
+ <li><a class="external" href="https://www.cygwin.com/">Information</a></li>
 </ul>
 <p>Install the tools into <code>C:\mozilla\cygwin\</code>. Remember to choose Unix as the Default Text File Type.</p>
 <p><img src="cygwin04.png"></p>
@@ -53,7 +53,7 @@ tags:
 <h3 id="Get_the_Mozilla_wintools">Get the Mozilla wintools</h3>
 <p>Netscape has modified a handful of the GNU command-line tools to solve some problems mostly for makefile compatibility with the GNU-styled UNIX builds.</p>
 <ul>
- <li><a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/source/wintools.zip">Download</a></li>
+ <li><a class="external" href="https://ftp.mozilla.org/pub/mozilla.org/mozilla/source/wintools.zip">Download</a></li>
 </ul>
 <p>Unpack the zip file into a temporary directory. Then start a Command Prompt in the temporary directory and do:</p>
 <pre class="eval">set MOZ_TOOLS=c:\mozilla\moztools
@@ -62,14 +62,14 @@ cd buildtools\windows
 install.bat
 </pre>
 <h3 id="Get_MinGW">Get MinGW</h3>
-<p>Download the following set of <a class="external" href="http://www.mingw.org/download.shtml">MinGW</a> packages:</p>
+<p>Download the following set of <a class="external" href="https://www.mingw.org/download.shtml">MinGW</a> packages:</p>
 <ul>
- <li><a class="external" href="http://www.mingw.org/download.shtml#hdr2">dos2unix</a></li>
- <li><a class="external" href="http://www.mingw.org/download.shtml#hdr2">gcc-core</a></li>
- <li><a class="external" href="http://www.mingw.org/download.shtml#hdr2">gcc-g++</a></li>
- <li><a class="external" href="http://www.mingw.org/download.shtml#hdr2">binutils</a></li>
- <li><a class="external" href="http://www.mingw.org/download.shtml#hdr2">w32api</a></li>
- <li><a class="external" href="http://www.mingw.org/download.shtml#hdr2">mingw-runtime</a></li>
+ <li><a class="external" href="https://www.mingw.org/download.shtml#hdr2">dos2unix</a></li>
+ <li><a class="external" href="https://www.mingw.org/download.shtml#hdr2">gcc-core</a></li>
+ <li><a class="external" href="https://www.mingw.org/download.shtml#hdr2">gcc-g++</a></li>
+ <li><a class="external" href="https://www.mingw.org/download.shtml#hdr2">binutils</a></li>
+ <li><a class="external" href="https://www.mingw.org/download.shtml#hdr2">w32api</a></li>
+ <li><a class="external" href="https://www.mingw.org/download.shtml#hdr2">mingw-runtime</a></li>
 </ul>
 <p>Using mingw-get is an easy and quick way to get these packages.  Alternatively you can unpack all of the <code>tar.gz</code> files in <code>c:\mozilla\mingw\</code>. You can do this by placing all the <code>tar.gz</code> files in <code>c:\mozilla\mingw\</code> and then starting a Command Prompt and doing the following:</p>
 <pre class="eval">cd c:\mozilla\mingw\
@@ -104,10 +104,10 @@ dos2unix.exe *.h
 <h3 id="Get_client.mk">Get the source</h3>
 <p>To build Firefox, the latest mozilla-central sources can be downloaded with mercurial:</p>
 <pre class="eval">cd c:\mozilla\
-hg clone <a class="external" href="http://hg.mozilla.org/mozilla-central/">http://hg.mozilla.org/mozilla-central/</a> mozilla
+hg clone <a class="external" href="https://hg.mozilla.org/mozilla-central/">http://hg.mozilla.org/mozilla-central/</a> mozilla
 </pre>
 <p>If you want to build Thunderbird or Sunbird:</p>
-<pre class="eval">hg clone <a class="external" href="http://hg.mozilla.org/comm-central/">http://hg.mozilla.org/comm-central/</a> mozilla
+<pre class="eval">hg clone <a class="external" href="https://hg.mozilla.org/comm-central/">http://hg.mozilla.org/comm-central/</a> mozilla
 python client.py checkout
 </pre>
 <h3 id="Create_the_.mozconfig_file">Create the .mozconfig file</h3>

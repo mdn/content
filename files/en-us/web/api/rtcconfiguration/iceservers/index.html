@@ -2,21 +2,21 @@
 title: RTCConfiguration.iceServers
 slug: Web/API/RTCConfiguration/iceServers
 tags:
-- API
-- Configuration
-- ICE
-- JSEP
-- Negotiation
-- Property
-- RTCConfiguration
-- Reference
-- SDP
-- STUN
-- TURN
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- iceServers
+  - API
+  - Configuration
+  - ICE
+  - JSEP
+  - Negotiation
+  - Property
+  - RTCConfiguration
+  - Reference
+  - SDP
+  - STUN
+  - TURN
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - iceServers
 ---
 <div id="show_cache">
   <p>{{DefaultAPISidebar("WebRTC API")}}</p>
@@ -41,7 +41,7 @@ let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
   <p>An array of zero or more {{domxref("RTCIceServer")}} objects, each of which describes
     one <a href="/en-US/docs/Web/API/WebRTC_API/Protocols">STUN or TURN server</a> for the
     ICE agent to use <a
-      href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_the_connection">during
+      href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection">during
       the connection's negotiation</a>. Each object must at least have an
     {{domxref("RTCIceServer.urls", "urls")}} property, which is an array of one or more
     strings, each providing one server's URL.</p>
@@ -63,7 +63,7 @@ let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
     {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate
     effect occurs. However, the new list of servers is used for any future renegotiation,
     such as while handling an <a
-      href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.
+      href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a>.
   </p>
 
   <h2 id="Examples">Examples</h2>
@@ -95,8 +95,7 @@ var pc = new RTCPeerConnection(configuration);</pre>
         <th scope="col">Comment</th>
       </tr>
       <tr>
-        <td>{{SpecName('WebRTC
-          1.0','#dom-rtcconfiguration-iceservers','RTCConfiguration.iceServers')}}</td>
+        <td>{{SpecName('WebRTC 1.0','#dom-rtcconfiguration-iceservers','RTCConfiguration.iceServers')}}</td>
         <td>{{Spec2('WebRTC 1.0')}}</td>
         <td>Initial definition.</td>
       </tr>
@@ -115,7 +114,7 @@ var pc = new RTCPeerConnection(configuration);</pre>
       <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
           protocols</a></li>
       <li><a
-          href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_the_connection">Lifetime
+          href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection">Lifetime
           of a WebRTC connection</a></li>
       <li><a href="/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation">Establishing a
           connection: The WebRTC perfect negotiation pattern</a></li>

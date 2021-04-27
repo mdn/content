@@ -19,12 +19,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">new Float64Array(); // new in ES2017
-new Float64Array(<var>length</var>);
-new Float64Array(<var>typedArray</var>);
-new Float64Array(<var>object</var>);
-new Float64Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);</pre>
+<pre class="brush: js">
+new Float64Array(); // new in ES2017
+new Float64Array(length);
+new Float64Array(typedArray);
+new Float64Array(object);
+
+new Float64Array(buffer);
+new Float64Array(buffer, byteOffset);
+new Float64Array(buffer, byteOffset, length);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

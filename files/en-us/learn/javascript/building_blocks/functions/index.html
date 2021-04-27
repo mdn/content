@@ -257,7 +257,7 @@ function greeting() {
 
 <p><img alt="" src="mdn-mozilla-zoo.png" style="display: block; margin: 0 auto;"></p>
 
-<p>The zoo keeper is like the global scope — he or she has the keys to access every enclosure, to restock food, tend to sick animals, etc.</p>
+<p>The zoo keeper is like the global scope — they have the keys to access every enclosure, to restock food, tend to sick animals, etc.</p>
 
 <h3 id="Active_learning_Playing_with_scope">Active learning: Playing with scope</h3>
 
@@ -298,8 +298,8 @@ function b() {
   let z = 3;
   output(x);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
   <pre class="brush: js">a();
 b();</pre>
   Both the <code>a()</code> and <code>b()</code> call should output the value of x — 1. These work fine because even though the <code>output()</code> calls are not in the same scope as <code>x</code> is defined in, <code>x</code> is a global variable so is available inside all code, everywhere.</li>
@@ -313,8 +313,8 @@ function b() {
   let z = 3;
   output(y);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
   <pre class="brush: js">a();
 b();</pre>
   This time the <code>a()</code> and <code>b()</code> calls will both return an annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>

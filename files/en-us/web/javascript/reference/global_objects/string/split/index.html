@@ -18,11 +18,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -107,19 +102,17 @@ tags:
 
 <h3 id="Using_split">Using <code>split()</code></h3>
 
-<div id="split_empty_string">
-  <p>When the string is empty, <code>split()</code> returns an array containing one empty
-    string, rather than an empty array. If the string and separator are both empty
-    strings, an empty array is returned.</p>
+<p>When the string is empty, <code>split()</code> returns an array containing one empty
+  string, rather than an empty array. If the string and separator are both empty
+  strings, an empty array is returned.</p>
 
-  <pre class="brush: js">const myString = ''
+<pre class="brush: js">const myString = ''
 const splits = myString.split()
 
 console.log(splits)
 
 // ↪ [""]
 </pre>
-</div>
 
 <p>The following example defines a function that splits a string into an array of strings
   using <code><var>separator</var></code>. After splitting the string, the function logs
@@ -267,10 +260,6 @@ const strReverse = str.split(/(?:)/u).reverse().join('')
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
 <p>{{Compat("javascript.builtins.String.split")}}</p>
 

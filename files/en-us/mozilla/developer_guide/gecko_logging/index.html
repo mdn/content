@@ -151,6 +151,10 @@ static void DoStuff()
 
 <pre>adb shell am start -n org.mozilla.geckoview_example/.GeckoViewActivity --es env0 "MOZ_LOG=example_logger:3"</pre>
 
+<p>If you want to use multiple loggers, separate them by commas as in the following example.</p>
+
+<pre>MOZ_LOG="SpellChecker:5,InlineSpellChecker:5"</pre>
+
 <p>There are special module names to change logging behavior. You can specify one or more special module names without logging level.</p>
 
 <table class="standard-table">

@@ -6,7 +6,7 @@ tags:
   - Overview
   - Reference
 ---
-<p><a href="/en-US/docs/Web/API/Document_Object_Model/Events">DOM Events</a> are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
+<p><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Events</a> are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.</p>
 
 <p>Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in <a href="/en-US/docs/Web/API/Event#introduction">Event > Interfaces based on Event</a>.</p>
 
@@ -81,6 +81,19 @@ tags:
 		<td>Events fired on <a href="/en-US/docs/Web/API/IDBDatabase#events"><code>IDBDatabase</code></a>, <a href="/en-US/docs/Web/API/IDBOpenDBRequest#events"><code>IDBOpenDBRequest</code></a>, <a href="/en-US/docs/Web/API/IDBRequest#events"><code>IDBRequest</code></a>, <a href="/en-US/docs/Web/API/IDBTransaction#events"><code>IDBTransaction</code></a>.</td>
 	</tr>
 
+  <tr>
+		<td>DOM mutation</td>
+		<td>
+			<p>Events related to modifications to the Document Object Model (DOM) hierarchy and nodes.</p>
+		</td>
+		<td>
+      <div class="notecard note">
+        <h4>Note</h4>
+        <p><strong><a href="/en-US/docs/Web/API/MutationEvent">Mutation Events</a> are deprecated</strong>. <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> should be used instead.</p>
+      </div>
+    </td>
+	</tr>
+
 	<tr>
 		<td>Drag'n'drop, Wheel</td>
 		<td>
@@ -128,6 +141,24 @@ tags:
 			<p>Events related to the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>.</p>
 		</td>
 		<td>Events fired on <a href="/en-US/docs/Web/API/Window#gamepad_events"><code>Window</code></a>.
+		</td>
+	</tr>
+
+  <tr>
+		<td>Gestures</td>
+		<td>
+      <p><a href="/en-US/docs/Web/API/Touch_events">Touch events</a> are recommended for implementing gestures.</p>
+		</td>
+		<td>
+      <p>Events fired on <a href="/en-US/docs/Web/API/Document#touch_events"><code>Document</code></a>, <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>.</p>
+      <p>In addition there are a number of non-standard gesture events:</p>
+      <ul>
+        <li>Non-standard WebKit specific events on <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>: <a href="/en-US/docs/Web/API/Element/gesturestart_event"><code>gesturestart</code> event</a>, <a href="/en-US/docs/Web/API/Element/gesturechange_event"><code>gesturechange</code> event</a>, <a href="/en-US/docs/Web/API/Element/gestureend_event"><code>gestureend</code> event</a>.
+        </li>
+        <li>Non-standard IE specific events on <a href="/en-US/docs/Web/API/Element#touch_events"><code>Element</code></a>: <a href="/en-US/docs/Web/API/Element/MSGestureStart_event"><code>MSGestureStart</code></a>, <a href="/en-US/docs/Web/API/Element/MSGestureChange_event"><code>MSGestureChange</code></a>, <a href="/en-US/docs/Web/API/Element/MSGestureEnd_event"><code>MSGestureEnd</code></a>, <a href="/en-US/docs/Web/API/Element/MSGestureHold_event"><code>MSGestureHold</code></a>, <a href="/en-US/docs/Web/API/Element/MSGestureTap_event"><code>MSGestureTap</code></a>.</li>
+        <li>Deprecated/non-standard Mozilla touch events <a href="/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events">Touch events (Mozilla experimental)</a></li>
+        <li><a href="/en-US/docs/Web/Events/Mouse_gesture_events">Mouse gesture events for Firefox Addons</a></li>
+      </ul>
 		</td>
 	</tr>
 
@@ -185,7 +216,7 @@ tags:
 		<td>Events fired on <a href="/en-US/docs/Web/API/Window#manifest_events"><code>Window</code></a>.</td>
 	</tr>
 
-	<tr>
+	<tr id="media">
 		<td>Media</td>
 		<td>
 			<p>Events related to media usage (including the <a href="/en-US/docs/Web/API/Media_Streams_API#events">Media Capture and Streams API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API#events">Web Audio API</a>, <a href="/en-US/docs/Web/API/Picture-in-Picture_API#events">Picture-in-Picture API</a>, etc.).</p>
@@ -1018,3 +1049,35 @@ tags:
     </ul>
   </dd>
 </dl>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webappapis.html#event-handler-attributes', 'event handlers')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'webappapis.html#event-handler-attributes', 'event handlers')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<section id="Quick_links">
+  <ul>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+  </ul>
+  {{ListSubpages}}
+ </section>

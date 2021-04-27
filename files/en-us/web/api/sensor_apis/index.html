@@ -52,7 +52,7 @@ if (window.AmbientLightSensor) {
  <li>Handling the errors gracefully so that the user experience is enhanced rather than degraded.</li>
 </ul>
 
-<p>The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It implements a handler for {{domxref('Sensor.onerror')}} to catch errors thrown during use. The only time anything is shown to the user is when <a href="/docs/Web/API/Permissions_API">permissions</a> need to be requested and when the sensor type isn't supported by the device.</p>
+<p>The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It implements a handler for {{domxref('Sensor.onerror')}} to catch errors thrown during use. The only time anything is shown to the user is when <a href="/en-US/docs/Web/API/Permissions_API">permissions</a> need to be requested and when the sensor type isn't supported by the device.</p>
 
 <div class="note">
 <p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
@@ -129,6 +129,10 @@ sensor.onerror = event =&gt; {
    <td><code>'ambient-light-sensor'</code></td>
   </tr>
   <tr>
+   <td><code>GravitySensor</code></td>
+   <td><code>'accelerometer'</code></td>
+  </tr>
+  <tr>
    <td><code>Gyroscope</code></td>
    <td><code>'gyroscope'</code></td>
   </tr>
@@ -175,6 +179,8 @@ magSensor.start();
  <dd>Provides the acceleration applied to the device along all three axes.</dd>
  <dt>{{domxref('AmbientLightSensor')}}{{securecontext_inline}}</dt>
  <dd>Returns the current light level or illuminance of the ambient light around the hosting device.</dd>
+ <dt>{{domxref('GravitySensor')}}{{securecontext_inline}}</dt>
+ <dd>Provides the gravity applied to the device along all three axes.</dd>
  <dt>{{domxref('Gyroscope')}}{{securecontext_inline}}</dt>
  <dd>Provides the angular velocity of the device along all three axes.</dd>
  <dt>{{domxref('LinearAccelerationSensor')}}{{securecontext_inline}}</dt>
@@ -208,7 +214,7 @@ magSensor.start();
   <tr>
    <td>{{SpecName('Accelerometer')}}</td>
    <td>{{Spec2('Accelerometer')}}</td>
-   <td>Defines <code>Accelerometer</code> and <code>LinearAccerationSensor</code>.</td>
+   <td>Defines <code>Accelerometer</code>, <code>GravitySensor</code>, and <code>LinearAccelerationSensor</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('AmbientLight')}}</td>

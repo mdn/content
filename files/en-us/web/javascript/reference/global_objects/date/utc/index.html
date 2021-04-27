@@ -15,26 +15,18 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p><strong>Since ECMAScript 2017:</strong></p>
-
-<pre
-  class="brush: js">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
-
-<p><strong>ECMAScript 2016 and earlier:</strong> <em>(<code><var>month</var></code> used
-    to be required)</em></p>
-
-<pre
-  class="brush: js">Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</pre>
-
-<h3 id="Parameters">Parameters</h3>
+<pre class="brush: js">
+Date.UTC(year)
+Date.UTC(year, month)
+Date.UTC(year, month, day)
+Date.UTC(year, month, day, hour)
+Date.UTC(year, month, day, hour, minute)
+Date.UTC(year, month, day, hour, minute, second)
+Date.UTC(year, month, day, hour, minute, second, millisecond)
+</pre>
 
 <dl>
   <dt><code><var>year</var></code></dt>

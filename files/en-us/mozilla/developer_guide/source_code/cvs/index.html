@@ -2,10 +2,14 @@
 title: Getting Mozilla Source Code Using CVS
 slug: Mozilla/Developer_guide/Source_Code/CVS
 ---
-<div class="note">Note: This document describes how to get source code for older versions of the code, Gecko 1.9.0, Firefox 3 or earlier, and older versions of NSS and NSPR. Development for Gecko 1.9.1/Firefox 3.5 and beyond, and recent versions of NSS and NSPR, uses the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mercurial</a> source code control system.</div>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>This document describes how to get source code for older versions of the code, Gecko 1.9.0, Firefox 3 or earlier, and older versions of NSS and NSPR. Development for Gecko 1.9.1/Firefox 3.5 and beyond, and recent versions of NSS and NSPR, uses the <a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mercurial</a> source code control system.</p>
+</div>
 
-<div class="warning">
-<p>As of July 2015, CVS services are no longer operated at Mozilla. For access to CVS Archives, please see <a href="https://web.archive.org/web/20160629020307/https://blog.mozilla.org/it/2015/07/28/vcs-decom-status/">the blog post</a> announcing the change.</p>
+<div class="notecard warning">
+    <h4>Warning</h4>
+    <p>As of July 2015, CVS services are no longer operated at Mozilla. For access to CVS Archives, please see <a href="https://web.archive.org/web/20160629020307/https://blog.mozilla.org/it/2015/07/28/vcs-decom-status/">the blog post</a> announcing the change.</p>
 </div>
 
 <p>Those doing active development can check out the latest source using CVS. This is the preferred method if you plan to provide patches and fix bugs, as it lets you get up-to-the-minute changes and merge them with your own.</p>
@@ -20,7 +24,7 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
 
 <h4 id="Requirements">Requirements</h4>
 
-<p>To check out the sources, you need to be running <a class="external" href="http://www.nongnu.org/cvs/">CVS</a> 1.11 or later. 1.12.13 does not work with the CVS server, and instead results in hangs, although 1.12.9 is known to work. Furthermore, you must use <a class="external" href="https://www.gnu.org/software/make/">GNU make</a> to check out and build Mozilla. No other "make" program is acceptable. On windows, mac and regular GNU systems (like GNU/Linux), use "make" to run GNU make; on most non-GNU unixes (like e.g. Solaris, etc.), use "gmake".</p>
+<p>To check out the sources, you need to be running <a class="external" href="https://www.nongnu.org/cvs/">CVS</a> 1.11 or later. 1.12.13 does not work with the CVS server, and instead results in hangs, although 1.12.9 is known to work. Furthermore, you must use <a class="external" href="https://www.gnu.org/software/make/">GNU make</a> to check out and build Mozilla. No other "make" program is acceptable. On windows, mac and regular GNU systems (like GNU/Linux), use "make" to run GNU make; on most non-GNU unixes (like e.g. Solaris, etc.), use "gmake".</p>
 
 <h3 id="CVS_Client_Settings">CVS Client Settings</h3>
 
@@ -94,7 +98,10 @@ slug: Mozilla/Developer_guide/Source_Code/CVS
  </dd>
 </dl>
 
-<p>{{ Note("The last version of Thunderbird on the HEAD was a post-3.0a2 nightly build. The last version of SeaMonkey on the HEAD was a 2.0a1pre nightly build. No further development of Thunderbird or SeaMonkey is taking place on the HEAD of CVS") }}</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>The last version of Thunderbird on the HEAD was a post-3.0a2 nightly build. The last version of SeaMonkey on the HEAD was a 2.0a1pre nightly build. No further development of Thunderbird or SeaMonkey is taking place on the HEAD of CVS"</p>
+</div>
 
 <h4 id="Specific_Branch">Specific Branch</h4>
 
@@ -117,7 +124,10 @@ $ make -f client.mk checkout MOZ_CO_PROJECT=<em>option,option</em>
 
 <p>As mentioned above, if you are using a custom <code>.mozconfig</code> file where you have already specified the <code>MOZ_CO_PROJECT</code> variable, you do not need to repeat it here on command line.</p>
 
-<div class="note">Always use <code>client.mk</code> to checkout the Mozilla sources: do not check out the <code>mozilla/</code> module directly. Various subprojects such as NSS, NSPR, and LDAP C SDK are pulled from stable release tags, even when regular mozilla development occurs on the trunk.</div>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>Always use <code>client.mk</code> to checkout the Mozilla sources: do not check out the <code>mozilla/</code> module directly. Various subprojects such as NSS, NSPR, and LDAP C SDK are pulled from stable release tags, even when regular mozilla development occurs on the trunk.</p>
+</div>
 
 <h4 id="Specific_Time">Specific Time</h4>
 

@@ -1,0 +1,57 @@
+---
+title: BackgroundFetchRecord.responseReady
+slug: Web/API/BackgroundFetchRecord/responseReady
+tags:
+  - API
+  - Property
+  - Reference
+  - responseReady
+  - BackgroundFetchRecord
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>responseReady</code></strong> read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var response = BackgroundFetchRecord.responseReady;</pre>
+
+<h3>Value</h3>
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example an individual <code>BackgroundFetchRecord</code> is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The value of <code>responseReady</code> is returned and logged to the console.</p>
+
+<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+  if (!record) {
+    console.log('No record found');
+    return;
+  }
+
+  const response = await record.responseReady;
+  console.log(`Here's the response`, response);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+    <td>{{SpecName('Background Fetch','#dom-backgroundfetchrecord-responseready','BackgroundFetchRecord.responseReady')}}</td>
+    <td>{{Spec2('Background Fetch')}}</td>
+    <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchRecord.responseReady")}}</p>

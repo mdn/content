@@ -34,9 +34,7 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <h3 id="Using_image-set_to_provide_alternative_background-image_options">Using image-set() to provide alternative background-image options</h3>
 
-<pre class="brush: css">background-image: image-set( "cat.png" 1x,
-                             "cat-2x.png" 2x,
-                             "cat-print.png" 600dpi);</pre>
+<p>{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}</p>
 
 <p>This example shows how to use <code><a class="css" href="https://drafts.csswg.org/css-images-4/#funcdef-image-set" id="ref-for-funcdef-image-set⑨">image-set()</a></code> to provide two alternative {{cssxref("background-image")}} options, chosen depending on the resolution needed: a normal version and a high-resolution version.</p>
 
@@ -45,7 +43,7 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a class="external external-icon" href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -76,9 +74,9 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <ul>
  <li>{{cssxref("image")}}</li>
- <li>{{cssxref("_image", "image()")}}</li>
- <li>{{cssxref("element")}}</li>
- <li>{{cssxref("url")}}</li>
+ <li>{{cssxref("image()", "image()")}}</li>
+ <li>{{cssxref("element()")}}</li>
+ <li>{{cssxref("url()")}}</li>
  <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("cross-fade")}}</li>
+ <li>{{cssxref("cross-fade()")}}</li>
 </ul>

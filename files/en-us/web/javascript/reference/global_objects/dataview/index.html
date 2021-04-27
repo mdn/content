@@ -28,7 +28,7 @@ console.log(littleEndian); // true or false
 
 <h3 id="64-bit_Integer_Values">64-bit Integer Values</h3>
 
-<p>Because JavaScript does not currently include standard support for 64-bit integer values, <code>DataView</code> does not offer native 64-bit operations. As a workaround, you could implement your own <code>getUint64()</code> function to obtain a value with precision up to {{jsxref("Number.MAX_SAFE_INTEGER")}}, which could suffice for certain cases.</p>
+<p>Some browsers don’t have support for {{jsxref("DataView.prototype.setBigInt64()")}} and {{jsxref("DataView.prototype.setBigUint64()")}}. So to enable 64-bit operations in your code that will work across browsers, you could implement your own <code>getUint64()</code> function, to obtain values with precision up to {{jsxref("Number.MAX_SAFE_INTEGER")}} — which could suffice for certain cases.</p>
 
 <pre class="brush: js">function getUint64(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts

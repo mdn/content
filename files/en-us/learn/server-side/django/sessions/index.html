@@ -118,27 +118,28 @@ request.session.modified = True
 
 <p>As a simple real-world example we'll update our library to tell the current user how many times they have visited the <em>LocalLibrary</em> home page. </p>
 
-<p>Open <strong>/locallibrary/catalog/views.py</strong>, and make the changes shown in bold below. </p>
+<p>Open <strong>/locallibrary/catalog/views.py</strong>, and add the lines that contain <code>num_visits</code> into <code>index()</code> (as shown below). </p>
 
 <pre class="brush: python">def index(request):
     ...
 
     num_authors = Author.objects.count()  # The 'all()' is implied by default.
 
-<strong>    # Number of visits to this view, as counted in the session variable.
+    # Number of visits to this view, as counted in the session variable.
     num_visits = request.session.get('num_visits', 1)
-    request.session['num_visits'] = num_visits + 1</strong>
+    request.session['num_visits'] = num_visits + 1
 
     context = {
         'num_books': num_books,
         'num_instances': num_instances,
         'num_instances_available': num_instances_available,
         'num_authors': num_authors,
-        <strong>'num_visits': num_visits,</strong>
+        'num_visits': num_visits,
     }
 
     # Render the HTML template index.html with the data in the context variable.
     return render(request, 'index.html', context=context)</pre>
+
 
 <p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 1 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
 
@@ -147,7 +148,7 @@ request.session.modified = True
     <p>We might also test whether cookies are even supported in the browser here (see <a href="https://docs.djangoproject.com/en/3.1/topics/http/sessions/">How to use sessions</a> for examples) or design our UI so that it doesn't matter whether or not cookies are supported.</p>
 </div>
 
-<p>Add the line seen at the bottom of the following block to your main HTML template (<strong>/locallibrary/catalog/templates/index.html</strong>) at the bottom of the "Dynamic content" section to display the context variable:</p>
+<p>Add the line shown at the bottom of the following block to your main HTML template (<strong>/locallibrary/catalog/templates/index.html</strong>) at the bottom of the "Dynamic content" section to display the <code>num_visits</code> context variable.</p>
 
 <pre class="brush: html">&lt;h2&gt;Dynamic content&lt;/h2&gt;
 
@@ -159,8 +160,10 @@ request.session.modified = True
   &lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; \{{ num_authors }}&lt;/li&gt;
 &lt;/ul&gt;
 
-<strong>&lt;p&gt;You have visited this page \{{ num_visits }} time{% if num_visits &gt; 1 %}s{% endif %}.&lt;/p&gt;</strong>
+<strong>&lt;p&gt;You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.&lt;/p&gt;</strong>
 </pre>
+
+<p>Note that we use the Django built-in template tag <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#pluralize">pluralize</a> to add an "s" when the page has been visited multiple time<strong>s</strong>.</p>
 
 <p>Save your changes and restart the test server. Every time you refresh the page, the number should update.</p>
 

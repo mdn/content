@@ -5,14 +5,14 @@ tags:
   - Advanced
   - NeedsUpdate
   - SVG
-  - 'SVG:Tutorial'
+  - SVG:Tutorial
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}</p>
 
 <p>When SVG was specified, support for web fonts was not widespread in browsers. Since accessing the correct font file is however crucial for rendering text correctly, a font description technology was added to SVG to provide this ability. It was not meant for compatibility with other formats like PostScript or OTF, but rather as a simple means of embedding glyph information into SVG when rendered.</p>
 
 <div class="note"><strong>SVG Fonts are currently supported only in Safari and Android Browser.</strong><br>
-Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx">hasn't considered implementing this</a>, the functionality has been <a href="https://www.chromestatus.com/feature/5930075908210688">removed from Chrome 38</a> (and Opera 25) and Firefox has <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=119490">postponed its implementation indefinitely</a> to concentrate on <a href="/en-US/docs/WOFF">WOFF</a>. Other tools however like the <a href="http://www.adobe.com/svg/viewer/install/">Adobe SVG Viewer</a> plugin, Batik and parts of Inkscape support SVG font embedding.</div>
+Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx">hasn't considered implementing this</a>, the functionality has been <a href="https://www.chromestatus.com/feature/5930075908210688">removed from Chrome 38</a> (and Opera 25) and Firefox has <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=119490">postponed its implementation indefinitely</a> to concentrate on <a href="/en-US/docs/Web/Guide/WOFF">WOFF</a>. Other tools however like the <a href="http://www.adobe.com/svg/viewer/install/">Adobe SVG Viewer</a> plugin, Batik and parts of Inkscape support SVG font embedding.</div>
 
 <p>The base for defining an SVG font is the {{ SVGElement("font") }} element.</p>
 
@@ -38,7 +38,7 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p>We start with the {{ SVGElement("font") }} element. This bears an id attribute, to enable it to be referenced via a URI (see below). The <code>horiz-adv-x</code> attribute determines how wide a character is on average compared to the path definitions of the single glyphs. The value <code>1000</code> sets a reasonable value to work with. There are several accompanying attributes that help further define the basic glyph-box layout.</p>
 
-<p>The {{ SVGElement("font-face") }} element is the SVG equivalent of the CSS <a href="/en-US/docs/CSS/@font-face"><code>@font-face</code></a> declaration. It defines basic properties of the final font such as weight, style, etc. In the example above the first and most important to be defined is <code>font-family</code>, the value of which can then be referenced in CSS and SVG <code>font-family</code> properties. The <code>font-weight</code> and <code>font-style</code> attributes have the same purpose as the equivalent descriptors in CSS. All following attributes are rendering instructions for the font layout engine, for example, how much of the glyphs' overall heights are <a href="https://en.wikipedia.org/wiki/Ascender_%28typography%29">ascenders</a>.</p>
+<p>The {{ SVGElement("font-face") }} element is the SVG equivalent of the CSS <a href="/en-US/docs/Web/CSS/@font-face"><code>@font-face</code></a> declaration. It defines basic properties of the final font such as weight, style, etc. In the example above the first and most important to be defined is <code>font-family</code>, the value of which can then be referenced in CSS and SVG <code>font-family</code> properties. The <code>font-weight</code> and <code>font-style</code> attributes have the same purpose as the equivalent descriptors in CSS. All following attributes are rendering instructions for the font layout engine, for example, how much of the glyphs' overall heights are <a href="https://en.wikipedia.org/wiki/Ascender_%28typography%29">ascenders</a>.</p>
 
 <p>Its child, the {{ SVGElement("font-face-src") }} element, corresponds to CSS' <code>src</code> descriptor in <code>@font-face</code> declarations. You can point to external sources for font declarations by means of its children {{ SVGElement("font-face-name") }} and {{ SVGElement("font-face-uri") }}. The above example states that if the renderer has a local font available named "Super Sans Bold", it should use this instead.</p>
 

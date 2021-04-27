@@ -97,7 +97,7 @@ tags:
  <li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
 </ul>
 
-<p>The good news when you're starting out is that there are quite a few sites that provide "evaluation", "developer", or "hobbyist" computing environments for "free". These are always fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period. They are however great for testing low traffic sites in a real environment, and can provide an easy migration to paying for more resources when your site gets busier. Popular choices in this category include <a href="https://www.heroku.com/">Heroku</a>, <a href="https://www.pythonanywhere.com/">Python Anywhere</a>, <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, etc.</p>
+<p>The good news when you're starting out is that there are quite a few sites that provide "evaluation", "developer", or "hobbyist" computing environments for "free". These are always fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period. They are however great for testing low traffic sites in a real environment, and can provide an easy migration to paying for more resources when your site gets busier. Popular choices in this category include <a href="https://www.heroku.com/">Heroku</a>, <a href="https://www.pythonanywhere.com/">Python Anywhere</a>, <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a>, etc.</p>
 
 <p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> and <a href="https://www.pythonanywhere.com/">Python Anywhere</a> are examples of popular hosting providers that offer a relatively inexpensive basic computing tier (in the $5 to $10USD per month range).</p>
 
@@ -162,7 +162,7 @@ with open('/etc/secret_key.txt') as f:
 
 <h2 id="Example_Installing_LocalLibrary_on_Heroku">Example: Installing LocalLibrary on Heroku</h2>
 
-<p>This section provides a practical demonstration of how to install <em>LocalLibrary</em> on the <a href="http://heroku.com">Heroku PaaS cloud</a>.</p>
+<p>This section provides a practical demonstration of how to install <em>LocalLibrary</em> on the <a href="https://heroku.com">Heroku PaaS cloud</a>.</p>
 
 <h3 id="Why_Heroku">Why Heroku?</h3>
 
@@ -198,7 +198,7 @@ with open('/etc/secret_key.txt') as f:
  <li><strong>runtime.txt</strong>: the programming language and version to use.</li>
  <li><strong>requirements.txt</strong>: the Python component dependencies, including Django.</li>
  <li><strong>Procfile</strong>: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a <code>.wsgi</code> script).</li>
- <li><strong>wsgi.py</strong>: <a href="http://wsgi.readthedocs.io/en/latest/what.html">WSGI</a> configuration to call our Django application in the Heroku environment.</li>
+ <li><strong>wsgi.py</strong>: <a href="https://wsgi.readthedocs.io/en/latest/what.html">WSGI</a> configuration to call our Django application in the Heroku environment.</li>
 </ul>
 
 <p>Developers interact with Heroku using a special client app/terminal, which is much like a Unix Bash shell. This allows you to upload code that is stored in a git repository, inspect the running processes, see logs, set configuration variables and much more!</p>
@@ -296,8 +296,6 @@ Changes to be committed:
   <p>In 2020 Github change the default repo branch name to "main" (from "master"). If using an older/existing repository you might call <code>git push origin master</code> instead.</p>
 </div>
 
-<p>When this operation completes, you should be able to go back to the page on Github where</p>
-
 <p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
 
 <div class="notecard note">
@@ -323,7 +321,7 @@ Changes to be committed:
 
 <h4 id="Gunicorn">Gunicorn</h4>
 
-<p><a href="http://gunicorn.org/">Gunicorn</a> is the recommended HTTP server for use with Django on Heroku (as referenced in the Procfile above). It is a pure-Python HTTP server for WSGI applications that can run multiple Python concurrent processes within a single dyno (see <a href="https://devcenter.heroku.com/articles/python-gunicorn">Deploying Python applications with Gunicorn</a> for more information).</p>
+<p><a href="https://gunicorn.org/">Gunicorn</a> is the recommended HTTP server for use with Django on Heroku (as referenced in the Procfile above). It is a pure-Python HTTP server for WSGI applications that can run multiple Python concurrent processes within a single dyno (see <a href="https://devcenter.heroku.com/articles/python-gunicorn">Deploying Python applications with Gunicorn</a> for more information).</p>
 
 <p>While we won't need <em>Gunicorn</em> to serve our LocalLibrary application during development, we'll install it so that it becomes part of our <a href="#requirements">requirements</a> for Heroku to set up on the remote server.</p>
 
@@ -410,7 +408,7 @@ pip3 install psycopg2-binary
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
@@ -429,7 +427,7 @@ STATIC_URL = '/static/'
   <p>Heroku automatically calls <em>collectstatic</em> and prepares your static files for use by WhiteNoise after it uploads your application. Check out <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.</p>
 </div>
 
-<p>The steps to set up <em>WhiteNoise</em> to use with the project are <a href="http://whitenoise.evans.io/en/stable/django.html">given here</a> (and reproduced below):</p>
+<p>The steps to set up <em>WhiteNoise</em> to use with the project are <a href="https://whitenoise.evans.io/en/stable/django.html">given here</a> (and reproduced below):</p>
 
 <h5 id="WhiteNoise">WhiteNoise</h5>
 

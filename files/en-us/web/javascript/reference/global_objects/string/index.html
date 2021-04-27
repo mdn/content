@@ -2,11 +2,11 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 tags:
-- Class
-- ECMAScript 2015
-- JavaScript
-- Reference
-- String
+  - Class
+  - ECMAScript 2015
+  - JavaScript
+  - Reference
+  - String
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +18,7 @@ tags:
 <p>Strings are useful for holding data that can be represented in text form. Some of the
   most-used operations on strings are to check their {{jsxref("String.length",
   "length")}}, to build and concatenate them using the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ and += string
+    href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators">+ and += string
     operators</a>, checking for the existence or location of substrings with the
   {{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
   with the {{jsxref("String.prototype.substring()", "substring()")}} method.</p>
@@ -66,7 +66,7 @@ const string3 = `Yet another string primitive`;</pre>
 
 <p>In C, the <code>strcmp()</code> function is used for comparing strings. In JavaScript,
   you just use the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">less-than
+    href="/en-US/docs/Web/JavaScript/Reference/Operators">less-than
     and greater-than operators</a>:</p>
 
 <pre class="brush: js">let a = 'a'
@@ -140,77 +140,72 @@ console.log(eval(s2))         // returns the string "2 + 2"
 <pre class="brush: js">console.log(eval(s2.valueOf()))  // returns the number 4
 </pre>
 
-<h3 id="Escape_notation">Escape notation</h3>
+<h3 id="escape_notation"><span id="escape_sequences">Escape sequences</span></h3>
 
-<p>Special characters can be encoded using escape notation:</p>
+<p>Special characters can be encoded using escape sequences:</p>
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Code</th>
-      <th scope="col">Output</th>
+      <th scope="col">Escape sequence</th>
+      <th scope="col">Unicode code point</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>\0</code></td>
-      <td>U+0000 NULL character</td>
+      <td>null character (U+0000 NULL)</td>
     </tr>
     <tr>
       <td><code>\'</code></td>
-      <td>single quote</td>
+      <td>single quote (U+0027 APOSTROPHE)</td>
     </tr>
     <tr>
       <td><code>\"</code></td>
-      <td>double quote</td>
+      <td>double quote (U+0022 QUOTATION MARK)</td>
     </tr>
     <tr>
       <td><code>\\</code></td>
-      <td>backslash</td>
+      <td>backslash (U+005C REVERSE SOLIDUS)</td>
     </tr>
     <tr>
       <td><code>\n</code></td>
-      <td>new line</td>
+      <td>newline (U+000A LINE FEED; LF)</td>
     </tr>
     <tr>
       <td><code>\r</code></td>
-      <td>carriage return</td>
+      <td>carriage return (U+000D CARRIAGE RETURN; CR)</td>
     </tr>
     <tr>
       <td><code>\v</code></td>
-      <td>vertical tab</td>
+      <td>vertical tab (U+000B LINE TABULATION)</td>
     </tr>
     <tr>
       <td><code>\t</code></td>
-      <td>tab</td>
+      <td>tab (U+0009 CHARACTER TABULATION)</td>
     </tr>
     <tr>
       <td><code>\b</code></td>
-      <td>backspace</td>
+      <td>backspace (U+0008 BACKSPACE)</td>
     </tr>
     <tr>
       <td><code>\f</code></td>
-      <td>form feed</td>
+      <td>form feed (U+000C FORM FEED)</td>
     </tr>
     <tr>
-      <td><code>\u<var>XXXX</var></code> (where <code><var>XXXX</var></code> is 4 hex
-        digits; range of <code>0x0000</code>–<code>0xFFFF</code>)</td>
-      <td>UTF-16 code unit / Unicode code point between <code>U+0000</code> and
-        <code>U+FFFF</code></td>
+      <td><code>\u<var>XXXX</var></code>
+        <br>…where <code><var>XXXX</var></code> is exactly 4 hex digits in the range <code>0000</code>–<code>FFFF</code>; e.g., <code>\u000A</code> is the same as <code>\n</code> (LINE FEED); <code>\u0021</code> is "<code>!</code>"</td>
+      <td>Unicode code point between <code>U+0000</code> and <code>U+FFFF</code> (the Unicode Basic Multilingual Plane)</td>
     </tr>
     <tr>
-      <td><code>\u{<var>X</var>}</code> ... <code>\u{<var>XXXXXX</var>}</code><br>
-        (where <code><var>X</var>…<var>XXXXXX</var></code> is 1–6 hex digits; range of
-        <code>0x0</code>–<code>0x10FFFF</code>)</td>
-      <td>UTF-32 code unit / Unicode code point between <code>U+0000</code> and
-        <code>U+10FFFF</code></td>
+      <td><code>\u{<var>X</var>}</code>…<code>\u{<var>XXXXXX</var>}</code>
+        <br>…where <code><var>X</var></code>…<code><var>XXXXXX</var></code> is 1–6 hex digits in the range <code>0</code>–<code>10FFFF</code>; e.g., <code>\u{A}</code> is the same as <code>\n</code> (LINE FEED); <code>\u{21}</code> is "<code>!</code>"</td>
+      <td>Unicode code point between <code>U+0000</code> and <code>U+10FFFF</code> (the entirety of Unicode)</td>
     </tr>
     <tr>
-      <td><code>\x<var>XX</var></code><br>
-        (where <code><var>XX</var></code> is 2 hex digits; range of
-        <code>0x00</code>–<code>0xFF</code>)</td>
-      <td>ISO-8859-1 character / Unicode code point between <code>U+0000</code> and
-        <code>U+00FF</code></td>
+      <td><code>\x<var>XX</var></code>
+        <br>…where <code><var>XX</var></code> is exactly 2 hex digits in the range <code>00</code>–<code>FF</code>; e.g., <code>\x0A</code> is the same as <code>\n</code> (LINE FEED); <code>\x21</code> is "<code>!</code>"</td>
+      <td>Unicode code point between <code>U+0000</code> and <code>U+00FF</code> (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1)</td>
     </tr>
   </tbody>
 </table>
@@ -370,9 +365,6 @@ otherwise my code is unreadable."
     "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}</dt>
   <dd>Determines whether the calling string begins with the characters of string
     <code><var>searchString</var></code>.</dd>
-  <dt>{{jsxref("String.prototype.substr()")}}</dt>
-  <dd>Returns the characters in a string beginning at the specified location through the
-    specified number of characters.</dd>
   <dt>{{jsxref("String.prototype.substring()",
     "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}</dt>
   <dd>Returns a new string containing characters of the calling string from (or between)
@@ -498,7 +490,5 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
       JavaScript Guide</a></li>
   <li>{{jsxref("RegExp")}}</li>
   <li>{{domxref("DOMString")}}</li>
-  <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> — a C-like
-      representation of strings based on typed arrays</a></li>
   <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
 </ul>

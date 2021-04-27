@@ -4,19 +4,17 @@ slug: Web/API/PositionSensorVRDevice/getImmediateState
 tags:
   - API
   - Experimental
-  - Expérimental(2)
   - Method
   - Obsolete
   - PositionSensorVRDevice
   - Reference
-  - Référence(2)
   - VR
   - Virtual Reality
   - WebVR
 ---
 <p>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
 
-<p>The <strong><code>getImmediateState()</code></strong> method of the {{domxref("VRDevice")}} interface returns the current instantaneous position sensor state. This is intended to only be used rarely, for certain special uses, for example sampling the immediate position of a hand orientation sensor — or at least it will be, in the future.</p>
+<p>The <strong><code>getImmediateState()</code></strong> method of the {{domxref("VRDisplay")}} interface returns the current instantaneous position sensor state. This is intended to only be used rarely, for certain special uses, for example sampling the immediate position of a hand orientation sensor — or at least it will be, in the future.</p>
 
 <p>For most standard uses, you'll probably want to use {{domxref("PositionSensorVRDevice.getState")}} instead.</p>
 
@@ -30,7 +28,7 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("VRPositionState")}} object.</p>
+<p>A {{domxref("VRPose")}} object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -62,7 +60,7 @@ tags:
   }
 }</pre>
 
-<p>Here we are grabbing a {{domxref("VRPositionState")}} object using <code>getImmediateState()</code> and storing it in <code>posState</code> (the actual live demo uses <code>getState()</code>, but both seem to do the same thing currently.) We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPositionState.hasPosition")}} and {{domxref("VRPositionState.hasOrientation")}} (these return <code>null</code> if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)</p>
+<p>Here we are grabbing a {{domxref("VRPose")}} object using <code>getImmediateState()</code> and storing it in <code>posState</code> (the actual live demo uses <code>getState()</code>, but both seem to do the same thing currently.) We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return <code>null</code> if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)</p>
 
 <p>We then output the x, y and z position and orientation values for informational purposes, and use those values to update the <code>xPos</code>, <code>yPos</code>, <code>zPos, </code><code>xOrient</code>, <code>yOrient</code>, and <code>zOrient</code> variables, which are used to update the scene rendering on each frame.</p>
 

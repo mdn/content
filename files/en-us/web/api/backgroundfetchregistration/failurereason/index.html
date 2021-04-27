@@ -1,0 +1,63 @@
+---
+title: BackgroundFetchRegistration.failureReason
+slug: Web/API/BackgroundFetchRegistration/failureReason
+tags:
+  - API
+  - Property
+  - Reference
+  - failureReason
+  - BackgroundFetchRegistration
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>failureReason</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let failureReason = BackgroundFetchRegistration.failureReason;</pre>
+
+<h3>Value</h3>
+<p>One of the following strings:</p>
+<dl>
+  <dt><code>""</code></dt>
+  <dd>The background fetch has not completed, or was successful.</dd>
+  <dt><code>"aborted"</code></dt>
+  <dd>The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.</dd>
+  <dt><code>"bad-status"</code></dt>
+  <dd>A response had a not-ok status (a status outside the range 200-299).</dd>
+  <dt><code>"fetch-error"</code></dt>
+  <dd>A fetch failed for other reasons, for example CORS, or a network failure.</dd>
+  <dt><code>"quota-exceeded"</code></dt>
+  <dd>Storage quota was reached during the operation.</dd>
+  <dt><code>"download-total-exceeded"</code></dt>
+  <dd>The  provided <code>downloadTotal</code> was exceeded. This value was set when the background fetch was registered.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Logging {{domxref("BackgroundFetchRegistration.failureReason")}} to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.</p>
+
+<pre class="brush: js">console.log(bgFetch.failureReason);</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+     <td>{{SpecName('Background Fetch','#dom-backgroundfetchregistration-failurereason','BackgroundFetchRegistration.failureReason')}}</td>
+     <td>{{Spec2('Background Fetch')}}</td>
+     <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.BackgroundFetchRegistration.failureReason")}}</p>

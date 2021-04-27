@@ -18,11 +18,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">new Int32Array(); // new in ES2017
-new Int32Array(<var>length</var>);
-new Int32Array(<var>typedArray</var>);
-new Int32Array(<var>object</var>);
-new Int32Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);</pre>
+<pre class="brush: js">
+new Int32Array(); // new in ES2017
+new Int32Array(length);
+new Int32Array(typedArray);
+new Int32Array(object);
+
+new Int32Array(buffer);
+new Int32Array(buffer, byteOffset);
+new Int32Array(buffer, byteOffset, length);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

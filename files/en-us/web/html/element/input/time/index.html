@@ -30,25 +30,25 @@ tags:
 
 <p>In Chrome/Opera the <code>time</code> control is simple, with slots to enter hours and minutes in 12 or 24-hour format depending on operating system locale, and up and down arrows to increment and decrement the currently selected component. In some versions, an "X" button is provided to clear the control's value.</p>
 
-<p><img alt="12-hour Chrome time input" src="chrome_time.png" style="height: 30px; width: 93px;"> 12-hour</p>
+<p><img alt="12-hour Chrome time input" src="chrome_time.png"> 12-hour</p>
 
-<p><img alt="24-hour Chrome time input" src="chrome-time.png" style="height: 30px; width: 79px;"> 24-hour</p>
+<p><img alt="24-hour Chrome time input" src="chrome-time.png"> 24-hour</p>
 
 <h3 id="Firefox">Firefox</h3>
 
 <p>Firefox's <code>time</code> control is very similar to Chrome's, except that it doesn't have the up and down arrows. It also uses a 12- or 24-hour format for inputting times, based on system locale. An "X" button is provided to clear the control's value.</p>
 
-<p><img alt="12-hour Firefox time input" src="firefox-time.png" style="height: 29px; width: 106px;"> 12-hour</p>
+<p><img alt="12-hour Firefox time input" src="firefox-time.png"> 12-hour</p>
 
-<p><img alt="24-hour Firefox time input" src="firefox-time-24.png" style="height: 29px; width: 80px;"> 24-hour</p>
+<p><img alt="24-hour Firefox time input" src="firefox-time-24.png"> 24-hour</p>
 
 <h3 id="Edge">Edge</h3>
 
 <p>The Edge <code>time</code> control is somewhat more elaborate, opening up an hour and minute picker with sliding reels. It, like Chrome, uses a 12- or 24-hour format for inputting times, based on system locale:</p>
 
-<p><img alt="12-hour Edge time input" src="edge_time.png" style="display: block; height: 290px; width: 188px;"> 12-hour</p>
+<p><img alt="12-hour Edge time input" src="edge_time.png" style="display: block;"> 12-hour</p>
 
-<p><img alt="24-hour Edge time input" src="edge-time.png" style="display: block; height: 290px; width: 129px;"> 24-hour</p>
+<p><img alt="24-hour Edge time input" src="edge-time.png" style="display: block;"> 24-hour</p>
 
 <table class="properties">
  <tbody>
@@ -159,7 +159,7 @@ startTime.addEventListener("input", function() {
 <div class="notecard note">
   <h3>Note</h3>
   <p>Unlike many data types, time values have a <strong>periodic domain</strong>, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a <code>min</code> of <code>14:00</code> and a <code>max</code> of <code>2:00</code> means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM. See more in the <a
-    href="#Making_min_and_max_cross_midnight">making min and max cross midnight</a> section of this article.</p>
+    href="#making_min_and_max_cross_midnight">making min and max cross midnight</a> section of this article.</p>
 </div>
 
 <p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
@@ -336,7 +336,7 @@ if (input.validity.valid &amp;&amp; input.type === 'time') {
 
 <p>Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
-<p>The second problem is the more serious; as mentioned previously, <code>time</code> inputs' values are always normalized to the format <code>hh:mm</code> or <code>hh:mm:ss</code>. With a text input, on the other hand, by default the browser has no idea of what format the time should be in, and there multiple ways in which people write times, such as:</p>
+<p>The second problem is the more serious; as mentioned previously, <code>time</code> inputs' values are always normalized to the format <code>hh:mm</code> or <code>hh:mm:ss</code>. With a text input, on the other hand, by default the browser has no idea of what format the time should be in, and there are multiple ways in which people write times, such as:</p>
 
 <ul>
  <li><code>3.00 pm</code></li>
@@ -549,7 +549,7 @@ function populateMinutes() {
 <ul>
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker">Date and Time picker tutorial</a></li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/week">&lt;input type="week"&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

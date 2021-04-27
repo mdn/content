@@ -16,9 +16,8 @@ tags:
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>The <strong><code>seekable</code></strong> read-only property of the
-  {{domxref("HTMLMediaElement")}} returns a {{domxref('TimeRanges')}} object that
-  contains the time ranges that the user is able to seek to, if any.</p>
+
+<p>The <strong><code>seekable</code></strong> read-only property of {{domxref("HTMLMediaElement")}} objects returns a new static <a href="/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects">normalized <code>TimeRanges</code> object</a> that represents the ranges of the media resource, if any, that the user agent is able to seek to at the time <code>seekable</code> property is accessed.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +25,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref('TimeRanges')}} object.</p>
+<p>A new static <a href="/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects">normalized TimeRanges object</a> that represents the ranges of the media resource, if any, that the user agent is able to seek to at the time <code>seekable</code> property is accessed.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,22 +48,14 @@ for (let count = 0; count &lt; timeRangesObject.length; count ++) {
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('HTML WHATWG', "the-video-element.html#dom-media-seekable",
-        "HTMLMediaElement")}}</td>
+      <td>{{SpecName('HTML WHATWG', "the-video-element.html#dom-media-seekable", "seekable")}}</td>
       <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change from {{SpecName('HTML5 W3C')}}</td>
+      <td></td>
     </tr>
     <tr>
-      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#dom-media-seekable",
-        "HTMLMediaElement")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media Source Extensions','#htmlmediaelement-extensions','HTMLMediaElement extensions, like for
-        seekable')}}</td>
+      <td>{{SpecName('Media Source Extensions','#htmlmediaelement-extensions')}}</td>
       <td>{{Spec2('Media Source Extensions')}}</td>
-      <td>Specifies a new algorithm for returning the seekable time range of a media
+      <td>Specifies a new algorithm for returning the seekable time ranges of a media
         element whose source is a {{domxref("MediaSource")}} object.</td>
     </tr>
   </tbody>

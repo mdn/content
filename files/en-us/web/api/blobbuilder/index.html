@@ -11,14 +11,18 @@ tags:
 ---
 <p>{{APIRef("File API")}}{{ deprecated_header}}</p>
 
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The <code>BlobBuilder</code> interface has been
+  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</p>
+</div>
+
 <p>The <strong><code>BlobBuilder</code></strong> interface provides an easy way to
   construct {{domxref("Blob")}} objects. Just create a <code>BlobBuilder</code> and append
   chunks of data to it by calling the {{manch("append")}} method. When you're done
   building your blob, call {{manch("getBlob")}} to retrieve a {{domxref("Blob")}}
   containing the data you sent into the blob builder.</p>
 
-<div class="note"><strong>Note:</strong> The <code>BlobBuilder</code> interface has been
-  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</div>
 
 <h2 id="Method_overview">Method overview</h2>
 

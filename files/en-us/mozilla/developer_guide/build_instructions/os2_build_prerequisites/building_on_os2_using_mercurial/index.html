@@ -10,7 +10,7 @@ tags:
 ---
 <h2 id="Required_Packages">Required Packages</h2>
 <p>To build code from Mercurial, you need all the tools listed in sections <a class="internal" href="/en-US/docs/Mozilla/Developer_Guide/Build_Instructions/OS/2_Build_Prerequisites#required_packages" title="OS/2 Build Prerequisites: Required Packages">Requires Packages</a> and <a class="internal" href="/en-US/docs/Mozilla/Developer_Guide/Build_Instructions/OS/2_Build_Prerequisites#compiler" title="OS/2 Build Prerequisites: Compiler">Compiler</a> of the <a class="internal" href="/en-US/docs/Mozilla/Developer_Guide/Build_Instructions/OS/2_Build_Prerequisites#required_packages">OS/2 Build Prerequisites</a>.</p>
-<ul> <li>Mercurial<br> The OS/2 version of this version control system is available from <a class="external" href="http://members.pcug.org.au/~andymac/packages/">Andrew McIntyres's</a> webpage.</li>
+<ul> <li>Mercurial<br> The OS/2 version of this version control system is available from <a class="external" href="https://members.pcug.org.au/~andymac/packages/">Andrew McIntyres's</a> webpage.</li>
 </ul>
 <h2 id="Compiler">Compiler</h2>
 <p>You should use <a class="external" href="http://download.smedley.info/gcc-4.4.0-os2-20090426.zip">GCC 4.4.0 (dated 2009-04-26)</a> for building any Mozilla application. Download the package from Paul Smedley's site and unpack. The setmozenv script (attached to this page) assumes that you installed into the directory <strong>D:\GCC44</strong>. If you installed elsewhere, you will have to make the appropriate changes. You still need GCC 3.3.5 because it contains binaries and include files required for the build process.</p>
@@ -46,7 +46,7 @@ hgext.win32text =
 <ul> <li><code>hg clone &lt;URL&gt;</code> (the first time only, may take hours depending on download speed)</li>
 </ul>
 <p>Then, to update your local tree do this:</p>
-<ul> <li><code>hg qpop -a</code> (remove all locally applied patches that Mercurial Queues know about, this may take long if you edited files without letting Mq know about it)</li> <li><code>hg pull -u</code> (pull all changes into the local repository which is inside the <code>.hg </code>subdirectory, and then update the checked-out source tree, this should be much faster than for CVS)</li> <li><code>hg qpush &lt;patchname&gt;</code> (apply the patch or patches again)</li>
+<ul> <li><code>hg qpop -a</code> (remove all locally applied patches that Mercurial Queues know about, this may take long if you edited files without letting Mq know about it)</li> <li><code>hg pull -u</code> (pull all changes into the local repository which is inside the <code>.hg</code> subdirectory, and then update the checked-out source tree, this should be much faster than for CVS)</li> <li><code>hg qpush &lt;patchname&gt;</code> (apply the patch or patches again)</li>
 </ul>
 <p>For SeaMonkey you can use the command</p>
 <ul> <li><code>python client.py checkout</code></li>
@@ -64,4 +64,4 @@ ac_add_options --disable-debug
 <p>and then kick-off the build with</p>
 <pre>make -f client.mk build 2&gt;&amp;1 | tee build.log
 </pre>
-<div class="warning"><strong>Warning</strong>: for some reason the configure file in <code>nsprpub </code>is part of the Hg repository, but as it is incompatible with the OS/2 build, you need to either remove it before building, or (<strong>recommended</strong>) to patch it away using the Mq extension of Mercurial. (In the latter case you might need to use <code>hg qrefresh</code> every now and then to update the patch.</div>
+<div class="warning"><strong>Warning</strong>: for some reason the configure file in <code>nsprpub</code> is part of the Hg repository, but as it is incompatible with the OS/2 build, you need to either remove it before building, or (<strong>recommended</strong>) to patch it away using the Mq extension of Mercurial. (In the latter case you might need to use <code>hg qrefresh</code> every now and then to update the patch.</div>

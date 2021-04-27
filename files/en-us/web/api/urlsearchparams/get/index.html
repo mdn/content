@@ -2,11 +2,11 @@
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 tags:
-- API
-- Method
-- URL API
-- URLSearchParams
-- get
+  - API
+  - Method
+  - URL API
+  - URLSearchParams
+  - get
 ---
 <p>{{ApiRef("URL API")}}</p>
 
@@ -36,9 +36,9 @@ tags:
 <p>If the URL of your page is <code>https://example.com/?name=Jonathan&amp;age=18</code>
   you could parse out the 'name' and 'age' parameters using:</p>
 
-<pre class="brush: js"><code>let params = new URLSearchParams(document.location.search.substring(1));
-let name = params.get("name"); // is the string "Jonathan"
-let age = parseInt(params.get("age"), 10); // is the number 18</code>
+<pre class="brush: js">let params = new URLSearchParams(document.location.search.substring(1));
+let name = params.get(&quot;name&quot;); // is the string &quot;Jonathan&quot;
+let age = parseInt(params.get(&quot;age&quot;), 10); // is the number 18
 </pre>
 
 <p>Requesting a parameter that isn't present in the query string will return

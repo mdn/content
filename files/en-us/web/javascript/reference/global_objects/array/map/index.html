@@ -18,17 +18,24 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-map.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let <var>newArray</var> = <var>arr</var>.map(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
-  // return element for <em>newArray,</em> after executing something
-}[, <var>thisArg</var>]);
+<pre class="brush: js">
+// Arrow function
+map((currentValue) => { ... } )
+map((currentValue, index) => { ... } )
+map((currentValue, index, array) => { ... } )
+
+// Callback function
+map(callbackFn)
+map(callbackFn, thisArg)
+
+// Inline callback function
+map(function callbackFn(currentValue) { ... })
+map(function callbackFn(currentValue, index) { ... })
+map(function callbackFn(currentValue, index, array){ ... })
+map(function callbackFn(currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

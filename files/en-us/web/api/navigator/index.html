@@ -35,6 +35,10 @@ tags:
  <dd>Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.</dd>
  <dt>{{domxref("Navigator.geolocation")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.</dd>
+ <dt>{{domxref("Navigator.hid")}} {{readonlyInline}}</dt>
+ <dd>Returns an {{domxref("HID")}} object providing methods
+  for connecting to HID devices, listing attached HID devices, and event
+  handlers for connected HID devices.</dd>
  <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyInline}}</dt>
  <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}</dt>
@@ -128,12 +132,16 @@ tags:
 <dl>
  <dt>{{domxref("Navigator.canShare()")}}</dt>
  <dd>Returns <code>true</code> if a call to <code>Navigator.share()</code> would succeed.</dd>
+ <dt>{{domxref("Navigator.clearAppBadge()")}}</dt>
+ <dd>Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</dd>
  <dt>{{domxref("Navigator.registerProtocolHandler()")}}</dt>
  <dd>Allows web sites to register themselves as a possible handler for a given protocol.</dd>
  <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.</dd>
  <dt>{{domxref("Navigator.sendBeacon()")}}</dt>
  <dd>Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.</dd>
+ <dt>{{domxref("Navigator.setAppBadge()")}}</dt>
+ <dd>Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</dd>
  <dt>{{domxref("Navigator.share()")}}</dt>
  <dd>Invokes the native sharing mechanism of the current platform.</dd>
  <dt>{{domxref("Navigator.vibrate()")}}</dt>

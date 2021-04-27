@@ -13,7 +13,7 @@ tags:
 <p>The <strong><code>If-Modified-Since</code></strong> request HTTP header makes the
   request conditional: the server will send back the requested resource, with a
   {{HTTPStatus("200")}} status, only if it has been last modified after the given date. If
-  the request has not been modified since, the response will be a {{HTTPStatus("304")}}
+  the resource has not been modified since, the response will be a {{HTTPStatus("304")}}
   without any body; the {{HTTPHeader("Last-Modified")}} response header of a previous
   request will contain the date of last modification. Unlike
   {{HTTPHeader("If-Unmodified-Since")}}, <code>If-Modified-Since</code> can only be used

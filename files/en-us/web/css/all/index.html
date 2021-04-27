@@ -6,7 +6,7 @@ tags:
   - CSS Cascade
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 ---
 <div>{{CSSRef}}</div>
 
@@ -39,11 +39,11 @@ all: revert;
  <dt>{{cssxref("revert")}}</dt>
  <dd>Specifies behavior that depends on the stylesheet origin to which the declaration belongs:
  <dl>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets">User-agent origin</a></dt>
+  <dt><a href="/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets">User-agent origin</a></dt>
   <dd>Equivalent to <code>unset</code>.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#User_stylesheets">User origin</a></dt>
+  <dt><a href="/en-US/docs/Web/CSS/Cascade#user_stylesheets">User origin</a></dt>
   <dd>Rolls back the <a href="/en-US/docs/Web/CSS/Cascade">cascade</a> to the user-agent level, so that the <a href="/en-US/docs/Web/CSS/specified_value">specified values</a> are calculated as if no author-level or user-level rules were specified for the element.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#Author_stylesheets">Author origin</a></dt>
+  <dt><a href="/en-US/docs/Web/CSS/Cascade#author_stylesheets">Author origin</a></dt>
   <dd>Rolls back the <a href="/en-US/docs/Web/CSS/Cascade">cascade</a> to the user level, so that the <a href="/en-US/docs/Web/CSS/specified_value">specified values</a> are calculated as if no author-level rules were specified for the element. For purposes of <code>revert</code>, the Author origin includes the Override and Animation origins.</dd>
  </dl>
  </dd>
@@ -91,7 +91,7 @@ blockquote {
 blockquote { background-color: skyblue;  color: red; }</pre>
 {{EmbedLiveSample("ex0", "200", "125")}}
 
-<p>The {{HTMLElement("blockquote")}} uses the browser's default styling together with a specific background and text color. It also behaves as a <em>block</em> element: the text that follows it is beneath it.</p>
+<p>The {{HTMLElement("blockquote")}} uses the browser's default styling which gives it a margin, together with a specific background and text color. It also behaves as a <em>block</em> element: the text that follows it is beneath it.</p>
 </div>
 
 <div id="ex1" style="display: inline-block; width: 225px; vertical-align: top;">

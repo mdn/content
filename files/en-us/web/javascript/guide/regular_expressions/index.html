@@ -203,7 +203,7 @@ var myArray = myRe.exec('cdbbdbsbz');
     // /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
 </pre>
 
-<p>(See <a href="#g-different-behaviors">different behaviors</a> for further info about the different behaviors.)</p>
+<p>(See <a href="#using_the_global_search_flag_with_exec">Using the global search flag with <code>exec()</code></a> for further info about the different behaviors.)</p>
 
 <p>If you want to construct the regular expression from a string, yet another alternative is this script:</p>
 
@@ -293,6 +293,11 @@ console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
  </thead>
  <tbody>
   <tr>
+   <td><code>d</code></td>
+   <td>Generate indices for substring matches.</td>
+   <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices">RegExp.prototype.hasIndices</a></code></td>
+  </tr>
+  <tr>
    <td><code>g</code></td>
    <td>Global search.</td>
    <td><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global">RegExp.prototype.global</a></code></td>
@@ -359,15 +364,17 @@ console.log(myArray);
 
 <p>and get the same result.</p>
 
-<p id="g-different-behaviors">The behavior associated with the <code>g</code> flag is different when the <code>.exec()</code> method is used.  The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast this <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>.  The <code>g</code> flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
+<p>The <code>m</code> flag is used to specify that a multiline input string should be treated as multiple lines. If the <code>m</code> flag is used, <code>^</code> and <code>$</code> match at the start or end of any line within the input string instead of the start or end of the entire string.</p>
+
+<h4 id="using_the_global_search_flag_with_exec">Using the global search flag with exec()</h4>
+
+<p>The behavior associated with the <code>g</code> flag is different when the <code>.exec()</code> method is used.  The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast this <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>.  The <code>g</code> flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
 
 <pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
 // ["fo ", index: 7, input: "fee fi fo fum"]</pre>
-
-<p>The <code>m</code> flag is used to specify that a multiline input string should be treated as multiple lines. If the <code>m</code> flag is used, <code>^</code> and <code>$</code> match at the start or end of any line within the input string instead of the start or end of the entire string.</p>
 
 <h2 id="Examples">Examples</h2>
 

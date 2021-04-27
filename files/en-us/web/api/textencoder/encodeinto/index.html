@@ -2,12 +2,12 @@
 title: TextEncoder.prototype.encodeInto()
 slug: Web/API/TextEncoder/encodeInto
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- TextEncoder
-- encodeInto
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - TextEncoder
+  - encodeInto
 ---
 <p>{{APIRef("Encoding API")}}{{SeeCompatTable}}</p>
 
@@ -124,7 +124,7 @@ console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
 <pre class="brush: js">var encoder = new TextEncoder;
 function encodeIntoWithSentinel(string, u8array, position) {
     var stats = encoder.encodeInto(string, position ? u8array.subarray(position|0) : u8array);
-    if (stats.<code>written &lt; </code>u8array.length) u8array[stats.<code>written] = 0; // append null if room</code>
+    if (stats.written &lt; u8array.length) u8array[stats.written] = 0; // append null if room
     return stats;
 }</pre>
 

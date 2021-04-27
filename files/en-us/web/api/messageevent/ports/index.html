@@ -2,13 +2,13 @@
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
 tags:
-- API
-- DOM
-- MessagingEvent
-- Property
-- Reference
-- messaging
-- ports
+  - API
+  - DOM
+  - MessagingEvent
+  - Property
+  - Reference
+  - messaging
+  - ports
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -28,16 +28,16 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">onconnect <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> port <span class="operator token">=</span> e<span class="punctuation token">.</span>ports<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js">onconnect = function(e) {
+  var port = e.ports[0];
 
-  port<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'message'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> workerResult <span class="operator token">=</span> <span class="string token">'Result: '</span> <span class="operator token">+</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">*</span> e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    port<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span>workerResult<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  port.addEventListener('message', function(e) {
+    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+    port.postMessage(workerResult);
+  });
 
-  port<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Required when using addEventListener. Otherwise called implicitly by onmessage setter.</span>
-<span class="punctuation token">}</span></code></pre>
+  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

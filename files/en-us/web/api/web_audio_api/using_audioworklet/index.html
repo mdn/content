@@ -30,7 +30,7 @@ tags:
 
 <ol>
  <li>Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.</li>
- <li>Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.</li>
+ <li>Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.</li>
  <li>As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.</li>
  <li>Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.</li>
  <li>Connect the created <code>AudioWorkletNode</code>s into your audio processing pipeline as you would any other node, then use your audio pipeline as usual.</li>
@@ -40,13 +40,12 @@ tags:
 
 <p>The example code found on this page is derived from <a href="https://glitch.com/~audioworkletnode-sample">this working example</a> which is available on <a href="https://glitch.me/">Glitch</a>. The example creates an oscillator node and adds white noise to it using an {{domxref("AudioWorkletNode")}} before playing the resulting sound out. Slider controls are available to allow controlling the gain of both the oscillator and the audio worklet's output.</p>
 
-<div class="threecolumns" style="width: 42em;">
-<p><a class="button ignore-extermal" href="https://glitch.com/~audioworkletnode-sample">Glitch Project Page</a></p>
 
-<p style="text-align: center;"><a class="button ignore-extermal" href="https://glitch.com/edit/#!/audioworkletnode-sample">See the Code</a></p>
+<p><a href="https://glitch.com/~audioworkletnode-sample"><strong>Glitch Project Page</strong></a></p>
 
-<p style="text-align: right;"><a class="button ignore-extermal" href="https://audioworkletnode-sample.glitch.me/" style="text-align: right;">Try it Live</a></p>
-</div>
+<p><a href="https://glitch.com/edit/#!/audioworkletnode-sample"><strong>See the Code</strong></a></p>
+
+<p><a href="https://audioworkletnode-sample.glitch.me/"><strong>Try it Live</strong></a></p>
 
 <h2 id="Creating_an_audio_worklet_processor">Creating an audio worklet processor</h2>
 

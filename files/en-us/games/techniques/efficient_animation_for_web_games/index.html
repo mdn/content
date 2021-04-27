@@ -75,7 +75,7 @@ function requestRedraw() {
 
 <h2 id="A_take-away">A take-away</h2>
 
-<p>To help combat poor animation performance, Chris Lord wrote <a href="https://gitlab.com/Cwiiis/animator-js/blob/master/Animator.js" title="Animator.js">Animator.js</a>, a simple, easy-to-use animation library, heavily influenced by various parts of <a href="http://blogs.gnome.org/clutter/" title="Clutter Project">Clutter</a>, but with a focus on avoiding scope-creep. It does one thing, and it does it well. Animator.js is a fire-and-forget style animation library, designed to be used with games, or other situations where you need many, synchronised, custom animations. It includes a handful of built-in tweening functions, the facility to add your own, and helper functions for animating object properties. Puzzowl uses it to drive all the drawing updates and transitions, by overriding its <code>requestAnimationFrame</code> function with a custom version that makes the request, and appending the game’s drawing function onto the end of the callback like so:</p>
+<p>To help combat poor animation performance, Chris Lord wrote <a href="https://gitlab.com/Cwiiis/animator-js/blob/master/Animator.js" title="Animator.js">Animator.js</a>, a simple, easy-to-use animation library, heavily influenced by various parts of <a href="https://blogs.gnome.org/clutter/" title="Clutter Project">Clutter</a>, but with a focus on avoiding scope-creep. It does one thing, and it does it well. Animator.js is a fire-and-forget style animation library, designed to be used with games, or other situations where you need many, synchronised, custom animations. It includes a handful of built-in tweening functions, the facility to add your own, and helper functions for animating object properties. Puzzowl uses it to drive all the drawing updates and transitions, by overriding its <code>requestAnimationFrame</code> function with a custom version that makes the request, and appending the game’s drawing function onto the end of the callback like so:</p>
 
 <pre class="brush: js">animator.requestAnimationFrame =
   function(callback) {
@@ -90,5 +90,5 @@ function requestRedraw() {
 <p>{{EmbedYouTube("hap4iQTMh70")}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: This article was originally written and published by Chris Lord, on his blog — see <a href="http://chrislord.net/index.php/2013/11/29/efficient-animation-for-games-on-the-mobile-web/">Efficient animation for games on the (mobile) web</a>.</p>
+<p><strong>Note</strong>: This article was originally written and published by Chris Lord, on his blog — see <a href="https://chrislord.net/index.php/2013/11/29/efficient-animation-for-games-on-the-mobile-web/">Efficient animation for games on the (mobile) web</a>.</p>
 </div>

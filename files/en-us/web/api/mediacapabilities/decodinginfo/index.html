@@ -46,12 +46,12 @@ tags:
 <pre class="brush: js">//Create media configuration to be tested
 const mediaConfig = {
     type : 'file', // or 'media-source'
-    audio : {<code class="language-js">
-        contentType <span class="punctuation token">:</span> <span class="string token">"audio/ogg"</span><span class="punctuation token">,</span> <span class="comment token">// valid content type </span>
-        channels <span class="punctuation token">:</span> <span class="number token">2</span><span class="punctuation token">,</span>     <span class="comment token">// audio channels used by the track</span>
-        bitrate <span class="punctuation token">:</span> <span class="number token">132700</span><span class="punctuation token">,</span> <span class="comment token">// number of bits used to encode 1s of audio </span>
-        samplerate <span class="punctuation token">:</span> <span class="number token">5200</span> <span class="comment token">// number of audio samples making up that 1s. </span>
-     </code>},
+    audio : {
+        contentType : &quot;audio/ogg&quot;, // valid content type
+        channels : 2,     // audio channels used by the track
+        bitrate : 132700, // number of bits used to encode 1s of audio
+        samplerate : 5200 // number of audio samples making up that 1s.
+     },
 };
 
 // check support and performance
