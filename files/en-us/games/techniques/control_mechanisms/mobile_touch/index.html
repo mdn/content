@@ -68,11 +68,11 @@ document.addEventListener("touchmove", touchHandler);</pre>
 
 <h2 id="Touch_events_in_Phaser">Touch events in Phaser</h2>
 
-<p>We don't have to do this on our own; frameworks like Phaser offer systems for managing touch events for us — see <a href="http://phaser.io/docs/2.6.1/Phaser.Touch.html">managing the touch events</a>.</p>
+<p>We don't have to do this on our own; frameworks like Phaser offer systems for managing touch events for us — see <a href="https://phaser.io/docs/2.6.1/Phaser.Touch.html">managing the touch events</a>.</p>
 
 <h3 id="Pointer_theory">Pointer theory</h3>
 
-<p>A <a href="http://phaser.io/docs/2.6.1/Phaser.Pointer.html">pointer</a> represents a single finger on the touch screen. Phaser starts two pointers by default, so two fingers can perform an action at once. Captain Rogers is a simple game — it can be controlled by two fingers, the left one moving the ship and the right one controlling the ship's gun. There's no multitouch or gestures — everything is handled by single pointer inputs.</p>
+<p>A <a href="https://phaser.io/docs/2.6.1/Phaser.Pointer.html">pointer</a> represents a single finger on the touch screen. Phaser starts two pointers by default, so two fingers can perform an action at once. Captain Rogers is a simple game — it can be controlled by two fingers, the left one moving the ship and the right one controlling the ship's gun. There's no multitouch or gestures — everything is handled by single pointer inputs.</p>
 
 <p>You can add more pointers to the game by using; <code>this.game.input.addPointer</code> up to ten pointers can be managed simultaneously. The most recently used pointer is available in the <code>this.game.input.activePointer</code> object — the most recent finger active on the screen.</p>
 
@@ -136,7 +136,7 @@ function onDragStart(sprite, pointer) {
 
 <h3 id="Dedicated_plugins">Dedicated plugins</h3>
 
-<p>You could go even further and use dedicated plugins like <a href="http://phaser.io/shop/plugins/virtualjoystick">Virtual Joystick</a> — this is a paid, official Phaser plugin, but you can find free and <a href="https://github.com/Gamegur-us/phaser-touch-control-plugin">open source alternatives</a>. The initialization of Virtual Joystick looks like this:</p>
+<p>You could go even further and use dedicated plugins like <a href="https://phaser.io/shop/plugins/virtualjoystick">Virtual Joystick</a> — this is a paid, official Phaser plugin, but you can find free and <a href="https://github.com/Gamegur-us/phaser-touch-control-plugin">open source alternatives</a>. The initialization of Virtual Joystick looks like this:</p>
 
 <pre class="brush: js">this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
 this.stick = this.pad.addStick(30, 30, 80, 'generic');</pre>

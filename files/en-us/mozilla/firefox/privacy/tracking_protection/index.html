@@ -54,7 +54,7 @@ tags:
 
 <p>For example, you should not use Google Analytics in the following way:</p>
 
-<pre class="brush:html example-bad">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;
+<pre class="brush:html example-bad">&lt;a href="https://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;
   Visit example.com
 &lt;/a&gt;
 
@@ -72,7 +72,7 @@ function trackLink(url,event) {
 
 <p>Instead, you should account for the case when Google Analytics is missing by checking to see if the ga object has initialized:</p>
 
-<pre class="brush:html example-good">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;
+<pre class="brush:html example-good">&lt;a href="https://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;
   Visit example.com
 &lt;/a&gt;
 
