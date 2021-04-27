@@ -49,7 +49,7 @@ X-Frame-Options: SAMEORIGIN
  <dd>The page cannot be displayed in a frame, regardless of the site attempting to do so.</dd>
  <dt><code>SAMEORIGIN</code></dt>
  <dd>The page can only be displayed in a frame on the same origin as the page itself. The spec leaves it up to browser vendors to decide whether this option applies to the top level, the parent, or the whole chain, although it is argued that the option is not very useful unless all ancestors are also in the same origin (see {{bug(725490)}}). Also see {{anch("Browser compatibility")}} for support details.</dd>
- <dt><code>ALLOW-FROM <em>uri</em></code> {{obsolete_inline()}}</dt>
+ <dt><code>ALLOW-FROM <em>uri</em></code> {{deprecated_inline}}</dt>
  <dd>This is an obsolete directive that no longer works in modern browsers. Don't use it. In supporting legacy browsers, a page can be displayed in a frame only on the specified origin <em>uri</em>. Note that in the legacy Firefox implementation this still suffered from the same problem as <code>SAMEORIGIN</code> did — it doesn't check the frame ancestors to see if they are in the same origin. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you can use instead.</dd>
 </dl>
 
