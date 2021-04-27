@@ -70,7 +70,7 @@ tags:
 <p>Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
+  <h4>Note</h4>
   <p>If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the <a href="https://www.digitalocean.com/community/tutorials?q=node">Digital Ocean Node community docs</a>.</p>
 </div>
 
@@ -113,7 +113,7 @@ tags:
 <p>In the following subsections, we outline the most important changes that you should make to your app.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
+  <h4>Note</h4>
   <p>There are other useful tips in the Express docs — see <a href="https://expressjs.com/en/advanced/best-practice-performance.html">Production best practices: performance and reliability</a> and <a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a>.</p>
 </div>
 
@@ -339,7 +339,7 @@ Changes to be committed:
 <p>When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
+  <h4>Note</h4>
   <p>This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.</p>
   
   <p>The <em>best</em> way to do this is to use <em>git</em> to manage your revisions. With <em>git</em> you can not only go back to a particular past version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. <a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Learning Git</a> is well worth the effort, but is beyond the scope of this topic.</p>
@@ -365,9 +365,9 @@ v12.18.4</pre>
 <pre class="brush: json">{
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
-<strong>  "engines": {
+  "engines": {
     "node": "12.18.4"
-  },</strong>
+  },
   "private": true,
   ...
 </pre>
@@ -469,10 +469,15 @@ NODE_ENV: production
 
 <p>We should also use a separate database for production, setting its URI in the <strong>MONGODB_URI</strong>  environment variable. You can set up a new database and database-user exactly <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database">as we did originally</a>, and get its URI. You can set the URI as shown (obviously, using your own URI!)</p>
 
-<pre class="brush: bash">&gt;heroku config:set <strong>MONGODB_URI</strong>='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+<pre class="brush: bash">&gt;heroku config:set <strong>MONGODB_URI</strong>=mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 Setting MONGODB_URI and restarting limitless-tor-18923... done, v13
 MONGODB_URI: mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true
 </pre>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>On some operating systems you may need to set the set the URL between single quotation marks (e.g. <code>heroku config:set MONGODB_URI='mongodb+srv://...'</code>).</p>
+</div>
 
 <p>You can inspect your configuration variables at any time using the <code>heroku config</code> command — try this now:</p>
 
@@ -485,7 +490,8 @@ NODE_ENV:    production
 <p>Heroku will restart your app when it updates the variables. If you check the home page now it should show zero values for your object counts, as the changes above mean that we're now using a new (empty) database.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> If you got the Heroku error page in the last section. Now try rerunning the last section.</p>
+  <h4>Note</h4>
+  <p>If you got the Heroku error page in the last section. Now try rerunning the last section.</p>
 </div>
 
 <h3 id="Managing_addons">Managing addons</h3>
