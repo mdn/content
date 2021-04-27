@@ -8,7 +8,13 @@ tags:
   - Reference
   - Request header
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}{{Deprecated_Header}}
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>Do not use this header. Browsers omit this header and servers should ignore it.</p>
+</div>
+
 <p><span class="seoSummary">The <strong><code>Accept-Charset</code></strong> request HTTP header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.</span></p>
 
 <p>UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To <a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">guarantee better privacy through less configuration-based entropy</a>, all browsers omit the <code>Accept-Charset</code> header. Chrome, Firefox, Internet Explorer, Opera, and Safari abandoned this header.</p>
