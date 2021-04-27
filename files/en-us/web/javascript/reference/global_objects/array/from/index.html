@@ -73,10 +73,10 @@ Array.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisAr
     as <code>Array.from(<var>obj</var>).map(<var>mapFn</var>, <var>thisArg</var>)</code>,<br>
     except that it does not create an intermediate array.</p>
 
-<div class="note"><strong>Note:</strong> This is especially important for certain array subclasses, like <a
+<div class="note"><p><strong>Note:</strong> This is especially important for certain array subclasses, like <a
         href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>, since the
     intermediate array would necessarily have values truncated to fit into the appropriate
-    type.</div>
+    type.</p></div>
 
 <p>The <code>length</code> property of the <code>from()</code> method is <code>1</code>.
 </p>
