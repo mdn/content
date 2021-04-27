@@ -308,11 +308,11 @@ JSON.stringify(circularReference);
 <h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">Issue with plain
   JSON.stringify for use as JavaScript</h3>
 
-<p>Historically, JSON was not a completely strict subset of JavaScript. The literal code 
-  points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in 
-  string literals and property names in JSON text. But they could not appear literally in 
-  similar context in JavaScript text, only using Unicode escapes as <code>\u2028</code> and 
-  <code>\u2029</code>. This recently changed: now both code points may appear literally in 
+<p>Historically, JSON was not a completely strict subset of JavaScript. The literal code
+  points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in
+  string literals and property names in JSON text. But they could not appear literally in
+  similar context in JavaScript text, only using Unicode escapes as <code>\u2028</code> and
+  <code>\u2029</code>. This recently changed: now both code points may appear literally in
   strings in JSON and JavaScript both.</p>
 
 <p>Therefore, if compatibility with older JavaScript engines is required, it is perilous
@@ -346,7 +346,7 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: Properties of non-array objects are not guaranteed to be
+  <p><strong>Note:</strong> Properties of non-array objects are not guaranteed to be
     stringified in any particular order. Do not rely on ordering of properties within the
     same object within the stringification.</p>
 </div>

@@ -40,14 +40,11 @@ tags:
     <p>The object to which the assignment was originally directed. This is usually the
       proxy itself. But a <code>set()</code> handler can also be called indirectly, via
       the prototype chain or various other ways.</p>
-
-    <div class="note">
-      <p><strong>For example:</strong> Suppose a script does
+    <p>For example, suppose a script does
         <code><var>obj</var>.name = "jen"</code>, and <code><var>obj</var></code> is not a
         proxy, and has no own property <code>.name</code>, but it has a proxy on its
         prototype chain. That proxy's <code>set()</code> handler will be called, and
         <code>obj</code> will be passed as the receiver.</p>
-    </div>
   </dd>
 </dl>
 

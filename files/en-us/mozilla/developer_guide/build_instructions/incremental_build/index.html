@@ -49,7 +49,7 @@ strgcmps.dll
 
 <p>Many components build in sections, with a master build subdirectory that links the component together. Usually this build subdirectory lives under the component's main directory, but not always. When modifying files in subfolders of uriloader you also need to make in /c/mozilla/docshell/build and when modifying files in subfolders of content, dom, editor or view you also need to make in /c/mozilla/layout/build (except when building versions prior to 1.9 where editor has its own build subdirectory). In case you have built with --enable-libxul, in addition to the above steps you need to make in &lt;path-to-obj-dir&gt;/toolkit/library so that the newly created component libraries are linked into libxul.</p>
 
-<p>The <code>smartmake</code> script (<a class="external" href="http://www.joshmatthews.net/blog/2011/05/build-smarter-not-harder/">introduced here</a>) is a convenient way to generate the necessary <code>make</code> commands for an incremental build. It takes the modified directories as arguments and uses its knowledge of basic dependencies to determine the required build commands.</p>
+<p>The <code>smartmake</code> script (<a class="external" href="https://www.joshmatthews.net/blog/2011/05/build-smarter-not-harder/">introduced here</a>) is a convenient way to generate the necessary <code>make</code> commands for an incremental build. It takes the modified directories as arguments and uses its knowledge of basic dependencies to determine the required build commands.</p>
 
 <h4 id="Using_sourcedir_builds">Using sourcedir builds</h4>
 

@@ -20,7 +20,7 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/math-random.html")}}</div>
 
 <div class="note">
-  <p><code>Math.random()</code> <em>does not</em> provide cryptographically secure random
+  <p><strong>Note:</strong> <code>Math.random()</code> <em>does not</em> provide cryptographically secure random
     numbers. Do not use them for anything related to security. Use the Web Crypto API
     instead, and more precisely the {{domxref("Crypto.getRandomValues",
     "window.crypto.getRandomValues()")}} method.</p>
@@ -79,7 +79,7 @@ tags:
 </pre>
 
 <div class="note">
-  <p>It might be tempting to use <code>Math.round()</code> to accomplish that, but doing
+  <p><strong>Note:</strong> It might be tempting to use <code>Math.round()</code> to accomplish that, but doing
     so would cause your random numbers to follow a non-uniform distribution, which may not
     be acceptable for your needs.</p>
 </div>

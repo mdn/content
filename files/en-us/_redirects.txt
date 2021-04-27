@@ -1319,7 +1319,6 @@
 /en-US/docs/DOM/DeviceAcceleration.y	/en-US/docs/Web/API/DeviceMotionEventAcceleration/y
 /en-US/docs/DOM/DeviceAcceleration.z	/en-US/docs/Web/API/DeviceMotionEventAcceleration/z
 /en-US/docs/DOM/DeviceLightEvent	/en-US/docs/Web/API/DeviceLightEvent
-/en-US/docs/DOM/DeviceLightEvent.value	/en-US/docs/Web/API/DeviceLightEvent/value
 /en-US/docs/DOM/DeviceMotionEvent	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/DeviceMotionEvent.acceleration	/en-US/docs/Web/API/DeviceMotionEvent/acceleration
 /en-US/docs/DOM/DeviceMotionEvent.accelerationIncludingGravity	/en-US/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity
@@ -1830,7 +1829,6 @@
 /en-US/docs/DOM/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/DOM/UserDataHandler	/en-US/docs/Web/API/UserDataHandler
 /en-US/docs/DOM/UserProximityEvent	/en-US/docs/Web/API/UserProximityEvent
-/en-US/docs/DOM/UserProximityEvent.near	/en-US/docs/Web/API/UserProximityEvent/near
 /en-US/docs/DOM/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms
 /en-US/docs/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/DOM/Using_full-screen_mode	/en-US/docs/Web/API/Fullscreen_API
@@ -2295,10 +2293,8 @@
 /en-US/docs/DOM/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/DOM/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
-/en-US/docs/DOM/window.ondevicelight	/en-US/docs/Web/API/Window/ondevicelight
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/ondevicemotion
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/ondeviceorientation
-/en-US/docs/DOM/window.ondeviceproximity	/en-US/docs/Web/API/Window/ondeviceproximity
 /en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
@@ -2322,7 +2318,6 @@
 /en-US/docs/DOM/window.onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/DOM/window.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/DOM/window.onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
-/en-US/docs/DOM/window.onuserproximity	/en-US/docs/Web/API/Window/onuserproximity
 /en-US/docs/DOM/window.open	/en-US/docs/Web/API/Window/open
 /en-US/docs/DOM/window.openDialog	/en-US/docs/Web/API/Window/openDialog
 /en-US/docs/DOM/window.opener	/en-US/docs/Web/API/Window/opener
@@ -7462,8 +7457,8 @@
 /en-US/docs/Web/API/DeviceAcceleration/x	/en-US/docs/Web/API/DeviceMotionEventAcceleration/x
 /en-US/docs/Web/API/DeviceAcceleration/y	/en-US/docs/Web/API/DeviceMotionEventAcceleration/y
 /en-US/docs/Web/API/DeviceAcceleration/z	/en-US/docs/Web/API/DeviceMotionEventAcceleration/z
-/en-US/docs/Web/API/DeviceLightEvent.value	/en-US/docs/Web/API/DeviceLightEvent/value
 /en-US/docs/Web/API/DeviceLightEvent/Using_light_events	/en-US/docs/Web/API/Ambient_Light_Events
+/en-US/docs/Web/API/DeviceLightEvent/value	/en-US/docs/Web/API/DeviceLightEvent
 /en-US/docs/Web/API/DeviceMotionEvent.acceleration	/en-US/docs/Web/API/DeviceMotionEvent/acceleration
 /en-US/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity	/en-US/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity
 /en-US/docs/Web/API/DeviceMotionEvent.interval	/en-US/docs/Web/API/DeviceMotionEvent/interval
@@ -8907,7 +8902,7 @@
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/API/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
 /en-US/docs/Web/API/Uint8ClampedArray	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-/en-US/docs/Web/API/UserProximityEvent.near	/en-US/docs/Web/API/UserProximityEvent/near
+/en-US/docs/Web/API/UserProximityEvent/near	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/VRDevice	/en-US/docs/Web/API/VRDisplay
 /en-US/docs/Web/API/VRDevice/deviceId	/en-US/docs/Web/API/VRDisplay/displayId
 /en-US/docs/Web/API/VRDevice/deviceName	/en-US/docs/Web/API/VRDisplay/displayName
@@ -9100,6 +9095,8 @@
 /en-US/docs/Web/API/Window/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/Window/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/Window/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
+/en-US/docs/Web/API/Window/ondevicelight	/en-US/docs/Web/API/DeviceLightEvent
+/en-US/docs/Web/API/Window/ondeviceproximity	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/Window/onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
 /en-US/docs/Web/API/Window/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
 /en-US/docs/Web/API/Window/oninput	/en-US/docs/Web/API/GlobalEventHandlers/onkeydown
@@ -9123,6 +9120,7 @@
 /en-US/docs/Web/API/Window/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/Web/API/Window/onunhandledrejection	/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection
 /en-US/docs/Web/API/Window/onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
+/en-US/docs/Web/API/Window/onuserproximity	/en-US/docs/Web/API/UserProximityEvent
 /en-US/docs/Web/API/Window/onvrdisplayconnected	/en-US/docs/Web/API/Window/onvrdisplayconnect
 /en-US/docs/Web/API/Window/onvrdisplaydisconnected	/en-US/docs/Web/API/Window/onvrdisplaydisconnect
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
@@ -9682,10 +9680,8 @@
 /en-US/docs/Web/API/window.onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/window.onclose	/en-US/docs/Web/API/GlobalEventHandlers/onclose
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
-/en-US/docs/Web/API/window.ondevicelight	/en-US/docs/Web/API/Window/ondevicelight
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/ondevicemotion
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/ondeviceorientation
-/en-US/docs/Web/API/window.ondeviceproximity	/en-US/docs/Web/API/Window/ondeviceproximity
 /en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/GlobalEventHandlers/onerror
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
@@ -9709,7 +9705,6 @@
 /en-US/docs/Web/API/window.onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/window.onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
 /en-US/docs/Web/API/window.onunload	/en-US/docs/Web/API/WindowEventHandlers/onunload
-/en-US/docs/Web/API/window.onuserproximity	/en-US/docs/Web/API/Window/onuserproximity
 /en-US/docs/Web/API/window.open	/en-US/docs/Web/API/Window/open
 /en-US/docs/Web/API/window.openDialog	/en-US/docs/Web/API/Window/openDialog
 /en-US/docs/Web/API/window.opener	/en-US/docs/Web/API/Window/opener
