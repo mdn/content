@@ -40575,23 +40575,6 @@
       "scaledrop"
     ]
   },
-  "Web/API/DeviceLightEvent/value": {
-    "modified": "2020-10-15T21:22:48.698Z",
-    "contributors": [
-      "connorshea",
-      "jpmedley",
-      "erikadoyle",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "KuroTora",
-      "sobering",
-      "kscarfone",
-      "tregagnon",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/DeviceMotionEvent": {
     "modified": "2020-10-15T21:23:45.988Z",
     "contributors": [
@@ -88220,21 +88203,6 @@
       "jswisher"
     ]
   },
-  "Web/API/UserProximityEvent/near": {
-    "modified": "2020-10-15T21:22:26.696Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "fscholz",
-      "MHasan",
-      "Jungle_",
-      "teoli",
-      "kscarfone",
-      "Reachmeatshivam",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/User_Timing_API": {
     "modified": "2020-10-09T08:34:10.885Z",
     "contributors": [
@@ -95143,22 +95111,6 @@
       "teoli"
     ]
   },
-  "Web/API/Window/ondevicelight": {
-    "modified": "2020-10-15T21:22:48.581Z",
-    "contributors": [
-      "sideshowbarker",
-      "wbamberg",
-      "jpmedley",
-      "erikadoyle",
-      "Sebastianz",
-      "fscholz",
-      "teoli",
-      "chrisdavidmills",
-      "libreGeekingKid",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/Window/ondevicemotion": {
     "modified": "2020-10-15T21:10:42.063Z",
     "contributors": [
@@ -95195,21 +95147,6 @@
       "wbamberg",
       "PushpitaPikuDey",
       "jpmedley"
-    ]
-  },
-  "Web/API/Window/ondeviceproximity": {
-    "modified": "2020-10-15T21:22:28.058Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "cpigat",
-      "MHasan",
-      "kscarfone",
-      "Sheppy",
-      "Jeremie"
     ]
   },
   "Web/API/Window/ondragdrop": {
@@ -95285,20 +95222,6 @@
       "Nickolay",
       "Mw22",
       "alecananian"
-    ]
-  },
-  "Web/API/Window/onuserproximity": {
-    "modified": "2020-10-15T21:22:28.239Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "wbamberg",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "Jeremie"
     ]
   },
   "Web/API/Window/onvrdisplayactivate": {
