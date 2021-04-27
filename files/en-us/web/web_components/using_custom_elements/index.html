@@ -27,7 +27,7 @@ tags:
 <ul>
  <li>A {{domxref("DOMString")}} representing the name you are giving to the element. Note that custom element names <a href="https://html.spec.whatwg.org/#valid-custom-element-name">require a dash to be used in them</a> (kebab-case); they can't be single words.</li>
  <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class</a> object that defines the behavior of the element.</li>
- <li>Optionally, an options object containing an <code>extends</code> property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).</li>
+ <li>{{optional_inline}} An options object containing an <code>extends</code> property, which specifies the built-in element your element inherits from, if any (only relevant to customized built-in elements; see the definition below).</li>
 </ul>
 
 <p>So for example, we can define a custom <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count element</a> like this:</p>
