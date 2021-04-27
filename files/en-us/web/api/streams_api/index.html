@@ -9,7 +9,7 @@ tags:
   - Reference
   - Streams
 ---
-<div>{{SeeCompatTable}}{{DefaultAPISidebar("Streams")}}</div>
+<div>{{DefaultAPISidebar("Streams")}}</div>
 
 <p>The Streams API allows JavaScript to programmatically access streams of data received over the network and process them as desired by the developer.</p>
 
@@ -59,6 +59,15 @@ tags:
  <dd>Represents a default writable stream writer that can be used to write chunks of data to a writable stream.</dd>
  <dt>{{domxref("WritableStreamDefaultController")}}</dt>
  <dd>Represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a <code>WritableStream</code>, the underlying sink is given a corresponding <code>WritableStreamDefaultController</code> instance to manipulate.</dd>
+</dl>
+
+<h3 id="Transform_Streams">Transform Streams</h3>
+
+<dl>
+  <dt>{{domxref("TransformStream")}}</dt>
+  <dd>Represents a set of transformable data.</dd>
+  <dt>{{domxref("TransformStreamDefaultController")}}</dt>
+  <dd>Provides methods to manipulate the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} associated with a transform stream.</dd>
 </dl>
 
 <h3 id="Related_stream_APIs_and_operations">Related stream APIs and operations</h3>
