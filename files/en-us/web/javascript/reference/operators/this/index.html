@@ -94,12 +94,13 @@ f1() === globalThis; // true</pre>
 f2() === undefined; // true
 </pre>
 
-<div class="note">In the second example, <code>this</code> should be
+<div class="note">
+  <p><strong>Note:</strong> In the second example, <code>this</code> should be
   {{jsxref("undefined")}}, because <code>f2</code> was called directly and not as a method
   or property of an object (e.g. <code>window.f2()</code>). This feature wasn't
   implemented in some browsers when they first started to support <a
     href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>. As a result,
-  they incorrectly returned the <code>window</code> object.</div>
+  they incorrectly returned the <code>window</code> object.</p></div>
 
 <p>To set the value of <code>this</code> to a particular value when calling a function,
   use {{jsxref("Function.prototype.call()", "call()")}}, or
@@ -253,7 +254,7 @@ var foo = (() =&gt; this);
 console.log(foo() === globalObject); // true</pre>
 
 <div class="note">
-  <p>Note: if <code>this</code> arg is passed to <code>call</code>, <code>bind</code>, or
+  <p><strong>Note:</strong> If <code>this</code> arg is passed to <code>call</code>, <code>bind</code>, or
     <code>apply</code> on invocation of an arrow function it will be ignored. You can
     still prepend arguments to the call, but the first argument (<code>thisArg</code>)
     should be set to <code>null</code>.</p>
@@ -418,7 +419,7 @@ console.log(o.average, o.sum); // 2, 6
   keyword), its <code>this</code> is bound to the new object being constructed.</p>
 
 <div class="note">
-  <p>While the default for a constructor is to return the object referenced by
+  <p><strong>Note:</strong> While the default for a constructor is to return the object referenced by
     <code>this</code>, it can instead return some other object (if the return value isn't
     an object, then the <code>this</code> object is returned).</p>
 </div>
