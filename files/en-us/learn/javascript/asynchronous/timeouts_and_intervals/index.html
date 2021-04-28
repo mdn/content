@@ -213,7 +213,7 @@ setInterval(function run() {
 <p>The difference between the two versions of the above code is a subtle one.</p>
 
 <ul>
- <li>Recursive <code>setTimeout()</code> guarantees the same delay between the executions. (For example, <code>100</code>ms in the above case.) The code will run, then wait <code>100</code> milliseconds before it runs again—so the interval will be the same, regardless of how long the code takes to run.</li>
+ <li>Recursive <code>setTimeout()</code> guarantees the given delay between the code execution completion and the next call. The delay for the next execution will start counting only after the code has finished running, therefore <em>excluding</em> the time taken to run the code. In this example, the <code>100</code> milliseconds will be the delay between the <code>run</code> code finishing, and the next <code>run</code> call.</li>
  <li>The example using <code>setInterval()</code> does things somewhat differently. The interval you chose <em>includes</em> the time taken to execute the code you want to run in. Let's say that the code takes <code>40</code> milliseconds to run — the interval then ends up being only <code>60</code> milliseconds.</li>
  <li>When using <code>setTimeout()</code> recursively, each iteration can calculate a different delay before running the next iteration. In other words, the value of the second parameter can specify a different time in milliseconds to wait before running the code again.</li>
 </ul>
