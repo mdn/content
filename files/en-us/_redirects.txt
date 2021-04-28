@@ -5946,12 +5946,14 @@
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS_2_Build_Prerequisites/Building_on_OS_2_using_Mercurial	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/OS2_Build_Prerequisites/Building_on_OS2_using_Mercurial
 /en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build/Windows_Firefox_build	/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_build
 /en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
+/en-US/docs/Mozilla/Firefox/Privacy/State_Partitioning	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/firefox/privacy/state_partitioning
 /en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility_for_Firefox_36	/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
 /en-US/docs/Mozilla/Performance/ScrollLinkedEffects	/en-US/docs/Mozilla/Performance/Scroll-linked_effects
+/en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_2_build_documentation	/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial
 /en-US/docs/Mozilla_Build_FAQ	/en-US/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
@@ -6154,7 +6156,7 @@
 /en-US/docs/Properties_compatibility_table_for_forms_widgets	/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /en-US/docs/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /en-US/docs/Python	/en-US/docs/Learn/Server-side/Django
-/en-US/docs/Python/Virtualenv	/en-US/docs/Mozilla/Virtualenv
+/en-US/docs/Python/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /en-US/docs/Quirks_Mode_and_Standards_Mode/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /en-US/docs/Quirks_Mode_and_Standards_Mode1/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode

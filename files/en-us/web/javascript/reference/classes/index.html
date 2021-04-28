@@ -64,8 +64,7 @@ console.log(Rectangle.name);
 </pre>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
+<p><strong>Note:</strong> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
 </div>
 
 <h2 id="Class_body_and_method_definitions">Class body and method definitions</h2>
@@ -257,8 +256,7 @@ Rectangle.prototype.prototypeWidth = 25;
 <p>It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.</p>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>Private fields can only be declared up-front in a field declaration.</p>
+<p><strong>Note:</strong> Private fields can only be declared up-front in a field declaration.</p>
 </div>
 
 <p>Private fields cannot be created later through assigning to them, the way that normal properties can.</p>

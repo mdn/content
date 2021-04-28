@@ -110,6 +110,12 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > build/NR
 
+          # Save the raw diff blob and store that inside the ./build/
+          # directory.
+          # The purpose of this is for the PR Review Companion to later
+          # be able to use this raw diff file for the benefit of analyzing.
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > build/DIFF
+
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
