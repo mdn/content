@@ -29,8 +29,8 @@ tags:
   <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
   <dd>An integer between <code>2</code> and <code>36</code> that represents the
     <em>radix</em> (the base in mathematical numeral systems) of the
-    <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong>
-    default to <code>10</code>!</dd>
+    <code><var>string</var></code>.
+    <p>If <code>radix</code> is undefined or <code>0</code>, it is assumed to be <code>10</code> except when the number begins with the code unit pairs <code>0x</code> or <code>0X</code>, in which case a radix of <code>16</code> is assumed.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
