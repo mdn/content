@@ -5,7 +5,7 @@ tags:
   - Build documentation
   - Developing Mozilla
 ---
-<p>The Mozilla {{ Source("configure") }} script is a standard method of determining compiler and system capabilities and options for Linux-based software. Mozilla uses <code>configure</code> on all platforms. <code>configure</code> is a shell script generated from an template file {{ Source("configure.in") }}, using <a class="external" href="http://www.gnu.org/software/autoconf/">Autoconf</a>.</p>
+<p>The Mozilla {{ Source("configure") }} script is a standard method of determining compiler and system capabilities and options for Linux-based software. Mozilla uses <code>configure</code> on all platforms. <code>configure</code> is a shell script generated from an template file {{ Source("configure.in") }}, using <a class="external" href="https://www.gnu.org/software/autoconf/">Autoconf</a>.</p>
 <p>Here's an example of how to add a configure option to the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works">build</a>. Please consult the build system owner (<a>Benjamin Smedberg</a>) before adding configure options. New options will only be accepted if they are going to be maintained and tested appropriately.</p>
 <pre class="eval">MOZ_ARG_ENABLE_BOOL(foo,
 [  --enable-foo     Insert some documentation here. Try to keep the spacing lined up right.],
