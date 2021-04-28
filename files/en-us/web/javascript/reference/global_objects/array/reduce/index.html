@@ -50,7 +50,7 @@ reduce(reducerFn, initialValue)
 reduce(function reducerFn(accumulator, currentValue) { ... })
 reduce(function reducerFn(accumulator, currentValue, index) { ... })
 reduce(function reducerFn(accumulator, currentValue, index, array){ ... })
-reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, thisArg)
+reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, initialValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -349,7 +349,7 @@ if (!Array.prototype.reduce) {
 
 <div class="notecard note">
   <p><strong>Note:</strong> If you need to support truly obsolete JavaScript engines
-    that do not support {{domxref("Object.defineProperty()")}}, it is best not to polyfill
+    that do not support {{jsxref("Object.defineProperty()")}}, it is best not to polyfill
     <code>Array.prototype</code> methods at all, as you cannot make them
     <strong>non-enumerable</strong>.</p>
 </div>
@@ -611,9 +611,9 @@ multiply24(10) // 240
 <h3 id="Write_map_using_reduce">Write map using reduce</h3>
 
 <pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
-  Array.prototype.mapUsingReduce = function(callback, thisArg) {
+  Array.prototype.mapUsingReduce = function(callback, initialValue) {
     return this.reduce(function(mappedArray, currentValue, index, array) {
-      mappedArray[index] = callback.call(thisArg, currentValue, index, array)
+      mappedArray[index] = callback.call(initialValue, currentValue, index, array)
       return mappedArray
     }, [])
   }
