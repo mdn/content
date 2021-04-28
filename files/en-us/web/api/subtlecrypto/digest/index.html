@@ -57,65 +57,52 @@ tags:
   usually much shorter than the input. They have a variety of applications in
   cryptography.</p>
 
-<h3 id="SHA-1">SHA-1</h3>
-
-<p>This algorithm is specified in <a
-    href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>,
-  section 6.1.</p>
-
-<div class="notecard warning">
-  <p><strong>Warning</strong>: This algorithm is now considered vulnerable and should not
-    be used for cryptographic applications.</p>
-</div>
-
-<h3 id="SHA-256">SHA-256</h3>
-
-<p>This algorithm is specified in <a
-    href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>,
-  section 6.2.</p>
-
-<h3 id="SHA-384">SHA-384</h3>
-
-<p>This algorithm is specified in <a
-    href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>,
-  section 6.5.</p>
-
-<h3 id="SHA-512">SHA-512</h3>
-
-<p>This algorithm is specified in <a
-    href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>,
-  section 6.4.</p>
-
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="col">Algorithm</th>
-      <th scope="col">Output length</th>
-      <th scope="col">Block size</th>
-     </tr>
-     <tr>
+      <th scope="col">Output length (bits)</th>
+      <th scope="col">Block size (bits)</th>
+      <th scope="col">Specification</th>
+    </tr>
    <tr>
     <th scope="row">SHA-1</th>
     <td>160</td>
     <td>512</td>
+    <td>
+      <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.1
+    </td>
    </tr>
    <tr>
     <th scope="row">SHA-256</th>
     <td>256</td>
     <td>512</td>
+    <td>
+      <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.2
+    </td>
    </tr>
    <tr>
     <th scope="row">SHA-384</th>
     <td>384</td>
     <td>1024</td>
+    <td><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.5
+    </td>
    </tr>
    <tr>
     <th scope="row">SHA-512</th>
     <td>512</td>
     <td>1024</td>
+    <td>
+      <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.4
+    </td>
    </tr>
   </tbody>
  </table>
+
+ <div class="notecard warning">
+  <p><strong>Warning</strong>: SHA-1 is now considered vulnerable and should not
+    be used for cryptographic applications.</p>
+</div>
 
  <div class="notecard note">
   <p>Hint: If you are looking here for how to create an keyed-hash message authentication
