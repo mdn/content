@@ -72,7 +72,7 @@ tags:
 <p><strong>The displayed date format will differ from the actual <code>value</code></strong> — the displayed date is formatted <em>based on the locale of the user's browser</em>, but the parsed <code>value</code> is always formatted <code>yyyy-mm-dd</code>.</p>
 </div>
 
-<p>You can get and set the date value in JavaScript with the input element's {{domxref("HTMLInputElement.value", "value")}} and {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} properties. For example:</p>
+<p>You can get and set the date value in JavaScript with the {{domxref("HTMLInputElement")}} <code>value</code> and <code>valueAsNumber</code> properties. For example:</p>
 
 <pre class="brush: js">var dateControl = document.querySelector('input[type="date"]');
 dateControl.value = '2017-06-01';
