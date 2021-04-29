@@ -80,7 +80,7 @@ tags:
 <div class="notecard note">
     <h4 id="checking_equality_with_promise_resolve_vs_async_return">Checking equality with <code>Promise.resolve</code> vs <code>async</code> return</h4>
     <p>Even though the return value of an async function behaves as if it's wrapped in a <code>Promise.resolve</code>, they are not equivalent.</p>
-    <p>An async function will return a different <i>reference</i>, whereas <code>Promise.resolve</code> returns the same reference if the given value is a promise.</p>
+    <p>An async function will return a different <em>reference</em>, whereas <code>Promise.resolve</code> returns the same reference if the given value is a promise.</p>
     <p>It can be a problem when you want to check the equality of a promise and a return value of an async function.</p>
     <pre class="brush: js">const p = new Promise((res, rej) => {
   res(1);
