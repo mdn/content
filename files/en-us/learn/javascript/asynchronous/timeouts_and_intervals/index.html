@@ -242,9 +242,9 @@ alert('Hello');</pre>
 
 <h2 id="requestAnimationFrame">requestAnimationFrame()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> is a specialized looping function created for running animations efficiently in the browser. It is basically the modern version of <code>setInterval()</code> — it executes a specified block of code before the browser next repaints the display, allowing an animation to be run at a suitable frame rate regardless of the environment it is being run in.</p>
+<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code> is a specialized enqueueing function created for running animations efficiently in the browser. It runs a specified block of code before the browser next repaints the display, allowing the execution to be paired with the device's display frame rate.</p>
 
-<p>It was created in response to perceived problems with <code>setInterval()</code>, which for example doesn't run at a frame rate optimized for the device, sometimes drops frames, continues to run even if the tab is not the active tab or the animation is scrolled off the page, etc.</p>
+<p>It was created in response to perceived problems with previous async functions like <code>setInterval()</code>, which for example doesn't run at a frame rate optimized for the device, dropping frames in some cases. They also lacked some optimizations suited for animations, like stopping the execution if the tab isn't active or the animation is scrolled off the page, among other things.</p>
 
 <p>(<a href="http://creativejs.com/resources/requestanimationframe/index.html">Read more about this on CreativeJS</a>.)</p>
 
