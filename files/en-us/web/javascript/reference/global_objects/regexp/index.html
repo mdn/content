@@ -7,6 +7,7 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+browser-compat: javascript.builtins.RegExp
 ---
 <div>{{JSRef}}</div>
 
@@ -94,7 +95,7 @@ let re = new RegExp('\\w+')
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{JSxRef("RegExp.prototype.compile()")}}</dt>
+ <dt>{{JSxRef("RegExp.prototype.compile()")}} {{deprecated_inline}}</dt>
  <dd>(Re-)compiles a regular expression during execution of a script.</dd>
  <dt>{{JSxRef("RegExp.prototype.exec()")}}</dt>
  <dd>Executes a search for a match in its string parameter.</dd>
@@ -230,7 +231,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox-specific_notes">Firefox-specific notes</h3>
 
