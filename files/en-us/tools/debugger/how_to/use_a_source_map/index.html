@@ -8,10 +8,10 @@ slug: Tools/Debugger/How_to/Use_a_source_map
 
 <ul>
  <li>sources are often combined and <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minified</a> to make delivering them from the server more efficient.</li>
- <li>JavaScript running in a page is often machine-generated, as when compiled from a language like <a href="http://coffeescript.org/">CoffeeScript</a> or <a href="http://www.typescriptlang.org/">TypeScript</a>.</li>
+ <li>JavaScript running in a page is often machine-generated, as when compiled from a language like <a href="https://coffeescript.org/">CoffeeScript</a> or <a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
 </ul>
 
-<p>In these situations, it's much easier to debug the original source, rather than the source in the transformed state that the browser has downloaded. A <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> is a file that maps from the transformed source to the original source, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.</p>
+<p>In these situations, it's much easier to debug the original source, rather than the source in the transformed state that the browser has downloaded. A <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source map</a> is a file that maps from the transformed source to the original source, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.</p>
 
 <p>To enable the debugger to work with a source map, you must:</p>
 
