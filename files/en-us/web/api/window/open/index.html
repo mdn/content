@@ -99,9 +99,7 @@ function openRequestedPopup() {
   into the <em>existing</em> window. In this case the return value of the method is the
   existing window and <code><var>windowFeatures</var></code> is ignored. Providing an
   empty string for <code><var>url</var></code> is a way to get a reference to an open
-  window by its name without changing the window's location. On Firefox and Chrome (at
-  least), <em>this only works from the same parent</em>, ie. if the current window is the
-  opener of the window you try to get an handle on. Otherwise the call to
+  window by its name without changing the window's location. Otherwise the call to
   <code>window.open()</code> will just create a new window.</p>
 
 <p>To open a <em>new</em> window on every call of <code>window.open()</code>, use the
