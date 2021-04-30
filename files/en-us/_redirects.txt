@@ -12331,4 +12331,3 @@
 /en-US/docs/zh_cn	/zh-CN/docs/Web
 /en-US/docs/{{domxref("/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/{{domxref("/TouchList.item	/en-US/docs/Web/API/TouchList/item
-/en-US/docs/واصفة_SpellCheck_الجديدة_في_HTML5	/ar/docs/واصفة_SpellCheck_الجديدة_في_HTML5
