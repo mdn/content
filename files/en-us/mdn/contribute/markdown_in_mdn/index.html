@@ -113,7 +113,150 @@ const greeting = "I'm a good example";
 ```
 </pre>
 
-<h3>Notes and warnings</h3>
+<h3>Notes, warnings, and callouts</h3>
+
+<p>Sometimes writers want to call special attention to some piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.</p>
+
+<ul>
+  <li>To add a note, create a GFM blockquote whose first paragraph starts with <code>**Note:**</code>.</li>
+  <li>To add a warning, create a GFM blockquote whose first paragraph starts with <code>**Warning:**</code>.</li>
+  <li>To add a callout, create a GFM blockquote whose first paragraph starts with <code>**Callout:**</code>.</li>
+</ul>
+
+<p>Notes and warnings will render the <strong>Note:</strong> or <strong>Warning:</strong> text in the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.</p>
+
+<p>Processing of the markup works on the AST it produces, not on the exact characters provided. This means that providing <code>&lt;strong&gt;Note:&lt;/strong&gt;</code> will also generate a note. However, the Markdown syntax is required as a matter of style.</p>
+
+<p>Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal markdown lines, and concatenated.</p>
+
+<p>The blockquote can contain code blocks or other block elements.</p>
+
+<p>Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.</p>
+
+<h4>Examples</h4>
+
+<h5>Note</h5>
+
+<pre>
+&gt; **Note:** This is how you write a note.
+&gt;
+&gt; It can have multiple lines.
+</pre>
+
+<p>This will produce the following HTML:</p>
+
+<pre class="brush: html">
+&lt;div class="notecard note"&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is how you write a note.&lt;/p&gt;
+  &lt;p&gt;It can have multiple lines.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>This HTML will be rendered as a highlighted box, like:</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This is how you write a note.</p>
+  <p>It can have multiple lines.</p>
+</div>
+
+<h5>Warnings</h5>
+
+<pre>
+&gt; **Warning: This is how you write a warning.
+&gt;
+&gt; It can have multiple paragraphs.
+</pre>
+
+<p>This will produce the following HTML:</p>
+
+<pre class="brush: html">
+&lt;div class="notecard warning"&gt;
+  &lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; This is how you write a warning.&lt;/p&gt;
+  &lt;p&gt;It can have multiple paragraphs.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>This HTML will be rendered as a highlighted box, like:</p>
+
+<div class="notecard warning">
+  <p><strong>Warning:</strong> This is how you write a warning.</p>
+  <p>It can have multiple paragraphs.</p>
+</div>
+
+<h5>Callouts</h5>
+
+<pre>
+&gt; **Callout:** **This is how you write a callout**.
+&gt;
+&gt; It can have multiple paragaphs.
+</pre>
+
+<p>This will produce the following HTML:</p>
+
+<pre class="brush: html">
+&lt;div class="callout"&gt;
+  &lt;p&gt;&lt;strong&gt;This is how you write a callout.&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;It can have multiple paragraphs.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>This HTML will be rendered as a highlighted box, like:</p>
+
+<div class="callout">
+  <p><strong>This is how you write a callout.</strong></p>
+  <p>It can have multiple paragraphs.</p>
+</div>
+
+<h5>Translated warning</h5>
+
+<p>For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:</p>
+
+<pre>
+&gt; Warnung: So schreibt man eine Warnung.
+</pre>
+
+<p>...and this will produce:</p>
+
+<pre class="brush: html">
+&lt;div class="notecard warning"&gt;
+  &lt;p&gt;&lt;strong&gt;Warnung:&lt;/strong&gt; So schreibt man eine Warnung.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<h5>Note containing a code block</h5>
+
+<p>This example contains a code block.</p>
+
+<pre>
+&gt; **Note:** This is how you write a note.
+&gt;
+&gt; It can contain code blocks.
+&gt;
+&gt; ```js
+&gt; const s = "I'm in a code block";
+&gt; ```
+&gt; Like that.
+</pre>
+
+<p>This will produce the following HTML:</p>
+
+<pre class="brush: html">
+&lt;div class="notecard note"&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is how you write a note.&lt;/p&gt;
+  &lt;p&gt;It can contain code blocks.&lt;/p&gt;
+  &lt;pre class="brush: js"&gt;const s = "I'm in a code block";&lt;/pre&gt;
+  &lt;p&gt;Like that.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>This HTML will be rendered as with a code block, like:</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This is how you write a note.</p>
+  <p>It can contain code blocks.</p>
+  <pre class="brush: js">const s = "I'm in a code block";</pre>
+  <p>Like that.</p>
+</div>
 
 <h3>Definition lists</h3>
 
