@@ -27,9 +27,16 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example an encoded string is passed to the queue using the <code>enqueue()</code> method.</p>
+<p>In this example an encoded chunk is passed to the queue using the <code>enqueue()</code> method.</p>
 
-<pre class="brush: js">controller.enqueue(this.textencoder.encode(String(chunk)))</pre>
+<pre class="brush: js">const textEncoderStream = new TransformStream({
+  transform(chunk, controller) {
+    controller.enqueue(new TextEncoder().encode(chunk));
+  },
+  flush(controller) {
+    controller.terminate();
+  },
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

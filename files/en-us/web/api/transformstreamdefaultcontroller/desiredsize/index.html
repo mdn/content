@@ -14,6 +14,8 @@ tags:
 
 <p>The internal queue of a <code>ReadableStream</code> contains chunks that have been enqueued, but not yet read. The browser determines the <strong>desired size</strong> to fill the stream, and it is this value returned by the <code>desiredSize</code> property.</p>
 
+<p>If the <code>desiredSize</code> is <code>0</code> then the queue is full. Therefore you can use this information to <a href="/en-US/docs/Web/API/Streams_API/Concepts#backpressure">manually apply backpressure</a> to manage the queue.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">let desiredSize = TransformStreamDefaultController.desiredSize;</pre>
