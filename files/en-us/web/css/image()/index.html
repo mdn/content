@@ -103,18 +103,6 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 
 <p>{{EmbedLiveSample("Displaying_a_section_of_the_background_image", "100%", 100)}}</p>
 
-<h3 id="Providing_fallback_images">Providing fallback images</h3>
-
-<pre class="brush: css;">.help::before {
-  content: image("try.webp", "try.svg", "try.gif");
-}</pre>
-
-<p>In this example, the browser will display an image as generated content before the content of the element with the class of <code>help</code>. The image displayed will be a WebP image, if WebP is supported. If not, the SVG example will be shown. If SVG is not supported, the GIF version will display.</p>
-
-<div class="hidden">
-<p>{{EmbedLiveSample("Providing_fallback_images", "100%", 200)}}</p>
-</div>
-
 <h3 id="Putting_color_on_top_of_a_background_image">Putting color on top of a background image</h3>
 
 <div class="hidden">
