@@ -26,11 +26,13 @@ browser-compat: javascript.builtins.Generator.next
 
 <dl>
   <dt><code><var>value</var></code></dt>
-  <dd>The value to send to the generator.</dd>
-  <dd>The value will be assigned as a result of a <code>yield</code> expression. For
+  <dd>
+    <p>The value to send to the generator.</p>
+    <p>The value will be assigned as a result of a <code>yield</code> expression. For
     example, in <code><var>variable</var> = yield <var>expression</var></code>, the value
     passed to the <code>.next()</code> function will be assigned to
-    <code><var>variable</var></code>.</dd>
+    <code><var>variable</var></code>.</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -39,12 +41,14 @@ browser-compat: javascript.builtins.Generator.next
 
 <dl>
   <dt><code>done</code> (boolean)</dt>
-  <dd>Has the value <code>true</code> if the iterator is past the end of the iterated
+  <dd>
+    <p>Has the value <code>true</code> if the iterator is past the end of the iterated
     sequence. In this case <code>value</code> optionally specifies the <em>return
-      value</em> of the iterator.</dd>
-  <dd>Has the value <code>false</code> if the iterator was able to produce the next value
+      value</em> of the iterator.</p>
+    <p>Has the value <code>false</code> if the iterator was able to produce the next value
     in the sequence. This is equivalent of not specifying the <code>done</code> property
-    altogether.</dd>
+    altogether.</p>
+  </dd>
   <dt><code>value</code></dt>
   <dd>Any JavaScript value returned by the iterator. Can be omitted when <code>done</code>
     is <code>true</code>.</dd>
