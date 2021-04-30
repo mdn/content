@@ -97,7 +97,7 @@ tags:
  <li>Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!</li>
 </ul>
 
-<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://cloud.google.com/free/docs/gcp-free-tier">Google Cloud</a>, and <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> provide free credit when you first join.</p>
+<p>The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, <a href="https://www.heroku.com/">Heroku</a> provides a free but resource-limited <em>PaaS</em> environment "forever", while <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://cloud.google.com/free/docs/gcp-free-tier">Google Cloud</a>, and <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> provide free credit when you first join.</p>
 
 <p>Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. <a href="https://www.digitalocean.com/">Digital Ocean</a> is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).</p>
 
@@ -132,7 +132,7 @@ tags:
 
 <p>Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g. tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.</p>
 
-<p>One way to minimize "debug" logging in production is to use a module like <a href="https://www.npmjs.com/package/debug">debug </a>that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.</p>
+<p>One way to minimize "debug" logging in production is to use a module like <a href="https://www.npmjs.com/package/debug">debug</a> that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.</p>
 
 <pre class="brush: js"><strong>var debug = require('debug')('author');</strong>
 
@@ -198,7 +198,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like <em>Nginx</em>.</p>
+  <p>For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like <em>nginx</em>.</p>
 </div>
 
 <h3 id="Use_Helmet_to_protect_against_well_known_vulnerabilities">Use Helmet to protect against well known vulnerabilities</h3>
@@ -223,7 +223,7 @@ var app = express();
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>The command above adds a <em>subset</em> of the available headers. They make sense for most sites. You can add/disable specific headers as needed by following the instructions on <a href="https://www.npmjs.com/package/helmet">npm</a>.</p>
+  <p>The command above adds a <em>subset</em> of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the <a href="https://www.npmjs.com/package/helmet">instructions for using helmet here</a>.</p>
 </div>
 
 <h2 id="Example_Installing_LocalLibrary_on_Heroku">Example: Installing LocalLibrary on Heroku</h2>
@@ -266,7 +266,7 @@ var app = express();
 
 <p>That's all the overview you need in order to get started (see <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> for a more comprehensive guide).</p>
 
-<h3 id="Creating_an_application_repository_in_Github">Creating an application repository in Github</h3>
+<h3 id="Creating_an_application_repository_in_Github">Creating an application repository in GitHub</h3>
 
 <p>Heroku is integrated with <strong>git,</strong> the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named <em>heroku.</em> It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.</p>
 
@@ -324,19 +324,19 @@ Changes to be committed:
         new file:   ...</pre>
  </li>
  <li>When you're satisfied, commit the files to your local repository:
-  <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
+  <pre class="brush: bash">git commit -m "First version of application moved into GitHub"</pre>
  </li>
- <li>Then synchronize your local repository to the Github website, using the following:
+ <li>Then synchronize your local repository to the GitHub website, using the following:
   <pre class="brush: bash">git push origin main</pre>
  </li>
 </ol>
 
 <div class="notecard warning">
   <h4>Warning</h4>
-  <p>In 2020 Github changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call <code>git push origin master</code> instead.</p>
+  <p>In 2020 GitHub changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call <code>git push origin master</code> instead.</p>
 </div>
 
-<p>When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
+<p>When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.</p>
 
 <div class="notecard note">
   <h4>Tip</h4>
@@ -398,9 +398,9 @@ var mongoDB = <strong>process.env.MONGODB_URI</strong> || dev_db_url;
 
 <p>Now run the site (see <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes">Testing the routes</a> for the relevant commands) and check that the site still behaves as you expect.</p>
 
-<h4 id="Save_changes_to_Github">Save changes to Github</h4>
+<h4 id="Save_changes_to_Github">Save changes to GitHub</h4>
 
-<p>Next, let's save all our changes to Github. In the terminal (whilst inside our repository), enter the following commands:</p>
+<p>Next, let's save all our changes to GitHub. In the terminal (whilst inside our repository), enter the following commands:</p>
 
 <pre class="brush: bash">git add -A
 git commit -m "Added files and changes required for deployment to heroku"
@@ -503,7 +503,7 @@ heroku ps   #Display dyno status
 
 <h2 id="Summary">Summary</h2>
 
-<p>That's the end of this tutorial on setting up Express apps in production, and also the series of tutorials on working with Express. We hope you've found them useful. You can check out a fully worked-through version of the <a href="https://github.com/mdn/express-locallibrary-tutorial">source code on Github here</a>.</p>
+<p>That's the end of this tutorial on setting up Express apps in production, and also the series of tutorials on working with Express. We hope you've found them useful. You can check out a fully worked-through version of the <a href="https://github.com/mdn/express-locallibrary-tutorial">source code on GitHub here</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -543,5 +543,5 @@ heroku ps   #Display dyno status
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><strong>Express Tutorial Part 7: Deploying to production</strong></li>
 </ul>
