@@ -265,9 +265,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 </p>
 
 <div class="warning">
-  <h4 id="Error_Handling">Error Handling</h4>
-
-  <p>Note that functions <code>concurrentStart</code> and <code>concurrentPromise</code>
+  <p><strong>Warning:</strong> The functions <code>concurrentStart</code> and <code>concurrentPromise</code>
     are not functionally equivalent.</p>
 
   <p>In <code>concurrentStart</code>, if promise <code>fast</code> rejects before promise
