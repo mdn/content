@@ -120,8 +120,8 @@ const notANum        = Number.NaN
 
 <p>The following example shows the minimum and maximum integer values that can be represented as <code>Number</code> object. (More details on this are described in the ECMAScript standard, chapter <em><a href="https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type">6.1.6 The Number Type</a>.</em>)</p>
 
-<pre class="brush: js">const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2^53 - 1) =&gt;  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER  // -(2^53 - 1) =&gt; -9007199254740991</pre>
+<pre class="brush: js">const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =&gt;  9007199254740991
+const smallestInt = Number.MIN_SAFE_INTEGER  // -(2**53 - 1) =&gt; -9007199254740991</pre>
 
 <p>When parsing data that has been serialized to JSON, integer values falling outside of this range can be expected to become corrupted when JSON parser coerces them to <code>Number</code> type.</p>
 
