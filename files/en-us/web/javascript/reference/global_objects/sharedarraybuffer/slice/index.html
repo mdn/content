@@ -33,21 +33,25 @@ slice(begin, end)</pre>
 
 <dl>
   <dt><code><var>begin</var></code> {{optional_inline}}</dt>
-  <dd>Zero-based index at which to begin extraction.</dd>
-  <dd>A negative index can be used, indicating an offset from the end of the sequence.
-    <code>slice(-2)</code> extracts the last two elements in the sequence.</dd>
-  <dd>If <code><var>begin</var></code> is undefined, <code>slice</code> begins from index
-    <code>0</code>.</dd>
+  <dd>
+    <p>Zero-based index at which to begin extraction.</p>
+    <p>A negative index can be used, indicating an offset from the end of the sequence.
+    <code>slice(-2)</code> extracts the last two elements in the sequence.</p>
+    <p>If <code><var>begin</var></code> is undefined, <code>slice</code> begins from index
+    <code>0</code>.</p>
+  </dd>
   <dt><code><var>end</var></code> {{optional_inline}}</dt>
-  <dd>Zero-based index <em>before</em> which to end extraction. <code>slice</code>
-    extracts up to but not including <code><var>end</var></code>.</dd>
-  <dd>For example, <code>slice(1,4)</code> extracts the second element through the fourth
-    element (elements indexed 1, 2, and 3).</dd>
-  <dd>A negative index can be used, indicating an offset from the end of the sequence.
+  <dd>
+    <p>Zero-based index <em>before</em> which to end extraction. <code>slice</code>
+    extracts up to but not including <code><var>end</var></code>.</p>
+    <p>For example, <code>slice(1,4)</code> extracts the second element through the fourth
+    element (elements indexed 1, 2, and 3).</p>
+    <p>A negative index can be used, indicating an offset from the end of the sequence.
     <code>slice(2,-1)</code> extracts the third element through the second-to-last element
-    in the sequence.</dd>
-  <dd>If <code><var>end</var></code> is omitted, <code>slice</code> extracts through the
-    end of the sequence (<code>sab.byteLength</code>).</dd>
+    in the sequence.</p>
+    <p>If <code><var>end</var></code> is omitted, <code>slice</code> extracts through the
+    end of the sequence (<code>sab.byteLength</code>).</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

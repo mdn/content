@@ -192,23 +192,31 @@ window.addEventListener("message", (event) =&gt; {
 
 <dl>
  <dt>{{JSxRef("Promise.all", "Promise.all(iterable)")}}</dt>
- <dd>Wait for all promises to be resolved, or for any to be rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</dd>
- <dd>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</dd>
+ <dd>
+   <p>Wait for all promises to be resolved, or for any to be rejected.</p>
+   <p>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</p>
+   <p>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</p>
+ </dd>
  <dt>{{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}</dt>
- <dd>Wait until all promises have settled (each may resolve or reject).</dd>
- <dd>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</dd>
+ <dd>
+   <p>Wait until all promises have settled (each may resolve or reject).</p>
+   <p>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</p>
+ </dd>
  <dt>{{JSxRef("Promise.any", "Promise.any(iterable)")}}</dt>
  <dd>Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.</dd>
  <dt>{{JSxRef("Promise.race", "Promise.race(iterable)")}}</dt>
- <dd>Wait until any of the promises is resolved or rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</dd>
- <dd>If it rejects, it is rejected with the reason from the first promise that was rejected.</dd>
+ <dd>
+   <p>Wait until any of the promises is resolved or rejected.</p>
+   <p>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</p>
+   <p>If it rejects, it is rejected with the reason from the first promise that was rejected.</p>
+ </dd>
  <dt>{{JSxRef("Promise.reject", "Promise.reject(reason)")}}</dt>
  <dd>Returns a new <code>Promise</code> object that is rejected with the given reason.</dd>
  <dt>{{JSxRef("Promise.resolve", "Promise.resolve(value)")}}</dt>
- <dd>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</dd>
- <dd>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</dd>
+ <dd>
+   <p>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</p>
+   <p>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</p>
+ </dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
