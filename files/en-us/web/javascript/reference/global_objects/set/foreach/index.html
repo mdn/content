@@ -20,17 +20,33 @@ browser-compat: javascript.builtins.Set.forEach
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>mySet</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+forEach(() => { ... } )
+forEach((value) => { ... } )
+forEach((value, key) => { ... } )
+forEach((value, key, set) => { ... } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function callbackFn() { ... })
+forEach(function callbackFn(value) { ... })
+forEach(function callbackFn(value, key) { ... })
+forEach(function callbackFn(value, key, set) { ... })
+forEach(function callbackFn(value, key, set) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>Function to execute for each element, taking three arguments:</dd>
   <dd>
     <dl>
-      <dt><code><var>currentValue</var></code>, <code><var>currentKey</var></code></dt>
+      <dt><code><var>value</var></code>, <code><var>key</var></code></dt>
       <dd>The current element being processed in the <code>Set</code>. As there are no
         keys in <code>Set</code>, the value is passed for both arguments.</dd>
       <dt><code><var>set</var></code></dt>
@@ -38,7 +54,7 @@ browser-compat: javascript.builtins.Set.forEach
     </dl>
   </dd>
   <dt><code><var>thisArg</var></code></dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.
+  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
   </dd>
 </dl>
 
