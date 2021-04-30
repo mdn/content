@@ -378,7 +378,7 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 
 <h4 class="name">#1: New initialization</h4>
 <div class="notecard warning">
-<p>One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
+<p><strong>Warning:</strong> One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
 
 <p>This technique is called monkey patching and breaks <em>encapsulation</em>. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional <em>non-standard</em> functionality.</p>
 

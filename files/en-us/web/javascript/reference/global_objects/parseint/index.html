@@ -38,8 +38,12 @@ parseInt(string, radix)
     <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong>
     default to <code>10</code>! If the radix value is not of the <code>Number</code> type
     it will be coerced to a <code>Number</code></dd>
-  <dd class="notecard warning">The <a href="#description">description below</a> explains
-    in more detail what happens when <code><var>radix</var></code> is not provided.</dd>
+  <dd><div class="notecard warning">
+    <p><strong>Warning:</strong> The <a href="#description">description below</a> explains
+    in more detail what happens when <code><var>radix</var></code> is not provided.
+    </p>
+    </div>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -113,7 +117,7 @@ parseInt(string, radix)
   <code><var>thatNumber</var>.toString(<var>radix</var>)</code>.</p>
 
 <div class="notecard warning">
-  <p><strong>{{jsxref("BigInt")}} Warning:</strong> <code>parseInt</code> converts a
+  <p><strong>Warning:</strong> <code>parseInt</code> converts a
     {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
     This is because trailing non-numeric values, including "<code>n</code>", are
     discarded.</p>
