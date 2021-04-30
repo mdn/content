@@ -70,8 +70,7 @@ p.sum(); // Pair.prototype.sum</pre>
 
 <dl>
  <dt>The shape of the <em>ultimate</em> object containing the inherited can be checked.</dt>
- <dd>In this case, a shape match must imply that no intervening object's <code>[[Prototype]]</code> has been modified.  Therefore, when an object's <code>[[Prototype]]</code> is mutated, every object along its <code>[[Prototype]]</code> chain must also have its shape changed.</dd>
- <dd>
+ <dd><p>In this case, a shape match must imply that no intervening object's <code>[[Prototype]]</code> has been modified.  Therefore, when an object's <code>[[Prototype]]</code> is mutated, every object along its <code>[[Prototype]]</code> chain must also have its shape changed.</p>
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);
@@ -80,8 +79,7 @@ var obj3 = Object.create(obj2);
 obj3.__proto__ = {};</pre>
  </dd>
  <dt>The shape of the object initially accessed can be checked.</dt>
- <dd>Every object that might inherit through a changed-<code>[[Prototype]]</code> object must change, reflecting the <code>[[Prototype]]</code> mutation having happened</dd>
- <dd>
+ <dd><p>Every object that might inherit through a changed-<code>[[Prototype]]</code> object must change, reflecting the <code>[[Prototype]]</code> mutation having happened</p>
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);
