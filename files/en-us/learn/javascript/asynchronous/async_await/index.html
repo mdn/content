@@ -247,11 +247,12 @@ myFetch().then((blob) =&gt; {
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  if(type === 'blob') {
-    content = await response.blob();
-  } else if(type === 'text') {
-    content = await response.text();
+  } else {
+    if(type === 'blob') {
+      content = await response.blob();
+    } else if(type === 'text') {
+      content = await response.text();
+    }
   }
 
   return content;
