@@ -96,7 +96,7 @@ tags:
 
 <p>Consider this HTML for a media element:</p>
 
-<pre class="brush: html">&lt;video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)"&gt;</pre>
+<pre class="brush: html">&lt;video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"&gt;</pre>
 
 <p>Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called <code>handleFirstPlay()</code>, which receives as input the <code>play</code> event.</p>
 
