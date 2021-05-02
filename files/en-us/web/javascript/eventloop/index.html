@@ -58,8 +58,18 @@ console.log(bar(7)) //returns 42
 
 <p>The <strong>event loop</strong> got its name because of how it's usually implemented, which usually resembles:</p>
 
-<pre class="brush: js">while (queue.waitForMessage()) {
-  queue.processNextMessage()
+<pre class="brush: js">while (true) {
+	if (queue.hasMessage()) {
+		queue.processNextMessage()
+	}
+}
+
+// Or, with a recursive illustration
+function loop() {
+	if (queue.hasMessage()) {
+		queue.processNextMessage()
+	}
+	loop()
 }</pre>
 
 <p><code>queue.waitForMessage()</code> waits synchronously for a message to arrive (if one is not already available and waiting to be handled).</p>
