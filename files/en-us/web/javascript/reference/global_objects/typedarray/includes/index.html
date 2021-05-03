@@ -24,16 +24,18 @@ browser-compat: javascript.builtins.TypedArray.includes
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarray</var>.includes(<var>searchElement</var>[, <var>fromIndex</var>]);</pre>
+<pre class="brush: js">
+includes(valueToFind)
+includes(valueToFind, fromIndex)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>searchElement</var></code></dt>
+  <dt><code><var>valueToFind</var></code></dt>
   <dd>The element to search for.</dd>
-  <dt><code><var>fromIndex</var></code></dt>
-  <dd>Optional. The position in this array at which to begin searching for
+  <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
+  <dd>The position in this array at which to begin searching for
     <code>searchElement</code>; defaults to 0.</dd>
 </dl>
 

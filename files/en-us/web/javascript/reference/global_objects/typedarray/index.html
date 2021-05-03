@@ -168,7 +168,10 @@ browser-compat: javascript.builtins.TypedArray
 new <var>TypedArray</var>(<var>length</var>);
 new <var>TypedArray</var>(<var>typedArray</var>);
 new <var>TypedArray</var>(<var>object</var>);
-new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);
+
+new <var>TypedArray</var>(buffer);
+new <var>TypedArray</var>(buffer, byteOffset);
+new <var>TypedArray</var>(buffer, byteOffset, length);
 </pre>
 
 <p>Where <var>TypedArray</var> is a constructor for one of the concrete types.</p>
