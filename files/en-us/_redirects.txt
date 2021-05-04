@@ -12331,7 +12331,6 @@
 /en-US/docs/zh_cn	/zh-CN/docs/Web
 /en-US/docs/{{domxref("/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/{{domxref("/TouchList.item	/en-US/docs/Web/API/TouchList/item
-ers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Introduction/Privacy_techniques_and_Do_Not_Track	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Introduction/What_does_tracking_mean	/en-US/docs/Web/HTTP/Headers/DNT
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials	/en-US/docs/Web/HTTP/Headers/DNT
