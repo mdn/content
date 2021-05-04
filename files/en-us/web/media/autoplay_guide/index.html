@@ -102,12 +102,18 @@ tags:
 
 <p><code>handleFirstPlay()</code> looks like this:</p>
 
-<pre class="brush: js">function handleFirstPlay(event) {
-  let vid = event.target;
+<pre class="brush: js">
+let hasPlayed = false;
+function handleFirstPlay(event) {
+  if(hasPlayed === false) {
+    hasPlayed = true;
+    
+    let vid = event.target;
 
-  vid.onplay = null;
+    vid.onplay = null;
 
-  // Start whatever you need to do after playback has started
+    // Start whatever you need to do after first playback has started
+  }
 }</pre>
 
 <p>After getting a reference to the video element from the {{domxref("Event")}} object's {{domxref("Event.target", "target")}}, the element's <code>onplay</code> handler is set to <code>null</code>. This will prevent any future <code>play</code> events from being delivered to the handler. That could happen if the video is paused and resumed by the user or automatically by the browser when the document is in a background tab.</p>
@@ -161,6 +167,19 @@ if (startPlayPromise !== undefined) {
 <p>We then add a {{jsxref("Promise.catch", "catch()")}} handler to the promise. This looks at the error's {{domxref("DOMException.name", "name")}} to see if it's <code>NotAllowedError</code>. This indicates that playback failed due to a permission issue, such as autoplay being denied. If that's the case, we should present a user interface to let the user manually start playback; that's handled here by a function <code>showPlayButton()</code>.</p>
 
 <p>Any other errors are handled as appropriate.</p>
+
+<p>If you want to start playing the video after the first interaction with the page, <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</code> might be used to achieve this:</p>
+
+<pre class="brush: js">let playAttempt = setInterval(() => {
+  videoElem.play()
+    .then(() => {
+      clearInterval(playAttempt);
+    })
+    .catch(error => {
+      console.log('Unable to play the video, User has not interacted yet.');
+    });
+}, 3000);
+</pre>
 
 <h2 id="Autoplay_using_the_Web_Audio_API">Autoplay using the Web Audio API</h2>
 
