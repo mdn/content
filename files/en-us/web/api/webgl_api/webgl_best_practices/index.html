@@ -685,7 +685,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 }
 </pre>
 
-<h2 id="Use_requestPostAnimationFrame_not_requestAnimationFrame">Use <code>requestPostAnimationFrame</code> not <code>requestAnimationFrame</code></h2>
+<h3 id="Consider_requestPostAnimationFrame_not_requestAnimationFrame">Consider <code>requestPostAnimationFrame</code> not <code>requestAnimationFrame</code></h3>
 
 <p>While it's well-known that apps should use <code>requestAnimationFrame</code> ("RAF") instead of <code>setTimeout</code> (et al) to redraw on-demand, what's less well-known is that non-trivial WebGL apps should often <em>not</em> render within a RAF callback.</p>
 
@@ -695,7 +695,9 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 <p>This allows as much time as possible for rendering each frame.</p>
 
-<h2 id="devicePixelRatio_and_high-dpi_rendering"><code>devicePixelRatio</code> and high-dpi rendering</h2>
+<p><em>Note</em> that <code>requestPostAnimationFrame</code> is still under development as of this writing. Polyfills of this API do <a href="http://crbug.com/1199005">not yet have</a> the desired performance characteristics. It's currently recommended to use <code>requestPostAnimationFrame</code> in Firefox, but in Chrome, to continue to use <code>requestAnimationFrame</code>.
+
+<h3 id="devicePixelRatio_and_high-dpi_rendering"><code>devicePixelRatio</code> and high-dpi rendering</h3>
 
 <p>Handling <code>devicePixelRatio != 1.0</code> is tricky. While the common approach is to set <code>canvas.width = width * devicePixelRatio</code>, this will cause moire artifacts with non-integer values of <code>devicePixelRatio</code>, as is common with UI scaling on Windows, as well as zooming on all platforms.</p>
 
