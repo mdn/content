@@ -25,9 +25,9 @@ tags:
   specified function to update an animation before the next repaint. The method takes a
   callback as an argument to be invoked before the repaint.</p>
 
-<div class="note"><strong>Note:</strong> Your callback routine must itself call
+<div class="note"><strong>Note:</strong> <code>requestAnimationFrame()</code> is 1 shot. Your callback routine can itself call
   <code>requestAnimationFrame()</code> again if you want to animate another frame at the
-  next repaint. <code>requestAnimationFrame()</code> is 1 shot.</div>
+  next repaint.</div>
 
 <p>You should call this method whenever you're ready to update your animation onscreen.
   This will request that your animation function be called before the browser performs the
