@@ -21,38 +21,38 @@ browser-compat: javascript.builtins.Array.forEach
 
 <pre class="brush: js">
 // Arrow function
-forEach((currentValue) => { ... } )
-forEach((currentValue, index) => { ... } )
-forEach((currentValue, index, array) => { ... } )
+forEach((element) => { ... } )
+forEach((element, index) => { ... } )
+forEach((element, index, array) => { ... } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn(currentValue) { ... })
-forEach(function callbackFn(currentValue, index) { ... })
-forEach(function callbackFn(currentValue, index, array){ ... })
-forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
+forEach(function callbackFn(element) { ... })
+forEach(function callbackFn(element, index) { ... })
+forEach(function callbackFn(element, index, array){ ... })
+forEach(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>Function to execute on each element. It accepts between one and three arguments:</p>
     <dl>
-      <dt><code><var>currentValue</var></code></dt>
+      <dt><code><var>element</var></code></dt>
       <dd>The current element being processed in the array.</dd>
       <dt><code><var>index</var></code> {{optional_inline}}</dt>
-      <dd>The index of <code><var>currentValue</var></code> in the array.</dd>
+      <dd>The index of <code><var>element</var></code> in the array.</dd>
       <dt><code><var>array</var></code> {{optional_inline}}</dt>
       <dd>The array <code>forEach()</code> was called upon.</dd>
     </dl>
   </dd>
   <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.
+  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
   </dd>
 </dl>
 
@@ -62,12 +62,12 @@ forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
 
 <h2 id="Description">Description</h2>
 
-<p><code>forEach()</code> calls a provided <code><var>callback</var></code> function once
+<p><code>forEach()</code> calls a provided <code><var>callbackFn</var></code> function once
   for each element in an array in ascending index order. It is not invoked for index properties
   that have been deleted or are uninitialized. (For sparse arrays, <a
     href="#sparseArray">see example below</a>.)</p>
 
-<p><code><var>callback</var></code> is invoked with three arguments:</p>
+<p><code><var>callbackFn</var></code> is invoked with three arguments:</p>
 
 <ol>
   <li>the value of the element</li>
@@ -78,15 +78,15 @@ forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>forEach()</code>,
   it will be used as callback's <code>this</code> value. The
   <code><var>thisArg</var></code> value ultimately observable by
-  <code><var>callback</var></code> is determined according to <a
+  <code><var>callbackFn</var></code> is determined according to <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
     determining the <code>this</code> seen by a function</a>.</p>
 
 <p>The range of elements processed by <code>forEach()</code> is set before the first
-  invocation of <code><var>callback</var></code>. Elements which are appended to the array
+  invocation of <code><var>callbackFn</var></code>. Elements which are appended to the array
   after the call to <code>forEach()</code> begins will not be visited by
-  <code><var>callback</var></code>. If existing elements of the array are changed or
-  deleted, their value as passed to <code><var>callback</var></code> will be the value at
+  <code><var>callbackFn</var></code>. If existing elements of the array are changed or
+  deleted, their value as passed to <code><var>callbackFn</var></code> will be the value at
   the time <code>forEach()</code> visits them; elements that are deleted before being
   visited are not visited. If elements that are already visited are removed (e.g. using
   {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements
@@ -94,14 +94,14 @@ forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Modifying_the_array_during_iteration">See
     this example, below</a>.)</p>
 
-<p><code>forEach()</code> executes the <code><var>callback</var></code> function once for
+<p><code>forEach()</code> executes the <code><var>callbackFn</var></code> function once for
   each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or
   {{jsxref("Array.prototype.reduce()", "reduce()")}} it always returns the value
   {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side
   effects at the end of a chain.</p>
 
 <p><code>forEach()</code> does not mutate the array on which it is called. (However,
-  <code><var>callback</var></code> may do so)</p>
+  <code><var>callbackFn</var></code> may do so)</p>
 
 <div class="note">
   <p><strong>Note:</strong> There is no way to stop or break a <code>forEach()</code> loop other than by throwing

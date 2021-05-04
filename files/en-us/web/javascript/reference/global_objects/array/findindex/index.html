@@ -45,7 +45,7 @@ findIndex(function callbackFn(element, index, array) { ... }, thisArg)
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>A function to execute on each value in the array until the function returns
       <code>true</code>, indicating that the satisfying element was found.</p>
@@ -63,7 +63,7 @@ findIndex(function callbackFn(element, index, array) { ... }, thisArg)
   </dd>
   <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
   <dd>Optional object to use as <code>this</code> when executing
-    <code><var>callback</var></code>.</dd>
+    <code><var>callbackFn</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -75,22 +75,22 @@ findIndex(function callbackFn(element, index, array) { ... }, thisArg)
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>findIndex()</code> method executes the <code><var>callback</var></code>
+<p>The <code>findIndex()</code> method executes the <code><var>callbackFn</var></code>
   function once for every index in the array until it finds the one where
-  <code><var>callback</var></code> returns a {{Glossary("truthy")}} value.</p>
+  <code><var>callbackFn</var></code> returns a {{Glossary("truthy")}} value.</p>
 
 <p>If such an element is found, <code>findIndex()</code> immediately returns the element's
-  index. If <code><var>callback</var></code> never returns a truthy value (or the array's
+  index. If <code><var>callbackFn</var></code> never returns a truthy value (or the array's
   <code>length</code> is <code>0</code>), <code>findIndex()</code> returns
   <code>-1</code>.</p>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Unlike other array methods such as
-    {{jsxref("Array.some()")}}, <code><var>callback</var></code> is run even for indexes
+    {{jsxref("Array.some()")}}, <code><var>callbackFn</var></code> is run even for indexes
     with unassigned values.</p>
 </div>
 
-<p><code><var>callback</var></code> is invoked with three arguments:</p>
+<p><code><var>callbackFn</var></code> is invoked with three arguments:</p>
 
 <ol>
   <li>The value of the element</li>
@@ -100,15 +100,15 @@ findIndex(function callbackFn(element, index, array) { ... }, thisArg)
 
 <p>If a <code><var>thisArg</var></code> parameter is passed to <code>findIndex()</code>,
   it will be used as the <code>this</code> inside each invocation of the
-  <code><var>callback</var></code>. If it is not provided, then {{jsxref("undefined")}} is
+  <code><var>callbackFn</var></code>. If it is not provided, then {{jsxref("undefined")}} is
   used.</p>
 
 <p>The range of elements processed by <code>findIndex()</code> is set before the first
-  invocation of <code><var>callback</var></code>. <code><var>callback</var></code> will
+  invocation of <code><var>callbackFn</var></code>. <code><var>callbackFn</var></code> will
   not process the elements appended to the array after the call to
   <code>findIndex()</code> begins. If an existing, unvisited element of the array is
-  changed by <code><var>callback</var></code>, its value passed to the
-  <code><var>callback</var></code> will be the value at the time <code>findIndex()</code>
+  changed by <code><var>callbackFn</var></code>, its value passed to the
+  <code><var>callbackFn</var></code> will be the value at the time <code>findIndex()</code>
   visits the element's index.</p>
 
 <p>Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.</p>

@@ -24,14 +24,14 @@ browser-compat: javascript.builtins.Array.includes
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">
-includes(valueToFind)
-includes(valueToFind, fromIndex)
+includes(searchElement)
+includes(searchElement, fromIndex)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>valueToFind</var></code></dt>
+  <dt><code><var>searchElement</var></code></dt>
   <dd>
     <p>The value to search for.</p>
 
@@ -43,7 +43,7 @@ includes(valueToFind, fromIndex)
   <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
   <dd>
     <p>The position in this array at which to begin searching for
-    <code><var>valueToFind</var></code>.</p>
+    <code><var>searchElement</var></code>.</p>
     <p>The first element to be searched is found at <code><var>fromIndex</var></code> for
     positive values of <code><var>fromIndex</var></code>, or at
     <code><var>arr</var>.length + <var>fromIndex</var></code> for negative values of
@@ -57,7 +57,7 @@ includes(valueToFind, fromIndex)
 <h3 id="Return_value">Return value</h3>
 
 <p>A {{jsxref("Boolean")}} which is <code>true</code> if the value
-  <code><var>valueToFind</var></code> is found within the array (or the part of the array
+  <code><var>searchElement</var></code> is found within the array (or the part of the array
   indicated by the index <code><var>fromIndex</var></code>, if specified).</p>
 
 <p>Values of zero are all considered to be equal, regardless of sign. (That is,
@@ -95,7 +95,7 @@ arr.includes('c', 100)  // false
 
 <p>If <code><var>fromIndex</var></code> is negative, the computed index is calculated to
   be used as a position in the array at which to begin searching for
-  <code><var>valueToFind</var></code>. If the computed index is less or equal than
+  <code><var>searchElement</var></code>. If the computed index is less or equal than
   <code>-1 * <var>arr</var>.length</code>, the entire array will be searched.</p>
 
 <pre class="brush: js">// array length is 3

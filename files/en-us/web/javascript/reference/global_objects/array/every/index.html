@@ -40,7 +40,7 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>A function to test for each element, taking three arguments:
     <dl>
       <dt><code><var>element</var></code></dt>
@@ -52,23 +52,23 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
     </dl>
   </dd>
   <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-  <dd>A value to use as <code>this</code> when executing <code><var>callback</var></code>.
+  <dd>A value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
   </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p><strong><code>true</code></strong> if the <code><var>callback</var></code> function
+<p><strong><code>true</code></strong> if the <code><var>callbackFn</var></code> function
   returns a {{Glossary("truthy")}} value for every array element. Otherwise,
   <strong><code>false</code></strong>.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>every</code> method executes the provided <code><var>callback</var></code>
+<p>The <code>every</code> method executes the provided <code><var>callbackFn</var></code>
   function once for each element present in the array until it finds the one where
-  <code><var>callback</var></code> returns a {{Glossary("falsy")}} value. If such an
+  <code><var>callbackFn</var></code> returns a {{Glossary("falsy")}} value. If such an
   element is found, the <code>every</code> method immediately returns <code>false</code>.
-  Otherwise, if <code><var>callback</var></code> returns a {{Glossary("truthy")}} value
+  Otherwise, if <code><var>callbackFn</var></code> returns a {{Glossary("truthy")}} value
   for all elements, <code>every</code> returns <code>true</code>.</p>
 
 <div class="notecard note">
@@ -76,11 +76,11 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
     <code>true</code> for any condition!</p>
 </div>
 
-<p><code><var>callback</var></code> is invoked only for array indexes which have assigned
+<p><code><var>callbackFn</var></code> is invoked only for array indexes which have assigned
   values. It is not invoked for indexes which have been deleted, or which have never been
   assigned values.</p>
 
-<p><code><var>callback</var></code> is invoked with three arguments: the value of the
+<p><code><var>callbackFn</var></code> is invoked with three arguments: the value of the
   element, the index of the element, and the Array object being traversed.</p>
 
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>every</code>, it
@@ -94,10 +94,10 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
 <p><code>every</code> does not mutate the array on which it is called.</p>
 
 <p>The range of elements processed by <code>every</code> is set before the first
-  invocation of <code><var>callback</var></code>. Therefore,
-  <code><var>callback</var></code> will not run on elements that are appended to the array
+  invocation of <code><var>callbackFn</var></code>. Therefore,
+  <code><var>callbackFn</var></code> will not run on elements that are appended to the array
   after the call to <code>every</code> begins. If existing elements of the array are
-  changed, their value as passed to <code><var>callback</var></code> will be the value at
+  changed, their value as passed to <code><var>callbackFn</var></code> will be the value at
   the time <code>every</code> visits them. Elements that are deleted are not visited.</p>
 
 <p><code>every</code> acts like the "for all" quantifier in mathematics. In particular,
