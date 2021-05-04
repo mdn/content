@@ -93,7 +93,7 @@ html(lang="en")
 <pre class="brush: html line-numbers language-html">h1= title
 p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</pre>
 
-<p>If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the <code>#{}</code> and<code> !{}</code> syntax respectively, as shown below. You can also add raw HTML within the plain text.</p>
+<p>If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the <code>#{}</code> and <code>!{}</code> syntax respectively, as shown below. You can also add raw HTML within the plain text.</p>
 
 <pre class="brush: html line-numbers language-html">p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</pre>

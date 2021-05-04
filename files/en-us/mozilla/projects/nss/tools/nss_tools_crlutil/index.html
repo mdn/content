@@ -203,7 +203,7 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
     For example: <code>20050204153000Z</code></li>
   <li>Add an extension to a CRL or a crl certificate entry:
     <blockquote>
-      <code>addext</code><i>extension-name</i> <i>critical/non-critical</i><code> [</code><i>arg1</i><code>[</code><i>arg2</i> <code>...]]</code>
+      <code>addext</code><i>extension-name</i> <i>critical/non-critical</i> <code>[</code><i>arg1</i><code>[</code><i>arg2</i> <code>...]]</code>
     </blockquote>
     Where:<br>
     <blockquote>
@@ -345,9 +345,9 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
 <h3 id="Creating_a_New_CRL"> <a id="1028724"> Creating a New CRL </a></h3>
 <p><a id="1034720"> This example creates a new CRL and importing it in to a Database in the specified directory: </a></p>
 
-<p><a id="1034722"> <code>crlutil -G -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> -c </code><i>crl-script-file</i></a></p>
+<p><a id="1034722"> <code>crlutil -G -d </code><i>certdir</i> <code>-n </code><i>cert-nickname</i> <code>-c </code><i>crl-script-file</i></a></p>
 <p>or</p>
-<p><code>crlutil -G -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> &lt;&lt;<i>EOF<br>
+<p><code>crlutil -G -d </code><i>certdir</i> <code>-n </code><i>cert-nickname</i> <code>&lt;&lt;<i>EOF<br>
   update=20050204153000Z<br>
   addcert 34-40 20050104153000Z<br>
   EOF</i></code></p>
@@ -360,7 +360,7 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
 <p><a id="1037237"> <code>CN=NSS Test CA,O=BOGUS NSS,L=Mountain View,ST=California,C=US  CRL<br>
   CN=John Smith,O=Netscape,L=Mountain View,ST=California,C=US  CRL</code></a></p>
 <p>To view a particular CRL user should specify <i>-n nickname</i> parameter.<br>
-  <code>crlutil -L -d </code><i>certdir</i><code> -n </code><i> nickname</i></p>
+  <code>crlutil -L -d </code><i>certdir</i> <code>-n </code><i> nickname</i></p>
 
 <p><code>CRL Info:<br>
   :<br>
@@ -376,16 +376,16 @@ slug: Mozilla/Projects/NSS/tools/NSS_Tools_crlutil
           Revocation Date: Wed Feb 23 12:08:40 2005</code></p>
 <h3 id="Deleting_CRL_from_a_Database"><a id="1028731"> Deleting CRL from a Database</a></h3>
 <p><a id="1035439"> This example deletes CRL from a database in the specified directory: </a></p>
-<p><a id="1035441"> <code>crlutil -D -n </code><i>nickname</i><code> -d </code><i>certdir</i> </a></p>
+<p><a id="1035441"> <code>crlutil -D -n </code><i>nickname</i> <code>-d </code><i>certdir</i> </a></p>
 <h3 id="Importing_CRL_into_a_Database"><a id="1034020"> Importing CRL into a Database </a></h3>
 <p>This example imports CRL into a database: </p>
-<p><code>crlutil -I -i </code><i>crl-file</i><code> -d </code><i>certdir</i></p>
+<p><code>crlutil -I -i </code><i>crl-file</i> <code>-d </code><i>certdir</i></p>
 <p>File should has binary format of ASN.1 encoded CRL data. </p>
 <h3 id="Modifying_CRL_in_a_Database">Modifying CRL in a Database</h3>
 <p>This example modifies a new CRL and importing it in to a Database in the specified directory:</p>
-<p><code>crlutil -G -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> -c </code><i>crl-script-file</i></p>
+<p><code>crlutil -G -d </code><i>certdir</i> <code>-n </code><i>cert-nickname</i> <code>-c </code><i>crl-script-file</i></p>
 <p>or</p>
-<p><code>crlutil -M -d </code><i>certdir</i><code> -n </code><i>cert-nickname</i><code> &lt;&lt;<i>EOF<br>
+<p><code>crlutil -M -d </code><i>certdir</i> <code>-n </code><i>cert-nickname</i> <code>&lt;&lt;<i>EOF<br>
   update=20050204153000Z<br>
   addcert 40-60 20050105153000Z<br>
   EOF</i></code></p>

@@ -12,7 +12,7 @@ tags:
 <p>This chapter describes the methods that provide the basic processes of initialization, instance creation and destruction, and shutdown.</p>
 
 <ul>
- <li><a href="/en-US/Gecko_Plugin_API_Reference/Initialization_and_Destruction#initialization">Initialization</a>: The browser calls the Plug-in API function<code> <a href="/en-US/NP_Initialize">NP_Initialize</a></code> when the plug-in code is first loaded.</li>
+ <li><a href="/en-US/Gecko_Plugin_API_Reference/Initialization_and_Destruction#initialization">Initialization</a>: The browser calls the Plug-in API function <code><a href="/en-US/NP_Initialize">NP_Initialize</a></code> when the plug-in code is first loaded.</li>
  <li><a href="/en-US/Gecko_Plugin_API_Reference/Initialization_and_Destruction#instance_creation">Instance Creation</a>: The browser calls the Plug-in API function <code><a href="/en-US/NPP_New">NPP_New</a></code> when the instance is created.</li>
  <li><a href="/en-US/Gecko_Plugin_API_Reference/Initialization_and_Destruction#instance_destruction">Instance Destruction</a>: The plug-in instance is deleted when the user leaves the instance page or closes the instance window; the browser calls the function <code><a href="/en-US/NPP_Destroy">NPP_Destroy</a></code> to tell the plug-in that the instance is being deleted.</li>
  <li><a href="/en-US/Gecko_Plugin_API_Reference/Initialization_and_Destruction#shutdown">Shutdown</a>: When the last instance of a plug-in is deleted, the plug-in code is unloaded from memory and the browser calls the function <code><a href="/en-US/NP_Shutdown">NP_Shutdown</a></code>. Plug-ins consume no resources, other than disk space, if not referenced.</li>

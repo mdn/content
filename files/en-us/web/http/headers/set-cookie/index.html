@@ -62,7 +62,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <ul>
   <li>A <code>&lt;cookie-name&gt;</code> can be any US-ASCII characters, except control characters, spaces, or tabs. It also must not contain a separator character like the following: <code>( ) &lt; &gt; @ , ; : \ " / [ ] ? = { }</code>.</li>
   <li>A <code>&lt;cookie-value&gt;</code> can optionally be wrapped in double quotes and include any US-ASCII characters excluding control characters, {{glossary("Whitespace")}}, double quotes, comma, semicolon, and backslash. <strong>Encoding</strong>: Many implementations perform URL encoding on cookie values, however it is not required per the RFC specification. It does help satisfying the requirements about which characters are allowed for &lt;cookie-value&gt; though.</li>
-  <li><strong><code>__Secure-</code> prefix</strong>: Cookies names starting with<code> __Secure-</code> (dash is part of the prefix) must be set with the <code>secure</code> flag from a secure page (HTTPS).</li>
+  <li><strong><code>__Secure-</code> prefix</strong>: Cookies names starting with <code>__Secure-</code> (dash is part of the prefix) must be set with the <code>secure</code> flag from a secure page (HTTPS).</li>
   <li><strong><code>__Host-</code> prefix</strong>: Cookies with names starting with <code>__Host-</code> must be set with the <code>secure</code> flag, must be from a secure page (HTTPS), must not have a domain specified (and therefore aren't sent to subdomains) and the path must be <code>/</code>.</li>
  </ul>
  </dd>

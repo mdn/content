@@ -50,7 +50,7 @@ tags:
 <p>Browsers tend to handle the <code>popstate</code> event differently on page load. Chrome (prior to v34) and Safari always emit a <code>popstate</code> event on page load, but Firefox doesn't.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When writing functions that process <code>popstate</code> event it is important to take into account that properties like <code>window.location</code> will already reflect the state change (if it affected the current URL), but <code>document</code> might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} method call should be used to effectively put its inner <em>callback</em> function that does the processing at the end of the browser event loop: <code>window.</code><code>onpopstate</code><code> = () =&gt; setTimeout(doSomeThing, 0);</code></p>
+<p><strong>Note</strong>: When writing functions that process <code>popstate</code> event it is important to take into account that properties like <code>window.location</code> will already reflect the state change (if it affected the current URL), but <code>document</code> might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} method call should be used to effectively put its inner <em>callback</em> function that does the processing at the end of the browser event loop: <code>window.</code><code>onpopstate</code> <code>= () =&gt; setTimeout(doSomeThing, 0);</code></p>
 </div>
 
 <h2 id="When_popstate_is_sent">When popstate is sent</h2>

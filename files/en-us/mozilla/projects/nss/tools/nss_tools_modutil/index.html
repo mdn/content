@@ -36,7 +36,7 @@ Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev
 </h2><a id="1033678">
     To run the Security Module Database Tool, type the command</a>
 <a id="1033679">
-    <code>modutil</code><i>option</i><code> [</code><i>arguments</i><code>]</code></a>
+    <code>modutil</code><i>option</i> <code>[</code><i>arguments</i><code>]</code></a>
 <a id="1028271">
     where <i>option</i> and <i>arguments</i> are combinations of the options and arguments listed in the following
     section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue
@@ -164,7 +164,7 @@ command are defined as follows:
             <td>
                 <p><a id="1039044">
                         Specify the security mechanisms for which the named module will <i>not</i> be a default
-                        provider. The security mechanisms are specified with the<code> -mechanisms</code>
+                        provider. The security mechanisms are specified with the <code>-mechanisms</code>
                         <i>mechanism-list</i> argument. </a></p>
             </td>
         </tr>
@@ -414,7 +414,7 @@ command are defined as follows:
             Adding a PKCS #11 module, which includes setting a supporting library file, enabling ciphers, and setting
             default provider status for various security mechanisms: </a>
         <blockquote><a id="1043245">
-                <code>-add</code><i>modulename</i><code> -libfile</code><i>library-file</i> <code>[-ciphers</code><i>cipher-enable-list</i><code>]<br>
+                <code>-add</code><i>modulename</i> <code>-libfile</code><i>library-file</i> <code>[-ciphers</code><i>cipher-enable-list</i><code>]<br>
 [-mechanisms</code><i>mechanism-list</i><code>]
 </code></a></blockquote>
     </li>
@@ -519,13 +519,13 @@ command are defined as follows:
 <a id="1041894">
     The script file grammar is as follows:</a>
 <pre><a id="1040388"><code>--&gt; </code><i>valuelist</i></a></pre>
-<pre><a id="1040390"><i>valuelist</i><code> --&gt; </code><i>value valuelist<br></i><code>               &lt;</code><i>null&gt;</i></a></pre>
-<pre><a id="1040394"><i>value</i><code> ---&gt; </code><i>key_value_pair<br></i>            <i>string</i></a></pre>
-<pre><a id="1040397"><i>key_value_pair</i><code> --&gt; </code><i>key </i><code>{ </code><i>valuelist</i><code> }</code></a></pre>
-<pre><a id="1040399"><i>key</i><code> --&gt; </code><i>string</i></a></pre>
-<pre><a id="1040401"><i>string</i><code> --&gt; </code><i>simple_string<br></i><code>            "</code><i>complex_string</i><code>"</code></a></pre>
-<pre><a id="1040404"><i>simple_string</i><code> --&gt; [^ \t\n\""{""}"]+ <br></code><var>(No whitespace, quotes, or braces.)</var></a></pre>
-<pre><a id="1040406"><i>complex_string</i><code> --&gt; ([^\"\\\r\n]|(\\\")|(\\\\))+ </code><var>(Quotes and<br>backslashes must be escaped with a backslash. A complex string must not<br>include newlines or carriage returns.)</var></a></pre>
+<pre><a id="1040390"><i>valuelist</i> <code>--&gt; </code><i>value valuelist<br></i><code>               &lt;</code><i>null&gt;</i></a></pre>
+<pre><a id="1040394"><i>value</i> <code>---&gt; </code><i>key_value_pair<br></i>            <i>string</i></a></pre>
+<pre><a id="1040397"><i>key_value_pair</i> <code>--&gt; </code><i>key </i><code>{ </code><i>valuelist</i> <code>}</code></a></pre>
+<pre><a id="1040399"><i>key</i> <code>--&gt; </code><i>string</i></a></pre>
+<pre><a id="1040401"><i>string</i> <code>--&gt; </code><i>simple_string<br></i><code>            "</code><i>complex_string</i><code>"</code></a></pre>
+<pre><a id="1040404"><i>simple_string</i> <code>--&gt; [^ \t\n\""{""}"]+ <br></code><var>(No whitespace, quotes, or braces.)</var></a></pre>
+<pre><a id="1040406"><i>complex_string</i> <code>--&gt; ([^\"\\\r\n]|(\\\")|(\\\\))+ </code><var>(Quotes and<br>backslashes must be escaped with a backslash. A complex string must not<br>include newlines or carriage returns.)</var></a></pre>
 <a id="1040408">
     Outside of complex strings, all white space (for example, spaces, tabs, and carriage returns) is considered equal
     and is used only to delimit tokens. </a>

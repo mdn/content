@@ -155,7 +155,7 @@ tags:
 
 <ul>
  <li>All model fields have the correct label and length.</li>
- <li>All models have the expected object name (e.g.<code> __str__()</code> returns the expected value).</li>
+ <li>All models have the expected object name (e.g. <code>__str__()</code> returns the expected value).</li>
  <li>Models have the expected URL for individual Blog and Comment records (e.g. <code>get_absolute_url()</code> returns the expected URL).</li>
  <li>The BlogListView (all-blog page) is accessible at the expected location (e.g. /blog/blogs)</li>
  <li>The BlogListView (all-blog page) is accessible at the expected named url (e.g. 'blogs')</li>
@@ -254,7 +254,7 @@ tags:
  <li>The <em>add comment</em> form can be created using a function-based view (and associated model and form) or using a generic <code>CreateView</code>. If you use a <code>CreateView</code> (recommended) then:
   <ul>
    <li>You will also need to pass the name of the blog post to the comment page in the context (implement <code>get_context_data()</code> as discussed below).</li>
-   <li>The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the<code> form_valid()</code> function so it can be saved into the model (<a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-editing/#models-and-request-user">as described here</a> — Django docs). In that same function we set the associated blog. A possible implementation is shown below (<code>pk</code> is a blog id passed in from the URL/URL configuration).
+   <li>The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the <code>form_valid()</code> function so it can be saved into the model (<a href="https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-editing/#models-and-request-user">as described here</a> — Django docs). In that same function we set the associated blog. A possible implementation is shown below (<code>pk</code> is a blog id passed in from the URL/URL configuration).
     <pre class="brush: python">    def form_valid(self, form):
         """
         Add author and associated blog to form data before setting it as valid (so it is saved to model)

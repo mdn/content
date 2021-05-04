@@ -32,7 +32,7 @@ var destination = audioCtx.createMediaStreamDestination();</pre>
 
 <p>In the following simple example, we create a {{domxref("MediaStreamAudioDestinationNode")}}, an {{ domxref("OscillatorNode") }} and a {{ domxref("MediaRecorder") }} (the example will therefore only work in Firefox and Chrome at this time.) The <code>MediaRecorder</code> is set up to record information from the <code>MediaStreamDestinationNode</code>.</p>
 
-<p>When the button is clicked, the oscillator starts, and the <code>MediaRecorder</code> is started. When the button is stopped, the oscillator and<code> MediaRecorder</code> both stop. Stopping the <code>MediaRecorder</code> causes the <code>dataavailable</code> event to fire, and the event data is pushed into the <code>chunks</code> array. After that, the <code>stop</code> event fires, a new <code>blob</code> is made of type opus — which contains the data in the <code>chunks</code> array, and a new window (tab) is then opened that points to a URL created from the blob.</p>
+<p>When the button is clicked, the oscillator starts, and the <code>MediaRecorder</code> is started. When the button is stopped, the oscillator and <code>MediaRecorder</code> both stop. Stopping the <code>MediaRecorder</code> causes the <code>dataavailable</code> event to fire, and the event data is pushed into the <code>chunks</code> array. After that, the <code>stop</code> event fires, a new <code>blob</code> is made of type opus — which contains the data in the <code>chunks</code> array, and a new window (tab) is then opened that points to a URL created from the blob.</p>
 
 <p>From here, you can play and save the opus file.</p>
 
