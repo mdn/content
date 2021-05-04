@@ -4755,7 +4755,6 @@
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/valueOf	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /en-US/docs/JavaScript/Reference/Global_Objects/Object/valueOf-redirect-1	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf
 /en-US/docs/JavaScript/Reference/Global_Objects/Proxy	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
-/en-US/docs/JavaScript/Reference/Global_Objects/Proxy{{template("Non-standard_heade	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 /en-US/docs/JavaScript/Reference/Global_Objects/RangeError	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/JavaScript/Reference/Global_Objects/RangeError/prototype	/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError
 /en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
@@ -12329,5 +12328,3 @@
 /en-US/docs/xml:base	/en-US/docs/Web/XML/xml:base
 /en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
 /en-US/docs/zh_cn	/zh-CN/docs/Web
-/en-US/docs/{{domxref("/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
-/en-US/docs/{{domxref("/TouchList.item	/en-US/docs/Web/API/TouchList/item
