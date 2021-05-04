@@ -29,6 +29,29 @@ tags:
 
 <p>Unknown descriptors are invalid and ignored, but do not invalidate the <code>@property</code> rule.</p>
 
+<h2 id="Multiple_declarations">Multiple declarations</h2>
+
+<p>To declare multiple custom properties at the same time, use the following syntax:</p>
+
+<pre class="brush: css no-line-numbers">@property --primary-color,
+@property --secondary-color,
+@property --text-color {
+  syntax: '<color>';
+  inherits: true;
+}
+
+@property --primary-color {
+  initial-value: red;
+}
+
+@property --secondary-color {
+  initial-value: blue;
+}
+
+@property --text-color {
+  initial-value: green;
+}</pre>
+
 <h2 id="Examples">Examples</h2>
 
 <p>Add type checking to <code>--my-color</code> {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:</p>
