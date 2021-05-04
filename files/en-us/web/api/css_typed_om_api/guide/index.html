@@ -363,7 +363,7 @@ let unit = allComputedStyles.get('--unit');
 console.log( unit )    // CSSUnparsedValue {0: " 1.2rem", length: 1}
 console.log (unit[0] ) // " 1.2rem" </pre>
 
-<p>When we invoke <code>get()</code>, a custom property of type <code>CSSUnparsedValue</code> is returned. Note the space before the  <code>1.2rem</code>.  To get a unit and value, we need a <code>CSSUnitValue</code>, which we can retrieve using the <code>CSSStyleValue.parse()</code> method on the <code>CSSUnparsedValue</code>.</p>
+<p>When we invoke <code>get()</code>, a custom property of type <code>CSSUnparsedValue</code> is returned. Note the space before the <code>1.2rem</code>. To get a unit and value, we need a <code>CSSUnitValue</code>, which we can retrieve using the <code>CSSStyleValue.parse()</code> method on the <code>CSSUnparsedValue</code>.</p>
 
 <pre class="brush: js">let parsedUnit = CSSNumericValue.parse( unit );
 console.log( parsedUnit );        // CSSUnitValue {value: 1.2, unit: "rem"}
