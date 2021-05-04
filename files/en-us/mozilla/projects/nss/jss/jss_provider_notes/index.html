@@ -48,7 +48,7 @@ tags:
 <h3 id="Installing_the_Provider"><a name="installing-provider">Installing the Provider</a></h3>
 
 <ul>
- <li>In order to use any part of JSS, including the JCA provider, you must first call <code> <a href="/en-US/docs/Mozilla/Projects/NSS/JSS/CryptoManager">CryptoManager</a>.initialize()</code>. By default, the JCA provider will be installed in the list of providers maintained by the <code>java.security.Security</code> class. If you do not wish the provider to be installed, create a <a href="/en-US/docs/Mozilla/Projects/NSS/JSS/CryptoManager/CryptoManager.InitializationValues"><code> CryptoManager.InitializationValues</code></a> object, set its <code>installJSSProvider</code> field to <code>false</code>, and pass the <code>InitializationValues</code> object to <code>CryptoManager.initialize()</code>.</li>
+ <li>In order to use any part of JSS, including the JCA provider, you must first call <code><a href="/en-US/docs/Mozilla/Projects/NSS/JSS/CryptoManager">CryptoManager</a>.initialize()</code>. By default, the JCA provider will be installed in the list of providers maintained by the <code>java.security.Security</code> class. If you do not wish the provider to be installed, create a <a href="/en-US/docs/Mozilla/Projects/NSS/JSS/CryptoManager/CryptoManager.InitializationValues"><code> CryptoManager.InitializationValues</code></a> object, set its <code>installJSSProvider</code> field to <code>false</code>, and pass the <code>InitializationValues</code> object to <code>CryptoManager.initialize()</code>.</li>
 </ul>
 
 <h3 id="Specifying_the_CryptoToken"><a name="specifying-token">Specifying the CryptoToken</a></h3>
