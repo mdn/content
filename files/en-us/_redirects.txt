@@ -6787,9 +6787,9 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
 /en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
-/en-US/docs/Thunderbird/Autoconfiguration	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration
-/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition
-/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
+/en-US/docs/Thunderbird/Autoconfiguration	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/definition
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/thunderbird/autoconfiguration/fileformat/howto
 /en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Toolbox	/en-US/docs/Tools/Tools_Toolbox
 /en-US/docs/Tools/DOM_Inspector	/en-US/docs/Tools/DOM_Property_Viewer
