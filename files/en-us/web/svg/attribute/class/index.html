@@ -42,22 +42,6 @@ tags:
 	</tbody>
 </table>
 
-<dl>
-	<dt><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-<var>T</var>s&gt;</a></dt>
-	<dd>
-	<p>(Where <var>T</var> is some type.) A list consists of a separated sequence of values. Unless explicitly described differently, lists within SVG's XML attributes can be either comma-separated (with optional white space before or after the comma), or white space-separated.</p>
-
-	<p>White space in lists is defined as one or more of the following consecutive characters: "space" (<code>U+0020</code>), "tab" (<code>U+0009</code>), "line feed" (<code>U+000A</code>), "carriage return" (<code>U+000D</code>), and "form-feed" (<code>U+000C</code>).</p>
-
-	<p>The following is a template for an EBNF grammar describing the &lt;list-of-<var>T</var>s&gt; syntax:</p>
-
-	<pre>list-of-<var>T</var>s ::= <var>T</var>
-               | <var>T</var>, list-of-<var>T</var>s</pre>
-
-	<p>Within the SVG DOM, values of a &lt;list-of-<var>T</var>s&gt; type are represented by an interface specific for the particular type <var>T</var>. For example, a &lt;list-of-lengths&gt; is represented in the SVG DOM using an {{domxref("SVGLengthList")}} or {{domxref("SVGAnimatedLengthList")}} object.</p>
-	</dd>
-</dl>
-
 
 <h2 id="Example">Example</h2>
 
