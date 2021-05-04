@@ -26,19 +26,19 @@ browser-compat: javascript.builtins.TypedArray.filter
 
 <pre class="brush: js">
 // Arrow function
-filter((currentValue) => { ... } )
-filter((currentValue, index) => { ... } )
-filter((currentValue, index, array) => { ... } )
+filter((element) => { ... } )
+filter((element, index) => { ... } )
+filter((element, index, array) => { ... } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function callbackFn(currentValue) { ... })
-filter(function callbackFn(currentValue, index) { ... })
-filter(function callbackFn(currentValue, index, array){ ... })
-filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
+filter(function callbackFn(element) { ... })
+filter(function callbackFn(element, index) { ... })
+filter(function callbackFn(element, index, array){ ... })
+filter(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

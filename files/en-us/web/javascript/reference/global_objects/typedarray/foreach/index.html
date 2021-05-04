@@ -23,19 +23,19 @@ browser-compat: javascript.builtins.TypedArray.forEach
 
 <pre class="brush: js">
 // Arrow function
-forEach((currentValue) => { ... } )
-forEach((currentValue, index) => { ... } )
-forEach((currentValue, index, array) => { ... } )
+forEach((element) => { ... } )
+forEach((element, index) => { ... } )
+forEach((element, index, array) => { ... } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn(currentValue) { ... })
-forEach(function callbackFn(currentValue, index) { ... })
-forEach(function callbackFn(currentValue, index, array){ ... })
-forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
+forEach(function callbackFn(element) { ... })
+forEach(function callbackFn(element, index) { ... })
+forEach(function callbackFn(element, index, array){ ... })
+forEach(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -44,7 +44,7 @@ forEach(function callbackFn(currentValue, index, array) { ... }, thisArg)
   <dt><code><var>callbackFn</var></code></dt>
   <dd>Function that produces an element of the new typed array, taking three arguments:
     <dl>
-      <dt><code><var>currentValue</var></code></dt>
+      <dt><code><var>element</var></code></dt>
       <dd>The current element being processed in the typed array.</dd>
       <dt><code><var>index</var></code></dt>
       <dd>The index of the current element being processed in the array.</dd>

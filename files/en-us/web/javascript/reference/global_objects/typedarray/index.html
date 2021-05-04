@@ -164,14 +164,15 @@ browser-compat: javascript.builtins.TypedArray
   {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their
   constructors:</p>
 
-<pre class="brush: js">new <var>TypedArray</var>();
-new <var>TypedArray</var>(<var>length</var>);
-new <var>TypedArray</var>(<var>typedArray</var>);
-new <var>TypedArray</var>(<var>object</var>);
+<pre class="brush: js">
+new TypedArray()
+new TypedArray(length)
+new TypedArray(typedArray)
+new TypedArray(object)
 
-new <var>TypedArray</var>(buffer);
-new <var>TypedArray</var>(buffer, byteOffset);
-new <var>TypedArray</var>(buffer, byteOffset, length);
+new TypedArray(buffer)
+new TypedArray(buffer, byteOffset)
+new TypedArray(buffer, byteOffset, length)
 </pre>
 
 <p>Where <var>TypedArray</var> is a constructor for one of the concrete types.</p>

@@ -23,20 +23,20 @@ browser-compat: javascript.builtins.TypedArray.reduceRight
 
 <pre class="brush: js">
 // Arrow function
-reduceRight((accumulator, currentValue) => { ... } )
-reduceRight((accumulator, currentValue, index) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... } )
-reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduceRight((previousValue, currentValue) => { ... } )
+reduceRight((previousValue, currentValue, index) => { ... } )
+reduceRight((previousValue, currentValue, index, array) => { ... } )
+reduceRight((previousValue, currentValue, index, array) => { ... }, initialValue)
 
 // Callback function
 reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Inline callback function
-reduceRight(function callbackFn(accumulator, currentValue) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, thisArg)
+reduceRight(function callbackFn(previousValue, currentValue) { ... })
+reduceRight(function callbackFn(previousValue, currentValue, index) { ... })
+reduceRight(function callbackFn(previousValue, currentValue, index, array){ ... })
+reduceRight(function callbackFn(previousValue, currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

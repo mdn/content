@@ -26,20 +26,20 @@ browser-compat: javascript.builtins.TypedArray.reduce
 
 <pre class="brush: js">
 // Arrow function
-reduce((accumulator, currentValue) => { ... } )
-reduce((accumulator, currentValue, index) => { ... } )
-reduce((accumulator, currentValue, index, array) => { ... } )
-reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduce((previousValue, currentValue) => { ... } )
+reduce((previousValue, currentValue, index) => { ... } )
+reduce((previousValue, currentValue, index, array) => { ... } )
+reduce((previousValue, currentValue, index, array) => { ... }, initialValue)
 
 // Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function callbackFn(accumulator, currentValue) { ... })
-reduce(function callbackFn(accumulator, currentValue, index) { ... })
-reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+reduce(function callbackFn(previousValue, currentValue) { ... })
+reduce(function callbackFn(previousValue, currentValue, index) { ... })
+reduce(function callbackFn(previousValue, currentValue, index, array){ ... })
+reduce(function callbackFn(previousValue, currentValue, index, array) { ... }, initialValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
