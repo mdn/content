@@ -26,20 +26,20 @@ browser-compat: javascript.builtins.TypedArray.reduce
 
 <pre class="brush: js">
 // Arrow function
-reduce((previousValue, currentValue) => { ... } )
-reduce((previousValue, currentValue, index) => { ... } )
-reduce((previousValue, currentValue, index, array) => { ... } )
-reduce((previousValue, currentValue, index, array) => { ... }, initialValue)
+reduce((accumulator, currentValue) => { ... } )
+reduce((accumulator, currentValue, index) => { ... } )
+reduce((accumulator, currentValue, index, array) => { ... } )
+reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
 
 // Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function callbackFn(previousValue, currentValue) { ... })
-reduce(function callbackFn(previousValue, currentValue, index) { ... })
-reduce(function callbackFn(previousValue, currentValue, index, array){ ... })
-reduce(function callbackFn(previousValue, currentValue, index, array) { ... }, initialValue)
+reduce(function callbackFn(accumulator, currentValue) { ... })
+reduce(function callbackFn(accumulator, currentValue, index) { ... })
+reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
+reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -48,7 +48,7 @@ reduce(function callbackFn(previousValue, currentValue, index, array) { ... }, i
   <dt><code><var>callbackFn</var></code></dt>
   <dd>Function to execute on each value in the typed array, taking four arguments:
     <dl>
-      <dt><code><var>previousValue</var></code></dt>
+      <dt><code><var>accumulator</var></code></dt>
       <dd>The value previously returned in the last invocation of the callback, or
         <code>initialValue</code>, if supplied (see below).</dd>
       <dt><code><var>currentValue</var></code></dt>
@@ -76,13 +76,13 @@ reduce(function callbackFn(previousValue, currentValue, index, array) { ... }, i
   <code><var>callbackFn</var></code> call), the value of the current element, the current
   index, and the typed array over which iteration is occurring.</p>
 
-<p>The first time the callback is called, <code><var>previousValue</var></code> and
+<p>The first time the callback is called, <code><var>accumulator</var></code> and
   <code><var>currentValue</var></code> can be one of two values. If
   <code><var>initialValue</var></code> is provided in the call to <code>reduce</code>,
-  then <code><var>previousValue</var></code> will be equal to
+  then <code><var>accumulator</var></code> will be equal to
   <code><var>initialValue</var></code> and <code><var>currentValue</var></code> will be
   equal to the first value in the typed array. If no <code><var>initialValue</var></code>
-  was provided, then <code><var>previousValue</var></code> will be equal to the first
+  was provided, then <code><var>accumulator</var></code> will be equal to the first
   value in the typed array and <code><var>currentValue</var></code> will be equal to the
   second.</p>
 
