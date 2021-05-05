@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.2.tgz#6150ff389513af5bda46b3d67bf6426e4358b581"
   integrity sha512-TW8LAl7MLc3gVMqd+Y70mHCOJ2dugvuXt5rQe+UjusFRhhKlFvmCBFyZ1Qv3QWf7N9Ppd6+6gl36lvg9sCc4Kg==
 
-"@mdn/yari@0.4.425":
-  version "0.4.425"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.425.tgz#98337b389223bf0bbf23df013a6a1b2e300160ba"
-  integrity sha512-tAdhRWh444aUrfMPtzOwmJB9SapKDxsGAP+rta+HkZ8PNXvjISydlOAXZ3aCeUDdEnsIfOKJ+rmmMHHFmpHv4A==
+"@mdn/yari@0.4.430":
+  version "0.4.430"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.430.tgz#cb70386b5176467033842cd342327a6bf84afe73"
+  integrity sha512-O0gTo5fQ3BrG5V4dOo3+UVG4qgVRwVI8wJJNhXFuYi4BoyXN6/TaJAQiP2biofQColQQaDyFnCD8rIR/SYeRPA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "3.3.2"
     accept-language-parser "1.5.0"
-    browser-specs "^1.34.2"
+    browser-specs "^1.36.0"
     chalk "4.1.1"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -63,7 +63,7 @@
     fdir "5.0.0"
     file-type "16.3.0"
     front-matter "^4.0.2"
-    fs-extra "9.1.0"
+    fs-extra "10.0.0"
     glob "^7.1.6"
     got "11.8.2"
     hast-util-is-element "^1.1.0"
@@ -427,11 +427,6 @@ async@^2.6.1:
   dependencies:
     lodash "^4.17.14"
 
-at-least-node@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
-  integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
-
 bail@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bail/-/bail-1.0.5.tgz#b6fa133404a392cbc1f8c4bf63f5953351e7a776"
@@ -539,10 +534,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^1.34.2:
-  version "1.35.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.35.1.tgz#01c77221940b5d733995248438e869ca5342cc9c"
-  integrity sha512-y9rMHjHa2kXUOBqovbRHCQAQhCJARiPQYluiO3PBoBl4Wa7f0ukE72+zDBN7+0oYzdRyWngZaUtl2rqCVdZ1Aw==
+browser-specs@^1.36.0:
+  version "1.36.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.36.0.tgz#95de670f2a28c9fa43d051c422763e3011256553"
+  integrity sha512-nfN2TXZDOgrCvhk9rNTBIoiigeLNfKC7UaRinGJavOF9aBkgvhgj0VqJtqn5MoeB5+ZvwWfEuGFakI4cKyzVrQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1758,12 +1753,11 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
-  integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
+fs-extra@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
+  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
   dependencies:
-    at-least-node "^1.0.0"
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
     universalify "^2.0.0"
