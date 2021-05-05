@@ -343,22 +343,10 @@ function baz() { // kosher
 
 <p>The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous <a href="https://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Browser versions used in the wild that only have partial support for strict mode</a> or do not support it at all (e.g. Internet Explorer below version 10!). <em>Strict mode changes semantics.</em> Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to <em>test your code in browsers that do and don't support strict mode</em>. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}}</td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li><a href="https://tc39.es/ecma262/#sec-strict-mode-code">Strict Mode Code in the ECMAScript specification</a></li>
  <li><a href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
  <li><a href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
  <li><a href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
