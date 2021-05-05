@@ -29,21 +29,21 @@ reduceRight((accumulator, currentValue, index) => { ... } )
 reduceRight((accumulator, currentValue, index, array) => { ... } )
 reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
 
-// Reducer function
-reduceRight(reducerFn)
-reduceRight(reducerFn, initialValue)
+// Callback function
+reduceRight(callbackFn)
+reduceRight(callbackFn, initialValue)
 
-// Inline reducer function
-reduceRight(function reducerFn(accumulator, currentValue) { ... })
-reduceRight(function reducerFn(accumulator, currentValue, index) { ... })
-reduceRight(function reducerFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function reducerFn(accumulator, currentValue, index, array) { ... }, thisArg)
+// Callback reducer function
+reduceRight(function callbackFn(accumulator, currentValue) { ... })
+reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
+reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
+reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>Function to execute on each value in the array, taking four arguments:
     <dl>
       <dt><code><var>accumulator</var></code></dt>
@@ -59,7 +59,7 @@ reduceRight(function reducerFn(accumulator, currentValue, index, array) { ... },
   </dd>
   <dt><code><var>initialValue</var></code> {{optional_inline}}</dt>
   <dd>Value to use as accumulator to the first call of the
-    <code><var>callback</var></code>. If no initial value is supplied, the last element in
+    <code><var>callbackFn</var></code>. If no initial value is supplied, the last element in
     the array will be used and skipped. Calling reduce or reduceRight on an empty array
     without an initial value creates a <code>TypeError</code>.</dd>
 </dl>
@@ -75,7 +75,7 @@ reduceRight(function reducerFn(accumulator, currentValue, index, array) { ... },
   (or value from the previous callback call), the value of the current element, the
   current index, and the array over which iteration is occurring.</p>
 
-<p>The call to the reduceRight <code><var>callback</var></code> would look something like
+<p>The call to the reduceRight <code><var>callbackFn</var></code> would look something like
   this:</p>
 
 <pre class="brush: js">arr.reduceRight(function(accumulator, currentValue, index, array) {
@@ -97,7 +97,7 @@ reduceRight(function reducerFn(accumulator, currentValue, index, array) { ... },
   {{jsxref("TypeError")}} would be thrown. If the array has only one element (regardless
   of position) and no <code><var>initialValue</var></code> was provided, or if
   <code><var>initialValue</var></code> is provided but the array is empty, the solo value
-  would be returned without calling <code><var>callback</var></code>.</p>
+  would be returned without calling <code><var>callbackFn</var></code>.</p>
 
 <p>Some example run-throughs of the function would look like this:</p>
 

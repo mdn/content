@@ -22,19 +22,19 @@ browser-compat: javascript.builtins.Array.from
 
 <pre class="brush: js">
 // Arrow function
-Array.from(arrayLike, (currentValue) => { ... } )
-Array.from(arrayLike, (currentValue, index) => { ... } )
-Array.from(arrayLike, (currentValue, index, array) => { ... } )
+Array.from(arrayLike, (element) => { ... } )
+Array.from(arrayLike, (element, index) => { ... } )
+Array.from(arrayLike, (element, index, array) => { ... } )
 
 // Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-Array.from(arrayLike, function mapFn(currentValue) { ... })
-Array.from(arrayLike, function mapFn(currentValue, index) { ... })
-Array.from(arrayLike, function mapFn(currentValue, index, array){ ... })
-Array.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisArg)
+Array.from(arrayLike, function mapFn(element) { ... })
+Array.from(arrayLike, function mapFn(element, index) { ... })
+Array.from(arrayLike, function mapFn(element, index, array){ ... })
+Array.from(arrayLike, function mapFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
