@@ -116,8 +116,10 @@ jobs:
 
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
-            --analyze-flaws --analyze-dangerous-content \
+            --analyze-flaws \
+            --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
+            --diff-file=build/DIFF \
             $BUILD_OUT_ROOT
