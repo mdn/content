@@ -170,7 +170,7 @@ isFinite(NaN); // false
 <pre class="brush: js">'hello'.length; // 5
 </pre>
 
-<p>There's our first brush with JavaScript objects! Did we mention that you can use strings like {{jsxref("Object", "objects", "", 1)}} too? They have {{jsxref("String", "methods", "#Methods", 1)}} as well that allow you to manipulate the string and access information about the string:</p>
+<p>There's our first brush with JavaScript objects! Did we mention that you can use strings like {{jsxref("Object", "objects", "", 1)}} too? They have {{jsxref("String", "methods", "#instance_methods", 1)}} as well that allow you to manipulate the string and access information about the string:</p>
 
 <pre class="brush: js">'hello'.charAt(0); // "h"
 'hello, world'.replace('world', 'mars'); // "hello, mars"
@@ -225,8 +225,7 @@ for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
 <pre class="brush: js">const Pi = 3.14; // variable Pi is set
 Pi = 1; // will throw an error because you cannot change a constant variable.</pre>
 
-<p><br>
- <code><strong>var</strong></code> is the most common declarative keyword. It does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the <strong><code>var</code></strong> keyword is available from the <em>function</em> it is declared in.</p>
+<p><code><strong>var</strong></code> is the most common declarative keyword. It does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the <strong><code>var</code></strong> keyword is available from the <em>function</em> it is declared in.</p>
 
 <pre class="brush: js">var a;
 var name = 'Simon';</pre>
@@ -660,9 +659,9 @@ avg(2, 3, 4, 5); // 3.5
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<p>In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.<br>
-<br>
-It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. <em>i.e. function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em> will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</p>
+<p>In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.</p>
+
+<p>It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. i.e. <em>function avg(<strong>firstValue, </strong>...args)</em> will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</p>
 
 <pre class="brush: js">function avgArray(arr) {
   var sum = 0;
