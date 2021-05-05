@@ -17,8 +17,6 @@ tags:
 
 <p>WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details <em>why</em>. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.</p>
 
-<h1 id="General_Topics">General Topics</h1>
-
 <h2 id="Address_and_eliminate_WebGL_errors">Address and eliminate WebGL errors</h2>
 
 <p>Your application should run without generating any WebGL errors (as returned by <code>getError</code>). Every WebGL error is reported in the Web Console as a JavaScript warning with a descriptive message. After too many errors (32 in Firefox), WebGL stops generating descriptive messages, which really hinders debugging.</p>
@@ -85,7 +83,9 @@ tags:
 
 <h3 id="Eagerly_lose_contexts_too">Eagerly lose contexts too</h3>
 
-<h2 id="Flush_when_expecting_results_like_queries_or_rendering_frame_completion">Flush when expecting results (like queries or rendering frame completion)</h2>
+<h2 id="Flush_when_expecting_results">Flush when expecting results</h2>
+
+<p>Call <code>flush()</code> when expecting results such as queries, or at completion of a rendering frame.</p>
 
 <p>Flush tells the implementation to push all pending commands out for execution, flushing them out of the queue, instead of waiting for more commands to enqueue before sending for execution.</p>
 
@@ -103,9 +103,9 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>Because RAF is directly followed by the frame boundary, an explicit <code>webgl.flush()</code> isn't really needed with RAF.</p>
 
-<h2 id="Avoid_blocking_API_calls_in_production_e.g._getError_getParameter">Avoid blocking API calls in production (e.g. <code>getError</code>, <code>getParameter</code>)</h2>
+<h2 id="Avoid_blocking_API_calls_in_production">Avoid blocking API calls in production</h2>
 
-<p>Certain WebGL entry points cause synchronous stalls on the calling thread. Even basic requests can take as long as 1ms, but they can take even longer if they need to wait for all graphics work to be completed (with an effect similar to <code>glFinish()</code> in native OpenGL).</p>
+<p>Certain WebGL entry points - including <code>getError</code> and <code>getParameter</code> - cause synchronous stalls on the calling thread. Even basic requests can take as long as 1ms, but they can take even longer if they need to wait for all graphics work to be completed (with an effect similar to <code>glFinish()</code> in native OpenGL).</p>
 
 <p>In production code, avoid such entry points, especially on the browser main thread where they can cause the entire page to jank (often including scrolling or even the whole browser).</p>
 
@@ -132,9 +132,9 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
  </li>
 </ul>
 
-<h2 id="Always_keep_vertex_attrib_0_array-enabled">Always keep vertex attrib 0 array-enabled</h2>
+<h2 id="Always_enable_vertex_attrib_0_as_an_array">Always enable vertex attrib 0 as an array</h2>
 
-<p>If you draw with vertex attrib 0 array disabled, you will force the browser to do complicated emulation when running on desktop OpenGL (such as on macOS). This is because in desktop OpenGL, nothing gets drawn if vertex attrib 0 is not array-enabled. You can use <code>bindAttribLocation</code> to force a vertex attribute to use location 0, and use <code>enableVertexAttribArray(0)</code> to make it array-enabled.</p>
+<p>If you draw without vertex attrib 0 enabled as an array, you will force the browser to do complicated emulation when running on desktop OpenGL (such as on macOS). This is because in desktop OpenGL, nothing gets drawn if vertex attrib 0 is not array-enabled. You can use <code>bindAttribLocation</code> to force a vertex attribute to use location 0, and use <code>enableVertexAttribArray(0)</code> to make it array-enabled.</p>
 
 <h2 id="Estimate_a_per-pixel_VRAM_Budget">Estimate a per-pixel VRAM Budget</h2>
 
@@ -150,27 +150,25 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>Keeping the application's VRAM usage under this cap will help to avoid out-of-memory errors and associated instability.</p>
 
-<h2 id="Consider_rendering_to_a_smaller_backbuffer_size">Consider rendering to a smaller backbuffer size</h2>
+<h2 id="Consider_rendering_to_a_smaller_back_buffer">Consider rendering to a smaller back buffer</h2>
 
-<p>A common (and easy) way to trade off quality for speed is rendering into a smaller backbuffer, and upscaling the result. Consider reducing canvas.width and height and keeping canvas.style.width and height at a constant size.</p>
+<p>A common (and easy) way to trade off quality for speed is rendering into a smaller back buffer, and upscaling the result. Consider reducing canvas.width and height and keeping canvas.style.width and height at a constant size.</p>
 
-<h2 id="Batch_draw_calls_prefer_fewer-but-larger_draw_calls">Batch draw calls (prefer fewer-but-larger draw calls)</h2>
+<h2 id="Batch_draw_calls">Batch draw calls</h2>
 
-<p>Fewer, larger draw operations will generally improve performance. If you have 1000 sprites to paint, try to do it as a single drawArrays() or drawElements() call.</p>
+<p>"Batching" draw calls into fewer, larger draw calls will generally improve performance. If you have 1000 sprites to paint, try to do it as a single drawArrays() or drawElements() call.</p>
 
 <p>It's common to use "degenerate triangles" if you need to draw discontinuous objects as a single drawArrays(TRIANGLE_STRIP) call. Degenerate triangles are triangles with no area, therefore any triangle where more than one point is in the same exact location. These triangles are effectively skipped, which lets you start a new triangle strip unattached to your previous one, without having to split into multiple draw calls.</p>
 
-<p>Another important method for batching is texture atlasing, where multiple images are placed into a single texture, often like a checkerboard. Since you need to split draw call batches to change textures, texture atlasing lets you combine more draw calls into fewer, bigger batches.</p>
+<p>Another important method for batching is texture atlasing, where multiple images are placed into a single texture, often like a checkerboard. Since you need to split draw call batches to change textures, texture atlasing lets you combine more draw calls into fewer, bigger batches. See <a href="https://webglsamples.org/sprites/readme.html">this example</a> demonstrating how to combine even sprites referencing multiple texture atlases into a single draw call.</p>
 
-<h1 id="Shaders_Programs_and_GLSL">Shaders, Programs, and GLSL</h1>
+<h2 id="Avoid_ifdef_GL_ES">Avoid "#ifdef GL_ES"</h2>
 
-<h2 id="Avoid_ifdef_GL_ES_which_is_always_true">Avoid "#ifdef GL_ES", which is always true</h2>
+<p>You should never use <code>#ifdef GL_ES</code> in your WebGL shaders; this condition is always true in WebGL. Although some early examples used this, it's not necessary.</p>
 
-<p>You should never use <code>#ifdef GL_ES</code> in your WebGL shaders; although some early examples used this, it's not necessary, since this condition is always true in WebGL shaders.</p>
+<h2 id="Prefer_doing_work_in_the_vertex_shader">Prefer doing work in the vertex shader</h2>
 
-<h2 id="Prefer_doing_more_work_in_vertex_not_fragment_shaders">Prefer doing more work in vertex (not fragment) shaders</h2>
-
-<p>Do as much as you can in the vertex shader, rather than in the fragment shader. This is because per draw call, fragment shaders generally run many more times than vertex shaders. Any calculation that can be done on the vertices and then just interpolated among fragments (via <code>varying</code>s) is a performance boon. (The interpolation of varyings is very cheap, and is done automatically for you through the fixed functionality rasterization phase of the graphics pipeline)</p>
+<p>Do as much work as you can in the vertex shader, rather than in the fragment shader. This is because per draw call, fragment shaders generally run many more times than vertex shaders. Any calculation that can be done on the vertices and then just interpolated among fragments (via <code>varying</code>s) is a performance boon. (The interpolation of varyings is very cheap, and is done automatically for you through the fixed functionality rasterization phase of the graphics pipeline.)</p>
 
 <p>For example, a simple animation of a textured surface can be achieved through a time-dependent transformation of texture coordinates. (The simplest case being adding a uniform vector to the texture coordinates attribute vector) If visually acceptable, one can transform the texture coordinates in the vertex shader rather than in the fragment shader, to get better performance.</p>
 
@@ -224,9 +222,9 @@ for (const [vs, fs, prog] of programs) {
 }
 </pre>
 
-<h2 id="KHR_parallel_shader_compile_for_non-blocking_compilelink_status">KHR_parallel_shader_compile for non-blocking compile/link status</h2>
+<h2 id="Prefer_KHR_parallel_shader_compile">Prefer KHR_parallel_shader_compile</h2>
 
-<p>While we've described a pattern to allow browsers to compile and link in parallel, normally checking <code>COMPILE_STATUS</code> or <code>LINK_STATUS</code> blocks until the compile or link completes. In browsers where it's available, the <a href="https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/">KHR_parallel_shader_compile</a> extension provides a <em>non-blocking</em> <code>COMPLETION_STATUS</code> query.</p>
+<p>While we've described a pattern to allow browsers to compile and link in parallel, normally checking <code>COMPILE_STATUS</code> or <code>LINK_STATUS</code> blocks until the compile or link completes. In browsers where it's available, the <a href="https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/">KHR_parallel_shader_compile</a> extension provides a <em>non-blocking</em> <code>COMPLETION_STATUS</code> query. Prefer to enable and use this extension.</p>
 
 <p>Example usage:</p>
 
@@ -252,7 +250,7 @@ if (ext) {
 
 <p>This technique may not work in all applications, for example those which require programs to be immediately available for rendering. Still, consider how variations may work.</p>
 
-<h2 id="Dont_check_shader_compile_status_until_linking_fails">Don't check shader compile status until linking fails</h2>
+<h2 id="Dont_check_shader_compile_status_unless_linking_fails">Don't check shader compile status unless linking fails</h2>
 
 <p>There are very few errors that are guaranteed to cause shader compilation failure, but cannot be deferred to link time. The <a href="https://www.khronos.org/registry/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf">ESSL3 spec</a> says this under "Error Handling":</p>
 
@@ -301,7 +299,7 @@ if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
 }
 </pre>
 
-<h2 id="Be_precise_with_GLSL_variable_precision_annotations">Be precise with GLSL variable precision annotations</h2>
+<h2 id="Be_precise_with_GLSL_precision_annotations">Be precise with GLSL precision annotations</h2>
 
 <p>If you expect to pass an essl300 <code>int</code> between shaders, and you need it to have 32-bits, you <em>must</em> use <code>highp</code> or you will have portability problems. (Works on Desktop, not on Android)</p>
 
@@ -477,11 +475,9 @@ precision mediump float;
  </tbody>
 </table>
 
-<h2 id="Prefer_builtins_like_dot_mix_and_normalize_instead_of_buiding_your_own">Prefer builtins like <code>dot</code>, <code>mix</code>, and <code>normalize</code> instead of buiding your own</h2>
+<h2 id="Prefer_builtins_instead_of_buiding_your_own">Prefer builtins instead of buiding your own</h2>
 
-<p>At best, custom implementations of builtins might run as fast as the builtins they replace, but don't expect them to. Hardware often has hyper-optimized or even specialized instructions for builtins, and the compiler can't reliably replace your custom builtin-replacements with the special builtin codepaths.</p>
-
-<h1 id="Textures">Textures</h1>
+<p>Prefer builtins like <code>dot</code>, <code>mix</code>, and <code>normalize</code>. At best, custom implementations might run as fast as the builtins they replace, but don't expect them to. Hardware often has hyper-optimized or even specialized instructions for builtins, and the compiler can't reliably replace your custom builtin-replacements with the special builtin codepaths.</p>
 
 <h2 id="Use_mipmaps_for_any_texture_youll_see_in_3d!">Use mipmaps for any texture you'll see in 3d!</h2>
 
@@ -500,13 +496,13 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>One caveat: <code>generateMipmaps</code> only works if you would be able to render into the texture if you attached it to a framebuffer. (The spec calls this "color-renderable formats") For example, if a system supports float-textures but not render-to-float, <code>generateMipmaps</code> will fail for float formats.</p>
 
-<h2 id="Support_for_float_textures_doesnt_mean_you_can_render_into_them!">Support for float textures doesn't mean you can render into them!</h2>
+<h2 id="Support_for_float_textures_doesnt_mean_theyre_renderable">Support for float textures doesn't mean they're renderable!</h2>
 
 <p>There are many, many systems that support RGBA32F textures, but if you attach one to a framebuffer you'll get <code>FRAMEBUFFER_INCOMPLETE_ATTACHMENT</code> from <code>checkFramebufferStatus()</code>. It may work on your system, but <em>most</em> mobile systems will not support it!</p>
 
-<p>On WebGL 1, use the <code>EXT_color_buffer_half_float</code> and <code>WEBGL_color_buffer_float</code> extensions to check for render-to-float-texture support for float32 and float16 respectively.</p>
+<p>On WebGL 1, use the <code>EXT_color_buffer_half_float</code> and <code>WEBGL_color_buffer_float</code> extensions to check for render-to-float-texture support for float16 and float32 respectively.</p>
 
-<p>On WebGL 2, <code>EXT_color_buffer_float</code> is your check for render-to-float-texture support for both float32 and float16.</p>
+<p>On WebGL 2, <code>EXT_color_buffer_float</code> checks for render-to-float-texture support for both float32 and float16. <code>EXT_color_buffer_half_float</code> is present on systems which only support rendering to float16 textures.</p>
 
 <h3 id="Render-to-float32_doesnt_imply_float32-blending!">Render-to-float32 doesn't imply float32-blending!</h3>
 
@@ -514,7 +510,7 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>Float16-blending is always supported.</p>
 
-<h2 id="Some_formats_e.g._RGB_on_some_systems_are_emulated">Some formats (e.g. RGB) on some systems are emulated</h2>
+<h2 id="Some_formats_e.g._RGB_may_be_emulated">Some formats (e.g. RGB) may be emulated</h2>
 
 <p>A number of formats (particularly three-channel formats) are emulated. For example, RGB32F is often actually RGBA32F, and Luminance8 may actually be RGBA8. RGB8 in particular is often surprisingly slow, as masking out the alpha channel and/or patching blend functions has fairly high overhead. Prefer to use RGBA8 and ignore the alpha yourself for better performance.</p>
 
@@ -549,7 +545,7 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>Depth and stencil attachments and formats are actually inseparable on many devices. You may ask for DEPTH_COMPONENT24 or STENCIL_INDEX8, but you're often getting D24X8 and X24S8 32bpp formats behind the scenes. Assume that the memory usage of depth and stencil formats is rounded up to the nearest four bytes.</p>
 
-<h2 id="texImagetexSubImage_uploads_particularly_with_videos_can_cause_pipeline_flushes">texImage/texSubImage uploads (particularly with videos) can cause pipeline flushes</h2>
+<h2 id="texImagetexSubImage_uploads_esp_videos_can_cause_pipeline_flushes">texImage/texSubImage uploads (esp. videos) can cause pipeline flushes</h2>
 
 <p>Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Progams internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan[<a href="https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo">1</a>] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)</p>
 
@@ -625,11 +621,9 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
     ...
 </code></pre>
 
-<h1 id="WebGL_2">WebGL 2</h1>
-
 <h2 id="Use_texStorage_to_create_textures">Use texStorage to create textures</h2>
 
-<p>The <code>texImage*</code> API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.</p>
+<p>The WebGL 2.0 <code>texImage*</code> API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.</p>
 
 <p>Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.</p>
 
@@ -637,11 +631,11 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <h2 id="invalidateFramebuffer">invalidateFramebuffer</h2>
 
-<p>Storing data that you won't use again can have high cost, particularly on tiled-rendering GPUs common on mobile. When you're done with the contents of a framebuffer attachment, use invalidateFramebuffer to discard the data, instead of leaving the driver to waste time storing the data for later use. DEPTH/STENCIL and/or multisampled attachments in particular are great candidates for <code>invalidateFramebuffer</code>.</p>
+<p>Storing data that you won't use again can have high cost, particularly on tiled-rendering GPUs common on mobile. When you're done with the contents of a framebuffer attachment, use WebGL 2.0's <code>invalidateFramebuffer</code> to discard the data, instead of leaving the driver to waste time storing the data for later use. DEPTH/STENCIL and/or multisampled attachments in particular are great candidates for <code>invalidateFramebuffer</code>.</p>
 
-<h2 id="Non-blocking_async_data_downloadreadback">Non-blocking async data download/readback</h2>
+<h2 id="Non-blocking_async_data_readback">Non-blocking async data readback</h2>
 
-<p>The approach in WebGL 2 is analogous to the approach in OpenGL: <a href="https://jdashg.github.io/misc/async-gpu-downloads.html">https://jdashg.github.io/misc/async-gpu-downloads.html</a></p>
+<p>Operations like <code>readPixels</code> and <code>getBufferSubData</code> are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: <a href="https://jdashg.github.io/misc/async-gpu-downloads.html">https://jdashg.github.io/misc/async-gpu-downloads.html</a></p>
 
 <pre class="brush: js">function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) =&gt; {
@@ -690,10 +684,6 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
   return dest;
 }
 </pre>
-
-<h1 id="Canvas_and_WebGL-Related">Canvas and WebGL-Related</h1>
-
-<p>Some tips are relevent to WebGL, but deal with other APIs.</p>
 
 <h2 id="Use_requestPostAnimationFrame_not_requestAnimationFrame">Use <code>requestPostAnimationFrame</code> not <code>requestAnimationFrame</code></h2>
 
