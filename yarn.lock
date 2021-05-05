@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.2.tgz#6150ff389513af5bda46b3d67bf6426e4358b581"
   integrity sha512-TW8LAl7MLc3gVMqd+Y70mHCOJ2dugvuXt5rQe+UjusFRhhKlFvmCBFyZ1Qv3QWf7N9Ppd6+6gl36lvg9sCc4Kg==
 
-"@mdn/yari@0.4.430":
-  version "0.4.430"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.430.tgz#cb70386b5176467033842cd342327a6bf84afe73"
-  integrity sha512-O0gTo5fQ3BrG5V4dOo3+UVG4qgVRwVI8wJJNhXFuYi4BoyXN6/TaJAQiP2biofQColQQaDyFnCD8rIR/SYeRPA==
+"@mdn/yari@0.4.433":
+  version "0.4.433"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.433.tgz#4fa74595047108f6f5fcfc70f936c220b2253467"
+  integrity sha512-y/75+E2Azid99ighD58Jro+fq/HmbR7ywyxsZ2d8t1/1O6c6rhaVdduIqfrCiSzb5gHHvpYP11b9WYvcadiyLQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -56,7 +56,7 @@
     cookie "0.4.1"
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
-    dotenv "8.2.0"
+    dotenv "8.4.0"
     ejs "3.1.6"
     express "4.17.1"
     fast-xml-parser "3.19.0"
@@ -1260,10 +1260,10 @@ domutils@^2.5.1, domutils@^2.5.2:
     domelementtype "^2.2.0"
     domhandler "^4.1.0"
 
-dotenv@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
-  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+dotenv@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.4.0.tgz#08576a9d5dc63b4fc58df087015c768eb102e0f3"
+  integrity sha512-l+pIWjvRva0AhnLerv9VvpscgXa72iPW1qKlCgA7COzJA414vGQ/PMcOuNfR1CmQbK208WWYeVwQUa8yfuqH8Q==
 
 download@^6.2.2:
   version "6.2.5"
