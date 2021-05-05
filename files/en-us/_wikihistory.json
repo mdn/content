@@ -53896,16 +53896,6 @@
       "krosylight"
     ]
   },
-  "Web/API/HTMLMediaElement/initialTime": {
-    "modified": "2020-10-15T21:38:08.828Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "Jedipedia",
-      "Sebastianz",
-      "markg"
-    ]
-  },
   "Web/API/HTMLMediaElement/load": {
     "modified": "2020-10-15T22:09:51.481Z",
     "contributors": [
