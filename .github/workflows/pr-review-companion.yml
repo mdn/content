@@ -121,5 +121,5 @@ jobs:
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
-            --diff-file=../../build/DIFF \
+            --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
