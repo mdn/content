@@ -114,6 +114,8 @@ jobs:
             --default-cache-control 0 \
             "$BUILD_OUT_ROOT"
 
+          ls -l build
+
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
             --analyze-flaws \
@@ -121,5 +123,4 @@ jobs:
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
-            --diff-file=build/DIFF \
             $BUILD_OUT_ROOT
