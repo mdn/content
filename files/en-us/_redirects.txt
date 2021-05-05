@@ -6084,6 +6084,7 @@
 /en-US/docs/Mozilla/Developer_guide/YouCompleteMe	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/developer_guide/youcompleteme
 /en-US/docs/Mozilla/Developer_guide/mach	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/developer_guide/mach
 /en-US/docs/Mozilla/Developer_guide/mozilla-central	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/developer_guide/mozilla-central
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy	/en-US/docs/Web/Privacy/Storage_Access_Policy
 /en-US/docs/Mozilla/Firefox/Privacy	/en-US/docs/Web/Privacy
 /en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility_for_Firefox_36	/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
