@@ -593,11 +593,14 @@ function nonePassiveHandler(event) {
   this.onclick1 = function(event) {
     console.log(this.name); // undefined, as |this| is the element
   };
+  // bind creates a new instance of the method and we can assign it to own method if `this` instance is fixed for the method
+  this.onclick1 = this.onclick1.bind(this);
+  
   this.onclick2 = function(event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
   element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
+  element.addEventListener('click', this.onclick2, false); // Trick
 }
 const s = new Something(document.body);
 </pre>
