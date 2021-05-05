@@ -22,7 +22,7 @@ exports.book_detail = function(req, res, <strong>next</strong>) {
 
             Book.findById(req.params.id)
               .populate('author')
-              .populate('genre')
+              .populate('Genre')
               .exec(callback);
         },
         book_instance: function(callback) {
