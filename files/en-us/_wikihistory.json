@@ -81482,13 +81482,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/StaticRange/toRange": {
-    "modified": "2020-10-15T21:59:08.980Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley"
-    ]
-  },
   "Web/API/StereoPannerNode": {
     "modified": "2020-10-15T21:32:40.831Z",
     "contributors": [
