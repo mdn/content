@@ -15,13 +15,13 @@ tags:
 
 <p>It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.</p>
 
-<p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a href="http://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href="/en-US/docs/Glossary/ECMAScript">ECMAScript</a> standard that year. The standard received a significant update as <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
+<p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a href="https://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href="/en-US/docs/Glossary/ECMAScript">ECMAScript</a> standard that year. The standard received a significant update as <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.</p>
 </div>
 
-<p>Unlike most programming languages, the JavaScript language has no concept of input or output. It is designed to run as a scripting language in a host environment, and it is up to the host environment to provide mechanisms for communicating with the outside world. The most common host environment is the browser, but JavaScript interpreters can also be found in a huge list of other places, including Adobe Acrobat, Adobe Photoshop, SVG images, Yahoo's Widget engine, server-side environments such as <a href="http://nodejs.org/">Node.js</a>, NoSQL databases like the open source <a href="http://couchdb.apache.org/">Apache CouchDB</a>, embedded computers, complete desktop environments like <a href="http://www.gnome.org/">GNOME</a> (one of the most popular GUIs for GNU/Linux operating systems), and others.</p>
+<p>Unlike most programming languages, the JavaScript language has no concept of input or output. It is designed to run as a scripting language in a host environment, and it is up to the host environment to provide mechanisms for communicating with the outside world. The most common host environment is the browser, but JavaScript interpreters can also be found in a huge list of other places, including Adobe Acrobat, Adobe Photoshop, SVG images, Yahoo's Widget engine, server-side environments such as <a href="https://nodejs.org/">Node.js</a>, NoSQL databases like the open source <a href="https://couchdb.apache.org/">Apache CouchDB</a>, embedded computers, complete desktop environments like <a href="https://www.gnome.org/">GNOME</a> (one of the most popular GUIs for GNU/Linux operating systems), and others.</p>
 
 <h2 id="Overview">Overview</h2>
 
@@ -30,22 +30,24 @@ tags:
 <p>Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:</p>
 
 <ul>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Boolean")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#number_type">Number</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#bigint_type">BigInt</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#string_type">String</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#boolean_type">Boolean</a></li>
  <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Object")}}</li>
- <li>{{jsxref("Symbol")}} (new in ES2015)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#objects">Object</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#symbol_type">Symbol</a> (new in ES2015)</li>
 </ul>
 
-<p>... oh, and {{jsxref("undefined")}} and {{jsxref("null")}}, which are ... slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:</p>
+<p>... oh, and <a href="/en-US/docs/Web/JavaScript/Data_structures#undefined_type">undefined</a> and <a href="/en-US/docs/Web/JavaScript/Data_structures#null_type">null</a>, which are ... slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:</p>
 
 <ul>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{jsxref("Symbol")}} (new in ES2015)</li>
- <li>{{jsxref("Object")}}
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#number_type">Number</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#bigint_type">BigInt</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#string_type">String</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#boolean_type">Boolean</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#symbol_type">Symbol</a> (new in ES2015)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#objects">Object</a>
   <ul>
    <li>{{jsxref("Function")}}</li>
    <li>{{jsxref("Array")}}</li>
@@ -53,8 +55,8 @@ tags:
    <li>{{jsxref("RegExp")}}</li>
   </ul>
  </li>
- <li>{{jsxref("null")}}</li>
- <li>{{jsxref("undefined")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#null_type">null</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#undefined_type">undefined</a></li>
 </ul>
 
 <p>And there are some built-in {{jsxref("Error")}} types as well. Things are a lot easier if we stick with the first diagram, however, so we'll discuss the types listed there for now.</p>
@@ -198,9 +200,9 @@ Boolean(234); // true
 
 <h2 id="Variables">Variables</h2>
 
-<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.<br>
- <br>
- <strong><code>let</code></strong> allows you to declare block-level variables. The declared variable is available from the <em>block</em> it is enclosed in.</p>
+<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.</p>
+
+<p><strong><code>let</code></strong> allows you to declare block-level variables. The declared variable is available from the <em>block</em> it is enclosed in.</p>
 
 <pre class="brush: js">let a;
 let name = 'Simon';
@@ -982,4 +984,4 @@ add20(7); // returns 27
 
 <p>Scope objects form a chain called the scope chain, similar to the prototype chain used by JavaScript's object system.</p>
 
-<p>A <strong>closure</strong> is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. You can find <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">several excellent introductions to closures</a>.</p>
+<p>A <strong>closure</strong> is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. You can find <a href="https://stackoverflow.com/questions/111102/how-do-javascript-closures-work">several excellent introductions to closures</a>.</p>
