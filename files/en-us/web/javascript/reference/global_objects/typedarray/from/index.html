@@ -22,7 +22,21 @@ browser-compat: javascript.builtins.TypedArray.from
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>TypedArray</var>.from(<var>source</var>[, <var>mapFn</var>[, <var>thisArg</var>]])
+<pre class="brush: js">
+// Arrow function
+TypedArray.from(arrayLike, (currentValue) => { ... } )
+TypedArray.from(arrayLike, (currentValue, index) => { ... } )
+TypedArray.from(arrayLike, (currentValue, index, array) => { ... } )
+
+// Mapping function
+TypedArray.from(arrayLike, mapFn)
+TypedArray.from(arrayLike, mapFn, thisArg)
+
+// Inline mapping function
+TypedArray.from(arrayLike, function mapFn(currentValue) { ... })
+TypedArray.from(arrayLike, function mapFn(currentValue, index) { ... })
+TypedArray.from(arrayLike, function mapFn(currentValue, index, array){ ... })
+TypedArray.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <p>Where <code><var>TypedArray</var></code> is one of:</p>
@@ -46,7 +60,7 @@ browser-compat: javascript.builtins.TypedArray.from
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-    <dt><code><var>source</var></code></dt>
+    <dt><code><var>arrayLike</var></code></dt>
     <dd>An array-like or iterable object to convert to a typed array.</dd>
     <dt><code><var>mapFn</var></code> {{optional_inline}}</dt>
     <dd>Map function to call on every element of the typed array.</dd>

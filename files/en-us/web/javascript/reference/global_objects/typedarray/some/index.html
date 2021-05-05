@@ -23,16 +23,30 @@ browser-compat: javascript.builtins.TypedArray.some
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarray</var>.some(<var>callback</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+some((element) => { ... } )
+some((element, index) => { ... } )
+some((element, index, array) => { ... } )
+
+// Callback function
+some(callbackFn)
+some(callbackFn, thisArg)
+
+// Inline callback function
+some(function callbackFn(element) { ... })
+some(function callbackFn(element, index) { ... })
+some(function callbackFn(element, index, array){ ... })
+some(function callbackFn(element, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>callback</code></dt>
+  <dt><code>callbackFn</code></dt>
   <dd>Function to test for each element, taking three arguments:
     <dl>
-      <dt><code>currentValue</code></dt>
+      <dt><code>element</code></dt>
       <dd>The current element being processed in the typed array.</dd>
       <dt><code>index</code></dt>
       <dd>The index of the current element being processed in the typed array.</dd>
@@ -53,19 +67,19 @@ browser-compat: javascript.builtins.TypedArray.some
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>some</code> method executes the <code>callback</code> function once for each
-  element present in the typed array until it finds one where <code>callback</code>
+<p>The <code>some</code> method executes the <code>callbackFn</code> function once for each
+  element present in the typed array until it finds one where <code>callbackFn</code>
   returns a true value. If such an element is found, <code>some</code> immediately returns
   <code>true</code>. Otherwise, <code>some</code> returns <code>false</code>.</p>
 
-<p><code>callback</code> is invoked with three arguments: the value of the element, the
+<p><code>callbackFn</code> is invoked with three arguments: the value of the element, the
   index of the element, and the array object being traversed.</p>
 
 <p>If a <code>thisArg</code> parameter is provided to <code>some</code>, it will be passed
-  to <code>callback</code> when invoked, for use as its <code>this</code> value.
+  to <code>callbackFn</code> when invoked, for use as its <code>this</code> value.
   Otherwise, the value <code>undefined</code> will be passed for use as its
   <code>this</code> value.  The <code>this</code> value ultimately observable by
-  <code>callback</code> is determined according to <a
+  <code>callbackFn</code> is determined according to <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
     determining the <code>this</code> seen by a function</a>.</p>
 
