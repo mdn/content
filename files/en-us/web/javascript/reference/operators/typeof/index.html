@@ -209,8 +209,8 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1</pre>
   <code>typeof</code> will return <code>'undefined'</code>. Using <code>typeof</code>
   could never generate an error.</p>
 
-<p>But with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
-  {{JSxRef("Statements/const")}} using <code>typeof</code> on <code>let</code> and
+<p>However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
+  {{JSxRef("Statements/const", "const")}}, using <code>typeof</code> on <code>let</code> and
   <code>const</code> variables (or using <code>typeof</code> on a <code>class</code>) in a
   block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
   variables are in a "<a
