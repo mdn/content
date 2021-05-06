@@ -8995,10 +8995,11 @@
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent
-/en-US/docs/Web/API/TransitionEvent.animationName	/en-US/docs/Web/API/TransitionEvent/animationName
+/en-US/docs/Web/API/TransitionEvent.animationName	/en-US/docs/Web/API/TransitionEvent/propertyName
 /en-US/docs/Web/API/TransitionEvent.elapsedTime	/en-US/docs/Web/API/TransitionEvent/elapsedTime
 /en-US/docs/Web/API/TransitionEvent.initTransitionEvent	/en-US/docs/Web/API/TransitionEvent/initTransitionEvent
 /en-US/docs/Web/API/TransitionEvent.pseudoElement	/en-US/docs/Web/API/TransitionEvent/pseudoElement
+/en-US/docs/Web/API/TransitionEvent/animationName	/en-US/docs/Web/API/TransitionEvent/propertyName
 /en-US/docs/Web/API/TreeWalker.currentNode	/en-US/docs/Web/API/TreeWalker/currentNode
 /en-US/docs/Web/API/TreeWalker.expandEntityReferences	/en-US/docs/Web/API/TreeWalker/expandEntityReferences
 /en-US/docs/Web/API/TreeWalker.firstChild	/en-US/docs/Web/API/TreeWalker/firstChild

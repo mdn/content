@@ -83644,15 +83644,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/TransitionEvent/animationName": {
-    "modified": "2020-10-15T21:24:41.563Z",
-    "contributors": [
-      "matt-curtis",
-      "fscholz",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/TransitionEvent/elapsedTime": {
     "modified": "2020-10-15T21:24:39.846Z",
     "contributors": [
@@ -83669,6 +83660,15 @@
       "fscholz",
       "jpmedley",
       "erikadoyle",
+      "teoli",
+      "kscarfone"
+    ]
+  },
+  "Web/API/TransitionEvent/propertyName": {
+    "modified": "2020-10-15T21:24:41.563Z",
+    "contributors": [
+      "matt-curtis",
+      "fscholz",
       "teoli",
       "kscarfone"
     ]
