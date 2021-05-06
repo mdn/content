@@ -1674,7 +1674,6 @@
 /en-US/docs/DOM/NodeList	/en-US/docs/Web/API/NodeList
 /en-US/docs/DOM/NodeList.item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/DOM/NodeList.item2	/en-US/docs/Web/API/NodeList/item
-/en-US/docs/DOM/Notation	/en-US/docs/Web/API/Notation
 /en-US/docs/DOM/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/DOM/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/DOM/Orientation_and_motion_data_explained	/en-US/docs/Web/Events/Orientation_and_motion_data_explained
@@ -3103,7 +3102,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.root	/en-US/docs/Web/API/NodeIterator/root
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.whatToShow	/en-US/docs/Web/API/NodeIterator/whatToShow
 /en-US/docs/Document_Object_Model_(DOM)/NodeList	/en-US/docs/Web/API/NodeList
-/en-US/docs/Document_Object_Model_(DOM)/Notation	/en-US/docs/Web/API/Notation
 /en-US/docs/Document_Object_Model_(DOM)/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/Document_Object_Model_(DOM)/Orientation_and_motion_data_explained	/en-US/docs/Web/Events/Orientation_and_motion_data_explained
 /en-US/docs/Document_Object_Model_(DOM)/Plugin	/en-US/docs/Web/API/Plugin

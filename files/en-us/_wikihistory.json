@@ -67006,20 +67006,6 @@
       "teoli"
     ]
   },
-  "Web/API/Notation": {
-    "modified": "2020-10-15T21:14:44.239Z",
-    "contributors": [
-      "connorshea",
-      "stevenwdv",
-      "SphinxKnight",
-      "SyronTill-Producer",
-      "teoli",
-      "fscholz",
-      "kscarfone",
-      "Sheppy",
-      "Brettz9"
-    ]
-  },
   "Web/API/Notification": {
     "modified": "2020-10-15T21:12:59.729Z",
     "contributors": [
