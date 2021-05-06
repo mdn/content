@@ -1,13 +1,13 @@
 ---
 title: Redirect tracking protection
-slug: Mozilla/Firefox/Privacy/Redirect_tracking_protection
+slug: Web/Privacy/Redirect_tracking_protection
 tags:
   - Firefox
   - Mozilla
   - Privacy
   - redirect tracking protection
 ---
-<div>{{FirefoxSidebar}}</div>
+
 <p>Firefox 79 includes protection against redirect tracking. This document describes how the protections work.</p>
 
 <h2 id="Redirect_tracking_defined">Redirect tracking defined</h2>
@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Redirect_tracking_protection_explained">Redirect tracking protection explained</h2>
 
-<p>To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is <a href="/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy">blocking tracking cookies</a> (i.e., the <code>network.cookie.cookieBehavior</code> pref is set to <code>4</code>). Support for other cookie policies is tracked by <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643045">Bug 1643045</a>.</p>
+<p>To protect against redirect tracking Firefox periodically clears cookies and site data from trackers. We only clear this data from storage if the user is <a href="/en-US/docs/Web/Privacy/Storage_Access_Policy">blocking tracking cookies</a> (i.e., the <code>network.cookie.cookieBehavior</code> pref is set to <code>4</code>). Support for other cookie policies is tracked by <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643045">Bug 1643045</a>.</p>
 
 <h3 id="What_origins_are_cleared">What origins are cleared?</h3>
 
