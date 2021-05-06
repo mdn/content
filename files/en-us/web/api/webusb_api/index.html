@@ -61,7 +61,7 @@ tags:
   })
   .catch(error => { console.error(error); });</pre>
 
-<p>You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected this would print the product and manufacturer name to the console.</p>
+<p>You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.</p>
 
 <pre class="brush: js">navigator.usb.getDevices().then(devices => {
   devices.forEach(device => {
