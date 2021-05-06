@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Web USB API")}}</div>
 
-<p class="summary">The <strong>WebUSB API</strong> provides a way to expose Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.</p>
+<p class="summary">The <strong>WebUSB API</strong> provides a way to expose non-standard Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.</p>
 
 <h2>Concepts and Usage</h2>
 
@@ -27,7 +27,7 @@ tags:
   <dt>{{domxref("USB")}}</dt>
   <dd>Provides attributes and methods for finding and connecting USB devices from a web page.</dd>
   <dt>{{domxref("USBConnectionEvent")}}</dt>
-  <dd>The event called when the user agent detects a new USB device connected to the host.</dd>
+  <dd>The event type passed when the user agent detects a new USB device has been connected to, or disconnected from the host.</dd>
   <dt>{{domxref("USBDevice")}}</dt>
   <dd>Provides access to metadata about a paired USB device and methods for controlling it.</dd>
   <dt>{{domxref("USBInTransferResult")}}</dt>
@@ -52,6 +52,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3>Accessing a connected device</h3>
+
 <p>The following example demonstrates how to access a connected Arduino device using {{domxref("USB.requestDevice()")}}, which has a vendorId of <code>0x2341</code>.</p>
 
 <pre class="brush: js">navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
@@ -60,6 +62,8 @@ tags:
     console.log(device.manufacturerName); // "Arduino LLC"
   })
   .catch(error => { console.error(error); });</pre>
+
+<h3>Finding all connected devices</h3>
 
 <p>You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.</p>
 
