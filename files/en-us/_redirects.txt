@@ -3827,6 +3827,7 @@
 /en-US/docs/Glossary/Instance_method	/en-US/docs/Glossary/Method
 /en-US/docs/Glossary/Instance_property	/en-US/docs/Glossary/property/JavaScript
 /en-US/docs/Glossary/Internationalization	/en-US/docs/Glossary/I18N
+/en-US/docs/Glossary/Modern_web_apps	/en-US/docs/Glossary/Progressive_web_apps
 /en-US/docs/Glossary/NodeJs	/en-US/docs/Glossary/Node.js
 /en-US/docs/Glossary/Node_(networking)	/en-US/docs/Glossary/Node/networking
 /en-US/docs/Glossary/Node_DOM	/en-US/docs/Glossary/Node/DOM
