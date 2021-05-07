@@ -84525,101 +84525,6 @@
       "teoli"
     ]
   },
-  "Web/API/URLUtilsReadOnly": {
-    "modified": "2020-11-13T08:33:28.460Z",
-    "contributors": [
-      "Rumyra",
-      "alattalatta",
-      "sideshowbarker",
-      "Sheppy",
-      "connorshea",
-      "chrisdavidmills",
-      "teoli"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/hash": {
-    "modified": "2020-10-15T21:24:48.282Z",
-    "contributors": [
-      "connorshea",
-      "Sebastianz",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/host": {
-    "modified": "2020-10-15T21:24:47.049Z",
-    "contributors": [
-      "connorshea",
-      "teoli",
-      "kscarfone"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/hostname": {
-    "modified": "2020-10-15T21:24:48.709Z",
-    "contributors": [
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/href": {
-    "modified": "2020-10-15T21:24:47.886Z",
-    "contributors": [
-      "chrisdavidmills",
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/origin": {
-    "modified": "2020-10-15T21:29:33.056Z",
-    "contributors": [
-      "connorshea",
-      "teoli"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/pathname": {
-    "modified": "2020-11-13T08:37:16.486Z",
-    "contributors": [
-      "Rumyra",
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/port": {
-    "modified": "2020-10-15T21:24:48.116Z",
-    "contributors": [
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/protocol": {
-    "modified": "2020-10-15T21:24:48.030Z",
-    "contributors": [
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/search": {
-    "modified": "2020-10-15T21:24:48.707Z",
-    "contributors": [
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly/toString": {
-    "modified": "2020-10-15T21:24:47.891Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "teoli",
-      "namolmes"
-    ]
-  },
   "Web/API/URL_API": {
     "modified": "2020-12-14T00:08:04.182Z",
     "contributors": [
@@ -94740,6 +94645,89 @@
       "DomenicDenicola",
       "Sebastianz",
       "teoli"
+    ]
+  },
+  "Web/API/WorkerLocation/hash": {
+    "modified": "2020-10-15T21:24:48.282Z",
+    "contributors": [
+      "connorshea",
+      "Sebastianz",
+      "teoli",
+      "kscarfone"
+    ]
+  },
+  "Web/API/WorkerLocation/host": {
+    "modified": "2020-10-15T21:24:47.049Z",
+    "contributors": [
+      "connorshea",
+      "teoli",
+      "kscarfone"
+    ]
+  },
+  "Web/API/WorkerLocation/hostname": {
+    "modified": "2020-10-15T21:24:48.709Z",
+    "contributors": [
+      "connorshea",
+      "teoli",
+      "namolmes"
+    ]
+  },
+  "Web/API/WorkerLocation/href": {
+    "modified": "2020-10-15T21:24:47.886Z",
+    "contributors": [
+      "chrisdavidmills",
+      "connorshea",
+      "teoli",
+      "namolmes"
+    ]
+  },
+  "Web/API/WorkerLocation/origin": {
+    "modified": "2020-10-15T21:29:33.056Z",
+    "contributors": [
+      "connorshea",
+      "teoli"
+    ]
+  },
+  "Web/API/WorkerLocation/pathname": {
+    "modified": "2020-11-13T08:37:16.486Z",
+    "contributors": [
+      "Rumyra",
+      "connorshea",
+      "teoli",
+      "namolmes"
+    ]
+  },
+  "Web/API/WorkerLocation/port": {
+    "modified": "2020-10-15T21:24:48.116Z",
+    "contributors": [
+      "connorshea",
+      "teoli",
+      "namolmes"
+    ]
+  },
+  "Web/API/WorkerLocation/protocol": {
+    "modified": "2020-10-15T21:24:48.030Z",
+    "contributors": [
+      "connorshea",
+      "teoli",
+      "namolmes"
+    ]
+  },
+  "Web/API/WorkerLocation/search": {
+    "modified": "2020-10-15T21:24:48.707Z",
+    "contributors": [
+      "connorshea",
+      "teoli",
+      "namolmes"
+    ]
+  },
+  "Web/API/WorkerLocation/toString": {
+    "modified": "2020-10-15T21:24:47.891Z",
+    "contributors": [
+      "sideshowbarker",
+      "connorshea",
+      "teoli",
+      "namolmes"
     ]
   },
   "Web/API/WorkerNavigator": {
