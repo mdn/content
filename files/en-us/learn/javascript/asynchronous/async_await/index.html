@@ -373,7 +373,7 @@ timeTest().then(() =&gt; {
 
 <p>Next, we await their results — because the promises all started processing at essentially the same time, the promises will all fulfill at the same time; when you run the second example, you'll see the alert box reporting a total run time of just over 3 seconds!</p>
 <div class="warning">
-<p>To start all the promises immediately; however, we will not use the above pattern, because they could lead to unhandled errors.</p>
+<p>To start all the promises immediately; however, we will not use this pattern, because they could lead to unhandled errors.</p>
 </div>
 <The>We re-look at the previous examples, this time adding a rejected promise and a catch statement in the end. The following codes could be pasted directly to the console to see how the errors are handled.</p>
 <pre class="brush: js">function timeoutPromiseResolve(interval) {
