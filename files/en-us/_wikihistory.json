@@ -24916,14 +24916,6 @@
       "jswisher"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:17.489Z",
-    "contributors": [
-      "dkocho4",
-      "wbamberg",
-      "chrisdavidmills"
-    ]
-  },
   "Tools/Debugger/Set_a_logpoint": {
     "modified": "2020-07-16T22:35:20.329Z",
     "contributors": [
