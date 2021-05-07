@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGStylable
 ---
 <div>{{deprecated_header}}{{APIRef("SVG")}}</div>
 
@@ -70,23 +71,13 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Name &amp; Arguments</th>
-   <th>Return</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><strong>getPresentationAttribute</strong>(in {{ domxref("DOMString") }} <em>name</em>)</code></td>
-   <td>{{ domxref("CSSValue") }}</td>
-   <td>Returns the base (i.e., static) value of a given presentation attribute as an object of type {{ domxref("CSSValue") }}. The returned object is live; changes to the objects represent immediate changes to the objects to which the {{ domxref("CSSValue") }} is attached.</td>
-  </tr>
- </tbody>
-</table>
+<dl>
+  <dt>{{domxref("SVGStylable.getPresentationAttribute()")}} {{deprecated_inline}}</dt>
+  <dd>Returns the base (i.e., static) value of a given presentation attribute as an object of type {{ domxref("CSSValue") }}. The returned object is live; changes to the objects represent immediate changes to the objects to which the {{ domxref("CSSValue") }} is attached.</dd>
+ </dl>
+ <!-- original syntax getPresentationAttribute(in {{ domxref("DOMString") }} name) -->
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGStylable")}}</p>
+<p>{{Compat}}</p>
+
