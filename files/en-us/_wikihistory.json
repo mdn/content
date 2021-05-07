@@ -24916,14 +24916,6 @@
       "jswisher"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:17.489Z",
-    "contributors": [
-      "dkocho4",
-      "wbamberg",
-      "chrisdavidmills"
-    ]
-  },
   "Tools/Debugger/Set_a_logpoint": {
     "modified": "2020-07-16T22:35:20.329Z",
     "contributors": [
@@ -25626,14 +25618,6 @@
       "birtles"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:50.161Z",
-    "contributors": [
-      "wbamberg",
-      "chrisdavidmills",
-      "twinmike81"
-    ]
-  },
   "Tools/Page_Inspector/UI_Tour": {
     "modified": "2020-07-16T22:34:48.807Z",
     "contributors": [
@@ -26303,13 +26287,6 @@
     "modified": "2020-07-16T22:34:24.501Z",
     "contributors": [
       "irenesmith"
-    ]
-  },
-  "Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:21.997Z",
-    "contributors": [
-      "wbamberg",
-      "chrisdavidmills"
     ]
   },
   "Tools/Web_Console/Rich_output": {

@@ -6815,6 +6815,7 @@
 /en-US/docs/Tools/Page_Inspector/How_to/Edit_filters	/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters
 /en-US/docs/Tools/Page_Inspector/How_to/View_fonts	/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts
 /en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
+/en-US/docs/Tools/Page_Inspector/Keyboard_shortcuts	/en-US/docs/Tools/Keyboard_shortcuts#page_inspector
 /en-US/docs/Tools/Page_Inspector/Style_panel	/en-US/docs/Tools/Page_Inspector#CSS_pane
 /en-US/docs/Tools/Page_Inspector/Use_the_3-pane_inspector	/en-US/docs/Tools/Page_Inspector/3-pane_mode
 /en-US/docs/Tools/Performance/Profiler_walkthrough	/en-US/docs/Tools/Performance/Call_Tree
@@ -6835,6 +6836,7 @@
 /en-US/docs/Tools/Toolbox	/en-US/docs/Tools/Tools_Toolbox
 /en-US/docs/Tools/Tools_draft	/en-US/docs/Tools
 /en-US/docs/Tools/Using_the_Source_Editor	/en-US/docs/tools/Keyboard_shortcuts#Source_editor
+/en-US/docs/Tools/Web_Console/Keyboard_shortcuts	/en-US/docs/Tools/Keyboard_shortcuts#web_console
 /en-US/docs/Tools/Web_Console/Message_display_pane	/en-US/docs/Tools/Web_Console/Console_messages
 /en-US/docs/Tools/Web_Console/Opening_the_Web_Console	/en-US/docs/Tools/Web_Console/UI_Tour
 /en-US/docs/Tools/Web_Console/WebConsoleHelp	/en-US/docs/Tools/Web_Console/Helpers
