@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.2.tgz#6150ff389513af5bda46b3d67bf6426e4358b581"
   integrity sha512-TW8LAl7MLc3gVMqd+Y70mHCOJ2dugvuXt5rQe+UjusFRhhKlFvmCBFyZ1Qv3QWf7N9Ppd6+6gl36lvg9sCc4Kg==
 
-"@mdn/yari@0.4.436":
-  version "0.4.436"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.436.tgz#6b885df73373f78ba2fc3e2760a9bb924d9c77af"
-  integrity sha512-xPlW2Nr+S2bxpQhKT6NJRzqM4RrVMqbzr/HDLNUa5Q3p1XkN+1uWx2IXY993puqgGdd6yCo/qvrNvdMtrmHN3A==
+"@mdn/yari@0.4.441":
+  version "0.4.441"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.441.tgz#5c8a9dee25aa1540bff97a9489ae197ac78dc364"
+  integrity sha512-UXWm/K6j3BvBxEo5sI9m34o7cRujloeF4psd0CsHV037TQY7glaCnsfbNFdm0UoDhV3TVNemUOrULhct1a0z+w==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "3.3.2"
     accept-language-parser "1.5.0"
-    browser-specs "^1.36.0"
+    browser-specs "^1.37.0"
     chalk "4.1.1"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -56,12 +56,12 @@
     cookie "0.4.1"
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
-    dotenv "8.4.0"
+    dotenv "9.0.0"
     ejs "3.1.6"
     express "4.17.1"
     fast-xml-parser "3.19.0"
     fdir "5.0.0"
-    file-type "16.3.0"
+    file-type "16.4.0"
     front-matter "^4.0.2"
     fs-extra "10.0.0"
     glob "^7.1.6"
@@ -534,10 +534,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^1.36.0:
-  version "1.36.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.36.0.tgz#95de670f2a28c9fa43d051c422763e3011256553"
-  integrity sha512-nfN2TXZDOgrCvhk9rNTBIoiigeLNfKC7UaRinGJavOF9aBkgvhgj0VqJtqn5MoeB5+ZvwWfEuGFakI4cKyzVrQ==
+browser-specs@^1.37.0:
+  version "1.37.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.37.0.tgz#9d1d88bdbde08b3194870fe32e71fe7039f57cd1"
+  integrity sha512-ZlkE8cbRSH7THLwdH1qffe124/OwIvv0lnXCPDQLXAUWiZmg2fzFNzrDSNZjG9jCdg5imjzHycRB1/qNmMzODg==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1260,10 +1260,10 @@ domutils@^2.5.1, domutils@^2.5.2:
     domelementtype "^2.2.0"
     domhandler "^4.1.0"
 
-dotenv@8.4.0:
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.4.0.tgz#08576a9d5dc63b4fc58df087015c768eb102e0f3"
-  integrity sha512-l+pIWjvRva0AhnLerv9VvpscgXa72iPW1qKlCgA7COzJA414vGQ/PMcOuNfR1CmQbK208WWYeVwQUa8yfuqH8Q==
+dotenv@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-9.0.0.tgz#2408af4e39378375b7eebe30b7b54989e36d6e46"
+  integrity sha512-yy3x9XjojW8ROTBePD25AcMoHqGHsvHmtfw8QWlpEXyMMXXPj6brUA464AptUvHuTPRmNz6Sd3ZLNLeJl6dHJA==
 
 download@^6.2.2:
   version "6.2.5"
@@ -1617,10 +1617,10 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-file-type@16.3.0:
-  version "16.3.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.3.0.tgz#f03af91db30f92cc9a0b335c0644c46101522f6d"
-  integrity sha512-ZA0hV64611vJT42ltw0T9IDwHApQuxRdrmQZWTeDmeAUtZBBVSQW3nSQqhhW1cAgpXgqcJvm410BYHXJQ9AymA==
+file-type@16.4.0:
+  version "16.4.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.4.0.tgz#464197e44bd94a452d77b09085d977ae0dad2df4"
+  integrity sha512-MDAkwha3wHg11Lp++2T3Gu347eC/DB4r7nYj6iZaf1l7UhGBh2746QKxg0BWC8w2dJsxUEmH8KvLueX+GthN2w==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
     strtok3 "^6.0.3"
