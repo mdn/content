@@ -6817,6 +6817,7 @@
 /en-US/docs/Tools/Page_Inspector/How_to/Edit_filters	/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters
 /en-US/docs/Tools/Page_Inspector/How_to/View_fonts	/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts
 /en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
+/en-US/docs/Tools/Page_Inspector/Keyboard_shortcuts	/en-US/docs/Tools/Keyboard_shortcuts#page_inspector
 /en-US/docs/Tools/Page_Inspector/Style_panel	/en-US/docs/Tools/Page_Inspector#CSS_pane
 /en-US/docs/Tools/Page_Inspector/Use_the_3-pane_inspector	/en-US/docs/Tools/Page_Inspector/3-pane_mode
 /en-US/docs/Tools/Performance/Profiler_walkthrough	/en-US/docs/Tools/Performance/Call_Tree
