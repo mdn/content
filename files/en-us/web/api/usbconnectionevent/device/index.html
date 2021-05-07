@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>If a USD device is connected this fires the <code>connect</code> event. The current {{domxref("USBDevice")}} is returned by calling <code>event.device</code>.</p>
+<p>Connecting a USB device fires the <code>connect</code> event. The current {{domxref("USBDevice")}} is returned by calling <code>event.device</code>.</p>
 
 <pre class="brush: js">navigator.usb.addEventListener('connect', event => {
   console.log(event.device);
