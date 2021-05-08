@@ -252,24 +252,23 @@ class newClass{};</pre>
 <p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in
   production-level code would be as follows (provided <code>obj</code> exists):</p>
 
-<pre class="brush: js">  function type(obj, fullClass) {
+<pre class="brush: js">  function type(obj, showFullClass) {
 
     // get toPrototypeString() of obj (handles all types)
-    // Early JS environments return '[object Object]' for null, so it's best to directly check for it.
-    if (fullClass) {
-        return (obj === null) ? '[object Null]' : Object.prototype.toString.call(obj);
-    }
+    if (showFullClass && typeof obj === "object") {
+        return Object.prototype.toString.call(obj);
+    }
     if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
 
     var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
-    if (deepType === 'generatorfunction') { return 'function' }
+    if (deepType === 'generatorfunction') { return 'function' }
 
     // Prevent overspecificity (for example, [object HTMLDivElement], etc).
     // Account for functionish Regexp (Android &lt;=2.3), functionish &lt;object&gt; element (Chrome &lt;=57, Firefox &lt;=52), etc.
     // String.prototype.match is universally supported.
 
     return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
-       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
   }</pre>
 
 <p>For checking non-existent variables that would otherwise throw
