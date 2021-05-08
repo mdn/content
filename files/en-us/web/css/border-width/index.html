@@ -64,37 +64,17 @@ border-width: unset;
 <dl>
  <dt><code>&lt;line-width&gt;</code></dt>
  <dd>Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td style="vertical-align: middle;"><code>thin</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thin; background-color: palegreen; display: block;"></div>
-    </td>
-    <td style="vertical-align: middle;">A thin border</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>medium</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: medium; background-color: palegreen; display: block;"></div>
-    </td>
-    <td style="vertical-align: middle;">A medium border</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>thick</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thick; background-color: palegreen; display: block;"></div>
-    </td>
-    <td style="vertical-align: middle;">A thick border</td>
-   </tr>
-  </tbody>
- </table>
-
- <div class="note">
- <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
- </div>
+   <ul>
+     <li><code>thin</code></li>
+     <li><code>medium</code></li>
+     <li><code>thick</code></li>
+  </ul>
  </dd>
 </dl>
+
+<div class="note">
+ <p><strong>Note:</strong> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern <code>thin ≤ medium ≤ thick</code>, and the values are constant within a single document.</p>
+</div>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
