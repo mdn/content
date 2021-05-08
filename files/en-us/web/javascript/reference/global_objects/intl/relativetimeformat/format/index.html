@@ -60,7 +60,7 @@ rtf.format(1, "day");
 
 <h3 id="Using_the_auto_option">Using the auto option</h3>
 
-<p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code> or <code>tomorrow</code> instead of <code>1 day ago</code> or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
+<p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code>, <code>today</code>, or <code>tomorrow</code> instead of <code>1 day ago</code>, <code>in 0 days</code>, or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
 
 <pre class="brush: js">// Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
@@ -69,6 +69,9 @@ const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 // Format relative time using negative value (-1).
 rtf.format(-1, "day");
 // &gt; "yesterday"
+
+rtf.format(0, "day");
+// &gt; "today"
 
 // Format relative time using positive day unit (1).
 rtf.format(1, "day");
