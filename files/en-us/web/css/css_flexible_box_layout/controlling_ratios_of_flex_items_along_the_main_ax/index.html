@@ -101,11 +101,11 @@ tags:
 
 <p>In this case the <code>flex-basis</code> value is <code>auto</code> and the items don’t have a width set, and so are auto-sized. This means that flexbox is looking at the <code>max-content</code> size of the items. After laying the items out we have some positive free space in the flex container, shown in this image as the hatched area:</p>
 
-<p><img alt="Images shows the positive free space as a hatched area" src="ratios2.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Images shows the positive free space as a hatched area" src="ratios2.png"></p>
 
 <p>We are working with a <code>flex-basis</code> equal to the content size so the available space to distribute is subtracted from the total available space (the width of the flex container), and the leftover space is then shared out equally among each item. Our bigger item ends up bigger because it started from a bigger size, even though it has the same amount of spare space assigned to it as the others:</p>
 
-<p><img alt="The positive space is distributed between items" src="ratios3.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="The positive space is distributed between items" src="ratios3.png"></p>
 
 <p>If what you actually want is three equally-sized items, even if they start out at different sizes, you should use this:</p>
 
