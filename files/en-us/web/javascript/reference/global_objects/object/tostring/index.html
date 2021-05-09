@@ -6,6 +6,7 @@ tags:
 - Method
 - Object
 - Prototype
+- Polyfill
 browser-compat: javascript.builtins.Object.toString
 ---
 <div>{{JSRef}}</div>
@@ -183,6 +184,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.prototype.toString</code> with <code>Symbol.toStringTag</code> support is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.prototype.toSource()")}}</li>
   <li>{{jsxref("Object.prototype.valueOf()")}}</li>
   <li>{{jsxref("Number.prototype.toString()")}}</li>
