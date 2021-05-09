@@ -104,9 +104,15 @@ jobs:
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
+          pwd
+          ls -al
+          echo "$BUILD_OUT_ROOT"
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
 
+
+          echo ${{ github.event.number }}
+          
           # Save the PR number into the build
           echo ${{ github.event.number }} > build/NR
 
