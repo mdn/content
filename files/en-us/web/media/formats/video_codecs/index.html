@@ -255,7 +255,7 @@ tags:
 
 <p>Note the blue and pink fringes around the edges of the star above (as well as the stepping and other significant compression artifacts). Those fringes are the ringing effect. Ringing is similar in some respects to <a href="#mosquito_noise">mosquito noise</a>, except that while the ringing effect is more or less steady and unchanging, mosquito noise shimmers and moves.</p>
 
-<p>RInging is another type of artifact that can make it particularly difficult to read text contained in your images.</p>
+<p>Ringing is another type of artifact that can make it particularly difficult to read text contained in your images.</p>
 
 <h3 id="Posterizing">Posterizing</h3>
 
@@ -324,7 +324,7 @@ tags:
 
 <h3 id="Reduced_frame_rate">Reduced frame rate</h3>
 
-<p>Similarly, you can remove frames from the video entirely and decrease the frame rate to compensate. This has two benefits: it makes the overall video smaller, and that smaller size allows motion compensation to accomplish even more for you. For exmaple, instead of computing motion differences for two frames that are two pixels apart due to inter-frame motion, skipping every other frame could lead to computing a difference that comes out to four pixels of movement. This lets the overall movement of the camera be represented by fewer residual frames.</p>
+<p>Similarly, you can remove frames from the video entirely and decrease the frame rate to compensate. This has two benefits: it makes the overall video smaller, and that smaller size allows motion compensation to accomplish even more for you. For example, instead of computing motion differences for two frames that are two pixels apart due to inter-frame motion, skipping every other frame could lead to computing a difference that comes out to four pixels of movement. This lets the overall movement of the camera be represented by fewer residual frames.</p>
 
 <p>The absolute minimum frame rate that a video can be before its contents are no longer perceived as motion by the human eye is about 12 frames per second. Less than that, and the video becomes a series of still images. Motion picture film is typically 24 frames per second, while standard definition television is about 30 frames per second (slightly less, but close enough) and high definition television is between 24 and 60 frames per second. Anything from 24 FPS upward will generally be seen as satisfactorily smooth; 30 or 60 FPS is an ideal target, depending on your needs.</p>
 
@@ -338,7 +338,7 @@ tags:
 
 <p>AV1 currently offers three profiles: <strong>main</strong>, <strong>high</strong>, and <strong>professional</strong> with increasing support for color depths and chroma subsampling. In addition, a series of <strong>levels</strong> are specified, each defining limits on a range of attributes of the video. These attributes include frame dimensions, image area in pixels, display and decode rates, average and maximum bit rates, and limits on the number of tiles and tile columns used in the encoding/decoding process.</p>
 
-<p>For example, level AV1 level 2.0 offers a maximum frame width of 2048 pixels and a maximum height of 1152 pixels, but its maximum frame size in pixels is 147,456, so you can't actually have a 2048x1152 video at level 2.0. It's worth noting, however, that at least for Firefox and Chrome, the levels are actually ignored at this time when performing software decoding, and the decoder just does the best it can to play the video given the settings provided. For compatibility's sake going forward, however, you should stay within the limits of the level you choose.</p>
+<p>For example, AV1 level 2.0 offers a maximum frame width of 2048 pixels and a maximum height of 1152 pixels, but its maximum frame size in pixels is 147,456, so you can't actually have a 2048x1152 video at level 2.0. It's worth noting, however, that at least for Firefox and Chrome, the levels are actually ignored at this time when performing software decoding, and the decoder just does the best it can to play the video given the settings provided. For compatibility's sake going forward, however, you should stay within the limits of the level you choose.</p>
 
 <p>The primary drawback to AV1 at this time is that it is very new, and support is still in the process of being integrated into most browsers. Additionally, encoders and decoders are still being optimized for performance, and hardware encoders and decoders are still mostly in development rather than production. For this reason, encoding a video into AV1 format takes a very long time, since all the work is done in software.</p>
 
@@ -1399,7 +1399,7 @@ tags:
 
 <p>VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common. VP9 is one of the two video codecs mandated by <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a> (the other being <a href="#vp8">VP8</a>). Of note, however, is that Safari supports neither WebM nor VP9, so if you choose to use VP9, be sure to offer a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.</p>
 
-<p>Aside from the lack of Safari support, VP9 is a good choice if you are able to use a WebM container and are able to provide a fallback video in a format such as AVC or HEVC for Safari users. This is especially true if you wish to use an open codec rather than a proprietary one. If you can't provide a fallback and aren't willing to sacrifice Safari compatibility, VP9 in WebM is a good option. Otherwise, you should probably consider a different codec.</p>
+<p>Aside from the lack of Safari support, VP9 is a good choice if you are able to use a WebM container and are able to provide a fallback video in a format such as AVC or HEVC for Safari users. This is especially true if you wish to use an open codec rather than a proprietary one. If you can't provide a fallback and are willing to sacrifice Safari compatibility, VP9 in WebM is a good option. Otherwise, you should probably consider a different codec.</p>
 
 <table class="standard-table">
  <tbody>
