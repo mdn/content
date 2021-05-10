@@ -75,6 +75,11 @@ tags:
 
 <p>Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "<code>about:debugging</code>" or "<code>about:addons</code>").</p>
 
+<div class="note">
+  <p> <strong>Note:</strong> Importing a module in a webextenions content script is now working via dynamic import. For more details, see {{bug(1536094)}}.
+  Also note that only URLs with the <em>moz-extension</em> scheme are allowed, which excludes data:-URLs ({{bug(1587336)}}).</p>
+  </div>
+
 <h2 id="Content_script_environment">Content script environment</h2>
 
 <h3 id="DOM_access">DOM access</h3>
