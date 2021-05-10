@@ -21,11 +21,11 @@ tags:
 
 <p>When working with grid layout you have two axes available to align things against – the <em>block axis</em> and the <em>inline axis</em>. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis. </p>
 
-<p><img alt="" src="block_axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="block_axis.png"></p>
 
 <p>The <em>inline axis</em> runs across the block axis, it is the direction in which text in regular inline flow runs. </p>
 
-<p><img alt="" src="7_inline_axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="7_inline_axis.png"></p>
 
 <p>We are able to align the content inside grid areas, and the grid tracks themselves on these two axes.</p>
 
@@ -101,7 +101,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_1', '500', '450') }}</p>
+<p>{{ EmbedLiveSample('alignment_1', '500', '500') }}</p>
 </div>
 
 <p>Keep in mind that once you set <code>align-items: start</code>, the height of each child <code>&lt;div&gt;</code> will be determined by the contents of the <code>&lt;div&gt;</code>.  This is in contrast to omitting <code><a href="/en-US/docs/Web/CSS/align-items">align-items</a></code> completely, in which case the height of each <code>&lt;div&gt;</code> stretches to fill its grid area.</p>
@@ -166,7 +166,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_2', '500', '450') }}</p>
+<p>{{ EmbedLiveSample('alignment_2', '500', '500') }}</p>
 </div>
 
 <h3 id="Items_with_an_intrinsic_aspect_ratio">Items with an intrinsic aspect ratio</h3>
@@ -251,7 +251,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_3', '500', '450') }}</p>
+<p>{{ EmbedLiveSample('alignment_3', '500', '500') }}</p>
 </div>
 
 <p>As with {{cssxref("align-self")}} and {{cssxref("align-items")}}, you can apply {{cssxref("justify-items")}} to the grid container, to set the {{cssxref("justify-self")}} value for all items.</p>
@@ -309,7 +309,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_4', '500', '480') }}</p>
+<p>{{ EmbedLiveSample('alignment_4', '500', '500') }}</p>
 </div>
 
 <h2 id="Aligning_the_grid_tracks_on_the_block_axis">Aligning the grid tracks on the block axis</h2>
@@ -388,7 +388,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_5', '500', '520') }}</p>
+<p>{{ EmbedLiveSample('alignment_5', '500', '550') }}</p>
 
 <p>If I add <code>align-content</code> to my container, with a value of <code>end</code>, the tracks all move to the end line of the grid container in the block dimension:</p>
 </div>
@@ -448,7 +448,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_6', '500', '520') }}</p>
+<p>{{ EmbedLiveSample('alignment_6', '500', '550') }}</p>
 </div>
 
 <p>We can also use values for this property that you may be familiar with from flexbox; the space distribution values of <code>space-between</code>, <code>space-around</code> and <code>space-evenly</code>. If we update {{cssxref("align-content")}} to <code>space-between</code>, you can see how the elements on our grid space out:</p>
@@ -508,14 +508,14 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_7', '500', '520') }}</p>
+<p>{{ EmbedLiveSample('alignment_7', '500', '600') }}</p>
 </div>
 
 <p>It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We’re always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.</p>
 
 <p>In the below image I have placed the grid with <code>align-content</code>, with a value of <code>start</code> alongside the grid when <code>align-content</code> has a value of <code>space-between</code>. You can see how items 1 and 2, which span two row tracks have taken on extra height as they gain the additional space added to the gap between those two tracks:</p>
 
-<p><img alt="Demonstrating how items become larger if we use space-between." src="7_space-between.png" style="height: 534px; width: 1030px;"></p>
+<p><img alt="Demonstrating how items become larger if we use space-between." src="7_space-between.png"></p>
 
 <h2 id="Justifying_the_grid_tracks_on_the_inline_axis">Justifying the grid tracks on the inline axis</h2>
 
@@ -579,7 +579,7 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_8', '500', '500') }}</p>
+<p>{{ EmbedLiveSample('alignment_8', '500', '550') }}</p>
 </div>
 
 <h2 id="Alignment_and_auto_margins">Alignment and auto margins</h2>
@@ -643,12 +643,12 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('alignment_9', '500', '500') }}</p>
+<p>{{ EmbedLiveSample('alignment_9', '500', '550') }}</p>
 </div>
 
 <p>You can see how the item is aligned by using the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a>:</p>
 
-<p><img alt="Image showing auto-margins using the Grid Highlighter." src="7_auto_margins.png" style="height: 1000px; width: 1000px;"></p>
+<p><img alt="Image showing auto-margins using the Grid Highlighter." src="7_auto_margins.png"></p>
 
 <h2 id="Alignment_and_Writing_Modes">Alignment and Writing Modes</h2>
 

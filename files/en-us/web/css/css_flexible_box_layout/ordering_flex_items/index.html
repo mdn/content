@@ -28,19 +28,19 @@ tags:
 
 <p>The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.</p>
 
-<p><img alt="The items are displayed in a row starting on the left." src="basics1.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="The items are displayed in a row starting on the left." src="basics1.png"></p>
 
-<p><img alt="The items are displayed as a column starting from the top " src="align10.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="The items are displayed as a column starting from the top " src="align10.png"></p>
 
 <p>The second two values reverse the items by switching the start and end lines.</p>
 
-<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="align9.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="The items are displayed in reverse order starting on the right-hand line." src="align9.png"></p>
 
-<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png"></p>
 
 <p>Remember that the start line relates to writing modes. The row-related examples above demonstrate how <code>row</code> and <code>row-reverse</code> work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then <code>row</code> would start on the right, <code>row-reverse</code> on the left.</p>
 
-<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png"></p>
 
 <p>This can seem like a neat way to display things in reverse order however you should be mindful that the items are only <em>visually</em> displayed in reverse order. The specification says the following on this matter:</p>
 
@@ -92,7 +92,7 @@ tags:
  <li>Source item 4: <code>order: 3</code></li>
 </ul>
 
-<p><img alt="Items have a number showing their source order which has been rearranged." src="order-property.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Items have a number showing their source order which has been rearranged." src="order-property.png"></p>
 
 <p>You can play around with the values in this live example below and see how that changes the order. Also, try changing <code>flex-direction</code> to <code>row-reverse</code> and see what happens — the start line is switched so the ordering begins from the opposite side.</p>
 

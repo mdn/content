@@ -37,9 +37,9 @@ image-rendering: unset;</pre>
  <dd>The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses <em>bilinear</em> resampling (high quality).</dd>
  <dt><code>smooth</code> {{Experimental_Inline}}</dt>
  <dd>The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.</dd>
- <dt><code style="white-space: nowrap;">high-quality</code> {{Experimental_Inline}}</dt>
- <dd>Identical to <code>smooth</code>, but with a preference for higher-quality scaling. If system resources are constrained, images with <code style="white-space: nowrap;">high-quality</code> should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.</dd>
- <dt><code style="white-space: nowrap;">crisp-edges</code></dt>
+ <dt><code>high-quality</code> {{Experimental_Inline}}</dt>
+ <dd>Identical to <code>smooth</code>, but with a preference for higher-quality scaling. If system resources are constrained, images with <code>high-quality</code> should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.</dd>
+ <dt><code>crisp-edges</code></dt>
  <dd>The image must be scaled with an algorithm that preserves contrast and edges in the image, and which does not smooth colors or introduce blur to the image in the process. Suitable algorithms include nearest-neighbor and <a href="https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms">other non-smoothing scaling algorithms</a> such as 2×SaI and <a href="https://en.wikipedia.org/wiki/Hqx">hqx-family</a> algorithms. This value is intended for pixel-art images, such as in browser games.</dd>
  <dt><code>pixelated</code></dt>
  <dd>When scaling the image up, the nearest-neighbor algorithm must be used, so that the image appears to be composed of large pixels. When scaling down, this is the same as <code>auto</code>.</dd>
