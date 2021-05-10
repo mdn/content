@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The <code><strong>AudioParamDescriptor</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> specifies properties for an {{domxref("AudioParam")}} objects.</span> It is used to create custom <code>AudioParam</code>s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by <code>AudioWorkletNode</code> constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
+<p><span class="seoSummary">The <code><strong>AudioParamDescriptor</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> specifies properties for {{domxref("AudioParam")}} objects.</span> It is used to create custom <code>AudioParam</code>s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by <code>AudioWorkletNode</code> constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
 
 </p><h2 id="Properties">Properties</h2>
 
@@ -32,7 +32,24 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-{{page("/en-US/docs/Web/API/AudioWorkletNode/parameters", "Examples")}}
+<p>The code fragment below shows a descriptor of this type being returned by a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} method defined in a custom <code>AudioWorkletProcessor</code> (this is part of the more complete example in <a href="/en-US/docs/Web/API/AudioWorkletNode/parameters#examples">AudioWorkletNode.parameters</a>).</p>
+
+<pre class="brush: js">// white-noise-processor.js
+class WhiteNoiseProcessor extends AudioWorkletProcessor {
+  static get parameterDescriptors () {
+    return [{
+      name: 'customGain',
+      defaultValue: 1,
+      minValue: 0,
+      maxValue: 1,
+      automationRate: 'a-rate'
+    }]
+  }
+
+...
+}</pre>
+
+
 
 <h2 id="Specifications">Specifications</h2>
 
