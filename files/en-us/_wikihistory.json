@@ -30905,25 +30905,6 @@
       "teoli"
     ]
   },
-  "Web/API/BudgetService": {
-    "modified": "2020-10-29T15:20:30.052Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "DPangerl",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
-  "Web/API/BudgetService/reserve": {
-    "modified": "2020-10-15T21:51:04.069Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "david_ross",
-      "jpmedley"
-    ]
-  },
   "Web/API/BufferSource": {
     "modified": "2019-03-23T22:29:36.836Z",
     "contributors": [
@@ -89548,17 +89529,6 @@
       "jpmedley",
       "rolfedh",
       "jyasskin"
-    ]
-  },
-  "Web/API/Web_Budget_API": {
-    "modified": "2020-11-30T19:19:21.659Z",
-    "contributors": [
-      "peterbe",
-      "fscholz",
-      "jamesdhurd",
-      "jpmedley",
-      "marcoscaceres",
-      "david_ross"
     ]
   },
   "Web/API/Web_Crypto_API": {

@@ -7386,8 +7386,6 @@
 /en-US/docs/Web/API/BroadcastChannel.name	/en-US/docs/Web/API/BroadcastChannel/name
 /en-US/docs/Web/API/BroadcastChannel.onmessage	/en-US/docs/Web/API/BroadcastChannel/onmessage
 /en-US/docs/Web/API/BroadcastChannel.postMessage	/en-US/docs/Web/API/BroadcastChannel/postMessage
-/en-US/docs/Web/API/BudgetService/getBudget	/en-US/docs/Web/API/BudgetService
-/en-US/docs/Web/API/BudgetService/getCost	/en-US/docs/Web/API/BudgetService
 /en-US/docs/Web/API/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/ByteLengthQueueingStrategy	/en-US/docs/Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 /en-US/docs/Web/API/ByteLengthQueueingStrategy/size	/en-US/docs/Web/API/ByteLengthQueuingStrategy/size
