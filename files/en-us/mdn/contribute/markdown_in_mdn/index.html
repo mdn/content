@@ -22,9 +22,7 @@ tags:
 
 <p>The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <a href="https://github.github.com/gfm/">https://github.github.com/gfm/</a>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark (<a href="https://spec.commonmark.org/">http://spec.commonmark.org/</a>).</p>
 
-<p>GFM and CommonMark describe some extensions to <a href="https://daringfireball.net/projects/markdown/syntax">the original Markdown description</a>). We'll highlight two that are going to be important to us.
-
-<h3>Code fences and info strings</h3>
+<h2>Example code blocks</h2>
 
 <p>In GFM and CommonMark, authors can use "code fences" to demarcate <code>&lt;pre&gt;</code> blocks. The opening code fence may be followed by some text that is called the "info string". From the spec:</p>
 
@@ -40,39 +38,7 @@ tags:
 ```
 </pre>
 
-<h3>Tables</h3>
-
-<p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but it should be noted that this syntax imposes limitations on the kinds of tables we can write, so in many cases this syntax will not be appropriate and we will need alternative ways of authoring tables.</p>
-
-<p>In particular:</p>
-
-<ul>
-  <li>GFM tables must have a header row.</li>
-  <li>GFM tables may not have a header column.</li>
-  <li>GFM won't parse GFM block elements in table cells.</li>
-</ul>
-
-<p>This last point means that if you write:</p>
-
-<pre>
---------------------------------------
-|  i'm a test    | yes i am          |
-|----------------|-------------------|
-| `inline` is ok | * lists aren't    |
---------------------------------------
-</pre>
-
-<p>...then the attempt to write a list in the bottom-right cell will just generate <code>&lt;td&gt;* lists aren't&lt;/td&gt;</code> in the output.</p>
-
-
-<h2>Extensions to GFM</h2>
-
-<p>In this section we'll outline ways in which writers will be able to go beyond the syntax defined in the GFM spec.</p>
-
-
-<h3>Example code blocks</h3>
-
-Writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words will be supported:
+In MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words will be supported:
 
 <ul>
   <li><code>bash</code></li>
@@ -113,7 +79,7 @@ const greeting = "I'm a good example";
 ```
 </pre>
 
-<h3>Notes, warnings, and callouts</h3>
+<h2>Notes, warnings, and callouts</h2>
 
 <p>Sometimes writers want to call special attention to some piece of content. To do this, they will use a GFM blockquote with a special first paragraph. There are three types of these: notes, warnings, and callouts.</p>
 
@@ -258,17 +224,65 @@ const greeting = "I'm a good example";
   <p>Like that.</p>
 </div>
 
-<h3>Definition lists</h3>
+<h2>Definition lists</h2>
 
-<h3>Tables</h3>
+<h2>Tables</h2>
 
-<h3>Heading IDs</h3>
+<p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but the GFM syntax only supports a subset of the features available in HTML.</p>
 
-<h3>Live samples</h3>
+<p>So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to.</p>
 
-<h3>Inline styles</h3>
+<p>The main limitations of GFM table syntax are:</p>
 
-<h3>KumaScript</h3>
+<ul>
+  <li>GFM tables must have a header row.</li>
+  <li>GFM tables may not have a header column.</li>
+  <li>GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.</li>
+  <li>GFM doesn't support any table elements beyond <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>.</li>
+  <li>GFM doesn't support any table element attributes like <code>colspan</code>, <code>rowspan</code>, or <code>scope</code>.</li>
+</ul>
+
+<p>If an author needs to use any of the unsupported features, they should write the table in HTML.</p>
+
+<p>We don't recommend the general use of <code>&lt;caption&gt;</code> elements on tables, since that would also rule out the GFM syntax.</p>
+
+<p>In GFM table syntax, authors can omit leading and trailing pipes for rows. MDN authors must include these pipes, for the sake of readability.</p>
+
+<p>That is, MDN authors must use this style:</p>
+
+<pre>
+| Heading 1 | Heading 2 | Heading 3 |
+|-----------|-----------|-----------|
+| cell 1    | cell 2    | cell 3    |
+| cell 4    | cell 5    | cell 6    |
+</pre>
+
+<p>and not this style:</p>
+
+<pre>
+Heading 1 | Heading 2 | Heading 3
+ --- | --- | ---
+cell 1    | cell 2    | cell 3
+cell 4    | cell 5    | cell 6
+</pre>
+
+<h2>Heading IDs</h2>
+
+<h2>Live samples</h2>
+
+<h2>Inline styles</h2>
+
+<h2>Superscript and subscript</h2>
+
+<p>Writers will be able to use the HTML {{HTMLElement("sup")}}> and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:</p>
+
+<ul>
+  <li>For exponentiation, use the caret: <code>2^53</code>.</li>
+  <li>For ordinal expressions like 1<sup>st</sup>, prefer words like "first".</li>
+  <li>For footnotes, don’t mark up the footnote references with, e.g., <code>&lt;sup&gt;[1]&lt;/sup&gt;</code>; it’s unnecessary.</li>
+</ul>
+
+<h2>KumaScript</h2>
 
 <p>Writers will be able to include KumaScript macro calls in prose content:</p>
 

@@ -136,7 +136,7 @@ Cache-Control: public
 
 <p>The {{HTTPHeader("Last-Modified")}} response header can be used as a weak validator. It is considered weak because it only has 1-second resolution. If the <code>Last-Modified</code> header is present in a response, then the client can issue an {{HTTPHeader("If-Modified-Since")}} request header to validate the cached document.</p>
 
-<p>When a validation request is made, the server can either ignore the validation request and response with a normal {{HTTPStatus(200)}} <code>OK</code>, or it can return {{HTTPStatus(304)}} <code>Not Modified</code> (with an empty body) to instruct the browser to use its cached copy. The latter response can also include headers that update the expiration time of the cached document.</p>
+<p>When a validation request is made, the server can either ignore the validation request and respond with a normal {{HTTPStatus(200)}} <code>OK</code>, or it can return {{HTTPStatus(304)}} <code>Not Modified</code> (with an empty body) to instruct the browser to use its cached copy. The latter response can also include headers that update the expiration time of the cached document.</p>
 
 <h2 id="Varying_responses">Varying responses</h2>
 

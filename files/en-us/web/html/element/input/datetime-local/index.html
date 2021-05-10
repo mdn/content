@@ -23,7 +23,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
+<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with Chrome/Opera/Edge and Safari 14.1 on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
 
 <p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
@@ -264,7 +264,7 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
+<p>As mentioned above, the major problem with using datetime-local inputs at the time of writing is browser support — Chrome/Opera/Edge and Safari support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
 
 <p><img alt="" src="datetime-local-fxa.png" style="display: block; margin: 0px auto;"></p>
 

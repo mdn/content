@@ -18,7 +18,7 @@ tags:
 
 <h3 id="Function_declarations">Function declarations</h3>
 
-<p>A <strong>function definition</strong> (also called a <strong>function declaration</strong>, or <strong>function statement</strong>) consists of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a> keyword, followed by:</p>
+<p>A <strong>function definition</strong> (also called a <strong>function declaration</strong>, or <strong>function statement</strong>) consists of the <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a> keyword, followed by:</p>
 
 <ul>
 	<li>The name of the function.</li>
@@ -33,12 +33,12 @@ tags:
 }
 </pre>
 
-<p>The function <code>square</code> takes one parameter, called <code>number</code>. The function consists of one statement that says to return the parameter of the function (that is, <code>number</code>) multiplied by itself. The statement <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> specifies the value returned by the function:</p>
+<p>The function <code>square</code> takes one parameter, called <code>number</code>. The function consists of one statement that says to return the parameter of the function (that is, <code>number</code>) multiplied by itself. The statement <a href="/en-US/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> specifies the value returned by the function:</p>
 
 <pre class="brush: js">return number * number;
 </pre>
 
-<p>Primitive parameters (such as a number) are passed to functions <strong>by value</strong>; the value is passed to the function, but if the function changes the value of the parameter, <strong>this change is not reflected globally or in the calling function</strong>.</p>
+<p>Primitive parameters (such as a number) are passed to functions <strong>by value</strong>; the value is passed to the function, but if the function changes the value of the parameter, <strong>this change is not reflected globally or in the calling function</strong>.</p>
 
 <p>If you pass an object (i.e. a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:</p>
 
@@ -58,9 +58,9 @@ y = mycar.make; // y gets the value "Toyota"
 
 <h3 id="Function_expressions">Function expressions</h3>
 
-<p>While the function declaration above is syntactically a statement, functions can also be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>.</p>
+<p>While the function declaration above is syntactically a statement, functions can also be created by a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>.</p>
 
-<p>Such a function can be <strong>anonymous</strong>; it does not have to have a name. For example, the function <code>square</code> could have been defined as:</p>
+<p>Such a function can be <strong>anonymous</strong>; it does not have to have a name. For example, the function <code>square</code> could have been defined as:</p>
 
 <pre class="brush: js">const square = function(number) { return number * number }
 var x = square(4) // x gets the value 16</pre>
@@ -72,28 +72,28 @@ var x = square(4) // x gets the value 16</pre>
 console.log(factorial(3))
 </pre>
 
-<p>Function expressions are convenient when passing a function as an argument to another function. The following example shows a <code>map</code> function that should receive a function as first argument and an array as second argument. </p>
+<p>Function expressions are convenient when passing a function as an argument to another function. The following example shows a <code>map</code> function that should receive a function as first argument and an array as second argument.</p>
 
 <pre class="brush: js">function map(f, a) {
   let result = []; // Create a new Array
-  let i; // Declare variable
+  let i; // Declare variable
   for (i = 0; i != a.length; i++)
     result[i] = f(a[i]);
   return result;
 }
 </pre>
 
-<p>In the following code, the function receives a function defined by a function expression and executes it for every element of the array received as a second argument. </p>
+<p>In the following code, the function receives a function defined by a function expression and executes it for every element of the array received as a second argument.</p>
 
 <pre class="brush: js">function map(f, a) {
-  let result = []; // Create a new Array
-  let i; // Declare variable
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
-  return result;
+  let result = []; // Create a new Array
+  let i; // Declare variable
+  for (i = 0; i != a.length; i++)
+    result[i] = f(a[i]);
+  return result;
 }
 const f = function(x) {
-   return x * x * x;
+   return x * x * x;
 }
 let numbers = [0, 1, 2, 5, 10];
 let cube = map(f,numbers);
@@ -171,7 +171,7 @@ e = factorial(5); // e gets the value 120
 
 <p>There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.</p>
 
-<p>It turns out that <em>functions are themselves objects</em>—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.</p>
+<p>It turns out that <em>functions are themselves objects</em>—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.</p>
 
 <h2 id="Function_scope">Function scope</h2>
 
@@ -255,7 +255,7 @@ while (x &lt; 10) { // "x &lt; 10" is the loop condition
 loop(0);
 </pre>
 
-<p>However, some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>) is easier via recursion:</p>
+<p>However, some algorithms cannot be simple iterative loops. For example, getting all the nodes of a tree structure (such as the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a>) is easier via recursion:</p>
 
 <pre class="brush: js">function walkTree(node) {
   if (node == null) //
@@ -271,7 +271,7 @@ loop(0);
 
 <p>It is possible to convert any recursive algorithm to a non-recursive one, but the logic is often much more complex, and doing so requires the use of a stack.</p>
 
-<p>In fact, recursion itself uses a stack: the function stack. The stack-like behavior can be seen in the following example:</p>
+<p>In fact, recursion itself uses a stack: the function stack. The stack-like behavior can be seen in the following example:</p>
 
 <pre class="brush: js">function foo(i) {
   if (i &lt; 0)
@@ -305,9 +305,6 @@ foo(3);
 
 <ul>
 	<li>The inner function can be accessed only from statements in the outer function.</li>
-</ul>
-
-<ul>
 	<li>The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.</li>
 </ul>
 
@@ -347,11 +344,11 @@ result1 = outside(3)(5); // returns 8
 
 <h3 id="Multiply-nested_functions">Multiply-nested functions</h3>
 
-<p>Functions can be multiply-nested.  For example:</p>
+<p>Functions can be multiply-nested.  For example:</p>
 
 <ul>
 	<li>A function (<code>A</code>) contains a function (<code>B</code>), which itself contains a function (<code>C</code>).</li>
-	<li>Both functions <code>B</code> and <code>C</code> form closures here. So, <code>B</code> can access <code>A</code>, and <code>C</code> can access <code>B</code>.</li>
+	<li>Both functions <code>B</code> and <code>C</code> form closures here. So, <code>B</code> can access <code>A</code>, and <code>C</code> can access <code>B</code>.</li>
 	<li>In addition, since <code>C</code> can access <code>B</code> which can access <code>A</code>, <code>C</code> can also access <code>A</code>.</li>
 </ul>
 
@@ -376,7 +373,7 @@ A(1); // logs 6 (1 + 2 + 3)
 <p>This can be done because:</p>
 
 <ol>
-	<li><code>B</code> forms a closure including <code>A</code> (i.e. <code>B</code> can access <code>A</code>'s arguments and variables).</li>
+	<li><code>B</code> forms a closure including <code>A</code> (i.e. <code>B</code> can access <code>A</code>'s arguments and variables).</li>
 	<li><code>C</code> forms a closure including <code>B</code>.</li>
 	<li>Because <code>B</code>'s closure includes <code>A</code>, <code>C</code>'s closure includes <code>A</code>, <code>C</code> can access <em>both</em> <code>B</code> <em>and</em> <code>A</code>'s arguments and variables. In other words, <code>C</code> <em>chains</em> the scopes of <code>B</code> and <code>A</code>, <em>in that order</em>.</li>
 </ol>
@@ -398,7 +395,7 @@ A(1); // logs 6 (1 + 2 + 3)
 outside()(10); // returns 20 instead of 10
 </pre>
 
-<p>The name conflict happens at the statement <code>return x * 2</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
+<p>The name conflict happens at the statement <code>return x * 2</code> and is between <code>inside</code>'s parameter <code>x</code> and <code>outside</code>'s variable <code>x</code>. The scope chain here is {<code>inside</code>, <code>outside</code>, global object}. Therefore, <code>inside</code>'s <code>x</code> takes precedences over <code>outside</code>'s <code>x</code>, and <code>20</code> (<code>inside</code>'s <code>x</code>) is returned instead of <code>10</code> (<code>outside</code>'s <code>x</code>).</p>
 
 <h2 id="Closures">Closures</h2>
 
@@ -406,7 +403,7 @@ outside()(10); // returns 20 instead of 10
 
 <p>However, the outer function does <em>not</em> have access to the variables and functions defined inside the inner function. This provides a sort of encapsulation for the variables of the inner function.</p>
 
-<p>Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.</p>
+<p>Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.</p>
 
 <pre class="brush: js">var pet = function(name) {   // The outer function defines a variable called "name"
   var getName = function() {
@@ -456,7 +453,7 @@ pet.getSex();                   // male
 pet.getName();                  // Oliver
 </pre>
 
-<p>In the code above, the <code>name</code> variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.</p>
+<p>In the code above, the <code>name</code> variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.</p>
 
 <pre class="brush: js">var getCode = (function() {
   var apiCode = '0]Eal(eh&amp;2';    // A code we do not want outsiders to be able to modify...
@@ -472,7 +469,7 @@ getCode();    // Returns the apiCode
 <div class="notecard note">
 <p><strong>Note:</strong> There are a number of pitfalls to watch out for when using closures!</p>
 
-<p>If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again.  (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)</p>
+<p>If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again.  (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)</p>
 
 <pre class="example-bad brush: js">var createPet = function(name) {  // The outer function defines a variable called "name".
   return {
@@ -521,7 +518,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> The <code>arguments</code> variable is "array-like", but not an array. It is array-like in that it has a numbered index and a <code>length</code> property. However, it does <em>not</em> possess all of the array-manipulation methods.</p>
+<p><strong>Note:</strong> The <code>arguments</code> variable is "array-like", but not an array. It is array-like in that it has a numbered index and a <code>length</code> property. However, it does <em>not</em> possess all of the array-manipulation methods.</p>
 </div>
 
 <p>See the {{jsxref("Function")}} object in the JavaScript reference for more information.</p>
@@ -538,7 +535,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 <p>In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are <code>undefined</code>.</p>
 
-<p>In the following example, if no value is provided for <code>b</code>, its value would be <code>undefined</code> when evaluating <code>a*b</code>, and a call to <code>multiply</code> would normally have returned <code>NaN</code>. However, this is prevented by the second line in this example:</p>
+<p>In the following example, if no value is provided for <code>b</code>, its value would be <code>undefined</code> when evaluating <code>a*b</code>, and a call to <code>multiply</code> would normally have returned <code>NaN</code>. However, this is prevented by the second line in this example:</p>
 
 <pre class="brush: js">function multiply(a, b) {
   b = typeof b !== 'undefined' ?  b : 1;
@@ -559,13 +556,13 @@ multiply(5); // 5
 
 multiply(5); // 5</pre>
 
-<p>For more details, see <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> in the reference.</p>
+<p>For more details, see <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameters</a> in the reference.</p>
 
 <h3 id="Rest_parameters">Rest parameters</h3>
 
 <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest parameter</a> syntax allows us to represent an indefinite number of arguments as an array.</p>
 
-<p>In the following example, the function <code>multiply</code> uses <em>rest parameters</em> to collect arguments from the second one to the end. The function then multiplies these by the first argument . </p>
+<p>In the following example, the function <code>multiply</code> uses <em>rest parameters</em> to collect arguments from the second one to the end. The function then multiplies these by the first argument.</p>
 
 <pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);
@@ -576,9 +573,9 @@ console.log(arr); // [2, 4, 6]</pre>
 
 <h2 id="Arrow_functions">Arrow functions</h2>
 
-<p>An <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> (previously, and now incorrectly known as <strong>fat arrow function</strong>) has a shorter syntax compared to function expressions and does not have its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>. Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "<a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">ES6 In Depth: Arrow functions</a>".</p>
+<p>An <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> (previously, and now incorrectly known as <strong>fat arrow function</strong>) has a shorter syntax compared to function expressions and does not have its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a>, or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a>. Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "<a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">ES6 In Depth: Arrow functions</a>".</p>
 
-<p>Two factors influenced the introduction of arrow functions: <em>shorter functions</em> and <em>non-binding</em> of <code>this</code>.</p>
+<p>Two factors influenced the introduction of arrow functions: <em>shorter functions</em> and <em>non-binding</em> of <code>this</code>.</p>
 
 <h3 id="Shorter_functions">Shorter functions</h3>
 
@@ -600,9 +597,9 @@ var a3 = a.map(s =&gt; s.length);
 console.log(a3); // logs [8, 6, 7, 9]
 </pre>
 
-<h3 id="No_separate_this">No separate <code>this</code></h3>
+<h3 id="No_separate_this">No separate <code>this</code></h3>
 
-<p>Until arrow functions, every new function defined its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> value (a new object in the case of a constructor, undefined in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.</p>
+<p>Until arrow functions, every new function defined its own <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> value (a new object in the case of a constructor, undefined in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.</p>
 
 <pre class="brush: js">function Person() {
   // The Person() constructor defines `this` as itself.
@@ -634,7 +631,7 @@ var p = new Person();</pre>
 
 <p>Alternatively, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bound function</a> could be created so that the proper <code>this</code> value would be passed to the <code>growUp()</code> function.</p>
 
-<p>An arrow function does not have its own <code>this;</code> the <code>this</code> value of the enclosing execution context is used. Thus, in the following code, the <code>this</code> within the function that is passed to <code>setInterval</code> has the same value as <code>this</code> in the enclosing function:</p>
+<p>An arrow function does not have its own <code>this</code>; the <code>this</code> value of the enclosing execution context is used. Thus, in the following code, the <code>this</code> within the function that is passed to <code>setInterval</code> has the same value as <code>this</code> in the enclosing function:</p>
 
 <pre class="brush: js">function Person() {
   this.age = 0;

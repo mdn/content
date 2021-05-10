@@ -73,16 +73,16 @@ tags:
 
 <p>In the following example, the browser will wait two seconds before executing the anonymous function, then will display the alert message (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see it running live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see the source code</a>):</p>
 
-<pre class="brush: js">let myGreeting = setTimeout(function() {
+<pre class="brush: js">let myGreeting = setTimeout(() => {
   alert('Hello, Mr. Universe!');
-}, 2000)</pre>
+}, 2000);</pre>
 
 <p>The functions you specify don't have to be anonymous. You can give your function a name, and even define it somewhere else and pass a function reference to the <code>setTimeout()</code>. The following two versions of the code snippet are equivalent to the first one:</p>
 
 <pre class="brush: js">// With a named function
 let myGreeting = setTimeout(function sayHi() {
   alert('Hello, Mr. Universe!');
-}, 2000)
+}, 2000);
 
 // With a function defined separately
 function sayHi() {
@@ -205,7 +205,7 @@ setTimeout(function run() {
 
 setInterval(function run() {
   console.log(i);
-  i++
+  i++;
 }, 100);</pre>
 
 <h4 id="How_do_recursive_setTimeout_and_setInterval_differ">How do recursive <code>setTimeout()</code> and <code>setInterval()</code> differ?</h4>

@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web
   - 'recipe:css-property'
+browser-compat: css.properties.-webkit-mask-box-image
 ---
 <div>{{ CSSRef() }} {{ Non-standard_header() }}</div>
 
@@ -30,11 +31,11 @@ tags:
 
 <dl>
  <dt>&lt;mask-box-image&gt;</dt>
- <dd><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">{{cssxref("&lt;uri&gt;")}} | &lt;gradient&gt; | none</code></dd>
+ <dd><code>{{cssxref("&lt;uri&gt;")}} | &lt;gradient&gt; | none</code></dd>
  <dt>&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;</dt>
- <dd><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">&lt;length&gt; | &lt;percentage&gt;</code></dd>
+ <dd><code>&lt;length&gt; | &lt;percentage&gt;</code></dd>
  <dt>&lt;x-repeat&gt; &lt;y-repeat&gt;</dt>
- <dd><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">repeat | stretch | round | space</code></dd>
+ <dd><code>repeat | stretch | round | space</code></dd>
 </dl>
 
 <h3 id="Values">Values</h3>
@@ -42,15 +43,15 @@ tags:
 <dl>
  <dt>&lt;uri&gt;</dt>
  <dd>The location of the image resource to be used as a mask image.</dd>
- <dt style="font-style: normal; font-weight: bold;">&lt;gradient&gt;</dt>
- <dd style="margin-bottom: 20px; padding-left: 16px; border-bottom-width: 1px; border-bottom-style: dashed; margin-top: 0px; margin-right: 0px; margin-left: 0px; padding-top: 2px; padding-right: 0px; padding-bottom: 4px;">A <span style="font-family: courier new;">-webkit-gradient</span> function to be used as a mask image.</dd>
+ <dt>&lt;gradient&gt;</dt>
+ <dd>A <code>-webkit-gradient</code> function to be used as a mask image.</dd>
  <dt>none</dt>
  <dd>Used to specify that a border box is to have no mask image.</dd>
  <dt>&lt;length&gt;</dt>
  <dd>The size of the mask image's offset. See {{cssxref("&lt;length&gt;")}} for possible units.</dd>
  <dt>&lt;percentage&gt;</dt>
  <dd>The mask image's offset has a percentage value relative to the border box's corresponding dimension (width or height).</dd>
- <dt style="font-style: normal; font-weight: bold;">repeat</dt>
+ <dt>repeat</dt>
  <dd>The mask image is repeated as many times as is necessary to span the border box. May include a partial image if the mask image does not divide evenly into the border box.</dd>
  <dt>stretch</dt>
  <dd>The mask image is stretched to contain the border box exactly.</dd>
@@ -90,7 +91,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.-webkit-mask-box-image")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

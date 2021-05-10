@@ -151,7 +151,7 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - Math.abs(this.scrollTop) === element.clientHeight;
+  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
   document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
   checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
