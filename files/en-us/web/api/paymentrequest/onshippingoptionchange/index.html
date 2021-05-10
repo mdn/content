@@ -11,7 +11,7 @@ tags:
   - Secure context
   - onshippingoptionchange
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p>The <strong><code>onshippingoptionchange</code></strong> event of the
   {{domxref("PaymentRequest")}} interface is fired whenever the user changes a shipping
@@ -76,24 +76,6 @@ request.addEventListener('shippingaddresschange', e =&gt; {
   })(details, request.shippingAddress));
 });
 </pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment', '#onshippingoptionchange-attribute',
-        'onshippingoptionchange')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

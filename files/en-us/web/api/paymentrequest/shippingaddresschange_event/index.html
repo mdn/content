@@ -15,7 +15,7 @@ tags:
   - payment
   - shippingaddresschange
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p><span class="seoSummary">The <strong><code>shippingaddresschange</code></strong> event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.</span></p>
 
@@ -71,23 +71,6 @@ const checkAddress = theAddress =&gt; {
   let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 };</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#dfn-shippingaddresschange','shippingaddresschange')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
