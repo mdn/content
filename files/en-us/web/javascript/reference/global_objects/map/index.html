@@ -45,7 +45,7 @@ browser-compat: javascript.builtins.Map
   <code>Object</code> has been used as <code>Map</code> historically.</p>
 
 <p>However, there are important differences that make <code>Map</code> preferable in
-  certain cases:</p>
+  some cases:</p>
 
 <table class="standard-table">
   <thead>
@@ -149,6 +149,15 @@ browser-compat: javascript.builtins.Map
       </td>
       <td>
         <p>Not optimized for frequent additions and removals of key-value pairs.</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Serialization</th>
+      <td>
+        <p>No native serialzation.</p>
+      </td>
+      <td>
+        <p>Serialization supported for <code>Object</code> via native functions JSON.stringify() and JSON.parse() as of ECMAScript 5.</p>
       </td>
     </tr>
   </tbody>
