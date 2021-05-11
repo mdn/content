@@ -83837,26 +83837,6 @@
       "teoli"
     ]
   },
-  "Web/API/UIEvent/cancelBubble": {
-    "modified": "2020-10-15T21:05:13.549Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "cvrebert",
-      "teoli",
-      "kscarfone",
-      "Cobra",
-      "Sheppy",
-      "dbruant",
-      "ziyunfei",
-      "Matej Lednar",
-      "Nickolay",
-      "Jabez",
-      "Ptak82",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/UIEvent/detail": {
     "modified": "2020-10-15T21:38:37.643Z",
     "contributors": [

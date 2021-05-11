@@ -2019,7 +2019,6 @@
 /en-US/docs/DOM/event.altKey	/en-US/docs/Web/API/MouseEvent/altKey
 /en-US/docs/DOM/event.bubbles	/en-US/docs/Web/API/Event/bubbles
 /en-US/docs/DOM/event.button	/en-US/docs/Web/API/MouseEvent/button
-/en-US/docs/DOM/event.cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/DOM/event.cancelable	/en-US/docs/Web/API/Event/cancelable
 /en-US/docs/DOM/event.charCode	/en-US/docs/Web/API/KeyboardEvent/charCode
 /en-US/docs/DOM/event.clientX	/en-US/docs/Web/API/MouseEvent/clientX
@@ -2523,7 +2522,6 @@
 /en-US/docs/DOM:event.altKey	/en-US/docs/Web/API/MouseEvent/altKey
 /en-US/docs/DOM:event.bubbles	/en-US/docs/Web/API/Event/bubbles
 /en-US/docs/DOM:event.button	/en-US/docs/Web/API/MouseEvent/button
-/en-US/docs/DOM:event.cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/DOM:event.cancelable	/en-US/docs/Web/API/Event/cancelable
 /en-US/docs/DOM:event.charCode	/en-US/docs/Web/API/KeyboardEvent/charCode
 /en-US/docs/DOM:event.clientX	/en-US/docs/Web/API/MouseEvent/clientX
@@ -3294,7 +3292,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Document_Object_Model_(DOM)/en_DOM	/en-US/docs/Web/API/Element/setCapture
 /en-US/docs/Document_Object_Model_(DOM)/event.bubbles	/en-US/docs/Web/API/Event/bubbles
-/en-US/docs/Document_Object_Model_(DOM)/event.cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/Document_Object_Model_(DOM)/event.cancelable	/en-US/docs/Web/API/Event/cancelable
 /en-US/docs/Document_Object_Model_(DOM)/event.charCode	/en-US/docs/Web/API/KeyboardEvent/charCode
 /en-US/docs/Document_Object_Model_(DOM)/event.clientX	/en-US/docs/Web/API/MouseEvent/clientX
@@ -8664,8 +8661,6 @@
 /en-US/docs/Web/API/TreeWalker.previousNode	/en-US/docs/Web/API/TreeWalker/previousNode
 /en-US/docs/Web/API/TreeWalker.previousSibling	/en-US/docs/Web/API/TreeWalker/previousSibling
 /en-US/docs/Web/API/UIEvent.UIEvent	/en-US/docs/Web/API/UIEvent/UIEvent
-/en-US/docs/Web/API/UIEvent.cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
-/en-US/docs/Web/API/UIEvent.cancleBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/Web/API/UIEvent.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
 /en-US/docs/Web/API/UIEvent.isChar	/en-US/docs/Web/API/UIEvent/isChar
 /en-US/docs/Web/API/UIEvent.layerX	/en-US/docs/Web/API/UIEvent/layerX
@@ -8675,6 +8670,7 @@
 /en-US/docs/Web/API/UIEvent.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/Web/API/UIEvent.which	/en-US/docs/Web/API/KeyboardEvent/which
 /en-US/docs/Web/API/UIEvent/UIEvent.detail	/en-US/docs/Web/API/UIEvent/detail
+/en-US/docs/Web/API/UIEvent/cancelBubble	/en-US/docs/Web/API/Event/cancelBubble
 /en-US/docs/Web/API/URL.URL	/en-US/docs/Web/API/URL/URL
 /en-US/docs/Web/API/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL
 /en-US/docs/Web/API/URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL
@@ -9218,7 +9214,6 @@
 /en-US/docs/Web/API/event.altKey	/en-US/docs/Web/API/MouseEvent/altKey
 /en-US/docs/Web/API/event.bubbles	/en-US/docs/Web/API/Event/bubbles
 /en-US/docs/Web/API/event.button	/en-US/docs/Web/API/MouseEvent/button
-/en-US/docs/Web/API/event.cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/Web/API/event.cancelable	/en-US/docs/Web/API/Event/cancelable
 /en-US/docs/Web/API/event.charCode	/en-US/docs/Web/API/KeyboardEvent/charCode
 /en-US/docs/Web/API/event.clientX	/en-US/docs/Web/API/MouseEvent/clientX
@@ -11672,7 +11667,6 @@
 /en-US/docs/bgColor	/en-US/docs/Web/API/HTMLTableElement/bgColor
 /en-US/docs/bubbles	/en-US/docs/Web/API/Event/bubbles
 /en-US/docs/button_role	/en-US/docs/Web/Accessibility/ARIA/Roles/button_role
-/en-US/docs/cancelBubble	/en-US/docs/Web/API/UIEvent/cancelBubble
 /en-US/docs/cancelable	/en-US/docs/Web/API/Event/cancelable
 /en-US/docs/caption	/en-US/docs/Web/HTML/Element/caption
 /en-US/docs/caret_temp	/en-US/docs/Web/API/Document/caretPositionFromPoint
