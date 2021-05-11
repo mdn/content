@@ -5,8 +5,9 @@ tags:
 - Client hints
 - HTTP
 - header
+browser-compat: http.headers.Accept-CH-Lifetime
 ---
-<div>{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}</div>
+<div>{{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}</div>
 
 <p>The <code><strong>Accept-CH-Lifetime</strong></code> header is set by the server to
   specify the persistence of {{HTTPHeader("Accept-CH")}} header value that specifies for
@@ -28,7 +29,7 @@ tags:
 
 <div class="notecard note">
   <p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS).
-    Accept-CH and Accept-CH-Lifetime headers should be persisted for all secure requests
+    {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} headers should be persisted for all secure requests
     to ensure Client Hints are sent reliably.</p>
 </div>
 
@@ -45,12 +46,7 @@ Accept-CH-Lifetime: 86400
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Accept-CH-Lifetime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

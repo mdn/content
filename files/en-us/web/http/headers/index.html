@@ -87,6 +87,8 @@ tags:
  <dd>Indicates that the request has been conveyed in early data.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
  <dd>Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.</dd>
+ <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
+ <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
  <dd>A boolean that indicates the user agent's preference for reduced data usage.</dd>
  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
@@ -321,7 +323,7 @@ tags:
 
 <h3 id="HTTP_Public_Key_Pinning_GlossaryHPKP">HTTP Public Key Pinning (HPKP)</h3>
 
-<p>{{Glossary("HPKP", "HTTP Public Key Pinning (HPKP)")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.</p>
+<p>{{Glossary("HPKP", "HTTP Public Key Pinning")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.</p>
 
 <dl>
  <dt>{{HTTPHeader("Public-Key-Pins")}}</dt>
