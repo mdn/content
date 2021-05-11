@@ -368,7 +368,7 @@ console.log(myArray);
 
 <h4 id="using_the_global_search_flag_with_exec">Using the global search flag with exec()</h4>
 
-<p>The behavior associated with the <code>g</code> flag is different when the <code>.exec()</code> method is used.  The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast this <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>.  The <code>g</code> flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
+<p>The behavior associated with the <code>g</code> flag is different when the <code>.exec()</code> method is used.  The roles of "class" and "argument" get reversed: In the case of <code>.match()</code>, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of <code>.exec()</code>, it is the regular expression that owns the method, with the string being the argument.  Contrast this <em><code>str.match(re)</code></em> versus <em><code>re.exec(str)</code></em>. The <code>g</code> flag is used with the <strong><code>.exec()</code></strong> method to get iterative progression.</p>
 
 <pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:
@@ -394,14 +394,14 @@ console.log(myArray);
 <p>The regular expression looks for:</p>
 
 <ol>
- <li>three numeric characters <code>\d{3}</code> OR <code>|</code> a left parenthesis <code>\(</code>, followed by three digits<code> \d{3}</code>, followed by a close parenthesis <code>\)</code>, in a non-capturing group <code>(?:)</code></li>
+ <li>three numeric characters <code>\d{3}</code> OR <code>|</code> a left parenthesis <code>\(</code>, followed by three digits <code>\d{3}</code>, followed by a close parenthesis <code>\)</code>, in a non-capturing group <code>(?:)</code></li>
  <li>followed by one dash, forward slash, or decimal point in a capturing group <code>()</code></li>
  <li>followed by three digits <code>\d{3}</code></li>
  <li>followed by the match remembered in the (first) captured group <code>\1</code></li>
  <li>followed by four digits <code>\d{4}</code></li>
 </ol>
 
-<p>The <code>Change</code> event activated when the user presses <kbd>Enter</kbd> sets the value of <code>RegExp.input</code>.</p>
+<p>The <code>click</code> event activated when the user presses <kbd>Enter</kbd> sets the value of <code>phoneInput.value</code>.</p>
 
 <h4 id="HTML">HTML</h4>
 
