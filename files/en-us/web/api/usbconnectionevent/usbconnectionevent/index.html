@@ -17,30 +17,32 @@ tags:
 
 <h3 id="Parameters">Parameters</h3>
 
-<dt><code>type</code></dt>
-<dd>A {{domxref("DOMString","string")}} representing the name of the event. One of:
-  <ul>
-    <li><code>connect</code></li>
-    <li><code>disconnect</code></li>
-  </ul>
-</dd>
-<dt><code>USBConnectionEventInit</code></dt>
-<dd>An object including the following:
-  <dl>
-    <dt>A {{domxref("USBDevice")}}</dt>
-    <dd>An object representing the USB device being connected or disconnected.</dd>
-    <dt><code>bubbles</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
-      <code>false</code>.</dd>
-    <dt><code>cancelable</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
-      default is <code>false</code>.</dd>
-    <dt><code>composed</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
-      outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
-      default is <code>false</code>.</dd>
-  </dl>
-</dd>
+<dl>
+  <dt><code>type</code></dt>
+  <dd>A {{domxref("DOMString","string")}} representing the name of the event. One of:
+    <ul>
+      <li><code>connect</code></li>
+      <li><code>disconnect</code></li>
+    </ul>
+  </dd>
+  <dt><code>USBConnectionEventInit</code></dt>
+  <dd>An object including the following:
+    <dl>
+      <dt>A {{domxref("USBDevice")}}</dt>
+      <dd>An object representing the USB device being connected or disconnected.</dd>
+      <dt><code>bubbles</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
+        <code>false</code>.</dd>
+      <dt><code>cancelable</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
+        default is <code>false</code>.</dd>
+      <dt><code>composed</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
+        outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
+        default is <code>false</code>.</dd>
+    </dl>
+  </dd>
+</dl>
 
 <h2 id="Specifications">Specifications</h2>
 
