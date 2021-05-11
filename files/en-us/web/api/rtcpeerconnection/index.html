@@ -89,7 +89,7 @@ tags:
  <dd>In old versions of the WebRTC specification, this event was used to deliver a received identity. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.</dd>
  <dt>{{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when a {{domxref("MediaStream")}} is removed from the connection. Instead of watching for this obsolete event, you should watch each stream for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream within the <code>RTCPeerConnection</code>.<br>
- Also available as the {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} event handler property.</dd>
+ Also available as the {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} event handler property.</dd>
 </dl>
 
 <h2 id="Constants">Constants</h2>
