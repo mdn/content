@@ -10,7 +10,7 @@ tags:
   - Reference
   - paymentAddress
 ---
-<div>{{APIRef("Payment Request API")}}{{SecureContext_Header}}</div>
+<div>{{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}</div>
 
 <p><span class="seoSummary">The <strong><code>PaymentAddress</code></strong> interface of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> is used to store shipping or payment address information.</span></p>
 
@@ -19,27 +19,27 @@ tags:
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt>{{domxref('PaymentAddress.addressLine')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.addressLine')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>An array of {{domxref("DOMString")}} objects providing each line of the address not included among the other properties. The exact size and content varies by country or location and can include, for example, a street name, house number, apartment number, rural delivery route, descriptive instructions, or post office box number.</dd>
- <dt>{{domxref('PaymentAddress.country')}} {{readonlyinline}} </dt>
+ <dt>{{domxref('PaymentAddress.country')}} {{readonlyinline}}{{deprecated_inline}} </dt>
  <dd>A {{domxref("DOMString")}} specifying the country in which the address is located, using the {{interwiki("wikipedia", "ISO-3166-1 alpha-2")}} standard. The string is always given in its canonical upper-case form. Some examples of valid <code>country</code> values: <code>"US"</code>, <code>"GB"</code>, <code>"CN"</code>, or <code>"JP"</code>.</dd>
- <dt>{{domxref('PaymentAddress.city')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.city')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} which contains the city or town portion of the address.</dd>
- <dt>{{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} giving the dependent locality or sublocality within a city, for example, a neighborhood, borough, district, or UK dependent locality.</dd>
- <dt>{{domxref('PaymentAddress.organization')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.organization')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} specifying the name of the organization, firm, company, or institution at the payment address.</dd>
- <dt>{{domxref('PaymentAddress.phone')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.phone')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} specifying the telephone number of the recipient or contact person.</dd>
- <dt>{{domxref('PaymentAddress.postalCode')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.postalCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} specifying a code used by a jurisdiction for mail routing, for example, the ZIP code in the United States or the PIN code in India.</dd>
- <dt>{{domxref('PaymentAddress.recipient')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.recipient')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} giving the name of the recipient, purchaser, or contact person at the payment address.</dd>
- <dt>{{domxref('PaymentAddress.region')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.region')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} containing the top level administrative subdivision of the country, for example a state, province, oblast, or prefecture.</dd>
- <dt>{{domxref('PaymentAddress.regionCode')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.regionCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} specifying the region of the address, represented as a "code element" of an <a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO3166-2</a> country subdivision name (e.g. "QLD" for Queensland, Australia, "CA" for California, and so on).</dd>
- <dt>{{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}}</dt>
+ <dt>{{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} providing a postal sorting code such as is used in France.</dd>
 </dl>
 
@@ -59,7 +59,7 @@ tags:
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt>{{domxref('PaymentAddress.toJSON()')}}</dt>
+ <dt>{{domxref('PaymentAddress.toJSON()')}}{{deprecated_inline}}</dt>
  <dd>A standard serializer that returns a JSON representation of the <code>PaymentAddress</code> object's properties.</dd>
 </dl>
 
@@ -123,23 +123,6 @@ doPaymentRequest();
     // etc. billing address is a <a href="/en-US/docs/Web/API/PaymentAddress">PaymentAddress</a> object
   }
 }</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#paymentaddress-interface','PaymentAddress')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

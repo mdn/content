@@ -13,7 +13,7 @@ tags:
   - payment
   - validate
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
+<div>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
 
 <p><code><strong>payerdetailchange</strong></code> events are delivered by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form.</p>
 
@@ -121,23 +121,6 @@ await response.retry({
 <pre class="brush: js">response.addEventListener("payerdetailchange", async ev =&gt; {
   ...
 }</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment', '#dfn-payerdetailchange', 'payerdetailchange event')}}</td>
-   <td>{{Spec2("Payment")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
