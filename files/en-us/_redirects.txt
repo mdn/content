@@ -5792,6 +5792,17 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
 /en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
+/en-US/docs/Mozilla/Firefox/Privacy	/en-US/docs/Web/Privacy
+/en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/en-US/docs/Web/Privacy/Redirect_tracking_protection
+/en-US/docs/Mozilla/Firefox/Privacy/State_Partitioning	/en-US/docs/Web/Privacy/State_Partitioning
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/en-US/docs/Web/Privacy/Storage_Access_Policy
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/en-US/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/en-US/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Tracking_Protection
 /en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility_for_Firefox_36	/en-US/docs/Mozilla/Firefox/Releases/36/Site_Compatibility
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_23_for_developers	/en-US/docs/Mozilla/Firefox/Releases/23
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
