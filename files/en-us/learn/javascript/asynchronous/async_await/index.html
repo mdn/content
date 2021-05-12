@@ -404,7 +404,7 @@ async function timeTest() {
 let startTime = Date.now();
 timeTest().then(() => {})
 .catch(e => {
-  console.log('has an error ', e);
+  console.log(e);
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
@@ -443,7 +443,7 @@ async function timeTest() {
 let startTime = Date.now();
 timeTest().then(() => {
 }).catch(e => {
-  console.log('has an error ', e);
+  console.log(e);
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
@@ -481,7 +481,7 @@ async function timeTest() {
 let startTime = Date.now();
 timeTest().then(() => {
 }).catch(e => {
-  console.log('has an error ', e);
+  console.log(e);
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
