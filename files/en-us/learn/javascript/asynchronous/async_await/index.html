@@ -299,26 +299,26 @@ displayContent()
 <p><strong>Note</strong>: It is also possible to use a sync <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause">finally</a></code> block within an async function, in place of a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code> async block, to show a final report on how the operation went — you can see this in action in our <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">live example</a> (see also the <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">source code</a>).</p>
 </div>
 
-<h2 id="a_remark_when_rewritting_code_using_async/_await">A remark when rewritting code using async/await</h2>
+<h2 id="handling_asyncawait_slowdown">Handling async/await slowdown</h2>
 
-<p>Async/await makes your code look synchronous, and in a way it makes it behave more synchronously. The <code>await</code> keyword blocks execution of all the code that follows it until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but the awaited code is blocked.</p>
+<p>Async/await makes your code look synchronous, and in a way it makes it behave more synchronously. The <code>await</code> keyword blocks execution of all the code that follows it until the promise fulfills, exactly as it would with a synchronous operation. It does allow other tasks to continue to run in the meantime, but the awaited code is blocked. For example:</p>
 
 <pre class="brush: js">async function makeResult(items) {
- let newArr = [];
- for(let i=0; i &lt; items.length; i++) {
-  newArr.push('word_'+i);
- }
- return newArr;
+  let newArr = [];
+  for(let i=0; i &lt; items.length; i++) {
+    newArr.push('word_'+i);
+  }
+  return newArr;
 }
 
 async function getResult() {
- let result = await makeResult(items); // Blocked on this line
- useThatResult(result); // Will not be executed before makeResult() is done
+  let result = await makeResult(items); // Blocked on this line
+  useThatResult(result); // Will not be executed before makeResult() is done
 }
 
 </pre>
 
-<p>This means that your code could be slowed down by a significant number of awaited promises happening straight after one another. Each <code>await</code> will wait for the previous one to finish, whereas actually what you want is for the promises to begin processing simultaneously, like they would do if we weren't using async/await.</p>
+<p>As a result, your code could be slowed down by a significant number of awaited promises happening straight after one another. Each <code>await</code> will wait for the previous one to finish, whereas actually what you might want is for the promises to begin processing simultaneously, like they would do if we weren't using async/await.</p>
 
 <p>Let's look at two examples — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) and <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Both of them start off with a custom promise function that fakes an async process with a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call:</p>
 
@@ -355,7 +355,7 @@ timeTest().then(() =&gt; {
   await timeoutPromise(3000);
 }</pre>
 
-<p>Here we await all three <code>timeoutPromise()</code> calls directly, making each one alert for 3 seconds. Each subsequent one is forced to wait until the last one finished — if you run the first example, you'll see the alert box reporting a total run time of around 9 seconds.</p>
+<p>Here we await all three <code>timeoutPromise()</code> calls directly, making each one alert after 3 seconds. Each subsequent one is forced to wait until the last one finished — if you run the first example, you'll see the alert box reporting a total run time of around 9 seconds.</p>
 
 <p>In the <code>fast-async-await.html</code> example, <code>timeTest()</code> looks like this:</p>
 
@@ -372,10 +372,13 @@ timeTest().then(() =&gt; {
 <p>Here we store the three <code>Promise</code> objects in variables, which has the effect of setting off their associated processes all running simultaneously.</p>
 
 <p>Next, we await their results — because the promises all started processing at essentially the same time, the promises will all fulfill at the same time; when you run the second example, you'll see the alert box reporting a total run time of just over 3 seconds!</p>
-<div class="warning">
-<p>To start all the promises immediately; however, we will not use this pattern, because they could lead to unhandled errors.</p>
-</div>
-<The>We re-look at the previous examples, this time adding a rejected promise and a catch statement in the end. The following codes could be pasted directly to the console to see how the errors are handled.</p>
+
+<h3 id="handling_errors">Handling errors</h3>
+
+<p>There is an issue with the above pattern however — it could lead to unhandled errors.</p>
+
+<p>Let's update the previous examples, this time adding a rejected promise and a <code>catch</code> statement in the end:</p>
+
 <pre class="brush: js">function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
@@ -383,6 +386,7 @@ timeTest().then(() =&gt; {
     }, interval);
   });
 };
+
 function timeoutPromiseReject(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
@@ -390,6 +394,7 @@ function timeoutPromiseReject(interval) {
     }, interval);
   });
 };
+
 async function timeTest() {
   await timeoutPromiseResolve(5000);
   await timeoutPromiseReject(2000);
@@ -404,7 +409,11 @@ timeTest().then(() => {})
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
 })</pre>
-<p>In the above example, the error is handled properly, the alert appears after approximately 7 seconds.</p>
+
+<p>In the above example, the error is handled properly, and the alert appears after approximately 7 seconds.</p>
+
+<p>Now onto the second pattern:</p>
+
 <pre class="brush: js">function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
@@ -412,6 +421,7 @@ timeTest().then(() => {})
     }, interval);
   });
 };
+
 function timeoutPromiseReject(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
@@ -419,6 +429,7 @@ function timeoutPromiseReject(interval) {
     }, interval);
   });
 };
+
 async function timeTest() {
   const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
   const timeoutPromiseReject2 = timeoutPromiseReject(2000);
@@ -437,8 +448,11 @@ timeTest().then(() => {
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
 })</pre>
-<p>In this example, we have an unhandled error in the console (after 2 seconds), the alert appears after approximately 5 seconds.</p>
-<p>To start the promises in parallel and catch the error properly, we could use <code>Promise.all()</code> as introduced above</p> 
+
+<p>In this example, we have an unhandled error in the console (after 2 seconds), and the alert appears after approximately 5 seconds.</p>
+
+<p>To start the promises in parallel and catch the error properly, we could use <code>Promise.all()</code>, as discussed earlier:</p> 
+
 <pre class="brush: js">function timeoutPromiseResolve(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
@@ -446,6 +460,7 @@ timeTest().then(() => {
     }, interval);
   });
 };
+
 function timeoutPromiseReject(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function(){
@@ -453,6 +468,7 @@ function timeoutPromiseReject(interval) {
     }, interval);
   });
 };
+
 async function timeTest() {
   const timeoutPromiseResolve1 = timeoutPromiseResolve(5000);
   const timeoutPromiseReject2 = timeoutPromiseReject(2000);
@@ -470,9 +486,12 @@ timeTest().then(() => {
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
 })</pre>
+
 <p>In this example, the error is handled properly after around 2 seconds and we also see the alert after around 2 seconds.</p>
-<p>The <code>Promise.all()</code> rejects when any of the input Promise is rejected. If you want all the promises to settle and then use some of their fulfilled values, even when some of 
+
+<p>The <code>Promise.all()</code> rejects when any of the input promises are rejected. If you want all the promises to settle and then use some of their fulfilled values, even when some of 
 them are rejected, you could use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"><code>Promise.allSettled()</code></a> instead.</p>
+
 <h2 id="Asyncawait_class_methods">Async/await class methods</h2>
 
 <p>As a final note before we move on, you can even add <code>async</code> in front of class/object methods to make them return promises, and <code>await</code> promises inside them. Take a look at the <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">ES class code we saw in our object-oriented JavaScript article</a>, and then look at our modified version with an <code>async</code> method:</p>
