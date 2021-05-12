@@ -19,7 +19,7 @@ browser-compat: css.properties.transform-origin
 
 <p>The transformation origin is the point around which a transformation is applied. For example, the transformation origin of the <code><a href="/en-US/docs/Web/CSS/transform-function/rotate">rotate()</a></code> function is the center of rotation.</p>
 
-<p>This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value. This means, this definition</p>
+<p>In effect, this property wraps a pair of translations around the element's other transformations. The first translation moves the transform origin to the true origin at <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Then the other transformations are applied, and because the transform origin is at <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, those transformations act about the transform origin. Finally, the opposite translation is applied, moving the transform origin back to its original location. Consequently, this definition</p>
 
 <pre class="brush: css">transform-origin: -100% 50%;
 transform: rotate(45deg);
@@ -30,7 +30,7 @@ transform: rotate(45deg);
 <pre class="brush: css">transform-origin: 0 0;
 transform: translate(-100%, 50%) rotate(45deg) translate(100%, -50%);</pre>
 
-<p>(Recall that the operations are applied from right to left.)</p>
+<p>where, reading from right to left, <code>translate(100%, -50%)</code> is the translation to bring the transform origin to the true origin, <code>rotate(45deg)</code> is the original transformation, and <code>translate(-100%, 50%)</code> is the translation to restore the transform origin to its original location.</p>
 
 <p>By default, the origin of a transform is <code>center</code>.</p>
 
