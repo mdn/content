@@ -154,7 +154,8 @@ browser-compat: javascript.builtins.Map
     <tr>
       <th scope="row">Serialization and parsing</th>
       <td>
-        <p>No native serialzation.</p>
+        <p>No native support for serialization or parsing.</p>
+        <p>(But you can build your own serialization and parsing support for <code>Map</code> by using {{jsxref("JSON.stringify()")}} with its <em>replacer</em> argument, and by using {{jsxref("JSON.parse()")}} with its <em>reviver</em> argument. See the Stack Overflow question <a href="https://stackoverflow.com/q/29085197/">How do you JSON.stringify an ES6 Map?</a>).</p>
       </td>
       <td>
         <p>Native support for serialization from {{jsxref("Object")}} to JSON, using {{jsxref("JSON.stringify()")}}.</p>
