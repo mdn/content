@@ -426,7 +426,7 @@ def book_detail_view(request, primary_key):
       <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
     </li>
     <li>Call the author model's <code>get_absolute_url()</code> method (this performs the same reversing operation):
-      <pre>&lt;a href="<strong>{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
+      <pre>&lt;a href="<strong>\{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;</pre>
     </li>
   </ul>
   <p>While both methods effectively do the same thing, <code>get_absolute_url()</code> is preferred because it helps you write more consistent and maintainable code (any changes only need to be done in one place: the author model).</p>
@@ -590,7 +590,7 @@ def book_detail_view(request, primary_key):
   <ul>
     <li>Once you've created the URL mapper for the author list page you will also need to update the <strong>All authors</strong> link in the base template. Follow the <a href="#update_the_base_template">same process</a> as we did when we updated the <strong>All books</strong> link.</li>
     <li>Once you've created the URL mapper for the author detail page, you should also update the <a href="#creating_the_detail_view_template">book detail view template</a> (<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) so that the author link points to your new author detail page (rather than being an empty URL). The recommended way to do this is to call <code>get_absolute_url()</code> on the author model as shown below.
-      <pre class="brush: html">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt;
+      <pre class="brush: html">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>\{{ book.author.get_absolute_url }}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt;
     </pre>
     </li>
   </ul>
@@ -633,7 +633,7 @@ def book_detail_view(request, primary_key):
  <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><strong>Django Tutorial Part 6: Generic list and detail views</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
