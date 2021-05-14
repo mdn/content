@@ -307,7 +307,7 @@ On MDN, this would produce the following HTML:
 
 <p>Definition lists written using this syntax must consist of pairs of <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> elements. Using this syntax, it's not possible to write a list with more than one consecutive <code>&lt;dt&gt;</code> element or more than one consecutive <code>&lt;dd&gt;</code> element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.</p>
 
-<p>Definition lists ({{HTMLElement("dl")}}) are not supported in GFM. There is an Markdown syntax for them that is used in <a href="https://kramdown.gettalong.org/syntax.html#definition-lists">Kramdown</a>, but it's incompatible with tooling that expects to see GFM or CommonMark (for example, Prettier or GitHub previews). The rationale for the syntax described here is that it works well enough with tools that expect CommonMark while being reasonably easy to write and to parse.</p>
+<p>The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.</p>
 
 <h2>Tables</h2>
 
