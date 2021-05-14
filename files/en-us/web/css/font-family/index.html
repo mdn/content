@@ -60,7 +60,7 @@ font-family: unset;
 
 <dl>
  <dt><a id="family-name"><code>&lt;family-name&gt;</code></a></dt>
- <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.</dd>
+ <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted. For example, 'Comic Sans MS'.</dd>
  <dt><a id="generic-name"><code>&lt;generic-name&gt;</code></a></dt>
  <dd>
  <p>Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:</p>
@@ -68,7 +68,7 @@ font-family: unset;
  <dl>
   <dt><code>serif</code></dt>
   <dd style="font-family: serif;">Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.<br>
-  E.g. <span style="font-family: lucida bright,serif;">Lucida Bright</span>, <span style="font-family: lucida fax,serif;">Lucida Fax</span>, <span style="font-family: palatino,serif;">Palatino</span>, <span style="font-family: palatino linotype,serif;">"Palatino Linotype"</span>, <span style="font-family: palladio,serif;">Palladio</span>, <span style="font-family: urw palladio,serif;">"URW Palladio"</span>, <span style="font-family: serif;">serif</span>.</dd>
+  E.g. <span style="font-family: lucida bright,serif;">"Lucida Bright"</span>, <span style="font-family: lucida fax,serif;">"Lucida Fax"</span>, <span style="font-family: palatino,serif;">Palatino</span>, <span style="font-family: palatino linotype,serif;">"Palatino Linotype"</span>, <span style="font-family: palladio,serif;">Palladio</span>, <span style="font-family: urw palladio,serif;">"URW Palladio"</span>, <span style="font-family: serif;">serif</span>.</dd>
   <dt><code>sans-serif</code></dt>
   <dd style="font-family: sans-serif;">Glyphs have stroke endings that are plain.<br>
   E.g. <span style="font-family: open sans,sans-serif;">"Open Sans"</span>, <span style="font-family: fira sans,sans-serif;">"Fira Sans"</span>, <span style="font-family: lucida sans,sans-serif;">"Lucida Sans"</span>, <span style="font-family: lucida sans unicode,sans-serif;">"Lucida Sans Unicode"</span>, <span style="font-family: trebuchet ms,sans-serif;">"Trebuchet MS"</span>, <span style="font-family: liberation sans,sans-serif;">"Liberation Sans"</span>, <span style="font-family: nimbus sans l,sans-serif;">"Nimbus Sans L"</span>, <span style="font-family: sans-serif;">sans-serif</span>.</dd>
@@ -107,7 +107,7 @@ font-family: unset;
 
 <p>For example, the following declarations are valid:</p>
 
-<pre class="brush: css; example-good">font-family: Gill Sans Extrabold, sans-serif;
+<pre class="brush: css; example-good">font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;</pre>
 
 <p>The following declarations are <strong>invalid</strong>:</p>
