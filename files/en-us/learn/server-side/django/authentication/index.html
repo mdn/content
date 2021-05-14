@@ -596,12 +596,14 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>The very last step is to add a link for this new page into the sidebar. We'll put this in the same section where we display other information for the logged in user.</p>
 
-<p>Open the base template (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) and add the line in bold to the sidebar as shown.</p>
+<p>Open the base template (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) and add the "My Borrowed" line to the sidebar in the position shown below.</p>
 
 <pre class="brush: python"> &lt;ul class="sidebar-nav"&gt;
    {% if user.is_authenticated %}
    &lt;li&gt;User: \{{ user.get_username }}&lt;/li&gt;
-<strong>   &lt;li&gt;&lt;a href="{% url 'my-borrowed' %}"&gt;My Borrowed&lt;/a&gt;&lt;/li&gt;</strong>
+
+   &lt;li&gt;&lt;a href="{% url 'my-borrowed' %}"&gt;My Borrowed&lt;/a&gt;&lt;/li&gt;
+   
    &lt;li&gt;&lt;a href="{% url 'logout'%}?next=\{{request.path}}"&gt;Logout&lt;/a&gt;&lt;/li&gt;
    {% else %}
    &lt;li&gt;&lt;a href="{% url 'login'%}?next=\{{request.path}}"&gt;Login&lt;/a&gt;&lt;/li&gt;
