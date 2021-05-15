@@ -307,6 +307,13 @@ On MDN, this would produce the following HTML:
 
 <p>Definition lists written using this syntax must consist of pairs of <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> elements. Using this syntax, it's not possible to write a list with more than one consecutive <code>&lt;dt&gt;</code> element or more than one consecutive <code>&lt;dd&gt;</code> element: the parser will treat this as an error. We expect almost all definition lists on MDN will work with this limitation, and for those that do not, authors can fall back to raw HTML.</p>
 
+<p>As a workaround for cases where an author needs to associate multiple <code>&lt;dt&gt;</code> items with a single <code>&lt;dd&gt;</code>, consider providing them as a single <code>&lt;dt&gt;</code> that holds multiple terms, separated by commas, like this:<p>
+
+<pre>
+* `param1`, `param2`, `param3`
+    * : My description of params 1, 2, and 3
+</pre>
+
 <p>The rationale for the syntax described here is that it works well enough with tools that expect CommonMark (for example, Prettier or GitHub previews) while being reasonably easy to write and to parse.</p>
 
 <h2>Tables</h2>
