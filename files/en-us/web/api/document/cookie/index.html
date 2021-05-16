@@ -145,8 +145,8 @@ tags:
 
 <h3 id="Example_1_Simple_usage">Example #1: Simple usage</h3>
 
-<pre class="brush: js">document.cookie = "name=oeschger";
-document.cookie = "favorite_food=tripe";
+<pre class="brush: js">document.cookie = "name=oeschger; SameSite=None; Secure";
+document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 function alertCookie() {
   alert(document.cookie);
 }
@@ -160,8 +160,8 @@ function alertCookie() {
 <h3 id="Example_2_Get_a_sample_cookie_named_test2">Example #2: Get a sample cookie named
 	<em>test2</em></h3>
 
-<pre class="brush: js">document.cookie = "test1=Hello";
-document.cookie = "test2=World";
+<pre class="brush: js">document.cookie = "test1=Hello; SameSite=None; Secure";
+document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
   .split('; ')
@@ -186,7 +186,7 @@ function alertCookieValue() {
 <pre class="brush: js">function doOnce() {
   if (!document.cookie.split('; ').find(row =&gt; row.startsWith('doSomethingOnlyOnce'))) {
     alert("Do something here!");
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
   }
 }</pre>
 
@@ -198,7 +198,7 @@ function alertCookieValue() {
 <h3 id="Example_4_Reset_the_previous_cookie">Example #4: Reset the previous cookie</h3>
 
 <pre class="brush: js">function resetOnce() {
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 }</pre>
 
 <pre
