@@ -529,7 +529,7 @@ document.body.appendChild(para);</pre>
     } else if (interval &lt; 0 || typeof interval !== 'number') {
       reject('Interval is negative or not a number');
     } else {
-      setTimeout(function(){
+      setTimeout(() =&gt; {
         resolve(message);
       }, interval);
     }
