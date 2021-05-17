@@ -35,13 +35,10 @@ tags:
  <li>{{cssxref("align-items")}} — controls alignment of all items on the cross axis.</li>
  <li>{{cssxref("align-self")}} — controls alignment of an individual flex item on the cross axis.</li>
  <li>{{cssxref("align-content")}} — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.</li>
+ <li>{{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} — used to create gaps or gutters between flex items.</li>
 </ul>
 
 <p>We will also discover how auto margins can be used for alignment in flexbox.</p>
-
-<div class="note">
-<p><strong>Note</strong>: The alignment properties in Flexbox have been placed into their own specification — <a href="https://www.w3.org/TR/css-align-3/">CSS Box Alignment Level 3</a>. It is expected that this spec will ultimately supersede the properties as defined in Flexbox Level One.</p>
-</div>
 
 <h2 id="The_Cross_Axis">The Cross Axis</h2>
 
@@ -182,7 +179,7 @@ tags:
 
 <p><img alt="Diagram showing start at the top and end at the bottom." src="align10.png"></p>
 
-<p>If you change flex-direction to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. <code>flex-start</code> will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.</p>
+<p>If you change <code>flex-direction</code> to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. <code>flex-start</code> will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.</p>
 
 <p><img alt="Diagram showing start on the right and end on the left." src="align9.png"></p>
 
@@ -202,13 +199,11 @@ tags:
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}} </p>
 
-<h2 id="Future_alignment_features_for_Flexbox">Future alignment features for Flexbox</h2>
+<h2 id="Creating_gaps_between_items">Creating gaps between items</h2>
 
-<p>At the beginning of this article I explained that the alignment properties currently contained in the Level 1 flexbox specification are also included in Box Alignment Level 3, which may well extend these properties and values in the future. We have already seen one place where this has happened, with the introduction of the <code>space-evenly</code> value for <code>align-content</code> and <code>justify-content</code> properties.</p>
+<p>To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("column-gap")}}, and {{cssxref("row-gap")}} properties. The {{cssxref("column-gap")}} property creates gaps between items on the main axis. The {{cssxref("row-gap")}} property creates gaps between flex lines, when you have {{cssxref("flex-wrap")}}</code> set to <code>wrap</code>. The {{cssxref("gap")}} property is a shorthand that sets both together.</p>
 
-<p>The Box Alignment module also includes other methods of creating space between items, such as the <code>column-gap</code> and <code>row-gap</code> feature as seen in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. The inclusion of these properties in Box Alignment means that in future we should be able to use <code>column-gap</code> and <code>row-gap</code> in flex layouts too, and in Firefox 63 you will find the first browser implementation of the gap properties in flex layout.</p>
-
-<p>My suggestion when exploring flexbox alignment in depth is to do so alongside looking at alignment in Grid Layout. Both specifications use the alignment properties as detailed in the Box Alignment specification. You can see how these properties behave when working with a grid in the MDN article <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box Alignment in Grid Layout</a>, and I have also compared how alignment works in these specifications in my <a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box Alignment Cheatsheet</a>.</p>
+<p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 500)}}</p>
 
 <h2 id="See_also">See also</h2>
 
