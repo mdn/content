@@ -77829,16 +77829,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGTransformable": {
-    "modified": "2020-10-15T21:10:55.390Z",
-    "contributors": [
-      "fscholz",
-      "mattwojo",
-      "kscarfone",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/SVGURIReference": {
     "modified": "2020-10-15T21:53:52.446Z",
     "contributors": [

@@ -1712,7 +1712,6 @@
 /en-US/docs/DOM/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
 /en-US/docs/DOM/SVGTransform	/en-US/docs/Web/API/SVGTransform
 /en-US/docs/DOM/SVGTransformList	/en-US/docs/Web/API/SVGTransformList
-/en-US/docs/DOM/SVGTransformable	/en-US/docs/Web/API/SVGTransformable
 /en-US/docs/DOM/SVGUseElement	/en-US/docs/Web/API/SVGUseElement
 /en-US/docs/DOM/SVGVKernElement	/en-US/docs/Web/API/SVGVKernElement
 /en-US/docs/DOM/SVGViewElement	/en-US/docs/Web/API/SVGViewElement
@@ -3084,7 +3083,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTransform	/en-US/docs/Web/API/SVGTransform
 /en-US/docs/Document_Object_Model_(DOM)/SVGTransformList	/en-US/docs/Web/API/SVGTransformList
-/en-US/docs/Document_Object_Model_(DOM)/SVGTransformable	/en-US/docs/Web/API/SVGTransformable
 /en-US/docs/Document_Object_Model_(DOM)/SVGUseElement	/en-US/docs/Web/API/SVGUseElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGVKernElement	/en-US/docs/Web/API/SVGVKernElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGViewElement	/en-US/docs/Web/API/SVGViewElement
