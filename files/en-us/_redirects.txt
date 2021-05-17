@@ -7288,7 +7288,6 @@
 /en-US/docs/Web/API/Document.xmlEncoding	/en-US/docs/Web/API/Document/xmlEncoding
 /en-US/docs/Web/API/Document/Document:_DOMContentLoaded_event	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/API/Document/Document:_paste_event	/en-US/docs/Web/API/Document/paste_event
-/en-US/docs/Web/API/Document/ParentNode.querySelectorAll	/en-US/docs/Web/API/ParentNode/querySelectorAll
 /en-US/docs/Web/API/Document/async	/en-US/docs/Web/API/XMLDocument/async
 /en-US/docs/Web/API/Document/baseURI	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/API/Document/cancelFullscreen	/en-US/docs/Web/API/Document/exitFullscreen
