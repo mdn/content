@@ -68223,48 +68223,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-12-04T06:14:39.443Z",
-    "contributors": [
-      "chrisdavidmills",
-      "sideshowbarker",
-      "czipperz",
-      "TrevorKarjanis",
-      "Rumyra",
-      "ExE-Boss",
-      "Sheppy",
-      "libbymc",
-      "DomenicDenicola",
-      "stevenwdv",
-      "Sebastianz",
-      "jpmedley",
-      "fscholz",
-      "cvrebert",
-      "MHasan",
-      "jdfm",
-      "kscarfone",
-      "Localsystem",
-      "Jeremie",
-      "NekR",
-      "teoli"
-    ]
-  },
-  "Web/API/ParentNode/querySelector": {
-    "modified": "2020-10-15T22:11:25.046Z",
-    "contributors": [
-      "ExE-Boss"
-    ]
-  },
-  "Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T21:52:23.893Z",
-    "contributors": [
-      "mfuji09",
-      "stephenriddell",
-      "ExE-Boss",
-      "Sheppy",
-      "Sebastianz"
-    ]
-  },
   "Web/API/PasswordCredential": {
     "modified": "2020-10-15T21:44:48.781Z",
     "contributors": [
