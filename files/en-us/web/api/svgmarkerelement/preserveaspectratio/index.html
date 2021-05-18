@@ -1,0 +1,65 @@
+---
+title: SVGMarkerElement.preserveAspectRatio
+slug: Web/API/SVGMarkerElement/preserveAspectRatio
+tags:
+  - API
+  - Property
+  - Reference
+  - preserveAspectRatio
+  - SVGMarkerElement
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>preserveAspectRatio</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedPreserveAspectRatio")}} object containing the value of the {{SVGattr("preserveAspectRatio")}} attribute of the {{SVGElement("marker")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let preserveAspectRatio = SVGMarkerElement.preserveAspectRatio;</pre>
+
+<h3>Value</h3>
+<p>An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, which has the properties <code>align</code> and <code>meetOrSlice</code>.</p>
+
+<p>These properties return a numeric value representing the <a href="/en-US/docs/Web/API/SVGPreserveAspectRatio#constants">constants</a> for these values.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example demonstrates how to return the numeric constants for <code>align</code> and <code>meetOrSlice</code> which relate to the values set for the {{SVGattr("preserveAspectRatio")}} attribute of {{SVGElement("marker")}}.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+        preserveAspectRatio="xMidYMid meet"
+        markerWidth="6" markerHeight="6"
+        orient="auto-start-reverse"&gt;
+      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+&lt;/svg&gt;</pre>
+
+<pre class="brush: js">let marker = document.getElementById("arrow");
+console.log(marker.preserveAspectRatio.baseVal.align); // 6
+console.log(marker.preserveAspectRatio.baseVal.meetOrSlice); // 1 </pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName("SVG2", "types.html#__svg__SVGFitToViewBox__preserveAspectRatio", "SVGMarkerElement.preserveAspectRatio")}}</td>
+    <td>{{Spec2("SVG2")}}</td>
+    <td>Initial definition</td>
+   </tr>
+  </tbody>
+ </table>
+
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.SVGMarkerElement.preserveAspectRatio")}}</p>

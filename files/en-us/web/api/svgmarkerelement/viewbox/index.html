@@ -1,31 +1,32 @@
 ---
-title: SVGMarkerElement.refX
-slug: Web/API/SVGMarkerElement/refX
+title: SVGMarkerElement.viewBox
+slug: Web/API/SVGMarkerElement/viewBox
 tags:
   - API
   - Property
   - Reference
-  - refX
+  - viewBox
   - SVGMarkerElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
-<p class="summary">The <strong><code>refX</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.</p>
+<p class="summary">The <strong><code>viewBox</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedRect")}} object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">let refX = SVGMarkerElement.refX;</pre>
+<pre class="syntaxbox">let viewBox = SVGMarkerElement.viewBox;</pre>
 
 <h3>Value</h3>
-<p>An {{domxref("SVGAnimatedLength")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGLength")}}, the value of which returns the <code>refX</code>.</p>
+<p>An {{domxref("SVGAnimatedRect")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGRect")}} object, from which can be returned the <code>x</code> and <code>y</code> co-ordinates, plus the <code>width</code> and <code>height</code> of the {{SVGElement("marker")}} {{SVGattr("viewBox")}} attribute.</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>The <code>markerWidth</code> property returns an {{domxref("SVGAnimatedLength")}} which contains an {{domxref("SVGLength")}} with the value of the {{SVGattr("refX")}} attribute.</p>
+<p>This example demonstrates how to return the value of the <code>width</code> set for the {{SVGattr("viewBox")}} attribute of {{SVGElement("marker")}}.</p>
 
 <pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
     &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+        viewBox="xMidYMid meet"
         markerWidth="6" markerHeight="6"
         orient="auto-start-reverse"&gt;
       &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
@@ -34,7 +35,7 @@ tags:
 &lt;/svg&gt;</pre>
 
 <pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.refX.baseVal.value); // 5</pre>
+console.log(marker.viewBox.baseVal.width); //10</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -46,7 +47,7 @@ console.log(marker.refX.baseVal.value); // 5</pre>
     <th scope="col">Comment</th>
    </tr>
    <tr>
-    <td>{{SpecName("SVG2", "painting.html#__svg__SVGMarkerElement__refX", "SVGMarkerElement.refX")}}</td>
+    <td>{{SpecName("SVG2", "types.html#__svg__SVGFitToViewBox__viewBox", "SVGMarkerElement.viewBox")}}</td>
     <td>{{Spec2("SVG2")}}</td>
     <td>Initial definition</td>
    </tr>
@@ -58,5 +59,4 @@ console.log(marker.refX.baseVal.value); // 5</pre>
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.SVGMarkerElement.refX")}}</p>
-
+<p>{{Compat("api.SVGMarkerElement.viewBox")}}</p>
