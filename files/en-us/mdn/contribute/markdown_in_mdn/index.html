@@ -231,7 +231,7 @@ const greeting = "I'm a good example";
 <ul>
   <li>The GFM <code>&lt;ul&gt;</code> contains any number of top-level GFM <code>&lt;li&gt;</code> elements.</li>
   <li>Each of these top-level GFM <code>&lt;li&gt;</code> elements must contain, as its final element, one GFM <code>&lt;ul&gt;</code> element.</li>
-  <li>This final nested <code>&lt;ul&gt;</code> must contain a single GFM <code>&lt;li&gt;</code> element, whose text content must start with <code>:&nbsp;</code> (a colon followed by a space).</li>
+  <li>This final nested <code>&lt;ul&gt;</code> must contain a single GFM <code>&lt;li&gt;</code> element, whose text content must start with <code>:&nbsp;</code> (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.</li>
 </ul>
 
 <p>Each of these top-level GFM <code>&lt;li&gt;</code> elements will be transformed into a
@@ -246,11 +246,11 @@ const greeting = "I'm a good example";
 For example, this is a <code>&lt;dl&gt;</code>:
 
 <pre>
-* `param1`
-    * : My description of param 1
+* term1
+    * : My description of term1
 
-* `param2`
-    * : My description of param 2
+* `term2`
+    * : My description of term2
 
       It can have multiple paragraphs, and code blocks too:
 
@@ -264,16 +264,16 @@ In GFM/CommonMark, this would produce the following HTML:
 <pre class="brush: html">
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;param1&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;term1&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;: My description of param 1&lt;/li&gt;
+      &lt;li&gt;: My description of term1&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;param2&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code&gt;term2&lt;/code&gt;&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;: My description of param 2&lt;/p&gt;
+        &lt;p&gt;: My description of term2&lt;/p&gt;
         &lt;p&gt;It can have multiple paragraphs, and code blocks too:&lt;/p&gt;
         &lt;pre&gt;
           &lt;code class="brush: js"&gt;const thing = 1;&lt;/code&gt;
@@ -289,14 +289,14 @@ On MDN, this would produce the following HTML:
 <pre class="brush: html">
 &lt;dl&gt;
   &lt;dt&gt;
-    &lt;p&gt;&lt;code&gt;param1&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;term1&lt;/p&gt;
   &lt;/dt&gt;
-  &lt;dd&gt;My description of param 1&lt;/dd&gt;
+  &lt;dd&gt;My description of term1&lt;/dd&gt;
   &lt;dt&gt;
-    &lt;p&gt;&lt;code&gt;param2&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code&gt;term2&lt;/code&gt;&lt;/p&gt;
   &lt;/dt&gt;
   &lt;dd&gt;
-    &lt;p&gt;My description of param 2&lt;/p&gt;
+    &lt;p&gt;My description of term2&lt;/p&gt;
     &lt;p&gt;It can have multiple paragraphs, and code blocks too:&lt;/p&gt;
     &lt;pre&gt;
        &lt;code class="brush: js"&gt;const thing = 1;&lt;/code&gt;
