@@ -490,21 +490,11 @@ function attemptMutation(v) {
 </dl>
 
 <dl>
- <dt>{{jsxref("Math.atan2")}}</dt>
- <dt>{{jsxref("Math.ceil")}}</dt>
- <dt>{{jsxref("Math.pow")}}</dt>
- <dt>{{jsxref("Math.round")}}</dt>
+ <dt>{{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}</dt>
  <dd>In some cases,it's possible for a <code>-0</code> to be introduced into an expression as a return value of these methods even when no <code>-0</code> exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
- <dt>{{jsxref("Math.floor")}}</dt>
- <dt>{{jsxref("Math.max")}}</dt>
- <dt>{{jsxref("Math.min")}}</dt>
- <dt>{{jsxref("Math.sin")}}</dt>
- <dt>{{jsxref("Math.sqrt")}}</dt>
- <dt>{{jsxref("Math.tan")}}</dt>
+ <dt>{{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}</dt>
  <dd>It's possible to get a <code>-0</code> return value out of these methods in some cases where a <code>-0</code> exists as one of the parameters. E.g., <code>Math.min(-0, +0)</code> evaluates to <code>-0</code>. Refer to the documentation for the individual methods.</dd>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">~</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&lt;&lt;</a></code></dt>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&gt;&gt;</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">~</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&lt;&lt;</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators">&gt;&gt;</a></code></dt>
  <dd>Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, <code>-0</code> will not survive a round trip after an inverse operation. E.g., both <code>Object.is(~~(-0), -0)</code> and <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> evaluate to <code>false</code>.</dd>
 </dl>
 
