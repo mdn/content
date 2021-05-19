@@ -10705,6 +10705,7 @@
 /en-US/docs/Web/HTTP/HTTP_response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Headers/Cache-Disposition	/en-US/docs/Web/HTTP/Headers/Content-Disposition
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
+/en-US/docs/Web/HTTP/Headers/Feature-Policy/wake-lock	/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/webauthn	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
