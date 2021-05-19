@@ -13,15 +13,14 @@ tags:
 
 <p><span class="seoSummary"><strong>HTTP headers</strong> let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (<code>:</code>), then by its value.</span> {{Glossary("Whitespace")}} before the value is ignored.</p>
 
-<p>Custom proprietary headers have historically been used with an <code>X-</code> prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in <a href="https://datatracker.ietf.org/doc/html/rfc6648">RFC 6648</a>; others are listed in an <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA registry</a>, whose original content was defined in <a href="https://datatracker.ietf.org/doc/html/rfc4229">RFC 4229</a>. IANA also maintains a <a href="http://www.iana.org/assignments/message-headers/prov-headers.html">registry of proposed new HTTP headers</a>.</p>
+<p>Custom proprietary headers have historically been used with an <code>X-</code> prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in <a href="https://datatracker.ietf.org/doc/html/rfc6648">RFC 6648</a>; others are listed in an <a href="https://www.iana.org/assignments/message-headers/perm-headers.html">IANA registry</a>, whose original content was defined in <a href="https://datatracker.ietf.org/doc/html/rfc4229">RFC 4229</a>. IANA also maintains a <a href="https://www.iana.org/assignments/message-headers/prov-headers.html">registry of proposed new HTTP headers</a>.</p>
 
 <p>Headers can be grouped according to their contexts:</p>
 
 <ul>
- <li>{{Glossary("General header", "General headers")}} apply to both requests and responses, but with no relation to the data transmitted in the body.</li>
  <li>{{Glossary("Request header", "Request headers")}} contain more information about the resource to be fetched, or about the client requesting the resource.</li>
  <li>{{Glossary("Response header", "Response headers")}} hold additional information about the response, like its location or about the server providing it.</li>
- <li>{{Glossary("Entity header", "Entity headers")}} contain information about the body of the resource, like its <a href="/en-US/docs/Web/HTTP/Headers/Content-Length">content length</a> or <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</li>
+ <li>{{Glossary("Representation header", "Representation headers")}} contain information about the body of the resource, like its <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, or encoding/compression applied.</li>
 </ul>
 
 <p>Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies")}} handle them:</p>
@@ -41,7 +40,7 @@ tags:
  <dt id="e2e">End-to-end headers</dt>
  <dd>These headers <em>must</em> be transmitted to the final recipient of the message: the server for a request, or the client for a response. Intermediate proxies must retransmit these headers unmodified and caches must store them.</dd>
  <dt id="hbh">Hop-by-hop headers</dt>
- <dd>These headers are meaningful only for a single transport-level connection, and <em>must not</em> be retransmitted by proxies or cached. Note that only hop-by-hop headers may be set using the {{httpheader("Connection")}} general header.</dd>
+ <dd>These headers are meaningful only for a single transport-level connection, and <em>must not</em> be retransmitted by proxies or cached. Note that only hop-by-hop headers may be set using the {{httpheader("Connection")}} header.</dd>
 </dl>
 
 <h2 id="Authentication">Authentication</h2>
@@ -124,9 +123,9 @@ tags:
  <dt>{{HTTPHeader("If-None-Match")}}</dt>
  <dd>Makes the request conditional, and applies the method only if the stored resource <em>doesn't</em> match any of the given ETags. This is used to update caches (for safe requests), or to prevent to upload a new resource when one already exists.</dd>
  <dt>{{HTTPHeader("If-Modified-Since")}}</dt>
- <dd>Makes the request conditional, and expects the entity to be transmitted only if it has been modified after the given date. This is used to transmit data only when the cache is out of date.</dd>
+ <dd>Makes the request conditional, and expects the resource to be transmitted only if it has been modified after the given date. This is used to transmit data only when the cache is out of date.</dd>
  <dt>{{HTTPHeader("If-Unmodified-Since")}}</dt>
- <dd>Makes the request conditional, and expects the entity to be transmitted only if it has not been modified after the given date. This ensures the coherence of a new fragment of a specific range with previous ones, or to implement an optimistic concurrency control system when modifying existing documents.</dd>
+ <dd>Makes the request conditional, and expects the resource to be transmitted only if it has not been modified after the given date. This ensures the coherence of a new fragment of a specific range with previous ones, or to implement an optimistic concurrency control system when modifying existing documents.</dd>
  <dt>{{HTTPHeader("Vary")}}</dt>
  <dd>Determines how to match request headers to decide whether a cached response can be used rather than requesting a fresh one from the origin server.</dd>
 </dl>
@@ -140,8 +139,10 @@ tags:
  <dd>Controls how long a persistent connection should stay open.</dd>
 </dl>
 
-<h2 id="Content_negotiation"><a href="/en-US/docs/Web/HTTP/Content_negotiation">Content negotiation</a></h2>
 
+<h2 id="Content_negotiation">Content negotiation</h2>
+
+<p><a href="/en-US/docs/Web/HTTP/Content_negotiation">Content negotiation</a> headers.</p>
 <dl>
  <dt>{{HTTPHeader("Accept")}}</dt>
  <dd>Informs the server about the {{Glossary("MIME_type", "types")}} of data that can be sent back.</dd>
@@ -198,15 +199,6 @@ tags:
  <dd>Indicates where a fetch originates from.</dd>
  <dt>{{HTTPHeader("Timing-Allow-Origin")}}</dt>
  <dd>Specifies origins that are allowed to see values of attributes retrieved via features of the <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>, which would otherwise be reported as zero due to cross-origin restrictions.</dd>
-</dl>
-
-<h2 id="Do_Not_Track">Do Not Track</h2>
-
-<dl>
- <dt>{{HTTPHeader("DNT")}}</dt>
- <dd>Expresses the user's tracking preference.</dd>
- <dt>{{HTTPHeader("Tk")}}</dt>
- <dd>Indicates the tracking status of the corresponding response.</dd>
 </dl>
 
 <h2 id="Downloads">Downloads</h2>
@@ -327,9 +319,9 @@ tags:
  <dd>Enables cross-site scripting filtering.</dd>
 </dl>
 
-<h3 id="HTTP_Public_Key_Pinning_GlossaryHPKP">HTTP Public Key Pinning ({{Glossary("HPKP")}})</h3>
+<h3 id="HTTP_Public_Key_Pinning_GlossaryHPKP">HTTP Public Key Pinning (HPKP)</h3>
 
-<p>HTTP Public Key Pinning has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.</p>
+<p>{{Glossary("HPKP", "HTTP Public Key Pinning (HPKP)")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.</p>
 
 <dl>
  <dt>{{HTTPHeader("Public-Key-Pins")}}</dt>
@@ -370,7 +362,7 @@ tags:
 
 <dl>
  <dt>{{HTTPHeader("Transfer-Encoding")}}</dt>
- <dd>Specifies the form of encoding used to safely transfer the entity to the user.</dd>
+ <dd>Specifies the form of encoding used to safely transfer the resource to the user.</dd>
  <dt>{{HTTPHeader("TE")}}</dt>
  <dd>Specifies the transfer encodings the user agent is willing to accept.</dd>
  <dt>{{HTTPHeader("Trailer")}}</dt>

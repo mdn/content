@@ -472,7 +472,7 @@ window.setTimeout("alert('Hello World!');", 500);
 
 <div class="note">
 <p>The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5.</p>
-<p>4 ms is <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{geckoRelease("5.0")}}, the minimum timeout value for nested timeouts was 10 ms.</p>
+<p>4 ms is <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{geckoRelease("5.0")}}, the minimum timeout value for nested timeouts was 10 ms.</p>
 </div>
 
 <h4 id="Timeouts_in_inactive_tabs_throttled_to_≥_1000ms">Timeouts in inactive tabs
@@ -485,7 +485,7 @@ window.setTimeout("alert('Hello World!');", 500);
   constant can be tweaked through the <span
     class="comment-copy"><code>dom.min_background_timeout_value</code> preference).</span>
   Chrome implements this behavior since version 11 (<a class="external"
-    href="http://crbug.com/66078">crbug.com/66078</a>).</p>
+    href="https://crbug.com/66078">crbug.com/66078</a>).</p>
 
 <p>Firefox for Android uses a timeout value of 15 minutes for background tabs since
   {{bug(736602)}} in Firefox 14, and background tabs can also be unloaded entirely.</p>
@@ -611,4 +611,5 @@ foo has been called</pre>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
+  <li>{{domxref("WindowOrWorkerGlobalScope.queueMicrotask")}}</li>
 </ul>

@@ -135,7 +135,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
+<p><strong>Note</strong>: You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
 </div>
 
 <h2 id="Service_workers_demo">Service workers demo</h2>
@@ -219,11 +219,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.<br>
  <br>
- The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s brand new storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
-
-<div class="note">
-<p><strong>Note</strong>: The Cache API is not supported in every browser. (See the {{anch("Browser compatibility")}} section for more information.) If you want to use this now, you could consider using a polyfill like the one available in <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, or perhaps store your assets in <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
-</div>
+ The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
 
 <p>Let’s start this section by looking at a code sample — this is the <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">first block you’ll find in our service worker</a>:</p>
 

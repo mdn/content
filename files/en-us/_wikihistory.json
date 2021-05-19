@@ -45042,14 +45042,6 @@
       "Callek"
     ]
   },
-  "Web/API/ElementTraversal": {
-    "modified": "2020-01-26T14:12:50.658Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
   "Web/API/Encoding_API": {
     "modified": "2020-12-13T21:01:48.901Z",
     "contributors": [
@@ -68231,48 +68223,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-12-04T06:14:39.443Z",
-    "contributors": [
-      "chrisdavidmills",
-      "sideshowbarker",
-      "czipperz",
-      "TrevorKarjanis",
-      "Rumyra",
-      "ExE-Boss",
-      "Sheppy",
-      "libbymc",
-      "DomenicDenicola",
-      "stevenwdv",
-      "Sebastianz",
-      "jpmedley",
-      "fscholz",
-      "cvrebert",
-      "MHasan",
-      "jdfm",
-      "kscarfone",
-      "Localsystem",
-      "Jeremie",
-      "NekR",
-      "teoli"
-    ]
-  },
-  "Web/API/ParentNode/querySelector": {
-    "modified": "2020-10-15T22:11:25.046Z",
-    "contributors": [
-      "ExE-Boss"
-    ]
-  },
-  "Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T21:52:23.893Z",
-    "contributors": [
-      "mfuji09",
-      "stephenriddell",
-      "ExE-Boss",
-      "Sheppy",
-      "Sebastianz"
-    ]
-  },
   "Web/API/PasswordCredential": {
     "modified": "2020-10-15T21:44:48.781Z",
     "contributors": [
@@ -77826,16 +77776,6 @@
       "Sheppy",
       "arasbm",
       "JohnBicknell",
-      "Jeremie"
-    ]
-  },
-  "Web/API/SVGTransformable": {
-    "modified": "2020-10-15T21:10:55.390Z",
-    "contributors": [
-      "fscholz",
-      "mattwojo",
-      "kscarfone",
-      "Sheppy",
       "Jeremie"
     ]
   },
