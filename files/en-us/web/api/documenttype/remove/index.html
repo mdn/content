@@ -11,11 +11,20 @@ tags:
 
 <p>The <code><strong>DocumentType.remove()</strong></code> method removes a document's <code>doctype</code>.</p>
 
+<div class="note">
+  <h4>Note</h4>
+  <p>Removing the document's doctype will set the rendering mode to
+    <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>!
+    Please don’t do this. Willfully designing for quirks mode is not going to help you.
+    If you need to work around issues with old Internet Explorer browsers, you might want to look into using
+    <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments">conditional comments</a>, or other workarounds.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">remove()</pre>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
 <h3 id="Using_remove">Using <code>remove()</code></h3>
 
