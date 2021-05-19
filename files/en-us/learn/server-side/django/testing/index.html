@@ -216,13 +216,13 @@ tags:
 <pre class="brush: bash">&gt; python3 manage.py test
 
 Creating test database for alias 'default'...
-<strong>setUpTestData: Run once to set up non-modified data for all class methods.
+setUpTestData: Run once to set up non-modified data for all class methods.
 setUp: Run once for every test method to setup clean data.
 Method: test_false_is_false.
 setUp: Run once for every test method to setup clean data.
 Method: test_false_is_true.
 setUp: Run once for every test method to setup clean data.
-Method: test_one_plus_one_equals_two.</strong>
+Method: test_one_plus_one_equals_two.
 .
 ======================================================================
 FAIL: test_false_is_true (catalog.tests.tests_models.YourTestClass)
@@ -333,7 +333,7 @@ class AuthorModelTest(TestCase):
     def test_object_name_is_last_name_comma_first_name(self):
         author = Author.objects.get(id=1)
         expected_object_name = f'{author.last_name}, {author.first_name}'
-        self.assertEqual(expected_object_name, str(author))
+        self.assertEqual(str(author), expected_object_name)
 
     def test_get_absolute_url(self):
         author = Author.objects.get(id=1)
@@ -368,7 +368,7 @@ self.assertEqual(field_label, 'first name')</pre>
 <pre class="brush: python">def test_object_name_is_last_name_comma_first_name(self):
     author = Author.objects.get(id=1)
     expected_object_name = f'{author.last_name}, {author.first_name}'
-    self.assertEqual(expected_object_name, str(author))
+    self.assertEqual(str(author), expected_object_name)
 
 def test_get_absolute_url(self):
     author = Author.objects.get(id=1)
@@ -526,7 +526,7 @@ class AuthorListViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)
-        self.assertTrue(len(response.context['author_list']) == 10)
+        self.assertEqual(len(response.context['author_list']), 10)
 
     def test_lists_all_authors(self):
         # Get second page and confirm it has (exactly) remaining 3 items
@@ -534,7 +534,7 @@ class AuthorListViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)
-        self.assertTrue(len(response.context['author_list']) == 3)</pre>
+        self.assertEqual(len(response.context['author_list']), 3)</pre>
 
 <p>All the tests use the client (belonging to our <code>TestCase</code>'s derived class) to simulate a <code>GET</code> request and get a response. The first version checks a specific URL (note, just the specific path without the domain) while the second generates the URL from its name in the URL configuration.</p>
 
@@ -675,7 +675,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         # Confirm all books belong to testuser1 and are on loan
         for bookitem in response.context['bookinstance_list']:
             self.assertEqual(response.context['user'], bookitem.borrower)
-            self.assertEqual('o', bookitem.status)
+            self.assertEqual(bookitem.status, 'o')
 
     def test_pages_ordered_by_due_date(self):
         # Change all books to be on loan
@@ -761,9 +761,10 @@ class RenewBookInstancesViewTest(TestCase):
         test_user1.save()
         test_user2.save()
 
-<strong>        permission = Permission.objects.get(name='Set book as returned')
+        # Give test_user2 permission to renew books.
+        permission = Permission.objects.get(name='Set book as returned')
         test_user2.user_permissions.add(permission)
-        test_user2.save()</strong>
+        test_user2.save()
 
         # Create a book
         test_author = Author.objects.create(first_name='John', last_name='Smith')
@@ -853,7 +854,7 @@ class RenewBookInstancesViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
         date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
-        self.assertEqual(response<strong>.context['form'].initial['renewal_date']</strong>, date_3_weeks_in_future)
+        self.assertEqual(response.context['form'].initial['renewal_date'], date_3_weeks_in_future)
 </pre>
 
 <div class="notecard warning">
@@ -866,16 +867,16 @@ class RenewBookInstancesViewTest(TestCase):
 <pre class="brush: python">    def test_redirects_to_all_borrowed_book_list_on_success(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&amp;3iD')
         valid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=2)
-        <strong>response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future})</strong>
+        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future})
         self.assertRedirects(response, reverse('all-borrowed'))
 </pre>
 
 <div class="notecard warning">
     <h4>Warning</h4>
-<p>The <em>all-borrowed</em> view was added as a <em>challenge</em>, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The <code>follow=True</code> in the request ensures that the request returns the final destination URL (hence checking <code>/catalog/</code> rather than <code>/</code>).</p>
+    <p>The <em>all-borrowed</em> view was added as a <em>challenge</em>, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The <code>follow=True</code> in the request ensures that the request returns the final destination URL (hence checking <code>/catalog/</code> rather than <code>/</code>).</p>
 
-<pre class="brush: python"> response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, <strong>follow=True</strong> )
- <strong>self.assertRedirects(response, '/catalog/')</strong></pre>
+<pre class="brush: python"> response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, follow=True )
+ self.assertRedirects(response, '/catalog/')</pre>
 </div>
 
 <p>Copy the last two functions into the class, as seen below. These again test <code>POST</code> requests, but in this case with invalid renewal dates. We use <code>assertFormError()</code> to verify that the error messages are as expected.</p>
@@ -885,14 +886,14 @@ class RenewBookInstancesViewTest(TestCase):
         date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
         response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': date_in_past})
         self.assertEqual(response.status_code, 200)
-        <strong>self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal in past')</strong>
+        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal in past')
 
     def test_form_invalid_renewal_date_future(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&amp;3iD')
         invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
         response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': invalid_date_in_future})
         self.assertEqual(response.status_code, 200)
-        <strong>self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')</strong>
+        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')
 </pre>
 
 <p>The same sorts of techniques can be used to test the other view.</p>
@@ -960,7 +961,7 @@ class RenewBookInstancesViewTest(TestCase):
  <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><strong>Django Tutorial Part 10: Testing a Django web application</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>

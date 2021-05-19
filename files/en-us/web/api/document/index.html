@@ -260,6 +260,8 @@ tags:
  <dd>Release the pointer lock.</dd>
  <dt>{{DOMxRef("Document.getAnimations()")}}</dt>
  <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the <code>document</code>.</dd>
+ <dt>{{DOMxRef("Document.getElementById")}}</dt>
+ <dd>Returns an object reference to the identified element.</dd>
  <dt>{{DOMxRef("Document.getElementsByClassName()")}}</dt>
  <dd>Returns a list of elements with the given class name.</dd>
  <dt>{{DOMxRef("Document.getElementsByTagName()")}}</dt>
@@ -276,6 +278,10 @@ tags:
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
  <dt>{{DOMxRef("Document.prepend()")}}</dt>
  <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.</dd>
+ <dt>{{DOMxRef("Document.querySelector()")}}</dt>
+ <dd>Returns the first Element node within the document, in document order, that matches the specified selectors.</dd>
+ <dt>{{DOMxRef("Document.querySelectorAll()")}}</dt>
+ <dd>Returns a list of all the Element nodes within the document that match the specified selectors.</dd>
  <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}</dt>
  <dd>Releases the current mouse capture if it's on an element in this document.</dd>
  <dt>{{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
@@ -288,17 +294,6 @@ tags:
  <dd>See {{DOMxRef("Window.routeEvent()")}}.</dd>
  <dt>{{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}</dt>
  <dd>Allows you to change the element being used as the background image for a specified element ID.</dd>
-</dl>
-
-<p>The <code>Document</code> interface is extended with the {{DOMxRef("ParentNode")}} interface:</p>
-
-<dl>
- <dt>{{DOMxRef("Document.getElementById","document.getElementById(String id)")}}</dt>
- <dd>Returns an object reference to the identified element.</dd>
- <dt>{{DOMxRef("Document.querySelector()")}}</dt>
- <dd>Returns the first Element node within the document, in document order, that matches the specified selectors.</dd>
- <dt>{{DOMxRef("Document.querySelectorAll()")}}</dt>
- <dd>Returns a list of all the Element nodes within the document that match the specified selectors.</dd>
 </dl>
 
 <p>The <code>Document</code> interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:</p>

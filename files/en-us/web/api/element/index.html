@@ -216,6 +216,10 @@ tags:
  <dd>Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNames()")}}</dt>
  <dd>Returns an array of attribute names from the current element.</dd>
+ <dt>{{DOMxRef("Element.getAttributeNode()")}}</dt>
+ <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
+ <dt>{{DOMxRef("Element.getAttributeNodeNS()")}}</dt>
+ <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNS()")}}</dt>
  <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getBoundingClientRect()")}}</dt>
@@ -256,6 +260,8 @@ tags:
  <dd>Removes the element from the children list of its parent.</dd>
  <dt>{{DOMxRef("Element.removeAttribute()")}}</dt>
  <dd>Removes the named attribute from the current node.</dd>
+ <dt>{{DOMxRef("Element.removeAttributeNode()")}}</dt>
+ <dd>Removes the node representation of the named attribute from the current node.</dd>
  <dt>{{DOMxRef("Element.removeAttributeNS()")}}</dt>
  <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("EventTarget.removeEventListener()")}}</dt>
@@ -276,6 +282,10 @@ tags:
  <dd>Scrolls to a particular set of coordinates inside a given element.</dd>
  <dt>{{DOMxRef("Element.setAttribute()")}}</dt>
  <dd>Sets the value of a named attribute of the current node.</dd>
+ <dt>{{DOMxRef("Element.setAttributeNode()")}}</dt>
+ <dd>Sets the node representation of the named attribute from the current node.</dd>
+ <dt>{{DOMxRef("Element.setAttributeNodeNS()")}}</dt>
+ <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("Element.setAttributeNS()")}}</dt>
  <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}</dt>
@@ -284,21 +294,6 @@ tags:
  <dd>Designates a specific element as the capture target of future <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a>.</dd>
  <dt>{{DOMxRef("Element.toggleAttribute()")}}</dt>
  <dd>Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.</dd>
-</dl>
-
-<h3 id="Obsolete_methods">Obsolete methods</h3>
-
-<dl>
- <dt>{{DOMxRef("Element.getAttributeNode()")}} {{deprecated_inline}}</dt>
- <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.getAttributeNodeNS()")}} {{deprecated_inline}}</dt>
- <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.removeAttributeNode()")}} {{deprecated_inline}}</dt>
- <dd>Removes the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNode()")}} {{deprecated_inline}}</dt>
- <dd>Sets the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNodeNS()")}} {{deprecated_inline}}</dt>
- <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -514,7 +509,7 @@ tags:
   <tr>
    <td>{{SpecName('Element Traversal', '#ecmascript-bindings', 'Element')}}</td>
    <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added inheritance of the {{DOMxRef("ElementTraversal")}} interface.</td>
+   <td>Added inheritance of the <code>ElementTraversal</code> interface.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM WHATWG', '#interface-element', 'Element')}}</td>

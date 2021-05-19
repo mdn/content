@@ -1712,7 +1712,6 @@
 /en-US/docs/DOM/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
 /en-US/docs/DOM/SVGTransform	/en-US/docs/Web/API/SVGTransform
 /en-US/docs/DOM/SVGTransformList	/en-US/docs/Web/API/SVGTransformList
-/en-US/docs/DOM/SVGTransformable	/en-US/docs/Web/API/SVGTransformable
 /en-US/docs/DOM/SVGUseElement	/en-US/docs/Web/API/SVGUseElement
 /en-US/docs/DOM/SVGVKernElement	/en-US/docs/Web/API/SVGVKernElement
 /en-US/docs/DOM/SVGViewElement	/en-US/docs/Web/API/SVGViewElement
@@ -3084,7 +3083,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTransform	/en-US/docs/Web/API/SVGTransform
 /en-US/docs/Document_Object_Model_(DOM)/SVGTransformList	/en-US/docs/Web/API/SVGTransformList
-/en-US/docs/Document_Object_Model_(DOM)/SVGTransformable	/en-US/docs/Web/API/SVGTransformable
 /en-US/docs/Document_Object_Model_(DOM)/SVGUseElement	/en-US/docs/Web/API/SVGUseElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGVKernElement	/en-US/docs/Web/API/SVGVKernElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGViewElement	/en-US/docs/Web/API/SVGViewElement
@@ -7290,7 +7288,6 @@
 /en-US/docs/Web/API/Document.xmlEncoding	/en-US/docs/Web/API/Document/xmlEncoding
 /en-US/docs/Web/API/Document/Document:_DOMContentLoaded_event	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/API/Document/Document:_paste_event	/en-US/docs/Web/API/Document/paste_event
-/en-US/docs/Web/API/Document/ParentNode.querySelectorAll	/en-US/docs/Web/API/ParentNode/querySelectorAll
 /en-US/docs/Web/API/Document/async	/en-US/docs/Web/API/XMLDocument/async
 /en-US/docs/Web/API/Document/baseURI	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/API/Document/cancelFullscreen	/en-US/docs/Web/API/Document/exitFullscreen
@@ -7347,7 +7344,6 @@
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
-/en-US/docs/Web/API/DocumentTraversal	/en-US/docs/Web/API/ElementTraversal
 /en-US/docs/Web/API/DocumentType/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
@@ -8483,6 +8479,7 @@
 /en-US/docs/Web/API/SVGPathElement/getPointAtLength	/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength
 /en-US/docs/Web/API/SVGPathElement/getTotalLength	/en-US/docs/Web/API/SVGGeometryElement/getTotalLength
 /en-US/docs/Web/API/SVGPathElement/pathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
+/en-US/docs/Web/API/SVGURIReference	/en-US/docs/Web/SVG/Attribute/href
 /en-US/docs/Web/API/Screen.availHeight	/en-US/docs/Web/API/Screen/availHeight
 /en-US/docs/Web/API/Screen.availLeft	/en-US/docs/Web/API/Screen/availLeft
 /en-US/docs/Web/API/Screen.availTop	/en-US/docs/Web/API/Screen/availTop
@@ -10708,6 +10705,7 @@
 /en-US/docs/Web/HTTP/HTTP_response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Headers/Cache-Disposition	/en-US/docs/Web/HTTP/Headers/Content-Disposition
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
+/en-US/docs/Web/HTTP/Headers/Feature-Policy/wake-lock	/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/webauthn	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP

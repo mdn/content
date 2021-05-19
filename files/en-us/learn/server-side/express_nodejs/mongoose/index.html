@@ -811,6 +811,10 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  </li>
  <li>Run the script using node in your command prompt, passing in the URL of your <em>MongoDB</em> database (the same one you replaced the <em>insert_your_database_url_here</em> placeholder with, inside <code>app.js</code> earlier):
   <pre class="brush: bash">node populatedb &lt;your mongodb url&gt;</pre>
+  <div class="notecard note">
+    <h4>Note</h4>
+    <p>On some operating systems/terminals, you may need to wrap the database URL inside double (") or single (') quotation marks.</p>
+  </div>
  </li>
  <li>The script should run through to completion, displaying items as it creates them in the terminal.</li>
 </ol>
@@ -848,7 +852,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
+ <li><strong>Express Tutorial Part 3: Using a Database (with Mongoose)</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
