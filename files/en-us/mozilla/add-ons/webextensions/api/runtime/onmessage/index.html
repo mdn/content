@@ -111,7 +111,7 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
  <p>The <code><var>listener</var></code> function can return either a Boolean or a {{jsxref("Promise")}}.</p>
 
  <div class="notecard note">
- <p><strong>Important:</strong> If you call <code>addListener()</code> using an <code>async</code> function, the listener will return a Promise for every message it receives, preventing other listeners from responding:</p>
+ <p><strong>Important:</strong> If you pass an async function to <code>addListener()</code>, the listener will return a Promise for every message it receives, preventing other listeners from responding:</p>
 
  <pre class="brush: js example-bad">// don't do this
 browser.runtime.onMessage.addListener(
@@ -121,13 +121,14 @@ browser.runtime.onMessage.addListener(
 );
 </pre>
 
- <p>If you only want the listener to respond to messages of a certain type, you must check the message type synchronously before returning a Promise:</p>
+ <p>If you only want the listener to respond to messages of a certain type, you must define the listener as a non-<code>async</code> function, and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or undefined:</p>
 
  <pre class="brush: js example-good">browser.runtime.onMessage.addListener(
   (data, sender) =&gt; {
     if (data.type === 'handle_me') {
       return Promise.resolve('done');
     }
+    return false;
   }
 );
 </pre>
