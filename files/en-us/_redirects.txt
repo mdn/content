@@ -621,7 +621,6 @@
 /en-US/docs/CSS/background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS/background-repeat	/en-US/docs/Web/CSS/background-repeat
 /en-US/docs/CSS/background-size	/en-US/docs/Web/CSS/background-size
-/en-US/docs/CSS/bleed	/en-US/docs/Web/CSS/@page/bleed
 /en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
 /en-US/docs/CSS/border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS/border-bottom	/en-US/docs/Web/CSS/border-bottom
@@ -10050,7 +10049,6 @@
 /en-US/docs/Web/CSS/additive-symbols	/en-US/docs/Web/CSS/@counter-style/additive-symbols
 /en-US/docs/Web/CSS/attr	/en-US/docs/Web/CSS/attr()
 /en-US/docs/Web/CSS/auto	/en-US/docs/Web/CSS/width
-/en-US/docs/Web/CSS/bleed	/en-US/docs/Web/CSS/@page/bleed
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
