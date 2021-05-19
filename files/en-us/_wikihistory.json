@@ -102694,25 +102694,6 @@
       "McGurk"
     ]
   },
-  "Web/CSS/@page/marks": {
-    "modified": "2020-10-15T21:06:01.342Z",
-    "contributors": [
-      "wbamberg",
-      "connorshea",
-      "mfuji09",
-      "ExE-Boss",
-      "mfluehr",
-      "Siilwyn",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Pointy",
-      "grendel",
-      "BijuGC"
-    ]
-  },
   "Web/CSS/@page/size": {
     "modified": "2020-10-15T21:47:28.836Z",
     "contributors": [

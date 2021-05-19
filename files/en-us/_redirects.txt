@@ -775,7 +775,6 @@
 /en-US/docs/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
 /en-US/docs/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
 /en-US/docs/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
-/en-US/docs/CSS/marks	/en-US/docs/Web/CSS/@page/marks
 /en-US/docs/CSS/mask	/en-US/docs/Web/CSS/mask
 /en-US/docs/CSS/max-height	/en-US/docs/Web/CSS/max-height
 /en-US/docs/CSS/max-width	/en-US/docs/Web/CSS/max-width
@@ -10106,7 +10105,6 @@
 /en-US/docs/Web/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
 /en-US/docs/Web/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
 /en-US/docs/Web/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
-/en-US/docs/Web/CSS/marks	/en-US/docs/Web/CSS/@page/marks
 /en-US/docs/Web/CSS/max	/en-US/docs/Web/CSS/max()
 /en-US/docs/Web/CSS/media	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/media/Bitmap	/en-US/docs/Web/CSS/@media
