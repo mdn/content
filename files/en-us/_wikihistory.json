@@ -102592,16 +102592,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/@media/prefers-reduced-transparency": {
-    "modified": "2020-10-15T22:20:09.272Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "bobbyjnichols",
-      "SphinxKnight",
-      "bershanskiy"
-    ]
-  },
   "Web/CSS/@media/resolution": {
     "modified": "2020-10-15T21:30:24.837Z",
     "contributors": [
