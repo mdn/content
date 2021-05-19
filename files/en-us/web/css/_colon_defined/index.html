@@ -12,7 +12,7 @@ browser-compat: css.selectors.defined
 ---
 <div>{{ CSSRef }}</div>
 
-<p>The <strong><code>:defined</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).</p>
+<p>The <strong><code>:defined</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the <a href="/en-US/docs/Web/API/CustomElementRegistry/define">CustomElementRegistry.define()</a> method).</p>
 
 <pre class="brush: css no-line-numbers">/* Selects any defined element */
 :defined {
@@ -25,11 +25,11 @@ simple-custom:defined {
 }
 </pre>
 
-<h2 id="Syntax">Syntax</h2>
+<h2 id="syntax">Syntax</h2>
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+<h2 id="examples">Examples</h2>
 
 <h3 id="Hiding_elements_until_they_are_defined">Hiding elements until they are defined</h3>
 
@@ -84,7 +84,7 @@ simple-custom:defined {
 
 <p>This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until definition is complete, so that you don't end up with flashes of ugly unstyled elements on the page</p>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -103,11 +103,11 @@ simple-custom:defined {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="see_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
