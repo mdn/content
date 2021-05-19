@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.3.tgz#139a151e98a7e91b43fc2900d0ccf7edb59bea5a"
   integrity sha512-ikDzSgs2SbBtKVXCNfU6GzVACpUuojZS8Vu/VhM1EwtWvtfGJsrRETLbV231ODMvWtfKJThzrsk2Hp88fv9+gA==
 
-"@mdn/yari@0.4.466":
-  version "0.4.466"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.466.tgz#68e009488df8fb68b53d785720f8049842baa496"
-  integrity sha512-E8WvVgagLMQB5oF7td6n9+2gNniZrlyL1hVCIQBUiwLfbbmJBhx3xR6EpcfXxIP48AvpJc4Q6lZmaBvAlz5SNQ==
+"@mdn/yari@0.4.467":
+  version "0.4.467"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.467.tgz#07b91f3132d0e96415105977f9239a2345fe3995"
+  integrity sha512-trO4espoPjaF77TA5mVVeEjjK3gV756K5jH3NnKX4z9qedMgch3SsPSgfex+xvQylrF8LQN37ZsZe23D17v0IQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -84,7 +84,7 @@
     lru-cache "^6.0.0"
     md5-file "5.0.0"
     mdn-data "2.0.18"
-    open "^8.0.8"
+    open "^8.0.9"
     open-editor "3.0.0"
     prismjs "1.23.0"
     read-chunk "3.2.0"
@@ -3279,10 +3279,10 @@ open@^7.3.0:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-open@^8.0.8:
-  version "8.0.8"
-  resolved "https://registry.yarnpkg.com/open/-/open-8.0.8.tgz#0e286bb2df3c72e00cb2a0203d604abee002dbdc"
-  integrity sha512-3XmKIU8+H/TVr8wB8C4vj0z748+yBydSvtpzZVS6vQ1dKNHB6AiPbhaoG+89zb80717GPk9y/7OvK0R6FXkNmQ==
+open@^8.0.9:
+  version "8.0.9"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.0.9.tgz#a7a739fed91dfa3734094255badbeabd71116a12"
+  integrity sha512-vbCrqMav3K8mCCy8NdK4teUky0tpDrBbuiDLduCdVhc5oA9toJMip9rBkuwdwSI9E7NOkz4VkLWPi8DD2MP1gQ==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
