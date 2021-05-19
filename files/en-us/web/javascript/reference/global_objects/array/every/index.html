@@ -108,12 +108,12 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>every</code> was added to the ECMA-262 standard in the 5<sup>th</sup> edition,
+<p><code>every</code> was added to the ECMA-262 standard in the fifth edition,
   and it may not be present in other implementations of the standard. You can work around
   this by inserting the following code at the beginning of your scripts, allowing use of
   <code>every</code> in implementations which do not natively support it.</p>
 
-<p>This algorithm is exactly the one specified in ECMA-262, 5<sup>th</sup> edition,
+<p>This algorithm is exactly the one specified in ECMA-262, fifth edition,
   assuming <code>Object</code> and <code>TypeError</code> have their original values, and
   that <code><var>callbackfn</var>.call</code> evaluates to the original value of
   {{jsxref("Function.prototype.call")}}.</p>
