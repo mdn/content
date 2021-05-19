@@ -77779,13 +77779,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGURIReference": {
-    "modified": "2020-10-15T21:53:52.446Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/API/SVGUnitTypes": {
     "modified": "2020-10-15T21:53:52.450Z",
     "contributors": [
