@@ -102606,19 +102606,6 @@
       "cvrebert"
     ]
   },
-  "Web/CSS/@media/scan": {
-    "modified": "2020-12-14T11:00:43.208Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "mfuji09",
-      "connorshea",
-      "mfluehr",
-      "kscarfone",
-      "jsx",
-      "cvrebert"
-    ]
-  },
   "Web/CSS/@media/scripting": {
     "modified": "2020-12-14T11:00:56.449Z",
     "contributors": [
