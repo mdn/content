@@ -17,9 +17,46 @@ tags:
 <pre class="syntaxbox">let preserveAspectRatio = SVGMarkerElement.preserveAspectRatio;</pre>
 
 <h3>Value</h3>
-<p>An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, which has the properties <code>align</code> and <code>meetOrSlice</code>.</p>
+<p>An {{domxref("SVGAnimatedPreserveAspectRatio")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGPreserveAspectRatio")}} object, with the following properties:</p>
 
-<p>These properties return a numeric value representing the <a href="/en-US/docs/Web/API/SVGPreserveAspectRatio#constants">constants</a> for these values.</p>
+<dl>
+  <dt><code>align</code></dt>
+    <dd>One of the following numeric constants:
+      <dl>
+        <dt><code>0</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_UNKNOWN</code></dd>
+        <dt><code>1</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_NONE</code></dd>
+        <dt><code>2</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMINYMIN</code></dd>
+        <dt><code>3</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMIDYMIN</code></dd>
+        <dt><code>4</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMAXYMIN</code></dd>
+        <dt><code>5</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMINYMID</code></dd>
+        <dt><code>6</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMIDYMID</code></dd>
+        <dt><code>7</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMAXYMID</code></dd>
+        <dt><code>8</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMINYMAX</code></dd>
+        <dt><code>9</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMIDYMAX</code></dd>
+        <dt><code>10</code></dt>
+        <dd><code>SVG_PRESERVEASPECTRATIO_XMAXYMAX</code></dd>
+      </dl>
+    </dd>
+  <dt><code>meetOrSlice</code></dt>
+  <dl>
+    <dt><code>0</code></dt>
+    <dd><code>SVG_MEETORSLICE_UNKNOWN</code></dd>
+    <dt><code>1</code></dt>
+    <dd><code>SVG_MEETORSLICE_MEET</code></dd>
+    <dt><code>2</code></dt>
+    <dd><code>SVG_MEETORSLICE_SLICE</code></dd>
+   </dl>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
