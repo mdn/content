@@ -6213,7 +6213,6 @@
 /en-US/docs/SVG/Element/animateTransform	/en-US/docs/Web/SVG/Element/animateTransform
 /en-US/docs/SVG/Element/circle	/en-US/docs/Web/SVG/Element/circle
 /en-US/docs/SVG/Element/clipPath	/en-US/docs/Web/SVG/Element/clipPath
-/en-US/docs/SVG/Element/color-profile	/en-US/docs/Web/SVG/Element/color-profile
 /en-US/docs/SVG/Element/cursor	/en-US/docs/Web/SVG/Element/cursor
 /en-US/docs/SVG/Element/defs	/en-US/docs/Web/SVG/Element/defs
 /en-US/docs/SVG/Element/desc	/en-US/docs/Web/SVG/Element/desc

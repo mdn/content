@@ -76641,13 +76641,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGColorProfileElement": {
-    "modified": "2020-10-15T21:53:52.508Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/API/SVGComponentTransferFunctionElement": {
     "modified": "2020-10-15T21:53:51.528Z",
     "contributors": [
@@ -77578,14 +77571,6 @@
       "kscarfone",
       "Sheppy",
       "Jeremie"
-    ]
-  },
-  "Web/API/SVGSolidcolorElement": {
-    "modified": "2020-10-15T21:53:53.263Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sebastianz"
     ]
   },
   "Web/API/SVGStopElement": {
@@ -156212,16 +156197,6 @@
       "Jeremie"
     ]
   },
-  "Web/SVG/Attribute/local": {
-    "modified": "2020-10-15T21:25:10.496Z",
-    "contributors": [
-      "Sebastianz",
-      "chrisdavidmills",
-      "Splaktar",
-      "Tigt",
-      "sumantro"
-    ]
-  },
   "Web/SVG/Attribute/marker-end": {
     "modified": "2020-10-31T11:07:53.559Z",
     "contributors": [
@@ -156600,12 +156575,6 @@
   },
   "Web/SVG/Attribute/refY": {
     "modified": "2019-04-19T20:33:31.537Z",
-    "contributors": [
-      "Sebastianz"
-    ]
-  },
-  "Web/SVG/Attribute/rendering-intent": {
-    "modified": "2020-10-15T22:21:12.005Z",
     "contributors": [
       "Sebastianz"
     ]
@@ -157592,18 +157561,6 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Element/color-profile": {
-    "modified": "2020-10-15T21:09:15.075Z",
-    "contributors": [
-      "Tigt",
-      "fscholz",
-      "Sebastianz",
-      "kscarfone",
-      "Jeremie",
-      "trevorh",
-      "Manuel_Strehl"
-    ]
-  },
   "Web/SVG/Element/cursor": {
     "modified": "2020-10-15T21:09:15.177Z",
     "contributors": [
@@ -158384,17 +158341,6 @@
       "fscholz",
       "Sebastianz",
       "kscarfone"
-    ]
-  },
-  "Web/SVG/Element/solidColor": {
-    "modified": "2020-12-06T03:40:51.367Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "fscholz",
-      "Sebastianz",
-      "david_ross",
-      "y6nH"
     ]
   },
   "Web/SVG/Element/stop": {
