@@ -6086,7 +6086,6 @@
 /en-US/docs/SVG/Attribute/edgeMode	/en-US/docs/Web/SVG/Attribute/edgeMode
 /en-US/docs/SVG/Attribute/elevation	/en-US/docs/Web/SVG/Attribute/elevation
 /en-US/docs/SVG/Attribute/end	/en-US/docs/Web/SVG/Attribute/end
-/en-US/docs/SVG/Attribute/externalResourcesRequired	/en-US/docs/Web/SVG/Attribute/externalResourcesRequired
 /en-US/docs/SVG/Attribute/fill	/en-US/docs/Web/SVG/Attribute/fill
 /en-US/docs/SVG/Attribute/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/SVG/Attribute/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule

@@ -76794,14 +76794,6 @@
       "rabimba"
     ]
   },
-  "Web/API/SVGExternalResourcesRequired": {
-    "modified": "2020-10-15T21:53:53.451Z",
-    "contributors": [
-      "fscholz",
-      "mike-marcacci",
-      "Sebastianz"
-    ]
-  },
   "Web/API/SVGFEBlendElement": {
     "modified": "2020-10-15T21:53:39.956Z",
     "contributors": [
@@ -155817,14 +155809,6 @@
     "modified": "2019-05-13T18:45:24.121Z",
     "contributors": [
       "Sebastianz"
-    ]
-  },
-  "Web/SVG/Attribute/externalResourcesRequired": {
-    "modified": "2020-10-15T21:13:01.240Z",
-    "contributors": [
-      "Sebastianz",
-      "ExE-Boss",
-      "Jeremie"
     ]
   },
   "Web/SVG/Attribute/fill": {
