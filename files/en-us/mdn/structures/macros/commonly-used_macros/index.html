@@ -176,15 +176,15 @@ tags:
 
 <h3 id="Indicating_that_a_feature_is_available_in_web_workers">Indicating that a feature is available in web workers</h3>
 
-<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/AvailableInWorkers.ejs">AvailableInWorkers</a></code> macro inserts a localized note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context. The default text can be customized if needed by specifying a string argument.</p>
+<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/AvailableInWorkers.ejs">AvailableInWorkers</a></code> macro inserts a localized note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context. You can use the argument <code>notservice</code> to indicate that a feature works in web workers except for service workers.</p>
 
 <h5 id="Syntax">Syntax</h5>
 
 <pre>\{{AvailableInWorkers}}
-\{{AvailableInWorkers("Replacement text to display in note if default is not suitable")}}</pre>
+\{{AvailableInWorkers("notservice")}}</pre>
 
 <h5 id="Examples">Examples</h5>
 
 <div>{{AvailableInWorkers}}
-  {{AvailableInWorkers("This feature is available in <a href='/en-US/docs/Web/API/Web_Workers_API'>Web workers</a> except for Service workers")}}
+  {{AvailableInWorkers("notservice")}}
 </div>
