@@ -10683,6 +10683,7 @@
 /en-US/docs/Web/HTML/Link_types/Link_types:_noopener	/en-US/docs/Web/HTML/Link_types/noopener
 /en-US/docs/Web/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/speculative_parsing
+/en-US/docs/Web/HTML/Preloading_content	/en-US/docs/Web/HTML/Link_types/preload
 /en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
