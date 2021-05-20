@@ -111,6 +111,23 @@ const flattened = [...flatten(arr, Infinity)];
 // [1, 2, 3, 4, 5, 6]
 </pre>
 
+<h3 id="use_concat_map_isArray_recursivity">Use concat, map, isArray & recursivity</h3>
+
+<pre class="brush: js">
+const list = [1, 2, [3, 4, [5, 6]]];
+
+const flatArray = (arr, depth = 0) => {
+  return [].concat(
+    ...arr.map(item =>
+      Array.isArray(item) && depth > 0 ? flatArray(item, depth - 1) : item
+    )
+  );
+};
+
+flatArray(list);
+// [1, 2, 3, 4, [5, 6]]
+</pre>
+
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Flattening_nested_arrays">Flattening nested arrays</h3>
