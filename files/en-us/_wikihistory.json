@@ -77620,17 +77620,6 @@
       "Longsonr"
     ]
   },
-  "Web/API/SVGStylable": {
-    "modified": "2020-10-15T21:10:56.430Z",
-    "contributors": [
-      "fscholz",
-      "mattwojo",
-      "kscarfone",
-      "Sheppy",
-      "trevorh",
-      "Jeremie"
-    ]
-  },
   "Web/API/SVGStyleElement": {
     "modified": "2020-10-15T21:10:49.974Z",
     "contributors": [
