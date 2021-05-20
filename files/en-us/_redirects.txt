@@ -621,7 +621,6 @@
 /en-US/docs/CSS/background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS/background-repeat	/en-US/docs/Web/CSS/background-repeat
 /en-US/docs/CSS/background-size	/en-US/docs/Web/CSS/background-size
-/en-US/docs/CSS/bleed	/en-US/docs/Web/CSS/@page/bleed
 /en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
 /en-US/docs/CSS/border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS/border-bottom	/en-US/docs/Web/CSS/border-bottom
@@ -776,7 +775,6 @@
 /en-US/docs/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
 /en-US/docs/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
 /en-US/docs/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
-/en-US/docs/CSS/marks	/en-US/docs/Web/CSS/@page/marks
 /en-US/docs/CSS/mask	/en-US/docs/Web/CSS/mask
 /en-US/docs/CSS/max-height	/en-US/docs/Web/CSS/max-height
 /en-US/docs/CSS/max-width	/en-US/docs/Web/CSS/max-width
@@ -10050,7 +10048,6 @@
 /en-US/docs/Web/CSS/additive-symbols	/en-US/docs/Web/CSS/@counter-style/additive-symbols
 /en-US/docs/Web/CSS/attr	/en-US/docs/Web/CSS/attr()
 /en-US/docs/Web/CSS/auto	/en-US/docs/Web/CSS/width
-/en-US/docs/Web/CSS/bleed	/en-US/docs/Web/CSS/@page/bleed
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
@@ -10108,7 +10105,6 @@
 /en-US/docs/Web/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
 /en-US/docs/Web/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
 /en-US/docs/Web/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
-/en-US/docs/Web/CSS/marks	/en-US/docs/Web/CSS/@page/marks
 /en-US/docs/Web/CSS/max	/en-US/docs/Web/CSS/max()
 /en-US/docs/Web/CSS/media	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/media/Bitmap	/en-US/docs/Web/CSS/@media

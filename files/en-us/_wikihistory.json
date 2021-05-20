@@ -102573,16 +102573,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/@media/prefers-reduced-transparency": {
-    "modified": "2020-10-15T22:20:09.272Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "bobbyjnichols",
-      "SphinxKnight",
-      "bershanskiy"
-    ]
-  },
   "Web/CSS/@media/resolution": {
     "modified": "2020-10-15T21:30:24.837Z",
     "contributors": [
@@ -102594,19 +102584,6 @@
       "ExE-Boss",
       "mfluehr",
       "kscarfone",
-      "cvrebert"
-    ]
-  },
-  "Web/CSS/@media/scan": {
-    "modified": "2020-12-14T11:00:43.208Z",
-    "contributors": [
-      "rachelandrew",
-      "wbamberg",
-      "mfuji09",
-      "connorshea",
-      "mfluehr",
-      "kscarfone",
-      "jsx",
       "cvrebert"
     ]
   },
@@ -102696,40 +102673,6 @@
       "teoli",
       "ethertank",
       "McGurk"
-    ]
-  },
-  "Web/CSS/@page/bleed": {
-    "modified": "2020-10-15T21:12:58.037Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "ExE-Boss",
-      "mfluehr",
-      "Prinz_Rana",
-      "Sebastianz",
-      "Sheppy",
-      "teoli",
-      "ethertank",
-      "BijuGC"
-    ]
-  },
-  "Web/CSS/@page/marks": {
-    "modified": "2020-10-15T21:06:01.342Z",
-    "contributors": [
-      "wbamberg",
-      "connorshea",
-      "mfuji09",
-      "ExE-Boss",
-      "mfluehr",
-      "Siilwyn",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "Pointy",
-      "grendel",
-      "BijuGC"
     ]
   },
   "Web/CSS/@page/size": {
