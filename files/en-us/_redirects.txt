@@ -3891,8 +3891,6 @@
 /en-US/docs/HTML/Element/li-redirect-1	/en-US/docs/Web/HTML/Element/li
 /en-US/docs/HTML/Element/link	/en-US/docs/Web/HTML/Element/link
 /en-US/docs/HTML/Element/link-redirect-1	/en-US/docs/Web/HTML/Element/link
-/en-US/docs/HTML/Element/listing	/en-US/docs/Web/HTML/Element/listing
-/en-US/docs/HTML/Element/listing-redirect-1	/en-US/docs/Web/HTML/Element/listing
 /en-US/docs/HTML/Element/main	/en-US/docs/Web/HTML/Element/main
 /en-US/docs/HTML/Element/map	/en-US/docs/Web/HTML/Element/map
 /en-US/docs/HTML/Element/map-redirect-1	/en-US/docs/Web/HTML/Element/map
