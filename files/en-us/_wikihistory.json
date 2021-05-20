@@ -123806,27 +123806,6 @@
       "McGurk"
     ]
   },
-  "Web/HTML/Element/isindex": {
-    "modified": "2020-12-02T06:53:48.312Z",
-    "contributors": [
-      "mfuji09",
-      "DomenicDenicola",
-      "teoli",
-      "chris-morgan",
-      "mfluehr",
-      "chrisdavidmills",
-      "Keavon",
-      "karlmoz",
-      "Tigt",
-      "JonnyBurger",
-      "LionC",
-      "kscarfone",
-      "tregagnon",
-      "Sheppy",
-      "ethertank",
-      "avsaro"
-    ]
-  },
   "Web/HTML/Element/kbd": {
     "modified": "2020-10-15T21:11:48.713Z",
     "contributors": [

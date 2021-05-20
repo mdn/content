@@ -3877,8 +3877,6 @@
 /en-US/docs/HTML/Element/iframe-redirect-1	/en-US/docs/Web/HTML/Element/iframe
 /en-US/docs/HTML/Element/ins	/en-US/docs/Web/HTML/Element/ins
 /en-US/docs/HTML/Element/ins-redirect-1	/en-US/docs/Web/HTML/Element/ins
-/en-US/docs/HTML/Element/isindex	/en-US/docs/Web/HTML/Element/isindex
-/en-US/docs/HTML/Element/isindex-redirect-1	/en-US/docs/Web/HTML/Element/isindex
 /en-US/docs/HTML/Element/kbd	/en-US/docs/Web/HTML/Element/kbd
 /en-US/docs/HTML/Element/kbd-redirect-1	/en-US/docs/Web/HTML/Element/kbd
 /en-US/docs/HTML/Element/keygen	/en-US/docs/Web/HTML/Element/keygen
