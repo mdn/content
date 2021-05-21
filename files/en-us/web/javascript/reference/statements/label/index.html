@@ -2,9 +2,9 @@
 title: label
 slug: Web/JavaScript/Reference/Statements/label
 tags:
-- JavaScript
-- Language feature
-- Statement
+  - JavaScript
+  - Language feature
+  - Statement
 browser-compat: javascript.statements.label
 ---
 <div>{{jsSidebar("Statements")}}</div>
@@ -48,7 +48,7 @@ browser-compat: javascript.statements.label
 <h3 id="Using_a_labeled_continue_with_for_loops">Using a labeled continue with for loops
 </h3>
 
-<pre class="brush: js">var i, j;
+<pre class="brush: js">let i, j;
 
 loop1:
 for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
@@ -77,8 +77,8 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 <p>Given an array of items and an array of tests, this example counts the number of items
   that passes all the tests.</p>
 
-<pre class="brush: js">var itemsPassed = 0;
-var i, j;
+<pre class="brush: js">let itemsPassed = 0;
+let i, j;
 
 top:
 for (i = 0; i &lt; items.length; i++) {
@@ -93,7 +93,7 @@ for (i = 0; i &lt; items.length; i++) {
 
 <h3 id="Using_a_labeled_break_with_for_loops">Using a labeled break with for loops</h3>
 
-<pre class="brush: js">var i, j;
+<pre class="brush: js">let i, j;
 
 loop1:
 for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
@@ -118,8 +118,8 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 <p>Given an array of items and an array of tests, this example determines whether all
   items pass all tests.</p>
 
-<pre class="brush: js">var allPass = true;
-var i, j;
+<pre class="brush: js">let allPass = true;
+let i, j;
 
 top:
 for (i = 0; i &lt; items.length; i++) {
@@ -152,7 +152,7 @@ console.log('swap');
 
 <p>Starting with ECMAScript 2015, labeled function declarations are now standardized for
   non-strict code in the <a
-    href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">web
+    href="https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">web
     compatibility annex of the specification</a>.</p>
 
 <pre class="brush: js">L: function F() {}</pre>

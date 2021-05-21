@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Array.splice
 
 <p>The <strong><code>splice()</code></strong> method changes the contents of an array by
   removing or replacing existing elements and/or adding new elements <a
-    href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a>.</p>
+    href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a>. To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-splice.html")}}</div>
 
@@ -41,7 +41,7 @@ splice(start, deleteCount, item1, item2, itemN)
     will behave as an adding function, adding as many element as item[n*] provided.</p>
     <p>If negative, it will begin that many elements from the end of the array. (In this
     case, the origin <code>-1</code>, meaning <code>-<var>n</var></code> is the index of
-    the <code><var>n</var></code><sup>th</sup> last element, and is therefore equivalent
+    the <code>n</code>th last element, and is therefore equivalent
     to the index of <code><var>array</var>.length - <var>n</var></code>.) If
     <code><var>array</var>.length + <var>start</var></code> is less than <code>0</code>,
     it will begin from index <code>0</code>.</p>

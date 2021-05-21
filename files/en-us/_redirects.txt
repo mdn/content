@@ -621,7 +621,6 @@
 /en-US/docs/CSS/background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS/background-repeat	/en-US/docs/Web/CSS/background-repeat
 /en-US/docs/CSS/background-size	/en-US/docs/Web/CSS/background-size
-/en-US/docs/CSS/bleed	/en-US/docs/Web/CSS/@page/bleed
 /en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
 /en-US/docs/CSS/border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS/border-bottom	/en-US/docs/Web/CSS/border-bottom
@@ -776,7 +775,6 @@
 /en-US/docs/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
 /en-US/docs/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
 /en-US/docs/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
-/en-US/docs/CSS/marks	/en-US/docs/Web/CSS/@page/marks
 /en-US/docs/CSS/mask	/en-US/docs/Web/CSS/mask
 /en-US/docs/CSS/max-height	/en-US/docs/Web/CSS/max-height
 /en-US/docs/CSS/max-width	/en-US/docs/Web/CSS/max-width
@@ -1700,7 +1698,7 @@
 /en-US/docs/DOM/SVGSetElement	/en-US/docs/Web/API/SVGSetElement
 /en-US/docs/DOM/SVGStopElement	/en-US/docs/Web/API/SVGStopElement
 /en-US/docs/DOM/SVGStringList	/en-US/docs/Web/API/SVGStringList
-/en-US/docs/DOM/SVGStylable	/en-US/docs/Web/API/SVGStylable
+/en-US/docs/DOM/SVGStylable	/en-US/docs/Web/API/SVGElement
 /en-US/docs/DOM/SVGStyleElement	/en-US/docs/Web/API/SVGStyleElement
 /en-US/docs/DOM/SVGSwitchElement	/en-US/docs/Web/API/SVGSwitchElement
 /en-US/docs/DOM/SVGSymbolElement	/en-US/docs/Web/API/SVGSymbolElement
@@ -1712,7 +1710,6 @@
 /en-US/docs/DOM/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
 /en-US/docs/DOM/SVGTransform	/en-US/docs/Web/API/SVGTransform
 /en-US/docs/DOM/SVGTransformList	/en-US/docs/Web/API/SVGTransformList
-/en-US/docs/DOM/SVGTransformable	/en-US/docs/Web/API/SVGTransformable
 /en-US/docs/DOM/SVGUseElement	/en-US/docs/Web/API/SVGUseElement
 /en-US/docs/DOM/SVGVKernElement	/en-US/docs/Web/API/SVGVKernElement
 /en-US/docs/DOM/SVGViewElement	/en-US/docs/Web/API/SVGViewElement
@@ -3072,7 +3069,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGSetElement	/en-US/docs/Web/API/SVGSetElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGStopElement	/en-US/docs/Web/API/SVGStopElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGStringList	/en-US/docs/Web/API/SVGStringList
-/en-US/docs/Document_Object_Model_(DOM)/SVGStylable	/en-US/docs/Web/API/SVGStylable
+/en-US/docs/Document_Object_Model_(DOM)/SVGStylable	/en-US/docs/Web/API/SVGElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGStyleElement	/en-US/docs/Web/API/SVGStyleElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGSwitchElement	/en-US/docs/Web/API/SVGSwitchElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGSymbolElement	/en-US/docs/Web/API/SVGSymbolElement
@@ -3084,7 +3081,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTransform	/en-US/docs/Web/API/SVGTransform
 /en-US/docs/Document_Object_Model_(DOM)/SVGTransformList	/en-US/docs/Web/API/SVGTransformList
-/en-US/docs/Document_Object_Model_(DOM)/SVGTransformable	/en-US/docs/Web/API/SVGTransformable
 /en-US/docs/Document_Object_Model_(DOM)/SVGUseElement	/en-US/docs/Web/API/SVGUseElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGVKernElement	/en-US/docs/Web/API/SVGVKernElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGViewElement	/en-US/docs/Web/API/SVGViewElement
@@ -3881,8 +3877,6 @@
 /en-US/docs/HTML/Element/iframe-redirect-1	/en-US/docs/Web/HTML/Element/iframe
 /en-US/docs/HTML/Element/ins	/en-US/docs/Web/HTML/Element/ins
 /en-US/docs/HTML/Element/ins-redirect-1	/en-US/docs/Web/HTML/Element/ins
-/en-US/docs/HTML/Element/isindex	/en-US/docs/Web/HTML/Element/isindex
-/en-US/docs/HTML/Element/isindex-redirect-1	/en-US/docs/Web/HTML/Element/isindex
 /en-US/docs/HTML/Element/kbd	/en-US/docs/Web/HTML/Element/kbd
 /en-US/docs/HTML/Element/kbd-redirect-1	/en-US/docs/Web/HTML/Element/kbd
 /en-US/docs/HTML/Element/keygen	/en-US/docs/Web/HTML/Element/keygen
@@ -3895,8 +3889,6 @@
 /en-US/docs/HTML/Element/li-redirect-1	/en-US/docs/Web/HTML/Element/li
 /en-US/docs/HTML/Element/link	/en-US/docs/Web/HTML/Element/link
 /en-US/docs/HTML/Element/link-redirect-1	/en-US/docs/Web/HTML/Element/link
-/en-US/docs/HTML/Element/listing	/en-US/docs/Web/HTML/Element/listing
-/en-US/docs/HTML/Element/listing-redirect-1	/en-US/docs/Web/HTML/Element/listing
 /en-US/docs/HTML/Element/main	/en-US/docs/Web/HTML/Element/main
 /en-US/docs/HTML/Element/map	/en-US/docs/Web/HTML/Element/map
 /en-US/docs/HTML/Element/map-redirect-1	/en-US/docs/Web/HTML/Element/map
@@ -6088,7 +6080,6 @@
 /en-US/docs/SVG/Attribute/edgeMode	/en-US/docs/Web/SVG/Attribute/edgeMode
 /en-US/docs/SVG/Attribute/elevation	/en-US/docs/Web/SVG/Attribute/elevation
 /en-US/docs/SVG/Attribute/end	/en-US/docs/Web/SVG/Attribute/end
-/en-US/docs/SVG/Attribute/externalResourcesRequired	/en-US/docs/Web/SVG/Attribute/externalResourcesRequired
 /en-US/docs/SVG/Attribute/fill	/en-US/docs/Web/SVG/Attribute/fill
 /en-US/docs/SVG/Attribute/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/SVG/Attribute/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
@@ -6218,7 +6209,6 @@
 /en-US/docs/SVG/Element/animateTransform	/en-US/docs/Web/SVG/Element/animateTransform
 /en-US/docs/SVG/Element/circle	/en-US/docs/Web/SVG/Element/circle
 /en-US/docs/SVG/Element/clipPath	/en-US/docs/Web/SVG/Element/clipPath
-/en-US/docs/SVG/Element/color-profile	/en-US/docs/Web/SVG/Element/color-profile
 /en-US/docs/SVG/Element/cursor	/en-US/docs/Web/SVG/Element/cursor
 /en-US/docs/SVG/Element/defs	/en-US/docs/Web/SVG/Element/defs
 /en-US/docs/SVG/Element/desc	/en-US/docs/Web/SVG/Element/desc
@@ -7153,9 +7143,9 @@
 /en-US/docs/Web/API/CharacterData.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
 /en-US/docs/Web/API/CharacterData/nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/CharacterData/previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
-/en-US/docs/Web/API/CharacterData/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/ChildNode.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
-/en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/ChildNode/remove
+/en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/Element/remove
+/en-US/docs/Web/API/ChildNode/remove	/en-US/docs/Web/API/Element/remove
 /en-US/docs/Web/API/Childnode.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
 /en-US/docs/Web/API/Client/focus	/en-US/docs/Web/API/WindowClient/focus
 /en-US/docs/Web/API/Client/focused	/en-US/docs/Web/API/WindowClient/focused
@@ -7290,7 +7280,6 @@
 /en-US/docs/Web/API/Document.xmlEncoding	/en-US/docs/Web/API/Document/xmlEncoding
 /en-US/docs/Web/API/Document/Document:_DOMContentLoaded_event	/en-US/docs/Web/API/Document/DOMContentLoaded_event
 /en-US/docs/Web/API/Document/Document:_paste_event	/en-US/docs/Web/API/Document/paste_event
-/en-US/docs/Web/API/Document/ParentNode.querySelectorAll	/en-US/docs/Web/API/ParentNode/querySelectorAll
 /en-US/docs/Web/API/Document/async	/en-US/docs/Web/API/XMLDocument/async
 /en-US/docs/Web/API/Document/baseURI	/en-US/docs/Web/API/Node/baseURI
 /en-US/docs/Web/API/Document/cancelFullscreen	/en-US/docs/Web/API/Document/exitFullscreen
@@ -7347,8 +7336,6 @@
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
-/en-US/docs/Web/API/DocumentTraversal	/en-US/docs/Web/API/ElementTraversal
-/en-US/docs/Web/API/DocumentType/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
@@ -7416,7 +7403,6 @@
 /en-US/docs/Web/API/Element/pointerout_event	/en-US/docs/Web/API/HTMLElement/pointerout_event
 /en-US/docs/Web/API/Element/pointerover_event	/en-US/docs/Web/API/HTMLElement/pointerover_event
 /en-US/docs/Web/API/Element/pointerup_event	/en-US/docs/Web/API/HTMLElement/pointerup_event
-/en-US/docs/Web/API/Element/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
@@ -8483,6 +8469,8 @@
 /en-US/docs/Web/API/SVGPathElement/getPointAtLength	/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength
 /en-US/docs/Web/API/SVGPathElement/getTotalLength	/en-US/docs/Web/API/SVGGeometryElement/getTotalLength
 /en-US/docs/Web/API/SVGPathElement/pathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
+/en-US/docs/Web/API/SVGStylable	/en-US/docs/Web/API/SVGElement
+/en-US/docs/Web/API/SVGURIReference	/en-US/docs/Web/SVG/Attribute/href
 /en-US/docs/Web/API/Screen.availHeight	/en-US/docs/Web/API/Screen/availHeight
 /en-US/docs/Web/API/Screen.availLeft	/en-US/docs/Web/API/Screen/availLeft
 /en-US/docs/Web/API/Screen.availTop	/en-US/docs/Web/API/Screen/availTop
@@ -10053,7 +10041,6 @@
 /en-US/docs/Web/CSS/additive-symbols	/en-US/docs/Web/CSS/@counter-style/additive-symbols
 /en-US/docs/Web/CSS/attr	/en-US/docs/Web/CSS/attr()
 /en-US/docs/Web/CSS/auto	/en-US/docs/Web/CSS/width
-/en-US/docs/Web/CSS/bleed	/en-US/docs/Web/CSS/@page/bleed
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
@@ -10111,7 +10098,6 @@
 /en-US/docs/Web/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
 /en-US/docs/Web/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
 /en-US/docs/Web/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
-/en-US/docs/Web/CSS/marks	/en-US/docs/Web/CSS/@page/marks
 /en-US/docs/Web/CSS/max	/en-US/docs/Web/CSS/max()
 /en-US/docs/Web/CSS/media	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/media/Bitmap	/en-US/docs/Web/CSS/@media
@@ -10691,6 +10677,7 @@
 /en-US/docs/Web/HTML/Link_types/Link_types:_noopener	/en-US/docs/Web/HTML/Link_types/noopener
 /en-US/docs/Web/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/speculative_parsing
+/en-US/docs/Web/HTML/Preloading_content	/en-US/docs/Web/HTML/Link_types/preload
 /en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
@@ -10708,6 +10695,7 @@
 /en-US/docs/Web/HTTP/HTTP_response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Headers/Cache-Disposition	/en-US/docs/Web/HTTP/Headers/Content-Disposition
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
+/en-US/docs/Web/HTTP/Headers/Feature-Policy/wake-lock	/en-US/docs/Web/HTTP/Headers/Feature-Policy/screen-wake-lock
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/webauthn	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP

@@ -9,13 +9,13 @@ tags:
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}</p>
 
-<p>There are several ways to color shapes (including specifying attributes on the object) using inline <a href="/en-US/docs/Glossary/CSS">CSS</a>, an embedded CSS section, or an external CSS file. Most <a href="/en-US/docs/Glossary/SVG">SVG </a>you'll find around the web use inline CSS, but there are advantages and disadvantages associated with each type.</p>
+<p>There are several ways to color shapes (including specifying attributes on the object) using inline <a href="/en-US/docs/Glossary/CSS">CSS</a>, an embedded CSS section, or an external CSS file. Most <a href="/en-US/docs/Glossary/SVG">SVG</a> you'll find around the web use inline CSS, but there are advantages and disadvantages associated with each type.</p>
 
 <h2 id="Fill_and_Stroke_Attributes">Fill and Stroke Attributes</h2>
 
 <h3 id="Painting">Painting</h3>
 
-<p>Basic coloring can be done by setting two attributes on the node: <code>fill</code> and <code>stroke</code>. Using <code>fill</code> sets the color inside the object and <code>stroke</code> sets the color of the line drawn around the object. You can use the same css color naming schemes that you use in HTML, whether that's color names (that is <code><em>red</em></code>), rgb values (that is <code><em>rgb(255,0,0)</em></code>), hex values, rgba values, etc.</p>
+<p>Basic coloring can be done by setting two attributes on the node: <code>fill</code> and <code>stroke</code>. Using <code>fill</code> sets the color inside the object and <code>stroke</code> sets the color of the line drawn around the object. You can use the same css color naming schemes that you use in HTML, whether that's color names (that is <code><em>red</em></code>), rgb values (that is <code><em>rgb(255,0,0)</em></code>), hex values, rgba values, etc.</p>
 
 <pre class="brush:xml;"> &lt;rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
        fill-opacity="0.5" stroke-opacity="0.8"/&gt;
@@ -40,12 +40,12 @@ tags:
 
 <p>The <code>stroke-width</code> property defines the width of this stroke. Strokes are drawn centered around the path. In the example above, the path is shown in pink, and the stroke in black.</p>
 
-<p>The second attribute affecting strokes is the <code>stroke-linecap</code> property, demonstrated above. This controls the shape of the ends of lines.</p>
+<p>The second attribute affecting strokes is the <code>stroke-linecap</code> property, demonstrated above. This controls the shape of the ends of lines.</p>
 
 <p>There are three possible values for <code>stroke-linecap</code>:</p>
 
 <ul>
- <li><code>butt</code> closes the line off with a straight edge that's normal (at 90 degrees) to the direction of the stroke and crosses its end.</li>
+ <li><code>butt</code> closes the line off with a straight edge that's normal (at 90 degrees) to the direction of the stroke and crosses its end.</li>
  <li><code>square</code> has essentially the same appearance, but stretches the stroke slightly beyond the actual path. The distance that the stroke goes beyond the path is half the <code>stroke-width</code>.</li>
  <li><code>round</code> produces a rounded effect on the end of the stroke. The radius of this curve is also controlled by the <code>stroke-width</code>.</li>
 </ul>
@@ -66,7 +66,7 @@ tags:
       stroke-linecap="square" fill="none" stroke-linejoin="bevel"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>Each of these polylines has two segments. The joint where the two meet is controlled by the <code>stroke-linejoin</code> attribute. There are three possible values for this attribute. <code>miter</code> extends the line slightly beyond its normal width to create a square corner where only one angle is used. <code>round</code> creates a rounded line segment. <code>bevel</code> creates a new angle to aid in the transition between the two segments.</p>
+<p>Each of these polylines has two segments. The joint where the two meet is controlled by the <code>stroke-linejoin</code> attribute. There are three possible values for this attribute. <code>miter</code> extends the line slightly beyond its normal width to create a square corner where only one angle is used. <code>round</code> creates a rounded line segment. <code>bevel</code> creates a new angle to aid in the transition between the two segments.</p>
 
 <p>Finally, you can also use dashed line types on a stroke by specifying the <code>stroke-dasharray</code> attribute.</p>
 
@@ -80,7 +80,7 @@ tags:
     stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>The stroke-dasharray attribute takes a series of comma-separated numbers as its argument. </p>
+<p>The <code>stroke-dasharray</code> attribute takes a series of comma-separated numbers as its argument. </p>
 
 <div class="note">
 <p><strong>Note:</strong> Unlike {{SVGElement("path")}}s, these numbers <strong><em>must</em></strong> be comma-separated (whitespace is ignored).</p>
@@ -88,11 +88,11 @@ tags:
 
 <p>The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.</p>
 
-<p>There are additional stroke and fill properties available, including <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a>,</code> which specifies how to color in shapes that overlap themselves; <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code>, which determines if a stroke should draw miters; and <a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a>, which specifies where to start a dasharray on a line.</p>
+<p>There are additional <code>stroke</code> and <code>fill</code> properties available, including <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a>,</code> which specifies how to color in shapes that overlap themselves; <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a></code>, which determines if a stroke should draw miters; and <a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a>, which specifies where to start a dasharray on a line.</p>
 
 <h2 id="Using_CSS">Using CSS</h2>
 
-<p>In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like <code>width</code>, <code>height</code>, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.</p>
+<p>In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like <code>width</code>, <code>height</code>, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.</p>
 
 <div class="note style-wrap"><strong>Note:</strong> The <a href="https://www.w3.org/TR/SVG/propidx.html">SVG specification</a> decides strictly between attributes that are <em>properties</em> and other attributes. The former can be modified with CSS, the latter not.</div>
 
@@ -103,7 +103,7 @@ tags:
 
 <p>Or it can be moved to a special style section that you include. Instead of shoving such a section into a <code>&lt;head&gt;</code> section like you do in HTML, though, it's included in an area called {{SVGElement("defs")}}.</p>
 
-<p>{{SVGElement("defs")}} stands for definitions, and it is here that you can create elements that don't appear in the SVG directly, but are used by other elements.</p>
+<p>{{SVGElement("defs")}} stands for definitions, and it is here that you can create elements that don't appear in the SVG directly, but are used by other elements.</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -118,7 +118,7 @@ tags:
   &lt;rect x="10" height="180" y="10" width="180" id="MyRect"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>Moving styles to an area like this can make it easier to adjust properties on large groups of elements. You can also use things like the <code>:</code><strong><code>hover</code> pseudo class</strong> to create rollover effects:</p>
+<p>Moving styles to an area like this can make it easier to adjust properties on large groups of elements. You can also use things like the <strong><code>:hover</code> pseudo class</strong> to create rollover effects:</p>
 
 <pre class="brush:css;"> #MyRect:hover {
    stroke: black;

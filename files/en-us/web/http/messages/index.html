@@ -64,9 +64,9 @@ tags:
 <p>Many different headers can appear in requests. They can be divided in several groups:</p>
 
 <ul>
- <li><em>General headers</em>, like {{HTTPHeader("Via")}}, apply to the message as a whole.</li>
- <li><em>Request headers</em>, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).</li>
- <li><em>Representation metadata headers</em> (formerly <em>entity headers</em>), like {{HTTPHeader("Content-Length")}} that describe the encoding and format of the message body (only present if the message has a body).</li>
+ <li>{{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the message as a whole.</li> 
+ <li>{{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).</li>
+ <li>{{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).</li>
 </ul>
 
 <p><img alt="Example of headers in an HTTP request" src="http_request_headers3.png"></p>
@@ -103,9 +103,9 @@ tags:
 <p>Many different headers can appear in responses. These can be divided into several groups:</p>
 
 <ul>
- <li><em>General headers</em>, like {{HTTPHeader("Via")}}, apply to the whole message.</li>
- <li><em>Response headers</em>, like {{HTTPHeader("Vary")}} and {{HTTPHeader("Accept-Ranges")}}, give additional information about the server which doesn't fit in the status line.</li>
- <li><em>Representation metadata headers</em> (formerly <em>entity headers</em>), like {{HTTPHeader("Content-Length")}} that describe the encoding and format of the message body (only present if the message has a body).</li>
+ <li>{{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the whole message.</li> 
+ <li>{{glossary("Response header", "Response headers")}}, like {{HTTPHeader("Vary")}} and {{HTTPHeader("Accept-Ranges")}}, give additional information about the server which doesn't fit in the status line.</li>  
+ <li>{{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).</li>
 </ul>
 
 <p><img alt="Example of headers in an HTTP response" src="http_response_headers3.png"></p>
