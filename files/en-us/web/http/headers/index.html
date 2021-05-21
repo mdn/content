@@ -83,8 +83,6 @@ tags:
  <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"><cite>[HTML]</cite></a>).</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}</dt>
  <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://datatracker.ietf.org/doc/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
- <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
- <dd>Indicates that the request has been conveyed in early data.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
  <dd>Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.</dd>
  <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
@@ -397,6 +395,8 @@ tags:
  <dd>Used to list alternate ways to reach this service.</dd>
  <dt>{{HTTPHeader("Date")}}</dt>
  <dd>Contains the date and time at which the message was originated.</dd>
+ <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
+ <dd>Indicates that the request has been conveyed in TLS early data.</dd>
  <dt>{{HTTPHeader("Large-Allocation")}}</dt>
  <dd>Tells the browser that the page being loaded is going to want to perform a large allocation.</dd>
  <dt>{{HTTPHeader("Link")}}</dt>
