@@ -76974,13 +76974,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGFilterPrimitiveStandardAttributes": {
-    "modified": "2020-10-15T21:53:52.473Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/API/SVGFontElement": {
     "modified": "2020-10-15T21:10:05.890Z",
     "contributors": [
