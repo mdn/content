@@ -79,7 +79,7 @@ parseInt(string, radix)
   values. Leading and trailing spaces are allowed.</p>
 
 <p>Because some numbers use the <code>e</code> character in their string representation
-  (e.g. <strong><code>6.022e23</code></strong> for 6.022 × 10<sup>23</sup>), using
+  (e.g. <strong><code>6.022E23</code></strong> for 6.022 × 10^23), using
   <code>parseInt</code> to truncate numbers will produce unexpected results when used on
   very large or very small numbers. <code>parseInt</code> should <em>not</em> be used as a
   substitute for {{jsxref("Math.floor()")}}.</p>

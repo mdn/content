@@ -239,7 +239,7 @@ Date.parse("2019-01-01T00:00:00.000+00:00")
 <ul>
   <li>Firefox 49 changed the parsing of 2-digit years to be aligned with the Google Chrome
     browser instead of Internet Explorer. Now, 2-digit years that are less than
-    <code>50</code> are parsed as 21<sup>st</sup> century years. For example,
+    <code>50</code> are parsed as 21st century years. For example,
     <code>04/16/17</code>, previously parsed as April 16, 1917, will be April 16, 2017
     now. To avoid any interoperability issues or ambiguous years, it is recommended to use
     the ISO 8601 format like "<code>2017-04-16</code>" (<a
@@ -248,7 +248,7 @@ Date.parse("2019-01-01T00:00:00.000+00:00")
     <code><em>dateString</em></code> parameter. This means that, for instance, while
     <code>!!Date.parse("42")</code> evaluates to <code>false</code> in Firefox, it
     evaluates to <code>true</code> in Google Chrome because "<code>42</code>" is
-    interpreted as January 1<sup>st</sup>, 2042.</li>
+    interpreted as the first of January 2042.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
