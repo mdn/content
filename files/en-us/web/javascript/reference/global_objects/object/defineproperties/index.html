@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Method
   - Object
+browser-compat: javascript.builtins.Object.defineProperties
 ---
 <div>{{JSRef}}</div>
 
@@ -26,13 +27,12 @@ tags:
   <dt><code><var>obj</var></code></dt>
   <dd>The object on which to define or modify properties.</dd>
   <dt><code><var>props</var></code></dt>
-  <dd>An object whose keys represent the names of properties to be defined or modified and
+  <dd>
+    <p>An object whose keys represent the names of properties to be defined or modified and
     whose values are objects describing those properties. Each value in <code>props</code>
     must be either a data descriptor or an accessor descriptor; it cannot be both (see
-    {{jsxref("Object.defineProperty()")}} for more details).</dd>
-  <dd>Data descriptors and accessor descriptors may optionally contain the following keys:
-  </dd>
-  <dd>
+    {{jsxref("Object.defineProperty()")}} for more details).</p>
+    <p>Data descriptors and accessor descriptors may optionally contain the following keys:</p>
     <dl>
       <dt><code>configurable</code></dt>
       <dd><code>true</code> if and only if the type of this property descriptor may be
@@ -179,23 +179,11 @@ Object.defineProperties(obj, {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.defineproperties',
-        'Object.defineProperties')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.defineProperties")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

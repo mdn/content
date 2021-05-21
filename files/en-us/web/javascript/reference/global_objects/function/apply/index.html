@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Method
   - Reference
+browser-compat: javascript.builtins.Function.apply
 ---
 <div>{{JSRef}}</div>
 
@@ -16,7 +17,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">func.apply(thisArg, [ argsArray])</pre>
+<pre class="brush: js">
+apply(thisArg)
+apply(thisArg, argsArray)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +59,7 @@ tags:
 
 <p>You can also use {{jsxref("Functions/arguments", "arguments")}} for the <code><var>argsArray</var></code> parameter. {{jsxref("Functions/arguments", "arguments")}} is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the <code>apply</code> method. You can use <code>arguments</code> to pass all the arguments to the called object. The called object is then responsible for handling the arguments.</p>
 
-<p>Since ECMAScript 5<sup>th</sup> Edition, you can also use any kind of object which is array-like. In practice, this means it's going to have a <code>length</code> property, and integer ("index") properties in the range <code>(0..length - 1)</code>. For example, you could use a {{domxref("NodeList")}}, or a custom object like <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }</code>.</p>
+<p>Since ECMAScript 5th Edition, you can also use any kind of object which is array-like. In practice, this means it's going to have a <code>length</code> property, and integer ("index") properties in the range <code>(0..length - 1)</code>. For example, you could use a {{domxref("NodeList")}}, or a custom object like <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }</code>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Many older browsers—including Chrome &lt;17 and Internet Explorer &lt;9—don't accept array-like objects, and will throw an exception.</p>
@@ -171,22 +175,11 @@ console.log(myInstance.constructor);              // logs 'MyConstructor'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.apply")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -56,7 +56,7 @@ tags:
 
 <p><img alt="The HTML validator homepage" src="validator.png" style="display: block; margin: 0px auto;"></p>
 
-<p>CSS has a similar story — you need to check that your property names are spelled correctly, property values are spelled correctly and are valid for the properties they are used on, you are not missing any curly braces, and so on. The W3C has a <a class="external external-icon" href="http://jigsaw.w3.org/css-validator/">CSS Validator</a> available too, for this purpose.</p>
+<p>CSS has a similar story — you need to check that your property names are spelled correctly, property values are spelled correctly and are valid for the properties they are used on, you are not missing any curly braces, and so on. The W3C has a <a class="external external-icon" href="https://jigsaw.w3.org/css-validator/">CSS Validator</a> available too, for this purpose.</p>
 
 <h3 id="Linters">Linters</h3>
 
@@ -202,7 +202,7 @@ tags:
 <p>If you view the example on a supporting browser like desktop/Android Chrome or iOS Safari, you'll see the special widgets/features in action as you try to input data. On a non-supporting platform such as Firefox or Internet Explorer, the inputs will just fallback to normal text inputs, so at least the user can still enter some information.</p>
 
 <div class="notecard note">
-<p>Note: Of course, this may not be a great solution for your project's needs — the difference in visual presentation is not great, plus it is harder to guarantee the data will be entered in the format you want it in. For cross browser forms, It is probably better to rely on simple form elements, or selectively use advanced form elements only in supporting browsers, or using a library that provides decent cross browser form widgets, such as <a href="http://jqueryui.com/">jQuery UI</a> or <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap datepicker</a>.</p>
+<p>Note: Of course, this may not be a great solution for your project's needs — the difference in visual presentation is not great, plus it is harder to guarantee the data will be entered in the format you want it in. For cross browser forms, It is probably better to rely on simple form elements, or selectively use advanced form elements only in supporting browsers, or using a library that provides decent cross browser form widgets, such as <a href="https://jqueryui.com/">jQuery UI</a> or <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap datepicker</a>.</p>
 </div>
 
 <h4 id="CSS_fallback_behavior">CSS fallback behavior</h4>
@@ -289,11 +289,11 @@ button:active {
 
 <p>(The <code>date</code> form input isn't directly inside the <code>&lt;form&gt;</code>; you'd be better off using a general descendant selector instead of a child selector).</p>
 
-<p>However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like <code><a href="/en-US/docs/Web/CSS/:nth-of-type">:nth-of-type</a></code>, <code><a href="/en-US/docs/Web/CSS/:not">:not</a></code>, <code><a href="/en-US/docs/Web/CSS/::selection">::selection</a></code>, etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's <a href="http://selectivizr.com/">Selectivizr</a> library — this is a small JavaScript library that works on top of an existing JavaScript library like <a href="http://jquery.com/">jQuery</a> or <a href="http://mootools.net/">MooTools</a>.</p>
+<p>However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like <code><a href="/en-US/docs/Web/CSS/:nth-of-type">:nth-of-type</a></code>, <code><a href="/en-US/docs/Web/CSS/:not">:not</a></code>, <code><a href="/en-US/docs/Web/CSS/::selection">::selection</a></code>, etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's <a href="http://selectivizr.com/">Selectivizr</a> library — this is a small JavaScript library that works on top of an existing JavaScript library like <a href="https://jquery.com/">jQuery</a> or <a href="https://mootools.net/">MooTools</a>.</p>
 
 <ol>
  <li>To try this example, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a>. If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with <code>p:first-child</code>, which won't work in old versions of IE.</li>
- <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
+ <li>Now download <a href="https://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
  <li>Put the following code into the head of your HTML document, just before the opening <code>&lt;style&gt;</code> tag:
   <pre class="brush: html">&lt;script type="text/javascript" src="MooTools-Core-1.6.0.js"&gt;&lt;/script&gt;
     &lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
@@ -370,11 +370,11 @@ transform: rotate(90deg);</pre>
 
 <p>The <a href="https://leaverou.github.io/prefixfree/">prefix-free JavaScript library</a> can be attached to a page, and will automatically detect what capabilities are possessed by browsers viewing the page and add prefixes as appropriate. It is really easy and convenient to use, although it does have some downsides (see the link above for details), and it is arguable that parsing every stylesheet in your site and add prefixes at run time can be a drain on the computer's processing power for a large site.</p>
 
-<p>Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> and <a href="http://postcss.org/">PostCSS</a>. These tools can be used in a variety of ways, for example <a href="https://tools.hubsadda.com/autoprefixer/">Autoprefixer</a> has an <a href="https://autoprefixer.github.io/">online version</a> that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in <a href="https://github.com/postcss/autoprefixer#options">Autoprefixer options</a>; also see <a href="https://github.com/ai/browserslist#queries">Browserslist queries</a>, which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.</p>
+<p>Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> and <a href="https://postcss.org/">PostCSS</a>. These tools can be used in a variety of ways, for example <a href="https://tools.hubsadda.com/autoprefixer/">Autoprefixer</a> has an <a href="https://autoprefixer.github.io/">online version</a> that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in <a href="https://github.com/postcss/autoprefixer#options">Autoprefixer options</a>; also see <a href="https://github.com/ai/browserslist#queries">Browserslist queries</a>, which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.</p>
 
 <pre>last 2 versions, ie &gt; 9</pre>
 
-<p>Autoprefixer can also be used in other, more convenient ways — see <a href="https://github.com/postcss/autoprefixer#usage">Autoprefixer usage</a>. For example, you can use it with a task runner/build tool such as <a href="http://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically add prefixes once development has been done. (Explaining how these work is somewhat beyond the scope of this article.)</p>
+<p>Autoprefixer can also be used in other, more convenient ways — see <a href="https://github.com/postcss/autoprefixer#usage">Autoprefixer usage</a>. For example, you can use it with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically add prefixes once development has been done. (Explaining how these work is somewhat beyond the scope of this article.)</p>
 
 <p>You can also use a plugin for a text editor such as Atom or Sublime text. For example, in Atom:</p>
 
@@ -412,7 +412,7 @@ transform: rotate(90deg);</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
+<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="https://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
 </div>
 
 <h4 id="Support_for_new_layout_features">Support for new layout features</h4>
@@ -422,7 +422,7 @@ transform: rotate(90deg);</pre>
 <p>More recently, dedicated layout mechanisms have appeared, like <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> and <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#native_css_grids_with_grid_layout">CSS Grids</a>, which make common layout tasks far easier and remove such shortcomings. These however are not as well-supported in browsers:</p>
 
 <ul>
- <li>CSS grids are very new; at the time of writing, they were only <a href="http://gridbyexample.com/browsers/">supported</a> in the very newest versions of modern browsers.</li>
+ <li>CSS grids are very new; at the time of writing, they were only <a href="https://gridbyexample.com/browsers/">supported</a> in the very newest versions of modern browsers.</li>
  <li>Flexbox is <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#cross_browser_compatibility">well-supported</a> in modern browsers, but provides problems in older browsers. IE 9 doesn't support it at all, and IE 10 and old versions of iOS/desktop Safari respectively support incompatible old versions of the flexbox spec. This results in some interesting browser prefix juggling if you want to try to use flexbox across all these browsers (see <a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">Advanced Cross-Browser Flexbox</a> to get an idea).</li>
 </ul>
 
@@ -446,7 +446,7 @@ transform: rotate(90deg);</pre>
 
 <p>There are many other issues you'll encounter with HTML and CSS, making knowledge of how to find answers online invaluable.</p>
 
-<p>Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), <a href="http://stackoverflow.com/">stackoverflow.com</a>, and <a href="https://caniuse.com/">caniuse.com</a>.</p>
+<p>Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), <a href="https://stackoverflow.com/">stackoverflow.com</a>, and <a href="https://caniuse.com/">caniuse.com</a>.</p>
 
 <p>To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example "mdn HTML5 video". MDN contains several useful types of content:</p>
 
@@ -458,7 +458,7 @@ transform: rotate(90deg);</pre>
 
 <p><a href="https://caniuse.com/">caniuse.com</a> provides support information, along with a few useful external resource links. For example, see <a href="https://caniuse.com/#search=video">https://caniuse.com/#search=video</a> (you just have to enter the feature you are searching for into the text box).</p>
 
-<p><a href="http://stackoverflow.com/">stackoverflow.com</a> (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "cross browser html5 video" on SO, and very quickly came up with <a class="question-hyperlink" href="http://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility">HTML5 Video with full cross browser compatibility</a>.</p>
+<p><a href="https://stackoverflow.com/">stackoverflow.com</a> (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "cross browser html5 video" on SO, and very quickly came up with <a class="question-hyperlink" href="https://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility">HTML5 Video with full cross browser compatibility</a>.</p>
 
 <p>Aside from that, try searching your favorite search engine for an answer to your problem. It is often useful to search for specific error messages if you have them — other developers will be likely to have had the same problems as you.</p>
 

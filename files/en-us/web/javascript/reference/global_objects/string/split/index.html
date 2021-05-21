@@ -8,6 +8,7 @@ tags:
 - Reference
 - Regular Expressions
 - String
+browser-compat: javascript.builtins.String.split
 ---
 <div>{{JSRef}}</div>
 
@@ -21,8 +22,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>str</var>.split([<var>separator</var>[, <var>limit</var>]])</pre>
+<pre class="brush: js">
+split()
+split(separator)
+split(separator, limit)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -211,7 +215,7 @@ console.log(splits)
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note: </strong><code>\d</code> matches the <a
+  <p><strong>Note:</strong> <code>\d</code> matches the <a
       href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character
       class</a> for digits between 0 and 9.</p>
 </div>
@@ -219,7 +223,7 @@ console.log(splits)
 <h3 id="Reversing_a_String_using_split">Reversing a String using <code>split()</code></h3>
 
 <div class="warning">
-  <p>This is not a robust way to reverse a string:</p>
+  <p><strong>Warning:</strong> This is not a robust way to reverse a string:</p>
 
   <pre class="brush: js example-bad">const str = 'asdfghjkl'
 const strReverse = str.split('').reverse().join('')
@@ -244,24 +248,12 @@ const strReverse = str.split(/(?:)/u).reverse().join('')
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.String.split")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

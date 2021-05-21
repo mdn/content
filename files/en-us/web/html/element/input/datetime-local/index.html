@@ -14,6 +14,7 @@ tags:
   - Reference
   - Time
   - datetime-local
+browser-compat: html.elements.input.input-datetime-local
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
+<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with Chrome/Opera/Edge and Safari 14.1 on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
 
 <p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
@@ -83,7 +84,7 @@ tags:
 <p><strong>Note:</strong> Also bear in mind that if such data is submitted via HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code>, the colon character will need to be escaped for inclusion in the URL parameters, e.g. <code>partydate=2017-06-01T08%3A30</code>. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.</p>
 </div>
 
-<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
+<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} <code>value</code> property, for example:</p>
 
 <pre class="brush: js">var dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';</pre>
@@ -264,7 +265,7 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
+<p>As mentioned above, the major problem with using datetime-local inputs at the time of writing is browser support — Chrome/Opera/Edge and Safari support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
 
 <p><img alt="" src="datetime-local-fxa.png" style="display: block; margin: 0px auto;"></p>
 
@@ -598,31 +599,11 @@ daySelect.onchange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-datetime-local")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

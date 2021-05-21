@@ -6,6 +6,7 @@ tags:
 - Method
 - Reference
 - parseInt
+browser-compat: javascript.builtins.parseInt
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
@@ -32,13 +33,18 @@ parseInt(string, radix)
     abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.
   </dd>
   <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
-  <dd>An integer between <code>2</code> and <code>36</code> that represents the
+  <dd>
+    <p>An integer between <code>2</code> and <code>36</code> that represents the
     <em>radix</em> (the base in mathematical numeral systems) of the
     <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong>
     default to <code>10</code>! If the radix value is not of the <code>Number</code> type
-    it will be coerced to a <code>Number</code></dd>
-  <dd class="notecard warning">The <a href="#description">description below</a> explains
-    in more detail what happens when <code><var>radix</var></code> is not provided.</dd>
+    it will be coerced to a <code>Number</code>.</p>
+    <div class="notecard warning">
+    <p><strong>Warning:</strong> The <a href="#description">description below</a> explains
+    in more detail what happens when <code><var>radix</var></code> is not provided.
+    </p>
+    </div>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -73,7 +79,7 @@ parseInt(string, radix)
   values. Leading and trailing spaces are allowed.</p>
 
 <p>Because some numbers use the <code>e</code> character in their string representation
-  (e.g. <strong><code>6.022e23</code></strong> for 6.022 × 10<sup>23</sup>), using
+  (e.g. <strong><code>6.022E23</code></strong> for 6.022 × 10^23), using
   <code>parseInt</code> to truncate numbers will produce unexpected results when used on
   very large or very small numbers. <code>parseInt</code> should <em>not</em> be used as a
   substitute for {{jsxref("Math.floor()")}}.</p>
@@ -112,7 +118,7 @@ parseInt(string, radix)
   <code><var>thatNumber</var>.toString(<var>radix</var>)</code>.</p>
 
 <div class="notecard warning">
-  <p><strong>{{jsxref("BigInt")}} Warning:</strong> <code>parseInt</code> converts a
+  <p><strong>Warning:</strong> <code>parseInt</code> converts a
     {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
     This is because trailing non-numeric values, including "<code>n</code>", are
     discarded.</p>
@@ -253,22 +259,11 @@ parseInt('11', obj); // 11</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.parseInt")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

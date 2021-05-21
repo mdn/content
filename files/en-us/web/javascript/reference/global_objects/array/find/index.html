@@ -8,6 +8,7 @@ tags:
   - Method
   - Prototype
   - Reference
+browser-compat: javascript.builtins.Array.find
 ---
 <div>{{JSRef}}</div>
 
@@ -53,7 +54,7 @@ find(function callbackFn(element, index, array) { ... }, thisArg)
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>Function to execute on each value in the array, taking 3 arguments:
     <dl>
       <dt><code><var>element</var></code></dt>
@@ -66,7 +67,7 @@ find(function callbackFn(element, index, array) { ... }, thisArg)
   </dd>
   <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
   <dd>Object to use as {{jsxref("Operators/this", "this")}} inside
-    <code><var>callback</var></code>.</dd>
+    <code><var>callbackFn</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -77,32 +78,32 @@ find(function callbackFn(element, index, array) { ... }, thisArg)
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>find</code> method executes the <code><var>callback</var></code> function
-  once for each index of the array until the <code><var>callback</var></code> returns a <a
+<p>The <code>find</code> method executes the <code><var>callbackFn</var></code> function
+  once for each index of the array until the <code><var>callbackFn</var></code> returns a <a
     href="/en-US/docs/Glossary/Truthy">truthy</a> value. If so, <code>find</code>
   immediately returns the value of that element. Otherwise, <code>find</code> returns
   {{jsxref("undefined")}}.</p>
 
-<p><code><var>callback</var></code> is invoked for <em>every</em> index of the array, not
+<p><code><var>callbackFn</var></code> is invoked for <em>every</em> index of the array, not
   just those with assigned values. This means it may be less efficient for sparse arrays,
   compared to methods that only visit assigned values.</p>
 
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>find</code>, it
   will be used as the <code>this</code> value inside each invocation of the
-  <code><var>callback</var></code>. If it is not provided, then {{jsxref("undefined")}} is
+  <code><var>callbackFn</var></code>. If it is not provided, then {{jsxref("undefined")}} is
   used.</p>
 
 <p>The <code>find</code> method does not mutate the array on which it is called, but the
-  function provided to <code><var>callback</var></code> can. If so, the elements processed
+  function provided to <code><var>callbackFn</var></code> can. If so, the elements processed
   by <code>find</code> are set <em>before</em> the first invocation of
-  <code><var>callback</var></code>. Therefore:</p>
+  <code><var>callbackFn</var></code>. Therefore:</p>
 
 <ul>
-  <li><code><var>callback</var></code> will not visit any elements added to the array
+  <li><code><var>callbackFn</var></code> will not visit any elements added to the array
     after the call to <code>find</code> begins.</li>
   <li>If an existing, yet-unvisited element of the array is changed by
-    <code><var>callback</var></code>, its value passed to the
-    <code><var>callback</var></code> will be the value at the time <code>find</code>
+    <code><var>callbackFn</var></code>, its value passed to the
+    <code><var>callbackFn</var></code> will be the value at the time <code>find</code>
     visits that element's index.</li>
   <li>Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.</li>
 </ul>
@@ -191,23 +192,11 @@ array.find(function(value, index) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.find")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

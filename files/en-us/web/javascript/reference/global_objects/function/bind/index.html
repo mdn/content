@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - Method
   - polyfill
+browser-compat: javascript.builtins.Function.bind
 ---
 <div>{{JSRef}}</div>
 
@@ -21,7 +22,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let boundFunc = <var>func</var>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]]])
+<pre class="brush: js">
+bind(thisArg)
+bind(thisArg, arg1)
+bind(thisArg, arg1, arg2)
+bind(thisArg, arg1, ... , argN)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -134,7 +139,7 @@ boundGetX();
 }
 
 function addArguments(arg1, arg2) {
-  return arg1 + arg2
+  return arg1 + arg2;
 }
 
 const list1 = list(1, 2, 3);
@@ -291,141 +296,13 @@ const slice = Function.prototype.apply.bind(unboundSlice);
 slice(arguments);
 </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>Because older browsers are generally also slower browsers, it is far more critical than
-  most people recognize to create performance polyfills to make the browsing experience in
-  outdated browsers slightly less horrible.</p>
-
-<p>Thus, presented below are two options for <code>Function.prototype.bind()</code>
-  polyfills:</p>
-
-<ol>
-  <li>The first one is much smaller and more performant, but does not work when using the
-    <code>new</code> operator.</li>
-  <li>The second one is bigger and less performant, but it permits some usage of the
-    <code>new</code> operator on bound functions.</li>
-</ol>
-
-<p>Generally, in most code it's very rare to see <code>new</code> used on a bound
-  function, so it is generally best to go with the first option.</p>
-
-<pre class="brush: js">//  Does not work with `new (funcA.bind(thisArg, args))`
-if (!Function.prototype.bind) (function(){
-  var slice = Array.prototype.slice;
-  Function.prototype.bind = function() {
-    var thatFunc = this, thatArg = arguments[0];
-    var args = slice.call(arguments, 1);
-    if (typeof thatFunc !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - ' +
-             'what is trying to be bound is not callable');
-    }
-    return function(){
-      var funcArgs = args.concat(slice.call(arguments))
-      return thatFunc.apply(thatArg, funcArgs);
-    };
-  };
-})();</pre>
-
-<p>You can partially work around this by inserting the following code at the beginning of
-  your scripts, allowing use of much of the functionality of <code>bind()</code> in
-  implementations that do not natively support it.</p>
-
-<pre class="brush: js">//  Yes, it does work with `new (funcA.bind(thisArg, args))`
-if (!Function.prototype.bind) (function(){
-  var ArrayPrototypeSlice = Array.prototype.slice;
-  Function.prototype.bind = function(otherThis) {
-    if (typeof this !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
-    }
-
-    var baseArgs= ArrayPrototypeSlice.call(arguments, 1),
-        baseArgsLength = baseArgs.length,
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          baseArgs.length = baseArgsLength; // reset to default base arguments
-          baseArgs.push.apply(baseArgs, arguments);
-          return fToBind.apply(
-                 fNOP.prototype.isPrototypeOf(this) ? this : otherThis, baseArgs
-          );
-        };
-
-    if (this.prototype) {
-      // Function.prototype doesn't have a prototype property
-      fNOP.prototype = this.prototype;
-    }
-    fBound.prototype = new fNOP();
-
-    return fBound;
-  };
-})();
-</pre>
-
-<p>Some of the many differences (there may well be others, as this list does not seriously
-  attempt to be exhaustive) between this algorithm and the specified algorithm are:</p>
-
-<ul>
-  <li>The partial implementation relies on {{jsxref("Array.prototype.slice()")}},
-    {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} and
-    {{jsxref("Function.prototype.apply()")}}, built-in methods to have their original
-    values.</li>
-  <li>The partial implementation creates functions that do not have immutable "poison
-    pill" {{jsxref("Function.caller", "caller")}} and <code>arguments</code> properties
-    that throw a {{jsxref("Global_Objects/TypeError", "TypeError")}} upon get, set, or
-    deletion. (This could be added if the implementation supports
-    {{jsxref("Object.defineProperty")}}, or partially implemented [without throw-on-delete
-    behavior] if the implementation supports the {{jsxref("Object.__defineGetter__",
-    "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}}
-    extensions.)</li>
-  <li>The partial implementation creates functions that have a <code>prototype</code>
-    property. (Proper bound functions have none.)</li>
-  <li>The partial implementation creates bound functions whose {{jsxref("Function.length",
-    "length")}} property does not agree with that mandated by ECMA-262: it creates
-    functions with <code>length</code> of <code>0</code>. A full implementation—depending
-    on the length of the target function and the number of pre-specified arguments—may
-    return a non-zero length.</li>
-  <li>The partial implementation creates bound functions whose {{jsxref("Function.name",
-    "name")}} property is not derived from the original function name. According to
-    ECMA-262, name of the returned bound function should be "bound " + name of target
-    function (note the space character).</li>
-</ul>
-
-<p>If you choose to use this partial implementation, <strong>you must not rely on those
-    cases where behavior deviates from ECMA-262, 5<sup>th</sup> edition!</strong>
-  Thankfully, these deviations from the specification rarely (if ever) come up in most
-  coding situations. If you do not understand any of the deviations from the specification
-  above, then it is safe in this particular case to not worry about these noncompliant
-  deviation details.</p>
-
-<p><strong>If it's absolutely necessary and performance is not a concern</strong>, a far
-  slower (but more specification-compliant solution) can be found at <a
-    href="https://github.com/Raynos/function-bind">https://github.com/Raynos/function-bind</a>.
-</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function.prototype.bind',
-        'Function.prototype.bind')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.bind")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

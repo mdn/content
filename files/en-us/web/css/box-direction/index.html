@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.box-direction
 ---
 <p>{{CSSRef}}{{Non-standard_header}}</p>
 
@@ -42,18 +43,10 @@ box-direction: unset;
 
 <p>The edge of the box designated the <em>start</em> for layout purposes depends on the box's orientation:</p>
 
-<table class="standard-table" style="text-align: center;">
- <tbody>
-  <tr>
-   <th style="text-align: right;"><strong>Horizontal</strong></th>
-   <td>left</td>
-  </tr>
-  <tr>
-   <th style="text-align: right;"><strong>Vertical</strong></th>
-   <td>top</td>
-  </tr>
- </tbody>
-</table>
+<ul>
+  <li>For horizontal elements, the <em>start</em> is the top edge.</li>
+  <li>For vertical elements, the <em>start</em> is the left edge.</li>
+</ul>
 
 <p>The edge opposite to the start is designated the <em>end</em>.</p>
 
@@ -85,7 +78,7 @@ box-direction: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.box-direction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

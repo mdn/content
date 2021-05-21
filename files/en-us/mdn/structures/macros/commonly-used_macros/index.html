@@ -48,21 +48,85 @@ tags:
 
 <h3 id="Linking_to_pages_in_references">Linking to pages in references</h3>
 
-<p>There are various macros for linking to pages in specific reference areas of MDN.</p>
+<p>There are macros for locale-independent linking to pages in specific reference areas of MDN: Javascript, CSS, HTML elements, SVG etc.</p>
 
-<ul>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/cssxref.ejs">cssxref</a></code> links to a page in the <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a>.<br>
-  Example: <code>\{{CSSxRef("cursor")}}</code>, results in: {{CSSxRef("cursor")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/DOMxRef.ejs">domxref</a></code> links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, <code>\{{DOMxRef("document.getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()")}} while <code>\{{DOMxRef("Node")}}</code> results in {{DOMxRef("Node")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code> links to an HTML element in the HTML Reference.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/htmlattrxref.ejs">htmlattrxref</a></code> links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, <code>\{{HTMLAttrxRef("lang")}} </code>will create this link: {{HTMLAttrxRef("lang")}}. <code>\{{HTMLAttrxRef("type","input")}}</code> will create this link: {{htmlattrxref("type","input")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/jsxref.ejs">jsxref</a></code> links to a page in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGAttr.ejs">SVGAttr</a></code> links to a specific SVG attribute. For example, <code>\{{SVGAttr("d")}}</code> creates this link: {{SVGAttr("d")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGElement.ejs">SVGElement</a></code> links to an SVG element in the SVG Reference.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code> links to an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a></code> links to an <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a>.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a></code> links to an <a href="/en-US/docs/Web/HTTP/Status">HTTP response status code</a>.</li>
-</ul>
+<p>The macros are easy to use. Minimally all you need to do is specify the name of the item to link to in the first argument. Most macros will also take a second argument allowing you to change the display text (documentation can be found at the links in the left-most column below).</p>
+
+<table class="standard-table">
+    <thead>
+      <tr>
+        <th>Macro</th>
+        <th>Links to page under</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/cssxref.ejs">CSSxRef</a></td>
+        <td><a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> (/Web/CSS/Reference)</td>
+        <td><code>\{{CSSxRef("cursor")}}</code> results in {{CSSxRef("cursor")}}.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/DOMxRef.ejs">DOMxRef</a></td>
+        <td><a href="/en-US/docs/Web/API">DOM Reference</a> (/Web/API)</td>
+        <td><code>\{{DOMxRef("Document")}}</code> or <code>\{{DOMxRef("document")}}</code> results in {{DOMxRef("Document")}},<br>
+            <code>\{{DOMxRef("document.getElementsByName()")}}</code> result in {{DOMxRef("document.getElementsByName()")}}<br/>
+            <code>\{{DOMxRef("Node")}}</code> result in {{DOMxRef("Node")}}. <br/>
+            You can change the display text using a second parameter: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()","getElementsByName()")}}.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code></td>
+        <td><a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)</td>
+        <td><code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/htmlattrxref.ejs">HTMLAttrxRef</a></td>
+        <td><a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attribute description</a> if you only specify the attribute name.<br/>Attribute associated with a specific HTML element if you specify an attribute name and an element name.</td>
+        <td><code>\{{HTMLAttrxRef("lang")}} </code> links to the global attribute description {{HTMLAttrxRef("lang")}}.<br/><code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).</td>
+      </tr>
+      <tr>
+        <td> <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/jsxref.ejs">JSxRef</a></td>
+        <td><a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference).</td>
+        <td>\{{("Promise")}}</code> results in {{JSxRef("Promise")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGAttr.ejs">SVGAttr</a></td>
+        <td><a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).</td>
+        <td><code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGElement.ejs">SVGElement</a></td>
+        <td><a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).</td>
+        <td><code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}</td>
+      </tr>
+      <tr>
+        <td><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></td>
+        <td><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> (/Web/HTTP/Headers).</td>
+        <td><code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a></td>
+        <td><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).</td>
+        <td><code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a></td>
+        <td><a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)</td>
+        <td><code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.</td>
+        <td><a href="/en-US/docs/Web/Events">Events reference</a> (/Web/Events)</td>
+        <td><code>\{{Event("Event_handlers", "Event handlders")}}</code> results in {{Event("Event_handlers", "Event handlers")}}
+        <div class="notecard note">
+            <h4>Note</h4>
+            <p>This macro is not particularly useful because events are now under their associated DOM element. So to link to the wheel event you would use <code>\{{DOMxRef("Document.wheel_event")}}</code>: {{DOMxRef("Document.wheel_event")}}</p>
+        </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 
 <h3 id="Linking_to_bugs">Linking to bugs</h3>
 
@@ -147,24 +211,20 @@ tags:
 
 <h3 id="Inline_indicators_that_support_specifying_the_technology">Inline indicators that support specifying the technology</h3>
 
-<p>In these macros the parameter (when specified) should be one of the strings "html", "js", "css", or "gecko", followed by the version number.</p>
-
 <h4 id="Deprecated">Deprecated</h4>
 
-<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_inline.ejs">deprecated_inline</a></code> inserts an in-line deprecated mark to discourage the use of an API that is officially deprecated. <strong>Note:</strong> "Deprecated" means that the item should no longer be used, but still functions. If you mean that it no longer works at all, use the term "obsolete."</p>
-
-<p>Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</p>
+<p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_inline.ejs">deprecated_inline</a></code> inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).</p>
 
 <h5 id="Syntax_3">Syntax</h5>
 
-<p><code>\{{Deprecated_Inline}}</code> or<code> \{{Deprecated_Inline("gecko5")}}</code></p>
+<p><code>\{{Deprecated_Inline}}</code></p>
 
 <h5 id="Examples_3">Examples</h5>
 
 <ul>
  <li>Icon: {{Deprecated_Inline}}</li>
- <li>Badge:{{Deprecated_Inline("gecko5")}}</li>
 </ul>
+
 
 <h3 id="Page_or_section_header_indicators">Page or section header indicators</h3>
 
@@ -174,7 +234,7 @@ tags:
  <li>{{TemplateLink("non-standard_header")}}: <code>\{{Non-standard_Header}}</code> {{Non-standard_Header}}</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SeeCompatTable.ejs">SeeCompatTable</a></code> should be used on pages that document <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental features</a>. Example: <code>\{{SeeCompatTable}}</code> {{SeeCompatTable}}</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code>: <code>\{{Deprecated_Header}}</code> {{Deprecated_Header}}</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/deprecated_header.ejs">deprecated_header</a></code> with parameter: <code>\{{Deprecated_Header("gecko5")}}</code> {{Deprecated_Header("gecko5")}} Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).</li>
+
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/secureContext_header.ejs">secureContext_header</a></code>: <code>\{{SecureContext_Header}}</code> {{SecureContext_Header}}</li>
 </ul>
 

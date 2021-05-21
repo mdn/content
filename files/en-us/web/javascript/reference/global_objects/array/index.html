@@ -8,6 +8,7 @@ tags:
   - Global Objects
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.Array
 ---
 <div>{{JSRef}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can change at any time, and data can be stored at non-contiguous locations in the array, JavaScript arrays are not guaranteed to be dense; this depends on how the programmer chooses to use them. In general, these are convenient characteristics; but if these features are not desirable for your particular use, you might consider using typed arrays.</p>
 
-<p>Arrays cannot use strings as element indexes (as in an <a href="https://en.wikipedia.org/wiki/Associative_array">associative array</a>) but must use integers. Setting or accessing via non-integers using <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties">bracket notation</a> (or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">dot notation</a>) will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">object property collection</a>. The array's object properties and list of array elements are separate, and the array's <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Array_methods">traversal and mutation operations</a> cannot be applied to these named properties.</p>
+<p>Arrays cannot use strings as element indexes (as in an <a href="https://en.wikipedia.org/wiki/Associative_array">associative array</a>) but must use integers. Setting or accessing via non-integers using <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">bracket notation</a> (or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">dot notation</a>) will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's <a href="/en-US/docs/Web/JavaScript/Data_structures#properties">object property collection</a>. The array's object properties and list of array elements are separate, and the array's <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods">traversal and mutation operations</a> cannot be applied to these named properties.</p>
 
 <h3 id="Common_operations">Common operations</h3>
 
@@ -429,33 +430,21 @@ console.table(values)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Initial publication</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-objects', 'Array')}}</td>
-   <td>ECMAScript 1</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>From the JavaScript Guide:
   <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties">“Indexing object properties”</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Array_object">“Indexed collections: <code>Array</code> object”</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties">“Indexing object properties”</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object">“Indexed collections: <code>Array</code> object”</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/JavaScript_typed_arrays">Typed Arrays</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed Arrays</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length">RangeError: invalid array length</a></li>
 </ul>

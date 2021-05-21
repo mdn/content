@@ -6,6 +6,7 @@ tags:
   - Function
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.Function.Function
 ---
 <div>{{JSRef}}</div>
 
@@ -21,8 +22,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">new Function([arg1 [, arg2 [, ...argN]] ,] functionBody)</pre>
+<pre class="brush: js">
+new Function(arg1, functionBody)
+new Function(arg1, arg2, functionBody)
+new Function(arg1, ... , argN, functionBody)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -75,23 +79,11 @@ adder(2, 6);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function-constructor', 'Function constructor')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.Function")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

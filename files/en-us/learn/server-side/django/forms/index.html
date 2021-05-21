@@ -317,7 +317,7 @@ def renew_book_librarian(request, pk):
 <p>If the form is valid, then we can start to use the data, accessing it through the <code>form.cleaned_data</code> attribute (e.g. <code>data = form.cleaned_data['renewal_date']</code>). Here we just save the data into the <code>due_back</code> value of the associated <code>BookInstance</code> object.</p>
 
 <div class="notecard warning">
-    <h4>Important</h4>
+    <h4>Warning</h4>
     <p>While you can also access the form data directly through the request (for example, <code>request.POST['renewal_date']</code> or <code>request.GET['renewal_date']</code> if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.</p>
 </div>
 
@@ -645,7 +645,7 @@ class AuthorDelete(DeleteView):
 
 <p><img alt="Form Example: Create Author" src="forms_example_create_author.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>Enter values for the fields and then press <strong>Submit</strong> to save the author record. You should now be taken to a detail view for your new author, with a URL of something like <em>http://127.0.0.1:8000/catalog/authors/10</em>.</p>
+<p>Enter values for the fields and then press <strong>Submit</strong> to save the author record. You should now be taken to a detail view for your new author, with a URL of something like <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
 <p>You can test editing records by appending <em>/update/</em> to the end of the detail view URL (e.g. <em>http://127.0.0.1:8000/catalog/author/10/update/</em>) — we don't show a screenshot, because it looks just like the "create" page!</p>
 
@@ -693,7 +693,7 @@ class AuthorDelete(DeleteView):
  <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
+ <li><strong>Django Tutorial Part 9: Working with forms</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>

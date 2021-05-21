@@ -12,7 +12,7 @@ tags:
 
 <p>Open <strong>/views/layout.pug</strong> and replace the content with the code below.</p>
 
-<pre class="brush: html line-numbers  language-html">doctype html
+<pre>doctype html
 html(lang='en')
   head
     title= title
@@ -53,19 +53,19 @@ html(lang='en')
           block content
 </pre>
 
-<p>The template uses (and includes) JavaScript and CSS from <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!</p>
+<p>The template uses (and includes) JavaScript and CSS from <a class="external external-icon" href="https://getbootstrap.com/" rel="noopener">Bootstrap</a> to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!</p>
 
 <p>The layout should be fairly obvious if you've read our above <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer">Template primer</a>. Note the use of <code>block content</code> as a placeholder for where the content for our individual pages will be placed.</p>
 
 <p>The base template also references a local css file (<strong>style.css</strong>) that provides a little additional styling. Open <strong>/public/stylesheets/style.css</strong> and replace its content with the following CSS code:</p>
 
-<pre class="brush: css line-numbers  language-css">.sidebar-nav {
+<pre class="brush: css">.sidebar-nav {
     margin-top: 20px;
     padding: 0;
     list-style: none;
 }</pre>
 
-<p>When we get round to running our site, we should see the sidebar appear! In the next sections we will use the above layout to define the individual pages.</p>
+<p>Now we have a base template for creating pages with a sidebar. In the next sections we will use it to define the individual pages.</p>
 
 <h2 id="Next_steps">Next steps</h2>
 

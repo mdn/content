@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.return
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -68,8 +69,10 @@ a + b;
 
 <p>The console will warn "unreachable code after return statement".</p>
 
-<div class="note">Starting with Firefox 40, a warning is shown in the console if
-  unreachable code is found after a <code>return</code> statement.</div>
+<div class="note">
+  <p><strong>Note:</strong> Starting with Firefox 40, a warning is shown in the console if
+  unreachable code is found after a <code>return</code> statement.</p>
+</div>
 
 <p>To avoid this problem (to prevent ASI), you could use parentheses:</p>
 
@@ -124,22 +127,11 @@ answer(1337); // 56154
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.return")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

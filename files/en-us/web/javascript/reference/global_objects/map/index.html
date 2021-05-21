@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Map
   - Reference
+browser-compat: javascript.builtins.Map
 ---
 <div>{{JSRef}}</div>
 
@@ -44,7 +45,7 @@ tags:
   <code>Object</code> has been used as <code>Map</code> historically.</p>
 
 <p>However, there are important differences that make <code>Map</code> preferable in
-  certain cases:</p>
+  some cases:</p>
 
 <table class="standard-table">
   <thead>
@@ -148,6 +149,18 @@ tags:
       </td>
       <td>
         <p>Not optimized for frequent additions and removals of key-value pairs.</p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Serialization and parsing</th>
+      <td>
+        <p>No native support for serialization or parsing.</p>
+        <p>(But you can build your own serialization and parsing support for <code>Map</code> by using {{jsxref("JSON.stringify()")}} with its <em>replacer</em> argument, and by using {{jsxref("JSON.parse()")}} with its <em>reviver</em> argument. See the Stack Overflow question <a href="https://stackoverflow.com/q/29085197/">How do you JSON.stringify an ES6 Map?</a>).</p>
+      </td>
+      <td>
+        <p>Native support for serialization from {{jsxref("Object")}} to JSON, using {{jsxref("JSON.stringify()")}}.</p>
+        <p>Native support for parsing from JSON to {{jsxref("Object")}}, using {{jsxref("JSON.parse()")}}.</p>
+
       </td>
     </tr>
   </tbody>
@@ -380,7 +393,7 @@ console.log(clone.get(1))       // one
 console.log(original === clone) // false (useful for shallow comparison)</pre>
 
 <div class="notecard note">
-  <p><strong>Important:</strong> Keep in mind that <em>the data itself</em> is not cloned.
+  <p><strong>Note:</strong> Keep in mind that <em>the data itself</em> is not cloned.
   </p>
 </div>
 
@@ -427,22 +440,11 @@ console.log(merged.get(3)) // three</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-map-objects', 'Map')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Map")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

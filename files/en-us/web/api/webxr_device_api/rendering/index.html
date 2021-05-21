@@ -38,7 +38,7 @@ tags:
 <pre class="brush: js">let worldRefSpace;
 
 async function runXR(xrSession) {
-  worldRefSpace = await xrSession.requestReferenceSpace("immersive-vr");
+  worldRefSpace = await xrSession.requestReferenceSpace("local");
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(

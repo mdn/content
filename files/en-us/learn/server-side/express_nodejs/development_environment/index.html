@@ -52,7 +52,7 @@ tags:
 
 <h3 id="What_operating_systems_are_supported">What operating systems are supported?</h3>
 
-<p><em>Node</em> can be run on Windows, macOS, many "flavours" of Linux, Docker, etc. (there is a full list on the nodejs <a href="https://nodejs.org/en/download/">Downloads</a> page). Almost any personal computer should have the necessary performance to run Node during development. <em>Express</em> is run in a <em>Node</em> environment, and hence can run on any platform that runs <em>Node</em>.</p>
+<p><em>Node</em> can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the nodejs <a href="https://nodejs.org/en/download/">Downloads</a> page. Almost any personal computer should have the necessary performance to run Node during development. <em>Express</em> is run in a <em>Node</em> environment, and hence can run on any platform that runs <em>Node</em>.</p>
 
 <p>In this article we provide setup instructions for Windows, macOS, and Ubuntu Linux.</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <h3 id="Ubuntu_20.04">Ubuntu 20.04</h3>
 
-<p>The easiest way to install the most recent LTS version of Node 12.x is to use the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> to get it from the Ubuntu <em>binary distributions</em> repository. This can be done very by running the following two commands on your terminal:</p>
+<p>The easiest way to install the most recent LTS version of Node 12.x is to use the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">package manager</a> to get it from the Ubuntu <em>binary distributions</em> repository. This can be done by running the following two commands on your terminal:</p>
 
 <pre>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -246,7 +246,7 @@ Example app listening on port 8000
 
 <h3 id="Development_dependencies">Development dependencies</h3>
 
-<p>If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool <a href="http://eslint.org/">eslint</a> you would call NPM as shown:</p>
+<p>If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool <a href="https://eslint.org/">eslint</a> you would call NPM as shown:</p>
 
 <pre class="brush: bash">npm install eslint --save-dev</pre>
 
@@ -266,7 +266,7 @@ Example app listening on port 8000
 <p>In addition to defining and fetching dependencies you can also define <em>named</em> scripts in your <strong>package.json</strong> files and call NPM to execute them with the <a href="https://docs.npmjs.com/cli/run-script">run-script</a> command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc).</p>
 
 <div class="note">
-<p><strong>Note:</strong> Task runners like <a href="http://gulpjs.com/">Gulp</a> and <a href="http://gruntjs.com/">Grunt</a> can also be used to run tests and other external tools.</p>
+<p><strong>Note:</strong> Task runners like <a href="https://gulpjs.com/">Gulp</a> and <a href="https://gruntjs.com/">Grunt</a> can also be used to run tests and other external tools.</p>
 </div>
 
 <p>For example, to define a script to run the <em>eslint</em> development dependency that we specified in the previous section we might add the following script block to our <strong>package.json</strong> file (assuming that our application source is in a folder /src/js):</p>
@@ -378,7 +378,7 @@ DEBUG=helloworld:* npm start
 <ul>
  <li><a href="https://nodejs.org/en/download/">Downloads</a> page (nodejs.org)</li>
  <li><a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> (nodejs.org)</li>
- <li><a href="http://expressjs.com/en/starter/installing.html">Installing Express</a> (expressjs.com)</li>
+ <li><a href="https://expressjs.com/en/starter/installing.html">Installing Express</a> (expressjs.com)</li>
  <li><a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> (expressjs.com)</li>
  <li><a href="https://docs.microsoft.com/windows/nodejs/">Using Node.js with Windows subsystem for Linux</a> (docs.microsoft.com)</li>
 </ul>

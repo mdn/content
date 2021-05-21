@@ -9,6 +9,7 @@ tags:
 - String
 - UTF-32
 - Unicode
+browser-compat: javascript.builtins.String.fromCodePoint
 ---
 <div>{{JSRef}}</div>
 
@@ -19,8 +20,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">String<code>.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+<pre class="brush: js">
+String.fromCodePoint(num1)
+String.fromCodePoint(num1, num2)
+String.fromCodePoint(num1, num2, ..., numN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -137,24 +141,12 @@ String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.String.fromCodePoint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

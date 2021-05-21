@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
 <div>{{JSRef}}</div>
 
@@ -22,8 +23,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarr</var>ay.toLocaleString([locales [, options]]);</pre>
+<pre class="brush: js">
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,23 +65,11 @@ uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring',
-        'TypedArray.prototype.toLocaleString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.toLocaleString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

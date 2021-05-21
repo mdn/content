@@ -7,6 +7,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.copyWithin
 ---
 <div>{{JSRef}}</div>
 
@@ -25,8 +26,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><code><var>typedarray</var>.copyWithin(<var>target</var>, <var>start</var>[, <var>end</var> = this.length])</code></pre>
+<pre class="brush: js">
+copyWithin(target, start)
+copyWithin(target, start, end)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,23 +64,11 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.copywithin',
-        'TypedArray.prototype.copyWithin')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.copyWithin")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

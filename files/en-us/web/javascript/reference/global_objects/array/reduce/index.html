@@ -10,6 +10,7 @@ tags:
 - Prototype
 - Reduce
 - Reference
+browser-compat: javascript.builtins.Array.reduce
 ---
 <div>{{JSRef}}</div>
 
@@ -42,21 +43,21 @@ reduce((accumulator, currentValue, index) => { ... } )
 reduce((accumulator, currentValue, index, array) => { ... } )
 reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
 
-// Reducer function
-reduce(reducerFn)
-reduce(reducerFn, initialValue)
+// Callback function
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
 
-// Inline reducer function
-reduce(function reducerFn(accumulator, currentValue) { ... })
-reduce(function reducerFn(accumulator, currentValue, index) { ... })
-reduce(function reducerFn(accumulator, currentValue, index, array){ ... })
-reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, thisArg)
+// Inline callback function
+reduce(function callbackFn(accumulator, currentValue) { ... })
+reduce(function callbackFn(accumulator, currentValue, index) { ... })
+reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
+reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>A function to execute on each element in the array (except for the first, if no
       <code><var>initialValue</var></code> is supplied).</p>
@@ -65,7 +66,7 @@ reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, this
 
     <dl>
       <dt><code><var>accumulator</var></code></dt>
-      <dd>The accumulator accumulates <var>callback</var>'s return values. It is the
+      <dd>The accumulator accumulates <var>callbackFn</var>'s return values. It is the
         accumulated value previously returned in the last invocation of the callback—or
         <code><var>initialValue</var></code>, if it was supplied (see below).</dd>
       <dt><code><var>currentValue</var></code></dt>
@@ -80,7 +81,7 @@ reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, this
   </dd>
   <dt><code><var>initialValue</var></code> {{optional_inline}}</dt>
   <dd>A value to use as the first argument to the first call of the
-    <code><var>callback</var></code>. If no <code><var>initialValue</var></code> is
+    <code><var>callbackFn</var></code>. If no <code><var>initialValue</var></code> is
     supplied, the first element in the array will be used as the initial
     <code><var>accumulator</var></code> value and skipped as
     <code><var>currentValue</var></code>. Calling <code>reduce()</code> on an empty array
@@ -94,7 +95,7 @@ reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, this
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>reduce()</code> method executes the <code><var>callback</var></code> once for
+<p>The <code>reduce()</code> method executes the <code><var>callbackFn</var></code> once for
   each assigned value present in the array, taking four arguments:</p>
 
 <ol>
@@ -126,24 +127,29 @@ reduce(function reducerFn(accumulator, currentValue, index, array) { ... }, this
 <p>If the array only has one element (regardless of position) and no
   <code><var>initialValue</var></code> is provided, or if
   <code><var>initialValue</var></code> is provided but the array is empty, the solo value
-  will be returned <em>without</em> calling <em><code>callback</code>.</em></p>
+  will be returned <em>without</em> calling <em><code>callbackFn</code>.</em></p>
 
-<p>It is almost always safer to provide an <code><var>initialValue</var></code>, because
-  there can be up to <em>four</em> possible output types without
-  <code><var>initialValue</var></code>, as shown in the following example:</p>
+<p>If <code><var>initialValue</var></code> is provided and the array is not empty then the
+  reduce method will always invoke the callback function starting at index 0. If
+  <code><var>initialValue</var></code> is not provided then the reduce method will act
+  differently for arrays with length larger than 1, equal to 1 and 0, as shown in the
+  following example:</p>
 
-<pre class="brush: js">let maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
-let maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
+<pre class="brush: js">
+const getMax = (a, b) =&gt; Math.max(a, b);
 
-// reduce without initialValue
-[ { x: 2 }, { x: 22 }, { x: 42 } ].reduce( maxCallback ); // NaN
-[ { x: 2 }, { x: 22 }            ].reduce( maxCallback ); // 22
-[ { x: 2 }                       ].reduce( maxCallback ); // { x: 2 }
-[                                ].reduce( maxCallback ); // TypeError
+// callback is invoked for each element in the array starting at index 0
+[1, 100].reduce(getMax, 50); // 100
+[    50].reduce(getMax, 10); // 50
 
-// map &amp; reduce with initialValue; better solution, also works for empty or larger arrays
-[ { x: 22 }, { x: 42 } ].map( el =&gt; el.x )
-                        .reduce( maxCallback2, -Infinity );
+// callback is invoked once for element at index 1
+[1, 100].reduce(getMax);     // 100
+
+// callback is not invoked
+[    50].reduce(getMax);     // 50
+[      ].reduce(getMax, 1);  // 1
+
+[      ].reduce(getMax);     // TypeError
 </pre>
 
 <h3 id="How_reduce_works">How reduce() works</h3>
@@ -348,8 +354,8 @@ if (!Array.prototype.reduce) {
 </pre>
 
 <div class="notecard note">
-  <p><strong>Caution:</strong> If you need to support truly obsolete JavaScript engines
-    that do not support {{domxref("Object.defineProperty()")}}, it is best not to polyfill
+  <p><strong>Note:</strong> If you need to support truly obsolete JavaScript engines
+    that do not support {{jsxref("Object.defineProperty()")}}, it is best not to polyfill
     <code>Array.prototype</code> methods at all, as you cannot make them
     <strong>non-enumerable</strong>.</p>
 </div>
@@ -611,9 +617,9 @@ multiply24(10) // 240
 <h3 id="Write_map_using_reduce">Write map using reduce</h3>
 
 <pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
-  Array.prototype.mapUsingReduce = function(callback, thisArg) {
+  Array.prototype.mapUsingReduce = function(callback, initialValue) {
     return this.reduce(function(mappedArray, currentValue, index, array) {
-      mappedArray[index] = callback.call(thisArg, currentValue, index, array)
+      mappedArray[index] = callback.call(initialValue, currentValue, index, array)
       return mappedArray
     }, [])
   }
@@ -627,23 +633,11 @@ multiply24(10) // 240
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.reduce',
-        'Array.prototype.reduce()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.reduce")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

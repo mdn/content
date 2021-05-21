@@ -35,7 +35,7 @@ tags:
 
 <p>When it starts up, the browser checks for plug-in modules for the platform and registers them. It determines which plug-ins are installed and which types they support through a combination of user preferences that are private to the browser, the contents of the plug-ins directory, or the registry on Windows.</p>
 
-<p>A MIME type is made up of a major type (such as application or image) and a minor type, for example, <em>image/jpeg</em>. If you define a new MIME type for a plug-in, you must register it with IETF (<a class="external" href="http://www.ietf.org/">Internet Engineering Task Force</a>). Until your new MIME type is registered, preface its name with "x-", for example, <em>image/x-nwim</em>. For more information about MIME types, see these MIME RFCs:</p>
+<p>A MIME type is made up of a major type (such as application or image) and a minor type, for example, <em>image/jpeg</em>. If you define a new MIME type for a plug-in, you must register it with IETF (<a class="external" href="https://www.ietf.org/">Internet Engineering Task Force</a>). Until your new MIME type is registered, preface its name with "x-", for example, <em>image/x-nwim</em>. For more information about MIME types, see these MIME RFCs:</p>
 
 <ul>
  <li><a class="external" href="https://datatracker.ietf.org/doc/html/rfc2045">RFC-2045</a>: "Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies"</li>
@@ -94,7 +94,7 @@ tags:
 
 <p>Mac OS X plug-ins are found according to the section <a href="/en-US/Gecko_Plugin_API_Reference/Plug-in_Basics#how_gecko_finds_plug-ins" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;">How Gecko Finds Plug-ins</a>. Plug-ins are identified by file type NSPL.</p>
 
-<p>To determine the supported MIME types, Gecko first checks for <a class="external" href="http://developer.apple.com/mac/library/documentation/InternetWeb/Conceptual/WebKit_PluginProgTopic/Concepts/AboutPlugins.html#//apple_ref/doc/uid/30001248-198944">registry information in the plugins Info.plist</a>. If nothing is found there, Gecko checks for an <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point, and will use the information returned by this function.</p>
+<p>To determine the supported MIME types, Gecko first checks for <a class="external" href="https://developer.apple.com/mac/library/documentation/InternetWeb/Conceptual/WebKit_PluginProgTopic/Concepts/AboutPlugins.html#//apple_ref/doc/uid/30001248-198944">registry information in the plugins Info.plist</a>. If nothing is found there, Gecko checks for an <code><a href="/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetMIMEDescription">NP_GetMIMEDescription</a></code> entry point, and will use the information returned by this function.</p>
 
 <div class="warning">
 <p><strong>Note:</strong> The resource method described below is deprecated. Plugins should use the Info.plist approach, and only use the following method as a supplement to support older browsers.</p>
@@ -263,7 +263,7 @@ tags:
 
 <h4 id="Building.2C_Platforms.2C_and_Compilers">Building, Platforms, and Compilers</h4>
 
-<p>The header files and some basic examples for NPAPI plugins are found in the <a href="http://code.google.com/p/npapi-sdk/">npapi-sdk project (Google Code)</a>.</p>
+<p>The header files and some basic examples for NPAPI plugins are found in the <a href="https://code.google.com/p/npapi-sdk/">npapi-sdk project (Google Code)</a>.</p>
 
 <h3 id="Installing_Plug-ins">Installing Plug-ins</h3>
 
@@ -271,7 +271,7 @@ tags:
 
 <h4 id="Windows_Installation_Using_the_Registry">Windows Installation Using the Registry</h4>
 
-<p>On Windows, plug-ins should be installed to a plug-in-specific directory such as C:\Program Files\Plugin Name\nppluginname.dll. Then the following registry values should be added to the Windows registry (the plug-in-identifier should follow <a class="external" href="http://www-archive.mozilla.org/projects/plugins/plugin-identifier.html">the specification</a>):</p>
+<p>On Windows, plug-ins should be installed to a plug-in-specific directory such as C:\Program Files\Plugin Name\nppluginname.dll. Then the following registry values should be added to the Windows registry (the plug-in-identifier should follow <a class="external" href="https://www-archive.mozilla.org/projects/plugins/plugin-identifier.html">the specification</a>):</p>
 
 <dl>
  <dt>HKLM/Software/MozillaPlugins/plugin-identifier</dt>

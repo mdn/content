@@ -78,7 +78,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following code creates a <code>BackGroundFetchRegistration</code> as <code>bgFetch</code>, with an <code>id</code> of <code>"my-fetch"</code>.</code></p>
+<p>The following code creates a <code>BackGroundFetchRegistration</code> as <code>bgFetch</code>, with an <code>id</code> of <code>"my-fetch"</code>.</p>
 
 <pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {

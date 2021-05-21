@@ -7,6 +7,7 @@ tags:
   - Method
   - Number
   - Prototype
+browser-compat: javascript.builtins.Number.toLocaleString
 ---
 <div>{{JSRef}}</div>
 
@@ -17,8 +18,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">numObj.toLocaleString([locales [, options]])</pre>
+<pre class="brush: js">
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -149,26 +153,12 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.prototype.tolocalestring',
-        'Number.prototype.toLocaleString')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring',
-        'Number.prototype.toLocaleString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.Number.toLocaleString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

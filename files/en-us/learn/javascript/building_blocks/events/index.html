@@ -134,7 +134,7 @@ btn.onclick = bgChange;</pre>
 <ul>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onfocus">btn.onfocus</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onblur">btn.onblur</a></code> — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button. These are often used to display information about filling in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.</li>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">btn.ondblclick</a></code> — The color changes only when the button is double-clicked.</li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">window.onkeypress</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">window.onkeydown</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">window.onkeyup</a></code> — The color changes when a key is pressed on the keyboard. The <code>keypress</code> event refers to a general press (button down and then up), while <code>keydown</code> and <code>keyup</code> refer to just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event handler on the button itself — we've had to register it on the <a href="/en-US/docs/Web/API/Window">window</a> object, which represents the entire browser window.</li>
+ <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">window.onkeydown</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">window.onkeyup</a></code> — The color changes when a key is pressed on the keyboard. The <code>keydown</code> and <code>keyup</code> refer to just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event handler on the button itself — we've had to register it on the <a href="/en-US/docs/Web/API/Window">window</a> object, which represents the entire browser window.</li>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.</li>
 </ul>
 
@@ -596,10 +596,10 @@ video.onclick = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li><a href="https://domevents.dev/">domevents.dev</a> — a very useful interactive playground app that enables learning about the behavior of the DOM Event system through exploration.</li>
  <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
- <li><a href="http://www.quirksmode.org/js/events_order.html">Event order</a> (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.</li>
- <li><a href="http://www.quirksmode.org/js/events_access.html">Event accessing</a> (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.</li>
-
+ <li><a href="https://www.quirksmode.org/js/events_order.html">Event order</a> (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.</li>
+ <li><a href="https://www.quirksmode.org/js/events_access.html">Event accessing</a> (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</p>
@@ -612,6 +612,6 @@ video.onclick = function() {
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+ <li><strong>Introduction to events</strong></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
 </ul>

@@ -7,6 +7,7 @@ tags:
 - Method
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.of
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>TypedArray</var>.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])
+<pre class="brush: js">
+TypedArray.of(element0)
+TypedArray.of(element0, element1)
+TypedArray.of(element0, element1, ... , elementN)
 </pre>
 
 <p>Where <code><var>TypedArray</var></code> is one of:</p>
@@ -82,22 +86,11 @@ Int16Array.of(undefined);    // Int16Array [ 0 ]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.of', '%TypedArray%.of')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.of")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

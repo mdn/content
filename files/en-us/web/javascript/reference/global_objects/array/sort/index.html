@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Sorting
+browser-compat: javascript.builtins.Array.sort
 ---
 <div>{{JSRef}}</div>
 
@@ -67,7 +68,7 @@ sort(function compareFn(firstEl, secondEl) { ... })
 </p>
 
 <div class="notecard note">
-  <p><strong>Note :</strong> In UTF-16, Unicode characters above <code>\uFFFF</code> are
+  <p><strong>Note:</strong> In UTF-16, Unicode characters above <code>\uFFFF</code> are
     encoded as two surrogate code units, of the range
     <code>\uD800</code>-<code>\uDFFF</code>. The value of each code unit is taken
     separately into account for the comparison. Thus the character formed by the surrogate
@@ -271,7 +272,7 @@ const result = mapped.map(v => in[v.i]);
 
 <p>After sorting this array by <code>grade</code> in ascending order:</p>
 
-<pre class="brush: js">students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);  
+<pre class="brush: js">students.sort((firstItem, secondItem) => firstItem.grade - secondItem.grade);
 </pre>
 
 <p>The <code>students</code> variable will then have the following value:</p>
@@ -298,23 +299,11 @@ const result = mapped.map(v => in[v.i]);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.sort', 'Array.prototype.sort')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.sort")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

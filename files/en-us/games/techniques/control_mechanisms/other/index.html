@@ -7,7 +7,6 @@ tags:
   - Games
   - JavaScript
   - Makey Makey
-  - Proximity
   - TV Leap Motion
   - Voice
 ---
@@ -69,7 +68,7 @@ if(this.cursors.right.isDown) {
 
 <p>As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.</p>
 
-<p>There's good <a href="https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html">Hello World</a> and <a href="https://developer.leapmotion.com/getting-started/javascript">Getting Started</a> JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about <a href="http://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455">using Leap Motion plugin for Kiwi.js</a>, or the case study of <a href="https://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/">building a web game with Leap Motion and Pixi.js</a>. Be sure to visit the <a href="https://github.com/leapmotion/leapjs">LeapJS repository on GitHub</a> to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a <a href="https://developer.leapmotion.com/gallery/category/javascript">gallery of working examples</a> you can look at.</p>
+<p>There's good <a href="https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html">Hello World</a> and <a href="https://developer.leapmotion.com/getting-started/javascript">Getting Started</a> JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about <a href="https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455">using Leap Motion plugin for Kiwi.js</a>, or the case study of <a href="https://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/">building a web game with Leap Motion and Pixi.js</a>. Be sure to visit the <a href="https://github.com/leapmotion/leapjs">LeapJS repository on GitHub</a> to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a <a href="https://developer.leapmotion.com/gallery/category/javascript">gallery of working examples</a> you can look at.</p>
 
 <p>To get the Leap Motion working on your computer you have to first install it by following the steps at <a href="https://leapmotion.com/setup">leapmotion.com/setup</a>. When everything is installed and the controller is connected to your computer we can proceed with implementing support in our <a href="https://github.com/end3r/JavaScript-Game-Controls/">little demo</a>. First, we add a <code>&lt;script&gt;</code> tag with the <code>url</code> pointing at <a href="https://js.leapmotion.com/leap-0.6.4.min.js">this file</a>, and add <code>&lt;div id="output"&gt;&lt;/div&gt;</code> just before the closing <code>&lt;/body&gt;</code> tag for outputting diagnostic information.</p>
 
@@ -146,23 +145,6 @@ var grabStrength = 0;</pre>
 
 <p>This approach won't give us the full flexibility of using a Gamepad, or even Leap Motion, but it's definitely an interesting, unconventional alternative. You can use it to scroll a page hands-free, or play theremin, but it should also be enough to move the ship up and down the screen if implemented correctly.</p>
 
-<h2 id="Proximity_API">Proximity API</h2>
-
-<p>Another interesting idea is to use the built-in proximity sensors of your hardware to detect how far an object, for example a hand, is from the given sensor. It could work similar to the doppler effect in terms of manipulating the player's ship on the screen by moving your hand closer or further from the device.</p>
-
-<p>An event listener for device proximity would look like this:</p>
-
-<pre class="brush: js">window.addEventListener('deviceproximity', function(event) {
-    var min = event.min;
-    var max = event.max;
-    var proximity = event.value;
-});</pre>
-
-<p>The <code>min</code> and <code>max</code> values are the minimum and the maximum distances respectively between which the sensor can detect the exact <code>proximity</code> value. All three are calculated in centimeters.</p>
-
-<div class="note">
-<p><strong>Note</strong>: See the {{domxref("DeviceProximityEvent")}} reference page for more details.</p>
-</div>
 
 <h2 id="MaKey_MaKey">MaKey MaKey</h2>
 

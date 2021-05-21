@@ -120,6 +120,10 @@ option {
   datalist.style.display = 'block';
 }
 
+input.onblur = function () {
+  datalist.style.display = 'none';
+}
+
 for (let option of datalist.options) {
   option.onclick = function () {
     input.value = this.value;

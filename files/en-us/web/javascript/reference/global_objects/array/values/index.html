@@ -10,6 +10,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Array.values
 ---
 <div>{{JSRef}}</div>
 
@@ -58,7 +59,7 @@ iterator.next();               // Object { value: undefined, done: true }
 iteraror.next().value;         // undefined </pre>
 
 <div class="notecard warning">
-  <p>One-use: the array iterator object is one use or temporary object</p>
+  <p><strong>Warning:</strong> The array iterator object is one use or temporary object</p>
 </div>
 
 <p>example:</p>
@@ -91,29 +92,17 @@ iterator.next().value;        //  "n"
 </pre>
 
 <div class="notecard note">
-  <p>if the values in the array changed the array iterator object values change too.</p>
+  <p><strong>Note:</strong> If the values in the array changed the array iterator object values change too.</p>
 </div>
 
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.values")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Object
   - Reference
+browser-compat: javascript.builtins.Error
 ---
 <div>{{JSRef}}</div>
 
@@ -118,11 +119,11 @@ tags:
 <h4 id="ES6_Custom_Error_Class">ES6 Custom Error Class</h4>
 
 <div class="notecard warning">
-<p>Versions of Babel prior to 7 can handle <code>CustomError</code> class methods, but only when they are declared with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a>. Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without <a href="https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend">additional configuration</a>.</p>
+<p><strong>Warning:</strong> Versions of Babel prior to 7 can handle <code>CustomError</code> class methods, but only when they are declared with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a>. Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without <a href="https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend">additional configuration</a>.</p>
 </div>
 
 <div class="notecard note">
-<p>Some browsers include the <code>CustomError</code> constructor in the stack trace when using ES2015 classes.</p>
+<p><strong>Note:</strong> Some browsers include the <code>CustomError</code> constructor in the stack trace when using ES2015 classes.</p>
 </div>
 
 <pre class="brush: js">class CustomError extends Error {
@@ -154,7 +155,7 @@ try {
 <h4 id="ES5_Custom_Error_Object">ES5 Custom Error Object</h4>
 
 <div class="warning">
-<p><strong>All</strong> browsers include the <code>CustomError</code> constructor in the stack trace when using a prototypal declaration.</p>
+<p><strong>Warning:</strong> All browsers include the <code>CustomError</code> constructor in the stack trace when using a prototypal declaration.</p>
 </div>
 
 <pre class="brush: js">function CustomError(foo, message, fileName, lineNumber) {
@@ -193,22 +194,11 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error-objects', 'Error')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Error")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

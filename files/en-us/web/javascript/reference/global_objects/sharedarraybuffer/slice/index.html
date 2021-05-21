@@ -8,6 +8,7 @@ tags:
 - Shared Memory
 - SharedArrayBuffer
 - TypedArrays
+browser-compat: javascript.builtins.SharedArrayBuffer.slice
 ---
 <div>{{JSRef}}</div>
 
@@ -23,29 +24,34 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>sab</var>.slice()
-<var>sab</var>.slice(<var>begin</var>)
-<var>sab</var>.slice(<var>begin</var>, <var>end</var>)</pre>
+<pre class="brush: js">
+slice()
+slice(begin)
+slice(begin, end)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code><var>begin</var></code> {{optional_inline}}</dt>
-  <dd>Zero-based index at which to begin extraction.</dd>
-  <dd>A negative index can be used, indicating an offset from the end of the sequence.
-    <code>slice(-2)</code> extracts the last two elements in the sequence.</dd>
-  <dd>If <code><var>begin</var></code> is undefined, <code>slice</code> begins from index
-    <code>0</code>.</dd>
+  <dd>
+    <p>Zero-based index at which to begin extraction.</p>
+    <p>A negative index can be used, indicating an offset from the end of the sequence.
+    <code>slice(-2)</code> extracts the last two elements in the sequence.</p>
+    <p>If <code><var>begin</var></code> is undefined, <code>slice</code> begins from index
+    <code>0</code>.</p>
+  </dd>
   <dt><code><var>end</var></code> {{optional_inline}}</dt>
-  <dd>Zero-based index <em>before</em> which to end extraction. <code>slice</code>
-    extracts up to but not including <code><var>end</var></code>.</dd>
-  <dd>For example, <code>slice(1,4)</code> extracts the second element through the fourth
-    element (elements indexed 1, 2, and 3).</dd>
-  <dd>A negative index can be used, indicating an offset from the end of the sequence.
+  <dd>
+    <p>Zero-based index <em>before</em> which to end extraction. <code>slice</code>
+    extracts up to but not including <code><var>end</var></code>.</p>
+    <p>For example, <code>slice(1,4)</code> extracts the second element through the fourth
+    element (elements indexed 1, 2, and 3).</p>
+    <p>A negative index can be used, indicating an offset from the end of the sequence.
     <code>slice(2,-1)</code> extracts the third element through the second-to-last element
-    in the sequence.</dd>
-  <dd>If <code><var>end</var></code> is omitted, <code>slice</code> extracts through the
-    end of the sequence (<code>sab.byteLength</code>).</dd>
+    in the sequence.</p>
+    <p>If <code><var>end</var></code> is omitted, <code>slice</code> extracts through the
+    end of the sequence (<code>sab.byteLength</code>).</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -65,21 +71,11 @@ sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-sharedarraybuffer.prototype.slice',
-        'SharedArrayBuffer.prototype.slice')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.SharedArrayBuffer.slice")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

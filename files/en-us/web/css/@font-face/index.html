@@ -10,6 +10,7 @@ tags:
   - Nick Names
   - Reference
   - typography
+browser-compat: css.at-rules.font-face
 ---
 <div>{{CSSRef}}</div>
 
@@ -26,6 +27,10 @@ tags:
 <h3 id="Descriptors">Descriptors</h3>
 
 <dl>
+ <dt>{{cssxref("@font-face/ascent-override", "ascent-override")}}</dt>
+ <dd>Defines the ascent metric for the font.</dd>
+ <dt>{{cssxref("@font-face/descent-override", "descent-override")}}</dt>
+ <dd>Defines the descent metric for the font.</dd>
  <dt>{{cssxref("@font-face/font-display", "font-display")}}</dt>
  <dd>Determines how a font face is displayed based on whether and when it is downloaded and ready to use.</dd>
  <dt>{{cssxref("@font-face/font-family", "font-family")}}</dt>
@@ -42,6 +47,8 @@ tags:
  <dd>Allows control over advanced typographic features in OpenType fonts.</dd>
  <dt>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</dt>
  <dd>Allows low-level control over OpenType or TrueType font variations, by specifying the four letter axis names of the features to vary, along with their variation values.</dd>
+ <dt>{{cssxref("@font-face/line-gap-override", "line-gap-override")}}</dt>
+ <dd>Defines the line gap metric for the font.</dd>
  <dt>{{cssxref("@font-face/src", "src")}}</dt>
  <dd>
  <p>Specifies the resource containing the font data. This can be a URL to a remote font file location or the name of a font on the user's computer.</p>
@@ -201,7 +208,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.font-face")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

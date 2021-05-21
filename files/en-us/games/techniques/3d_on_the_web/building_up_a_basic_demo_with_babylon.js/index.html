@@ -18,7 +18,7 @@ tags:
 <ul>
  <li>Making sure you are using a modern browser with good <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> support, such as the latest Firefox or Chrome.</li>
  <li>Creating a directory to store your experiments in.</li>
- <li>Saving a copy of the <a href="http://cdn.babylonjs.com/2-3/babylon.js">latest Babylon.js engine</a> inside your directory.</li>
+ <li>Saving a copy of the <a href="https://cdn.babylonjs.com/2-3/babylon.js">latest Babylon.js engine</a> inside your directory.</li>
  <li>Opening the <a href="https://doc.babylonjs.com/">Babylon.js documentation</a> in a separate tab — it is useful to refer to.</li>
 </ul>
 
@@ -88,7 +88,7 @@ engine.runRenderLoop(renderLoop);
 <pre class="brush: js">var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
 </pre>
 
-<p>There are many <a href="http://doc.babylonjs.com/tutorials/Cameras">cameras</a> available in Babylon.js; <code>FreeCamera</code> is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.</p>
+<p>There are many <a href="https://doc.babylonjs.com/tutorials/Cameras">cameras</a> available in Babylon.js; <code>FreeCamera</code> is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You probably noticed the <code>BABYLON.Vector3()</code> method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.</p>
@@ -96,7 +96,7 @@ engine.runRenderLoop(renderLoop);
 
 <h2 id="Let_there_be_light">Let there be light</h2>
 
-<p>There are various <a href="http://doc.babylonjs.com/tutorials/Lights">light sources</a> available in Babylon.js. The most basic one is the <code>PointLight</code>, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition: </p>
+<p>There are various <a href="https://doc.babylonjs.com/tutorials/Lights">light sources</a> available in Babylon.js. The most basic one is the <code>PointLight</code>, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition: </p>
 
 <pre class="brush: js">var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
 </pre>
@@ -105,7 +105,7 @@ engine.runRenderLoop(renderLoop);
 
 <h2 id="Geometry">Geometry</h2>
 
-<p>Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of <a href="http://doc.babylonjs.com/tutorials/Discover_Basic_Elements">predefined primitives</a> that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:</p>
+<p>Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of <a href="https://doc.babylonjs.com/tutorials/Discover_Basic_Elements">predefined primitives</a> that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:</p>
 
 <pre class="brush: js">var box = BABYLON.Mesh.CreateBox("box", 2, scene);
 </pre>
@@ -126,7 +126,7 @@ box.rotation.y = -0.4;
 
 <h2 id="Material">Material</h2>
 
-<p>Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of <a href="http://doc.babylonjs.com/tutorials/Materials">materials</a> that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:</p>
+<p>Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are many types of <a href="https://doc.babylonjs.com/tutorials/Materials">materials</a> that can be used, but for now the standard one should be enough for us. Add these lines below the previous ones:</p>
 
 <pre class="brush: js">var boxMaterial = new BABYLON.StandardMaterial("material", scene);
 boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);

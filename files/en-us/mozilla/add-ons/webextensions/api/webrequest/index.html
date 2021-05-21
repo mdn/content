@@ -74,10 +74,6 @@ tags:
 
 <p>In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} object, which indicates the modification you need to make: for example, the modified request header you want to send.</p>
 
-<div class="notecard warning">
-<p><strong>Warning</strong>: Non-HTTP(S) protocols do not currently support <code>"blocking"</code> functionality, so modifying these requests is not available at this time. See {{bug(1475832)}} for more details.</p>
-</div>
-
 <h2 id="Accessing_security_information">Accessing security information</h2>
 
 <p>In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the <a href="/en-US/docs/Glossary/TLS">TLS</a> properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the <code>extraInfoSpec</code> argument to the event's <code>addListener()</code>.</p>

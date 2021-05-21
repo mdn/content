@@ -7,6 +7,7 @@ tags:
   - Keyword
   - Lexical Grammar
   - Literal
+browser-compat: javascript.grammar
 ---
 <div>{{JsSidebar("More")}}</div>
 
@@ -222,11 +223,11 @@ console.log("Hello world");
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Hashbang comments in JavaScript mimic <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">shebangs in Unix</a> used to run files with proper interpreter.</p>
+<p><strong>Note:</strong> Hashbang comments in JavaScript mimic <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">shebangs in Unix</a> used to run files with proper interpreter.</p>
 </div>
 
 <div class="notecard warning">
-<p>Although <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.</p>
+<p><strong>Warning:</strong> Although <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.</p>
 </div>
 
 <p>You must only use the <code>#!</code> comment style to specify a JavaScript interpreter. In all other cases just use a <code>//</code> comment (or mulitiline comment).</p>
@@ -621,29 +622,15 @@ return;
 a + b;
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-		</tr>
-	</tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.grammar")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/">Jeff Walden: Binary and octal numbers</a></li>
+	<li><a href="https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar">Lexical grammar in the ECMAScript specification</a></li>
+  <li><a href="http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/">Jeff Walden: Binary and octal numbers</a></li>
 	<li><a href="http://mathiasbynens.be/notes/javascript-escapes">Mathias Bynens: JavaScript character escape sequences</a></li>
 	<li>{{jsxref("Boolean")}}</li>
 	<li>{{jsxref("Number")}}</li>

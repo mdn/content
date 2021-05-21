@@ -12,6 +12,7 @@ tags:
   - Text
   - text entry
   - text input
+browser-compat: html.elements.input.input-text
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -46,7 +47,7 @@ tags:
 
 <h2 id="Value">Value</h2>
 
-<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement.value", "value")}} property in JavaScript.</p>
+<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} <code>value</code> property in JavaScript.</p>
 
 <pre class="brush: js">let theText = myTextInput.value;
 </pre>
@@ -142,7 +143,7 @@ tags:
 
 <h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement.value")}} property.</p>
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
@@ -429,31 +430,11 @@ input:valid+span:after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="text"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="text"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-text")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

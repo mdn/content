@@ -8,6 +8,7 @@ tags:
 - Method
 - Random
 - Reference
+browser-compat: javascript.builtins.Math.random
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/math-random.html")}}</div>
 
 <div class="note">
-  <p><code>Math.random()</code> <em>does not</em> provide cryptographically secure random
+  <p><strong>Note:</strong> <code>Math.random()</code> <em>does not</em> provide cryptographically secure random
     numbers. Do not use them for anything related to security. Use the Web Crypto API
     instead, and more precisely the {{domxref("Crypto.getRandomValues",
     "window.crypto.getRandomValues()")}} method.</p>
@@ -40,7 +41,7 @@ tags:
 <p>Note that as numbers in JavaScript are IEEE 754 floating point numbers with
   round-to-nearest-even behavior, the ranges claimed for the functions below (excluding
   the one for <code>Math.random()</code> itself) aren't exact. If extremely large bounds
-  are chosen (2<sup>53</sup> or higher), it's possible in <em>extremely</em> rare cases to
+  are chosen (2^53 or higher), it's possible in <em>extremely</em> rare cases to
   calculate the usually-excluded upper bound.</p>
 
 <h3 id="Getting_a_random_number_between_0_inclusive_and_1_exclusive">Getting a random
@@ -79,7 +80,7 @@ tags:
 </pre>
 
 <div class="note">
-  <p>It might be tempting to use <code>Math.round()</code> to accomplish that, but doing
+  <p><strong>Note:</strong> It might be tempting to use <code>Math.round()</code> to accomplish that, but doing
     so would cause your random numbers to follow a non-uniform distribution, which may not
     be acceptable for your needs.</p>
 </div>
@@ -100,23 +101,12 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.random', 'Math.random')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.Math.random")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

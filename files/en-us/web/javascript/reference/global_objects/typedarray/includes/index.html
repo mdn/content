@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.includes
 ---
 <div>{{JSRef}}</div>
 
@@ -23,16 +24,18 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarray</var>.includes(<var>searchElement</var>[, <var>fromIndex</var>]);</pre>
+<pre class="brush: js">
+includes(searchElement)
+includes(searchElement, fromIndex)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code><var>searchElement</var></code></dt>
   <dd>The element to search for.</dd>
-  <dt><code><var>fromIndex</var></code></dt>
-  <dd>Optional. The position in this array at which to begin searching for
+  <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
+  <dd>The position in this array at which to begin searching for
     <code>searchElement</code>; defaults to 0.</dd>
 </dl>
 
@@ -57,23 +60,11 @@ new Float64Array([NaN]).includes(NaN); // true;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.includes',
-        'TypedArray.prototype.includes')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.includes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

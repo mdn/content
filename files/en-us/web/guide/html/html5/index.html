@@ -34,12 +34,12 @@ tags:
  <dt><a href="/en-US/docs/Learn/Forms">Forms improvements</a></dt>
  <dd>A look at the <a href="/en-US/docs/Learn/Forms/Form_validation">constraint validation API</a>, several new attributes, new values for the {{HTMLElement("input")}} attribute {{htmlattrxref("type", "input")}} and the new {{HTMLElement("output")}} element.</dd>
  <dt>New semantic elements</dt>
- <dd>Beside sections, media and forms elements, there are numerous new elements, like {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, {{HTMLElement("figcaption")}}, {{HTMLElement("data")}}, {{HTMLElement("time")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, or {{HTMLElement("meter")}} and {{HTMLElement("main")}}, increasing the number of <a href="/en-US/docs/Web/HTML/HTML5/HTML5_element_list">valid HTML5 elements</a>.</dd>
+ <dd>Beside sections, media and forms elements, there are numerous new elements, like {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, {{HTMLElement("figcaption")}}, {{HTMLElement("data")}}, {{HTMLElement("time")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, or {{HTMLElement("meter")}} and {{HTMLElement("main")}}, increasing the number of <a href="/en-US/docs/Web/HTML/Element">valid HTML elements</a>.</dd>
  <dt>Improvement in {{HTMLElement("iframe")}}</dt>
  <dd>Using the {{htmlattrxref("sandbox", "iframe")}} and {{htmlattrxref("srcdoc", "iframe")}} attributes, authors can now be precise about the level of security and the wished rendering of an {{HTMLElement("iframe")}} element.</dd>
  <dt><a href="/en-US/docs/Web/MathML">MathML</a></dt>
  <dd>Allows directly embedding mathematical formulas.</dd>
- <dt><a href="/en-US/docs/Web/HTML/HTML5/Introduction_to_HTML5">Introduction to HTML5</a></dt>
+ <dt><a href="/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5">Introduction to HTML5</a></dt>
  <dd>This article introduces how to indicate to the browser that you are using HTML5 in your web design or web application.</dd>
  <dt><a href="https://hostingcanada.org/html-cheat-sheet/">HTML5 Reference Guide</a></dt>
  <dd>Quick-reference HTML5 sheet containing markup generators, code examples and web developer tools. The guide is downloadable for ease of use and access. This page was created with help from the W3C as a quick guide for those who have some basic familiarity and experience using HTML5.</dd>
@@ -68,8 +68,6 @@ tags:
 
 
 <dl>
- <dt><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Offline resources: The application cache</a></dt>
- <dd>Firefox fully supports the HTML5 offline resource specification. Most others have offline resource support at some level.</dd>
  <dt><a href="/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events">Online and offline events</a></dt>
  <dd>Firefox 3 supports WHATWG online and offline events, which let applications and extensions detect whether or not there's an active Internet connection, as well as to detect when the connection goes up and down.</dd>
  <dt><a href="/en-US/docs/Web/API/Web_Storage_API">WHATWG client-side session and persistent storage (aka DOM storage)</a></dt>
@@ -88,7 +86,7 @@ tags:
  <dt><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></dt>
  <dd>This technology, where RTC stands for Real-Time Communication, allows connecting to other people and controlling videoconferencing directly in the browser, without the need for a plugin or an external application.</dd>
  <dt>Track and WebVTT</dt>
- <dd>The {{HTMLElement("track")}} element allows subtitles and chapters. <a href="/en-US/docs/Web/HTML/WebVTT">WebVTT</a> is a text track format.</dd>
+ <dd>The {{HTMLElement("track")}} element allows subtitles and chapters. <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> is a text track format.</dd>
 </dl>
 
 <h2 id="2D3D_graphics_AND_effects">2D/3D graphics AND effects</h2>
@@ -136,13 +134,11 @@ tags:
 <h2 id="Device_access">Device access</h2>
 
 <dl>
- <dt><a href="/en-US/docs/DOM/Using_the_Camera_API">Using the Camera API</a></dt>
- <dd>Allows using, manipulating, and storing an image from the computer's camera.</dd>
  <dt><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></dt>
  <dd>Handlers to react to events created by a user pressing touch screens.</dd>
  <dt><a href="/en-US/docs/Web/API/Geolocation_API" title="Using geolocation">Using geolocation</a></dt>
  <dd>Let browsers locate the position of the user using geolocation.</dd>
- <dt><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></dt>
+ <dt><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation</a></dt>
  <dd>Get the information when the device on which the browser runs changes orientation. This can be used as an input device (e.g., to make games that react to the position of the device) or to adapt the layout of a page to the orientation of the screen (portrait or landscape).</dd>
  <dt><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a></dt>
  <dd>Allows locking the pointer to the content, so games and similar application don't lose focus when the pointer reaches the window limit.</dd>
@@ -150,7 +146,7 @@ tags:
 
 <h2 id="Styling">Styling</h2>
 
-<p id="CSS_has_been_extended_to_be_able_to_style_elements_in_a_much_more_complex_way._This_is_often_referred_as_CSS3_though_CSS_is_not_a_monolithic_specification_any_more_and_the_different_modules_are_not_all_at_level_3_some_are_at_level_1_and_others_at_level_4_with_all_the_intermediate_levels_covered."><a href="/en-US/docs/Web/CSS">CSS</a> has been extended to be able to style elements in a much more complex way. This is often referred as <a href="/en-US/docs/CSS/CSS3">CSS3</a>, though CSS is not a monolithic specification any more and the different modules are not all at level 3: some are at level 1 and others at level 4, with all the intermediate levels covered.</p>
+<p id="CSS_has_been_extended_to_be_able_to_style_elements_in_a_much_more_complex_way._This_is_often_referred_as_CSS3_though_CSS_is_not_a_monolithic_specification_any_more_and_the_different_modules_are_not_all_at_level_3_some_are_at_level_1_and_others_at_level_4_with_all_the_intermediate_levels_covered."><a href="/en-US/docs/Web/CSS">CSS</a> has been extended to be able to style elements in a much more complex way. This is often referred as CSS3, though CSS is not a monolithic specification any more and the different modules are not all at level 3: some are at level 1 and others at level 4, with all the intermediate levels covered.</p>
 
 <dl>
  <dt>New background styling features</dt>
