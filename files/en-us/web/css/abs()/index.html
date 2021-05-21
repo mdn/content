@@ -31,6 +31,8 @@ width: abs(20% - 100px);</pre>
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Positive_variables">Positive variables</h3>
+
 <p>A use case for this CSS functions is when you need to use only positive values.</p>
 
 <pre class="brush: css;">h1 {
@@ -38,7 +40,19 @@ width: abs(20% - 100px);</pre>
 }
 </pre>
 
-<p>In this example we can make sure `font-size` value will always be positive even if the `--font-size` variable in negetive.</p>
+<p>In this example we can make sure <code>font-size</code> value will always be positive even if the <code>--font-size</code> variable in negetive.</p>
+
+<h3 id="Control_gradient_angle_of_direction">Control gradient angle of direction</h3>
+
+<p>You can also control the gradient direction using <code>abs()</code> function.</p>
+
+<pre class="brush: css;">div {
+  --deg: -45deg;
+  background-image: linear-gradient( abs( var( --deg ) ), blue, red);
+}
+</pre>
+
+<p>In this example we are making sure the gradient direction is not negetive.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
