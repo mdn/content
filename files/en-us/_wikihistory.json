@@ -77607,20 +77607,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGTests": {
-    "modified": "2020-10-15T21:09:43.330Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sebastianz",
-      "mattwojo",
-      "kscarfone",
-      "Sheppy",
-      "kohei.yoshino",
-      "Jeremie",
-      "Longsonr"
-    ]
-  },
   "Web/API/SVGTextContentElement": {
     "modified": "2020-10-15T21:51:29.333Z",
     "contributors": [
