@@ -1,23 +1,22 @@
 ---
-title: ChildNode.remove()
-slug: Web/API/ChildNode/remove
+title: Element.remove()
+slug: Web/API/Element/remove
 tags:
-- API
-- ChildNode
-- DOM
-- Method
+  - API
+  - Element
+  - DOM
+  - Method
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>ChildNode.remove()</strong></code> method removes the object from the
+<p>The <code><strong>Element.remove()</strong></code> method removes the element from the
   tree it belongs to.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>node</var>.remove();
-</pre>
+<pre class="brush: js">remove()</pre>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">Examples</h2>
 
 <h3 id="Using_remove">Using <code>remove()</code></h3>
 
@@ -30,7 +29,7 @@ tags:
 el.remove(); // Removes the div with the 'div-02' id
 </pre>
 
-<h3 id="ChildNode.remove_is_unscopable"><code>ChildNode.remove()</code> is unscopable</h3>
+<h3 id="Element.remove_is_unscopable"><code>Element.remove()</code> is unscopable</h3>
 
 <p>The <code>remove()</code> method is not scoped into the <code>with</code> statement.
   See {{jsxref("Symbol.unscopables")}} for more information.</p>
@@ -46,31 +45,21 @@ el.remove(); // Removes the div with the 'div-02' id
   <thead>
     <tr>
       <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>{{SpecName('DOM WHATWG', '#dom-childnode-remove', 'ChildNode.remove')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition.</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ChildNode.remove")}}</p>
+<p>{{Compat("api.Element.remove")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li>The {{domxref("ChildNode")}} pure interface.</li>
-  <li>
-    <div class="brush: js">Object types implementing this pure interface:
-      {{domxref("CharacterData")}}, {{domxref("Element")}}, and
-      {{domxref("DocumentType")}}.</div>
-  </li>
   <li><a href="https://github.com/chenzhenxi/element-remove">Polyfill</a></li>
 </ul>
