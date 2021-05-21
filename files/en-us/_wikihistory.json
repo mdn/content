@@ -76404,16 +76404,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGAnimatedPoints": {
-    "modified": "2020-10-15T21:10:58.964Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "kscarfone",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/SVGAnimatedPreserveAspectRatio": {
     "modified": "2020-10-15T21:09:36.896Z",
     "contributors": [
