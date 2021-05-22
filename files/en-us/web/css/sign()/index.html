@@ -14,11 +14,14 @@ browser-compat: css.types.sign
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>sign()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> contains one calculation, and returns -1 if the numeric value of the argument is negative, +1 if the numeric value of the argument is positive, 0⁺ if the numeric value of the argument is 0⁺, and 0⁻ if the numeric value of the argument is 0⁻.</p>
+<p>The <strong><code>sign()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> contains one calculation, and returns <code>-1</code> if the numeric value of the argument is negative, <code>+1</code> if the numeric value of the argument is positive, <code>0⁺</code> if the numeric value of the argument is 0⁺, and <code>0⁻</code> if the numeric value of the argument is 0⁻.</p>
 
 <div class="notecard note">
+
 <h4>Note</h4>
+
 <p>While the <a href="/en-US/docs/Web/CSS/abs()"><code>abs()</code></a> returns the absolute value of the argument, <code>sign()</code> returns the sign of the argument.</p>
+
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -34,7 +37,11 @@ browser-compat: css.types.sign
 
 <h2 id="Examples">Examples</h2>
 
-For example, in background-position positive percentages resolve to a negative length, and vice versa, if the background image is larger than the background area. Thus sign(10%) might return 1 or -1, depending on how the percentage is resolved! (Or even 0, if it’s resolved against a zero length.)
+For example, in <a href="/en-US/docs/Web/CSS/background-position"><code>background-position</code></a> positive percentages resolve to a negative length, and vice versa, if the background image is larger than the background area. Thus <code>sign(10%)</code> might return <code>1</code> or <code>-1</code>, depending on how the percentage is resolved! (Or even <code>0</code>, if it’s resolved against a zero length.)
+
+<pre class="brush: css;">div {
+  background-position: sign(10%);
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
