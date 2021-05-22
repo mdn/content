@@ -43,15 +43,13 @@ width: abs(20% - 100px);</pre>
 
 <h3 id="Control_gradient_angle_of_direction">Control gradient angle of direction</h3>
 
-<p>You can also control the gradient direction using <code>abs()</code> function.</p>
+<p>You can also control the gradient direction using <code>abs()</code> function. In the following example, with an angle of -45deg the gradient would start red and transition to blue. By using <code>abs()</code> to make the value positive, the gradient will start blue and transition to red.</p>
 
 <pre class="brush: css;">div {
   --deg: -45deg;
   background-image: linear-gradient( abs( var( --deg ) ), blue, red);
 }
 </pre>
-
-<p>In this example we are making sure the gradient direction is not negetive.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
