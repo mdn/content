@@ -95,11 +95,9 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
   <dd>
     <div class="notecard note">
       <h4>Note</h4>
-      <p>For event listeners attached to the event target, the event is in the target phase, 
+      <p>For event listeners attached to the event target, the event is in the target phase,
         rather than the capturing and bubbling phases.
-        Events in the target phase will trigger all listeners on an element in the
-      order they were registered, regardless of the <var>useCapture</var>
-      parameter.</p>
+        Capturing event listeners should be called before non-capturing ones</p>
     </div>
 
     <div class="notecard note">
