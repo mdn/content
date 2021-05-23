@@ -448,15 +448,6 @@ git push</pre>
 
 <p>Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the {{TemplateLink("Compat")}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.</p>
 
-<p>Above the macro call, to help other contributors finding their way, you should add a hidden text that is only visible in MDN contributors in edit mode:</p>
-
-<pre class="brush: html">&lt;div class="hidden"&gt;
-The compatibility table on this page is generated from structured data.
-If you'd like to contribute to the data, please check out
-&lt;a href="https://github.com/mdn/browser-compat-data"&gt;https://github.com/mdn/browser-compat-data&lt;/a&gt;
-and send us a pull request.
-&lt;/div&gt;</pre>
-
 <p>As an example, on the {{HTTPHeader("Content-Type")}} HTTP header page, the macro call looks like this: <code>\{{Compat("http.headers.Content-Type")}}</code>. If you look at the <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> file in the repo, you'll see how this is reflected in the JSON data.</p>
 
 <p>As another example, The compat table for the {{domxref("VRDisplay.capabilities")}} property is generated using <code>\{{Compat("api.VRDisplay.capabilities")}}</code>. The macro call generates the following table (and corresponding set of notes):</p>
