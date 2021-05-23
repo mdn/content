@@ -83,7 +83,7 @@ sort(function compareFn(firstEl, secondEl) { ... })
   being compared, then:</p>
 
 <ul>
-  <li>If <code>compareFunction(a, b)</code> returns less than 0, leave <code>a</code> and <code>b</code> unchanged.</li>
+  <li>If <code>compareFunction(a, b)</code> returns less than 0, <code>a</code> is sorted before <code>b</code>.</li>
   <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and
     <code>b</code> unchanged with respect to each other, but sorted with respect to all
     different elements. Note: the ECMAScript standard only started guaranteeing this
