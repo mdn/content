@@ -91,7 +91,7 @@ console.log(a); // 1
 console.log(b); // 2
 </pre>
 
-<p>If there are fewer items in the array than the variables specified during assignment, then destructuring automatically assigns default value(<code>undefined</code>) to the extra variables:</p>
+<p>In an array destructuring from an array of length <var>N</var> specified on the right-hand side of the assignment, if the number of variables specified on the left-hand side of the assignment is greater than <var>N</var>, only the first <var>N</var> variables are assigned values. The values of the remaining variables will be undefined.</p>
 <pre class="brush: js">const foo = ['one', 'two'];
 
 const [red, yellow, green,blue] = foo;
