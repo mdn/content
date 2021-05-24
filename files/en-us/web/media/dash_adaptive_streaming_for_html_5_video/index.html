@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Using_DASH_-_Server_Side">Using DASH - Server Side</h2>
 
-<p>First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the ffpmeg program from <a href="http://www.ffmpeg.org/">ffmpeg.org</a>, with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested ith 3.2.5).</p>
+<p>First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the ffpmeg program from <a href="https://www.ffmpeg.org/">ffmpeg.org</a>, with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested ith 3.2.5).</p>
 
 <h3 id="1._Use_your_existing_WebM_file_to_create_one_audio_file_and_multiple_video_files.">1. Use your existing WebM file to create one audio file and multiple video files.</h3>
 
@@ -93,6 +93,6 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame
 
 <p><a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">WebM DASH Specification at The WebM Project</a></p>
 
-<p><a href="http://dashif.org/">DASH Industry Forum</a></p>
+<p><a href="https://dashif.org/">DASH Industry Forum</a></p>
 
 <p><a href="http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash">WebM project description of how to create DASH files with FFMPEG</a></p>
