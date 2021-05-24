@@ -720,7 +720,7 @@ In such situations:
 
 ## Frequently asked questions (FAQ)
 
-### When will my change show up on the production MDN site
+### When will my change show up on the production MDN site?
 
 After your pull request is merged, it may take up to 48 hours before the
 change goes live on the production <https://developer.mozilla.org/> site,
@@ -737,7 +737,7 @@ has been deployed to the production site.
 And use <https://whatsdeployed.io/s/16d/mdn/translated-content> for changes
 to the <https://github.com/mdn/translated-content> repo.
 
-### Can I copy content from other sources to put on MDN
+### Can I copy content from other sources to put on MDN?
 
 In general, we do not approve of copying content from other sources and putting
 it on MDN. MDN should be made up of original content wherever possible. If we
