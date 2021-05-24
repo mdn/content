@@ -83,15 +83,14 @@ sort(function compareFn(firstEl, secondEl) { ... })
   being compared, then:</p>
 
 <ul>
-  <li>If <code>compareFunction(a, b)</code> returns less than 0, leave <code>a</code> and <code>b</code> unchanged.</li>
-  <li>If <code>compareFunction(a, b)</code> returns 0, leave <code>a</code> and
-    <code>b</code> unchanged with respect to each other, but sorted with respect to all
-    different elements. Note: the ECMAScript standard only started guaranteeing this
-    behavior <a
-      href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">in
-      2019</a>, thus, older browsers may not respect this.</li>
-  <li>If <code>compareFunction(a, b)</code> returns greater than 0, sort <code>b</code> before
-    <code>a</code>.</li>
+  <li>If <code>compareFunction(a, b)</code> returns a value &gt; than 0, sort <code>b</code> before <code>a</code>.</li>
+  <li>If <code>compareFunction(a, b)</code> returns a value ≤ 0, leave <code>a</code> and <code>b</code> in the same order.
+    <div class="notecard note">
+      <p><strong>Note:</strong> The <a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-intro">ECMAScript Standard, 10th edition</a> (2019) 
+        algorithm mandates stable sorting, which means than elements that compare equal must remain in their original order with respect to each other. 
+        This behaviour may not be respected by older browsers.</p>
+    </div>
+  </li>
   <li><code>compareFunction(a, b)</code> must always return the same value when given a
     specific pair of elements <code>a</code> and <code>b</code> as its two arguments. If
     inconsistent results are returned, then the sort order is undefined.</li>

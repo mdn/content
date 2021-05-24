@@ -28,7 +28,7 @@ tags:
 <p>If it's using, for example, <code>OscillatorNode</code>, you will have to wait until it is supported, or maybe, if you're really eager, hack in some replacement using <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#ScriptProcessorNode-section">ScriptProcessorNode</a>, which allows you to write a node with callbacks that get called periodically, so that your JavaScript code generates or processes audio.</p>
 <p>The node parameters you use must also be supported in Firefox too. If they aren't, you might be able to change them into something "acceptable" for the time being, and count on the talented audio developers to implement those very soon.</p>
 <p>For example, up until a couple of days ago <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#PannerNode-section">PannerNode</a> did not support the default HRTF panning model yet, and attempting to use a <code>PannerNode</code> with that configuration resulted in silence or a mono output coming out from that node, depending on the build you used.</p>
-<p>Today the support is already present in <a href="http://nightly.mozilla.org/">Nightly</a>, but not quite yet in <a href="https://www.mozilla.org/en-US/firefox/aurora/">Aurora</a>. In the meantime, you can explicitly specify <code>'equalpower'</code> instead:</p>
+<p>Today the support is already present in <a href="https://nightly.mozilla.org/">Nightly</a>, but not quite yet in <a href="https://www.mozilla.org/en-US/firefox/aurora/">Aurora</a>. In the meantime, you can explicitly specify <code>'equalpower'</code> instead:</p>
 <pre class="brush: js">var panner = new audioContext.PannerNode();
 panner.panningModel = 'equalpower';
 </pre>
