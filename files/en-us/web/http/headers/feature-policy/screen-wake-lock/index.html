@@ -1,13 +1,17 @@
 ---
 title: 'Feature-Policy: screen-wake-lock'
 slug: Web/HTTP/Headers/Feature-Policy/screen-wake-lock
+tags:
+  - Directive
+  - Feature Policy
+  - Feature-Policy
+  - HTTP
+  - Reference
+  - screen-wake-lock
+  - Experimental
 browser-compat: http.headers.Feature-Policy.screen-wake-lock
 ---
 <p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
-
-<div class="hidden">
-<p><strong>Note:</strong> This API is still actively being developed and available only behind a flag on select browsers and platforms.</p>
-</div>
 
 <p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <strong><code>screen-wake-lock</code></strong> directive controls whether the current document is allowed to use <a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a> to indicate that device should not dim or turn off the screen.</span></p>
 
@@ -20,8 +24,8 @@ browser-compat: http.headers.Feature-Policy.screen-wake-lock
 <pre>Feature-Policy: screen-wake-lock &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page('Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}</dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
