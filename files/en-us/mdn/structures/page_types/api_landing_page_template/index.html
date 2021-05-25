@@ -9,7 +9,8 @@ browser-compat: path.to.feature.NameOfAPI
 ---
 <div>{{MDNSidebar}}</div>
 
-<div class="note">
+<div class="notecard note">
+
 <h2 id="Remove_before_publishing">Remove before publishing</h2>
 
 <h3 id="Title_and_slug">Title and slug</h3>
@@ -41,7 +42,14 @@ browser-compat: path.to.feature.NameOfAPI
 <p>To fill in the browser compatibility section, you may first need to create/update an entry for the API in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
 <p>Then replace the value of the page front-matter section's <code>browser-compat</code> key (at the top of the page) with the path to the API in the browser compatibility data.
-	The toolchain automatically inserts the data in the browser compatibility section (replacing the <code>\{{Compat}}</code> macro).</p>
+	The toolchain automatically inserts the specified compatibility data into the page, replacing the <code>\{{Compat}}</code> macro.</p>
+
+<h3 id="Specifications">Specifications</h3>
+
+<p>Specification data for the API should be included in its <a href="https://github.com/mdn/browser-compat-data">browser-compat-data</a> as part of creating/updating the entry (see <a href="#browser_compatibility">previous section</a>).</p>
+
+<p>Ensure that the page front-matter section's <code>browser-compat</code> key (at the top of the page) has the correct path to the API in the browser compatibility data. 
+	The toolchain automatically inserts the specification data associated with the key into the page, replacing the <code>\{{Specifications}}</code> macro.</p>
 </div>
 
 <div>{{draft}}{{securecontext_header}}{{APIRef("GroupDataName")}}</div>
@@ -101,27 +109,7 @@ browser-compat: path.to.feature.NameOfAPI
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfOtherSpecificationfromSpecName")}}</td>
-			<td>{{Spec2("NameOfOtherSpecificationFromSpec2")}}</td>
-			<td>Defines blah blah feature. If no other specs define extensions of this API, you can delete this table row.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('NameOfSpecificationFromSpecName')}}</td>
-			<td>{{Spec2('NameOfSpecificationFromSpec2')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
