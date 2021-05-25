@@ -215,6 +215,9 @@ the changes you'll make as they would look in production. Once started,
 this local preview service is available at `http://localhost:5000`
 within your browser.
 
+To use the preview service, you need to have [yarn](https://yarnpkg.com/getting-started/install)
+and a recent version of [node](https://nodejs.org/en/download/) installed on your computer.
+
     ```sh
     # Switch to a separate terminal.
     cd ~/repos/mdn/content
