@@ -7,6 +7,7 @@ tags:
   - Structures
   - browser compat
   - compatibility tables
+browser-compat: api.AbortController
 ---
 <div>{{MDNSidebar}}</div>
 
@@ -136,6 +137,7 @@ tags:
 
 <ul>
  <li><code>mdn_url</code>: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. <code>/docs/...</code> not <code>/en-US/docs/...</code>. This is added in by the macro when the data is put on the page, for localization purposes.</li>
+ <li><code>spec_url</code>: URL or array of URLs to specification(s) in which this feature is defined.</li>
  <li><code>support</code>: Contains members representing the browser support information for this feature in all the different browsers we want to report.</li>
  <li><code>status</code>: Contains members reporting the standards track status of this feature.</li>
 </ul>
@@ -163,6 +165,7 @@ tags:
 
 <pre class="brush: json">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
+  "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-width",
   "support": {
     "chrome": {
       "version_added": "1"
@@ -446,15 +449,38 @@ git push</pre>
 
 <h2 id="Inserting_the_data_into_MDN_pages">Inserting the data into MDN pages</h2>
 
-<p>Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the {{TemplateLink("Compat")}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.</p>
+<p>Once your new compatibility data has been included in the main <a href="https://github.com/mdn/browser-compat-data">browser-compat-data</a> repo, you can start dynamically generating browser compatibility and specification tables based on that data on MDN pages.</p>
 
-<p>As an example, on the {{HTTPHeader("Content-Type")}} HTTP header page, the macro call looks like this: <code>\{{Compat("http.headers.Content-Type")}}</code>. If you look at the <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> file in the repo, you'll see how this is reflected in the JSON data.</p>
+<p>First you need to find the "address" for the relevant compatibility data you wish to include. This can be determined by inspecting its source file. For example:</p>
+<ul>
+  <li>{{domxref("AbortController")}} compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json">AbortController.json</a> and has address <code>api.AbortController</code>.</li>
+  <li>{{HTTPHeader("Content-Type")}} HTTP header compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> and has address <code>http.headers.Content-Type</code>.</li>
+  <li>{{domxref("VRDisplay.capabilities")}} property compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json">VRDisplay.json</a> and has address key is <code>api.VRDisplay.capabilities</code>.</li>
+</ul>
 
-<p>As another example, The compat table for the {{domxref("VRDisplay.capabilities")}} property is generated using <code>\{{Compat("api.VRDisplay.capabilities")}}</code>. The macro call generates the following table (and corresponding set of notes):</p>
+<p>The compatibility data address should be specified in the page front-matter using the <code>browser-compat</code> key.
+  For example, for the {{domxref("AbortController")}} this would be added as shown below:</p>
+  
+<pre>---
+title: AbortController
+slug: Web/API/AbortController
 
-<hr>
-<p>{{Compat("api.VRDisplay.capabilities")}}</p>
+...
 
-<div class="notecard note">
-<p><strong>Note:</strong> The filenames often match the labels given to the interfaces inside the JSON structures, but it is not always the case. When the macro calls generate the tables, they walk through all the files until they find the relevant JSON to use, so the filenames are not critical. Saying that, you should always name them as intuitively as possible.</p>
-</div>
+browser-compat: api.AbortController
+---</pre>
+
+<p>The compatibility and specification tables corresponding to the key are then automatically rendered in place of the <code>\{{Compat}}</code> and <code>\{{Specifications}}</code> macros in the source.</p>
+
+<p>You can also specify the desired API as the first argument to the macro as shown: <code>\{{Compat("api.AbortController")}}</code>. This can be useful if multiple compatibility tables are required on the same page.</p>
+
+<p>The macro calls generate the following tables (and corresponding set of notes):</p>
+
+
+<h4 id="Compatibility_table_example">Compatibility table example</h4>
+
+<p>{{Compat}}</p>
+
+<h4 id="Specifications_table_example">Specifications table examples</h4>
+
+<p>{{Specifications}}</p>
