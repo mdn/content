@@ -5,15 +5,16 @@ tags:
   - API
   - File API
   - Files
-  - Obsolete
   - Reference
+  - Deprecated
 ---
 <div>{{APIRef("File System API")}}{{deprecated_header}}</div>
 
 <p>Represents an error that occurs while using the {{domxref("FileReader")}} interface.</p>
 
-<div class="note">
-<p><strong>Note:</strong> This interface is obsolete per the latest specification. Use the new DOM4 {{domxref("DOMError")}} interface instead.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This interface is obsolete per the latest specification. Use the new DOM4 {{domxref("DOMError")}} interface instead.</p>
 </div>
 
 <p>In the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a>, a <code>FileError</code> represents error conditions that you might encounter while accessing the file system using the asynchronous API. It extends the <code>FileError</code> interface described in <a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> and adds several new error codes.</p>
@@ -53,7 +54,10 @@ tags:
 
 <h2 id="Error_codes">Error codes</h2>
 
-<p>{{Note("Do not rely on the numeric values of the constants, which might change as the specifications continue to change. Use the constant names instead.")}}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Do not rely on the numeric values of the constants, which might change as the specifications continue to change. Use the constant names instead.</p>
+</div>
 
 <table class="standard-table">
  <thead>

@@ -37,7 +37,7 @@ tags:
 
 <p>Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavors (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.</p>
 
-<p class="entry-title">Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like <a href="http://jquery.com/">jQuery</a> came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in <a href="/en-US/docs/Web/Guide/AJAX/Getting_Started#step_1_%e2%80%93_how_to_make_an_http_request">How to make an HTTP request</a>) so developers only have to write one simple bit of code (see <code><a href="http://api.jquery.com/jquery.ajax/">jQuery.ajax()</a></code>). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.</p>
+<p class="entry-title">Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like <a href="https://jquery.com/">jQuery</a> came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in <a href="/en-US/docs/Web/Guide/AJAX/Getting_Started#step_1_%e2%80%93_how_to_make_an_http_request">How to make an HTTP request</a>) so developers only have to write one simple bit of code (see <code><a href="https://api.jquery.com/jquery.ajax/">jQuery.ajax()</a></code>). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.</p>
 
 <p>Things have improved significantly since then; modern browsers do a good job of supporting "classic JavaScript features", and the requirement to use such code has diminished as the requirement to support older browsers has lessened (although bear in mind that they have not gone away altogether).</p>
 
@@ -62,9 +62,8 @@ tags:
   <div class="note">
   <p>The easiest solution is to declare the iteration variable with <code>let</code> instead of <code>var</code>—the value of <code>i</code> associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.</p>
   </div>
-  If you want this to work correctly, you can define a function to add the handler separately, calling it on each iteration and passing it the current value of <code>para</code> and <code>i</code> each time (or something similar). See <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html">good-for-loop.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html">source code</a> also) for a version that works.
+  <p>If you want this to work correctly, you can define a function to add the handler separately, calling it on each iteration and passing it the current value of <code>para</code> and <code>i</code> each time (or something similar). See <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html">good-for-loop.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html">source code</a> also) for a version that works.</p>
 
-  <div class="note"></div>
  </li>
  <li>Making sure asynchronous operations have returned before trying to use the values they return. For example, <a href="/en-US/docs/Web/Guide/AJAX/Getting_Started#step_3_%e2%80%93_a_simple_example">this Ajax example</a> checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction of <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> to the JavaScript language.</li>
 </ul>
@@ -75,11 +74,11 @@ tags:
 
 <h3 id="Linters">Linters</h3>
 
-<p>As with <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#linters">HTML and CSS</a>, you can ensure better quality, less error-prone JavaScript code using a linter, which points out errors and can also flag up warnings about bad practices, etc., and be customized to be stricter or more relaxed in their error/warning reporting. The JavaScript/ECMAScript linters we'd recommend are <a href="http://jshint.com/">JSHint</a> and <a href="http://eslint.org/">ESLint</a>; these can be used in a variety of ways, some of which we'll detail below.</p>
+<p>As with <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#linters">HTML and CSS</a>, you can ensure better quality, less error-prone JavaScript code using a linter, which points out errors and can also flag up warnings about bad practices, etc., and be customized to be stricter or more relaxed in their error/warning reporting. The JavaScript/ECMAScript linters we'd recommend are <a href="https://jshint.com/">JSHint</a> and <a href="https://eslint.org/">ESLint</a>; these can be used in a variety of ways, some of which we'll detail below.</p>
 
 <h4 id="Online">Online</h4>
 
-<p>The <a href="http://jshint.com/">JSHint homepage</a> provides an online linter, which allows you to enter your JavaScript code on the left and provides an output on the right, including metrics, warnings, and errors.</p>
+<p>The <a href="https://jshint.com/">JSHint homepage</a> provides an online linter, which allows you to enter your JavaScript code on the left and provides an output on the right, including metrics, warnings, and errors.</p>
 
 <p><img alt="" src="jshint-online.png" style="display: block; margin: 0 auto;"></p>
 
@@ -97,11 +96,11 @@ tags:
  <li>After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.</li>
 </ol>
 
-<p><img alt="" src="jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="http://jshint.com/install/">JSHint install page</a>.</p>
+<p><img alt="" src="jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="https://jshint.com/install/">JSHint install page</a>.</p>
 
 <h4 id="Other_uses">Other uses</h4>
 
-<p>There are other ways to use such linters; you can read about them on the <a href="http://jshint.com/install/">JSHint</a> and <a href="http://eslint.org/docs/user-guide/getting-started">ESLint</a> install pages.</p>
+<p>There are other ways to use such linters; you can read about them on the <a href="https://jshint.com/install/">JSHint</a> and <a href="https://eslint.org/docs/user-guide/getting-started">ESLint</a> install pages.</p>
 
 <p>It is worth mentioning command line uses — you can install these tools as command line utilities (available via the CLI — command line interface) using npm (Node Package Manager — you'll have to install <a href="https://nodejs.org/en/">NodeJS</a> first). For example, the following command installs JSHint:</p>
 
@@ -110,7 +109,7 @@ tags:
 
 <p>You can then point these tools at JavaScript files you want to lint, for example:</p>
 
-<p><img alt="" src="js-hint-commandline.png" style="display: block; margin: 0px auto;">You can also use these tools with a task runner/build tool such as <a href="http://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="http://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
+<p><img alt="" src="js-hint-commandline.png" style="display: block; margin: 0px auto;">You can also use these tools with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="https://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.</p>
@@ -303,10 +302,10 @@ showHeroes(superHeroes);</pre>
 <p>JavaScript libraries tend to come in a few main varieties (some libraries will serve more than one of these purposes):</p>
 
 <ul>
- <li>Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. <a href="http://jquery.com/">jQuery</a> for example provides its own fully-featured selectors and DOM manipulation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.</li>
+ <li>Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. <a href="https://jquery.com/">jQuery</a> for example provides its own fully-featured selectors and DOM manipulation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.</li>
  <li>Convenience libraries: Make difficult things easier to do. For example, the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> is really complex and challenging to use when you write it directly, so the <a href="https://threejs.org/">Three.js</a> library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc. The <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the <a href="https://serviceworke.rs/">Service Worker Cookbook</a> for several useful code samples).</li>
  <li>Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when {{glossary("DHTML")}} was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily. See <a href="https://www.javascripting.com/animation/">JavaScripting.com/animation</a> for a list of libraries.</li>
- <li>UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example <a href="http://foundation.zurb.com/">Foundation</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and <a href="https://material-ui.com/">Material-UI</a> (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.</li>
+ <li>UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example <a href="https://foundation.zurb.com/">Foundation</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, and <a href="https://material-ui.com/">Material-UI</a> (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.</li>
  <li>Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, <a href="https://github.com/localForage/localForage">LocalForage</a> is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>, <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage</a>, or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery</li>
 </ul>
 
@@ -319,7 +318,7 @@ showHeroes(superHeroes);</pre>
 <p>Library usage at a basic level tends to consist of downloading the library's files (JavaScript, possibly some CSS or other dependencies too) and attaching them to your page (e.g. via a {{htmlelement("script")}} element), although there are normally many other usage options for such libraries, like installing them as <a href="https://bower.io/">Bower</a> components, or including them as dependencies via the <a href="https://webpack.github.io/">Webpack</a> module bundler. You will have to read the libraries' individual install pages for more information.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You will also come across JavaScript frameworks in your travels around the Web, like <a href="http://emberjs.com/">Ember</a> and <a href="https://angularjs.org/">Angular</a>. Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.</p>
+<p><strong>Note</strong>: You will also come across JavaScript frameworks in your travels around the Web, like <a href="https://emberjs.com/">Ember</a> and <a href="https://angularjs.org/">Angular</a>. Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.</p>
 </div>
 
 <h4 id="Polyfills">Polyfills</h4>
@@ -455,7 +454,7 @@ if(ua.indexOf('Firefox') !== -1) {
 <p>Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless. </p>
 
 <div class="note">
-<p><strong>Note</strong>: You should read <a href="http://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
+<p><strong>Note</strong>: You should read <a href="https://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
 </div>
 
 <p>The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. {{anch("Feature detection")}} is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.</p>

@@ -15,13 +15,13 @@ tags:
 
 <p>It's useful to start with an overview of the language's history. JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape. JavaScript was first released with Netscape 2 early in 1996. It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that attempted to capitalize on the popularity of Sun Microsystem's Java language — despite the two having very little in common. This has been a source of confusion ever since.</p>
 
-<p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a href="http://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href="/en-US/docs/Glossary/ECMAScript">ECMAScript</a> standard that year. The standard received a significant update as <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
+<p>Several months later, Microsoft released JScript with Internet Explorer 3. It was a mostly-compatible JavaScript work-alike. Several months after that, Netscape submitted JavaScript to <a href="https://www.ecma-international.org/">Ecma International</a>, a European standards organization, which resulted in the first edition of the <a href="/en-US/docs/Glossary/ECMAScript">ECMAScript</a> standard that year. The standard received a significant update as <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> in 1999, and it has stayed pretty much stable ever since. The fourth edition was abandoned, due to political differences concerning language complexity. Many parts of the fourth edition formed the basis for ECMAScript edition 5, published in December of 2009, and for the 6th major edition of the standard, published in June of 2015.</p>
 
 <div class="note">
-<p>Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.</p>
+<p><strong>Note:</strong> Because it is more familiar, we will refer to ECMAScript as "JavaScript" from this point on.</p>
 </div>
 
-<p>Unlike most programming languages, the JavaScript language has no concept of input or output. It is designed to run as a scripting language in a host environment, and it is up to the host environment to provide mechanisms for communicating with the outside world. The most common host environment is the browser, but JavaScript interpreters can also be found in a huge list of other places, including Adobe Acrobat, Adobe Photoshop, SVG images, Yahoo's Widget engine, server-side environments such as <a href="http://nodejs.org/">Node.js</a>, NoSQL databases like the open source <a href="http://couchdb.apache.org/">Apache CouchDB</a>, embedded computers, complete desktop environments like <a href="http://www.gnome.org/">GNOME</a> (one of the most popular GUIs for GNU/Linux operating systems), and others.</p>
+<p>Unlike most programming languages, the JavaScript language has no concept of input or output. It is designed to run as a scripting language in a host environment, and it is up to the host environment to provide mechanisms for communicating with the outside world. The most common host environment is the browser, but JavaScript interpreters can also be found in a huge list of other places, including Adobe Acrobat, Adobe Photoshop, SVG images, Yahoo's Widget engine, server-side environments such as <a href="https://nodejs.org/">Node.js</a>, NoSQL databases like the open source <a href="https://couchdb.apache.org/">Apache CouchDB</a>, embedded computers, complete desktop environments like <a href="https://www.gnome.org/">GNOME</a> (one of the most popular GUIs for GNU/Linux operating systems), and others.</p>
 
 <h2 id="Overview">Overview</h2>
 
@@ -30,22 +30,24 @@ tags:
 <p>Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:</p>
 
 <ul>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Boolean")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#number_type">Number</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#bigint_type">BigInt</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#string_type">String</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#boolean_type">Boolean</a></li>
  <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Object")}}</li>
- <li>{{jsxref("Symbol")}} (new in ES2015)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#objects">Object</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#symbol_type">Symbol</a> (new in ES2015)</li>
 </ul>
 
-<p>... oh, and {{jsxref("undefined")}} and {{jsxref("null")}}, which are ... slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:</p>
+<p>... oh, and <a href="/en-US/docs/Web/JavaScript/Data_structures#undefined_type">undefined</a> and <a href="/en-US/docs/Web/JavaScript/Data_structures#null_type">null</a>, which are ... slightly odd. And {{jsxref("Array")}}, which is a special kind of object. And {{jsxref("Date")}} and {{jsxref("RegExp")}}, which are objects that you get for free. And to be technically accurate, functions are just a special type of object. So the type diagram looks more like this:</p>
 
 <ul>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{jsxref("Symbol")}} (new in ES2015)</li>
- <li>{{jsxref("Object")}}
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#number_type">Number</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#bigint_type">BigInt</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#string_type">String</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#boolean_type">Boolean</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#symbol_type">Symbol</a> (new in ES2015)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#objects">Object</a>
   <ul>
    <li>{{jsxref("Function")}}</li>
    <li>{{jsxref("Array")}}</li>
@@ -53,15 +55,17 @@ tags:
    <li>{{jsxref("RegExp")}}</li>
   </ul>
  </li>
- <li>{{jsxref("null")}}</li>
- <li>{{jsxref("undefined")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#null_type">null</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Data_structures#undefined_type">undefined</a></li>
 </ul>
 
 <p>And there are some built-in {{jsxref("Error")}} types as well. Things are a lot easier if we stick with the first diagram, however, so we'll discuss the types listed there for now.</p>
 
 <h2 id="Numbers">Numbers</h2>
 
-<p>Numbers in JavaScript are "double-precision 64-bit format IEEE 754 values", according to the spec —  There's <strong><em>no such thing as an integer</em></strong> in JavaScript (except {{jsxref("BigInt")}}), so you have to be a little careful. See this example:</p>
+<p>ECMAScript has two built-in numeric types: <strong>Number</strong> and <strong>BigInt</strong>.</p>
+
+<p>The Number type is a <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision 64-bit binary format IEEE 754 value</a> (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a <em>representation</em> of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:</p>
 
 <pre class="brush: js">console.log(3 / 2);             // 1.5, <em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1</pre>
@@ -153,7 +157,7 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 </pre>
 
-<div class="note">The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator converts the string to <code>NaN</code> if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.</div>
+<div class="note"><p><strong>Note:</strong> The {{jsxref("Global_Objects/parseInt", "parseInt()")}} and {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} functions parse a string until they reach a character that isn't valid for the specified number format, then return the number parsed up to that point. However the "+" operator converts the string to <code>NaN</code> if there is an invalid character contained within it. Just try parsing the string "10.2abc" with each method by yourself in the console and you'll understand the differences better.</p></div>
 
 <h2 id="Strings">Strings</h2>
 
@@ -166,7 +170,7 @@ isFinite(NaN); // false
 <pre class="brush: js">'hello'.length; // 5
 </pre>
 
-<p>There's our first brush with JavaScript objects! Did we mention that you can use strings like {{jsxref("Object", "objects", "", 1)}} too? They have {{jsxref("String", "methods", "#Methods", 1)}} as well that allow you to manipulate the string and access information about the string:</p>
+<p>There's our first brush with JavaScript objects! Did we mention that you can use strings like {{jsxref("Object", "objects", "", 1)}} too? They have {{jsxref("String", "methods", "#instance_methods", 1)}} as well that allow you to manipulate the string and access information about the string:</p>
 
 <pre class="brush: js">'hello'.charAt(0); // "h"
 'hello, world'.replace('world', 'mars'); // "hello, mars"
@@ -180,8 +184,8 @@ isFinite(NaN); // false
 <p>JavaScript has a boolean type, with possible values <code>true</code> and <code>false</code> (both of which are keywords.) Any value can be converted to a boolean according to the following rules:</p>
 
 <ol>
- <li><code>false</code>, <code>0</code>, empty strings (<code>""</code>), <code>NaN</code>, <code>null</code>, and <code>undefined</code> all become <code>false.</code></li>
- <li>All other values become <code>true.</code></li>
+ <li><code>false</code>, <code>0</code>, empty strings (<code>""</code>), <code>NaN</code>, <code>null</code>, and <code>undefined</code> all become <code>false</code>.</li>
+ <li>All other values become <code>true</code>.</li>
 </ol>
 
 <p>You can perform this conversion explicitly using the <code>Boolean()</code> function:</p>
@@ -196,9 +200,9 @@ Boolean(234); // true
 
 <h2 id="Variables">Variables</h2>
 
-<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.<br>
- <br>
- <strong><code>let</code></strong> allows you to declare block-level variables. The declared variable is available from the <em>block</em> it is enclosed in.</p>
+<p>New variables in JavaScript are declared using one of three keywords: <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code>.</p>
+
+<p><strong><code>let</code></strong> allows you to declare block-level variables. The declared variable is available from the <em>block</em> it is enclosed in.</p>
 
 <pre class="brush: js">let a;
 let name = 'Simon';
@@ -221,8 +225,7 @@ for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
 <pre class="brush: js">const Pi = 3.14; // variable Pi is set
 Pi = 1; // will throw an error because you cannot change a constant variable.</pre>
 
-<p><br>
- <code><strong>var</strong></code> is the most common declarative keyword. It does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the <strong><code>var</code></strong> keyword is available from the <em>function</em> it is declared in.</p>
+<p><code><strong>var</strong></code> is the most common declarative keyword. It does not have the restrictions that the other two keywords have. This is because it was traditionally the only way to declare a variable in JavaScript. A variable declared with the <strong><code>var</code></strong> keyword is available from the <em>function</em> it is declared in.</p>
 
 <pre class="brush: js">var a;
 var name = 'Simon';</pre>
@@ -286,14 +289,14 @@ x = x + 5;
 <p>JavaScript has a similar set of control structures to other languages in the C family. Conditional statements are supported by <code>if</code> and <code>else</code>; you can chain them together if you like:</p>
 
 <pre class="brush: js">var name = 'kittens';
-if (name == 'puppies') {
+if (name === 'puppies') {
   name += ' woof';
-} else if (name == 'kittens') {
+} else if (name === 'kittens') {
   name += ' meow';
 } else {
   name += '!';
 }
-name == 'kittens meow';
+name === 'kittens meow';
 </pre>
 
 <p>JavaScript has <code>while</code> loops and <code>do-while</code> loops. The first is good for basic looping; the second for loops where you wish to ensure that the body of the loop is executed at least once:</p>
@@ -464,13 +467,13 @@ obj['for'] = 'Simon'; // works fine
 </pre>
 
 <div class="note">
-<p>Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 <a href="https://es5.github.io/#x7.6.1">Spec</a>.</p>
+<p><strong>Note:</strong> Starting in ECMAScript 5, reserved words may be used as object property names "in the buff". This means that they don't need to be "clothed" in quotes when defining object literals. See the ES5 <a href="https://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
 <p>For more on objects and prototypes see <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object.prototype</a>. For an explanation of object prototypes and the object prototype chains see <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
 
 <div class="note">
-<p>Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. <code>{[phoneType]: 12345}</code> is possible instead of just <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
+<p><strong>Note:</strong> Starting in ECMAScript 2015, object keys can be defined by the variable using bracket notation upon being created. <code>{[phoneType]: 12345}</code> is possible instead of just <code>var userPhone = {}; userPhone[phoneType] = 12345</code>.</p>
 </div>
 
 <h2 id="Arrays">Arrays</h2>
@@ -656,9 +659,9 @@ avg(2, 3, 4, 5); // 3.5
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<div class="note">In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.<br>
-<br>
-It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. <em>i.e. function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em> will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</div>
+<p>In the above code, the variable <strong>args</strong> holds all the values that were passed into the function.</p>
+
+<p>It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments <em>after</em> its declaration, but not before. i.e. <em>function avg(<strong>firstValue, </strong>...args)</em> will store the first value passed into the function in the <strong>firstValue</strong> variable and the remaining arguments in <strong>args</strong>. That's another useful language feature but it does lead us to a new problem. The <code>avg()</code> function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:</p>
 
 <pre class="brush: js">function avgArray(arr) {
   var sum = 0;
@@ -678,13 +681,24 @@ avgArray([2, 3, 4, 5]); // 3.5
 
 <p>The second argument to <code>apply()</code> is the array to use as arguments; the first will be discussed later on. This emphasizes the fact that functions are objects too.</p>
 
-<div class="note">
 <p>You can achieve the same result using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> in the function call.</p>
 
 <p>For instance: <code>avg(...numbers)</code></p>
-</div>
 
-<p>JavaScript lets you create anonymous functions.</p>
+<h3 id="anonymous_functions">Anonymous functions</h3>
+
+<p>JavaScript lets you create anonymous functions — that is, functions without names:</p>
+
+<pre class="brush: js">function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i &lt; j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+</pre>
+
+<p>But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:</p>
 
 <pre class="brush: js">var avg = function() {
   var sum = 0;
@@ -695,19 +709,18 @@ avgArray([2, 3, 4, 5]); // 3.5
 };
 </pre>
 
-<p>This is semantically equivalent to the <code>function avg()</code> form. It's extremely powerful, as it lets you put a full function definition anywhere that you would normally put an expression. This enables all sorts of clever tricks. Here's a way of "hiding" some local variables — like block scope in C:</p>
+<p>That makes the anonymous function invocable by calling <code>avg()</code> with some arguments — that is, it’s semantically equivalent to declaring the function using the <code>function avg()</code> named-function form.</p>
 
-<pre class="brush: js">var a = 1;
-var b = 2;
+<p>But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript  provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an <a href="/en-US/docs/Glossary/IIFE">Immediately invoked function expression (IIFE)</a>, and the syntax for using it with an anonymous function looks like this:
 
-(function() {
-  var b = 3;
-  a += b;
+<pre class="brush: js">(function() {
+  // …
 })();
-
-a; // 4
-b; // 2
 </pre>
+
+<p>Further details on IIFEs are out of scope for this introductory article — but a good example of what they’re particularly useful for is in the <a href="/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">Emulating private methods with closures</a> section of the <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a> article.</p>
+
+<h3 id="recursive_functions">Recursive functions</h3>
 
 <p>JavaScript allows you to call functions recursively. This is particularly useful for dealing with tree structures, such as those found in the browser DOM.</p>
 
@@ -743,7 +756,7 @@ b; // 2
 
 <h2 id="Custom_objects">Custom objects</h2>
 
-<div class="note">For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to Object-Oriented JavaScript</a>.</div>
+<div class="note"><p><strong>Note:</strong> For a more detailed discussion of object-oriented programming in JavaScript, see <a href="/en-US/docs/Learn/JavaScript/Objects">Introduction to Object-Oriented JavaScript</a>.</p></div>
 
 <p>In classic Object Oriented Programming, objects are collections of data and methods that operate on that data. JavaScript is a prototype-based language that contains no class statement, as you'd find in C++ or Java (this is sometimes confusing for programmers accustomed to languages with a class statement). Instead, JavaScript uses functions as classes. Let's consider a person object with first and last name fields. There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:</p>
 
@@ -970,4 +983,4 @@ add20(7); // returns 27
 
 <p>Scope objects form a chain called the scope chain, similar to the prototype chain used by JavaScript's object system.</p>
 
-<p>A <strong>closure</strong> is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. You can find <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">several excellent introductions to closures</a>.</p>
+<p>A <strong>closure</strong> is the combination of a function and the scope object in which it was created. Closures let you save state — as such, they can often be used in place of objects. You can find <a href="https://stackoverflow.com/questions/111102/how-do-javascript-closures-work">several excellent introductions to closures</a>.</p>

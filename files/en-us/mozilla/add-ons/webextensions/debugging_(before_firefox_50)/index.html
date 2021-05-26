@@ -6,7 +6,7 @@ tags:
   - Firefox
   - Guide
   - Mozilla
-  - Obsolete
+  - Deprecated
   - WebExtensions
 ---
 <div>{{AddonSidebar}}</div>
@@ -204,7 +204,7 @@ chrome.runtime.onMessage.addListener(notify);
 <p><img alt="" src="disable-autohide.png" style="display: block; margin-left: auto; margin-right: auto;">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
 
 <div class="notecard note">
-<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="hamburger.png">), as well as extension popups.</p>
+<p>Note that this change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu (<img alt="" src="hamburger.png" style="display: inline-block; vertical-align: middle;">), as well as extension popups.</p>
 
 <p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>
 

@@ -39,7 +39,7 @@ tags:
 
 <ul>
  <li>The <code>TabClose</code>, <code>TabSelect</code>, and <code>TabOpen</code> events no longer bubble up to the {{XULElem("tabbrowser")}} element (<code>gBrowser</code>). Event listeners for those events should be added to <code>gBrowser.tabContainer</code> rather than to <code>gBrowser</code> directly.</li>
- <li>The tab context menu is no longer an anonymous child of the {{XULElem("tabbrowser")}}. It can therefore be overlaid directly with <a href="/en-US/docs/XUL_Overlays">XUL overlays</a>. It can also be accessed more directly in JavaScript via <code>gBrowser.tabContextMenu</code>. See <a class="external" href="http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">this blog post</a> for more details.</li>
+ <li>The tab context menu is no longer an anonymous child of the {{XULElem("tabbrowser")}}. It can therefore be overlaid directly with <a href="/en-US/docs/XUL_Overlays">XUL overlays</a>. It can also be accessed more directly in JavaScript via <code>gBrowser.tabContextMenu</code>. See <a class="external" href="https://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">this blog post</a> for more details.</li>
 </ul>
 
 <h2 id="XPCOM_changes">XPCOM changes</h2>
@@ -119,5 +119,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://blog.mozilla.com/addons/2010/11/11/making-add-on-compatible-firefox-4/">Making Your Add-on Compatible with Firefox 4</a> (blog post)</li>
+ <li><a class="external" href="https://blog.mozilla.com/addons/2010/11/11/making-add-on-compatible-firefox-4/">Making Your Add-on Compatible with Firefox 4</a> (blog post)</li>
 </ul>

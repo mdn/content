@@ -7,6 +7,7 @@ tags:
 - Prototype
 - Reference
 - String
+browser-compat: javascript.builtins.String.concat
 ---
 <div>{{JSRef}}</div>
 
@@ -15,22 +16,19 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>str</var>.concat(<var>str2</var> [, ...<var>strN</var>])</pre>
+<pre class="brush: js">
+concat(str1)
+concat(str1, str2)
+concat(str1, str2, ... , strN)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>str2</var> [, ...<var>strN</var>]</code></dt>
-  <dd>Strings to concatenate to <code><var>str</var></code>.</dd>
+  <dt><code>strN</code></dt>
+  <dd>One or more strings to concatenate to <code>str</code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -75,23 +73,11 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.concat',
-        'String.prototype.concat')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.concat")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

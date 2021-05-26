@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-<p>The <strong><code>Path2D</code></strong> interface of the Canvas 2D API is used to declare a path that can then be used on a {{domxref("CanvasRenderingContext2D")}} object. The<a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths"> path methods</a> of the <code>CanvasRenderingContext2D</code> interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.</p>
+<p>The <strong><code>Path2D</code></strong> interface of the Canvas 2D API is used to declare a path that can then be used on a {{domxref("CanvasRenderingContext2D")}} object. The<a href="/en-US/docs/Web/API/CanvasRenderingContext2D#paths"> path methods</a> of the <code>CanvasRenderingContext2D</code> interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.</p>
 
 <h2 id="Constructors">Constructors</h2>
 
@@ -35,11 +35,11 @@ tags:
  <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo()", "Path2D.quadraticCurveTo()")}}</dt>
  <dd>Adds a quadratic Bézier curve to the current path.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arc()", "Path2D.arc()")}}</dt>
- <dd>Adds an arc to the path which is centered at (<code>x, y</code>) position with radius <code>r</code> starting at <code>startAngle</code> and ending at <code>endAngle</code> going in the given direction by <code>anticlockwise</code> (defaulting to clockwise).</dd>
+ <dd>Adds an arc to the path which is centered at (<code>x, y</code>) position with radius <code>r</code> starting at <code>startAngle</code> and ending at <code>endAngle</code> going in the given direction by <code>counterclockwise</code> (defaulting to clockwise).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arcTo()", "Path2D.arcTo()")}}</dt>
  <dd>Adds a circular arc to the path with the given control points and radius, connected to the previous point by a straight line.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}</dt>
- <dd>Adds an elliptical arc to the path which is centered at (<code>x, y</code>) position with the radii <code>radiusX</code> and <code>radiusY</code> starting at <code>startAngle</code> and ending at <code>endAngle</code> going in the given direction by <code>anticlockwise</code> (defaulting to clockwise).</dd>
+ <dd>Adds an elliptical arc to the path which is centered at (<code>x, y</code>) position with the radii <code>radiusX</code> and <code>radiusY</code> starting at <code>startAngle</code> and ending at <code>endAngle</code> going in the given direction by <code>counterclockwise</code> (defaulting to clockwise).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}</dt>
  <dd>Creates a path for a rectangle at position (<code>x, y</code>) with a size that is determined by <code>width</code> and <code>height</code>.</dd>
 </dl>

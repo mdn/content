@@ -5,7 +5,7 @@ tags:
   - API
   - DOM
   - NeedsMarkupWork
-  - Obsolete
+  - Deprecated
 ---
 <p>{{APIRef("DOM")}}{{deprecated_header}}</p>
 
@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Summary">Summary</h2>
 
-<p>When associating user data with a key on a node, <code><a class="internal" href="/en-US/docs/DOM/Node.setUserData">Node.setUserData</a>()</code> can also accept, in its third argument, a handler which will be called when the object is cloned, imported, deleted, renamed, or adopted. Per the specification, exceptions should not be thrown in a <code>UserDataHandler</code>. In both <code><a class="internal" href="/en-US/docs/DOM/document.importNode">document.importNode</a>()</code> and <code><a class="internal" href="/en-US/docs/DOM/Node.cloneNode">Node.cloneNode</a>()</code>, although user data is not copied over, the handler will be called.</p>
+<p>When associating user data with a key on a node, <code><a class="internal" href="/en-US/docs/Web/API/Node/setUserData">Node.setUserData</a>()</code> can also accept, in its third argument, a handler which will be called when the object is cloned, imported, deleted, renamed, or adopted. Per the specification, exceptions should not be thrown in a <code>UserDataHandler</code>. In both <code><a class="internal" href="/en-US/docs/Web/API/Document/importNode">document.importNode</a>()</code> and <code><a class="internal" href="/en-US/docs/Web/API/Node/cloneNode">Node.cloneNode</a>()</code>, although user data is not copied over, the handler will be called.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -47,12 +47,12 @@ tags:
   <tr>
    <td><code>NODE_CLONED</code></td>
    <td>1</td>
-   <td><code><a href="/en-US/docs/DOM/Node.cloneNode">Node.cloneNode</a>()</code></td>
+   <td><code><a href="/en-US/docs/Web/API/Node/cloneNode">Node.cloneNode</a>()</code></td>
   </tr>
   <tr>
    <td><code>NODE_IMPORTED</code></td>
    <td>2</td>
-   <td><code><a href="/en-US/docs/DOM/document.importNode">Document.importNode</a>()</code></td>
+   <td><code><a href="/en-US/docs/Web/API/Document/importNode">Document.importNode</a>()</code></td>
   </tr>
   <tr>
    <td><code>NODE_DELETED</code> {{ unimplemented_inline("550400") }}</td>
@@ -85,6 +85,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOMUserData"><code>DOMUserData</code></a></li>
- <li><a href="/en-US/docs/DOM/Node.getUserData"><code>Node.getUserData</code></a>, <a href="/en-US/docs/DOM/Node.setUserData"><code>Node.setUserData</code></a></li>
+ <li><a href="/en-US/docs/Web/API/DOMUserData"><code>DOMUserData</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Node/getUserData"><code>Node.getUserData</code></a>, <a href="/en-US/docs/Web/API/Node/setUserData"><code>Node.setUserData</code></a></li>
 </ul>

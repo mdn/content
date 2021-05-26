@@ -24,11 +24,11 @@ tags:
 <dl>
  <dt>{{domxref("PaymentDetailsBase.displayItems", "displayItems")}} {{optional_inline}}</dt>
  <dd>An array of {{domxref("PaymentItem")}} objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice.</dd>
- <dt>{{domxref("PaymentDetailsUpdate.error", "error")}} {{optional_inline}}</dt>
+ <dt>{{domxref("PaymentDetailsUpdate.error", "error")}} {{optional_inline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} specifying an error message to present to the user<em>.</em> When calling {{domxref("PaymentDetailsUpdate.updateWith", "updateWith()")}}, including <code>error</code> in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use <code>shippingAddressErrors</code>.</dd>
  <dt>{{domxref("PaymentDetailsBase.modifiers", "modifiers")}} {{optional_inline}}</dt>
  <dd>An array of {{domxref("PaymentDetailsModifier")}} objects, each describing a modifier for particular payment method identifiers. For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").</dd>
- <dt>{{domxref("PaymentDetailsUpdate.shippingAddressErrors", "shippingAddressErrors")}} {{optional_inline}}</dt>
+ <dt>{{domxref("PaymentDetailsUpdate.shippingAddressErrors", "shippingAddressErrors")}} {{optional_inline}}{{deprecated_inline}}</dt>
  <dd>An {{domxref("AddressErrors")}} object which includes an error message for each property of the shipping address that could not be validated.</dd>
  <dt>{{domxref("PaymentDetailsBase.shippingOptions", "shippingOptions")}} {{optional_inline}}</dt>
  <dd>An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.</dd>
@@ -57,4 +57,3 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.PaymentDetailsUpdate")}}</p>
-

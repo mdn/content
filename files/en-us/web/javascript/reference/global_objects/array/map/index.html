@@ -9,6 +9,7 @@ tags:
 - Prototype
 - Reference
 - polyfill
+browser-compat: javascript.builtins.Array.map
 ---
 <div>{{JSRef}}</div>
 
@@ -18,32 +19,39 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-map.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let <var>newArray</var> = <var>arr</var>.map(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
-  // return element for <em>newArray,</em> after executing something
-}[, <var>thisArg</var>]);
+<pre class="brush: js">
+// Arrow function
+map((element) => { ... } )
+map((element, index) => { ... } )
+map((element, index, array) => { ... } )
+
+// Callback function
+map(callbackFn)
+map(callbackFn, thisArg)
+
+// Inline callback function
+map(function callbackFn(element) { ... })
+map(function callbackFn(element, index) { ... })
+map(function callbackFn(element, index, array){ ... })
+map(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>Function that is called for every element of <code><var>arr</var></code>. Each time
-      <code><var>callback</var></code> executes, the returned value is added to
+      <code><var>callbackFn</var></code> executes, the returned value is added to
       <code><var>newArray</var></code>.</p>
 
-    <p>The <code><var>callback</var></code> function accepts the following arguments:</p>
+    <p>The <code><var>callbackFn</var></code> function accepts the following arguments:</p>
 
     <dl>
-      <dt><code><var>currentValue</var></code></dt>
+      <dt><code><var>element</var></code></dt>
       <dd>The current element being processed in the array.</dd>
       <dt><code><var>index</var></code>{{optional_inline}}</dt>
       <dd>The index of the current element being processed in the array.</dd>
@@ -52,7 +60,7 @@ tags:
     </dl>
   </dd>
   <dt><code>thisArg</code>{{optional_inline}}</dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.
+  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
   </dd>
 </dl>
 
@@ -62,9 +70,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>map</code> calls a provided <code><var>callback</var></code> function
+<p><code>map</code> calls a provided <code><var>callbackFn</var></code> function
   <strong>once for each element</strong> in an array, in order, and constructs a new array
-  from the results. <code><var>callback</var></code> is invoked only for indexes of the
+  from the results. <code><var>callbackFn</var></code> is invoked only for indexes of the
   array which have assigned values (including {{jsxref("undefined")}}).</p>
 
 <p>It is <em>not</em> called for missing elements of the array; that is:</p>
@@ -89,24 +97,24 @@ tags:
 
 <h3 id="Parameters_in_Detail">Parameters in Detail</h3>
 
-<p><code><var>callback</var></code> is invoked with three arguments: the value of the
+<p><code><var>callbackFn</var></code> is invoked with three arguments: the value of the
   element, the index of the element, and the array object being mapped.</p>
 
 <p>If a <code>thisArg</code> parameter is provided, it will be used as callback's
   <code>this</code> value. Otherwise, the value {{jsxref("undefined")}} will be used as
   its <code>this</code> value. The <code>this</code> value ultimately observable by
-  <code><var>callback</var></code> is determined according to <a
+  <code><var>callbackFn</var></code> is determined according to <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
     determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>map</code> does not mutate the array on which it is called (although
-  <code><var>callback</var></code>, if invoked, may do so).</p>
+  <code><var>callbackFn</var></code>, if invoked, may do so).</p>
 
 <p>The range of elements processed by <code>map</code> is set before the first invocation
-  of <code><var>callback</var></code>. Elements which are appended to the array after the
-  call to <code>map</code> begins will not be visited by <code><var>callback</var></code>.
+  of <code><var>callbackFn</var></code>. Elements which are appended to the array after the
+  call to <code>map</code> begins will not be visited by <code><var>callbackFn</var></code>.
   If existing elements of the array are changed after the call to <code>map</code>, their
-  value will be the value at the time <code><var>callback</var></code> visits them.
+  value will be the value at the time <code><var>callbackFn</var></code> visits them.
   Elements that are deleted after the call to <code>map</code> begins and before being
   visited are not visited.</p>
 
@@ -389,22 +397,11 @@ let filteredNumbers = numbers.map(function(num, index) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.map")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

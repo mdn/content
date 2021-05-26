@@ -39,7 +39,7 @@ tags:
 <p>These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you want to download the examples and run them locally, you'll need to run them through a local web server.</p>
+<p><strong>Note:</strong> If you want to download the examples and run them locally, you'll need to run them through a local web server.</p>
 </div>
 
 <h2 id="Basic_example_structure">Basic example structure</h2>
@@ -53,7 +53,7 @@ modules/
     square.js</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: All of the examples in this guide have basically the same structure; the above should start getting pretty familiar.</p>
+<p><strong>Note:</strong> All of the examples in this guide have basically the same structure; the above should start getting pretty familiar.</p>
 </div>
 
 <p>The modules directory's two modules are described below:</p>
@@ -147,7 +147,7 @@ export function draw(ctx, length, x, y, color) {
 <p>You can see such lines in action in <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In some module systems, you can omit the file extension and the leading <code>/</code>, <code>./</code>, or <code>../</code> (e.g. <code>'modules/square'</code>). This doesn't work in native JavaScript modules.</p>
+<p><strong>Note:</strong> In some module systems, you can omit the file extension and the leading <code>/</code>, <code>./</code>, or <code>../</code> (e.g. <code>'modules/square'</code>). This doesn't work in native JavaScript modules.</p>
 </div>
 
 <p>Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in <code>main.js</code>, below the import lines:</p>
@@ -161,7 +161,7 @@ reportPerimeter(square1.length, reportList);
 </pre>
 
 <div class="notecard note">
-<p><strong>Note: </strong>Although imported features are available in the file, they are read only views of the feature that was exported. You cannot change the variable that was imported, but you can still modify properties similar to <code>const</code>. Additionally, these features are imported as live bindings, meaning that they can change in value even if you cannot modify the binding unlike <code>const</code>.</p>
+<p><strong>Note:</strong> Although imported features are available in the file, they are read only views of the feature that was exported. You cannot change the variable that was imported, but you can still modify properties similar to <code>const</code>. Additionally, these features are imported as live bindings, meaning that they can change in value even if you cannot modify the binding unlike <code>const</code>.</p>
 </div>
 
 <h2 id="Applying_the_module_to_your_HTML">Applying the module to your HTML</h2>
@@ -187,7 +187,7 @@ reportPerimeter(square1.length, reportList);
 <ul>
 	<li>You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.</li>
 	<li>Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.</li>
-	<li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script&gt; element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
+	<li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#attributes" title="The HTML &lt;script&gt; element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
 	<li>Modules are only executed once, even if they have been referenced in multiple <code>&lt;script&gt;</code> tags.</li>
 	<li>Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.</li>
 </ul>
@@ -219,7 +219,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The as syntax for renaming exported items is explained below in the <a href="#renaming_imports_and_exports">Renaming imports and exports</a> section.</p>
+<p><strong>Note:</strong> The as syntax for renaming exported items is explained below in the <a href="#renaming_imports_and_exports">Renaming imports and exports</a> section.</p>
 </div>
 
 <h2 id="Avoiding_naming_conflicts">Avoiding naming conflicts</h2>
@@ -389,7 +389,7 @@ export { Circle } from './shapes/circle.js';</pre>
 <p>These grab the exports from the individual submodules and effectively make them available from the <code>shapes.js</code> module.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The exports referenced in <code>shapes.js</code> basically get redirected through the file and don't really exist there, so you won't be able to write any useful related code inside the same file.</p>
+<p><strong>Note:</strong> The exports referenced in <code>shapes.js</code> basically get redirected through the file and don't really exist there, so you won't be able to write any useful related code inside the same file.</p>
 </div>
 
 <p>So now in the <code>main.js</code> file, we can get access to all three module classes by replacing</p>

@@ -9,9 +9,11 @@ tags:
   - Intermediate
   - Web
 ---
-<div>{{LearnSidebar}} All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari or old versions of Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.</div>
+<p>{{LearnSidebar}}</p>
 
-<div>Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. And HTML5 {{htmlelement('input')}} types don't fail when not supported: they fall back to <code>type=text</code>.</div>
+<p>All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari or old versions of Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.</p>
+
+<p>Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. And HTML5 {{htmlelement('input')}} types don't fail when not supported: they fall back to <code>type=text</code>.</p>
 
 <h2 id="Learn_about_the_issues">Learn about the issues</h2>
 
@@ -24,7 +26,7 @@ tags:
  <li>Microsoft: <a href="https://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx" rel="external">Internet Explorer Standards Support Documentation</a></li>
  <li>WebKit: Because there are several different editions of this engine, things are a little trickier.
   <ul>
-   <li><a href="https://www.webkit.org/blog/" rel="external">The WebKit blog</a> and <a href="http://planet.webkit.org/" rel="external">Planet WebKit</a> aggregate the best articles by WebKit core developers.</li>
+   <li><a href="https://www.webkit.org/blog/" rel="external">The WebKit blog</a> and <a href="https://planet.webkit.org/" rel="external">Planet WebKit</a> aggregate the best articles by WebKit core developers.</li>
    <li><a href="https://www.chromestatus.com/features">Chrome platform status site</a> is also important.</li>
    <li>As well as <a href="https://developer.apple.com/technologies/safari/" rel="external">the Apple web site.</a></li>
   </ul>
@@ -33,11 +35,11 @@ tags:
 
 <h2 id="Make_things_simple">Make things simple</h2>
 
-<p>Because <a href="/en-US/docs/Learn/Forms">HTML forms</a> involves complex interaction, there is one rule of thumb: keep it simple, also known as the "<a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principal</a>". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, <a href="http://www.uxforthemasses.com/forms-usability/" rel="external">forms usability on UX For The Masses,</a> explains it well.</p>
+<p>Because <a href="/en-US/docs/Learn/Forms">HTML forms</a> involves complex interaction, there is one rule of thumb: keep it simple, also known as the "<a href="https://en.wikipedia.org/wiki/KISS_principle">KISS principal</a>". There are so many cases where we want forms that are "nicer" or "with advanced functionality", but building efficient HTML Forms is not a question of design or technology. Rather, it's about simplicity, intuitiveness, and ease of user interaction. The tutorial, <a href="https://www.uxforthemasses.com/forms-usability/" rel="external">forms usability on UX For The Masses,</a> explains it well.</p>
 
 <h3 id="Graceful_degradation_is_web_developers_best_friend">Graceful degradation is web developer's best friend</h3>
 
-<p><a href="http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/" rel="external">Graceful degradation and progressive enhancement</a> are development patterns that allow you to build great stuff by supporting a wide range of browsers at the same time. When you build something for a modern browser, and you want to be sure it will work, one way or another, on legacy browsers, you are performing graceful degradation.</p>
+<p><a href="https://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/" rel="external">Graceful degradation and progressive enhancement</a> are development patterns that allow you to build great stuff by supporting a wide range of browsers at the same time. When you build something for a modern browser, and you want to be sure it will work, one way or another, on legacy browsers, you are performing graceful degradation.</p>
 
 <p>Let's see some examples related to HTML forms.</p>
 
@@ -76,7 +78,7 @@ tags:
 
 <h5 id="HTMLElementinput">{{HTMLElement("input")}}</h5>
 
-<p>The  {{HTMLElement("input")}} element can make things a little difficult if you want to apply some CSS by using the element selector:</p>
+<p>The {{HTMLElement("input")}} element can make things a little difficult if you want to apply some CSS by using the element selector:</p>
 
 <pre class="brush: html">&lt;input type="button" value="click me"&gt;</pre>
 
@@ -125,7 +127,7 @@ input[type="button"] {
 
 <p>It's generally a good idea to not alter the default appearance of form control because altering one CSS property value may alter some input types but not others. For example, if you declare <code>input { font-size: 2rem; }</code>, it will impact <code>number</code>, <code>date</code>, and <code>text</code>, but not <code>color</code> or <code>range</code>. If you alter a property, that may impact the appearance of the widget in unexpected ways. For example, <code>[value] { background-color: #ccc; }</code> may have been used to target every {{HTMLElement("input")}} with a <code>value</code> attribute, but changing the background-color or border radius on a {{HTMLElement("meter")}} will lead to likely unexpected results that differ across browsers. You can declare {{cssxref('appearance', 'appearance: none;')}} to remove the browser styles, but that generally defeats the purpose: as you lose all styling, removing the default look and feel your visitors are used to. </p>
 
-<p>To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the <a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a> article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">rebuilding widgets with JavaScript</a>. But in that case, do not hesitate to <a href="http://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">charge your client for such foolishness</a>.</p>
+<p>To summarize, when it comes to styling form control widgets, the side effects of styling them with CSS can be unpredictable. So don't. As you can see from the complexity of the <a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a> article, it's very difficult. Even if it's still possible to do a few adjustments on text elements (such as sizing or font color), there are always side effects. The best approach remains to not style HTML Form widgets at all. But you can still apply styles to all the surrounding items. And, if you must alter the default styles of your form widgets, define a style guide to ensure consistency among all your form controls so user experience is not destroyed. You can also investigate some hard techniques such as <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">rebuilding widgets with JavaScript</a>. But in that case, do not hesitate to <a href="https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">charge your client for such foolishness</a>.</p>
 
 <h2 id="Feature_detection_and_polyfills">Feature detection and polyfills</h2>
 
@@ -141,7 +143,7 @@ input[type="button"] {
    /* restyle the search input */
  }</pre>
 
-<p>The{{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of <code>none</code>, remove default platform-native based styling.</p>
+<p>The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of <code>none</code>, remove default platform-native based styling.</p>
 
 <h3 id="Unobtrusive_JavaScript">Unobtrusive JavaScript</h3>
 
@@ -156,9 +158,9 @@ input[type="button"] {
 
 <h3 id="The_Modernizr_library">The Modernizr library</h3>
 
-<p>There are many cases where a good "polyfill" can help a lot by providing a missing API. A <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external">polyfill</a> is a bit of JavaScript that "fills in the holes" in the functionality of legacy browsers. While they can be used to improve support for any functionality, using them for JavaScript is less risky than for CSS or HTML; there many cases where JavaScript can break (network issues, script conflicts, etc.). But for JavaScript, if you work with unobstructive JavaScript in mind, if polyfills are missing, it's no big deal.</p>
+<p>There are many cases where a good "polyfill" can help a lot by providing a missing API. A <a href="https://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external">polyfill</a> is a bit of JavaScript that "fills in the holes" in the functionality of legacy browsers. While they can be used to improve support for any functionality, using them for JavaScript is less risky than for CSS or HTML; there many cases where JavaScript can break (network issues, script conflicts, etc.). But for JavaScript, if you work with unobstructive JavaScript in mind, if polyfills are missing, it's no big deal.</p>
 
-<p>The best way to polyfill missing API is by using the <a href="http://modernizr.com" rel="external">Modernizr</a> library and its spin-off project: <a href="http://yepnopejs.com" rel="external">YepNope</a>. Modernizr is a library that allows you to test the availability of functionality in order to act accordingly. YepNope is a conditional loading library.</p>
+<p>The best way to polyfill missing API is by using the <a href="https://modernizr.com" rel="external">Modernizr</a> library and its spin-off project: <a href="https://yepnopejs.com" rel="external">YepNope</a>. Modernizr is a library that allows you to test the availability of functionality in order to act accordingly. YepNope is a conditional loading library.</p>
 
 <p>Here is an example:</p>
 
@@ -181,7 +183,7 @@ input[type="button"] {
 <p>The Modernizr team conveniently maintains <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" rel="external">a list of great polyfills</a>. Just pick what you need.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please <a href="http://modernizr.com/docs/" rel="external">read the Modernizr documentation</a>.</p>
+<p><strong>Note:</strong> Modernizr has other awesome features to help you in dealing with unobstructive JavaScript and graceful degradation techniques. Please <a href="https://modernizr.com/docs/" rel="external">read the Modernizr documentation</a>.</p>
 </div>
 
 <h3 id="Pay_attention_to_performance">Pay attention to performance</h3>
@@ -192,7 +194,7 @@ input[type="button"] {
 
 <p>As you can see, considering browser and operating system default form control appearance is important. There are many techniques to handle these issue; however mastering all of them is beyond the scope of this article. The basic premise is to consider whether altering the default implementation is worth the work before embarking on the challenge.</p>
 
-<p>If you read all the articles of this <a href="/en-US/docs/Learn/Forms">HTML Forms guide</a>, you should now be at ease with using forms. If you discover new techniques or hints, please help <a href="/en-US/docs/Project:How_to_help">improve the guide</a>.</p>
+<p>If you read all the articles of this <a href="/en-US/docs/Learn/Forms">HTML Forms guide</a>, you should now be at ease with using forms. If you discover new techniques or hints, please help improve the guide.</p>
 
 <h2 id="See_also">See also</h2>
 

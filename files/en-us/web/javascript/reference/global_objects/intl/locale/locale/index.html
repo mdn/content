@@ -2,12 +2,13 @@
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 tags:
-- Constructor
-- Internationalization
-- Intl
-- JavaScript
-- Locale
-- Reference
+  - Constructor
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Locale
+  - Reference
+browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
 <div>{{JSRef}}</div>
 
@@ -20,8 +21,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">new Intl.Locale(<var>tag</var> [, <var>options</var>])</pre>
+<pre class="brush: js">
+new Intl.Locale(tag)
+new Intl.Locale(tag, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,7 +40,7 @@ tags:
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<p>At its very simplest, the {{jsxref("Locale/Locale", "Intl.Locale")}} constructor takes
+<p>At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes
   a locale identifier string as its argument:</p>
 
 <pre class="brush: js">let us = new Intl.Locale('en-US');</pre>
@@ -61,22 +64,11 @@ console.log(us12hour.hourCycle); // Prints "h12"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sec-intl-locale-constructor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.Locale.Locale")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

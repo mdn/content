@@ -2,18 +2,18 @@
 title: 'TypeError: can''t delete non-configurable array element'
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 tags:
-- Error
-- Errors
-- JavaScript
-- TypeError
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
 <p>The JavaScript exception "can't delete non-configurable array element" occurs when it
   was attempted to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array">shorten
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array">shorten
     the length</a> of an array, but one of the array's elements is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.</p>
+    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>.</p>
 
 <h2 id="Message">Message</h2>
 
@@ -28,9 +28,9 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 <h2 id="What_went_wrong">What went wrong?</h2>
 
 <p>It was attempted to <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#Shortening_an_array">shorten
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array">shorten
     the length</a> of an array, but one of the array's elements is <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Properties">non-configurable</a>.
+    href="/en-US/docs/Web/JavaScript/Data_structures#properties">non-configurable</a>.
   When shortening an array, the elements beyond the new array length will be deleted,
   which failed in this situation.</p>
 
@@ -39,7 +39,7 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
   changed.</p>
 
 <p>Usually, properties in an object created by an <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Syntax">array
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax">array
     initializer</a> are configurable. However, for example, when using
   {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.</p>
 
@@ -51,7 +51,8 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 <p>The {{jsxref("Object.defineProperty()")}} creates non-configurable properties by
   default if you haven't specified them as configurable.</p>
 
-<pre class="brush: js example-bad">var arr = [];
+<pre class="brush: js example-bad">"use strict";
+var arr = [];
 Object.defineProperty(arr, 0, {value: 0});
 Object.defineProperty(arr, 1, {value: "1"});
 
@@ -62,7 +63,8 @@ arr.length = 1;
 <p>You will need to set the elements as configurable, if you intend to shorten the array.
 </p>
 
-<pre class="brush: js example-good">var arr = [];
+<pre class="brush: js example-good">"use strict";
+var arr = [];
 Object.defineProperty(arr, 0, {value: 0, configurable: true});
 Object.defineProperty(arr, 1, {value: "1", configurable: true});
 
@@ -74,7 +76,8 @@ arr.length = 1;
 <p>The {{jsxref("Object.seal()")}} function marks all existing elements as
   non-configurable.</p>
 
-<pre class="brush: js example-bad">var arr = [1,2,3];
+<pre class="brush: js example-bad">"use strict";
+var arr = [1,2,3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -85,7 +88,8 @@ arr.length = 1;
   In case of a copy, shortening the copy of the array does not modify the original array
   length.</p>
 
-<pre class="brush: js example-good">var arr = [1,2,3];
+<pre class="brush: js example-good">"use strict";
+var arr = [1,2,3];
 Object.seal(arr);
 
 // Copy the initial array to shorten the copy
@@ -97,7 +101,7 @@ copy.length = 1;
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">[[Configurable]]</a>
+  <li><a href="/en-US/docs/Web/JavaScript/Data_structures#properties">[[Configurable]]</a>
   </li>
   <li>{{jsxref("Array.length")}}</li>
   <li>{{jsxref("Object.defineProperty()")}}</li>

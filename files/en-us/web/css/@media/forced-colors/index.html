@@ -7,10 +7,11 @@ tags:
   - color
   - forced-colors
   - media feature
+browser-compat: css.at-rules.media.forced-colors
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.</span></p>
+<p><span class="seoSummary">The <strong><code>forced-colors</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media feature</a> is used to detect if the {{Glossary("user agent")}} has enabled a forced colors mode where it enforces a user-chosen limited color palette on the page. An example of a forced colors mode is Windows High Contrast mode.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,7 +23,7 @@ tags:
  <dt><code><dfn>none</dfn></code></dt>
  <dd>Forced colors mode is not active; the page’s colors are not being forced into a limited palette.</dd>
  <dt><code>active</code></dt>
- <dd>Indicates that forced colors mode is active. The browser provides the color palette to authors through the <a href="/en-US/docs/Web/CSS/color_value#System_Colors">CSS system color</a> keywords and, if appropriate, triggers the appropriate value of <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> so that authors can adapt the page. The browser selects the value for <code>prefers-color-scheme</code> based on the lightness of the <code>Canvas</code> system color (see the <a href="https://www.w3.org/TR/css-color-adjust-1/#forced">color adjust spec</a> for more details).</dd>
+ <dd>Indicates that forced colors mode is active. The browser provides the color palette to authors through the <a href="/en-US/docs/Web/CSS/color_value#system_colors">CSS system color</a> keywords and, if appropriate, triggers the appropriate value of <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> so that authors can adapt the page. The browser selects the value for <code>prefers-color-scheme</code> based on the lightness of the <code>Canvas</code> system color (see the <a href="https://www.w3.org/TR/css-color-adjust-1/#forced">color adjust spec</a> for more details).</dd>
 </dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
@@ -138,7 +139,7 @@ tags:
 <p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 </div>
 
-<p>{{Compat("css.at-rules.media.forced-colors")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,6 +8,7 @@ tags:
 - String
 - UTF-16
 - Unicode
+browser-compat: javascript.builtins.String.fromCharCode
 ---
 <div>{{JSRef}}</div>
 
@@ -16,16 +17,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-fromcharcode.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</pre>
+<pre class="brush: js">
+String.fromCharCode(num1)
+String.fromCharCode(num1, num2)
+String.fromCharCode(num1, num2, ..., numN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,7 +52,7 @@ tags:
 
 <p>In UTF-16, the most common characters can be represented by a single 16-bit value (i.e.
   a code unit). However, this set of characters, known as the Base Multilingual Plane
-  (BMP), is only <sup>1</sup>/<sub>17</sub><sup>th</sup> of the total addressable Unicode
+  (BMP), is only 1/17th of the total addressable Unicode
   code points. The remaining code points, in the range of <code>65536</code>
   (<code>0x010000</code>) to <code>1114111</code> (<code>0x10FFFF</code>) are known as
   supplementary characters. In UTF-16, supplementary characters are represented by two
@@ -100,22 +99,11 @@ String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD8
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.fromcharcode', 'String.fromCharCode')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.fromCharCode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

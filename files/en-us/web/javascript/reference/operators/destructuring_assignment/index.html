@@ -10,6 +10,7 @@ tags:
   - Language feature
   - Nested object and array destructuring
   - Operator
+browser-compat: javascript.operators.destructuring
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -17,7 +18,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -219,7 +219,7 @@ console.log(is_verified); // true
 ({a, b} = {a: 1, b: 2});</pre>
 
 <div class="note">
-<p><strong>Notes</strong>: The parentheses <code>( ... )</code> around the assignment statement are required when using object literal destructuring assignment without a declaration.</p>
+<p><strong>Note:</strong> The parentheses <code>( ... )</code> around the assignment statement are required when using object literal destructuring assignment without a declaration.</p>
 
 <p><code>{a, b} = {a: 1, b: 2}</code> is not valid stand-alone syntax, as the <code>{a, b}</code> on the left-hand side is considered a block and not an object literal.</p>
 
@@ -301,7 +301,7 @@ drawChart({
 });</pre>
 
 <div class="note">
-<p>In the function signature for <strong><code>drawChart</code></strong> above, the destructured left-hand side is assigned to an empty object literal on the right-hand side: <code>{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}</code>. You could have also written the function without the right-hand side assignment. However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call <code><strong>drawChart()</strong></code> without supplying any parameters. The current design is useful if you want to be able to call the function without supplying any parameters, the other can be useful when you want to ensure an object is passed to the function.</p>
+<p><strong>Note:</strong> In the function signature for <strong><code>drawChart</code></strong> above, the destructured left-hand side is assigned to an empty object literal on the right-hand side: <code>{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}</code>. You could have also written the function without the right-hand side assignment. However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call <code><strong>drawChart()</strong></code> without supplying any parameters. The current design is useful if you want to be able to call the function without supplying any parameters, the other can be useful when you want to ensure an object is passed to the function.</p>
 </div>
 
 <h4 id="Nested_object_and_array_destructuring">Nested object and array destructuring</h4>
@@ -419,22 +419,11 @@ const {self, prot} = obj;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.destructuring")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

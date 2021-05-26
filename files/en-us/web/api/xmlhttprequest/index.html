@@ -22,12 +22,7 @@ tags:
 
 <p>If your communication needs to involve receiving event data or message data from a server, consider using <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a> through the {{domxref("EventSource")}} interface. For full-duplex communication, <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> may be a better choice.</p>
 
-<p>{{AvailableInWorkers}}</p>
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>Not supported in service workers.</p>
-</div>
-
+<p>{{AvailableInWorkers("notservice")}}</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -42,7 +37,7 @@ tags:
 
 <dl>
  <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
- <dd>An {{domxref("EventHandler")}} that is called whenever the <code>readyState</code> attribute changes.</dd>
+ <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">Event handler</a> that is called whenever the <code>readyState</code> attribute changes.</dd>
  <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>Returns an <code>unsigned short</code>, the state of the request.</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
@@ -67,7 +62,7 @@ tags:
  <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>Is an <code>unsigned long</code> representing the number of milliseconds a request can take before automatically being terminated.</dd>
  <dt id="xmlhttprequesteventtarget-ontimeout">{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} that is called whenever the request times out. </dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">Event handler</a> that is called whenever the request times out. </dd>
  <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>Is an {{domxref("XMLHttpRequestUpload")}}, representing the upload process.</dd>
  <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
@@ -85,9 +80,9 @@ tags:
  <dd>Is a boolean. If true, the same origin policy will not be enforced on the request.</dd>
  <dt>{{domxref("XMLHttpRequest.mozBackgroundRequest")}}</dt>
  <dd>Is a boolean. It indicates whether or not the object represents a background service request.</dd>
- <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{deprecated_inline}} {{ReadOnlyInline}}</dt>
  <dd>{{jsxref("ArrayBuffer")}}. The response to the request, as a JavaScript typed array.</dd>
- <dt>{{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.multipart")}} {{deprecated_inline}}</dt>
  <dd><strong>This Gecko-only feature, a boolean, was removed in Firefox/Gecko 22.</strong> Please use <a href="/en-US/docs/Web/API/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/Web/API/WebSockets_API">Web Sockets</a>, or <code>responseText</code> from progress events instead.</dd>
 </dl>
 
@@ -95,7 +90,7 @@ tags:
 
 <p><code>onreadystatechange</code> as a property of the <code>XMLHttpRequest</code> instance is supported in all browsers.</p>
 
-<p>Since then, a number of additional event handlers have been implemented in various browsers (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). See <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+<p>Since then, a number of additional <code>on*</code> event handler properties have been implemented in various browsers (<code>onload</code>, <code>onerror</code>, <code>onprogress</code>, etc.). See <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
 
 <p>More recent browsers, including Firefox, also support listening to the <code>XMLHttpRequest</code> events via standard {{domxref("EventTarget.addEventListener", "addEventListener()")}} APIs in addition to setting <code>on*</code> properties to a handler function.</p>
 
@@ -179,6 +174,6 @@ tags:
    <li><a href="/en-US/docs/Web/API/Fetch_API" title="Fetch API">Fetch API</a></li>
   </ul>
  </li>
- <li><a href="http://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>
+ <li><a href="https://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>
  <li>Feature-Policy directive {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}</li>
 </ul>

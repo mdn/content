@@ -6,22 +6,22 @@ tags:
   - JavaScript
   - Number
   - Property
+browser-compat: javascript.builtins.Number.MIN_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>Number.MIN_SAFE_INTEGER</code></strong> constant represents the minimum safe integer in JavaScript (<code>-(2<sup>53</sup> - 1)</code>).</p>
+<p>The <strong><code>Number.MIN_SAFE_INTEGER</code></strong> constant represents the minimum safe integer in JavaScript (<code>-(2^53 - 1)</code>).</p>
 
 <p>To represent integers smaller than this, consider using {{jsxref("BigInt")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>MIN_SAFE_INTEGER</code> constant has a value of <code>-9007199254740991</code> (-9,007,199,254,740,991 or about -9 quadrillion). The reasoning behind that number is that JavaScript uses <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision floating-point format numbers</a> as specified in <a href="https://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a> and can only safely represent numbers between <code>-(2<sup>53</sup> - 1)</code> and <code>2<sup>53</sup> - 1</code>.  See {{jsxref("Number.isSafeInteger()")}} for more information.</p>
+<p>The <code>MIN_SAFE_INTEGER</code> constant has a value of <code>-9007199254740991</code> (-9,007,199,254,740,991 or about -9 quadrillion). The reasoning behind that number is that JavaScript uses <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision floating-point format numbers</a> as specified in <a href="https://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a> and can only safely represent numbers between <code>-(2^53 - 1)</code> and <code>2^53 - 1</code>.  See {{jsxref("Number.isSafeInteger()")}} for more information.</p>
 
 <p>Because <code>MIN_SAFE_INTEGER</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.MIN_SAFE_INTEGER</code>, rather than as a property of a {{jsxref("Number")}} object you created.</p>
 
@@ -35,22 +35,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

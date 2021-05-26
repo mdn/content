@@ -30,18 +30,16 @@ tags:
   <dd>Options are as follows:
     <ul>
       <li><code>attack</code>: The amount of time (in seconds) to reduce the gain by 10dB.
-        Its default value is 0.003. This parameter is k-rate. Its nominal range is [0, 1].
-      </li>
+        Its default value is 0.003. This parameter is k-rate. Its nominal range is [0, 1].</li>
       <li><code>knee</code>: A decibel value representing the range above the threshold
         where the curve smoothly transitions to the "ratio" portion. Its default value is
         30. This parameter is k-rate. Its nominal range is [0, 40].</li>
       <li><code>ratio</code>: The amount of dB change in input for a 1 dB change in
         output. Its default value is 12. This parameter is k-rate. Its nominal range is
         [1, 20].</li>
-      <li>release: The amount of time (in seconds) to increase the gain by 10dB. Its
-        default value is 0.250. This parameter is k-rate. Its nominal range is [0, 1].
-      </li>
-      <li>threshold: The decibel value above which the compression will start taking
+      <li><code>release</code>: The amount of time (in seconds) to increase the gain by 10dB. Its
+        default value is 0.250. This parameter is k-rate. Its nominal range is [0, 1].</li>
+      <li><code>threshold</code>: The decibel value above which the compression will start taking
         effect. Its default value is -24. This parameter is k-rate. Its nominal range is
         [-100, 0].</li>
     </ul>
@@ -58,8 +56,7 @@ tags:
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Web Audio
-        API','#dynamicscompressornode','DynamicsCompressorNode()')}}</td>
+      <td>{{SpecName('Web Audio API','#dynamicscompressornode','DynamicsCompressorNode()')}}</td>
       <td>{{Spec2('Web Audio API')}}</td>
       <td>Initial definition.</td>
     </tr>

@@ -2,15 +2,15 @@
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 tags:
-- API
-- Adaptive Design
-- Property
-- Read-only
-- Reference
-- Window
-- devicePixelRatio
-- ratio
-- resolution
+  - API
+  - Adaptive Design
+  - Property
+  - Read-only
+  - Reference
+  - Window
+  - devicePixelRatio
+  - ratio
+  - resolution
 ---
 <p>{{APIRef}}</p>
 
@@ -90,7 +90,7 @@ var y = size / 2;
 var textString = "I love MDN";
 ctx.fillText(textString, x, y);</pre>
 
-<p><a href="devicepixelration_diff.jpg"><img alt="Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display." src="devicepixelration_diff.jpg" style="height: auto; width: 600px;"></a></p>
+<p><a href="devicepixelration_diff.jpg"><img alt="Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display." src="devicepixelration_diff.jpg"></a></p>
 
 <h3 id="Monitoring_screen_resolution_or_zoom_level_changes">Monitoring screen resolution
   or zoom level changes</h3>
@@ -105,17 +105,15 @@ ctx.fillText(textString, x, y);</pre>
   checks the value of <code>devicePixelRatio</code> any time it changes.</p>
 
 <pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
-let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
 
 const updatePixelRatio = () =&gt; {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
+  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
 }
 
 updatePixelRatio();
-
-matchMedia(mqString).addListener(updatePixelRatio);</pre>
 
 <p>The string <code>mqString</code> is set up to be the media query itself. The media
   query, which begins as <code>(resolution: 1dppx)</code> (for standard  displays) or

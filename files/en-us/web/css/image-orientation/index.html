@@ -9,11 +9,12 @@ tags:
   - Experimental
   - Image Correction
   - Image Orientation
-  - Obsolete
+  - Deprecated
   - Orientation
   - Reference
   - image-orientation
   - 'recipe:css-property'
+browser-compat: css.properties.image-orientation
 ---
 <div>{{deprecated_header}}</div>
 
@@ -32,7 +33,7 @@ image-orientation: inherit;
 image-orientation: initial;
 image-orientation: unset;
 
-/* Obsolete Values. {{obsolete_inline(63)}} */
+/* Obsolete Values. {{deprecated_inline}} */
 image-orientation: 90deg; /* Rotate 90deg */
 image-orientation: 90deg flip; /* Rotate 90deg, and flip it horizontally */
 image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
@@ -46,9 +47,9 @@ image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
  <dd>Does not apply any additional image rotation; the image is oriented as encoded or as other CSS property values dictate.</dd>
  <dt><code>from-image</code></dt>
  <dd>Default initial value. The {{interwiki("wikipedia", "EXIF")}} information contained in the image is used to rotate the image appropriately.</dd>
- <dt>{{cssxref("&lt;angle&gt;")}} {{non-standard_inline}}{{obsolete_inline(63)}}</dt>
+ <dt>{{cssxref("&lt;angle&gt;")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
  <dd>The {{cssxref("&lt;angle&gt;")}} of rotation to apply to the image. It is rounded to the nearest <code>90deg</code> (<code>0.25turn</code>).</dd>
- <dt><code>flip</code> {{non-standard_inline}}{{obsolete_inline(63)}}</dt>
+ <dt><code>flip</code> {{non-standard_inline}}{{deprecated_inline}}</dt>
  <dd>The image is flipped horizontally (i.e., reflected) after the rotation given by the {{cssxref("&lt;angle&gt;")}} value is applied. If no {{cssxref("&lt;angle&gt;")}} is given, <code>0deg</code> is used.</dd>
 </dl>
 
@@ -122,7 +123,7 @@ imageOrientation.addEventListener("change", function (evt) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.image-orientation")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

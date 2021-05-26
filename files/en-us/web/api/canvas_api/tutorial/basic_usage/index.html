@@ -29,7 +29,6 @@ tags:
 
 <p>The <code>&lt;canvas&gt;</code> element can be styled just like any normal image ({{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("background")}}…). These rules, however, don't affect the actual drawing on the canvas. We'll see how this is done in a <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">dedicated chapter</a> of this tutorial. When no styling rules are applied to the canvas it will initially be fully transparent.</p>
 
-<div id="section_2">
 <h3 id="Fallback_content">Fallback content</h3>
 
 <p>The <code>&lt;canvas&gt;</code> element differs from an {{HTMLElement("img")}} tag in that, like for {{HTMLElement("video")}}, {{HTMLElement("audio")}}, or {{HTMLElement("picture")}} elements, it is easy to define some fallback content, to be displayed in older browsers not supporting it, like versions of Internet Explorer earlier than version 9 or textual browsers. You should always provide fallback content to be displayed by those browsers.</p>
@@ -67,7 +66,6 @@ var ctx = canvas.getContext('2d');
 
 <p>The first line in the script retrieves the node in the DOM representing the {{HTMLElement("canvas")}} element by calling the {{domxref("document.getElementById()")}} method. Once you have the element node, you can access the drawing context using its <code>getContext()</code> method.</p>
 
-<div id="section_5">
 <h2 id="Checking_for_support">Checking for support</h2>
 
 <p>The fallback content is displayed in browsers which do not support {{HTMLElement("canvas")}}. Scripts can also check for support programmatically by testing for the presence of the <code>getContext()</code> method. Our code snippet from above becomes something like this:</p>
@@ -81,8 +79,6 @@ if (canvas.getContext) {
   // canvas-unsupported code here
 }
 </pre>
-</div>
-</div>
 
 <h2 id="A_skeleton_template">A skeleton template</h2>
 

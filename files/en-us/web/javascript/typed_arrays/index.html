@@ -7,9 +7,9 @@ tags:
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p><span class="seoSummary"><strong>JavaScript typed arrays</strong> are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.</span> As you may already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast.</p>
+<p><strong>JavaScript typed arrays</strong> are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.</p>
 
-<p>However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data. This is where typed arrays come in. Each entry in a JavaScript typed array is a raw binary value in one of a number of supported formats, from 8-bit integers to 64-bit floating-point numbers.</p>
+<p>{{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using WebSockets, and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data. This is where typed arrays come in. Each entry in a JavaScript typed array is a raw binary value in one of a number of supported formats, from 8-bit integers to 64-bit floating-point numbers.</p>
 
 <p>However, typed arrays are <em>not</em> to be confused with normal arrays, as calling {{jsxref("Array.isArray()")}} on a typed array returns <code>false</code>. Moreover, not all methods available for normal arrays are supported by typed arrays (e.g. push and pop).</p>
 
@@ -97,7 +97,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">×</span><code>10<sup>-38</sup></code> to <code>3.4</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">×</span><code>10<sup>38</sup></code></td>
+   <td><code>1.2E-38</code> to <code>3.4E38</code></td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.123456</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -105,7 +105,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">×</span><code>10<sup>-324</sup></code> to <code>1.8</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">×</span><code>10<sup>308</sup></code></td>
+   <td><code>5E-324</code> to <code>1.8E308</code></td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -113,7 +113,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+   <td><code>-2^63</code> to <code>2^63 - 1</code></td>
    <td>8</td>
    <td>64-bit two's complement signed integer</td>
    <td><code>bigint</code></td>
@@ -121,7 +121,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+   <td><code>0</code> to <code>2^64 - 1</code></td>
    <td>8</td>
    <td>64-bit unsigned integer</td>
    <td><code>bigint</code></td>
@@ -226,7 +226,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);</pre>
 
 <p>Then you can access, for example, the amount due with <code>amountDueView[0]</code>.</p>
 
-<div class="note"><strong>Note:</strong> The <a href="https://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</div>
+<div class="note"><p><strong>Note:</strong> The <a href="https://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</p></div>
 
 <h3 id="Conversion_to_normal_arrays">Conversion to normal arrays</h3>
 
@@ -244,25 +244,6 @@ const normalArray = [...typedArray];</pre>
 
 <pre class="brush:js">const typedArray = new Uint8Array([1, 2, 3, 4]);
 const normalArray = Array.prototype.slice.call(typedArray);</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("javascript.builtins.Int8Array")}}</p>
 
 <h2 id="See_also">See also</h2>
 

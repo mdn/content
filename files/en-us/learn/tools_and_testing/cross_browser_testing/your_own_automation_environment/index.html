@@ -35,9 +35,9 @@ tags:
 
 <h2 id="Selenium">Selenium</h2>
 
-<p><a href="http://www.seleniumhq.org/">Selenium</a> is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.</p>
+<p><a href="https://www.seleniumhq.org/">Selenium</a> is the most popular browser automation tool. There are other ways, but the best way to use Selenium is via WebDriver, a powerful API that builds on top of Selenium and makes calls to a browser to automate it, carrying out actions such as "open this web page", "move over this element on the page", "click this link", "see whether the link opens this URL", etc. This is ideal for running automated tests.</p>
 
-<p>How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project">Setting Up a Selenium-WebDriver Project</a> for more details of Selenium setups for different languages.</p>
+<p>How you install and use WebDriver depends on what programming environment you want to use to write and run your tests. Most popular environments have available a package or framework that will install WebDriver and the bindings required to communicate with WebDriver using this language, for example, Java, C#, Ruby, Python, JavaScript (Node), etc. See <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#setting-up-a-selenium-webdriver-project">Setting Up a Selenium-WebDriver Project</a> for more details of Selenium setups for different languages.</p>
 
 <p>Different browsers require different drivers to allow WebDriver to communicate with and control them. See <a href="https://www.selenium.dev/downloads/">Platforms Supported by Selenium</a> for more information on where to get browser drivers from, etc.</p>
 
@@ -51,7 +51,7 @@ tags:
 
 <ol>
  <li>To start with, set up a new npm project, as discussed in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#setting_up_node_and_npm">Setting up Node and npm</a> in the last chapter. Call it something different, like <code>selenium-test</code>.</li>
- <li>Next, we need to install a framework to allow us to work with Selenium from inside Node. We are going to choose selenium's official <a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a>, as the documentation seems fairly up-to-date and it is well-maintained. If you want different options, <a href="http://webdriver.io/">webdriver.io</a> and <a href="http://nightwatchjs.org/">nightwatch.js</a> are also good choices. To install selenium-webdriver, run the following command, making sure you are inside your project folder:
+ <li>Next, we need to install a framework to allow us to work with Selenium from inside Node. We are going to choose selenium's official <a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a>, as the documentation seems fairly up-to-date and it is well-maintained. If you want different options, <a href="https://webdriver.io/">webdriver.io</a> and <a href="https://nightwatchjs.org/">nightwatch.js</a> are also good choices. To install selenium-webdriver, run the following command, making sure you are inside your project folder:
   <pre class="brush: bash">npm install selenium-webdriver</pre>
  </li>
 </ol>
@@ -63,7 +63,7 @@ tags:
 <p>Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the <a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a> page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.</p>
 
 <ol>
- <li>Download the latest <a href="https://github.com/mozilla/geckodriver/releases/">GeckoDriver</a> (for Firefox) and <a href="http://chromedriver.storage.googleapis.com/index.html">ChromeDriver</a> drivers.</li>
+ <li>Download the latest <a href="https://github.com/mozilla/geckodriver/releases/">GeckoDriver</a> (for Firefox) and <a href="https://chromedriver.storage.googleapis.com/index.html">ChromeDriver</a> drivers.</li>
  <li>Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.</li>
  <li>Add the <code>chromedriver</code> and <code>geckodriver</code> driver's location to your system <code>PATH</code> variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a Mac OS X machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be <code>/Users/bob</code>.</li>
 </ol>
@@ -75,7 +75,7 @@ tags:
 <p>To set your <code>PATH</code> variable on Mac OS X/most Linux systems:</p>
 
 <ol>
- <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="http://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
+ <li>Open your <code>.bash_profile</code> (or <code>.bashrc</code>) file (if you can't see hidden files, you'll need to display them, see <a href="https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">Show/Hide hidden files in Mac OS X</a> or <a href="https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-ubuntu-14-04">Show hidden folders in Ubuntu</a>).</li>
  <li>Paste the following into the bottom of your file (updating the path as it actually is on your machine):
   <pre class="brush: bash">#Add WebDriver browser drivers to PATH
 
@@ -190,7 +190,7 @@ function searchTest(driver) {
 
 <h2 id="WebDriver_syntax_crash_course">WebDriver syntax crash course</h2>
 
-<p>Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/">selenium-webdriver JavaScript API reference</a> for a detailed reference, and the Selenium main documentation's <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp">Selenium WebDriver</a> and <a href="http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp">WebDriver: Advanced Usage</a> pages, which contain multiple examples to learn from written in different languages.</p>
+<p>Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/">selenium-webdriver JavaScript API reference</a> for a detailed reference, and the Selenium main documentation's <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp">Selenium WebDriver</a> and <a href="https://www.seleniumhq.org/docs/04_webdriver_advanced.jsp">WebDriver: Advanced Usage</a> pages, which contain multiple examples to learn from written in different languages.</p>
 
 <h3 id="Starting_a_new_test">Starting a new test</h3>
 
@@ -252,7 +252,7 @@ var driver = new webdriver.Builder()
 
 <h3 id="Interacting_with_the_document">Interacting with the document</h3>
 
-<p>Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">select UI elements in many ways</a> in WebDriver, including by ID, class, element name, etc. The actual selection is done by the <code>findElement()</code> method, which accepts as a parameter a selection method. For example, to select an element by ID:</p>
+<p>Now we've got a document to test, we need to interact with it in some way, which usually involves first selecting a specific element to test something about. You can <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements">select UI elements in many ways</a> in WebDriver, including by ID, class, element name, etc. The actual selection is done by the <code>findElement()</code> method, which accepts as a parameter a selection method. For example, to select an element by ID:</p>
 
 <pre class="brush: js"><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">driver</span><span class="p">.</span><span class="nx">findElement</span><span class="p">(</span><span class="nx">By</span><span class="p">.</span><span class="nx">id</span><span class="p">(</span><span class="s1">'myElementId'</span><span class="p">));</span></pre>
 
@@ -264,7 +264,7 @@ var driver = new webdriver.Builder()
 
 <h3 id="Testing_your_element"><span class="p">Testing your element</span></h3>
 
-<p><span class="p">There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at <a href="http://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">Getting text values</a> on the </span>WebDriver docs.</p>
+<p><span class="p">There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at <a href="https://www.seleniumhq.org/docs/03_webdriver.jsp#getting-text-values">Getting text values</a> on the </span>WebDriver docs.</p>
 
 <p>If we wanted to get the text inside our button, we could do this:</p>
 
@@ -353,7 +353,7 @@ input.</span>sendKeys('Filling in my form');</pre>
 
 <h2 id="Test_best_practices">Test best practices</h2>
 
-<p>There has been a lot written about best practices for writing tests. You can find some good background information at <a href="http://www.seleniumhq.org/docs/06_test_design_considerations.jsp">Test Design Considerations</a>. In general, you should make sure that your tests are:</p>
+<p>There has been a lot written about best practices for writing tests. You can find some good background information at <a href="https://www.seleniumhq.org/docs/06_test_design_considerations.jsp">Test Design Considerations</a>. In general, you should make sure that your tests are:</p>
 
 <ol>
  <li>Using good locator strategies: When you are {{anch("Interacting with the document")}}, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.</li>
@@ -487,7 +487,7 @@ searchTextOnGoogle();
 <ol>
  <li>Inside your project directory, create a new file called <code>bstack_google_test.js</code>.</li>
  <li>Give it the following contents:
-  <pre>const webdriver = require('selenium-webdriver'),
+  <pre class="brush: js">const webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
@@ -498,8 +498,8 @@ let capabilities = {
    'os' : 'OS X',
    'os_version' : 'Sierra',
    'resolution' : '1280x1024',
-   'browserstack.user' : '<code>YOUR-USER-NAME</code>',
-   'browserstack.key' : '<code>YOUR-ACCESS-KEY</code>',
+   'browserstack.user' : 'YOUR-USER-NAME',
+   'browserstack.key' : 'YOUR-ACCESS-KEY',
    'browserstack.debug' : 'true',
    'build' : 'First build'
 };
@@ -573,10 +573,10 @@ driver.session_.then(function(sessionData) {
   driver.getTitle().then(function(title) {
     if(title === 'webdriver - Google Search') {
       console.log('Test passed');
-      request({uri: "https://<code>YOUR-USER-NAME</code>:<code>YOUR-ACCESS-KEY</code>@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"passed","reason":"Google results showed correct title"}});
+      request({uri: "https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"passed","reason":"Google results showed correct title"}});
     } else {
       console.log('Test failed');
-      request({uri: "https://<code>YOUR-USER-NAME</code>:<code>YOUR-ACCESS-KEY</code>@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"failed","reason":"Google results showed wrong title"}});
+      request({uri: "https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/" + sessionId + ".json", method:"PUT", form:{"status":"failed","reason":"Google results showed wrong title"}});
     }
   });
 });</pre>
@@ -709,8 +709,8 @@ driver.quit();</pre>
 <p>If you don't want to use a service like Sauce Labs or BrowserStack, you can always set up your own remote testing server. Let's look at how to do this.</p>
 
 <ol>
- <li>The Selenium remote server requires Java to run. Download the latest JDK for your platform from the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE downloads page</a>. Install it when it is downloaded.</li>
- <li>Next, download the latest <a href="http://selenium-release.storage.googleapis.com/index.html">Selenium standalone server</a> — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your <code>PATH</code>, do so now (see the {{anch("Setting up Selenium in Node")}} section).</li>
+ <li>The Selenium remote server requires Java to run. Download the latest JDK for your platform from the <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE downloads page</a>. Install it when it is downloaded.</li>
+ <li>Next, download the latest <a href="https://selenium-release.storage.googleapis.com/index.html">Selenium standalone server</a> — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your <code>PATH</code>, do so now (see the {{anch("Setting up Selenium in Node")}} section).</li>
  <li>Run the standalone server by entering the following into a terminal on your server computer
   <pre class="brush: bash">java -jar selenium-server-standalone-3.0.0.jar</pre>
   (update the <code>.jar</code> filename) so it matches exactly what file you've got.</li>
@@ -752,7 +752,7 @@ driver.quit();</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: If you wish to perform continuous testing with <strong>codeless automation</strong> then you can use <a href="https://endtest.io">Endtest</a>.</p>
+<p><strong>Note</strong>: If you wish to perform continuous testing with <strong>codeless automation</strong> then you can use <a href="https://endtest.io">Endtest</a> or <a href="https://testingbot.com">TestingBot</a>.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

@@ -257,7 +257,7 @@ function greeting() {
 
 <p><img alt="" src="mdn-mozilla-zoo.png" style="display: block; margin: 0 auto;"></p>
 
-<p>The zoo keeper is like the global scope — he or she has the keys to access every enclosure, to restock food, tend to sick animals, etc.</p>
+<p>The zoo keeper is like the global scope — they have the keys to access every enclosure, to restock food, tend to sick animals, etc.</p>
 
 <h3 id="Active_learning_Playing_with_scope">Active learning: Playing with scope</h3>
 
@@ -268,11 +268,11 @@ function greeting() {
  <li>Open the example up in a browser and in your text editor.</li>
  <li>Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
   <pre class="brush: js">output(x);</pre>
-  You should see the value of variable <code>x</code> output to the screen.</li>
+  You should see the value of variable <code>x</code> printed to the browser viewport.</li>
  <li>Now try entering the following in your console
   <pre class="brush: js">output(y);
 output(z);</pre>
-  Both of these should return an error along the lines of "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Why is that? Because of function scope — <code>y</code> and <code>z</code> are locked inside the <code>a()</code> and <code>b()</code> functions, so <code>output()</code> can't access them when called from the global scope.</li>
+  Both of these should throw an error into the console along the lines of "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Why is that? Because of function scope — <code>y</code> and <code>z</code> are locked inside the <code>a()</code> and <code>b()</code> functions, so <code>output()</code> can't access them when called from the global scope.</li>
  <li>However, what about when it's called from inside another function? Try editing <code>a()</code> and <code>b()</code> so they look like this:
   <pre class="brush: js">function a() {
   let y = 2;
@@ -287,7 +287,7 @@ function b() {
 
   <pre class="brush: js">a();
 b();</pre>
-  You should see the <code>y</code> and <code>z</code> values output in the page. This works fine, as the <code>output()</code> function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. <code>output()</code> itself is available from anywhere, as it is defined in the global scope.</li>
+  You should see the <code>y</code> and <code>z</code> values printed in the browser viewport. This works fine, as the <code>output()</code> function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. <code>output()</code> itself is available from anywhere, as it is defined in the global scope.</li>
  <li>Now try updating your code like this:
   <pre class="brush: js">function a() {
   let y = 2;
@@ -298,11 +298,11 @@ function b() {
   let z = 3;
   output(x);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
   <pre class="brush: js">a();
 b();</pre>
-  Both the <code>a()</code> and <code>b()</code> call should output the value of x — 1. These work fine because even though the <code>output()</code> calls are not in the same scope as <code>x</code> is defined in, <code>x</code> is a global variable so is available inside all code, everywhere.</li>
+  Both the <code>a()</code> and <code>b()</code> call should print the value of x to the browser viewport. These work fine because even though the <code>output()</code> calls are not in the same scope as <code>x</code> is defined in, <code>x</code> is a global variable so is available inside all code, everywhere.</li>
  <li>Finally, try updating your code like this:
   <pre class="brush: js">function a() {
   let y = 2;
@@ -313,11 +313,11 @@ function b() {
   let z = 3;
   output(y);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
   <pre class="brush: js">a();
 b();</pre>
-  This time the <code>a()</code> and <code>b()</code> calls will both return an annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>
+  This time the <code>a()</code> and <code>b()</code> calls will throw that annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error into the console — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>
 </ol>
 
 <div class="note">
@@ -398,7 +398,7 @@ function subFunction3(value) {
 <ul>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
+ <li><strong>Functions — reusable blocks of code</strong></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>

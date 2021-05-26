@@ -9,6 +9,7 @@ tags:
   - Prototype
   - Reference
   - polyfill
+browser-compat: javascript.builtins.Array.filter
 ---
 <div>{{JSRef}}</div>
 
@@ -16,26 +17,37 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">let <var>newArray</var> = <var>arr</var>.filter(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[<var>, array</var>]]) {
-  // return element for <var>newArray,</var> if true
-}[, <var>thisArg</var>]);
+<pre class="brush: js">
+// Arrow function
+filter((element) => { ... } )
+filter((element, index) => { ... } )
+filter((element, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(element) { ... })
+filter(function callbackFn(element, index) { ... })
+filter(function callbackFn(element, index, array){ ... })
+filter(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code></dt>
+ <dt><code><var>callbackFn</var></code></dt>
  <dd>
  <p>Function is a predicate, to test each element of the array. Return a value that coerces to <code>true</code> to keep the element, or to <code>false</code> otherwise.</p>
 
  <p>It accepts three arguments:</p>
 
  <dl>
-  <dt><code><var>currentValue</var></code></dt>
+  <dt><code><var>element</var></code></dt>
   <dd>The current element being processed in the array.</dd>
   <dt><code><var>index</var></code>{{optional_inline}}</dt>
   <dd>The index of the current element being processed in the array.</dd>
@@ -44,7 +56,7 @@ tags:
  </dl>
  </dd>
  <dt><code><var>thisArg</var></code>{{optional_inline}}</dt>
- <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.</dd>
+ <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -53,9 +65,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>filter()</code> calls a provided <code><var>callback</var></code> function once for each element in an array, and constructs a new array of all the values for which <code><var>callback</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callback</var></code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the <code><var>callback</var></code> test are skipped, and are not included in the new array.</p>
+<p><code>filter()</code> calls a provided <code><var>callbackFn</var></code> function once for each element in an array, and constructs a new array of all the values for which <code><var>callbackFn</var></code> returns <a href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>. <code><var>callbackFn</var></code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the <code><var>callbackFn</var></code> test are skipped, and are not included in the new array.</p>
 
-<p><code><var>callback</var></code> is invoked with three arguments:</p>
+<p><code><var>callbackFn</var></code> is invoked with three arguments:</p>
 
 <ol>
  <li>the value of the element</li>
@@ -67,7 +79,7 @@ tags:
 
 <p><code>filter()</code> does not mutate the array on which it is called.</p>
 
-<p>The range of elements processed by <code>filter()</code> is set before the first invocation of <code><var>callback</var></code>. Elements which are appended to the array (from <code><var>callback</var></code>) after the call to <code>filter()</code> begins will not be visited by <code><var>callback</var></code>. If existing elements of the array are deleted in the same way they will not be visited.</p>
+<p>The range of elements processed by <code>filter()</code> is set before the first invocation of <code><var>callbackFn</var></code>. Elements which are appended to the array (from <code><var>callbackFn</var></code>) after the call to <code>filter()</code> begins will not be visited by <code><var>callbackFn</var></code>. If existing elements of the array are deleted in the same way they will not be visited.</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -255,22 +267,11 @@ console.log(deleteWords)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.filter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

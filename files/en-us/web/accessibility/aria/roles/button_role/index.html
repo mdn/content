@@ -9,8 +9,6 @@ tags:
   - Button Role
   - Reference
 ---
-<p>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
-
 <p class="summary"><span class="seoSummary">The <strong><a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a></strong> role should be used for clickable elements that trigger a response when activated by the user. Adding <code>role="button"</code> will make an element appear as a button control to a screen reader. This role can be used in combination with the <code>aria-pressed</code> attribute to create toggle buttons.</span></p>
 
 <pre class="brush: html">&lt;div id="saveChanges" tabindex="0" role="button" aria-pressed="false"&gt;Save&lt;/div&gt;</pre>
@@ -115,7 +113,7 @@ tags:
     &lt;ul id="nameList"&gt;&lt;/ul&gt;
     &lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
     &lt;input type="text" id="newName"&gt;
-    &lt;span role="button" tabindex="0" onclick="handleCommand()" onKeyDown="handleCommand()"&gt;Add Name&lt;/span&gt;</pre>
+    &lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -140,6 +138,11 @@ ul {
 <pre class="brush: js">function handleCommand(event) {
     // Handles both mouse clicks and keyboard
     // activate with Enter or Space
+    
+    // Keypresses other then Enter and Space should not trigger a command
+    if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
+        return;
+    }
 
     // Get the new name value from the input element
     let newNameInput = document.getElementById('newName');
@@ -268,8 +271,8 @@ function toggleButton(element) {
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria/roles#button">button</a></code></li>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-pressed">aria-pressed</a></code></li>
- <li><code>aria-expanded</code></li>
- <li><code>aria-haspopup</code></li>
+ <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">aria-expanded</a></code></li>
+ <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup">aria-haspopup</a></code></li>
 </ul>
 
 <h3 id="Additional_resources">Additional resources</h3>
@@ -280,3 +283,10 @@ function toggleButton(element) {
  <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">Official WAI-ARIA example code</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role">ARIA menubutton role</a></li>
 </ul>
+
+
+<section id="Quick_links">
+  <ol>
+   <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

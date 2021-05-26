@@ -4,7 +4,7 @@ slug: Web/API/VRFieldOfView/VRFieldOfView
 tags:
   - API
   - Constructor
-  - Obsolete
+  - Deprecated
   - Reference
   - VR
   - VRFieldOfView
@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>There are two forms of this constructor, which take their information in slightly different ways. The first one accepts four separate arguments — the {{domxref("VRFieldOfViewReadOnly.upDegrees")}}, {{domxref("VRFieldOfViewReadOnly.rightDegrees")}}, {{domxref("VRFieldOfViewReadOnly.downDegrees")}}, and {{domxref("VRFieldOfViewReadOnly.leftDegrees")}} values you want the field of view to have</p>
+<p>There are two forms of this constructor, which take their information in slightly different ways. The first one accepts four separate arguments — the {{domxref("VRFieldOfView.upDegrees")}}, {{domxref("VRFieldOfView.rightDegrees")}}, {{domxref("VRFieldOfView.downDegrees")}}, and {{domxref("VRFieldOfView.leftDegrees")}} values you want the field of view to have</p>
 
 <pre class="brush: js">var myFOV = new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees);</pre>
 
@@ -71,7 +71,7 @@ var myFOV = new VRFieldOfView(init);</pre>
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: When testing, setting a weird/tiny field of view can really mess up your view. It is a good idea to grab the current field of view first (using {{domxref("VREyeParameters.currentFieldOfView")}}) before making any drastic changes, so you can reset it afterwards if needed.</p>
+<p><strong>Note</strong>: When testing, setting a weird/tiny field of view can really mess up your view. It is a good idea to grab the current field of view first (using {{domxref("VREyeParameters.fieldOfView")}}) before making any drastic changes, so you can reset it afterwards if needed.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

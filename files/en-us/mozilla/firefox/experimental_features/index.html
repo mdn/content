@@ -9,14 +9,15 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p class="summary">In order to test new features, Mozilla publishes a test version of the Firefox browser, <a href="https://nightly.mozilla.org/">Firefox Nightly</a>, every day. These nightly builds of Firefox typically include experimental or partially-implemented features, including those for proposed or cutting-edge Web platform standards.</p>
+<p>This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which <em>preference</em> can be used to activate or deactivate them. This allows you to test the features before they are released.</p>
 
-<p class="summary"><span class="seoSummary">This page lists features that are in Nightly versions of Firefox along with information on how to activate them, if necessary.</span> You can test your Web sites and applications before these features get released and ensure everything will still work with the latest Web technology capabilities.</p>
+<p>New features appear first in the <a href="https://nightly.mozilla.org/">Firefox Nightly</a> build, where they are often enabled by default. They later propagate though to <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a> and eventually to the release build. Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.</p>
 
-<p>To test these experimental features, you need to download <a href="https://nightly.mozilla.org/">Firefox Nightly</a> or <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a> and set the appropriate preference in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Firefox Configuration Editor</a>. The preference that you need to set is described alongside each feature's description below.</p>
+<p>Experimental features can be enabled or disabled using the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Firefox Configuration Editor</a> (enter <code>about:config</code> in the Firefox address bar) by modifying the associated <em>preference</em> listed below.</p>
 
 <div class="notecard note">
-<p><strong>Editor's note:</strong> When adding features to these tables, please try to include a link to the relevant bug or bugs using the {{TemplateLink("bug")}} macro: <code>\{{bug(<em>bug-number</em>)}}</code>.</p>
+  <h4>Editor's notes</h4>
+  <p>When adding features to these tables, please try to include a link to the relevant bug or bugs using the {{TemplateLink("bug")}} macro: <code>\{{bug(<em>bug-number</em>)}}</code>.</p>
 </div>
 
 <h2 id="HTML">HTML</h2>
@@ -223,45 +224,6 @@ tags:
  </tbody>
 </table>
 
-<h3 id="outline_property">outline property to follow border-radius shape</h3>
-
-<p>The {{cssxref("outline")}} CSS property has been updated to follow the outline created by {{cssxref("border-radius")}}. As part of this work the non-standard {{cssxref("-moz-outline-radius")}} property will be removed. (See {{bug(315209)}} and {{bug(1694146)}} for more details.)</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>87</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>87</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>87</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>87</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Preference name</th>
-   <th colspan="2"><code>layout.css.outline-follows-border-radius.enabled</code></th>
-  </tr>
- </tbody>
-</table>
 
 <h3 id="Property_initial-letter">Property: initial-letter</h3>
 
@@ -339,6 +301,46 @@ tags:
   <tr>
    <th scope="row">Preference name</th>
    <th colspan="2"><code>layout.css.aspect-ratio.enabled</code></th>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Descriptor_size_adjust">Descriptor: size-adjust</h3>
+
+<p>The {{cssxref("@font-face/size-adjust")}} CSS descriptor is part of the {{SpecName("CSS5 Fonts")}} specification and defines a multiplier for glyph outlines and metrics associated with this font. This makes it easier to harmonize the designs of various fonts when rendered at the same font-size. (See {{bug(1698495)}} for more details.)</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col" style="vertical-align: bottom;">Release channel</th>
+   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Nightly</th>
+   <td>89</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">Developer Edition</th>
+   <td>89</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Beta</th>
+   <td>89</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Release</th>
+   <td>89</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Preference name</th>
+   <th colspan="2"><code>layout.css.size-adjust.enabled</code></th>
   </tr>
  </tbody>
 </table>
@@ -550,42 +552,6 @@ tags:
 <h3 id="Relative_indexing_method">Relative indexing method</h3>
 
 <p>The relative indexing method <code>at()</code> has been added to the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a></code> global objects. Passing a positive integer to the method returns the item or character at that position, and it also accepts negative integers, which count back from the end of the array or string. For example, <code>1</code> would return the second item or character and <code>-1</code> would return the last item or character. See <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at">Array.prototype.at()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at">String.prototype.at()</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/at">TypedArray.prototype.at()</a></code> for more details.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
-   <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Nightly</th>
-   <td>85</td>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Developer Edition</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Beta</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Release</th>
-   <td>85</td>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="Top_level_await">Top level await</h3>
-
-<p>Top level await is enabled for use within <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a>. You can use the <code>await</code> keyword on it's own (outside of an async function) within a module. This means modules, with child modules that use <code>await</code>, wait for the child module to execute before they themselves run. All while not blocking other child modules from loading.</p>
 
 <table class="standard-table">
  <thead>
@@ -1574,13 +1540,13 @@ tags:
 
 <h4 id="FTP_support_disabled">FTP support disabled</h4>
 
-<p>For security reasons, Mozilla intends to remove support for {{Glossary("FTP")}} from Firefox in 2020, effective in Firefox 82. See {{bug(1622409)}} for implementation progress. The <code>network.ftp.enabled</code> preference must be enabled (set to <code>true</code>) to allow FTP to be used.</p>
+<p>For security reasons, {{Glossary("FTP")}} is disabled from Firefox 88 in all releases ({{bug(1691890)}}), with the intention of removing the feature in Firefox 90 (previously FTP was only disabled in nightly builds). The <code>network.ftp.enabled</code> preference must be enabled (set to <code>true</code>) to allow FTP to be used.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col" style="vertical-align: bottom;">Release channel</th>
-   <th scope="col" style="vertical-align: bottom;">Version added</th>
+   <th scope="col" style="vertical-align: bottom;">Version changed</th>
    <th scope="col" style="vertical-align: bottom;">Enabled by default?</th>
   </tr>
  </thead>
@@ -1588,21 +1554,21 @@ tags:
   <tr>
    <th scope="row">Nightly</th>
    <td>77</td>
-   <td>Yes</td>
+   <td>No</td>
   </tr>
   <tr>
    <th scope="row">Developer Edition</th>
-   <td>77</td>
+   <td>88</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Beta</th>
-   <td>77</td>
+   <td>88</td>
    <td>No</td>
   </tr>
   <tr>
    <th scope="row">Release</th>
-   <td>77</td>
+   <td>88</td>
    <td>No</td>
   </tr>
   <tr>

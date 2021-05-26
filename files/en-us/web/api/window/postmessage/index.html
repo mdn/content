@@ -26,15 +26,12 @@ tags:
 <p>Broadly, one window may obtain a reference to another (<em>e.g.,</em> via
   <code>targetWindow = window.opener</code>), and then dispatch a
   {{domxref("MessageEvent")}} on it with <code>targetWindow.postMessage()</code>. The
-  receiving window is then free to <a href="/en-US/docs/Web/Guide/Events">handle this
-    event</a> as needed. The arguments passed to <code>window.postMessage()</code>
-  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the
-    receiving window through the event object</a>.</p>
+  receiving window is then free to <a href="/en-US/docs/Web/Events/Event_handlers">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code>
+  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the receiving window through the event object</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
+<pre class="brush: js"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
 
 <dl>
   <dt><code><em>targetWindow</em></code></dt>
@@ -229,7 +226,7 @@ window.addEventListener("message", (event) =&gt; {
   listening for events sent by <code>postMessage</code> throws an exception.</p>
 
 <p>After <code>postMessage()</code> is called, the {{domxref("MessageEvent")}} will be
-  dispatched <em>only after all pending execution contexts have finished</em>. 
+  dispatched <em>only after all pending execution contexts have finished</em>.
   For example, if <code>postMessage()</code> is invoked in an event handler, that event
   handler will run to completion, as will any remaining handlers for that same event,
   before the {{domxref("MessageEvent")}} is dispatched.</p>
@@ -301,4 +298,5 @@ window.addEventListener("message", (event) =&gt; {
 <ul>
   <li>{{domxref("Document.domain")}}</li>
   <li>{{domxref("CustomEvent")}}</li>
+  <li>{{domxref("BroadcastChannel")}} - For same-origin communication.</li>
 </ul>

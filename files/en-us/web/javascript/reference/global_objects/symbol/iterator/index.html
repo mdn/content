@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Property
   - Symbol
+browser-compat: javascript.builtins.Symbol.iterator
 ---
 <div>{{JSRef}}</div>
 
@@ -63,7 +64,7 @@ const someObj = {
   }
 }
 
-console.log(...new Foo); // 1, 2, 3 
+console.log(...new Foo); // 1, 2, 3
 console.log(...someObj); // 'a', 'b'
 </pre>
 
@@ -78,22 +79,11 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Symbol.iterator")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

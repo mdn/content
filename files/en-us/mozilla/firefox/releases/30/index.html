@@ -11,7 +11,7 @@ tags:
 
 <ul>
  <li>A Box Model Highlighter has been implemented ({{bug(663778)}}).</li>
- <li>Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this <a href="http://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30">blog post</a>.</li>
+ <li>Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ({{bug(757866)}}). Similarly all JS functions and objects are highlighted in the console output ({{bug(584733)}}). More information about the console improvement can be found in this <a href="https://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30">blog post</a>.</li>
  <li>Support for {{domxref("Console.count()")}} has been added ({{bug(922208)}}).</li>
 </ul>
 
@@ -51,7 +51,7 @@ tags:
  <li>Basic support for Hit regions on canvas has been added: the methods {{domxref("CanvasRenderingContext2D.addHitRegion()")}} and {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} have been added. These are disabled by default; to activate them set the preference <code>canvas.hitregions.enabled</code> to <code>true</code>. ({{bug(966591)}})</li>
  <li>The non-standard, and deprecated since Firefox 15, {{domxref("Blob.mozSlice")}} is no longer supported ({{bug(961804)}}).</li>
  <li>The non-standard {{domxref("ArchiveReader")}} and {{domxref("ArchiveRequest")}} are no longer exposed to the Web ({{bug(968883)}}).</li>
- <li><a href="http://dxr.mozilla.org/mozilla-central/source/dom/webidl/">WebIDL constructors</a> cannot be called as functions anymore. They need to be preceded by the keyword <code>new</code>. ({{bug(916644)}})</li>
+ <li><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/">WebIDL constructors</a> cannot be called as functions anymore. They need to be preceded by the keyword <code>new</code>. ({{bug(916644)}})</li>
  <li>Added support for a new value (<code>alpha</code>) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always <code>1.0</code>. This allows the back-end to implement a fast-track. ({{bug(982480)}})</li>
  <li>{{domxref("GlobalWorkerScope.console")}} now returns for the regular {{domxref("Console")}}; <code>WorkerConsole</code> has been removed ({{bug(965860)}}).</li>
  <li>The {{domxref("WebGL_debug_shaders")}} WebGL extension has been implemented ({{bug(968374)}}).</li>

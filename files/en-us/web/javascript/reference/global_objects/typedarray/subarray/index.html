@@ -7,6 +7,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.subarray
 ---
 <div>{{JSRef}}</div>
 
@@ -19,15 +20,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>typedarr</var>ay.subarray([<var>begin</var>[, <var>end</var>]])
+<pre class="brush: js">
+subarray()
+subarray(begin)
+subarray(begin, end)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -74,23 +73,11 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray',
-        'TypedArray.prototype.subarray')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.subarray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

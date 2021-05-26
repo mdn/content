@@ -9,6 +9,7 @@ tags:
 - Prototype
 - Reference
 - polyfill
+browser-compat: javascript.builtins.Array.copyWithin
 ---
 <div>{{JSRef}}</div>
 
@@ -19,29 +20,38 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>arr</var>.copyWithin(<var>target[, start[, end]]</var>)
+<pre class="brush: js">
+copyWithin(target)
+copyWithin(target, start)
+copyWithin(target, start, end)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>Zero-based index at which to copy the sequence to. If negative, <code>target</code>
-    will be counted from the end.</dd>
-  <dd>If <code>target</code> is at or greater than <code>arr.length</code>, nothing will
+  <dd>
+    <p>Zero-based index at which to copy the sequence to. If negative, <code>target</code>
+    will be counted from the end.</p>
+    <p>If <code>target</code> is at or greater than <code>arr.length</code>, nothing will
     be copied. If <code>target</code> is positioned after <code>start</code>, the copied
-    sequence will be trimmed to fit <code>arr.length</code>.</dd>
+    sequence will be trimmed to fit <code>arr.length</code>.</p>
+  </dd>
   <dt><code>start</code> {{optional_inline}}</dt>
-  <dd>Zero-based index at which to start copying elements from. If negative,
-    <code>start</code> will be counted from the end.</dd>
-  <dd>If <code>start</code> is omitted, <code>copyWithin</code> will copy from index
-    <code>0</code>. </dd>
+  <dd>
+    <p>Zero-based index at which to start copying elements from. If negative,
+    <code>start</code> will be counted from the end.</p>
+    <p>If <code>start</code> is omitted, <code>copyWithin</code> will copy from index
+    <code>0</code>.</p>
+  </dd>
   <dt><code>end</code> {{optional_inline}}</dt>
-  <dd>Zero-based index at which to end copying elements from. <code>copyWithin</code>
+  <dd>
+    <p>Zero-based index at which to end copying elements from. <code>copyWithin</code>
     copies up to but not including <code>end</code>. If negative, <code>end</code> will be
-    counted from the end.</dd>
-  <dd>If <code>end</code> is omitted, <code>copyWithin</code> will copy until the last
-    index (default to <code>arr.length</code>).</dd>
+    counted from the end.</p>
+    <p>If <code>end</code> is omitted, <code>copyWithin</code> will copy until the last
+    index (default to <code>arr.length</code>).</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -62,76 +72,6 @@ tags:
 <p>The <code>copyWithin</code> method is a mutable method. It does not alter the length of
   <code>this</code>, but it will change its content and create new properties, if
   necessary.</p>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">if (!Array.prototype.copyWithin) {
-  Object.defineProperty(Array.prototype, 'copyWithin', {
-    value: function(target, start/*, end*/) {
-    // Steps 1-2.
-    if (this == null) {
-      throw new TypeError('this is null or not defined');
-    }
-
-    var O = Object(this);
-
-    // Steps 3-5.
-    var len = O.length &gt;&gt;&gt; 0;
-
-    // Steps 6-8.
-    var relativeTarget = target &gt;&gt; 0;
-
-    var to = relativeTarget &lt; 0 ?
-      Math.max(len + relativeTarget, 0) :
-      Math.min(relativeTarget, len);
-
-    // Steps 9-11.
-    var relativeStart = start &gt;&gt; 0;
-
-    var from = relativeStart &lt; 0 ?
-      Math.max(len + relativeStart, 0) :
-      Math.min(relativeStart, len);
-
-    // Steps 12-14.
-    var end = arguments[2];
-    var relativeEnd = end === undefined ? len : end &gt;&gt; 0;
-
-    var final = relativeEnd &lt; 0 ?
-      Math.max(len + relativeEnd, 0) :
-      Math.min(relativeEnd, len);
-
-    // Step 15.
-    var count = Math.min(final - from, len - to);
-
-    // Steps 16-17.
-    var direction = 1;
-
-    if (from &lt; to &amp;&amp; to &lt; (from + count)) {
-      direction = -1;
-      from += count - 1;
-      to += count - 1;
-    }
-
-    // Step 18.
-    while (count &gt; 0) {
-      if (from in O) {
-        O[to] = O[from];
-      } else {
-        delete O[to];
-      }
-
-      from += direction;
-      to += direction;
-      count--;
-    }
-
-    // Step 19.
-    return O;
-  },
-  configurable: true,
-  writable: true
-  });
-}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -165,24 +105,16 @@ i32a.copyWithin(0, 2)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.copywithin',
-        'Array.prototype.copyWithin')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.copyWithin")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Array")}}</li>
 </ul>

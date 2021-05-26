@@ -7,12 +7,11 @@ tags:
   - File System API
   - Offline
   - Reference
-  - Référence(2)
   - filesystem
 ---
 <div>{{APIRef("File System API")}}{{non-standard_header()}}</div>
 
-<p>The <code>LocalFileSystemSync</code> interface of the <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a> gives you access to a sandboxed file system. It is intended to be used with <a href="/en-US/docs/DOM/Worker"> WebWorkers</a>. The methods are implemented by <a href="/en-US/docs/DOM/Worker">worker</a> objects.</p>
+<p>The <code>LocalFileSystemSync</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> gives you access to a sandboxed file system. It is intended to be used with <a href="/en-US/docs/Web/API/Worker"> WebWorkers</a>. The methods are implemented by <a href="/en-US/docs/Web/API/Worker">worker</a> objects.</p>
 
 <h2 id="About_this_document">About this document</h2>
 
@@ -24,7 +23,7 @@ tags:
 
 <p>You can request access to a sandboxed file system by requesting <code>LocalFileSystemSync</code> object from within a web worker. The global methods in the <code>window</code> object <code>requestFileSystemSync()</code> and <code>resolveLocalFileSystemSyncURL()</code> methods are exposed to the Worker's global scope. Calling <code>window.requestFileSystemSync()</code> for creates new storage for your web app.</p>
 
-<p>For more concepts, see the counterpart <a href="/en-US/docs/DOM/File_API/File_System_API/LocalFileSystem#Basic_concepts">article for the asynchronous API</a>.</p>
+<p>For more concepts, see the counterpart <a href="/en-US/docs/Web/API/LocalFileSystem#basic_concepts">article for the asynchronous API</a>.</p>
 
 <h3 id="Example">Example</h3>
 
@@ -46,10 +45,10 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>FileSystemSync <a href="#requestfilesystemsync">requestFileSystemSync</a> (in unsigned short <em>type</em>, in long long <em>size</em>) raises <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>; </code></td>
+   <td><code>FileSystemSync <a href="#requestfilesystemsync">requestFileSystemSync</a> (in unsigned short <em>type</em>, in long long <em>size</em>) raises <a href="/en-US/docs/Web/API/FileException">FileException</a>; </code></td>
   </tr>
   <tr>
-   <td><code>EntrySync <a href="#resolvelocalfilesystemsyncurl">resolveLocalFileSystemSyncURL</a> (in DOMString <em>url</em>) raises <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a>;</code></td>
+   <td><code>EntrySync <a href="#resolvelocalfilesystemsyncurl">resolveLocalFileSystemSyncURL</a> (in DOMString <em>url</em>) raises <a href="/en-US/docs/Web/API/FileException">FileException</a>;</code></td>
   </tr>
  </tbody>
 </table>
@@ -103,13 +102,13 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <h5 id="Returns">Returns</h5>
 
 <dl>
- <dt><code><a href="/en-US/docs/DOM/File_API/File_System_API/FileSystemSync">FileSystemSync</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/FileSystemSync">FileSystemSync</a></code></dt>
  <dd>An object that represents the file system.</dd>
 </dl>
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>This method can raise an <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following code:</p>
+<p>This method can raise an <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following code:</p>
 
 <table class="standard-table">
  <thead>
@@ -119,7 +118,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
   </tr>
   <tr>
    <td><code>SECURITY_ERROR</code></td>
-   <td>The application does not have permission to access the file system interface. For example, you cannot run from <code>file://</code>. For more details, see the <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F">article on basic concepts</a>.</td>
+   <td>The application does not have permission to access the file system interface. For example, you cannot run from <code>file://</code>. For more details, see the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction#you_cannot_run_your_app_from_file:.2f.2f">article on basic concepts</a>.</td>
   </tr>
  </thead>
 </table>
@@ -142,13 +141,13 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <h5 id="Returns_2">Returns</h5>
 
 <dl>
- <dt><code><a href="/en-US/docs/DOM/File_API/File_System_API/EntrySync">EntrySync</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/FileSystemEntrySync">EntrySync</a></code></dt>
  <dd>An object that represents entries in the file system.</dd>
 </dl>
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method can raise a <a href="/en-US/docs/DOM/File_API/File_System_API/FileException">FileException</a> with the following codes:</p>
+<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
 <table class="standard-table">
  <thead>
@@ -181,6 +180,6 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en-US/docs/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
 
-<p>Introduction: <a href="/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>

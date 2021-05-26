@@ -8,6 +8,7 @@ tags:
   - Web
   - Property
   - Houdini
+browser-compat: css.at-rules.property
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
@@ -28,6 +29,29 @@ tags:
 <p><code>@property</code> rules require a <strong>syntax</strong> and <strong>inherits</strong> descriptor; if either are missing, the entire rule is invalid and must be ignored. The <strong>initial-value</strong> descriptor is optional only if the syntax is the universal syntax definition, otherwise the descriptor is required; if it’s missing, the entire rule is invalid and must be ignored.</p>
 
 <p>Unknown descriptors are invalid and ignored, but do not invalidate the <code>@property</code> rule.</p>
+
+<h2 id="Multiple_declarations">Multiple declarations</h2>
+
+<p>To declare multiple custom properties at the same time, use the following syntax:</p>
+
+<pre class="brush: css no-line-numbers">@property --primary-color,
+@property --secondary-color,
+@property --text-color {
+  syntax: '&lt;color&gt;';
+  inherits: true;
+}
+
+@property --primary-color {
+  initial-value: red;
+}
+
+@property --secondary-color {
+  initial-value: blue;
+}
+
+@property --text-color {
+  initial-value: green;
+}</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -77,7 +101,7 @@ tags:
 
 <div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("css.at-rules.property")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

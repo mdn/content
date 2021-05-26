@@ -1,20 +1,13 @@
-# Note that this workflow uses `get-diff-action` which is important.
-# It gives us an environment variable called `GIT_DIFF` which is a string
-# that is a list of file paths.
-# If you want to do what this workflow does on your laptop you can simulate
-# it like this:
-#
-#    export GIT_DIFF=`git diff --name-only main... | grep 'files/' | grep '\.html$'`
-#    node content build --no-progressbar --files="${GIT_DIFF}"
-#
-# That way, you can behave on your laptop like, this action behaves here.
+# This file tests more or less everything related to a pull request. All
+# in one big job. At the end, if all the testing passes, it proceeds
+# to upload all the files that were built to our Dev environment.
+# This way, if the tests passed, you'll be able to review the built
+# pages on a public URL.
 
 name: PR Test
 
 on:
   pull_request:
-    branches:
-      - main
 
 jobs:
   tests:
@@ -29,7 +22,7 @@ jobs:
           node-version: "12"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.5
         id: cached-node_modules
         with:
           path: |
@@ -41,7 +34,28 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
-      - uses: technote-space/get-diff-action@v4.0.6
+      - name: Config git core.quotePath
+        run: |
+          # If you don't do this, the get-diff-action won't be able to
+          # notice files that contain non-ascii characters.
+          # I.e.
+          #
+          #    ▶ git status
+          #    Changes not staged for commit:
+          #    ...
+          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
+          #
+          # But after you set `core.quotePath` you get:
+          #
+          #    ▶ git status
+          #    Changes not staged for commit:
+          #    ...
+          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
+          #
+          # Now, this gets used by the `git diff ...` inside get-diff-action.
+          git config --global core.quotePath false
+
+      - uses: technote-space/get-diff-action@v4.1.1
         id: git_diff_content
         with:
           PATTERNS: files/**/*.html
@@ -49,25 +63,20 @@ jobs:
 
       - name: Build changed content
         if: ${{ env.GIT_DIFF_CONTENT }}
-        run: |
-          echo ${{ env.GIT_DIFF_CONTENT }}
-          export CONTENT_ROOT=$(pwd)/files
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/files
 
-          # Some day, when our number of flaws have reached 0 we'll change
-          # this to "*:error" which means the slightest flaw in the build
-          # will break the build.
-          # See https://github.com/mdn/yari/issues/715
-          export BUILD_FLAW_LEVELS="unsafe_html: error, *:ignore"
+          # This is so that if there's a single 'unsafe_html' flaw, it
+          # completely fails the build.
+          # But all other flaws should be 'warn' so that we can include
+          # information about the flaws when we analyze the built PR.
+          BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
 
-          # Note, it might be interesting to explore building *some*
-          # pages in a PR build if the diff doesn't have any index.html
-          # files changed.
-          # Instead of building the git diff, you build some known typical
-          # folders that you know don't take too long and do cover a lot
-          # of interesting macros etc.
-          # This way, when an edit to the source code comes in, perhaps the
-          # functional tests have a gap in them but actually building
-          # real content exposes it.
+          # Because we build these pages in a way that you get a toolbar,
+          # so the flaws can be displayed, but we don't want any of the
+          # other toolbar features like "Fix fixable flaws" or "Quick-edit"
+          # we set this to disable that stuff.
+          REACT_APP_CRUD_MODE_READONLY: true
 
           # Setting this to an empty string effectively means that the
           # <iframe> src will end up being the relative URL of the current
@@ -79,25 +88,61 @@ jobs:
           # whatever code is inserted into the code example. But since the
           # whole (possible) domain for PR builds will never be somewhere
           # where there are interesting cookies, it's a safe choice.
-          export BUILD_LIVE_SAMPLES_BASE_URL=
+          BUILD_LIVE_SAMPLES_BASE_URL: ""
 
           # In these builds we never care for or need the ability to sign in.
           # This environment variable will disable that functionality entirely.
-          export REACT_APP_DISABLE_AUTH=true
+          REACT_APP_DISABLE_AUTH: true
 
-          # If we don't do this the built files will end up in
-          # `node_modules/@mdn/yari/client/build/` and we don't want that
-          # to get pushed into the cache.
-          export BUILD_OUT_ROOT=/tmp/
+          # TODO: This should be implicit when `CI=true`
+          BUILD_NO_PROGRESSBAR: true
 
-          export BUILD_NO_PROGRESSBAR=true
+        run: |
           # The reason this script isn't in `package.json` is because
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-      - uses: technote-space/get-diff-action@v4.0.6
+          echo "Disk usage size of build/"
+          du -sh $BUILD_OUT_ROOT
+
+          # Save the PR number into the build
+          echo ${{ github.event.number }} > build/NR
+
+          # Save the raw diff blob and store that inside the ./build/
+          # directory.
+          # The purpose of this is for the PR Review Companion to later
+          # be able to use this raw diff file for the benefit of analyzing.
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > build/DIFF
+
+      - name: Merge static assets with built documents
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        run: |
+          rsync -a node_modules/@mdn/yari/client/build/ build/
+
+          # Now that build/ directory contains everything you need to deploy
+          # that as a site. HTML, static assets, images, etc.
+          # However, that Yari static files is very heavy and it's in large
+          # part due to the .map files.
+          # In fact, as of March 2021, the client/build/static directory
+          # is 2.3MB but only 864KB without all the .map files.
+          # Let's delete those this time because this isn't the right time
+          # to debug JS or CSS.
+          echo "Before..."
+          du -sh build
+          find build/static -type f -name "*.map" | xargs ls -lh
+          find build/static -type f -name "*.map" | xargs rm
+          echo "After..."
+          du -sh build
+
+      - uses: actions/upload-artifact@v2
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        with:
+          name: build
+          path: build/
+
+      - uses: technote-space/get-diff-action@v4.1.1
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -111,7 +156,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.0.6
+      - uses: technote-space/get-diff-action@v4.1.1
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

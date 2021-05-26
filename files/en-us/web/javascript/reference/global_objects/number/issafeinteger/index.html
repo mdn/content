@@ -2,10 +2,11 @@
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Number
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Number
+browser-compat: javascript.builtins.Number.isSafeInteger
 ---
 <div>{{JSRef}}</div>
 
@@ -14,11 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <p>A safe integer is an integer that</p>
 
@@ -28,13 +24,13 @@ tags:
     fit the IEEE-754 representation.</li>
 </ul>
 
-<p>For example, <code>2<sup>53</sup> - 1</code> is a safe integer: it can be exactly
+<p>For example, <code>2^53 - 1</code> is a safe integer: it can be exactly
   represented, and no other integer rounds to it under any IEEE-754 rounding mode. In
-  contrast, <code>2<sup>53</sup></code> is <em>not</em> a safe integer: it can be exactly
-  represented in IEEE-754, but the integer <code>2<sup>53</sup> + 1</code> can't be
-  directly represented in IEEE-754 but instead rounds to <code>2<sup>53</sup></code> under
+  contrast, <code>2^53</code> is <em>not</em> a safe integer: it can be exactly
+  represented in IEEE-754, but the integer <code>2^53 + 1</code> can't be
+  directly represented in IEEE-754 but instead rounds to <code>2^53</code> under
   round-to-nearest and round-to-zero rounding. The safe integers consist of all integers
-  from <code>-(2<sup>53</sup> - 1)</code> inclusive to <code>2<sup>53</sup> - 1</code>
+  from <code>-(2^53 - 1)</code> inclusive to <code>2^53 - 1</code>
   inclusive (± <code>9007199254740991</code> or ± 9,007,199,254,740,991).</p>
 
 <p>Handling values larger or smaller than ~9 quadrillion with full precision requires
@@ -48,7 +44,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>Number.isSafeInteger(<var>testValue</var>)</code>
+<pre class="brush: js">Number.isSafeInteger(testValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -86,23 +82,11 @@ Number.isSafeInteger(3.0);                  // true
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.isSafeInteger")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

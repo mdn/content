@@ -48,13 +48,13 @@ tags:
 
 <p>Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.</p>
 
-<p>The first section below provides a brief "primer" on how to use the Express <a href="http://expressjs.com/en/4x/api.html#router">Router</a> middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.</p>
+<p>The first section below provides a brief "primer" on how to use the Express <a href="https://expressjs.com/en/4x/api.html#router">Router</a> middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.</p>
 
 <h2 id="Routes_primer">Routes primer</h2>
 
 <p>A route is a section of Express code that associates an HTTP verb (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc.), a URL path/pattern, and a function that is called to handle that pattern.</p>
 
-<p>There are several ways to create routes. For this tutorial we're going to use the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.</p>
+<p>There are several ways to create routes. For this tutorial we're going to use the <code><a href="https://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.</p>
 
 <div class="note">
 <p><strong>Note:</strong> We discussed Express application routes briefly in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#creating_route_handlers">Express Introduction &gt; Creating route handlers</a>. Other than providing better support for modularization (as discussed in the first subsection below), using <em>Router</em> is very similar to defining routes directly on the <em>Express application object</em>.</p>
@@ -143,7 +143,7 @@ app.use('/wiki', wiki);</pre>
  <li><code>()</code> : Grouping match on a set of characters to perform another operation on, e.g. <code>'/ab(cd)?e'</code> will perform a <code>?</code>-match on the group <code>(cd)</code>—it will match <code>abe</code> and <code>abcde</code>.</li>
 </ul>
 
-<p>The route paths can also be JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, the route path below will match <code>catfish </code>and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
+<p>The route paths can also be JavaScript <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>. For example, the route path below will match <code>catfish</code> and <code>dogfish</code>, but not <code>catflap</code>, <code>catfishhead</code>, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).</p>
 
 <pre class="brush: js">app.get(/.*fish$/, function (req, res) {
   ...
@@ -172,7 +172,7 @@ app.use('/wiki', wiki);</pre>
 <p><strong>Note:</strong> The URL <em>/book/create</em> will be matched by a route like <code>/book/:bookId</code> (which will extract a "bookId" value of '<code>create</code>'). The first route that matches an incoming URL will be used, so if you want to process <code>/book/create</code> URLs separately, their route handler must be defined before your <code>/book/:bookId</code> route.</p>
 </div>
 
-<p>That's all you need to get started with routes - if needed you can find more information in the Express docs: <a href="http://expressjs.com/en/starter/basic-routing.html">Basic routing</a> and <a href="http://expressjs.com/en/guide/routing.html">Routing guide</a>. The following sections show how we'll set up our routes and controllers for the LocalLibrary.</p>
+<p>That's all you need to get started with routes - if needed you can find more information in the Express docs: <a href="https://expressjs.com/en/starter/basic-routing.html">Basic routing</a> and <a href="https://expressjs.com/en/guide/routing.html">Routing guide</a>. The following sections show how we'll set up our routes and controllers for the LocalLibrary.</p>
 
 <h2 id="Routes_needed_for_the_LocalLibrary">Routes needed for the LocalLibrary</h2>
 
@@ -627,8 +627,8 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://expressjs.com/en/starter/basic-routing.html">Basic routing</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/routing.html">Routing guide</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/starter/basic-routing.html">Basic routing</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/guide/routing.html">Routing guide</a> (Express docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}</p>

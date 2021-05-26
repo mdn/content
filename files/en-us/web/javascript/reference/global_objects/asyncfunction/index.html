@@ -5,6 +5,7 @@ tags:
 - Constructor
 - JavaScript
 - Reference
+browser-compat: javascript.builtins.AsyncFunction
 ---
 <div>{{JSRef}}</div>
 
@@ -20,8 +21,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">new AsyncFunction([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</pre>
+<pre class="brush: js">
+new AsyncFunction(arg0, functionBody)
+new AsyncFunction(arg0, arg1, functionBody)
+new AsyncFunction(arg0, arg1, ...argN, functionBody)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -89,23 +93,11 @@ a(10, 20).then(v =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-async-function-objects', 'AsyncFunction object')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.AsyncFunction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

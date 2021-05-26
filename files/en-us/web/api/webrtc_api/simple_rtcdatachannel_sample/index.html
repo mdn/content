@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>The {{domxref("RTCDataChannel")}} interface is a feature of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>, so that the same programming model can be used for each.</p>
+<p>The {{domxref("RTCDataChannel")}} interface is a feature of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket API</a>, so that the same programming model can be used for each.</p>
 
 <p>In this example, we will open an {{domxref("RTCDataChannel")}} connection linking two elements on the same page. While that's obviously a contrived scenario, it's useful for demonstrating the flow of connecting two peers. We'll cover the mechanics of accomplishing the connection and transmitting and receiving data, but we will save the bits about locating and linking to a remote computer for another example.</p>
 
@@ -47,11 +47,11 @@ tags:
 
 <p>While you can just <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js" rel="noopener">look at the code itself on GitHub</a>, below we'll review the parts of the code that do the heavy lifting.</p>
 
-<p>The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015</a>, you should read up on them. Similarly, this example uses <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> to simplify syntax.</p>
+<p>The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of <a href="/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">ECMAScript 2015</a>, you should read up on them. Similarly, this example uses <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> to simplify syntax.</p>
 
 <h3 id="Starting_up">Starting up</h3>
 
-<p>When the script is run, we set up an {{event("load")}} event listener, so that once the page is fully loaded, our <code>startup()</code> function is called.</p>
+<p>When the script is run, we set up a {{event("load")}} event listener, so that once the page is fully loaded, our <code>startup()</code> function is called.</p>
 
 <pre class="brush: js">function startup() {
   connectButton = document.getElementById('connectButton');

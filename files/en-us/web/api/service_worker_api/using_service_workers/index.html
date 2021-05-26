@@ -20,8 +20,9 @@ tags:
  <br>
  The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
 
-<div class="note">
-<p><strong>Note</strong>: From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
 </div>
 
 <p>Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as <a href="http://offlinefirst.org/">Offline First</a>). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.</p>
@@ -77,11 +78,15 @@ tags:
 
 <p>In the first example, we have to wait for <code>myFunction()</code> to run and return <code>value</code> before any more of the code can execute. In the second example, <code>myFunction()</code> returns a promise for <code>value</code>, then the rest of the code can carry on running. When the promise resolves, the code inside <code>then</code> will be run, asynchronously.<br>
  <br>
- Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to want to do, but it can be a bit of a pain. We can use <code>.onload</code> to only display the image after it’s loaded, but what about events that start happening before we start listening to them? We could try to work around this using <code>.complete</code>, but it’s still not foolproof, and what about multiple images? And, ummm, it’s still synchronous, so blocks the main thread.<br>
+ Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to do, but it can be a bit of a pain. We can use <code>.onload</code> to only display the image after it’s loaded, but what about events that start happening before we start listening to them? We could try to work around this using <code>.complete</code>, but it’s still not foolproof, and what about multiple images? And, ummm, it’s still synchronous, so blocks the main thread.<br>
  <br>
  Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/js-examples/tree/master/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/js-examples/promises-test/">look at it running live</a>.)</p>
 
-<p>{{note("A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.")}}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.</p>
+</div>
+
 
 <pre class="brush: js">const imgLoad = (url) =&gt; {
   return new Promise((resolve, reject) =&gt; {
@@ -130,7 +135,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
+<p><strong>Note</strong>: You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
 </div>
 
 <h2 id="Service_workers_demo">Service workers demo</h2>
@@ -214,11 +219,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.<br>
  <br>
- The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s brand new storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
-
-<div class="note">
-<p><strong>Note</strong>: The Cache API is not supported in every browser. (See the {{anch("Browser compatibility")}} section for more information.) If you want to use this now, you could consider using a polyfill like the one available in <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, or perhaps store your assets in <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
-</div>
+ The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
 
 <p>Let’s start this section by looking at a code sample — this is the <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">first block you’ll find in our service worker</a>:</p>
 

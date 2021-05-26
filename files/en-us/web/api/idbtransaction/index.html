@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
-<p>The <strong><code>IDBTransaction</code></strong> interface of the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, {{domxref("IDBTransaction")}} to set the mode of the transaction (e.g. is it <code>readonly</code> or <code>readwrite</code>), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an <code>IDBTransaction</code> object to abort transactions.</p>
+<p>The <strong><code>IDBTransaction</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, {{domxref("IDBTransaction")}} to set the mode of the transaction (e.g. is it <code>readonly</code> or <code>readwrite</code>), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an <code>IDBTransaction</code> object to abort transactions.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -95,13 +95,12 @@ objectStore1.put("1", "key");
 
 <h2 id="Mode_constants">Mode constants</h2>
 
-<div>
-<div>{{ deprecated_header(13) }}</div>
+<div>{{Deprecated_Header}}</div>
 
 <div class="warning">
 <p>These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
 </div>
-</div>
+
 
 <p>Transactions can have one of three modes:</p>
 
@@ -141,7 +140,7 @@ objectStore1.put("1", "key");
 
     <p>(2 in Chrome)</p>
    </td>
-   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion"><code>setVersion()</code></a> method of <a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
+   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="/en-US/docs/Web/API/IDBDatabase#setversion"><code>setVersion()</code></a> method of <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
   </tr>
  </tbody>
 </table>

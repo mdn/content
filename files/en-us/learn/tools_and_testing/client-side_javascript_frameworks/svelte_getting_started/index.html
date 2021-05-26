@@ -116,21 +116,22 @@ npm run dev</pre>
 <p>The starter template comes with the following structure:</p>
 
 <pre>moz-todo-svelte
-├── readme.md
+├── README.md
 ├── package.json
 ├── package-lock.json
 ├── rollup.config.js
 ├── .gitignore
 ├── node_modules
 ├── public
-│   ├── favicon.ico
+│   ├── favicon.png
 │   ├── index.html
 │   ├── global.css
 │   └── build
 │       ├── bundle.css
-│       ├── bundle.css.map
 │       ├── bundle.js
 │       └── bundle.js.map
+├── scripts
+│   └── setupTypeScript.js
 └── src
     ├── App.svelte
     └── main.js</pre>
@@ -142,7 +143,11 @@ npm run dev</pre>
  <li><code>node_modules</code>: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.</li>
  <li><code>.gitignore</code>: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.</li>
  <li><code>rollup.config.js</code>: Svelte uses <a href="https://rollupjs.org/">rollup.js</a> as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer <a href="https://webpack.js.org/">webpack</a> you can create your starter project with <code>npx degit sveltejs/template-webpack svelte-app</code> instead.</li>
- <li>scripts: Contains setup scripts as required. Currently should only contain <code>setupTypeScript.js</code>, a script that sets up TypeScript support in Svelte. We'll talk about this more in the last article.</li>
+ <li><code>scripts</code>: Contains setup scripts as required. Currently should only contain <code>setupTypeScript.js</code>.
+  <ul>
+    <li><code>setupTypeScript.js</code>: This script that sets up TypeScript support in Svelte. We'll talk about this more in the last article.</li>
+  </ul>
+ </li>
  <li><code>src</code>: This directory is where the source code for your application lives — where you'll be creating the code for your app.
   <ul>
    <li><code>App.svelte</code>: This is the top-level component of your app. So far it just renders the 'Hello World!' message.</li>
@@ -536,5 +541,15 @@ npm run dev</pre>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

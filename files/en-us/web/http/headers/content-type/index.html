@@ -3,14 +3,14 @@ title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 tags:
   - Content-Type
-  - Entity header
   - HTTP
+  - HTTP header
+  - Representation header
   - Reference
-  - header
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Content-Type</code></strong> entity header is used to indicate the {{Glossary("MIME type","media type")}} of the resource.</p>
+<p>The <strong><code>Content-Type</code></strong> representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).</p>
 
 <p>In responses, a <code>Content-Type</code> header tells the client what the content type of the returned content actually is. Browsers will do MIME sniffing in some cases and will not necessarily follow the value of this header; to prevent this behavior, the header {{HTTPHeader("X-Content-Type-Options")}} can be set to <code>nosniff</code>.</p>
 
@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
+   <td>{{Glossary("Representation header")}}</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -114,7 +114,7 @@ Content-Type: text/plain
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}</li>
+ <li>{{HTTPHeader("Accept")}}</li>
  <li>{{HTTPHeader("Content-Disposition")}}</li>
  <li>{{HTTPStatus("206")}} Partial Content</li>
  <li>{{HTTPHeader("X-Content-Type-Options")}}</li>

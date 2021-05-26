@@ -56,8 +56,7 @@ tags:
  <dd>The specified proxy should be used</dd>
  <dt><code>HTTPS <em>host:port</em></code></dt>
  <dd>The specified HTTPS proxy should be used</dd>
- <dt><code>SOCKS4 <em>host:port</em></code></dt>
- <dt><code>SOCKS5 <em>host:port</em></code></dt>
+ <dt><code>SOCKS4 <em>host:port</em></code>, <code>SOCKS5 <em>host:port</em></code></dt>
  <dd>The specified SOCKS server (with the specified SOCK version) should be used</dd>
 </dl>
 
@@ -138,7 +137,7 @@ tags:
  </li>
  <li>There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
   <ul>
-   <li><code>ProxyConfig.bindings</code> {{obsolete_inline}}</li>
+   <li><code>ProxyConfig.bindings</code> {{deprecated_inline}}</li>
   </ul>
  </li>
 </ul>
@@ -372,8 +371,8 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 <p>Returns <code>true</code> if the string matches the specified shell glob expression.</p>
 
-<p>Support for particular glob expression syntax varies across browsers: 
-  <code>*</code> (match any number of characters) and <code>?</code> (match one character) are always supported, 
+<p>Support for particular glob expression syntax varies across browsers:
+  <code>*</code> (match any number of characters) and <code>?</code> (match one character) are always supported,
   while <code>[characters]</code> and <code>[^characters]</code> are additionally supported by some implementations (including Firefox). </p>
 
 <div class="notecard note">

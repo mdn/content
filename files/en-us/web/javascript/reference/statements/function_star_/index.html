@@ -2,12 +2,13 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 tags:
-- ECMAScript 2015
-- Function
-- Iterator
-- JavaScript
-- Language feature
-- Statement
+  - ECMAScript 2015
+  - Function
+  - Iterator
+  - JavaScript
+  - Language feature
+  - Statement
+browser-compat: javascript.statements.generator_function
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -66,7 +67,7 @@ tags:
   finish (i.e. the <code>done</code> property of the object returned by it will be set to
   <code>true</code>). If a value is returned, it will be set as the <code>value</code>
   property of the object returned by the generator.<br>
-  Much like a <code>return</code> statement, an error is thrown inside the generator will
+  Much like a <code>return</code> statement, an error thrown inside the generator will
   make the generator finished -- unless caught within the generator's body.<br>
   When a generator is finished, subsequent <code>next()</code> calls will not execute any
   of that generator's code, they will just return an object of this form:
@@ -239,22 +240,11 @@ for(let power of powers(2)){
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.generator_function")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -268,7 +258,7 @@ for(let power of powers(2)){
   <li>{{jsxref("Function")}} object</li>
   <li>{{jsxref("Statements/function", "function")}} declaration</li>
   <li>{{jsxref("Operators/function", "function")}} expression</li>
-  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+  <li>{{jsxref("Functions", "Functions and function scope", "", 1)}}
   </li>
   <li>Other web resources:
     <ul>

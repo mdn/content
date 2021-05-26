@@ -129,9 +129,8 @@ tags:
 
 <p>Ubuntu Linux 20.04 LTS includes Python 3.8.5 by default. You can confirm this by running the following command in the bash terminal:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- Python 3.8.5</span>
-</pre>
+<pre class="brush: sh">python3 -V
+ Python 3.8.5</pre>
 
 <p>However, the Python Package Index tool (<em>pip3</em>) you'll need to install packages for Python 3 (including Django) is <strong>not</strong> available by default. You can install <em>pip3</em> in the bash terminal using:</p>
 
@@ -140,10 +139,10 @@ tags:
 
 <h3 id="macOS">macOS</h3>
 
-<p>macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the bash terminal:</p>
+<p>macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the zsh or bash terminal:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- </span>-bash: python3: command not found</pre>
+<pre class="brush: bash">$ python3 -V 
+  python3: command not found</pre>
 
 <p>You can easily install Python 3 (along with the <em>pip3</em> tool) from<a href="https://www.python.org/"> python.org</a>:</p>
 
@@ -164,9 +163,8 @@ tags:
 
 <p>You can now confirm successful installation by checking for the <em>Python 3</em> version as shown below:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
- Python 3.9.0</span>
-</pre>
+<pre class="brush: bash">python3 -V
+ Python 3.9.0</pre>
 
 <p>You can similarly check that <em>pip3</em> is installed by listing the available packages:</p>
 
@@ -194,14 +192,12 @@ tags:
 
 <p>You can then verify that Python 3 was installed by entering the following text into the command prompt:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">py -3 -V
- Python 3.8.6</span>
-</pre>
+<pre class="brush: bash">py -3 -V
+ Python 3.8.6</pre>
 
 <p>The Windows installer incorporates <em>pip3</em> (the Python package manager) by default. You can list installed packages as shown:</p>
 
-<pre class="brush: bash"><span style="line-height: 1.5;">pip3 list</span>
-</pre>
+<pre class="brush: bash">pip3 list</pre>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -216,7 +212,7 @@ tags:
 
 <h4 id="Ubuntu_virtual_environment_setup">Ubuntu virtual environment setup</h4>
 
-<p>After installing Python and pip you can install <em>virtualenvwrapper</em> (which includes <em>virtualenv</em>). The official installation guide can be found <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">here</a>, or follow the instructions below.</p>
+<p>After installing Python and pip you can install <em>virtualenvwrapper</em> (which includes <em>virtualenv</em>). The official installation guide can be found <a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">here</a>, or follow the instructions below.</p>
 
 <p>Install the tool using <em>pip3</em>:</p>
 
@@ -256,13 +252,14 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_detail
 
 <h4 id="macOS_virtual_environment_setup">macOS virtual environment setup</h4>
 
-<p>Setting up <em>virtualenvwrapper</em> on macOS is almost exactly the same as on Ubuntu (again, you can follow the instructions from either the <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">official installation guide</a> or below).</p>
+<p>Setting up <em>virtualenvwrapper</em> on macOS is almost exactly the same as on Ubuntu (again, you can follow the instructions from either the <a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">official installation guide</a> or below).</p>
 
 <p>Install <em>virtualenvwrapper</em> (and bundling <em>virtualenv</em>) using <em>pip</em> as shown.</p>
 
 <pre class="brush: bash">sudo pip3 install virtualenvwrapper</pre>
 
-<p>Then add the following lines to the end of your shell startup file.</p>
+<p>Then add the following lines to the end of your shell startup file (these are the same lines as for Ubuntu).
+  If you're using the <em>zsh shell</em> then the startup file will be a hidden file named <strong>.zshrc</strong> in your home directory. If you're using the <em>bash shell</em> then it will be a hidden file named <strong>.bash_profile</strong>. You may need to create the file if it does not yet exist.</p>
 
 <pre class="brush: bash">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -283,27 +280,26 @@ source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.s
   <p>You can find the correct locations for your system using the commands <code>which virtualenvwrapper.sh</code> and <code>which python3</code>.</p>
 </div>
 
-<p>These are the same lines as for Ubuntu, but the startup file is the differently named hidden file <strong>.bash_profile</strong> in your home directory.</p>
-
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>If you can't find <strong>.bash_profile</strong> to edit in the finder, you can also open this in the terminal using nano.</p>
-
-  <p>The commands look something like this:</p>
-
-  <pre><code>cd ~  # Navigate to my home directory
-ls -la #List the content of the directory. YOu should see .bash_profile
-nano .bash_profile # Open the file in the nano text editor, within the terminal
-# Scroll to the end of the file, and copy in the lines above
-# Use Ctrl+X to exit nano, Choose Y to save the file.</code>
-  </pre>
-</div>
-
 <p>Then reload the startup file by making the following call in the terminal:</p>
 
 <pre class="brush: bash">source ~/.bash_profile</pre>
 
 <p>At this point, you may see a bunch of scripts being run (the same scripts as for the Ubuntu installation). You should now be able to create a new virtual environment with the <code>mkvirtualenv</code> command.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>If you can't find the startup file to edit in the finder, you can also open this in the terminal using nano.</p>
+
+  <p>Assuming you're using bash, the commands look something like this:</p>
+
+  <pre class="brush: bash">cd ~  # Navigate to my home directory
+ls -la #List the content of the directory. YOu should see .bash_profile
+nano .bash_profile # Open the file in the nano text editor, within the terminal
+# Scroll to the end of the file, and copy in the lines above
+# Use Ctrl+X to exit nano, choose Y to save the file.</pre>
+</div>
+
+
 
 <h4 id="Windows_10_virtual_environment_setup">Windows 10 virtual environment setup</h4>
 
@@ -368,7 +364,7 @@ py -3 -m django --version
 
 <pre class="brush: bash">py -m django --version</pre>
 
-<p>In Windows <em>Python 3</em> scripts are launched by prefixing the command with <code>py -3</code>, although this can vary depending on your specific installation. Try omitting the <code>-3 </code>modifier if you encounter any problems with commands. In Linux/macOS, the command is <code>python3.</code></p>
+<p>In Windows <em>Python 3</em> scripts are launched by prefixing the command with <code>py -3</code>, although this can vary depending on your specific installation. Try omitting the <code>-3</code> modifier if you encounter any problems with commands. In Linux/macOS, the command is <code>python3.</code></p>
 </div>
 
 <div class="notecard warning">
@@ -434,7 +430,7 @@ Quit the server with CONTROL-C.
 
 <ul>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
+ <li><strong>Setting up a Django development environment</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>

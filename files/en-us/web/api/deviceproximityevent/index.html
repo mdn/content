@@ -6,19 +6,24 @@ tags:
   - Interface
   - Proximity Events
   - Reference
+  - Deprecated
 ---
 <div>{{APIRef("Proximity Events")}}{{deprecated_header}}</div>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p><code>DeviceProximityEvent</code> is not supported by any current major browser, and should not be used.</p>
+</div>
 
 <p>The <strong><code>DeviceProximityEvent</code></strong> interface provides information about the distance of a nearby physical object using the proximity sensor of a device.</p>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt>{{domxref("DeviceProximityEvent.max")}} {{readonlyinline}}</dt>
+ <dt><code>DeviceProximityEvent.max</code> {{readonlyinline}}</dt>
  <dd>The maximum sensing distance the sensor is able to report, in centimeters.</dd>
- <dt>{{domxref("DeviceProximityEvent.min")}} {{readonlyinline}}</dt>
+ <dt><code>DeviceProximityEvent.min</code> {{readonlyinline}}</dt>
  <dd>The minimum sensing distance the sensor is able to report, in centimeters. Ususally zero.</dd>
- <dt>{{domxref("DeviceProximityEvent.value")}} {{readonlyinline}}</dt>
+ <dt><code>DeviceProximityEvent.value</code> {{readonlyinline}}</dt>
  <dd>The current device proximity, in centimeters.</dd>
 </dl>
 
@@ -35,7 +40,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{event("deviceproximity")}}</li>
  <li>{{domxref("UserProximityEvent")}}</li>
  <li><a href="/en-US/docs/Web/API/Proximity_Events">Proximity API</a></li>
 </ul>

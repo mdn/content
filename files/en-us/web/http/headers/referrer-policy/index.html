@@ -51,7 +51,7 @@ Referrer-Policy: unsafe-url
  <dt><code>no-referrer</code></dt>
  <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer information is sent along with requests.</dd>
  <dt><code>no-referrer-when-downgrade</code></dt>
- <dd>Send the {{glossary("origin")}}, path, and querystring in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS. Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
+ <dd>Send the {{glossary("origin")}}, path, and querystring in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
  </dd>
  <dt><code>origin</code></dt>
  <dd>Send the {{glossary("origin")}} (only) in the {{HTTPHeader("Referer")}} header.<br>
@@ -222,8 +222,7 @@ Referrer-Policy: unsafe-url
 
 <p>Firefox preferences can be used to configure the <em>default</em> referrer policy. The preference names are version specific:</p>
 <ul>
-  <li>Firefox version 87: <code>network.http.referer.userControlPolicy</code></li>
-  <li>Firefox versions 59 to 86: <code>network.http.referer.defaultPolicy</code> (and <code>network.http.referer.defaultPolicy.pbmode</code> for private networks)</li>
+  <li>Firefox version 59 and later: <code>network.http.referer.defaultPolicy</code> (and <code>network.http.referer.defaultPolicy.pbmode</code> for private networks)</li>
   <li>Firefox versions 53 to 58: <code>network.http.referer.userControlPolicy</code></li>
 </ul>
 <p>All of these settings take the same set of values: <code>0 = no-referrer</code>, <code>1 = same-origin</code>, <code>2 = strict-origin-when-cross-origin</code>, <code>3 = no-referrer-when-downgrade</code>.</p>
@@ -255,10 +254,10 @@ Referrer-Policy: unsafe-url
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns">Web security > Referer header: privacy and security concerns</a></li> 
+ <li><a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns">Web security > Referer header: privacy and security concerns</a></li>
  <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
  <li>When using <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>: {{domxref("Request.referrerPolicy")}}</li>
- <li>The obsolete <span style="white-space: nowrap;">{{HTTPHeader("Content-Security-Policy")}}</span> {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{Obsolete_Inline}} directive.</li>
+ <li>The obsolete <span style="white-space: nowrap;">{{HTTPHeader("Content-Security-Policy")}}</span> {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.</li>
  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
  <li>
   <p><a href="https://blog.mozilla.org/security/2015/01/21/meta-referrer/">Tighter Control Over Your Referrers – Mozilla Security Blog</a></p>

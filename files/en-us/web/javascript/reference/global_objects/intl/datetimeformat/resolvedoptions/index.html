@@ -2,20 +2,21 @@
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 tags:
-- DateTimeFormat
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Method
-- Prototype
-- Reference
+  - DateTimeFormat
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 ---
 <div>{{JSRef}}</div>
 
 <p>The <code><strong>Intl.DateTimeFormat.prototype.resolvedOptions()</strong></code>
 	method returns a new object with properties reflecting the locale and date and time
-	formatting options computed during initialization of this {{jsxref("DateTimeFormat")}}
+	formatting options computed during initialization of this {{jsxref("Intl/DateTimeFormat")}}
 	object.</p>
 
 <div>
@@ -25,12 +26,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>dateTimeFormat</var>.resolvedOptions()</pre>
+<pre class="brush: js">resolvedOptions()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <p>A new object with properties reflecting the locale and date and time formatting options
-	computed during the initialization of the given {{jsxref("DateTimeFormat")}} object.
+	computed during the initialization of the given {{jsxref("Intl/DateTimeFormat")}} object.
 </p>
 
 <h2 id="Description">Description</h2>
@@ -57,15 +58,7 @@ tags:
 	<dt><code>hour12</code></dt>
 	<dd>The value provided for this property in the <code>options</code> argument or
 		filled in as a default.</dd>
-	<dt><code>weekday</code></dt>
-	<dt><code>era</code></dt>
-	<dt><code>year</code></dt>
-	<dt><code>month</code></dt>
-	<dt><code>day</code></dt>
-	<dt><code>hour</code></dt>
-	<dt><code>minute</code></dt>
-	<dt><code>second</code></dt>
-	<dt><code>timeZoneName</code></dt>
+	<dt><code>weekday</code>, <code>era</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, <code>timeZoneName</code></dt>
 	<dd>The values resulting from format matching between the corresponding properties in
 		the <code>options</code> argument and the available combinations and
 		representations for date-time formatting in the selected locale. Some of these
@@ -89,24 +82,11 @@ usedOptions.month;           // "numeric"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft',
-				'#sec-intl.datetimeformat.prototype.resolvedoptions',
-				'Intl.DateTimeFormat.prototype.resolvedOptions')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.DateTimeFormat.resolvedOptions")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
