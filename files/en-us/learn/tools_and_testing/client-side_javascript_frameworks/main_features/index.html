@@ -221,7 +221,7 @@ var header = React.createElement("header", null,
   &lt;/Home&gt;
 &lt;/App&gt;</pre>
 
-<p>Our <code>App</code> component has data that our <code>AuthorCredit</code> component needs. We could rewrite <code>Home</code> and <code>Article</code> so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: <code>Home</code> and <code>Article</code> don’t actually make use of the author's portrait or byline, but if we want to get that information into the <code>AuthorCredit</code>, we will need to change <code>Home</code> and <code>Author</code> to accommodate it.</p>
+<p>Our <code>App</code> component has data that our <code>AuthorCredit</code> component needs. We could rewrite <code>Home</code> and <code>Article</code> so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: <code>Home</code> and <code>Article</code> don’t actually make use of the author's portrait or byline, but if we want to get that information into the <code>AuthorCredit</code>, we will need to change <code>Home</code> and <code>Article</code> to accommodate it.</p>
 
 <p>The problem of passing data through many layers of components is called prop drilling, and it’s not ideal for large applications.</p>
 

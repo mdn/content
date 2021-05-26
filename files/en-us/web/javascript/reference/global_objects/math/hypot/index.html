@@ -125,8 +125,8 @@ Math.hypot(value0, value1, ... , valueN)
 
 <p><code>Math.hypot</code> also avoids overflow/underflow problems if the magnitude of
   your numbers is very large. The largest number you can represent in JS is
-  <code>Number.MAX_VALUE</code>, which is around 10<sup>308</sup>. If your numbers are
-  larger than about 10<sup>154</sup>, taking the square of them will result in Infinity.
+  <code>Number.MAX_VALUE</code>, which is around 10^308. If your numbers are
+  larger than about 10^154, taking the square of them will result in Infinity.
   For example, <code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. If you use
   <code>hypot()</code> instead, you get better answer:
   <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code> . This is also true with very

@@ -18,7 +18,7 @@ browser-compat: javascript.builtins.Number.MIN_VALUE
 
 <h2 id="Description">Description</h2>
 
-<p><code>Number.MIN_VALUE</code> is the smallest positive number (not the most negative number) that can be represented within float precision — in other words, the number closest to 0. That’s approximately <code>5e-324</code> (<code>5 × 10<sup>-324</sup></code>). The ECMAScript spec doesn’t define a precise value that implementations are required to support — instead the spec says, <em>“must be the smallest non-zero positive value that can actually be represented by the implementation”</em>. But in practice, its precise value in browsers and in Node.js is <code>2<sup>-1074</sup></code>.
+<p><code>Number.MIN_VALUE</code> is the smallest positive number (not the most negative number) that can be represented within float precision — in other words, the number closest to 0. That’s approximately <code>5E-324</code>. The ECMAScript spec doesn’t define a precise value that implementations are required to support — instead the spec says, <em>“must be the smallest non-zero positive value that can actually be represented by the implementation”</em>. But in practice, its precise value in browsers and in Node.js is <code>2^-1074</code>.
 
 <p>Because <code>MIN_VALUE</code> is a static property of {{jsxref("Number")}}, you always use it as <code>Number.MIN_VALUE</code>, rather than as a property of a {{jsxref("Number")}} object you created.</p>
 

@@ -131,7 +131,7 @@ function factorial(num) {
   The <code>squared()</code> and <code>cubed()</code> functions are fairly obvious — they return the square or cube of the number that was given as a parameter. The <code>factorial()</code> function returns the <a href="https://en.wikipedia.org/wiki/Factorial">factorial</a> of the given number.</li>
  <li>Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
   <pre class="brush: js">input.onchange = function() {
-  const num = input.value;
+  const num = parseFloat(input.value);
   if (isNaN(num)) {
     para.textContent = 'You need to enter a number!';
   } else {
@@ -191,7 +191,7 @@ function factorial(num) {
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
+ <li><strong>Function return values</strong></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
 </ul>
