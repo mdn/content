@@ -240,7 +240,7 @@ function checkACookieExists() {
 <pre class="brush: js">function checkCookieHasASpecificValue() {
   if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
     const output = document.getElementById('a-specific-value-of-the-cookie')
-    output.textContent = '>> The cookie "reader" has "1" for value'
+    output.textContent = '>> The cookie "reader" has a value of "1"'
   }
 }
 </pre>
