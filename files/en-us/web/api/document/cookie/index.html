@@ -215,24 +215,32 @@ function alertCookieValue() {
 
 function checkACookieExists() {
   if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader='))) {
-    console.log('The cookie "reader" exists')
+		const output = document.getElementById('a-cookie-existence')
+    output.textContent = '>> The cookie "reader" exists'
   }
 }
 
 </pre>
 
 <pre
-	class="brush: html">&lt;button onclick="checkACookieExists()"&gt;Check a cookie existence&lt;/button&gt;
+	class="brush: html">&lt;button onclick="checkACookieExists()"&gt;
+  Check a cookie existence
+&lt;/button&gt;
+
+&lt;div&gt;
+  &lt;code id="a-cookie-existence"&gt;&lt;/code&gt;
+&lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('Example_5_Check_a_cookie_existence', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Example_5_Check_a_cookie_existence', 200, 72)}}</p>
 
 <h3 id="Example_6_Check_that_a_cookie_has_a_specific_value">Example #6: Check that a
 	cookie has a specific value</h3>
 
 <pre class="brush: js">function checkCookieHasASpecificValue() {
   if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
-    console.log('The cookie "reader" has "1" for value')
+    const output = document.getElementById('a-specific-value-of-the-cookie')
+    output.textContent = '>> The cookie "reader" has "1" for value'
   }
 }
 </pre>
@@ -241,9 +249,13 @@ function checkACookieExists() {
 	class="brush: html">&lt;button onclick="checkCookieHasASpecificValue()"&gt;
   Check that a cookie has a specific value
 &lt;/button&gt;
+
+&lt;div&gt;
+  &lt;code id="a-specific-value-of-the-cookie"&gt;&lt;/code&gt;
+&lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('Example_6_Check_that_a_cookie_has_a_specific_value', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Example_6_Check_that_a_cookie_has_a_specific_value', 200, 72)}}</p>
 
 <h2 id="Security">Security</h2>
 
