@@ -579,9 +579,8 @@ function nonePassiveHandler(event) {
 
 <h4 id="Specifying_this_using_bind">Specifying "this" using bind()</h4>
 
-<p>The {{jsxref("Function.prototype.bind()")}} method lets you specify the value that
-  should be used as <code>this</code> for all calls to a given function. This lets you
-  easily bypass problems where it's unclear what <code>this</code> will be, depending on
+<p>The {{jsxref("Function.prototype.bind()")}} method lets you establish a fixed 
+  <code>this</code> context for all subsequent calls — bypassing problems where it's unclear what <code>this</code> will be, depending on
   the context from which your function was called. Note, however, that you'll need to keep
   a reference to the listener around so you can remove it later.</p>
 
@@ -593,11 +592,16 @@ function nonePassiveHandler(event) {
   this.onclick1 = function(event) {
     console.log(this.name); // undefined, as |this| is the element
   };
+  
   this.onclick2 = function(event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
+  
+  // bind causes a fixed `this` context to be assigned to onclick2
+  this.onclick2 = this.onclick2.bind(this);
+  
   element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
+  element.addEventListener('click', this.onclick2, false); // Trick
 }
 const s = new Something(document.body);
 </pre>
