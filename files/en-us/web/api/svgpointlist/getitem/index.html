@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The {{domxref("SVGPoint")}} at index <code>1</code> (the second item in the list) is returned.</p>
+<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The {{domxref("SVGPoint")}} at index <code>0</code>.</p>
 
 <pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;polyline id="example" stroke="black" fill="none"
@@ -44,7 +44,7 @@ tags:
 </svg></pre>
 
 <pre class="brush: js">let example = document.getElementById("example");
-console.log(example.points.getItem(1));</pre>
+console.log(example.points.getItem(0));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
