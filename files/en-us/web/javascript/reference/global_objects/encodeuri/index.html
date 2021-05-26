@@ -9,6 +9,7 @@ tags:
 - URI
 - URL
 - encodeURI
+browser-compat: javascript.builtins.encodeURI
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
@@ -19,11 +20,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -108,7 +104,7 @@ console.log(encodeURI('\uDFFF'));</pre>
 <h3 id="Encoding_for_IPv6">Encoding for IPv6</h3>
 
 <p>If one wishes to follow the more recent <a
-    href="https://tools.ietf.org/html/rfc3986">RFC3986</a> for URLs, which makes square
+    href="https://datatracker.ietf.org/doc/html/rfc3986">RFC3986</a> for URLs, which makes square
   brackets reserved (for {{glossary("IPv6")}}) and thus not encoded when forming something
   which could be part of a URL (such as a host), the following code snippet may help:</p>
 
@@ -118,22 +114,11 @@ console.log(encodeURI('\uDFFF'));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-encodeuri-uri', 'encodeURI')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.encodeURI")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -25,11 +25,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a></td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, but not containing <code>&lt;form&gt;</code> elements</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, but not containing <code>&lt;form&gt;</code> elements</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -37,7 +37,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a></td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a></td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -59,7 +59,7 @@ tags:
 <p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
- <dt>{{htmlattrdef("accept")}} {{obsolete_inline("html5")}}</dt>
+ <dt>{{htmlattrdef("accept")}} {{deprecated_inline}}</dt>
  <dd>Comma-separated <a href="/en-US/docs/Web/SVG/Content_type">content types</a> the server accepts.
  <div class="notecard note">
  <h4>Note</h4>
@@ -81,12 +81,12 @@ tags:
  <dt>{{htmlattrdef("autocomplete")}}</dt>
  <dd>Indicates whether input elements can by default have their values automatically completed by the browser. <code>autocomplete</code> attributes on form elements override it on <code>&lt;form&gt;</code>. Possible values:
  <ul>
-  <li><code>off</code>: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">The autocomplete attribute and login fields</a>.)</li>
+  <li><code>off</code>: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields">The autocomplete attribute and login fields</a>.)</li>
   <li><code>on</code>: The browser may automatically complete entries.</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>The name of the form. Deprecated as of HTML 4 (use <code>id</code> instead). It must be unique among the forms in a document and not an empty string as of HTML5.</dd>
+ <dd>The name of the form. The value must not be the empty string, and must be unique among the <code>form</code> elements in the forms collection that it is in, if any.</dd>
  <dt>{{htmlattrdef("rel")}}</dt>
  <dd>Creates a hyperlink or annotation depending on the value, see the <a href="/en-US/docs/Web/HTML/Attributes/rel">{{htmlattrdef("rel")}}</a> attribute for details.</dd>
 </dl>
@@ -131,7 +131,7 @@ tags:
 
  <p>This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> element.</p>
  <div class="notecard note">
- <h4>Note</h4> 
+ <h4>Note</h4>
  <p>Setting <code>target="_blank"</code> on <code>&lt;form&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code><a href="/en-US/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> which does not set <code>window.opener</code>.</p>
  </div>
  </dd>

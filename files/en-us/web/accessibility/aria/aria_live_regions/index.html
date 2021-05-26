@@ -96,7 +96,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 });
 </pre>
 
-<p>{{EmbedLiveSample('Dropdown_box_updates_useful_onscreen_information', '', 350)}}</p>
+<p>{{EmbedLiveSample('Basic_example_Dropdown_box_updates_useful_onscreen_information', '', 350)}}</p>
 
 <p>As the user selects a new planet, the information in the live region will be announced. Because the live region has <code>aria-live="polite"</code>, the screen reader will wait until the user pauses before announcing the update. Thus, moving down in the list and selecting another planet will not announce updates in the live region. Updates in the live region will only be announced for the planet finally chosen.</p>
 
@@ -156,7 +156,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <p>General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).</p>
 
-<p>The Paciello Group has some <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">information about the state of the support of Live Regions </a>(2014). Paul J. Adam has researched <a href="http://pauljadam.com/demos/aria-atomic-relevant.html">the support of <code>aria-atomic</code> and <code>aria-relevant</code></a> in particular.</p>
+<p>The Paciello Group has some <a href="https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/">information about the state of the support of Live Regions </a>(2014). Paul J. Adam has researched <a href="https://pauljadam.com/demos/aria-atomic-relevant.html">the support of <code>aria-atomic</code> and <code>aria-relevant</code></a> in particular.</p>
 
 <ol>
  <li><code><strong>aria-atomic</strong></code>: The <code>aria-atomic=BOOLEAN</code> is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: <code>false</code> or <code>true</code>. The default setting is <code>false</code>.</li>
@@ -206,7 +206,7 @@ setInterval(updateClock, 60000);
 &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;div id="date-output" aria-live="polite"&gt;
+&lt;div id="date-output" aria-atomic="true" aria-live="polite"&gt;
 The set year is:
 &lt;span id="year-output"&gt;1990&lt;/span&gt;
 &lt;/div&gt;</pre>
@@ -224,7 +224,7 @@ function change(event) {
   }
 };</pre>
 
-<p>Without <code>aria-atomic="true" </code>the screenreader announces only the changed value of year. With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changed value</em>"</p>
+<p>Without <code>aria-atomic="true"</code> the screenreader announces only the changed value of year. With <code>aria-atomic="true"</code>, the screenreader announces "The set year is: <em>changed value</em>"</p>
 
 <h3 id="basic-example-aria-relevant">Basic example: <code>aria-relevant</code></h3>
 

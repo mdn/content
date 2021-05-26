@@ -2,15 +2,15 @@
 title: Request.context
 slug: Web/API/Request/context
 tags:
-- API
-- Context
-- Experimental
-- Fetch
-- Property
-- Reference
-- request
+  - API
+  - Context
+  - Experimental
+  - Fetch
+  - Property
+  - Reference
+  - request
 ---
-<div>{{APIRef("Fetch")}}{{deprecated_header()}}</div>
+<div>{{APIRef("Fetch")}}{{Deprecated_Header}}</div>
 
 <p><span class="seoSummary">The deprecated <strong><code>context</code></strong> read-only
     property of the {{domxref("Request")}} interface contains the context of the Request
@@ -19,7 +19,7 @@ tags:
   {{domxref("Request.destination", "destination")}} property.</p>
 
 <p>The context of a request is only relevant in the <a
-    href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>; a service worker
+    href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a>; a service worker
   can make decisions based on whether the URL is for an image, or an embeddable object
   such as a {{htmlelement("video")}}, {{domxref("iframe")}}, etc.</p>
 
@@ -55,8 +55,8 @@ var myContext = myRequest.context; // returns the empty string by default</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

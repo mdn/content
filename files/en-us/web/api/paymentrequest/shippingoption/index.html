@@ -2,16 +2,16 @@
 title: PaymentRequest.shippingOption
 slug: Web/API/PaymentRequest/shippingOption
 tags:
-- API
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Property
-- Reference
-- Secure context
-- shippingOption
+  - API
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Reference
+  - Secure context
+  - shippingOption
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p>The <strong><code>shippingOption</code></strong> read-only attribute of
   the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
@@ -27,8 +27,8 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code>// Returns the id of the selected PaymentShippingOption
-var shippingOption = request.shippingOption; </code></pre>
+<pre class="brush: js">// Returns the id of the selected PaymentShippingOption
+var shippingOption = request.shippingOption; </pre>
 
 <h2 id="Example">Example</h2>
 
@@ -68,23 +68,6 @@ async function checkShipping(request) {
   }
 }
 </pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#shippingoption-attribute','shippingOption')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

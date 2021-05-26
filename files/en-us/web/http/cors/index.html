@@ -58,8 +58,6 @@ tags:
 
 <p>We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("XMLHttpRequest")}}, which can make cross-site requests in any supporting browser.</p>
 
-<p>A discussion of Cross-Origin Resource Sharing from a server perspective (including PHP code snippets) can be found in the <a class="internal" href="/en-US/docs/Web/HTTP/CORS">Server-Side Access Control (CORS)</a> article.</p>
-
 <h3 id="Simple_requests">Simple requests</h3>
 
 <p>Some requests don’t trigger a <a href="#preflighted_requests">CORS preflight</a>. Those are called <em>“simple requests”</em> in this article, though the {{SpecName('Fetch')}} spec (which defines CORS) doesn’t use that term. A “simple request” is one that <strong>meets all the following conditions</strong>:</p>
@@ -87,14 +85,13 @@ tags:
    <li><code>text/plain</code></li>
   </ul>
  </li>
- <li>No event listeners are registered on any {{domxref("XMLHttpRequest.upload")}} object used in the request; these are accessed using the {{domxref("XMLHttpRequest.upload")}} property.</li>
+ <li>If the request is made using an {{domxref("XMLHttpRequest")}} object, no event listeners are registered on the object returned by the {{domxref("XMLHttpRequest.upload")}} property used in the request; that is, given an {{domxref("XMLHttpRequest")}} instance <code>xhr</code>, no code has called <code>xhr.upload.addEventListener()</code> to add an event listener to monitor the upload.</li>
  <li>No {{domxref("ReadableStream")}} object is used in the request.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.</div>
-
-<div class="note">
-<p><strong>Note:</strong> WebKit Nightly and Safari Technology Preview place additional restrictions on the values allowed in the {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, and {{HTTPHeader("Content-Language")}} headers. If any of those headers have ”nonstandard” values, WebKit/Safari does not consider the request to be a “simple request”. What values WebKit/Safari consider “nonstandard” is not documented, except in the following WebKit bugs:</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>WebKit Nightly and Safari Technology Preview place additional restrictions on the values allowed in the {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, and {{HTTPHeader("Content-Language")}} headers. If any of those headers have ”nonstandard” values, WebKit/Safari does not consider the request to be a “simple request”. What values WebKit/Safari consider “nonstandard” is not documented, except in the following WebKit bugs:</p>
 
 <ul>
  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></li>
@@ -153,7 +150,10 @@ Content-Type: application/xml
 <pre><code class="plain">Access-Control-Allow-Origin: https://foo.example</code>
 </pre>
 
-<div class="note"><strong>Note:</strong> When responding to a <a href="#requests_with_credentials">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>When responding to a <a href="#requests_with_credentials">credentialed requests</a> request, the server <strong>must</strong> specify an origin in the value of the <code>Access-Control-Allow-Origin</code> header, instead of specifying the "<code>*</code>" wildcard.</p>
+</div>
 
 <h3 id="Preflighted_requests">Preflighted requests</h3>
 
@@ -174,7 +174,8 @@ xhr.send('&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;');
 <p><img alt="" src="preflight_correct.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: As described below, the actual <code>POST</code> request does not include the <code>Access-Control-Request-*</code> headers; they are needed only for the <code>OPTIONS</code> request.</p>
+  <h4>Note</h4>
+  <p>As described below, the actual <code>POST</code> request does not include the <code>Access-Control-Request-*</code> headers; they are needed only for the <code>OPTIONS</code> request.</p>
 </div>
 
 <p>Let's look at the full exchange between client and server. The first exchange is the <em>preflight request/response</em>:</p>
@@ -289,7 +290,8 @@ Content-Type: text/plain
 <h3 id="Requests_with_credentials">Requests with credentials</h3>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced independent of any setup on the server and the client, as described in this chapter.</p>
+  <h4>Note</h4>
+  <p>When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced independent of any setup on the server and the client, as described in this chapter.</p>
 </div>
 
 <p>The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> and CORS is the ability to make "credentialed" requests that are aware of <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> and HTTP Authentication information. By default, in cross-site <code>XMLHttpRequest</code> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> invocations, browsers will <strong>not</strong> send credentials. A specific flag has to be set on the <code>XMLHttpRequest</code> object or the {{domxref("Request")}} constructor when it is invoked.</p>
@@ -344,6 +346,16 @@ Content-Type: text/plain
 </pre>
 
 <p>Although line 10 contains the Cookie destined for the content on <code class="plain">http://bar.other</code>, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> (line 17) the response would be ignored and not made available to web content.</p>
+
+<h4 id="Preflight_requests_and_credentials">Preflight requests and credentials</h4>
+
+<p>CORS-preflight requests must never include credentials. The <em>response</em> to a preflight request must specify <code>Access-Control-Allow-Credentials: true</code> to indicate that the actual request can be made with credentials.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Some enterprise authentication services require TLS client certificates be sent in preflight requests, in contravention of the {{SpecName("Fetch","#cors-protocol-and-credentials")}} specification.</p>
+  <p>Firefox 87 allows this non-compliant behavior to be enabled by setting the preference: <code>network.cors_preflight.allow_client_cert</code> to <code>true</code> ({{bug(1511151)}}). Chromium-based browsers currently always send TLS client certificates in CORS preflight requests (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=775438">Chrome bug 775438</a>).</p>
+</div>
 
 <h4 id="Credentialed_requests_and_wildcards">Credentialed requests and wildcards</h4>
 
@@ -406,7 +418,7 @@ Vary: Origin</pre>
 
 <h3 id="Access-Control-Allow-Credentials">Access-Control-Allow-Credentials</h3>
 
-<p>The {{HTTPHeader("Access-Control-Allow-Credentials")}} header Indicates whether or not the response to the request can be exposed when the <code>credentials</code> flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple <code>GET</code> requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.</p>
+<p>The {{HTTPHeader("Access-Control-Allow-Credentials")}} header indicates whether or not the response to the request can be exposed when the <code>credentials</code> flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple <code>GET</code> requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.</p>
 
 <pre class="brush: none">Access-Control-Allow-Credentials: true
 </pre>
@@ -440,9 +452,12 @@ Vary: Origin</pre>
 <pre class="brush: none">Origin: &lt;origin&gt;
 </pre>
 
-<p>The origin is a URI indicating the server from which the request initiated. It does not include any path information, but only the server name.</p>
+<p>The origin is a URL indicating the server from which the request initiated. It does not include any path information, but only the server name.</p>
 
-<div class="note"><strong>Note:</strong> The <code>origin</code> value can be <code>null</code>, or a URI.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The <code>origin</code> value can be <code>null</code>.</p>
+</div>
 
 <p>Note that in any access control request, the {{HTTPHeader("Origin")}} header is <strong>always</strong> sent.</p>
 

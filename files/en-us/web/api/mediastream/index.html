@@ -13,7 +13,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>MediaStream</code></strong> interface represents a stream of media content. A stream consists of several <strong>tracks</strong> such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.</span>You can obtain a MediaStream object either by using the constructor or by calling {{domxref("MediaDevices.getUserMedia()")}}.</p>
 
-<p>Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStream")}}.</p>
+<p>Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -29,7 +29,7 @@ tags:
 <dl>
  <dt>{{domxref("MediaStream.active")}} {{readonlyinline}}</dt>
  <dd>A Boolean value that returns <code>true</code> if the <code>MediaStream</code> is active, or <code>false</code> otherwise.</dd>
- <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}} {{obsolete_inline()}}</dt>
+ <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>A Boolean value set to <code>true</code> if the end of the stream has been reached. This has been removed from the specification; you should instead check the value of {{domxref("MediaStreamTrack.readyState")}} to see if its value is <code>ended</code> for the track or tracks you want to ensure have finished playing.</dd>
 </dl>
 

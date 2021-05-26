@@ -2,17 +2,17 @@
 title: PaymentRequest.onshippingaddresschange
 slug: Web/API/PaymentRequest/onshippingaddresschange
 tags:
-- API
-- Event Handler
-- Experimental
-- Payment Request
-- Payment Request API
-- Property
-- Reference
-- Secure context
-- onshippingaddresschange
+  - API
+  - Event Handler
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - Secure context
+  - onshippingaddresschange
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p>The <strong><code>onshippingaddresschange</code></strong> event of the
   {{domxref("PaymentRequest")}} interface is fired whenever the user changes their
@@ -21,9 +21,9 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><code>PaymentRequest.addEventListener('shippingaddresschange', shippingAddressChangeEvent =&gt; { ... });
+  class="brush: js">PaymentRequest.addEventListener('shippingaddresschange', shippingAddressChangeEvent =&gt; { ... });
 
-PaymentRequest.onshippingaddresschange = function(shippingAddressChangeEvent) { ... };</code></pre>
+PaymentRequest.onshippingaddresschange = function(shippingAddressChangeEvent) { ... };</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,24 +49,6 @@ payment.show().then(function(paymentResponse) {
   console.error("Uh oh, something bad happened", err.message);
 });
 </pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment', '#onshippingaddresschange-attribute',
-        'onshippingaddresschange')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

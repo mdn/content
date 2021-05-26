@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</span> The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among <a href="/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.</p>
+<p><span class="seoSummary">The <strong><code>Document</code></strong> interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the <a href="/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">DOM tree</a>.</span> The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement("table")}}, among <a href="/en-US/docs/Web/HTML/Element">many others</a>. It provides functionality globally to the document, like how to obtain the page's URL and create new elements in the document.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
-<p>The <code>Document</code> interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g. <a href="/en-US/docs/HTML">HTML</a>, <a href="/en-US/docs/XML">XML</a>, SVG, …), a larger API is available: HTML documents, served with the <code>"text/html"</code> content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.</p>
+<p>The <code>Document</code> interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g. <a href="/en-US/docs/Web/HTML">HTML</a>, <a href="/en-US/docs/Web/XML">XML</a>, SVG, …), a larger API is available: HTML documents, served with the <code>"text/html"</code> content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -34,6 +34,10 @@ tags:
  <dd>Returns the {{HTMLElement("body")}} or {{htmlelement("frameset")}} node of the current document.</dd>
  <dt>{{DOMxRef("Document.characterSet")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the character set being used by the document.</dd>
+ <dt>{{domxref("Document.childElementCount")}} {{readonlyInline}}</dt>
+ <dd>Returns the number of child elements of the current document.</dd>
+ <dt>{{domxref("Document.children")}} {{readonlyInline}}</dt>
+ <dd>Returns the child elements of the current document.</dd>
  <dt>{{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Indicates whether the document is rendered in <em>quirks</em> or <em>strict</em> mode.</dd>
  <dt>{{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
@@ -46,10 +50,14 @@ tags:
  <dd>Returns the document location as a string.</dd>
  <dt>{{DOMxRef("Document.embeds")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the embedded {{HTMLElement('embed')}} elements within the current document.</dd>
+ <dt>{{domxref("Document.firstElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the first child element of the current document.</dd>
  <dt>{{DOMxRef("Document.fonts")}}</dt>
  <dd>Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.</dd>
  <dt>{{DOMxRef("Document.forms")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the {{HTMLElement("form")}} elements within the current document.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}</dt>
+ <dd>The element that's currently in full screen mode for this document.</dd>
  <dt>{{DOMxRef("Document.head")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the {{HTMLElement("head")}} element of the current document.</dd>
  <dt>{{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}</dt>
@@ -58,31 +66,33 @@ tags:
  <dd>Returns a list of the images in the current document.</dd>
  <dt>{{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}</dt>
  <dd>Returns the DOM implementation associated with the current document.</dd>
+ <dt>{{domxref("Document.lastElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the last child element of the current document.</dd>
  <dt>{{DOMxRef("Document.links")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of all the hyperlinks in the document.</dd>
  <dt>{{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}</dt>
  <dd>Returns a {{JSxRef("Boolean")}} that is <code>true</code> only if this document is synthetic, such as a standalone image, video, audio file, or the like.</dd>
- <dt>{{DOMxRef("Document.pictureInPictureEnabled")}}{{ReadOnlyInline}}</dt>
- <dd>Returns true if the picture-in-picture feature is enabled</dd>
+ <dt>{{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the {{DOMxRef('Element')}} currently being presented in picture-in-picture mode in this document.</dd>
+ <dt>{{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns true if the picture-in-picture feature is enabled.</dd>
  <dt>{{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the available plugins.</dd>
+ <dt>{{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
  <dt>{{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.</dd>
  <dt>{{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}</dt>
  <dd>Returns all the {{HTMLElement("script")}} elements on the document.</dd>
  <dt>{{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a reference to the {{DOMxRef("Element")}} that scrolls the document.</dd>
+ <dt>{{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}</dt>
+ <dd>Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
  <dt>{{DOMxRef("Document.timeline")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns timeline as a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.</dd>
- <dt>{{DOMxRef("Document.undoManager")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>…</dd>
  <dt>{{DOMxRef("Document.visibilityState")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a <code>string</code> denoting the visibility state of the document. Possible values are <code>visible</code>, <code>hidden</code>, <code>prerender</code>, and <code>unloaded</code>.</dd>
 </dl>
-
-<p>The <code>Document</code> interface is extended with the {{DOMxRef("ParentNode")}} interface:</p>
-
-<p>{{page("/en-US/docs/Web/API/ParentNode","Properties")}}</p>
 
 <h3 id="Extensions_for_HTMLDocument">Extensions for HTMLDocument</h3>
 
@@ -113,19 +123,6 @@ tags:
  <dd>Returns the document location as a string.</dd>
 </dl>
 
-<h3 id="Properties_included_from_DocumentOrShadowRoot">Properties included from DocumentOrShadowRoot</h3>
-
-<p><em>The <code>Document</code> interface includes the following properties defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them directly on the {{DOMxRef("Document")}} interface.</em></p>
-
-<dl>
- <dt>{{DOMxRef("Document.fullscreenElement")}}{{ReadOnlyInline}}</dt>
- <dd>The element that's currently in full screen mode for this document.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.pointerLockElement")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
- <dd>Returns the element set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another document.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef('StyleSheetList')}} of {{DOMxRef('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a document.</dd>
-</dl>
-
 <h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
@@ -145,7 +142,7 @@ tags:
  <dd>Represents the event handling code for the {{event("paste")}} event.</dd>
  <dt>{{DOMxRef("Document.onreadystatechange")}}</dt>
  <dd>Represents the event handling code for the {{event("readystatechange")}} event.</dd>
- <dt>{{DOMxRef("Document.onselectionchange")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}</dt>
  <dd>Is an {{DOMxRef("EventHandler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
  <dt>{{DOMxRef("Document.onvisibilitychange")}}</dt>
  <dd>Is an {{DOMxRef("EventHandler")}} representing the code to be called when the {{event("visibilitychange")}} event is raised.</dd>
@@ -174,33 +171,33 @@ tags:
  <dd>Should return a {{DOMxRef("DOMConfiguration")}} object.</dd>
  <dt>{{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the foreground color, or text color, of the current document.</dd>
- <dt>{{DOMxRef("Document.fullscreen")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.fullscreen")}} {{deprecated_inline}}</dt>
  <dd><code>true</code> when the document is in {{DOMxRef("Using_full-screen_mode","full-screen mode")}}.</dd>
- <dt>{{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.height")}} {{Non-standard_Inline}} {{deprecated_inline}}</dt>
  <dd>Gets/sets the height of the current document.</dd>
  <dt>{{DOMxRef("Document.inputEncoding")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.</dd>
- <dt>{{DOMxRef("Document.lastStyleSheetSet")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.lastStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the name of the style sheet set that was last enabled. Has the value <code>null</code> until the style sheet is changed by setting the value of {{DOMxRef("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.</dd>
  <dt>{{DOMxRef("Document.linkColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the color of hyperlinks in the document.</dd>
- <dt>{{DOMxRef("Document.preferredStyleSheetSet")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.preferredStyleSheetSet")}} {{deprecated_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns the preferred style sheet set as specified by the page author.</dd>
  <dt>{{DOMxRef("Document.rootElement")}} {{Deprecated_Inline}}</dt>
  <dd>Like {{DOMxRef("Document.documentElement")}}, but only for {{SVGElement("svg")}} root elements. Use this property instead.</dd>
- <dt>{{DOMxRef("Document.selectedStyleSheetSet")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.selectedStyleSheetSet")}} {{deprecated_inline}}</dt>
  <dd>Returns which style sheet set is currently in use.</dd>
- <dt>{{DOMxRef("Document.styleSheetSets")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("Document.styleSheetSets")}} {{deprecated_inline}}{{ReadOnlyInline}}</dt>
  <dd>Returns a list of the style sheet sets available on the document.</dd>
  <dt>{{DOMxRef("Document.vlinkColor")}} {{Deprecated_Inline}}</dt>
  <dd>Gets/sets the color of visited hyperlinks.</dd>
- <dt>{{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.width")}} {{Non-standard_Inline}} {{deprecated_inline}}</dt>
  <dd>Returns the width of the current document.</dd>
  <dt>{{DOMxRef("Document.xmlEncoding")}} {{Deprecated_Inline}}</dt>
  <dd>Returns the encoding as determined by the XML declaration.</dd>
- <dt>{{DOMxRef("Document.xmlStandalone")}} {{Obsolete_Inline("Gecko10")}}</dt>
+ <dt>{{DOMxRef("Document.xmlStandalone")}} {{deprecated_inline}}</dt>
  <dd>Returns <code>true</code> if the XML declaration specifies the document to be standalone (<em>e.g.,</em> An external part of the DTD affects the document's content), else <code>false</code>.</dd>
- <dt>{{DOMxRef("Document.xmlVersion")}} {{Obsolete_Inline("Gecko10")}}</dt>
+ <dt>{{DOMxRef("Document.xmlVersion")}} {{deprecated_inline}}</dt>
  <dd>Returns the version number as specified in the XML declaration or <code>"1.0"</code> if the declaration is absent.</dd>
 </dl>
 
@@ -211,8 +208,12 @@ tags:
 <dl>
  <dt>{{DOMxRef("Document.adoptNode()")}}</dt>
  <dd>Adopt node from an external document.</dd>
+ <dt>{{DOMxRef("Document.append()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the document.</dd>
  <dt>{{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}</dt>
  <dd>See {{DOMxRef("Window.captureEvents")}}.</dd>
+ <dt>{{DOMxRef("Document.caretPositionFromPoint()")}}</dt>
+ <dd>Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
  <dt>{{DOMxRef("Document.caretRangeFromPoint()")}} {{Non-standard_Inline}}</dt>
  <dd>Gets a {{DOMxRef("Range")}} object for the document fragment under the specified coordinates.</dd>
  <dt>{{DOMxRef("Document.createAttribute()")}}</dt>
@@ -229,7 +230,7 @@ tags:
  <dd>Creates a new element with the given tag name.</dd>
  <dt>{{DOMxRef("Document.createElementNS()")}}</dt>
  <dd>Creates a new element with the given tag name and namespace URI.</dd>
- <dt>{{DOMxRef("Document.createEntityReference()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.createEntityReference()")}} {{deprecated_inline}}</dt>
  <dd>Creates a new entity reference object and returns it.</dd>
  <dt>{{DOMxRef("Document.createEvent()")}}</dt>
  <dd>Creates an event object.</dd>
@@ -247,52 +248,59 @@ tags:
  <dd>Creates a {{DOMxRef("TouchList")}} object.</dd>
  <dt>{{DOMxRef("Document.createTreeWalker()")}}</dt>
  <dd>Creates a {{DOMxRef("TreeWalker")}} object.</dd>
- <dt>{{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.elementFromPoint()")}}</dt>
+ <dd>Returns the topmost element at the specified coordinates.</dd>
+ <dt>{{DOMxRef("Document.elementsFromPoint()")}}</dt>
+ <dd>Returns an array of all elements at the specified coordinates.</dd>
+ <dt>{{DOMxRef("Document.enableStyleSheetsForSet()")}} {{deprecated_inline}}</dt>
  <dd>Enables the style sheets for the specified style sheet set.</dd>
  <dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
  <dd>Remove the video from the floating picture-in-picture window back to its original container.</dd>
  <dt>{{DOMxRef("Document.exitPointerLock()")}} {{Experimental_Inline}}</dt>
  <dd>Release the pointer lock.</dd>
+ <dt>{{DOMxRef("Document.getAnimations()")}}</dt>
+ <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the <code>document</code>.</dd>
+ <dt>{{DOMxRef("Document.getElementById")}}</dt>
+ <dd>Returns an object reference to the identified element.</dd>
  <dt>{{DOMxRef("Document.getElementsByClassName()")}}</dt>
  <dd>Returns a list of elements with the given class name.</dd>
  <dt>{{DOMxRef("Document.getElementsByTagName()")}}</dt>
  <dd>Returns a list of elements with the given tag name.</dd>
  <dt>{{DOMxRef("Document.getElementsByTagNameNS()")}}</dt>
  <dd>Returns a list of elements with the given tag name and namespace.</dd>
+ <dt>{{DOMxRef("Document.getSelection()")}}</dt>
+ <dd>Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
  <dt>{{DOMxRef("Document.hasStorageAccess()")}} {{Experimental_Inline}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.</dd>
  <dt>{{DOMxRef("Document.importNode()")}}</dt>
  <dd>Returns a clone of a node from an external document.</dd>
- <dt>{{DOMxRef("Document.normalizeDocument()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.normalizeDocument()")}} {{deprecated_inline}}</dt>
  <dd>Replaces entities, normalizes text nodes, etc.</dd>
- <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}} {{gecko_minversion_inline("2.0")}}</dt>
- <dd>Releases the current mouse capture if it's on an element in this document.</dd>
- <dt>{{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>See {{DOMxRef("Window.releaseEvents()")}}.</dd>
- <dt>{{DOMxRef("Document.requestStorageAccess()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.</dd>
- <dt>{{DOMxRef("Document.routeEvent()")}} {{Non-standard_Inline}} {{Obsolete_Inline("Gecko24")}}</dt>
- <dd>See {{DOMxRef("Window.routeEvent()")}}.</dd>
- <dt>{{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}</dt>
- <dd>Allows you to change the element being used as the background image for a specified element ID.</dd>
-</dl>
-
-<p>The <code>Document</code> interface is extended with the {{DOMxRef("ParentNode")}} interface:</p>
-
-<dl>
- <dt>{{DOMxRef("Document.getElementById","document.getElementById(String id)")}}</dt>
- <dd>Returns an object reference to the identified element.</dd>
+ <dt>{{DOMxRef("Document.prepend()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the document.</dd>
  <dt>{{DOMxRef("Document.querySelector()")}}</dt>
  <dd>Returns the first Element node within the document, in document order, that matches the specified selectors.</dd>
  <dt>{{DOMxRef("Document.querySelectorAll()")}}</dt>
  <dd>Returns a list of all the Element nodes within the document that match the specified selectors.</dd>
+ <dt>{{DOMxRef("Document.releaseCapture()")}} {{Non-standard_Inline}}</dt>
+ <dd>Releases the current mouse capture if it's on an element in this document.</dd>
+ <dt>{{DOMxRef("Document.releaseEvents()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
+ <dd>See {{DOMxRef("Window.releaseEvents()")}}.</dd>
+ <dt>{{DOMxRef("Document.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a document with a specified new set of children.</dd>
+ <dt>{{DOMxRef("Document.requestStorageAccess()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.</dd>
+ <dt>{{DOMxRef("Document.routeEvent()")}} {{Non-standard_Inline}} {{deprecated_inline}}</dt>
+ <dd>See {{DOMxRef("Window.routeEvent()")}}.</dd>
+ <dt>{{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}</dt>
+ <dd>Allows you to change the element being used as the background image for a specified element ID.</dd>
 </dl>
 
 <p>The <code>Document</code> interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:</p>
 
 <dl>
  <dt>{{DOMxRef("Document.createExpression()")}}</dt>
- <dd>Compiles an <code><a href="/en-US/docs/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
+ <dd>Compiles an <code><a href="/en-US/docs/Web/API/XPathExpression">XPathExpression</a></code> which can then be used for (repeated) evaluations.</dd>
  <dt>{{DOMxRef("Document.createNSResolver()")}}</dt>
  <dd>Creates an {{DOMxRef("XPathNSResolver")}} object.</dd>
  <dt>{{DOMxRef("Document.evaluate()")}}</dt>
@@ -308,7 +316,7 @@ tags:
  <dd>In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.</dd>
  <dt>{{DOMxRef("Document.close()")}}</dt>
  <dd>Closes a document stream for writing.</dd>
- <dt>{{DOMxRef("Document.execCommand()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.execCommand()")}} {{deprecated_inline}}</dt>
  <dd>On an editable document, executes a formatting command.</dd>
  <dt>{{DOMxRef("Document.getElementsByName()")}}</dt>
  <dd>Returns a list of elements with the given name.</dd>
@@ -316,37 +324,20 @@ tags:
  <dd>Returns <code>true</code> if the focus is currently located anywhere inside the specified document.</dd>
  <dt>{{DOMxRef("Document.open()")}}</dt>
  <dd>Opens a document stream for writing.</dd>
- <dt>{{DOMxRef("Document.queryCommandEnabled()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandEnabled()")}} {{deprecated_inline}}</dt>
  <dd>Returns true if the formatting command can be executed on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandIndeterm()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandIndeterm()")}} {{deprecated_inline}}</dt>
  <dd>Returns true if the formatting command is in an indeterminate state on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandState()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandState()")}} {{deprecated_inline}}</dt>
  <dd>Returns true if the formatting command has been executed on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandSupported()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandSupported()")}} {{deprecated_inline}}</dt>
  <dd>Returns true if the formatting command is supported on the current range.</dd>
- <dt>{{DOMxRef("Document.queryCommandValue()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandValue()")}} {{deprecated_inline}}</dt>
  <dd>Returns the current value of the current range for a formatting command.</dd>
  <dt>{{DOMxRef("Document.write()")}}</dt>
  <dd>Writes text in a document.</dd>
  <dt>{{DOMxRef("Document.writeln()")}}</dt>
  <dd>Writes a line of text in a document.</dd>
-</dl>
-
-<h3 id="Methods_included_from_DocumentOrShadowRoot">Methods included from DocumentOrShadowRoot</h3>
-
-<p><em>The <code>Document</code> interface includes the following methods defined on the {{DOMxRef("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{DOMxRef("Document")}} interface.</em></p>
-
-<dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
- <dd>Returns a {{DOMxRef('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}</dt>
- <dd>Returns the topmost element at the specified coordinates.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.elementsFromPoint()")}}</dt>
- <dd>Returns an array of all elements at the specified coordinates.</dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.getAnimations()")}} {{Experimental_Inline}}</dt>
- <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the <code>document</code></dd>
- <dt>{{DOMxRef("DocumentOrShadowRoot.getSelection()")}}</dt>
- <dd>Returns a {{DOMxRef('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -428,7 +419,7 @@ tags:
  <dt>{{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}</dt>
  <dd>Fired when the <code>Document</code> transitions into or out of <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">full-screen</a> mode.<br>
  Also available via the {{DOMxRef("Document.onfullscreenchange", "onfullscreenchange")}} property.</dd>
- <dt><code><a href="/en-US/docs/Web/Events/fullscreenerror">fullscreenerror</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/Document/fullscreenerror_event">fullscreenerror</a></code></dt>
  <dd>Fired if an error occurs while attempting to switch into or out of <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">full-screen</a> mode.<br>
  Also available via the  {{DOMxRef("Document.onfullscreenerror", "onfullscreenerror")}} property.</dd>
 </dl>
@@ -464,7 +455,7 @@ tags:
  <dd>Fired when an element captures a pointer using <code><a href="/en-US/docs/Web/API/Element/setPointerCapture">setPointerCapture()</a></code>.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} property.</dd>
  <dt>{{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#Pointer_capture">captured pointer</a> is released.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/API/Pointer_events#pointer_capture">captured pointer</a> is released.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} property.</dd>
  <dt>{{DOMxRef("Document/pointercancel_event", "pointercancel")}}</dt>
  <dd>Fired when a pointer event is canceled.<br>
@@ -530,16 +521,16 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is canceled.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}} property.</dd>
  <dt>{{DOMxRef("Document/transitionend_event", "transitionend")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has completed.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}} property.</dd>
  <dt>{{DOMxRef("Document/transitionrun_event", "transitionrun")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is first created.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property.</dd>
  <dt>{{DOMxRef("Document/transitionstart_event", "transitionstart")}}</dt>
- <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
+ <dd>Fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has actually started.<br>
  Also available via the {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} property.</dd>
 </dl>
 
@@ -565,13 +556,13 @@ tags:
 <p>Mozilla also define some non-standard methods:</p>
 
 <dl>
- <dt>{{DOMxRef("Document.execCommandShowHelp()")}}{{Obsolete_Inline("Gecko14")}}</dt>
+ <dt>{{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}</dt>
  <dd>This method never did anything and always threw an exception, so it was removed in Gecko 14.0 {{geckoRelease("14.0")}}.</dd>
- <dt>{{DOMxRef("Document.getBoxObjectFor()")}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}</dt>
  <dd>Use the {{DOMxRef("Element.getBoundingClientRect()")}} method instead.</dd>
- <dt>{{DOMxRef("Document.loadOverlay()")}}{{Obsolete_Inline("Gecko61")}}</dt>
+ <dt>{{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}</dt>
  <dd>Loads a <a href="/en-US/docs/XUL_Overlays">XUL overlay</a> dynamically. This only works in XUL documents.</dd>
- <dt>{{DOMxRef("Document.queryCommandText()")}}{{Obsolete_Inline("Gecko14")}}</dt>
+ <dt>{{DOMxRef("Document.queryCommandText()")}} {{deprecated_inline}}</dt>
  <dd>This method never did anything but throw an exception, and was removed in Gecko 14 {{GeckoRelease("14")}}.</dd>
 </dl>
 
@@ -580,7 +571,7 @@ tags:
 <p>Microsoft defines some non-standard properties:</p>
 
 <dl>
- <dt>{{DOMxRef("Document.fileSize")}}* {{Non-standard_Inline}} {{Obsolete_Inline}}</dt>
+ <dt>{{DOMxRef("Document.fileSize")}}* {{Non-standard_Inline}} {{deprecated_inline}}</dt>
  <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="https://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
 </dl>
 

@@ -10,16 +10,17 @@ tags:
 
 <p>To start, you need to create an {{domxref("XSLTProcessor")}} object:</p>
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var processor = new XSLTProcessor();
-</pre>
-</div>
+
+<pre class="brush: js">var processor = new XSLTProcessor();</pre>
 
 <h3 id="Specifying_the_stylesheet">Specifying the stylesheet</h3>
 
 <p>Before you can use it, you must import a stylesheet with the {{domxref("XSLTProcessor.importStylesheet()")}} method. It has a single parameter, which is the DOM Node of the XSLT stylesheet to import.</p>
 
-<p>{{ note("The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.</p>
+</div>
 
 <pre class="brush: js">var testTransform = document.implementation.createDocument("", "test", null);
 // just an example to get a transform into a script as a DOM
@@ -77,7 +78,7 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 
 <h3 id="Resetting">Resetting</h3>
 
-<p>The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcessor.reset()")}} method, which can be used to remove all stylesheets and parameters then put the processor back into its initial state. This method is implemented in <a href="/en/Gecko">Mozilla</a> 1.3 and later.</p>
+<p>The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcessor.reset()")}} method, which can be used to remove all stylesheets and parameters then put the processor back into its initial state. This method is implemented in Gecko 1.3 and later.</p>
 
 <h3 id="Resources">Resources</h3>
 
@@ -106,8 +107,8 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 <h3 id="See_also">See also</h3>
 
 <ul>
- <li><a href="/en/The_XSLT/JavaScript_Interface_in_Gecko">The XSLT JavaScript Interface in Gecko</a></li>
- <li><a href="/en-US/docs/DOM/document.load">document.load()</a> regarding the loading of XML documents (as used above)</li>
+ <li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT JavaScript Interface in Gecko</a></li>
+ <li><a href="/en-US/docs/Web/API/XMLDocument/load">document.load()</a> regarding the loading of XML documents (as used above)</li>
 </ul>
 
 <div class="originaldocinfo">
@@ -119,4 +120,3 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
  <li>Copyright Information: Copyright (C) Mike Hearn</li>
 </ul>
 </div>
-

@@ -7,6 +7,7 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+browser-compat: javascript.builtins.RegExp
 ---
 <div>{{JSRef}}</div>
 
@@ -50,7 +51,7 @@ let re = new RegExp('\\w+')
 
 <h3 id="Perl-like_RegExp_properties">Perl-like RegExp properties</h3>
 
-<p>Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.). See also <a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties">deprecated <code>RegExp</code> properties.</a></p>
+<p>Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. (Perl is the programming language from which JavaScript modeled its regular expressions.). See also <a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp_properties">deprecated <code>RegExp</code> properties.</a></p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -64,8 +65,6 @@ let re = new RegExp('\\w+')
 <dl>
  <dt>{{jsxref("RegExp.@@species", "get RegExp[@@species]")}}</dt>
  <dd>The constructor function that is used to create derived objects.</dd>
- <dt>{{jsxref("RegExp.lastIndex")}}</dt>
- <dd>The index at which to start the next match.</dd>
 </dl>
 
 <h2 id="Instance_properties">Instance properties</h2>
@@ -77,6 +76,8 @@ let re = new RegExp('\\w+')
  <dd>Whether <code>.</code> matches newlines or not.</dd>
  <dt>{{JSxRef("RegExp.prototype.global")}}</dt>
  <dd>Whether to test the regular expression against all possible matches in a string, or only against the first.</dd>
+ <dt>{{JSxRef("RegExp.prototype.hasIndices")}}</dt>
+ <dd>Whether the regular expression result exposes the start and end indices of captured substrings.</dd>
  <dt>{{JSxRef("RegExp.prototype.ignoreCase")}}</dt>
  <dd>Whether to ignore case while attempting a match in a string.</dd>
  <dt>{{JSxRef("RegExp.prototype.multiline")}}</dt>
@@ -87,12 +88,14 @@ let re = new RegExp('\\w+')
  <dd>Whether or not the search is sticky.</dd>
  <dt>{{JSxRef("RegExp.prototype.unicode")}}</dt>
  <dd>Whether or not Unicode features are enabled.</dd>
+ <dt>{{jsxref("RegExp.lastIndex", "RegExp: lastIndex")}}</dt>
+ <dd>The index at which to start the next match.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{JSxRef("RegExp.prototype.compile()")}}</dt>
+ <dt>{{JSxRef("RegExp.prototype.compile()")}} {{deprecated_inline}}</dt>
  <dd>(Re-)compiles a regular expression during execution of a script.</dd>
  <dt>{{JSxRef("RegExp.prototype.exec()")}}</dt>
  <dd>Executes a search for a match in its string parameter.</dd>
@@ -208,27 +211,16 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 </pre>
 
 <div class="notecard note">
-<p>Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the <a href="/en-US/docs/Web/API/URL_API">URL API</a>.</p>
+<p><strong>Note:</strong> Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the <a href="/en-US/docs/Web/API/URL_API">URL API</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox-specific_notes">Firefox-specific notes</h3>
 

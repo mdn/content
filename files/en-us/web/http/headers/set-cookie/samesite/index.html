@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The <strong><code>SameSite</code></strong> attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a <a href="/en-US/docs/Web/HTTP/Cookies#Third-party_cookies">first-party</a> or same-site context. </span></p>
+<p><span class="seoSummary">The <strong><code>SameSite</code></strong> attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a <a href="/en-US/docs/Web/HTTP/Cookies#third-party_cookies">first-party</a> or same-site context. </span></p>
 
 <div class="notecard note">
 <p>Standards related to the Cookie <code>SameSite</code> attribute recently changed such that:</p>
@@ -42,7 +42,7 @@ tags:
 
 <h3 id="None"><code>None</code></h3>
 
-<p>Cookies will be sent in all contexts, i.e in responses to both first-party and cross-origin requests.If <code>SameSite=None</code> is set, the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Secure"><code>Secure</code></a> attribute must also be set (or the cookie will be blocked).</p>
+<p>Cookies will be sent in all contexts, i.e in responses to both first-party and cross-origin requests.If <code>SameSite=None</code> is set, the cookie <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure"><code>Secure</code></a> attribute must also be set (or the cookie will be blocked).</p>
 
 <h2 id="Fixing_common_warnings">Fixing common warnings</h2>
 
@@ -114,7 +114,7 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
    <td>HTTP State Management Mechanism</td>
   </tr>
   <tr>
-   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05">draft-ietf-httpbis-rfc6265bis-05</a></td>
+   <td><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-05">draft-ietf-httpbis-rfc6265bis-05</a></td>
    <td>Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies</td>
   </tr>
  </tbody>

@@ -10,8 +10,6 @@ tags:
   - Role
   - list
 ---
-<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
-
 <p><span class="seoSummary">The ARIA <code>list</code> role can be used to identify a list of items. It is normally used in conjunction with the <code>listitem</code> role, which is used to identify a list item contained inside the list.</span></p>
 
 <pre class="brush: html">&lt;section role="list"&gt;
@@ -27,8 +25,9 @@ tags:
 
 <p>There are no hard and fast rules about which elements you should use to markup the list and list items, but you should make sure that the list items make sense in the context of a list, e.g. a shopping list, recipe steps, driving directions.</p>
 
-<div class="warning">
-<p><strong>Warning</strong>:<span class="ILfuVd yZ8quc"> If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{htmlelement("ul")}}/{{htmlelement("ol")}} and {{htmlelement("li")}}. See {{anch("Best practices")}} for a full example.</span></p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{htmlelement("ul")}}/{{htmlelement("ol")}} and {{htmlelement("li")}}. See {{anch("Best practices")}} for a full example.</p>
 </div>
 
 <h3 id="Associated_WAI-ARIA_Roles_States_and_Properties">Associated WAI-ARIA Roles, States, and Properties</h3>
@@ -38,7 +37,7 @@ tags:
  <dd>
  <p>A single item in a list or directory. Elements with role listitem can only be found in an element with the role <code>list</code> or <code>group</code>.</p>
  </dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Group_role">group</a></dt>
+ <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></dt>
  <dd>
  <p>A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.</p>
  </dd>
@@ -114,5 +113,11 @@ tags:
  <li><span class="ILfuVd yZ8quc">{{htmlelement("ol")}}</span></li>
  <li><span class="ILfuVd yZ8quc">{{htmlelement("li")}}</span></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role">ARIA: listitem role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Group_role">ARIA: group role</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role">ARIA: group role</a></li>
 </ul>
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

@@ -7,6 +7,7 @@ tags:
   - CSS
   - Conditional
   - Reference
+browser-compat: css.at-rules.media
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The <code>@media</code> at-rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">conditional group at-rule</a>.</p>
+<p>The <code>@media</code> at-rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#conditional_group_rules">conditional group at-rule</a>.</p>
 
 <pre class="brush: css no-line-numbers">/* At the top level of your code */
 @media screen and (min-width: 900px) {
@@ -37,7 +38,7 @@ tags:
 }
 </pre>
 
-<p>For a discussion of media query syntax, please see <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax">Using media queries</a>.</p>
+<p>For a discussion of media query syntax, please see <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax">Using media queries</a>.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -51,9 +52,9 @@ tags:
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>To best accommodate people who adjust a site's text size, use <code><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values">em</a></code>s when you need a {{cssxref("&lt;length&gt;")}} for your <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>.</p>
+<p>To best accommodate people who adjust a site's text size, use <code><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values">em</a></code>s when you need a {{cssxref("&lt;length&gt;")}} for your <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>.</p>
 
-<p>Both <code><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values">em</a></code> and <code><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values">px</a></code> are valid units, but <code><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#Numeric_values">em</a></code> works better if the user changes the browser text size.</p>
+<p>Both <code><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values">em</a></code> and <code><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values">px</a></code> are valid units, but <code><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values">em</a></code> works better if the user changes the browser text size.</p>
 
 <p>Also consider using Level 4 media queries to improve the user's experience. For example, <code>prefers-reduced-motion</code> to <a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">detect if the user has requested that the system minimize the amount of animation</a> or motion it uses.</p>
 
@@ -65,7 +66,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -150,13 +151,13 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.media")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a class="internal" href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
  <li>In JavaScript, <code>@media</code> can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.</li>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions#Media_features">Extended Mozilla media features</a></li>
- <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions#Media_features">Extended WebKit media features</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions#media_features">Extended Mozilla media features</a></li>
+ <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions#media_features">Extended WebKit media features</a></li>
 </ul>

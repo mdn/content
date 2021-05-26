@@ -21,11 +21,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td>Either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a> or zero or more {{HTMLElement("option")}} elements.</td>
+   <td>Either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a> or zero or more {{HTMLElement("option")}} elements.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -33,7 +33,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -118,6 +118,10 @@ option {
 
 <pre class="brush: js">input.onfocus = function () {
   datalist.style.display = 'block';
+}
+
+input.onblur = function () {
+  datalist.style.display = 'none';
 }
 
 for (let option of datalist.options) {

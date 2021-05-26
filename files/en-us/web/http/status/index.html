@@ -14,14 +14,14 @@ tags:
 <p class="summary"><span class="seoSummary">HTTP response status codes indicate whether a specific <a href="/en-US/docs/Web/HTTP">HTTP</a> request has been successfully completed. Responses are grouped in five classes: </span></p>
 
 <ol>
- <li><span class="seoSummary">Informational responses (<code>100</code>–<code>199</code>)</span></li>
- <li><span class="seoSummary">Successful responses (<code>200</code>–<code>299</code>)</span></li>
- <li><span class="seoSummary">Redirects (<code>300</code>–<code>399</code>)</span></li>
- <li><span class="seoSummary">Client errors (<code>400</code>–<code>499</code>)</span></li>
- <li><span class="seoSummary">Server errors (<code>500</code>–<code>599</code>)</span></li>
+ <li><span class="seoSummary"><a href="#information_responses">Informational responses</a> (<code>100</code>–<code>199</code>)</span></li>
+ <li><span class="seoSummary"><a href="#successful_responses">Successful responses</a> (<code>200</code>–<code>299</code>)</span></li>
+ <li><span class="seoSummary"><a href="#redirection_messages">Redirects</a> (<code>300</code>–<code>399</code>)</span></li>
+ <li><span class="seoSummary"><a href="#client_error_responses">Client errors</a> (<code>400</code>–<code>499</code>)</span></li>
+ <li><span class="seoSummary"><a href="#server_error_responses">Server errors</a> (<code>500</code>–<code>599</code>)</span></li>
 </ol>
 
-<p>The below status codes are defined by <a href="https://tools.ietf.org/html/rfc2616#section-10">section 10 of RFC 2616</a>. You can find an updated specification in <a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">RFC 7231</a>.</p>
+<p>The below status codes are defined by <a href="https://datatracker.ietf.org/doc/html/rfc2616#section-10">section 10 of RFC 2616</a>. You can find an updated specification in <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1">RFC 7231</a>.</p>
 
 <div class="notecard note">
 <p>If you receive a response that is not in this list, it is a non-standard response, possibly custom to the server's software.</p>
@@ -47,7 +47,7 @@ tags:
  <dd>The request has succeeded. The meaning of the success depends on the HTTP method:
  <ul>
   <li><code>GET</code>: The resource has been fetched and is transmitted in the message body.</li>
-  <li><code>HEAD</code>: The entity headers are in the message body.</li>
+  <li><code>HEAD</code>: The representation headers are included in the response without any message body.</li>
   <li><code>PUT</code> or <code>POST</code>: The resource describing the result of the action is transmitted in the message body.</li>
   <li><code>TRACE</code>: The message body contains the request message as received by the server.</li>
  </ul>
@@ -68,7 +68,7 @@ tags:
  <dd>Conveys information about multiple resources, for situations where multiple status codes might be appropriate.</dd>
  <dt>{{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})</dt>
  <dd>Used inside a <code>&lt;dav:propstat&gt;</code> response element to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.</dd>
- <dt>{{HTTPStatus(226, "226 IM Used")}} (<a href="https://tools.ietf.org/html/rfc3229">HTTP Delta encoding</a>)</dt>
+ <dt>{{HTTPStatus(226, "226 IM Used")}} (<a href="https://datatracker.ietf.org/doc/html/rfc3229">HTTP Delta encoding</a>)</dt>
  <dd>The server has fulfilled a <code>GET</code> request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.</dd>
 </dl>
 
@@ -111,7 +111,7 @@ tags:
  <dt>{{HTTPStatus(405, "405 Method Not Allowed")}}</dt>
  <dd>The request method is known by the server but has been disabled and cannot be used. For example, an API may forbid DELETE-ing a resource. The two mandatory methods, <code>GET</code> and <code>HEAD</code>, must never be disabled and should not return this error code.</dd>
  <dt>{{HTTPStatus(406, "406 Not Acceptable")}}</dt>
- <dd>This response is sent when the web server, after performing <a href="/en-US/docs/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, doesn't find any content that conforms to the criteria given by the user agent.</dd>
+ <dd>This response is sent when the web server, after performing <a href="/en-US/docs/Web/HTTP/Content_negotiation#server-driven_negotiation">server-driven content negotiation</a>, doesn't find any content that conforms to the criteria given by the user agent.</dd>
  <dt>{{HTTPStatus(407, "407 Proxy Authentication Required")}}</dt>
  <dd>This is similar to 401 but authentication is needed to be done by a proxy.</dd>
  <dt>{{HTTPStatus(408, "408 Request Timeout")}}</dt>

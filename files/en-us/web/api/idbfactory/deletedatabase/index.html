@@ -2,14 +2,14 @@
 title: IDBFactory.deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 tags:
-- API
-- Database
-- IDBFactory
-- IndexedDB
-- Method
-- Reference
-- Storage
-- deleteDatabase
+  - API
+  - Database
+  - IDBFactory
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - deleteDatabase
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
@@ -26,7 +26,7 @@ tags:
 
 <p>When <code>deleteDatabase()</code> is called, any other open connections to this
   particular database will get a <a
-    href="/en-US/docs/Web/Events/versionchange_indexedDB">versionchange</a> event.</p>
+    href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange</a> event.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -52,7 +52,7 @@ tags:
     {{DOMxRef("IDBDatabase.deleteObjectStore()")}}, which does throw an exception if the
     named object store does not exist.</dd>
   <dt>options{{NonStandardBadge}}</dt>
-  <dd>In Gecko, since <a href="/en-US/Firefox/Releases/26">version 26</a>, you can include
+  <dd>In Gecko, since <a href="/en-US/docs/Mozilla/Firefox/Releases/26">version 26</a>, you can include
     a non-standard optional storage parameter that specifies whether you want to delete a
     <code>permanent</code> (the default value) IndexedDB, or an indexedDB in
     <code>temporary</code> storage (aka shared pool.)</dd>

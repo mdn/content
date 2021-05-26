@@ -3,9 +3,10 @@ title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
 tags:
   - Cache-Control
-  - General Header
   - HTTP
   - HTTP Header
+  - Request header
+  - Response header
   - Reference
 ---
 <div>{{HTTPSidebar}}</div>
@@ -16,7 +17,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Header type</th>
-   <td>{{Glossary("General header")}}</td>
+   <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -114,7 +115,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dt><code>must-revalidate</code></dt>
- <dd>Indicates that once a resource becomes stale, caches must not use their stale copy without successful <a href="/en-US/docs/Web/HTTP/Caching#Cache_validation">validation</a> on the origin server.</dd>
+ <dd>Indicates that once a resource becomes stale, caches must not use their stale copy without successful <a href="/en-US/docs/Web/HTTP/Caching#cache_validation">validation</a> on the origin server.</dd>
  <dt><code>proxy-revalidate</code></dt>
  <dd>Like <code>must-revalidate</code>, but only for shared caches (e.g., proxies). Ignored by private caches.</dd>
  <dt><code>immutable</code></dt>
@@ -210,7 +211,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Caching_FAQ">HTTP Caching FAQ</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Caching">HTTP Caching FAQ</a></li>
  <li><a href="https://www.mnot.net/cache_docs/">Caching Tutorial for Web Authors and Webmasters</a></li>
  <li>Guide: <em><a href="https://csswizardry.com/2019/03/cache-control-for-civilians"><code>Cache-Control</code> for civilians</a></em></li>
  <li>{{HTTPHeader("Age")}}</li>

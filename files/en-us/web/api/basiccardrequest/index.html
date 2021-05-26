@@ -32,7 +32,7 @@ tags:
 <p>These properties have been removed from the Payment Method: Basic Card specification and should no longer be used.</p>
 
 <dl>
-	<dt>{{domxref('BasicCardRequest.supportedTypes')}} {{obsolete_inline}} {{optional_inline}} {{securecontext_inline}}</dt>
+	<dt>{{domxref('BasicCardRequest.supportedTypes')}} {{deprecated_inline}} {{optional_inline}} {{securecontext_inline}}</dt>
 	<dd>This obsolete property was used to provide an optional array of {{domxref("DOMString")}}s representing the card types that the retailer supports (e.g. <code>credit</code>, <code>debit</code>, <code>prepaid</code>). If the property is missing, it implies that all the card types are supported. Instead of using this property, it is up to the server to check support for the card given the information coded into the account number.</dd>
 </dl>
 
@@ -61,11 +61,11 @@ tags:
 <p>The first of these three (<code>supportedInstruments</code> in the example below) contains a <code>data</code> property that has to conform to the structure defined by the <code>BasicCardRequest</code> dictionary. </p>
 
 <pre class="brush: js">var supportedInstruments = [{
-  <code>supportedMethods: 'basic-card',
+  supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
                         'diners', 'discover', 'mir', 'unionpay']
-  }</code>
+  }
 }];
 
 var details = {

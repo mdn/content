@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Proxy
+browser-compat: javascript.builtins.Proxy.handler.set
 ---
 <div>{{JSRef}}</div>
 
@@ -14,11 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,14 +41,11 @@ tags:
     <p>The object to which the assignment was originally directed. This is usually the
       proxy itself. But a <code>set()</code> handler can also be called indirectly, via
       the prototype chain or various other ways.</p>
-
-    <div class="note">
-      <p><strong>For example:</strong> Suppose a script does
+    <p>For example, suppose a script does
         <code><var>obj</var>.name = "jen"</code>, and <code><var>obj</var></code> is not a
         proxy, and has no own property <code>.name</code>, but it has a proxy on its
         prototype chain. That proxy's <code>set()</code> handler will be called, and
         <code>obj</code> will be passed as the receiver.</p>
-    </div>
   </dd>
 </dl>
 
@@ -122,24 +115,11 @@ console.log(p.a);       // 10
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft',
-        '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver',
-        '[[Set]]')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Proxy.handler.set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

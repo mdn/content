@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - polyfill
+browser-compat: javascript.builtins.Array.reduceRight
 ---
 <div>{{JSRef}}</div>
 
@@ -21,13 +22,28 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.reduceRight(<var>callback</var>(<var>accumulator</var>, <var>currentValue</var>[, <var>index</var>[, <var>array</var>]])[, <var>initialValue</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+reduceRight((accumulator, currentValue) => { ... } )
+reduceRight((accumulator, currentValue, index) => { ... } )
+reduceRight((accumulator, currentValue, index, array) => { ... } )
+reduceRight((accumulator, currentValue, index, array) => { ... }, initialValue)
+
+// Callback function
+reduceRight(callbackFn)
+reduceRight(callbackFn, initialValue)
+
+// Callback reducer function
+reduceRight(function callbackFn(accumulator, currentValue) { ... })
+reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
+reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
+reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>Function to execute on each value in the array, taking four arguments:
     <dl>
       <dt><code><var>accumulator</var></code></dt>
@@ -43,7 +59,7 @@ tags:
   </dd>
   <dt><code><var>initialValue</var></code> {{optional_inline}}</dt>
   <dd>Value to use as accumulator to the first call of the
-    <code><var>callback</var></code>. If no initial value is supplied, the last element in
+    <code><var>callbackFn</var></code>. If no initial value is supplied, the last element in
     the array will be used and skipped. Calling reduce or reduceRight on an empty array
     without an initial value creates a <code>TypeError</code>.</dd>
 </dl>
@@ -59,7 +75,7 @@ tags:
   (or value from the previous callback call), the value of the current element, the
   current index, and the array over which iteration is occurring.</p>
 
-<p>The call to the reduceRight <code><var>callback</var></code> would look something like
+<p>The call to the reduceRight <code><var>callbackFn</var></code> would look something like
   this:</p>
 
 <pre class="brush: js">arr.reduceRight(function(accumulator, currentValue, index, array) {
@@ -81,7 +97,7 @@ tags:
   {{jsxref("TypeError")}} would be thrown. If the array has only one element (regardless
   of position) and no <code><var>initialValue</var></code> was provided, or if
   <code><var>initialValue</var></code> is provided but the array is empty, the solo value
-  would be returned without calling <code><var>callback</var></code>.</p>
+  would be returned without calling <code><var>callbackFn</var></code>.</p>
 
 <p>Some example run-throughs of the function would look like this:</p>
 
@@ -324,23 +340,16 @@ var right = a.reduceRight(function(prev, cur) { return prev + cur; });
 console.log(left);  // "12345"
 console.log(right); // "54321"</pre>
 
-<h3 id="Defining_Composible_Function">Defining Composible Function</h3>
+<h3>Defining composable functions</h3>
 
-<p>The concept of compose function is simple it combines n functions. It’s a flowing
-  right-to-left, calling each function with the output of the last one.</p>
+<p>Function composition is a mechanism for combining functions, in which the
+output of each function is passed into the next one, and the output of the last
+function is the final result.  In this example we use <code>reduceRight()</code>
+to implement function composition.</p>
 
-<pre class="brush: js">/**
- * Function Composition is way in which result of one function can
- * be passed to another and so on.
- *
- * h(x) = f(g(x))
- *
- * Function execution happens right to left
- *
- * https://en.wikipedia.org/wiki/Function_composition
- */
+<p>See also <a href="https://en.wikipedia.org/wiki/Function_composition_(computer_science)">Function composition</a> on Wikipedia.
 
-const compose = (...args) =&gt; (value) =&gt; args.reduceRight((acc, fn) =&gt; fn(acc), value)
+<pre class="brush: js">const compose = (...args) =&gt; (value) =&gt; args.reduceRight((acc, fn) =&gt; fn(acc), value)
 
 // Increment passed number
 const inc = (n) =&gt; n + 1
@@ -357,23 +366,11 @@ console.log(compose(inc, double)(2)); // 5
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.reduceright',
-        'Array.prototype.reduceRight')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.reduceRight")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -91,9 +91,16 @@ tags:
           <dt><code>same-origin</code></dt>
           <dd>Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.</dd>
           <dt><code>include</code></dt>
-          <dd>Tells browsers to always include credentials in requests, and always use any credentials sent back in responses.</dd>
+          <dd>Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
+            <div class="notecard note">
+              <h4>Note</h4>
+              <p>Credentials may be included in simple and "final" cross-origin requests, but should not be included in <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">CORS preflight requests</a>.</p>
+            </div>
+          </dd>
         </dl>
       </dd>
+      <dt><code>cache</code></dt>
+      <dd>A string indicating how the request will interact with the browser’s <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>. The possible values, <code>default</code>, <code>no-store</code>, <code>reload</code>, <code>no-cache</code>, <code>force-cache</code>, and <code>only-if-cached</code>, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.</dd>
 <dt><code>redirect</code></dt>
 <dd>How to handle a <code>redirect</code> response:
     <ul>
@@ -136,7 +143,7 @@ tags:
 
 <dl>
   <dt><code>AbortError</code></dt>
-  <dd>The request was aborted due to a call to the {{domxref("AbortController")}} method
+  <dd>The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.</dd>
   <dt><code>TypeError</code></dt>
   <dd>The specified URL string includes user credentials. This information should instead
@@ -180,7 +187,7 @@ fetch(myRequest)
 <pre class="brush: js">const myImage = document.querySelector('img');
 
 let myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append('Accept', 'image/jpeg');
 
 const myInit = {
   method: 'GET',
@@ -207,7 +214,7 @@ fetch(myRequest, myInit).then(function(response) {
 <pre class="brush: js">const myInit = {
   method: 'GET',
   headers: {
-    'Content-Type': 'image/jpeg'
+    'Accept': 'image/jpeg'
   },
   mode: 'cors',
   cache: 'default'

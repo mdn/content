@@ -8,6 +8,7 @@ tags:
 - TypedArray
 - TypedArrays
 - from
+browser-compat: javascript.builtins.TypedArray.from
 ---
 <div>{{JSRef}}</div>
 
@@ -18,15 +19,24 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-from.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-    repository. If you'd like to contribute to the interactive examples project, please
-    clone <a
-        href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-    and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>TypedArray</var>.from(<var>source</var>[, <var>mapFn</var>[, <var>thisArg</var>]])
+<pre class="brush: js">
+// Arrow function
+TypedArray.from(arrayLike, (currentValue) => { ... } )
+TypedArray.from(arrayLike, (currentValue, index) => { ... } )
+TypedArray.from(arrayLike, (currentValue, index, array) => { ... } )
+
+// Mapping function
+TypedArray.from(arrayLike, mapFn)
+TypedArray.from(arrayLike, mapFn, thisArg)
+
+// Inline mapping function
+TypedArray.from(arrayLike, function mapFn(currentValue) { ... })
+TypedArray.from(arrayLike, function mapFn(currentValue, index) { ... })
+TypedArray.from(arrayLike, function mapFn(currentValue, index, array){ ... })
+TypedArray.from(arrayLike, function mapFn(currentValue, index, array) { ... }, thisArg)
 </pre>
 
 <p>Where <code><var>TypedArray</var></code> is one of:</p>
@@ -50,7 +60,7 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-    <dt><code><var>source</var></code></dt>
+    <dt><code><var>arrayLike</var></code></dt>
     <dd>An array-like or iterable object to convert to a typed array.</dd>
     <dt><code><var>mapFn</var></code> {{optional_inline}}</dt>
     <dd>Map function to call on every element of the typed array.</dd>
@@ -196,23 +206,11 @@ Uint8Array.from(s);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}}
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.from")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -161,13 +161,13 @@ a:focus, input:focus, button:focus, select:focus {
 <ol>
  <li>Create custom controls using <code>&lt;button&gt;</code> elements (which we can tab to by default!) and JavaScript to wire up their functionality. See <a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a> for some good examples of this.</li>
  <li>Create keyboard shortcuts via JavaScript, so functionality is activated when you press certain keys on the keyboard. See <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a> for some game-related examples that can be adapted for any purpose.</li>
- <li>Use some interesting tactics to fake button behavior. Take for example our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Here we've given our fake <code>&lt;div&gt;</code> buttons the ability to be focused (including via tab) by giving each one the attribute <code>tabindex="0"</code> (see WebAIM's <a href="http://webaim.org/techniques/keyboard/tabindex">tabindex article</a> for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
+ <li>Use some interesting tactics to fake button behavior. Take for example our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Here we've given our fake <code>&lt;div&gt;</code> buttons the ability to be focused (including via tab) by giving each one the attribute <code>tabindex="0"</code> (see WebAIM's <a href="https://webaim.org/techniques/keyboard/tabindex">tabindex article</a> for more really useful details). This allows us to tab to the buttons, but not to activate them via the Enter/Return key. To do that, we had to add the following bit of JavaScript trickery:
   <pre class="brush: js">document.onkeydown = function(e) {
   if(e.keyCode === 13) { // The Enter/Return key
     document.activeElement.onclick(e);
   }
 };</pre>
-  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
+  Here we add a listener to the <code>document</code> object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's <a href="/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> property; if it is the keycode that matches Return/Enter, we run the function stored in the button's <code>onclick</code> handler using <code>document.activeElement.onclick()</code>. <code><a href="/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> gives us the element that is currently focused on the page.</li>
 </ol>
 
 <div class="note">
@@ -190,7 +190,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>There are certain features and best practices in HTML designed to provide context and relationships between elements where none otherwise exists. The three most common examples are links, form labels, and data tables.</p>
 
-<p>The key to accessible link text is that people using screen readers will often use a common feature whereby they pull up a list of all the links on the page. In this case, the link text needs to make sense out of context. For example, a list of links labeled "click here", "click here", etc. is really bad for accessibility. It is better for link text to make sense in context and out of context.</p>
+<p>The key to accessible link text is that people using screen readers will often use a common feature whereby they pull up a list of all the links on the page. In this case, the link text needs to make sense out of context. For example, a list of links labeled "click here", "click me", etc. is really bad for accessibility. It is better for link text to make sense in context and out of context.</p>
 
 <p>Next on our list, the form {{htmlelement("label")}} element is one of the central features that allows us to make forms accessible. The trouble with forms is that you need labels to say what data should be entered into each form input. Each label needs to be included inside a {{htmlelement("label")}} to link it unambiguously to its partner form input (each <code>&lt;label&gt;</code> <code>for</code> attribute value needs to match the form element <code>id</code> value), and it will make sense even if the source order is not completely logical (which to be fair it should be).</p>
 
@@ -220,7 +220,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <h4 id="Color_and_color_contrast">Color and color contrast</h4>
 
-<p>When choosing a color scheme for your website, you should make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people with visual impairments like color blindness can't read your content. Use a tool like WebAIM's <a href="http://webaim.org/resources/contrastchecker/">Color Contrast Checker</a> to check whether your scheme is contrasting enough.</p>
+<p>When choosing a color scheme for your website, you should make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people with visual impairments like color blindness can't read your content. Use a tool like WebAIM's <a href="https://webaim.org/resources/contrastchecker/">Color Contrast Checker</a> to check whether your scheme is contrasting enough.</p>
 
 <p>Another tip is to not rely on color alone for signposts/information, as this will be no good for those who can't see the color. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.</p>
 
@@ -239,7 +239,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screenreaders. Unless of course, there is a good reason why you want this content to be hidden from screenreaders.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
+<p><strong>Note</strong>: <a href="https://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -256,7 +256,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM's <a href="http://webaim.org/techniques/javascript/">Accessible JavaScript</a> provides some useful further details about considerations for accessible JavaScript.</p>
+<p><strong>Note</strong>: WebAIM's <a href="https://webaim.org/techniques/javascript/">Accessible JavaScript</a> provides some useful further details about considerations for accessible JavaScript.</p>
 </div>
 
 <p>More complex JavaScript implementations can create issues with accessibility — you need to do what you can. For example, it would be unreasonable to expect you to make a complex 3D game written using <a href="/en-US/docs/Learn/WebGL">WebGL</a> 100% accessible to a blind person, but you could implement <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">keyboard controls</a> so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.</p>
@@ -265,7 +265,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <p>One of the main areas problematic for accessibility is complex apps that involve complicated form controls (such as date pickers) and dynamic content that is updated often and incrementally.</p>
 
-<p>Non-native complicated form controls are problematic because they tend to involve a lot of nested <code>&lt;div&gt;</code>s, and the browser does not know what to do with them by default. If you are inventing them yourself, you need to make sure that they are keyboard accessible; if you are using some kind of third-party framework, carefully review the options available to see how accessible they are before diving in. <a href="http://getbootstrap.com/">Bootstrap</a> looks to be fairly good for accessibility, for example, although <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a> by Rhiana Heath explores some of its issues (mainly related to color contrast), and looks at some solutions.</span></p>
+<p>Non-native complicated form controls are problematic because they tend to involve a lot of nested <code>&lt;div&gt;</code>s, and the browser does not know what to do with them by default. If you are inventing them yourself, you need to make sure that they are keyboard accessible; if you are using some kind of third-party framework, carefully review the options available to see how accessible they are before diving in. <a href="https://getbootstrap.com/">Bootstrap</a> looks to be fairly good for accessibility, for example, although <span class="l-d-i l-pa2 t-bg-white"><a href="https://www.sitepoint.com/making-bootstrap-accessible/">Making Bootstrap a Little More Accessible</a> by Rhiana Heath explores some of its issues (mainly related to color contrast), and looks at some solutions.</span></p>
 
 <p>Regularly updated dynamic content can be a problem because screenreader users might miss it, especially if it updates unexpectedly. If you have a single-page app with a main content panel that is regularly updated using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> or <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>, a screenreader user might miss those updates.</p>
 
@@ -288,7 +288,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <pre class="brush: html">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
 
-<p>You can see an example in action at Freedom Scientific's <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) Live Regions</a> example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a> provides another useful example.</p>
+<p>You can see an example in action at Freedom Scientific's <a href="https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) Live Regions</a> example — the highlighted paragraph should update its content every 10 seconds, and a screenreader should read this out to the user. <a href="https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a> provides another useful example.</p>
 
 <p>We don't have space to cover WAI-ARIA in detail here, you can learn a lot more about it at <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a>.</p>
 
@@ -301,7 +301,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>There are a number of auditing tools available that you can feed your web pages into. They will look over them and return a list of accessibility issues present on the page. Examples include:</p>
 
 <ul>
- <li><a href="http://wave.webaim.org/">Wave</a>: A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.</li>
+ <li><a href="https://wave.webaim.org/">Wave</a>: A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.</li>
  <li><a href="https://tenon.io">Tenon</a>: Another nice online tool that goes through the code at a provided URL and returns results on accessibility errors including metrics, specific errors along with the WCAG criteria they affect, and suggested fixes. It requires a free trial signup to view the results.</li>
  <li><a href="https://khan.github.io/tota11y/">tota11y</a>: An accessibility tool from the Khan Academy that takes the form of a JavaScript library that you attach to your page to provide a number of accessibility tools.</li>
 </ul>
@@ -309,9 +309,9 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Let's look at an example, using Wave.</p>
 
 <ol>
- <li>Go to the <a href="http://wave.webaim.org/">Wave homepage</a>.</li>
- <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input at the top of the page (or the URL of another webpage you'd like to analyze) and press <em>Analyse Your Webpage</em>.</li>
- <li>Check out the description of the accessibility problems on the results page (the icons you can click to see what problems are occurring where are rather useful).</li>
+ <li>Go to the <a href="https://wave.webaim.org/">Wave homepage</a>.</li>
+ <li>Enter the URL of our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.</li>
+ <li>The site should respond with a description of the accessibility problems. Click the icons displayed to see more information about each of the issues identified by Wave's evaluation.</li>
 </ol>
 
 <div class="note">
@@ -323,24 +323,24 @@ a:focus, input:focus, button:focus, select:focus {
 <p><a href="https://www.deque.com/products/axe/">Deque's aXe tool</a> goes a bit further than the auditing tools we mentioned above. Like the others, it checks pages and returns accessibility errors. Its most immediately useful form is probably the browser extensions:</p>
 
 <ul>
- <li><a href="http://bitly.com/aXe-Chrome">aXe for Chrome</a></li>
- <li><a href="http://bit.ly/aXe-Firefox">aXe for Firefox</a></li>
+ <li><a href="https://bitly.com/aXe-Chrome">aXe for Chrome</a></li>
+ <li><a href="https://bit.ly/aXe-Firefox">aXe for Firefox</a></li>
 </ul>
 
 <p>These add an accessibility tab to the browser developer tools. For example, we installed the Firefox version, then used it to audit our <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> example. We got the following results:</p>
 
 <p><img alt="" src="axe-screenshot.png" style="display: block; margin: 0px auto;"></p>
 
-<p>aXe is also installable using <code>npm</code>, and can be integrated with task runners like <a href="http://gruntjs.com/">Grunt</a> and <a href="http://gulpjs.com/">Gulp</a>, automation frameworks like <a href="http://www.seleniumhq.org/">Selenium</a> and <a href="https://cucumber.io/">Cucumber</a>, unit testing frameworks like <a href="https://jasmine.github.io/">Jasmin</a>, and more besides (again, see the <a href="https://www.deque.com/products/axe/">main aXe page</a> for details).</p>
+<p>aXe is also installable using <code>npm</code>, and can be integrated with task runners like <a href="https://gruntjs.com/">Grunt</a> and <a href="https://gulpjs.com/">Gulp</a>, automation frameworks like <a href="https://www.seleniumhq.org/">Selenium</a> and <a href="https://cucumber.io/">Cucumber</a>, unit testing frameworks like <a href="https://jasmine.github.io/">Jasmine</a>, and more besides (again, see the <a href="https://www.deque.com/products/axe/">main aXe page</a> for details).</p>
 
 <h3 id="Screenreaders">Screenreaders</h3>
 
 <p>It is definitely worth testing with a screenreader to get used to how severely visually impaired people use the Web. There are a number of screenreaders available:</p>
 
 <ul>
- <li>Some are paid-for commercial products, like <a href="http://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a> (Windows) and <a href="http://www.gwmicro.com/window-eyes/">Window Eyes</a> (Windows).</li>
- <li>Some are free products, like <a href="http://www.nvaccess.org/">NVDA</a> (Windows), <a href="http://www.chromevox.com/">ChromeVox</a> (Chrome, Windows, and Mac OS X), and <a href="https://wiki.gnome.org/Projects/Orca">Orca</a> (Linux).</li>
- <li>Some are built into the operating system, like <a href="http://www.apple.com/accessibility/osx/voiceover/">VoiceOver</a> (Mac OS X and iOS), <a href="http://www.chromevox.com/">ChromeVox</a> (on Chromebooks), and <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">TalkBack</a> (Android).</li>
+ <li>Some are paid-for commercial products, like <a href="https://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a> (Windows) and <a href="http://www.gwmicro.com/window-eyes/">Window Eyes</a> (Windows).</li>
+ <li>Some are free products, like <a href="https://www.nvaccess.org/">NVDA</a> (Windows), <a href="http://www.chromevox.com/">ChromeVox</a> (Chrome, Windows, and Mac OS X), and <a href="https://wiki.gnome.org/Projects/Orca">Orca</a> (Linux).</li>
+ <li>Some are built into the operating system, like <a href="https://www.apple.com/accessibility/osx/voiceover/">VoiceOver</a> (Mac OS X and iOS), <a href="http://www.chromevox.com/">ChromeVox</a> (on Chromebooks), and <a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">TalkBack</a> (Android).</li>
 </ul>
 
 <p>Generally, screen readers are separate apps that run on the host operating system and can read not only web pages, but text in other apps as well. This is not always the case (ChromeVox is a browser extension), but usually. Screenreaders tend to act in slightly different ways and have different controls, so you'll have to consult the documentation for your chosen screen reader to get all of the details — saying that, they all work in basically the same sort of way.</p>
@@ -348,7 +348,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>Let's go through some tests with a couple of different screenreaders to give you a general idea of how they work and how to test with them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM's <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a> provides some useful information about screenreader usage and what works best for screenreaders. Also see <a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a> for some interesting screenreader usage statistics.</p>
+<p><strong>Note</strong>: WebAIM's <a href="https://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a> provides some useful information about screenreader usage and what works best for screenreaders. Also see <a href="https://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a> for some interesting screenreader usage statistics.</p>
 </div>
 
 <h4 id="VoiceOver">VoiceOver</h4>
@@ -456,7 +456,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>NVDA is Windows-only, and you'll need to install it.</p>
 
 <ol>
- <li>Download it from <a href="http://www.nvaccess.org/">nvaccess.org</a>. You can choose whether to make a donation or download it for free; you'll also need to give them your e-mail address before you can download it.</li>
+ <li>Download it from <a href="https://www.nvaccess.org/">nvaccess.org</a>. You can choose whether to make a donation or download it for free; you'll also need to give them your e-mail address before you can download it.</li>
  <li>Once downloaded, install it — you double click the installer, accept the license and follow the prompts.</li>
  <li>To start NVDA, double click on the program file/shortcut, or use the keyboard shortcut Ctrl + Alt + N. You'll see the NVDA welcome dialog when you start it. Here you can choose from a couple of options, then press the <em>OK</em> button to get going.</li>
 </ol>
@@ -571,8 +571,8 @@ a:focus, input:focus, button:focus, select:focus {
  <li>Look at <a href="https://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>, and note how the headers are found by the screenreader and available to use for navigation. Now look at <a href="https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>, and note how the screenreader gets none of this information. Imagine how annoying this would be when trying to navigate a really long page of text.</li>
  <li>Look at <a href="https://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a>, and note how they make sense when viewed out of context. This is not the case with <a href="https://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a> — they are all just "click here".</li>
  <li>Look at <a href="https://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a>, and note how the form inputs are described using their labels because we've used <code>&lt;label&gt;</code> elements properly. In <a href="https://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>, they get an unhelpful label along the lines of "blank".</li>
- <li>Look at our <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a> example, and see how the screenreader is able to associate columns and rows of content and read them out all together because we've defined headers properly. In <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a>, none of the cells can be associated at all. Note that NVDA seems to behave slightly strangely when you've only got a single table on a page; you could try <a href="http://webaim.org/articles/nvda/tables.htm">WebAIM's table test page</a> instead.</li>
- <li>Have a look at the <a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">WAI-ARIA live regions example</a> we saw earlier, and note how the screen reader will keep reading out the constantly updating section as it updates.</li>
+ <li>Look at our <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a> example, and see how the screenreader is able to associate columns and rows of content and read them out all together because we've defined headers properly. In <a href="https://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a>, none of the cells can be associated at all. Note that NVDA seems to behave slightly strangely when you've only got a single table on a page; you could try <a href="https://webaim.org/articles/nvda/tables.htm">WebAIM's table test page</a> instead.</li>
+ <li>Have a look at the <a href="https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">WAI-ARIA live regions example</a> we saw earlier, and note how the screen reader will keep reading out the constantly updating section as it updates.</li>
 </ul>
 
 <h3 id="User_testing">User testing</h3>

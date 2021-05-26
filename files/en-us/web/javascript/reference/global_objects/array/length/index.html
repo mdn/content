@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Property
   - Reference
+browser-compat: javascript.builtins.Array.length
 ---
 <div>{{JSRef}}</div>
 
@@ -13,13 +14,12 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
-<p>The value of the <code>length</code> property is an integer with a positive sign and a value less than 2 to the 32nd power (2<sup>32</sup>).</p>
+<p>The value of the <code>length</code> property is an integer with a positive sign and a value less than 2 to the 32nd power (2^32).</p>
 
-<pre class="brush: js">var namelistA = new Array(4294967296); //2 to the 32nd power<sup> = </sup>4294967296
+<pre class="brush: js">var namelistA = new Array(4294967296); //2 to the 32nd power = 4294967296
 var namelistC = new Array(-100) //negative sign
 
 console.log(namelistA.length); //RangeError: Invalid array length
@@ -47,7 +47,7 @@ arr.forEach(element =&gt; console.log(element));
 // 2
 </pre>
 
-<p>As you can see, the <code>length</code> property does not necessarily indicate the number of defined values in the array. See also <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties" title="Relationship between length and numerical properties">Relationship between <code>length</code> and numerical properties</a>.</p>
+<p>As you can see, the <code>length</code> property does not necessarily indicate the number of defined values in the array. See also <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties" title="Relationship between length and numerical properties">Relationship between <code>length</code> and numerical properties</a>.</p>
 
 <p>{{js_property_attributes(1, 0, 0)}}</p>
 
@@ -94,27 +94,16 @@ console.log(numbers); // [undefined, undefined, undefined]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-properties-of-array-instances-length', 'Array.length')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("javascript.builtins.Array.length")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{jsxref("Array")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length">RangeError: invalid array length</a></li>
 </ul>

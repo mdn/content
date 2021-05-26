@@ -54,8 +54,8 @@ tags:
 <p><em>The {{DOMxRef("Document")}} interface provides properties that can be used to determine if full-screen mode is supported and available, and if full-screen mode is currently active, which element is using the screen.</em></p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</dt>
- <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed in full-screen mode on the DOM (or shadow DOM). If this is <code>null</code>, the document is not in full-screen mode.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}</dt>
+ <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed in full-screen mode on the DOM (or shadow DOM). If this is <code>null</code>, the document (or shadow DOM) is not in full-screen mode.</dd>
  <dt>{{DOMxRef("document.fullscreenEnabled")}}</dt>
  <dd>The <code>fullscreenEnabled</code> property tells you whether or not it is possible to engage full-screen mode. This is <code>false</code> if full-screen mode is not available for any reason (such as the <code>"fullscreen"</code> feature not being allowed, or full-screen mode not being supported).</dd>
 </dl>
@@ -72,9 +72,9 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("Document.onfullscreenchange")}}</dt>
- <dd>An event handler for the {{Event("fullscreenchange")}} event that's sent to a {{DOMxRef("Document")}} when that document is placed into full-screen mode, or when that document exits full-screen mode. This handler is called only when the entire document is presented in full-screen mode.</dd>
+ <dd>An event handler for the {{Event("fullscreenchange")}} event that's bubbled up to the {{DOMxRef("Document")}} when any {{DOMxRef("Element")}} in that document is placed into full-screen mode, or exits full-screen mode.</dd>
  <dt>{{DOMxRef("Document.onfullscreenerror")}}</dt>
- <dd>An event handler for the {{Event("fullscreenerror")}} event that gets sent to a {{DOMxRef("Document")}} when an error occurs while trying to enable or disable full-screen mode for the entire document.</dd>
+ <dd>An event handler for the {{Event("fullscreenerror")}} event that gets bubbled up to the {{DOMxRef("Document")}} when an error occurs while trying to enable or disable full-screen mode for any {{DOMxRef("Element")}} in that document.</dd>
 </dl>
 
 <h4 id="Event_handlers_on_elements">Event handlers on elements</h4>
@@ -101,9 +101,9 @@ tags:
 
 <dl>
  <dt>{{Event("fullscreenchange")}}</dt>
- <dd>Sent to a {{DOMxRef("Document")}} or {{DOMxRef("Element")}} when it transitions into or out of full-screen mode.</dd>
+ <dd>Sent to an {{DOMxRef("Element")}} when it transitions into or out of full-screen mode.</dd>
  <dt>{{Event("fullscreenerror")}}</dt>
- <dd>Sent to a <code>Document</code> or <code>Element</code> if an error occurs while attempting to switch it into or out of full-screen mode.</dd>
+ <dd>Sent to an <code>Element</code> if an error occurs while attempting to switch it into or out of full-screen mode.</dd>
 </dl>
 
 <h2 id="Dictionaries">Dictionaries</h2>
@@ -191,7 +191,7 @@ tags:
 
 <div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("api.DocumentOrShadowRoot.fullscreenElement")}}</p>
+<p>{{Compat("api.Document.fullscreenElement")}}</p>
 
 <h3 id="Document.fullscreenEnabled"><code>Document.fullscreenEnabled</code></h3>
 

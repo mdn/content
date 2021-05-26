@@ -2,16 +2,16 @@
 title: ImageCapture.getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
 tags:
-- API
-- Experimental
-- Image
-- Image Capture
-- ImageCapture
-- Media
-- MediaStream Image Capture API
-- Method
-- Reference
-- getPhotoSettings
+  - API
+  - Experimental
+  - Image
+  - Image Capture
+  - ImageCapture
+  - Media
+  - MediaStream Image Capture API
+  - Method
+  - Reference
+  - getPhotoSettings
 ---
 <div>{{APIRef("MediaStream Image")}}</div>
 
@@ -55,7 +55,7 @@ tags:
   {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
 </p>
 
-<pre class="brush: js"><code>const input = document.querySelector('input[type="range"]');
+<pre class="brush: js">const input = document.querySelector('input[type=&quot;range&quot;]');
 
 var imageCapture;
 
@@ -80,7 +80,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 .then(photoSettings =&gt; {
   input.value = photoSettings.imageWidth;
 })
-.catch(error =&gt; console.log('Argh!', error.name || error));</code></pre>
+.catch(error =&gt; console.log('Argh!', error.name || error));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -92,8 +92,7 @@ navigator.mediaDevices.getUserMedia({video: true})
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('MediaStream
-        Image','#dom-imagecapture-getphotosettings','getPhotoSettings()')}}</td>
+      <td>{{SpecName('MediaStream Image','#dom-imagecapture-getphotosettings','getPhotoSettings()')}}</td>
       <td>{{Spec2('MediaStream Image')}}</td>
       <td>Initial definition.</td>
     </tr>

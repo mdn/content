@@ -7,6 +7,7 @@ tags:
   - CSS Cascade
   - CSS Conditional Rules
   - Reference
+browser-compat: css.at-rules.import
 ---
 <div>{{CSSRef}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <dl>
  <dt><em>url</em></dt>
- <dd>Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("&lt;url&gt;")}} representing the location of the resource to import. The URL may be absolute or relative. Note that the URL for a Mozilla package need not actually specify a file; it can just specify the package name and part, and the appropriate file is chosen automatically (e.g. <code>chrome://communicator/skin/</code>). <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/The_Chrome_URL">See here</a> for more information.</dd>
+ <dd>Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("&lt;url&gt;")}} representing the location of the resource to import. The URL may be absolute or relative.</dd>
  <dt><em>list-of-media-queries</em></dt>
  <dd>Is a comma-separated list of <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> conditioning the application of the CSS rules defined in the linked URL. If the browser does not support any these queries, it does not load the linked resource.</dd>
  <dt><em>supports-query</em></dt>
@@ -39,7 +40,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -97,7 +98,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.import")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

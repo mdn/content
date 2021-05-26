@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.filter
 ---
 <div>{{JSRef}}</div>
 
@@ -20,26 +21,35 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarray</var>.filter(<var>callback</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+filter((element) => { ... } )
+filter((element, index) => { ... } )
+filter((element, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(element) { ... })
+filter(function callbackFn(element, index) { ... })
+filter(function callbackFn(element, index, array){ ... })
+filter(function callbackFn(element, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>Function to test each element of the typed array. Invoked with arguments
-    <code>(<var>element</var>, <var>index</var>, <var>typedarray</var>)</code>. Return
+    <code>(<var>element</var>, <var>index</var>, <var>array</var>)</code>. Return
     <code>true</code> to keep the element, <code>false</code> otherwise.</dd>
   <dt><code><var>thisArg</var></code>{{optional_inline}}</dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.
+  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
   </dd>
 </dl>
 
@@ -49,17 +59,17 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>filter()</code> method calls a provided <code><var>callback</var></code>
+<p>The <code>filter()</code> method calls a provided <code><var>callbackFn</var></code>
   function once for each element in a typed array, and constructs a new typed array of all
-  the values for which <code><var>callback</var></code> returns <a
+  the values for which <code><var>callbackFn</var></code> returns <a
     href="/en-US/docs/Glossary/Truthy">a value that coerces to <code>true</code></a>.
-  <code><var>callback</var></code> is invoked only for indexes of the typed array which
+  <code><var>callbackFn</var></code> is invoked only for indexes of the typed array which
   have assigned values; it is not invoked for indexes which have been deleted or which
   have never been assigned values. Typed array elements which do not pass the
-  <code><var>callback</var></code> test are skipped, and are not included in the new typed
+  <code><var>callbackFn</var></code> test are skipped, and are not included in the new typed
   array.</p>
 
-<p><code><var>callback</var></code> is invoked with three arguments:</p>
+<p><code><var>callbackFn</var></code> is invoked with three arguments:</p>
 
 <ol>
   <li>the value of the element</li>
@@ -68,20 +78,20 @@ tags:
 </ol>
 
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>filter()</code>, it
-  will be passed to <code><var>callback</var></code> when invoked, for use as its
+  will be passed to <code><var>callbackFn</var></code> when invoked, for use as its
   <code>this</code> value. Otherwise, the value <code>undefined</code> will be passed for
   use as its <code>this</code> value. The <code>this</code> value ultimately observable by
-  <code><var>callback</var></code> is determined according to <a
+  <code><var>callbackFn</var></code> is determined according to <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
     determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>filter()</code> does not mutate the typed array on which it is called.</p>
 
 <p>The range of elements processed by <code>filter()</code> is set before the first
-  invocation of <code><var>callback</var></code>. Elements which are appended to the typed
+  invocation of <code><var>callbackFn</var></code>. Elements which are appended to the typed
   array after the call to <code>filter()</code> begins will not be visited by
-  <code><var>callback</var></code>. If existing elements of the typed array are changed,
-  or deleted, their value as passed to <code><var>callback</var></code> will be the value
+  <code><var>callbackFn</var></code>. If existing elements of the typed array are changed,
+  or deleted, their value as passed to <code><var>callbackFn</var></code> will be the value
   at the time <code>filter()</code> visits them; elements that are deleted are not
   visited.</p>
 
@@ -110,23 +120,11 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter',
-        'TypedArray.prototype.filter')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.filter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

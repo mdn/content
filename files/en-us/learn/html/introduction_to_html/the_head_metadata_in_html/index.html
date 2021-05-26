@@ -151,7 +151,7 @@ started with developing web sites and applications."&gt;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in <a href="http://www.google.com/webmasters/tools/">Google's webmaster tools</a> — a way to make your site's search results better in the Google search engine.</p>
+<p><strong>Note</strong>: In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in <a href="https://www.google.com/webmasters/tools/">Google's webmaster tools</a> — a way to make your site's search results better in the Google search engine.</p>
 </div>
 
 <div class="note">
@@ -162,9 +162,9 @@ started with developing web sites and applications."&gt;</pre>
 
 <p>As you travel around the web, you'll find other types of metadata, too. A lot of the features you'll see on websites are proprietary creations, designed to provide certain sites (such as social networking sites) with specific pieces of information they can use.</p>
 
-<p>For example, <a href="http://ogp.me/">Open Graph Data</a> is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN Web Docs sourcecode, you'll find this:</p>
+<p>For example, <a href="https://ogp.me/">Open Graph Data</a> is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN Web Docs sourcecode, you'll find this:</p>
 
-<pre class="brush: html">&lt;meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"&gt;
+<pre class="brush: html">&lt;meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"&gt;
 &lt;meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
 and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
@@ -200,15 +200,15 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 <p>There are lots of other icon types to consider these days as well. For example, you'll find this in the source code of the MDN Web Docs homepage:</p>
 
 <pre class="brush: html">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png"&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png"&gt;
 &lt;!-- iPhone with high-resolution Retina display: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png"&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png"&gt;
 &lt;!-- first- and second-generation iPad: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png"&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png"&gt;
 &lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
-&lt;link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png"&gt;
+&lt;link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png"&gt;
 &lt;!-- basic favicon --&gt;
-&lt;link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png"&gt;</pre>
+&lt;link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png"&gt;</pre>
 
 <p>The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.</p>
 
@@ -229,7 +229,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
   <pre class="brush: html">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
  </li>
  <li>
-  <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript at the same time as the page's HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a>). </p>
+  <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a>). </p>
 
   <pre class="brush: html">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
 

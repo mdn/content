@@ -17,15 +17,15 @@ tags:
 
 <p>The only stacking context is the root context. Without z-indexes, elements are stacked in order of occurrence.</p>
 
-<p><img alt="Stacking context example 1" class="internal" src="/@api/deki/files/914/=Understanding_zindex_05a.png"></p>
+<p><img alt="Stacking context example 1" class="internal" src="understanding_zindex_05a.png"></p>
 
 <p>If DIV #2 is assigned a positive (non-zero and non-auto) z-index value, it is rendered above all the other DIVs.</p>
 
-<p><img alt="Stacking context example 1" class="internal" src="/@api/deki/files/915/=Understanding_zindex_05b.png"></p>
+<p><img alt="Stacking context example 1" class="internal" src="understanding_zindex_05b.png"></p>
 
 <p>Then if DIV #4 is also assigned a positive z-index greater than DIV #2's z-index, it is rendered above all the other DIVs including DIV #2.</p>
 
-<p><img alt="Stacking context example 1" class="internal" src="/@api/deki/files/916/=Understanding_zindex_05c.png"></p>
+<p><img alt="Stacking context example 1" class="internal" src="understanding_zindex_05c.png"></p>
 
 <p>In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through z-index. It happens that, since DIV #1 and DIV #3 are not assigned any z-index value, they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.</p>
 
@@ -40,7 +40,7 @@ tags:
  </li>
 </ul>
 
-<div class="note"><strong>Note:</strong> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a z-index value. And this example shows what happens when a parent element does not create a stacking context.</div>
+<div class="notecard"><strong>Note:</strong> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a z-index value. And this example shows what happens when a parent element does not create a stacking context.</div>
 
 <h2 id="Example">Example</h2>
 
@@ -126,7 +126,6 @@ tags:
  <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, <code>z-index</code> on the second level</li>
 </ul>
 
-<div class="originaldocinfo">
 <h2 id="Original_Document_Information">Original Document Information</h2>
 
 <ul>
@@ -134,4 +133,3 @@ tags:
  <li>This article is the English translation of an article I wrote in Italian for <a href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under the <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a>.</li>
  <li>Last Updated Date: July 9, 2005</li>
 </ul>
-</div>

@@ -2,12 +2,13 @@
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 tags:
-- ECMAScript 2015
-- Generator
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - ECMAScript 2015
+  - Generator
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Generator.next
 ---
 <div>{{JSRef}}</div>
 
@@ -19,17 +20,19 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js"><code><var>gen</var>.next(<var>value</var>)</code></pre>
+  class="brush: js">next(value)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code><var>value</var></code></dt>
-  <dd>The value to send to the generator.</dd>
-  <dd>The value will be assigned as a result of a <code>yield</code> expression. For
+  <dd>
+    <p>The value to send to the generator.</p>
+    <p>The value will be assigned as a result of a <code>yield</code> expression. For
     example, in <code><var>variable</var> = yield <var>expression</var></code>, the value
     passed to the <code>.next()</code> function will be assigned to
-    <code><var>variable</var></code>.</dd>
+    <code><var>variable</var></code>.</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -38,12 +41,14 @@ tags:
 
 <dl>
   <dt><code>done</code> (boolean)</dt>
-  <dd>Has the value <code>true</code> if the iterator is past the end of the iterated
+  <dd>
+    <p>Has the value <code>true</code> if the iterator is past the end of the iterated
     sequence. In this case <code>value</code> optionally specifies the <em>return
-      value</em> of the iterator.</dd>
-  <dd>Has the value <code>false</code> if the iterator was able to produce the next value
+      value</em> of the iterator.</p>
+    <p>Has the value <code>false</code> if the iterator was able to produce the next value
     in the sequence. This is equivalent of not specifying the <code>done</code> property
-    altogether.</dd>
+    altogether.</p>
+  </dd>
   <dt><code>value</code></dt>
   <dd>Any JavaScript value returned by the iterator. Can be omitted when <code>done</code>
     is <code>true</code>.</dd>
@@ -121,23 +126,11 @@ g.next(2);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-generator.prototype.next',
-        'Generator.prototype.next')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Generator.next")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

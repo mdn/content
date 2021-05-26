@@ -52,7 +52,7 @@ tags:
 
 <p>As described above, JSON is a string whose format very much resembles JavaScript object literal format. You can include the same basic data types inside JSON as you can in a standard JavaScript object — strings, numbers, arrays, booleans, and other object literals. This allows you to construct a data hierarchy, like so:</p>
 
-<pre class="brush: json">'{
+<pre class="brush: json">{
   "squadName": "Super hero squad",
   "homeTown": "Metro City",
   "formed": 2016,
@@ -92,7 +92,7 @@ tags:
       ]
     }
   ]
-}'</pre>
+}</pre>
 
 <p>If we loaded this string into a JavaScript program, parsed it into a variable called <code>superHeroes</code> for example, we could then access the data inside it using the same dot/bracket notation we looked at in the <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">JavaScript object basics</a> article. For example:</p>
 
@@ -119,7 +119,7 @@ superHeroes['active']</pre>
 
 <p>Above we mentioned that JSON text basically looks like a JavaScript object inside a string. We can also convert arrays to/from JSON. Below is also valid JSON, for example:</p>
 
-<pre class="brush: json">'[
+<pre class="brush: json">[
   {
     "name": "Molecule Man",
     "age": 29,
@@ -140,7 +140,7 @@ superHeroes['active']</pre>
       "Superhuman reflexes"
     ]
   }
-]'</pre>
+]</pre>
 
 <p>The above is perfectly valid JSON. You'd just have to access array items (in its parsed version) by starting with an array index, for example <code>[0]["powers"][0]</code>.</p>
 
@@ -149,7 +149,7 @@ superHeroes['active']</pre>
 <ul>
  <li>JSON is purely a string with a specified data format — it contains only properties, no methods.</li>
  <li>JSON requires double quotes to be used around strings and property names. Single quotes are not valid other than surrounding the entire JSON string.</li>
- <li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like <a href="http://jsonlint.com/">JSONLint</a>.</li>
+ <li>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly). You can validate JSON using an application like <a href="https://jsonlint.com/">JSONLint</a>.</li>
  <li>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be valid JSON.</li>
  <li>Unlike in JavaScript code in which object properties may be unquoted, in JSON only quoted strings may be used as properties.</li>
 </ul>
@@ -341,7 +341,7 @@ myString</pre>
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest object reference page</a></li>
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
  <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
- <li><a href="http://json.org">Official JSON web site with link to ECMA standard</a></li>
+ <li><a href="https://json.org">Official JSON web site with link to ECMA standard</a></li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}</p>

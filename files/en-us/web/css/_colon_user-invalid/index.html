@@ -1,30 +1,52 @@
 ---
 title: ':user-invalid (:-moz-ui-invalid)'
-slug: 'Web/CSS/:user-invalid'
+slug: Web/CSS/:user-invalid
 tags:
   - CSS
   - CSS Selectors
-  - 'CSS:Mozilla Extensions'
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
   - Pseudo-class
   - Reference
   - Selector
+browser-compat: css.selectors.user-invalid
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <code>:user-invalid</code> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value isn't valid based on their <a href="/en-US/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation">validation constraints</a>, after the user has interacted with it.</p>
+<p>The <strong><code>:user-invalid</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value isn't valid based on their <a href="/en-US/docs/Learn/Forms#constraint_validation">validation constraints</a>, after the user has interacted with it.</p>
 
-<p>The :user-invalid pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, or blank-but {{CSSxRef(":required")}} element between the time the user has attempted to submit the form and before the user has interacted again with the form element. </p>
+<p>The <code>:user-invalid</code> pseudo-class must match an {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, or blank-but {{CSSxRef(":required")}} element between the time the user has attempted to submit the form and before the user has interacted again with the form element. </p>
 
-<p>The pseudo-class behaves in the same way as the non-standard <code>:moz-ui-invalid</code> pseudo-class.</p>
-
-<p>By default, Gecko applies a style that creates a red "glow" (using the {{CSSxRef("box-shadow")}} property) around items, which have the <code>:moz-ui-invalid</code> pseudo-class applied. See the {{CSSxRef(":invalid")}} pseudo-class for an example that shows how to override the default style.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The pseudo-class behaves in the same way as the non-standard <code>:-moz-ui-invalid</code> pseudo-class.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Setting_invalid">Setting a color and symbol on :user-invalid</h3>
+
+<p>In the following example, the red border and ❌ only display once the user has interacted with the field.
+Try typing something other than an email address to see it in action.</p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;label for="email"&gt;Email *: &lt;/label&gt;
+  &lt;input id="email" name="email" type="email" required&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/form&gt;</pre>
+
+<pre class="brush: css">input:user-invalid {
+  border: 2px solid red;
+}
+
+input:user-invalid + span::before {
+  content: '✖';
+  color: red;
+}</pre>
+
+<p>{{EmbedLiveSample("Setting_invalid", 140, 100)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -47,7 +69,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.user-invalid")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -56,5 +78,5 @@ tags:
 	<li>{{CSSxRef(":invalid")}}</li>
 	<li>{{CSSxRef(":required")}}</li>
 	<li>{{CSSxRef(":optional")}}</li>
-	<li>{{CSSxRef(":-moz-ui-valid")}}</li>
+	<li>{{CSSxRef(":user-valid")}}</li>
 </ul>

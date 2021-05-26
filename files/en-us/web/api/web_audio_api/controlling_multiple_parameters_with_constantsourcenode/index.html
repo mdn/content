@@ -25,7 +25,7 @@ tags:
 
 <p>The diagram below shows how this works; an input value, <code>N</code>, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The <code>ConstantSourceNode</code> can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So <code>N</code> becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.</p>
 
-<p><img alt="Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes." src="https://mdn.mozillademos.org/files/14627/CustomSourceNode-as-Splitter.svg" style="height: 394px; width: 660px;"></p>
+<p><img alt="Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes." src="customsourcenode-as-splitter.svg"></p>
 
 <p>As a result, every time you change <code>N</code> (the value of the input {{domxref("AudioParam")}}, the values of the two <code>GainNode</code>s' <code>gain</code> properties and the value of the <code>StereoPannerNode</code>'s <code>pan</code> propertry are all set to <code>N</code> as well.</p>
 
@@ -182,9 +182,9 @@ window.addEventListener("load", setup, false);
 
 <p>Next, the {{domxref("GainNode")}} <code>gainNode1</code> is created to handle the volume for the non-linked oscillator (<code>oscNode1</code>). We set that gain to 0.5. We also create <code>gainNode2</code> and <code>gainNode3</code>, setting their values to match <code>gainNode1</code>, then set the value of the volume slider to the same value, so it is synchronized with the gain level it controls.</p>
 
-<p>Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode")}}, <code>constantNode</code>. We connect its output to the <code>gain</code> {{domxref("AudioParam")}} on both <code>gainNode2</code> and <code>gainNode3</code>, and we start the constant node running by calling its {{domxref("ConstantSourceNode.start", "start()")}} method; now it's sending the value 0.5 to the two gain nodes' values, and any change to {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} will automatically set the gain of both <code>gainNode2</code> and <code>gainNode3</code> (affecting their audio inputs as expected).</p>
+<p>Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode")}}, <code>constantNode</code>. We connect its output to the <code>gain</code> {{domxref("AudioParam")}} on both <code>gainNode2</code> and <code>gainNode3</code>, and we start the constant node running by calling its {{domxref("AudioScheduledSourceNode/start", "start()")}} method; now it's sending the value 0.5 to the two gain nodes' values, and any change to {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} will automatically set the gain of both <code>gainNode2</code> and <code>gainNode3</code> (affecting their audio inputs as expected).</p>
 
-<p>Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("AudioContext.destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.</p>
+<p>Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.</p>
 
 <p>After setting the window's {{event("load")}} event handler to be the <code>setup()</code> function, the stage is set. Let's see how the action plays out.</p>
 
@@ -248,7 +248,7 @@ window.addEventListener("load", setup, false);
 <p>Each of the three oscillators is set up the same way:</p>
 
 <ol>
- <li>Create the {{domxref("OscillatorNode")}} by calling {{domxref("AudioContext.createOscillator()")}}.</li>
+ <li>Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.</li>
  <li>Set the oscillator's type to <code>"sine"</code> to use a sine wave as the audio waveform.</li>
  <li>Set the oscillator's frequency to the desired value; in this case, <code>oscNode1</code> is set to a middle C, while <code>oscNode2</code> and <code>oscNode3</code> round out the chord by playing the E and G notes.</li>
  <li>Connect the new oscillator to the corresponding gain node.</li>

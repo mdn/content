@@ -69,7 +69,7 @@ tags:
   to verify the state of this method.</p>
 
 <pre
-  class="brush: js"><em>promise</em> = <em>rtcPeerConnection</em>.getStats(<em>selector</em>, <em>successCallback</em>, <em>failureCallback</em>) {{obsolete_inline}}</pre>
+  class="brush: js"><em>promise</em> = <em>rtcPeerConnection</em>.getStats(<em>selector</em>, <em>successCallback</em>, <em>failureCallback</em>) {{deprecated_inline}}</pre>
 
 <h4 id="Parameters_2">Parameters</h4>
 
@@ -101,7 +101,7 @@ tags:
     let statsOutput = "";
 
     stats.forEach(report =&gt; {
-      statsOutput += `&lt;h2&gt;Report: ${report.type}&lt;/h3&gt;\n&lt;strong&gt;ID:&lt;/strong&gt; ${report.id}&lt;br&gt;\n` +
+      statsOutput += `&lt;h2&gt;Report: ${report.type}&lt;/h2&gt;\n&lt;strong&gt;ID:&lt;/strong&gt; ${report.id}&lt;br&gt;\n` +
                      `&lt;strong&gt;Timestamp:&lt;/strong&gt; ${report.timestamp}&lt;br&gt;\n`;
 
       // Now the statistics for this report; we intentially drop the ones we

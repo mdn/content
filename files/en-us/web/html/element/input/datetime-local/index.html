@@ -14,6 +14,7 @@ tags:
   - Reference
   - Time
   - datetime-local
+browser-compat: html.elements.input.input-datetime-local
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
+<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with Chrome/Opera/Edge and Safari 14.1 on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
 
 <p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
@@ -33,13 +34,13 @@ tags:
 
 <p>For those of you not using a supporting browser, the Chrome/Opera <code>datetime-local</code> control looks like the below screenshot. Clicking the down arrow on the right hand side brings up a date picker to allow you to choose a date; you have to enter the time manually.</p>
 
-<p><img alt="" src="datetime-local-chrome.png" style="display: block; height: 224px; margin: 0px auto; width: 280px;"></p>
+<p><img alt="" src="datetime-local-chrome.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The Edge <code>datetime-local</code> control looks like the below; clicking the date and the time parts of the value bring up two separate pickers for you, so you can easily set both the date and the time. This is somewhat like having <code>date</code> and <code>time</code> widgets both created for you and merged into one.</p>
 
-<p><img alt="" src="datetime-local-picker-edge1.png" style="display: block; height: 398px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="" src="datetime-local-picker-edge1.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="" src="datetime-local-picker-edge2.png" style="display: block; height: 394px; margin: 0px auto; width: 264px;"></p>
+<p><img alt="" src="datetime-local-picker-edge2.png" style="display: block; margin: 0px auto;"></p>
 
 <table class="properties">
  <tbody>
@@ -83,7 +84,7 @@ tags:
 <p><strong>Note:</strong> Also bear in mind that if such data is submitted via HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code>, the colon character will need to be escaped for inclusion in the URL parameters, e.g. <code>partydate=2017-06-01T08%3A30</code>. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.</p>
 </div>
 
-<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
+<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} <code>value</code> property, for example:</p>
 
 <pre class="brush: js">var dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';</pre>
@@ -233,7 +234,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="datetime-local-error.png" style="display: block; height: 100px; margin: 0px auto; width: 558px;"></p>
+<p><img alt="" src="datetime-local-error.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -264,9 +265,9 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
+<p>As mentioned above, the major problem with using datetime-local inputs at the time of writing is browser support — Chrome/Opera/Edge and Safari support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
 
-<p><img alt="" src="datetime-local-fxa.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="" src="datetime-local-fxa.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
@@ -598,31 +599,11 @@ daySelect.onchange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-datetime-local")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -630,6 +611,6 @@ daySelect.onchange = function() {
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code></li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker">Date and Time picker tutorial</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

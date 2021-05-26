@@ -8,6 +8,7 @@ tags:
 - Prototype
 - Reference
 - String
+browser-compat: javascript.builtins.String.localeCompare
 ---
 <div>{{JSRef}}</div>
 
@@ -25,8 +26,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><code><var>referenceStr</var>.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
+<pre class="brush: js">
+localeCompare(compareString)
+localeCompare(compareString, locales)
+localeCompare(compareString, locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,8 +72,7 @@ tags:
 </ul>
 
 <div class="notecard warning">
-  <p><strong>Do NOT rely on exact return values of <code>-1</code> or <code>1</code>!
-    </strong></p>
+  <p><strong>Warning:</strong> Do not rely on exact return values of <code>-1</code> or <code>1</code>!</p>
 
   <p>Negative and positive integer results vary between browsers (as well as between
     browser versions) because the W3C specification only mandates negative and positive
@@ -164,32 +167,12 @@ console.log(<span class="message-body-wrapper"><span class="message-flex-body"><
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.localecompare',
-        'String.prototype.localeCompare')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sup-String.prototype.localeCompare',
-        'String.prototype.localeCompare')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.localeCompare")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

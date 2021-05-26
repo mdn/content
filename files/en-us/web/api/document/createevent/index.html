@@ -2,20 +2,20 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 tags:
-- API
-- DOM
-- Method
-- Reference
+  - API
+  - DOM
+  - Method
+  - Reference
 ---
-<div class="warning">
-  <p>Many methods used with <code>createEvent</code>, such as
-    <code>initCustomEvent</code>, are deprecated. Use <a
-      href="/en-US/docs/Web/API/CustomEvent">event constructors</a> instead.</p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>Many methods used with <code>createEvent</code>, such as <code>initCustomEvent</code>, are deprecated.
+    Use <a href="/en-US/docs/Web/API/CustomEvent">event constructors</a> instead.</p>
 </div>
 
 <div>{{ApiRef("DOM")}}</div>
 
-<p>Creates an <a href="/en-US/docs/DOM/event">event</a> of the type specified. The
+<p>Creates an <a href="/en-US/docs/Web/API/Event">event</a> of the type specified. The
   returned object should be first initialized and can then be passed to
   {{domxref("EventTarget.dispatchEvent")}}.</p>
 
@@ -26,7 +26,7 @@ tags:
 
 <ul>
   <li><code><var>event</var></code> is the created <a
-      href="/en-US/docs/DOM/event">Event</a> object.</li>
+      href="/en-US/docs/Web/API/Event">Event</a> object.</li>
   <li><code><var>type</var></code> is a string that represents the type of event to be
     created. Possible event types include <code>"UIEvents"</code>,
     <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, and
@@ -111,6 +111,5 @@ elem.dispatchEvent(event);
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
-      triggering events</a></li>
+  <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
 </ul>

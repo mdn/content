@@ -29,8 +29,8 @@ tags:
 <ul>
  <li><strong><a href="#headers_tab">Headers</a></strong></li>
  <li><strong>Messages</strong> (only for WebSocket items)</li>
- <li><strong><a href="#cookies_tab">Cookies</a></strong></li>
  <li><strong><a href="#params_tab">Params</a></strong></li>
+ <li><strong><a href="#request_tab">Request</a></strong></li>
  <li><strong><a href="#response_tab">Response</a></strong></li>
  <li><strong><a href="#cache_tab">Cache</a></strong></li>
  <li><strong><a href="#timings_tab">Timings</a></strong></li>
@@ -104,7 +104,7 @@ tags:
 <p>A <strong>Raw</strong> toggle button in the section heading controls whether the headers are shown with formatting, or as plain, unformatted text.</p>
 
 <div class="notecard note">
-<p>Note that the keys in the response header are all in lowercase, while the request headers keys are not. <a href="https://tools.ietf.org/html/rfc7540#section-8.1.2">HTTP/2 requires that all headers be lowercase</a>; response headers are shown as they are received from the server. (There may be some exceptions, such as <code>X-Firefox-Spdy</code>, which is added by Firefox.)</p>
+<p>Note that the keys in the response header are all in lowercase, while the request headers keys are not. <a href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2">HTTP/2 requires that all headers be lowercase</a>; response headers are shown as they are received from the server. (There may be some exceptions, such as <code>X-Firefox-Spdy</code>, which is added by Firefox.)</p>
 </div>
 
 <p><img alt="Screenshot showing the Request headers section of the Request details pane" src="response-headers-fx78.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
@@ -294,19 +294,37 @@ tags:
 
 <p><img alt="" src="params.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
+<h3 id="Request_tab">Request tab</h3>
+
+<p>Request shows the complete request parameters, by default, in a formatted view:</p>
+
+<p><img alt="" src="json_formatted_request.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>Switch the toggle button to have the raw view presented:</p>
+
+<p><img alt="" src="json_raw_request.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+
 <h3 id="Response_tab">Response tab</h3>
 
 <p>The complete content of the response. If the response is HTML, JS, or CSS, it will be shown as text:</p>
 
-<p><img alt="" src="network_response.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="html_formatted_response.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>The toggle button for switching between raw and formatted response view has been implemented ({{bug(1693147)}}). The previous HTML example makes use of the formatted view. When the toggle button is turned on, the raw response view will be enabled: </p>
+
+<p><img alt="" src="html_raw_response.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>If the response is JSON, it will be shown as an inspectable object:</p>
 
-<p><img alt="" src="response_json.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="json_formatted_response.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>In the raw response view the response will be shown as a string:</p>
+
+<p><img alt="" src="json_raw_response.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>If the response is an image, the tab displays a preview:</p>
 
-<p><img alt="" src="response_pane_image.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="response_pane_image.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>For network responses that are initiated by a <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection, the details pane shows any associated messages. For more information, see <a href="/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets">Inspecting web sockets</a>.</p>
 

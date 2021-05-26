@@ -24,7 +24,7 @@ tags:
 
 <figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 30em; margin-bottom: 1em; margin-right: 2em;">
 <figcaption><strong>Screenshot of this example in action</strong></figcaption>
-<img alt="Screenshot of example showing a textured cube the user can move around" src="https://mdn.mozillademos.org/files/17000/xr-sample.png"></figure>
+<img alt="Screenshot of example showing a textured cube the user can move around" src="xr-sample.png"></figure>
 
 <p>The core of this example—the spinning, textured, lighted cube—is taken from our WebGL tutorial series; namely, the penultimate article in the series, covering <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">lighting in WebGL</a>.</p>
 
@@ -133,7 +133,7 @@ const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 <h3 id="The_vertex_and_fragment_shaders">The vertex and fragment  shaders</h3>
 
-<p>The vertex and fragment shaders are both exactly the same as those used in the example for our article <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a>. <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#Update_the_shaders">Refer to that</a> if you're interested in the <a href="/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL">GLSL</a> source code for the basic shaders used here.</p>
+<p>The vertex and fragment shaders are both exactly the same as those used in the example for our article <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a>. <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#update_the_shaders">Refer to that</a> if you're interested in the <a href="/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL">GLSL</a> source code for the basic shaders used here.</p>
 
 <p>Suffice it to say that the vertex shader computes the position of each vertex given the initial positions of each vertex and the transforms that need to be applied to convert them to simulate the viewer's current position and orientation. The fragment shader returns the color of each vertex, interpolating as needed from the values found in the texture and applying the lighting effects.</p>
 

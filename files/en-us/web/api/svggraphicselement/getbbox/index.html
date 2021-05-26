@@ -1,5 +1,5 @@
 ---
-title: getBBox()
+title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 tags:
 - API
@@ -11,13 +11,14 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>SVGGraphicsElement.getBBox()</strong></code> allows us to determine
+<p>The <code><strong>SVGGraphicsElement.getBBox()</strong></code> method allows us to determine
   the coordinates of the smallest rectangle in which the object fits. The coordinates
   returned are with respect to the current SVG space (after the application of all
   geometry attributes on all the elements contained in the target element).</p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> <code>getBBox()</code> must return the actual bounding box at
+  <h4>Note</h4>
+  <p><code>getBBox()</code> must return the actual bounding box at
     the time the method was called—even in case the element has not yet been rendered. It
     also does not account for any transformation applied to the element or its parents.
   </p>

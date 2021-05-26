@@ -5,6 +5,7 @@ tags:
   - Global attributes
   - HTML
   - Reference
+browser-compat: html.global_attributes.data_attributes
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
@@ -18,9 +19,9 @@ tags:
  The <code>*</code> may be replaced by any name following <a href="https://www.w3.org/TR/REC-xml/#NT-Name">the production rule of XML names</a> with the following restrictions:</p>
 
 <ul>
- <li>the name must not start with <code>xml</code>, whatever case is used for these letters;</li>
- <li>the name must not contain any semicolon (<code>U+003A</code>);</li>
- <li>the name must not contain capital letters.</li>
+ <li>The name must not start with <code>xml</code> (case-insensitive).</li>
+ <li>The name must not contain any colon characters (<code>:</code>).</li>
+ <li>The name must not contain any capital letters.</li>
 </ul>
 
 <p>Note that the {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}}, and the name of the custom data attribute <em>data-test-value</em> will be accessible via <code>HTMLElement.dataset.testValue</code> (or by <code>HTMLElement.dataset["<em>testValue</em>"]</code>) as any dash (<code>U+002D</code>) is replaced by the capitalization of the next letter, converting the name to camelcase.</p>
@@ -39,24 +40,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#attr-data-*", "data-*")}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.global_attributes.data_attributes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

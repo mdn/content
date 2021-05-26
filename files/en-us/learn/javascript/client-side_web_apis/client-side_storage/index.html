@@ -165,7 +165,7 @@ myName</pre>
   <p>First, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> file in a new directory on your computer.</p>
  </li>
  <li>
-  <p>Next, note how our HTML references a JavaScript file called <code>index.js</code> (see line 40). We need to create this and write our JavaScript code into it. Create an <code>index.js</code> file in the same directory as your HTML file. </p>
+  <p>Next, note how our HTML references a JavaScript file called <code>index.js</code>, with a line like <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code>. We need to create this and write our JavaScript code into it. Create an <code>index.js</code> file in the same directory as your HTML file. </p>
  </li>
  <li>
   <p>We'll start off by creating references to all the HTML features we need to manipulate in this example — we'll create them all as constants, as these references do not need to change in the lifecycle of the app. Add the following lines to your JavaScript file:</p>
@@ -671,7 +671,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>When it intercepts a request, it can do anything you wish to it (see <a href="/en-US/docs/Web/API/Service_Worker_API#other_use_case_ideas">use case ideas</a>), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.</p>
 
-<p>The Cache API is a another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.</p>
+<p>The Cache API is another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.</p>
 
 <h3 id="A_service_worker_example">A service worker example</h3>
 

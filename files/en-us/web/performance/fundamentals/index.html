@@ -44,7 +44,7 @@ tags:
 
 <p><strong>Memory usage</strong> is another key metric. Unlike responsiveness and framerate, users don't directly perceive memory usage, but memory usage closely approximates "user state". An ideal system would maintain 100% of user state at all times: all applications in the system would run simultaneously, and all applications would retain the state created by the user the last time the user interacted with the application (application state is stored in computer memory, which is why the approximation is close).</p>
 
-<p>From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of <strong>free</strong> memory. Memory is a resource, and free memory is a unused resource. Rather, a well-designed system has been optimized to <strong>use</strong> as much memory as possible to maintain user state, while meeting other UPP goals.</p>
+<p>From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of <strong>free</strong> memory. Memory is a resource, and free memory is an unused resource. Rather, a well-designed system has been optimized to <strong>use</strong> as much memory as possible to maintain user state, while meeting other UPP goals.</p>
 
 <p>That doesn't mean the system should <strong>waste</strong> memory. When a system uses more memory than necessary to maintain some particular user state, the system is wasting a resource it could use to retain some other user state. In practice, no system can maintain all user states. Intelligently allocating memory to user state is an important concern that we go over in more detail below.</p>
 
@@ -60,7 +60,7 @@ tags:
 
 <h3 id="Web_technologies">Web technologies</h3>
 
-<p>The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes <a href="/en-US/docs/Web/WebGL">WebGL</a>). Somewhere "in between" HTML/CSS and Canvas is <a href="/en-US/docs/Web/SVG">SVG</a>, which offers some benefits of both.</p>
+<p>The Web platform provides many tools, some better suited for particular jobs than others. All application logic is written in JavaScript. To display graphics, developers can use HTML or CSS (i.e. high-level declarative languages), or use low-level imperative interfaces offered by the {{ htmlelement("canvas") }} element (which includes <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>). Somewhere "in between" HTML/CSS and Canvas is <a href="/en-US/docs/Web/SVG">SVG</a>, which offers some benefits of both.</p>
 
 <p>HTML and CSS greatly increase productivity, sometimes at the expense of framerate or pixel-level control over rendering. Text and images reflow automatically, UI elements automatically receive the system theme, and the system provides "built-in" support for some use cases developers may not think of initially, like different-resolution displays or right-to-left languages.</p>
 
@@ -119,10 +119,10 @@ tags:
 <p>Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For much more information on improving startup performance, read <a href="/en-US/Apps/Developing/Performance/Optimizing_startup_performance">Optimizing startup performance</a>.</p>
+<p><strong>Note</strong>: For much more information on improving startup performance, read <a href="/en-US/docs/Web/Performance/Optimizing_startup_performance">Optimizing startup performance</a>.</p>
 </div>
 
-<p>On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via <a href="/en-US/docs/">Service Workers</a>. See <a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Making PWAs work offline with Service workers</a> for a guide as to how.</p>
+<p>On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>. See <a href="/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers">Making PWAs work offline with Service workers</a> for a guide as to how.</p>
 
 <h3 id="Framerate_2">Framerate</h3>
 
@@ -130,7 +130,7 @@ tags:
 
 <p>For content drawn using Canvas, it's up to the developer to hit framerate targets: they have direct control over what's drawn.</p>
 
-<p>For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS <a href="/en-US/docs/Web/Guide/CSS/Media_queries">media queries</a> allow these compromises to be restricted only to devices that need them.</p>
+<p>For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> allow these compromises to be restricted only to devices that need them.</p>
 
 <p>Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:</p>
 
@@ -159,11 +159,11 @@ tags:
 
 <h4 id="Use_CSS_animations_and_transitions">Use CSS animations and transitions</h4>
 
-<p>Instead of using some library’s <code>animate()</code> function, which probably currently uses many badly performing technologies ({{domxref("window.setTimeout()")}} or <code>top</code>/<code>left</code> positioning, for example) use <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS animations</a>. In many cases, you can actually use <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">CSS Transitions</a> to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.</p>
+<p>Instead of using some library’s <code>animate()</code> function, which probably currently uses many badly performing technologies ({{domxref("WindowOrWorkerGlobalScope.setTimeout")}} or <code>top</code>/<code>left</code> positioning, for example) use <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a>. In many cases, you can actually use <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS Transitions</a> to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.</p>
 
 <p>CSS animations give you very granular control over your effects using <a href="/en-US/docs/Web/CSS/@keyframes">keyframes</a>, and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.</p>
 
-<p>If you want to create animations on the fly or modify them in <a href="/en-US/docs/JavaScript">JavaScript</a>, James Long has written a simple library for that called <a href="https://github.com/jlongster/css-animations.js/">CSS-animations.js</a>.</p>
+<p>If you want to create animations on the fly or modify them in <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, James Long has written a simple library for that called <a href="https://github.com/jlongster/css-animations.js/">CSS-animations.js</a>.</p>
 
 <h4 id="Use_CSS_transforms">Use CSS transforms</h4>
 
@@ -177,7 +177,7 @@ tags:
 
 <h4 id="Use_requestAnimationFrame_instead_of_setInterval">Use <code>requestAnimationFrame()</code> instead of <code>setInterval()</code></h4>
 
-<p>Calls to {{domxref("window.setInterval()")}} run code at a presumed frame rate that may or may not be possible under current circumstances. It tells the browser to render results even while the browser isn't actually drawing; that is, while the video hardware hasn't reached the next display cycle. This wastes processor time and can even lead to reduced battery life on the user's device.</p>
+<p>Calls to {{domxref("WindowOrWorkerGlobalScope.setInterval")}} run code at a presumed frame rate that may or may not be possible under current circumstances. It tells the browser to render results even while the browser isn't actually drawing; that is, while the video hardware hasn't reached the next display cycle. This wastes processor time and can even lead to reduced battery life on the user's device.</p>
 
 <p>Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. This waits until the browser is actually ready to start building the next frame of your animation, and won't bother if the hardware isn't going to actually draw anything. Another benefit to this API is that animations won't run while your app isn't visible on the screen (such as if it's in the background and some other task is operating). This will save battery life and prevent users from cursing your name into the night sky.</p>
 
@@ -187,7 +187,7 @@ tags:
 
 <h4 id="Keep_your_interface_simple">Keep your interface simple</h4>
 
-<p>One big performance issue we found in HTML5 apps was that moving lots of <a href="/en-US/docs/DOM">DOM</a> elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.</p>
+<p>One big performance issue we found in HTML5 apps was that moving lots of <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.</p>
 
 <p>When, for example, you have a long list of elements (let’s say tweets), don’t move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn’t mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren’t visible. The same trick applies in games to sprites: if they aren’t currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.</p>
 
@@ -195,15 +195,15 @@ tags:
 
 <p>Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, <a href="/en-US/docs/Tools/Network_Monitor">Firefox's Network Monitor</a> will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.</p>
 
-<p><img alt="The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph." src="https://mdn.mozillademos.org/files/6845/network-monitor.jpg" style="display: block; height: 713px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph." src="network-monitor.jpg" style="display: block; margin: 0px auto;"></p>
 
-<p>If your page contains JavaScript code that is taking a long time to run, the <a href="/en-US/docs/Tools/Profiler">JavaScript profiler</a> will pinpoint the slowest lines of code:</p>
+<p>If your page contains JavaScript code that is taking a long time to run, the <a href="/en-US/docs/Tools/Performance">JavaScript profiler</a> will pinpoint the slowest lines of code:</p>
 
-<p><img alt="The Firefox JavaScript profiler showing a completed profile 1." src="https://mdn.mozillademos.org/files/6839/javascript-profiler.png" style="display: block; height: 433px; margin: 0px auto; width: 896px;"></p>
+<p><img alt="The Firefox JavaScript profiler showing a completed profile 1." src="javascript-profiler.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The <a href="/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler">Built-in Gecko Profiler</a> is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.</p>
 
-<p><img alt="A built-in Gecko profiler windows showing a lot of network information." src="https://mdn.mozillademos.org/files/6837/gecko-profiler.png" style="display: block; height: 514px; margin: 0px auto; width: 896px;"></p>
+<p><img alt="A built-in Gecko profiler windows showing a lot of network information." src="gecko-profiler.png" style="display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can use these tools with the Android browser by running Firefox and enabling <a href="/en-US/docs/Tools/Remote_Debugging">remote debugging</a>.</p>

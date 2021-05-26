@@ -15,7 +15,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15.5_release_notes
 <h3 id="New_Functionality">New Functionality</h3>
 <ul>
  <li>Added support for the TLS <a href="http://www.iana.org/go/draft-friedl-tls-applayerprotoneg">application layer protocol negotiation (ALPN) extension</a>. Two SSL socket options, <code>SSL_ENABLE_NPN</code> and <code>SSL_ENABLE_ALPN</code>, can be used to control whether NPN or ALPN (or both) should be used for application layer protocol negotiation.</li>
- <li>Added the TLS <a href="https://tools.ietf.org/html/draft-agl-tls-padding">padding extension</a>. The extension type value is <span style="line-height: 1.5;">35655, which may change when an official extension type value is assigned by IANA. NSS automatically adds the padding extension to ClientHello when necessary.</span></li>
+ <li>Added the TLS <a href="https://datatracker.ietf.org/doc/html/draft-agl-tls-padding">padding extension</a>. The extension type value is <span style="line-height: 1.5;">35655, which may change when an official extension type value is assigned by IANA. NSS automatically adds the padding extension to ClientHello when necessary.</span></li>
  <li>Added a new macro <code>CERT_LIST_TAIL</code>, defined in <code>certt.h</code>, for getting the tail of a <code>CERTCertList</code>.</li>
 </ul>
 <h3 id="Notable_Changes_in_NSS_3.15.5">Notable Changes in NSS 3.15.5</h3>

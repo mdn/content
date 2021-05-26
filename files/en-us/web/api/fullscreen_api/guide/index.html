@@ -72,8 +72,8 @@ if (elem.requestFullscreen) {
 <p>The {{DOMxRef("Document")}} provides some additional information that can be useful when developing fullscreen web applications:</p>
 
 <dl>
- <dt>{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</dt>
- <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed fullscreen. If this is non-null, the document is in fullscreen mode. If this is null, the document is not in fullscreen mode.</dd>
+ <dt>{{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}</dt>
+ <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed fullscreen. If this is non-null, the document (or shadow DOM) is in fullscreen mode. If this is null, the document (or shadow DOM) is not in fullscreen mode.</dd>
  <dt>{{DOMxRef("Document.fullscreenEnabled")}}</dt>
  <dd>The <code>fullscreenEnabled</code> property tells you whether or not the document is currently in a state that would allow fullscreen mode to be requested.</dd>
 </dl>
@@ -88,7 +88,7 @@ if (elem.requestFullscreen) {
 
 <p>In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.</p>
 
-<p><a href="/samples/domref/fullscreen.html">View Live Examples</a></p>
+<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html">View Live Examples</a></p>
 
 <h3 id="Watching_for_the_Enter_key">Watching for the Enter key</h3>
 
@@ -150,7 +150,7 @@ if (elem.requestFullscreen) {
    <td><code>msFullscreenEnabled</code></td>
   </tr>
   <tr>
-   <th scope="row">{{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}</th>
+   <th scope="row">{{DOMxRef("Document.fullscreenElement")}}</th>
    <td><code>webkitFullscreenElement</code></td>
    <td><code>mozFullScreenElement</code></td>
    <td><code>msFullscreenElement</code></td>

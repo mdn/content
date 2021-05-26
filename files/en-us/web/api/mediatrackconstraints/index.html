@@ -44,7 +44,7 @@ tags:
  <dt>{{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} object which specifies whether automatic gain control is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.channelCount", "channelCount")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the channel count or range of channel counts which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} object specifying whether or not echo cancellation is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.latency", "latency")}}</dt>
@@ -52,9 +52,9 @@ tags:
  <dt>{{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} which specifies whether noise suppression is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the sample rate or range of sample rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.volume", "volume")}}</dt>
  <dd>A {{domxref("ConstrainDouble")}} specifying the volume or range of volumes which are acceptable and/or required.</dd>
 </dl>
@@ -62,33 +62,33 @@ tags:
 <h3 id="Properties_of_image_tracks">Properties of image tracks</h3>
 
 <dl>
- <dt>{{domxref("MediaTrackConstraints.whiteBalanceMode","whiteBalanceMode")}}</dt>
+ <dt><span id="whitebalancemode">whiteBalanceMode</span></dt>
  <dd>A {{jsxref("String")}} specifying one of <code>"none"</code>, <code>"manual"</code>, <code>"single-shot"</code>, or <code>"continuous"</code>.</dd>
- <dt>{{domxref("MediaTrackConstraints.exposureMode","exposureMode")}}</dt>
+ <dt><span id="exposuremode">exposureMode</span></dt>
  <dd>A {{jsxref("String")}} specifying one of <code>"none"</code>, <code>"manual"</code>, <code>"single-shot"</code>, or <code>"continuous"</code>.</dd>
- <dt>{{domxref("MediaTrackConstraints.focusMode","focusMode")}}</dt>
+ <dt><span id="focusmode">focusMode</span></dt>
  <dd>A {{jsxref("String")}} specifying one of <code>"none"</code>, <code>"manual"</code>, <code>"single-shot"</code>, or <code>"continuous"</code>.</dd>
- <dt>{{domxref("MediaTrackConstraints.pointsOfInterest","pointsOfInterest")}}</dt>
+ <dt><span id="pointsofinterest">pointsOfInterest</span></dt>
  <dd>The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:<em>value</em>, y:<em>value</em> } or an array of such objects, where <em>value</em> is a double-precision integer.</dd>
- <dt>{{domxref("MediaTrackConstraints.expsureCompensation","exposureCompensation")}}</dt>
+ <dt><span id="exposurecompensation">exposureCompensation</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying f-stop adjustment by up to ±3. </dd>
- <dt>{{domxref("MediaTrackConstraints.colorTemperature","colorTemperature")}}</dt>
+ <dt><span id="colortemperature">colorTemperature</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired color temperature in degrees kelvin.</dd>
- <dt>{{domxref("MediaTrackConstraints.iso","iso")}}</dt>
+ <dt><span id="iso">iso</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired iso setting.</dd>
- <dt>{{domxref("MediaTrackConstraints.brightness","brightness")}}</dt>
+ <dt><span id="brightness">brightness</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired brightness setting.</dd>
- <dt>{{domxref("MediaTrackConstraints.contrast","contrast")}}</dt>
+ <dt><span id="contrast">contrast</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the degree of difference between light and dark.</dd>
- <dt>{{domxref("MediaTrackConstraints.saturation","saturation")}}</dt>
+ <dt><span id="saturation">saturation</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the degree of color intensity.</dd>
- <dt>{{domxref("MediaTrackConstraints.sharpness","sharpness")}}</dt>
+ <dt><span id="sharpness">sharpness</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the intensity of edges.</dd>
- <dt>{{domxref("MediaTrackConstraints.focusDistance","focusDistance")}}</dt>
+ <dt><span id="focusdistance">focusDistance</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying distance to a focused object.</dd>
- <dt>{{domxref("MediaTrackConstraints.zoom","zoom")}}</dt>
+ <dt><span id="zoom">zoom</span></dt>
  <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the desired focal length.</dd>
- <dt>{{domxref("MediaTrackConstraints.torch","torch")}}</dt>
+ <dt><span id="torch">torch</span></dt>
  <dd>A {{jsxref("Boolean")}} defining whether the fill light is continuously connected, meaning it stays on as long as the track is active.</dd>
 </dl>
 
@@ -102,10 +102,10 @@ tags:
  <dt>{{domxref("MediaTrackConstraints.frameRate", "frameRate")}}</dt>
  <dd>A {{domxref("ConstrainDouble")}} specifying the frame rate or range of frame rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.height", "height")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the video height or range of heights which are acceptable and/or required.</dd>
+ <dd>A {{domxref("ConstrainULong")}} specifying the video height or range of heights which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.width", "width")}}</dt>
- <dd>A {{domxref("ConstrainLong")}} specifying the video width or range of widths which are acceptable and/or required.</dd>
- <dt>{{domxref("MediaTrackConstraints.resizeMode", "resizeMode")}}</dt>
+ <dd>A {{domxref("ConstrainULong")}} specifying the video width or range of widths which are acceptable and/or required.</dd>
+ <dt><span id="resizemode">resizeMode</span></dt>
  <dd>A {{domxref("ConstrainDOMString")}} object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are <code>none</code> and <code>crop-and-scale</code>. <code>none</code> means that the user agent uses the resolution provided by the camera, its driver or the OS. <code>crop-and-scale</code> means that the user agent can use cropping and downscaling on the camera output  in order to satisfy other constraints that affect the resolution.</dd>
 </dl>
 

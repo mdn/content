@@ -7,8 +7,9 @@ tags:
   - Glossary
   - HTTP
 ---
-<p><span class="seoSummary">A <em>CORS-safelisted response header</em> is an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> which has been safelisted so that it will not be filtered when responses are processed by CORS, since they're considered <em>safe</em> (as the headers listed in {{HTTPHeader("Access-Control-Expose-Headers")}}).</span> By default, the safelist includes the following response headers:</p>
+<p><span class="seoSummary">A <em>CORS-safelisted response header</em> is an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> in a <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> response that it is considered <em>safe</em> to expose to client scripts. Only safelisted response headers are made available to web pages.</span></p>
 
+<p>By default, the safelist includes the following response headers:</p>
 <ul>
  <li>{{HTTPHeader("Cache-Control")}}</li>
  <li>{{HTTPHeader("Content-Language")}}</li>
@@ -19,7 +20,13 @@ tags:
  <li>{{HTTPHeader("Pragma")}}</li>
 </ul>
 
-<p>{{HTTPHeader("Content-Length")}} was not part of the original set safelisted response headers [<a href="https://github.com/whatwg/fetch/pull/626">ref</a>]</p>
+<p>Additional headers can be added to the safelist using {{HTTPHeader("Access-Control-Expose-Headers")}}.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>{{HTTPHeader("Content-Length")}} was not part of the original set of safelisted response headers [<a href="https://github.com/whatwg/fetch/pull/626">ref</a>]</p>
+</div>
+
 
 <h2 id="Examples">Examples</h2>
 
@@ -27,7 +34,7 @@ tags:
 
 <p>You can extend the list of CORS-safelisted response headers by using the {{HTTPHeader("Access-Control-Expose-Headers")}} header:</p>
 
-<pre class="brush: plain">Access-Control-Expose-Headers: X-Custom-Header, Content-Length</pre>
+<pre class="brush: plain">Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding</pre>
 
 <section id="Quick_links">
 <ol>

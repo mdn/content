@@ -1,5 +1,5 @@
 ---
-title: RegExpInstance.lastIndex
+title: 'RegExp: lastIndex'
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 tags:
   - JavaScript
@@ -7,10 +7,13 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+browser-compat: javascript.builtins.RegExp.lastIndex
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>lastIndex</code></strong> is a read/write integer property of regular expression instances that specifies the index at which to start the next match.</p>
+<p><strong><code>lastIndex</code></strong> is a read/write integer property of {{jsXref("RegExp")}} instances that specifies the index at which to start the next match.</p>
+
+<p>Note that <code>lastIndex</code> is not a property of the  {{jsXref("RegExp")}} prototype but is instead only exposed from  {{jsXref("RegExp")}} instances.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}</div>
 
@@ -52,29 +55,21 @@ console.log(re.lastIndex);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp.lastIndex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("RegExp.prototype.ignoreCase")}}</li>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.multiline")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
+ <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
+ <li>{{JSxRef("RegExp.prototype.global")}}</li>
+ <li>{{JSxRef("RegExp.prototype.hasIndices")}}</li>
+ <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
+ <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
+ <li>{{JSxRef("RegExp.prototype.source")}}</li>
+ <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
+ <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
 </ul>

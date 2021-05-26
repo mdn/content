@@ -8,12 +8,13 @@ tags:
 - Reference
 - String
 - regex
+browser-compat: javascript.builtins.String.replaceAll
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>replaceAll()</code></strong> method returns
+<p>The <strong><code>replaceAll()</code></strong> method returns
     a new string with all matches of a <code>pattern</code> replaced by a
-    <code>replacement</code>.</span> The <code>pattern</code> can be a string or a
+    <code>replacement</code>. The <code>pattern</code> can be a string or a
   {{jsxref("RegExp")}}, and the <code>replacement</code> can be a string or a function to
   be called for each match.</p>
 
@@ -23,11 +24,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)
+<pre class="brush: js">
+replaceAll(regexp, newSubstr)
+replaceAll(regexp, replacerFunction)
+
+replaceAll(substr, newSubstr)
+replaceAll(substr, replacerFunction)
 </pre>
 
 <div class="notecard note">
-  <p>when using a `<var>regexp</var>` you have to set the global ("g") flag; otherwise, it
+  <p><strong>Note:</strong> When using a `<var>regexp</var>` you have to set the global ("g") flag; otherwise, it
     will throw a <code>TypeError</code>: "replaceAll must be called with a global RegExp".
   </p>
 </div>
@@ -38,7 +44,7 @@ tags:
   <dt><code><var>regexp</var></code> (pattern)</dt>
   <dd>A {{jsxref("RegExp")}} object or literal with the global flag. The matches are
     replaced with <code><var>newSubstr</var></code> or the value returned by the specified
-    <code><var>function</var></code>. A RegExp without the global ("g") flag will throw a
+    <code><var>replacerFunction</var></code>. A RegExp without the global ("g") flag will throw a
     <code>TypeError</code>: "replaceAll must be called with a global RegExp".</dd>
   <dt><code><var>substr</var></code></dt>
   <dd>A {{jsxref("String")}} that is to be replaced by <code><var>newSubstr</var></code>.
@@ -50,7 +56,7 @@ tags:
     of special replacement patterns are supported; see the "<a
       href="#Specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>"
     section below.</dd>
-  <dt><code><var>function</var></code> (replacement)</dt>
+  <dt><code><var>replacerFunction</var></code> (replacement)</dt>
   <dd>A function to be invoked to create the new substring to be used to replace the
     matches to the given <code><var>regexp</var></code> or <code><var>substr</var></code>.
     The arguments supplied to this function are described in the "<a
@@ -112,8 +118,7 @@ tags:
   used as the replacement string. (<strong>Note:</strong> The above-mentioned special
   replacement patterns do <em>not</em> apply in this case.)</p>
 
-<p>Note that the function will be invoked multiple times for each full match to be
-  replaced if the regular expression in the first parameter is global.</p>
+<p>Note that if the first argument of an <code>replaceAll()</code> invocation is a {{jsxref("RegExp")}} object or regular expression literal, the function will be invoked multiple times.</p>
 
 <p>The arguments to the function are as follows:</p>
 
@@ -132,7 +137,7 @@ tags:
     <tr>
       <td><code>p1, p2, ...</code></td>
       <td>The <var>n</var>th string found by a parenthesized capture group, provided the
-        first argument to <code>replace()</code> was a {{jsxref("RegExp")}} object.
+        first argument to <code>replaceAll()</code> was a {{jsxref("RegExp")}} object.
         (Corresponds to <code>$1</code>, <code>$2</code>, etc. above.) For example,
         if <code>/(\a+)(\b+)/</code>, was given, <code>p1</code> is the match for
         <code>\a+</code>, and <code>p2</code> for <code>\b+</code>.</td>
@@ -177,28 +182,12 @@ TypeError: replaceAll must be called with a global RegExp
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.replaceall',
-        'String.prototype.replaceAll')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.replaceAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

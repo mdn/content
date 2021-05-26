@@ -25,7 +25,7 @@ tags:
 <p>JavaScript objects are dynamic "bags" of properties (referred to as <strong>own properties</strong>). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.</p>
 
 <div class="note">
-<p>Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.</p>
+<p><strong>Note:</strong> Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.</p>
 
 <p>It should not be confused with the <code><em>func</em>.prototype</code> property of functions, which instead specifies the <code>[[Prototype]]</code> to be assigned to all <em>instances</em> of objects created by the given function when used as a constructor. The <code><strong>Object.prototype</strong></code> property represents the {{jsxref("Object")}} prototype object.</p>
 </div>
@@ -74,7 +74,7 @@ console.log(o.d); // undefined
 
 <p><a href="https://repl.it/@khaled_hossain_code/prototype">Code Link</a></p>
 
-<p>Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">getter or a setter</a>.</p>
+<p>Setting a property to an object creates an own property. The only exception to the getting and setting behavior rules is when there is an inherited property with a <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">getter or a setter</a>.</p>
 
 <h3 id="Inheriting_methods">Inheriting "methods"</h3>
 
@@ -305,7 +305,7 @@ delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
-<p>The <code>new</code> operator has a shorter chain in this example:</p>
+<p>In the following example, calling <code>new Graph()</code> creates a <code>Graph</code> instance that has its own <code>vertices</code> property, and that doesn’t inherit any <code>vertices</code> property. So when the <code>vertices</code> property is deleted from that <code>Graph</code> instance, the instance then has neither its own <code>vertices</code> property nor any inherited <code>vertices</code> property.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [4,4];
@@ -313,6 +313,7 @@ console.log(b.a); // print undefined</pre>
 
 var g = new Graph();
 console.log(g.vertices); // print [4,4]
+console.log(g.__proto__.vertices) // print undefined
 g.vertices = 25;
 console.log(g.vertices); // print 25
 delete g.vertices;
@@ -371,30 +372,21 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 
 <p>Note: It is <strong>not</strong> enough to check whether a property is <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>. The property might very well exist, but its value just happens to be set to <code>undefined</code>.</p>
 
-<h3 id="Bad_practice_Extension_of_native_prototypes">Bad practice: Extension of native prototypes</h3>
+<h3 id="Summary_of_methods_for_extending_the_prototype_chain">Summary of methods for extending the prototype chain</h3>
 
-<p>One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
+<p>Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting <code>inst</code> object (thus logging the same results to the console), except in different ways.</p>
+
+<h4 class="name">#1: New initialization</h4>
+<div class="notecard warning">
+<p><strong>Warning:</strong> One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
 
 <p>This technique is called monkey patching and breaks <em>encapsulation</em>. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional <em>non-standard</em> functionality.</p>
 
 <p>The <strong>only</strong> good reason for extending a built-in prototype is to backport the features of newer JavaScript engines, like <code>Array.forEach</code>.</p>
+</div>
+<h4 class="example">Code example</h4>
 
-<h3 id="Summary_of_methods_for_extending_the_prototype_chain">Summary of methods for extending the prototype chain</h3>
-
-<p>Here are all 4 ways and their pros/cons. All of the examples listed below create exactly the same resulting <code>inst</code> object (thus logging the same results to the console), except in different ways for the purpose of illustration.</p>
-
-<table class="standard-table" style="vertical-align: top;">
-	<tbody>
-		<tr>
-			<td style="width: 1%;">Name</td>
-			<td style="vertical-align: top; width: 1%;">Example(s)</td>
-			<td style="vertical-align: top;">Pro(s)</td>
-			<td style="vertical-align: top; width: 60%;">Con(s)</td>
-		</tr>
-		<tr>
-			<td>New-initialization</td>
-			<td style="vertical-align: top;">
-			<pre class="brush: js">
+<pre class="brush: js">
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -407,14 +399,25 @@ var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
-			</td>
-			<td style="vertical-align: top;">Supported in every browser imaginable (support goes all the way back to IE 5.5!). Also, it is very fast, very standard, and very JIT-optimizable.</td>
-			<td style="vertical-align: top;">In order to use this method, the function in question must be initialized. During this initialization, the constructor may store unique information that must be generated per-object. However, this unique information would only be generated once, potentially leading to problems. Additionally, the initialization of the constructor may put unwanted methods onto the object. However, both these are generally not problems at all (in fact, usually beneficial) if it is all your own code and you know what does what where.</td>
-		</tr>
-		<tr>
-			<td>Object.create</td>
-			<td style="vertical-align: top;">
-			<pre class="brush: js">
+<table class="standard-table">
+  <caption>Pros and cons of extending Object.prototype</caption>
+	<tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>Supported in all browsers — including older browsers (going all the way back to IE 5.5). Also, it is very fast, very standard, and very JIT-optimizable.</td>
+      </tr>
+      <tr>
+      <th scope="row">Con(s)</th>
+      <td><div>1. In order to use this method, the function in question must be initialized. During this initialization, the constructor may store unique information that must be generated per-object. This unique information would only be generated once, potentially leading to problems.</div>
+      <div>2. The initialization of the constructor may put unwanted methods onto the object.</div>
+      <p>Both of those are generally not problems in practice.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="name">#2: {{jsxref("Object.create")}}</h4>
+<pre class="brush: js">
+// Technique 1
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -429,8 +432,8 @@ var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
-
-			<pre class="brush: js">
+<pre class="brush: js">
+// Technique 2
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -448,16 +451,22 @@ bar.prototype = proto;
 var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-			</td>
-			<td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE9 and up. Allows the direct setting of __proto__ in a way that is one-time-only so that the browser can better optimize the object. Also allows the creation of objects without a prototype via <code>Object.create(null)</code>.</td>
-			<td style="vertical-align: top;">Not supported in IE8 and below. However, as Microsoft has discontinued extended support for systems running these old browsers, this should not be a concern for most applications. Additionally, the slow object initialization can be a performance black hole if using the second argument because each object-descriptor property has its own separate descriptor object. When dealing with hundreds of thousands of object descriptors in the form of object, there can arise a serious issue with lag.</td>
-		</tr>
-		<tr>
-			<td>
-			<p>Object.setPrototypeOf</p>
-			</td>
-			<td style="vertical-align: top;">
-			<pre class="brush: js">
+<table class="standard-table">
+  <caption>Pros and cons of {{jsxref("Object.create")}}</caption>
+	<tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>Supported in all modern browsers. Allows the direct setting of <code>__proto__</code> in a way that is a single event, which permits the browser to further optimize the object. Also allows the creation of objects without a prototype, using <code>Object.create(null)</code>.</td>
+      </tr>
+      <tr>
+      <th scope="row">Con(s)</th>
+      <td>Not supported in IE8 and below. However, as Microsoft has discontinued extended support for systems running IE8 and below, that should not be a concern for most applications. Additionally, the slow object initialization can be a performance black hole if using the second argument, because each object-descriptor property has its own separate descriptor object. When dealing with hundreds of thousands of object descriptors in the form of objects, that lag time might become a serious issue.</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="example">#3: {{jsxref("Object.setPrototypeOf")}}</h4>
+<pre class="brush: js">
+// Technique 1
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -474,8 +483,8 @@ var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
-
-			<pre class="brush: js">
+<pre class="brush: js">
+// Technique 2
 function foo(){}
 foo.prototype = {
   foo_prop: "foo val"
@@ -490,30 +499,38 @@ bar.prototype = proto;
 var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-			</td>
-			<td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE9 and up. Allows the dynamic manipulation of an objects prototype and can even force a prototype on a prototype-less object created with <code>Object.create(null)</code>.</td>
-			<td style="vertical-align: top;">Should-be-deprecated and ill-performant. Making your Javascript run fast is completely out of the question if you dare use this in the final production code because many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations and can even force some browsers to recompile for deoptimization your code just to make it work according to the specs. Not supported in IE8 and below.</td>
-		</tr>
-		<tr>
-			<td>__proto__</td>
-			<td style="vertical-align: top;">
-			<pre class="brush: js">
-function foo(){}
-foo.prototype = {
+<table class="standard-table">
+  <caption>Pros and cons of {{jsxref("Object.setPrototypeOf")}}</caption>
+	<tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>Supported in all modern browsers. Allows the dynamic manipulation of an object’s prototype and can even force a prototype on a prototype-less object created with <code>Object.create(null)</code>.</td>
+      </tr>
+      <tr>
+      <th scope="row">Con(s)</th>
+      <td>Ill-performing. Should be deprecated. Many browsers optimize the prototype and try to guess the location of the method in memory when calling an instance in advance; but setting the prototype dynamically disrupts all those optimizations. It might cause some browsers to recompile your code for de-optimization, to make it work according to the specs. Not supported in IE8 and below.</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="example" id="4_setting_the___proto___property">#4: Setting the {{jsxref("Object/proto","__proto__")}} property</h4>
+<pre class="brush: js">
+// Technique 1
+function A(){}
+A.prototype = {
   foo_prop: "foo val"
 };
 function bar(){}
 var proto = {
   bar_prop: "bar val",
-  __proto__: foo.prototype
+  __proto__: A.prototype
 };
 bar.prototype = proto;
 var inst = new bar;
 console.log(inst.foo_prop);
 console.log(inst.bar_prop);
 </pre>
-
-			<pre class="brush: js">
+<pre class="brush: js">
+// Technique 2
 var inst = {
   __proto__: {
     bar_prop: "bar val",
@@ -525,9 +542,17 @@ var inst = {
 };
 console.log(inst.foo_prop);
 console.log(inst.bar_prop)</pre>
-			</td>
-			<td style="vertical-align: top;">Support in all in-use-today browsers which are all non-microsoft browsers plus IE11 and up. Setting __proto__ to something that is not an object only fails silently. It does not throw an exception.</td>
-			<td style="vertical-align: top;">Grossly deprecated and non-performant. Making your Javascript run fast is completely out of the question if you dare use this in the final production code because many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance, but setting the prototype dynamically disrupts all these optimizations and can even force some browsers to recompile for deoptimization your code just to make it work according to the specs. Not supported in IE10 and below.</td>
+			<table class="standard-table">
+  <caption>Pros and cons of setting the {{jsxref("Object/proto","__proto__")}} property</caption>
+	<tbody>
+    <tr>
+      <th scope="row">Pro(s)</th>
+      <td>Supported in all modern browsers. Setting {{jsxref("Object/proto","__proto__")}}
+      to something that is not an object only fails silently. It does not throw an exception.</td>
+      </tr>
+      <tr>
+      <th scope="row">Con(s)</th>
+      <td>Non-performant and deprecated. Many browsers optimize the prototype and try to guess the location of the method in the memory when calling an instance in advance; but setting the prototype dynamically disrupts all those optimizations and can even force some browsers to recompile for de-optimization of your code, to make it work according to the specs. Not supported in IE10 and below.</td>
 		</tr>
 	</tbody>
 </table>
@@ -536,7 +561,7 @@ console.log(inst.bar_prop)</pre>
 
 <p>JavaScript is a bit confusing for developers coming from Java or C++, as it's all dynamic, all runtime, and it has no classes at all. It's all just instances (objects). Even the "classes" we simulate are just a function object.</p>
 
-<p>You probably already noticed that our <code>function A</code> has a special property called <code>prototype</code>. This special property works with the JavaScript <code>new </code>operator. The reference to the prototype object is copied to the internal <code>[[Prototype]]</code> property of the new instance. For example, when you do <code>var a1 = new A()</code>, JavaScript (after creating the object in memory and before running function <code>A()</code> with <code>this</code> defined to it) sets <code>a1.[[Prototype]] = A.prototype</code>. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in <code>[[Prototype]]</code>. This means that all the stuff you define in <code>prototype</code> is effectively shared by all instances, and you can even later change parts of <code>prototype</code> and have the changes appear in all existing instances, if you wanted to.</p>
+<p>You probably already noticed that our <a href="#4_setting_the___proto___property">function A</a> has a special property called <code>prototype</code>. This special property works with the JavaScript <code>new </code>operator. The reference to the prototype object is copied to the internal <code>[[Prototype]]</code> property of the new instance. For example, when you do <code>var a1 = new A()</code>, JavaScript (after creating the object in memory and before running function <code>A()</code> with <code>this</code> defined to it) sets <code>a1.[[Prototype]] = A.prototype</code>. When you then access properties of the instance, JavaScript first checks whether they exist on that object directly, and if not, it looks in <code>[[Prototype]]</code>. This means that all the stuff you define in <code>prototype</code> is effectively shared by all instances, and you can even later change parts of <code>prototype</code> and have the changes appear in all existing instances, if you wanted to.</p>
 
 <p>If, in the example above, you do <code>var a1 = new A(); var a2 = new A();</code> then <code>a1.doSomething</code> would actually refer to <code>Object.getPrototypeOf(a1).doSomething</code>, which is the same as the <code>A.prototype.doSomething</code> you defined, i.e. <code>Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething</code>.</p>
 

@@ -2,11 +2,12 @@
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 tags:
-- FinalizationRegistry
-- JavaScript
-- Method
-- Prototype
-- Reference
+  - FinalizationRegistry
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
 <div>{{JSRef}}</div>
 
@@ -16,7 +17,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code><var>registry</var>.register(<var>target</var>, <var>heldValue</var>, [<var>unregisterToken</var>]);</code>
+<pre class="brush: js">
+register(target, heldValue);
+register(target, heldValue, unregisterToken);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -40,9 +43,9 @@ tags:
 <h2 id="Notes">Notes</h2>
 
 <p>See the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#Avoid_where_possible">Avoid
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#avoid_where_possible">Avoid
     where possible</a> and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#Notes_on_cleanup_callbacks">Notes
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry#notes_on_cleanup_callbacks">Notes
     on cleanup callbacks</a> sections of the {{jsxref("FinalizationRegistry")}} page for
   important caveats.</p>
 
@@ -66,23 +69,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('WeakRefs', '#sec-finalization-registry.prototype.register',
-        'FinalizationRegistry.prototype.register')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.FinalizationRegistry.register")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

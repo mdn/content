@@ -6,7 +6,8 @@ tags:
   - CSS Cascade
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.all
 ---
 <div>{{CSSRef}}</div>
 
@@ -39,11 +40,11 @@ all: revert;
  <dt>{{cssxref("revert")}}</dt>
  <dd>Specifies behavior that depends on the stylesheet origin to which the declaration belongs:
  <dl>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets">User-agent origin</a></dt>
+  <dt><a href="/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets">User-agent origin</a></dt>
   <dd>Equivalent to <code>unset</code>.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#User_stylesheets">User origin</a></dt>
+  <dt><a href="/en-US/docs/Web/CSS/Cascade#user_stylesheets">User origin</a></dt>
   <dd>Rolls back the <a href="/en-US/docs/Web/CSS/Cascade">cascade</a> to the user-agent level, so that the <a href="/en-US/docs/Web/CSS/specified_value">specified values</a> are calculated as if no author-level or user-level rules were specified for the element.</dd>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#Author_stylesheets">Author origin</a></dt>
+  <dt><a href="/en-US/docs/Web/CSS/Cascade#author_stylesheets">Author origin</a></dt>
   <dd>Rolls back the <a href="/en-US/docs/Web/CSS/Cascade">cascade</a> to the user level, so that the <a href="/en-US/docs/Web/CSS/specified_value">specified values</a> are calculated as if no author-level rules were specified for the element. For purposes of <code>revert</code>, the Author origin includes the Override and Animation origins.</dd>
  </dl>
  </dd>
@@ -55,7 +56,7 @@ all: revert;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -82,7 +83,7 @@ blockquote {
 
 <h3 id="Result">Result</h3>
 
-<div id="ex0" style="display: inline-block; width: 225px; vertical-align: top;">
+<div id="ex0">
 <h4 id="No_all_property">No <code>all</code> property</h4>
 
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
@@ -91,10 +92,10 @@ blockquote {
 blockquote { background-color: skyblue;  color: red; }</pre>
 {{EmbedLiveSample("ex0", "200", "125")}}
 
-<p>The {{HTMLElement("blockquote")}} uses the browser's default styling together with a specific background and text color. It also behaves as a <em>block</em> element: the text that follows it is beneath it.</p>
+<p>The {{HTMLElement("blockquote")}} uses the browser's default styling which gives it a margin, together with a specific background and text color. It also behaves as a <em>block</em> element: the text that follows it is beneath it.</p>
 </div>
 
-<div id="ex1" style="display: inline-block; width: 225px; vertical-align: top;">
+<div id="ex1">
 <h4 id="allunset"><code>all:unset</code></h4>
 
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
@@ -107,7 +108,7 @@ blockquote { all: unset; }</pre>
 <p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is an <em>inline</em> element now (initial value), its {{cssxref("background-color")}} is <code>transparent</code> (initial value), but its {{cssxref("font-size")}} is still <code>small</code> (inherited value) and its {{cssxref("color")}} is <code>blue</code> (inherited value).</p>
 </div>
 
-<div id="ex2" style="display: inline-block; width: 225px; vertical-align: top;">
+<div id="ex2">
 <h4 id="allinitial"><code>all:initial</code></h4>
 
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
@@ -120,7 +121,7 @@ blockquote { all: initial; }</pre>
 <p>The {{HTMLElement("blockquote")}} doesn't use the browser default styling: it is an <em>inline</em> element now (initial value), its {{cssxref("background-color")}} is <code>transparent</code> (initial value), its {{cssxref("font-size")}} is <code>normal</code> (initial value) and its {{cssxref("color")}} is <code>black</code> (initial value).</p>
 </div>
 
-<div id="ex3" style="display: inline-block; width: 225px; vertical-align: top;">
+<div id="ex3">
 <h4 id="allinherit"><code>all:inherit</code></h4>
 
 <pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
@@ -159,7 +160,7 @@ blockquote { all: inherit; }</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.all")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

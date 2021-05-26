@@ -144,7 +144,7 @@ tags:
  <dd>
  <p>For <code>rel="stylesheet"</code> only, the <code>disabled</code> Boolean attribute indicates whether or not the described stylesheet should be loaded and applied to the document. If <code>disabled</code> is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded on-demand, if and when the <code>disabled</code> attribute is changed to <code>false</code> or removed.</p>
 
- <p>Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's {{domxref("DocumentOrShadowRoot/styleSheets")}} list.</p>
+ <p>Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.</p>
  </dd>
  <dt>{{HTMLAttrDef("href")}}</dt>
  <dd>This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.</dd>
@@ -210,11 +210,11 @@ tags:
 <h3 id="Obsolete_attributes">Obsolete attributes</h3>
 
 <dl>
- <dt>{{HTMLAttrDef("charset")}} {{Obsolete_Inline}}</dt>
+ <dt>{{HTMLAttrDef("charset")}} {{deprecated_inline}}</dt>
  <dd>This attribute defines the character encoding of the linked resource. The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}. The default value is <code>iso-8859-1</code>.
  <div class="note"><strong>Usage note:</strong> To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.</div>
  </dd>
- <dt>{{HTMLAttrDef("rev")}} {{Obsolete_Inline}}</dt>
+ <dt>{{HTMLAttrDef("rev")}} {{deprecated_inline}}</dt>
  <dd>The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{HTMLAttrxRef("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the <code>rel</code> attribute. <a href="/en-US/docs/Web/HTML/Link_types">Link type values</a> for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.</dd>
  <dd>
  <div class="notecard note">
@@ -303,7 +303,7 @@ myStylesheet.onerror = function() {
  <tbody>
   <tr>
    <th><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>Metadata content. If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a> and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Metadata content. If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a> and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th>Permitted content</th>
@@ -315,7 +315,7 @@ myStylesheet.onerror = function() {
   </tr>
   <tr>
    <th>Permitted parents</th>
-   <td>Any element that accepts metadata elements. If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts metadata elements. If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>

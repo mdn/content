@@ -2,28 +2,29 @@
 title: IDBVersionChangeEvent.version
 slug: Web/API/IDBVersionChangeEvent/version
 tags:
-- API
-- Deprecated
-- IndexedDB
-- NeedsExample
-- Property
-- Reference
-- Référence(2)
+  - API
+  - Deprecated
+  - IndexedDB
+  - NeedsExample
+  - Property
+  - Reference
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+<p>{{ APIRef("IndexedDB") }} {{Deprecated_Header}}</p>
 
-<p>The <strong><code>version</code></strong> property of the
-  {{domxref("IDBVersionChangeEvent")}} interface returns The new version of the database
-  in a <a
-    href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE">versionchange</a> transaction.
-</p>
-
-<div class="warning">
-  <p><strong>Warning</strong>: While this property is still implemented in older browsers,
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>While this property is still implemented in older browsers,
     the latest specification replaces it with the <code>oldVersion</code> and
     <code>newVersion</code> attributes. See the compatibility table to know what browsers
     support them.</p>
 </div>
+
+<p>The <strong><code>version</code></strong> property of the
+  {{domxref("IDBVersionChangeEvent")}} interface returns The new version of the database
+  in a <a
+    href="/en-US/docs/Web/API/IDBTransaction#version_change">versionchange</a> transaction.
+</p>
+
 
 <h2 id="Syntax">Syntax</h2>
 

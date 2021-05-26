@@ -2,12 +2,12 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 tags:
-- API
-- CSSOM View
-- Method
-- Reference
-- Window
-- getComputedStyle
+  - API
+  - CSSOM View
+  - Method
+  - Reference
+  - Window
+  - getComputedStyle
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -20,8 +20,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">var <var>style</var> = window.getComputedStyle(<var>element</var> [, <var>pseudoElt</var>]);</pre>
+<pre class="brush: js">window.getComputedStyle(element);
+window.getComputedStyle(element, pseudoElt);
+</pre>
 
 <dl>
   <dt><code><var>element</var></code></dt>
@@ -94,7 +95,7 @@ para.textContent = 'My computed font-size is ' +
 <h2 id="Description">Description</h2>
 
 <p>The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object
-  returned from the element's {{DOMxRef("HTMLElement.style", "style")}} property. However,
+  returned from the element's {{DOMxRef("ElementCSSInlineStyle/style", "style")}} property. However,
   the two objects have different purposes:</p>
 
 <ul>

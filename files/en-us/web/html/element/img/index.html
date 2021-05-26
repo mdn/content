@@ -81,7 +81,7 @@ tags:
 				<li>The user chooses not to display images (saving bandwidth, privacy reasons)</li>
 				<li>The image is invalid or an <a href="#supported_image_formats">unsupported type</a></li>
 			</ul>
-			
+
 			<p>In these cases, the browser may replace the image with the text in the element's <code>alt</code> attribute. For these reasons and others, provide a useful value for <code>alt</code> whenever possible.</p>
 	</div>
 
@@ -101,7 +101,7 @@ tags:
 
 	<dl>
 		<dt><code>anonymous</code></dt>
-		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a href="https://tools.ietf.org/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
+		<dd>A CORS request is sent with credentials omitted (that is, no {{glossary("cookie", "cookies")}}, <a href="https://datatracker.ietf.org/doc/html/rfc5280">X.509 certificates</a>, or {{httpheader("Authorization")}} request header).</dd>
 		<dt><code>use-credentials</code></dt>
 		<dd>The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the <code>Authorization</code> request header). If the server does not opt into sharing credentials with the origin site (by sending back the <code>Access-Control-Allow-Credentials: true</code> response header), then the browser marks the image as tainted and restricts access to its image data.</dd>
 	</dl>
@@ -133,7 +133,7 @@ tags:
 		<p><strong>Note:</strong> This attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute. This gives users without pointing devices a fallback destination.</p>
 	</div>
 	</dd>
-	<dt>{{htmlattrdef("loading")}}</dt>
+	<dt>{{htmlattrdef("loading")}} {{experimental_inline}}</dt>
 	<dd>Indicates how the browser should load the image:
 	<ul>
 		<li><code>eager</code>: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).</li>
@@ -200,7 +200,7 @@ tags:
 <h3 id="Deprecated_attributes">Deprecated attributes</h3>
 
 <dl>
-	<dt>{{htmlattrdef("align")}} {{Obsolete_Inline}}</dt>
+	<dt>{{htmlattrdef("align")}} {{deprecated_inline}}</dt>
 	<dd>Aligns the image with its surrounding context. Use the {{cssxref('float')}} and/or {{cssxref('vertical-align')}} {{glossary("CSS")}} properties instead of this attribute. Allowed values:</dd>
 	<dd>
 	<dl>
@@ -216,20 +216,20 @@ tags:
 		<dd>Equivalent to <code style="white-space: nowrap;">float: right</code></dd>
 	</dl>
 	</dd>
-	<dt>{{htmlattrdef("border")}} {{Obsolete_Inline}}</dt>
+	<dt>{{htmlattrdef("border")}} {{deprecated_inline}}</dt>
 	<dd>The width of a border around the image. Use the {{cssxref('border')}} {{glossary("CSS")}} property instead.</dd>
-	<dt>{{htmlattrdef("hspace")}} {{Obsolete_Inline}}</dt>
+	<dt>{{htmlattrdef("hspace")}} {{deprecated_inline}}</dt>
 	<dd>The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.</dd>
-	<dt>{{htmlattrdef("longdesc")}} {{Obsolete_Inline}}</dt>
+	<dt>{{htmlattrdef("longdesc")}} {{deprecated_inline}}</dt>
 	<dd>A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
 	<div class="notecard note">
 		<h4>Note</h4>
 		<p>This attribute is mentioned in the latest {{glossary("W3C")}} version, <a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a>, but has been removed from the {{glossary("WHATWG")}}’s <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a>. It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
 	</div>
 	</dd>
-	<dt>{{htmlattrdef("name")}} {{Obsolete_Inline}}</dt>
+	<dt>{{htmlattrdef("name")}} {{deprecated_inline}}</dt>
 	<dd>A name for the element. Use the {{htmlattrxref("id")}} attribute instead.</dd>
-	<dt>{{htmlattrdef("vspace")}} {{Obsolete_Inline}}</dt>
+	<dt>{{htmlattrdef("vspace")}} {{deprecated_inline}}</dt>
 	<dd>The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.</dd>
 </dl>
 
@@ -290,7 +290,7 @@ tags:
 
 <div class="notecard note">
 	<h4>Note</h4>
-	<p>To see the resizing in action, <a href="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/img$samples/Using_the_srcset_and_sizes_attributes">view the example on a separate page</a>, so you can actually resize the content area.</p>
+	<p>To see the resizing in action, {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'view the example on a separate page')}}, so you can actually resize the content area.</p>
 </div>
 
 <h2 id="Security_and_privacy_concerns">Security and privacy concerns</h2>

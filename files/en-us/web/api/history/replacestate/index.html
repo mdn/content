@@ -2,12 +2,12 @@
 title: History.replaceState()
 slug: Web/API/History/replaceState
 tags:
-- API
-- HTML DOM
-- History
-- History API
-- Method
-- Reference
+  - API
+  - HTML DOM
+  - History
+  - History API
+  - Method
+  - Reference
 ---
 <div>{{APIRef("History API")}}</div>
 
@@ -44,11 +44,11 @@ tags:
 <p>Suppose https://www.mozilla.org/foo.html executes the following JavaScript:</p>
 
 <pre
-  class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const </span>stateObj <span class="operator token">=</span> <span class="punctuation token">{</span> foo<span class="punctuation token">:</span> '<span class="string token">bar'</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
-history<span class="punctuation token">.</span><span class="function token">pushState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">''</span><span class="punctuation token">,</span> '<span class="string token">bar.html'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  class="brush: js line-numbers language-js">const stateObj = { foo: 'bar' };
+history.pushState(stateObj, '', 'bar.html');</pre>
 
 <p>The explanation of these two lines above can be found in the <a
-    href="/en-US/docs/Web/API/History_API/Working_with_the_History_API#Example_of_pushState_method">Example
+    href="/en-US/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method">Example
     of <code>pushState()</code> method</a> section of the <a
     href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the
     History API</a> article. Then suppose
@@ -56,7 +56,7 @@ history<span class="punctuation token">.</span><span class="function token">push
   JavaScript:</p>
 
 <pre
-  class="brush: js line-numbers language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">replaceState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">''</span><span class="punctuation token">,</span> '<span class="string token">bar2.html'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  class="brush: js line-numbers language-js">history.replaceState(stateObj, '', 'bar2.html');</pre>
 
 <p>This will cause the URL bar to display
   <code>https://www.mozilla.org/bar2.html</code>, but won't cause the browser

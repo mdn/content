@@ -42,7 +42,7 @@ tags:
 	<dd>A {{domxref("DOMString")}} which indicates whether the candidate is an RTP or an RTCP candidate; its value is either <code>"rtp"</code> or <code>"rtcp"</code>, and is derived from the  <code>"component-id"</code> field in the <code>candidate</code> a-line string. The permitted values are listed in the {{domxref("RTCIceComponent")}} enumerated type.</dd>
 	<dt>{{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}</dt>
 	<dd>Returns a {{domxref("DOMString")}} containing a unique identifier that is the same for any candidates of the same type, share the same base (the address from which the ICE agent sent the candidate), and come from the same {{Glossary("STUN")}} server. This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple {{domxref("RTCIceTransport")}} objects.</dd>
-	<dt>{{domxref("RTCIceCandidate.ip", "ip")}} {{readonlyInline}}</dt>
+	<dt>{{domxref("RTCIceCandidate/address", "ip")}} {{readonlyInline}}</dt>
 	<dd>A {{domxref("DOMString")}} containing the IP address of the candidate.</dd>
 	<dt>{{domxref("RTCIceCandidate.port", "port")}} {{readonlyInline}}</dt>
 	<dd>An integer value indicating the candidate's port number.</dd>
@@ -59,7 +59,7 @@ tags:
 	<dt>{{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{readonlyInline}}</dt>
 	<dd>A {{domxref("DOMString")}} specifying the candidate's media stream identification tag which uniquely identifies the media stream within the component with which the candidate is associated, or <code>null</code> if no such association exists.</dd>
 	<dt>{{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{readonlyInline}}</dt>
-	<dd>If not <code>null</code>, <code>sdpMLineIndex</code> indicates the zero-based index number of the media description (as defined in <a href="https://tools.ietf.org/html/rfc4566">RFC 4566</a>) in the {{Glossary("SDP")}} with which the candidate is associated.</dd>
+	<dd>If not <code>null</code>, <code>sdpMLineIndex</code> indicates the zero-based index number of the media description (as defined in <a href="https://datatracker.ietf.org/doc/html/rfc4566">RFC 4566</a>) in the {{Glossary("SDP")}} with which the candidate is associated.</dd>
 	<dt>{{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}</dt>
 	<dd>If <code>protocol</code> is <code>"tcp"</code>, <code>tcpType</code> represents the type of TCP candidate. Otherwise, <code>tcpType</code> is <code>null</code>.</dd>
 	<dt>{{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}</dt>

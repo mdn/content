@@ -9,26 +9,24 @@ tags:
 - Prototype
 - Reference
 - String
+browser-compat: javascript.builtins.String.padStart
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>padStart()</code></strong> method pads the
+<p>The <strong><code>padStart()</code></strong> method pads the
     current string with another string (multiple times, if needed) until the resulting
-    string reaches the given length.</span> The padding is applied from the start of the
+    string reaches the given length. The padding is applied from the start of the
   current string.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-padstart.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+<pre class="brush: js">
+padStart(targetLength)
+padStart(targetLength, padString)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -74,32 +72,17 @@ console.log(leftFillNum(num, 5));
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.padstart',
-        'String.prototype.padStart')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a     href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</div>
 
-<p>{{Compat("javascript.builtins.String.padStart")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{jsxref("String.prototype.padEnd()")}}</li>
-  <li><a href="https://github.com/uxitten/polyfill/blob/master/string.polyfill.js">A
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/string.polyfill.js">A
       polyfill</a></li>
 </ul>

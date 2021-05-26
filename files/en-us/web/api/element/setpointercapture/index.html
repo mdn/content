@@ -15,7 +15,8 @@ tags:
   {{domxref("Element")}} interface is used to designate a specific element as the
   <em>capture target</em> of future pointer events. Subsequent events for the pointer will
   be targeted at the capture element until capture is released (via
-  {{domxref("Element.releasePointerCapture()")}}).</p>
+  {{domxref("Element.releasePointerCapture()")}} or the
+  {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired).</p>
 
 <div class="note"><strong>Note:</strong> When pointer capture is set,
   {{domxref("HTMLElement/pointerover_event", "pointerover")}},

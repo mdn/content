@@ -7,6 +7,7 @@ tags:
   - CSS
   - CSS Descriptor
   - Reference
+browser-compat: css.at-rules.counter-style.speak-as
 ---
 <div>{{CSSRef}}</div>
 
@@ -29,7 +30,7 @@ speak-as: &lt;counter-style-name&gt;;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>If the value of <code>speak-as</code> is specified as <code>auto</code>, then the effective value of <code>speak-as</code> will be determined based on the value of the {{cssxref("system")}} descriptor:
+ <dd>If the value of <code>speak-as</code> is specified as <code>auto</code>, then the effective value of <code>speak-as</code> will be determined based on the value of the {{cssxref("@counter-style/system")}} descriptor:
  <ul>
   <li>If the value of <code>system</code> is <code>alphabetic</code>, the effective value of <code>speak-as</code> will be <code>spell-out</code>.</li>
   <li>If <code>system</code> is <code>cyclic</code>, the effective value of <code>speak-as</code> will be <code>bullets</code>.</li>
@@ -46,7 +47,7 @@ speak-as: &lt;counter-style-name&gt;;
  <dt><code>spell-out</code></dt>
  <dd>The user agent will generate a counter representation as normal and would read it out letter by letter. If the user agent doesn't know how to read out a particular counter symbol, the user agent might read it out as if the value of <code>speak-as</code> was <code>numbers</code>.</dd>
  <dt><code>&lt;counter-style-name&gt;</code></dt>
- <dd>The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("fallback")}} descriptor. If the specified style does not exist, <code>speak-as</code> defaults to <code>auto</code>.</dd>
+ <dd>The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("@counter-style/fallback")}} descriptor. If the specified style does not exist, <code>speak-as</code> defaults to <code>auto</code>.</dd>
 </dl>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
@@ -61,7 +62,7 @@ speak-as: &lt;counter-style-name&gt;;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
  <h2 id="Examples">Examples</h2>
 
@@ -115,11 +116,11 @@ speak-as: &lt;counter-style-name&gt;;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.counter-style.speak-as")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
+ <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
 </ul>

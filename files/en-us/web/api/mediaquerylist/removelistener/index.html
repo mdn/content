@@ -2,23 +2,24 @@
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
 tags:
-- API
-- CSSOM View
-- Media Queries
-- MediaQueryList
-- Method
-- Reference
-- removeListener
+  - API
+  - CSSOM View
+  - Media Queries
+  - MediaQueryList
+  - Method
+  - Reference
+  - removeListener
 ---
-<p>{{APIRef("CSSOM")}}</p>
+<p>{{APIRef("CSSOM")}}{{Deprecated_Header}}</p>
 
 <p>The <code><strong>removeListener()</strong></code> method of the
   {{DOMxRef("MediaQueryList")}} interface removes a listener from the
   <code>MediaQueryListener</code>.</p>
 
-<p>This is basically an alias of {{DOMxRef("EventTarget.removeEventListener()")}}, for
-  backwards compatibility purposes — in older browsers you could use
-  <code>removeEventListener()</code> instead.</p>
+<p>In older browsers <code>MediaQueryList</code> did not yet inherit from {{DOMxRef("EventTarget")}},
+  so this method was provided as an alias of {{DOMxRef("EventTarget.removeEventListener()")}}.
+  Use <code>removeEventListener()</code> instead of <code>removeListener()</code> if it is
+  available in the browsers you need to support.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -83,8 +84,8 @@ mediaQueryList.removeListener(screenTest);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
       code</a></li>
   <li>{{DOMxRef("window.matchMedia()")}}</li>
   <li>{{DOMxRef("MediaQueryList")}}</li>

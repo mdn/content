@@ -137,7 +137,7 @@ to this project. If you would like to help with MDN content reviews,
 
 Note that changes to any content areas not explicitly listed below will be
 handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
-team, which currently consists of [@chrisdavidmills](https://github.com/chrisdavidmills/).
+team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 
 * [Web accessibility content](https://github.com/mdn/content/tree/main/files/en-us/web/accessibility):
   * [@ericwbailey](https://github.com/ericwbailey)
@@ -150,7 +150,7 @@ team, which currently consists of [@chrisdavidmills](https://github.com/chrisdav
 * [MDN meta docs](https://github.com/mdn/content/tree/main/files/en-us/mdn)
   — the [@yari-content-mdn](https://github.com/orgs/mdn/teams/yari-content-mdn)
   team, which consists of:
-  * [@chrisdavidmills](https://github.com/chrisdavidmills/)
+  * [@Rumyra](https://github.com/Rumyra/)
   * [@Elchi3](https://github.com/Elchi3)
 * [Firefox Developer Tools content](https://github.com/mdn/content/tree/main/files/en-us/tools):
   * [@hamishwillee](https://github.com/hamishwillee)

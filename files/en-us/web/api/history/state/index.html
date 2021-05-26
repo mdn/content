@@ -40,7 +40,7 @@ console.log(`History.state before pushState: ${history.state}`);
 history.pushState({name: 'Example'}, "pushState example", 'page3.html');
 
 // Now state has a value.
-console.log(`History.state after pushState: ${history.state}`);</pre>
+console.log('History.state after pushState: ', history.state);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -72,6 +72,7 @@ console.log(`History.state after pushState: ${history.state}`);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with
-      the History API</a></li>
+  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
+  <li><a href="/en-US/docs/Web/API/History/pushState"><code>History.pushState()</code></a></li>
+  <li><a href="/en-US/docs/Web/API/History/replaceState"><code>History.replaceState()</code></a></li>
 </ul>

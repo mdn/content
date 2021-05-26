@@ -11,6 +11,7 @@ tags:
   - overflow
   - 'recipe:css-shorthand-property'
   - scrolling
+browser-compat: css.properties.overflow
 ---
 <div>{{CSSRef}}</div>
 
@@ -65,13 +66,13 @@ overflow: unset;
 <h4 id="Mozilla_extensions">Mozilla extensions</h4>
 
 <dl>
- <dt><code>-moz-scrollbars-none</code> {{obsolete_inline}}<a href="#deprecated">[1]</a></dt>
+ <dt><code>-moz-scrollbars-none</code> {{deprecated_inline}}<a href="#deprecated">[1]</a></dt>
  <dd>Use <code>overflow: hidden</code> instead.</dd>
  <dt><code>-moz-scrollbars-horizontal</code> {{deprecated_inline}}<a href="#deprecated">[1]</a></dt>
  <dd>Use <code>{{Cssxref("overflow-x")}}: scroll</code> and <code>{{Cssxref("overflow-y")}}: hidden</code>, or <code>overflow: hidden scroll</code> instead.</dd>
  <dt><code>-moz-scrollbars-vertical</code> {{deprecated_inline}}<a href="#deprecated">[1]</a></dt>
  <dd>Use <code>{{Cssxref("overflow-x")}}: hidden</code> and <code>{{Cssxref("overflow-y")}}: scroll</code>, or <code>overflow: scroll hidden</code> instead.</dd>
- <dt><code>-moz-hidden-unscrollable</code> {{obsolete_inline}}</dt>
+ <dt><code>-moz-hidden-unscrollable</code> {{deprecated_inline}}</dt>
  <dd>Use <code>overflow: clip</code> instead.</dd>
 </dl>
 
@@ -81,7 +82,7 @@ overflow: unset;
 
 <p>Overflow options include clipping, showing scrollbars, or displaying the content flowing out of its container into the surrounding area.</p>
 
-<p>Specifying a value other than <code>visible</code> (the default) creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
+<p>Specifying a value other than <code>visible</code> (the default) or <code>clip</code> creates a new <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>. This is necessary for technical reasons — if a float intersected with the scrolling element it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.</p>
 
 <p>In order for <code>overflow</code> to have an effect, the block-level container must have either a set height (<code>height</code> or <code>max-height</code>) or <code>white-space</code> set to <code>nowrap</code>.</p>
 
@@ -95,7 +96,7 @@ overflow: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -158,7 +159,7 @@ overflow: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.overflow")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

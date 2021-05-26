@@ -5,7 +5,7 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}{{deprecated_header("SVG 2")}}</div>
+<div>{{SVGRef}}{{Deprecated_Header}}</div>
 
 <p>The <code><strong>requiredFeatures</strong></code> attribute takes a list of feature strings, with the individual strings separated by white space. It determines whether or not all of the named features are supported by the browser; if all of them are supported, the attribute evaluates to <code>true</code> end the element is rendered; otherwise, the attribute evaluates to <code>false</code> and the current element and its children are skipped and thus will not be rendered. This provides a way to design SVG that gracefully falls back when features aren't available.</p>
 
@@ -49,7 +49,7 @@ text {
  <tbody>
   <tr>
    <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/SVG/Content_type#List-of-Ts">&lt;list-of-features&gt;</a></code></td>
+   <td><code><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-features&gt;</a></code></td>
   </tr>
   <tr>
    <th scope="row">Default value</th>
@@ -220,10 +220,6 @@ text {
  <dd>
  <p>The browser supports the {{SVGElement("marker")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#ColorProfile</dt>
- <dd>
- <p>The browser supports the {{SVGElement("color-profile")}} element</p>
- </dd>
  <dt class="plain">http://www.w3.org/TR/SVG11/feature#Gradient</dt>
  <dd>
  <p>The browser supports the {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} and {{SVGElement("stop")}} elements</p>
@@ -275,10 +271,6 @@ text {
  <dt class="plain">http://www.w3.org/TR/SVG11/feature#XlinkAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}} and {{SVGAttr("xlink:actuate")}} attributes</p>
- </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#ExternalResourcesRequired</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("externalResourcesRequired")}} attribute</p>
  </dd>
  <dt class="plain">http://www.w3.org/TR/SVG11/feature#View</dt>
  <dd>
@@ -546,12 +538,6 @@ text {
 	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#XlinkAttribute" /&gt;
 	&lt;text x="20" y="977"&gt;http://www.w3.org/TR/SVG11/feature#XlinkAttribute&lt;/text&gt;
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#ExternalResourcesRequired --&gt;
-	&lt;rect class="ko" x="10" y="985" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="985" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ExternalResourcesRequired" /&gt;
-	&lt;text x="20" y="1002"&gt;http://www.w3.org/TR/SVG11/feature#ExternalResourcesRequired&lt;/text&gt;
-
 	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#View --&gt;
 	&lt;rect class="ko" x="10" y="1010" height="25" width="430" /&gt;
 	&lt;rect class="ok" x="10" y="1010" height="25" width="430"
@@ -615,7 +601,7 @@ text{
 
 <p>{{EmbedLiveSample("Example", "400", "400")}}</p>
 
-<p>See also <a href="https://developer.mozilla.org/files/3286/requiredFeatures.svg">requiredFeatures.svg</a></p>
+<p>See also <a href="/files/3286/requiredFeatures.svg">requiredFeatures.svg</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 

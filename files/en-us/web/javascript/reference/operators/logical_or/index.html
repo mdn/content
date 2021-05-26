@@ -2,11 +2,12 @@
 title: Logical OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
 tags:
-- JavaScript
-- Language feature
-- Logical Operator
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Logical Operator
+  - Operator
+  - Reference
+browser-compat: javascript.operators.logical_or
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -19,11 +20,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -32,8 +28,8 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>If <code>expr<strong>1</strong></code> can be converted to <code>true</code>, returns
-  <code>expr<strong>1</strong></code>; else, returns <code>expr<strong>2</strong></code>.
+<p>If <code>expr1</code> can be converted to <code>true</code>, returns
+  <code>expr1</code>; else, returns <code>expr2</code>.
 </p>
 
 <p>If a value can be converted to <code>true</code>, the value is so-called
@@ -53,11 +49,10 @@ tags:
 <p>Even though the <code>||</code> operator can be used with operands that are not Boolean
   values, it can still be considered a boolean operator since its return value can always
   be converted to a <a
-    href="/en-US/docs/Web/JavaScript/Data_structures#Boolean_type">boolean primitive</a>.
+    href="/en-US/docs/Web/JavaScript/Data_structures#boolean_type">boolean primitive</a>.
   To explicitly convert its return value (or any expression in general) to the
-  corresponding boolean value, use a double <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">NOT
-    operator</a> or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
+  corresponding boolean value, use a double {{JSxRef("Operators/Logical_NOT", "NOT
+  operator")}} or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
   constructor.</p>
 
 <h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
@@ -90,7 +85,7 @@ console.log( B() || A() );
     precedence</a>).</p>
 
 <pre
-  class="brush: js">true || false &amp;&amp; false      // returns true, because || is executed first
+  class="brush: js">true || false &amp;&amp; false      // returns true, because &amp;&amp; is executed first
 (true || false) &amp;&amp; false    // returns false, because operator precedence cannot apply</pre>
 
 <h2 id="Examples">Examples</h2>
@@ -158,23 +153,11 @@ o10 = false || varObject // f || object returns varObject
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#prod-LogicalORExpression', 'Logical OR expression')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.logical_or")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

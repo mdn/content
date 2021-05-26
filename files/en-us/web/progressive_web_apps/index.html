@@ -5,7 +5,6 @@ tags:
   - App
   - Application
   - Apps
-  - Modern web apps
   - PWA
   - Progressive web apps
   - Web app
@@ -13,7 +12,7 @@ tags:
 ---
 <div>{{draft}}</div>
 
-<p class="summary"><img alt="PWA community logo" src="https://mdn.mozillademos.org/files/16742/pwa.png" style="display: block; float: left; height: 188px; margin: 0px auto; padding-bottom: 1em; padding-right: 2em; width: 350px;"><strong>Progressive Web Apps</strong> are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. Progressive Web Apps are a useful design pattern, though they aren't a formalized standard. PWA can be thought of as similar to AJAX or other similar patterns that encompass a set of application attributes, including use of specific web technologies and techniques. This set of docs tells you all you need to know about them.</p>
+<p class="summary"><img alt="PWA community logo" src="pwa.png" style="display: block; float: left; margin: 0px auto; padding-bottom: 1em; padding-right: 2em;"><strong>Progressive Web Apps</strong> are web apps that use emerging web browser APIs and features along with traditional progressive enhancement strategy to bring a native app-like user experience to cross-platform web applications. Progressive Web Apps are a useful design pattern, though they aren't a formalized standard. PWA can be thought of as similar to AJAX or other similar patterns that encompass a set of application attributes, including use of specific web technologies and techniques. This set of docs tells you all you need to know about them.</p>
 
 <p>In order to call a Web App a PWA, technically speaking it should have the following features: <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a> (<strong>{{Glossary("HTTPS")}}</strong>), one or more <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>, and a <a href="/en-US/docs/Web/Manifest">manifest file</a>.</p>
 
@@ -28,7 +27,7 @@ tags:
 
 <h2 id="PWA_advantages">PWA advantages</h2>
 
-<p>PWAs should be discoverable, installable, linkable, network independent, progressive, re-engageable, responsive, and safe. To find out more about what these mean, read <a href="/en-US/docs/Web/Progressive_web_apps/Advantages">Progressive web app advantages</a>.</p>
+<p>PWAs should be discoverable, installable, linkable, network independent, progressive, re-engageable, responsive, and safe. To find out more about what these mean, read <a href="/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications">Progressive web app advantages</a>.</p>
 
 <p>To find out how to implement PWAs, read through our <a href="/en-US/docs/Web/Progressive_web_apps/Developer_guide">PWA developer guide</a>.</p>
 
@@ -55,8 +54,6 @@ tags:
  <li><a href="/en-US/docs/Web/Progressive_web_apps/Loading">Progressive loading</a></li>
 </ol>
 
-<div class="column-container">
-<div class="column-half">
 <h2 id="Technology_guides">Technology guides</h2>
 
 <ul>
@@ -65,15 +62,13 @@ tags:
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a> — The fundamentals of IndexedDB, explained in detail.</li>
  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> — The Web storage API made simple.</li>
  <li><a class="external external-icon" href="https://developers.google.com/web/updates/2015/11/app-shell" rel="noopener">Instant Loading Web Apps with An Application Shell Architecture</a> — A guide to using the App Shell coding pattern to create apps that load quickly.</li>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a> — Learn the essentials behind the Web Push API.</li>
+ <li><a href="/en-US/docs/Web/API/Push_API">Using the Push API</a> — Learn the essentials behind the Web Push API.</li>
  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a> — Web notifications in a nutshell.</li>
- <li><a href="/en-US/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a> — Learn the basics of responsive design, an essential topic for modern app layout.</li>
- <li><a href="/en-US/docs/Web/Apps/Modern/Responsive/Mobile_first">Mobile first</a> — Often when creating responsive application layouts, it makes sense to create the mobile layout as the default, and build wider layouts on top.</li>
- <li><a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">Add to home screen guide</a> — Learn how your apps can take advantage of Add to home screen (A2HS).</li>
+ <li><a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">The building blocks of responsive design</a> — Learn the basics of responsive design, an essential topic for modern app layout.</li>
+ <li><a href="/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first">Mobile first</a> — Often when creating responsive application layouts, it makes sense to create the mobile layout as the default, and build wider layouts on top.</li>
+ <li><a href="/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen">Add to home screen guide</a> — Learn how your apps can take advantage of Add to home screen (A2HS).</li>
 </ul>
-</div>
 
-<div class="column-half">
 <h2 id="Tools">Tools</h2>
 
 <ul>
@@ -86,8 +81,6 @@ tags:
  <li><a class="external external-icon" href="https://serviceworke.rs/" rel="noopener">The service worker cookbook</a> — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.</li>
  <li><a href="https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa">PWA VS Code extension</a> - A collection of all essential code snippets you need to build Progressive Web Apps right there in your VS Code environment.</li>
 </ul>
-</div>
-</div>
 
 <ul>
  <li><a href="https://developers.google.com/web/progressive-web-apps">Progressive web apps</a> on Google Developers.</li>
@@ -95,11 +88,8 @@ tags:
  <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">Progressive Web Apps Check List</a>.</li>
  <li><a href="https://developers.google.com/web/tools/lighthouse">The Lighthouse Tool</a> by Google.</li>
  <li><a href="https://github.com/angular/mobile-toolkit">Tools for building progressive web apps with Angular</a>.</li>
- <li><a href="https://github.com/codebusking/react-pwa-guide-kit">React PWA Guide Kit</a>.</li>
  <li><a href="https://pokedex.org/">Offline-capable Pokédex web site</a>.</li>
  <li><a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a>.</li>
- <li><a href="https://goingmeta.io/progressive-web-app/">Progressive Web App: Advantages in a nutshell</a></li>
- <li><a href="https://ymedialabs.com/progressive-web-apps">Why Progressive Web Apps Are The Future of Mobile Web (2019 Research)</a>.</li>
  <li><a href="https://www.csschopper.com/blog/progressive-web-apps-everything-you-need-to-know/">Progressive Web Apps: Everything You Need To Know</a></li>
  <li><a href="https://pwafire.org">Collection of resources, codelabs and tools you need to build PWAs by the team at pwafire.org</a></li>
  <li><a href="https://github.com/pwafire/pwadev-tips">Setting up your Progressive Web App Development environment</a></li>

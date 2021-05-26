@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{SVGRef}}</div>
 
-<p>The <strong><code>markerUnits</code></strong> attribute defines the coordinate system for the {{SVGAttr("markerWidth")}} and {{SVGAttr("markerUnits")}} attributes and the contents of the {{SVGElement("marker")}}.</p>
+<p>The <strong><code>markerUnits</code></strong> attribute defines the coordinate system for the {{SVGAttr("markerWidth")}} and {{SVGAttr("markerHeight")}} attributes and the contents of the {{SVGElement("marker")}}.</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -31,9 +31,9 @@ tags:
 
 <dl>
  <dt><code>userSpaceOnUse</code></dt>
- <dd>This value specifies that the <code>markerWidth</code> and <code>markerUnits</code> attributes and the contents of the <code>&lt;marker&gt;</code> element represent values in the current user coordinate system in place for the graphic object referencing the marker (i.e., the user coordinate system for the element referencing the <code>&lt;marker&gt;</code> element via a {{SVGAttr("marker")}}, <code>marker-start</code>, <code>marker-mid</code>, or <code>marker-end</code> property).</dd>
+ <dd>This value specifies that the <code>markerWidth</code> and <code>markerHeight</code> attributes and the contents of the <code>&lt;marker&gt;</code> element represent values in the current user coordinate system in place for the graphic object referencing the marker (i.e., the user coordinate system for the element referencing the <code>&lt;marker&gt;</code> element via a {{SVGAttr("marker")}}, <code>marker-start</code>, <code>marker-mid</code>, or <code>marker-end</code> property).</dd>
  <dt><code>strokeWidth</code></dt>
- <dd>This value specifies that the <code>markerWidth</code> and <code>markerUnits</code> attributes and the contents of the <code>&lt;marker&gt;</code> element represent values in a coordinate system which has a single unit equal the size in user units of the current stroke width (see the {{SVGAttr("stroke-width")}} attribute) in place for the graphic object referencing the marker.</dd>
+ <dd>This value specifies that the <code>markerWidth</code> and <code>markerHeight</code> attributes and the contents of the <code>&lt;marker&gt;</code> element represent values in a coordinate system which has a single unit equal the size in user units of the current stroke width (see the {{SVGAttr("stroke-width")}} attribute) in place for the graphic object referencing the marker.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -69,6 +69,6 @@ tags:
 <ul>
  <li>{{SVGElement("marker")}}</li>
  <li>{{SVGAttr("markerWidth")}}</li>
- <li>{{SVGAttr("markerUnits")}}</li>
+ <li>{{SVGAttr("markerHeight")}}</li>
  <li>{{SVGAttr("stroke-width")}}</li>
 </ul>

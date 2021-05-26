@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>The {{domxref("MouseEvent")}} object passed into the event handler for <code>click</code> has its {{domxref("Event.detail", "detail")}} property set to the number of times the {{domxref("Event.target", "target")}} was clicked. In other words, <code>detail</code> will be 2 for a double-click, 3 for triple-click, and so forth. This counter resets after a short interval without any clicks occurring; the specifics of how long that interval is may vary from browser to browser and across platforms. The interval is also likely to be affected by user preferences; for example, accessibility options may extend this interval to make it easier to perform multiple clicks with adaptive interfaces.</p>
+<p>The {{domxref("MouseEvent")}} object passed into the event handler for <code>click</code> has its {{domxref("UIEvent/detail", "detail")}} property set to the number of times the {{domxref("Event.target", "target")}} was clicked. In other words, <code>detail</code> will be 2 for a double-click, 3 for triple-click, and so forth. This counter resets after a short interval without any clicks occurring; the specifics of how long that interval is may vary from browser to browser and across platforms. The interval is also likely to be affected by user preferences; for example, accessibility options may extend this interval to make it easier to perform multiple clicks with adaptive interfaces.</p>
 
 <h3 id="Internet_Explorer">Internet Explorer</h3>
 

@@ -8,6 +8,7 @@ tags:
   - Function
   - Reference
   - Web
+browser-compat: css.types.image.image-set
 ---
 <div>{{CSSRef}}</div>
 
@@ -26,26 +27,37 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <h3 id="Values">Values</h3>
 
-<p>Most commonly you'll see an <code>url()</code> <code>&lt;string&gt;</code> value, but the <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> can be any image type except for an image set. The <code>image-set()</code> function can not be nested inside another <code>image-set()</code> function.</p>
-
-<p><code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code> units include <code>x</code> or <code>dppx</code>, for dots per pixel unit, <code>dpi</code>, for dots per inch, and <code>dpcm</code> for dots per centimeter. Every image within an <code>image-set()</code> must have a unique resolution.</p>
+<dl>
+  <dt><code>&lt;image&gt;</code></dt>
+  <dd>The <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> can be any image type except for an image set. The <code>image-set()</code> function may not be nested inside another <code>image-set()</code> function.</dd>
+  <dt><code>&lt;string&gt;</code></dt>
+  <dd>A <code>url()</code> to an image.</dd>
+  <dt><code>&lt;resolution&gt;</code>{{optional_inline}}</dt>
+  <dd><code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code> units include <code>x</code> or <code>dppx</code>, for dots per pixel unit, <code>dpi</code>, for dots per inch, and <code>dpcm</code> for dots per centimeter. Every image within an <code>image-set()</code> must have a unique resolution.</dd>
+  <dt><code>type(&lt;string&gt;)</code>{{optional_inline}}</dt>
+  <dd>A valid MIME type string, for example "image/jpeg".</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_image-set_to_provide_alternative_background-image_options">Using image-set() to provide alternative background-image options</h3>
 
-<pre class="brush: css">background-image: image-set( "cat.png" 1x,
-                             "cat-2x.png" 2x,
-                             "cat-print.png" 600dpi);</pre>
-
 <p>This example shows how to use <code><a class="css" href="https://drafts.csswg.org/css-images-4/#funcdef-image-set" id="ref-for-funcdef-image-set⑨">image-set()</a></code> to provide two alternative {{cssxref("background-image")}} options, chosen depending on the resolution needed: a normal version and a high-resolution version.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}</p>
+
+<h3 id="Using_image-set_to_provide_alternative_formats">Using image-set() to provide alternative image formats</h3>
+
+<p>In the next example the <code>type()</code> function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}</p>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <p>Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
  <li><a class="external external-icon" href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html" rel="noopener">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -70,15 +82,15 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.image.image-set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{cssxref("image")}}</li>
- <li>{{cssxref("_image", "image()")}}</li>
- <li>{{cssxref("element")}}</li>
- <li>{{cssxref("url")}}</li>
+ <li>{{cssxref("image()", "image()")}}</li>
+ <li>{{cssxref("element()")}}</li>
+ <li>{{cssxref("url()")}}</li>
  <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("cross-fade")}}</li>
+ <li>{{cssxref("cross-fade()")}}</li>
 </ul>

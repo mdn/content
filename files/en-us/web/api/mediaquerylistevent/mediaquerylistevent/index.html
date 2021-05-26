@@ -2,12 +2,12 @@
 title: MediaQueryListEvent.MediaQueryListEvent()
 slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
 tags:
-- API
-- CSSOM View
-- Constructor
-- Media Queries
-- MediaQueryListEvent
-- Reference
+  - API
+  - CSSOM View
+  - Constructor
+  - Media Queries
+  - MediaQueryListEvent
+  - Reference
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -40,10 +40,10 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre
-  class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> media <span class="operator token">=</span> <span class="string token">'(max-width: 600px)'</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> matches <span class="operator token">=</span> <span class="keyword token">true</span><span class="punctuation token">;</span>
+  class="brush: js line-numbers language-js">var media = '(max-width: 600px)';
+var matches = true;
 
-<span class="keyword token">var</span> myMediaQueryListEvent <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaQueryListEvent</span><span class="punctuation token">(</span><span class="punctuation token">{</span>media<span class="punctuation token">,</span> matches<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+var myMediaQueryListEvent = new MediaQueryListEvent({media, matches});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -70,8 +70,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
       code</a></li>
   <li>{{DOMxRef("window.matchMedia()")}}</li>
   <li>{{DOMxRef("MediaQueryList")}}</li>

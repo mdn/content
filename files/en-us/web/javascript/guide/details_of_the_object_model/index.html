@@ -6,7 +6,7 @@ tags:
   - Intermediate
   - JavaScript
   - Object
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}</div>
 
@@ -32,7 +32,7 @@ tags:
 <p>JavaScript follows a similar model, but does not have a class definition separate from the constructor. Instead, you define a constructor function to create objects with a particular initial set of properties and values. Any JavaScript function can be used as a constructor. You use the <code>new</code> operator with a constructor function to create a new object.</p>
 
 <div class="notecard note">
-<p>Note that ECMAScript 2015 introduces a <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class declaration</a>:</p>
+<p><strong>Note:</strong> ECMAScript 2015 introduces a <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class declaration</a>:</p>
 
 <blockquote>
 <p>JavaScript classes, introduced in ECMAScript 2015, are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. The class syntax <em>does not</em> introduce a new object-oriented inheritance model to JavaScript.</p>
@@ -100,14 +100,10 @@ tags:
 
 <p>The remainder of this chapter uses the employee hierarchy shown in the following figure.</p>
 
-<div style="display: table-row;">
-<div style="display: table-cell; width: 350px; text-align: center; vertical-align: middle; padding: 10px;">
-<p>A simple object hierarchy with the following objects:</p>
+<p><img alt="" src="figure8.1.png"></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/3060/figure8.1.png"></p>
-</div>
+<p>This shows an object hierarchy with the following objects:</p>
 
-<div style="display: table-cell; vertical-align: middle; padding: 10px;">
 <ul>
  <li><code>Employee</code> has the properties <code>name</code> (whose value defaults to the empty string) and <code>dept</code> (whose value defaults to "general").</li>
  <li><code>Manager</code> is based on <code>Employee</code>. It adds the <code>reports</code> property (whose value defaults to an empty array, intended to have an array of <code>Employee</code> objects as its value).</li>
@@ -115,8 +111,7 @@ tags:
  <li><code>SalesPerson</code> is based on <code>WorkerBee</code>. It adds the <code>quota</code> property (whose value defaults to 100). It also overrides the <code>dept</code> property with the value "sales", indicating that all salespersons are in the same department.</li>
  <li><code>Engineer</code> is based on <code>WorkerBee</code>. It adds the <code>machine</code> property (whose value defaults to the empty string) and also overrides the <code>dept</code> property with the value "engineering".</li>
 </ul>
-</div>
-</div>
+
 
 <h2 id="Creating_the_hierarchy">Creating the hierarchy</h2>
 
@@ -136,7 +131,6 @@ tags:
     this.dept = 'general';
   }
 }
-
 </pre>
 
 <h4 id="JavaScript_**_use_this_instead">JavaScript ** (use this instead)</h4>
@@ -145,7 +139,6 @@ tags:
     this.name = '';
     this.dept = 'general';
 }
-
 </pre>
 
 <h4 id="Java">Java</h4>
@@ -185,7 +178,6 @@ WorkerBee.prototype.constructor = WorkerBee;
 public class WorkerBee extends Employee {
    public String[] projects = new String[0];
 }
-
 </pre>
 
 <p>The <code>Engineer</code> and <code>SalesPerson</code> definitions create objects that descend from <code>WorkerBee</code> and hence from <code>Employee</code>. An object of these types has properties of all the objects above it in the chain. In addition, these definitions override the inherited value of the <code>dept</code> property with new values specific to these objects.</p>
@@ -220,7 +212,6 @@ public class Engineer extends WorkerBee {
    public String dept = "engineering";
    public String machine = "";
 }
-
 </pre>
 
 <p>Using these definitions, you can create instances of these objects that get the default values for their properties. The next figure illustrates using these JavaScript definitions to create new objects and shows the property values for the new objects.</p>
@@ -236,7 +227,7 @@ public class Engineer extends WorkerBee {
 
 <p>The following hierarchy is created using the code on the right side.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/10412/=figure8.3.png"></p>
+<p><img src="figure8.3.png"></p>
 
 <h4 id="Individual_objects_Jim_Sally_Mark_Fred_Jane_etc._Instances_created_from_constructor">Individual objects = Jim, Sally, Mark, Fred, Jane, etc.<br>
  "Instances" created from constructor</h4>
@@ -315,15 +306,19 @@ mark.projects = ['navigator'];</pre>
 
 <p>As soon as JavaScript executes this statement, the <code>mark</code> object also has the <code>specialty</code> property with the value of <code>"none"</code>. The following figure shows the effect of adding this property to the <code>Employee</code> prototype and then overriding it for the <code>Engineer</code> prototype.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
- <small><strong>Adding properties</strong></small></p>
+<figure>
+  <img alt="" class="internal" src="figure8.4.png">
+  <figcaption>Adding properties</figcaption>
+</figure>
 
 <h2 id="More_flexible_constructors">More flexible constructors</h2>
 
 <p>The constructor functions shown so far do not let you specify property values when you create an instance. As with Java, you can provide arguments to constructors to initialize property values for instances. The following figure shows one way to do this.</p>
 
-<p><img alt="" class="internal" id="figure8.5" src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
- <small><strong>Specifying properties in a constructor, take 1</strong></small></p>
+<figure>
+  <img alt="" class="internal" src="figure8.5.png">
+  <figcaption>Specifying properties in a constructor, take 1</figcaption>
+</figure>
 
 <p>The following pairs of examples show the Java and JavaScript definitions for these objects.</p>
 
@@ -415,8 +410,10 @@ jane.machine == 'belau';
 
 <p>So far, the constructor function has created a generic object and then specified local properties and values for the new object. You can have the constructor add more properties by directly calling the constructor function for an object higher in the prototype chain. The following figure shows these new definitions.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
- <small><strong>Specifying properties in a constructor, take 2</strong></small></p>
+<figure>
+  <img alt="" class="internal" src="figure8.6.png">
+  <figcaption>Specifying properties in a constructor, take 2</figcaption>
+</figure>
 
 <p>Let's look at one of these definitions in detail. Here's the new definition for the <code>Engineer</code> constructor:</p>
 
@@ -597,7 +594,7 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=634150">bug 634150</a> if you want the nitty-gritty details.</div>
+<div class="note"><p><strong>Note:</strong> The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=634150">bug 634150</a> if you want the nitty-gritty details.</p></div>
 
 <p>Using the instanceOf function defined above, these expressions are true:</p>
 

@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.flex-basis
 ---
 <div>{{CSSRef}}</div>
 
@@ -14,7 +15,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
 
-<div class="note">
+<p>In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to <code>1</code> on all three items, indicating that the flex item can grow and shrink from the initial <code>flex-basis</code>.</p>
+
+<p>The demo then changes the <code>flex-basis</code> on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the <code>flex-basis</code> of the first item is <code>200px</code>, it will start out at 200px but then shrink to fit the space available with the other items being at least <code>min-content</code> sized.</p>
+
+<p>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox Inspector</a> in Firefox can help you understand the size items become.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
 <p><strong>Note:</strong> in case both <code>flex-basis</code> (other than <code>auto</code>) and <code>width</code> (or <code>height</code> in case of <code>flex-direction: column</code>) are set for an element, <code>flex-basis</code> has priority.</p>
 </div>
 
@@ -70,7 +78,7 @@ flex-basis: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -198,7 +206,7 @@ flex-basis: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.flex-basis")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

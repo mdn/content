@@ -33,7 +33,7 @@ tags:
  <dt>{{domxref("ServiceWorkerRegistration.waiting")}} {{readonlyinline}}</dt>
  <dd>Returns a service worker whose state is <code>installed</code>. This is initially set to <code>null</code>.</dd>
  <dt>{{domxref("ServiceWorkerRegistration.active")}} {{readonlyinline}}</dt>
- <dd>Returns a service worker whose state is <code>activating</code> or <code>activated</code>. This is initially set to <code>null</code>. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</dd>
+ <dd>Returns a service worker whose state is <code>activating</code> or <code>activated</code>. This is initially set to <code>null</code>. An active worker will control a {{domxref("Client")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</dd>
  <dt>{{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}</dt>
  <dd>Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.</dd>
  <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>

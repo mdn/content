@@ -16,17 +16,16 @@ tags:
 <p>{{DefaultAPISidebar("Fetch API")}}</p>
 
 <div class="summary">
-<p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("GlobalFetch.fetch","fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+<p>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
 </div>
 
-<p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.</p>
+<p>This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> and extensions to HTTP.</p>
 
-<p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in three main ways:</p>
+<p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in the following significant ways:</p>
 
 <ul>
- <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, it will resolve normally (with <code>ok</code> status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
- <li><code>fetch()</code> <strong><s>won't</s> can receive cross-site cookies</strong>; you <s>can’t</s> can establish a cross site session using fetch. <s>{{HTTPHeader("Set-Cookie")}} headers from other sites are silently ignored.</s></li>
- <li><code>fetch</code><strong> won’t send cookies</strong>, unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
+ <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the {{domxref("Response/ok", "ok")}} property of the response set to false if the response isn’t in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.</li>
+ <li><code>fetch()</code> <strong>won’t send cross-origin cookies</strong> unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">init option</a>. (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">April 2018</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
 <p>A basic fetch request is really simple to set up. Have a look at the following code:</p>
@@ -40,17 +39,18 @@ tags:
 
 <p>This is just an HTTP response, not the actual JSON. To extract the JSON body content from the response, we use the {{domxref("Body.json","json()")}} method (defined on the {{domxref("Body")}} mixin, which is implemented by both the {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
 
-<div class="note">
-<p><strong>Note</strong>: The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The Body mixin also has similar methods to extract other types of body content; see the {{anch("Body")}} section for more.</p>
 </div>
 
-<p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
+<p>Fetch requests are controlled by the <code>connect-src</code> directive of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a> rather than the directive of the resources it's retrieving.</p>
 
 <h3 id="Supplying_request_options">Supplying request options</h3>
 
 <p>The <code>fetch()</code> method can optionally accept a second parameter, an <code>init</code> object that allows you to control a number of different settings:</p>
 
-<p>See {{domxref("GlobalFetch.fetch","fetch()")}} for the full options available, and more details.</p>
+<p>See {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} for the full options available, and more details.</p>
 
 <pre class="brush: js">// Example POST method implementation:
 async function postData(url = '', data = {}) {
@@ -88,16 +88,23 @@ postData('https://example.com/answer', { answer: 42 })
 
 <h3 id="Sending_a_request_with_credentials_included">Sending a request with credentials included</h3>
 
-<p>To cause browsers to send a request with credentials included, even for a cross-origin call, add <code>credentials: 'include'</code> to the <code>init</code> object you pass to the <code>fetch()</code> method.</p>
-
-<div class="note">
-<p><strong>Note</strong>: <code>Access-Control-Allow-Origin</code> is prohibited from using a wildcard for requests with <code>credentials: 'include'</code>. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.</p>
-</div>
+<p>To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add <code>credentials: 'include'</code> to the <code>init</code> object you pass to the <code>fetch()</code> method.</p>
 
 <pre class="brush: js">fetch('https://example.com', {
   credentials: 'include'
 });
 </pre>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p><code>Access-Control-Allow-Origin</code> is prohibited from using a wildcard for requests with <code>credentials: 'include'</code>. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.</p>
+</div>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Browsers should not send credentials in <em>preflight requests</em> irrespective of this setting. For more information see: <a href="/en-US/docs/Web/HTTP/CORS#requests_with_credentials">CORS > Requests with credentials</a>.</p>
+</div>
+
 
 <p>If you only want to send credentials if the request URL is on the same origin as the calling script, add <code>credentials: 'same-origin'</code>.</p>
 
@@ -115,9 +122,10 @@ fetch('https://example.com', {
 })
 </pre>
 
+
 <h3 id="Uploading_JSON_data">Uploading JSON data</h3>
 
-<p>Use {{domxref("GlobalFetch.fetch","fetch()")}} to POST JSON-encoded data.</p>
+<p>Use {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} to POST JSON-encoded data.</p>
 
 <pre class="brush: js">const data = { username: 'example' };
 
@@ -162,7 +170,7 @@ fetch('https://example.com/profile/avatar', {
 
 <h3 id="Uploading_multiple_files">Uploading multiple files</h3>
 
-<p>Files can be uploaded using an HTML <code>&lt;input type="file" multiple /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("GlobalFetch.fetch","fetch()")}}.</p>
+<p>Files can be uploaded using an HTML <code>&lt;input type="file" multiple /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.</p>
 
 <pre class="brush: js">const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
@@ -232,7 +240,7 @@ run();
 
 <h3 id="Checking_that_the_fetch_was_successful">Checking that the fetch was successful</h3>
 
-<p>A {{domxref("GlobalFetch.fetch","fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful <code>fetch()</code> would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:</p>
+<p>A {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful <code>fetch()</code> would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:</p>
 
 <pre class="brush: js">fetch('flowers.jpg')
   .then(response =&gt; {
@@ -276,8 +284,9 @@ fetch(myRequest)
 
 <p>This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again while varying the <code>init</code> options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.</p>
 
-<div class="note">
-<p><strong>Note</strong>: There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
 </div>
 
 <h2 id="Headers">Headers</h2>
@@ -311,12 +320,12 @@ console.log(myHeaders.get('Content-Length')); // 11
 console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
 
 myHeaders.delete('X-Custom-Header');
-console.log(myHeaders.get('X-Custom-Header')); // [ ]
+console.log(myHeaders.get('X-Custom-Header')); // null
 </pre>
 
-<p>Some of these operations are only useful in {{domxref("ServiceWorker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
+<p>Some of these operations are only useful in {{domxref("Service_Worker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
 
-<p>All of the Headers methods throw a <code>TypeError</code> if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a <code>TypeError</code> if there is an immutable guard (see below). Otherwise, they fail silently. For example:</p>
+<p>All of the Headers methods throw a <code>TypeError</code> if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a <code>TypeError</code> if there is an immutable guard (<a href="#guard">see below</a>). Otherwise, they fail silently. For example:</p>
 
 <pre class="brush: js">const myResponse = Response.error();
 try {
@@ -344,7 +353,7 @@ try {
 
 <h3 id="Guard">Guard</h3>
 
-<p>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.</p>
+<p>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a <em>guard</em> property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.</p>
 
 <p>Possible guard values are:</p>
 
@@ -352,12 +361,13 @@ try {
  <li><code>none</code>: default.</li>
  <li><code>request</code>: guard for a headers object obtained from a request ({{domxref("Request.headers")}}).</li>
  <li><code>request-no-cors</code>: guard for a headers object obtained from a request created with {{domxref("Request.mode")}} <code>no-cors</code>.</li>
- <li><code>response</code>: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).</li>
- <li><code>immutable</code>: Mostly used for ServiceWorkers; renders a headers object read-only.</li>
+ <li><code>response</code>: guard for a headers object obtained from a response ({{domxref("Response.headers")}}).</li>
+ <li><code>immutable</code>: guard that renders a headers object read-only; mostly used for ServiceWorkers.</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: You may not append or set a <code>request</code> guarded Headers’ <code>Content-Length</code> header. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You may not append or set the <code>Content-Length</code> header on a guarded headers object for a <code>response</code>. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
 </div>
 
 <h2 id="Response_objects">Response objects</h2>
@@ -369,10 +379,10 @@ try {
 <ul>
  <li>{{domxref("Response.status")}} — An integer (default value 200) containing the response status code.</li>
  <li>{{domxref("Response.statusText")}} — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 <a href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not support</a> status messages.</li>
- <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.</li>
+ <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{jsxref("Boolean")}}.</li>
 </ul>
 
-<p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("ServiceWorker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
+<p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("Service_Worker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
 
 <pre class="brush: js">const myBody = new Blob();
 
@@ -388,8 +398,9 @@ addEventListener('fetch', function(event) {
 
 <p>The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)</p>
 
-<div class="note">
-<p><strong>Note</strong>: The static method {{domxref("Response.error","error()")}} returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The static method {{domxref("Response.error","error()")}} returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.</p>
 </div>
 
 <h2 id="Body">Body</h2>
@@ -397,7 +408,7 @@ addEventListener('fetch', function(event) {
 <p>Both requests and responses may contain body data. A body is an instance of any of the following types:</p>
 
 <ul>
- <li>{{domxref("ArrayBuffer")}}</li>
+ <li>{{jsxref("ArrayBuffer")}}</li>
  <li>{{domxref("ArrayBufferView")}} (Uint8Array and friends)</li>
  <li>{{domxref("Blob")}}/File</li>
  <li>string</li>
@@ -430,7 +441,7 @@ fetch('/login', {
 
 <h2 id="Feature_detection">Feature detection</h2>
 
-<p>Fetch API support can be detected by checking for the existence of {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} or {{domxref("GlobalFetch.fetch","fetch()")}} on the {{domxref("Window")}} or {{domxref("Worker")}} scope. For example:</p>
+<p>Fetch API support can be detected by checking for the existence of {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} or {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} on the {{domxref("Window")}} or {{domxref("Worker")}} scope. For example:</p>
 
 <pre class="brush: js">if (window.fetch) {
   // run my fetch request here
@@ -469,7 +480,7 @@ fetch('/login', {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
  <li><a href="https://github.com/github/fetch">Fetch polyfill</a></li>

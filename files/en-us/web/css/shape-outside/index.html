@@ -14,6 +14,7 @@ tags:
   - 'recipe:css-property'
   - shape-outside
   - wrapping
+browser-compat: css.properties.shape-outside
 ---
 <div>{{CSSRef}}</div>
 
@@ -61,7 +62,7 @@ shape-outside: unset;
  <dd>
  <dl>
   <dt><code>margin-box</code></dt>
-  <dd><span style="line-height: 1.5;">Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the <code>border-radius / margin</code> </span>ratio is <code>1</code> or more, then the margin box corner radius is <code>border-radius + margin</code>. If the ratio is less than <code>1</code>, then the margin box corner radius is <code>border-radius + (margin * (1 + (ratio-1)^3))</code>.</dd>
+  <dd>Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the <code>border-radius / margin</code> ratio is <code>1</code> or more, then the margin box corner radius is <code>border-radius + margin</code>. If the ratio is less than <code>1</code>, then the margin box corner radius is <code>border-radius + (margin * (1 + (ratio-1)^3))</code>.</dd>
   <dt><code>border-box</code></dt>
   <dd>
   <p>Defines the shape enclosed by the outside border edge. The shape follows the normal border radius shaping rules for the outside of the border.</p>
@@ -103,7 +104,7 @@ shape-outside: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -185,7 +186,7 @@ p {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.shape-outside")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

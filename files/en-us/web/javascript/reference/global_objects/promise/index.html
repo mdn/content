@@ -8,6 +8,7 @@ tags:
   - Promise
   - Reference
   - promise.all
+browser-compat: javascript.builtins.Promise
 ---
 <div>{{JSRef}}</div>
 
@@ -33,14 +34,14 @@ tags:
 
 <p>As the <code>{{JSxRef("Promise.then", "Promise.prototype.then()")}}</code> and <code>{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}</code> methods return promises, they can be chained.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15911/promises.png" style="height: 297px; width: 801px;"></p>
+<p><img alt="" src="promises.png"></p>
 
 <div class="notecard note">
-<p><strong>Not to be confused with:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
+<p><strong>Note:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked-in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contain more details about promise terminology.</p>
+<p><strong>Note:</strong> A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked-in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contain more details about promise terminology.</p>
 </div>
 
 <h3 id="Chained_Promises">Chained Promises</h3>
@@ -73,7 +74,7 @@ myPromise
 .catch(handleRejectedAny);
 </pre>
 
-<p>Using <code>{{JSxRef("Functions.arrow_functions", "Arrow Function Expressions")}}</code> for the callback functions, an implementation of a promise chain might look something like this:</p>
+<p>Using <code>{{JSxRef("Functions/Arrow_functions", "Arrow Function Expressions")}}</code> for the callback functions, an implementation of a promise chain might look something like this:</p>
 
 <pre class="brush: js">
 promise1
@@ -177,7 +178,7 @@ window.addEventListener("message", (event) =&gt; {
 <p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.</p>
+<p><strong>Note:</strong> Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.</p>
 </div>
 
 <h2 id="Constructor">Constructor</h2>
@@ -191,27 +192,35 @@ window.addEventListener("message", (event) =&gt; {
 
 <dl>
  <dt>{{JSxRef("Promise.all", "Promise.all(iterable)")}}</dt>
- <dd>Wait for all promises to be resolved, or for any to be rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</dd>
- <dd>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</dd>
+ <dd>
+   <p>Wait for all promises to be resolved, or for any to be rejected.</p>
+   <p>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</p>
+   <p>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</p>
+ </dd>
  <dt>{{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}</dt>
- <dd>Wait until all promises have settled (each may resolve or reject).</dd>
- <dd>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</dd>
+ <dd>
+   <p>Wait until all promises have settled (each may resolve or reject).</p>
+   <p>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</p>
+ </dd>
  <dt>{{JSxRef("Promise.any", "Promise.any(iterable)")}}</dt>
  <dd>Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.</dd>
  <dt>{{JSxRef("Promise.race", "Promise.race(iterable)")}}</dt>
- <dd>Wait until any of the promises is resolved or rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</dd>
- <dd>If it rejects, it is rejected with the reason from the first promise that was rejected.</dd>
+ <dd>
+   <p>Wait until any of the promises is resolved or rejected.</p>
+   <p>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</p>
+   <p>If it rejects, it is rejected with the reason from the first promise that was rejected.</p>
+ </dd>
  <dt>{{JSxRef("Promise.reject", "Promise.reject(reason)")}}</dt>
  <dd>Returns a new <code>Promise</code> object that is rejected with the given reason.</dd>
  <dt>{{JSxRef("Promise.resolve", "Promise.resolve(value)")}}</dt>
- <dd>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</dd>
- <dd>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</dd>
+ <dd>
+   <p>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</p>
+   <p>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</p>
+ </dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
-
+<p>See the <a target="_blank" href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide" title="Microtask_guide">Microtask guide</a> to learn more about how these methods use the Microtask queue and services.</p>
 <dl>
  <dt>{{jsxref("Promise.prototype.catch()")}}</dt>
  <dd>Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.</dd>
@@ -294,7 +303,7 @@ function troubleWithGetNumber(reason) {
 
 function promiseGetWord(parityInfo) {
   // The "tetheredGetWord()" function gets "parityInfo" as closure variable.
-  var tetheredGetWord = function(resolve,reject) {
+  const tetheredGetWord = function(resolve,reject) {
     const theNumber = parityInfo.theNumber;
     const threshold_B = THRESHOLD_A - 1;
     if(theNumber &gt;= threshold_B) {
@@ -329,18 +338,22 @@ function promiseGetWord(parityInfo) {
 
 <h3 id="Advanced_Example">Advanced Example</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
-&lt;div id="log"&gt;&lt;/div&gt;
-</pre>
-</div>
-
-<p>This small example shows the mechanism of a <code>Promise</code>. The <code>testPromise()</code> method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("window.setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The <code>Promise()</code> constructor is used to create the promise.</p>
+<p>This small example shows the mechanism of a <code>Promise</code>. The <code>testPromise()</code> method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The <code>Promise()</code> constructor is used to create the promise.</p>
 
 <p>The fulfillment of the promise is logged, via a fulfill callback set using {{JSxRef("Promise.prototype.then()","p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.</p>
 
+<p>By clicking the button several times in a short amount of time, you'll even see the different promises being fulfilled one after another.</p>
+
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;button id="make-promise"&gt;Make a promise!&lt;/button&gt;
+&lt;div id="log"&gt;&lt;/div&gt;
+</pre>
+
+<h4>JavaScript</h4>
+
 <pre class="brush: js">"use strict";
-var promiseCount = 0;
+let promiseCount = 0;
 
 function testPromise() {
   let thisPromiseCount = ++promiseCount;
@@ -371,22 +384,16 @@ function testPromise() {
   log.insertAdjacentHTML('beforeend', thisPromiseCount + ') Promise made&lt;br&gt;');
 }
 
-</pre>
-
-<div class="hidden">
-<pre class="brush: js">if ("Promise" in window) {
-  let btn = document.getElementById("btn");
+if ("Promise" in window) {
+  let btn = document.getElementById("make-promise");
   btn.addEventListener("click",testPromise);
 } else {
   log = document.getElementById('log');
   log.textContent = "Live example not available as your browser doesn't support the &lt;code&gt;Promise&lt;code&gt; interface.";
 }
 </pre>
-</div>
 
-<p>This example is started by clicking the button. (You need a browser that supports <code>Promise</code>. )</p>
-
-<p>By clicking the button several times in a short amount of time, you'll even see the different promises being fulfilled one after another.</p>
+<h4>Result</h4>
 
 <p>{{EmbedLiveSample("Advanced_Example", "500", "200")}}</p>
 
@@ -396,22 +403,12 @@ function testPromise() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise-objects', 'Promise')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
-<p>{{Compat("javascript.builtins.Promise")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,18 +7,18 @@ tags:
 - Method
 - Reference
 - String
+browser-compat: javascript.builtins.String.raw
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The static <strong><code>String.raw()</code></strong> method
+<p>The static <strong><code>String.raw()</code></strong> method
     is a tag function of <a
       href="/en-US/docs/Web/JavaScript/Reference/template_strings">template literals</a>.
     This is <em>similar</em> to the <code>r</code> prefix in Python, or the <code>@</code>
     prefix in C# for string literals. (But it is not <em>identical</em>; see explanations
     in <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">this issue</a>.)
     It's used to get the raw string form of template literals, that is, substitutions (e.g.
-    <code>${foo}</code>) are processed, but escapes (e.g. <code>\n</code>) are not.</span>
-</p>
+    <code>${foo}</code>) are processed, but escapes (e.g. <code>\n</code>) are not.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-raw.html")}}</div>
 
@@ -106,22 +106,11 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.raw")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

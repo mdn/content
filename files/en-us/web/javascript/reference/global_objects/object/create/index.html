@@ -2,13 +2,14 @@
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 tags:
-- ECMAScript 5
-- JavaScript
-- Method
-- 'Null'
-- Object
-- Reference
-- polyfill
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - 'Null'
+  - Object
+  - Reference
+  - polyfill
+browser-compat: javascript.builtins.Object.create
 ---
 <p>{{JSRef}}</p>
 
@@ -17,16 +18,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">Object.create(<var>proto</var>, [<var>propertiesObject</var>])</pre>
+<pre class="brush: js">
+Object.create(proto)
+Object.create(proto, propertiesObject)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,7 +50,7 @@ tags:
 <ul>
   <li>{{jsxref("null")}} or</li>
   <li>an {{jsxref("Object")}} excluding <a
-      href="/en-US/docs/Glossary/Primitive#Primitive_wrapper_objects_in_JavaScript">primitive
+      href="/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript">primitive
       wrapper objects</a>.</li>
 </ul>
 
@@ -328,7 +326,7 @@ MyClass.prototype.myMethod = function() {
 <p>{{jsxref("Object.assign()")}} copies properties from the OtherSuperClass prototype to
   the MyClass prototype, making them available to all instances of MyClass.
   <code>Object.assign()</code> was introduced with ES2015 and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill">can
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill">can
     be polyfilled</a>. If support for older browsers is necessary,
   <code><a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a></code> or
   <code><a href="https://lodash.com/docs/#assign">_.assign()</a></code> can be used.</p>
@@ -413,22 +411,11 @@ o2 = Object.create({p: 42}) */
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.create', 'Object.create')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.create")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

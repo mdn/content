@@ -1,0 +1,83 @@
+---
+title: Serial.requestPort()
+slug: Web/API/Serial/requestPort
+tags:
+  - API
+  - Method
+  - Reference
+  - requestPort
+  - Serial
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+
+<p class="summary">The <strong><code>Serial.requestPort()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>promise</var> = Serial.requestPort([<var>options</var>]);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt>options</dt>
+  <dd>
+    <dl>
+      <dt><code>filters</code></dt>
+      <dd>A list of objects containing vendor and product IDs used to search for attached devices. The <a href="https://www.usb.org/">USB Implementors Forum</a> assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
+        <ul>
+          <li><code>usbVendorId</code>: An unsigned short integer that identifies a USB device vendor. </li>
+          <li><code>usbProductId</code>: An unsigned short integer that identiffies a USB device.</li>
+        </ul>
+      </dd>
+    </dl>
+  </dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}}.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>"SecurityError"</code></dt>
+  <dd>The returned <code>Promise</code> rejects with this error if a <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> restricts use of this API or a permission to use it has not granted via a user gesture.</dd>
+  <dt>{{domxref("DOMException")}} <code>"AbortError"</code></dt>
+  <dd>The returned <code>Promise</code> rejects with this if the user does not select a port when prompted.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows a filter being passed to <code>requestPort()</code> with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.</p>
+
+<pre class="brush: js">button.addEventListener('click', () => {
+  const usbVendorId = ...;
+  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
+    // Connect to `port` or add it to the list of available ports.
+  }).catch((e) => {
+    // The user didn't select a port.
+  });
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Serial API','#dom-serial-requestport','Serial.requestPort()')}}</td>
+   <td>{{Spec2('Web Serial API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Serial.requestPort")}}</p>

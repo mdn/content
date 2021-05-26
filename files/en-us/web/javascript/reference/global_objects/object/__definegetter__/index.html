@@ -2,16 +2,17 @@
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 tags:
-- Deprecated
-- JavaScript
-- Method
-- Object
-- Prototype
+  - Deprecated
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+browser-compat: javascript.builtins.Object.defineGetter
 ---
 <div>{{JSRef}}</div>
 
 <div class="warning">
-  <p>This feature is deprecated in favor of defining getters using the <a
+  <p><strong>Warning:</strong> This feature is deprecated in favor of defining getters using the <a
       href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object
       initializer syntax</a> or the {{jsxref("Object.defineProperty()")}} API. While this
     feature is widely implemented, it is only described in the <a
@@ -25,8 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>obj</var>.__defineGetter__(<var>prop</var>, <var>func</var>)</pre>
+<pre class="brush: js">__defineGetter__(prop, func)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -43,7 +43,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>__defineGetter__</code> allows a {{jsxref("Operators/get", "getter", "", 1)}}
+<p>The <code>__defineGetter__</code> allows a {{jsxref("Functions/get", "getter", "", 1)}}
   to be defined on a pre-existing object.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -73,34 +73,22 @@ console.log(o.gimmeFive); // 5
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.__defineGetter__',
-        'Object.prototype.__defineGetter__()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.defineGetter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
-  <li>{{jsxref("Operators/get", "get")}} operator</li>
+  <li>{{jsxref("Functions/get", "get")}} operator</li>
   <li>{{jsxref("Object.defineProperty()")}}</li>
   <li>{{jsxref("Object.prototype.__lookupGetter__()")}}</li>
   <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
   <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS
+      href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">JS
       Guide: Defining Getters and Setters</a></li>
   <li><a
       href="https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[Blog

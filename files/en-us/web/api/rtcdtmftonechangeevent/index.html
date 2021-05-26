@@ -37,13 +37,13 @@ tags:
 
 <p>This snippet is derived loosely from the full, working example you'll find in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_DTMF", "When a tone finishes playing")}}. It appends each tone to a display box as it's played, and, once all tones have been sent, re-enabled a previously-disabled "Send" button, allowing the next DMTF string to be entered.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">dtmfSender.addEventListener("change", function(event) {</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>tone <span class="operator token">!==</span> <span class="string token">""</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers  language-js">dtmfSender.addEventListener(&quot;change&quot;, function(event) {
+  if (event.tone !== &quot;&quot;) {
     dialStringBox.innerText += event.tone;
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
+  } else {
     sendDTMFButton.disabled = false;
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}, false);</span></code></pre>
+  }
+}, false);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -69,6 +69,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
  <li>Its usual target: {{domxref("RTCDTMFSender")}}.</li>
 </ul>

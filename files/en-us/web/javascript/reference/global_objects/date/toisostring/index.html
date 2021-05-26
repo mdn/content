@@ -8,6 +8,7 @@ tags:
 - Prototype
 - Reference
 - polyfill
+browser-compat: javascript.builtins.Date.toISOString
 ---
 <div>{{JSRef}}</div>
 
@@ -23,52 +24,16 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>dateObj</var>.toISOString()</pre>
+<pre class="brush: js">toISOString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <p>A string representing the given date in the <a
     href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format according to
   universal time.</p>
-
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>This method was standardized in ECMA-262 5th edition. Engines which have not been
-  updated to support this method can work around the absence of this method using the
-  following shim:</p>
-
-<pre class="brush: js">if (!Date.prototype.toISOString) {
-  (function() {
-
-    function pad(number) {
-      if (number &lt; 10) {
-        return '0' + number;
-      }
-      return number;
-    }
-
-    Date.prototype.toISOString = function() {
-      return this.getUTCFullYear() +
-        '-' + pad(this.getUTCMonth() + 1) +
-        '-' + pad(this.getUTCDate()) +
-        'T' + pad(this.getUTCHours()) +
-        ':' + pad(this.getUTCMinutes()) +
-        ':' + pad(this.getUTCSeconds()) +
-        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        'Z';
-    };
-
-  })();
-}
-</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -84,23 +49,11 @@ console.log(today.toISOString())  // Returns 2011-10-05T14:48:00.000Z
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.toisostring',
-        'Date.prototype.toISOString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.toISOString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -108,4 +61,5 @@ console.log(today.toISOString())  // Returns 2011-10-05T14:48:00.000Z
   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
   <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
   <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/date.polyfill.js">A polyfill</a></li>
 </ul>

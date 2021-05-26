@@ -68,6 +68,20 @@ tags:
 	<li>The browser assembles the small chunks into a complete web page and displays it to you (the goods arrive at your door — new shiny stuff, awesome!).</li>
 </ol>
 
+<h2 id="Order_in_which_component_files_are_parsed">Order in which component files are parsed</h2>
+
+<p>Once the client’s request is approved, the server first sends back the HTML (index) file — index.html is commonly named as such, as it is the first file of a website to be parsed by the server.</p>
+
+<p>The HTML file can reference <a href="/en-US/docs/Learn/CSS">CSS</a> and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, either in external files via <code>&lt;link&gt;</code> and <code>&lt;script&gt;</code> elements respectively, or embedded in the HTML page via <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> elements.</p>
+
+<p>From a server standpoint it is important to know the order in which these files are parsed when the response is sent back:</p>
+
+<ul>
+  <li>The HTML file is parsed first and, by looking inside that file, the server recognises which CSS and JavaScript files are referenced.</li>
+  <li>After the HTML has been parsed and a DOM tree structure has been generated from it, the linked CSS is then parsed, and styles are applied to the appropriate parts of the DOM tree. At this point, the visual representation of the page is painted to the screen, and the user sees the page.</li>
+  <li>The JavaScript usually gets parsed and applied to the page after the HTML and CSS.</li>
+</ul>
+
 <h2 id="DNS_explained">DNS explained</h2>
 
 <p>Real web addresses aren't the nice, memorable strings you type into your address bar to find your favorite websites. They are special numbers that look like this: <code>63.245.215.20</code>.</p>
@@ -78,7 +92,9 @@ tags:
 
 <h2 id="Packets_explained">Packets explained</h2>
 
-<p>Earlier we used the term "packets" to describe the format in which the data is sent from server to client. What do we mean here? Basically, when data is sent across the web, it is sent as thousands of small chunks, so that many different web users can download the same website at the same time. If websites were sent as single big chunks, only one user could download one at a time, which obviously would make the web very inefficient and not much fun to use.</p>
+<p>
+	Earlier we used the term "packets" to describe the format in which the data is sent from server to client. What do we mean here? Basically,	when data is sent across the web, it is sent in thousands of small chunks. There are multiple reasons why data is sent in small packets. They are sometimes dropped or corrupted, and it's easier to replace small chunks when this happens. Additionally, the packets can be routed along different paths, making the exchange faster and allowing many different users to download the same website at the same time. If each website was sent as a single big chunk, only one user could download it at a time, which obviously would make the web very inefficient and not much fun to use.
+</p>
 
 <h2 id="See_also">See also</h2>
 

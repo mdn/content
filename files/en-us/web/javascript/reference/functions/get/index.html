@@ -7,6 +7,7 @@ tags:
 - Functions
 - JavaScript
 - Language feature
+browser-compat: javascript.functions.get
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -129,11 +130,11 @@ console.log(obj.foo); // "bar"</pre>
 </ul>
 
 <div class="note">
-  <p>This means that you shouldn’t write a lazy getter for a property whose value you
+  <p><strong>Note:</strong> This means that you shouldn’t write a lazy getter for a property whose value you
     expect to change, because if the getter is lazy then it will not recalculate the
     value.</p>
 
-  <p>Note that getters are not “lazy” or “memozied” by nature; you must implement this
+  <p>Note that getters are not “lazy” or “memoized” by nature; you must implement this
     technique if you desire this behavior.</p>
 </div>
 
@@ -184,22 +185,11 @@ console.log(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.functions.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

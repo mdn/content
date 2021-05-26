@@ -7,6 +7,7 @@ tags:
 - Language feature
 - Operator
 - Primary Expression
+browser-compat: javascript.operators.await
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -44,7 +45,7 @@ tags:
 <p>An <code>await</code> splits execution flow, allowing the caller of the async function
   to resume execution. After the <code>await</code> defers the continuation of the async
   function, execution of subsequent statements ensues. If this <code>await</code> is the
-  last expression executed by its function execution continues by returning to the
+  last expression executed by its function, execution continues by returning to the
   function's caller a pending <code>Promise</code> for completion of the
   <code>await</code>'s function and resuming execution of that caller.</p>
 
@@ -138,27 +139,11 @@ export default await colors;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("ESDraft", "#sec-async-function-definitions", "async functions")}}
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("Top Level Await", "#introduction", "Top level await")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.await")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

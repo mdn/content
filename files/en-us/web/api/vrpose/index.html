@@ -11,7 +11,7 @@ tags:
   - Virtual Reality
   - WebVR
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
 <p>The <strong><code>VRPose</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)</p>
 
@@ -37,7 +37,7 @@ tags:
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occurred in. <strong>This version of <code>timestamp</code> has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.</strong></dd>
 </dl>
 

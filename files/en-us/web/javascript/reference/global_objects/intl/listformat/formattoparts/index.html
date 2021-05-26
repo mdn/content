@@ -2,14 +2,15 @@
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- ListFormat
-- Localization
-- Method
-- Prototype
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - ListFormat
+  - Localization
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
 <div>{{JSRef}}</div>
 
@@ -19,8 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">Intl.ListFormat.prototype.formatToParts(<var>list</var>)
-</pre>
+<pre class="brush: js">formatToParts(list)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Whereas {{jsxref("ListFormat.prototype.format()",
+<p>Whereas {{jsxref("Intl/ListFormat/format",
 	"Intl.ListFormat.prototype.format()")}} returns a string being the formatted version
 	of the list (according to the given locale and style options),
 	<code>formatToParts()</code> returns an array of the different components of the
@@ -70,34 +70,22 @@ console.table(myListFormat.formatToParts(fruits));
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('Intl.ListFormat',
-				'#sec-Intl.ListFormat.prototype.formatToParts', 'formatToParts()')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.ListFormat.formatToParts")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
 	<li>{{jsxref("Intl.ListFormat")}}</li>
-	<li>{{jsxref("ListFormat.prototype.format()", "Intl.ListFormat.prototype.format()")}}
+	<li>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
 	</li>
-	<li>{{jsxref("RelativeTimeFormat.formatToParts()",
+	<li>{{jsxref("Intl/RelativeTimeFormat/formatToParts",
 		"Intl.RelativeTimeFormat.prototype.formatToParts()")}}</li>
-	<li>{{jsxref("NumberFormat.formatToParts()",
+	<li>{{jsxref("Intl/NumberFormat/formatToParts",
 		"Intl.NumberFormat.prototype.formatToParts()")}}</li>
-	<li>{{jsxref("DateTimeFormat.formatToParts()",
+	<li>{{jsxref("Intl/DateTimeFormat/formatToParts",
 		"Intl.DateTimeFormat.prototype.formatToParts()")}}</li>
 </ul>

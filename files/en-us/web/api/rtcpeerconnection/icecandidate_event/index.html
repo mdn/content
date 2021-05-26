@@ -63,7 +63,7 @@ tags:
 
 <p>You should deliver this to the remote peer just like any standard candidate, as described under {{anch("Sharing a new candidate")}} above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code> are not forwarded across the signaling connection.</p>
 
-<p>The end-of-candidates indication is described in <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02#section-9.3">section 9.3 of the Trickle ICE draft specification</a> (note that the section number is subject to change as the specification goes through repeated drafts).</p>
+<p>The end-of-candidates indication is described in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice-02#section-9.3">section 9.3 of the Trickle ICE draft specification</a> (note that the section number is subject to change as the specification goes through repeated drafts).</p>
 
 <h3 id="Indicating_that_ICE_gathering_is_complete">Indicating that ICE gathering is complete</h3>
 

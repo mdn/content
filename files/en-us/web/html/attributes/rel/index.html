@@ -13,7 +13,9 @@ tags:
 
 <p class="summary">The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
-<p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords, which are listed in the following table. Every keyword within a space-separated value should be unique within that value.</p>
+<p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a <code>class</code> name, which does not express semantics, the <code>rel</code> attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the <code>rel</code> attribute are the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relation registry</a>, the <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>, and the freely-editable <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values page</a> in the microformats wiki, <a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">as suggested</a> by the Living Standard. If a <code>rel</code> attribute not present in one of the three sources above is used some HTML validators (such as the <a href="https://validator.w3.org/">W3C Markup Validation Service</a>) will generate a warning.</p>
+
+<p>The following table lists some of the most important existing keywords. Every keyword within a space-separated value should be unique within that value.</p>
 
 <table class="standard-table">
 	<caption>Values for the <code>rel</code> attribute, and the elements for which each is relevant</caption>
@@ -238,17 +240,16 @@ tags:
 &lt;link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF"&gt;</pre>
 		</li>
 	</ul>
+  <p class="note">Note: The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p>
 	</dd>
 	<dt>{{htmlattrdef("author")}}</dt>
-	<dd>Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>author</code> keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or <code>mailto:</code>) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.
-	<p class="note">Note: The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p>
-	</dd>
+	<dd>Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>author</code> keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or <code>mailto:</code>) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.</dd>
 	<dt>{{htmlattrdef("bookmark")}}</dt>
 	<dd>Relevant as the <code>rel</code> attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements, the bookmark provides a permalink for ancestor section, which is the nearest ancestor {{htmlelement('article')}} or {{htmlelement('section')}}, if there is at least one, otherwise, the nearest heading sibling or ancestor descendant, to the next..</dd>
 	<dt>{{htmlattrdef("canonical")}}</dt>
 	<dd>Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which is useful for search engines.</dd>
 	<dt>{{htmlattrdef("dns-prefetch")}}</dt>
-	<dd>Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See <a href="/en-US/docs/Learn/Performance/dns-prefetch">dns-prefetch</a> described in <a href="">resource hints</a>.</dd>
+	<dd>Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See <a href="/en-US/docs/Web/Performance/dns-prefetch">dns-prefetch</a> described in <a href="">resource hints</a>.</dd>
 	<dt>{{htmlattrdef("external")}}</dt>
 	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.</dd>
 	<dt>{{htmlattrdef("help")}}</dt>
@@ -315,7 +316,7 @@ tags:
 	<dd>
 	<p>Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>search</code> keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.</p>
 
-	<p>If the <code><a href="type">type</a></code> attribute is set to <code>application/opensearchdescription+xml</code> the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch</a> plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</p>
+	<p>If the <code><a href="type">type</a></code> attribute is set to <code>application/opensearchdescription+xml</code> the resource is an <a href="/en-US/docs/Web/OpenSearch">OpenSearch</a> plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</p>
 	</dd>
 	<dt>{{htmlattrdef("stylesheet")}}</dt>
 	<dd>

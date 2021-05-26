@@ -41,12 +41,6 @@ tags:
  <dd>The attribute's value.</dd>
 </dl>
 
-<div class="note">
-<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the {{domxref("Node")}} interface. In DOM4 they were moved to <code>Attr</code>.</p>
-
-<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
-</div>
-
 <h2 id="Deprecated_properties_and_methods">Deprecated properties and methods</h2>
 
 <p>The following properties have been deprecated. Where available, the appropriate replacement is noted.</p>
@@ -54,13 +48,13 @@ tags:
 <dl>
  <dt><code>attributes</code></dt>
  <dd>This property now always returns <code>NULL</code>.</dd>
- <dt><code>childNodes</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>childNodes</code> {{deprecated_inline}}</dt>
  <dd>This property now always returns an empty {{domxref("NodeList")}}.</dd>
- <dt><code>firstChild</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>firstChild</code> {{deprecated_inline}}</dt>
  <dd>This property now always returns <code>NULL</code>.</dd>
  <dt><code>isId</code> {{readOnlyInline}}</dt>
  <dd>Indicates whether the attribute is an "ID attribute". An "ID attribute" being an attribute which value is expected to be unique across a DOM Document. In HTML DOM, "id" is the only ID attribute, but XML documents could define others. Whether or not an attribute is unique is often determined by a {{Glossary("DTD")}} or other schema description.</dd>
- <dt><code>lastChild</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>lastChild</code> {{deprecated_inline}}</dt>
  <dd>This property now always returns <code>NULL</code>.</dd>
  <dt><code>nextSibling</code></dt>
  <dd>This property now always returns <code>NULL</code>.</dd>
@@ -76,7 +70,7 @@ tags:
  <dd>This property now always returns <code>NULL</code>.</dd>
  <dt><code>previousSibling</code></dt>
  <dd>This property now always returns <code>NULL</code>.</dd>
- <dt><code>schemaTypeInfo</code> {{obsolete_inline}} {{readOnlyInline}}</dt>
+ <dt><code>schemaTypeInfo</code> {{deprecated_inline}} {{readOnlyInline}}</dt>
  <dd>The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.</dd>
  <dt><code>specified</code></dt>
  <dd>This property now always returns <code>true</code>.</dd>
@@ -87,7 +81,7 @@ tags:
 <p>The following methods have been deprecated:</p>
 
 <dl>
- <dt><code>appendChild()</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>appendChild()</code> {{deprecated_inline}}</dt>
  <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
  <dt><code>cloneNode()</code></dt>
  <dd>You shouldn't have been using this in the first place, so you probably don't care that this is going away.</dd>
@@ -99,7 +93,7 @@ tags:
  <dd>Use {{domxref("Element.getAttribute()")}} instead.</dd>
  <dt><code>getAttributeNodeNS()</code></dt>
  <dd>Use {{domxref("Element.getAttributeNS()")}} instead.</dd>
- <dt><code>hasAttributes()</code> {{obsolete_inline("21.0")}}</dt>
+ <dt><code>hasAttributes()</code> {{deprecated_inline}}</dt>
  <dd>This method now always returns false.</dd>
  <dt><code>hasChildNodes()</code></dt>
  <dd>This method now always returns false.</dd>
@@ -113,9 +107,9 @@ tags:
  <dd>You shouldn't have been using this in the first place, so you probably don't care that this is going away.</dd>
  <dt><code>removeAttributeNode()</code></dt>
  <dd>Use {{domxref("Element.removeAttribute()")}} instead.</dd>
- <dt><code>removeChild()</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>removeChild()</code> {{deprecated_inline}}</dt>
  <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
- <dt><code>replaceChild()</code> {{obsolete_inline(14)}}</dt>
+ <dt><code>replaceChild()</code> {{deprecated_inline}}</dt>
  <dd>Modify the value of {{domxref("Attr.value")}} instead.</dd>
  <dt><code>setAttributeNode()</code></dt>
  <dd>Use {{domxref("Element.setAttribute()")}} instead.</dd>

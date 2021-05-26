@@ -20,7 +20,7 @@ tags:
 
 <dl>
  <dt>{{domxref("HTMLSelectElement.autofocus")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified. {{gecko_minversion_inline("2.0")}}</dd>
+ <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified. </dd>
  <dt>{{domxref("HTMLSelectElement.disabled")}}</dt>
  <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.</dd>
  <dt>{{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}</dt>
@@ -36,7 +36,7 @@ tags:
  <dt>{{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}</dt>
  <dd>An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.</dd>
  <dt>{{domxref("HTMLSelectElement.required")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form. {{gecko_minversion_inline("2.0")}}</dd>
+ <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form. </dd>
  <dt>{{domxref("HTMLSelectElement.selectedIndex")}}</dt>
  <dd>A <code>long</code> reflecting the index of the first selected {{HTMLElement("option")}} element. The value <code>-1</code> indicates no element is selected.</dd>
  <dt>{{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}</dt>
@@ -62,11 +62,11 @@ tags:
 <dl>
  <dt>{{domxref("HTMLSelectElement.add()")}}</dt>
  <dd>Adds an element to the collection of <code>option</code> elements for this <code>select</code> element.</dd>
- <dt>{{domxref("HTMLSelectElement.blur()")}}{{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLSelectElement.blur()")}}{{deprecated_inline}}</dt>
  <dd>Removes input focus from this element. <em>This method is now implemented on {{domxref("HTMLElement")}}</em>.</dd>
  <dt>{{domxref("HTMLSelectElement.checkValidity()")}}</dt>
  <dd>Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element (and returns <code>false</code>).</dd>
- <dt>{{domxref("HTMLSelectElement.focus()")}}{{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLSelectElement.focus()")}}{{deprecated_inline}}</dt>
  <dd>Gives input focus to this element. <em>This method is now implemented on {{domxref("HTMLElement")}}</em>.</dd>
  <dt>{{domxref("HTMLSelectElement.item()")}}</dt>
  <dd>Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.</dd>
@@ -151,8 +151,6 @@ console.log(select.options[select.selectedIndex].value) // Second
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("api.HTMLSelectElement")}}</p>
 

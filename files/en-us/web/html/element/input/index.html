@@ -12,6 +12,7 @@ tags:
   - MakeBrowserAgnostic
   - Reference
   - Web
+browser-compat: html.elements.input
 ---
 <div>{{HTMLRef}}</div>
 
@@ -219,7 +220,7 @@ tags:
   </tr>
   <tr>
    <td>{{HTMLElement("input/datetime", "datetime")}}</td>
-   <td>{{deprecated_inline}} {{obsolete_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.</td>
+   <td>{{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.</td>
    <td id="exampledatetime">
     <pre class="brush: html hidden">
 &lt;input type="datetime" name="datetime"/&gt;</pre>
@@ -397,7 +398,7 @@ tags:
   <tr>
    <td>{{anch('htmlattrdefvalue', 'value')}}</td>
    <td>all</td>
-   <td>At first, the initial value if specified explicitly in HTML. More generally, the current value of the form control. Submitted with the form as part of a name/value pair.</td>
+   <td>The initial value of the control.</td>
   </tr>
   <tr>
    <td>{{anch('htmlattrdefwidth', 'width')}}</td>
@@ -572,7 +573,7 @@ tags:
 
  <p>Per the specifications, the <code>list</code> attribute is not supported by the <code>hidden</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
 
- <p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a {{HTMLElement("select")}} but allows for non-listed values. Check out the <a href="/en-US/docs/Web/HTML/Element/datalist#Browser_compatibility">browser compatibility table</a> for the other input types.</p>
+ <p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a {{HTMLElement("select")}} but allows for non-listed values. Check out the <a href="/en-US/docs/Web/HTML/Element/datalist#browser_compatibility">browser compatibility table</a> for the other input types.</p>
 
  <p>See the {{htmlelement('datalist')}} element.</p>
  </dd>
@@ -671,7 +672,7 @@ let hatSize = form.elements["hat-size"];
  </dd>
  <dt id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</dt>
  <dd>
- <p>A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The <code>readonly</code> attribute is supported <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>password</code> input types.</p>
+ <p>A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The <code>readonly</code> attribute is supported by the <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>password</code> input types.</p>
 
  <p>See the <a href="/en-US/docs/Web/HTML/Attributes/readonly">HTML attribute: <code>readonly</code></a> for more information.</p>
  </dd>
@@ -724,7 +725,7 @@ let hatSize = form.elements["hat-size"];
  <dd>
  <p>A string specifying the type of control to render. For example, to create a checkbox, a value of <code>checkbox</code> is used. If omitted (or an unknown value is specified), the input type <code>text</code> is used, creating a plaintext input field.</p>
 
- <p>Permitted values are listed in {{anch("&lt;input&gt; types", "<code>&lt;input&gt;</code> types")}} above.</p>
+ <p>Permitted values are listed in <a href="#input_types">Input types</a> above.</p>
  </dd>
  <dt id="htmlattrdefvalue">{{htmlattrdef("value")}}</dt>
  <dd>
@@ -846,7 +847,7 @@ let hatSize = form.elements["hat-size"];
   </tr>
   <tr>
    <td>{{Cssxref(":placeholder-shown")}}</td>
-   <td>Element that is currently displaying <a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
+   <td>Element that is currently displaying <a href="#attr-placeholder">placeholder text</a>, including {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements with the {{anch('htmlattrdefplaceholder', 'placeholder')}} attribute present that has, as of yet, no value.</td>
   </tr>
   <tr>
    <td>{{Cssxref(":default")}}</td>
@@ -928,7 +929,7 @@ input[min][max] {}
 
 <h3 id="placeholder">::placeholder</h3>
 
-<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Learn/Forms#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
+<p>By default, the appearance of placeholder text is a translucent or light gray. The {{cssxref('::placeholder')}} pseudo-element is the input's <a href="/en-US/docs/Learn/Forms#the_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
 
 <pre class="brush: css no-line-numbers">::placeholder {
   color: blue;
@@ -1132,7 +1133,7 @@ input[min][max] {}
 
 <h4 id="Example">Example</h4>
 
-<p>If you want to present a custom error message when a field fails to validate, you need to use the <a href="/en-US/docs/Web/API/Constraint_validation#Constraint_validation_interfaces">Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
+<p>If you want to present a custom error message when a field fails to validate, you need to use the <a href="/en-US/docs/Web/API/Constraint_validation#constraint_validation_interfaces">Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="name"&gt;Enter username (upper and lowercase letters): &lt;/label&gt;
@@ -1199,7 +1200,7 @@ nameInput.addEventListener('invalid', () =&gt; {
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>. If the {{htmlattrxref("type", "input")}} is not <code>hidden</code>, then labelable element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -1211,7 +1212,7 @@ nameInput.addEventListener('invalid', () =&gt; {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -1279,40 +1280,6 @@ nameInput.addEventListener('invalid', () =&gt; {
  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}</td>
-   <td>{{Spec2('HTML Media Capture')}}</td>
-   <td>Adds the <code>capture</code> attribute</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <h3 id="Labels_2">Labels</h3>
@@ -1335,9 +1302,13 @@ nameInput.addEventListener('invalid', () =&gt; {
  <li><a href="https://a11yproject.com/posts/large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
 </ul>
 
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("html.elements.input")}}</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

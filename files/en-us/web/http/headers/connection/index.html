@@ -3,7 +3,9 @@ title: Connection
 slug: Web/HTTP/Headers/Connection
 tags:
 - HTTP
-- Headers
+- HTTP Header
+- Request header
+- Response header
 - Reference
 - Web
 ---
@@ -15,9 +17,10 @@ tags:
   subsequent requests to the same server to be done.</p>
 
 <div class="notecard warning">
+  <h4>Warning</h4>
   <p>Connection-specific header fields such as {{HTTPHeader("Connection")}} and
     {{HTTPHeader("Keep-Alive")}} are <a
-      href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>.
+      href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>.
     Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
     spec requirements and won’t load any response which contains them.</p>
 </div>
@@ -28,14 +31,13 @@ tags:
   {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any
   hop-by-hop headers used by the message must be listed in the <code>Connection</code>
   header, so that the first proxy knows it has to consume them and not forward them
-  further. Standard hop-by-hop headers can be listed too (it is often the case of
-  {{HTTPHeader("Keep-Alive")}}, but this is not mandatory).</p>
+  further. Standard hop-by-hop headers are also required to be listed.</p>
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("General header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>

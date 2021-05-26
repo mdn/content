@@ -16,7 +16,7 @@ tags:
 
 <p>Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10959/android-notification.png" style="display: block; height: 184px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="" src="android-notification.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The system notification system will vary of course by platform and browser, but this is ok, and the Notifications API is written to be general enough for compatibility with most system notification systems.</p>
 
@@ -133,7 +133,7 @@ var notification = new Notification('To do list', { body: text, icon: img });</p
 
 <h2 id="Closing_notifications">Closing notifications</h2>
 
-<p>Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("WindowTimers.setTimeout","setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.</p>
+<p>Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("WindowOrWorkerGlobalScope/setTimeout","setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.</p>
 
 <pre class="brush: js">var n = new Notification('My Great Song');
 document.addEventListener('visibilitychange', function() {
@@ -201,7 +201,7 @@ document.addEventListener('visibilitychange', function() {
       }, 200);
     }
 
-    // If the user hasn't told if he wants to be notified or not
+    // If the user hasn't told if they want to be notified or not
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
     else if (window.Notification &amp;&amp; Notification.permission !== "denied") {
@@ -262,6 +262,5 @@ document.addEventListener('visibilitychange', function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/Apps/Build/User_notifications">User notifications reference</a></li>
  <li>{{ domxref("Notification") }}</li>
 </ul>

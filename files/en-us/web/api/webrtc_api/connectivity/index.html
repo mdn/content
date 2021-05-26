@@ -31,15 +31,15 @@ tags:
 
 <p>The configuration of an endpoint on a WebRTC connection is called a <strong>session description</strong>. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using <strong>Session Description Protocol</strong> ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(2327)}}.</p>
 
-<p>When a user starts a WebRTC call to another user, a special description is created called an <strong>offer</strong>. This description includes all the information about the caller's proposed configuration for the call. The recipient then responds with an <strong>answer</strong>, which is a description of their end of the call. In this way, both devices share with one another the information needed in order to exchange media data. This exchange is handled using Interactive Connectivity Establishment ({{Glossary("ICE")}}, a protocol which lets two devices use an intermediary to exchange offers and answers even if the two devices are separated by Network Address Translation ({{Glossary("NAT")}}).</p>
+<p>When a user starts a WebRTC call to another user, a special description is created called an <strong>offer</strong>. This description includes all the information about the caller's proposed configuration for the call. The recipient then responds with an <strong>answer</strong>, which is a description of their end of the call. In this way, both devices share with one another the information needed in order to exchange media data. This exchange is handled using Interactive Connectivity Establishment ({{Glossary("ICE")}}), a protocol which lets two devices use an intermediary to exchange offers and answers even if the two devices are separated by Network Address Translation ({{Glossary("NAT")}}).</p>
 
 <p>Each peer, then, keeps two descriptions on hand: the <strong>local description</strong>, describing itself, and the <strong>remote description</strong>, describing the other end of the call.</p>
 
 <p>The offer/answer process is performed both when a call is first established, but also any time the call's format or other configuration needs to change. Regardless of whether it's a new call, or reconfiguring an existing one, these are the basic steps which must occur to exchange the offer and answer, leaving out the ICE layer for the moment:</p>
 
 <ol>
- <li>The caller captures local Media via {{domxref("navigator.mediaDevices.getUserMedia()")}} </li>
- <li>The caller creates <code>RTCPeerConnection</code> and called {{domxref("RTCPeerConnection.addTrack()")}} (Since <code>addStream</code> is deprecating)</li>
+ <li>The caller captures local Media via {{domxref("MediaDevices.getUserMedia")}} </li>
+ <li>The caller creates <code>RTCPeerConnection</code> and calls {{domxref("RTCPeerConnection.addTrack()")}} (Since <code>addStream</code> is deprecating)</li>
  <li>The caller calls {{domxref("RTCPeerConnection.createOffer()")}} to create an offer.</li>
  <li>The caller calls {{domxref("RTCPeerConnection.setLocalDescription()")}} to set that offer as the <em>local description</em> (that is, the description of the local end of the connection).</li>
  <li>After setLocalDescription(), the caller asks STUN servers to generate the ice candidates</li>
@@ -87,7 +87,7 @@ tags:
 
 <dl>
  <dt><code>host</code></dt>
- <dd>A host candidate is one for which its {{domxref("RTCIceCandidate.ip", "ip")}} address is the actual, direct IP address of the remote peer.</dd>
+ <dd>A host candidate is one for which its {{domxref("RTCIceCandidate/address", "ip")}} address is the actual, direct IP address of the remote peer.</dd>
  <dt><code>prflx</code></dt>
  <dd>A peer reflexive candidate is one whose IP address comes from a symmetric NAT between the two peers, usually as an additional candidate during trickle ICE (that is, additional candidate exchanges that occur after primary signaling but before the connection verification phase is finished).</dd>
  <dt><code>srflx</code></dt>
@@ -143,4 +143,4 @@ tags:
 
 <h2 id="The_entire_exchange_in_a_complicated_diagram">The entire exchange in a complicated diagram</h2>
 
-<p><a href="https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png"><img alt="A complete architectural diagram showing the whole WebRTC process." src="https://mdn.mozillademos.org/files/6119/webrtc-complete-diagram.png" style="display: block; height: 559px; margin: 0px auto; width: 641px;"></a></p>
+<p><a href="https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png"><img alt="A complete architectural diagram showing the whole WebRTC process." src="webrtc-complete-diagram.png" style="display: block; margin: 0px auto;"></a></p>

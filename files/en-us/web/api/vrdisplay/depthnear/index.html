@@ -12,7 +12,7 @@ tags:
   - WebVR
   - depthNear
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
 <p>The <code><strong>depthNear</strong></code> property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the nearest viewable boundary of the scene.</p>
 
@@ -31,13 +31,13 @@ vrDisplayInstance.depthNear = 1.0;
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> vrDisplay<span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js">var vrDisplay;
 
-navigator<span class="punctuation token">.</span><span class="function token">getVRDisplays</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>displays<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  vrDisplay <span class="operator token">=</span> displays<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  vrDisplay<span class="punctuation token">.</span>depthNear <span class="operator token">=</span> <span class="number token">1.0</span><span class="punctuation token">;</span>
-  vrDisplay<span class="punctuation token">.</span>depthFar <span class="operator token">=</span> <span class="number token">7500.0</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+navigator.getVRDisplays().then(function(displays) {
+  vrDisplay = displays[0];
+  vrDisplay.depthNear = 1.0;
+  vrDisplay.depthFar = 7500.0;
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

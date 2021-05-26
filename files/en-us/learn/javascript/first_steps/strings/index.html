@@ -153,7 +153,7 @@ typeof myNum;</pre>
    <li>Conversely, every number has a method called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a></code> that converts it to the equivalent string. Try this:
     <pre class="brush: js">let myNum2 = 123;
 let myString2 = myNum2.toString();
-typeof myString;</pre>
+typeof myString2;</pre>
    </li>
   </ul>
   These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through <code>Number()</code> to handle this. We did exactly this in our <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">Number Guessing Game, in line 54</a>.</li>
@@ -191,7 +191,7 @@ let output = 'I like the song "' + song + '". I gave it a score of ' + (score/hi
 
 <pre class="brush: js">let examScore = 45;
 let examHighestScore = 70;
-examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((examScore/examHighestScore*100)) }%). ${ examScore &gt;= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;</pre>
+examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round(examScore/examHighestScore*100) }%). ${ examScore &gt;= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;</pre>
 
 <ul>
  <li>The first two placeholders here are pretty simple, only including a simple value in the string.</li>

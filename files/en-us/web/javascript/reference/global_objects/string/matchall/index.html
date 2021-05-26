@@ -8,6 +8,7 @@ tags:
 - Reference
 - Regular Expressions
 - String
+browser-compat: javascript.builtins.String.matchAll
 ---
 <div>{{JSRef}}</div>
 
@@ -20,15 +21,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-matchall.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>str</var>.matchAll(<var>regexp</var>)</pre>
+<pre class="brush: js">matchAll(regexp)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,7 +45,12 @@ tags:
 <h3 id="Return_value">Return value</h3>
 
 <p>An <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a>
-  (which is not a restartable iterable).</p>
+  (which is not a restartable iterable) of matches.</p>
+
+<p>Each match is an array (with extra properties <code>index</code> and
+  <code>input</code>; see the return value for {{jsxref("RegExp.exec")}}). The match
+  array has the matched text as the first item, and then one item for each
+  parenthetical capture group of the matched text.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -60,7 +61,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a>
   (and regexes with the <code>/g</code> flag) in a loop to obtain all the matches:</p>
 
-<pre class="brush: js">const regexp = RegExp('foo[a-z]*','g');
+<pre class="brush: js">const regexp = new RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
 let match;
 
@@ -78,7 +79,7 @@ while ((match = regexp.exec(str)) !== null) {
   {{jsxref("Operators/Spread_syntax", "array spread")}}, or {{jsxref("Array.from()")}}
   constructs:</p>
 
-<pre class="brush: js">const regexp = RegExp('foo[a-z]*','g');
+<pre class="brush: js">const regexp = new RegExp('foo[a-z]*','g');
 const str = 'table football, foosball';
 const matches = str.matchAll(regexp);
 
@@ -96,7 +97,7 @@ Array.from(str.matchAll(regexp), m =&gt; m[0]);
 <p><code>matchAll</code> will throw an exception if the <code>g</code> flag is missing.
 </p>
 
-<pre class="brush: js">const regexp = RegExp('[a-c]','');
+<pre class="brush: js">const regexp = new RegExp('[a-c]','');
 const str = 'abc';
 str.matchAll(regexp);
 // TypeError
@@ -106,7 +107,7 @@ str.matchAll(regexp);
   <code><var>regexp</var></code>—so, unlike {{jsxref("Global_Objects/RegExp/exec",
   "regexp.exec()")}}, <code>lastIndex</code> does not change as the string is scanned.</p>
 
-<pre class="brush: js">const regexp = RegExp('[a-c]','g');
+<pre class="brush: js">const regexp = new RegExp('[a-c]','g');
 regexp.lastIndex = 1;
 const str = 'abc';
 Array.from(str.matchAll(regexp), m =&gt; `${regexp.lastIndex} ${m[0]}`);
@@ -139,28 +140,12 @@ array[1];
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.matchall',
-        'String.prototype.matchAll')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.matchAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
   - Function
   - JavaScript
   - Property
+browser-compat: javascript.builtins.Function.name
 ---
 <div>{{JSRef}}</div>
 
@@ -16,7 +17,7 @@ tags:
 <div>{{js_property_attributes(0,0,1)}}</div>
 
 <div class="note">
-<p>Note that in non-standard, pre-ES2015 implementations the <code>configurable</code> attribute was <code>false</code> as well.</p>
+<p><strong>Note:</strong> In non-standard, pre-ES2015 implementations the <code>configurable</code> attribute was <code>false</code> as well.</p>
 </div>
 
 <h2 id="JavaScript_compressors_and_minifiers">JavaScript compressors and minifiers</h2>
@@ -100,9 +101,6 @@ try { object_someMethod } catch(e) { console.log(e); }
 
 <p>The name property is read-only and cannot be changed by the assigment operator:</p>
 
-<div class="hidden">
-<p>Example below contradicts with what is said at the beginning of this section and doesn't work as described.</p>
-</div>
 
 <pre class="brush: js"> let object = {
   // anonymous
@@ -202,22 +200,11 @@ o[sym2].name; // ""</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-instances-name', 'name')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.name")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

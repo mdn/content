@@ -17,12 +17,46 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The CSS <code>display</code> property is specified using keyword values. Keyword values are grouped into six value categories:</p>
+<p>The CSS <code>display</code> property is specified using keyword values.</p>
 
-<pre class="brush: css">.container {
-  display:  [ &lt;display-outside&gt; | &lt;display-inside&gt; ] | &lt;display-listitem&gt; | &lt;display-internal&gt; | &lt;display-box&gt; | &lt;display-legacy&gt; ;
-}
+<pre class="brush: css">/* legacy values */
+display: block;
+display: inline;
+display: inline-block;
+display: flex;
+display: inline-flex;
+display: grid;
+display: inline-grid;
+display: flow-root;
+
+/* box generation */
+display: none;
+display: contents;
+
+/* two-value syntax */
+display: block flow;
+display: inline flow;
+display: inline flow-root;
+display: block flex;
+display: inline flex;
+display: block grid;
+display: inline grid;
+display: block flow-root;
+
+/* other values */
+display: table;
+display: table-row; /* all table elements have an equivalent CSS display value */
+display: list-item;
+
+/* Global values */
+display: inherit;
+display: initial;
+display: unset;
 </pre>
+
+<h2 id="Grouped_values">Grouped values</h2>
+
+<p>The keyword values can be grouped into six value categories.</p>
 
 <h3 id="Outside">Outside</h3>
 
@@ -186,7 +220,7 @@ display: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 

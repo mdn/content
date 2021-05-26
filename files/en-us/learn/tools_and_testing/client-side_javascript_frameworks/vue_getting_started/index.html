@@ -50,7 +50,7 @@ tags:
 
 <ul>
  <li>
-  <p>Development Script (Unoptimized, but includes console warnings. Great for development</p>
+  <p>Development Script (Unoptimized, but includes console warnings. Great for development.)</p>
 
   <pre class="brush: html">&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;</pre>
  </li>
@@ -92,8 +92,8 @@ tags:
  <li>In terminal, <code>cd</code> to where you'd like to create your sample app, then run <code>vue create moz-todo-vue</code>.</li>
  <li>Use the arrow keys and <kbd>Enter</kbd> to select the "Manually select features" option.</li>
  <li>The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press <kbd>Enter</kbd> to proceed.</li>
- <li>Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit <kbd>Enter</kbd> again. This will help us catch common errors, but not be overly opinionated.</li>
- <li>Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit <kbd>Enter</kbd> to continue.</li>
+ <li>Next, you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit <kbd>Enter</kbd> again. This will help us catch common errors, but not be overly opinionated.</li>
+ <li>Next, you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit <kbd>Enter</kbd> to continue.</li>
  <li>Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's <code>package.json</code> file. Select "In dedicated config files" and push <kbd>Enter</kbd>.</li>
  <li>Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type <kbd>y</kbd> , otherwise type <kbd>n</kbd>.</li>
 </ol>
@@ -126,8 +126,8 @@ tags:
   <ul>
    <li><code>main.js</code>: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the <code>index.html</code> file your app should be attached to. This file is often where you register global components or additional Vue libraries.</li>
    <li><code>App.vue</code>: this is the top-level component in your Vue app. See below for more explanation of Vue components.</li>
-   <li><code>components</code>: this directory is where you keep your components. Currently it just has one example component.</li>
-   <li><code>assets</code>: This directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like <a href="https://sass-lang.com/">Sass/SCSS</a> or <a href="https://stylus-lang.com/">Stylus</a>.</li>
+   <li><code>components</code>: this directory is where you keep your components. Currently, it just has one example component.</li>
+   <li><code>assets</code>: this directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like <a href="https://sass-lang.com/">Sass/SCSS</a> or <a href="https://stylus-lang.com/">Stylus</a>.</li>
   </ul>
  </li>
 </ul>
@@ -158,12 +158,12 @@ tags:
 
 <p><code>&lt;script&gt;</code> contains all of the non-display logic of your component. Most importantly, your <code>&lt;script&gt;</code> tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a <code>render()</code> function.</p>
 
-<p>In the case of <code>App.vue</code>, our default export sets the name of the component to <code>app</code> and registers the <code>HelloWorld</code> component by adding it into the <code>components</code> property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.</p>
+<p>In the case of <code>App.vue</code>, our default export sets the name of the component to <code>App</code> and registers the <code>HelloWorld</code> component by adding it into the <code>components</code> property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.</p>
 
 <pre class="brush: js">import HelloWorld from './components/HelloWorld.vue';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     //You can register components locally here.
     HelloWorld
@@ -296,5 +296,15 @@ export default {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

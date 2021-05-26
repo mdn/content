@@ -5,15 +5,16 @@ tags:
   - API
   - Property
   - Reference
-  - Référence(2)
   - SharedWorkerGlobalScope
   - Web Workers
   - applicationCache
 ---
-<div>{{APIRef("Web Workers API")}}</div>
 
-<div class="warning">
-<p><strong>Important</strong>: Application Cache is deprecated as of Firefox 44, and is no longer available in insecure contexts from Firefox 60 onwards ({{bug(1354175)}}, currently Nightly/Beta only). Don't use it to make offline websites — consider using <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> instead.</p>
+<div>{{Deprecated_Header}}{{APIRef("Web Workers API")}}</div>
+
+<div class="notecard warning">
+  <h4>Important</h4>
+  <p>Application Cache is deprecated as of Firefox 44, and is no longer available in insecure contexts from Firefox 60 onwards ({{bug(1354175)}}, currently Nightly/Beta only). Don't use it to make offline websites — consider using <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> instead.</p>
 </div>
 
 <p>The <code><strong>applicationCache</strong></code> read-only property of the {{domxref("SharedWorkerGlobalScope")}} interface returns the {{domxref("ApplicationCache")}} object for the worker (see <a href="/en-US/docs/Web/HTML/Using_the_application_cache">Using the application cache</a>).</p>

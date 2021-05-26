@@ -12,7 +12,7 @@ tags:
   - WebVR
   - getLayers()
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
 <p>The <code><strong>getLayers()</strong></code> method of the {{domxref("VRDisplay")}} interface returns the layers currently being presented by the <code>VRDisplay</code>.</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>If the {{domxref("VRDevice")}} is presenting, this method returns an array of the {{domxref("VRLayerInit")}} objects currently being presented (this will currently be one, as {{domxref("VRDisplayCapabilities.maxLayers")}} is currently always 1). If the {{domxref("VRDevice")}} is not presenting, this method returns an empty array.</p>
+<p>If the {{domxref("VRDisplay")}} is presenting, this method returns an array of the {{domxref("VRLayerInit")}} objects currently being presented (this will currently be one, as {{domxref("VRDisplayCapabilities.maxLayers")}} is currently always 1). If the {{domxref("VRDisplay")}} is not presenting, this method returns an empty array.</p>
 
 <h2 id="Examples">Examples</h2>
 

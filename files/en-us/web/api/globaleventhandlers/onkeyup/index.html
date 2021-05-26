@@ -2,12 +2,12 @@
 title: GlobalEventHandlers.onkeyup
 slug: Web/API/GlobalEventHandlers/onkeyup
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
@@ -78,8 +78,8 @@ function logKey(e) {
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
-<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/Events/keyup">keyup</a></code> and
-  <code><a href="/en-US/docs/Web/Events/keydown">keydown</a></code> events are now fired
+<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code> and
+  <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> events are now fired
   during IME composition, to improve cross-browser compatibility for CJKT users
   ({{bug(354358)}}, also see <a
     href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown
@@ -88,12 +88,12 @@ function logKey(e) {
   this (229 is a special value set for a <code>keyCode</code> relating to an even that has
   been processed by an IME):</p>
 
-<pre class="brush: js"><code>eventTarget.addEventListener("keyup", event =&gt; {
+<pre class="brush: js">eventTarget.addEventListener(&quot;keyup&quot;, event =&gt; {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
-});</code></pre>
+});</pre>
 
 <h2 id="See_also">See also</h2>
 

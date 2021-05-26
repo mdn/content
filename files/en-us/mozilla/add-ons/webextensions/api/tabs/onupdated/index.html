@@ -79,7 +79,12 @@ browser.tabs.onUpdated.hasListener(listener)
    <li>"sharingState"</li>
    <li>"status"</li>
    <li>"title"</li>
+   <li>"url"</li>
   </ul>
+
+  <div class="notecard note">
+    <p><strong>Note:</strong> The "url" value is supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".</p>
+  </div>
   </dd>
   <dt><code>tabId</code></dt>
   <dd><code>Integer</code>. Fire this event only for the tab identified by this ID.</dd>

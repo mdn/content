@@ -6,7 +6,7 @@ tags:
   - Deprecated
   - Experimental
   - Landing
-  - Obsolete
+  - Deprecated
   - Reference
   - VR
   - Virtual Reality
@@ -14,7 +14,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}</p>
 
-<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
 
 <p class="summary">WebVR provides support for exposing virtual reality devices — for example, head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene. This has numerous, interesting applications, from virtual product tours and interactive training apps to immersive first-person games.</p>
 
@@ -22,7 +22,7 @@ tags:
 
 <p>Any VR devices attached to your computer will be returned by the {{DOMxRef("Navigator.getVRDisplays()")}} method; each one will be represented by a {{DOMxRef("VRDisplay")}} object.</p>
 
-<p><img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png" style="display: block; height: 78px; margin: 0px auto; width: 60%;"></p>
+<p><img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="hw-setup.png" style="display: block; margin: 0px auto;"></p>
 
 <p>{{DOMxRef("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:</p>
 
@@ -62,7 +62,7 @@ tags:
 
 <h3 id="Using_controllers_Combining_WebVR_with_the_Gamepad_API">Using controllers: Combining WebVR with the Gamepad API</h3>
 
-<p>Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more.</p>
+<p>Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a>, and specifically the <a href="/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions">Gamepad Extensions API</a> that adds API features for accessing <a href="/en-US/docs/Web/API/GamepadPose">controller pose</a>, <a href="/en-US/docs/Web/API/GamepadHapticActuator">haptic actuators</a>, and more.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Our <a href="/en-US/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR">Using VR controllers with WebVR</a> article explains the basics of how to use VR controllers with WebVR apps.</p>
@@ -154,7 +154,7 @@ tags:
   <tr>
    <td>{{SpecName("GamepadExtensions")}}</td>
    <td>{{Spec2("GamepadExtensions")}}</td>
-   <td>Defines the <a href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Experimental Gamepad extensions</a>.</td>
+   <td>Defines the <a href="/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions">Experimental Gamepad extensions</a>.</td>
   </tr>
   <tr>
    <td>{{SpecName("WebVR 1.1")}}</td>

@@ -9,6 +9,7 @@ tags:
 - Prototype
 - Reference
 - flatMap
+browser-compat: javascript.builtins.Array.flatMap
 ---
 <div>{{JSRef}}</div>
 
@@ -20,9 +21,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
-    // return element for new_array
-}</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+flatMap((currentValue) => { ... } )
+flatMap((currentValue, index) => { ... } )
+flatMap((currentValue, index, array) => { ... } )
+
+// Callback function
+flatMap(callbackFn)
+flatMap(callbackFn, thisArg)
+
+// Inline callback function
+flatMap(function callbackFn(currentValue) { ... })
+flatMap(function callbackFn(currentValue, index) { ... })
+flatMap(function callbackFn(currentValue, index, array){ ... })
+flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -72,12 +86,6 @@ arr.reduce((acc, x) =&gt; acc.concat([x, x * 2]), []);
   iteration, it creates a new temporary array that must be garbage-collected, and it
   copies elements from the current accumulator array into a new array instead of just
   adding the new elements to the existing array.</p>
-
-<div class="hidden">
-  <p>Please do not add polyfills on this article. For reference, please check: <a
-      href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a>
-  </p>
-</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -139,21 +147,11 @@ a.flatMap( (n) =&gt;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.flatmap',
-        'Array.prototype.flatMap')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.flatMap")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -162,4 +160,5 @@ a.flatMap( (n) =&gt;
   <li>{{jsxref("Array.prototype.map()")}}</li>
   <li>{{jsxref("Array.prototype.reduce()")}}</li>
   <li>{{jsxref("Array.prototype.concat()")}}</li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A polyfill</a></li>
 </ul>

@@ -2,13 +2,13 @@
 title: Response.error()
 slug: Web/API/Response/error
 tags:
-- API
-- Error
-- Experimental
-- Fetch
-- Method
-- Reference
-- Response
+  - API
+  - Error
+  - Experimental
+  - Fetch
+  - Method
+  - Reference
+  - Response
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -18,14 +18,14 @@ tags:
 
 <div class="note">
   <p><strong>Note</strong>: This is mainly relevant to <a
-      href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>; the error method is
+      href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a>; the error method is
     used to return an error if you so wish it. An error response has its
     {{domxref("Response.type","type")}} set to <code>error</code>.</p>
 </div>
 
 <div class="note">
   <p><strong>Note</strong>: An "error" <code>Response</code> never really gets exposed to
-    script: such a response to a {{domxref("GlobalFetch.fetch","fetch()")}} would reject
+    script: such a response to a {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} would reject
     the promise.</p>
 </div>
 
@@ -70,8 +70,8 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

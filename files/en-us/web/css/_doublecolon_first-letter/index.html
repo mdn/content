@@ -1,16 +1,17 @@
 ---
 title: '::first-letter (:first-letter)'
-slug: 'Web/CSS/::first-letter'
+slug: Web/CSS/::first-letter
 tags:
   - CSS
   - Layout
   - Pseudo-element
   - Reference
   - Selector
+browser-compat: css.selectors.first-letter
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>::first-letter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the first letter of the first line of a <a href="/en-US/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-level element</a>, but only when not preceded by other content (such as images or inline tables).</p>
+<p>The <strong><code>::first-letter</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the first letter of the first line of a <a href="/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes">block-level element</a>, but only when not preceded by other content (such as images or inline tables).</p>
 
 <pre class="brush: css no-line-numbers">/* Selects the first letter of a &lt;p&gt; */
 p::first-letter {
@@ -21,12 +22,15 @@ p::first-letter {
 
 <ul>
  <li>Punctuation that precedes or immediately follows the first letter is included in the match. Punctuation includes any Unicode character defined in the <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf), and <em>other punctuation</em> (Po) classes.</li>
- <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element. (This is poorly supported by browsers; see the <a href="/en-US/docs/Web/CSS/::first-letter#Browser_compatibility">browser compatibility table</a> below.)</li>
+ <li>Some languages have digraphs that are always capitalized together, like the <code>IJ</code> in Dutch. In these cases, both letters of the digraph should be matched by the <code>::first-letter</code> pseudo-element.</li>
  <li>A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, <code>::first-letter</code> will match the first letter of this generated content.</li>
 </ul>
 
-<div class="note">
+<div class="notecard note">
+  <h4>Note</h4>
 <p>CSS3 introduced the <code>::first-letter</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:first-letter</code>, introduced in CSS2.</p>
+
+<p>Browser support for digraphs such as <code>IJ</code> in Dutch is poor. Check the compatibility table below to see the current state of support.</p>
 </div>
 
 <h2 id="Allowable_properties">Allowable properties</h2>
@@ -45,7 +49,7 @@ p::first-letter {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -152,7 +156,7 @@ h2 + p::first-letter {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.first-letter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

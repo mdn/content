@@ -6,8 +6,8 @@ tags:
   - Firefox 3
   - Firefox 3.5
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ fx_minversion_header(3) }}</p>
-<p>Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with <a class="external" href="http://www.color.org/">International Color Consortium</a> (ICC) tagging are, by default, color corrected.</p>
+<div>{{FirefoxSidebar}}</div>
+<p>Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with <a class="external" href="https://www.color.org/">International Color Consortium</a> (ICC) tagging are, by default, color corrected.</p>
 <p>The image below is split into three sections.  The top left corner shows the image as rendered by Firefox 2.  The top right corner shows how the image renders in Firefox 3.  The bottom shows the image rendered in Photoshop.</p>
 <p><img class="internal default" src="iccsample.jpg"></p>
 <p>As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile.  Firefox 2 ignores the profile, resulting in mismatched color.</p>
@@ -26,6 +26,6 @@ tags:
 </table>
 <div class="note"><strong>Note:</strong> In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.</div>
 <h3 id="Caveats">Caveats</h3>
-<p>The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488800">bug 488800</a> and the <a class="external" href="http://www.color.org/version4html.xalter">ICC version 4 profile test</a>.</p><h2 id="See_also">See also</h2>
-<ul> <li><a class="external" href="http://bholley.wordpress.com/2008/09/12/so-many-colors/">So Many Colors</a> (blog post)</li> <li><a class="external" href="http://www.dria.org/wordpress/archives/2008/04/29/633/">Firefox 3: Color profile support</a> (blog post)</li> <li><a class="external" href="http://ejohn.org/blog/color-profiles/">Color Profiles in Firefox 3</a> (blog post)</li> <li><a class="external" href="http://www.color.org/">International Color Consortium</a></li>
+<p>The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=488800">bug 488800</a> and the <a class="external" href="https://www.color.org/version4html.xalter">ICC version 4 profile test</a>.</p><h2 id="See_also">See also</h2>
+<ul> <li><a class="external" href="https://bholley.wordpress.com/2008/09/12/so-many-colors/">So Many Colors</a> (blog post)</li> <li><a class="external" href="http://www.dria.org/wordpress/archives/2008/04/29/633/">Firefox 3: Color profile support</a> (blog post)</li> <li><a class="external" href="http://ejohn.org/blog/color-profiles/">Color Profiles in Firefox 3</a> (blog post)</li> <li><a class="external" href="https://www.color.org/">International Color Consortium</a></li>
 </ul>

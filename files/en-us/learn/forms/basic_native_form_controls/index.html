@@ -124,22 +124,40 @@ tags:
 
 <p>A check box is created using the {{HTMLElement("input")}} element with a <a href="/en-US/docs/Web/HTML/Attributes/type"><code>type</code></a> attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.</p>
 
-<pre class="brush: html">&lt;input type="checkbox" id="carrots" name="carrots" value="carrots" checked&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="questionOne" name="subscribe" value="yes" checked&gt;
 </pre>
 
-<p>Including the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.</p>
+<p>Related checkbox items should use the same {{htmlattrxref("name","input")}} attribute. Including the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.</p>
+
+<pre class="brush: html">&lt;fieldset&gt;
+  &lt;legend&gt;Choose all the vegetables you like to eat&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="carrots"&gt;Carrots&lt;/label&gt;
+      &lt;input type="checkbox" id="carrots" name="vegetable" value="carrots" checked&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="peas"&gt;Peas&lt;/label&gt;
+      &lt;input type="checkbox" id="peas" name="vegetable" value="peas"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="cabbage"&gt;Cabbage&lt;/label&gt;
+      &lt;input type="checkbox" id="cabbage" name="vegetable" value="cabbage"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/fieldset&gt;</pre>
 
 <p>The following screenshots show default, focused and disabled checkboxes in Firefox 71 and Safari 13 on macOS and Chrome 79 and Edge 18 on Windows 10:</p>
 
 <p><img alt="Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="checkboxes.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Any checkboxes and radio buttons with the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute on load match the {{cssxref('<code>:default')}}</code> pseudo class, even if they are no longer checked. Any that are currently checked match the <code>{{cssxref(':checked')}}</code> pseudoclass.</p>
+<p><strong>Note</strong>: Any checkboxes and radio buttons with the <code><a href="/en-US/docs/Web/HTML/Attributes/checked">checked</a></code> attribute on load match the {{cssxref(':default')}} pseudo class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo class.</p>
 </div>
 
-<p id="Radio_button">Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches You can <a href="https://mdn.github.io/learning-area/html/forms/toggle-switch-example/">see an example in action here</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html">source code</a>).</p>
+<p>Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can <a href="https://mdn.github.io/learning-area/html/forms/toggle-switch-example/">see an example in action here</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html">source code</a>).</p>
 
-<h3 id="Radio_button_2">Radio button</h3>
+<h3 id="Radio_button">Radio button</h3>
 
 <p>A radio button is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value <code>radio</code>:</p>
 
@@ -192,7 +210,7 @@ tags:
 <p><strong>Note</strong>: You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html">button-examples.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html">see it live also</a>).</p>
 </div>
 
-<p>Below you can find examples of each button <code>&lt;input&gt;</code> type, along with the equivalent button type.</p>
+<p>Below you can find examples of each button <code>&lt;input&gt;</code> type, along with the equivalent <code>&lt;button&gt;</code> type.</p>
 
 <h3 id="submit">submit</h3>
 
