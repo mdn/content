@@ -7,6 +7,7 @@ tags:
   - Method
   - Object
   - Prototype
+  - Polyfill
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
@@ -71,6 +72,7 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.prototype.__lookupGetter__</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
   <li>{{jsxref("Functions/get", "get")}} operator</li>
   <li>{{jsxref("Object.getOwnPropertyDescriptor()")}} and
