@@ -212,7 +212,7 @@ function alertCookieValue() {
 
 //ES5
 
-function checkACookieExistenceES5() {
+function checkACookieExistsES5() {
   if (document.cookie.split(';').some(function(item) {
     return item.trim().indexOf('reader=') == 0
   })) {
