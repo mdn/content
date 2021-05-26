@@ -6,7 +6,7 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<p><span class="seoSummary"><strong>Native messaging</strong> enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.  </span></p>
+<p><strong>Native messaging</strong> enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.</p>
 
 <p>Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.</p>
 
@@ -72,7 +72,7 @@ tags:
 }</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Chrome does not support the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a> key. You will need to use another manifest without this key to install an equivalent WebExtension on Chrome. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
+<p><strong>Note:</strong> Chrome does not support the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a> key. You will need to use another manifest without this key to install an equivalent WebExtension on Chrome. See <a href="#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
 </div>
 
 <h3 id="App_manifest">App manifest</h3>
@@ -96,7 +96,7 @@ tags:
 <p>This allows the extension whose ID is <code>"ping_pong@example.org"</code> to connect, by passing the name <code>"ping_pong"</code> into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at <code>"/path/to/native-messaging/app/ping_pong.py"</code>.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Chrome identifies allowed extensions with another key: <code>allowed_origins</code>, using the ID of the WebExtension. Refer to <a href="https://developer.chrome.com/apps/nativeMessaging#native-messaging-host">Chrome documentation for more details </a>and see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
+<p><strong>Note:</strong> Chrome identifies allowed extensions with another key: <code>allowed_origins</code>, using the ID of the WebExtension. Refer to <a href="https://developer.chrome.com/apps/nativeMessaging#native-messaging-host">Chrome documentation for more details </a>and see <a href="#chrome_incompatibilities">Chrome incompatibilities below</a>.</p>
 </div>
 
 <h3 id="Windows_setup">Windows setup</h3>
@@ -115,7 +115,7 @@ tags:
   "allowed_extensions": [ "ping_pong@example.org" ]
 }</pre>
 
-<p>(See note above about <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#chrome_incompatibilities">Chrome compatibility</a> regarding the <code>allowed_extensions</code> key and its counterpart in Chrome).</p>
+<p>(See note above about <a href="#chrome_incompatibilities">Chrome compatibility</a> regarding the <code>allowed_extensions</code> key and its counterpart in Chrome).</p>
 
 <p>The batch file then invokes the Python script:</p>
 
@@ -465,4 +465,5 @@ while True:
 
 <h2 id="Chrome_incompatibilities">Chrome incompatibilities</h2>
 
-<p>{{Page("Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities", "Native_messaging")}}</p>
+<p>There are a number of differences between browsers that affect native messaging in web extensions, including the arguments passed to the native app, location of the manifest file, etc.
+  These differences are discussed in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging">Chrome incompatibilities > Native messaging</a>.</p>

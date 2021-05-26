@@ -28,7 +28,7 @@ foo     = true;  // foo is now a boolean
  <li>Six <strong>Data Types</strong> that are <a href="/en-US/docs/Glossary/Primitive">primitives</a>, checked by <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> operator:
 
   <ul>
-   <li><a href="/en-US/docs/Glossary/undefined">undefined</a> : <code>typeof instance === "<strong>undefined</strong>"</code></li>
+   <li><a href="/en-US/docs/Glossary/undefined">undefined</a> : <code>typeof instance === "undefined"</code></li>
    <li><a href="/en-US/docs/Glossary/Boolean">Boolean</a> : <code>typeof instance === "boolean"</code></li>
    <li><a href="/en-US/docs/Glossary/Number">Number</a> : <code>typeof instance === "number"</code></li>
    <li><a href="/en-US/docs/Glossary/String">String</a> : <code>typeof instance === "string"</code></li>
@@ -38,13 +38,13 @@ foo     = true;  // foo is now a boolean
  </li>
  <li><strong>Structural</strong> <strong>Types</strong>:
   <ul>
-   <li><a href="/en-US/docs/Glossary/Object">Object</a> : <code>typeof instance === "<strong>object</strong>"</code>. Special non-data but <strong>Structural</strong> <strong>type</strong> for any <a href="/en-US/docs/Learn/JavaScript/Objects#the_constructor">constructed</a> object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new keyword</a>;</li>
-   <li><a href="/en-US/docs/Glossary/Function">Function</a> : a non-data structure, though it also answers for <code>typeof</code> operator: <code>typeof instance === "<strong>function</strong>"</code>. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.</li>
+   <li><a href="/en-US/docs/Glossary/Object">Object</a> : <code>typeof instance === "object"</code>. Special non-data but <strong>Structural</strong> <strong>type</strong> for any <a href="/en-US/docs/Learn/JavaScript/Objects#the_constructor">constructed</a> object instance also used as data structures: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} and almost everything made with <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new keyword</a>;</li>
+   <li><a href="/en-US/docs/Glossary/Function">Function</a> : a non-data structure, though it also answers for <code>typeof</code> operator: <code>typeof instance === "function"</code>. This is merely a special shorthand for Functions, though every Function constructor is derived from Object constructor.</li>
   </ul>
  </li>
  <li><strong>Structural Root</strong> Primitive:
   <ul>
-   <li><strong><a href="/en-US/docs/Glossary/Null">null</a></strong> : <code>typeof instance === "<strong>object</strong>"</code>. Special <a href="/en-US/docs/Glossary/Primitive">primitive</a> type having additional usage for its value: if object is not inherited, then <code>null</code> is shown;</li>
+   <li><strong><a href="/en-US/docs/Glossary/Null">null</a></strong> : <code>typeof instance === "object"</code>. Special <a href="/en-US/docs/Glossary/Primitive">primitive</a> type having additional usage for its value: if object is not inherited, then <code>null</code> is shown;</li>
   </ul>
  </li>
 </ul>
@@ -73,7 +73,7 @@ foo     = true;  // foo is now a boolean
 
 <p>ECMAScript has two built-in numeric types: <strong>Number</strong> and <strong>BigInt</strong> (see below).</p>
 
-<p>The Number type is a <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision 64-bit binary format IEEE 754 value</a> (numbers between -(2<sup>53</sup> − 1) and 2<sup>53</sup> − 1). In addition to representing floating-point numbers, the number type has three symbolic values: <code>+Infinity</code>, <code>-Infinity</code>, and {{jsxref("NaN")}} ("<strong>N</strong>ot a <strong>N</strong>umber").</p>
+<p>The Number type is a <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision 64-bit binary format IEEE 754 value</a> (numbers between -(2^53 − 1) and 2^53 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: <code>+Infinity</code>, <code>-Infinity</code>, and {{jsxref("NaN")}} ("<strong>N</strong>ot a <strong>N</strong>umber").</p>
 
 <p>To check for the largest available value or smallest available value within {{jsxref("Infinity", "±Infinity")}}, you can use the constants {{jsxref("Number.MAX_VALUE")}} or {{jsxref("Number.MIN_VALUE")}}.</p>
 
@@ -377,7 +377,7 @@ Infinity
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code>×<code>10<sup>-38</sup></code> to <code>3.4</code>×<code>10<sup>38</sup></code></td>
+   <td><code>1.2E-38</code> to <code>3.4E38</code></td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.1234567</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -385,7 +385,7 @@ Infinity
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code>×<code>10<sup>-324</sup></code> to <code>1.8</code>×<code>10<sup>308</sup></code></td>
+   <td><code>5E-324</code> to <code>1.8E308</code></td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -393,7 +393,7 @@ Infinity
   </tr>
   <tr>
    <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+   <td><code>-2^63</code> to <code>2^63 - 1</code></td>
    <td>8</td>
    <td>64-bit two's complement signed integer</td>
    <td><code>bigint</code></td>
@@ -401,7 +401,7 @@ Infinity
   </tr>
   <tr>
    <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+   <td><code>0</code> to <code>2^64 - 1</code></td>
    <td>8</td>
    <td>64-bit unsigned integer</td>
    <td><code>bigint</code></td>

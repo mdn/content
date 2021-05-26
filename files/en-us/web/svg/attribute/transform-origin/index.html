@@ -62,6 +62,136 @@ tags:
  </li>
 </ul>
 
+<h2 id="example">Example</h2>
+
+<p>This example shows the code for three SVG images:</p>
+
+<ol>
+  <li>A reference image that uses no transformation.</li>
+  <li>An image that uses <code>transform-origin</code> to do a transformation, with the expected result being an image identical to the reference image.</li>
+  <li>An image that does not use <code>transform-origin</code> but does the same transformation using just <code><a href="/en-US/docs/Web/SVG/Attribute/transform">transform</a></code>, with the expected result being an image identical to the reference image.</li>
+</ol>
+
+<p>The third image image shows how to do the transformation in browsers that don't support <code>transform-origin</code> — because the code for the third image does the same transformation as the second image's <code>transform-origin</code>-based code, but by only using <code>transform</code>, without <code>transform-origin</code>.</p>
+
+<p>(Note: These examples use a modified version of a code snippet in a Stack Overflow <a href="https://stackoverflow.com/q/67057190">question</a> from <a href="https://stackoverflow.com/users/1033939/maxim-kulikov">Maxim Kulikov</a>, as well as a modified version of a code snippet in an <a href="https://stackoverflow.com/a/67057754">answer</a> from <a href="https://stackoverflow.com/users/271353/michael-mullany">Michael Mullany</a> that accompanies the question. Both code snippets are used under the terms of the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license.)</p>
+
+<h3 id="html">HTML</h3>
+
+<pre class="brush: html">&lt;h4&gt;Reference image&lt;/h4&gt;
+
+&lt;figure&gt;
+  &lt;svg width="200" height="200" viewBox="0 0 200 200"&gt;
+    &lt;circle cx="100" cy="100" r="100" stroke="none" fill="black"/&gt;
+    &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
+    &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
+
+    &lt;circle cx="100" cy="100" r="75" stroke="none" fill="blue"/&gt;
+    &lt;line x1="100" y1="25" x2="100" y2="175" stroke="rebeccapurple" stroke-width="1.5"/&gt;
+    &lt;line x1="25" y1="100" x2="175" y2="100" stroke="rebeccapurple" stroke-width="1.5"/&gt;
+
+    &lt;circle cx="100" cy="100" r="50" stroke="none" fill="red"/&gt;
+    &lt;line x1="100" y1="50" x2="100" y2="150" stroke="rebeccapurple" stroke-width="1"/&gt;
+    &lt;line x1="50" y1="100" x2="150" y2="100" stroke="rebeccapurple" stroke-width="1"/&gt;
+
+    &lt;circle cx="100" cy="100" r="25" stroke="none" fill="yellow"/&gt;
+    &lt;line x1="100" y1="75" x2="100" y2="125" stroke="rebeccapurple" stroke-width="0.5"/&gt;
+    &lt;line x1="75" y1="100" x2="125" y2="100" stroke="rebeccapurple" stroke-width="0.5"/&gt;
+  &lt;/svg&gt;
+  &lt;figcaption&gt;Figure 1. The images following this image should look
+    exactly the same as this.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4&gt;Transformation with transform-origin&lt;/h4&gt;
+
+&lt;figure&gt;
+  &lt;svg width="200" height="200" viewBox="0 0 200 200"&gt;
+    &lt;defs&gt;
+      &lt;g id="target-g-1"&gt;
+        &lt;circle cx="100" cy="100" r="100" stroke="none"/&gt;
+        &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
+        &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
+      &lt;/g&gt;
+    &lt;/defs&gt;
+
+    &lt;use href="#target-g-1" fill="black"/&gt;
+    &lt;use href="#target-g-1" fill="blue"
+        transform="scale(0.75 0.75)"
+        transform-origin="100 100"/&gt;
+
+    &lt;svg x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
+      &lt;use href="#target-g-1" fill="red"
+        transform="scale(0.5 0.5)"
+        transform-origin="100 100"/&gt;
+      &lt;use href="#target-g-1" fill="yellow"
+        transform="scale(0.25 0.25)"
+        transform-origin="100 100"/&gt;
+    &lt;/svg&gt;
+  &lt;/svg&gt;
+
+  &lt;figcaption&gt;Figure 2. transform-origin used.
+    This image should look exactly the same as the reference image in Figure 1.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4&gt;Transformation without transform-origin&lt;/h4&gt;
+
+&lt;figure&gt;
+  &lt;svg width="200" height="200" viewBox="0 0 200 200"&gt;
+    &lt;defs&gt;
+      &lt;g id="target-g-1"&gt;
+        &lt;circle cx="100" cy="100" r="100" stroke="none"/&gt;
+        &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
+        &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
+      &lt;/g&gt;
+    &lt;/defs&gt;
+    
+    &lt;use href="#target-g-1" fill="black"/&gt;
+    &lt;use href="#target-g-1" fill="blue"
+        transform="translate(100 100) scale(0.75 0.75) translate(-100 -100)"/&gt;
+    
+    &lt;svg x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
+      &lt;use href="#target-g-1" fill="red"
+          transform="translate(100 100) scale(0.5 0.5) translate(-100 -100)"/&gt;
+      &lt;use href="#target-g-1" fill="yellow"
+          transform="translate(100 100) scale(0.25 0.25) translate(-100 -100)"/&gt;
+    &lt;/svg&gt;
+  &lt;/svg&gt;
+
+  &lt;figcaption&gt;Figure 3. transform-origin not used.
+    This image should look exactly the same as the reference image in Figure 1.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</pre>
+
+<h3 id="css">CSS</h3>
+
+<pre class="brush: css">
+    h4 {
+      font-family: sans-serif;
+    }
+
+    figure {
+      border: thin #c0c0c0 solid;
+      display: inline-flex;
+      flex-flow: column;
+      padding: 5px;
+      max-width: 200px;
+      margin: auto;
+    }
+
+    figcaption {
+      margin-top: 5px;
+      background-color: #222;
+      color: #fff;
+      font: smaller sans-serif;
+      padding: 3px;
+      text-align: center;
+    }
+</pre>
+
+<h3 id="result">Result</h3>
+
+<p>{{ EmbedLiveSample('example', 700, 1100) }}</p>
+
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
