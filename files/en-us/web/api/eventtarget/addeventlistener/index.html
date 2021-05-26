@@ -597,7 +597,7 @@ function nonePassiveHandler(event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
   
-  // bind creates a new method with fixed `this` context assigned to onclick2
+  // bind causes a fixed `this` context to be assigned to onclick2
   this.onclick2 = this.onclick2.bind(this);
   
   element.addEventListener('click', this.onclick1, false);
