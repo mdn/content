@@ -17,7 +17,7 @@ browser-compat: css.properties.border-top-left-radius
 
 <p>The rounding can be a circle or an ellipse, or if one of the value is <code>0,</code>no rounding is done and the corner is square.</p>
 
-<div style="text-align: center;"><img alt="border-radius.png" class="default internal" src="border-radius.png"></div>
+<img alt="border-radius.png" class="default internal" src="border-radius.png">
 
 <p>A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.</p>
 
@@ -66,81 +66,77 @@ border-top-left-radius: inherit;
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Examples_of_different_border-top-left-radius_values">Examples of different border-top-left-radius values</h3>
+<h3 id="arc_of_a_circle">Arc of a circle</h3>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Live example</th>
-   <th>Code</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div id="circle-arc" style="background-color: lightgreen; border: solid 1px black; border-top-left-radius: 40px 40px; width: 100px; height: 100px;"></div>
-   </td>
-   <td>An arc of ellipse is used as the border
-    <pre class="brush:css">
-div {
-  border-top-left-radius: 40px 40px;
+<p>A single <code>&lt;length&gt;</code> value produces an arc of a circle.</p>
+
+<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">div {
+  border-top-left-radius: 40px;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
 }
 </pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div id="ellipse-arc" style="background-color: lightgreen; border: solid 1px black; border-top-left-radius: 40px 20px; width: 100px; height: 100px;"></div>
-   </td>
-   <td>An arc of ellipse is used as the border
-    <pre class="brush:css">
-div {
+
+{{EmbedLiveSample("arc_of_a_circle")}}
+
+<h3 id="arc_of_an_ellipse">Arc of an ellipse</h3>
+
+<p>Two different <code>&lt;length&gt;</code> values produce an arc of an ellipse.</p>
+
+<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">div {
   border-top-left-radius: 40px 20px;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
 }
 </pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div id="square-box-circle-arc" style="background-color: lightgreen; border: solid 1px black; border-top-left-radius: 40%; width: 100px; height: 100px;"></div>
-   </td>
-   <td>The box is a square: an arc of circle is used as the border
-    <pre class="brush: css">
-div {
+
+{{EmbedLiveSample("arc_of_an_ellipse")}}
+
+<h3 id="square_element_with_percentage_radius">Square element with percentage radius</h3>
+
+<p>A square element with a single <code>&lt;percentage&gt;</code> value produces an arc of a circle.</p>
+
+<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">div {
   border-top-left-radius: 40%;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
 }
 </pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div id="not-square-ellipse-arc" style="background-color: lightgreen; border: solid 1px black; border-top-left-radius: 40%; width: 100px; height: 200px;"></div>
-   </td>
-   <td>The box is not a square: an arc of ellipse is used as the border
-    <pre class="brush: css">
-div {
+
+{{EmbedLiveSample("square_element_with_percentage_radius")}}
+
+<h3 id="non_square_element_with_percentage_radius">Non-square element with percentage radius</h3>
+
+<p>A non-square element with a single <code>&lt;percentage&gt;</code> value produces an arc of an ellipse.</p>
+
+<pre class="brush: html hidden">&lt;div&gt;&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">div {
   border-top-left-radius: 40%;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 200px;
+  height: 100px;
 }
 </pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div id="clipped-border" style="background-color: rgb(250,20,70); background-clip: content-box; border: double 3px black; border-top-left-radius: 40%; width: 100px; height: 100px;"></div>
-   </td>
-   <td>The background color is clipped at the border
-    <pre class="brush: css">
-div {
-  border-top-left-radius:40%;
-  border: 3px double black;
-  background-color: rgb(250,20,70);
-  background-clip: content-box;
-}
-</pre>
-   </td>
-  </tr>
- </tbody>
-</table>
+
+{{EmbedLiveSample("non_square_element_with_percentage_radius")}}
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -34351,27 +34351,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:47:15.895Z",
-    "contributors": [
-      "mauricio-sg",
-      "stevenvachon",
-      "mfluehr",
-      "IlyaUpyackovich",
-      "Sephr",
-      "Peppesterest",
-      "zhuangyin",
-      "fscholz",
-      "subhaze",
-      "smukkekim",
-      "ght",
-      "ericyd",
-      "anonyco",
-      "stevenwdv",
-      "jszhou",
-      "jpmedley"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-10-15T21:31:16.211Z",
     "contributors": [
@@ -44279,6 +44258,27 @@
     "contributors": [
       "chrisdavidmills",
       "krosylight"
+    ]
+  },
+  "Web/API/Element/replaceWith": {
+    "modified": "2020-10-15T21:47:15.895Z",
+    "contributors": [
+      "mauricio-sg",
+      "stevenvachon",
+      "mfluehr",
+      "IlyaUpyackovich",
+      "Sephr",
+      "Peppesterest",
+      "zhuangyin",
+      "fscholz",
+      "subhaze",
+      "smukkekim",
+      "ght",
+      "ericyd",
+      "anonyco",
+      "stevenwdv",
+      "jszhou",
+      "jpmedley"
     ]
   },
   "Web/API/Element/requestFullScreen": {
@@ -76972,13 +76972,6 @@
       "kscarfone",
       "Sheppy",
       "Jeremie"
-    ]
-  },
-  "Web/API/SVGFilterPrimitiveStandardAttributes": {
-    "modified": "2020-10-15T21:53:52.473Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz"
     ]
   },
   "Web/API/SVGFontElement": {

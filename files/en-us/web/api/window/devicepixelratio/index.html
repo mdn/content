@@ -105,17 +105,15 @@ ctx.fillText(textString, x, y);</pre>
   checks the value of <code>devicePixelRatio</code> any time it changes.</p>
 
 <pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
-let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
 
 const updatePixelRatio = () =&gt; {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
+  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
 }
 
 updatePixelRatio();
-
-matchMedia(mqString).addListener(updatePixelRatio);</pre>
 
 <p>The string <code>mqString</code> is set up to be the media query itself. The media
   query, which begins as <code>(resolution: 1dppx)</code> (for standard  displays) or

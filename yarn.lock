@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.4.tgz#27704e32b997db5bdf9cacdb331694f09629fe83"
   integrity sha512-J8vDIdqtOv0O9IzZrOJgUPHlncNePoLfr0/Hsb4x5IMFtn1xlLbaOfD+moFYhHGhXBd/6FfTKgD+DvDSI3zhYA==
 
-"@mdn/yari@0.4.480":
-  version "0.4.480"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.480.tgz#6f7878a186533a8a8afeee9fbb4719e2cbf908a5"
-  integrity sha512-Z/lfaYv5/M14yx3Ii+op0oRC4yfVVKgYbglO+pA6AFYdAVLV+avE6zisr6A04zIexgppcnjc8AtZ3gKHiwGzuA==
+"@mdn/yari@0.4.501":
+  version "0.4.501"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.501.tgz#3d85e620e280e853a8d03e2a9af8b8e773a8ea8c"
+  integrity sha512-PBQ8rbsHoB5iXZQR9zqBwzo6wl+KlrJvvx5/Fxmwlpp7ZVY2U0Q9QpvFuSdYcqwcazho5UYvk9bkB0eWNYgaqg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -56,7 +56,7 @@
     cookie "0.4.1"
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
-    dotenv "9.0.2"
+    dotenv "10.0.0"
     ejs "3.1.6"
     express "4.17.1"
     fast-xml-parser "3.19.0"
@@ -84,7 +84,7 @@
     lru-cache "^6.0.0"
     md5-file "5.0.0"
     mdn-data "2.0.18"
-    open "^8.1.0"
+    open "^8.2.0"
     open-editor "3.0.0"
     prismjs "1.23.0"
     read-chunk "3.2.0"
@@ -1299,10 +1299,10 @@ domutils@^2.5.1, domutils@^2.5.2:
     domelementtype "^2.2.0"
     domhandler "^4.1.0"
 
-dotenv@9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-9.0.2.tgz#dacc20160935a37dea6364aa1bef819fb9b6ab05"
-  integrity sha512-I9OvvrHp4pIARv4+x9iuewrWycX6CcZtoAu1XrzPxc5UygMJXJZYmBsynku8IkrJwgypE5DGNjDPmPRhDCptUg==
+dotenv@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 download@^6.2.2:
   version "6.2.5"
@@ -3337,10 +3337,10 @@ open@^7.3.0:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-open@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/open/-/open-8.1.0.tgz#d77e9d8edab7672d03633674eb182e1c376ee25f"
-  integrity sha512-jB5hAtsDOhCy/FNQJwQJOrGlxLUat482Yr14rbA5l2Zb1eOeoS+ccQPO036C1+z9VDBTmOZqzh1tBbI4myzIYw==
+open@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.2.0.tgz#d6a4788b00009a9d60df471ecb89842a15fdcfc1"
+  integrity sha512-O8uInONB4asyY3qUcEytpgwxQG3O0fJ/hlssoUHsBboOIRVZzT6Wq+Rwj5nffbeUhOdMjpXeISpDDzHCMRDuOQ==
   dependencies:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
