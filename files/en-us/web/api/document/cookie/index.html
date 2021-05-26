@@ -213,30 +213,16 @@ function alertCookieValue() {
 
 <pre class="brush: js">document.cookie = "reader=1; SameSite=None; Secure";
 
-//ES5
-
-function checkACookieExistsES5() {
-  if (document.cookie.split(';').some(function(item) {
-    return item.trim().indexOf('reader=') == 0
-  })) {
-    console.log('The cookie "reader" exists (ES5)')
-  }
-}
-
-//ES2016
-
-function checkACookieExistsES2016() {
+function checkACookieExists() {
   if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader='))) {
-    console.log('The cookie "reader" exists (ES6)')
+    console.log('The cookie "reader" exists')
   }
 }
 
 </pre>
 
 <pre
-	class="brush: html">&lt;button onclick="checkACookieExistsES5()"&gt;Check a cookie exists (ES5)&lt;/button&gt;
-
-&lt;button onclick="checkACookieExistenceES2016()"&gt;Check a cookie existence (ES2016)&lt;/button&gt;
+	class="brush: html">&lt;button onclick="checkACookieExists()"&gt;Check a cookie existence&lt;/button&gt;
 </pre>
 
 <p>{{EmbedLiveSample('Example_5_Check_a_cookie_existence', 200, 36)}}</p>
@@ -244,19 +230,7 @@ function checkACookieExistsES2016() {
 <h3 id="Example_6_Check_that_a_cookie_has_a_specific_value">Example #6: Check that a
 	cookie has a specific value</h3>
 
-<pre class="brush: js">//ES5
-
-function checkCookieHasASpecificValueES5() {
-  if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('reader=1') &gt;= 0
-  })) {
-    console.log('The cookie "reader" has a value of "1"')
-  }
-}
-
-//ES2016
-
-function checkCookieHasASpecificValueES2016() {
+<pre class="brush: js">function checkCookieHasASpecificValue() {
   if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
     console.log('The cookie "reader" has "1" for value')
   }
@@ -264,12 +238,8 @@ function checkCookieHasASpecificValueES2016() {
 </pre>
 
 <pre
-	class="brush: html">&lt;button onclick="checkCookieHasASpecificValueES5()"&gt;
-  Check that a cookie has a specific value (ES5)
-&lt;/button&gt;
-
-&lt;button onclick="checkCookieHasASpecificValueES2016()"&gt;
-  Check that a cookie has a specific value (ES2016)
+	class="brush: html">&lt;button onclick="checkCookieHasASpecificValue()"&gt;
+  Check that a cookie has a specific value
 &lt;/button&gt;
 </pre>
 
