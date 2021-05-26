@@ -160,7 +160,10 @@ function alertCookie() {
 <h3 id="Example_2_Get_a_sample_cookie_named_test2">Example #2: Get a sample cookie named
 	<em>test2</em></h3>
 
-<pre class="brush: js">document.cookie = "test1=Hello; SameSite=None; Secure";
+<pre class="brush: js">// Note that we are setting `SameSite=None;` in this example because the example.
+// `SameSite=None;` needs to work cross-origin.
+// It is more common not to set the `SameSite` attribute, which results in the default, and more secure, value of `SameSite=Lax;`
+document.cookie = "test1=Hello; SameSite=None; Secure";
 document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
