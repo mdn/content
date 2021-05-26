@@ -58,7 +58,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example tries to get the cookie named "favourite-color", associated with the URL for the currently active tab:</p>
+<p>This example tries to get the cookie named "favorite-color", associated with the URL for the currently active tab:</p>
 
 <pre class="brush: js">function logCookie(cookie) {
   if (cookie) {
@@ -69,7 +69,7 @@ tags:
 function getCookie(tabs) {
   var getting = browser.cookies.get({
     url: tabs[0].url,
-    name: "favourite-color"
+    name: "favorite-color"
   });
   getting.then(logCookie);
 }
