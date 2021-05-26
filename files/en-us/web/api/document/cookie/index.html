@@ -215,7 +215,7 @@ function alertCookieValue() {
 
 //ES5
 
-function checkACookieExistenceES5() {
+function checkACookieExistsES5() {
   if (document.cookie.split(';').some(function(item) {
     return item.trim().indexOf('reader=') == 0
   })) {
@@ -225,7 +225,7 @@ function checkACookieExistenceES5() {
 
 //ES2016
 
-function checkACookieExistenceES2016() {
+function checkACookieExistsES2016() {
   if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader='))) {
     console.log('The cookie "reader" exists (ES6)')
   }
@@ -234,7 +234,7 @@ function checkACookieExistenceES2016() {
 </pre>
 
 <pre
-	class="brush: html">&lt;button onclick="checkACookieExistenceES5()"&gt;Check a cookie existence (ES5)&lt;/button&gt;
+	class="brush: html">&lt;button onclick="checkACookieExistsES5()"&gt;Check a cookie exists (ES5)&lt;/button&gt;
 
 &lt;button onclick="checkACookieExistenceES2016()"&gt;Check a cookie existence (ES2016)&lt;/button&gt;
 </pre>
@@ -250,7 +250,7 @@ function checkCookieHasASpecificValueES5() {
   if (document.cookie.split(';').some(function(item) {
     return item.indexOf('reader=1') &gt;= 0
   })) {
-    console.log('The cookie "reader" has "1" for value')
+    console.log('The cookie "reader" has a value of "1"')
   }
 }
 
