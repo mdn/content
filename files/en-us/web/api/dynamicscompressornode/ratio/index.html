@@ -30,13 +30,18 @@ compressor.ratio.value = 12;
 
 <p>An {{domxref("AudioParam")}}.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
 </div>
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createDynamicsCompressor","Example")}}</p>
+<pre class="brush: js">var audioCtx = new AudioContext();
+var compressor = audioCtx.createDynamicsCompressor();
+compressor.ratio.value = 12;</pre>
+
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> for more complete example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -255,26 +255,22 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 }
 </pre>
 
-<p>Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an NPM script because NPM knows all about the installed packages. Find the <code>scripts</code> section of your package.json. Initially, it will contain one line, which begins with <code>"start"</code>. Update it by putting a comma at the end of that line, and adding the <code>"devstart"</code> and <code>"serverstart"</code> lines shown below:</p>
-
-<pre class="brush: json">  "scripts": {
-    "start": "node ./bin/www"<strong>,</strong>
-<strong>    "devstart": "nodemon ./bin/www",
-    "serverstart": "</strong>DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart"</strong>
-  },
-</pre>
-
-<p>We can now start the server in almost exactly the same way as previously, but using the <code>devstart</code> command:</p>
+<p>Because the tool isn't installed globally we can't launch it from the command line (unless we add it to the path) but we can call it from an NPM script because NPM knows all about the installed packages. Find the <code>scripts</code> section of your package.json. Initially, it will contain one line, which begins with <code>"start"</code>. Update it by putting a comma at the end of that line, and adding the <code>"devstart"</code> and <code>"serverstart"</code> lines:</p>
 
 <ul>
- <li>On Windows, use this command:
-  <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong></pre>
- </li>
- <li>On macOS or Linux, use this command:
-  <pre class="brush: bash">DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart</strong>
-</pre>
+  <li>On Linux and macOS, the scripts section will look like this:
+    <pre class="brush: bash">  "scripts": {
+      "start": "node ./bin/www",
+      "devstart": "nodemon ./bin/www",
+      "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+    },</pre>
+   </li>
+ <li>On Windows, use this command instead:
+  <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm run devstart</pre>
  </li>
 </ul>
+
+<p>We can now start the server in almost exactly the same way as previously, but using the <code>devstart</code> command.</p>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -361,7 +357,7 @@ GET /stylesheets/style.css 200 4.886 ms - 111
   },
 </pre>
 
-<p>The <em>devstart</em> and <em>serverstart</em> scripts can be used to start the same <strong>./bin/www</strong> file with <em>nodemon</em> rather than <em>node</em> (as discussed above in <a href="#enable_server_restart_on_file_changes">Enable server restart on file changes</a>).</p>
+<p>The <em>devstart</em> and <em>serverstart</em> scripts can be used to start the same <strong>./bin/www</strong> file with <em>nodemon</em> rather than <em>node</em> (this example is for Linux and macOS, as discussed above in <a href="#enable_server_restart_on_file_changes">Enable server restart on file changes</a>).</p>
 
 <h3 id="www_file">www file</h3>
 
@@ -536,7 +532,7 @@ block content
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><strong>Express Tutorial Part 2: Creating a skeleton website</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>

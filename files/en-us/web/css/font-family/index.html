@@ -26,7 +26,7 @@ browser-compat: css.properties.font-family
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css; no-line-numbers">/* A font family name and a generic family name */
-font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
 /* A generic family name only */
@@ -54,13 +54,13 @@ font-family: unset;
 
 <p>The example below lists two font families, the first with a <code>&lt;family-name&gt;</code> and the second with a <code>&lt;generic-name&gt;</code>:</p>
 
-<pre class="brush: css;">font-family: Gill Sans Extrabold, sans-serif;</pre>
+<pre class="brush: css;">font-family: "Gill Sans Extrabold", sans-serif;</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
  <dt><a id="family-name"><code>&lt;family-name&gt;</code></a></dt>
- <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.</dd>
+ <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted. For example: "Comic Sans MS".</dd>
  <dt><a id="generic-name"><code>&lt;generic-name&gt;</code></a></dt>
  <dd>
  <p>Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:</p>
@@ -105,9 +105,11 @@ font-family: unset;
 
 <p>Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
 
+<p>It is a <strong>good practice</strong> to quote font family names that contain white space, digits, or punctuation characters other than hyphens.</p>
+
 <p>For example, the following declarations are valid:</p>
 
-<pre class="brush: css; example-good">font-family: Gill Sans Extrabold, sans-serif;
+<pre class="brush: css; example-good">
 font-family: "Goudy Bookletter 1911", sans-serif;</pre>
 
 <p>The following declarations are <strong>invalid</strong>:</p>
@@ -119,6 +121,12 @@ font-family: Ahem!, sans-serif;
 font-family: test@foo, sans-serif;
 font-family: #POUND, sans-serif;
 font-family: Hawaii 5-0, sans-serif;</pre>
+
+<p>The following example is technically <strong>valid</strong> but is not recommended:</p>
+
+<pre class="brush: css;">
+font-family: Gill Sans Extrabold, sans-serif;
+</pre>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -133,7 +141,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 <h3 id="Some_common_font_families">Some common font families</h3>
 
 <pre class="brush: css;">.serif {
-  font-family: Times, Times New Roman, Georgia, serif;
+  font-family: Times, "Times New Roman", Georgia, serif;
 }
 
 .sansserif {
@@ -141,7 +149,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 }
 
 .monospace {
-  font-family: Lucida Console, Courier, monospace;
+  font-family: "Lucida Console", Courier, monospace;
 }
 
 .cursive {
