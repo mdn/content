@@ -2,12 +2,13 @@
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 tags:
-- ECMAScript 2015
-- ECMAScript 5
-- Function
-- JavaScript
-- Method
-- polyfill
+  - ECMAScript 2015
+  - ECMAScript 5
+  - Function
+  - JavaScript
+  - Method
+  - polyfill
+browser-compat: javascript.builtins.Function.bind
 ---
 <div>{{JSRef}}</div>
 
@@ -18,15 +19,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let boundFunc = <var>func</var>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]]])
+<pre class="brush: js">
+bind(thisArg)
+bind(thisArg, arg1)
+bind(thisArg, arg1, arg2)
+bind(thisArg, arg1, ... , argN)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -104,7 +104,7 @@ tags:
 <p>Without special care, however, the original object is usually lost. Creating a bound
   function from the function, using the original object, neatly solves this problem:</p>
 
-<pre class="brush: js notranslate">this.x = 9;    // 'this' refers to global 'window' object here in a browser
+<pre class="brush: js">this.x = 9;    // 'this' refers to global 'window' object here in a browser
 const module = {
   x: 81,
   getX: function() { return this.x; }
@@ -134,12 +134,12 @@ boundGetX();
   inserted at the start of the arguments passed to the target function, followed by
   whatever arguments are passed bound function at the time it is called.</p>
 
-<pre class="brush: js notranslate">function list() {
+<pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
 }
 
 function addArguments(arg1, arg2) {
-  return arg1 + arg2
+  return arg1 + arg2;
 }
 
 const list1 = list(1, 2, 3);
@@ -176,7 +176,7 @@ const result3 = addThirtySeven(5, 10);
   that require <code>this</code> to refer to class instances, you may explicitly bind
   <code>this</code> to the callback function, in order to maintain the instance.</p>
 
-<pre class="brush: js notranslate">function LateBloomer() {
+<pre class="brush: js">function LateBloomer() {
   this.petalCount = Math.floor(Math.random() * 12) + 1;
 }
 
@@ -211,7 +211,7 @@ flower.bloom();
 
 <p>However, provided arguments are still prepended to the constructor call:</p>
 
-<pre class="brush: js notranslate">function Point(x, y) {
+<pre class="brush: js">function Point(x, y) {
   this.x = x;
   this.y = y;
 }
@@ -248,7 +248,7 @@ new YAxisPoint(17, 42) instanceof Point; // true
   called plainly, even if you would rather require the bound function to only be called
   using {{jsxref("Operators/new", "new")}}.</p>
 
-<pre class="brush: js notranslate">//  Example can be run directly in your JavaScript console
+<pre class="brush: js">//  Example can be run directly in your JavaScript console
 //  ...continued from above
 
 //  Can still be called as a normal function
@@ -271,7 +271,7 @@ YAxisPoint(13);
   converting an array-like object to a real array. You could create a shortcut like this:
 </p>
 
-<pre class="brush: js notranslate">const slice = Array.prototype.slice;
+<pre class="brush: js">const slice = Array.prototype.slice;
 
 // ...
 
@@ -282,12 +282,12 @@ slice.apply(arguments);
 
 <p>In the following piece of code, <code>slice()</code> is a bound function to the
   {{jsxref("Function.prototype.apply()", "apply()")}} function of
-  {{jsxref("Function.prototype")}}, with the <code>this</code> value set to the
+  {{jsxref("Function")}}, with the <code>this</code> value set to the
   {{jsxref("Array.prototype.slice()", "slice()")}} function of
   {{jsxref("Array.prototype")}}. This means that additional <code>apply()</code> calls can
   be eliminated:</p>
 
-<pre class="brush: js notranslate">//  same as "slice" in the previous example
+<pre class="brush: js">//  same as "slice" in the previous example
 const unboundSlice = Array.prototype.slice;
 const slice = Function.prototype.apply.bind(unboundSlice);
 
@@ -315,7 +315,7 @@ slice(arguments);
 <p>Generally, in most code it's very rare to see <code>new</code> used on a bound
   function, so it is generally best to go with the first option.</p>
 
-<pre class="brush: js notranslate">//  Does not work with `new (funcA.bind(thisArg, args))`
+<pre class="brush: js">//  Does not work with `new (funcA.bind(thisArg, args))`
 if (!Function.prototype.bind) (function(){
   var slice = Array.prototype.slice;
   Function.prototype.bind = function() {
@@ -338,7 +338,7 @@ if (!Function.prototype.bind) (function(){
   your scripts, allowing use of much of the functionality of <code>bind()</code> in
   implementations that do not natively support it.</p>
 
-<pre class="brush: js notranslate">//  Yes, it does work with `new (funcA.bind(thisArg, args))`
+<pre class="brush: js">//  Yes, it does work with `new (funcA.bind(thisArg, args))`
 if (!Function.prototype.bind) (function(){
   var ArrayPrototypeSlice = Array.prototype.slice;
   Function.prototype.bind = function(otherThis) {
@@ -414,26 +414,11 @@ if (!Function.prototype.bind) (function(){
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function.prototype.bind',
-        'Function.prototype.bind')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Function.bind")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

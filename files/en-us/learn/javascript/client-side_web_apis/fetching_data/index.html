@@ -92,7 +92,7 @@ tags:
  <li>
   <p>Just inside the {{htmlelement("script")}} element, add the following code. This stores a reference to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements in constants and defines an {{domxref("GlobalEventHandlers.onchange","onchange")}} event handler function so that when the select's value is changed, its value is passed to an invoked function <code>updateDisplay()</code> as a parameter.</p>
 
-  <pre class="brush: js  notranslate">const verseChoose = document.querySelector('select');
+  <pre class="brush: js">const verseChoose = document.querySelector('select');
 const poemDisplay = document.querySelector('pre');
 
 verseChoose.onchange = function() {
@@ -103,7 +103,7 @@ verseChoose.onchange = function() {
  <li>
   <p>Let's define our <code>updateDisplay()</code> function. First of all, put the following beneath your previous code block — this is the empty shell of the function. Note: Steps 4 - 9 will all be performed <em>within</em> this function.</p>
 
-  <pre class="brush: js  notranslate">function updateDisplay(verse) {
+  <pre class="brush: js">function updateDisplay(verse) {
 
 }</pre>
  </li>
@@ -112,43 +112,43 @@ verseChoose.onchange = function() {
 
   <p>However, web servers tend to be case sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and simple <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings">string concatenation</a>. Add the following lines inside your <code>updateDisplay()</code> function:</p>
 
-  <pre class="brush: js  notranslate">verse = verse.replace(" ", "");
+  <pre class="brush: js">verse = verse.replace(" ", "");
 verse = verse.toLowerCase();
 let url = verse + '.txt';</pre>
  </li>
  <li>
   <p>To begin creating an XHR request, you need to create a new request object using the {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} constructor. You can call this object anything you like, but we'll call it <code>request</code> to keep things simple. Add the following below your previous lines inside your <code>updateDisplay()</code> function:</p>
 
-  <pre class="brush: js  notranslate">let request = new XMLHttpRequest();</pre>
+  <pre class="brush: js">let request = new XMLHttpRequest();</pre>
  </li>
  <li>
   <p>Next, you need to use the {{domxref("XMLHttpRequest.open","open()")}} method to specify what <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a> to use to request the resource from the network, and what its URL is. We'll just use the <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> method here and set the URL as our <code>url</code> variable. Add this below your previous line:</p>
 
-  <pre class="brush: js  notranslate">request.open('GET', url);</pre>
+  <pre class="brush: js">request.open('GET', url);</pre>
  </li>
  <li>
   <p>Next, we'll set the type of response we are expecting — which is defined by the request's {{domxref("XMLHttpRequest.responseType", "responseType")}} property — as <code>text</code>. This isn't strictly necessary here — XHR returns text by default — but it is a good idea to get into the habit of setting this in case you want to fetch other types of data in the future. Add this next:</p>
 
-  <pre class="brush: js  notranslate">request.responseType = 'text';</pre>
+  <pre class="brush: js">request.responseType = 'text';</pre>
  </li>
  <li>
   <p>Fetching a resource from the network is an {{glossary("asynchronous")}} operation, meaning that you have to wait for that operation to complete (e.g., the resource is returned from the network) before you can do anything with that response, otherwise, an error will be thrown. XHR allows you to handle this using its {{domxref("XMLHttpRequest.onload", "onload")}} event handler — this is run when the {{event("load")}} event fires (when the response has returned). When this has occurred, the response data will be available in the <code>response</code> property of the XHR request object.</p>
 
   <p>Add the following below your last addition. You'll see that inside the <code>onload</code> event handler we are setting the <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> of the <code>poemDisplay</code> (the {{htmlelement("pre")}} element) to the value of the {{domxref("XMLHttpRequest.response", "request.response")}} property.</p>
 
-  <pre class="brush: js  notranslate">request.onload = function() {
+  <pre class="brush: js">request.onload = function() {
   poemDisplay.textContent = request.response;
 };</pre>
  </li>
  <li>
   <p>The above is all set up for the XHR request — it won't actually run until we tell it to, which is done using the {{domxref("XMLHttpRequest.send","send()")}} method. Add the following below your previous addition to complete the function. This line should rest just above the closing curly brace of your <code>updateDisplay()</code> function.</p>
 
-  <pre class="brush: js  notranslate">request.send();</pre>
+  <pre class="brush: js">request.send();</pre>
  </li>
  <li>
   <p>One problem with the example as it stands is that it won't show any of the poem when it first loads. To fix this, add the following two lines at the bottom of your code (just above the closing <code>&lt;/script&gt;</code> tag) to load verse 1 by default, and make sure the {{htmlelement("select")}} element always shows the correct value:</p>
 
-  <pre class="brush: js  notranslate">updateDisplay('Verse 1');
+  <pre class="brush: js">updateDisplay('Verse 1');
 verseChoose.value = 'Verse 1';</pre>
  </li>
 </ol>
@@ -172,7 +172,7 @@ verseChoose.value = 'Verse 1';</pre>
  <li>
   <p>Inside the <code>updateDisplay()</code> function, find the XHR code:</p>
 
-  <pre class="brush: js  notranslate">let request = new XMLHttpRequest();
+  <pre class="brush: js">let request = new XMLHttpRequest();
 request.open('GET', url);
 request.responseType = 'text';
 
@@ -185,7 +185,7 @@ request.send();</pre>
  <li>
   <p>Replace all the XHR code with this:</p>
 
-  <pre class="brush: js  notranslate">fetch(url).then(function(response) {
+  <pre class="brush: js">fetch(url).then(function(response) {
   response.text().then(function(text) {
     poemDisplay.textContent = text;
   });
@@ -214,7 +214,7 @@ request.send();</pre>
 
 <p>Let's look at the promise structure from above again to see if we can make some more sense of it:</p>
 
-<pre class="brush: js  notranslate">fetch(url).then(function(response) {
+<pre class="brush: js">fetch(url).then(function(response) {
   response.text().then(function(text) {
     poemDisplay.textContent = text;
   });
@@ -224,7 +224,7 @@ request.send();</pre>
 
 <p>Effectively, the function passed into <code>then()</code> is a chunk of code that won't run immediately. Instead, it will run at some point in the future when the response has been returned. Note that you could also choose to store your promise in a variable and chain {{jsxref("Promise.then",".then()")}} onto that instead. The code below would do the same thing:</p>
 
-<pre class="brush: js  notranslate">let myFetch = fetch(url);
+<pre class="brush: js">let myFetch = fetch(url);
 
 myFetch.then(function(response) {
   response.text().then(function(text) {
@@ -234,7 +234,7 @@ myFetch.then(function(response) {
 
 <p>Because the <code>fetch()</code> method returns a promise that resolves to the HTTP response, any function you define inside a <code>.then()</code> chained onto the end of it will automatically be given the response as a parameter. You can call the parameter anything you like — the below example would still work:</p>
 
-<pre class="brush: js  notranslate">fetch(url).then(function(dogBiscuits) {
+<pre class="brush: js">fetch(url).then(function(dogBiscuits) {
   dogBiscuits.text().then(function(text) {
     poemDisplay.textContent = text;
   });
@@ -244,7 +244,7 @@ myFetch.then(function(response) {
 
 <p>Now let's focus just on the function:</p>
 
-<pre class="brush: js  notranslate">function(response) {
+<pre class="brush: js">function(response) {
   response.text().then(function(text) {
     poemDisplay.textContent = text;
   });
@@ -256,7 +256,7 @@ myFetch.then(function(response) {
 
 <p>The following block does the same thing as our original example, but is written in a different style:</p>
 
-<pre class="brush: js  notranslate">fetch(url).then(function(response) {
+<pre class="brush: js">fetch(url).then(function(response) {
   return response.text()
 }).then(function(text) {
   poemDisplay.textContent = text;
@@ -286,7 +286,7 @@ myFetch.then(function(response) {
 
 <p>The first block that uses Fetch can be found at the start of the JavaScript:</p>
 
-<pre class="brush: js  notranslate">fetch('products.json').then(function(response) {
+<pre class="brush: js">fetch('products.json').then(function(response) {
   return response.json();
 }).then(function(json) {
   let products = json;
@@ -316,7 +316,7 @@ myFetch.then(function(response) {
 
 <p>The second Fetch block can be found inside the <code>fetchBlob()</code> function:</p>
 
-<pre class="brush: js  notranslate">fetch(url).then(function(response) {
+<pre class="brush: js">fetch(url).then(function(response) {
     return response.blob();
 }).then(function(blob) {
   // Convert the blob to an object URL — this is basically a temporary internal URL
@@ -330,7 +330,7 @@ myFetch.then(function(response) {
 
 <p>Once we've successfully received our blob, we create an object URL out of it using {{domxref("URL.createObjectURL()", "createObjectURL()")}}. This returns a temporary internal URL that points to an object referenced inside the browser. These are not very readable, but you can see what one looks like by opening up the Can Store app, Ctrl-/Right-clicking on an image, and selecting the "View image" option (which might vary slightly depending on what browser you are using). The object URL will be visible inside the address bar, and should be something like this:</p>
 
-<pre class="notranslate">blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4</pre>
+<pre>blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4</pre>
 
 <h3 id="Challenge_An_XHR_version_of_the_Can_Store">Challenge: An XHR version of the Can Store</h3>
 
@@ -373,7 +373,6 @@ myFetch.then(function(response) {
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
@@ -385,4 +384,3 @@ myFetch.then(function(response) {
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
 </ul>
-</div>

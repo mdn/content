@@ -33,7 +33,7 @@ tags:
 
 <p>Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, <code>{{ domxref("window.requestAnimationFrame()") }}</code> will be the foundation of most well-programmed per-frame main loops.  A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:</p>
 
-<pre class="brush: js notranslate">window.main = function () {
+<pre class="brush: js">window.main = function () {
   window.requestAnimationFrame( main );
 
   // Whatever your main loop needs to do
@@ -57,7 +57,7 @@ main(); // Start the cycle</pre>
 
 <p>There are two obvious issues with our previous main loop: <code>main()</code> pollutes the <code>{{ domxref("window") }}</code> object (where all global variables are stored) and the example code did not leave us with a way to <em>stop</em> the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -82,7 +82,7 @@ main(); // Start the cycle</pre>
 
 <p>For the second issue, stopping the main loop, you will need to cancel the call to <code>main()</code> with <code>{{ domxref("window.cancelAnimationFrame()") }}</code>. You will need to pass <code>cancelAnimationFrame()</code> the ID token given by <code>requestAnimationFrame()</code> when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called <code>MyGame</code>. Expanding our last example, the main loop would now look like:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -103,7 +103,7 @@ main(); // Start the cycle</pre>
 
 <p>We now have a variable declared in our <code>MyGame</code> namespace, which we call <code>stopMain</code>, that contains the ID returned from our main loop's most recent call to <code>requestAnimationFrame()</code>. At any point, we can stop the main loop by telling the browser to cancel the request that corresponds to our token.</p>
 
-<pre class="brush: js notranslate">window.cancelAnimationFrame( MyGame.stopMain );</pre>
+<pre class="brush: js">window.cancelAnimationFrame( MyGame.stopMain );</pre>
 
 <p>The key to programming a main loop, in JavaScript, is to attach it to whatever event should be driving your action and pay attention to how the different systems involved interplay. You may have multiple components driven by multiple different types of events. This feels like unnecessary complexity but it might just be good optimization (not necessarily, of course). The problem is that you are not programming a typical main loop. In Javascript, you are using the browser's main loop and you are trying to do so effectively.</p>
 
@@ -117,7 +117,7 @@ main(); // Start the cycle</pre>
  <li>Start a new frame (while the previous frame is handled by the display).</li>
  <li>Go through the list of <code>requestAnimationFrame</code> callbacks and invoke them.</li>
  <li>Perform garbage collection and other per-frame tasks when the above callbacks stop controlling the main thread.</li>
- <li>Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image (<a href="http://www.techopedia.com/definition/92/vertical-sync-vsync">VSync</a>) and repeat.</li>
+ <li>Sleep (unless an event interrupts the browser's nap) until the monitor is ready for your image (<a href="https://www.techopedia.com/definition/92/vertical-sync-vsync">VSync</a>) and repeat.</li>
 </ol>
 
 <p>You can think about developing realtime applications as having a budget of time to do work. All of the above steps must take place every 16-and-a-half milliseconds to keep up with a 60 Hz display. Browsers invoke your code as early as possible to give it maximum computation time. Your main thread will often start workloads that are not even on the main thread (such as rasterization or shaders in WebGL). Long calculations can be performed on a Web Worker or a GPU at the same time as the browser uses its main thread to manage garbage collection, its other tasks, or handle asynchronous events.</p>
@@ -130,12 +130,12 @@ main(); // Start the cycle</pre>
 
 <p>This value is not too useful alone, since it is relative to a fairly uninteresting event, but it can be subtracted from another timestamp to accurately and precisely determine how much time elapsed between those two points. To acquire one of these timestamps, you can call <code>window.performance.now()</code> and store the result as a variable.</p>
 
-<pre class="brush: js notranslate">var tNow = window.performance.now();
+<pre class="brush: js">var tNow = window.performance.now();
 </pre>
 
 <p>Back to the topic of the main loop. You will often want to know when your main function was invoked. Because this is common, <code>window.requestAnimationFrame()</code> always provides a <code>DOMHighResTimeStamp</code> to callbacks as an argument when they are executed. This leads to another enhancement to our previous main loops.</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -169,7 +169,7 @@ main(); // Start the cycle</pre>
 
 <p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can update, render, and then do nothing until VSync.</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -241,7 +241,7 @@ main(); // Start the cycle</pre>
 <p><strong>Note:</strong> This example, specifically, is in need of technical review.</p>
 </div>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon

@@ -28,7 +28,7 @@ tags:
 
 <p>Alternatively, you can nest the <code>&lt;input&gt;</code> directly inside the <code>&lt;label&gt;</code>, in which case the <code>for</code> and <code>id</code> attributes are not needed because the association is implicit:</p>
 
-<pre class="brush: html notranslate">&lt;label&gt;Do you like peas?
+<pre class="brush: html">&lt;label&gt;Do you like peas?
   &lt;input type="checkbox" name="peas"&gt;
 &lt;/label&gt;
 </pre>
@@ -46,7 +46,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
+ <dd>The {{htmlattrxref("id")}} of a <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a> form-related element in the same document as the <code>&lt;label&gt;</code> element. The first element in the document with an <code>id</code> matching the value of the <code>for</code> attribute is the <em>labeled control</em> for this label element if it is a <a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">labelable element</a>. If it is not labelable then the <code>for</code> attribute has no effect. If there are other elements that also match the <code>id</code> value, later in the document, they are not considered.
  <div class="note"><strong>Note</strong>: A <code>&lt;label&gt;</code> element can have both a <code>for</code> attribute and a contained control element, as long as the <code>for</code> attribute points to the contained control element.</div>
  </dd>
 </dl>
@@ -59,13 +59,13 @@ tags:
 
 <h3 id="Simple_label_example">Simple label example</h3>
 
-<pre class="brush: html notranslate">&lt;label&gt;Click me &lt;input type="text"&gt;&lt;/label&gt;</pre>
+<pre class="brush: html">&lt;label&gt;Click me &lt;input type="text"&gt;&lt;/label&gt;</pre>
 
 <p>{{EmbedLiveSample('Simple_label_example', '200', '50', '')}}</p>
 
 <h3 id="Using_the_for_attribute">Using the "for" attribute</h3>
 
-<pre class="brush: html notranslate">&lt;label for="username"&gt;Click me&lt;/label&gt;
+<pre class="brush: html">&lt;label for="username"&gt;Click me&lt;/label&gt;
 &lt;input type="text" id="username"&gt;</pre>
 
 <p>{{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}</p>
@@ -78,7 +78,7 @@ tags:
 
 <h4 id="Dont">Don't</h4>
 
-<pre class="brush: html example-bad notranslate">&lt;label for="tac"&gt;
+<pre class="brush: html example-bad">&lt;label for="tac"&gt;
   &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
   I agree to the &lt;a href="terms-and-conditions.html"&gt;Terms and Conditions&lt;/a&gt;
 &lt;/label&gt;
@@ -86,7 +86,7 @@ tags:
 
 <h4 id="Do">Do</h4>
 
-<pre class="brush: html example-good notranslate">&lt;label for="tac"&gt;
+<pre class="brush: html example-good">&lt;label for="tac"&gt;
   &lt;input id="tac" type="checkbox" name="terms-and-conditions"&gt;
   I agree to the Terms and Conditions
 &lt;/label&gt;
@@ -97,13 +97,13 @@ tags:
 
 <h3 id="Headings">Headings</h3>
 
-<p>Placing <a href="/en-US/docs/Web/HTML/Element/Heading_Elements">heading elements</a> within a <code>&lt;label&gt;</code> interferes with many kinds of assistive technology, because headings are commonly used as <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#Navigation">a navigation aid</a>. If the label's text needs to be adjusted visually, use CSS classes applied to the <code>&lt;label&gt;</code> element instead.</p>
+<p>Placing <a href="/en-US/docs/Web/HTML/Element/Heading_Elements">heading elements</a> within a <code>&lt;label&gt;</code> interferes with many kinds of assistive technology, because headings are commonly used as <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#navigation">a navigation aid</a>. If the label's text needs to be adjusted visually, use CSS classes applied to the <code>&lt;label&gt;</code> element instead.</p>
 
 <p>If a <a href="/en-US/docs/Web/HTML/Element/form">form</a>, or a section of a form needs a title, use the {{HTMLElement("legend")}} element placed within a {{HTMLElement("fieldset")}}.</p>
 
 <h4 id="Dont_2">Don't</h4>
 
-<pre class="brush: html example-bad notranslate">&lt;label for="your-name"&gt;
+<pre class="brush: html example-bad">&lt;label for="your-name"&gt;
   &lt;h3&gt;Your name&lt;/h3&gt;
   &lt;input id="your-name" name="your-name" type="text"&gt;
 &lt;/label&gt;
@@ -111,7 +111,7 @@ tags:
 
 <h4 id="Do_2">Do</h4>
 
-<pre class="brush: html example-good notranslate">&lt;label class="large-label" for="your-name"&gt;
+<pre class="brush: html example-good">&lt;label class="large-label" for="your-name"&gt;
   Your name
   &lt;input id="your-name" name="your-name" type="text"&gt;
 &lt;/label&gt; </pre>
@@ -126,11 +126,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated element</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a> elements other than the labeled control are allowed.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a> elements other than the labeled control are allowed.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -138,7 +138,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>

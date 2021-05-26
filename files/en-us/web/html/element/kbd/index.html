@@ -30,11 +30,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -42,7 +42,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -81,7 +81,7 @@ tags:
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Use the command &lt;kbd&gt;help mycommand&lt;/kbd&gt; to view documentation
+<pre class="brush: html">&lt;p&gt;Use the command &lt;kbd&gt;help mycommand&lt;/kbd&gt; to view documentation
 for the command "mycommand".&lt;/p&gt;
 </pre>
 
@@ -97,7 +97,7 @@ for the command "mycommand".&lt;/p&gt;
 
 <h5 id="HTML">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;p&gt;You can also create a new document using the keyboard shortcut
+<pre class="brush: html">&lt;p&gt;You can also create a new document using the keyboard shortcut
 &lt;kbd&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;N&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;</pre>
 
 <p>This wraps the entire key sequence in an outer <code>&lt;kbd&gt;</code> element, then each individual key within its own, in order to denote the components of the sequence.</p>
@@ -122,7 +122,7 @@ for the command "mycommand".&lt;/p&gt;
 
 <p>We add a new style for <code>&lt;kbd&gt;</code> elements, <code>key</code>, which we can apply when rendering keyboard keys:</p>
 
-<pre class="brush: css notranslate">kbd.key {
+<pre class="brush: css">kbd.key {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
@@ -132,7 +132,7 @@ for the command "mycommand".&lt;/p&gt;
 
 <p>Then we update the HTML to use this class on the keys in the output to be presented:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;You can also create a new document by pressing &lt;kbd&gt;&lt;kbd class="key"&gt;Ctrl&lt;/kbd&gt;+&lt;kbd class="key"&gt;N&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;You can also create a new document by pressing &lt;kbd&gt;&lt;kbd class="key"&gt;Ctrl&lt;/kbd&gt;+&lt;kbd class="key"&gt;N&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;</pre>
 
 <h5 id="Result_2">Result</h5>
 
@@ -144,7 +144,7 @@ for the command "mycommand".&lt;/p&gt;
 
 <p>Nesting a <code>&lt;kbd&gt;</code> element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system.</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;If a syntax error occurs, the tool will output the initial
+<pre class="brush: html">&lt;p&gt;If a syntax error occurs, the tool will output the initial
 command you typed for your review:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;samp&gt;&lt;kbd&gt;custom-git ad my-new-file.cpp&lt;/kbd&gt;&lt;/samp&gt;
@@ -158,7 +158,7 @@ command you typed for your review:&lt;/p&gt;
 
 <p>For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;To create a new file, choose the menu option
+<pre class="brush: html">&lt;p&gt;To create a new file, choose the menu option
 &lt;kbd&gt;&lt;kbd&gt;&lt;samp&gt;File&lt;/samp&gt;&lt;/kbd&gt;⇒&lt;kbd&gt;&lt;samp&gt;New
 Document&lt;/samp&gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 

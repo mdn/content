@@ -1,0 +1,64 @@
+---
+title: CompressionStream.CompressionStream()
+slug: Web/API/CompressionStream/CompressionStream
+tags:
+  - API
+  - Constructor
+  - Reference
+  - CompressionStream
+---
+<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+
+<p class="summary">The <strong><code>CompressionStream()</code></strong> constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let CompressionStream = new CompressionStream(format);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>format</code></dt>
+  <dd>One of the following allowed compression formats:
+    <ul>
+      <li><code>"gzip"</code></li>
+      <li><code>"deflate"</code></li>
+    </ul>
+  </dd>
+</dl>
+
+<h2 id="Exceptions">Exceptions</h2>
+
+<dl>
+  <dt>{{jsxref("TypeError")}}</dt>
+  <dd>Thrown if the format passed to the constructor is not supported.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example a stream is compressed using gzip compression.</p>
+
+<pre class="brush: js">const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Compression Streams','#dom-compressionstream-compressionstream','CompressionStream()')}}</td>
+    <td>{{Spec2('Compression Streams')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.CompressionStream.CompressionStream")}}</p>

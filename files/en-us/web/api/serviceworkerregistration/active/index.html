@@ -2,13 +2,12 @@
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 tags:
-- API
-- Property
-- Reference
-- Référence(2)
-- Service Workers
-- ServiceWorkerRegistration
-- active
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - active
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -17,7 +16,7 @@ tags:
   {{domxref("ServiceWorker.state")}} is <code>activating</code> or <code>activated</code>.
   This property is initially set to <code>null</code>.</p>
 
-<p>An active worker controls a {{domxref("ServiceWorkerClient")}} if the client's URL
+<p>An active worker controls a {{domxref("Client")}} if the client's URL
   falls within the scope of the registration (the <code>scope</code> option set when
   {{domxref("ServiceWorkerContainer.register")}} is first called.)</p>
 
@@ -34,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.active;
+<pre class="brush: js">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.active;
 </pre>
 
 <h3 id="Value">Value</h3>

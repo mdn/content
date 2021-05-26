@@ -1,0 +1,438 @@
+---
+title: Creating an item component
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
+tags:
+  - Beginner
+  - Frameworks
+  - JavaScript
+  - Learn
+  - client-side
+  - Angular
+  - Components
+  - Events
+  - Data
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<p>Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To learn more about components, including how events work to handle updates. To add check, edit, and delete functionality. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="creating_the_new_component">Creating the new component</h2>
+
+<p>At the command line, create a component named <code>item</code> with the following CLI command:</p>
+
+<pre class="brush: bash">ng generate component item</pre>
+
+<p>The <code>ng generate component</code> command creates a component and folder with the name you specify.
+Here, the folder and component name is <code>item</code>.
+You can find the <code>item</code> directory within the <code>app</code> folder.</p>
+
+<p>Just as with the <code>AppComponent</code>, the <code>ItemComponent</code> is made up of the following files:</p>
+
+<ul>
+  <li><code>item.component.html</code> for HTML</li>
+  <li><code>item.component.ts</code> for logic</li>
+  <li><code>item.component.css</code> for styles</li>
+</ul>
+
+<p>You can see a reference to the HTML and CSS files in the <code>@Component()</code> decorator metadata in <code>item.component.ts</code>.</p>
+
+<pre class="brush: js">@Component({
+  selector: 'app-item',
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.css'],
+})</pre>
+
+<h2 id="add_html_for_the_itemcomponent-">Add HTML for the ItemComponent</h2>
+
+<p>The <code>ItemComponent</code> can take over the task of giving the user a way to check items off as done, edit them, or delete them.</p>
+
+<p>Add markup for managing items by replacing the placeholder content in <code>item.component.html</code> with the following:</p>
+
+<pre class="brush: html">&lt;div class="item"&gt;
+
+  &lt;input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" /&gt;
+  &lt;label [for]="item.description"&gt;\{{item.description}}&lt;/label&gt;
+
+  &lt;div class="btn-wrapper" *ngIf="!editable"&gt;
+    &lt;button class="btn" (click)="editable = !editable"&gt;Edit&lt;/button&gt;
+    &lt;button class="btn btn-warn" (click)="remove.emit()"&gt;Delete&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- This section shows only if user clicks Edit button --&gt;
+  &lt;div *ngIf="editable"&gt;
+    &lt;input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)"&gt;
+
+    &lt;div class="btn-wrapper"&gt;
+      &lt;button class="btn" (click)="editable = !editable"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-save" (click)="saveItem(editedItem.value)"&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</pre>
+
+<p>The first input is a checkbox so users can check off items when an item is complete.
+The double curly braces, <code>\{{}}</code>, in the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> for the checkbox signifies Angular&#39;s interpolation.
+Angular uses <code>\{{item.description}}</code> to retrieve the description of the current <code>item</code> from the <code>items</code> array.
+The next section explains how components share data in detail.</p>
+
+<p>The next two buttons for editing and deleting the current item are within a <code>&lt;div&gt;</code>.
+On this <code>&lt;div&gt;</code> is an <code>*ngIf</code>, a built-in Angular directive that you can use to dynamically change the structure of the DOM.</p>
+
+<p>This <code>*ngIf</code> means that if <code>editable</code> is <code>false</code>, this <code>&lt;div&gt;</code> is in the DOM. If <code>editable</code> is <code>true</code>, Angular removes this <code>&lt;div&gt;</code> from the DOM.</p>
+
+<pre class="brush: html">&lt;div class="btn-wrapper" *ngIf="!editable"&gt;
+  &lt;button class="btn" (click)="editable = !editable"&gt;Edit&lt;/button&gt;
+  &lt;button class="btn btn-warn" (click)="remove.emit()"&gt;Delete&lt;/button&gt;
+&lt;/div&gt;</pre>
+
+<p>When a user clicks the <strong>Edit</strong> button, <code>editable</code> becomes true, which removes this <code>&lt;div&gt;</code> and its children from the DOM.
+If, instead of clicking <strong>Edit</strong>, a user clicks <strong>Delete</strong>, the <code>ItemComponent</code> raises an event that notifies the <code>AppComponent</code> of the deletion.</p>
+
+<p>An <code>*ngIf</code> is also on the next <code>&lt;div&gt;</code>, but is set to an <code>editable</code> value of <code>true</code>.
+In this case, if <code>editable</code> is <code>true</code>, Angular puts the <code>&lt;div&gt;</code> and its child <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code> elements in the DOM.</p>
+
+<pre class="brush: html">&lt;!-- This section shows only if user clicks Edit button --&gt;
+&lt;div *ngIf="editable"&gt;
+  &lt;input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)"&gt;
+
+  &lt;div class="btn-wrapper"&gt;
+    &lt;button class="btn" (click)="editable = !editable"&gt;Cancel&lt;/button&gt;
+    &lt;button class="btn btn-save" (click)="saveItem(editedItem.value)"&gt;Save&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<p>With <code>[value]=&quot;item.description&quot;</code>, the value of the <code>&lt;input&gt;</code> is bound to the <code>description</code> of the current item.
+This binding makes the item&#39;s <code>description</code> the value of the <code>&lt;input&gt;</code>.
+So if the <code>description</code> is <code>eat</code>, the <code>description</code> is already in the <code>&lt;input&gt;</code>.
+This way, when the user edits the item, the value of the <code>&lt;input&gt;</code> is already <code>eat</code>.</p>
+
+<p>The template variable, <code>#editedItem</code>, on the <code>&lt;input&gt;</code> means that Angular stores whatever a user types in this <code>&lt;input&gt;</code> in a variable called <code>editedItem</code>.
+The <code>keyup</code> event calls the <code>saveItem()</code> method and passes in the <code>editedItem</code> value if the user chooses to press enter instead of click <strong>Save</strong>.</p>
+
+<p>When a user clicks the <strong>Cancel</strong> button, <code>editable</code> toggles to <code>false</code>, which removes the input and buttons for editing from the DOM.
+When <code>editable</code> is <code>false</code>, Angular puts <code>&lt;div&gt;</code> with the <strong>Edit</strong> and <strong>Delete</strong> buttons back in the DOM.</p>
+
+<p>Clicking the <strong>Save</strong> button calls the <code>saveItem()</code> method.
+The <code>saveItem()</code> method takes the value from the <code>#editedItem</code> <code>&lt;input&gt;</code> and changes the item&#39;s <code>description</code> to <code>editedItem.value</code> string.</p>
+
+<h2 id="prepare_the_appcomponent">Prepare the AppComponent</h2>
+
+<p>In the next section, you will add code that relies on communication the <code>AppComponent</code> and the <code>ItemComponent</code>.
+Configure the AppComponent first by adding the following to <code>app.component.ts</code>:</p>
+
+<pre class="brush: js">remove(item) {
+  this.allItems.splice(this.allItems.indexOf(item), 1);
+}</pre>
+
+<p>The <code>remove()</code> method uses the JavaScript <code>Array.splice()</code> method to remove one item at at the <code>indexOf</code> the relevant item.
+In plain English, this means that the <code>splice()</code> method removes the item from the array.
+For more information on the <code>splice()</code> method, see the MDN Web Docs article on <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.prototype.splice()</code></a>.</p>
+
+<h2 id="add_logic_to_itemcomponent-">Add logic to ItemComponent</h2>
+
+<p>To use the <code>ItemComponent</code> UI, you must add logic to the component such as functions, and ways for data to go in and out.</p>
+
+<p>In <code>item.component.ts</code>, edit the JavaScript imports as follows:</p>
+
+<pre class="brush: js">import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Item } from "../item";</pre>
+
+<p>The addition of <code>Input</code>, <code>Output</code>, and <code>EventEmitter</code> allows <code>ItemComponent</code> to share data with <code>AppComponent</code>.
+By importing <code>Item</code>, <code>ItemComponent</code> can understand what an <code>item</code> is.</p>
+<p>Further down <code>item.component.ts</code>, replace the generated <code>ItemComponent</code> class with the following:</p>
+
+<pre class="brush: js">export class ItemComponent {
+
+  editable = false;
+
+  @Input() item: Item;
+  @Input() newItem: string;
+  @Output() remove = new EventEmitter&lt;Item&gt;();
+
+  saveItem(description) {
+    if (!description) return;
+    this.editable = false;
+    this.item.description = description;
+  }
+}</pre>
+
+<p>The <code>editable</code> property helps toggle a section of the template where a user can edit an item.
+<code>editable</code> is the same property in the HTML as in the <code>*ngIf</code> statement, <code>*ngIf=&quot;editable&quot;</code>.
+When you use a property in the template, you must also declare it in the class.</p>
+
+<p><code>@Input()</code>, <code>@Output()</code>, and <code>EventEmitter</code> facilitate communication between your two components.
+An <code>@Input()</code> serves as a doorway for data to come into the component, and an <code>@Output()</code> acts as a doorway for data to go out of the component.
+An <code>@Output()</code> has to be of type <code>EventEmitter</code>, so that a component can raise an event when there&#39;s data ready to share with another component.</p>
+
+<p>Use <code>@Input()</code> to specify that the value of a property can come from outside of the component.
+Use <code>@Output()</code> in conjunction with <code>EventEmitter</code> to specify that the value of a property can leave the component so that another component can receive that data.</p>
+
+<p>The <code>saveItem()</code> method takes as an argument a <code>description</code>.
+The <code>description</code> is the text that the user enters into the HTML <code>&lt;input&gt;</code> when editing an item in the list.
+This <code>description</code> is the same string from the <code>&lt;input&gt;</code> with the <code>#editedItem</code> template variable.</p>
+
+<p>If the user doesn&#39;t enter a value but clicks <strong>Save</strong>, <code>saveItem()</code> returns nothing and does not update the <code>description</code>.
+If you didn&#39;t have this <code>if</code> statement, the user could click <strong>Save</strong> with nothing in the HTML <code>&lt;input&gt;</code>, and the <code>description</code> would become an empty string.</p>
+
+<p>If a user enters text and clicks save, <code>saveItem()</code> sets <code>editable</code> to false, which causes the <code>*ngIf</code> in the template to remove the edit feature and render the <strong>Edit</strong> and <strong>Delete</strong> buttons again.</p>
+
+<p>Though the application should compile at this point, you need to use the <code>ItemComponent</code> in <code>AppComponent</code> so you can see the new features in the browser.</p>
+
+<h2 id="use_the_itemcomponent_in_the_appcomponent">Use the ItemComponent in the AppComponent</h2>
+
+<p>Including one component within another in the context of a parent-child relationship gives you the flexibility of using components wherever you need them.</p>
+
+<p>The <code>AppComponent</code> serves as a shell for the application where you can include other components.</p>
+
+<p>To use the <code>ItemComponent</code> in <code>AppComponent</code>, put the <code>ItemComponent</code> selector in the <code>AppComponent</code> template.
+Angular specifies the selector of a component in the metadata of the <code>@Component()</code> decorator.
+In this example, the selector is <code>app-item</code>:</p>
+
+<pre class="brush: js">@Component({
+  selector: 'app-item',
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.css']
+})</pre>
+
+<p>To use the <code>ItemComponent</code> selector within the <code>AppComponent</code>, you add the element, <code>&lt;app-item&gt;</code>, which corresponds to the selector you defined for the component class to <code>app.component.html</code>.
+Replace the current unordered list in <code>app.component.html</code> with the following updated version:</p>
+
+<pre class="brush: html">&lt;h2&gt;\{{items.length}} &lt;span *ngIf="items.length === 1; else elseBlock"&gt;item&lt;/span&gt;
+&lt;ng-template #elseBlock&gt;items&lt;/ng-template&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li *ngFor="let item of items"&gt;
+    &lt;app-item (remove)="remove(item)" [item]="item"&gt;&lt;/app-item&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+<p>The double curly brace syntax, <code>\{{}}</code>, in the <code>&lt;h2&gt;</code> interpolates the length of the <code>items</code> array and displays the number.</p>
+
+<p>The <code>&lt;span&gt;</code> in the <code>&lt;h2&gt;</code> uses an <code>*ngIf</code> and <code>else</code> to determine whether the <code>&lt;h2&gt;</code> should say &quot;item&quot; or &quot;items&quot;.
+If there is only a single item in the list, the <code>&lt;span&gt;</code> containing &quot;item&quot; displays.
+Otherwise, if the length of the <code>items</code> array is anything other than <code>1</code>, the <code>&lt;ng-template&gt;</code>, which we&#39;ve named <code>elseBlock</code>, with the syntax <code>#elseBlock</code>, shows instead of the <code>&lt;span&gt;</code>.
+You can use Angular&#39;s <code>&lt;ng-template&gt;</code> when you don&#39;t want content to render by default.
+In this case, when the length of the <code>items</code> array is not <code>1</code>, the <code>*ngIf</code> shows the <code>elseBlock</code> and not the <code>&lt;span&gt;</code>.</p>
+
+<p>The <code>&lt;li&gt;</code> uses Angular&#39;s repeater directive, <code>*ngFor</code>, to iterate over all of the items in the <code>items</code> array.
+Angular&#39;s <code>*ngFor</code> like <code>*ngIf</code>, is another directive that helps you change the structure of the DOM while writing less code.
+For each <code>item</code>, Angular repeats the <code>&lt;li&gt;</code> and everything within it, which includes <code>&lt;app-item&gt;</code>.
+This means that for each item in the array, Angular creates another instance of <code>&lt;app-item&gt;</code>.
+For any number of items in the array, Angular would create that many <code>&lt;li&gt;</code> elements.</p>
+
+<p>You can use an <code>*ngFor</code> on other elements, too, such as <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, or <code>&lt;p&gt;</code>, to name a few.</p>
+
+<p>The <code>AppComponent</code> has a <code>remove()</code> method for removing the item, which is bound to the <code>remove</code> property in the <code>ItemComponent</code>.
+The <code>item</code> property in the square brackets, <code>[]</code>, binds the value of <code>item</code> between the <code>AppComponent</code> and the <code>ItemComponent</code>.</p>
+
+<p>Now you should be able to edit and delete items from the list.
+When you add or delete items, the count of the items should also change.
+To make the list more user-friendly, add some styles to the <code>ItemComponent</code>.</p>
+
+<h2 id="add_styles_to_itemcomponent-">Add styles to ItemComponent</h2>
+
+<p>You can use a component&#39;s style sheet to add styles specific to that component.
+The following CSS adds basic styles, flexbox for the buttons, and custom checkboxes.</p>
+<p>Paste the following styles into <code>item.component.css</code>.</p>
+
+<pre class="brush: css">.item {
+  padding: .5rem 0 .75rem 0;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.btn-wrapper {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.btn {
+  /* menu buttons flexbox styles */
+  flex-basis: 49%;
+}
+
+.btn-save {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+
+}
+
+.btn-save:hover {
+  background-color: #444242;
+}
+
+.btn-save:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+.checkbox-wrapper {
+  margin: .5rem 0;
+}
+
+.btn-warn {
+  background-color: #b90000;
+  color: #fff;
+  border-color: #9a0000;
+}
+
+.btn-warn:hover {
+  background-color: #9a0000;
+}
+
+.btn-warn:active {
+  background-color: #e30000;
+  border-color: #000;
+}
+
+.sm-text-input {
+  width: 100%;
+  padding: .5rem;
+  border: 2px solid #555;
+  display: block;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+/* Custom checkboxes
+Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-buttons-and-checkboxes */
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em; left: .22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #0d8dee;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}</pre>
+
+<h2 id="summary">Summary</h2>
+
+<p>You should now have a styled Angular to-do list application that can add, edit, and remove items.
+The next step is to add filtering so that you can look at items that meet specific criteria.</p>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li>React
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+  </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
+ </li>
+</ul>

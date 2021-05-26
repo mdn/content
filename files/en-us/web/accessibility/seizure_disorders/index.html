@@ -307,7 +307,7 @@ tags:
 	<li><strong>JPG (Raster)</strong></li>
 	<li><strong>MNG (Raster)</strong> Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.</li>
 	<li><strong>PNG, APNG (Raster)</strong> Portable Network Graphics and Animated Portable Network Graphics may both be animated.</li>
-	<li><strong>SVGs (Vector)</strong> The MDN document, "<strong><a href="/en-US/docs/Web/SVG">SVG: Scalable Vector Graphics</a></strong>", notes that "<em>SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong>, <strong><a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a></strong>, and <strong><a href="/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SMIL</a></strong>.</em>" SVGs can be used as an image, for example, <strong><code>&lt;img src="example.svg" alt="This is an image using a svg as a source"&gt;</code></strong> This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on <strong><a href="/en-US/docs/Web/API/Document_Object_Model#SVG_interfaces">SVG Interfaces</a></strong> and <strong><a href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></strong>.</li>
+	<li><strong>SVGs (Vector)</strong> The MDN document, "<strong><a href="/en-US/docs/Web/SVG">SVG: Scalable Vector Graphics</a></strong>", notes that "<em>SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as <strong><a href="/en-US/docs/Web/CSS">CSS</a></strong>, <strong><a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a></strong>, and <strong><a href="/en-US/docs/Web/SVG/SVG_animation_with_SMIL">SMIL</a></strong>.</em>" SVGs can be used as an image, for example, <strong><code>&lt;img src="example.svg" alt="This is an image using a svg as a source"&gt;</code></strong> This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on <strong><a href="/en-US/docs/Web/API/Document_Object_Model#svg_interfaces">SVG Interfaces</a></strong> and <strong><a href="/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">Applying SVG effects to HTML content</a></strong>.</li>
 	<li><strong>Voxel</strong> <strong>(Raster)</strong> Three-dimensional <strong><a href="https://en.wikipedia.org/wiki/Voxel">voxel</a></strong> raster graphics are employed in video games and are also used in medical imaging.</li>
 </ul>
 
@@ -331,7 +331,7 @@ tags:
 
 <p>JavaScript is often used to control &lt;canvas&gt; elements and SVGs. Most JavaScript code that applies to HTML5 video also applies to audio. <strong><code>HTMLMediaElement.playbackRate</code></strong> is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: <strong><code>HTMLMediaElement.playbackRate = playbackspeed</code></strong></p>
 
-<p><strong><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">document.getAnimations()</a></strong> is an experimental technology, and includes <strong><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></strong>, <strong><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></strong>, and <strong><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a></strong>. The MDN document, <strong><a href="/en-US/docs/Web/API/DocumentOrShadowRoot/getAnimations">Document.getAnimations()</a></strong> provides the following code sample of how to slow down all animations on a page to half speed.</p>
+<p><strong><a href="/en-US/docs/Web/API/Document/getAnimations">document.getAnimations()</a></strong> is an experimental technology, and includes <strong><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></strong>, <strong><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></strong>, and <strong><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a></strong>. The MDN document, <strong><a href="/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations()</a></strong> provides the following code sample of how to slow down all animations on a page to half speed.</p>
 
 <pre class="brush: js">document.getAnimations().forEach(
   function (animation) {
@@ -380,9 +380,9 @@ tags:
 
 <p>It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFS, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's <strong><a href="https://pinetools.com/brightness-contrast-image">Brightness and contrast online</a></strong>. If you intend to make animated gifs, for example, start with one that has a lower contrast ratio.</p>
 
-<p>JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, "<strong><a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#Setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</a></strong>" from the MDN document, <strong><a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">Traversing an HTML table with JavaScript and DOM Interfaces</a></strong>. Notice that the color in the example is described in the <strong>RGB</strong> color space.</p>
+<p>JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, "<strong><a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#setting_background_of_a_paragraph">Example: Setting the background color of a paragraph</a></strong>" from the MDN document, <strong><a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">Traversing an HTML table with JavaScript and DOM Interfaces</a></strong>. Notice that the color in the example is described in the <strong>RGB</strong> color space.</p>
 
-<p><strong>HTML Content <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#HTML_Content_2">(link to source page)</a></strong></p>
+<p><strong>HTML Content <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#html_content_2">(link to source page)</a></strong></p>
 
 <pre class="brush: html">&lt;body&gt;
   &lt;input type="button" value="Set paragraph background color" onclick="set_background()"&gt;
@@ -390,7 +390,7 @@ tags:
   &lt;p&gt;hello&lt;/p&gt;
 &lt;/body&gt;</pre>
 
-<p><strong>JavaScript Content <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#JavaScript_Content_2">(link to source page)</a></strong></p>
+<p><strong>JavaScript Content <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#javascript_content_2">(link to source page)</a></strong></p>
 
 <pre class="brush: js">function set_background() {
   // get a list of all the body elements (there will only be one),
@@ -553,10 +553,6 @@ tags:
 <h6 id="prefers-contrast"><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast">prefers-contrast</a></h6>
 
 <p>From W3C's Draft document, Media Queries Level 5 section on <code><strong>prefers-contrast</strong></code>: "<em>The <strong><code>prefers-contrast</code></strong> media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.</em>" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.</p>
-
-<h6 id="prefers-reduced-transparency"><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-reduced-transparency">prefers-reduced-transparency</a></h6>
-
-<p>The prefers-reduced-transparency media feature is used to detect if the user has requested the system minimize the amount of transparent or translucent layer effects it uses.</p>
 
 <h4 id="MediaQueryList_Interface"><code>MediaQueryList</code> Interface</h4>
 

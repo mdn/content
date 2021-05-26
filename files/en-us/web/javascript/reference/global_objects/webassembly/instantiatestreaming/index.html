@@ -11,6 +11,7 @@ tags:
 - instantiate
 - instantiateStreaming
 - streaming
+browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
 ---
 <div>{{JSRef}}</div>
 
@@ -20,8 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">Promise&lt;ResultObject&gt; WebAssembly.instantiateStreaming(<em>source</em>, <em>importObject</em>);</pre>
+<pre class="brush: js">WebAssembly.instantiateStreaming(source, importObject)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -91,32 +91,17 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
   exported function invoked.</p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: For this to work, <code>.wasm</code> files should be returned
+  <p><strong>Note:</strong> For this to work, <code>.wasm</code> files should be returned
     with an <code>application/wasm</code> MIME type by the server.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('WebAssembly Embedding', '#webassemblyinstantiatestreaming',
-        'instantiateStreaming()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.WebAssembly.instantiateStreaming")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

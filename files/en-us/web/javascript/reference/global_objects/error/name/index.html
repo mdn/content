@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Property
   - Prototype
+browser-compat: javascript.builtins.Error.name
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h3 id="Throwing_a_custom_error">Throwing a custom error</h3>
 
-<pre class="brush: js notranslate">var e = new Error('Malformed input'); // e.name is 'Error'
+<pre class="brush: js">var e = new Error('Malformed input'); // e.name is 'Error'
 
 e.name = 'ParseError';
 throw e;
@@ -27,23 +28,11 @@ throw e;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Error.name")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

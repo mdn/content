@@ -14,14 +14,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">ServiceWorkerGlobalScope.onperiodicsync = function(event) { ... };
+<pre class="brush: js">ServiceWorkerGlobalScope.onperiodicsync = function(event) { ... };
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The following example shows how to respond to a periodic sync event in the service worker.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('periodicsync', event =&gt; {
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.periodicsync")}}</p>
+<p>{{Compat("api.ServiceWorkerGlobalScope.onperiodicsync")}}</p>
 
 <h2 id="See_also">See also</h2>
 

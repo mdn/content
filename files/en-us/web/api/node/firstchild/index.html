@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>childNode</var> = <var>node</var>.firstChild;
+<pre class="brush: js">var <var>childNode</var> = <var>node</var>.firstChild;
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -58,7 +58,7 @@ tags:
 <p>Now the console will show 'SPAN'.</p>
 
 <p>To avoid the issue with <code>node.firstChild</code> returning <code>#text</code> or
-  <code>#comment</code> nodes, {{domxref("ParentNode.firstElementChild")}} can be used to
+  <code>#comment</code> nodes, {{domxref("Element.firstElementChild")}} can be used to
   return only the first element node. However, <code>node.firstElementChild</code>
   requires a shim for Internet Explorer 9 and earlier.</p>
 

@@ -5,11 +5,10 @@ tags:
   - API
   - Method
   - Reference
-  - Référence(2)
 ---
 <p>{{ APIRef("HTML DOM") }}</p>
 
-<p>This method indicates whether the current browser is Java-enabled or not.</p>
+<p>This method always returns false.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,13 +18,9 @@ tags:
 <h2 id="Example">Example</h2>
 
 <pre class="eval">if (window.navigator.javaEnabled()) {
-   // browser has java
+   // code will never be executed; the condition is always false
 }
 </pre>
-
-<h2 id="Notes">Notes</h2>
-
-<p>The return value for this method indicates whether the preference that controls Java is on or off - not whether the browser offers Java support in general.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

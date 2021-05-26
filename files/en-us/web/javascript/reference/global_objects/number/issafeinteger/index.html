@@ -2,10 +2,11 @@
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Number
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Number
+browser-compat: javascript.builtins.Number.isSafeInteger
 ---
 <div>{{JSRef}}</div>
 
@@ -14,11 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <p>A safe integer is an integer that</p>
 
@@ -48,7 +44,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Number.isSafeInteger(<var>testValue</var>)</code>
+<pre class="brush: js">Number.isSafeInteger(testValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -65,7 +61,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">Number.isSafeInteger = Number.isSafeInteger || function (value) {
+<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
    return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
 };
 </pre>
@@ -74,7 +70,7 @@ tags:
 
 <h3 id="Using_isSafeInteger">Using isSafeInteger</h3>
 
-<pre class="brush: js notranslate">Number.isSafeInteger(3);                    // true
+<pre class="brush: js">Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false
@@ -86,23 +82,11 @@ Number.isSafeInteger(3.0);                  // true
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.isSafeInteger")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

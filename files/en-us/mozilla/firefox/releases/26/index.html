@@ -17,7 +17,7 @@ tags:
  <li>The non-standard {{cssxref("-moz-text-blink")}} property has been removed ({{bug("812995")}}).</li>
  <li>Support for the {{cssxref("image-orientation")}} property, in its CSS Images &amp; Values Level 4 version, that is with the <code>from-image</code> keyword and EXIF support, has been added ({{bug(825771)}}).</li>
  <li>Experimental support for <code>position: sticky</code> has been implemented and can be enabled by pref <code>layout.css.sticky.enabled</code> ({{bug(886646)}}).</li>
- <li>The {{cssxref("text-align")}} property now applies to the {{cssxref("::-moz-placeholder")}} pseudo-element ({{bug(915551)}}).</li>
+ <li>The {{cssxref("text-align")}} property now applies to the <code>::-moz-placeholder</code> pseudo-element ({{bug(915551)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -36,8 +36,8 @@ tags:
 <ul>
  <li>The ECMAScript 2015 compliant syntax for <a href="http://wiki.ecmascript.org/doku.php?id=harmony:generators">Generators (yield)</a> has been implemented ({{bug("666399")}}).</li>
  <li>Generator/Iterator results are now boxed like <code>{ value: foo, done: bool }</code> ({{bug(907744)}}).</li>
- <li>New mathematical methods have been implemented on <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Math/fround"><code>Math.fround()</code></a> ({{bug("900125")}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Reserved_Words">reserved words</a> cannot be used for function names:such a usage now throws a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> ({{bug("907958")}}).</li>
+ <li>New mathematical methods have been implemented on <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><code>Math</code></a>: <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround"><code>Math.fround()</code></a> ({{bug("900125")}}).</li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords">reserved words</a> cannot be used for function names:such a usage now throws a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a> ({{bug("907958")}}).</li>
  <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameter</a> syntax has been updated to allow parameters without defaults after default parameters, such as <code>function f(x=1, y)</code>. See {{bug(777060)}}.</li>
  <li>{{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} is implemented ({{bug(904701)}}).</li>
 </ul>
@@ -48,7 +48,7 @@ tags:
  <li>Make the last argument (doctype) to {{domxref("DOMImplementation.createDocument")}} optional ({{bug(909859)}}).</li>
  <li>Implement the new {{domxref("element.classList")}} specification which permits adding/removing several classes with one call ({{bug(814014)}}).</li>
  <li>The {{domxref("URL.URL", "URL()")}} constructor has been implemented on the {{domxref("URL")}} interface ({{bug("887364")}}).</li>
- <li>The properties {{domxref("URLUtils.origin")}}, {{domxref("URLUtils.password")}}, and {{domxref("URLUtils.username")}} are now available to all interfaces implementing {{domxref("URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, and {{domxref("HTMLAreaElement")}} ({{bug("887364")}}).</li>
+ <li>The properties {{domxref("HTMLAnchorElement/origin", "URLUtils.origin")}}, {{domxref("HTMLAnchorElement/password", "URLUtils.password")}}, and {{domxref("HTMLAnchorElement/username", "URLUtils.username")}} are now available to all interfaces implementing {{domxref("HTMLHyperlinkElementUtils", "URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, and {{domxref("HTMLAreaElement")}} ({{bug("887364")}}).</li>
  <li>The {{domxref("URL")}} interface is now accessible from Web Workers ({{bug("887364")}}).</li>
  <li>IndexedDB can now be used as a "optimistic" storage area so it doesn't require any prompts and data is stored in a pool with LRU eviction policy, in short temporary storage ({{bug("785884")}}).</li>
  <li>Support for {{domxref("WaveShaperNode.oversample")}} has been added ({{bug(875277)}}).</li>

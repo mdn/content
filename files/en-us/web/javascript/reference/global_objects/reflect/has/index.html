@@ -7,6 +7,7 @@ tags:
 - Method
 - Reference
 - Reflect
+browser-compat: javascript.builtins.Reflect.has
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.has(<var>target</var>, <var>propertyKey</var>)
+<pre class="brush: js">Reflect.has(<var>target</var>, <var>propertyKey</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -51,7 +52,7 @@ tags:
 
 <h3 id="Using_Reflect.has">Using Reflect.has()</h3>
 
-<pre class="brush: js notranslate">Reflect.has({x: 0}, 'x')  // true
+<pre class="brush: js">Reflect.has({x: 0}, 'x')  // true
 Reflect.has({x: 0}, 'y')  // false
 
 // returns true for properties in the prototype chain
@@ -69,7 +70,7 @@ Reflect.has(obj, 'dormitory')  // false
   the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code>
     operator</a>:</p>
 
-<pre class="brush: js notranslate">const a = {foo: 123}
+<pre class="brush: js">const a = {foo: 123}
 const b = {__proto__: a}
 const c = {__proto__: b}
 // The prototype chain is: c -&gt; b -&gt; a
@@ -78,22 +79,11 @@ Reflect.has(c, 'foo') // true
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.has")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

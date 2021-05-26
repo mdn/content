@@ -2,10 +2,10 @@
 title: 'TypeError: ''x'' is not iterable'
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 tags:
-- Error
-- JavaScript
-- Reference
-- TypeError
+  - Error
+  - JavaScript
+  - Reference
+  - TypeError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">TypeError: 'x' is not iterable (Firefox, Chrome)
+<pre class="brush: js">TypeError: 'x' is not iterable (Firefox, Chrome)
 TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 </pre>
 
@@ -37,7 +37,7 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
         object</a>.  An iterable can be a built-in iterable type such as
     {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or
     an object implementing the <a
-        href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable
+        href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable
         protocol</a>.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -45,7 +45,7 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 <h3 id="Iterating_over_Object_properties">Iterating over Object properties</h3>
 
 <p>In JavaScript, {{jsxref("Object")}}s are not iterable unless they implement the <a
-        href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable
+        href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable
         protocol</a>. Therefore, you cannot use <a
         href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of
     </a>to iterate over the properties of an object.</p>
@@ -92,7 +92,7 @@ for (const [country, capital] of map.entries())
 <h3 id="Iterating_over_a_generator">Iterating over a generator</h3>
 
 <p><a
-        href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators</a>
+        href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators">Generators</a>
     are functions you call to produce an iterable object.</p>
 
 <pre class="brush: js example-bad">function* generate(a, b) {
@@ -149,13 +149,13 @@ Array.from(myEmptyIterable);  // []
 
 <ul>
     <li><a
-            href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable
+            href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable
             protocol</a></li>
     <li>{{jsxref("Object.keys")}}</li>
     <li>{{jsxref("Object.entries")}}</li>
     <li>{{jsxref("Map")}}</li>
     <li><a
-            href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">generators</a>
+            href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators">generators</a>
     </li>
     <li><a
             href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of</a>

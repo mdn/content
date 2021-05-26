@@ -2,8 +2,10 @@
 title: Want-Digest
 slug: Web/HTTP/Headers/Want-Digest
 tags:
-- HTTP
-- HTTP Header
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -35,7 +37,7 @@ tags:
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("General header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -47,7 +49,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: html notranslate">Want-Digest: &lt;digest-algorithm&gt;
+  class="brush: html">Want-Digest: &lt;digest-algorithm&gt;
 
 // Multiple algorithms, weighted with the quality value syntax:
 Want-Digest: &lt;digest-algorithm&gt;&lt;q-value&gt;,&lt;digest-algorithm&gt;&lt;q-value&gt;</pre>
@@ -57,8 +59,8 @@ Want-Digest: &lt;digest-algorithm&gt;&lt;q-value&gt;,&lt;digest-algorithm&gt;&lt
 <dl>
   <dt><code>&lt;digest-algorithm&gt;</code></dt>
   <dd>Supported digest algorithms are defined in <a
-      href="https://tools.ietf.org/html/rfc3230">RFC 3230</a> and <a
-      href="https://tools.ietf.org/html/rfc5843">RFC 5843</a>, and include
+      href="https://datatracker.ietf.org/doc/html/rfc3230">RFC 3230</a> and <a
+      href="https://datatracker.ietf.org/doc/html/rfc5843">RFC 5843</a>, and include
     <code>SHA-256</code> and <code>SHA-512</code>. Some of the supported algorithms,
     including <code>unixsum</code> and <code>MD5</code> are subject to collisions and are
     thus not suitable for applications in which collision-resistance is important.</dd>
@@ -69,7 +71,7 @@ Want-Digest: &lt;digest-algorithm&gt;&lt;q-value&gt;,&lt;digest-algorithm&gt;&lt
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">Want-Digest: sha-256
+<pre class="brush: html">Want-Digest: sha-256
 Want-Digest: SHA-512;q=0.3, sha-256;q=1, md5;q=0</pre>
 
 <h3 id="Basic_operation">Basic operation</h3>
@@ -137,7 +139,7 @@ Response:
   </tbody>
 </table>
 
-<p>This header was originally defined in <a href="https://tools.ietf.org/html/rfc3230">RFC
+<p>This header was originally defined in <a href="https://datatracker.ietf.org/doc/html/rfc3230">RFC
     3230</a>, but the definition of "selected representation" in <a
     href="https://www.rfc-editor.org/info/rfc7231">RFC 7231</a> made the original
   definition inconsistent with current HTTP specifications. When released, The "Resource

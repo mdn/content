@@ -2,12 +2,12 @@
 title: PublicKeyCredentialCreationOptions.extensions
 slug: Web/API/PublicKeyCredentialCreationOptions/extensions
 tags:
-- API
-- Property
-- PublicKeyCredentialCreationOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialCreationOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
@@ -33,7 +33,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>extensions</em> = <em>publicKeyCredentialCreationOptions</em>.extensions</pre>
+  class="brush: js"><em>extensions</em> = <em>publicKeyCredentialCreationOptions</em>.extensions</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -90,7 +90,7 @@ tags:
     <tr>
       <td><code>loc</code></td>
       <td>Boolean</td>
-      <td>Location. If <code>true</code>, the client outputs a {{domxref("Coordinates")}}
+      <td>Location. If <code>true</code>, the client outputs a {{domxref("GeolocationCoordinates")}}
         object representing the geolocation of the authenticator.</td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">var publicKey = {
+<pre class="brush: js">var publicKey = {
   extensions:{
     uvi: true,
     loc: false,

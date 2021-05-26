@@ -25,7 +25,7 @@ tags:
 
 <ul>
  <li>
-  <p>An IANA registry maintains <a class="external" href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</a>.</p>
+  <p>An IANA registry maintains <a href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">a complete list of official content encodings</a>.</p>
  </li>
  <li>Two others content encoding, <code>bzip</code> and <code>bzip2</code>, are sometimes used, though not standard. They implement the algorithm used by these two UNIX programs. Note that the first one was discontinued due to patent licensing problems.</li>
 </ul>
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Accept-Encoding: gzip
+<pre class="brush: html">Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
@@ -77,7 +77,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate">Accept-Encoding: gzip
+<pre>Accept-Encoding: gzip
 
 Accept-Encoding: gzip, compress, br
 
@@ -112,5 +112,5 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 <ul>
  <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
  <li>Header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}</li>
- <li>Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
+ <li>Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}</li>
 </ul>

@@ -11,6 +11,7 @@ tags:
   - Non-standard
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.-moz-context-properties
 ---
 <div>{{CSSRef}}{{Non-standard_header}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css notranslate">/* Keyword values */
+<pre class="brush:css">/* Keyword values */
 -moz-context-properties: fill;
 -moz-context-properties: fill, stroke;
 
@@ -49,7 +50,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -59,7 +60,7 @@ tags:
 
 <p>You first need to specify on the embedding element the properties whose values you wish to expose to the embedded SVG, using the <code>-moz-context-properties</code> property. For example:</p>
 
-<pre class="brush: css notranslate">.img1 {
+<pre class="brush: css">.img1 {
   width: 100px;
   height: 100px;
   -moz-context-properties: fill, stroke;
@@ -69,7 +70,7 @@ tags:
 
 <p>Now that you've done this, the SVG image can use the values of the {{cssxref("fill")}} and {{cssxref("stroke")}} properties, for example:</p>
 
-<pre class="brush: html notranslate">&lt;img class="img1" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;
+<pre class="brush: html">&lt;img class="img1" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;
                        &lt;rect width='100%' height='100%' stroke-width='30px'
                        fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/&gt;&lt;/svg&gt;"&gt;</pre>
 
@@ -85,7 +86,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.-moz-context-properties")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

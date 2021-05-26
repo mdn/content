@@ -9,6 +9,7 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+browser-compat: javascript.builtins.RegExp.n
 ---
 <div>{{JSRef}}</div>
 
@@ -30,7 +31,7 @@ tags:
 
 <p>The following script uses the {{jsxref("String.prototype.replace()", "replace()")}} method of the {{jsxref("String")}} instance to match a name in the format <em>first last</em> and output it in the format <em>last, first</em>. In the replacement text, the script uses <code>$1</code> and <code>$2</code> to indicate the results of the corresponding matching parentheses in the regular expression pattern.</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
 str.replace(re, '$2, $1'); // "Smith, John"
 RegExp.$1; // "John"
@@ -41,7 +42,7 @@ RegExp.$2; // "Smith"
 
 <p>The following script uses the {{jsxref("RegExp.prototype.test()", "test()")}} method of the {{jsxref("RegExp")}} instance to grab a number in a generic string.</p>
 
-<pre class="brush: js notranslate">var str = 'Test 24';
+<pre class="brush: js">var str = 'Test 24';
 var number = /(\d+)/.test(str) ? RegExp.$1 : '0';
 number; // "24"
 </pre>
@@ -50,25 +51,11 @@ number; // "24"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Legacy RegExp features')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.RegExp.n")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

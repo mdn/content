@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.getMonth
 ---
 <div>{{JSRef}}</div>
 
@@ -16,15 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateObj</var>.getMonth()</pre>
+<pre class="brush: js">getMonth()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -38,7 +34,7 @@ tags:
 <p>The second statement below assigns the value 11 to the variable <code>month</code>,
   based on the value of the {{jsxref("Date")}} object <code>Xmas95</code>.</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
 var month = Xmas95.getMonth();
 
 console.log(month); // 11
@@ -51,7 +47,7 @@ console.log(month); // 11
     with an <code>options</code> parameter. Using this method, internationalization is
     made easier:</p>
 
-  <pre class="brush: js notranslate">var options = { month: 'long'};
+  <pre class="brush: js">var options = { month: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 // December
 console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
@@ -61,23 +57,11 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.getmonth',
-        'Date.prototype.getMonth')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.getMonth")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,6 +1,6 @@
 ---
 title: ':is() (:matches(), :any())'
-slug: 'Web/CSS/:is'
+slug: Web/CSS/:is
 tags:
   - ':is'
   - CSS
@@ -10,16 +10,17 @@ tags:
   - Selector
   - Selectors
   - Web
+browser-compat: css.selectors.is
 ---
 <p>{{CSSRef}}</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> <code>:matches()</code> was renamed to <code>:is()</code> in <a href="https://github.com/w3c/csswg-drafts/issues/3258" style="white-space: nowrap;">CSSWG issue #3258</a>.</p>
+<p><strong>Note:</strong> <code>:matches()</code> was renamed to <code>:is()</code> in <a href="https://github.com/w3c/csswg-drafts/issues/3258">CSSWG issue #3258</a>.</p>
 </div>
 
 <p>The <strong><code>:is()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any paragraph inside a header, main
+<pre class="brush: css no-line-numbers">/* Selects any paragraph inside a header, main
    or footer element that is being hovered */
 :is(header, main, footer) p:hover {
   color: red;
@@ -35,11 +36,13 @@ footer p:hover {
 }
 </pre>
 
-<p>Note that older browsers support this functionality as <code>:matches()</code>, or through an older, prefixed pseudo-class — <code>:any()</code>, including older versions of Chrome, Firefox, and Safari. <code>:any()</code> works in exactly the same way as <code>:matches()</code>/<code>:is()</code>, except that it requires vendor prefixes and doesn't support <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">complex selectors</a>.</p>
+<p>Pseudo-elements are not valid in the selector list for <code>:is()</code>.</p>
+
+<p>Note that older browsers support this functionality as <code>:matches()</code>, or through an older, prefixed pseudo-class — <code>:any()</code>, including older versions of Chrome, Firefox, and Safari. <code>:any()</code> works in exactly the same way as <code>:matches()</code>/<code>:is()</code>, except that it requires vendor prefixes and doesn't support <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">complex selectors</a>.</p>
 
 <p>These legacy pseudo-classes can be used to provide backwards compatibility.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Backwards-compatible version with :-*-any() and :matches()
+<pre class="brush: css no-line-numbers">/* Backwards-compatible version with :-*-any() and :matches()
    (It is not possible to group selectors into single rule,
    because presence of invalid selector would invalidate whole rule.) */
 :-webkit-any(header, main, footer) p:hover {
@@ -62,13 +65,13 @@ footer p:hover {
 
 <p>In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed invalid. When using <code>:is()</code> or <code>:where() </code>instead of the whole list of selectors being deemed invalid if one fails to parse, the incorrect or unsupported selector will be ignored and the others used.</p>
 
-<pre class="brush: css notranslate">:is(:valid, :unsupported) {
+<pre class="brush: css">:is(:valid, :unsupported) {
   ...
 }</pre>
 
 <p>Will still parse correctly and match <code>:valid</code> even in browsers which don't support <code>:unsupported</code>, whereas:</p>
 
-<pre class="brush: css notranslate">:valid, :unsupported {
+<pre class="brush: css">:valid, :unsupported {
   ...
 }</pre>
 
@@ -78,7 +81,7 @@ footer p:hover {
 
 <h3 id="Cross-browser_example">Cross-browser example</h3>
 
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
   &lt;p&gt;This is my header paragraph&lt;/p&gt;
 &lt;/header&gt;
 
@@ -93,7 +96,7 @@ footer p:hover {
   &lt;p&gt;This is my footer paragraph&lt;/p&gt;
 &lt;/footer&gt;</pre>
 
-<pre class="brush: css notranslate">:-webkit-any(header, main, footer) p:hover {
+<pre class="brush: css">:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -114,7 +117,7 @@ footer p:hover {
 }
 </pre>
 
-<pre class="brush: js notranslate">let matchedItems;
+<pre class="brush: js">let matchedItems;
 
 try {
   matchedItems = document.querySelectorAll(':is(header, main, footer) p');
@@ -148,7 +151,7 @@ function applyHandler(elem) {
 
 <p>The <code>:is()</code> pseudo-class can greatly simplify your CSS selectors. For example, the following CSS:</p>
 
-<pre class="brush: css notranslate">/* 3-deep (or more) unordered lists use a square */
+<pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -167,7 +170,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <p>... can be replaced with:</p>
 
-<pre class="brush: css notranslate">/* 3-deep (or more) unordered lists use a square */
+<pre class="brush: css">/* 3-deep (or more) unordered lists use a square */
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
 :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
@@ -176,11 +179,11 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <h3 id="Simplifying_section_selectors">Simplifying section selectors</h3>
 
-<p>The <code>:is()</code> pseudo-class is particularly useful when dealing with HTML5 <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections and headings</a>. Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without <code>:is()</code>, styling them to match one another can be tricky.</p>
+<p>The <code>:is()</code> pseudo-class is particularly useful when dealing with HTML5 <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">sections and headings</a>. Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without <code>:is()</code>, styling them to match one another can be tricky.</p>
 
 <p>For example, without <code>:is()</code>, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:</p>
 
-<pre class="brush: css notranslate">/* Level 0 */
+<pre class="brush: css">/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -201,7 +204,7 @@ nav section h1, nav article h1, nav aside h1, nav nav h1 {
 
 <p>Using <code>:is()</code>, though, it's much easier:</p>
 
-<pre class="brush: css notranslate">/* Level 0 */
+<pre class="brush: css">/* Level 0 */
 h1 {
   font-size: 30px;
 }
@@ -224,11 +227,11 @@ h1 {
 
 <h3 id="Difference_between_is_and_where">Difference between :is() and :where()</h3>
 
-<p>The difference between the two is that <code>:is()</code> counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas <code><a href="/en-US/docs/Web/CSS/:where">:where()</a></code> has a specificity value of 0. This is demonstrated by the <a href="/en-US/docs/Web/CSS/:where#Examples">example on the <code>:where()</code> reference page</a>.</p>
+<p>The difference between the two is that <code>:is()</code> counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas <code><a href="/en-US/docs/Web/CSS/:where">:where()</a></code> has a specificity value of 0. This is demonstrated by the <a href="/en-US/docs/Web/CSS/:where#examples">example on the <code>:where()</code> reference page</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -251,7 +254,7 @@ h1 {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.is")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

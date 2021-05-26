@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - polyfill
+browser-compat: javascript.builtins.Array.fill
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.fill(<var>value[</var>, <var>start[<var>, <var>end]]</var>)</var></var>
+<pre class="brush: js">
+fill(value)
+fill(value, start)
+fill(value, start, end)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -50,7 +54,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Array.prototype.fill) {
+<pre class="brush: js">if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {
     value: function(value) {
 
@@ -102,7 +106,7 @@ tags:
 
 <h3 id="Using_fill">Using fill</h3>
 
-<pre class="brush: js notranslate">[1, 2, 3].fill(4)                // [4, 4, 4]
+<pre class="brush: js">[1, 2, 3].fill(4)                // [4, 4, 4]
 [1, 2, 3].fill(4, 1)             // [1, 4, 4]
 [1, 2, 3].fill(4, 1, 2)          // [1, 4, 3]
 [1, 2, 3].fill(4, 1, 1)          // [1, 2, 3]
@@ -122,7 +126,7 @@ arr[0].hi = "hi"            // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 
 <p>This example shows how to create a matrix of all 1, like the <em>ones()</em> function of Octave or MATLAB.</p>
 
-<pre class="brush: js notranslate">const arr = new Array(3);
+<pre class="brush: js">const arr = new Array(3);
 for (let i=0; i&lt;arr.length; i++) {
   arr[i] = new Array(4).fill(1); // Creating an array of size 4 and filled of 1
 }
@@ -134,22 +138,11 @@ console.log(arr[2][0]); // 1
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Array.fill")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

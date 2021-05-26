@@ -2,11 +2,12 @@
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 tags:
-- Deprecated
-- JavaScript
-- Method
-- Object
-- Prototype
+  - Deprecated
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+browser-compat: javascript.builtins.Object.lookupGetter
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>obj</var>.__lookupGetter__(<var>sprop</var>)</pre>
+<pre class="brush: js">__lookupGetter__(sprop)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +45,7 @@ tags:
 <h3 id="Standard-compliant_and_non-standard_ways_to_get_a_property_getter">
   Standard-compliant and non-standard ways to get a property getter</h3>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   get foo() {
     return Math.random() &gt; 0.5 ? 'foo' : 'bar';
   }
@@ -61,26 +62,11 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.__lookupGetter__',
-        'Object.prototype.__lookupGetter__()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.lookupGetter")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -92,6 +78,6 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
   <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
   <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
   <li><a
-      href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS
+      href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters">JS
       Guide: Defining Getters and Setters</a></li>
 </ul>

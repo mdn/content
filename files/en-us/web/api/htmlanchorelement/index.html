@@ -15,32 +15,32 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}, and implements those from {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
- <dt>{{domxref("Element.accessKey")}}</dt>
+ <dt>{{domxref("HTMLElement.accessKey")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing a single character that switches input focus to the hyperlink.</dd>
  <dt>{{domxref("HTMLAnchorElement.download")}} {{experimental_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.hash")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.hash")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the fragment identifier, including the leading hash mark ('<code>#</code>'), if any, in the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.host")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.host")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the hostname and port (if it's not the default port) in the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.hostname")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.hostname")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the hostname in the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.href")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.href")}}</dt>
  <dd>Is a {{domxref("USVString")}} that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.</dd>
  <dt>{{domxref("HTMLAnchorElement.hreflang")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.password")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the password specified before the domain name.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.origin")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.origin")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.pathname")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.password")}}</dt>
+ <dd>Is a {{domxref("USVString")}} containing the password specified before the domain name.</dd>
+ <dt>{{domxref("HTMLAnchorElement.pathname")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of the URL, not including the query string or fragment.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.port")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.port")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the port component, if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.protocol")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.protocol")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the protocol component, including trailing colon ('<code>:</code>'), of the referenced URL.</dd>
  <dt>{{domxref("HTMLAnchorElement.referrerPolicy")}} {{experimental_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "a")}} HTML attribute indicating which referrer to use.</dd>
@@ -48,9 +48,9 @@ tags:
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, specifying the relationship of the target object to the linked object.</dd>
  <dt>{{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "a")}} HTML attribute, as a list of tokens.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.search")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.search")}}</dt>
  <dd>Is a {{domxref("USVString")}} representing the search element, including leading question mark ('<code>?</code>'), if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLElement.tabindex")}}</dt>
+ <dt>{{domxref("HTMLOrForeignElement.tabIndex")}}</dt>
  <dd>Is a <code>long</code> containing the position of the element in the tabbing navigation order for the current document.</dd>
  <dt>{{domxref("HTMLAnchorElement.target")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("target", "a")}} HTML attribute, indicating where to display the linked resource.</dd>
@@ -58,38 +58,38 @@ tags:
  <dd>Is a {{domxref("DOMString")}} being a synonym for the {{domxref("Node.textContent")}} property.</dd>
  <dt>{{domxref("HTMLAnchorElement.type")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("type", "a")}} HTML attribute, indicating the MIME type of the linked resource.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.username")}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.username")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing the username specified before the domain name.</dd>
 </dl>
 
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{domxref("HTMLAnchorElement.charset")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.charset")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the character encoding of the linked resource.</dd>
- <dt>{{domxref("HTMLAnchorElement.coords")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.coords")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing a comma-separated list of coordinates.</dd>
- <dt>{{domxref("HTMLAnchorElement.name")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.name")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the anchor name.</dd>
- <dt>{{domxref("HTMLAnchorElement.rev")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.rev")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing that the {{htmlattrxref("rev", "a")}} HTML attribute, specifying the relationship of the link object to the target object.
  <div class="note"><strong>Note</strong>: Currently the W3C HTML 5.2 spec states that <code>rev</code> is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.</div>
  </dd>
- <dt>{{domxref("HTMLAnchorElement.shape")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAnchorElement.shape")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the shape of the active area.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}, and implements those from {{domxref("HTMLHyperlinkElementUtils")}}.</em></p>
+<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
- <dt>{{domxref("HTMLElement.blur()")}}</dt>
+ <dt>{{domxref("HTMLOrForeignElement.blur")}}</dt>
  <dd>Removes the keyboard focus from the current element.</dd>
- <dt>{{domxref("HTMLElement.focus()")}}</dt>
+ <dt>{{domxref("HTMLOrForeignElement.focus")}}</dt>
  <dd>Gives the keyboard focus to the current element.</dd>
- <dt>{{domxref("HTMLHyperlinkElementUtils.toString()")}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("HTMLHyperlinkElementUtils.href")}}, though it can't be used to modify the value.</dd>
+ <dt>{{domxref("HTMLAnchorElement.toString()")}}</dt>
+ <dd>Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("HTMLAnchorElement.href")}}, though it can't be used to modify the value.</dd>
 </dl>
 
 <p>The <code>blur()</code> and <code>focus()</code> methods are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on <code>HTMLAnchorElement</code> in DOM Level 2 HTML and earlier specifications.</p>
@@ -100,44 +100,18 @@ tags:
  <tbody>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', "#htmlanchorelement", "HTMLAnchorElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following property has been added: <code>download</code>.<br>
-    Technically, the URL-related properties, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moved to the {{domxref("HTMLHyperlinkElementUtils")}} mixin, and <code>HTMLAnchorElement</code> implements this mixin.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The methods <code>blur()</code> and <code>focus()</code>, as well as the properties <code>tabindex</code> and <code>accessKey</code>, are now defined on {{domxref("HTMLElement")}}.<br>
-    The following properties are now obsolete: <code>charset</code>, <code>coords</code>, <code>name</code>, <code>rev</code>, and <code>shape</code>.<br>
-    The following properties have been added: <code>hash</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>relList</code>, <code>search</code>, and <code>text</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-48250443', 'HTMLAnchorElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-48250443', 'HTMLAnchorElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLAnchorElement")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
-
 <ul>
  <li>The HTML element implementing this interface: {{HTMLElement("a")}}</li>
 </ul>

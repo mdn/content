@@ -2,27 +2,25 @@
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- Media
-- Method
-- Reference
-- Web Audio API
-- sound
-- start
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - Media
+  - Method
+  - Reference
+  - Web Audio API
+  - sound
+  - start
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <code>start()</code> method of the {{ domxref("AudioBufferSourceNode") }}
-    Interface is used to schedule playback of the audio data contained in the buffer, or
-    to begin playback immediately.</p>
-</div>
+<p>The <code>start()</code> method of the {{ domxref("AudioBufferSourceNode") }}
+  Interface is used to schedule playback of the audio data contained in the buffer, or
+  to begin playback immediately.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>AudioBufferSourceNode</em>.start([<em>when</em>][, <em>offset</em>][, <em>duration</em>]);
+<pre class="brush: js"><em>AudioBufferSourceNode</em>.start([<em>when</em>][, <em>offset</em>][, <em>duration</em>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -31,7 +29,7 @@ tags:
   <dt><code>when</code> {{optional_inline}}</dt>
   <dd>The time, in seconds, at which the sound should begin to play, in the same time
     coordinate system used by the {{domxref("AudioContext")}}. If <code>when</code> is
-    less than ({{domxref("AudioContext.currentTime")}}, or if it's 0, the sound begins to
+    less than ({{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, or if it's 0, the sound begins to
     play at once. <strong>The default value is 0.</strong></dd>
   <dt><code>offset</code> {{optional_inline}}</dt>
   <dd>An offset, specified as the number of seconds in the same time coordinate system as
@@ -81,11 +79,7 @@ tags:
 <pre class="brush: js">source.start(audioCtx.currentTime + 1,3,10);</pre>
 
 <div class="note">
-  <p>For a more complete example showing <code>start()</code> in use, check out our
-    {{domxref("AudioContext.decodeAudioData()")}} example, You can also <a
-      class="external external-icon" href="https://mdn.github.io/decode-audio-data/">run
-      the code example live</a>, or <a class="external external-icon"
-      href="https://github.com/mdn/decode-audio-data">view the source</a>.</p>
+  <p>For a more complete example showing <code>start()</code> in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also <a class="external external-icon" href="https://mdn.github.io/webaudio-examples/decode-audio-data/">run the code example live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data">view the source</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -108,10 +102,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioBufferSourceNode.start")}}</p>
-</div>
+<p>{{Compat("api.AudioBufferSourceNode.start")}}</p>
 
 <h2 id="See_also">See also</h2>
 

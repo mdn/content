@@ -1,6 +1,6 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
+slug: Web/CSS/::after
 tags:
   - CSS
   - Layout
@@ -8,12 +8,13 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.after
 ---
 <p>{{CSSRef}}</p>
 
 <p><span class="seoSummary">In CSS, <strong><code>::after</code></strong> creates a <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> that is the last child of the selected element. It is often used to add cosmetic content to an element with the {{CSSxRef("content")}} property.</span> It is inline by default.</p>
 
-<pre class="brush: css no-line-numbers language-css notranslate">/* Add an arrow after links */
+<pre class="brush: css no-line-numbers language-css">/* Add an arrow after links */
 a::after {
   content: "→";
 }</pre>
@@ -24,7 +25,7 @@ a::after {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <div class="note">
 <p><strong>Note:</strong> CSS3 introduced the <code>::after</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:after</code>, introduced in CSS2.</p>
@@ -38,13 +39,13 @@ a::after {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="boring-text"&gt;Here is some plain old boring text.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="boring-text"&gt;Here is some plain old boring text.&lt;/p&gt;
 &lt;p&gt;Here is some normal text that is neither boring nor exciting.&lt;/p&gt;
 &lt;p class="exciting-text"&gt;Contributing to MDN is easy and fun.&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.exciting-text::after {
+<pre class="brush: css">.exciting-text::after {
   content: " &lt;- EXCITING!";
   color: green;
 }
@@ -64,11 +65,11 @@ a::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;span class="ribbon"&gt;Look at the orange box after this text. &lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="ribbon"&gt;Look at the orange box after this text. &lt;/span&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.ribbon {
+<pre class="brush: css">.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -85,13 +86,13 @@ a::after {
 
 <h3 id="Tooltips">Tooltips</h3>
 
-<p>This example uses <code>::after</code>, in conjunction with the <a href="/en-US/docs/Web/CSS/attr"><code>attr()</code></a> CSS expression and a <code>data-descr</code> <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attribute</a>, to create tooltips. No JavaScript is required!</p>
+<p>This example uses <code>::after</code>, in conjunction with the <a href="/en-US/docs/Web/CSS/attr()"><code>attr()</code></a> CSS expression and a <code>data-descr</code> <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attribute</a>, to create tooltips. No JavaScript is required!</p>
 
 <p>We can also support keyboard users with this technique, by adding a <code>tabindex</code> of <code>0</code> to make each <code>span</code> keyboard focusable, and using a CSS <code>:focus</code> selector. This shows how flexible <code>::before</code> and <code>::after</code> can be, though for the most accessible experience a semantic disclosure widget created in some other way (such as with <a href="/en-US/docs/Web/HTML/Element/details">details and summary</a> elements) is likely to be more appropriate.</p>
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Here we have some
+<pre class="brush: html">&lt;p&gt;Here we have some
   &lt;span tabindex="0" data-descr="collection of words and punctuation"&gt;text&lt;/span&gt; with a few
   &lt;span tabindex="0" data-descr="small popups that appear when hovering"&gt;tooltips&lt;/span&gt;.
 &lt;/p&gt;
@@ -99,7 +100,7 @@ a::after {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">span[data-descr] {
+<pre class="brush: css">span[data-descr] {
   position: relative;
   text-decoration: underline;
   color: #00F;
@@ -162,10 +163,7 @@ span[data-descr]:focus::after {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.selectors.after")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

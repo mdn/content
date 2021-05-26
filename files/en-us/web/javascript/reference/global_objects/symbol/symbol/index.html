@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Reference
 - Symbol
+browser-compat: javascript.builtins.Symbol.Symbol
 ---
 <div>{{JSRef}}</div>
 
@@ -20,15 +21,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Symbol([<var>description</var>])</pre>
+<pre class="brush: js">
+Symbol()
+Symbol(description)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -45,7 +44,7 @@ tags:
 <p>To create a new primitive symbol, you write <code>Symbol()</code> with an optional
   string as its description:</p>
 
-<pre class="brush: js notranslate">let sym1 = Symbol()
+<pre class="brush: js">let sym1 = Symbol()
 let sym2 = Symbol('foo')
 let sym3 = Symbol('foo')
 </pre>
@@ -54,7 +53,7 @@ let sym3 = Symbol('foo')
   coerce the string <code>"foo"</code> into a symbol. It creates a new symbol each time:
 </p>
 
-<pre class="brush: js notranslate">Symbol('foo') === Symbol('foo')  // false
+<pre class="brush: js">Symbol('foo') === Symbol('foo')  // false
 </pre>
 
 <h3 id="new_Symbol...">new Symbol(...)</h3>
@@ -62,7 +61,7 @@ let sym3 = Symbol('foo')
 <p>The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
   {{jsxref("TypeError")}}:</p>
 
-<pre class="brush: js notranslate">let sym = new Symbol()  // TypeError
+<pre class="brush: js">let sym = new Symbol()  // TypeError
 </pre>
 
 <p>This prevents authors from creating an explicit <code>Symbol</code> wrapper object
@@ -73,7 +72,7 @@ let sym3 = Symbol('foo')
 <p>If you really want to create a <code>Symbol</code> wrapper object, you can use the
   <code>Object()</code> function:</p>
 
-<pre class="brush: js notranslate">let sym    = Symbol('foo');
+<pre class="brush: js">let sym    = Symbol('foo');
 let symObj = Object(sym);
 typeof sym    // =&gt; "symbol"
 typeof symObj // =&gt; "object"
@@ -81,22 +80,11 @@ typeof symObj // =&gt; "object"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-symbol-constructor', 'Symbol constructor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Symbol.Symbol")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

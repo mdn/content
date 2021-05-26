@@ -21,9 +21,7 @@ tags:
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<div>
 <p><span class="seoSummary">The <strong><code>MediaStreamAudioSourceNode</code></strong> interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.</span> This media could be from a microphone (through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}) or from a remote peer on a WebRTC call (using the {{domxref("RTCPeerConnection")}}'s audio tracks).</p>
-</div>
 
 <p>A <code>MediaStreamAudioSourceNode</code> has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamSource()")}} method.</p>
 
@@ -77,17 +75,14 @@ tags:
 
 <h2 id="Usage_notes">Usage notes</h2>
 
-<p>Typically, you should probably not use this type of node. It has been replaced with the more predictable {{domxref("MediaStreamTrackAudioSourceNode")}}, which has better-defined rules for how it chooses the track to output.</p>
-
-<p>If you do chooose to use <code>MediaStreamAudioSourceNode</code>, you should keep the following in mind.</p>
-
 <h3 id="Track_ordering">Track ordering</h3>
 
 <p>For the purposes of the <code>MediaStreamTrackAudioSourceNode</code> interface, the order of the audio tracks on the stream is determined by taking the tracks whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code>, then sorting the tracks by their {{domxref("MediaStreamTrack.id", "id")}} property's values, in Unicode code point order (essentially, in alphabetical or lexicographical order, for IDs which are simple alphanumeric strings).</p>
 
 <p>The <strong>first</strong> track, then, is the track whose <code>id</code> comes first when the tracks' IDs are all sorted by Unicode code point.</p>
 
-<p>However, it's important to note that the rule establishing this ordering was added long after this interface was first introduced into the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. As such, you can't easily rely on the order matching between any two browsers or browser versions. This is why it is typically wiser to use {{domxref("MediaStreamTrackAudioSourceNode")}}, which provides similar capabilities but was better-defined upon being added to the specification, so it's more reliable.</p>
+<p>However, it's important to note that the rule establishing this ordering was added long after this interface was first introduced into the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. As such, you can't easily rely on the order matching between any two browsers or browser versions.</p>
+<p>The {{domxref("MediaStreamTrackAudioSourceNode")}} interface is similar to <code>MediaStreamAudioSourceNode</code>, but avoids this problem by letting you specify which track you want to use.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -112,10 +107,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.MediaStreamAudioSourceNode")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

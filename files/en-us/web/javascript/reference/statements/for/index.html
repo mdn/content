@@ -8,6 +8,7 @@ tags:
 - Reference
 - Statement
 - for
+browser-compat: javascript.statements.for
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -19,26 +20,23 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/statement-for.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">for ([<var>initialization</var>]; [<var>condition</var>]; [<var>final-expression</var>])
+<pre class="brush: js">for ([<var>initialization</var>]; [<var>condition</var>]; [<var>final-expression</var>])
    <var>statement</var></pre>
 
 <dl>
   <dt><code><var>initialization</var></code></dt>
-  <dd>An expression (including assignment expressions) or variable declaration evaluated
+  <dd>
+    <p>An expression (including assignment expressions) or variable declaration evaluated
     once before the loop begins. Typically used to initialize a counter variable. This
     expression may optionally declare new variables with <code>var</code> or
     <code>let</code> keywords. Variables declared with <code>var</code> are not local to
     the loop, i.e. they are in the same scope the <code>for</code> loop is in. Variables
-    declared with <code>let</code> are local to the statement.</dd>
-  <dd>The result of this expression is discarded.</dd>
+    declared with <code>let</code> are local to the statement.</p>
+    <p>The result of this expression is discarded.</p>
+  </dd>
   <dt><code><var>condition</var></code></dt>
   <dd>An expression to be evaluated before each loop iteration. If this expression
     evaluates to true, <code><var>statement</var></code> is executed. This conditional
@@ -66,7 +64,7 @@ tags:
   less than nine, performs the two succeeding statements, and increments <code>i</code> by
   1 after each pass through the loop.</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; 9; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; 9; i++) {
    console.log(i);
    // more statements
 }
@@ -79,7 +77,7 @@ tags:
 <p>For example, in the <code><var>initialization</var></code> block it is not required to
   initialize variables:</p>
 
-<pre class="brush: js notranslate">var i = 0;
+<pre class="brush: js">var i = 0;
 for (; i &lt; 9; i++) {
     console.log(i);
     // more statements
@@ -91,7 +89,7 @@ for (; i &lt; 9; i++) {
   expression, you must make sure to break the loop in the body in order to not create an
   infinite loop.</p>
 
-<pre class="brush: js notranslate">for (let i = 0;; i++) {
+<pre class="brush: js">for (let i = 0;; i++) {
    console.log(i);
    if (i &gt; 3) break;
    // more statements
@@ -102,7 +100,7 @@ for (; i &lt; 9; i++) {
   (increase) a variable, so that the condition for the break statement is true at some
   point.</p>
 
-<pre class="brush: js notranslate">var i = 0;
+<pre class="brush: js">var i = 0;
 
 for (;;) {
   if (i &gt; 3) break;
@@ -117,7 +115,7 @@ for (;;) {
   <code><var>final-expression</var></code> section, and therefore it does not require the
   use of a <code><var>statement</var></code> section, a semicolon is used instead.</p>
 
-<pre class="brush: js notranslate">function showOffsetPos(sId) {
+<pre class="brush: js">function showOffsetPos(sId) {
 
   var nLeft = 0, nTop = 0;
 
@@ -144,28 +142,17 @@ showOffsetPos('content');
 // left: 0px;
 // top: 153px;"</pre>
 
-<div class="note"><strong>Note:</strong> This is one of the few cases in JavaScript where
+<div class="note"><p><strong>Note:</strong> This is one of the few cases in JavaScript where
   <strong>the semicolon is mandatory</strong>. Indeed, without the semicolon the line that
-  follows the cycle declaration will be considered a statement.</div>
+  follows the cycle declaration will be considered a statement.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-for-statement', 'for statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.for")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

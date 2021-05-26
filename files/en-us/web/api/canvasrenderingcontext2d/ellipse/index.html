@@ -16,13 +16,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>anticlockwise</em>]);
+<pre class="brush: js">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>counterclockwise</em>]);
 </pre>
 
 <p>The <code>ellipse()</code> method creates an elliptical arc centered at
   <code>(x, y)</code> with the radii <code>radiusX</code> and <code>radiusY</code>. The
   path starts at <code>startAngle</code> and ends at <code>endAngle</code>, and travels in
-  the direction given by <code>anticlockwise</code> (defaulting to clockwise).</p>
+  the direction given by <code>counterclockwise</code> (defaulting to clockwise).</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -43,9 +43,9 @@ tags:
   <dt><code>endAngle</code></dt>
   <dd>The angle at which the ellipse ends, measured clockwise from the positive x-axis and
     expressed in radians.</dd>
-  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
+  <dt><code>counterclockwise</code> {{optional_inline}}</dt>
   <dd>An optional {{jsxref("Boolean")}} which, if <code>true</code>, draws the ellipse
-    anticlockwise (counter-clockwise). The default value is <code>false</code>
+    counterclockwise (anticlockwise). The default value is <code>false</code>
     (clockwise).</dd>
 </dl>
 

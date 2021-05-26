@@ -8,22 +8,21 @@ tags:
 - Method
 - Window
 ---
-<div>{{Fx_minversion_header(3)}}{{deprecated_header}}{{APIRef}}</div>
+<div>{{deprecated_header}}{{APIRef}}</div> 
 
-<div class="warning">
-  <p><strong><em>This feature has been removed. Please fix your Web sites and
-        applications</em></strong>.</p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This feature has been removed. Please fix your Web sites and applications.</p>
 
   <p>This method was removed in Chrome 43 and Firefox 56.</p>
 </div>
 
 <p><span class="seoSummary">The <strong><code>Window.showModalDialog()</code></strong>
-    created and displayed a modal dialog box containing a specified HTML document.</span>
-</p>
+    created and displayed a modal dialog box containing a specified HTML document.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>returnVal</var> = window.showModalDialog(<var>uri</var>[, <var>arguments</var>][, <var>options</var>]);
+<pre class="brush: js"><var>returnVal</var> = window.showModalDialog(<var>uri</var>[, <var>arguments</var>][, <var>options</var>]);
 </pre>
 
 <ul>
@@ -80,8 +79,10 @@ tags:
   </tbody>
 </table>
 
-<p>{{Note("Firefox does not implement the <code>dialogHide</code>, <code>edge</code>,
-  <code>status</code>, or <code>unadorned</code> arguments.")}}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Firefox does not implement the <code>dialogHide</code>, <code>edge</code>, <code>status</code>, or <code>unadorned</code> arguments.</p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 

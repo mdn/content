@@ -2,37 +2,35 @@
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 tags:
-- API
-- DOM
-- DOM Events
-- Deprecated
-- Method
-- MouseEvent
-- Reference
+  - API
+  - DOM
+  - DOM Events
+  - Deprecated
+  - Method
+  - MouseEvent
+  - Reference
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header}}</p>
 
 <p>The <code><strong>MouseEvent.initMouseEvent()</strong></code> method initializes the
-  value of a mouse event once it's been created (normally using the
-  {{domxref("Document.createEvent()")}} method).</p>
+  value of a mouse event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).</p>
 
-<p>Events initialized in this way must have been created with the {{
-  domxref("Document.createEvent()") }} method. This method must be called to set the event
+<p>Events initialized in this way must have been created with the {{domxref("Document.createEvent()") }} method.
+  This method must be called to set the event
   before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
   dispatched, it doesn't do anything anymore.</p>
 
-<div class="note">
+<div class="notecard note">
+  <h4>Note</h4>
   <p><strong>Do not use this method anymore as it is deprecated.</strong></p>
 
-  <p>Instead use specific event constructors, like {{domxref("MouseEvent.MouseEvent",
-    "MouseEvent()")}}. The page on <a
-      href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
-      triggering events</a> gives more information about the way to use these.</p>
+  <p>Instead use specific event constructors, like {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
+  The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>event</em>.initMouseEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>view</em>,
+<pre class="brush: js"><em>event</em>.initMouseEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>view</em>,
 <em>                     detail</em>, <em>screenX</em>, <em>screenY</em>, <em>clientX</em>, <em>clientY</em>,
 <em>                     ctrlKey</em>, <em>altKey</em>, <em>shiftKey</em>, <em>metaKey</em>,
 <em>                     button</em>, <em>relatedTarget</em>);</pre>
@@ -83,7 +81,7 @@ tags:
   <dt><code>button</code></dt>
   <dd>the event's mouse {{domxref("MouseEvent.button", "button")}}.</dd>
   <dt><code>relatedTarget</code></dt>
-  <dd>the event's <a href="/en-US/docs/DOM/event.relatedTarget">related EventTarget</a>. Only used
+  <dd>the event's <a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">related EventTarget</a>. Only used
     with some event types (e.g., <code>mouseover</code> and <code>mouseout</code>). In
     other cases, pass <code>null</code>.</dd>
 </dl>

@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Proxy
+browser-compat: javascript.builtins.Proxy.handler.defineProperty
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
 </div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   defineProperty: function(<var>target</var>, <var>property</var>, <var>descriptor</var>) {
   }
 });
@@ -88,7 +84,7 @@ tags:
 
 <p>The following code traps {{jsxref("Object.defineProperty()")}}.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   defineProperty: function(target, prop, descriptor) {
     console.log('called: ' + prop);
     return true;
@@ -113,7 +109,7 @@ Object.defineProperty(p, 'a', desc); // "called: a"
   <li><code>set</code></li>
 </ul>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   defineProperty(target, prop, descriptor) {
     console.log(descriptor);
     return Reflect.defineProperty(target, prop, descriptor);
@@ -128,27 +124,11 @@ Object.defineProperty(p, 'name', {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft',
-        '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc',
-        '[[DefineOwnProperty]]')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,6 +10,7 @@ tags:
   - Prototype
   - Reference
   - RelativeTimeFormat
+browser-compat: javascript.builtins.Intl.RelativeTimeFormat.format
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>relativeTimeFormat</var>.format(<var>value</var>, <var>unit</var>)</pre>
+<pre class="brush: js">format(value, unit)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -33,7 +34,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The function returned by the <code>format</code> getter formats a value and a unit into a string according to the locale and formatting options of this {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} object.</p>
+<p>The function returned by the <code>format</code> getter formats a value and a unit into a string according to the locale and formatting options of this {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} object.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -41,7 +42,7 @@ tags:
 
 <p>The following example shows how to create a relative time formatter using the English language.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -59,15 +60,18 @@ rtf.format(1, "day");
 
 <h3 id="Using_the_auto_option">Using the auto option</h3>
 
-<p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code> or <code>tomorrow</code> instead of <code>1 day ago</code> or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
+<p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code>, <code>today</code>, or <code>tomorrow</code> instead of <code>1 day ago</code>, <code>in 0 days</code>, or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
 rtf.format(-1, "day");
 // &gt; "yesterday"
+
+rtf.format(0, "day");
+// &gt; "today"
 
 // Format relative time using positive day unit (1).
 rtf.format(1, "day");
@@ -76,22 +80,11 @@ rtf.format(1, "day");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.format', 'RelativeTimeFormat.format()')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

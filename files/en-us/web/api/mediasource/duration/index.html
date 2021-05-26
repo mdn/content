@@ -2,16 +2,16 @@
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- MediaSource
-- Property
-- Reference
-- Video
-- duration
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - MediaSource
+  - Property
+  - Reference
+  - Video
+  - duration
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>mediaSource</em>.duration = 5.5; // 5.5 seconds
+<pre class="brush: js"><em>mediaSource</em>.duration = 5.5; // 5.5 seconds
 
 var <em>myDuration</em> = <em>mediaSource</em>.duration;</pre>
 
@@ -63,22 +63,22 @@ var <em>myDuration</em> = <em>mediaSource</em>.duration;</pre>
     href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
     the source</a> for further investigation.)</p>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">function</span> sourceOpen <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
- <span class="comment token"> //console.log(this.readyState); // open
-</span>  <span class="keyword token">var</span> mediaSource <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="function token">fetchAB<span class="punctuation token">(</span></span>assetURL<span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>buf<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    sourceBuffer<span class="punctuation token">.</span><span class="function token">addEventListener<span class="punctuation token">(</span></span><span class="string token">'updateend'</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span>_<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      mediaSource<span class="punctuation token">.</span><span class="function token">endOfStream<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;
-      mediaSource.duration = 120;</span>
-      video<span class="punctuation token">.</span><span class="function token">play<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-     <span class="comment token"> //console.log(mediaSource.readyState); // ended
-</span>    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    sourceBuffer<span class="punctuation token">.</span><span class="function token">appendBuffer<span class="punctuation token">(</span></span>buf<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;
+<pre class="brush: js  language-js">function sourceOpen (_) {
+  //console.log(this.readyState); // open
+  var mediaSource = this;
+  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, function (buf) {
+    sourceBuffer.addEventListener('updateend', function (_) {
+      mediaSource.endOfStream();
+      mediaSource.duration = 120;
+      video.play();
+      //console.log(mediaSource.readyState); // ended
+    });
+    sourceBuffer.appendBuffer(buf);
+  });
+};
 
-...</span></code></pre>
+...</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -100,10 +100,7 @@ var <em>myDuration</em> = <em>mediaSource</em>.duration;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.MediaSource.duration")}}</p>
-</div>
+<p>{{Compat("api.MediaSource.duration")}}</p>
 
 <h2 id="See_also">See also</h2>
 

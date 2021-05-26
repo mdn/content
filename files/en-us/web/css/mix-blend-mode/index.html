@@ -8,6 +8,7 @@ tags:
   - Compositing
   - Compositing and Blending
   - 'recipe:css-property'
+browser-compat: css.properties.mix-blend-mode
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 mix-blend-mode: normal;
 mix-blend-mode: multiply;
 mix-blend-mode: screen;
@@ -54,14 +55,14 @@ mix-blend-mode: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Effect_of_different_mix-blend-mode_values">Effect of different mix-blend-mode values</h3>
 
 <div class="hidden" id="mix-blend-mode">
-<pre class="brush: html notranslate">&lt;div class="grid"&gt;
+<pre class="brush: html">&lt;div class="grid"&gt;
   &lt;div class="col"&gt;
     &lt;div class="note"&gt;Blending in isolation (no blending with the background)&lt;/div&gt;
     &lt;div class="row isolate"&gt;
@@ -471,7 +472,7 @@ mix-blend-mode: unset;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html,body {
+<pre class="brush: css">html,body {
   height: 100%;
   box-sizing: border-box;
   background: #EEE;
@@ -572,7 +573,7 @@ mix-blend-mode: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="isolate"&gt;
+<pre class="brush: html">&lt;div class="isolate"&gt;
   &lt;div class="circle circle-1"&gt;&lt;/div&gt;
   &lt;div class="circle circle-2"&gt;&lt;/div&gt;
   &lt;div class="circle circle-3"&gt;&lt;/div&gt;
@@ -580,7 +581,7 @@ mix-blend-mode: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.circle {
+<pre class="brush: css">.circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -616,7 +617,7 @@ mix-blend-mode: unset;
 
 <h4 id="SVG">SVG</h4>
 
-<pre class="brush: html notranslate">&lt;svg&gt;
+<pre class="brush: html">&lt;svg&gt;
   &lt;g class="isolate"&gt;
     &lt;circle cx="40" cy="40" r="40" fill="red"/&gt;
     &lt;circle cx="80" cy="40" r="40" fill="lightgreen"/&gt;
@@ -626,7 +627,7 @@ mix-blend-mode: unset;
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush:css notranslate">circle { mix-blend-mode: screen; }
+<pre class="brush:css">circle { mix-blend-mode: screen; }
 .isolate { isolation: isolate; } /* Without isolation, the background color will be taken into account */
 </pre>
 
@@ -655,7 +656,7 @@ mix-blend-mode: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.mix-blend-mode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

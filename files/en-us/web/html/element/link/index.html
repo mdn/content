@@ -21,29 +21,29 @@ tags:
 
 <p>To link an external stylesheet, you'd include a <code>&lt;link&gt;</code> element inside your {{HTMLElement("head")}} like this:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
+<pre class="brush: html no-line-numbers">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
 
 <p>This simple example provides the path to the stylesheet inside an <code>href</code> attribute, and a <code>rel</code> attribute with a value of <code>stylesheet</code>. The <code>rel</code> stands for "relationship", and is probably one of the key features of the <code>&lt;link&gt;</code> element — the value denotes how the item being linked to is related to the containing document. As you'll see from our <a href="/en-US/docs/Web/HTML/Link_types">Link types</a> reference, there are many different kinds of relationship.</p>
 
 <p>There are a number of other common types you'll come across. For example, a link to the site's favicon:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+<pre class="brush: html no-line-numbers">&lt;link rel="icon" href="favicon.ico"&gt;</pre>
 
 <p>There are a number of other icon <code>rel</code> values, mainly used to indicate special icon types for use on various mobile platforms, e.g.:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
+<pre class="brush: html no-line-numbers">&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="apple-icon-114.png" type="image/png"&gt;</pre>
 
 <p>The <code>sizes</code> attribute indicates the icon size, while the <code>type</code> contains the MIME type of the resource being linked. These provide useful hints to allow the browser to choose the most appropriate icon available.</p>
 
 <p>You can also provide a media type or query inside a <code>media</code> attribute; this resource will then only be loaded if the media condition is true. For example:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"&gt;</pre>
 
 <p>Some interesting new performance and security features have been added to the <code>&lt;link&gt;</code> element too. Take this example:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link rel="preload" href="myFont.woff2" as="font"
+<pre class="brush: html no-line-numbers">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
 <p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
@@ -144,7 +144,7 @@ tags:
  <dd>
  <p>For <code>rel="stylesheet"</code> only, the <code>disabled</code> Boolean attribute indicates whether or not the described stylesheet should be loaded and applied to the document. If <code>disabled</code> is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded on-demand, if and when the <code>disabled</code> attribute is changed to <code>false</code> or removed.</p>
 
- <p>Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's {{domxref("DocumentOrShadowRoot/styleSheets")}} list.</p>
+ <p>Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.</p>
  </dd>
  <dt>{{HTMLAttrDef("href")}}</dt>
  <dd>This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.</dd>
@@ -210,11 +210,11 @@ tags:
 <h3 id="Obsolete_attributes">Obsolete attributes</h3>
 
 <dl>
- <dt>{{HTMLAttrDef("charset")}} {{Obsolete_Inline}}</dt>
+ <dt>{{HTMLAttrDef("charset")}} {{deprecated_inline}}</dt>
  <dd>This attribute defines the character encoding of the linked resource. The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}. The default value is <code>iso-8859-1</code>.
  <div class="note"><strong>Usage note:</strong> To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.</div>
  </dd>
- <dt>{{HTMLAttrDef("rev")}} {{Obsolete_Inline}}</dt>
+ <dt>{{HTMLAttrDef("rev")}} {{deprecated_inline}}</dt>
  <dd>The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{HTMLAttrxRef("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the <code>rel</code> attribute. <a href="/en-US/docs/Web/HTML/Link_types">Link type values</a> for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.</dd>
  <dd>
  <div class="notecard note">
@@ -231,7 +231,7 @@ tags:
 
 <p>To include a stylesheet in a page, use the following syntax:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="style.css" rel="stylesheet"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="style.css" rel="stylesheet"&gt;
 </pre>
 
 <h3 id="Providing_alternative_stylesheets">Providing alternative stylesheets</h3>
@@ -240,7 +240,7 @@ tags:
 
 <p>The user can choose which style sheet to use by choosing it from the View &gt; Page Style menu. This provides a way for users to see multiple versions of a page.</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="default.css" rel="stylesheet" title="Default Style"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="default.css" rel="stylesheet" title="Default Style"&gt;
 &lt;link href="fancy.css" rel="alternate stylesheet" title="Fancy"&gt;
 &lt;link href="basic.css" rel="alternate stylesheet" title="Basic"&gt;
 </pre>
@@ -249,7 +249,7 @@ tags:
 
 <p>You can include links to several different icons on the same page, and the browser will choose which one works best for its particular context using the <code>rel</code> and <code>sizes</code> values as hints.</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+<pre class="brush: html no-line-numbers">&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png"&gt;
 &lt;!-- iPhone with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png"&gt;
@@ -264,7 +264,7 @@ tags:
 
 <p>You can provide a media type or query inside a <code>media</code> attribute; this resource will then only be loaded if the media condition is true. For example:</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html no-line-numbers">&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="all"&gt;
 &lt;link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)"&gt;
 &lt;link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)"&gt;
@@ -274,7 +274,7 @@ tags:
 
 <p>You can determine when a style sheet has been loaded by watching for a <code>load</code> event to fire on it; similarly, you can detect if an error has occurred while processing a style sheet by watching for an <code>error</code> event:</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
 var myStylesheet = document.querySelector('#my-stylesheet');
 
 myStylesheet.onload = function() {
@@ -303,7 +303,7 @@ myStylesheet.onerror = function() {
  <tbody>
   <tr>
    <th><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td>Metadata content. If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a> and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Metadata content. If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present: <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a> and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th>Permitted content</th>
@@ -315,7 +315,7 @@ myStylesheet.onerror = function() {
   </tr>
   <tr>
    <th>Permitted parents</th>
-   <td>Any element that accepts metadata elements. If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts metadata elements. If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>

@@ -2,16 +2,16 @@
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- MediaSource
-- Method
-- Reference
-- Video
-- removeSourceBuffer
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - MediaSource
+  - Method
+  - Reference
+  - Video
+  - removeSourceBuffer
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>mediaSource</em>.removeSourceBuffer(<em>sourceBuffer</em>);</pre>
+  class="brush: js"><em>mediaSource</em>.removeSourceBuffer(<em>sourceBuffer</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,11 +56,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">for (i = 0; i &lt; 10; i++) {
-  var</span> sourceBuffer <span class="operator token">=</span> mediaSource<span class="punctuation token">.</span><span class="function token">addSourceBuffer<span class="punctuation token">(</span></span>mimeCodec<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js  language-js">for (i = 0; i &lt; 10; i++) {
+  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
-</code>mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
+mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -83,10 +83,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.MediaSource.removeSourceBuffer")}}</p>
-</div>
+<p>{{Compat("api.MediaSource.removeSourceBuffer")}}</p>
 
 <h2 id="See_also">See also</h2>
 

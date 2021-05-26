@@ -7,6 +7,7 @@ tags:
 - Functions
 - JavaScript
 - Language feature
+browser-compat: javascript.functions.get
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">{get <var>prop</var>() { ... } }
+<pre class="brush: js">{get <var>prop</var>() { ... } }
 {get [<var>expression</var>]() { ... } }</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -45,8 +46,7 @@ tags:
 
 <ul>
   <li>It can have an identifier which is either a number or a string;</li>
-  <li>It must have exactly zero parameters (see <a class="external"
-      href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/"
+  <li>It must have exactly zero parameters (see <a       href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/"
       rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr>
       change: literal getter and setter functions must now have exactly zero or one
       arguments</a> for more information);</li>
@@ -63,7 +63,7 @@ tags:
 <p>This will create a pseudo-property <code>latest</code> for object <code>obj</code>,
   which will return the last array item in <code>log</code>.</p>
 
-<pre class="brush: js notranslate">const obj = {
+<pre class="brush: js">const obj = {
   log: ['example','test'],
   get latest() {
     if (this.log.length === 0) return undefined;
@@ -81,7 +81,7 @@ console.log(obj.latest); // "test"
 <p>If you want to remove the getter, you can just {{jsxref("Operators/delete", "delete")}}
   it:</p>
 
-<pre class="brush: js notranslate">delete <var>obj</var>.latest;
+<pre class="brush: js">delete <var>obj</var>.latest;
 </pre>
 
 <h3 id="Defining_a_getter_on_existing_objects_using_defineProperty">Defining a getter on
@@ -90,7 +90,7 @@ console.log(obj.latest); // "test"
 <p>To append a getter to an existing object later at any time, use
   {{jsxref("Object.defineProperty()")}}.</p>
 
-<pre class="brush: js notranslate">const o = {a: 0};
+<pre class="brush: js">const o = {a: 0};
 
 Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
 
@@ -98,7 +98,7 @@ console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)</pre>
 
 <h3 id="Using_a_computed_property_name">Using a computed property name</h3>
 
-<pre class="brush: js notranslate">const expr = 'foo';
+<pre class="brush: js">const expr = 'foo';
 
 const obj = {
   get [expr]() { return 'bar'; }
@@ -130,11 +130,11 @@ console.log(obj.foo); // "bar"</pre>
 </ul>
 
 <div class="note">
-  <p>This means that you shouldn’t write a lazy getter for a property whose value you
+  <p><strong>Note:</strong> This means that you shouldn’t write a lazy getter for a property whose value you
     expect to change, because if the getter is lazy then it will not recalculate the
     value.</p>
 
-  <p>Note that getters are not “lazy” or “memozied” by nature; you must implement this
+  <p>Note that getters are not “lazy” or “memoized” by nature; you must implement this
     technique if you desire this behavior.</p>
 </div>
 
@@ -142,7 +142,7 @@ console.log(obj.foo); // "bar"</pre>
   property, the property is removed from the object and re-added, but implicitly as a data
   property this time. Finally, the value gets returned.</p>
 
-<pre class="brush: js notranslate">get notifier() {
+<pre class="brush: js">get notifier() {
   delete this.notifier;
   return this.notifier = document.getElementById('bookmarked-notification-anchor');
 },</pre>
@@ -163,7 +163,7 @@ console.log(obj.foo); // "bar"</pre>
   instance it is applied to.</p>
 
 <pre
-  class="brush: js notranslate">class Example {
+  class="brush: js">class Example {
   get hello() {
     return 'world';
   }
@@ -185,22 +185,11 @@ console.log(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.functions.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

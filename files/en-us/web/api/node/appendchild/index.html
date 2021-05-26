@@ -28,13 +28,13 @@ tags:
 
 <div class="notecard note">
   <p><strong>Newer API available!</strong><br>
-    The {{domxref("ParentNode.append()")}} method supports multiple arguments and
+    The {{domxref("Element.append()")}} method supports multiple arguments and
     appending strings.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>element</var>.appendChild(<var>aChild</var>)</pre>
+<pre class="brush: js"><var>element</var>.appendChild(<var>aChild</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,14 +55,14 @@ tags:
   child element:</p>
 
 <pre
-  class="brush: js notranslate">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
+  class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
 
 <p>Sets <code><var>aBlock</var></code> to <code>&lt;b&gt;&lt;/b&gt;</code> only, which is
   probably not what you want.</p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush:js notranslate">// Create a new paragraph element, and append it to the end of the document body
+<pre class="brush:js">// Create a new paragraph element, and append it to the end of the document body
 let p = document.createElement("p");
 document.body.appendChild(p);</pre>
 
@@ -103,10 +103,7 @@ document.body.appendChild(p);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Node.appendChild")}}</p>
-</div>
+<p>{{Compat("api.Node.appendChild")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -116,5 +113,5 @@ document.body.appendChild(p);</pre>
   <li>{{domxref("Node.insertBefore()")}}</li>
   <li>{{domxref("Node.hasChildNodes()")}}</li>
   <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("ParentNode.append()")}}</li>
+  <li>{{domxref("Element.append()")}}</li>
 </ul>

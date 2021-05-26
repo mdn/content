@@ -7,7 +7,6 @@ tags:
   - Firefox 3.6
 ---
 <div>{{FirefoxSidebar}}</div>
-<p>{{ fx_minversion_header(3.6) }}</p>
 <p>This article provides helpful information to extension developers trying to update their extensions to work properly
   in Firefox 3.6.</p>
 <h2 id="User_interface_changes">User interface changes</h2>
@@ -22,18 +21,18 @@ tags:
 <h2 id="HTML_5_compliance_improvements">HTML 5 compliance improvements</h2>
 <p>The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.</p>
 <ul>
-  <li>The <a class="internal" href="/En/DOM/Node.localName"><code>localName</code></a> DOM property now returns the name
+  <li>The <a class="internal" href="/en-US/docs/Web/API/Element/localName"><code>localName</code></a> DOM property now returns the name
     of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 <a
       class="internal" href="/en-US/docs/DOM/node.tagName"><code>tagName</code></a> continues to return in upper case in HTML
     documents.)</li>
-  <li>The <a class="internal" href="/En/DOM/Node.namespaceURI"><code>namespaceURI</code></a> DOM property now returns
+  <li>The <a class="internal" href="/en-US/docs/Web/API/Element/namespaceURI"><code>namespaceURI</code></a> DOM property now returns
     <code>"http://www.w3.org/1999/xhtml"</code> on HTML element nodes. Previously, in
     HTML documents, it returned <code>null</code>.
   </li>
   <li>
     <code>document.<a class="internal" href="/en-US/docs/DOM/document.createElementNS">createElementNS</a>(null, "FOO")</code>
     no longer creates an HTML element node in HTML documents.
-    <code>document.<a class="internal" href="/en-US/docs/DOM/document.createElement">createElement</a>("FOO")</code>
+    <code>document.<a class="internal" href="/en-US/docs/Web/API/Document/createElement">createElement</a>("FOO")</code>
     or <code>document.createElementNS("http://www.w3.org/1999/xhtml", "foo")</code> continue
     to work in HTML documents.
   </li>

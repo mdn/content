@@ -8,6 +8,7 @@ tags:
   - Reference
   - Selector
   - WebKit
+browser-compat: css.selectors.file-selector-button
 ---
 <div>{{CSSRef}}</div>
 
@@ -19,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate"><var>selector</var>::file-selector-button
+<pre class="brush: css"><var>selector</var>::file-selector-button
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -27,7 +28,7 @@ tags:
 <div id="basic_example">
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="fileUpload"&gt;Upload file&lt;/label&gt;
   &lt;input type="file" id="fileUpload"&gt;
 &lt;/form&gt;</pre>
@@ -35,7 +36,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <div class="hidden">
-<pre class="brush: css notranslate">form {
+<pre class="brush: css">form {
   display: flex;
   gap: 1em;
   align-items: center;
@@ -43,7 +44,7 @@ tags:
 </pre>
 </div>
 
-<pre class="brush: css notranslate">input[type=file]::file-selector-button {
+<pre class="brush: css">input[type=file]::file-selector-button {
   border: 2px solid #6c5ce7;
   padding: .2em .4em;
   border-radius: .2em;
@@ -67,7 +68,7 @@ input[type=file]::file-selector-button:hover {
 <div id="fallback_example">
 <h3 id="HTML_2">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="fileUpload"&gt;Upload file&lt;/label&gt;
   &lt;input type="file" id="fileUpload"&gt;
 &lt;/form&gt;</pre>
@@ -75,7 +76,7 @@ input[type=file]::file-selector-button:hover {
 <h3 id="CSS_2">CSS</h3>
 
 <div class="hidden">
-<pre class="brush: css notranslate">form {
+<pre class="brush: css">form {
   display: flex;
   gap: 1em;
   align-items: center;
@@ -83,7 +84,7 @@ input[type=file]::file-selector-button:hover {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">input[type=file]::-webkit-file-upload-button {
+<pre class="brush: css">input[type=file]::-webkit-file-upload-button {
   border: 2px solid #6c5ce7;
   padding: .2em .4em;
   border-radius: .2em;
@@ -119,7 +120,7 @@ input[type=file]::file-selector-button:hover {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.file-selector-button")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

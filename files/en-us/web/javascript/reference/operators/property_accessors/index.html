@@ -2,10 +2,11 @@
 title: Property accessors
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
 tags:
-- JavaScript
-- Language feature
-- Operator
-- Reference
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+browser-compat: javascript.operators.property_accessors
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>object</var>.<var>property</var>
+<pre class="brush: js"><var>object</var>.<var>property</var>
 <var>object</var>['<var>property</var>']
 </pre>
 
@@ -38,7 +39,7 @@ tags:
 <h3 id="Dot_notation">Dot notation</h3>
 
 <p>In the <code><var>object.property</var></code> syntax, the <code>property</code> must
-  be a valid JavaScript <a href="/en-US/docs/Glossary/identifier">identifier</a>. (In the
+  be a valid JavaScript <a href="/en-US/docs/Glossary/Identifier">identifier</a>. (In the
   ECMAScript standard, the names of properties are technically "IdentifierNames", not
   "Identifiers", so reserved words can be used but are not recommended). For example,
   <code><var>object</var>.$1</code> is valid, while <code><var>object</var>.1</code> is
@@ -128,14 +129,14 @@ console.log(object[bar])
   <code>this</code> is not fixed in a method. Put another way, <code>this</code> does not
   necessarily refer to the object containing a method. Instead, <code>this</code> is
   "passed" by the function call. See <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#Method_binding">method
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#method_binding">method
     binding</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Bracket_notation_vs._eval">Bracket notation vs. <code>eval</code></h3>
 
-<p>JavaScript novices often make the mistake of using {{jsxref("eval", "eval()")}} where
+<p>JavaScript novices often make the mistake of using {{jsxref("Global_Objects/eval", "eval()")}} where
   the bracket notation can be used instead.</p>
 
 <p>For example, the following syntax is often seen in many scripts.</p>
@@ -153,22 +154,11 @@ console.log(object[bar])
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.property_accessors")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

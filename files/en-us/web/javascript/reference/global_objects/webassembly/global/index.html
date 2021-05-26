@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Reference
   - WebAssembly
+browser-compat: javascript.builtins.WebAssembly.Global
 ---
 <div>{{JSRef}}</div>
 
@@ -48,7 +49,7 @@ tags:
 
 <p>The value of the global is then changed, first to <code>42</code> using the <code>Global.value</code> property, and then to 43 using the <code>incGlobal()</code> function exported out of the <code>global.wasm</code> module (this adds 1 to whatever value is given to it and then returns the new value).</p>
 
-<pre class="brush: js notranslate">const output = document.getElementById('output');
+<pre class="brush: js">const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
   output.innerHTML += `Testing ${msg}: `;
@@ -72,30 +73,16 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the example <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>; see also the <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
+<p><strong>Note:</strong> You can see the example <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>; see also the <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#globals', 'WebAssembly.Global()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.WebAssembly.Global")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,15 +2,15 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 tags:
-- API
-- CacheStorage
-- Experimental
-- Method
-- Reference
-- Service Workers
-- Service worker API
-- ServiceWorker
-- open
+  - API
+  - CacheStorage
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - Service worker API
+  - ServiceWorker
+  - open
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
+<pre class="brush: js">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
   // Do something with your cache
 });
 </pre>
@@ -54,7 +54,7 @@ tags:
   the app. This consists of calling <code>CacheStorage.open()</code> to create a new
   cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', function(event) {
+<pre class="brush: js">self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -97,7 +97,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>

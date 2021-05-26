@@ -8,15 +8,21 @@ tags:
   - NeedsContent
   - Non-standard
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.-moz-outline-radius-bottomleft
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+<div>{{CSSRef}}</div>
+
+<div class="notecard warning">
+  <h4>Scheduled for removal</h4>
+  <p>From Firefox 88 onwards, the standard {{cssxref("outline")}} property will follow the shape of {{cssxref("border-radius")}}, making <code>-moz-outline-radius</code> properties redundant. As such, this property will be removed.</p>
+</div>
 
 <p>In Mozilla applications, the <strong><code>-moz-outline-radius-bottomleft</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property can be used to round the bottom-left corner of an element's {{cssxref("outline")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The value of <code>-moz-outline-radius-bottomleft</code> is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a <a href="/en-US/docs/Web/CSS/percentage">percentage</a> of the corresponding dimensions of the border box. The {{cssxref("calc", "calc()")}} function may be used as well.</p>
+<p>The value of <code>-moz-outline-radius-bottomleft</code> is either a CSS {{cssxref("length", "&lt;length&gt;")}} or a <a href="/en-US/docs/Web/CSS/percentage">percentage</a> of the corresponding dimensions of the border box. The {{cssxref("calc()", "calc()")}} function may be used as well.</p>
 
 <h3 id="Values">Values</h3>
 
@@ -33,7 +39,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -43,11 +49,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Look at this paragraph's bottom-left corner.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Look at this paragraph's bottom-left corner.&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   margin: 10px;
   border: solid cyan;
   outline: dotted green;
@@ -64,7 +70,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.-moz-outline-radius-bottomleft")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

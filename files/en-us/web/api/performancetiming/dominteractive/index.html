@@ -12,12 +12,11 @@ tags:
 - domInteractive
 - legacy
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
 
-<div class="warning">
-  <p>This interface of this property is deprecated in the <a
-      href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2
-      specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
     interface instead.</p>
 </div>
 
@@ -39,7 +38,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>time</em> = <em>performanceTiming</em>.domInteractive;</pre>
+  class="brush: js"><em>time</em> = <em>performanceTiming</em>.domInteractive;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -61,10 +60,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PerformanceTiming.domInteractive")}}</p>
-</div>
+<p>{{Compat("api.PerformanceTiming.domInteractive")}}</p>
 
 <h2 id="See_also">See also</h2>
 

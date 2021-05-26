@@ -2,12 +2,12 @@
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
 tags:
-- API
-- DOM
-- KeyboardEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - KeyboardEvent
+  - Property
+  - Read-only
+  - Reference
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -69,7 +69,7 @@ tags:
     </tr>
     <tr>
       <td><code>DOM_KEY_LOCATION_MOBILE</code>
-        {{Non-standard_inline()}}{{obsolete_inline(38)}}</td>
+        {{Non-standard_inline()}}{{deprecated_inline}}</td>
       <td>4</td>
       <td>
         <p>The key was on a mobile device; this can be on either a physical keypad or a
@@ -82,15 +82,14 @@ tags:
       </td>
     </tr>
     <tr>
-      <td><code>DOM_KEY_LOCATION_JOYSTICK</code>
-        {{Non-standard_inline()}}{{obsolete_inline(38)}}</td>
+      <td><code>DOM_KEY_LOCATION_JOYSTICK</code> {{Non-standard_inline()}} {{deprecated_inline}}</td>
       <td>5</td>
       <td>
         <p>The key was a button on a game controller or a joystick on a mobile device.</p>
 
         <div class="note"><strong>Note:</strong> Gecko never fires trusted key events with
           <code>DOM_KEY_LOCATION_JOYSTICK</code> except on Android. Starting 18, native
-          key events on Android may have this value. {{gecko_minversion_inline("18.0")}}
+          key events on Android may have this value.
           However, at {{gecko("38")}}, this is dropped.</div>
       </td>
     </tr>
@@ -100,7 +99,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>location</em> = <em>event</em>.location;</pre>
+  class="brush: js">var <em>location</em> = <em>event</em>.location;</pre>
 
 <h2 id="Example">Example</h2>
 

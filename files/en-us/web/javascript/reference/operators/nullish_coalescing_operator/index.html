@@ -7,6 +7,7 @@ tags:
 - Operator
 - Reference
 - nullish coalescing
+browser-compat: javascript.operators.nullish_coalescing
 ---
 <p>{{JSSidebar("Operators")}}</p>
 
@@ -36,18 +37,10 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
 </div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.<br>
-  See <a
-    href="https://github.com/mdn/interactive-examples/pull/1482#issuecomment-553841750">PR
-    #1482</a> regarding the addition of this example.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>leftExpr</var> ?? <var>rightExpr</var>
+<pre class="brush: js"><var>leftExpr</var> ?? <var>rightExpr</var>
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -57,7 +50,7 @@ tags:
 <p>In this example, we will provide default values but keep values other than
   <code>null</code> or <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">const nullValue = null;
+<pre class="brush: js">const nullValue = null;
 const emptyText = ""; // falsy
 const someNumber = 42;
 
@@ -77,7 +70,7 @@ console.log(valC); // 42</pre>
   (<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">||</a></code>):
 </p>
 
-<pre class="brush: js notranslate">let foo;
+<pre class="brush: js">let foo;
 
 //  foo is never assigned any value so it is still undefined
 let someDummyText = foo || 'Hello!';</pre>
@@ -89,7 +82,7 @@ let someDummyText = foo || 'Hello!';</pre>
   consequences if you consider <code>0</code>, <code>''</code>, or <code>NaN</code> as
   valid values.</p>
 
-<pre class="brush: js notranslate">let count = 0;
+<pre class="brush: js">let count = 0;
 let text = "";
 
 let qty = count || 42;
@@ -102,7 +95,7 @@ console.log(message); // "hi!" and not ""
   operand when the first one evaluates to either <code>null</code> or
   <code>undefined</code> (but no other falsy values):</p>
 
-<pre class="brush: js notranslate">let myText = ''; // An empty string (which is also a falsy value)
+<pre class="brush: js">let myText = ''; // An empty string (which is also a falsy value)
 
 let notFalsyText = myText || 'Hello world';
 console.log(notFalsyText); // Hello world
@@ -117,7 +110,7 @@ console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
   if the left-hand side proves to be neither <code>null</code> nor <code>undefined</code>.
 </p>
 
-<pre class="brush: js notranslate">function A() { console.log('A was called'); return undefined;}
+<pre class="brush: js">function A() { console.log('A was called'); return undefined;}
 function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
@@ -138,12 +131,12 @@ console.log( B() ?? C() );
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>
   will be thrown in such cases.</p>
 
-<pre class="brush: js example-bad notranslate">null || undefined ?? "foo"; // raises a SyntaxError
+<pre class="brush: js example-bad">null || undefined ?? "foo"; // raises a SyntaxError
 true || undefined ?? "foo"; // raises a SyntaxError</pre>
 
 <p>However, providing parenthesis to explicitly indicate precedence is correct:</p>
 
-<pre class="brush: js example-good notranslate">(null || undefined) ?? "foo"; // returns "foo"
+<pre class="brush: js example-good">(null || undefined) ?? "foo"; // returns "foo"
 </pre>
 
 <h3 id="Relationship_with_the_optional_chaining_operator_.">Relationship with the optional
@@ -155,7 +148,7 @@ true || undefined ?? "foo"; // raises a SyntaxError</pre>
     chaining operator (<code>?.</code>)</a> which is useful to access a property of an
   object which may be <code>null</code> or <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let foo = { someFooProp: "hi" };
+<pre class="brush: js">let foo = { someFooProp: "hi" };
 
 console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
 console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"
@@ -163,34 +156,11 @@ console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not availabl
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#prod-CoalesceExpression', 'nullish coalescing
-        expression')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.nullish_coalescing")}}</p>
-
-<h3 id="Implementation_Progress">Implementation Progress</h3>
-
-<p>The following table provides a daily implementation status for this feature, because
-  this feature has not yet reached cross-browser stability. The data is generated by
-  running the relevant feature tests in <a
-    href="https://github.com/tc39/test262">Test262</a>, the standard test suite of
-  JavaScript, in the nightly build, or latest release of each browser's JavaScript engine.
-</p>
-
-<div>{{EmbedTest262ReportResultsTable("coalesce-expression")}}</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

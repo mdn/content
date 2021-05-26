@@ -2,26 +2,26 @@
 title: RTCIceCandidate.relatedPort
 slug: Web/API/RTCIceCandidate/relatedPort
 tags:
-- API
-- Address
-- Candidate
-- ICE
-- IP
-- Media
-- Property
-- RTCIceCandidate
-- Reference
-- SDP
-- WebRTC
-- WebRTC API
-- relatedPort
+  - API
+  - Address
+  - Candidate
+  - ICE
+  - IP
+  - Media
+  - Property
+  - RTCIceCandidate
+  - Reference
+  - SDP
+  - WebRTC
+  - WebRTC API
+  - relatedPort
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
 <p><span class="seoSummary">The <strong>{{domxref("RTCIceCandidate")}}</strong>
     interface's read-only <strong><code>relatedPort</code></strong> property indicates the
     port number of reflexive or relay candidates.</span> If the candidate is a host
-  candidate (that is, its {{domxref("RTCIceCandidate.ip", "ip")}} is in fact the real IP
+  candidate (that is, its {{domxref("RTCIceCandidate/address", "ip")}} is in fact the real IP
   address of the remote peer), <code>relatedPort</code> is <code>null</code>.</p>
 
 <p>The <code>relatedPort</code> field's value is set when the
@@ -39,7 +39,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>relPort</em> = <em>RTCIceCandidate</em>.relatedPort;</pre>
+  class="brush: js">var <em>relPort</em> = <em>RTCIceCandidate</em>.relatedPort;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -106,10 +106,7 @@ if (relIP &amp;&amp; relPort) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCIceCandidate.relatedPort")}}</p>
-</div>
+<p>{{Compat("api.RTCIceCandidate.relatedPort")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -121,5 +118,5 @@ if (relIP &amp;&amp; relPort) {
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC
       session</a></li>
   <li>{{domxref("RTCIceCanddiate.relatedAddress")}}</li>
-  <li>{{domxref("RTCIceCandidate.ip")}} and {{domxref("RTCIceCandidate.port")}}</li>
+  <li>{{domxref("RTCIceCandidate.address")}} and {{domxref("RTCIceCandidate.port")}}</li>
 </ul>

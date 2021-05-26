@@ -6,8 +6,6 @@ tags:
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<div>{{Fx_minversion_header(3)}}</div>
-
 <p>This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.</p>
 
 <p>Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the <code>maxVersion</code> field in its install manifest, and you host your extension at <a class="link-https" href="https://addons.mozilla.org">addons.mozilla.org</a>, you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the <code>maxVersion</code>. You can avoid having to have your extension re-reviewed this way.</p>
@@ -172,7 +170,7 @@ tags:
  </li>
  <li><code>window.addEventListener("load", myFunc, true)</code> is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use <code>gBrowser.addEventListener("load", myFunc, true)</code> as described <a href="/en-US/docs/Code_snippets/Tabbed_browser#Detecting_page_load">here</a> and works in Firefox 2 as well.</li>
  <li><code>content.window.getSelection()</code> gives an object (which can be converted to a string by <code>toString()</code>), unlike the now deprecated <code>content.document.getSelection()</code> which returns a string</li>
- <li><code>event.preventBubble()</code> was deprecated in Firefox 2 and has been removed in Firefox 3. Use <a href="/en-US/docs/DOM/event.stopPropagation"><code>event.stopPropagation()</code></a>, which works in Firefox 2 as well.</li>
+ <li><code>event.preventBubble()</code> was deprecated in Firefox 2 and has been removed in Firefox 3. Use <a href="/en-US/docs/Web/API/Event/stopPropagation"><code>event.stopPropagation()</code></a>, which works in Firefox 2 as well.</li>
  <li>Timers that are initiated using <code>setTimeout()</code> are now blocked by modal windows due to the fix made for {{ Bug(52209) }}. You may use {{ Interface("nsITimer") }} instead.</li>
  <li>If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new <a href="/en-US/docs/Chrome_Registration#contentaccessible" title="Chrome_Registration#contentaccessible"><code>contentaccessible</code> flag</a>.</li>
 </ul>

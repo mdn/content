@@ -13,9 +13,7 @@ tags:
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
 <p class="summary">The <strong><code>cancel()</code></strong> method of the
-  {{domxref("ReadableStreamBYOBReader")}} interface cancels the stream, signaling a loss
-  of interest in the stream by a consumer. The supplied <code>reason</code> parameter will
-  be given to the underlying source, which may or may not use it.</p>
+  {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.</p>
 
 <div class="note">
   <p><strong>Note</strong>: If the reader is active, the <code>cancel()</code> method
@@ -26,13 +24,13 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = <em>readableStreamBYOBReader</em>.cancel(<em>reason</em>);</pre>
+  class="brush: js">var <em>promise</em> = <em>readableStreamBYOBReader</em>.cancel(<em>reason</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt>reason</dt>
-  <dd>A {{domxref("DOMString")}} providing a human-readable reason for the cancellation.
+  <dt>reason {{optional_inline}}</dt>
+  <dd>A human-readable reason for the cancellation. The underlying source may or may not use it.
   </dd>
 </dl>
 

@@ -2,13 +2,14 @@
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- Locale
-- Method
-- Prototype
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Locale
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
 <div>{{JSRef}}</div>
 
@@ -22,13 +23,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>locale</var>.maximize()</pre>
+<pre class="brush: js">maximize()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Locale", "Locale")}} instance whose <code>baseName</code> property returns
+<p>A {{jsxref("Intl/Locale", "Locale")}} instance whose <code>baseName</code> property returns
 	the result of the <a href="https://www.unicode.org/reports/tr35/#Likely_Subtags">Add
-		Likely Subtags</a> algorithm executed against <em>{{jsxref("Locale/baseName",
+		Likely Subtags</a> algorithm executed against <em>{{jsxref("Intl/Locale/baseName",
 		"locale.baseName")}}</em>.</p>
 
 <h2 id="Description">Description</h2>
@@ -45,8 +46,8 @@ tags:
 		rel="noopener">language identifier</a>: language, script, and region subtags.
 	Other subtags after the "-u" in the locale identifier are called extension subtags and
 	are not affected by the <code>maximize()</code> method. Examples of these subtags
-	include {{jsxref("Locale/hourCycle", "Locale.hourCycle")}},
-	{{jsxref("Locale/calendar", "Locale.calendar")}}, and {{jsxref("Locale/numeric",
+	include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
+	{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
 	"Locale.numeric")}}.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -68,28 +69,17 @@ console.log(myLocMaximized.toString()); </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.maximize')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.Locale.maximize")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
 	<li>{{jsxref("Intl.Locale")}}</li>
-	<li>{{jsxref("Locale/baseName", "Intl.Locale.baseName")}}</li>
+	<li>{{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}</li>
 	<li><a href="https://www.unicode.org/reports/tr35/#Likely_Subtags">Unicode's Likely
 			Subtags spec</a></li>
 </ul>

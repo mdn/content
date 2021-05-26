@@ -9,6 +9,7 @@ tags:
 - Method
 - Reference
 - Window
+- Polyfill
 ---
 <div>{{APIRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.cancelAnimationFrame(<em>requestID</em>);
+<pre class="brush: js">window.cancelAnimationFrame(<em>requestID</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -63,8 +64,7 @@ cancelAnimationFrame(myReq);
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('HTML
-        WHATWG','#animationframeprovider-cancelanimationframe','cancelAnimationFrame()')}}
+      <td>{{SpecName('HTML WHATWG','#animationframeprovider-cancelanimationframe','cancelAnimationFrame()')}}
       </td>
       <td>{{Spec2('HTML WHATWG')}}</td>
       <td></td>
@@ -74,14 +74,12 @@ cancelAnimationFrame(myReq);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Window.cancelAnimationFrame")}}</p>
-</div>
+<p>{{Compat("api.Window.cancelAnimationFrame")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{domxref("window.mozAnimationStartTime")}}</li>
   <li>{{domxref("window.requestAnimationFrame()")}}</li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
 </ul>

@@ -6,7 +6,7 @@ tags:
   - Element
   - HTML
   - HTML grouping content
-  - 'HTML:Flow content'
+  - HTML:Flow content
   - Layout
   - Reference
   - Web
@@ -26,11 +26,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>.<br>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.<br>
     Or (in {{glossary("WHATWG")}} HTML): If the parent is a {{HTMLElement("dl")}} element: one or more {{HTMLElement("dt")}} elements followed by one or more {{HTMLElement("dd")}} elements, optionally intermixed with {{HTMLElement("script")}} and {{HTMLElement("template")}} elements.</td>
   </tr>
   <tr>
@@ -39,7 +39,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.<br>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.<br>
     Or (in {{glossary("WHATWG")}} HTML): {{HTMLElement("dl")}} element.</td>
   </tr>
   <tr>
@@ -71,11 +71,15 @@ tags:
  <li>The <code>&lt;div&gt;</code> element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.</li>
 </ul>
 
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+The <code>&lt;div&gt;</code> element has <a href="https://www.w3.org/TR/wai-aria-1.2/#generic">an implicit role of <code>generic</code></a>, and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
+
 <h2 id="Examples">Examples</h2>
 
 <h3 id="A_simple_example">A simple example</h3>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;p&gt;Any kind of content here. Such as
   &amp;lt;p&amp;gt;, &amp;lt;table&amp;gt;. You name it!&lt;/p&gt;
 &lt;/div&gt; </pre>
@@ -90,14 +94,14 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="shadowbox"&gt;
+<pre class="brush: html">&lt;div class="shadowbox"&gt;
   &lt;p&gt;Here's a very interesting note displayed in a
   lovely shadowed box.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.shadowbox {
+<pre class="brush: css">.shadowbox {
   width: 15em;
   border: 1px solid #333;
   box-shadow: 8px 8px 5px #444;

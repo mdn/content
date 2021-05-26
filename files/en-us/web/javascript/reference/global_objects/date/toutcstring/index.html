@@ -7,13 +7,14 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.toUTCString
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>toUTCString()</code></strong> method converts a date to a string,
   using the UTC time zone.</p>
 
-<p>Based on <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.1">rfc7231</a> and
+<p>Based on <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1">rfc7231</a> and
   modified according to <a
     href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-date.prototype.toutcstring">ecma-262
     toUTCString</a>, it can have negative values in the <a
@@ -21,15 +22,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateObj</var>.toUTCString()</pre>
+<pre class="brush: js">toUTCString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -88,29 +84,17 @@ tags:
 
 <h3 id="Using_toUTCString">Using toUTCString()</h3>
 
-<pre class="brush: js notranslate">let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+<pre class="brush: js">let today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
 let UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.toutcstring',
-        'Date.prototype.toUTCString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.toUTCString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

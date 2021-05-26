@@ -51,7 +51,7 @@ tags:
 
 <p>This example, run in the context of a service worker, listens for a <code>pushsubscriptionchange</code> event and re-subscribes to the lapsed subscription.</p>
 
-<pre class="brush: js notranslate">self.addEventListener("pushsubscriptionchange", event =&gt; {
+<pre class="brush: js">self.addEventListener("pushsubscriptionchange", event =&gt; {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
     .then(subscription =&gt; {
       return fetch("register", {
@@ -71,7 +71,7 @@ tags:
 
 <p>You can also use the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property to set up the event handler:</p>
 
-<pre class="brush: js notranslate">self.onpushsubscriptionchange = event =&gt; {
+<pre class="brush: js">self.onpushsubscriptionchange = event =&gt; {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
     .then(subscription =&gt; {
       /* ... */
@@ -104,6 +104,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
+ <li><a href="/en-US/docs/Web/API/Push_API">Using the Push API</a></li>
  <li>{{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property</li>
 </ul>

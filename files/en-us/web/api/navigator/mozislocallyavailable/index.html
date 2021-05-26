@@ -6,19 +6,21 @@ tags:
 - Method
 - Navigator
 - Non-standard
-- Obsolete
+- Deprecated
 ---
-<div>{{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}</div>
+<div>{{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}</div>
 
 <p>The <strong><code>Navigator.mozIsLocallyAvailable()</code></strong> method allows
   add-ons to determine whether or not a given resource is available.</p>
 
-<p>{{Note("Security exceptions can occur if the requested URI is not from the same
-  origin.")}}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Security exceptions can occur if the requested URI is not from the same origin.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.mozIsLocallyAvailable(<em>uri</em>, <em>ifOffline</em>);
+<pre class="brush: js">navigator.mozIsLocallyAvailable(<em>uri</em>, <em>ifOffline</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

@@ -17,13 +17,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.arc(<em>x</em>, <em>y</em>, <em>radius</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>anticlockwise</em>]);
+<pre class="brush: js">void <em>ctx</em>.arc(<em>x</em>, <em>y</em>, <em>radius</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>counterclockwise</em>]);
 </pre>
 
 <p>The <code>arc()</code> method creates a circular arc centered at <code>(x, y)</code>
   with a radius of <code>radius</code>. The path starts at <code>startAngle</code>, ends
   at <code>endAngle</code>, and travels in the direction given by
-  <code>anticlockwise</code> (defaulting to clockwise).</p>
+  <code>counterclockwise</code> (defaulting to clockwise).</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,7 +39,7 @@ tags:
   </dd>
   <dt><code>endAngle</code></dt>
   <dd>The angle at which the arc ends in radians, measured from the positive x-axis.</dd>
-  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
+  <dt><code>counterclockwise</code> {{optional_inline}}</dt>
   <dd>An optional {{jsxref("Boolean")}}. If <code>true</code>, draws the arc
     counter-clockwise between the start and end angles. The default is <code>false</code>
     (clockwise).</dd>
@@ -99,9 +99,9 @@ for (let i = 0; i &lt;= 3; i++) {
     let radius        = 20;                          // Arc radius
     let startAngle    = 0;                           // Starting point on circle
     let endAngle      = Math.PI + (Math.PI * j) / 2; // End point on circle
-    let anticlockwise = i % 2 == 1;                  // Draw anticlockwise
+    let counterclockwise = i % 2 == 1;                  // Draw counterclockwise
 
-    ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+    ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
     if (i &gt; 1) {
       ctx.fill();

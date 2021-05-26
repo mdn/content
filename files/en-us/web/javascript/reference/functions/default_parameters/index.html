@@ -6,6 +6,7 @@ tags:
 - Functions
 - JavaScript
 - Language feature
+browser-compat: javascript.functions.default_parameters
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -17,9 +18,8 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">function [<var>name</var>]([<var>param1</var>[ = <var>defaultValue1</var> ][, ..., <var>paramN</var>[ = <var>defaultValueN</var> ]]]) {
-   <var>statements</var>
-}
+<pre class="brush: js">
+function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -237,31 +237,15 @@ f()  // 6</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.functions.default_parameters")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a class="external"
-      href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values"
+  <li><a       href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values"
       rel="external">Original proposal at ecmascript.org</a></li>
 </ul>

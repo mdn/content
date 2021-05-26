@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Symbol
+browser-compat: javascript.builtins.Symbol.keyFor
 ---
 <div>{{JSRef}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Symbol.keyFor(<var>sym</var>);</pre>
+<pre class="brush: js">Symbol.keyFor(<var>sym</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +35,7 @@ tags:
 
 <h3 id="Using_keyFor">Using keyFor()</h3>
 
-<pre class="brush: js notranslate">var globalSym = Symbol.for('foo'); // create a new global symbol
+<pre class="brush: js">var globalSym = Symbol.for('foo'); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -47,22 +48,11 @@ Symbol.keyFor(Symbol.iterator) // undefined
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-symbol.keyfor', 'Symbol.keyFor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Symbol.keyFor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

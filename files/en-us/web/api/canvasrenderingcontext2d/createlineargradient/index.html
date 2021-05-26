@@ -2,12 +2,12 @@
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Gradients
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Gradients
+  - Method
+  - Reference
 ---
 <div>{{APIRef}}</div>
 
@@ -17,8 +17,7 @@ tags:
   coordinates.</p>
 
 <p><img alt=""
-    src="https://mdn.mozillademos.org/files/14681/mdn-canvas-linearGradient.png"
-    style="height: 121px; width: 264px;"></p>
+    src="mdn-canvas-lineargradient.png"></p>
 
 <p>This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
   the gradient must first be assigned to the
@@ -33,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">CanvasGradient <var>ctx</var>.createLinearGradient(<var>x0</var>, <var>y0</var>, <var>x1</var>, <var>y1</var>);
+<pre class="brush: js">CanvasGradient <var>ctx</var>.createLinearGradient(<var>x0</var>, <var>y0</var>, <var>x1</var>, <var>y1</var>);
 </pre>
 
 <p>The <code>createLinearGradient()</code> method is specified by four parameters defining
@@ -132,4 +131,5 @@ ctx.fillRect(20, 20, 200, 100);
 <ul>
   <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
   <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
+  <li>{{domxref("CanvasRenderingContext2D.createConicGradient()")}}</li>
 </ul>

@@ -37,7 +37,7 @@ tags:
  <dd>Returns <code>true</code> if the <kbd>alt</kbd> key was down when the mouse event was fired.</dd>
  <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
  <dd>The button number that was pressed (if applicable) when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}</dt>
+ <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}}</dt>
  <dd>The buttons being depressed (if any) when the mouse event was fired.</dd>
  <dt>{{domxref("MouseEvent.clientX")}} {{readonlyinline}}</dt>
  <dd>The X coordinate of the mouse pointer in local (DOM content) coordinates.</dd>
@@ -111,12 +111,12 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
+<pre class="brush: html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
 &lt;p&gt;&lt;button id="button"&gt;Click me&lt;/button&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function simulateClick() {
+<pre class="brush: js">function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,

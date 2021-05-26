@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>performance</em>.measure(name);
+<pre class="brush: js"><em>performance</em>.measure(name);
 <em>performance</em>.measure(name, startMark);
 <em>performance</em>.measure(name, startMark, endMark);
 <em>performance</em>.measure(name, undefined, endMark);
@@ -87,7 +87,7 @@ setTimeout(function() {
     performance.measure("measure a to b", markerNameA, markerNameB);
     performance.measure("measure a to now", markerNameA);
     performance.measure("measure from navigation start to b", undefined, markerNameB);
-    performance.measure("measure from the start of navigation to now");
+    performance.measure("measure from navigation start to now");
 
     // Pull out all of the measurements.
     console.log(performance.getEntriesByType("measure"));
@@ -124,7 +124,4 @@ setTimeout(function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Performance.measure")}}</p>
-</div>
+<p>{{Compat("api.Performance.measure")}}</p>

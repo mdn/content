@@ -6,90 +6,20 @@ tags:
 - Math
 - Method
 - Reference
+browser-compat: javascript.builtins.Math.abs
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>Math.abs()</code></strong> function returns
-    the absolute value of a number</span>, that is</p>
-
-<p><math display="block">
-    <semantics>
-      <mrow>
-        <mstyle mathvariant="monospace">
-          <mrow>
-            <mo lspace="0em" rspace="thinmathspace">Math.abs</mo>
-            <mo stretchy="false">(</mo>
-            <mi>x</mi>
-            <mo stretchy="false">)</mo>
-          </mrow>
-        </mstyle>
-        <mo>=</mo>
-        <mrow>
-          <mo stretchy="false">|</mo>
-          <mi>x</mi>
-          <mo stretchy="false">|</mo>
-        </mrow>
-        <mo>=</mo>
-        <mrow>
-          <mo>{</mo>
-          <mtable columnalign="left left">
-            <mtr>
-              <mtd>
-                <mi>x</mi>
-              </mtd>
-              <mtd>
-                <mtext>if</mtext>
-                <mspace width="1em"></mspace>
-                <mi>x</mi>
-                <mo>&gt;</mo>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mi>0</mi>
-              </mtd>
-              <mtd>
-                <mtext>if</mtext>
-                <mspace width="1em"></mspace>
-                <mi>x</mi>
-                <mo>=</mo>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mo>-</mo>
-                <mi>x</mi>
-              </mtd>
-              <mtd>
-                <mtext>if</mtext>
-                <mspace width="1em"></mspace>
-                <mi>x</mi>
-                <mo>&lt;</mo>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-          </mtable>
-        </mrow>
-      </mrow>
-      <annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(z)}} = {|z|} =
-        \begin{cases} x &amp; \text{if} \quad x \geq 0 \\ x &amp; \text{if} \quad x &lt; 0
-        \end{cases} </annotation>
-    </semantics>
-  </math></p>
+<p>The <strong><code>Math.abs()</code></strong> function returns
+    the absolute value of a number. That is, it returns <code>x</code> if <code>x</code>
+    is positive or zero, and the negation of <code>x</code> if <code>x</code> is negative.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-abs.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.abs(<var>x</var>)</pre>
+<pre class="brush: js">Math.abs(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -116,7 +46,7 @@ tags:
   {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing
   {{jsxref("null")}}, an empty string or an empty array returns 0.</p>
 
-<pre class="brush: js notranslate">Math.abs('-1');     // 1
+<pre class="brush: js">Math.abs('-1');     // 1
 Math.abs(-2);       // 2
 Math.abs(null);     // 0
 Math.abs('');       // 0
@@ -130,22 +60,11 @@ Math.abs();         // NaN
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.abs', 'Math.abs')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.abs")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

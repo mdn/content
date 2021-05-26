@@ -1,10 +1,10 @@
 ---
-title: 'about:debugging'
-slug: 'Tools/about:debugging'
+title: about:debugging
+slug: Tools/about:debugging
 tags:
   - Debugger
   - Remote debugging
-  - 'about:debugging'
+  - about:debugging
 ---
 <p>{{ToolsSidebar}}</p>
 
@@ -154,10 +154,10 @@ tags:
 <p>If you install an extension in this way, what happens when you update the extension?</p>
 
 <ul>
- <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
+ <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
  <li>For other changes, click the <strong>Reload</strong> button. This does what it says:
   <ul>
-   <li>Reloads any persistent scripts, such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
+   <li>Reloads any persistent scripts, such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a></li>
    <li>Parses the <code>manifest.json</code> file again, so changes to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> or any other keys take effect</li>
   </ul>
  </li>
@@ -196,7 +196,7 @@ tags:
 <ul>
  <li>All registered <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
  <li>All registered <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
- <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
+ <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#dedicated_workers">Dedicated Workers</a></li>
 </ul>
 
 <p>You can connect the developer tools to each worker, and send push notifications to service workers.</p>

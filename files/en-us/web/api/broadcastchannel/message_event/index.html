@@ -43,12 +43,12 @@ tags:
 <h4 id="Sender">Sender</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Sender&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Sender&lt;/h1&gt;
 &lt;label for="message"&gt;Type a message to broadcast:&lt;/label&gt;&lt;br/&gt;
 &lt;textarea id="message" name="message" rows="1" cols="40"&gt;Hello&lt;/textarea&gt;
 &lt;button id="broadcast-message" type="button"&gt;Broadcast message&lt;/button&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
      border: 1px solid black;
      padding: .5rem;
      height: 150px;
@@ -74,7 +74,7 @@ button {
 }</pre>
 </div>
 
-<pre class="brush: js notranslate">const channel = new BroadcastChannel('example-channel');
+<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 const messageControl = document.querySelector('#message');
 const broadcastMessageButton = document.querySelector('#broadcast-message');
 
@@ -86,10 +86,10 @@ broadcastMessageButton.addEventListener('click', () =&gt; {
 <h4 id="Receiver_1">Receiver 1</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Receiver 1&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Receiver 1&lt;/h1&gt;
 &lt;div id="received"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -103,7 +103,7 @@ h1 {
 </pre>
 </div>
 
-<pre class="brush: js notranslate">const channel = new BroadcastChannel('example-channel');
+<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 channel.addEventListener('message', (event) =&gt; {
   received.textContent = event.data;
 });</pre>
@@ -111,10 +111,10 @@ channel.addEventListener('message', (event) =&gt; {
 <h4 id="Receiver_2">Receiver 2</h4>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;h1&gt;Receiver 2&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Receiver 2&lt;/h1&gt;
 &lt;div id="received"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -128,7 +128,7 @@ h1 {
 </pre>
 </div>
 
-<pre class="brush: js notranslate">const channel = new BroadcastChannel('example-channel');
+<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 channel.addEventListener('message', (event) =&gt; {
   received.textContent = event.data;
 });</pre>
@@ -163,5 +163,5 @@ channel.addEventListener('message', (event) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Related events: <code><a href="/docs/Web/API/BroadcastChannel/messageerror_event">messageerror</a></code>.</li>
+ <li>Related events: <code><a href="/en-US/docs/Web/API/BroadcastChannel/messageerror_event">messageerror</a></code>.</li>
 </ul>

@@ -19,14 +19,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
+<pre class="brush: js">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
 </pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Simple_usage">Simple usage</h3>
 
-<pre class="brush:js notranslate">// parg is an object reference to a &lt;p&gt; element
+<pre class="brush:js">// parg is an object reference to a &lt;p&gt; element
 
 // First check that the element has child nodes
 if (parg.hasChildNodes()) {
@@ -40,7 +40,7 @@ if (parg.hasChildNodes()) {
 
 <h3 id="Remove_all_children_from_a_node">Remove all children from a node</h3>
 
-<pre class="brush:js notranslate">// This is one way to remove all children from a node
+<pre class="brush:js">// This is one way to remove all children from a node
 // box is an object reference to an element
 
 while (box.firstChild) {
@@ -60,7 +60,7 @@ while (box.firstChild) {
 
 <p><code>childNodes</code> includes <em>all</em> child nodes—including non-element nodes
   like text and comment nodes. To get a collection of only elements, use
-  {{domxref("ParentNode.children")}} instead.</p>
+  {{domxref("Element.children")}} instead.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -108,5 +108,5 @@ while (box.firstChild) {
   <li>{{domxref("Node.lastChild")}}</li>
   <li>{{domxref("Node.nextSibling")}}</li>
   <li>{{domxref("Node.previousSibling")}}</li>
-  <li>{{domxref("ParentNode.children")}}</li>
+  <li>{{domxref("Element.children")}}</li>
 </ul>

@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>gl</em>.vertexAttribPointer(<em>index</em>, <em>size</em>, <em>type</em>, <em>normalized</em>, <em>stride</em>, <em>offset</em>);
+<pre class="brush: js">void <em>gl</em>.vertexAttribPointer(<em>index</em>, <em>size</em>, <em>type</em>, <em>normalized</em>, <em>stride</em>, <em>offset</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -222,21 +222,8 @@ tags:
 
 <p>Will be stored in the array buffer as follows:</p>
 
-<table style="width: auto;">
-  <tbody>
-    <tr>
-      <td style="background-color: #ccf;">00 00 80 3F</td>
-      <td style="background-color: #ddf;">00 00 00 40</td>
-      <td style="background-color: #ccf;">00 00 0C 3F</td>
-      <td style="background-color: #cfc;">7F</td>
-      <td style="background-color: #dfd;">00</td>
-      <td style="background-color: #cfc;">00</td>
-      <td style="background-color: #dfd;">00</td>
-      <td style="background-color: #fcc;">7F FF</td>
-      <td style="background-color: #fdd;">3F FF</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="webgl-array-buffer.svg"
+     alt="WebGL array buffer contents"></p>
 
 <h3 id="Creating_the_array_buffer">Creating the array buffer</h3>
 

@@ -6,6 +6,7 @@ tags:
 - Math
 - Method
 - Reference
+browser-compat: javascript.builtins.Math.floor
 ---
 <div>{{JSRef}}</div>
 
@@ -14,15 +15,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-floor.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.floor(<var>x</var>)</pre>
+<pre class="brush: js">Math.floor(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -43,7 +39,7 @@ tags:
   created (<code>Math</code> is not a constructor).</p>
 
 <div class="notecard note">
-  <p><strong>Note: </strong><code>Math.floor(null)</code> returns 0, not a
+  <p><strong>Note:</strong> <code>Math.floor(null)</code> returns 0, not a
     {{jsxref("NaN")}}.</p>
 </div>
 
@@ -51,7 +47,7 @@ tags:
 
 <h3 id="Using_Math.floor">Using Math.floor()</h3>
 
-<pre class="brush: js notranslate">Math.floor( 45.95); //  45
+<pre class="brush: js">Math.floor( 45.95); //  45
 Math.floor( 45.05); //  45
 Math.floor(  4   ); //   4
 Math.floor(-45.05); // -46
@@ -60,7 +56,7 @@ Math.floor(-45.95); // -46
 
 <h3 id="Decimal_adjustment">Decimal adjustment</h3>
 
-<pre class="brush: js notranslate">/**
+<pre class="brush: js">/**
  * Decimal adjustment of a number.
  *
  * @param {String}  type  The type of adjustment.
@@ -117,22 +113,11 @@ ceil10(-59, 1);       // -50
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.floor', 'Math.floor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.floor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -5,13 +5,11 @@ tags:
   - Guide
   - Intermediate
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}</div>
 
-<p class="summary">Processing each of the items in a collection is a very common operation. JavaScript provides a number of ways of iterating over a collection, from simple {{jsxref("Statements/for","for")}} loops to {{jsxref("Global_Objects/Array/map","map()")}} and {{jsxref("Global_Objects/Array/filter","filter()")}}.</p>
-
-<p class="summary"><span class="seoSummary">Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of","for...of")}} loops.</span></p>
+<p>Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of","for...of")}} loops.</p>
 
 <p>For details, see also:</p>
 
@@ -26,7 +24,7 @@ tags:
 
 <p>In JavaScript an <strong>iterator</strong> is an object which defines a sequence and potentially a return value upon its termination.</p>
 
-<p>Specifically, an iterator is any object which implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">Iterator protocol</a> by having a <code>next()</code> method that returns an object with two properties:</p>
+<p>Specifically, an iterator is any object which implements the <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol">Iterator protocol</a> by having a <code>next()</code> method that returns an object with two properties:</p>
 
 <dl>
  <dt><code><var>value</var></code></dt>
@@ -43,7 +41,7 @@ tags:
 
 <p>Here is an example which can do just that. It allows creation of a simple range iterator which defines a sequence of integers from <code><var>start</var></code> (inclusive) to <code><var>end</var></code> (exclusive) spaced <code><var>step</var></code> apart. Its final return value is the size of the sequence it created, tracked by the variable <code><var>iterationCount</var></code>.</p>
 
-<pre class="brush: js notranslate">function makeRangeIterator(<var>start</var> = 0, <var>end</var> = Infinity, <var>step</var> = 1) {
+<pre class="brush: js">function makeRangeIterator(<var>start</var> = 0, <var>end</var> = Infinity, <var>step</var> = 1) {
     let nextIndex = start;
     let iterationCount = 0;
 
@@ -65,7 +63,7 @@ tags:
 
 <p>Using the iterator then looks like this:</p>
 
-<pre class="brush: js notranslate">const it = makeRangeIterator(1, 10, 2);
+<pre class="brush: js">const it = makeRangeIterator(1, 10, 2);
 
 let result = it.next();
 while (!result.done) {
@@ -91,7 +89,7 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>We can now adapt the example from above. The behavior of this code is identical, but the implementation is much easier to write and read.</p>
 
-<pre class="brush: js notranslate">function* makeRangeIterator(<var>start</var> = 0, <var>end</var> = 100, <var>step</var> = 1) {
+<pre class="brush: js">function* makeRangeIterator(<var>start</var> = 0, <var>end</var> = 100, <var>step</var> = 1) {
     let iterationCount = 0;
     for (let i = start; i &lt; end; i += step) {
         iterationCount++;
@@ -104,13 +102,13 @@ console.log("Iterated over sequence of size: ", result.value); // [5 numbers ret
 
 <p>An object is <strong>iterable</strong> if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.</p>
 
-<p>In order to be <strong>iterable</strong>, an object must implement the <strong>@@iterator</strong> method. This means that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a {{jsxref("Symbol.iterator")}} key.</p>
+<p>In order to be <strong>iterable</strong>, an object must implement the <strong>@@iterator</strong> method. This means that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a {{jsxref("Symbol.iterator")}} key.</p>
 
 <p>It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.</p>
 
 <p>Iterables which can iterate only once (such as Generators) customarily return <code>this</code> from their <strong>@@iterator</strong> method, whereas iterables which can be iterated many times must return a new iterator on each invocation of <strong>@@iterator</strong>.</p>
 
-<pre class="brush: js notranslate">function* makeIterator() {
+<pre class="brush: js">function* makeIterator() {
     yield 1;
     yield 2;
 }
@@ -141,7 +139,7 @@ console.log(<var>it</var>[Symbol.iterator]() === <var>it</var>) // true;
 
 <p>You can make your own iterables like this:</p>
 
-<pre class="brush: js notranslate">const myIterable = {
+<pre class="brush: js">const myIterable = {
     *[Symbol.iterator]() {
         yield 1;
         yield 2;
@@ -169,7 +167,7 @@ or
 
 <p>Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.</p>
 
-<pre class="brush: js notranslate">for (let value of ['a', 'b', 'c']) {
+<pre class="brush: js">for (let value of ['a', 'b', 'c']) {
     console.log(value);
 }
 // "a"
@@ -204,7 +202,7 @@ a;
 
 <p>Here is the fibonacci generator using <code>next(<var>x</var>)</code> to restart the sequence:</p>
 
-<pre class="brush: js notranslate">function* fibonacci() {
+<pre class="brush: js">function* fibonacci() {
   let current = 0;
   let next = 1;
   while (true) {

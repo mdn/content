@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.try_catch
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -14,23 +15,18 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">try {
-  <em>try_statements</em>
+<pre class="brush: js">try {
+  try_statements
 }
-[catch [(<em>exception_var</em>)] {
-  <em>catch_statements</em>
-}]
-[finally {
-  <em>finally_statements</em>
-}]
+catch (exception_var) {
+  catch_statements
+}
+finally {
+  finally_statements
+}
 </pre>
 
 <dl>
@@ -89,7 +85,7 @@ tags:
   exception occurs in the following code, control transfers to the
   <code>catch</code>-block.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw 'myException'; // generates an exception
 } catch (e) {
   // statements to handle any exceptions
@@ -107,7 +103,7 @@ tags:
   <code>try...catch</code> blocks with <code>if...else if...else</code> structures, like
   this:</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   myroutine(); // may throw three types of exceptions
 } catch (e) {
   if (e instanceof TypeError) {
@@ -126,7 +122,7 @@ tags:
 <p>A common use case for this is to only catch (and silence) a small subset of expected
   errors, and then re-throw the error in other cases:</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   myRoutine();
 } catch (e) {
   if (e instanceof RangeError) {
@@ -146,7 +142,7 @@ tags:
   <code>catch</code>-block's {{Glossary("Scope", "scope")}}. If you don't need the
   exception value, it could be omitted.</p>
 
-<pre class="brush: js notranslate">function isValidJSON(text) {
+<pre class="brush: js">function isValidJSON(text) {
   try {
     JSON.parse(text);
     return true;
@@ -170,7 +166,7 @@ tags:
   <code>finally</code>-block makes sure the file always closes after it is used even if an
   exception was thrown.</p>
 
-<pre class="brush: js notranslate">openMyFile();
+<pre class="brush: js">openMyFile();
 try {
   // tie up a resource
   writeMyFile(theData);
@@ -185,7 +181,7 @@ try {
 
 <p>First, let's see what happens with this:</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   try {
     throw new Error('oops');
   } finally {
@@ -203,7 +199,7 @@ try {
 <p>Now, if we already caught the exception in the inner <code>try</code>-block by adding a
   <code>catch</code>-block</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   try {
     throw new Error('oops');
   } catch (ex) {
@@ -222,7 +218,7 @@ try {
 
 <p>And now, let's rethrow the error.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   try {
     throw new Error('oops');
   } catch (ex) {
@@ -253,7 +249,7 @@ try {
   <code>return</code> statements in the <code>try</code> and <code>catch</code>-blocks.
   This includes exceptions thrown inside of the <code>catch</code>-block:</p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
   try {
     try {
       throw new Error('oops');
@@ -278,22 +274,11 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-try-statement', 'try statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.try_catch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

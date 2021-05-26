@@ -14,7 +14,7 @@ tags:
 
 <p>Regardless of platform, it's always a good idea to start up as <strong>quickly</strong> as possible. Since that's a universal issue, we won't be focusing on it too much here. Instead, we're going to look at a more important issue when building Web apps: starting up as <strong>asynchronously</strong> as possible. That means not running all your startup code in a single event handler on the app's main thread.</p>
 
-<p>Instead, you should write your code so that your app creates a <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a> that does as much as possible in a background thread (for example, fetching and processing data.) Then, anything that must be done on the main thread (such as user events and rendering UI) should be broken up into small pieces so that the app's event loop continues to cycle while it starts up. This will prevent the app, browser, and/or device from appearing to have locked up.</p>
+<p>Instead, you should write your code so that your app creates a <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker</a> that does as much as possible in a background thread (for example, fetching and processing data.) Then, anything that must be done on the main thread (such as user events and rendering UI) should be broken up into small pieces so that the app's event loop continues to cycle while it starts up. This will prevent the app, browser, and/or device from appearing to have locked up.</p>
 
 <p>Why is it important to be asynchronous? Other than the reasons suggested above, consider the impact of a non-responsive page or user interface. The user is unable to cancel if they launched your app by mistake. If the app is being run in a browser, it's possible the user may get an "unresponsive app" or "slow script" notification. You should present some kind of interface, such as a progress bar, so that the user knows how much longer they'll need to wait while your app starts up.</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <p>On the other hand, however, it can get tricky when you're porting an existing app to the Web. A desktop application doesn't need to be written in an asynchronous fashion because usually the operating system handles that for you, or the app is the only thing that matters which is currently running, depending on the operating environment. The source application might have a main loop that can easily be made to operate asynchronously (by running each main loop iteration separately); startup is often just a continuous, monolithic procedure that might periodically update a progress meter.</p>
 
-<p>While you can use <a href="/en-US/docs/DOM/Using_web_workers">Web workers</a> to run even very large, long-duration chunks of <a href="/en-US/docs/JavaScript">JavaScript</a> code asynchronously, there's a huge caveat that: workers don't have access to <a href="/en-US/docs/WebGL">WebGL</a> or audio, and they can't send synchronous messages to the main thread, so you can't even proxy those APIs to the main thread. This all means that unless you can easily pull out the "pure calculation" chunks of your startup process into workers, you'll wind up having to run most or all of your startup code on the main thread.</p>
+<p>While you can use <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web workers</a> to run even very large, long-duration chunks of <a href="/en-US/docs/Web/JavaScript">JavaScript</a> code asynchronously, there's a huge caveat that: workers don't have access to <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or audio, and they can't send synchronous messages to the main thread, so you can't even proxy those APIs to the main thread. This all means that unless you can easily pull out the "pure calculation" chunks of your startup process into workers, you'll wind up having to run most or all of your startup code on the main thread.</p>
 
 <p>However, even code like that can be made asynchronous, with a little work.</p>
 
@@ -74,7 +74,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Apps">Apps</a></li>
+ <li><a href="/en-US/docs/Web/Progressive_web_apps">Apps</a></li>
  <li><a href="/en-US/docs/Games">Games</a></li>
 </ul>
 

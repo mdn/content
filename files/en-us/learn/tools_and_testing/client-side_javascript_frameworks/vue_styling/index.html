@@ -56,7 +56,7 @@ tags:
 
 <p>Add the following contents to the <code>reset.css</code> file:</p>
 
-<pre class="brush: css notranslate">/*reset.css*/
+<pre class="brush: css">/*reset.css*/
 /* RESETS */
 *,
 *::before,
@@ -132,7 +132,7 @@ body {
 
 <p>Next, in your <code>src/main.js</code> file, import the <code>reset.css</code> file like so:</p>
 
-<pre class="brush: js notranslate">import './assets/reset.css';</pre>
+<pre class="brush: js">import './assets/reset.css';</pre>
 
 <p>This will cause the file to get picked up during the build step and automatically added to our site.</p>
 
@@ -154,7 +154,7 @@ body {
 
 <p>Update your <code>App.vue</code> file’s <code>&lt;style&gt;</code> element so it looks like so:</p>
 
-<pre class="brush: css notranslate">&lt;style&gt;
+<pre class="brush: css">&lt;style&gt;
 /* Global styles */
 .btn {
   padding: 0.8rem 1rem 0.7rem;
@@ -275,7 +275,7 @@ body {
 
 <p>Add <code>class="btn btn__primary btn__lg"</code> to your form’s <code>&lt;button&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;button type="submit" class="btn btn__primary btn__lg"&gt;
+<pre class="brush: html">&lt;button type="submit" class="btn btn__primary btn__lg"&gt;
   Add
 &lt;/button&gt;</pre>
 
@@ -283,7 +283,7 @@ body {
 
 <p>Update your <code>ToDoForm</code> template so that it looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;template&gt;
+<pre class="brush: html">&lt;template&gt;
   &lt;form @submit.prevent="onSubmit"&gt;
     &lt;h2 class="label-wrapper"&gt;
       &lt;label for="new-todo-input" class="label__lg"&gt;
@@ -308,7 +308,7 @@ body {
 
 <p>Update it as follows:</p>
 
-<pre class="brush: html notranslate">&lt;ul aria-labelledby="list-summary" class="stack-large"&gt;</pre>
+<pre class="brush: html">&lt;ul aria-labelledby="list-summary" class="stack-large"&gt;</pre>
 
 <h2 id="Adding_scoped_styles">Adding scoped styles</h2>
 
@@ -316,12 +316,12 @@ body {
 
 <p>To use the <code>scoped</code> modifier, create a <code>&lt;style&gt;</code> element inside <code>ToDoItem.vue</code>, at the bottom of the file, and give it a <code>scoped</code> attribute:</p>
 
-<pre class="brush: html notranslate">&lt;style scoped&gt;
+<pre class="brush: html">&lt;style scoped&gt;
 &lt;/style&gt;</pre>
 
 <p>Next, copy the following CSS into the newly created <code>&lt;style&gt;</code> element:</p>
 
-<pre class="brush: css notranslate">.custom-checkbox &gt; .checkbox-label {
+<pre class="brush: css">.custom-checkbox &gt; .checkbox-label {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -500,5 +500,15 @@ body {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

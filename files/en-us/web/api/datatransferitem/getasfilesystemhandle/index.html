@@ -2,11 +2,11 @@
 title: DataTransferItem.getAsFileSystemHandle()
 slug: Web/API/DataTransferItem/getAsFileSystemHandle
 tags:
-- DataTransferItem
-- Directory
-- File
-- File System Access API
-- Method
+  - DataTransferItem
+  - Directory
+  - File
+  - File System Access API
+  - Method
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
 </div>
@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>handle</var> = DataTransferItem.getAsFileSystemHandle();</pre>
+  class="brush: js">var <var>handle</var> = DataTransferItem.getAsFileSystemHandle();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +38,7 @@ tags:
 <p>This example uses the <code>getAsFileSystemHandle</code> method to return
   {{domxref('FileSystemHandle','file handles')}} for dropped items.</p>
 
-<pre class="brush: js notranslate">elem.addEventListener('dragover', (e) =&gt; {
+<pre class="brush: js">elem.addEventListener('dragover', (e) =&gt; {
   // Prevent navigation.
   e.preventDefault();
 });
@@ -84,7 +84,7 @@ elem.addEventListener('drop', async (e) =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
   <li><a href="https://web.dev/file-system-access/">The File System Access API:
       simplifying access to local files</a></li>
 </ul>

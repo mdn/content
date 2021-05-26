@@ -5,7 +5,8 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.margin-bottom
 ---
 <div>{{CSSRef}}</div>
 
@@ -13,13 +14,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}</div>
 
-<p><img alt="The effect of the CSS margin-bottom property on the element box" src="/files/4045/margin-bottom.svg" style="border: 1px solid; display: block; height: 130px; margin-left: auto; margin-right: auto; width: 400px;"></p>
+<p><img alt="The effect of the CSS margin-bottom property on the element box" src="margin-bottom.svg"></p>
 
 <p>This property has no effect on <em>non-<a href="/en-US/docs/Web/CSS/Replaced_element">replaced</a></em> inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
 margin-bottom: 10px;  /* An absolute length */
 margin-bottom: 1em;   /* relative to the text size */
 margin-bottom: 5%;    /* relative to the nearest block container's width */
@@ -52,7 +53,7 @@ margin-bottom: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -60,7 +61,7 @@ margin-bottom: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
 &lt;div class="box0"&gt;Box 0&lt;/div&gt;
 &lt;div class="box1"&gt;Box 1&lt;/div&gt;
 &lt;div class="box2"&gt;Box one's negative margin pulls me up&lt;/div&gt;
@@ -70,7 +71,7 @@ margin-bottom: unset;
 
 <p>CSS for divs to set margin-bottom and height</p>
 
-<pre class="brush: css notranslate">.box0 {
+<pre class="brush: css">.box0 {
     margin-bottom:1em;
     height:3em;
 }
@@ -88,7 +89,7 @@ margin-bottom: unset;
 
 <p>Some definitions for container and divs so margins' effects can be seen more clearly</p>
 
-<pre class="brush: css notranslate">.container {
+<pre class="brush: css">.container {
     background-color:orange;
     width:320px;
     border:1px solid black;
@@ -133,7 +134,7 @@ div {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.margin-bottom")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

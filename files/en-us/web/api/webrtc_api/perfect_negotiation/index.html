@@ -50,13 +50,10 @@ tags:
 
 <p>First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnection")}} needs to be created. The {{Glossary("STUN")}} server listed here is obviously not a real one; you'll need to replace <code>stun.myserver.tld</code> with the address of a real STUN server.</p>
 
-<pre class="brush: js notranslate">const constraints = { audio: true, video: true };
+<pre class="brush: js">
 const config = {
   iceServers: [{ urls: "stun:stun.mystunserver.tld" }]
 };
-
-const selfVideo = document.querySelector("video.selfview");
-const remoteVideo = document.querySelector("video.remoteview");
 
 const signaler = new SignalingChannel();
 const pc = new RTCPeerConnection(config);
@@ -66,9 +63,15 @@ const pc = new RTCPeerConnection(config);
 
 <h3 id="Connecting_to_a_remote_peer">Connecting to a remote peer</h3>
 
-<p>The <code>start()</code> function shown here can be called by either of the two end-points that want to talk to one another. It doesn't matter who does it first; the negotiation will just work.</p>
 
-<pre class="brush: js notranslate">async function start() {
+
+<pre class="brush: js">
+const constraints = { audio: true, video: true };
+const selfVideo = document.querySelector("video.selfview");
+const remoteVideo = document.querySelector("video.remoteview");
+
+
+async function start() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
 
@@ -82,13 +85,14 @@ const pc = new RTCPeerConnection(config);
 }
 </pre>
 
+<p>The <code>start()</code> function shown above can be called by either of the two end-points that want to talk to one another. It doesn't matter who does it first; the negotiation will just work.</p>
 <p>This isn't appreciably different from older WebRTC connection establishment code. The user's camera and microphone are obtained by calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. The resulting media tracks are then added to the {{domxref("RTCPeerConnection")}} by passing them into {{domxref("RTCPeerConnection.addTrack", "addTrack()")}}. Then, finally, the media source for the self-view {{HTMLElement("video")}} element indicated by the <code>selfVideo</code> constant is set to the camera and microphone stream, allowing the local user to see what the other peer sees.</p>
 
 <h3 id="Handling_incoming_tracks">Handling incoming tracks</h3>
 
 <p>We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiatied to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.</p>
 
-<pre class="brush: js notranslate">pc.ontrack = ({track, streams}) =&gt; {
+<pre class="brush: js">pc.ontrack = ({track, streams}) =&gt; {
   track.onunmute = () =&gt; {
     if (remoteVideo.srcObject) {
       return;
@@ -112,7 +116,7 @@ const pc = new RTCPeerConnection(config);
 
 <p>First, we implement the {{domxref("RTCPeerConnection")}} event handler {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} to get a local description and send it using the signaling channel to the remote peer.</p>
 
-<pre class="brush: js notranslate">let makingOffer = false;
+<pre class="brush: js">let makingOffer = false;
 
 pc.onnegotiationneeded = async () =&gt; {
   try {
@@ -127,7 +131,7 @@ pc.onnegotiationneeded = async () =&gt; {
 };
 </pre>
 
-<p>Note that <code>setLocalDescription()</code> without arguments automatically creates and sets the appropriate description based on the current {{domxref("RTCPeerConnection.signalingState", "signalingState")}}. The set description is either an answer to the most recent offer from the remote peer <em>or</em> a freshly-created offer if there's no negotiation underway. Here, it will be always be an <code>offer</code>, because the negotiationneeded event is only fired in <code>stable</code> state.</p>
+<p>Note that <code>setLocalDescription()</code> without arguments automatically creates and sets the appropriate description based on the current {{domxref("RTCPeerConnection.signalingState", "signalingState")}}. The set description is either an answer to the most recent offer from the remote peer <em>or</em> a freshly-created offer if there's no negotiation underway. Here, it will always be an <code>offer</code>, because the negotiationneeded event is only fired in <code>stable</code> state.</p>
 
 <p>We set a Boolean variable, <code>makingOffer</code> to <code>true</code> to mark that we're preparing an offer. To avoid races, we'll use this value later instead of the signaling state to determine whether or not an offer is being processed because the value of {{domxref("RTCPeerConnection.signalingState", "signalingState")}} changes asynchronously, introducing a glare opportunity.</p>
 
@@ -137,7 +141,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>Next, we need to handle the <code>RTCPeerConnection</code> event {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}, which is how the local ICE layer passes candidates to us for delivery to the remote peer over the signaling channel.</p>
 
-<pre class="brush: js notranslate">pc.onicecandidate = ({candidate}) =&gt; signaler.send({candidate});</pre>
+<pre class="brush: js">pc.onicecandidate = ({candidate}) =&gt; signaler.send({candidate});</pre>
 
 <p>This takes the <code>candidate</code> member of this ICE event and passes it through to the signaling channel's <code>send()</code> method to be sent over the signaling server to the remote peer.</p>
 
@@ -145,7 +149,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>The last piece of the puzzle is code to handle incoming messages from the signaling server. That's implemented here as an <code>onmessage</code> event handler on the signaling channel object. This method is invoked each time a message arrives from the signaling server.</p>
 
-<pre class="brush: js notranslate">let ignoreOffer = false;
+<pre class="brush: js">let ignoreOffer = false;
 
 signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
   try {
@@ -209,7 +213,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <p>Consider this {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler:</p>
 
-<pre class="brush: js example-bad notranslate">pc.onnegotiationneeded = async () =&gt; {
+<pre class="brush: js example-bad">pc.onnegotiationneeded = async () =&gt; {
   try {
     await pc.setLocalDescription(await pc.createOffer());
     signaler.send({description: pc.localDescription});
@@ -225,7 +229,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <p>As shown in the section {{anch("Implementing perfect negotiation")}}, we can eliminate this problem by introducing a variable (here called <code>makingOffer</code>) which we use to indicate that we are in the process of sending an offer, and making use of the updated <code>setLocalDescription()</code> method:</p>
 
-<pre class="brush: js example-good notranslate">let makingOffer = false;
+<pre class="brush: js example-good">let makingOffer = false;
 
 pc.onnegotiationneeded = async () =&gt; {
   try {
@@ -246,7 +250,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>A key component to perfect negotiation is the concept of the polite peer, which always rolls itself back if it receives an offer while itself waiting for an answer to an offer. Previously, triggering rollback involved manually checking for rollback conditions and triggering the rollback manually, by setting the local description to one with the type <code>rollback</code>, like this:</p>
 
-<pre class="brush: js notranslate">await pc.setLocalDescription({ type: "rollback" });</pre>
+<pre class="brush: js">await pc.setLocalDescription({ type: "rollback" });</pre>
 
 <p>Doing so returns the local peer to the <code>stable</code> {{domxref("RTCPeerConnection.signalingState", "signalingState")}} from whichever state it had previously been in. Since a peer can only accept offers when in the <code>stable</code> state, the peer has thus rescinded its offer and is ready to receive the offer from the remote (impolite) peer. As we'll see in a moment, there are problems with this approach, however.</p>
 
@@ -254,7 +258,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>Using the previous API to implement incoming negotiation messages during perfect negotiation would look something like this:</p>
 
-<pre class="brush: js example-bad notranslate">signaler.onmessage = async({data: { description, candidate }}) =&gt; {
+<pre class="brush: js example-bad">signaler.onmessage = async({data: { description, candidate }}) =&gt; {
   try {
     if (description) {
       if (description.type == "offer" &amp;&amp; pc.signalingState != "stable") {
@@ -264,7 +268,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
         await Promise.all([
           pc.setLocalDescription({type: "rollback"}),
-          pc.setRemoteDescription(description);
+          pc.setRemoteDescription(description)
         ]);
       } else {
         await pc.setRemoteDescription(description);
@@ -304,7 +308,7 @@ pc.onnegotiationneeded = async () =&gt; {
 
 <p>The updated code takes advantage of the fact that you can now call {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} with no parameters so it just does the right thing for you, as well as the fact that <code>setRemoteDescription()</code> automatically rolls back if necessary. This lets us get rid of the need to use a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> to keep the timing in order, since the rollback becomes an essentially atomic part of the <code>setRemoteDescription()</code> call.</p>
 
-<pre class="brush: js example-good notranslate">let ignoreOffer = false;
+<pre class="brush: js example-good">let ignoreOffer = false;
 
 signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
   try {
@@ -352,13 +356,13 @@ signaler.onmessage = async ({ data: { description, candidate } }) =&gt; {
 
 <h3 id="Explicit_restartIce_method_added">Explicit restartIce() method added</h3>
 
-<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
+<p>The techniques previously used to trigger an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> while handling the event{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} have significant flaws. These flaws have made it difficult to safely and reliably trigger a restart during negotiation. The perfect negotiation improvements have fixed this by adding a new {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method to <code>RTCPeerConnection</code>.</p>
 
 <h4 id="The_old_way_2">The old way</h4>
 
 <p>In the past, if you encountered an ICE error and needed to restart negotiation, you might have done something like this:</p>
 
-<pre class="brush: js example-bad notranslate">pc.onnegotiationneeded = async options =&gt; {
+<pre class="brush: js example-bad">pc.onnegotiationneeded = async options =&gt; {
   await pc.setLocalDescription(await pc.createOffer(options));
   signaler.send({ description: pc.localDescription });
 };
@@ -375,7 +379,7 @@ pc.oniceconnectionstatechange = () =&gt; {
 
 <p>Now, you can use <code>restartIce()</code> to do this much more cleanly:</p>
 
-<pre class="brush: js example-good notranslate">pc.onnegotiationneeded = async options =&gt; {
+<pre class="brush: js example-good">pc.onnegotiationneeded = async options =&gt; {
   await pc.setLocalDescription(await pc.createOffer(options));
   signaler.send({ description: pc.localDescription });
 };

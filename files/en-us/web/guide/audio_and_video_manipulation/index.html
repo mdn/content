@@ -14,7 +14,7 @@ tags:
   - developer recommendation
 ---
 <div class="summary">
-<p>The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/WebGL">WebGL</a> or <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.</p>
+<p>The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> or <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.</p>
 </div>
 
 <h2 id="Video_manipulation">Video manipulation</h2>
@@ -28,9 +28,9 @@ tags:
 <p>The general technique is to:</p>
 
 <ol>
- <li>Write a frame from the {{htmlelement("video")}} element to an intermediary {{htmlelement("canvas")}} element.</li>
- <li>Read the data from the intermediary <code>&lt;canvas&gt;</code> element and manipulate it.</li>
- <li>Write the manipulated data to your "display" <code>&lt;canvas&gt;</code>.</li>
+ <li>Write a frame from the {{htmlelement("video")}} element to the {{htmlelement("canvas")}} element.</li>
+ <li>Read the data from the <code>&lt;canvas&gt;</code> element and manipulate it.</li>
+ <li>Write the manipulated data to your "display" <code>&lt;canvas&gt;</code> (which effectively can be the same element).</li>
  <li>Pause and repeat.</li>
 </ol>
 
@@ -40,7 +40,7 @@ tags:
 
 <p>We can set up our video player and <code>&lt;canvas&gt;</code> element like this:</p>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -51,7 +51,7 @@ tags:
 
 <p>This code handles altering the frames.</p>
 
-<pre class="brush: js notranslate">var processor = {
+<pre class="brush: js">var processor = {
   timerCallback: function() {
     if (this.video.paused || this.video.ended) {
       return;
@@ -96,7 +96,7 @@ tags:
 
 <p>Once the page has loaded you can call</p>
 
-<pre class="brush: js notranslate">processor.doLoad()</pre>
+<pre class="brush: js">processor.doLoad()</pre>
 
 <h4 id="Result">Result</h4>
 
@@ -104,13 +104,15 @@ tags:
 
 <p>This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of <code>setTimeout()</code> when running on browsers that support it.</p>
 
+<p>You can achieve the same result by applying the {{cssxref("filter-function/grayscale()", "grayscale()")}} CSS function to the source <code>&lt;video&gt;</code> element.</p>
+
 <div class="note">
-<p><strong>Note</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
+<p><strong>Note</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>
 </div>
 
 <h3 id="Video_and_WebGL">Video and WebGL</h3>
 
-<p><a href="/en-US/docs/Web/WebGL">WebGL</a> is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
 
@@ -126,19 +128,19 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls
+<pre class="brush: html">&lt;video id="my-video" controls
        src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"&gt;
 &lt;/video&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">var myVideo = document.getElementById('my-video');
+<pre class="brush: js">var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</pre>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
+<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -151,7 +153,7 @@ var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var edit = document.getElementById('edit');
 var code = textarea.value;
@@ -221,13 +223,13 @@ window.addEventListener('load', setPlaybackRate);
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls
+<pre class="brush: html">&lt;video id="my-video" controls
        src="myvideo.mp4" type="video/mp4"&gt;
 &lt;/video&gt;</pre>
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<pre class="brush: js notranslate">var context = new AudioContext(),
+<pre class="brush: js">var context = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -241,7 +243,7 @@ filter.gain.value = 25;</pre>
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -254,7 +256,7 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;&lt;/textarea&gt;</pre>
 
-<pre class="brush: js notranslate">var context     = new AudioContext(),
+<pre class="brush: js">var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -286,7 +288,7 @@ window.addEventListener('load', setFilter);
 <p>{{ EmbedLiveSample('Playable_code_2', 700, 425) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: unless you have <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
+<p><strong>Note</strong>: unless you have <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled, to avoid security issues your video should be on the same domain as your code.</p>
 </div>
 
 <h4 id="Common_audio_filters">Common audio filters</h4>
@@ -314,7 +316,7 @@ window.addEventListener('load', setFilter);
 
 <h4 id="Example">Example</h4>
 
-<pre class="brush: js notranslate">var convolver = context.createConvolver();
+<pre class="brush: js">var convolver = context.createConvolver();
 convolver.buffer = this.impulseResponseBuffer;
 // Connect the graph.
 source.connect(convolver);
@@ -329,7 +331,7 @@ convolver.connect(context.destination);
 
 <h4 id="Example_2">Example</h4>
 
-<pre class="brush: js notranslate">var panner = context.createPanner();
+<pre class="brush: js">var panner = context.createPanner();
 panner.coneOuterGain = 0.2;
 panner.coneOuterAngle = 120;
 panner.coneInnerAngle = 0;
@@ -345,7 +347,7 @@ context.listener.setPosition(0, 0, 0);</pre>
 <p><strong>Note</strong>: You can find an <a href="https://github.com/mdn/webaudio-examples/tree/master/panner-node">example on our GitHub repository</a> (<a href="https://mdn.github.io/webaudio-examples/panner-node/">see it live</a> also).</p>
 </div>
 
-<h2 id="JavaScript_codecs">JavaScript codecs</h2>
+<h3 id="JavaScript_codecs">JavaScript codecs</h3>
 
 <p>It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.</p>
 
@@ -377,12 +379,12 @@ context.listener.setPosition(0, 0, 0);</pre>
 <h3 id="Tutorials">Tutorials</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTML/Manipulating_video_using_canvas">Manipulating Video Using Canvas</a></li>
- <li><a href="/en-US/Apps/Build/Manipulating_media/HTML5_playbackRate_explained">HTML5 playbackRate explained</a></li>
+ <li><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating Video Using Canvas</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained">HTML5 playbackRate explained</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
- <li><a href="/en-US/docs/Web/WebGL/Animating_textures_in_WebGL#Using_the_video_frames_as_a_texture">Using Video frames as a WebGL Texture</a> (You can also the <a href="http://threejs.org">THREE.js</a> WebGL library (and others) to <a href="https://stemkoski.github.io/Three.js/Video.html">achieve this effect</a>)</li>
- <li><a href="/en-US/docs/Web/WebGL/Animating_textures_in_WebGL">Animating Textures in WebGL</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialisation basics</a></li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture">Using Video frames as a WebGL Texture</a> (You can also the <a href="http://threejs.org">THREE.js</a> WebGL library (and others) to <a href="https://stemkoski.github.io/Three.js/Video.html">achieve this effect</a>)</li>
+ <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL">Animating Textures in WebGL</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room">Developing Game Audio with the Web Audio API (Room effects and filters)</a></li>
 </ul>
 
@@ -394,7 +396,7 @@ context.listener.setPosition(0, 0, 0);</pre>
  <li>The {{htmlelement("canvas")}} element</li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
  <li><a href="/en-US/docs/Web/API/AudioContext">AudioContext</a></li>
- <li>More info on <a href="/en-US/docs/Web/API/AudioContext.createPanner">Spatial Audio</a></li>
+ <li>More info on <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner">Spatial Audio</a></li>
  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
 </ul>
 

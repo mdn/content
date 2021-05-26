@@ -1,5 +1,5 @@
 ---
-title: inert
+title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
 ---
 <p>{{ APIRef("HTML DOM") }}</p>
@@ -8,7 +8,7 @@ slug: Web/API/HTMLElement/inert
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate"><em>isInert</em> = <em>HTMLElement</em>.inert;
+<pre><em>isInert</em> = <em>HTMLElement</em>.inert;
 
 <em>HTMLElement</em>.inert = true | false;</pre>
 
@@ -20,18 +20,18 @@ slug: Web/API/HTMLElement/inert
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;label for="button1"&gt;Button 1&lt;/label&gt;
   &lt;button id="button1"&gt;I am not inert&lt;/button&gt;
 &lt;/div&gt;
 &lt;div inert&gt;
-  &lt;label for="button2"&gt;Button 1&lt;/label&gt;
+  &lt;label for="button2"&gt;Button 2&lt;/label&gt;
   &lt;button id="button2"&gt;I am inert&lt;/button&gt;
 &lt;/div&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">[inert] &gt; * {
+<pre class="brush: css">[inert] &gt; * {
   opacity: .5;
 }
 </pre>

@@ -6,13 +6,12 @@ slug: Tools/Tools_Toolbox
 
 <p>The Toolbox provides a single home for most of the developer tools that are built into Firefox.</p>
 
-<p>There are a few different ways to open the Toolbox:</p>
+<p>There three main ways to open the Toolbox:</p>
 
 <ul>
- <li>select "Toggle Tools" from the Web Developer menu (under "Tools" on OS X and Linux, or "Firefox" on Windows)</li>
- <li>click the wrench icon (<img alt="" src="wrench-icon.png">), which is in the main toolbar or under the Hamburger menu (<img alt="" src="hamburger.png">), then select "Toggle Tools"</li>
- <li>activate any tool hosted in the Toolbox (for example, the JavaScript Debugger or the Page Inspector)</li>
- <li>press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> on Windows and Linux, or <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd> on OS X. See also <a href="/en-US/docs/Tools/Keyboard_shortcuts">keyboard shortcuts</a>.</li>
+    <li>Right-click a mouse on any element in the page, and select <strong>Inspect</strong> from the popup menu.</li>
+ <li>Open the Hamburger menu (<img alt="" src="hamburger.png" style="display:inline" width="20px"/>) and select <strong>More tools > Web Developer Tools</strong> (or <strong>Web Developer > Toggle Tools</strong> before Firefox 89).</li>
+ <li>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> on Windows and Linux, or <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd> on OS X. See also <a href="/en-US/docs/Tools/Keyboard_shortcuts">keyboard shortcuts</a>.</li>
 </ul>
 
 <p>By default, the window appears docked to the bottom side of the Firefox window, but you can detach it if you like. This is what it looks like when it's docked:</p>
@@ -21,13 +20,14 @@ slug: Tools/Tools_Toolbox
 
 <p><img alt="" src="toolbox-annotated-29.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<div class="note">
-<p><strong>Note</strong>: Since Firefox 62, you can drag and drop tabs in the main toolbar of the toolbox to reorder your tools as you wish ({{bug(1226272)}}).</p>
+<div class="notecard note">
+    <h4>Note</h4>
+    <p>Since Firefox 62, you can drag and drop tabs in the main toolbar of the toolbox to reorder your tools as you wish ({{bug(1226272)}}).</p>
 </div>
 
 <h2 id="Docking_mode">Docking mode</h2>
 
-<p>By default, the Toolbox appears docked to the bottom of the browser window, but you can also dock it to the right-hand side of the window, or make it a standalone window, using <a href="/en-US/docs/Tools/Tools_Toolbox#toolbox_controls">buttons in the toolbar</a>.</p>
+<p>By default, the Toolbox appears docked to the bottom of the browser window, but you can also dock it to the right-hand side of the window, or make it a standalone window, using <a href="#toolbox_controls">buttons in the toolbar</a>.</p>
 
 <h2 id="Toolbar">Toolbar</h2>
 
@@ -68,8 +68,6 @@ slug: Tools/Tools_Toolbox
 
 <ul>
  <li><a href="/en-US/docs/Tools/Paint_Flashing_Tool">Highlight painted area</a></li>
- <li><a href="/en-US/docs/Tools/3D_View">3D view</a> (note that this is not available in Firefox 40)</li>
- <li><a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a></li>
  <li><a href="/en-US/docs/Tools/Eyedropper">Grab a color from the page</a></li>
  <li>Take a screenshot of the entire page: take a screenshot of the complete web page and saves it in your Downloads directory</li>
  <li><a href="/en-US/docs/Tools/Rulers">Toggle rulers for the page</a></li>
@@ -87,7 +85,7 @@ slug: Tools/Tools_Toolbox
  <li>access <a href="#settings">developer tool settings</a></li>
 </ul>
 
-<h2 id="Settings_2"><a name="Settings">Settings</a></h2>
+<h2 id="Settings_2">Settings</h2>
 
 <p><a href="/en-US/docs/Tools/Settings">See the separate page on the Developer Tools Settings</a>.</p>
 
@@ -97,6 +95,4 @@ slug: Tools/Tools_Toolbox
 
 <h2 id="Keyboard_shortcuts">Keyboard shortcuts</h2>
 
-<p>{{ Page ("en-US/docs/tools/Keyboard_shortcuts", "toolbox-shortcuts") }}</p>
-
-<p>{{ Page ("en-US/docs/tools/Keyboard_shortcuts", "all-toolbox-tools") }}</p>
+<p><a href="/en-US/docs/Tools/Keyboard_shortcuts#toolbox">Toolbox shortcuts</a> lists the shortcuts that work whenever the toolbox is open, no matter which tool is active. This same page also lists tool-specific keyboard shortcuts.</p>

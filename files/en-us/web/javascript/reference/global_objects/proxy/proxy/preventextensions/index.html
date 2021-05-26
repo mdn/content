@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Method
   - Proxy
+browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
 <div>{{JSRef}}</div>
 
@@ -13,11 +14,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>target</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>target</var>, {
   preventExtensions: function(<var>target</var>) {
   }
 });
@@ -63,7 +63,7 @@ tags:
 
 <p>The following code traps {{jsxref("Object.preventExtensions()")}}.</p>
 
-<pre class="brush: js notranslate">const p = new Proxy({}, {
+<pre class="brush: js">const p = new Proxy({}, {
   preventExtensions: function(target) {
     console.log('called');
     Object.preventExtensions(target);
@@ -77,7 +77,7 @@ console.log(Object.preventExtensions(p)); // "called"
 
 <p>The following code violates the invariant.</p>
 
-<pre class="brush: js example-bad notranslate">const p = new Proxy({}, {
+<pre class="brush: js example-bad">const p = new Proxy({}, {
   preventExtensions: function(target) {
     return true;
   }
@@ -88,25 +88,11 @@ Object.preventExtensions(p); // TypeError is thrown
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

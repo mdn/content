@@ -13,6 +13,7 @@ tags:
   - Reference
   - Reset Button
   - reset
+browser-compat: html.elements.input.input-reset
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -56,7 +57,7 @@ tags:
 <p>An <code>&lt;input type="reset"&gt;</code> element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label. Buttons such as <code>reset</code> don't have a value otherwise.</p>
 
 <div id="summary-example3">
-<pre class="brush: html notranslate">&lt;input type="reset" value="Reset the form"&gt;</pre>
+<pre class="brush: html">&lt;input type="reset" value="Reset the form"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
@@ -64,7 +65,7 @@ tags:
 <p>If you don't specify a <code>value</code>, you get an button with the default label (typically "Reset," but this will vary depending on the {{Glossary("user agent")}}):</p>
 
 <div id="summary-example1">
-<pre class="brush: html notranslate">&lt;input type="reset"&gt;</pre>
+<pre class="brush: html">&lt;input type="reset"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
@@ -77,7 +78,7 @@ tags:
 
 <p>We'll begin by creating a simple reset button:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
     &lt;input id="example" type="text"&gt;
@@ -100,7 +101,7 @@ tags:
 
 <p>In this example, <kbd>r</kbd> is specified as the access key (you'll need to press <kbd>r</kbd> plus the particular modifier keys for your browser/OS combination; see {{htmlattrxref("accesskey")}} for a useful list of those).</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="example"&gt;Type in some sample text&lt;/label&gt;
     &lt;input id="example" type="text"&gt;
@@ -120,13 +121,13 @@ tags:
 <p>To disable a reset button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
 
 <div id="disable-example1">
-<pre class="brush: html notranslate">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
+<pre class="brush: html">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
 </div>
 
 <p>You can enable and disable buttons at run time by setting <code>disabled</code> to <code>true</code> or <code>false</code>; in JavaScript this looks like <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See the <code><a href="/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> page for more ideas about enabling and disabling buttons.</p>
+<p><strong>Note</strong>: See the <code><a href="/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> page for more ideas about enabling and disabling buttons.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>
@@ -139,34 +140,17 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#reset-button-state-(type=reset)', '&lt;input type="reset"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-reset")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.</li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons">Forms and buttons</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons">Forms and buttons</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Forms (accessibility)</a></li>
  <li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
  <li>The {{HTMLElement("button")}} element</li>

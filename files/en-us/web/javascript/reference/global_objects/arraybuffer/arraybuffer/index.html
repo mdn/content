@@ -6,6 +6,7 @@ tags:
 - Constructor
 - JavaScript
 - Reference
+browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
 <div>{{JSRef}}</div>
 
@@ -14,15 +15,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new ArrayBuffer(<var>length</var>)
+<pre class="brush: js">new ArrayBuffer(<var>length</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -49,11 +45,11 @@ tags:
   <code>ArrayBuffer</code> constructor as a function without <code>new</code>, will throw
   a {{jsxref("TypeError")}} from now on.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = ArrayBuffer(10);
+<pre class="brush: js example-bad">var dv = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new ArrayBuffer(10);</pre>
+<pre class="brush: js example-good">var dv = new ArrayBuffer(10);</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -62,25 +58,16 @@ tags:
 <p>In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array",
   "Int32Array")}} view referring to the buffer:</p>
 
-<pre class="brush: js notranslate">var buffer = new ArrayBuffer(8);
+<pre class="brush: js">var buffer = new ArrayBuffer(8);
 var view   = new Int32Array(buffer);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.ArrayBuffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

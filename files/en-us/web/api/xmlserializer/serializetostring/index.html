@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><em>xmlString</em> = <em>anXMLSerializer</em>.serializeToString(<em>rootNode</em>);</pre>
+  class="brush: js"><em>xmlString</em> = <em>anXMLSerializer</em>.serializeToString(<em>rootNode</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -84,8 +84,8 @@ tags:
 
 <ul>
   <li>For XML serializations, <code>Element</code> and <code>Attr</code> nodes are always
-    serialized with their {{domxref("Node.namespaceURI", "namespaceURI")}} intact. This
-    may mean that a previously-specified {{domxref("Node.prefix", "prefix")}} or default
+    serialized with their {{domxref("Element.namespaceURI", "namespaceURI")}} intact. This
+    may mean that a previously-specified {{domxref("Element.prefix", "prefix")}} or default
     namespace may be dropped or altered.</li>
   <li>The resulting XML is compatible with the HTML parser.</li>
   <li>Elements in the HTML namespace that have no child nodes (thereby representing empty

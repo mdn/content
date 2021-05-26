@@ -14,7 +14,7 @@ tags:
 
 <p>Web developers, or webmasters, rarely craft these textual HTTP messages themselves: software, a Web browser, proxy, or Web server, perform this action. They provide HTTP messages through config files (for proxies or servers), APIs (for browsers), or other interfaces.</p>
 
-<p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" style="height: 538px; width: 1174px;"></p>
+<p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="httpmsg2.png"></p>
 
 <p>The HTTP/2 binary framing mechanism has been designed to not require any alteration of the APIs or config files applied: it is broadly transparent to the user.</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <p>The start-line and HTTP headers of the HTTP message are collectively known as the <em>head</em> of the requests, whereas its payload is known as the <em>body</em>.</p>
 
-<p><img alt="Requests and responses share a common structure in HTTP" src="https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png" style="height: 368px; width: 1239px;"></p>
+<p><img alt="Requests and responses share a common structure in HTTP" src="httpmsgstructure2.png"></p>
 
 <h2 id="HTTP_Requests">HTTP Requests</h2>
 
@@ -64,12 +64,12 @@ tags:
 <p>Many different headers can appear in requests. They can be divided in several groups:</p>
 
 <ul>
- <li><em>General headers</em>, like {{HTTPHeader("Via")}}, apply to the message as a whole.</li>
- <li><em>Request headers</em>, like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).</li>
- <li><em>Representation metadata headers</em> (formerly <em>entity headers</em>), like {{HTTPHeader("Content-Length")}} that describe the encoding and format of the message body (only present if the message has a body).</li>
+ <li>{{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the message as a whole.</li> 
+ <li>{{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).</li>
+ <li>{{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).</li>
 </ul>
 
-<p><img alt="Example of headers in an HTTP request" src="https://mdn.mozillademos.org/files/17444/HTTP_request_headers3.png" style="height: 279px; width: 851px;"></p>
+<p><img alt="Example of headers in an HTTP request" src="http_request_headers3.png"></p>
 
 <h3 id="Body">Body</h3>
 
@@ -79,7 +79,7 @@ tags:
 
 <ul>
  <li>Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Multiple-resource bodies</a>, consisting of a multipart body, each containing a different bit of information. This is typically associated with <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>.</li>
+ <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Multiple-resource bodies</a>, consisting of a multipart body, each containing a different bit of information. This is typically associated with <a href="/en-US/docs/Learn/Forms">HTML Forms</a>.</li>
 </ul>
 
 <h2 id="HTTP_Responses">HTTP Responses</h2>
@@ -103,12 +103,12 @@ tags:
 <p>Many different headers can appear in responses. These can be divided into several groups:</p>
 
 <ul>
- <li><em>General headers</em>, like {{HTTPHeader("Via")}}, apply to the whole message.</li>
- <li><em>Response headers</em>, like {{HTTPHeader("Vary")}} and {{HTTPHeader("Accept-Ranges")}}, give additional information about the server which doesn't fit in the status line.</li>
- <li><em>Representation metadata headers</em> (formerly <em>entity headers</em>), like {{HTTPHeader("Content-Length")}} that describe the encoding and format of the message body (only present if the message has a body).</li>
+ <li>{{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the whole message.</li> 
+ <li>{{glossary("Response header", "Response headers")}}, like {{HTTPHeader("Vary")}} and {{HTTPHeader("Accept-Ranges")}}, give additional information about the server which doesn't fit in the status line.</li>  
+ <li>{{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).</li>
 </ul>
 
-<p><img alt="Example of headers in an HTTP response" src="https://mdn.mozillademos.org/files/17445/HTTP_response_headers3.png" style="height: 344px; width: 805px;"></p>
+<p><img alt="Example of headers in an HTTP response" src="http_response_headers3.png"></p>
 
 <h3 id="Body_2">Body</h3>
 
@@ -134,7 +134,7 @@ tags:
 
 <p>HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, this allows header compression. Several streams can be combined together, a process called <em>multiplexing</em>, allowing more efficient use of underlying TCP connections.</p>
 
-<p><img alt="HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization." src="https://mdn.mozillademos.org/files/13819/Binary_framing2.png" style="height: 735px; width: 810px;"></p>
+<p><img alt="HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization." src="binary_framing2.png"></p>
 
 <p>HTTP frames are now transparent to Web developers. This is an additional step in HTTP/2, between HTTP/1.1 messages and the underlying transport protocol. No changes are needed in the APIs used by Web developers to utilize HTTP frames; when available in both the browser and the server, HTTP/2 is switched on and used.</p>
 

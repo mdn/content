@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js syntaxbox notranslate">var <var>notification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
+<pre class="brush: js syntaxbox">var <var>notification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -84,7 +84,7 @@ tags:
   creates the necessary <code>options</code> object and triggers the notification by using
   the <code>Notification()</code> constructor.</p>
 
-<pre class="brush: js notranslate">function spawnNotification(body, icon, title) {
+<pre class="brush: js">function spawnNotification(body, icon, title) {
   var options = {
       body: body,
       icon: icon
@@ -119,8 +119,6 @@ tags:
 <h3 id="Chrome_notes">Chrome notes</h3>
 
 <p>Starting in Chrome 49, notifications don't work in incognito mode.</p>
-
-<p>{{Page("/en-US/docs/Web/API/Notifications_API", "Chrome notes")}}</p>
 
 <h3 id="Internet_Explorer_notes">Internet Explorer notes</h3>
 

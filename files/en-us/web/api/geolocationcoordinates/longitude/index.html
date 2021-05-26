@@ -2,17 +2,17 @@
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
 tags:
-- API
-- GPS
-- Geolocation
-- Geolocation API
-- GeolocationCoordinates
-- Global Positioning System
-- Property
-- Read-only
-- Reference
-- Secure context
-- longitude
+  - API
+  - GPS
+  - Geolocation
+  - Geolocation API
+  - GeolocationCoordinates
+  - Global Positioning System
+  - Property
+  - Read-only
+  - Reference
+  - Secure context
+  - longitude
 ---
 <div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
 
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>let longitude</var> = <var>geolocationCoordinatesInstance</var>.longitude
+<pre class="brush: js"><var>let longitude</var> = <var>geolocationCoordinatesInstance</var>.longitude
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -55,7 +55,7 @@ tags:
 <p>The JavaScript code below creates an event listener so that when the user clicks on a
   button, the location information is retrieved and displayed.</p>
 
-<pre class="brush: js notranslate">let button = document.getElementById("get-location");
+<pre class="brush: js">let button = document.getElementById("get-location");
 let latText = document.getElementById("latitude");
 let longText = document.getElementById("longitude");
 
@@ -82,7 +82,7 @@ button.addEventListener("click", function() {
   determined position.</p>
 
 <p>From the <code>GeolocationPosition</code> object, we obtain the user's latitude and
-  longitude using {{domxref("Coordinates.latitude", "position.coords.latitude")}} and
+  longitude using {{domxref("GeolocationCoordinates/latitude", "position.coords.latitude")}} and
   <code>position.coords.longitude</code> so we can update the displayed coordinates. The
   two {{HTMLElement("span")}} elements are updated to display the corresponding values
   after being converted to a value with two decimal places.</p>
@@ -91,7 +91,7 @@ button.addEventListener("click", function() {
 
 <p>The HTML used to present the results looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Your location is &lt;span id="latitude"&gt;0.00&lt;/span&gt;°
   latitude by &lt;span id="longitude"&gt;0.00&lt;/span&gt;° longitude.
 &lt;/p&gt;
@@ -132,7 +132,7 @@ button.addEventListener("click", function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using">Using the Geolocation API</a>
+  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
   </li>
   <li>The {{domxref("GeolocationCoordinates")}} interface it belongs to.</li>
   <li>The {{domxref("GeolocationPosition")}} interface, which is the top-level interface

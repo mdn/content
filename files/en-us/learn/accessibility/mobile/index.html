@@ -218,7 +218,7 @@ tags:
 
 <p>If you try to control our <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html">simple-box-drag.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html">see example live</a>) example with a keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:</p>
 
-<pre class="brush: js notranslate">div.onmousedown = function() {
+<pre class="brush: js">div.onmousedown = function() {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
@@ -228,7 +228,7 @@ document.onmouseup = stopMove;</pre>
 
 <p>To enable other forms of control, you need to use different, yet equivalent events — for example, touch events work on touchscreen devices:</p>
 
-<pre class="brush: js notranslate">div.ontouchstart = function(e) {
+<pre class="brush: js">div.ontouchstart = function(e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
@@ -267,7 +267,7 @@ panel.ontouchend = stopMove;</pre>
 
 <p>Using <a href="/en-US/docs/Web/HTML/Viewport_meta_tag">viewport</a>, it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:</p>
 
-<pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width; user-scalable=yes"&gt;</pre>
+<pre class="brush: html">&lt;meta name="viewport" content="width=device-width; user-scalable=yes"&gt;</pre>
 
 <p>You should never set <code>user-scalable=no</code> if at all possible — many people rely on zoom to be able to see the content of your website, so taking this functionality away is a really bad idea. There are certain situations where zooming might break the UI; in such cases, if you feel that you absolutely need to disable zoom, you should provide some other kind of equivalent, such as a control for increasing the text size in a way that doesn't break your UI.</p>
 
@@ -277,7 +277,7 @@ panel.ontouchend = stopMove;</pre>
 
 <p>When implementing such a menu, you need to make sure that the control to reveal it is accessible by appropriate control mechanisms (normally touch for mobile), as discussed in {{anch("Control mechanisms")}} above, and that the rest of the page is moved out of the way or hidden in some way while the menu is being accessed, to avoid confusion with navigating it.</p>
 
-<p>Click here for a <a href="http://fritz-weisshart.de/meg_men/">good hamburger menu example</a>.</p>
+<p>Click here for a <a href="https://fritz-weisshart.de/meg_men/">good hamburger menu example</a>.</p>
 
 <h2 id="User_input">User input</h2>
 
@@ -292,7 +292,7 @@ panel.ontouchend = stopMove;</pre>
  <li>Types <code>time</code> and <code>date</code> display suitable pickers for selecting times and dates.</li>
 </ul>
 
-<p>If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See <a href="http://diveinto.html5doctor.com/detect.html#input-types">input types</a> for raw information on detecting different input types, and also check out our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> for much more information.</p>
+<p>If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See <a href="https://diveinto.html5doctor.com/detect.html#input-types">input types</a> for raw information on detecting different input types, and also check out our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> for much more information.</p>
 
 <h2 id="Summary">Summary</h2>
 
@@ -302,12 +302,11 @@ panel.ontouchend = stopMove;</pre>
 
 <ul>
  <li><a href="https://www.smashingmagazine.com/guidelines-for-mobile-web-development/">Guidelines For Mobile Web Development</a> — A list of articles in <em>Smashing Magazine</em> covering different techniques for mobile web design.</li>
- <li><a href="http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644">Make your site work on touch devices</a> — Useful article about using touch events to get interactions working on mobile devices.</li>
+ <li><a href="https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644">Make your site work on touch devices</a> — Useful article about using touch events to get interactions working on mobile devices.</li>
 </ul>
 
 <div>{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
@@ -319,4 +318,3 @@ panel.ontouchend = stopMove;</pre>
  <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
  <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
 </ul>
-</div>

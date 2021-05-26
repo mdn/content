@@ -9,6 +9,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.comma
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>expr1</em>, <em>expr2, expr3...</em></pre>
+<pre class="brush: js"><em>expr1</em>, <em>expr2, expr3...</em></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,7 +52,7 @@ tags:
 
 <p>The following code prints the values of the diagonal elements in the array:</p>
 
-<pre class="brush:js highlight:[1] notranslate">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
+<pre class="brush:js highlight:[1]">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
   console.log('a[' + i + '][' + j + '] = ' + a[i][j]);</pre>
 
 <p>Note that the comma operators in assignments may appear not to have the normal effect
@@ -62,7 +63,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator
     precedence and associativity</a>.</p>
 
-<pre class="brush: js notranslate">var a, b, c;
+<pre class="brush: js">var a, b, c;
 
 a = b = 3, c = 4; // Returns 4 in console
 console.log(a); // 3 (left-most)
@@ -79,7 +80,7 @@ console.log(x); // 6 (right-most)
   As stated, only the last element will be returned but all others are going to be
   evaluated as well. So, one could do:</p>
 
-<pre class="brush: js notranslate">function myFunc() {
+<pre class="brush: js">function myFunc() {
   var x = 0;
 
   return (x += 1, x); // the same as return ++x;
@@ -87,20 +88,11 @@ console.log(x); // 6 (right-most)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.comma")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

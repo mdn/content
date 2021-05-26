@@ -8,6 +8,7 @@ tags:
 - Primary Expressions
 - Reference
 - this
+browser-compat: javascript.operators.this
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -28,15 +29,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">this</pre>
+<pre class="brush: js">this</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -99,12 +95,13 @@ f1() === globalThis; // true</pre>
 f2() === undefined; // true
 </pre>
 
-<div class="note">In the second example, <code>this</code> should be
+<div class="note">
+  <p><strong>Note:</strong> In the second example, <code>this</code> should be
   {{jsxref("undefined")}}, because <code>f2</code> was called directly and not as a method
   or property of an object (e.g. <code>window.f2()</code>). This feature wasn't
   implemented in some browsers when they first started to support <a
     href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>. As a result,
-  they incorrectly returned the <code>window</code> object.</div>
+  they incorrectly returned the <code>window</code> object.</p></div>
 
 <p>To set the value of <code>this</code> to a particular value when calling a function,
   use {{jsxref("Function.prototype.call()", "call()")}}, or
@@ -258,7 +255,7 @@ var foo = (() =&gt; this);
 console.log(foo() === globalObject); // true</pre>
 
 <div class="note">
-  <p>Note: if <code>this</code> arg is passed to <code>call</code>, <code>bind</code>, or
+  <p><strong>Note:</strong> If <code>this</code> arg is passed to <code>call</code>, <code>bind</code>, or
     <code>apply</code> on invocation of an arrow function it will be ignored. You can
     still prepend arguments to the call, but the first argument (<code>thisArg</code>)
     should be set to <code>null</code>.</p>
@@ -423,7 +420,7 @@ console.log(o.average, o.sum); // 2, 6
   keyword), its <code>this</code> is bound to the new object being constructed.</p>
 
 <div class="note">
-  <p>While the default for a constructor is to return the object referenced by
+  <p><strong>Note:</strong> While the default for a constructor is to return the object referenced by
     <code>this</code>, it can instead return some other object (if the return value isn't
     an object, then the <code>this</code> object is returned).</p>
 </div>
@@ -564,22 +561,11 @@ bird.sayBye();  // Bye from Ferrari</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-this-keyword', 'The this keyword')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.this")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

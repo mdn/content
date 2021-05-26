@@ -16,7 +16,7 @@ tags:
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p>The {{domxref("MutationObserver")}} interface provides the ability to watch for changes being made to the <a href="/en-US/docs/DOM">DOM</a> tree. It is designed as a replacement for the older <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> feature, which was part of the DOM3 Events specification.</p>
+<p>The {{domxref("MutationObserver")}} interface provides the ability to watch for changes being made to the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> tree. It is designed as a replacement for the older <a href="/en-US/docs/Web/API/MutationEvent">Mutation Events</a> feature, which was part of the DOM3 Events specification.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -38,13 +38,13 @@ tags:
 
 <h2 id="Mutation_Observer_customize_resize_event_listener_demo">Mutation Observer &amp; customize resize event listener &amp; demo</h2>
 
-<p><a class="external" href="https://codepen.io/webgeeker/full/YjrZgg/">https://codepen.io/webgeeker/full/YjrZgg/</a></p>
+<p><a href="https://codepen.io/webgeeker/full/YjrZgg/">https://codepen.io/webgeeker/full/YjrZgg/</a></p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following example was adapted from <a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">this blog post</a>.</p>
+<p>The following example was adapted from <a href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">this blog post</a>.</p>
 
-<pre class="brush: js notranslate">// Select the node that will be observed for mutations
+<pre class="brush: js">// Select the node that will be observed for mutations
 const targetNode = document.getElementById('some-id');
 
 // Options for the observer (which mutations to observe)
@@ -101,7 +101,7 @@ observer.disconnect();</pre>
 	<li>{{domxref('PerformanceObserver')}}</li>
 	<li>{{domxref('ResizeObserver')}}</li>
 	<li>{{domxref('IntersectionObserver')}}</li>
-	<li><a class="external" href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">A brief overview</a></li>
-	<li><a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a></li>
-	<li><a class="external" href="http://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a></li>
+	<li><a href="https://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">A brief overview</a></li>
+	<li><a href="https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a></li>
+	<li><a href="https://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a></li>
 </ul>

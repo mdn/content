@@ -10,6 +10,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Array.@@iterator
 ---
 <div>{{JSRef}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>arr</var>[Symbol.iterator]()</code></pre>
+<pre class="brush: js">[Symbol.iterator]()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -38,12 +39,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul id="letterResult"&gt;
+<pre class="brush: html">&lt;ul id="letterResult"&gt;
 &lt;/ul&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const arr = ['a', 'b', 'c'];
+<pre class="brush: js">const arr = ['a', 'b', 'c'];
 const eArr = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
 // your browser must support for..of loop
@@ -63,7 +64,7 @@ for (let letter of eArr) {
 
 <h3 id="Alternative_iteration">Alternative iteration</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // a
 console.log(eArr.next().value); // b
@@ -82,7 +83,7 @@ console.log(eArr.next().value); // e
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a>
   object or a custom object.</p>
 
-<pre class="brush: js notranslate">function logIterable(it) {
+<pre class="brush: js">function logIterable(it) {
  if (!(Symbol.iterator in Object.getPrototypeOf(it)
  /* or "Symbol.iterator in Object.__proto__"
     or "it[Symbol.iterator]" */)) {
@@ -116,23 +117,11 @@ logIterable(123);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype-@@iterator',
-        'Array.prototype[@@iterator]()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.@@iterator")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

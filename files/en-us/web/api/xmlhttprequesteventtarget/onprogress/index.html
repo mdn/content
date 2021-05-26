@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>XMLHttpRequest</em>.onprogress = <em>callback</em>;</pre>
+<pre class="brush: js"><em>XMLHttpRequest</em>.onprogress = <em>callback</em>;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -30,14 +30,14 @@ tags:
  <li><em><code>event.total</code></em>  the total amount of data to be transferred.</li>
 </ul>
 
-<pre class="brush: js notranslate">XMLHttpRequest.onprogress = function (event) {
+<pre class="brush: js">XMLHttpRequest.onprogress = function (event) {
   event.loaded;
   event.total;
 };</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">var xmlhttp = new XMLHttpRequest(),
+<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
   method = 'GET',
   url = 'https://developer.mozilla.org/';
 

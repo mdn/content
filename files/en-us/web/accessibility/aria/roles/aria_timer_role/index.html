@@ -8,11 +8,11 @@ tags:
   - Reference
   - Role Timer
 ---
-<p>{{draft}}{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
+<p>{{draft}}</p>
 
 <p><span class="seoSummary">The timer role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point.</span></p>
 
-<pre class="brush: html notranslate">&lt;div role="timer" id="eggtimer"&gt;0&lt;/div&gt;
+<pre class="brush: html">&lt;div role="timer" id="eggtimer"&gt;0&lt;/div&gt;
 </pre>
 
 <p>This defines this <code>div</code> element as a timer with no remaining time.</p>
@@ -61,11 +61,11 @@ tags:
 
 <p>As an illustration of <code>aria-atomic</code>, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.</p>
 
-<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="off"&gt;20&lt;/div&gt;
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="off"&gt;20&lt;/div&gt;
 
 &lt;button onclick="startTimer('clock')"&gt;start&lt;/button&gt;</pre>
 
-<pre class="brush: js notranslate">/* basic JavaScript to update a timer */
+<pre class="brush: js">/* basic JavaScript to update a timer */
 function startTimer(timerName) {
   // get the number of seconds
    let timer = document.getElementById(timerName),
@@ -89,7 +89,7 @@ function startTimer(timerName) {
 
 <p><code>aria-atomic="true"</code> ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").</p>
 
-<pre class="brush: html notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;</pre>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -113,3 +113,11 @@ function startTimer(timerName) {
 <h2 id="Precedence_order">Precedence order</h2>
 
 <p>Applying the <code>timer</code> role will cause this and all of the descendant elements of this element to be treated like XXX</p>
+
+
+<section id="Quick_links">
+  <ol>
+   <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>
+  

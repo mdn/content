@@ -2,14 +2,20 @@
 title: BlobBuilder
 slug: Web/API/BlobBuilder
 tags:
-- API
-- DOM
-- DOM Reference
-- File API
-- Obsolete
-- Reference
+  - API
+  - DOM
+  - DOM Reference
+  - File API
+  - Deprecated
+  - Reference
 ---
 <p>{{APIRef("File API")}}{{ deprecated_header}}</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The <code>BlobBuilder</code> interface has been
+  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</p>
+</div>
 
 <p>The <strong><code>BlobBuilder</code></strong> interface provides an easy way to
   construct {{domxref("Blob")}} objects. Just create a <code>BlobBuilder</code> and append
@@ -17,8 +23,6 @@ tags:
   building your blob, call {{manch("getBlob")}} to retrieve a {{domxref("Blob")}}
   containing the data you sent into the blob builder.</p>
 
-<div class="note"><strong>Note:</strong> The <code>BlobBuilder</code> interface has been
-  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</div>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -41,12 +45,12 @@ tags:
     </tr>
     <tr>
       <td>
-        <code>Blob <a href="/en-US/docs/Web/API/BlobBuilder#getBlob()">getBlob</a>([optional] in DOMString contentType);</code>
+        <code>Blob <a href="/en-US/docs/Web/API/BlobBuilder#getblob()">getBlob</a>([optional] in DOMString contentType);</code>
       </td>
     </tr>
     <tr>
       <td>
-        <code>File <a href="/en-US/docs/Web/API/BlobBuilder#getFile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code>
+        <code>File <a href="/en-US/docs/Web/API/BlobBuilder#getfile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code>
       </td>
     </tr>
   </tbody>
@@ -63,7 +67,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>,
   the value is coerced to a string before being appended to the blob.</p>
 
-<pre class="brush: js notranslate">void append(
+<pre class="brush: js">void append(
   in ArrayBuffer data
 );
 
@@ -94,7 +98,7 @@ void append(
 <p>Returns the {{domxref("Blob")}} object that has been constructed using the data passed
   through calls to {{manch("append")}}.</p>
 
-<pre class="brush: js notranslate">Blob getBlob(
+<pre class="brush: js">Blob getBlob(
   in DOMString contentType {{optional_inline}}
 );
 </pre>
@@ -118,7 +122,7 @@ void append(
 
 <p>Returns a {{domxref("File")}} object.</p>
 
-<pre class="brush: js notranslate">File getFile(
+<pre class="brush: js">File getFile(
   in DOMString name,
   [optional] in DOMString contentType
 );

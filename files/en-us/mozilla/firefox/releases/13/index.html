@@ -32,18 +32,18 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>Support for the ECMAScript 2015 <a href="/en-US/docs/JavaScript/Reference/Statements/for...of" title="for...of"><code>for..of</code></a> construct has been added.</li>
- <li>Experimental support for ECMAScript 2015 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Map">Map</a> and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Set">Set</a> objects has been implemented.</li>
+ <li>Support for the ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of" title="for...of"><code>for..of</code></a> construct has been added.</li>
+ <li>Experimental support for ECMAScript 2015 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a> objects has been implemented.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
 
 <ul>
  <li>The {{domxref("Node.cloneNode()")}} method's <code>deep</code> argument is now optional, as specified in DOM4.</li>
- <li>The {{domxref("window.setTimeout()")}} and {{domxref("window.setInterval()")}} methods no longer pass an additional "lateness" argument to the callback routine.</li>
+ <li>The {{domxref("WindowOrWorkerGlobalScope/setTimeout")}} and {{domxref("WindowOrWorkerGlobalScope/setInterval")}} methods no longer pass an additional "lateness" argument to the callback routine.</li>
  <li>The {{domxref("Blob","Blob.mozSlice()")}} method has been unprefixed.</li>
  <li>Support for the {{domxref("Blob")}} constructor has been added.</li>
- <li>Support for <a href="/en-US/docs/DOM/Storage#globalStorage"><code>globalStorage</code></a> has been removed.</li>
+ <li>Support for <a href="/en-US/docs/Web/API/Web_Storage_API#globalstorage"><code>globalStorage</code></a> has been removed.</li>
  <li>The new {{domxref("DOMRequest")}} interface, used for reporting the status and result of background operations, has been added.</li>
  <li>The {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} method now returns <code>0</code> instead of the incorrect <code>-1</code> when the {{HTMLElement("option")}} is inside a {{HTMLElement("datalist")}} HTML element.</li>
  <li>{{domxref("DOMException")}} as defined in DOM Level 4 has been implemented.</li>
@@ -63,20 +63,20 @@ tags:
 <h3 id="SVG">SVG</h3>
 
 <ul>
- <li>The {{domxref("SVGStringList")}} DOM interface is now indexable like <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> (see {{bug("722071")}}).</li>
+ <li>The {{domxref("SVGStringList")}} DOM interface is now indexable like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> (see {{bug("722071")}}).</li>
 </ul>
 
 <h3 id="WebGL">WebGL</h3>
 
 <ul>
- <li>Support has been added for the <a href="/en-US/docs/WebGL/Using_Extensions#EXT_texture_filter_anisotropic"><code>EXT_texture_filter_anisotropic</code></a> extension. Anisotropic texture filtering improves the quality of mipmapped texture access when viewing a textured primitive at an oblique angle.</li>
+ <li>Support has been added for the <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions#ext_texture_filter_anisotropic"><code>EXT_texture_filter_anisotropic</code></a> extension. Anisotropic texture filtering improves the quality of mipmapped texture access when viewing a textured primitive at an oblique angle.</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
 
 <ul>
  <li>Support for the <code>width</code> attribute on {{MathMLElement("mtable")}} elements has been added ({{bug("722880")}}).</li>
- <li><a class="external" href="http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/" rel="external">MathJax fonts</a> are now used as the default fonts for mathematical text. See <a href="/en-US/docs/Mozilla_MathML_Project/Fonts" title="Fonts for Mozilla's MathML engine">Fonts for Mozilla's MathML engine</a> for more information.</li>
+ <li><a class="external" href="https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/" rel="external">MathJax fonts</a> are now used as the default fonts for mathematical text. See <a href="/en-US/docs/Mozilla_MathML_Project/Fonts" title="Fonts for Mozilla's MathML engine">Fonts for Mozilla's MathML engine</a> for more information.</li>
 </ul>
 
 <h3 id="Network">Network</h3>
@@ -96,8 +96,8 @@ tags:
 <h4 id="Style_panel_improvements">Style panel improvements</h4>
 
 <ul>
- <li>Clicking the heading for any rule in the <a href="/en-US/docs/Tools/Page_Inspector/Style_panel" title="Style panel">style panel</a> now opens the <a href="/en-US/docs/Tools/Style_Editor" title="Style Editor">Style Editor</a> at the corresponding CSS.</li>
- <li>Right-clicking on a rule in the <a href="/en-US/docs/Tools/Page_Inspector/Style_panel" title="Style panel">style panel</a> now offers an option to copy the rule to the clipboard.</li>
+ <li>Clicking the heading for any rule in the <a href="/en-US/docs/Tools/Page_Inspector#css_pane" title="Style panel">style panel</a> now opens the <a href="/en-US/docs/Tools/Style_Editor" title="Style Editor">Style Editor</a> at the corresponding CSS.</li>
+ <li>Right-clicking on a rule in the <a href="/en-US/docs/Tools/Page_Inspector#css_pane" title="Style panel">style panel</a> now offers an option to copy the rule to the clipboard.</li>
  <li>Entering an unknown property name, or an illegal property value, displays a warning icon next to that property.</li>
 </ul>
 

@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - polyfill
+browser-compat: javascript.builtins.Array.from
 ---
 <div>{{JSRef}}</div>
 
@@ -19,7 +20,21 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Array.from(<var>arrayLike </var>[, <var>mapFn </var>[, <var>thisArg</var>]])
+<pre class="brush: js">
+// Arrow function
+Array.from(arrayLike, (element) => { ... } )
+Array.from(arrayLike, (element, index) => { ... } )
+Array.from(arrayLike, (element, index, array) => { ... } )
+
+// Mapping function
+Array.from(arrayLike, mapFn)
+Array.from(arrayLike, mapFn, thisArg)
+
+// Inline mapping function
+Array.from(arrayLike, function mapFn(element) { ... })
+Array.from(arrayLike, function mapFn(element, index) { ... })
+Array.from(arrayLike, function mapFn(element, index, array){ ... })
+Array.from(arrayLike, function mapFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -59,10 +74,10 @@ tags:
     as <code>Array.from(<var>obj</var>).map(<var>mapFn</var>, <var>thisArg</var>)</code>,<br>
     except that it does not create an intermediate array.</p>
 
-<div class="note">This is especially important for certain array subclasses, like <a
+<div class="note"><p><strong>Note:</strong> This is especially important for certain array subclasses, like <a
         href="/en-US/docs/Web/JavaScript/Typed_arrays">typed arrays</a>, since the
     intermediate array would necessarily have values truncated to fit into the appropriate
-    type.</div>
+    type.</p></div>
 
 <p>The <code>length</code> property of the <code>from()</code> method is <code>1</code>.
 </p>
@@ -76,18 +91,18 @@ tags:
 
 <h3 id="Array_from_a_String">Array from a <code>String</code></h3>
 
-<pre class="brush: js notranslate">Array.from('foo');
+<pre class="brush: js">Array.from('foo');
 // [ "f", "o", "o" ]</pre>
 
 <h3 id="Array_from_a_Set">Array from a <code>Set</code></h3>
 
-<pre class="brush: js notranslate">const set = new Set(['foo', 'bar', 'baz', 'foo']);
+<pre class="brush: js">const set = new Set(['foo', 'bar', 'baz', 'foo']);
 Array.from(set);
 // [ "foo", "bar", "baz" ]</pre>
 
 <h3 id="Array_from_a_Map">Array from a <code>Map</code></h3>
 
-<pre class="brush: js notranslate">const map = new Map([[1, 2], [2, 4], [4, 8]]);
+<pre class="brush: js">const map = new Map([[1, 2], [2, 4], [4, 8]]);
 Array.from(map);
 // [[1, 2], [2, 4], [4, 8]]
 
@@ -101,7 +116,7 @@ Array.from(mapper.keys());
 
 <h3 id="Array_from_a_NodeList">Array from a <code>NodeList</code></h3>
 
-<pre class="brush: js notranslate">// Create an array based on a property of DOM Elements
+<pre class="brush: js">// Create an array based on a property of DOM Elements
 const images = document.getElementsByTagName('img');
 const sources = Array.from(images, image =&gt; image.src);
 const insecureSources = sources.filter(link =&gt; link.startsWith('http://'));</pre>
@@ -109,7 +124,7 @@ const insecureSources = sources.filter(link =&gt; link.startsWith('http://'));</
 <h3 id="Array_from_an_Array-like_object_arguments">Array from an Array-like object
     (arguments)</h3>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js">function f() {
   return Array.from(arguments);
 }
 
@@ -120,7 +135,7 @@ f(1, 2, 3);
 <h3 id="Using_arrow_functions_and_Array.from">Using arrow functions and
     <code>Array.from()</code></h3>
 
-<pre class="brush: js notranslate">// Using an arrow function as the map function to
+<pre class="brush: js">// Using an arrow function as the map function to
 // manipulate the elements
 Array.from([1, 2, 3], x =&gt; x + x);
 // [2, 4, 6]
@@ -134,7 +149,7 @@ Array.from({length: 5}, (v, i) =&gt; i);
 
 <h3 id="Sequence_generator_range">Sequence generator (range)</h3>
 
-<pre class="brush: js notranslate">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+<pre class="brush: js">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
 const range = (start, stop, step) =&gt; Array.from({ length: (stop - start) / step + 1}, (_, i) =&gt; start + (i * step));
 
 // Generate numbers range 0..4
@@ -152,24 +167,11 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Initial publication</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{SpecName('ESDraft', '#sec-array.from', 'Array.from')}}</td>
-            <td>ECMAScript 2015</td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.from")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -182,7 +184,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
     natively support it.</p>
 
 <div class="notecard note">
-    <p><strong>Polyfill Notes:</strong> This algorithm is exactly as specified in
+    <p><strong>Note:</strong> This algorithm is exactly as specified in
         ECMA-262 6<sup>th</sup> Edition (assuming <code>Object</code> and
         <code>TypeError</code> have their original values and that
         <code><var>callback</var>.call()</code> evaluates to the original value of
@@ -193,7 +195,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
         ECMA-262.</p>
 </div>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 6, 22.1.2.1
+<pre class="brush: js">// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
     Array.from = (function () {
         var symbolIterator;

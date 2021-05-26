@@ -5,6 +5,7 @@ tags:
   - Class
   - Function
   - JavaScript
+browser-compat: javascript.builtins.Function
 ---
 <div>{{JSRef}}</div>
 
@@ -14,7 +15,7 @@ tags:
 
 <dl>
  <dt>{{jsxref("Function/Function", "Function()")}}</dt>
- <dd>Creates a new <code>Function</code> object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to {{jsxref("eval")}}. However, unlike eval, the <code>Function</code> constructor creates functions that execute in the global scope only.</dd>
+ <dd>Creates a new <code>Function</code> object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to {{jsxref("Global_Objects/eval")}}. However, unlike eval, the <code>Function</code> constructor creates functions that execute in the global scope only.</dd>
 </dl>
 
 <h2 id="Instance_properties">Instance properties</h2>
@@ -52,9 +53,9 @@ tags:
 
 <h3 id="Difference_between_Function_constructor_and_function_declaration">Difference between Function constructor and function declaration</h3>
 
-<p>Functions created with the <code>Function</code> constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>Function</code> constructor was created. This is different from using {{jsxref("eval")}} with code for a function expression.</p>
+<p>Functions created with the <code>Function</code> constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>Function</code> constructor was created. This is different from using {{jsxref("Global_Objects/eval")}} with code for a function expression.</p>
 
-<pre class="brush: js notranslate">var x = 10;
+<pre class="brush: js">var x = 10;
 
 function createFunction1() {
     var x = 20;
@@ -79,25 +80,11 @@ console.log(f2());          // 20
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-objects', 'Function')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Function")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

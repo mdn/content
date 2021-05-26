@@ -2,32 +2,31 @@
 title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 tags:
-- Constructor
-- Function
-- JavaScript
-- Reference
+  - Constructor
+  - Function
+  - JavaScript
+  - Reference
+browser-compat: javascript.builtins.Function.Function
 ---
 <div>{{JSRef}}</div>
 
 <p><span class="seoSummary">The <strong><code>Function</code> constructor</strong> creates
     a new <code>Function</code> <strong>object</strong>. Calling the constructor directly
     can create functions dynamically, but suffers from security and similar (but far less
-    significant) performance issues to {{jsxref("eval")}}. However, unlike eval, the
+    significant) performance issues to {{jsxref("Global_Objects/eval")}}. However, unlike eval, the
     <code>Function</code> constructor creates functions which execute in the global scope
     only.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><code>new Function([<var>arg1 </var>[, <var>arg2 </var>[, ...<var>argN</var>]] ,] <var>functionBody</var>)</code></pre>
+<pre class="brush: js">
+new Function(arg1, functionBody)
+new Function(arg1, arg2, functionBody)
+new Function(arg1, ... , argN, functionBody)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +64,7 @@ tags:
 
 <p>The following code creates a <code>Function</code> object that takes two arguments.</p>
 
-<pre class="brush: js notranslate">// Example can be run directly in your JavaScript console
+<pre class="brush: js">// Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments, and returns the sum of those arguments
 const adder = new Function('a', 'b', 'return a + b');
@@ -80,26 +79,11 @@ adder(2, 6);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function-constructor', 'Function constructor')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Function.Function")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

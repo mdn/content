@@ -2,23 +2,30 @@
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
 tags:
-- HTTP
-- Headers
-- Reference
+  - Content-Length
+  - HTTP
+  - HTTP header
+  - Request header
+  - Response header
+  - Reference
+browser-compat: http.headers.Content-Length
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Content-Length</code></strong> entity header indicates the size of
-  the entity-body, in bytes, sent to the recipient.</p>
+<p>The <strong><code>Content-Length</code></strong> header indicates the size of the message body, in bytes, sent to the recipient.</p>
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Entity header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
       <td>yes</td>
     </tr>
   </tbody>
@@ -26,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Content-Length: &lt;length&gt;
+<pre class="brush: html">Content-Length: &lt;length&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -55,12 +62,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Content-Length")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

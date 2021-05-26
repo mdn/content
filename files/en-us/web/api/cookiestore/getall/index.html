@@ -1,0 +1,84 @@
+---
+title: CookieStore.getAll()
+slug: Web/API/CookieStore/getAll
+tags:
+  - API
+  - Method
+  - Reference
+  - getAll()
+  - CookieStore
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
+
+<p class="summary">The <strong><code>getAll()</code></strong> method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>list</var> = cookieStore.getAll(<var>name</var>);
+var <var>list</var> = cookieStore.getAll(<var>options</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>name</code>{{Optional_Inline}}</dt>
+  <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
+  <dt><code>options</code>{{Optional_Inline}}</dt>
+  <dd>An object containing:
+    <dl>
+      <dt><code>name</code></dt>
+      <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
+      <dt><code>url</code></dt>
+      <dd>A {{domxref("USVString")}} with the url of a cookie.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<div class="notecard note">
+  <h3>Note:</h3>
+  <p>The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
+</div>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("Promise")}} that resolves with a list of cookies for the given name or options.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{jsxref("TypeError")}}</dt>
+  <dd>Thrown if getting the cookie or cookies represented by the given <code>name</code> or <code>options</code> fails.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example we use <code>getAll()</code> with no parameters. This returns all of the cookies for this context as an array of objects.</p>
+
+<pre class="brush:js">let cookies = cookieStore.getAll();
+if (cookies) {
+  console.log(cookies);
+} else {
+  console.log('Cookie not found');
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Cookie Store API','#CookieStore-getAll','CookieStore.getAll()')}}</td>
+    <td>{{Spec2('Cookie Store API')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.CookieStore.getAll")}}</p>

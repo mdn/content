@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Method
 - Object
+browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 ---
 <div>{{JSRef}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
+<pre class="brush: js">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -67,7 +68,7 @@ tags:
   properties from a source object to a target object, you are able to use this method and
   {{jsxref("Object.create()")}} for a shallow copy between two unknown objects:</p>
 
-<pre class="brush: js notranslate">Object.create(
+<pre class="brush: js">Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
@@ -80,7 +81,7 @@ tags:
   awkward especially for getters and setters. Instead, you can use this code to set the
   prototype:</p>
 
-<pre class="brush: js notranslate">function superclass() {}
+<pre class="brush: js">function superclass() {}
 superclass.prototype = {
   // Define your methods and properties here
 };
@@ -95,26 +96,11 @@ subclass.prototype = Object.create(
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.getownpropertydescriptors',
-        'Object.getOwnPropertyDescriptors')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

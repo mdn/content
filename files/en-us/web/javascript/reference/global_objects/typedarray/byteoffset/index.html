@@ -7,6 +7,7 @@ tags:
   - Prototype
   - TypedArray
   - TypedArrays
+browser-compat: javascript.builtins.TypedArray.byteOffset
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h3 id="Using_the_byteOffset_property">Using the byteOffset property</h3>
 
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+<pre class="brush:js">var buffer = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(buffer);
 uint8.byteOffset; // 0 (no offset specified)
@@ -31,22 +32,11 @@ uint8.byteOffset; // 3 (as specified when constructing Uint8Array)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.byteoffset', 'TypedArray.prototype.byteOffset')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.byteOffset")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.join
 ---
 <div>{{JSRef}}</div>
 
@@ -19,16 +20,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-join.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>typedarray</var>.join([<var>separator</var> = ',']);</pre>
+<pre class="brush: js">
+join()
+join(separator)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +45,7 @@ tags:
 
 <h3 id="Using_join">Using join()</h3>
 
-<pre class="brush: js notranslate">var uint8 = new Uint8Array([1,2,3]);
+<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
 uint8.join();      // '1,2,3'
 uint8.join(' / '); // '1 / 2 / 3'
 uint8.join('');    // '123'
@@ -58,7 +56,7 @@ uint8.join('');    // '123'
 <p>Since there is no global object with the name <em>TypedArray</em>, polyfilling must be
   done on an "as needed" basis.</p>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
   Object.defineProperty(Uint8Array.prototype, 'join', {
     value: Array.prototype.join
@@ -72,26 +70,11 @@ if (!Uint8Array.prototype.join) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.join',
-        'TypedArray.prototype.join')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.join")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

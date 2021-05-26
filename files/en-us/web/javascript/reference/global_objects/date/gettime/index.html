@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.getTime
 ---
 <div>{{JSRef}}</div>
 
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>dateObj</var>.getTime()</code></pre>
+<pre class="brush: js">getTime()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -42,7 +43,7 @@ tags:
   Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by default
   and defaults to 20µs in Firefox 59; in 60 it will be 2ms.</p>
 
-<pre class="brush: js notranslate">// reduced time precision (2ms) in Firefox 60
+<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
 new Date().getTime();
 // 1519211809934
 // 1519211810362
@@ -69,7 +70,7 @@ new Date().getTime();
 
 <p>Constructing a date object with the identical time value.</p>
 
-<pre class="brush: js notranslate">// Since month is zero based, birthday will be January 10, 1995
+<pre class="brush: js">// Since month is zero based, birthday will be January 10, 1995
 var birthday = new Date(1994, 12, 10);
 var copy = new Date();
 copy.setTime(birthday.getTime());
@@ -82,7 +83,7 @@ copy.setTime(birthday.getTime());
   to calculate the executing time of some operations. See also {{jsxref("Date.now()")}} to
   prevent instantiating unnecessary {{jsxref("Date")}} objects.</p>
 
-<pre class="brush: js notranslate">var end, start;
+<pre class="brush: js">var end, start;
 
 start = new Date();
 for (var i = 0; i &lt; 1000; i++) {
@@ -95,28 +96,12 @@ console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.Date.getTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

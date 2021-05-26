@@ -6,6 +6,7 @@ tags:
   - Function
   - JavaScript
   - Property
+browser-compat: javascript.builtins.Function.caller
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
@@ -23,24 +24,24 @@ tags:
 
 <p>Note that in case of recursion, you can't reconstruct the call stack using this property. Consider:</p>
 
-<pre class="brush: js notranslate">function f(n) { g(n - 1); }
+<pre class="brush: js">function f(n) { g(n - 1); }
 function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
 f(2);
 </pre>
 
 <p>At the moment <code>stop()</code> is called the call stack will be:</p>
 
-<pre class="brush: js notranslate">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
+<pre class="brush: js">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
 </pre>
 
 <p>The following is true:</p>
 
-<pre class="brush: js notranslate">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
+<pre class="brush: js">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
 </pre>
 
 <p>so if you tried to get the stack trace in the <code>stop()</code> function like this:</p>
 
-<pre class="brush: js notranslate">var f = stop;
+<pre class="brush: js">var f = stop;
 var stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
@@ -56,7 +57,7 @@ while (f) {
 
 <p>The following code checks the value a function's <code>caller</code> property.</p>
 
-<pre class="brush: js notranslate">function myFunc() {
+<pre class="brush: js">function myFunc() {
   if (myFunc.caller == null) {
     return 'The function was called from the top!';
   } else {
@@ -71,7 +72,7 @@ while (f) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.caller")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

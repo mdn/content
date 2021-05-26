@@ -4,12 +4,12 @@ slug: Web/MathML/Element/mrow
 tags:
   - MathML
   - MathML Reference
-  - 'MathML:Element'
-  - 'MathML:General Layout Schemata'
+  - MathML:Element
+  - MathML:General Layout Schemata
 ---
 <div>{{MathMLRef}}</div>
 
-<p class="summary">The MathML <code>&lt;mrow&gt;</code> element is used to group sub-expressions, which usually contain one or more <a href="/en-US/docs/MathML/Element/mo">operators</a> with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.</p>
+<p class="summary">The MathML <code>&lt;mrow&gt;</code> element is used to group sub-expressions, which usually contain one or more <a href="/en-US/docs/Web/MathML/Element/mo">operators</a> with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.</p>
 
 <p>When writing a MathML expression, you should group elements within an <code>&lt;mrow&gt;</code> in the same way as they are grouped in the mathematical interpretation of the expression. Proper grouping helps the rendering of the expression in several ways:</p>
 
@@ -23,22 +23,22 @@ tags:
 
 <dl>
  <dt id="attr-class-id-style">class, id, style</dt>
- <dd>Provided for use with <a href="/en-US/docs/CSS">stylesheets</a>.</dd>
+ <dd>Provided for use with <a href="/en-US/docs/Web/CSS">stylesheets</a>.</dd>
  <dt id="attr-displaystyle"><code>displaystyle</code></dt>
- <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>largeop</code> and <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
+ <dd>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when <code>displaystyle</code> is set to <code>true</code>. See also <code>movablelimits</code> on {{ MathMLElement("mo") }}.</dd>
  <dt id="attr-dir">dir</dt>
  <dd>Overall directionality of formulas. Possible values are either <code>ltr</code> (left to right) or <code>rtl</code> (right to left).</dd>
  <dt id="attr-href">href</dt>
  <dd>Used to set a hyperlink to a specified URI.</dd>
  <dt id="attr-mathbackground">mathbackground</dt>
- <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
  <dt id="attr-mathcolor">mathcolor</dt>
- <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/en-US/docs/Web/CSS/color_value#color_keywords">HTML color names</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;math&gt;
+<pre class="brush: html">&lt;math&gt;
 
   &lt;mrow&gt;
     &lt;mn&gt; 1 &lt;/mn&gt;

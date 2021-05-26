@@ -13,6 +13,7 @@ tags:
 - Smallest Number
 - Smallest Value
 - min
+browser-compat: javascript.builtins.Math.min
 ---
 <div>{{JSRef}}</div>
 
@@ -22,16 +23,15 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-min.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">Math.min([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
+<pre class="brush: js">
+Math.min()
+Math.min(value0)
+Math.min(value0, value1)
+Math.min(value0, value1, ... , valueN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +65,7 @@ tags:
 <p>This finds the min of <code>x</code> and <code>y</code> and assigns it to
   <code>z</code>:</p>
 
-<pre class="brush: js notranslate">var x = 10, y = -20;
+<pre class="brush: js">var x = 10, y = -20;
 var z = Math.min(x, y);
 </pre>
 
@@ -74,7 +74,7 @@ var z = Math.min(x, y);
 <p><code>Math.min()</code> is often used to clip a value so that it is always less than or
   equal to a boundary. For instance, this</p>
 
-<pre class="brush: js notranslate">var x = f(foo);
+<pre class="brush: js">var x = f(foo);
 
 if (x &gt; boundary) {
   x = boundary;
@@ -83,7 +83,7 @@ if (x &gt; boundary) {
 
 <p>may be written as this</p>
 
-<pre class="brush: js notranslate">var x = Math.min(f(foo), boundary);
+<pre class="brush: js">var x = Math.min(f(foo), boundary);
 </pre>
 
 <p>{{jsxref("Math.max()")}} can be used in a similar way to clip a value at the other end.
@@ -91,22 +91,11 @@ if (x &gt; boundary) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.min', 'Math.min')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.min")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

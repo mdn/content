@@ -7,6 +7,7 @@ tags:
 - Prototype
 - Reference
 - String
+browser-compat: javascript.builtins.String.substring
 ---
 <div>{{JSRef}}</div>
 
@@ -15,16 +16,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-substring.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</pre>
+<pre class="brush: js">
+substring(indexStart)
+substring(indexStart, indexEnd)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,7 +66,7 @@ tags:
 <p>The following example uses <code>substring()</code> to display characters from the
   string <code>'Mozilla'</code>:</p>
 
-<pre class="brush: js notranslate">let anyString = 'Mozilla'
+<pre class="brush: js">let anyString = 'Mozilla'
 
 // Displays 'M'
 console.log(anyString.substring(0, 1))
@@ -94,7 +92,7 @@ console.log(anyString.substring(0, 10))
   particular string. This method may be easier to remember, given that you don't need to
   know the starting and ending indices as you would in the above examples.</p>
 
-<pre class="brush: js notranslate">// Displays 'illa' the last 4 characters
+<pre class="brush: js">// Displays 'illa' the last 4 characters
 let anyString = 'Mozilla'
 let anyString4 = anyString.substring(anyString.length - 4)
 console.log(anyString4)
@@ -120,7 +118,7 @@ console.log(anyString5)
     ECMAScript</strong> and could be removed from future versions, so it is best to avoid
   using it if possible.</p>
 
-<pre class="brush: js notranslate">let text = 'Mozilla'
+<pre class="brush: js">let text = 'Mozilla'
 console.log(text.substring(2,5))  // =&gt; "zil"
 console.log(text.substr(2,3))     // =&gt; "zil"</pre>
 
@@ -136,7 +134,7 @@ console.log(text.substr(2,3))     // =&gt; "zil"</pre>
   meaning that a string is still returned. The {{jsxref("String.slice", "slice()")}}
   method returns an empty string if this is the case.</p>
 
-<pre class="brush: js notranslate">let text = 'Mozilla'
+<pre class="brush: js">let text = 'Mozilla'
 console.log(text.substring(5, 2))  // =&gt; "zil"
 console.log(text.slice(5, 2))      // =&gt; ""
 </pre>
@@ -144,7 +142,7 @@ console.log(text.slice(5, 2))      // =&gt; ""
 <p>If either or both of the arguments are negative or <code>NaN</code>, the
   <code>substring()</code> method treats them as if they were <code>0</code>.</p>
 
-<pre class="brush: js notranslate">console.log(text.substring(-5, 2))  // =&gt; "Mo"
+<pre class="brush: js">console.log(text.substring(-5, 2))  // =&gt; "Mo"
 console.log(text.substring(-5, -2)) // =&gt; ""
 </pre>
 
@@ -152,7 +150,7 @@ console.log(text.substring(-5, -2)) // =&gt; ""
   it is given negative values it counts backwards from the end of the string to find the
   indexes.</p>
 
-<pre class="brush: js notranslate">console.log(text.slice(-5, 2))   // =&gt; ""
+<pre class="brush: js">console.log(text.slice(-5, 2))   // =&gt; ""
 console.log(text.slice(-5, -2))  // =&gt; "zil"
 </pre>
 
@@ -165,7 +163,7 @@ console.log(text.slice(-5, -2))  // =&gt; "zil"
   individual characters and substrings. The function call at the end of the example
   changes the string <code>Brave New World</code> to <code>Brave New Web</code>.</p>
 
-<pre class="brush: js notranslate">// Replaces oldS with newS in the string fullS
+<pre class="brush: js">// Replaces oldS with newS in the string fullS
 function replaceString(oldS, newS, fullS) {
   for (let i = 0; i &lt; fullS.length; ++i) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
@@ -184,7 +182,7 @@ replaceString('World', 'Web', 'Brave New World')
 
 <p>A better method for replacing strings is as follows:</p>
 
-<pre class="brush: js notranslate">function replaceString(oldS, newS, fullS) {
+<pre class="brush: js">function replaceString(oldS, newS, fullS) {
   return fullS.split(oldS).join(newS)
 }
 </pre>
@@ -195,23 +193,11 @@ replaceString('World', 'Web', 'Brave New World')
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.substring',
-        'String.prototype.substring')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.substring")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -29,7 +29,7 @@ tags:
 
 <p>The <code>Clear-Site-Data</code> header accepts one or more directives. If all types of data should be cleared, the wildcard directive (<code>"*"</code>) can be used.</p>
 
-<pre class="notranslate">// Single directive
+<pre>// Single directive
 Clear-Site-Data: "cache"
 
 // Multiple directives (comma separated)
@@ -41,7 +41,10 @@ Clear-Site-Data: "*"
 
 <h2 id="Directives">Directives</h2>
 
-<p class="note">All directives must comply with the <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">quoted-string grammar</a>. A directive that does not include the double quotes is invalid.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>All directives must comply with the <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">quoted-string grammar</a>. A directive that does not include the double quotes is invalid.</p>
+</div>
 
 <dl>
  <dt id="cache"><code>"cache"</code></dt>
@@ -73,13 +76,13 @@ Clear-Site-Data: "*"
 
 <p>If a user signs out of your website or service, you might want to remove locally stored data. You can achieve that by adding the <code>Clear-Site-Data</code> header when sending the page confirming that logging out from the site has been accomplished successfully (https://example.com/logout, for example):</p>
 
-<pre class="notranslate">Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"</pre>
+<pre>Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"</pre>
 
 <h3 id="Clearing_cookies">Clearing cookies</h3>
 
 <p>If this header is delivered with the response at https://example.com/clear-cookies, all cookies on the same domain https://example.com and any subdomains (like https://stage.example.com, etc), will be cleared out.</p>
 
-<pre class="notranslate">Clear-Site-Data: "cookies"</pre>
+<pre>Clear-Site-Data: "cookies"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

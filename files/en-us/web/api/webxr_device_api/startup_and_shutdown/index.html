@@ -32,7 +32,7 @@ tags:
 
 <p>Thus the simplest code that fetches the <code>XRSystem</code> object is:</p>
 
-<pre class="brush: js notranslate">const xr = navigator.xr;</pre>
+<pre class="brush: js">const xr = navigator.xr;</pre>
 
 <p>The value of <code>xr</code> will be <code>null</code> or <code>undefined</code> if WebXR isn't available.</p>
 
@@ -89,7 +89,7 @@ tags:
 
 <p>Here we define a <code>getXR()</code> function, which returns the {{domxref("XRSystem")}} object after optionally installing the polyfill, assuming that the polyfill has been included or loaded using a prior {{HTMLElement("script")}} tag.</p>
 
-<pre class="brush: js notranslate">let webxrPolyfill = null;
+<pre class="brush: js">let webxrPolyfill = null;
 
 function getXR(usePolyfill) {
   let tempXR;
@@ -136,7 +136,7 @@ const xr = getXR("if-needed"); // Use the polyfill only if navigator.xr missing
 
 <p>To find out if a given mode is supported, call the {{domxref("XRSystem")}} method {{domxref("XRSystem.isSessionSupported", "isSessionSupported()")}}. This returns a promise which resolves to <code>true</code> if the given type of session is available for use or <code>false</code> otherwise.</p>
 
-<pre class="brush: js notranslate">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
+<pre class="brush: js">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
 if (immersiveOK) {
   // Create and use an immersive VR session
 } else {
@@ -149,7 +149,7 @@ if (immersiveOK) {
 
 <p>A WebXR session is represented by an {{domxref("XRSession")}} object. To obtain an <code>XRSession</code>, you call your {{domxref("XRSystem")}}'s {{domxref("XRSystem.requestSession", "requestSession()")}} method, which returns a promise that resolves with an <code>XRSession</code> if it's able to establish one successfully. Fundamentally, that looks like this:</p>
 
-<pre class="brush: js notranslate">xr.requestSession("immersive-vr").then((session) =&gt; {
+<pre class="brush: js">xr.requestSession("immersive-vr").then((session) =&gt; {
   xrSession = session;
   /* continue to set up the session */
 });
@@ -168,7 +168,7 @@ if (immersiveOK) {
 
 <p>If the session couldn't be created for some reason—such as feature policy disallowing its use or the user declining to grant permission to use the headset—the promise gets rejected. So a more complete function that starts up and returns a WebXR session could look like this:</p>
 
-<pre class="brush: js notranslate">async function createImmersiveSession(xr) {
+<pre class="brush: js">async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr");
     return session;
@@ -186,7 +186,7 @@ if (immersiveOK) {
 
 <p>For example, if you need an <code>unbounded</code> reference space, you can specify that as a required feature in order to ensure that the session you get can use unbounded spaces:</p>
 
-<pre class="brush: js notranslate">async function createImmersiveSession(xr) {
+<pre class="brush: js">async function createImmersiveSession(xr) {
   try {
     session = await xr.requestSession("immersive-vr", {
       requiredFeatures: [ "unbounded" ]
@@ -200,7 +200,7 @@ if (immersiveOK) {
 
 <p>On the other hand, if you need an <em>inline</em> session and would prefer a <code>local</code> reference space, you can do this:</p>
 
-<pre class="brush: js notranslate">async function createInlineSession(xr) {
+<pre class="brush: js">async function createInlineSession(xr) {
   try {
     session = await xr.requestSession("inline", {
       optionalFeatures: [ "local" ]
@@ -222,7 +222,7 @@ if (immersiveOK) {
 
 <ul>
  <li>Add handlers for the events you need to watch. This most likely includes the {{domxref("XRSession.end_event", "end")}} at a minimum, so you can detect when the session is over.</li>
- <li>If you use XR input controllers, watch the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event to detect the addition or removal of XR input controllers, and the various <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#Actions">select and squeeze action events</a>.</li>
+ <li>If you use XR input controllers, watch the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event to detect the addition or removal of XR input controllers, and the various <a href="/en-US/docs/Web/API/WebXR_Device_API/Inputs#actions">select and squeeze action events</a>.</li>
  <li>You may want to watch for the {{domxref("XRSystem")}} event {{domxref("XRSystem.devicechange_event", "devicechange")}} so you can be advised when the set of available immersive devices changes.</li>
  <li>Obtain a WebGL context for the canvas into which you intend to render your frames by calling the {{domxref("HTMLCanvasElement")}} method {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the target context.</li>
  <li>Set up your WebGL data and models and prepare to render the scene.</li>
@@ -233,7 +233,7 @@ if (immersiveOK) {
 
 <p>In basic form, code to do this final setup might look something like this:</p>
 
-<pre class="brush: js notranslate">async function runSession(session) {
+<pre class="brush: js">async function runSession(session) {
   let worldData;
 
   session.addEventListener("end", onSessionEnd);
@@ -276,10 +276,10 @@ if (immersiveOK) {
 <p>At this point, the <code>XRSession</code> itself has been fully configured, so we can begin rendering. First, we need a reference space within which coordinates for the world will be stated. We can get the initial reference space for the session by calling the <code>XRSession</code>'s {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method. We specify when calling <code>requestReferenceSpace()</code> the name of the type of reference space we want; in this case, <code>unbounded</code>. You might just as easily specify <code>local</code> or <code>viewer</code>, depending on your needs.</p>
 
 <div class="notecard note">
-<p>To understand how to select the right reference space for your needs, see {{SectionOnPage("en-US/docs/Web/API/WebXR_Device_API/Geometry", "Selecting the reference space type")}}.</p>
+<p>To understand how to select the right reference space for your needs, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Selecting the reference space type")}}.</p>
 </div>
 
-<p>The reference space returned by <code>requestReferenceSpace()</code> places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a <em>new</em> reference space <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry#Establishing_the_reference_space">which offsets the coordinate system</a> so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into <code>getOffsetReferenceSpace()</code> is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.</p>
+<p>The reference space returned by <code>requestReferenceSpace()</code> places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a <em>new</em> reference space <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space">which offsets the coordinate system</a> so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into <code>getOffsetReferenceSpace()</code> is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.</p>
 
 <p>With the new reference space in hand and stored into the <code>worldData</code> object for safe-keeping, we call the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to schedule a callback to be executed when it's time to render the next frame of animation for the WebXR session. The returned value is an ID we can use later to cancel the request if need be, so we save that into <code>worldData</code> as well.</p>
 
@@ -299,7 +299,7 @@ if (immersiveOK) {
 
 <p>When the state of the <code>XRSession</code>'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives an {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.</p>
 
-<pre class="brush: js notranslate">session.onvisibilitychange = (event) =&gt; {
+<pre class="brush: js">session.onvisibilitychange = (event) =&gt; {
   switch(event.session.visibilityState) {
     case "hidden":
       myFrameRate = 10;
@@ -318,7 +318,7 @@ if (immersiveOK) {
 
 <h3 id="Detecting_reference_space_resets">Detecting reference space resets</h3>
 
-<p>Occasionally, discontinuities or jumps in the <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry#On_the_origins_of_spaces">native origin</a> may occur while tracking the user's position in the world. The most common scenarios in which this happens are when the user requests a recalibration of their XR device or when a hiccup or glitch occurs in the flow of tracking data received from the XR hardware. These situations cause the native origin to jump abruptly by the distance and directional angle necessary to bring the native origin back into alignment with the user's position and facing direction.</p>
+<p>Occasionally, discontinuities or jumps in the <a href="/en-US/docs/Web/API/WebXR_Device_API/Geometry#on_the_origins_of_spaces">native origin</a> may occur while tracking the user's position in the world. The most common scenarios in which this happens are when the user requests a recalibration of their XR device or when a hiccup or glitch occurs in the flow of tracking data received from the XR hardware. These situations cause the native origin to jump abruptly by the distance and directional angle necessary to bring the native origin back into alignment with the user's position and facing direction.</p>
 
 <p>When this happens, a {{domxref("XRReferenceSpace.reset_event", "reset")}} event is sent to the session's {{domxref("XRReferenceSpace")}}. The event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property is an {{domxref("XRRigidTransform")}} detailing the transform needed to realign the native origin.</p>
 
@@ -344,7 +344,7 @@ if (immersiveOK) {
 
 <p>To cleanly shut down the WebXR session when you're done with it, you should call the session's {{domxref("XRSession.end", "end()")}} method. This returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> you can use to know when the shutdown is complete.</p>
 
-<pre class="brush: js notranslate">async function shutdownXR(session) {
+<pre class="brush: js">async function shutdownXR(session) {
   if (session) {
     await session.end();
 
@@ -361,7 +361,7 @@ if (immersiveOK) {
 
 <p>As previously established, you can detect when the WebXR session has ended—whether because you've called its {{domxref("XRSession.end", "end()")}} method, the user turned off their headset, or some sort of irresolvable error occurred in the XR system—by watching for the {{domxref("XRSession.end_event", "end")}} event to be sent to the {{domxref("XRSession")}}.</p>
 
-<pre class="brush: js notranslate">session.onend = (event) =&gt; {
+<pre class="brush: js">session.onend = (event) =&gt; {
   /* the session has shut down */
 
   freeResources();

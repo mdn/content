@@ -48,9 +48,11 @@ tags:
 <p>In JavaScript, a link is made between the object instance and its prototype (its <code>__proto__</code> property, which is derived from the <code>prototype</code> property on the constructor), and the properties and methods are found by walking up the chain of prototypes.</p>
 
 <div class="note">
-<p><strong>Note:</strong> It's important to understand that there is a distinction between <strong>an object's <code>prototype</code></strong> (available via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code>, or via the deprecated <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> property) and <strong>the <code>prototype</code> property on constructor functions</strong>.</p>
+  <p><strong>Note:</strong> It's important to understand that there is a distinction between <strong>an object's <code>prototype</code></strong> (available via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code>, or via the deprecated <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> property) and <strong>the <code>prototype</code> property on constructor functions</strong>.</p>
 
-<p>The former is the property on each instance, and the latter is the property on the constructor. That is, <code>Object.getPrototypeOf(new <var>Foobar</var>())</code> refers to a different object than <code><var>Foobar</var>.prototype</code>.</p>
+  <p>The constructor function <code>Foobar()</code> has its own <code>prototype</code>, which can be found by calling <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>Foobar</var>)</a></code>. However this differs from its <code>prototype</code> property, <code>Foobar.prototype</code>, which is the blueprint for instances of this constructor function.</p>
+
+  <p>If we were to create a new instance — <code>let fooInstance = new Foobar()</code> — <code>fooInstance</code> would take its prototype from its constructor function's <code>prototype</code> property. Thus <code>Object.getPrototypeOf(<var>fooInstance</var>) === Foobar.prototype</code>.</p>
 </div>
 
 <p>Let's look at an example to make this a bit clearer.</p>
@@ -61,7 +63,7 @@ tags:
 
 <p>In this example, we have defined a constructor function, like so:</p>
 
-<pre class="brush: js   notranslate">function Person(first, last, age, gender, interests) {
+<pre class="brush: js">function Person(first, last, age, gender, interests) {
 
   // property and method definitions
   this.name = {
@@ -75,7 +77,7 @@ tags:
 
 <p>We have then created an object instance like this:</p>
 
-<pre class="brush: js   notranslate">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+<pre class="brush: js">let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
 
 <p>If you type "<code>person1.</code>" into your JavaScript console, you should see the browser try to auto-complete this with the member names available on this object:</p>
 
@@ -87,7 +89,7 @@ tags:
 
 <p>What happens if you call a method on <code>person1</code>, which is actually defined on <code>Object.prototype</code>? For example:</p>
 
-<pre class="brush: js   notranslate">person1.valueOf()</pre>
+<pre class="brush: js">person1.valueOf()</pre>
 
 <p><code>valueOf()</code> returns the value of the object it is called on. In this case, what happens is:</p>
 
@@ -107,7 +109,7 @@ tags:
 <div class="note">
 <p><strong>Note</strong>: Before ECMAScript 2015, there wasn't officially a way to access an object's <code>prototype</code> directly — the "links" between the items in the chain are defined in an internal property, referred to as <code>[[prototype]]</code> in the specification for the JavaScript language (see {{glossary("ECMAScript")}}).</p>
 
-<p>Most modern browsers, however, do offer property available called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (that's 2 underscores either side), which contains the object's constructor's <code>prototype </code>object. For example, try <code>person1.__proto__</code> and <code>person1.__proto__.__proto__</code> to see what the chain looks like in code!</p>
+<p>Most modern browsers, however, do offer property available called <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (that's 2 underscores either side), which contains the object's constructor's <code>prototype</code> object. For example, try <code>person1.__proto__</code> and <code>person1.__proto__.__proto__</code> to see what the chain looks like in code!</p>
 
 <p>Since ECMAScript 2015, you can access an object's prototype object indirectly via <code>Object.getPrototypeOf(obj)</code>.</p>
 </div>
@@ -120,7 +122,7 @@ tags:
 
 <p>So <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.prototype.toString()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf()</a></code>, etc., are available to any object types that inherit from <code>Object.prototype</code>, including new object instances created from the <code>Person()</code> constructor.</p>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>, and other members not defined inside the <code>prototype</code> bucket are not inherited by object instances or object types that inherit from <code>Object.prototype</code>. They are methods/properties available just on the <code>Object()</code> constructor itself.</p>
+<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>, and other members not defined inside the <code>prototype</code> bucket, are not inherited by object instances or object types that inherit from <code>Object.prototype</code>. They are methods/properties available just on the <code>Object()</code> constructor itself.</p>
 
 <div class="note">
 <p><strong>Note</strong>: This seems strange — how can you have a method defined on a constructor, which is itself a function?</p>
@@ -130,10 +132,10 @@ tags:
 
 <ol>
  <li>You can check out existing prototype properties for yourself — go back to our previous example and try entering the following into the JavaScript console:
-  <pre class="brush: js   notranslate">Person.prototype</pre>
+  <pre class="brush: js">Person.prototype</pre>
  </li>
  <li>The output won't show you very much because we haven't defined anything on our custom constructor's prototype! By default, a constructor's <code>prototype</code> always starts empty. Now try the following:
-  <pre class="brush: js   notranslate">Object.prototype</pre>
+  <pre class="brush: js">Object.prototype</pre>
  </li>
 </ol>
 
@@ -141,7 +143,7 @@ tags:
 
 <p>You'll see other examples of prototype chain inheritance all over JavaScript — try looking for the methods and properties defined on the prototype of the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> global objects, for example. These all have a number of members defined on their prototype, which is why for example when you create a string, like this:</p>
 
-<pre class="brush: js   notranslate">let myString = 'This is my string.';</pre>
+<pre class="brush: js">let myString = 'This is my string.';</pre>
 
 <p><code>myString</code> immediately has a number of useful methods available on it, like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code>, etc.</p>
 
@@ -159,10 +161,10 @@ tags:
 
 <ol>
  <li>For example, try this in your previous example's JavaScript console:
-  <pre class="brush: js   notranslate">let person2 = Object.create(person1);</pre>
+  <pre class="brush: js">let person2 = Object.create(person1);</pre>
  </li>
  <li>What <code>create()</code> actually does is to create a new object from a specified prototype object. Here, <code>person2</code> is being created using <code>person1</code> as a prototype object. You can check this by entering the following in the console:
-  <pre class="brush: js   notranslate">person2.__proto__</pre>
+  <pre class="brush: js">person2.__proto__</pre>
  </li>
 </ol>
 
@@ -176,7 +178,7 @@ tags:
 
 <ol>
  <li>For example, try these commands in the console:
-  <pre class="brush: js   notranslate">person1.constructor
+  <pre class="brush: js">person1.constructor
 person2.constructor</pre>
 
   <p>These should both return the <code>Person()</code> constructor, as it contains the original definition of these instances.</p>
@@ -184,10 +186,10 @@ person2.constructor</pre>
   <p>A clever trick is that you can put parentheses onto the end of the <code>constructor</code> property (containing any required parameters) to create another object instance from that constructor. The constructor is a function after all, so can be invoked using parentheses; you just need to include the <code>new</code> keyword to specify that you want to use the function as a constructor.</p>
  </li>
  <li>Try this in the console:
-  <pre class="brush: js   notranslate">let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);</pre>
+  <pre class="brush: js">let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);</pre>
  </li>
  <li>Now try accessing your new object's features, for example:
-  <pre class="brush: js   notranslate">person3.name.first
+  <pre class="brush: js">person3.name.first
 person3.age
 person3.bio()</pre>
  </li>
@@ -197,11 +199,11 @@ person3.bio()</pre>
 
 <p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code> property has other uses. For example, if you have an object instance and you want to return the name of the constructor it is an instance of, you can use the following:</p>
 
-<pre class="brush: js   notranslate">instanceName.constructor.name</pre>
+<pre class="brush: js">instanceName.constructor.name</pre>
 
 <p>Try this, for example:</p>
 
-<pre class="brush: js   notranslate">person1.constructor.name
+<pre class="brush: js">person1.constructor.name
 </pre>
 
 <div class="note">
@@ -215,12 +217,12 @@ person3.bio()</pre>
 <ol>
  <li>Go back to our <a href="https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> example and make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">source code</a>. Below the existing JavaScript, add the following code, which adds a new method to the constructor's <code>prototype</code> property:
 
-  <pre class="brush: js   notranslate">Person.prototype.farewell = function() {
+  <pre class="brush: js">Person.prototype.farewell = function() {
   alert(this.name.first + ' has left the building. Bye for now!');
 };</pre>
  </li>
  <li>Save the code and load the page in the browser, and try entering the following into the text input:
-  <pre class="brush: js   notranslate">person1.farewell();</pre>
+  <pre class="brush: js">person1.farewell();</pre>
  </li>
 </ol>
 
@@ -228,7 +230,7 @@ person3.bio()</pre>
 
 <p>Think about this for a moment. In our code we define the constructor, then we create an instance object from the constructor, <em>then</em> we add a new method to the constructor's prototype:</p>
 
-<pre class="brush: js   notranslate">function Person(first, last, age, gender, interests) {
+<pre class="brush: js">function Person(first, last, age, gender, interests) {
 
   // property and method definitions
 
@@ -254,17 +256,17 @@ In order to mitigate this issue, you could use <code><a href="/en-US/docs/Web/J
 
 <p>You will rarely see properties defined on the <code>prototype</code> property, because they are not very flexible when defined like this. For example you could add a property like so:</p>
 
-<pre class="brush: js   notranslate">Person.prototype.fullName = 'Bob Smith';</pre>
+<pre class="brush: js">Person.prototype.fullName = 'Bob Smith';</pre>
 
 <p>This isn't very flexible, as the person might not be called that. It'd be much better to build the <code>fullName</code> out of <code>name.first</code> and <code>name.last</code>:</p>
 
-<pre class="brush: js   notranslate">Person.prototype.fullName = this.name.first + ' ' + this.name.last;</pre>
+<pre class="brush: js">Person.prototype.fullName = this.name.first + ' ' + this.name.last;</pre>
 
 <p>However, this doesn't work. That's because <code>this</code> will be referencing the global scope in this case, not the function scope. Calling this property would return <code>undefined</code>. This worked fine on the method we defined earlier in the prototype because it is sitting inside a function scope, which will be transferred successfully to the object instance scope. So you might define constant properties on the prototype (i.e. ones that never need to change), but generally it works better to define properties inside the constructor.</p>
 
 <p>In fact, a fairly common pattern for more object definitions is to define the properties inside the constructor, and the methods on the prototype. This makes the code easier to read, as the constructor only contains the property definitions, and the methods are split off into separate blocks. For example:</p>
 
-<pre class="brush: js   notranslate">// Constructor with property definitions
+<pre class="brush: js">// Constructor with property definitions
 
 function Test(a, b, c, d) {
   // property definitions

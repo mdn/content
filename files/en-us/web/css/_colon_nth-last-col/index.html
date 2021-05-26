@@ -1,12 +1,13 @@
 ---
 title: ':nth-last-col'
 slug: 'Web/CSS/:nth-last-col'
+browser-compat: css.selectors.nth-last-col
 ---
 <p>{{CSSRef}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>:nth-last-col()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is designed for tables and grids. It accepts the An+B notation such as used with the {{Cssxref(":nth-child")}} selector, using this to target every nth column before it, therefore counting back from the end of the set of columns. The values odd and even are also valid. </p>
 
-<pre class="brush: css notranslate">/* Selects every odd column in a table */
+<pre class="brush: css">/* Selects every odd column in a table */
 :nth-last-col(odd) {
   background-color: pink;
 }</pre>
@@ -19,8 +20,7 @@ slug: 'Web/CSS/:nth-last-col'
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="notranslate">{{csssyntax}}
-</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -28,7 +28,7 @@ slug: 'Web/CSS/:nth-last-col'
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;one&lt;/td&gt;
     &lt;td&gt;two&lt;/td&gt;
@@ -45,7 +45,7 @@ slug: 'Web/CSS/:nth-last-col'
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">td {
+<pre class="brush: css">td {
   border: 1px solid #ccc;
   padding: .2em;
 }
@@ -83,7 +83,7 @@ slug: 'Web/CSS/:nth-last-col'
 
 <p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
-<p>{{Compat("css.selectors.nth-last-col")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

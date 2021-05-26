@@ -6,10 +6,10 @@ tags:
   - CSSOM
   - CSSPrimitiveValue
   - Interface
-  - Obsolete
   - Reference
+  - Deprecated
 ---
-<div>{{APIRef("CSSOM")}}</div>
+<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>CSSPrimitiveValue</strong></code> interface derives from the {{DOMxRef("CSSValue")}} interface and represents the current computed value of a CSS property.</p>
 
@@ -134,7 +134,7 @@ tags:
    </tr>
    <tr>
     <td><code>CSS_URI</code></td>
-    <td>The value is a {{CSSxRef("&lt;uri&gt;")}}. The value can be obtained by using the <code>getStringValue()</code> method.</td>
+    <td>The value is a {{CSSxRef("url()")}}. The value can be obtained by using the <code>getStringValue()</code> method.</td>
    </tr>
   </tbody>
  </table>
@@ -179,10 +179,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.CSSPrimitiveValue")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

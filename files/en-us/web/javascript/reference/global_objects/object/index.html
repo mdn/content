@@ -5,6 +5,7 @@ tags:
   - Class
   - JavaScript
   - Object
+browser-compat: javascript.builtins.Object
 ---
 <div>{{JSRef}}</div>
 
@@ -91,10 +92,8 @@ tags:
 <dl>
  <dt>{{jsxref("Object.prototype.constructor")}}</dt>
  <dd>Specifies the function that creates an object's prototype.</dd>
- <dt>{{jsxref("Object.prototype.__proto__")}}</dt>
+ <dt>{{jsxref("Object/proto","Object.prototype.__proto__")}}</dt>
  <dd>Points to the object which was used as prototype when the object was instantiated.</dd>
- <dt>{{jsxref("Object.prototype.__noSuchMethod__")}}</dt>
- <dd>Allows a function to be defined that will be executed when an undefined object member is called as a method.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
@@ -113,17 +112,13 @@ tags:
  <dt>{{jsxref("Object.prototype.isPrototypeOf()")}}</dt>
  <dd>Returns a boolean indicating whether the object this method is called upon is in the prototype chain of the specified object.</dd>
  <dt>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</dt>
- <dd>Returns a boolean indicating if the internal <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">ECMAScript [[Enumerable]] attribute</a> is set.</dd>
+ <dd>Returns a boolean indicating if the internal <a href="/en-US/docs/Web/JavaScript/Data_structures#properties">ECMAScript [[Enumerable]] attribute</a> is set.</dd>
  <dt>{{jsxref("Object.prototype.toLocaleString()")}}</dt>
  <dd>Calls {{jsxref("Object.toString", "toString()")}}.</dd>
  <dt>{{jsxref("Object.prototype.toString()")}}</dt>
  <dd>Returns a string representation of the object.</dd>
- <dt>{{jsxref("Object.prototype.unwatch()")}}</dt>
- <dd>Removes a watchpoint from a property of the object.</dd>
  <dt>{{jsxref("Object.prototype.valueOf()")}}</dt>
  <dd>Returns the primitive value of the specified object.</dd>
- <dt>{{jsxref("Object.prototype.watch()")}}</dt>
- <dd>Adds a watchpoint to a property of the object.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -248,26 +243,12 @@ mime.greet();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-objects', 'Object')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("javascript.builtins.Object")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

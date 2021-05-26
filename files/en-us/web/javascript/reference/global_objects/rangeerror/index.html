@@ -6,10 +6,11 @@ tags:
   - JavaScript
   - Object
   - RangeError
+browser-compat: javascript.builtins.RangeError
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>RangeError</strong></code> object indicates an error when a value is not in the set or range of allowed values.</span></p>
+<p>The <code><strong>RangeError</strong></code> object indicates an error when a value is not in the set or range of allowed values.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -51,7 +52,7 @@ tags:
 
 <h3 id="Using_RangeError_for_numeric_values">Using RangeError (for numeric values)</h3>
 
-<pre class="brush: js notranslate">function check(n)
+<pre class="brush: js">function check(n)
 {
     if( !(n &gt;= -500 &amp;&amp; n &lt;= 500) )
     {
@@ -73,7 +74,7 @@ catch(error)
 
 <h3 id="Using_RangeError_for_non-numeric_values">Using RangeError (for non-numeric values)</h3>
 
-<pre class="brush: js notranslate">function check(value)
+<pre class="brush: js">function check(value)
 {
     if(["apple", "banana", "carrot"].includes(value) === false)
     {
@@ -96,25 +97,11 @@ catch(error)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.RangeError")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -35,7 +35,7 @@ tags:
   <tr>
    <th scope="row"><dfn>Permitted parents</dfn></th>
    <td>
-    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
+    <div>A media element—{{HTMLElement("audio")}} or {{HTMLelement("video")}}—and it must be placed before any <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a> or {{HTMLElement("track")}} element.</div>
 
     <div>A {{HTMLElement("picture")}} element, and it must be placed before the {{HTMLElement("img")}} element.</div>
    </td>
@@ -104,7 +104,7 @@ tags:
 
 <p>This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the <code>audio</code> or <code>video</code> element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an <code>error</code> event is raised and the default media controls (if enabled) will indicate an error. Be sure to reference our <a href="/en-US/docs/Web/Media/Formats">guide to media types and formats on the web</a> for details on what media file formats you can use and how well they're supported by browsers.</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="foo.webm" type="video/webm"&gt;
   &lt;source src="foo.ogg" type="video/ogg"&gt;
   &lt;source src="foo.mov" type="video/quicktime"&gt;
@@ -118,7 +118,7 @@ tags:
 
 <p>In this example, two <code>&lt;source&gt;</code> elements are included within the {{HTMLElement("picture")}}, providing versions of an image to use when the available space exceeds certain widths. If the available width is less than the smaller of these widths, the user agent will fall back to the image given by the {{HTMLElement("img")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;picture&gt;
+<pre class="brush: html">&lt;picture&gt;
    &lt;source srcset="mdn-logo-wide.png" media="(min-width: 800px)"&gt;
    &lt;source srcset="mdn-logo-medium.png" media="(min-width: 600px)"&gt;
    &lt;img src="mdn-logo-narrow.png" alt="MDN Web Docs"&gt;

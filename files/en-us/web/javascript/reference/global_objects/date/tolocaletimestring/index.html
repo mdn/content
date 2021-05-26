@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
 <div>{{JSRef}}</div>
 
@@ -21,16 +22,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><code><var>dateObj</var>.toLocaleTimeString([<var>locales[, </var><var>options</var>]])</code></pre>
+<pre class="brush: js">
+toLocaleTimeString()
+toLocaleTimeString(locales)
+toLocaleTimeString(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -67,7 +66,7 @@ tags:
 <p>In basic use without specifying a locale, a formatted string in the default locale and
   with default options is returned.</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleTimeString() without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -83,7 +82,7 @@ console.log(date.toLocaleTimeString());
   requirement that illegal language tags are rejected with a {{jsxref("RangeError")}}
   exception:</p>
 
-<pre class="brush: js notranslate">function toLocaleTimeStringSupportsLocales() {
+<pre class="brush: js">function toLocaleTimeStringSupportsLocales() {
   try {
     new Date().toLocaleTimeString('i');
   } catch (e) {
@@ -100,7 +99,7 @@ console.log(date.toLocaleTimeString());
   specify that language (and possibly some fallback languages) using the
   <code>locales</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -132,7 +131,7 @@ console.log(date.toLocaleTimeString(['ban', 'id']));
 <p>The results provided by <code>toLocaleTimeString()</code> can be customized using the
   <code>options</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // an application may want to use UTC and make that visible
 var options = { timeZone: 'UTC', timeZoneName: 'short' };
@@ -151,27 +150,11 @@ console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }))
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring',
-        'Date.prototype.toLocaleTimeString')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring',
-        'Date.prototype.toLocaleTimeString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.toLocaleTimeString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

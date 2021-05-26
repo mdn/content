@@ -46,7 +46,7 @@ tags:
 
 <p>The majority of <code>icecandidate</code> events are fired to indicate that a new candidate has been gathered. This candidate needs to be delivered to the remote peer over the signaling channel your code manages.</p>
 
-<pre class="brush: js notranslate">rtcPeerConnection.onicecandidate = (event) =&gt; {
+<pre class="brush: js">rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {
     sendCandidateToRemotePeer(event.candidate)
   } else {
@@ -63,7 +63,7 @@ tags:
 
 <p>You should deliver this to the remote peer just like any standard candidate, as described under {{anch("Sharing a new candidate")}} above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code> are not forwarded across the signaling connection.</p>
 
-<p>The end-of-candidates indication is described in <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02#section-9.3">section 9.3 of the Trickle ICE draft specification</a> (note that the section number is subject to change as the specification goes through repeated drafts).</p>
+<p>The end-of-candidates indication is described in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice-02#section-9.3">section 9.3 of the Trickle ICE draft specification</a> (note that the section number is subject to change as the specification goes through repeated drafts).</p>
 
 <h3 id="Indicating_that_ICE_gathering_is_complete">Indicating that ICE gathering is complete</h3>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:</p>
 
-<pre class="brush: js notranslate">pc.addEventListener("icegatheringstatechange", ev =&gt; {
+<pre class="brush: js">pc.addEventListener("icegatheringstatechange", ev =&gt; {
   switch(pc.iceGatheringState) {
     case "new":
       /* gathering is either just starting or has been reset */
@@ -98,7 +98,7 @@ tags:
 
 <p>First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">pc.addEventListener("icecandidate", ev =&gt; {
+<pre class="brush: js">pc.addEventListener("icecandidate", ev =&gt; {
   if (ev.candidate) {
     sendMessage({
       type: "new-ice-candidate",
@@ -110,7 +110,7 @@ tags:
 
 <p>You can also set the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property directly:</p>
 
-<pre class="brush: js notranslate">pc.onicecandidate = ev =&gt; {
+<pre class="brush: js">pc.onicecandidate = ev =&gt; {
   if (ev.candidate) {
     sendMessage({
       type: "new-ice-candidate",

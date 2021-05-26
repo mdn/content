@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web
   - url()
+browser-compat: css.types.url
 ---
 <div>{{CSSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 <p>In CSS Level 1, the <code>url()</code> functional notation described only true URLs. In CSS Level 2, the definition of <code>url()</code> was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that <code>url()</code> could be used to create a <code>&lt;uri&gt;</code> CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, <code>url()</code> denotes only true <code>&lt;url&gt;</code>s.</p>
 </div>
 
-<pre class="brush: css no-line-numbers notranslate">/* Simple usage */
+<pre class="brush: css no-line-numbers">/* Simple usage */
 url(https://example.com/images/myImg.jpg);
 url(data:image/png;base64,iRxVB0…);
 url(myFont.woff);
@@ -70,7 +71,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 	<dl>
 		<dt>&lt;url&gt;</dt>
 		<dd>A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
-		<pre class="brush: css notranslate">&lt;css_property&gt;: url("https://example.com/image.png")
+		<pre class="brush: css">&lt;css_property&gt;: url("https://example.com/image.png")
 &lt;css_property&gt;: url('https://example.com/image.png')
 &lt;css_property&gt;: url(https://example.com/image.png)</pre>
 
@@ -80,26 +81,26 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 		<dd>References the ID of an <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">SVG shape</a> -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, or <code>rect</code> -- using the shape's geometry as the path.</dd>
 	</dl>
 	</dd>
-	<dt><code style="white-space: nowrap;">&lt;url-modifier&gt;</code> {{Experimental_Inline}}</dt>
+	<dt><code>&lt;url-modifier&gt;</code> {{Experimental_Inline}}</dt>
 	<dd>In the future, the <code>url()</code> function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
+<pre class="brush: css">url( <a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> &lt;url-modifier&gt;* )</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="A_url_used_in_the_background_property">A url used in the background property</h3>
 
-<pre class="notranslate">.topbanner {
+<pre>.topbanner {
   background: url("topbanner.png") #00D no-repeat fixed;
 }
 </pre>
 
 <h3 id="A_url_loading_an_image_as_a_list_bullet">A url loading an image as a list bullet</h3>
 
-<pre class="notranslate">ul {
+<pre>ul {
   list-style: square url(http://www.example.com/redball.png);
 }</pre>
 
@@ -107,7 +108,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
   &lt;li&gt;Item 3&lt;/li&gt;
@@ -115,7 +116,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css highlight[2] notranslate">li::after {
+<pre class="brush: css highlight[2]">li::after {
   content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
 }</pre>
 
@@ -128,17 +129,17 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 <div id="color-value">
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="background"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="background"&gt;&lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.background {
+<pre class="brush: css">.background {
   height: 100vh;
 }</pre>
 </div>
 
-<pre class="brush: css highlight[6] notranslate">.background {
+<pre class="brush: css highlight[6]">.background {
   background: yellow;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
 }</pre>
@@ -155,7 +156,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 	<li>the ID of the filter, if the SVG already exists on the page.</li>
 </ol>
 
-<pre class="notranslate">.blur {
+<pre>.blur {
   filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
 }
 
@@ -199,7 +200,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("css.types.url")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

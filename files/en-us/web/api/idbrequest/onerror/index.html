@@ -2,14 +2,14 @@
 title: IDBRequest.onerror
 slug: Web/API/IDBRequest/onerror
 tags:
-- API
-- Database
-- IDBRequest
-- IndexedDB
-- Property
-- Reference
-- Storage
-- onerror
+  - API
+  - Database
+  - IDBRequest
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - onerror
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -19,7 +19,7 @@ tags:
     request returns an error.</p>
 
   <p>The event handler takes one parameter, an error <a
-      href="/en-US/docs/Web/Events/error">Event</a> with type="error".</p>
+      href="/en-US/docs/Web/API/Element/error_event">Event</a> with type="error".</p>
 
   <p>{{AvailableInWorkers}}</p>
 </div>
@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">request.onerror = function(event) { ... };</pre>
+  class="brush: js">request.onerror = function(event) { ... };</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -99,16 +99,13 @@ objectStoreTitleRequest.onsuccess = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBRequest.onerror")}}</p>
-</div>
+<p>{{Compat("api.IDBRequest.onerror")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li><a href="/en-US/docs/Web/Events/error">Error Event</a></li>
+  <li><a href="/en-US/docs/Web/API/Element/error_event">Error Event</a></li>
   <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
   <li>Using transactions: {{domxref("IDBTransaction")}}</li>
   <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

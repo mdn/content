@@ -6,6 +6,7 @@ tags:
 - Math
 - Method
 - Reference
+browser-compat: javascript.builtins.Math.sign
 ---
 <div>{{JSRef}}</div>
 
@@ -17,15 +18,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-sign.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.sign(<var>x</var>)</pre>
+<pre class="brush: js">Math.sign(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -53,37 +49,11 @@ tags:
   as <code>Math.sign()</code>, rather than as a method of a <code>Math</code> object you
   created (<code>Math</code> is not a constructor).</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js notranslate">if (!Math.sign) {
-  Math.sign = function(x) {
-    // If x is NaN, the result is NaN.
-    // If x is -0, the result is -0.
-    // If x is +0, the result is +0.
-    // If x is negative and not -0, the result is -1.
-    // If x is positive and not +0, the result is +1.
-    return ((x &gt; 0) - (x &lt; 0)) || +x;
-    // A more aesthetic pseudo-representation:
-    //
-    // ( (x &gt; 0) ? 1 : 0 )  // if x is positive, then positive one
-    //          +           // else (because you can't be both - and +)
-    // ( (x &lt; 0) ? -1 : 0 ) // if x is negative, then negative one
-    //         ||           // if x is 0, -0, or NaN, or not a number,
-    //         +x           // then the result will be x, (or) if x is
-    //                      // not a number, then x converts to number
-  };
-}
-</pre>
-
-<p>In the above polyfill, no extra type-coercing is needed to make <code>(x &gt; 0)</code>
-  or <code>(x &lt; 0)</code> numbers because subtracting them from each other forces a
-  type conversion from booleans to numbers.</p>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_Math.sign">Using Math.sign()</h3>
 
-<pre class="brush: js notranslate">Math.sign(3);     //  1
+<pre class="brush: js">Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign('-3');  // -1
 Math.sign(0);     //  0
@@ -95,31 +65,18 @@ Math.sign();      // NaN
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a class="external"
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</div>
 
-<p>{{Compat("javascript.builtins.Math.sign")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/math.polyfill.js">A
+    polyfill</a></li>
   <li>{{jsxref("Math.abs()")}}</li>
   <li>{{jsxref("Math.ceil()")}}</li>
   <li>{{jsxref("Math.floor()")}}</li>

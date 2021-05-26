@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>namespace</em> = <em>node</em>.lookupNamespaceURI(<em>prefix</em>);</pre>
+  class="brush: js">var <em>namespace</em> = <em>node</em>.lookupNamespaceURI(<em>prefix</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,8 +56,3 @@ tags:
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("api.Node.lookupNamespaceURI")}}</p>
-
-<p>In Firefox, due to <a class="link-https"
-    href="https://bugzilla.mozilla.org/show_bug.cgi?id=312019">bug 312019</a>, this method
-  does not work with dynamically assigned namespaces (i.e., those set with
-  {{domxref("Node.prefix")}}).</p>

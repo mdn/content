@@ -14,15 +14,15 @@ tags:
 
 <h3 id="SVG_filter">SVG filter example</h3>
 
-<pre class="brush: html notranslate"><code>&lt;defs&gt;
-  &lt;filter id="drop-shadow"&gt;
-  &lt;feGaussianBlur in="SourceAlpha" stdDeviation="3"/&gt;
+<pre class="brush: html">&lt;defs&gt;
+  &lt;filter id=&quot;drop-shadow&quot;&gt;
+  &lt;feGaussianBlur in=&quot;SourceAlpha&quot; stdDeviation=&quot;3&quot;/&gt;
   &lt;/filter&gt;
 &lt;/defs&gt;
 
-&lt;g id="ghost" style="filter: url(#drop-shadow);"/&gt;
+&lt;g id=&quot;ghost&quot; style=&quot;filter: url(#drop-shadow);&quot;/&gt;
  &lt;!--Ghost drawing in here--&gt;
-&lt;/g&gt;</code>
+&lt;/g&gt;
 </pre>
 
 <p>This above example will not produced the desired output. Instead we need to add more filter primitives which will produce the desire rendering. By adding <code><a href="https://www.w3.org/TR/SVG/filters.html#feOffsetElement">feoffset</a> </code>and<code> result, </code>the effect layer is defined</p>
@@ -31,14 +31,14 @@ tags:
 
 <h3 id="More_filter_primitives">Implementation of more primitives</h3>
 
-<pre class="brush: html notranslate"><code>&lt;defs&gt;
-  &lt;filter id="drop-shadow"&gt;
-    &lt;feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/&gt;
-    &lt;feoffset in="blur" dx="4" dy="4" result="offsetBlur"/&gt;
+<pre class="brush: html">&lt;defs&gt;
+  &lt;filter id=&quot;drop-shadow&quot;&gt;
+    &lt;feGaussianBlur in=&quot;SourceAlpha&quot; stdDeviation=&quot;3&quot; result=&quot;blur&quot;/&gt;
+    &lt;feoffset in=&quot;blur&quot; dx=&quot;4&quot; dy=&quot;4&quot; result=&quot;offsetBlur&quot;/&gt;
     &lt;feMerge&gt;
-      &lt;feMergeNode in="offsetBlur"/&gt;
-      &lt;feMergeNode in="SourceGraphic"/&gt;
+      &lt;feMergeNode in=&quot;offsetBlur&quot;/&gt;
+      &lt;feMergeNode in=&quot;SourceGraphic&quot;/&gt;
     &lt;/feMerge&gt;
   &lt;/filter&gt;
-&lt;/defs&gt; </code>
+&lt;/defs&gt; 
 </pre>

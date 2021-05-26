@@ -2,17 +2,17 @@
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 tags:
-- API
-- CSS Selectors
-- DOM
-- Element
-- Finding Elements
-- Method
-- Reference
-- Searching Elements
-- Selecting Elements
-- Selectors
-- querySelector
+  - API
+  - CSS Selectors
+  - DOM
+  - Element
+  - Finding Elements
+  - Method
+  - Reference
+  - Searching Elements
+  - Selecting Elements
+  - Selectors
+  - querySelector
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -21,15 +21,9 @@ tags:
   matching the specified group of selectors which are descendants of the element on which
   the method was called.</p>
 
-<div class="note">
-  <p><strong>Note:</strong> This method is implemented based on the
-    {{domxref("ParentNode")}} mixin's {{domxref("ParentNode.querySelectorAll",
-    "querySelectorAll()")}} method.</p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
+<pre class="brush: js"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -47,7 +41,7 @@ tags:
 
 <div class="note">
   <p><strong>Note:</strong> Characters which are not part of standard CSS syntax must be
-    escaped using a backslash character. Since JavaScript also uses backspace escaping,
+    escaped using a backslash character. Since JavaScript also uses backslash escaping,
     special care must be taken when writing string literals using these characters. See
     {{anch("Escaping special characters")}} for more information.</p>
 </div>
@@ -223,10 +217,7 @@ inner.length; // 0
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.Element.querySelectorAll")}}</p>
-</div>
+<p>{{Compat("api.Element.querySelectorAll")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -236,15 +227,13 @@ inner.length; // 0
       DOM elements using selectors</a></li>
   <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a> in the CSS
     Guide</li>
-  <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Attribute
+  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute
       selectors</a> in the MDN Learning Area</li>
   <li>{{domxref("Element.querySelector()")}}</li>
   <li>{{domxref("Document.querySelector()")}} and
     {{domxref("Document.querySelectorAll()")}}</li>
   <li>{{domxref("DocumentFragment.querySelector()")}} and
     {{domxref("DocumentFragment.querySelectorAll()")}}</li>
-  <li>{{domxref("ParentNode.querySelector()")}} and
-    {{domxref("ParentNode.querySelectorAll()")}}</li>
   <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for
       <code>querySelector()</code></a></li>
 </ul>

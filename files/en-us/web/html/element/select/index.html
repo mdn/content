@@ -25,7 +25,7 @@ tags:
 
 <p>You can further nest <code>&lt;option&gt;</code> elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.</p>
 
-<p>For further examples, see <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
+<p>For further examples, see <a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#drop-down_content">The native form widgets: Drop-down content</a>.</p>
 
 <h2 id="Attributes">Attributes</h2>
 
@@ -106,7 +106,7 @@ tags:
 
 <p>The following example creates a very simple dropdown menu, the second option of which is selected by default.</p>
 
-<pre class="brush: html notranslate">&lt;!-- The second value will be selected initially --&gt;
+<pre class="brush: html">&lt;!-- The second value will be selected initially --&gt;
 &lt;select name="choice"&gt;
   &lt;option value="first"&gt;First Value&lt;/option&gt;
   &lt;option value="second" selected&gt;Second Value&lt;/option&gt;
@@ -120,7 +120,7 @@ tags:
 
 <p>The follow example is more complex, showing off more features you can use on a <code>&lt;select&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;label&gt;Please choose one or more pets:
+<pre class="brush: html">&lt;label&gt;Please choose one or more pets:
   &lt;select name="pets" multiple size="4"&gt;
     &lt;optgroup label="4-legged pets"&gt;
       &lt;option value="dog"&gt;Dog&lt;/option&gt;
@@ -164,7 +164,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
  &lt;fieldset&gt;
     &lt;legend&gt;Standard controls&lt;/legend&gt;
     &lt;select
@@ -198,7 +198,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -363,7 +363,7 @@ html body form fieldset#custom div.select div.header span {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const selects = custom.querySelectorAll('select');
+<pre class="brush: js">const selects = custom.querySelectorAll('select');
 for (const select of selects) {
     const div = document.createElement('div');
     const header = document.createElement('div');
@@ -506,7 +506,7 @@ document.forms[0].onsubmit = function(e) {
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_">form-associated </a>element</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_">form-associated </a>element</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -518,7 +518,7 @@ document.forms[0].onsubmit = function(e) {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>

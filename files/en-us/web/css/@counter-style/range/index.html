@@ -8,6 +8,7 @@ tags:
   - CSS Counter Styles
   - CSS Descriptor
   - Reference
+browser-compat: css.at-rules.counter-style.range
 ---
 <div>{{CSSRef}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css notranslate">/* Keyword value */
+<pre class="brush:css">/* Keyword value */
 range: auto;
 
 /* Range values */
@@ -60,13 +61,13 @@ range: infinite 6, 10 infinite;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_counter_style_over_a_range">Setting counter style over a range</h3>
 
-<pre class="brush: html notranslate">&lt;ul class="list"&gt;
+<pre class="brush: html">&lt;ul class="list"&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
   &lt;li&gt;Three&lt;/li&gt;
@@ -79,7 +80,7 @@ range: infinite 6, 10 infinite;
   &lt;li&gt;Ten&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<pre class="brush: css notranslate">@counter-style range-multi-example {
+<pre class="brush: css">@counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
   range: 2 4, 7 9;
@@ -123,11 +124,11 @@ range: infinite 6, 10 infinite;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.counter-style.range")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
+ <li>{{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
 </ul>

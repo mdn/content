@@ -44,7 +44,7 @@ tags:
 
 <p>Add a few sample to-do items, along the lines of those seen below. This way you have some data available for rendering using <code>v-for</code>.</p>
 
-<pre class="brush: js notranslate">export default {
+<pre class="brush: js">export default {
   name: 'app',
   components: {
     ToDoItem
@@ -75,14 +75,14 @@ tags:
  <li>
   <p>Import <code>lodash.uniqueid</code> into your <code>App</code> component in the same way you did with your <code>ToDoItem</code> component, using</p>
 
-  <pre class="brush: js notranslate"> import uniqueId from 'lodash.uniqueid';</pre>
+  <pre class="brush: js"> import uniqueId from 'lodash.uniqueid';</pre>
  </li>
  <li>
   <p>Next, add an <code>id</code> field to each element in your <code>ToDoItems</code> array, and assign each of them a value of <code>uniqueId('todo-')</code>.</p>
 
   <p>Your <code>App.vue</code> <code>&lt;script&gt;</code> element contents should now look like this:</p>
 
-  <pre class="brush: js notranslate">import ToDoItem from './components/ToDoItem.vue';
+  <pre class="brush: js">import ToDoItem from './components/ToDoItem.vue';
 import uniqueId from 'lodash.uniqueid'
 
 export default {
@@ -105,7 +105,7 @@ export default {
  <li>
   <p>Now, add the <code>v-for</code> directive and <code>key</code> attribute to the <code>&lt;li&gt;</code> element in your <code>App.vue</code> template, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;ul&gt;
+  <pre class="brush: html">&lt;ul&gt;
   &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
     &lt;to-do-item label="My ToDo Item" :done="true"&gt;&lt;/to-do-item&gt;
   &lt;/li&gt;
@@ -116,7 +116,7 @@ export default {
  <li>
   <p>Update the <code>label="My ToDo Item"</code> attribute to <code>:label="item.label"</code>, and the <code>:done="false"</code> attribute to <code>:done="item.done"</code>, as seen in context below:</p>
 
-  <pre class="brush: html notranslate">&lt;ul&gt;
+  <pre class="brush: html">&lt;ul&gt;
   &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
      &lt;to-do-item :label="item.label" :done="item.done"&gt;&lt;/to-do-item&gt;
   &lt;/li&gt;
@@ -141,7 +141,7 @@ export default {
 
 <p>The <code>&lt;script&gt;</code> contents in your <code>ToDoItem</code> component should now look something like this:</p>
 
-<pre class="brush: js notranslate">export default {
+<pre class="brush: js">export default {
     props: {
         label: {required: true, type: String},
         done: {default: false, type: Boolean},
@@ -156,7 +156,7 @@ export default {
 
 <p>Now, over in your <code>App.vue</code> component, pass <code>item.id</code> as a prop to the <code>ToDoItem</code> component. Your <code>App.vue</code> template should now look like this:</p>
 
-<pre class="brush: html notranslate">&lt;template&gt;
+<pre class="brush: html">&lt;template&gt;
   &lt;div id="app"&gt;
     &lt;h1&gt;My To-Do List&lt;/h1&gt;
     &lt;ul&gt;
@@ -227,5 +227,15 @@ export default {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

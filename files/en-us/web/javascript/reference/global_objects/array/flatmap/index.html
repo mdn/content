@@ -9,6 +9,7 @@ tags:
 - Prototype
 - Reference
 - flatMap
+browser-compat: javascript.builtins.Array.flatMap
 ---
 <div>{{JSRef}}</div>
 
@@ -20,9 +21,22 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>var new_array = arr</var>.flatMap(function <var>callback(currentValue[, index[, array]]) {
-    // return element for new_array
-}</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+flatMap((currentValue) => { ... } )
+flatMap((currentValue, index) => { ... } )
+flatMap((currentValue, index, array) => { ... } )
+
+// Callback function
+flatMap(callbackFn)
+flatMap(callbackFn, thisArg)
+
+// Inline callback function
+flatMap(function callbackFn(currentValue) { ... })
+flatMap(function callbackFn(currentValue, index) { ... })
+flatMap(function callbackFn(currentValue, index, array){ ... })
+flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -60,7 +74,7 @@ tags:
 
 <h4 id="reduce_and_concat"><code>reduce()</code> and <code>concat()</code></h4>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3, 4];
+<pre class="brush: js">var arr = [1, 2, 3, 4];
 
 arr.flatMap(x =&gt; [x, x * 2]);
 // is equivalent to
@@ -73,17 +87,11 @@ arr.reduce((acc, x) =&gt; acc.concat([x, x * 2]), []);
   copies elements from the current accumulator array into a new array instead of just
   adding the new elements to the existing array.</p>
 
-<div class="hidden">
-  <p>Please do not add polyfills on this article. For reference, please check: <a
-      href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a>
-  </p>
-</div>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="map_and_flatMap"><code>map()</code> and <code>flatMap()</code></h3>
 
-<pre class="brush: js notranslate">let arr1 = [1, 2, 3, 4];
+<pre class="brush: js">let arr1 = [1, 2, 3, 4];
 
 arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
@@ -101,7 +109,7 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 
 <p>Let's generate a list of words from a list of sentences.</p>
 
-<pre class="brush: js notranslate">let arr1 = ["it's Sunny in", "", "California"];
+<pre class="brush: js">let arr1 = ["it's Sunny in", "", "California"];
 
 arr1.map(x =&gt; x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
@@ -122,7 +130,7 @@ arr1.flatMap(x =&gt; x.split(" "));
   Return a 1-element array to keep the item, a multiple-element array to add items, or a
   0-element array to remove the item.</p>
 
-<pre class="brush: js notranslate">// Let's say we want to remove all the negative numbers
+<pre class="brush: js">// Let's say we want to remove all the negative numbers
 // and split the odd numbers into an even number and a 1
 let a = [5, 4, -3, 20, 17, -33, -4, 18]
 //       |\  \  x   |  | \   x   x   |
@@ -139,24 +147,11 @@ a.flatMap( (n) =&gt;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.flatmap',
-        'Array.prototype.flatMap')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.flatMap")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -165,4 +160,5 @@ a.flatMap( (n) =&gt;
   <li>{{jsxref("Array.prototype.map()")}}</li>
   <li>{{jsxref("Array.prototype.reduce()")}}</li>
   <li>{{jsxref("Array.prototype.concat()")}}</li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A polyfill</a></li>
 </ul>

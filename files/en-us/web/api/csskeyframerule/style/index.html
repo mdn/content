@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p>The read-only <strong><code>CSSKeyframeRule.style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a class="external" href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ domxref("CSSKeyframeRule") }}.</p>
+<p>The read-only <strong><code>CSSKeyframeRule.style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ domxref("CSSKeyframeRule") }}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,10 +36,10 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>
-    The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+    The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
     <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual <code>CSSKeyFrame</code> objects for each keyframe.
 </p>
-  
+
 <pre class="brush: css">@keyframes slidein {
   from {
     transform: translateX(0%);

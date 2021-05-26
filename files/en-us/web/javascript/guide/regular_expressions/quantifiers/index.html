@@ -17,7 +17,6 @@ tags:
 
 <h2 id="Types">Types</h2>
 
-<div class="hidden">The following table is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
 <div class="notecard note">
 <p><strong>Note:</strong> In the following, <em>item</em> refers not only to singular characters, but also includes <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character classes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups and ranges</a>.</p>
@@ -94,7 +93,7 @@ tags:
 
 <h3 id="Repeated_pattern">Repeated pattern</h3>
 
-<pre class="brush: js notranslate">var wordEndingWithAs = /\w+a+\b/;
+<pre class="brush: js">var wordEndingWithAs = /\w+a+\b/;
 var delicateMessage = "This is Spartaaaaaaa";
 
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
@@ -102,7 +101,7 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 
 <h3 id="Counting_characters">Counting characters</h3>
 
-<pre class="brush: js notranslate">var singleLetterWord = /\b\w\b/g;
+<pre class="brush: js">var singleLetterWord = /\b\w\b/g;
 var notSoLongWord = /\b\w{1,6}\b/g;
 var loooongWord = /\b\w{13,}\b/g;
 
@@ -115,7 +114,7 @@ console.table(sentence.match(loooongWord));      // ["multiplication"]
 
 <h3 id="Optional_character">Optional character</h3>
 
-<pre class="brush: js notranslate">var britishText = "He asked his neighbour a favour.";
+<pre class="brush: js">var britishText = "He asked his neighbour a favour.";
 var americanText = "He asked his neighbor a favor.";
 
 var regexpEnding = /\w+ou?r/g;
@@ -133,7 +132,7 @@ console.table(americanText.match(regexpEnding));
 
 <h3 id="Greedy_versus_non-greedy">Greedy versus non-greedy</h3>
 
-<pre class="brush: js notranslate">var text = "I must be getting somewhere near the centre of the earth.";
+<pre class="brush: js">var text = "I must be getting somewhere near the centre of the earth.";
 var greedyRegexp = /[\w ]+/;
 // [\w ]      a letter of the latin alphabet or a whitespace
 //      +     one or several times
@@ -148,23 +147,6 @@ console.log(text.match(nonGreedyRegexp));
 // The match is the smallest one possible
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>For browser compatibility information, check out the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
-
 <h2 id="See_also">See also</h2>
 
 <ul>
@@ -178,4 +160,5 @@ console.log(text.match(nonGreedyRegexp));
   </ul>
  </li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">The <code>RegExp()</code> constructor</a></li>
+ <li><a href="https://tc39.es/ecma262/#sec-quantifier">Quantifiers in the ECMAScript specification</a></li>
 </ul>

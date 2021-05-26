@@ -12,26 +12,26 @@ tags:
 
 <h2 id="The_referrer_problem">The referrer problem</h2>
 
-<p>The {{httpheader("Referer")}} (sic) header contains the address of the previous web page from which a link to the currently requested page was followed, which has lots of fairly innocent uses including analytics, logging, or optimized caching. However, there are more problematic uses such as tracking or stealing information, or even just side effects such as inadvertently leaking sensitive information.</p>
+<p>The {{httpheader("Referer")}} (sic) header contains the address of a request (for example, the address of the previous web page from which a link to the currently requested page was followed, or the address of a page loading an image or other resource). This has many fairly innocent uses, including analytics, logging, or optimized caching. However, there are more problematic uses such as tracking or stealing information, or even just side effects such as inadvertently leaking sensitive information.</p>
 
 <p>For example, consider a "reset password" page with a social media link in a footer. If the link was followed, depending on how information was shared the social media site may receive the reset password URL and may still be able to use the shared information, potentially compromising a user's security.</p>
 
-<p>By the same logic, an image hosted on a third party side but embedded in your page could result in sensitive information being leaked to the third party. Even if security is not compromised, the information may not be something the user wants shared.</p>
+<p>By the same logic, an image from a third party site embedded in your page could result in sensitive information being leaked to the third party. Even if security is not compromised, the information may not be something the user wants shared.</p>
 
 <h2 id="How_can_we_fix_this">How can we fix this?</h2>
 
-<p>Much of this risk can be mitigated by sensible design of applications. A sensible application would remove such risks by making password reset URLs only usable for a single use, or when combined with a unique user token, and transmitting sensitive data in different ways.</p>
+<p>Much of this risk can be mitigated by sensible design of applications. A sensible application would remove such risks by making single-use password reset URLs, or combining them with a unique user token. The risk can also be reduced by transmitting sensitive data in more secure ways.</p>
 
 <p>You should use {{HTTPMethod("POST")}} rather than {{HTTPMethod("GET")}} wherever possible, to avoid passing sensitive data to other locations via URLs.</p>
 
-<p>You should always use {{glossary("HTTPS")}} for your sites. This has many security advantages, including the fact that HTTPS sites will never transmit referer information to non-HTTPS sites. This is becoming less useful in this context now that most of the web is using HTTPS, but it is still a worthy consideration.</p>
+<p>You should always use {{glossary("HTTPS")}} for your sites. This has many security advantages, including the fact that HTTPS sites will never transmit referrer information to non-HTTPS sites. This advice is less relevant now that most of the web is using HTTPS, but it is still a worthy consideration.</p>
 
 <p>In addition, you should consider removing any third party content (e.g. social networking widgets embedded in {{htmlelement("iframe")}}) from secure areas of your website, like password reset pages, payment forms, login areas, etc.</p>
 
 <p>You can also mitigate such risks using:</p>
 
 <ul>
- <li>The {{httpheader("Referrer-Policy")}} header on your server to control what information is sent through the <code>Referer</code> header. Again, a directive of <code>no-referrer</code> would omit the Referer header entirely.</li>
+ <li>The {{httpheader("Referrer-Policy")}} header on your server to control what information is sent through the {{httpheader("Referer")}} header. For example, a directive of <code>no-referrer</code> would omit the Referer header entirely.</li>
  <li>The <code>referrerpolicy</code> attribute on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). This can for example be set to <code>no-referrer</code> to stop the <code>Referer</code> header being sent altogether.</li>
  <li>The <code>rel</code> attribute set to <code>noreferrer</code> on HTML elements that are in danger of leaking such information (such as {{HTMLElement("img")}} and {{HTMLElement("a")}}). See <a href="/en-US/docs/Web/HTML/Link_types">Link types</a> and search for <code>noreferrer</code> for more information.</li>
  <li>The <a href="https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect">Exit page</a> technique.</li>

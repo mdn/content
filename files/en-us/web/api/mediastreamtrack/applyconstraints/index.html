@@ -2,13 +2,13 @@
 title: MediaStreamTrack.applyConstraints()
 slug: Web/API/MediaStreamTrack/applyConstraints
 tags:
-- API
-- Constraints
-- Media Capture and Streams API
-- Media Streams API
-- MediaStreamTrack
-- Method
-- applyConstraints
+  - API
+  - Constraints
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaStreamTrack
+  - Method
+  - applyConstraints
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
@@ -23,7 +23,7 @@ tags:
   For example, you may prefer high-density video but require that the frame rate be a
   little low to help keep the data rate low enough not overtax the network. Constraints
   can also specify ideal and/or acceptable sizes or ranges of sizes. See <a
-    href="/en-US/docs/Web/API/Media_Streams_API/Constraints#Applying_constraints">Applying
+    href="/en-US/docs/Web/API/Media_Streams_API/Constraints#applying_constraints">Applying
     constraints</a> in <a
     href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints,
     and settings</a> for more information on how to apply your preferred constraints.</p>
@@ -31,7 +31,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">const <em>appliedPromise</em> = <em>track</em>.applyConstraints([<em>constraints</em>])</pre>
+  class="brush: js">const <em>appliedPromise</em> = <em>track</em>.applyConstraints([<em>constraints</em>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -64,7 +64,7 @@ tags:
   aspect ratio of 1.333 if that is not available. Note that these constraints also
   illustrate what the spec refers to as a <em>backoff strategy</em>.</p>
 
-<pre class="brush: js notranslate">const constraints = {
+<pre class="brush: js">const constraints = {
   width: {min: 640, ideal: 1280},
   height: {min: 480, ideal: 720},
   advanced: [

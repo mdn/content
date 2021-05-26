@@ -7,12 +7,13 @@ tags:
   - CSS Function
   - Function
   - Reference
+browser-compat: css.types.counters
 ---
 <p>{{CSSRef}}</p>
 
 <p>The <strong><code>counters()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any. The <code>counters()</code> function has two forms: <code>counters(<var>name</var>, <var>string</var>)</code> or <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>. It is generally used with <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, but can be used, theoretically, anywhere a <code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code> value is supported. The generated text is the value of all counters with the given name, from outermost to innermost, separated by the specified string. The counters are rendered in the style indicated, defaulting to <code>decimal</code> if no style is specified.</p>
 
-<pre class="brush: css notranslate">/* Simple usage  - style defaults to decimal */
+<pre class="brush: css">/* Simple usage  - style defaults to decimal */
 counters(countername, '-');
 
 /* changing the counter display */
@@ -33,7 +34,7 @@ counters(countername, '.', upper-roman)</pre>
 <dl>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
  <dd>A name identifying the counters, which is the same case-sensitive name used for the {{cssxref("counter-reset")}} and  {{cssxref("counter-increment")}}. The name cannot start with two dashes and can't be <code>none</code>, <code>unset</code>, <code>initial</code>, or <code>inherit</code>.</dd>
- <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
+ <dt><code>&lt;counter-style&gt;</code></dt>
  <dd>A counter style name or <code><a href="/en-US/docs/Web/CSS/symbols">symbols()</a></code> function, where a counter style name is a numeric, alphabetic, or symbolic simple predefined counter style, a complex longhand east Asian or Ethiopic predefined counter style, or other <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">predefined counter style</a>. If omitted, the counter-style defaults to decimal</dd>
  <dt>{{cssxref("&lt;string&gt;")}}</dt>
  <dd>Any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, <code>\000A9</code> represents the copyright symbol.</dd>
@@ -41,7 +42,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -49,7 +50,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;
      &lt;ol&gt;
         &lt;li&gt;&lt;/li&gt;
@@ -75,7 +76,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css; highlight[2]">ol {
   counter-reset: listCounter;
 }
 li {
@@ -96,7 +97,7 @@ li::before {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;
      &lt;ol&gt;
         &lt;li&gt;&lt;/li&gt;
@@ -122,7 +123,7 @@ li::before {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css; highlight[2]">ol {
   counter-reset: count;
 }
 li {
@@ -165,7 +166,7 @@ li::before {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.counters")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.bitwise_xor
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -16,15 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>a</var> ^ <var>b</var></code>
+<pre class="brush: js"><code><var>a</var> ^ <var>b</var></code>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -34,7 +30,7 @@ tags:
   example, the following integer with more than 32 bits will be converted to a 32 bit
   integer:</p>
 
-<pre class="brush: js notranslate">Before: 11100110111110100000000000000110000000000001
+<pre class="brush: js">Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001</pre>
 
 <p>Each bit in the first operand is paired with the corresponding bit in the second
@@ -78,7 +74,7 @@ After:              10100000000000000110000000000001</pre>
   </tbody>
 </table>
 
-<pre class="brush: js notranslate">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+<pre class="brush: js">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
@@ -91,7 +87,7 @@ After:              10100000000000000110000000000001</pre>
 
 <h3 id="Using_bitwise_XOR">Using bitwise XOR</h3>
 
-<pre class="brush: js notranslate">// 9  (00000000000000000000000000001001)
+<pre class="brush: js">// 9  (00000000000000000000000000001001)
 // 14 (00000000000000000000000000001110)
 
 14 ^ 9;
@@ -99,28 +95,12 @@ After:              10100000000000000110000000000001</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#prod-BitwiseXORExpression', 'Bitwise XOR expression')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a class="external"
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</div>
 
-<p>{{Compat("javascript.operators.bitwise_xor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

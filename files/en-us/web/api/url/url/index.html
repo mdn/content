@@ -20,15 +20,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
+<pre class="brush: js">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
 	<dt><code><var>url</var></code></dt>
-	<dd>A {{domxref("USVString")}} representing an absolute or relative URL. If
-		<code><var>url</var></code> is a relative URL, <code><var>base</var></code> is
+	<dd>A {{domxref("USVString")}} or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+		If <code><var>url</var></code> is a relative URL, <code><var>base</var></code> is
 		required, and will be used as the base URL. If <code><var>url</var></code> is an
 		absolute URL, a given <code><var>base</var></code> will be ignored.</dd>
 	<dt><code><var>base</var></code> {{optional_inline}}</dt>
@@ -66,7 +66,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">// Base urls
+<pre class="brush: js">// Base urls
 let m = 'https://developer.mozilla.org';
 let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
 let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'

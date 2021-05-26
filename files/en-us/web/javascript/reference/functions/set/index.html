@@ -6,6 +6,7 @@ tags:
 - Functions
 - JavaScript
 - Language feature
+browser-compat: javascript.functions.set
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">{set <var>prop</var>(<var>val</var>) { . . . }}
+<pre class="brush: js">{set <var>prop</var>(<var>val</var>) { . . . }}
 {set [<var>expression</var>](<var>val</var>) { . . . }}</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -42,21 +43,18 @@ tags:
 
 <p>Note the following when working with the <code>set</code> syntax:</p>
 
-<div>
-  <ul>
-    <li>It can have an identifier which is either a number or a string;</li>
-    <li>It must have exactly one parameter (see <a class="external"
-        href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/"
-        rel="external nofollow">Incompatible <abbr
-          title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter
-        functions must now have exactly zero or one arguments</a> for more information);
-    </li>
-    <li>It must not appear in an object literal with another <code>set</code> or with a
-      data entry for the same property.<br>
-      ( <code>{ set x(v) { }, set x(v) { } }</code> and
-      <code>{ x: ..., set x(v) { } }</code> are forbidden )</li>
-  </ul>
-</div>
+<ul>
+  <li>It can have an identifier which is either a number or a string;</li>
+  <li>It must have exactly one parameter (see <a       href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/"
+      rel="external nofollow">Incompatible <abbr
+        title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter
+      functions must now have exactly zero or one arguments</a> for more information);
+  </li>
+  <li>It must not appear in an object literal with another <code>set</code> or with a
+    data entry for the same property.<br>
+    ( <code>{ set x(v) { }, set x(v) { } }</code> and
+    <code>{ x: ..., set x(v) { } }</code> are forbidden )</li>
+</ul>
 
 <h2 id="Examples">Examples</h2>
 
@@ -132,22 +130,11 @@ console.log(obj.baz);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.functions.set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

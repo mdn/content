@@ -2,27 +2,27 @@
 title: Console.timeLog()
 slug: Web/API/Console/timeLog
 tags:
-- API
-- DOM
-- Debugging
-- Method
-- Web Development
-- console
-- web console
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Web Development
+  - console
+  - web console
 ---
 <div>{{APIRef("Console API")}}</div>
 
 <p>Logs the current value of a timer that was previously started by calling
   {{domxref("console.time()")}} to the console.</p>
 
-<p>See <a href="/en-US/docs/Web/API/console#Timers">Timers</a> in the documentation for
+<p>See <a href="/en-US/docs/Web/API/Console#timers">Timers</a> in the documentation for
   details and examples.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">console.timeLog(<em>label</em>);</pre>
+<pre class="brush: js">console.timeLog(<em>label</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -63,9 +63,9 @@ console.timeEnd("answer time");
 <p>The output from the example above shows the time taken by the user to dismiss the first
   alert box, followed by the time it took for the user to dismiss the second alert:</p>
 
-<p><img alt="timerresult.png" class="default internal"
-    src="https://mdn.mozillademos.org/files/16741/timer_output.png"
-    style="border: 1px solid black; height: 354px; margin: 0px auto; width: 537px;"></p>
+<p><img class="default internal"
+    src="timer_output.png"
+    style="border: 1px solid black; margin: 0px auto;"></p>
 
 <p>Notice that the timer's name is displayed when the timer value is logged using
   <code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd()
@@ -93,14 +93,5 @@ console.timeEnd("answer time");
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
+<p>{{Compat("api.Console.timeLog")}}</p>
 
-  <p>{{Compat("api.Console.timeLog")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
-      documentation: Console</a></li>
-</ul>

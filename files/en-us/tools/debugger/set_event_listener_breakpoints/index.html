@@ -20,15 +20,15 @@ tags:
 
 <p>To use an event breakpoint, you open up the JavaScript debugger, and find and expand the Event Listener Breakpoints section in the right hand column.</p>
 
-<p><img alt="The list of event listener breakpoints in the right hand column" src="https://mdn.mozillademos.org/files/16985/event-listener-breakpoints.png" style="border: 1px solid black; display: block; height: 608px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="The list of event listener breakpoints in the right hand column" src="event-listener-breakpoints.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>To break when event listeners are hit, check the boxes next the events you are interested in. All of the standard events supported in your version of Firefox are listed, arranged by which API or API area they're part of.</p>
 
 <p>Now when a <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code>, <code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code>, <code><a href="/en-US/docs/Web/API/Document/keypress_event">keypress</a></code>, or <code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code> event occurs, execution will pause as soon as it enters the listener code.</p>
 
-<p><img alt="execution is paused on an event breakpoint and the source panel shows what line it is paused on" src="https://mdn.mozillademos.org/files/16986/paused-on-breakpoint.png" style="border-style: solid; border-width: 1px; height: 630px; width: 1000px;"></p>
+<p><img alt="execution is paused on an event breakpoint and the source panel shows what line it is paused on" src="paused-on-breakpoint.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>When execution pauses, the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a> displays the highlighted line of the JavaScript code that is next to be executed, along with the surrounding code for context. In addition, you get a box overlaid on the viewport saying "Paused on event breakpoint", with buttons to step over that line of code or resume execution.</p>
+<p>When execution pauses, the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a> displays the highlighted line of the JavaScript code that is next to be executed, along with the surrounding code for context. In addition, you get a box overlaid on the viewport saying "Paused on event breakpoint", with buttons to step over that line of code or resume execution.</p>
 
 <p>You <em>could</em> add regular breakpoints at the entry point of the listener to achieve the same effect. If however you have multiple elements, all of which have event listeners attached that you want to break on, this becomes an enormous time saver.</p>
 
@@ -40,26 +40,26 @@ tags:
 
 <p>So if we choose to log keyboard events, for example, the code no longer pauses as each event is fired:</p>
 
-<p><img alt="log on events checkbox" src="https://mdn.mozillademos.org/files/16979/log-events-1.png" style="border-style: solid; border-width: 1px; display: block; height: 273px; margin: 0 auto; width: 400px;"></p>
+<p><img alt="log on events checkbox" src="log-events-1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <p>Instead, we can then switch to the console, and whenever we press a key we are given a log of where related events were fired.</p>
 
-<p><img alt="events logged in console" src="https://mdn.mozillademos.org/files/16980/log-events-2.png" style="border-style: solid; border-width: 1px; height: 694px; width: 900px;"></p>
+<p><img alt="events logged in console" src="log-events-2.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>There's an issue here — the console is showing that the <a href="/en-US/docs/Web/API/Document/keypress_event"><code>keypress</code> event</a> is being fired somewhere inside jQuery. Instead, it’d be far more useful if we showed where in our own app code is calling the jQuery that fired the event. This can be done by finding <code>jquery.js</code> in the Sources panel, and choosing the <strong>Ignore source option</strong> from its context menu.</p>
 
-<p><img alt="blackbox jquery source" src="https://mdn.mozillademos.org/files/16981/log-events-3.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0 auto; width: 500px;"></p>
+<p><img alt="blackbox jquery source" src="log-events-3.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <p>Now the logs will show where in your app jQuery was called, rather than where in jQuery the event was fired:</p>
 
-<p><img alt="events logged in console with lines shown where our source calls jQuery." src="https://mdn.mozillademos.org/files/16982/log-events-4.png" style="border-style: solid; border-width: 1px; height: 694px; width: 900px;"></p>
+<p><img alt="events logged in console with lines shown where our source calls jQuery." src="log-events-4.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Filter_by_event_type">Filter by event type</h2>
 
 <p>Also added to Firefox 71 is a new <em>Filter by event type...</em> text input, which can also be found at the top of the <em>Event Listener Breakpoints</em> list. When you click in this input and type a search term, the list of event listener types will filter by that term allowing you to find the events you want to break on more easily.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16983/filter-event-breakpoints.png" style="border-style: solid; border-width: 1px; display: block; height: 319px; margin: 0 auto; width: 500px;"></p>
+<p><img alt="" src="filter-event-breakpoints.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <h2 id="Inline_variable_preview">Inline variable preview</h2>
 
-<p>New in Firefox 71, the <a href="/en-US/docs/Tools/Debugger/UI_Tour#Source_pane">source pane</a> now gives you an instant preview of the variables on each line of code you've stepped through. See <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview">Set a breakpoint &gt; Inline variable preview</a> for more information.</p>
+<p>New in Firefox 71, the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a> now gives you an instant preview of the variables on each line of code you've stepped through. See <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">Set a breakpoint &gt; Inline variable preview</a> for more information.</p>

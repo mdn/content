@@ -7,6 +7,7 @@ tags:
   - Left-hand-side expressions
   - Operator
   - Reference
+browser-compat: javascript.operators.new
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -19,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">new <var>constructor</var>[([<var>arguments</var>])]</pre>
+  class="brush: js">new <var>constructor</var>[([<var>arguments</var>])]</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -39,10 +40,10 @@ tags:
   <li>Creates a blank, plain JavaScript object.</li>
   <li>Adds a property to the new object (<code>__proto__</code>) that links to the constructor function's prototype object
     <div class="notecard note">
-      <p>Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using <code>new</code>).</p>
-      </div> 
+      <p><strong>Note:</strong> Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using <code>new</code>).</p>
+      </div>
   </li>
-  <li>Binds the newly created object instance as the <code>this</code> context 
+  <li>Binds the newly created object instance as the <code>this</code> context
     (i.e. all references to <code>this</code> in the constructor function now refer to the object created in the first step).</li>
   <li>Returns <code>this</code> if the function doesn't return an object.</li>
 </ol>
@@ -52,18 +53,18 @@ tags:
 <ol>
   <li>Define the object type by writing a function that specifies its name and properties.
     For example, a constructor function to create an object <code>Foo</code>might look like this:
-    <pre class="brush: js notranslate">function Foo(bar1, bar2) {
+    <pre class="brush: js">function Foo(bar1, bar2) {
       this.bar1 = bar1;
       this.bar2 = bar2;
     }</pre>
   </li>
   <li>Create an instance of the object with <code>new</code>.
-    <pre class="brush: js notranslate">var myFoo = new Foo('Bar 1', 2021);</pre>
+    <pre class="brush: js">var myFoo = new Foo('Bar 1', 2021);</pre>
   </li>
 </ol>
 
 <div class="notecard note">
-<p>An object can have a property that is itself another object. See the
+<p><strong>Note:</strong> An object can have a property that is itself another object. See the
   examples below.</p>
 </div>
 
@@ -88,7 +89,7 @@ tags:
 <p>You can always add a property to a previously defined object instance. For example, the
   statement <code>car1.color = "black"</code> adds a property <code>color</code> to
   <code>car1</code>, and assigns it a value of "<code>black</code>".</p>
-  
+
 <p>However, this does not affect any other objects. To add the new property to all objects of the same type,
   you must add the property to the definition of the <code>Car</code> object type.</p>
 
@@ -102,7 +103,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">prototype</a>.
 </p>
 
-<pre class="brush: js notranslate">function Car() {}
+<pre class="brush: js">function Car() {}
 car1 = new Car();
 car2 = new Car();
 
@@ -121,7 +122,7 @@ console.log(car2.color);   // 'original color'
 </pre>
 
 <div class="notecard note">
-  <p>While the constructor function can be invoked like any regular function (i.e. without the <code>new</code> operator),
+  <p><strong>Note:</strong> While the constructor function can be invoked like any regular function (i.e. without the <code>new</code> operator),
     in this case a new Object is not created and the value of <code>this</code> is also different.</p>
 </div>
 
@@ -133,7 +134,7 @@ console.log(car2.color);   // 'original color'
   called <code>Car</code>, and you want it to have properties for make, model, and year.
   To do this, you would write the following function:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year) {
+<pre class="brush: js">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -142,7 +143,7 @@ console.log(car2.color);   // 'original color'
 
 <p>Now you can create an object called <code>myCar</code> as follows:</p>
 
-<pre class="brush: js notranslate">var myCar = new Car('Eagle', 'Talon TSi', 1993);
+<pre class="brush: js">var myCar = new Car('Eagle', 'Talon TSi', 1993);
 </pre>
 
 <p>This statement creates <code>myCar</code> and assigns it the specified values for its
@@ -152,7 +153,7 @@ console.log(car2.color);   // 'original color'
 <p>You can create any number of <code>car</code> objects by calls to <code>new</code>. For
   example:</p>
 
-<pre class="brush: js notranslate">var kensCar = new Car('Nissan', '300ZX', 1992);
+<pre class="brush: js">var kensCar = new Car('Nissan', '300ZX', 1992);
 </pre>
 
 <h3 id="Object_property_that_is_itself_another_object">Object property that is itself
@@ -160,7 +161,7 @@ console.log(car2.color);   // 'original color'
 
 <p>Suppose you define an object called <code>Person</code> as follows:</p>
 
-<pre class="brush: js notranslate">function Person(name, age, sex) {
+<pre class="brush: js">function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
@@ -169,14 +170,14 @@ console.log(car2.color);   // 'original color'
 
 <p>And then instantiate two new <code>Person</code> objects as follows:</p>
 
-<pre class="brush: js notranslate">var rand = new Person('Rand McNally', 33, 'M');
+<pre class="brush: js">var rand = new Person('Rand McNally', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
 </pre>
 
 <p>Then you can rewrite the definition of <code>Car</code> to include an
   <code>owner</code> property that takes a <code>Person</code> object, as follows:</p>
 
-<pre class="brush: js notranslate">function Car(make, model, year, owner) {
+<pre class="brush: js">function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -186,7 +187,7 @@ var ken = new Person('Ken Jones', 39, 'M');
 
 <p>To instantiate the new objects, you then use the following:</p>
 
-<pre class="brush: js notranslate">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+<pre class="brush: js">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
 </pre>
 
@@ -195,27 +196,16 @@ var car2 = new Car('Nissan', '300ZX', 1992, ken);
   parameters for the owners. To find out the name of the owner of <code>car2</code>, you
   can access the following property:</p>
 
-<pre class="brush: js notranslate">car2.owner.name
+<pre class="brush: js">car2.owner.name
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-new-operator', 'The new Operator')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.new")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

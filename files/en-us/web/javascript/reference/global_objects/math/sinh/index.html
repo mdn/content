@@ -7,6 +7,7 @@ tags:
 - Math
 - Method
 - Reference
+browser-compat: javascript.builtins.Math.sinh
 ---
 <div>{{JSRef}}</div>
 
@@ -45,15 +46,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-sinh.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.sinh(<var>x</var>)</pre>
+<pre class="brush: js">Math.sinh(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -76,14 +72,14 @@ tags:
 
 <p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.sinh = Math.sinh || function(x) {
+<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
   return (Math.exp(x) - Math.exp(-x)) / 2;
 }
 </pre>
 
 <p>or using only one call to the {{jsxref("Math.exp()")}} function:</p>
 
-<pre class="brush: js notranslate">Math.sinh = Math.sinh || function(x) {
+<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
   var y = Math.exp(x);
   return (y - 1 / y) / 2;
 }
@@ -93,28 +89,17 @@ tags:
 
 <h3 id="Using_Math.sinh">Using Math.sinh()</h3>
 
-<pre class="brush: js notranslate">Math.sinh(0); // 0
+<pre class="brush: js">Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.sinh")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

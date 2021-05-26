@@ -9,6 +9,7 @@ tags:
   - frequency-percentage
   - units
   - values
+browser-compat: css.types.frequency-percentage
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
@@ -28,17 +29,17 @@ tags:
 
 <h3 id="Valid_percentage_values">Valid percentage values</h3>
 
-<pre class="notranslate">90% Positive percentage
+<pre>90% Positive percentage
 +90% Positive percentage with leading +
 -90% Negative percentage — not valid for all properties that use percentages</pre>
 
 <h3 id="Invalid_percentage_values">Invalid percentage values</h3>
 
-<pre class="example-bad notranslate">90 % No space is allowed between the number and the unit</pre>
+<pre class="example-bad">90 % No space is allowed between the number and the unit</pre>
 
 <h3 id="Valid_frequency_values">Valid frequency values</h3>
 
-<pre class="notranslate">12Hz     Positive integer
+<pre>12Hz     Positive integer
 4.3Hz    Non-integer
 14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
 +0Hz     Zero, with a leading + and a unit
@@ -46,7 +47,7 @@ tags:
 
 <h3 id="Invalid_frequency_values">Invalid frequency values</h3>
 
-<pre class="example-bad notranslate">12.0     This is a &lt;number&gt;, not an &lt;frequency&gt;, because it is missing a unit.
+<pre class="example-bad">12.0     This is a &lt;number&gt;, not an &lt;frequency&gt;, because it is missing a unit.
 7 Hz     No space is allowed between the number and the unit.
 0        Although unitless zero is an allowable &lt;length&gt;, it's an invalid &lt;frequency&gt;.</pre>
 
@@ -76,7 +77,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.frequency-percentage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

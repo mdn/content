@@ -2,15 +2,15 @@
 title: AudioBufferSourceNode.loopStart
 slug: Web/API/AudioBufferSourceNode/loopStart
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- Media
-- Property
-- Reference
-- Web Audio API
-- loopStart
-- sound
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - Media
+  - Property
+  - Reference
+  - Web Audio API
+  - loopStart
+  - sound
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>AudioBufferSourceNode.loopStart = startOffsetInSeconds</em>;
+<pre class="brush: js"><em>AudioBufferSourceNode.loopStart = startOffsetInSeconds</em>;
 
 <em>startOffsetInSeconds</em> = <em>AudioBufferSourceNode.loopStart</em>;
 </pre>
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, the {{domxref("AudioContext.decodeAudioData()")}} function is used to
+<p>In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
   decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
   are provided to play and stop the audio playback, and slider controls are used to change
   the <code>playbackRate</code>, <code>loopStart</code>, and <code>loopEnd</code>
@@ -116,10 +116,7 @@ loopendControl.oninput = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioBufferSourceNode.loopStart")}}</p>
-</div>
+<p>{{Compat("api.AudioBufferSourceNode.loopStart")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Text_formatting
 tags:
   - Guide
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>
 
@@ -14,7 +14,6 @@ tags:
 
 <p>JavaScript's <a href="/en-US/docs/Glossary/String">String</a> type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values  (UTF-16 code units). Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it. You can create strings using string literals or string objects.</p>
 
-<div class="hidden">CAUTION: if you edit this page, do not include any characters above U+FFFF, until MDN bug 857438 is fixed ( <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=857438">https://bugzilla.mozilla.org/show_bug.cgi?id=857438</a> ).</div>
 
 <h3 id="String_literals">String literals</h3>
 
@@ -191,11 +190,11 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 
 <h2 id="Internationalization">Internationalization</h2>
 
-<p>The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The constructors for {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, and {{jsxref("DateTimeFormat")}} objects are properties of the <code>Intl</code> object.</p>
+<p>The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting. The constructors for {{jsxref("Intl/Collator")}}, {{jsxref("Intl/NumberFormat")}}, and {{jsxref("Intl/DateTimeFormat")}} objects are properties of the <code>Intl</code> object.</p>
 
 <h3 id="Date_and_time_formatting">Date and time formatting</h3>
 
-<p>The {{jsxref("DateTimeFormat")}} object is useful for formatting date and time. The following formats a date for English as used in the United States. (The result is different in another time zone.)</p>
+<p>The {{jsxref("Intl/DateTimeFormat")}} object is useful for formatting date and time. The following formats a date for English as used in the United States. (The result is different in another time zone.)</p>
 
 <pre class="brush: js">const msPerDay = 24 * 60 * 60 * 1000;
 
@@ -211,7 +210,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 <h3 id="Number_formatting">Number formatting</h3>
 
-<p>The {{jsxref("NumberFormat")}} object is useful for formatting numbers, for example currencies.</p>
+<p>The {{jsxref("Intl/NumberFormat")}} object is useful for formatting numbers, for example currencies.</p>
 
 <pre class="brush: js">const gasPrice = new Intl.NumberFormat('en-US',
                         { style: 'currency', currency: 'USD',
@@ -227,7 +226,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 <h3 id="Collation">Collation</h3>
 
-<p>The {{jsxref("Collator")}} object is useful for comparing and sorting strings.</p>
+<p>The {{jsxref("Intl/Collator")}} object is useful for comparing and sorting strings.</p>
 
 <p>For example, there are actually two different sort orders in German, <em>phonebook</em> and <em>dictionary</em>. Phonebook sort emphasizes sound, and it’s as if “ä”, “ö”, and so on were expanded to “ae”, “oe”, and so on prior to sorting.</p>
 

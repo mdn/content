@@ -19,11 +19,11 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 <ul>
 	<li>The position of elements can now be changed within the content ({{bug(1139187)}}).</li>
 	<li>Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).</li>
-	<li>Added <a href="/en-US/docs/Tools/Web_Console/Console_messages#Viewing_network_request_details">HTTP log inspection to the Web Console</a> ({{bug(1211525)}}).</li>
-	<li>Added a <a href="/en-US/docs/Tools/Tools_Toolbox#Choose_DevTools_theme">Firebug theme</a> ({{bug(1244054)}}).</li>
-	<li>Added the <a href="/en-US/docs/Tools/DOM_Inspector">DOM Inspector</a> ({{bug(1201475)}}).</li>
-	<li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Fonts_view">Font inspector</a> has been enabled by default again ({{bug(1280121)}}).</li>
-	<li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Edit_rules">Improved suggestions</a> for CSS properties ({{bug(1168246)}}).</li>
+	<li>Added <a href="/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details">HTTP log inspection to the Web Console</a> ({{bug(1211525)}}).</li>
+	<li>Added a <a href="/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme">Firebug theme</a> ({{bug(1244054)}}).</li>
+	<li>Added the <a href="/en-US/docs/Tools/DOM_Property_Viewer">DOM Inspector</a> ({{bug(1201475)}}).</li>
+	<li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view">Font inspector</a> has been enabled by default again ({{bug(1280121)}}).</li>
+	<li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#edit_rules">Improved suggestions</a> for CSS properties ({{bug(1168246)}}).</li>
 	<li>Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).</li>
 </ul>
 
@@ -64,11 +64,11 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 	<ul>
 		<li>{{cssxref("-webkit-text-fill-color")}} ({{bug(1247777)}}).</li>
 		<li>{{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ({{bug(1248708)}}).</li>
-		<li> {{cssxref("-webkit-background-clip")}}  (as background-clip) text value ({{bug(759568)}}).</li>
-		<li>{{cssxref("-webkit-box-direction")}}, {{cssxref("-webkit-box-orient")}} ({{bug(1262049)}}.</li>
+		<li> <code>-webkit-background-clip</code>  (as background-clip) text value ({{bug(759568)}}).</li>
+		<li><code>-webkit-box-direction</code>, <code>-webkit-box-orient</code> ({{bug(1262049)}}.</li>
 		<li>The value <code>-webkit-inline-box</code> is now an alias of <code>inline-flex</code> on the {{cssxref("display")}} property. ({{bug(1257661)}}).</li>
-		<li>{{cssxref("-webkit-flex-direction")}}, {{cssxref("-webkit-flex-wrap")}}, {{cssxref("-webkit-flex-flow")}}, {{cssxref("-webkit-order")}}, {{cssxref("-webkit-flex")}}, {{cssxref("-webkit-flex-grow")}}, {{cssxref("-webkit-flex-shrink")}}, {{cssxref("-webkit-flex-basis")}}, {{cssxref("-webkit-justify-content")}}, {{cssxref("-webkit-align-items")}}, {{cssxref("-webkit-align-self")}} and {{cssxref("-webkit-align-content")}} were added as aliases for the unprefixed properties and the values <code>-webkit-flex</code> and <code>-webkit-inline-flex</code> for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).</li>
-		<li>Added {{cssxref("-webkit-box-flex")}}, {{cssxref("-webkit-box-ordinal-group")}}, {{cssxref("-webkit-box-align")}} and {{cssxref("-webkit-box-pack")}} properties and <code>-webkit-box</code> value to {{cssxref("display")}} as aliases for modern <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications">CSS Flexbox</a> ({{bug(1208635)}}).</li>
+		<li><code>-webkit-flex-direction</code>, <code>-webkit-flex-wrap</code>, <code>-webkit-flex-flow</code>, <code>-webkit-order</code>, <code>-webkit-flex</code>, <code>-webkit-flex-grow</code>, <code>-webkit-flex-shrink</code>, <code>-webkit-flex-basis</code>, <code>-webkit-justify-content</code>, <code>-webkit-align-items</code>, <code>-webkit-align-self</code> and <code>-webkit-align-content</code> were added as aliases for the unprefixed properties and the values <code>-webkit-flex</code> and <code>-webkit-inline-flex</code> for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).</li>
+		<li>Added <code>-webkit-box-flex</code>, <code>-webkit-box-ordinal-group</code>, <code>-webkit-box-align</code> and <code>-webkit-box-pack</code> properties and <code>-webkit-box</code> value to {{cssxref("display")}} as aliases for modern <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox">CSS Flexbox</a> ({{bug(1208635)}}).</li>
 	</ul>
 	</li>
 	<li>The <code>text</code> value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ({{bug(1263516)}}).</li>
@@ -94,7 +94,7 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 <ul>
 	<li>The deprecated <a href="/en-US/docs/Archive/Web/Old_Proxy_API">old Proxy API</a> (<code>Proxy.create</code> and <code>Proxy.createFunction()</code>) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).</li>
 	<li>The <code>String.prototype.contains()</code> method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ({{bug(1103588)}}).</li>
-	<li>The non-standard <code>RegExp.multiline</code> property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">m flag</a> instead ({{bug(1219757)}}).</li>
+	<li>The non-standard <code>RegExp.multiline</code> property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">m flag</a> instead ({{bug(1219757)}}).</li>
 	<li>The {{jsxref("Object.__defineGetter__", "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}} methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).</li>
 </ul>
 
@@ -110,7 +110,7 @@ install Firefox Developer Edition</a> Firefox 48 was released on August 2, 2016.
 	<li>{{domxref("Element.animate()")}} is now activated by default ({{bug(1245000)}}).</li>
 	<li>The two methods {{domxref("Element.insertAdjacentText()")}} and {{domxref("Element.insertAdjacentElement()")}} have been implemented ({{bug(811259)}}).</li>
 	<li>{{domxref("Document.scrollingElement")}} got enabled by default ({{bug(1265032)}}).</li>
-	<li>{{domxref("Node.localName")}}, {{domxref("Node.namespaceURI")}} and {{domxref("Node.prefix")}} were moved to the {{domxref("Element")}} and {{domxref("Attr")}} APIs ({{bug(1055776)}}).</li>
+	<li><code>Node.localName</code>, <code>Node.namespaceURI</code> and <code>Node.prefix</code> were moved to the {{domxref("Element")}} and {{domxref("Attr")}} APIs ({{bug(1055776)}}).</li>
 	<li>Per the latest specification, the values of {{domxref("KeyboardEvent.code")}} returned for the following keys have been changed see ({{bug(1264150)}}):
 	<ul>
 		<li><code>"OSLeft"</code> and <code>"OSRight"</code> are now <code>"MetaLeft"</code> and <code>"MetaRight"</code>.</li>

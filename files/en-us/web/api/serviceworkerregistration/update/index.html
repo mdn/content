@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>serviceWorkerRegistration</em>.update();</pre>
+<pre class="brush: js"><em>serviceWorkerRegistration</em>.update();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
   handler to a button so you can explicitly update the service worker whenever desired:
 </p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // registration worked
     console.log('Registration succeeded.');

@@ -5,13 +5,14 @@ tags:
 - Deprecated
 - JavaScript
 - Method
+browser-compat: javascript.builtins.escape
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<div class="warning"><strong>Warning:</strong> Although <code>escape()</code> is not
+<div class="warning"><p><strong>Warning:</strong> Although <code>escape()</code> is not
   strictly deprecated (as in "removed from the Web standards"), it is defined in <a
     href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">Annex
-    B</a> of the ECMA-262 standard, whose introduction states:
+    B</a> of the ECMA-262 standard, whose introduction states:</p>
 
   <blockquote>… All of the language features and behaviors specified in this annex have
     one or more undesirable characteristics and in the absence of legacy usage would be
@@ -38,7 +39,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">escape(<var>str</var>)</pre>
+<pre class="brush: js">escape(<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -74,27 +75,12 @@ escape('@*_+-./');    // "@*_+-./"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-escape-string', 'escape')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<div class="hidden">Please do not add polyfills to reference pages. For more information,
-  see <a
-    href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a>
-</div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.escape")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

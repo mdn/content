@@ -3,16 +3,18 @@ title: IDBDatabaseException
 slug: Web/API/IDBDatabaseException
 tags:
   - API
-  - Obsolete
+  - Deprecated
   - Reference
 ---
-<div>{{APIRef("IndexedDB")}}</div>
 
-<div class="warning style-wrap">
-<p><strong>Obsolete:</strong> This interface was removed from the specification and was replaced by usage of {{ domxref("DOMException") }}.</p>
+<div>{{APIRef("IndexedDB")}}{{Deprecated_Header}}</div>
+
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This interface was removed from the specification and was replaced by usage of {{ domxref("DOMException") }}.</p>
 </div>
 
-<p>In the <a href="/en-US/docs/IndexedDB">IndexedDB API</a>, an <code>IDBDatabaseException</code> object represents exception conditions that can be encountered while performing database operations.</p>
+<p>In the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>, an <code>IDBDatabaseException</code> object represents exception conditions that can be encountered while performing database operations.</p>
 
 <h2 id="Attributes">Attributes</h2>
 
@@ -40,7 +42,10 @@ tags:
 
 <h2 id="Constants">Constants</h2>
 
-<p>{{ Note("Do not rely on the numeric values of the constants, which might change as the specifications continue to change. Use the constant names instead. ") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Do not rely on the numeric values of the constants, which might change as the specifications continue to change. Use the constant names instead.</p>
+</div>
 
 <table class="standard-table">
  <thead>
@@ -54,7 +59,7 @@ tags:
   <tr>
    <td><code><a name="ABORT_ERR">ABORT_ERR</a></code></td>
    <td><code>8</code></td>
-   <td>A request was aborted, for example, through a call to<a href="/en-US/docs/IndexedDB/IDBTransaction#abort"> <code>IDBTransaction.abort</code></a>.</td>
+   <td>A request was aborted, for example, through a call to<a href="/en-US/docs/Web/API/IDBTransaction#abort"> <code>IDBTransaction.abort</code></a>.</td>
   </tr>
   <tr>
    <td><code><a name="CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></td>
@@ -113,7 +118,7 @@ tags:
   <tr>
    <td><code><a name="VER_ERR">VER_ERR</a></code></td>
    <td><code>12</code></td>
-   <td>A request to open a database with a version lower than the one it already has. This can only happen with <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a>.</td>
+   <td>A request to open a database with a version lower than the one it already has. This can only happen with <a href="/en-US/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a>.</td>
   </tr>
  </tbody>
 </table>

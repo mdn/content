@@ -5,6 +5,7 @@ tags:
 - Classes
 - JavaScript
 - Language feature
+browser-compat: javascript.classes.private_class_fields
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
+<pre class="brush: js">class ClassWithPrivateField {
   #privateField
 }
 
@@ -39,7 +40,7 @@ class ClassWithPrivateStaticField {
 
 <p>The limitation of static variables being called by only static methods still holds.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
+<pre class="brush: js">class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -57,7 +58,7 @@ console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
 <p>This can lead to unexpected behavior when using <strong><code>this</code></strong>.</p>
 
-<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
+<pre class="brush: js">class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -87,7 +88,7 @@ console.assert(error instanceof TypeError)
 <p>The encapsulation is enforced by the language. It is a syntax error to refer to
   <code>#</code> names from out of scope.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateField {
+<pre class="brush: js">class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -110,7 +111,7 @@ instance.#privateField === 42 // Syntax error
 
 <p>Private static methods may be generator, async, and async generator functions.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
+<pre class="brush: js">class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
     return 42
   }
@@ -134,7 +135,7 @@ console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
   <code>Derived.publicStaticMethod2()</code>, and thus exhibits the same "provenance
   restriction" as mentioned above:</p>
 
-<pre class="brush: js notranslate">class Base {
+<pre class="brush: js">class Base {
   static #privateStaticMethod() {
     return 42;
   }
@@ -157,7 +158,7 @@ console.log(Derived.publicStaticMethod2()); // TypeError
 <p>Private instance methods are methods available on class instances whose access is
   restricted in the same manner as private instance fields.</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateMethod {
+<pre class="brush: js">class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -174,7 +175,7 @@ console.log(instance.getPrivateMessage())
 <p>Private instance methods may be generator, async, or async generator functions. Private
   getters and setters are also possible:</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
+<pre class="brush: js">class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {
@@ -196,29 +197,19 @@ new ClassWithPrivateAccessor();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition',
-        'FieldDefinition')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public
       class fields</a></li>
+  <li><a href="https://v8.dev/features/class-fields">Public and private class fields</a> article at the v8.dev site.</li>
+  <li><a href="https://github.com/tc39/proposal-class-fields#class-field-declarations-for-javascript">Class field declarations for JavaScript</a> explainer, by the <a href="https://github.com/tc39/proposal-class-fields">Public and private instance fields</a> authors</li>
   <li><a
       href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The
       Semantics of All JS Class Elements</a></li>

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Reference
   - TypedArrays
+browser-compat: javascript.builtins.ArrayBuffer
 ---
 <div>{{JSRef}}</div>
 
@@ -14,7 +15,7 @@ tags:
 
 <p>It is an array of bytes, often referred to in other languages as a "byte array".You cannot directly manipulate the contents of an <code>ArrayBuffer</code>; instead, you create one of the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}} object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.</p>
 
-<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer">ArrayBuffer()</a></code> constructor creates a new <code>ArrayBuffer</code> of the given length in bytes. You can also get an array buffer from existing data, for example <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">from a Base64 string</a> or <a href="/en-US/docs/Web/API/FileReader/readAsArrayBuffer">from a local file</a>.</p>
+<p>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer">ArrayBuffer()</a></code> constructor creates a new <code>ArrayBuffer</code> of the given length in bytes. You can also get an array buffer from existing data, for example, from a <a href="/en-US/docs/Glossary/Base64">Base64</a> string or <a href="/en-US/docs/Web/API/FileReader/readAsArrayBuffer">from a local file</a>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -62,26 +63,16 @@ const view = new Int32Array(buffer);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer-objects', 'ArrayBuffer')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.ArrayBuffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
  <li>{{jsxref("SharedArrayBuffer")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length">RangeError: invalid array length</a></li>
 </ul>

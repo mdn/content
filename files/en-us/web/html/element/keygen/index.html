@@ -6,7 +6,7 @@ tags:
   - Element
   - HTML
   - HTML5
-  - Obsolete
+  - Deprecated
   - Reference
   - Web
 ---
@@ -18,7 +18,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, interactive content, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_submittable">submittable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form_resettable">resettable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, interactive content, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_listed">listed</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_labelable">labelable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_submittable">submittable</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form_resettable">resettable</a> <a href="/en-US/docs/Web/Guide/HTML/Content_categories#form-associated_content">form-associated element</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -30,7 +30,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -64,7 +64,7 @@ tags:
 
 <p>The element is written as follows:</p>
 
-<pre class="brush: html notranslate">&lt;keygen name="<var>name</var>" challenge="<var>challenge string</var>" keytype="<var>type</var>"
+<pre class="brush: html">&lt;keygen name="<var>name</var>" challenge="<var>challenge string</var>" keytype="<var>type</var>"
         keyparams="<var>pqg-params</var>"&gt;</pre>
 
 <p>The <code>keytype</code> parameter is used to specify what type of key is to be generated. Valid values are "<code>RSA</code>", which is the default, "<code>DSA</code>" and "<code>EC</code>". The <code>name</code> and <code>challenge</code> attributes are required in all cases. The <code>keytype</code> attribute is optional for RSA key generation and required for DSA and EC key generation. The <code>keyparams</code> attribute is required for DSA and EC key generation and ignored for RSA key generation. <code>PQG</code> is a synonym for <code>keyparams</code>. That is, you may specify <code>keyparams="pqg-params"</code> or <code>pqg="pqg-params"</code>.</p>
@@ -73,13 +73,13 @@ tags:
 
 <p>For DSA keys, the <code>keyparams</code> parameter specifies the DSA PQG parameters which are to be used in the keygen process. The value of the <code>pqg</code> parameter is the BASE64 encoded, DER encoded Dss-Parms as specified in IETF <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc3279.txt">RFC 3279</a>. The user may be given a choice of DSA key sizes, allowing the user to choose one of the sizes defined in the DSA standard.</p>
 
-<p>For EC keys, the <code>keyparams</code> parameter specifies the name of the elliptic curve on which the key will be generated. It is normally a string from the table in <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a>. (Note that only a subset of the curves named there may actually be supported in any particular browser.) If the <code>keyparams</code> parameter string is not a recognized curve name string, then a curve is chosen according to the user's chosen key strength (low, medium, high), using the curve named "<code>secp384r1</code>" for high, and the curve named "<code>secp256r1</code>" for medium keys. (Note: choice of the number of key strengths, default values for each strength, and the UI by which the user is offered a choice, are outside of the scope of this specification.)</p>
+<p>For EC keys, the <code>keyparams</code> parameter specifies the name of the elliptic curve on which the key will be generated. It is normally a string from the table in <a href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a>. (Note that only a subset of the curves named there may actually be supported in any particular browser.) If the <code>keyparams</code> parameter string is not a recognized curve name string, then a curve is chosen according to the user's chosen key strength (low, medium, high), using the curve named "<code>secp384r1</code>" for high, and the curve named "<code>secp256r1</code>" for medium keys. (Note: choice of the number of key strengths, default values for each strength, and the UI by which the user is offered a choice, are outside of the scope of this specification.)</p>
 
 <p>The <code>&lt;keygen&gt;</code> element is only valid within an HTML form. It will cause some sort of selection to be presented to the user for selecting key size. The UI for the selection may be a menu, radio buttons, or possibly something else. The browser presents several possible key strengths. Currently, two strengths are offered, high and medium. If the user's browser is configured to support cryptographic hardware (e.g. "smart cards") the user may also be given a choice of where to generate the key, i.e., in a smart card or in software and stored on disk.</p>
 
 <p>When the submit button is pressed, a key pair of the selected size is generated. The private key is encrypted and stored in the local key database.</p>
 
-<pre class="notranslate">PublicKeyAndChallenge ::= SEQUENCE {
+<pre>PublicKeyAndChallenge ::= SEQUENCE {
     spki SubjectPublicKeyInfo,
     challenge IA5STRING
 }
@@ -93,7 +93,7 @@ SignedPublicKeyAndChallenge ::= SEQUENCE {
 
 <p>Here is an example form submission as it would be delivered to a CGI program by the HTTP server:</p>
 
-<pre class="notranslate">   commonname=John+Doe&amp;email=doe@foo.com&amp;org=Foobar+Computing+Corp.&amp;
+<pre>   commonname=John+Doe&amp;email=doe@foo.com&amp;org=Foobar+Computing+Corp.&amp;
    orgunit=Bureau+of+Bureaucracy&amp;locality=Anytown&amp;state=California&amp;country=US&amp;
    key=MIHFMHEwXDANBgkqhkiG9w0BAQEFAANLADBIAkEAnX0TILJrOMUue%2BPtwBRE6XfV%0AWtKQbsshxk5ZhcUwcwyvcnIq9b82QhJdoACdD34rqfCAIND46fXKQUnb0mvKzQID%0AAQABFhFNb3ppbGxhSXNNeUZyaWVuZDANBgkqhkiG9w0BAQQFAANBAAKv2Eex2n%2FS%0Ar%2F7iJNroWlSzSMtTiQTEB%2BADWHGj9u1xrUrOilq%2Fo2cuQxIfZcNZkYAkWP4DubqW%0Ai0%2F%2FrgBvmco%3D</pre>
 

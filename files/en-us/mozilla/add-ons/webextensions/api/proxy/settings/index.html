@@ -16,7 +16,8 @@ tags:
 <p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the browser's proxy settings.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The ability to change proxy settings requires private window access because proxy settings affect both private and non-private windows. Therefore, if an extension has not been granted private window permission, calls to <code>proxy.settings.set()</code> will throw an exception.</p>
+  <h4>Note</h4>
+  <p>The ability to change proxy settings requires private window access because proxy settings affect both private and non-private windows. Therefore, if an extension has not been granted private window permission, calls to <code>proxy.settings.set()</code> will throw an exception.</p>
 </div>
 
 <p>The underlying value is an object with the properties listed below.</p>
@@ -28,8 +29,9 @@ tags:
  <dd><code>string</code>. A URL to use to configure the proxy.</dd>
  <dt><code>autoLogin</code>{{optional_inline}}</dt>
  <dd><code>boolean</code>. Do not prompt for authentication if the password is saved. Defaults to <code>false</code>.</dd>
- <dt><code>ftp</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The address of the FTP proxy. Can include a port.</dd>
+ <dt><code>ftp</code>{{optional_inline}} {{Deprecated_Inline}}</dt>
+ <dd><code>string</code>. The address of the FTP proxy. Can include a port.
+</dd>
  <dt><code>http</code>{{optional_inline}}</dt>
  <dd><code>string</code>. The address of the HTTP proxy. Can include a port.</dd>
  <dt><code>httpProxyAll</code>{{optional_inline}}</dt>
@@ -50,7 +52,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate brush: js">let proxySettings = {
+<pre class="brush: js">let proxySettings = {
   proxyType: "manual",
   http: "http://proxy.org:8080",
   socksVersion: 4,

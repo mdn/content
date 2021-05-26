@@ -2,9 +2,10 @@
 title: Trailer
 slug: Web/HTTP/Headers/Trailer
 tags:
-- HTTP
-- Reference
-- header
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -13,7 +14,8 @@ tags:
   dynamically generated while the message body is sent, such as a message integrity check,
   digital signature, or post-processing status.</p>
 
-<div class="note">
+<div class="notecard note">
+  <h4>Note</h4>
   <p>The {{HTTPHeader("TE")}} request header needs to be set to "trailers" to allow
     trailer fields.</p>
 </div>
@@ -22,7 +24,7 @@ tags:
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -33,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Trailer: header-names</pre>
+<pre class="brush: html">Trailer: header-names</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -102,8 +104,8 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
+  If you'd like to contribute to the data, please check out 
+  <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
   and send us a pull request.</p>
 
 <p>{{Compat("http.headers.Trailer")}}</p>
@@ -114,7 +116,6 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
   <li>{{HTTPHeader("Transfer-Encoding")}}</li>
   <li>{{HTTPHeader("TE")}}</li>
   <li>
-    <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer
-        encoding</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">Chunked transfer encoding</a></p>
   </li>
 </ul>

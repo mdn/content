@@ -2,11 +2,12 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 tags:
-- Class
-- ECMAScript 2015
-- JavaScript
-- Reference
-- String
+  - Class
+  - ECMAScript 2015
+  - JavaScript
+  - Reference
+  - String
+browser-compat: javascript.builtins.String
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 <p>Strings are useful for holding data that can be represented in text form. Some of the
   most-used operations on strings are to check their {{jsxref("String.length",
   "length")}}, to build and concatenate them using the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ and += string
+    href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators">+ and += string
     operators</a>, checking for the existence or location of substrings with the
   {{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
   with the {{jsxref("String.prototype.substring()", "substring()")}} method.</p>
@@ -28,11 +29,11 @@ tags:
 <p>Strings can be created as primitives, from string literals, or as objects, using the
   {{jsxref("String/String", "String()")}} constructor:</p>
 
-<pre class="brush: js notranslate">const string1 = "A string primitive";
+<pre class="brush: js">const string1 = "A string primitive";
 const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;</pre>
 
-<pre class="brush: js notranslate">const string4 = new String("A String object");
+<pre class="brush: js">const string4 = new String("A String object");
 </pre>
 
 <p>String primitives and string objects can be used interchangeably in most situations.
@@ -49,13 +50,13 @@ const string3 = `Yet another string primitive`;</pre>
 <p>There are two ways to access an individual character in a string. The first is the
   {{jsxref("String.prototype.charAt()", "charAt()")}} method:</p>
 
-<pre class="brush: js notranslate">return 'cat'.charAt(1) // returns "a"
+<pre class="brush: js">return 'cat'.charAt(1) // returns "a"
 </pre>
 
 <p>The other way (introduced in ECMAScript 5) is to treat the string as an array-like
   object, where individual characters correspond to a numerical index:</p>
 
-<pre class="brush: js notranslate">return 'cat'[1] // returns "a"
+<pre class="brush: js">return 'cat'[1] // returns "a"
 </pre>
 
 <p>When using bracket notation for character access, attempting to delete or assign a
@@ -66,10 +67,10 @@ const string3 = `Yet another string primitive`;</pre>
 
 <p>In C, the <code>strcmp()</code> function is used for comparing strings. In JavaScript,
   you just use the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">less-than
+    href="/en-US/docs/Web/JavaScript/Reference/Operators">less-than
     and greater-than operators</a>:</p>
 
-<pre class="brush: js notranslate">let a = 'a'
+<pre class="brush: js">let a = 'a'
 let b = 'b'
 if (a &lt; b) { // true
   console.log(a + ' is less than ' + b)
@@ -88,7 +89,7 @@ if (a &lt; b) { // true
   to compare without regard to upper or lower case characters, use a function similar to
   this:</p>
 
-<pre class="brush: js notranslate">function isEqual(str1, str2)
+<pre class="brush: js">function isEqual(str1, str2)
 {
     return str1.toUpperCase() === str2.toUpperCase()
 } // isEqual
@@ -112,7 +113,7 @@ if (a &lt; b) { // true
   will automatically wrap the string primitive and call the method or perform the property
   lookup.</p>
 
-<pre class="brush: js notranslate">let s_prim = 'foo'
+<pre class="brush: js">let s_prim = 'foo'
 let s_obj = new String(s_prim)
 
 console.log(typeof s_prim) // Logs "string"
@@ -124,7 +125,7 @@ console.log(typeof s_obj)  // Logs "object"
   <code>eval</code> are treated as source code; <code>String</code> objects are treated as
   all other objects are, by returning the object. For example:</p>
 
-<pre class="brush: js notranslate">let s1 = '2 + 2'              // creates a string primitive
+<pre class="brush: js">let s1 = '2 + 2'              // creates a string primitive
 let s2 = new String('2 + 2')  // creates a String object
 console.log(eval(s1))         // returns the number 4
 console.log(eval(s2))         // returns the string "2 + 2"
@@ -137,83 +138,75 @@ console.log(eval(s2))         // returns the string "2 + 2"
 <p>A <code>String</code> object can always be converted to its primitive counterpart with
   the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.</p>
 
-<pre class="brush: js notranslate">console.log(eval(s2.valueOf()))  // returns the number 4
+<pre class="brush: js">console.log(eval(s2.valueOf()))  // returns the number 4
 </pre>
 
-<h3 id="Escape_notation">Escape notation</h3>
+<h3 id="escape_notation"><span id="escape_sequences">Escape sequences</span></h3>
 
-<p>Special characters can be encoded using escape notation:</p>
+<p>Special characters can be encoded using escape sequences:</p>
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Code</th>
-      <th scope="col">Output</th>
+      <th scope="col">Escape sequence</th>
+      <th scope="col">Unicode code point</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>\<var>XXX</var></code><br>
-        (where <code><var>XXX</var></code> is 1–3 octal digits; range of
-        <code>0</code>–<code>377</code>)</td>
-      <td>ISO-8859-1 character / Unicode code point between <code>U+0000</code> and
-        <code>U+00FF</code></td>
+      <td><code>\0</code></td>
+      <td>null character (U+0000 NULL)</td>
     </tr>
     <tr>
       <td><code>\'</code></td>
-      <td>single quote</td>
+      <td>single quote (U+0027 APOSTROPHE)</td>
     </tr>
     <tr>
       <td><code>\"</code></td>
-      <td>double quote</td>
+      <td>double quote (U+0022 QUOTATION MARK)</td>
     </tr>
     <tr>
       <td><code>\\</code></td>
-      <td>backslash</td>
+      <td>backslash (U+005C REVERSE SOLIDUS)</td>
     </tr>
     <tr>
       <td><code>\n</code></td>
-      <td>new line</td>
+      <td>newline (U+000A LINE FEED; LF)</td>
     </tr>
     <tr>
       <td><code>\r</code></td>
-      <td>carriage return</td>
+      <td>carriage return (U+000D CARRIAGE RETURN; CR)</td>
     </tr>
     <tr>
       <td><code>\v</code></td>
-      <td>vertical tab</td>
+      <td>vertical tab (U+000B LINE TABULATION)</td>
     </tr>
     <tr>
       <td><code>\t</code></td>
-      <td>tab</td>
+      <td>tab (U+0009 CHARACTER TABULATION)</td>
     </tr>
     <tr>
       <td><code>\b</code></td>
-      <td>backspace</td>
+      <td>backspace (U+0008 BACKSPACE)</td>
     </tr>
     <tr>
       <td><code>\f</code></td>
-      <td>form feed</td>
+      <td>form feed (U+000C FORM FEED)</td>
     </tr>
     <tr>
-      <td><code>\u<var>XXXX</var></code> (where <code><var>XXXX</var></code> is 4 hex
-        digits; range of <code>0x0000</code>–<code>0xFFFF</code>)</td>
-      <td>UTF-16 code unit / Unicode code point between <code>U+0000</code> and
-        <code>U+FFFF</code></td>
+      <td><code>\u<var>XXXX</var></code>
+        <br>…where <code><var>XXXX</var></code> is exactly 4 hex digits in the range <code>0000</code>–<code>FFFF</code>; e.g., <code>\u000A</code> is the same as <code>\n</code> (LINE FEED); <code>\u0021</code> is "<code>!</code>"</td>
+      <td>Unicode code point between <code>U+0000</code> and <code>U+FFFF</code> (the Unicode Basic Multilingual Plane)</td>
     </tr>
     <tr>
-      <td><code>\u{<var>X</var>}</code> ... <code>\u{<var>XXXXXX</var>}</code><br>
-        (where <code><var>X</var>…<var>XXXXXX</var></code> is 1–6 hex digits; range of
-        <code>0x0</code>–<code>0x10FFFF</code>)</td>
-      <td>UTF-32 code unit / Unicode code point between <code>U+0000</code> and
-        <code>U+10FFFF</code></td>
+      <td><code>\u{<var>X</var>}</code>…<code>\u{<var>XXXXXX</var>}</code>
+        <br>…where <code><var>X</var></code>…<code><var>XXXXXX</var></code> is 1–6 hex digits in the range <code>0</code>–<code>10FFFF</code>; e.g., <code>\u{A}</code> is the same as <code>\n</code> (LINE FEED); <code>\u{21}</code> is "<code>!</code>"</td>
+      <td>Unicode code point between <code>U+0000</code> and <code>U+10FFFF</code> (the entirety of Unicode)</td>
     </tr>
     <tr>
-      <td><code>\x<var>XX</var></code><br>
-        (where <code><var>XX</var></code> is 2 hex digits; range of
-        <code>0x00</code>–<code>0xFF</code>)</td>
-      <td>ISO-8859-1 character / Unicode code point between <code>U+0000</code> and
-        <code>U+00FF</code></td>
+      <td><code>\x<var>XX</var></code>
+        <br>…where <code><var>XX</var></code> is exactly 2 hex digits in the range <code>00</code>–<code>FF</code>; e.g., <code>\x0A</code> is the same as <code>\n</code> (LINE FEED); <code>\x21</code> is "<code>!</code>"</td>
+      <td>Unicode code point between <code>U+0000</code> and <code>U+00FF</code> (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1)</td>
     </tr>
   </tbody>
 </table>
@@ -230,7 +223,7 @@ console.log(eval(s2))         // returns the string "2 + 2"
 <p>You can use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Addition">+</a>
   operator to append multiple strings together, like this:</p>
 
-<pre class="brush: js notranslate">let longString = "This is a very long string which needs " +
+<pre class="brush: js">let longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
                  "otherwise my code is unreadable."
 </pre>
@@ -244,7 +237,7 @@ console.log(eval(s2))         // returns the string "2 + 2"
 
 <p>That form looks like this:</p>
 
-<pre class="brush: js notranslate">let longString = "This is a very long string which needs \
+<pre class="brush: js">let longString = "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable."
 </pre>
@@ -373,9 +366,6 @@ otherwise my code is unreadable."
     "String.prototype.startsWith(<var>searchString</var> [, <var>length</var>])")}}</dt>
   <dd>Determines whether the calling string begins with the characters of string
     <code><var>searchString</var></code>.</dd>
-  <dt>{{jsxref("String.prototype.substr()")}}</dt>
-  <dd>Returns the characters in a string beginning at the specified location through the
-    specified number of characters.</dd>
   <dt>{{jsxref("String.prototype.substring()",
     "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}</dt>
   <dd>Returns a new string containing characters of the calling string from (or between)
@@ -424,43 +414,41 @@ otherwise my code is unreadable."
 
 <h2 id="HTML_wrapper_methods">HTML wrapper methods</h2>
 
-<div>
-  <div class="notecard note">
-    <p><strong>Deprecated. Avoid these methods.</strong></p>
+<div class="notecard warning">
+  <p><strong>Warning:</strong> Deprecated. Avoid these methods.</p>
 
-    <p>They are of limited use, as they provide only a subset of the available HTML tags
-      and attributes.</p>
-  </div>
-
-  <dl>
-    <dt>{{jsxref("String.prototype.anchor()")}}</dt>
-    <dd>{{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)</dd>
-    <dt>{{jsxref("String.prototype.big()")}}</dt>
-    <dd>{{HTMLElement("big")}}</dd>
-    <dt>{{jsxref("String.prototype.blink()")}}</dt>
-    <dd>{{HTMLElement("blink")}}</dd>
-    <dt>{{jsxref("String.prototype.bold()")}}</dt>
-    <dd>{{HTMLElement("b")}}</dd>
-    <dt>{{jsxref("String.prototype.fixed()")}}</dt>
-    <dd>{{HTMLElement("tt")}}</dd>
-    <dt>{{jsxref("String.prototype.fontcolor()")}}</dt>
-    <dd>{{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}</dd>
-    <dt>{{jsxref("String.prototype.fontsize()")}}</dt>
-    <dd>{{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}</dd>
-    <dt>{{jsxref("String.prototype.italics()")}}</dt>
-    <dd>{{HTMLElement("i")}}</dd>
-    <dt>{{jsxref("String.prototype.link()")}}</dt>
-    <dd>{{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)</dd>
-    <dt>{{jsxref("String.prototype.small()")}}</dt>
-    <dd>{{HTMLElement("small")}}</dd>
-    <dt>{{jsxref("String.prototype.strike()")}}</dt>
-    <dd>{{HTMLElement("strike")}}</dd>
-    <dt>{{jsxref("String.prototype.sub()")}}</dt>
-    <dd>{{HTMLElement("sub")}}</dd>
-    <dt>{{jsxref("String.prototype.sup()")}}</dt>
-    <dd>{{HTMLElement("sup")}}</dd>
-  </dl>
+  <p>They are of limited use, as they provide only a subset of the available HTML tags
+    and attributes.</p>
 </div>
+
+<dl>
+  <dt>{{jsxref("String.prototype.anchor()")}}</dt>
+  <dd>{{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)</dd>
+  <dt>{{jsxref("String.prototype.big()")}}</dt>
+  <dd>{{HTMLElement("big")}}</dd>
+  <dt>{{jsxref("String.prototype.blink()")}}</dt>
+  <dd>{{HTMLElement("blink")}}</dd>
+  <dt>{{jsxref("String.prototype.bold()")}}</dt>
+  <dd>{{HTMLElement("b")}}</dd>
+  <dt>{{jsxref("String.prototype.fixed()")}}</dt>
+  <dd>{{HTMLElement("tt")}}</dd>
+  <dt>{{jsxref("String.prototype.fontcolor()")}}</dt>
+  <dd>{{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}</dd>
+  <dt>{{jsxref("String.prototype.fontsize()")}}</dt>
+  <dd>{{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}</dd>
+  <dt>{{jsxref("String.prototype.italics()")}}</dt>
+  <dd>{{HTMLElement("i")}}</dd>
+  <dt>{{jsxref("String.prototype.link()")}}</dt>
+  <dd>{{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (link to URL)</dd>
+  <dt>{{jsxref("String.prototype.small()")}}</dt>
+  <dd>{{HTMLElement("small")}}</dd>
+  <dt>{{jsxref("String.prototype.strike()")}}</dt>
+  <dd>{{HTMLElement("strike")}}</dd>
+  <dt>{{jsxref("String.prototype.sub()")}}</dt>
+  <dd>{{HTMLElement("sub")}}</dd>
+  <dt>{{jsxref("String.prototype.sup()")}}</dt>
+  <dd>{{HTMLElement("sup")}}</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -471,7 +459,7 @@ otherwise my code is unreadable."
   used on {{jsxref("null")}}, {{jsxref("undefined")}}, and on {{jsxref("Symbol",
   "symbols")}}. For example:</p>
 
-<pre class="brush: js notranslate">let outputStrings = []
+<pre class="brush: js">let outputStrings = []
 for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }
@@ -479,22 +467,11 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string-objects', 'String')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -503,7 +480,5 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
       JavaScript Guide</a></li>
   <li>{{jsxref("RegExp")}}</li>
   <li>{{domxref("DOMString")}}</li>
-  <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> — a C-like
-      representation of strings based on typed arrays</a></li>
   <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
 </ul>

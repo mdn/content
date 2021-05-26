@@ -40,7 +40,7 @@ tags:
 <p>Given the following:</p>
 
 <div id="example1">
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
  &lt;label&gt;Enter your phone number in the format (123)456-7890
   (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;)-
    &lt;input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/&gt; -
@@ -52,7 +52,7 @@ tags:
 
 <p>If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: red solid 3px;
 }</pre>
 
@@ -63,11 +63,11 @@ tags:
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
+<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
 
 <p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="45"
@@ -81,7 +81,7 @@ tags:
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -155,6 +155,6 @@ input:valid+span:after {
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation">Forms: Data form validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Forms: Data form validation</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a></li>
 </ul>

@@ -58,6 +58,9 @@ tags:
  <dt><code>notificationclose</code></dt>
  <dd>Occurs — when a user closes a displayed notification.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}} property.</dd>
+ <dt>{{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}}</dt>
+ <dd>Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.<br>
+ Also available via the {{domxref("ServiceWorkerGlobalScope.onperiodicsync")}} property.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope/push_event", "push")}}</dt>
  <dd>Occurs when a server push notification is received.<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onpush")}} property.</dd>
@@ -89,7 +92,7 @@ tags:
 
 <p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
+<pre class="brush: js">self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(

@@ -2,14 +2,14 @@
 title: Response.redirected
 slug: Web/API/Response/redirected
 tags:
-- API
-- Experimental
-- Fetch
-- Property
-- Read-only
-- Reference
-- Response
-- redirected
+  - API
+  - Experimental
+  - Fetch
+  - Property
+  - Read-only
+  - Reference
+  - Response
+  - redirected
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -20,14 +20,14 @@ tags:
 <div class="note">
   <p>Relying on redirected to filter out redirects makes it easy for a forged redirect to
     prevent your content from working as expected. Instead, you should actually instead do
-    the filtering when you call {{domxref("GlobalFetch.fetch", "fetch()")}}. See the
+    the filtering when you call {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}}. See the
     example {{anch("Disallowing redirects")}}, which shows this being done.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>isRedirected</em> = <var>Response</var>.redirected;</pre>
+  class="brush: js">var <em>isRedirected</em> = <var>Response</var>.redirected;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -62,7 +62,7 @@ tags:
 
 <p>Because using redirected to manually filter out redirects can allow forgery of
   redirects, you should instead set the redirect mode to <code>"error"</code> in the
-  <code>init</code> parameter when calling {{domxref("GlobalFetch.fetch", "fetch()")}},
+  <code>init</code> parameter when calling {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}},
   like this:</p>
 
 <pre class="brush: js">fetch("awesome-picture.jpg", { redirect: "error" }).then(function(response) {
@@ -97,8 +97,8 @@ tags:
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

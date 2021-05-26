@@ -15,7 +15,7 @@ tags:
 ---
 <div>{{APIRef("Generic Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>LinearAccelerationSensor</code></strong> interface of the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides on each reading the acceleration applied to the device along all three axes, but without the contribution of gravity. </span></p>
+<p><span class="seoSummary">The <strong><code>LinearAccelerationSensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides on each reading the acceleration applied to the device along all three axes, but without the contribution of gravity. </span></p>
 
 <p>To use this sensor, the user must grant permission to the <code>'accelerometer'</code> device sensor through the {{domxref('Permissions')}} API.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <p>Linear acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
 
-<pre class="brush: js notranslate">let laSensor = new LinearAccelerationSensor({frequency: 60});
+<pre class="brush: js">let laSensor = new LinearAccelerationSensor({frequency: 60});
 
 laSensor.addEventListener('reading', e =&gt; {
   console.log("Linear acceleration along the X-axis " + laSensor.x);

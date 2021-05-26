@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Reference
+browser-compat: javascript.builtins.Date.UTC
 ---
 <div>{{JSRef}}</div>
 
@@ -15,26 +16,18 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p><strong>Since ECMAScript 2017:</strong></p>
-
-<pre
-  class="brush: js notranslate">Date.UTC(<var>year</var>[, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]]])</pre>
-
-<p><strong>ECMAScript 2016 and earlier:</strong> <em>(<code><var>month</var></code> used
-    to be required)</em></p>
-
-<pre
-  class="brush: js notranslate">Date.UTC(<var>year</var>, <var>month</var>[, <var>day</var>[, <var>hour</var>[, <var>minute</var>[, <var>second</var>[, <var>millisecond</var>]]]]])</pre>
-
-<h3 id="Parameters">Parameters</h3>
+<pre class="brush: js">
+Date.UTC(year)
+Date.UTC(year, month)
+Date.UTC(year, month, day)
+Date.UTC(year, month, day, hour)
+Date.UTC(year, month, day, hour, minute)
+Date.UTC(year, month, day, hour, minute, second)
+Date.UTC(year, month, day, hour, minute, second, millisecond)
+</pre>
 
 <dl>
   <dt><code><var>year</var></code></dt>
@@ -100,27 +93,16 @@ tags:
 <p>The following statement creates a {{jsxref("Date")}} object with the arguments treated
   as UTC instead of local:</p>
 
-<pre class="brush:js notranslate">let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+<pre class="brush:js">let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.utc', 'Date.UTC')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.UTC")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
@@ -133,7 +115,7 @@ tags:
     href="https://bugzilla.mozilla.org/show_bug.cgi?id=1050755">bug 1050755</a>, <a
     href="https://github.com/tc39/ecma262/pull/642">ecma-262 #642</a>).</p>
 
-<pre class="brush: js notranslate">Date.UTC();
+<pre class="brush: js">Date.UTC();
 Date.UTC(1);
 
 // Safari: NaN

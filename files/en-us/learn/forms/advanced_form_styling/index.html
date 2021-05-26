@@ -14,7 +14,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}</div>
 
-<p><span class="seoSummary">In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories.</span> As we saw <a href="/en-US/docs/Forms/Styling_web_forms">in the previous article</a>, text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.</p>
+<p><span class="seoSummary">In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories.</span> As we saw <a href="/en-US/docs/Learn/Forms/Styling_web_forms"> in the previous article</a>, text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -61,7 +61,7 @@ tags:
 
 <p>For example, let's take the following controls:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;label for="search"&gt;search: &lt;/label&gt;
     &lt;input id="search" name="search" type="search"&gt;
@@ -88,7 +88,7 @@ tags:
 
 <p>Applying the following CSS to them removes system-level styling.</p>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   -webkit-appearance: none;
   appearance: none;
 }</pre>
@@ -109,7 +109,7 @@ tags:
 
 <p>This can be fixed using our friend <code>appearance: none;</code>, which disables the default Aqua appearance:</p>
 
-<pre class="brush: css notranslate">input[type="search"] {
+<pre class="brush: css">input[type="search"] {
     -webkit-appearance: none;
     appearance: none;
 }</pre>
@@ -132,9 +132,9 @@ tags:
 
 <p>For example, consider this simple test case:</p>
 
-<pre class="brush: html notranslate">&lt;span&gt;&lt;input type="checkbox"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span&gt;&lt;input type="checkbox"&gt;&lt;/span&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
     display: inline-block;
     background: red;
 }
@@ -185,7 +185,7 @@ input[type="checkbox"] {
 
 <p>As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}<code>:none;</code> Let's take this example HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Fruit preferences&lt;/legend&gt;
 
@@ -212,7 +212,7 @@ input[type="checkbox"] {
 
 <p>Now, let's style these with a custom checkbox design. Let's start by unstyling the original check boxes:</p>
 
-<pre class="brush: css notranslate">input[type="checkbox"] {
+<pre class="brush: css">input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
 }
@@ -220,7 +220,7 @@ input[type="checkbox"] {
 
 <p>We can use the {{cssxref(":checked")}} and {{cssxref(":disabled")}} pseudo-classes to change the appearance of our custom checkbox as its state changes:</p>
 
-<pre class="brush: css notranslate">input[type="checkbox"] {
+<pre class="brush: css">input[type="checkbox"] {
   position: relative;
   width: 1em;
   height: 1em;
@@ -289,7 +289,7 @@ input[type="checkbox"]:disabled {
 
 <p>This example has the following CSS applied to it:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: 'Josefin Sans', sans-serif;
   margin: 20px auto;
   max-width: 400px;
@@ -320,7 +320,6 @@ button, label, input, select, progress, meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100%;
@@ -352,7 +351,7 @@ button {
 
 <p>We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:</p>
 
-<pre class="brush: css notranslate">button, label, input, select, progress, meter {
+<pre class="brush: css">button, label, input, select, progress, meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -366,7 +365,7 @@ button {
 
 <p>We also added some uniform shadow and rounded corners to the controls on which it made sense:</p>
 
-<pre class="brush: css notranslate">input[type="text"], input[type="datetime-local"], input[type="color"], select {
+<pre class="brush: css">input[type="text"], input[type="datetime-local"], input[type="color"], select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }</pre>
@@ -383,14 +382,14 @@ button {
 
 <p>Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend <code>appearance: none</code> to get rid of the icon altogether:</p>
 
-<pre class="brush: css notranslate">select {
+<pre class="brush: css">select {
   -webkit-appearance: none;
   appearance: none;
 }</pre>
 
 <p>We then created our own icon using generated content. We put an extra wrapper around the control, because <code><a href="/en-US/docs/Web/CSS/::before">::before</a></code>/<code><a href="/en-US/docs/Web/CSS/::after">::after</a></code> don't work on <code>&lt;select&gt;</code> elements (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements — their display is generated by the browser and put in place — and therefore don't have one):</p>
 
-<pre class="brush: html notranslate">&lt;div class="select-wrapper"&gt;&lt;select id="select" name="select"&gt;
+<pre class="brush: html">&lt;div class="select-wrapper"&gt;&lt;select id="select" name="select"&gt;
   &lt;option&gt;Banana&lt;/option&gt;
   &lt;option&gt;Cherry&lt;/option&gt;
   &lt;option&gt;Lemon&lt;/option&gt;
@@ -398,7 +397,7 @@ button {
 
 <p>We then use generated content to generate a little down arrow, and put it in the right place using positioning:</p>
 
-<pre class="brush: css notranslate">.select-wrapper {
+<pre class="brush: css">.select-wrapper {
   position: relative;
 }
 
@@ -414,7 +413,7 @@ button {
 
 <p>If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the <code>multiple</code> attribute, which makes all the options appear on the page, sidestepping this particular problem:</p>
 
-<pre class="brush: html notranslate">&lt;select id="select" name="select" multiple&gt;
+<pre class="brush: html">&lt;select id="select" name="select" multiple&gt;
   ...
 &lt;/select&gt;</pre>
 
@@ -434,7 +433,7 @@ button {
 
 <p><code><a href="/en-US/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code> is annoying to style. You can use something like the following to remove the default slider track completely and replace it with a custom style (a thin red track, in this case):</p>
 
-<pre class="brush: css notranslate">input[type="range"] {
+<pre class="brush: css">input[type="range"] {
   appearance: none;
   -webkit-appearance: none;
   background: red;
@@ -451,7 +450,7 @@ button {
 
 <p>You can remove the border, just leaving the block of color, using something like this:</p>
 
-<pre class="brush: css notranslate">input[type="color"] {
+<pre class="brush: css">input[type="color"] {
   border: 0;
   padding: 0;
 }</pre>
@@ -466,7 +465,7 @@ button {
 
 <p>One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual from input using something like this:</p>
 
-<pre class="brush: css notranslate">input[type="file"] {
+<pre class="brush: css">input[type="file"] {
   height: 0;
   padding: 0;
   opacity: 0;
@@ -474,7 +473,7 @@ button {
 
 <p>And then style the label to act like a button, which when pressed will open the file picker as expected:</p>
 
-<pre class="brush: css notranslate">label[for="file"] {
+<pre class="brush: css">label[for="file"] {
   box-shadow: 1px 1px 3px #ccc;
   background: linear-gradient(to bottom, #eee, #ccc);
   border: 1px solid rgb(169, 169, 169);
@@ -506,15 +505,15 @@ label[for="file"]:active {
 <p>As we've mentioned above a few times, if you want to gain full control over the "ugly" control types, you have no choice but to rely on JavaScript. In the article <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a> you will see how to do it on your own, but there are some very useful libraries out there that can help you:</p>
 
 <ul>
- <li><a href="http://sprawsm.com/uni-form/" rel="external">Uni-form</a> is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.</li>
- <li><a href="http://formalize.me/" rel="external">Formalize</a> is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.</li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Niceforms</a> is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.</li>
+ <li><a href="https://sprawsm.com/uni-form/" rel="external">Uni-form</a> is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.</li>
+ <li><a href="https://formalize.me/" rel="external">Formalize</a> is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.</li>
+ <li><a href="https://www.emblematiq.com/lab/niceforms/" rel="external">Niceforms</a> is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.</li>
 </ul>
 
 <p>The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:</p>
 
 <ul>
- <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a> offers customizable widgets such as date pickers (with special attention given to accessibility).</li>
+ <li><a href="https://jqueryui.com/" rel="external">jQuery UI</a> offers customizable widgets such as date pickers (with special attention given to accessibility).</li>
  <li><a href="https://twitter.github.com/bootstrap/base-css.html#forms" rel="external">Twitter Bootstrap</a> can help normalize your forms.</li>
  <li><a href="https://afarkas.github.io/webshim/demos/" rel="external">WebShim</a> is a huge tool that can help you deal with browser HTML5 support. The web forms part can be really helpful.</li>
 </ul>

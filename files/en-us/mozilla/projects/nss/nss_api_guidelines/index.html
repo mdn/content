@@ -2,7 +2,6 @@
 title: NSS API Guidelines
 slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 ---
-<h1 id="NSS_API_Guidelines">NSS API Guidelines</h1>
 
 <p>Newsgroup: <a href="news://news.mozilla.org/mozilla.dev.tech.crypto">mozilla.dev.tech.crypto</a></p>
 
@@ -12,17 +11,15 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>Some of the guidelines in this document, are more forward-looking than documentary. These rules are here to help us all immediately achieve more consistent and usable code, but some existing code won't follow all these rules.</p>
 
-<p><a name="Structure"> </a></p>
+<h2 id="NSS_API_Structure">NSS API Structure</h2>
 
-<h2 id="NSS_API_Structure"><a name="Structure">NSS API Structure</a></h2>
+<p>This section explains the structure and relationships of the NSS libraries. The <a href="#layering">Layering</a> section explains how the NSS code is layered, and how higher-level functions wrap low-level functions. The <a href="#libraries"> Libraries</a> section describes the NSS libraries, the functionality each provides, and the layer in which the library (mostly) operates.</p>
 
-<p>This section explains the structure and relationships of the NSS libraries. The <a href="#Layering">Layering</a> section explains how the NSS code is layered, and how higher-level functions wrap low-level functions. The <a href="#Libraries"> Libraries</a> section describes the NSS libraries, the functionality each provides, and the layer in which the library (mostly) operates.</p>
-
-<h3 id="Layering_2"><a name="Layering"></a>Layering</h3>
+<h3 id="Layering">Layering</h3>
 
 <p>Each separate component of the API should live in its own layer. The functions in these APIs should never call API layers above them. In addition, some low-level APIs may be completely opaque to higher level layers. That is, access to these functions should only be provided by the API directly above them. The NSS APIs are layered, as shown in this diagram:</p>
 
-<p><img alt='A diagram of the different layers that collectively make up "NSS". Dependencies are only permitted between siblings and layers below them.' src="layer.gif" style="height: 507px; line-height: 1.572; width: 427px;"></p>
+<p><img alt='A diagram of the different layers that collectively make up "NSS". Dependencies are only permitted between siblings and layers below them.' src="layer.gif" style="line-height: 1.572;"></p>
 
 <p><span style="line-height: 1.572;">The boxes in the gray section, towards the center, are exported only through PKCS #11. PKCS #11 is only exported through the Wrappers. The areas which need the most work (both here and throughout the code) is: </span></p>
 
@@ -33,9 +30,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
  <li><span style="line-height: 1.572;">PKCS #12 and PKCS #5</span></li>
 </ol>
 
-<p><a name="Libraries"> </a></p>
-
-<h3 id="Libraries_2"><a name="Libraries">Libraries</a></h3>
+<h3 id="Libraries">Libraries</h3>
 
 <p>NSS compiles into the libraries described below. The Layer indicates the main layer, seen in the previous diagram, in which the library operates. The Directory is the location of the library code in the NSS source tree. The Public Headers is a list of header files that contain types, and functions, that are publicly available to higer-level APIs.</p>
 
@@ -64,7 +59,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
   </tr>
   <tr>
    <td>crmf</td>
-   <td>Provides functions, and data types, to handle Certificate Management Message Format (CMMF) and Certificate Request Message Format (CRMF, see <a href="https://tools.ietf.org/html/rfc2511"> RFC 2511</a>) data. CMMF no longer exists as a proposed standard; CMMF functions have been incorporated into the proposal for <a href="https://tools.ietf.org/html/rfc2510"> Certificate Management Protocols (CMP)</a>.</td>
+   <td>Provides functions, and data types, to handle Certificate Management Message Format (CMMF) and Certificate Request Message Format (CRMF, see <a href="https://datatracker.ietf.org/doc/html/rfc2511"> RFC 2511</a>) data. CMMF no longer exists as a proposed standard; CMMF functions have been incorporated into the proposal for <a href="https://datatracker.ietf.org/doc/html/rfc2510"> Certificate Management Protocols (CMP)</a>.</td>
    <td>Same Level as SSL</td>
    <td>lib/crmf</td>
    <td>cmmf.h, crmf.h, crmft.h, cmmft.h, crmffut.h</td>
@@ -149,13 +144,11 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
  </tbody>
 </table>
 
-<h2 id="Naming_Conventions"><a name="Naming">Naming Conventions</a></h2>
+<h2 id="Naming_Conventions">Naming Conventions</h2>
 
 <p>This section describes the rules that (ideally) should be followed for naming and identifying new files, functions, and data types.</p>
 
-<p><a name="CVSID"> </a></p>
-
-<h3 id="CVS_ID"><a name="CVSID">CVS ID</a></h3>
+<h3 id="CVS_ID">CVS ID</h3>
 
 <p>Each file should include a CVS ID string for identification. The preferred format is:</p>
 
@@ -175,7 +168,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>The difference, between this and Id, is that Id has some useless information (<em>every</em> file is "experimental"), and doesn't have Name. Name is the tag (if any) from which this file was pulled. If you're good with tagging your releases, and then checking out (or exporting!) from the tag for your build, this saves you from messing around with specific files revision numbers.</p>
 
-<h3 id="Header_Files"><a name="HeaderFiles">Header Files</a></h3>
+<h3 id="Header_Files">Header Files</h3>
 
 <p>We have a preferred naming system for include files. We had been moving towards one, for some time, but for the NSS 3.0 project we finally wrote it down.<br>
   </p>
@@ -224,10 +217,10 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
  <li>Header files for consumption outside NSS start with "nss."</li>
  <li>Header files with types have a trailing "t", header files with prototypes don't. "extern" declarations of data also go in the prototypes files.</li>
  <li>"Friend" headers are for things that we really wish weren't used by non-NSS code, but which are. Those files have a trailing "f," and their use should be deprecated.</li>
- <li>"Module" headers are for things used only within a specific subset of NSS; things which would have been "static" if we had combined separate C source files together. These header files have a trailing "m."<a name="FuncsAndTypes"></a></li>
+ <li>"Module" headers are for things used only within a specific subset of NSS; things which would have been "static" if we had combined separate C source files together. These header files have a trailing "m."</li>
 </ol>
 
-<h3 id="Functions_and_Types"><a name="FuncsAndTypes">Functions and Types</a></h3>
+<h3 id="Functions_and_Types">Functions and Types</h3>
 
 <p>There are a number of ways of doing things in our API, as well as naming decisions for functions that can affect the usefulness of our library. If our library is self-consistent with how we accomplish these tasks, it makes it easier for the developer to learn how to use our functions. This section of the document should grow as we develop our API.</p>
 
@@ -247,10 +240,10 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
    <li>Enum members have the same standard as public macros (minus the '()' of course).</li>
   </ol>
   Options 2 and 3 are the more preferred options. Option 1, currently the most common used for enums, actually creates namespace pollution.</li>
- <li><strong>Callback functions</strong>, and functions used in function tables, should have a typedef used to define the complete signature of the given function. Function typedefs should have the following format: LAYERBody(), with the same definitions for LAYER as public functions, and Body is camel case English words. For example: LAYERCapitalizedEnglishWords or SECKEYPrivateKey.<a name="Opaque"></a></li>
+ <li><strong>Callback functions</strong>, and functions used in function tables, should have a typedef used to define the complete signature of the given function. Function typedefs should have the following format: LAYERBody(), with the same definitions for LAYER as public functions, and Body is camel case English words. For example: LAYERCapitalizedEnglishWords or SECKEYPrivateKey.</li>
 </ol>
 
-<h2 id="Opaque_Data_Structures"><a name="Opaque">Opaque Data Structures</a></h2>
+<h2 id="Opaque_Data_Structures">Opaque Data Structures</h2>
 
 <p>There are many data structures in the security library whose definition is effectively private, to the portion of the security library that defines and operates on those data structures. External code does not have access to these definitions. The goal here is to increase the opaqueness of these structures. This will allow us to modify the size, definition, and format of these data structures in future releases, without interfering with the operation of existing applications that use the security library.</p>
 
@@ -274,10 +267,10 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <ol>
  <li>They are truly stable and will not change in future release</li>
- <li>It is necessary for the callers of the API to know the size of these structures, as they may allocate new ones and pass them down.<a name="Arenas"></a></li>
+ <li>It is necessary for the callers of the API to know the size of these structures, as they may allocate new ones and pass them down.</li>
 </ol>
 
-<h2 id="Memory_Allocation_with_Arenas"><a name="Arenas">Memory Allocation with Arenas</a></h2>
+<h2 id="Memory_Allocation_with_Arenas">Memory Allocation with Arenas</h2>
 
 <p>This section discusses memory allocation using arenas. NSS code uses arenas, and this section explains some of the improvements we are making.</p>
 
@@ -314,9 +307,9 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>All these are useful, but they don't combine well. Now some of the pointer-tracking pressure has eased off, we can drop its use when it becomes too difficult.</p>
 
-<p>Many routines are defined to take an NSSArena *arenaOpt argument. This means if an arena is specified (non-null), it is used, otherwise (null) the routine uses the heap. You can think of the heap as a default arena you can't destroy.<a name="Errors"></a></p>
+<p>Many routines are defined to take an NSSArena *arenaOpt argument. This means if an arena is specified (non-null), it is used, otherwise (null) the routine uses the heap. You can think of the heap as a default arena you can't destroy.</p>
 
-<h2 id="Error_Handling"><a name="Errors">Error Handling</a></h2>
+<h2 id="Error_Handling">Error Handling</h2>
 
 <p>NSS 3.0 introduces the concept of an error stack. When something goes wrong, the call stack unwinds, with routines returning an error indication. Each level which flags a problem, adds its own error number to the stack. At the bottom of the stack is the fundamental error, for example: file not found, and on top is an error precisely relating to what you are doing.</p>
 
@@ -361,9 +354,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>Finally, error logging should be added an documented when debug is turned on. Interfaces for these are in NSPR.</p>
 
-<p><a name="ThreadSafety"> </a></p>
-
-<h2 id="Thread_Safety"><a name="ThreadSafety">Thread Safety</a></h2>
+<h2 id="Thread_Safety">Thread Safety</h2>
 
 <p>Code developed using the NSS APIs needs to make use of thread safety features. First to examine is <strong>object creation</strong> and <strong>deletion</strong>.</p>
 
@@ -371,7 +362,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>Deletion, on the other hand, may be trickier. Threads may be referencing the object at the same time a another thread tries to delete it. The semantics depend on the way the application uses the object, also how and when the application wants to destroy it. For some data structures, this problem can be removed by protected reference counting. The object does not disappear until all users have released it.</p>
 
-<p>Next we examine <strong>global data</strong>, including function local static structures. Just initialized, and never to be changed global data, does not need to protection from mutexes. We should also determine if global data should be moved to a session context (see <a href="#SessionContext">session context</a> and <a href="#GlobalEffects">global effects </a>below).</p>
+<p>Next we examine <strong>global data</strong>, including function local static structures. Just initialized, and never to be changed global data, does not need to protection from mutexes. We should also determine if global data should be moved to a session context (see <a href="#sessioncontext">session context</a> and <a href="#globaleffects">global effects </a>below).</p>
 
 <div class="note">
 <p>Note: Permanent objects, like data in files, databases, tokens, etc. should be treated as global data. Global data which is changed rarely, should be protected by reader/writer locks.</p>
@@ -415,31 +406,23 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>The exception to this global effects rule may be functions which set global state for an application at initialization time.</p>
 
-<p><a name="Design"> </a></p>
+<h2 id="MethodsFunctions_Design">Methods/Functions Design</h2>
 
-<h2 id="MethodsFunctions_Design"><a name="Design">Methods/Functions Design</a></h2>
-
-<p><a name="Design"> </a><a name="InitShutdown"> </a></p>
-
-<h3 id="Init_Shutdown_Functions"><a name="InitShutdown">Init, Shutdown Functions</a></h3>
+<h3 id="Init_Shutdown_Functions">Init, Shutdown Functions</h3>
 
 <p>If a layer has some global initialization tasks, which need to be completed before the layer can be used, that layer should supply an initialization function of the form LAYER_Init(). If an initialization function is supplied, a corresponding LAYER_Shutdown() function should also be supplied. LAYER_INIT() should increment a count of the number of times it is called, and LAYER_Shutdown() should decrement that count, and shutdown when the count reaches '0'.</p>
 
 <p><a name="OpenClose"> </a></p>
 
-<h3 id="Open_Close_Functions"><a name="OpenClose">Open, Close Functions</a></h3>
+<h3 id="Open_Close_Functions">Open, Close Functions</h3>
 
 <p>Open functions should have a corresponding close function. Open and close function are not reference counted, like init and shutdown functions.</p>
 
-<p><a name="CreateFuncs"> </a></p>
-
-<h3 id="Creation_Functions"><a name="CreateFuncs">Creation Functions</a></h3>
+<h3 id="Creation_Functions">Creation Functions</h3>
 
 <p>In general, data objects should all have functions which create them. These functions should have the form LAYER_CreateDataType[FromDataType](). For instance generating a new key would change from PK11_KeyGen() to PK11_CreateSymKey().</p>
 
-<p><a name="DestroyFuncs"> </a></p>
-
-<h3 id="Destruction_Functions"><a name="DestroyFuncs">Destruction Functions</a></h3>
+<h3 id="Destruction_Functions">Destruction Functions</h3>
 
 <p>In the security library we have 3 different ways of saying 'get rid of this data object': Free, Delete, and Destroy.</p>
 
@@ -466,15 +449,11 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>This has the advantage of<em> not</em> surfacing the reference countedness of a data object. If you own a pointer to an object, you must always destroy it. There is no way to destroy an object by bypassing it's reference count. Also, the signature of public destruction functions do not have the 'freeit' PRBool, since the structures being freed are opaque.</p>
 
-<p><a name="DupCopy"> </a></p>
-
-<h3 id="Dup_Copy_and_Reference_Functions"><a name="DupCopy">Dup, Copy, and Reference Functions</a></h3>
+<h3 id="Dup_Copy_and_Reference_Functions">Dup, Copy, and Reference Functions</h3>
 
 <p>Functions that return a new reference or copy of a given object should have the form LAYER_DupDataType(). For instance, CERT_DupCertifiate() will remain the same, but PK11_ReferenceSlot() will become PK11_DupSlot(), and PK11_CloneContext() will become PK11_DupContext().</p>
 
-<p><a name="SearchFuncs"> </a></p>
-
-<h3 id="Search_Functions"><a name="SearchFuncs">Search Functions</a></h3>
+<h3 id="Search_Functions">Search Functions</h3>
 
 <p>There are several different kinds of searches done via the security library. The first is a search for exactly one object, meeting a given criteria. These types of searches include CERT_FindCertByDERCert(), PK11_FindAnyCertFromDERCert(), PK11_FindKeyByCert(), PK11_GetBestSlot(). These functions should all have the form LAYER_FindDataType[ByDataType]().</p>
 
@@ -484,9 +463,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>List and Array returning functions should be available at the higher layers of the API, most wrapping  LAYER_Traverse() functions. They should have the form LAYER_LookupDataType{List|Array}[ByDataType]().</p>
 
-<p><a name="Accessors"> </a></p>
-
-<h3 id="Accesssor_Functions"><a name="Accessors">Accesssor Functions</a></h3>
+<h3 id="Accesssor_Functions">Accesssor Functions</h3>
 
 <p>Accessor Functions should take the following formats:</p>
 
@@ -496,9 +473,7 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>Examples: PK11_SlotGetSeries(), PK11_SymKeyGetSeries(), CERT_CertificateExtractPublicKey()</p>
 
-<p><a name="Params"> </a></p>
-
-<h3 id="Parameter_ordering"><a name="Params">Parameter ordering</a></h3>
+<h3 id="Parameter_ordering">Parameter ordering</h3>
 
 <p>Most functions will have a 'Natural' ordering for parameters. To keep consistency we should have some minimal parameter consistency. For most functions, they can be seen as operating on a particular object. This object, that the function is operating on, should come first. For instance, in most SSL functions this is the NSPR Socket, or the SSL Socket structure: Update, final, encrypt, decrypt type functions operating on their state contexts, etc.</p>
 
@@ -525,6 +500,6 @@ slug: Mozilla/Projects/NSS/NSS_API_Guidelines
 
 <p>Within your layer, multiple similar functions should have consistent parameter order.<a name="Callbacks"></a></p>
 
-<h3 id="Callback_Functions"><a name="Callbacks"> Callback Functions</a></h3>
+<h3 id="Callback_Functions">Callback Functions</h3>
 
-<p><a name="Callbacks"> </a> Callback functions should all contain an opaque parameter (void *) as their first argument, passed by the original caller. Callbacks which are set, like SSL callbacks, should have defaults which provide generally useful semantics.</p>
+<p>Callback functions should all contain an opaque parameter (void *) as their first argument, passed by the original caller. Callbacks which are set, like SSL callbacks, should have defaults which provide generally useful semantics.</p>

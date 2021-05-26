@@ -18,12 +18,12 @@ tags:
 <ul>
  <li>The Fonts tab in the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> now includes an editor that makes it easy to view and edit the settings of the fonts on your page. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts">Edit fonts</a> for details.</li>
  <li>The <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a> is now enabled by default ({{bug(1482454)}}).</li>
- <li>When you hover over an object in the <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a>, <a href="/en-US/docs/Tools/Accessibility_inspector#Highlighting_of_UI_items">the item is highlighted</a> and its role and name will be shown in an information bar on the page ({{bug(1473030)}}).</li>
+ <li>When you hover over an object in the <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a>, <a href="/en-US/docs/Tools/Accessibility_inspector#highlighting_of_ui_items">the item is highlighted</a> and its role and name will be shown in an information bar on the page ({{bug(1473030)}}).</li>
  <li>The command line in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a> is now shown immediately following the console output ({{bug(1136299)}}).</li>
  <li>A new icon has been added to the content in the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> to indicate when a URL belongs to a known tracker — see {{SectionOnPage("/en-US/docs/Tools/Network_Monitor/request_list", "Security icons")}} ({{bug(1333994)}}).</li>
  <li>The default value of <code>devtools.aboutdebugging.showSystemAddons</code> is now <code>false</code>, meaning that system add-ons will not be listed on the <code>about:debugging</code> page. You can change the settings by navigating to <code>about:config</code> ({{bug(1425347)}}).</li>
  <li>The <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> toolbar was simplified, and we added the option to left-align the viewport.</li>
- <li>The Page Inspector includes a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Custom_element_definition">link to the class definition</a> for a custom element. ({{bug(1443923)}}).</li>
+ <li>The Page Inspector includes a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#custom_element_definition">link to the class definition</a> for a custom element. ({{bug(1443923)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -42,11 +42,11 @@ tags:
 
 <ul>
  <li>Support for the {{CSSxRef(":defined")}} pseudo-class has been added ({{bug(1331334)}}).</li>
- <li>Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties">Flexbox layout</a> ({{bug(1398483)}}).</li>
+ <li>Support for {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}} and {{CSSxRef("gap")}} have been added in <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#the_gap_properties">Flexbox layout</a> ({{bug(1398483)}}).</li>
  <li>Re-enabled support for <a href="/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio">webkit-prefixed pixel-density @media queries</a> ({{bug(1444139)}}).</li>
  <li>Support added for the <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexible Box Layout</a> (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ({{bug(1472843)}}).</li>
  <li>Implemented the <code>path()</code> function for {{CSSxRef("offset-path")}} ({{bug(1429298)}}).</li>
- <li>Implemented <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax_improvements_in_Level_4">syntax improvements from the Media Queries Level 4 specification</a> ({{bug(1472843)}}).</li>
+ <li>Implemented <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4">syntax improvements from the Media Queries Level 4 specification</a> ({{bug(1472843)}}).</li>
  <li>Renamed <code>offset-*</code> properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).</li>
  <li>Added support for the <a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a> media feature ({{bug(1365045)}}, {{bug(1475462)}}).</li>
  <li>Added flow relative values (<code>block</code>, <code>inline</code>) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).</li>
@@ -69,7 +69,7 @@ tags:
 <ul>
  <li>The {{JSxRef("Symbol.prototype.description")}} property has been implemented ({{bug(1472170)}}).</li>
  <li>The {{JSxRef("Object.fromEntries()")}} method has been added ({{bug(1469019)}}).</li>
- <li>When you try to access a property of an undefined object, the error message is now much improved. Considering the case where <code>x</code> is undefined and you try to access <code>x.y</code>, instead of <code>TypeError: x is undefined</code> the console now returns the more descriptive <code><a href="/en-US/docs/Web/JavaScript/Reference/Errors/cant_access_property">x is undefined; can't access its "y" property</a></code> ({{bug(1259822)}}).</li>
+ <li>When you try to access a property of an undefined object, the error message is now much improved. Considering the case where <code>x</code> is undefined and you try to access <code>x.y</code>, instead of <code>TypeError: x is undefined</code> the console now returns the more descriptive <code><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property">x is undefined; can't access its "y" property</a></code> ({{bug(1259822)}}).</li>
 </ul>
 
 <h4 id="Removals_3">Removals</h4>
@@ -248,11 +248,11 @@ tags:
 <h4 id="Menus">Menus</h4>
 
 <ul>
- <li>Added {{WebExtApiRef("menus.getTargetElement()")}} to the {{WebExtApiRef("menus")}} API. The method returns the element referenced by the <code>targetElementId</code> parameter that identifies the clicked element. If the <code>targetElementId </code>is no longer valid, the method returns null ({{bug(1325814)}}).</li>
+ <li>Added {{WebExtApiRef("menus.getTargetElement()")}} to the {{WebExtApiRef("menus")}} API. The method returns the element referenced by the <code>targetElementId</code> parameter that identifies the clicked element. If the <code>targetElementId</code> is no longer valid, the method returns null ({{bug(1325814)}}).</li>
  <li>{{WebExtAPIRef("menus.create()")}} now enables you to create invisible menu items, and {{WebExtAPIRef("menus.update()")}} enables you to toggle menu item visibility ({{bug(1482529)}}).</li>
  <li>Items created using the {{WebExtAPIRef("menus")}} API now support access keys ({{bug(1320462)}}).</li>
  <li>The <code>targetUrlPatterns</code> parameter of {{WebExtApiRef("menus.create()")}} and {{WebExtApiRef("menus.update()")}} now supports any URL scheme, even those that are usually not allowed in a match pattern ({{bug(1280370)}}).</li>
- <li>When a tab context menu item is clicked, the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">"activeTab" permission</a> is now granted for that tab, even if that's not the currently active tab ({{bug(1446956)}}).</li>
+ <li>When a tab context menu item is clicked, the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">"activeTab" permission</a> is now granted for that tab, even if that's not the currently active tab ({{bug(1446956)}}).</li>
 </ul>
 
 <h4 id="Other_2">Other</h4>

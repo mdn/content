@@ -7,38 +7,33 @@ tags:
 - Method
 - Reference
 - asUintN
+browser-compat: javascript.builtins.BigInt.asUintN
 ---
 <div>{{JSRef}}</div>
 
-<p>The <strong><code>BigInt.asUintN</code></strong> static method is used to wrap a BigInt
-  value to an unsigned integer between 0 and 2<sup>width</sup>-1.</p>
+<p>The <strong><code>BigInt.asUintN</code></strong> static method clamps a BigInt value to an unsigned integer value, and returns that value.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">BigInt.asUintN(<var>width</var>, <var>bigint</var>);</pre>
+  class="brush: js">BigInt.asUintN(<var>bits</var>, <var>bigint</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>width</var></code></dt>
+  <dt><code><var>bits</var></code></dt>
   <dd>The amount of bits available for the integer size.</dd>
   <dt><code><var>bigint</var></code></dt>
-  <dd>The integer to clamp to fit into the supplied bits.</dd>
+  <dd>The BigInt value to clamp to fit into the supplied bits.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
 
 <p>The value of <code><var>bigint</var></code> modulo
-  2<sup><code><var>width</var></code></sup> as an unsigned integer.</p>
+  2<sup><code><var>bits</var></code></sup>, as an unsigned integer.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,22 +53,11 @@ BigInt.asUintN(64, max + 1n);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-bigint.asuintn', 'BigInt.asUintN()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.BigInt.asUintN")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

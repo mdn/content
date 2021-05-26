@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>buttonsPressed</em> = <em>instanceOfMouseEvent</em>.buttons
+<pre class="brush: js">var <em>buttonsPressed</em> = <em>instanceOfMouseEvent</em>.buttons
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -59,12 +59,12 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Click anywhere with one or more mouse buttons.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Click anywhere with one or more mouse buttons.&lt;/p&gt;
 &lt;pre id="log"&gt;buttons: &lt;/pre&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">let log = document.createTextNode('?');   // let log = new Text('?');
+<pre class="brush: js">let log = document.createTextNode('?');   // let log = new Text('?');
 
 function logButtons(e) {
   log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
@@ -96,8 +96,7 @@ document.querySelector('#log').appendChild(log)</pre>
 			<td>Current working draft</td>
 		</tr>
 		<tr>
-			<td>{{SpecName('DOM3
-				Events','#widl-MouseEvent-buttons','MouseEvent.buttons')}}</td>
+			<td>{{SpecName('DOM3 Events','#widl-MouseEvent-buttons','MouseEvent.buttons')}}</td>
 			<td>{{Spec2('DOM3 Events')}}</td>
 			<td>Initial definition</td>
 		</tr>

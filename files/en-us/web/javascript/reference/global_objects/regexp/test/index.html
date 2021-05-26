@@ -8,6 +8,7 @@ tags:
 - Reference
 - RegExp
 - Regular Expressions
+browser-compat: javascript.builtins.RegExp.test
 ---
 <div>{{JSRef}}</div>
 
@@ -17,15 +18,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexObj</var>.test(<var>str</var>)</pre>
+<pre class="brush: js">test(str)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,7 +57,7 @@ tags:
 <p>Simple example that tests if "<code>hello</code>" is contained at the very beginning of
   a string, returning a boolean result.</p>
 
-<pre class="brush: js notranslate">const str = 'hello world!';
+<pre class="brush: js">const str = 'hello world!';
 const result = /^hello/.test(str);
 
 console.log(result); // true
@@ -69,7 +65,7 @@ console.log(result); // true
 
 <p>The following example logs a message which depends on the success of the test:</p>
 
-<pre class="brush: js notranslate">function testInput(re, str) {
+<pre class="brush: js">function testInput(re, str) {
   let midstring;
   if (re.test(str)) {
     midstring = 'contains';
@@ -105,7 +101,7 @@ console.log(result); // true
 
 <p>The following example demonstrates this behavior:</p>
 
-<pre class="brush: js notranslate">const regex = /foo/g; // the "global" flag is set
+<pre class="brush: js">const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
 regex.test('foo')     // true
@@ -125,22 +121,11 @@ regex.test('foobar')  //false
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp.test")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

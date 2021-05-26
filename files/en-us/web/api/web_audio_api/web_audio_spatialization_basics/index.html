@@ -26,7 +26,7 @@ tags:
 
 <p>To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> guide. see the <a href="https://mdn.github.io/webaudio-examples/spacialization/">3D spatialization demo live</a> (and see the <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">source code</a> also).</p>
 
-<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="https://mdn.mozillademos.org/files/16232/web-audio-spatialization.png" style="border-style: solid; border-width: 1px; height: 724px; width: 949px;"></p>
+<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="web-audio-spatialization.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>The boombox sits inside a room (defined by the edges of the browser viewport), and in this demo, we can move and rotate it with the provided controls. When we move the boombox, the sound it produces changes accordingly, panning as it moves to the left or right of the room, or becoming quieter as it is moved away from the user or is rotated so the speakers are facing away from them, etc. This is done by setting the different properties of the <code>PannerNode</code> object instance in relation to that movement, to emulate spacialization.</p>
 
@@ -40,7 +40,7 @@ tags:
 
 <p>Let's create our context and listener and set the listener's position to emulate a person looking into our room:</p>
 
-<pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 
@@ -55,7 +55,7 @@ listener.positionZ.value = posZ-5;
 
 <p>We could move the listener left or right using <code>positionX</code>, up or down using <code>positionY</code>, or in or out of the room using <code>positionZ</code>. Here we are setting the listener to be in the middle of the viewport and slightly in front of our boombox. We can also set the direction the listener is facing. The default values for these work well:</p>
 
-<pre class="brush: js notranslate">listener.forwardX.value = 0;
+<pre class="brush: js">listener.forwardX.value = 0;
 listener.forwardY.value = 0;
 listener.forwardZ.value = -1;
 listener.upX.value = 0;
@@ -77,39 +77,39 @@ listener.upZ.value = 0;
 
 <p>Pretty clever stuff. Let's use the <code>HRTF</code> model!</p>
 
-<pre class="brush: js notranslate">const pannerModel = 'HRTF';
+<pre class="brush: js">const pannerModel = 'HRTF';
 </pre>
 
 <p>The <a href="/en-US/docs/Web/API/PannerNode/coneInnerAngle"><code>coneInnerAngle</code></a> and <a href="/en-US/docs/Web/API/PannerNode/coneOuterAngle"><code>coneOuterAngle</code></a> properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the <a href="/en-US/docs/Web/API/PannerNode/coneOuterGain"><code>coneOuterGain</code></a> value. Let's create constants that store the values we'll use for these parameters later on:</p>
 
-<pre class="brush: js notranslate">const innerCone = 60;
+<pre class="brush: js">const innerCone = 60;
 const outerCone = 90;
 const outerGain = 0.3;
 </pre>
 
 <p>The next parameter is <a href="/en-US/docs/Web/API/PannerNode/distanceModel"><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
 
-<pre class="brush: js notranslate">const distanceModel = 'linear';
+<pre class="brush: js">const distanceModel = 'linear';
 </pre>
 
 <p>We can set a maximum distance (<a href="/en-US/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
 
-<pre class="brush: js notranslate">const maxDistance = 10000;
+<pre class="brush: js">const maxDistance = 10000;
 </pre>
 
 <p>There's also a reference distance (<code><a href="/en-US/docs/Web/API/PannerNode/refDistance">refDistance</a></code>), which is used by the distance models. We can keep that at the default value of <code>1</code> as well:</p>
 
-<pre class="brush: js notranslate">const refDistance = 1;
+<pre class="brush: js">const refDistance = 1;
 </pre>
 
 <p>Then there's the roll-off factor (<a href="/en-US/docs/Web/API/PannerNode/rolloffFactor"><code>rolloffFactor</code></a>) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.</p>
 
-<pre class="brush: js notranslate">const rollOff = 10;
+<pre class="brush: js">const rollOff = 10;
 </pre>
 
 <p>Now we can start setting our position and orientation of our boombox. This is a lot like how we did it with our listener. These are also the parameters we're going to change when the controls on our interface are used.</p>
 
-<pre class="brush: js notranslate">const positionX = posX;
+<pre class="brush: js">const positionX = posX;
 const positionY = posY;
 const positionZ = posZ;
 
@@ -122,7 +122,7 @@ const orientationZ = -1.0;
 
 <p>Let's use the relevant constructor for creating our panner node and pass in all those parameters we set above:</p>
 
-<pre class="brush: js notranslate">const panner = new PannerNode(audioCtx, {
+<pre class="brush: js">const panner = new PannerNode(audioCtx, {
     panningModel: pannerModel,
     distanceModel: distanceModel,
     positionX: positionX,
@@ -146,7 +146,7 @@ const orientationZ = -1.0;
 
 <p>We need to set up a few things for the interface. First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS transforms</a> to actually do the movement. Finally, we'll set some bounds so our boombox doesn't move too far in any direction:</p>
 
-<pre class="brush: js notranslate">const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
+<pre class="brush: js">const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
 const boombox = document.querySelector('.boombox-body');
 
 // the values for our css transforms
@@ -171,7 +171,7 @@ const outerBound = 1.5;
 
 <p>To start with let's take a look at our left, right, up and down values as these are pretty straightforward. We'll move the boombox along these axis and update the appropriate position.</p>
 
-<pre class="brush: js notranslate">function moveBoombox(direction) {
+<pre class="brush: js">function moveBoombox(direction) {
     switch (direction) {
         case 'left':
             if (transform.xAxis &gt; leftBound) {
@@ -203,7 +203,7 @@ const outerBound = 1.5;
 
 <p>It's a similar story for our move in and out values too:</p>
 
-<pre class="brush: js notranslate">case 'back':
+<pre class="brush: js">case 'back':
     if (transform.zAxis &gt; innerBound) {
         transform.zAxis -= 0.01;
         panner.positionZ.value += 40;
@@ -221,7 +221,7 @@ break;
 
 <p>Let's set up a rotation rate, which we'll convert into a radian range value for use in <code>Math.sin</code> and <code>Math.cos</code> later, when we want to figure out the new coordinates when we're rotating our boombox:</p>
 
-<pre class="brush: js notranslate">// set up rotation constants
+<pre class="brush: js">// set up rotation constants
 const rotationRate = 60; // bigger number equals slower sound rotation
 
 const q = Math.PI/rotationRate; //rotation increment in radians
@@ -229,14 +229,14 @@ const q = Math.PI/rotationRate; //rotation increment in radians
 
 <p>We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):</p>
 
-<pre class="brush: js notranslate">// get degrees for css
+<pre class="brush: js">// get degrees for css
 const degreesX = (q * 180)/Math.PI;
 const degreesY = (q * 180)/Math.PI;
 </pre>
 
 <p>Let's take a look at our left rotation as an example. We need to change the x orientation and the z orientation of the panner coordinates, to move around the y-axis for our left rotation:</p>
 
-<pre class="brush: js notranslate">case 'rotate-left':
+<pre class="brush: js">case 'rotate-left':
   transform.rotateY -= degreesY;
 
   // 'left' is rotation about y-axis with negative angle increment
@@ -254,7 +254,7 @@ break;
 
 <p>We can do this for all the axes. We just need to choose the right orientations to update and whether we want a positive or negative increment.</p>
 
-<pre class="brush: js notranslate">case 'rotate-right':
+<pre class="brush: js">case 'rotate-right':
   transform.rotateY += degreesY;
   // 'right' is rotation about y-axis with positive angle increment
   z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
@@ -288,7 +288,7 @@ break;
 
 <p>One last thing — we need to update the CSS and keep a reference of the last move for the mouse event. Here's the final <code>moveBoombox</code> function.</p>
 
-<pre class="brush: js notranslate">function moveBoombox(direction, prevMove) {
+<pre class="brush: js">function moveBoombox(direction, prevMove) {
     switch (direction) {
         case 'left':
             if (transform.xAxis &gt; leftBound) {
@@ -382,7 +382,7 @@ break;
 
 <p>Wiring up out control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:</p>
 
-<pre class="brush: js notranslate">// for each of our controls, move the boombox and change the position values
+<pre class="brush: js">// for each of our controls, move the boombox and change the position values
 moveControls.forEach(function(el) {
 
     let moving;
@@ -409,11 +409,11 @@ moveControls.forEach(function(el) {
 
 <p>Our HTML contains the audio element we want to be affected by the panner node.</p>
 
-<pre class="brush: html notranslate">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;</pre>
+<pre class="brush: html">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;</pre>
 
 <p>We need to grab the source from that element and pipe it into the Web Audio API using the {{domxref('AudioContext.createMediaElementSource')}}.</p>
 
-<pre class="brush: js notranslate">// get the audio element
+<pre class="brush: js">// get the audio element
 const audioElement = document.querySelector('audio');
 
 // pass it into the audio context
@@ -422,15 +422,15 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>Next we have to connect our audio graph. We connect our input (the track) to our modification node (the panner) to our destination (in this case the speakers).</p>
 
-<pre class="brush: js notranslate">track.connect(panner).connect(audioCtx.destination);
+<pre class="brush: js">track.connect(panner).connect(audioCtx.destination);
 </pre>
 
 <p>Let's create a play button, that when clicked will play or pause the audio depending on the current state.</p>
 
-<pre class="brush: html notranslate">&lt;button data-playing="false" role="switch"&gt;Play/Pause&lt;/button&gt;
+<pre class="brush: html">&lt;button data-playing="false" role="switch"&gt;Play/Pause&lt;/button&gt;
 </pre>
 
-<pre class="brush: js notranslate">// select our play button
+<pre class="brush: js">// select our play button
 const playButton = document.querySelector('button');
 
 playButton.addEventListener('click', function() {

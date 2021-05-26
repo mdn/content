@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.fill
 ---
 <div>{{JSRef}}</div>
 
@@ -19,16 +20,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>typedarray</var>.fill(<var>value</var>[, <var>start = 0</var>[, <var>end = this.length</var>]])</pre>
+<pre class="brush: js">
+fill(value)
+fill(value, start)
+fill(value, start, end)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,7 +64,7 @@ tags:
 
 <h3 id="Using_fill">Using fill()</h3>
 
-<pre class="brush: js notranslate">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
+<pre class="brush: js">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
 new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
@@ -78,7 +77,7 @@ new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
   done on an "as needed" basis. Use the following "polyfill" along with the
   {{jsxref("Array.prototype.fill()")}} polyfill.</p>
 
-<pre class="brush: js notranslate">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
 if (!Uint8Array.prototype.fill) {
   Uint8Array.prototype.fill = Array.prototype.fill;
 }
@@ -86,26 +85,11 @@ if (!Uint8Array.prototype.fill) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill',
-        'TypedArray.prototype.fill')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.fill")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

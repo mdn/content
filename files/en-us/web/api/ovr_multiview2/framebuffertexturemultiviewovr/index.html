@@ -2,14 +2,14 @@
 title: OVR_multiview2.framebufferTextureMultiviewOVR()
 slug: Web/API/OVR_multiview2/framebufferTextureMultiviewOVR
 tags:
-- API
-- Method
-- Multiview
-- VR
-- WebGL
-- WebGL extensions
-- WebVR
-- WebXR
+  - API
+  - Method
+  - Multiview
+  - VR
+  - WebGL
+  - WebGL extensions
+  - WebVR
+  - WebXR
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -19,14 +19,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <var>ext</var>.framebufferTextureMultiviewOVR(<var>target</var>, <var>attachment</var>, <var>texture</var>, <var>level</var>, <var>baseViewIndex</var>, <var>numViews</var>);
+<pre class="brush: js">void <var>ext</var>.framebufferTextureMultiviewOVR(<var>target</var>, <var>attachment</var>, <var>texture</var>, <var>level</var>, <var>baseViewIndex</var>, <var>numViews</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt>target</dt>
-  <dd>A {{domxref("GLenum")}} specifying the binding point (target). Possible values:
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the binding point (target). Possible values:
     <ul>
       <li><code>gl.FRAMEBUFFER</code>: Collection buffer data storage of color, alpha,
         depth and stencil buffers used to render an image.</li>
@@ -37,7 +37,7 @@ tags:
     </ul>
   </dd>
   <dt>attachment</dt>
-  <dd>A {{domxref("GLenum")}} specifying the attachment point for the
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the attachment point for the
     <code>texture</code>. Possible values:
     <ul>
       <li><code>gl.COLOR_ATTACHMENT0</code>: Attaches the texture to the framebuffer's
@@ -95,13 +95,13 @@ tags:
   <dt>texture</dt>
   <dd>A {{domxref("WebGLTexture")}} object whose image to attach.</dd>
   <dt>level</dt>
-  <dd>A {{domxref("GLint")}} specifying the mipmap level of the texture image to be
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the mipmap level of the texture image to be
     attached. Must be 0.</dd>
   <dt>baseViewIndex</dt>
-  <dd>A {{domxref("GLint")}} specifying the base view index of the framebuffer object
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the base view index of the framebuffer object
     attachment.</dd>
   <dt>numViews</dt>
-  <dd>A {{domxref("GLsizei")}} specifying the number of views of the framebuffer object
+  <dd>A {{domxref("WebGL_API.Types")}} specifying the number of views of the framebuffer object
     attachment.</dd>
 </dl>
 

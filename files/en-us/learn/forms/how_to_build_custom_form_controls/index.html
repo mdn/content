@@ -95,9 +95,9 @@ tags:
 <p>It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to <a href="https://en.wikipedia.org/wiki/Usability_testing" rel="external">perform user tests</a>. This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:</p>
 
 <ul>
- <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
+ <li><a href="https://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
  <li><a href="http://uxdesign.com/" rel="external">UXDesign.com</a></li>
- <li><a href="http://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
+ <li><a href="https://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
 </ul>
 
 <div class="note">
@@ -108,7 +108,7 @@ tags:
 
 <p>Now that the control's basic functionality has been decided upon, it's time to start building it. The first step is to define its HTML structure and to give it some basic semantics. Here is what we need to rebuild a {{HTMLElement("select")}} element:</p>
 
-<pre class="brush: html notranslate">&lt;!-- This is our main container for our control.
+<pre class="brush: html">&lt;!-- This is our main container for our control.
      The tabindex attribute is what allows the user to focus the control.
      We'll see later that it's better to set it through JavaScript. --&gt;
 &lt;div class="select" tabindex="0"&gt;
@@ -142,7 +142,7 @@ tags:
 
 <p>The required styles are those necessary to handle the three states of our control.</p>
 
-<pre class="brush: css notranslate">.select {
+<pre class="brush: css">.select {
   /* This will create a positioning context for the list of options;
      adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
   */
@@ -154,7 +154,7 @@ tags:
 
 <p>We need an extra class <code>active</code> to define the look and feel of our control when it is in its active state. Because our control is focusable, we double this custom style with the {{cssxref(":focus")}} pseudo-class in order to be sure they will behave the same.</p>
 
-<pre class="brush: css notranslate">.select .active,
+<pre class="brush: css">.select .active,
 .select:focus {
   outline: none;
 
@@ -165,7 +165,7 @@ tags:
 
 <p>Now, let's handle the list of options:</p>
 
-<pre class="brush: css notranslate">/* The .select selector here helps to make we only select
+<pre class="brush: css">/* The .select selector here helps to make we only select
    element inside our control. */
 .select .optList {
   /* This will make sure our list of options will be displayed below the value
@@ -177,7 +177,7 @@ tags:
 
 <p>We need an extra class to handle when the list of options is hidden. This is necessary in order to manage the differences between the active state and the open state that do not exactly match.</p>
 
-<pre class="brush: css notranslate">.select .optList.hidden {
+<pre class="brush: css">.select .optList.hidden {
   /* This is a simple way to hide the list in an accessible way;
      we will talk more about accessibility in the end */
   max-height: 0;
@@ -192,7 +192,7 @@ tags:
 
 <p>So now that we have the basic functionality in place, the fun can start. The following is just an example of what is possible, and will match the screenshot at the beginning of this article. However, you should feel free to experiment and see what you can come up with.</p>
 
-<pre class="brush: css notranslate">.select {
+<pre class="brush: css">.select {
   /* The computations are made assuming 1em == 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
   font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
@@ -226,7 +226,7 @@ tags:
 
 <p>We don't need an extra element to design the down arrow; instead, we're using the {{cssxref(":after")}} pseudo-element. It could also be implemented using a simple background image on the <code>select</code> class.</p>
 
-<pre class="brush: css notranslate">.select:after {
+<pre class="brush: css">.select:after {
   content : "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
   position: absolute;
   z-index : 1; /* This will be important to keep the arrow from overlapping the list of options */
@@ -249,7 +249,7 @@ tags:
 
 <p>Next, let's style the list of options:</p>
 
-<pre class="brush: css notranslate">.select .optList {
+<pre class="brush: css">.select .optList {
   z-index : 2; /* We explicitly said the list of options will always be on top of the down arrow */
 
   /* this will reset the default style of the ul element */
@@ -281,7 +281,7 @@ tags:
 
 <p>For the options, we need to add a <code>highlight</code> class to be able to identify the value the user will pick (or has picked).</p>
 
-<pre class="brush: css notranslate">.select .option {
+<pre class="brush: css">.select .option {
   padding: .2em .3em; /* 2px 3px */
 }
 
@@ -342,7 +342,7 @@ tags:
 
 <p>First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.</p>
 
-<pre class="brush: html notranslate">&lt;body class="no-widget"&gt;
+<pre class="brush: html">&lt;body class="no-widget"&gt;
   &lt;form&gt;
     &lt;select name="myFruit"&gt;
       &lt;option&gt;Cherry&lt;/option&gt;
@@ -368,7 +368,7 @@ tags:
 
 <p>Second, we need two new classes to let us hide the unneeded element: we visually hide the "real" {{HTMLElement("select")}} element if our script isn't running, or the custom control if it is running. Note that, by default, our HTML code hides our custom control.</p>
 
-<pre class="brush: css notranslate">.widget select,
+<pre class="brush: css">.widget select,
 .no-widget .select {
   /* This CSS selector basically says:
      - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
@@ -384,7 +384,7 @@ tags:
 
 <p>Now we need a JavaScript switch to determine if the script is running or not. This switch is a couple of lines: if at page load time our script is running, it will remove the <code>no-widget</code> class and add the <code>widget</code> class, thereby swapping the visibility of the {{HTMLElement("select")}} element and the custom control.</p>
 
-<pre class="brush: js notranslate">window.addEventListener("load", function () {
+<pre class="brush: js">window.addEventListener("load", function () {
   document.body.classList.remove("no-widget");
   document.body.classList.add("widget");
 });</pre>
@@ -424,7 +424,7 @@ tags:
 
 <p>Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>. This is important because <code>Array</code> objects support the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an <code>Array</code> and because <code>forEach</code> is so convenient to use, we can easily add the support of <code>forEach</code> to {{domxref("NodeList")}} in order to make our life easier, like so:</p>
 
-<pre class="brush: js notranslate">NodeList.prototype.forEach = function (callback) {
+<pre class="brush: js">NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
 }</pre>
 
@@ -434,7 +434,7 @@ tags:
 
 <p>The groundwork is done. We can now start to define all the functions that will be used each time the user interacts with our control.</p>
 
-<pre class="brush: js notranslate">// This function will be used each time we want to deactivate a custom control
+<pre class="brush: js">// This function will be used each time we want to deactivate a custom control
 // It takes one parameter
 // select : the DOM node with the `select` class to deactivate
 function deactivateSelect(select) {
@@ -505,7 +505,7 @@ function highlightOption(select, option) {
 
 <p>Next, we bind these functions to the appropriate events:</p>
 
-<pre class="brush: js notranslate">// We handle the event binding when the document is loaded.
+<pre class="brush: js">// We handle the event binding when the document is loaded.
 window.addEventListener('load', function () {
   var selectList = document.querySelectorAll('.select');
 
@@ -591,7 +591,7 @@ window.addEventListener('load', function () {
 
 <p>As seen previously, we already use a native select control as a fallback for accessibility reasons; we can synchronize its value with that of our custom control:</p>
 
-<pre class="brush: js notranslate">// This function updates the displayed value and synchronizes it with the native control.
+<pre class="brush: js">// This function updates the displayed value and synchronizes it with the native control.
 // It takes two parameters:
 // select : the DOM node with the class `select` containing the value to update
 // index  : the index of the value to be selected
@@ -629,7 +629,7 @@ function getIndex(select) {
 
 <p>With these two functions, we can bind the native controls to the custom ones:</p>
 
-<pre class="brush: js notranslate">// We handle event binding when the document is loaded.
+<pre class="brush: js">// We handle event binding when the document is loaded.
 window.addEventListener('load', function () {
   var selectList = document.querySelectorAll('.select');
 
@@ -706,7 +706,7 @@ window.addEventListener('load', function () {
 
 <p>To support the <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code> role, we just have to update our HTML like this:</p>
 
-<pre class="brush: html notranslate">&lt;!-- We add the role="listbox" attribute to our top element --&gt;
+<pre class="brush: html">&lt;!-- We add the role="listbox" attribute to our top element --&gt;
 &lt;div class="select" role="listbox"&gt;
   &lt;span class="value"&gt;Cherry&lt;/span&gt;
   &lt;!-- We also add the role="presentation" to the ul element --&gt;
@@ -721,7 +721,7 @@ window.addEventListener('load', function () {
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>Note:</strong> Including both the <code>role</code> attribute and a <code>class</code> attribute is not necessary. Instead of using <code>.option</code> use the <code>[role="option]</code> <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a> in your CSS .</p>
+<p><strong>Note:</strong> Including both the <code>role</code> attribute and a <code>class</code> attribute is not necessary. Instead of using <code>.option</code> use the <code>[role="option"]</code> <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a> in your CSS .</p>
 </div>
 
 <h3 id="The_aria-selected_attribute">The <code>aria-selected</code> attribute</h3>
@@ -730,7 +730,7 @@ window.addEventListener('load', function () {
 
 <p>The <code>aria-selected</code> attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our <code>updateValue()</code> function:</p>
 
-<pre class="brush: js notranslate">function updateValue(select, index) {
+<pre class="brush: js">function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
   var value = select.querySelector('.value');
   var optionList = select.querySelectorAll('[role="option"]');
@@ -750,7 +750,7 @@ window.addEventListener('load', function () {
 
 <p>It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.</p>
 
-<p>Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as <a href="http://www.nvda-project.org/" rel="external">NVDA</a> or <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>):</p>
+<p>Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as <a href="http://www.nvda-project.org/" rel="external">NVDA</a> or <a href="https://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>):</p>
 
 <table>
  <thead>
@@ -778,7 +778,7 @@ window.addEventListener('load', function () {
 
 <p>We can start with a completely semantic, accessible, unordered list of {{htmlelement('input/radio','radio')}} buttons with an associated {{htmlelement('label')}}, labeling the entire group with a semantically appropriate {{htmlelement('fieldset')}} and {{htmlelement('legend')}} pair.</p>
 
-<pre class="brush: html notranslate"> &lt;fieldset&gt;
+<pre class="brush: html"> &lt;fieldset&gt;
   &lt;legend&gt;Pick a fruit&lt;/legend&gt;
     &lt;ul class="styledSelect"&gt;
       &lt;li&gt;&lt;input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked&gt;&lt;label for="fruitCherry"&gt;Cherry&lt;/label&gt;&lt;/li&gt;
@@ -791,7 +791,7 @@ window.addEventListener('load', function () {
 
 <p>We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:</p>
 
-<pre class="brush: css notranslate">.styledSelect {
+<pre class="brush: css">.styledSelect {
   display: inline-block;
   padding: 0;
 }
@@ -856,10 +856,10 @@ window.addEventListener('load', function () {
 <p>Here are a few libraries you should consider before coding your own:</p>
 
 <ul>
- <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a></li>
+ <li><a href="https://jqueryui.com/" rel="external">jQuery UI</a></li>
  <li><a href="https://www.webaxe.org/accessible-custom-select-dropdowns">AXE accessible custom select dropdowns</a></li>
  <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external">msDropDown</a></li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
+ <li><a href="https://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
 </ul>
 
 <p>If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!</p>

@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>touch</var> = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
+<pre class="brush: js">var <var>touch</var> = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
                                       screenX, screenY);
 </pre>
 
@@ -85,8 +85,8 @@ tags:
 
 <pre class="brush: js">var target = document.getElementById("target");
 
-var touch1 = Document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
+var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+var touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

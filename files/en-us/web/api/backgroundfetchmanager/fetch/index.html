@@ -5,28 +5,28 @@ tags:
   - API
   - Method
   - Reference
-  - fetch()
+  - fetch
   - BackgroundFetchManager
   - Experimental
   - Service Workers
   - Fetch
 ---
-<div>{{draft}}{{DefaultAPISidebar("Background Fetch")}}</div>
+<div>{{DefaultAPISidebar("Background Fetch")}}</div>
 
 <p class="summary">The <strong><code>fetch()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects. </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>backgroundFetchRegistration</var> = BackgroundFetchManager.fetch();</pre>
+<pre class="syntaxbox">let backgroundFetchRegistration = BackgroundFetchManager.fetch(id, requests [,options]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-<dt>id</dt>
+<dt><code>id</code></dt>
 <dd>A developer-defined identifier that can be passed to the other methods to retrieve a {{domxref("backgroundFetchRegistration")}}.</dd>
-<dt>request</dt>
+<dt><code>requests</code></dt>
 <dd>A {{domxref("RequestInfo")}} object or an array of such objects.</dd>
-<dt>options</dt>
+<dt><code>options</code> {{optional_inline}}</dt>
 <dd>A {{domxref("BackgroundFetchOptions")}} object.</dd>
 </dl>
 

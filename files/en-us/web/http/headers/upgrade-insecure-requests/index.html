@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The HTTP <strong><code>Upgrade-Insecure-Requests</code></strong> request header sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} <a href="/en-US/docs/Web/Security/CSP">CSP</a> directive.</p>
+<p>The HTTP <strong><code>Upgrade-Insecure-Requests</code></strong> request header sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> directive.</p>
 
 <table class="properties">
  <tbody>
@@ -26,19 +26,19 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Upgrade-Insecure-Requests: 1</pre>
+<pre class="brush: html">Upgrade-Insecure-Requests: 1</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>A client's request signals to the server that it supports the upgrade mechanisms of {{CSP("upgrade-insecure-requests")}}:</p>
 
-<pre class="notranslate">GET / HTTP/1.1
+<pre>GET / HTTP/1.1
 Host: example.com
 Upgrade-Insecure-Requests: 1</pre>
 
 <p>The server can now redirect to a secure version of the site. A {{HTTPHeader("Vary")}} header can be used so that the site isn't served by caches to clients that don’t support the upgrade mechanism.</p>
 
-<pre class="notranslate">Location: https://example.com/
+<pre>Location: https://example.com/
 Vary: Upgrade-Insecure-Requests</pre>
 
 <h2 id="Specifications">Specifications</h2>

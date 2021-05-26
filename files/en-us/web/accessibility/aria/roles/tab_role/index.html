@@ -8,11 +8,9 @@ tags:
   - ARIA widget
   - Reference
 ---
-<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
-
 <p><span class="seoSummary">The ARIA <code>tab</code> role indicates an interactive element inside a <code>tablist</code> that, when activated, displays its associated <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role"><code>tabpanel</code></a>.</span></p>
 
-<pre class="brush: html notranslate">&lt;button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -72,7 +70,7 @@ tags:
 
 <p>This example combines the role <code>tab</code> with <code>tablist</code> and elements with <code>tabpanel</code> to create an interactive group of tabbed content. Here we are enclosing our group of content in a <code>div</code>, with our <code>tablist</code> having an <code>aria-label</code> to label it for assistive technology. Each <code>tab</code> is a <code>button</code> with the attributes previously mentioned. The first <code>tab</code> has <code>tabindex=0</code> on it, which we will later change to whatever tab has <code>aria-selected=true</code>. All of the <code>tabpanel</code> elements have <code>tabindex=0</code> to make them tabbable, and all but the currently active one have the <code>hidden</code> attribute, which we will change with JavaScript. There is some basic styling applied that restyles the buttons and changes the <code><a href="/en-US/docs/Web/CSS/z-index">z-index</a></code> to of <code>tab</code> elements to give the illusion of it connecting to the <code>tabpanel</code> for active elements, and the illusion that inactive elements are behind the active <code>tabpanel</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div class="tabs"&gt;
+<pre class="brush: html">&lt;div class="tabs"&gt;
   &lt;div role="tablist" aria-label="Sample Tabs"&gt;
     &lt;button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"&gt;
           First Tab
@@ -96,7 +94,7 @@ tags:
 &lt;/div&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.tabs {
+<pre class="brush: css">.tabs {
   padding: 1em;
 }
 
@@ -139,7 +137,7 @@ tags:
 
 <p>To handle changing the active <code>tab</code> and <code>tabpanel</code>, we have a function that takes in the event, gets the element that triggered the event, the triggering element's parent element, and its grandparent element. We then find all tabs with <code>aria-selected=true</code> inside the parent element and sets it to <code>false</code>, then sets the triggering element's <code>aria-selected</code> to <code>true</code>. After that, we find all <code>tabpanel</code> elements in the grandparent element, make them all <code>hidden</code>, and finally select the element whose <code>id</code> is equal to the triggering <code>tab</code>'s <code>aria-controls</code> and removes the <code>hidden</code> attribute, making it visible.</p>
 
-<pre class="brush: js notranslate">window.addEventListener("DOMContentLoaded", () =&gt; {
+<pre class="brush: js">window.addEventListener("DOMContentLoaded", () =&gt; {
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');
 
@@ -232,3 +230,11 @@ function changeTabs(e) {
 <h2 id="Screen_reader_support">Screen reader support</h2>
 
 <p>TBD</p>
+
+
+<section id="Quick_links">
+	<ol>
+	  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+	</ol>
+</section>
+

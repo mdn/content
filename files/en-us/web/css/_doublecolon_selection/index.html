@@ -1,18 +1,19 @@
 ---
 title: '::selection'
-slug: 'Web/CSS/::selection'
+slug: Web/CSS/::selection
 tags:
   - CSS
   - Layout
   - Pseudo-element
   - Reference
   - Selector
+browser-compat: css.selectors.selection
 ---
 <div>{{CSSRef}}</div>
 
 <p><span class="seoSummary">The <strong><code>::selection</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).</span></p>
 
-<pre class="brush: css no-line-numbers notranslate">::selection {
+<pre class="brush: css no-line-numbers">::selection {
   background-color: cyan;
 }</pre>
 
@@ -23,12 +24,9 @@ tags:
 <ul>
  <li>{{CSSxRef("color")}}</li>
  <li>{{CSSxRef("background-color")}}</li>
- <li>{{CSSxRef("cursor")}}</li>
- <li>{{CSSxRef("caret-color")}}</li>
- <li>{{CSSxRef("outline")}} and its longhands</li>
  <li>{{CSSxRef("text-decoration")}} and its associated properties</li>
- <li>{{CSSxRef("text-emphasis-color")}}</li>
  <li>{{CSSxRef("text-shadow")}}</li>
+ <li>{{CSSxRef("stroke-color")}}, {{CSSxRef("fill-color")}} and {{CSSxRef("stroke-width")}}</li>
 </ul>
 
 <div class="warning">
@@ -37,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">/* Legacy Firefox syntax (version 61 and below) */
+<pre class="brush: css">/* Legacy Firefox syntax (version 61 and below) */
 ::-moz-selection
 
 {{CSSSyntax}}
@@ -47,13 +45,13 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">This text has special styles when you highlight it.
+<pre class="brush: html">This text has special styles when you highlight it.
 &lt;p&gt;Also try selecting text in this paragraph.&lt;/p&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
 <div class="hidden">
-<pre class="brush: css notranslate">::-moz-selection {
+<pre class="brush: css">::-moz-selection {
   color: gold;
   background-color: red;
 }
@@ -64,7 +62,7 @@ p::-moz-selection {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">/* Make selected text gold on a red background */
+<pre class="brush: css">/* Make selected text gold on a red background */
 ::selection {
   color: gold;
   background-color: red;
@@ -90,7 +88,7 @@ p::selection {
 
 <ul>
  <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -114,12 +112,12 @@ p::selection {
 </table>
 
 <div class="note">
-<p><strong>Note:</strong> <code>::selection</code> was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved <a class="external" href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(based on discussion in the W3C Style mailing list)</a>. It returned in <a href="http://dev.w3.org/csswg/css-pseudo-4/">Pseudo-Elements Level 4</a>.</p>
+<p><strong>Note:</strong> <code>::selection</code> was in drafts of CSS Selectors Level 3, but it was removed in the Candidate Recommendation phase because its was under-specified (especially with nested elements) and interoperability wasn't achieved <a href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(based on discussion in the W3C Style mailing list)</a>. It returned in <a href="http://dev.w3.org/csswg/css-pseudo-4/">Pseudo-Elements Level 4</a>.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.selection")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

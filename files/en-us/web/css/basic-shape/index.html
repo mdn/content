@@ -7,6 +7,7 @@ tags:
   - CSS Shapes
   - Data Type
   - Reference
+browser-compat: css.types.basic-shape
 ---
 <div>{{CSSRef}}</div>
 
@@ -20,14 +21,18 @@ tags:
 
 <p>When creating a shape, the reference box is defined by each property that uses <code>&lt;basic-shape&gt;</code> values. The coordinate system for the shape has its origin at the top-left corner of the reference box, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the used dimensions of the reference box.</p>
 
+<p>The default reference box is the <code>margin-box</code>, as demonstrated in the below image which shows a circle created using <code>shape-outside: circle(50%)</code>. The shape is being defined with reference to the margin box.</p>
+
+<p><img alt="An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted." src="shapes-reference-box.png"></p>
+
 <h3 id="Shape_functions">Shape functions</h3>
 
 <p>The following shapes are supported. All <code>&lt;basic-shape&gt;</code> values use functional notation and are defined here using the <a href="/en-US/docs/Web/CSS/Value_definition_syntax">value definition syntax</a>.</p>
 
 <dl>
- <dt><code><a id="inset()"></a>inset()</code></dt>
+ <dt><code><a id="inset()"></a>{{cssxref("basic-shape/inset()","inset()")}}</code></dt>
  <dd>
- <pre class="brush: css notranslate">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
+ <pre class="brush: css">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
 
  <p>Defines an inset rectangle.</p>
 
@@ -37,25 +42,25 @@ tags:
 
  <p>A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.</p>
  </dd>
- <dt><code><a id="circle()"></a>circle()</code></dt>
+ <dt><code><a id="circle()"></a>{{cssxref("basic-shape/circle()","circle()")}}</code></dt>
  <dd>
- <pre class="brush: css notranslate">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
+ <pre class="brush: css">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> argument represents <em>r</em>, the radius of the circle. Negative values are invalid. A percentage value here is resolved from the used width and height of the reference box as <code>sqrt(width^2+height^2)/sqrt(2)</code>.</p>
 
  <p>The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.</p>
  </dd>
- <dt><code><a id="ellipse()"></a>ellipse()</code></dt>
+ <dt><code><a id="ellipse()"></a>{{cssxref("basic-shape/ellipse()","ellipse()")}}</code></dt>
  <dd>
- <pre class="brush: css notranslate">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
+ <pre class="brush: css">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
 
  <p>The <code>&lt;shape-radius&gt;</code> arguments represent r<sub>x</sub> and r<sub>y</sub>, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the r<sub>x</sub> value) and the used height (for the r<sub>y</sub> value) of the reference box.</p>
 
  <p>The position argument defines the center of the ellipse. This defaults to center if omitted.</p>
  </dd>
- <dt><code><a id="polygon()"></a>polygon()</code></dt>
+ <dt><code><a id="polygon()"></a>{{cssxref("basic-shape/polygon()","polygon()")}}</code></dt>
  <dd>
- <pre class="brush: css notranslate">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
+ <pre class="brush: css">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
 
  <p><code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the polygon. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
@@ -63,17 +68,17 @@ tags:
  </dd>
  <dt><code><a id="path()"></a>path()</code></dt>
  <dd>
- <pre class="brush: css notranslate">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
+ <pre class="brush: css">path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</pre>
 
  <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
- <p>The required &lt;string&gt; is an <a href="/en-US/docs/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
+ <p>The required &lt;string&gt; is an <a href="/en-US/docs/Web/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
  </dd>
 </dl>
 
 <p>The arguments not defined above are defined as follows:</p>
 
-<pre class="brush: css notranslate">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
+<pre class="brush: css">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
 &lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</pre>
 
 <p>Defines a radius for a circle or ellipse. If omitted it defaults to <code>closest-side</code>.</p>
@@ -115,11 +120,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 300px;
   height: 300px;
   background: repeating-linear-gradient(red, orange 50px);
@@ -163,11 +168,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.basic-shape")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}</li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Edit Shape Paths in CSS — Firefox Developer Tools</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Overview of CSS Shapes</a></li>
 </ul>

@@ -8,6 +8,7 @@ tags:
 - Reference
 - Time
 - polyfill
+browser-compat: javascript.builtins.Date.now
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>timeInMs</var> = Date.now();</pre>
+<pre class="brush: js">Date.now()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -30,7 +31,7 @@ tags:
   been updated to support this method can work around the absence of this method using the
   following shim:</p>
 
-<pre class="brush: js notranslate">if (!Date.now) {
+<pre class="brush: js">if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
@@ -46,7 +47,7 @@ tags:
   In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by
   default and defaults to 20µs in Firefox 59; in 60 it will be 2ms.</p>
 
-<pre class="brush: js notranslate">// reduced time precision (2ms) in Firefox 60
+<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
 Date.now()
 // 1519211809934
 // 1519211810362
@@ -68,25 +69,12 @@ Date.now();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.now', 'Date.now')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.Date.now")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

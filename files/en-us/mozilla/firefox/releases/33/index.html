@@ -27,7 +27,7 @@ tags:
  <li>WebIDE</li>
 </ul>
 
-<p>For details please <a href="https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/">see the hacks post</a>. Special thanks to the 33 contributors that added <a href="http://mzl.la/1pGLFDs">all the features and fixes</a> in this release.</p>
+<p>For details please <a href="https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/">see the hacks post</a>. Special thanks to the 33 contributors that added <a href="https://mzl.la/1pGLFDs">all the features and fixes</a> in this release.</p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -80,7 +80,7 @@ tags:
  <li>The non-standard <code>XMLHttpRequest.mozBackgroundRequest()</code> is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ({{bug(1035242)}}).</li>
  <li>The {{event("touchenter")}} and {{event("touchleave")}} events, removed from the specification, have been removed ({{bug(1036444)}}).</li>
  <li>The formely called <code>loaded</code> event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{event("load")}} to match the specification ({{bug(1035505)}}).</li>
- <li>The IndexedDB interface {{domxref("FileHandle")}} has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).</li>
+ <li>The IndexedDB interface <code>FileHandle</code> has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).</li>
  <li>The IndexedDB interface {{domxref("LockedFile")}} has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).</li>
  <li>The {{domxref("ServiceWorker")}} interface has been implemented, behind the <code>dom.serviceWorkers.enabled</code> flag ({{bug(903441)}}).</li>
  <li>The {{domxref("NetworkInformation.type")}} now also support the <code>"unknown"</code> value ({{bug(1023029)}}).</li>
@@ -112,13 +112,13 @@ tags:
 <h2 id="Security">Security</h2>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/Security/CSP">CSP</a> 1.1 <code>frame-ancestors</code> <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">directive</a> is now supported ({{bug(846978)}}).</li>
+ <li>The <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 1.1 <code>frame-ancestors</code> <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">directive</a> is now supported ({{bug(846978)}}).</li>
 </ul>
 
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <ul>
- <li>The <a href="/en-US/Add-ons/Code_snippets/JavaScript_Debugger_Service">JavaScript Debugger Service (JSD)</a> has been removed in favor of the new <a href="/en-US/docs/Tools/Debugger-API">Debugger API</a> ({{bug(800200)}}).</li>
+ <li>The <a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/JavaScript_Debugger_Service">JavaScript Debugger Service (JSD)</a> has been removed in favor of the new <a href="/en-US/docs/Tools/Debugger-API">Debugger API</a> ({{bug(800200)}}).</li>
  <li>The interface nsIX509CertDB2 has been removed and the methods from that interface have been moved to the nsIX509CertDB interface.</li>
 </ul>
 
@@ -127,9 +127,9 @@ tags:
 <h4 id="Highlights">Highlights</h4>
 
 <ul>
- <li>Added support for context menus in panels via a new option in the <a href="/en-US/Add-ons/SDK/High-Level_APIs/panel#Panel(options)"><code>Panel</code> constructor</a>.</li>
- <li>Added <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#readyState"><code>tab.readyState</code></a>.</li>
- <li>Added a <a href="/en-US/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow"><code>BrowserWindow</code></a> parameter to <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)"><code>sidebar.show()</code></a> and <a href="/en-US/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)"><code>sidebar.hide()</code></a>, to control the window for which the sidebar will be shown or hidden.</li>
+ <li>Added support for context menus in panels via a new option in the <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#panel(options)"><code>Panel</code> constructor</a>.</li>
+ <li>Added <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#readystate"><code>tab.readyState</code></a>.</li>
+ <li>Added a <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow"><code>BrowserWindow</code></a> parameter to <a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)"><code>sidebar.show()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)"><code>sidebar.hide()</code></a>, to control the window for which the sidebar will be shown or hidden.</li>
 </ul>
 
 <h4 id="Details">Details</h4>

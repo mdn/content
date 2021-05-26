@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Why_is_styling_form_widgets_challenging">Why is styling form widgets challenging?</h2>
 
-<p>Form controls were added to HTML in <a href="http://www.ietf.org/rfc/rfc1866.txt" rel="external">the HTML 2 specification</a> in 1995; CSS wasn't released until late 1996, and wasn't supported very well by browsers for a few years after that. Browsers relied on the underlying operating system to manage and render form controls.</p>
+<p>Form controls were added to HTML in <a href="https://www.ietf.org/rfc/rfc1866.txt" rel="external">the HTML 2 specification</a> in 1995; CSS wasn't released until late 1996, and wasn't supported very well by browsers for a few years after that. Browsers relied on the underlying operating system to manage and render form controls.</p>
 
 <p>And even with CSS available to style HTML, browser vendors have historically been reluctant to make form controls stylable because users were so accustomed to the visual appearance of their respective platforms. But this has changed. Website owners want form styles that fit in with their overall site design more than ever, and the web platform has changed to make this more possible.</p>
 
@@ -100,7 +100,7 @@ tags:
 
 <p>CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:</p>
 
-<pre class="brush: css notranslate">button, input, select, textarea {
+<pre class="brush: css">button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
 }</pre>
@@ -121,7 +121,7 @@ tags:
 
 <p><strong>This is because each widget has their own rules for border, padding and margin.</strong> To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:</p>
 
-<pre class="brush: css notranslate">input, textarea, select, button {
+<pre class="brush: css">input, textarea, select, button {
   width : 150px;
   padding: 0;
   margin: 0;
@@ -144,7 +144,7 @@ tags:
 
 <p>To position the legend in this manner, we used the following CSS (other declarations removed for brevity):</p>
 
-<pre class="brush: css notranslate">fieldset {
+<pre class="brush: css">fieldset {
   position: relative;
 }
 
@@ -172,7 +172,7 @@ legend {
 
 <p>The HTML is only slightly more involved than the example we used in <a href="/en-US/docs/Learn/Forms/Your_first_form">the first article of this guide</a>; it just has a few extra IDs and a heading.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;h1&gt;to: Mozilla&lt;/h1&gt;
 
   &lt;div id="from"&gt;
@@ -203,8 +203,8 @@ legend {
 
 <ol>
  <li>The postcard <a href="/files/4151/background.jpg" title="The postcard background">background</a> — download this image and save it in the same directory as your working HTML file.</li>
- <li>A typewriter font: <a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">The "Secret Typewriter" font from fontsquirrel.com</a> — download the TTF file into the same directory as above.</li>
- <li>A hand drawn font: <a href="http://www.fontsquirrel.com/fonts/Journal" rel="external">The "Journal" font from fontsquirrel.com</a> — download the TTF file into the same directory as above.</li>
+ <li>A typewriter font: <a href="https://www.fontsquirrel.com/fonts/Secret-Typewriter" rel="external">The "Secret Typewriter" font from fontsquirrel.com</a> — download the TTF file into the same directory as above.</li>
+ <li>A hand drawn font: <a href="https://www.fontsquirrel.com/fonts/Journal" rel="external">The "Journal" font from fontsquirrel.com</a> — download the TTF file into the same directory as above.</li>
 </ol>
 
 <p>Your fonts need some more processing before you start:</p>
@@ -224,7 +224,7 @@ legend {
 
 <p>First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different to what we described above, you can find the correct <code>@font-face</code> blocks inside your downloaded webfont kit, in the <code>stylesheet.css</code> file (you'll need to replace the below <code>@font-face</code> blocks with them, and update the paths to the font files):</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
     font-family: 'handwriting';
     src: url('fonts/journal-webfont.woff2') format('woff2'),
          url('fonts/journal-webfont.woff') format('woff');
@@ -265,7 +265,7 @@ form {
 
 <p>Notice that we've used some <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> and <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> to lay out the form. Using this we can easily position our elements, including the title and all the form elements:</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font : 1em "typewriter", monospace;
   align-self : end;
 }
@@ -283,13 +283,13 @@ form {
 
 <p>Now we can start working on the form elements themselves. First, let's ensure that the {{HTMLElement("label")}}s are given the right font:</p>
 
-<pre class="brush: css notranslate">label {
+<pre class="brush: css">label {
   font : .8em "typewriter", sans-serif;
 }</pre>
 
 <p>The text fields require some common rules. In other words, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their {{cssxref("padding")}} and {{cssxref("margin")}}:</p>
 
-<pre class="brush: css notranslate">input, textarea {
+<pre class="brush: css">input, textarea {
   font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
   border  : none;
   padding : 0 10px;
@@ -300,7 +300,7 @@ form {
 
 <p>When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):</p>
 
-<pre class="brush: css notranslate">input:focus, textarea:focus {
+<pre class="brush: css">input:focus, textarea:focus {
   background   : rgba(0,0,0,.1);
   border-radius: 5px;
 }
@@ -312,7 +312,7 @@ form {
 
 <p>{{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the {{cssxref("resize")}} and {{cssxref("overflow")}} properties. While our design is a fixed-size design, and we could use the <code>resize</code> property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The {{cssxref("overflow")}} property is used to make the field render more consistently across browsers. Some browsers default to the value <code>auto</code>, while some default to the value <code>scroll</code>. In our case, it's better to be sure every one will use <code>auto</code>:</p>
 
-<pre class="brush: css notranslate">textarea {
+<pre class="brush: css">textarea {
   display : block;
 
   padding : 10px;
@@ -330,7 +330,7 @@ form {
 
 <p>The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>:</p>
 
-<pre class="brush: css notranslate">button {
+<pre class="brush: css">button {
   padding      : 5px;
   font         : bold .6em sans-serif;
   border       : 2px solid #333;

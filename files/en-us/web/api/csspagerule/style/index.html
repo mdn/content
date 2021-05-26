@@ -11,14 +11,14 @@ tags:
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p class="summary">The <strong><code>style</code></strong> read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSStyleDeclaration")}} object. This represents an object that is a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_block">CSS declaration block</a>, and exposes style information and various style-related methods and properties.</p>
+<p class="summary">The <strong><code>style</code></strong> read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSStyleDeclaration")}} object. This represents an object that is a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">CSS declaration block</a>, and exposes style information and various style-related methods and properties.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>style</var> = <var>CSSPageRule</var>.style;</pre>
+<pre class="syntaxbox">var <var>style</var> = <var>CSSPageRule</var>.style;</pre>
 
 <h3>Value</h3>
-<p>A {{domxref("CSSStyleDeclaration")}} object, which represents a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_block">CSS declaration block</a> with the following properties:</p>
+<p>A {{domxref("CSSStyleDeclaration")}} object, which represents a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">CSS declaration block</a> with the following properties:</p>
 
 <dl>
   <dt>computed flag</dt>
@@ -39,7 +39,7 @@ tags:
   margin: 1cm;
 }</pre>
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules; 
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].style); // returns a CSSStyleDeclaration object</pre>
 
 <h2 id="Specifications">Specifications</h2>

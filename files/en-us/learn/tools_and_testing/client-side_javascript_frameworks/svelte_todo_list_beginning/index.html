@@ -42,15 +42,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/02-starting-our-todo-app</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/02-starting-our-todo-app</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -94,17 +94,17 @@ tags:
  <li>
   <p>Create a file named <code>src/components/Todos.svelte</code> with the following content:</p>
 
-  <pre class="brush: html notranslate">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
+  <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
  </li>
  <li>
   <p>Change the <code>title</code> element in <code>public/index.html</code> to contain the text <em>Svelte To-do list</em>:</p>
 
-  <pre class="brush: html notranslate">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
+  <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
  </li>
  <li>
   <p>Open <code>src/App.svelte</code> and replace its contents with the following:</p>
 
-  <pre class="brush: html notranslate">&lt;script&gt;
+  <pre class="brush: html">&lt;script&gt;
   import Todos from './components/Todos.svelte'
 &lt;/script&gt;
 
@@ -113,7 +113,7 @@ tags:
  <li>
   <p>In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a <code>name</code> prop being specified when we instantiate the <code>App</code> component inside <code>src/main.js</code>, which isn't used inside <code>App</code>. The console should currently give you a message along the lines of "&lt;App&gt; was created with unknown prop 'name'". To get rid of this, remove the <code>name</code> prop from <code>src/main.js</code>; it should now look like so:</p>
 
-  <pre class="brush: js notranslate">import App from './App.svelte'
+  <pre class="brush: js">import App from './App.svelte'
 
 const app = new App({
   target: document.body
@@ -131,7 +131,7 @@ export default app</pre>
 
 <p>For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our <code>Todos.svelte</code> component file, replacing the existing content:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Todos.svelte --&gt;
+<pre class="brush: html">&lt;!-- Todos.svelte --&gt;
 &lt;div class="todoapp stack-large"&gt;
 
   &lt;!-- NewTodo --&gt;
@@ -274,7 +274,7 @@ export default app</pre>
 
 <p>You may notice some unusual attributes here. For example:</p>
 
-<pre class="brush: html notranslate">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
+<pre class="brush: html">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
   &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
   &lt;span&gt;All&lt;/span&gt;
   &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
@@ -286,7 +286,7 @@ export default app</pre>
 
 <p>Further down, you can find the following <code>&lt;ul&gt;</code> element:</p>
 
-<pre class="brush: html notranslate">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
+<pre class="brush: html">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
 
 <p>The <code>role</code> attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.</p>
 
@@ -302,14 +302,14 @@ export default app</pre>
 
 <p>For example, if we add an <code>&lt;img&gt;</code> element to our <code>todos.svelte</code> component without its corresponding <code>alt</code> prop:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
 
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
 <p>The compiler will issue the following warning:</p>
 
-<pre class="brush: bash notranslate">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
+<pre class="brush: bash">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
 src/components/Todos.svelte
 1: &lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
 2:
@@ -325,7 +325,7 @@ created public/build/bundle.js in 220ms
 
 <p>You can tell Svelte to ignore this warning for the next block of markup with a <a href="https://svelte.dev/docs#Comments">comment</a> beginning with <code>svelte-ignore</code>, like this:</p>
 
-<pre class="brush: html notranslate">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
+<pre class="brush: html">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
@@ -335,7 +335,7 @@ created public/build/bundle.js in 220ms
 
 <p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
 
-<pre class="brush: js notranslate">plugins: [
+<pre class="brush: js">plugins: [
   svelte({
     dev: !production,
     css: css =&gt; {
@@ -369,7 +369,7 @@ created public/build/bundle.js in 220ms
 
 <p>Let's make the todo list look a little better. Replace the contents of the file <code>public/global.css</code> with the following:</p>
 
-<pre class="brush: css notranslate">/* RESETS */
+<pre class="brush: css">/* RESETS */
 *,
 *::before,
 *::after {
@@ -678,11 +678,11 @@ body {
 
 <p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -748,5 +748,15 @@ body {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

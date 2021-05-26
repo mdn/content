@@ -2,12 +2,12 @@
 title: RTCDataChannel.binaryType
 slug: Web/API/RTCDataChannel/binaryType
 tags:
-- Experimental
-- Property
-- RTCDataChannel
-- Reference
-- WebRTC
-- binaryType
+  - Experimental
+  - Property
+  - RTCDataChannel
+  - Reference
+  - WebRTC
+  - binaryType
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}{{draft}}</p>
 
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>type</em> = <em>aDataChannel</em>.binaryType;
+<pre class="brush: js">var <em>type</em> = <em>aDataChannel</em>.binaryType;
 
 <em>aDataChannel</em>.binaryType = <em>type</em>;
 </pre>
@@ -51,17 +51,17 @@ tags:
   events which constructs a string representing the received data as a list of hexadecimal
   byte values.</p>
 
-<pre class="brush: js">var dc = peerConnection.createDataChannel("Binary");
-<code>dc.binaryType = "arraybuffer";
+<pre class="brush: js">var dc = peerConnection.createDataChannel(&quot;Binary&quot;);
+dc.binaryType = &quot;arraybuffer&quot;;
 
 dc.onmessage = function(event) {
   let byteArray = new Uint8Array(event.data);
-  let hexString = "";
+  let hexString = &quot;&quot;;
 
   byteArray.forEach(function(byte) {
-    hexString += byte.toString(16) + " ";
+    hexString += byte.toString(16) + &quot; &quot;;
   });
-};</code>
+};
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -91,7 +91,7 @@ dc.onmessage = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
       channels</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>

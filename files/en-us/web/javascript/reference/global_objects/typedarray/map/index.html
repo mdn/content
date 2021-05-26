@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.map
 ---
 <div>{{JSRef}}</div>
 
@@ -20,21 +21,30 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-map.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>typedArray</var>.map(<var>mapFn</var>[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+map((currentValue) => { ... } )
+map((currentValue, index) => { ... } )
+map((currentValue, index, array) => { ... } )
+
+// Callback function
+map(callbackFn)
+map(callbackFn, thisArg)
+
+// Inline callback function
+map(function callbackFn(currentValue) { ... })
+map(function callbackFn(currentValue, index) { ... })
+map(function callbackFn(currentValue, index, array){ ... })
+map(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>mapFn</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>A callback function that produces an element of the new typed array, taking three
       arguments:</p>
@@ -49,7 +59,7 @@ tags:
     </dl>
   </dd>
   <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>mapFn</var></code>.</dd>
+  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -59,32 +69,32 @@ tags:
 <h2 id="Description">Description</h2>
 
 <p>The <code>map()</code> method calls a provided callback function
-  (<code><var>mapFn</var></code>) once for each element in a typed array, in order, and
+  (<code><var>callbackFn</var></code>) once for each element in a typed array, in order, and
   constructs a new typed array from the results.</p>
 
-<p><code><var>mapFn</var></code> is invoked only for indexes of the typed array which have
+<p><code><var>callbackFn</var></code> is invoked only for indexes of the typed array which have
   assigned values; it is not invoked for indexes that are <code>undefined</code>, those
   which have been deleted, or which have never been assigned values.</p>
 
-<p><code><var>mapFn</var></code> is invoked with three arguments: the value of the
+<p><code><var>callbackFn</var></code> is invoked with three arguments: the value of the
   element, the index of the element, and the typed array object being traversed.</p>
 
 <p>If a <code><var>thisArg</var></code> parameter is provided to <code>map()</code>, it
-  will be passed to <code><var>mapFn</var></code> when invoked, for use as its
+  will be passed to <code><var>callbackFn</var></code> when invoked, for use as its
   <code>this</code> value. Otherwise, the value {{jsxref("undefined")}} will be passed for
   use as its <code>this</code> value. The <code>this</code> value ultimately observable by
-  <code><var>mapFn</var></code> is determined according to <a
+  <code><var>callbackFn</var></code> is determined according to <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
     determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>map()</code> does not mutate the typed array on which it is called (although
-  <code><var>mapFn</var></code>, if invoked, may do so).</p>
+  <code><var>callbackFn</var></code>, if invoked, may do so).</p>
 
 <p>The range of elements processed by <code>map()</code> is set before the first
-  invocation of <code><var>mapFn</var></code>. Elements which are appended to the array
+  invocation of <code><var>callbackFn</var></code>. Elements which are appended to the array
   after the call to <code>map()</code> begins will not be visited by
-  <code><var>mapFn</var></code>. If existing elements of the typed array are changed, or
-  deleted, their value as passed to <code><var>mapFn</var></code> will be the value at the
+  <code><var>callbackFn</var></code>. If existing elements of the typed array are changed, or
+  deleted, their value as passed to <code><var>callbackFn</var></code> will be the value at the
   time <code>map()</code> visits them; elements that are deleted are not visited.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -95,7 +105,7 @@ tags:
 <p>The following code takes a typed array and creates a new typed array containing the
   square roots of the numbers in the first typed array.</p>
 
-<pre class="brush: js notranslate">const numbers = new Uint8Array([1, 4, 9]);
+<pre class="brush: js">const numbers = new Uint8Array([1, 4, 9]);
 const roots = numbers.map(Math.sqrt);
 // roots is now: Uint8Array [1, 2, 3],
 // numbers is still Uint8Array [1, 4, 9]
@@ -108,7 +118,7 @@ const roots = numbers.map(Math.sqrt);
   argument is used with it. The argument will automatically be assigned to each element of
   the typed array as <code>map()</code> loops through the original typed array.</p>
 
-<pre class="brush: js notranslate">const numbers = new Uint8Array([1, 4, 9]);
+<pre class="brush: js">const numbers = new Uint8Array([1, 4, 9]);
 const doubles = numbers.map(function(num) {
   return num * 2;
 });
@@ -118,26 +128,11 @@ const doubles = numbers.map(function(num) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.map',
-        'TypedArray.prototype.map')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.map")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

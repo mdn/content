@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{APIRef("Server Sent Events")}}</div>
 
-<p><span class="seoSummary">The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>. An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Web/API/Document_Object_Model/Events">events</a> in <code>text/event-stream</code> format.</span> The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
+<p><span class="seoSummary">The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>. An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> in <code>text/event-stream</code> format.</span> The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
 
 <p>Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.</p>
 
@@ -147,10 +147,7 @@ evtSource.onmessage = function(e) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.EventSource")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

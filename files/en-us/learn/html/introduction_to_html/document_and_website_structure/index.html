@@ -59,7 +59,7 @@ tags:
 <p>This is because visuals don't tell the whole story. We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">Roughy 8% of men and 0.5% of women</a> are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 million such people in the world</a>, while the total population was <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">around 7 billion</a>).</p>
+<p><strong>Note</strong>: <a href="https://www.color-blindness.com/2006/04/28/colorblind-population/">Roughy 8% of men and 0.5% of women</a> are colorblind; or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were <a href="https://en.wikipedia.org/wiki/Visual_impairment">285 million such people in the world</a>, while the total population was <a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">around 7 billion</a>).</p>
 </div>
 
 <p>In your HTML code, you can mark up sections of content based on their <em>functionality</em> — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognize those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure">consequences of not using the right element structure and semantics for the right job</a>.</p>
@@ -78,7 +78,7 @@ tags:
 
 <p>Our example seen above is represented by the following code (you can also <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html">find the example in our GitHub repository</a>). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -178,7 +178,7 @@ tags:
  <li>{{HTMLElement('footer')}} represents a group of end content for a page.</li>
 </ul>
 
-<p>Each of the aformentioned elements can be clicked on to read the corresponding article in the "HTML element reference" section, providing more detail about each one.</p>
+<p>Each of the aforementioned elements can be clicked on to read the corresponding article in the "HTML element reference" section, providing more detail about each one.</p>
 
 <h3 id="Non-semantic_wrappers">Non-semantic wrappers</h3>
 
@@ -186,7 +186,7 @@ tags:
 
 <p>{{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
+<pre class="brush: html">&lt;p&gt;The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
 him as he staggered through the door &lt;span class="editor-note"&gt;[Editor's note: At this point in the
 play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 
@@ -194,7 +194,7 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 
 <p>{{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:</p>
 
-<pre class="brush: html notranslate">&lt;div class="shopping-cart"&gt;
+<pre class="brush: html">&lt;div class="shopping-cart"&gt;
   &lt;h2&gt;Shopping cart&lt;/h2&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -221,7 +221,7 @@ play, the lights should be down low]&lt;/span&gt;.&lt;/p&gt;</pre>
 <p><code>&lt;br&gt;</code> creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. For example:</p>
 
 <div id="line-break-live-sample">
-<pre class="brush: html notranslate">&lt;p&gt;There once was a man named O'Dell&lt;br&gt;
+<pre class="brush: html">&lt;p&gt;There once was a man named O'Dell&lt;br&gt;
 Who loved to write HTML&lt;br&gt;
 But his structure was bad, his semantics were sad&lt;br&gt;
 and his markup didn't read very well.&lt;/p&gt;</pre>
@@ -234,7 +234,7 @@ and his markup didn't read very well.&lt;/p&gt;</pre>
 <p><code>&lt;hr&gt;</code> elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line. As an example:</p>
 
 <div id="horizantal-rule-live-sample">
-<pre class="brush: html notranslate">&lt;p&gt;Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Meanwhile, Harry was sitting at home, staring at his royalty statement and pondering when the next spin off series would come out, when an enchanted distress letter flew through his window and landed in his lap. He read it hazily and sighed; "better get back to work then", he mused.&lt;/p&gt;</pre>
 </div>

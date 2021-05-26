@@ -2,17 +2,17 @@
 title: PaymentResponse.shippingOption
 slug: Web/API/PaymentResponse/shippingOption
 tags:
-- API
-- Experimental
-- Payment Request
-- PaymentResponse
-- Property
-- Reference
-- Request Payment API
-- Secure context
-- shippingOption
+  - API
+  - Experimental
+  - Payment Request
+  - PaymentResponse
+  - Property
+  - Reference
+  - Request Payment API
+  - Secure context
+  - shippingOption
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p>The <strong><code>shippingOption</code></strong> read-only property of
   the <code>PaymentRequest</code> interface returns the ID attribute of the shipping
@@ -24,7 +24,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><code>var shippingOption = PaymentRequest.shippingOption;</code></pre>
+  class="brush: js">var shippingOption = PaymentRequest.shippingOption;</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -69,26 +69,6 @@ function updateDetails(details, shippingOption, resolve, reject) {
 }
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentResponse.shippingOption")}}</p>
-</div>
+<p>{{Compat("api.PaymentResponse.shippingOption")}}</p>

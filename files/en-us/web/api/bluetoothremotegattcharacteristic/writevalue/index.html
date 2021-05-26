@@ -11,7 +11,9 @@ tags:
 - Web Bluetooth API
 - writeValue
 ---
-<p>{{SeeCompatTable}}</p>
+<p>{{Deprecated_header}}</p>
+
+<p>Use <code>writeValueWithResponse()</code> and <code>writeValueWithoutResponse()</code> instead.</p>
 
 <p>The <strong><code>BluetoothRemoteGATTCharacteristic.writeValue()</code></strong> method
   sets the value property to the bytes contained in an {{jsxref("ArrayBuffer")}} and
@@ -20,7 +22,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">BluetoothRemoteGATTCharacteristic.writeValue(value).then(function() { ... })</pre>
+  class="brush: js">BluetoothRemoteGATTCharacteristic.writeValue(value).then(function() { ... })</pre>
 
 <h3 id="Returns">Returns</h3>
 

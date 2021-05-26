@@ -10,12 +10,13 @@ tags:
   - border-start-end-radius
   - 'recipe:css-property'
   - writing modes
+browser-compat: css.properties.border-start-end-radius
 ---
 <p>{{CSSRef}}</p>
 
 <p>The <strong><code>border-start-end-radius</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines a logical border radius on an element, which maps to a physical border radius depending on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the <a href="/en-US/docs/Web/CSS/text-orientation">text orientation</a> and <a href="/en-US/docs/Web/CSS/CSS_Writing_Modes">writing mode</a>.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
 /* With one value the corner will be a circle */
 border-start-end-radius: 10px;
 border-start-end-radius: 1em;
@@ -46,7 +47,7 @@ border-start-end-radius: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -54,14 +55,14 @@ border-start-end-radius: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;p class="exampleText"&gt;Example&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
@@ -100,7 +101,7 @@ border-start-end-radius: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-start-end-radius")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

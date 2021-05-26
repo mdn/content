@@ -9,7 +9,7 @@ tags:
 - Method
 - Reference
 ---
-<p>{{APIRef("DOM")}}</p>
+<p>{{APIRef("DOM")}}{{Deprecated_header}}</p>
 
 <p>The <code><strong>CustomEvent.initCustomEvent()</strong></code> method initializes a
   <code>CustomEvent</code> object. If the event has already been dispatched, this method
@@ -20,18 +20,17 @@ tags:
   before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
   dispatched, it doesn't do anything anymore.</p>
 
-<div class="note">
+<div class="notecard note">
+  <h4>Note</h4>
   <p><strong>Do not use this method anymore, as it is deprecated.</strong></p>
 
-  <p><strong>Note:</strong> Rather than using the feature, instead use specific event
-    constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page
-    on <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
-      triggering events</a> gives more information about the way to use those.</p>
+  <p>Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
+	The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use those.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>event</em>.initCustomEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>detail</em>);
+<pre class="brush: js"><em>event</em>.initCustomEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>detail</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>

@@ -44,7 +44,7 @@ tags:
 
 <p>The terminal originates from around the 1950s-60s and its original form really doesn’t resemble what we use today (for that we should be thankful). You can read a bit of the history on Wikipedia’s entry for <a href="https://en.wikipedia.org/wiki/Computer_terminal">Computer Terminal</a>.</p>
 
-<p>Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud (it’s not really a cloud), to microcomputers like the Raspberry PI Zero, and even to mobile phones. it provides direct access to the computer’s underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.</p>
+<p>Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer’s underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.</p>
 
 <p>It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png”  to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.</p>
 
@@ -139,11 +139,11 @@ tags:
 
 <p>Try typing this into your system's terminal:</p>
 
-<pre class="brush: bash notranslate">cd Desktop</pre>
+<pre class="brush: bash">cd Desktop</pre>
 
 <p>If you want to move back up to the previous directory, you can use two dots:</p>
 
-<pre class="brush: bash notranslate">cd ..</pre>
+<pre class="brush: bash">cd ..</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing <code>cd D</code> and pressing <kbd>tab</kbd> — it should autocomplete the directory name <code>Desktop</code> for you, provided it is present in the current directory. Bear this in mind as you move forward.</p>
@@ -153,13 +153,13 @@ tags:
 
 <p>For example, if you wanted to go to a directory called <code>src</code>, located inside a directory called <code>project</code>, located on the <code>Desktop</code>, you could type these three commands to get there from your home folder:</p>
 
-<pre class="brush: bash notranslate">cd Desktop
+<pre class="brush: bash">cd Desktop
 cd project
 cd src</pre>
 
 <p>But this a waste of time — instead, you can type one command, with the different items in the path separated by forward slashes, just like you do when specifying paths to images or other assets in CSS, HTML, or JavaScript code:</p>
 
-<pre class="brush: bash notranslate">cd Desktop/project/src</pre>
+<pre class="brush: bash">cd Desktop/project/src</pre>
 
 <p>Note that including a leading slash on your path makes the path absolute, for example <code>/Users/your-user-name/Desktop</code>. Omitting the leading slash like we’ve done above makes the path relative to the your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the web site", whereas omitting the slash means "the URL is relative to my current page".</p>
 
@@ -173,7 +173,7 @@ cd src</pre>
 
 <p>Try running this now in your terminal:</p>
 
-<pre class="brush: bash notranslate">ls</pre>
+<pre class="brush: bash">ls</pre>
 
 <p>This gives you a list of the files and directories in your present working directory, but the information is really basic — you only get the name of each item present, not whether it is a file or a directory, or anything else. Fortunately, a small change to the command usage can give you a lot more information.</p>
 
@@ -183,7 +183,7 @@ cd src</pre>
 
 <p>For example, give this a go and see what you get:</p>
 
-<pre class="brush: bash notranslate">ls -l </pre>
+<pre class="brush: bash">ls -l </pre>
 
 <p>In the case of <code>ls</code>, the <code>-l</code> (<em>dash ell</em>) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can <code>cd</code> into.</p>
 
@@ -217,7 +217,7 @@ cd src</pre>
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, <code>rm mdn-*</code> would delete all files beginning with <code>mdn-</code>. <code>rm mdn-*.bak</code> would delete all files that start with <code>mdn- </code>and end with <code>.bak</code>.</p>
+<p><strong>Note</strong>: Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, <code>rm mdn-*</code> would delete all files beginning with <code>mdn-</code>. <code>rm mdn-*.bak</code> would delete all files that start with <code>mdn-</code> and end with <code>.bak</code>.</p>
 </div>
 
 <h2 id="Terminal_—_considered_harmful">Terminal — considered harmful?</h2>
@@ -241,17 +241,17 @@ cd src</pre>
 
 <p>We’ve already looked at <code>ls</code>, which outputs the contents of the current directory:</p>
 
-<pre class="brush: bash notranslate">ls</pre>
+<pre class="brush: bash">ls</pre>
 
 <p>But what if we wanted to quickly count the number of files and directories inside the current directory? <code>ls</code> can’t do that on its own.</p>
 
 <p>There is another Unix tool available called <code>wc</code>. This counts the number of words, lines, characters, or bytes of whatever is inputted into it. This can be a text file — the below example outputs the number of lines in <code>myfile.txt</code>:</p>
 
-<pre class="brush: bash notranslate">wc -l myfile.txt</pre>
+<pre class="brush: bash">wc -l myfile.txt</pre>
 
 <p>But it can also count the number of lines of whatever output is <strong>piped</strong> into it. For example, the below command counts the number of lines outputted by the <code>ls</code> command (what it would normally print to the terminal if run on its own) and outputs that count to the terminal instead:</p>
 
-<pre class="brush: bash notranslate">ls | wc -l</pre>
+<pre class="brush: bash">ls | wc -l</pre>
 
 <p>Since <code>ls</code> prints each file or directory on its own line, that effectively gives us a directory and file count.</p>
 
@@ -267,7 +267,7 @@ cd src</pre>
 
 <p>Therefore, if you use curl to request https://developer.mozilla.org/docs/Web/API/fetch, you won’t get an output. Try it now:</p>
 
-<pre class="brush: bash notranslate">curl https://developer.mozilla.org/en-US/docs/Web/API/fetch</pre>
+<pre class="brush: bash">curl https://developer.mozilla.org/en-US/docs/Web/API/fetch</pre>
 
 <p>We need to explicitly tell <code>curl</code> to follow redirects using the <code>-L</code> flag.</p>
 
@@ -275,11 +275,11 @@ cd src</pre>
 
 <p>Try running the following, and you’ll see that in fact there are three redirects happening before we reach the final page:</p>
 
-<pre class="brush: bash notranslate">curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location</pre>
+<pre class="brush: bash">curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location</pre>
 
 <p>Your output should look something like this (<code>curl</code> will first output some download counters and suchlike):</p>
 
-<pre class="brush: bash notranslate">location: /en-US/docs/Web/API/fetch
+<pre class="brush: bash">location: /en-US/docs/Web/API/fetch
 location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 location: /en-US/docs/Web/API/GlobalFetch/fetch
 location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
@@ -288,11 +288,11 @@ location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
 
 <p>Try running this:</p>
 
-<pre class="brush: bash notranslate">curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'</pre>
+<pre class="brush: bash">curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'</pre>
 
 <p>Your final output should look something like this:</p>
 
-<pre class="brush: bash notranslate">https://developer.mozilla.org/en-US/docs/Web/API/fetch
+<pre class="brush: bash">https://developer.mozilla.org/en-US/docs/Web/API/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
 https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</pre>
@@ -371,17 +371,17 @@ https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 
 <p>Once you've installed node, open up the terminal and run the following command to install Prettier:</p>
 
-<pre class="brush: bash notranslate">npm install --global prettier</pre>
+<pre class="brush: bash">npm install --global prettier</pre>
 
 <p>Once the command has finished running, the Prettier tool is now available in your terminal, at any location in your file system.</p>
 
 <p>Running the command without any arguments, as with many other commands, will offer up usage and help information. Try this now:</p>
 
-<pre class="brush: bash notranslate">prettier</pre>
+<pre class="brush: bash">prettier</pre>
 
 <p>Your output should look something like this:</p>
 
-<pre class="brush: bash notranslate">Usage: prettier [options] [file/glob ...]
+<pre class="brush: bash">Usage: prettier [options] [file/glob ...]
 
 By default, output is written to stdout.
 Stdin is read if it is piped to Prettier and no files are given.
@@ -398,18 +398,18 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 <p>Now save the following code in a new file called <code>index.js</code>, inside your test directory:</p>
 
-<pre class="brush: js notranslate">const myObj = {
+<pre class="brush: js">const myObj = {
 a:1,b:{c:2}}
 function printMe(obj){console.log(obj.b.c)}
 printMe(myObj)</pre>
 
 <p>We can run prettier against a codebase to just check if our code wants adjusting. <code>cd</code> into your directory, and try running this command:</p>
 
-<pre class="brush: bash notranslate">prettier --check index.js</pre>
+<pre class="brush: bash">prettier --check index.js</pre>
 
 <p>You should get on output along the lines of</p>
 
-<pre class="brush: bash notranslate">Checking formatting...
+<pre class="brush: bash">Checking formatting...
 index.js
 Code style issues found in the above file(s). Forgot to run Prettier?</pre>
 
@@ -417,17 +417,17 @@ Code style issues found in the above file(s). Forgot to run Prettier?</pre>
 
 <p>Now try running this version of the command:</p>
 
-<pre class="brush: bash notranslate">prettier --write index.js</pre>
+<pre class="brush: bash">prettier --write index.js</pre>
 
 <p>You’ll get an output like this</p>
 
-<pre class="brush: bash notranslate">Checking formatting...
+<pre class="brush: bash">Checking formatting...
 index.js
 Code style issues fixed in the above file(s).</pre>
 
 <p>But more importantly, if you look back at your JavaScript file you’ll find it has been reformatted to something like this:</p>
 
-<pre class="brush: js notranslate">const myObj = {
+<pre class="brush: js">const myObj = {
   a: 1,
   b: { c: 2 },
 };
@@ -454,8 +454,8 @@ printMe(myObj);</pre>
 
 <ul>
  <li><code><a href="https://github.com/sharkdp/bat">bat</a></code> — A “nicer” <code>cat</code> (<code>cat</code> is used to print the contents of files).</li>
- <li><code><a href="http://denilson.sa.nom.br/prettyping/">prettyping</a></code> — <code>ping</code> on the command line, but visualized (<code>ping</code> is a useful tool to check if a server is responding).</li>
- <li><code><a href="http://hisham.hm/htop/">htop</a></code> — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.</li>
+ <li><code><a href="https://denilson.sa.nom.br/prettyping/">prettyping</a></code> — <code>ping</code> on the command line, but visualized (<code>ping</code> is a useful tool to check if a server is responding).</li>
+ <li><code><a href="https://hisham.hm/htop/">htop</a></code> — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.</li>
  <li><code><a href="https://tldr.sh/#installation">tldr</a></code> — mentioned earlier in this chapter, but available as a command line tool.</li>
 </ul>
 
@@ -471,7 +471,7 @@ printMe(myObj);</pre>
 
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview">Client-side tooling overview</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a></li>
+ <li><strong>Command line crash course</strong></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain">Introducing a complete toolchain</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment">Deploying our app</a></li>

@@ -24,7 +24,7 @@ tags:
 
 <p>First, let's build the cube's vertex position buffer by updating the code in <code>initBuffers()</code>. This is pretty much the same as it was for the square plane, but somewhat longer since there are 24 vertices (4 per side):</p>
 
-<pre class="brush: js notranslate">const positions = [
+<pre class="brush: js">const positions = [
   // Front face
   -1.0, -1.0,  1.0,
    1.0, -1.0,  1.0,
@@ -65,7 +65,7 @@ tags:
 
 <p>Since we've added a z-component to our vertices, we need to update the <code>numComponents</code> of our <code>vertexPosition</code> attribute to 3.</p>
 
-<pre class="brush: js notranslate">// Tell WebGL how to pull out the positions from the position
+<pre class="brush: js">// Tell WebGL how to pull out the positions from the position
 // buffer into the vertexPosition attribute
 {
   const numComponents = 3;
@@ -86,7 +86,7 @@ tags:
 
 <p>We also need to build an array of colors for each of the 24 vertices. This code starts by defining a color for each face, then uses a loop to assemble an array of all the colors for each of the vertices.</p>
 
-<pre class="brush: js notranslate">  const faceColors = [
+<pre class="brush: js">  const faceColors = [
     [1.0,  1.0,  1.0,  1.0],    // Front face: white
     [1.0,  0.0,  0.0,  1.0],    // Back face: red
     [0.0,  1.0,  0.0,  1.0],    // Top face: green
@@ -115,7 +115,7 @@ tags:
 
 <p>Once the vertex arrays are generated, we need to build the element array.</p>
 
-<pre class="brush: js notranslate">  const indexBuffer = gl.createBuffer();
+<pre class="brush: js">  const indexBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
   // This array defines each face as two triangles, using the
@@ -151,7 +151,7 @@ tags:
 
 <p>Next we need to add code to our <code>drawScene()</code> function to draw using the cube's index buffer, adding new  {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} and {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} calls:</p>
 
-<pre class="brush: js notranslate">  // Tell WebGL which indices to use to index the vertices
+<pre class="brush: js">  // Tell WebGL which indices to use to index the vertices
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
 ...
@@ -169,7 +169,7 @@ tags:
 
 <p>Finally, let's replace our variable <code>squareRotation</code> by <code>cubeRotation</code> and add a second rotation around the x axis:</p>
 
-<pre class="brush: js notranslate"><span class="pl-smi">mat4</span>.<span class="pl-en">rotate</span>(modelViewMatrix, modelViewMatrix, cubeRotation<span class="pl-k"> *</span><span class="pl-c1"> .7</span>, [<span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-c1">0</span>]);
+<pre class="brush: js"><span class="pl-smi">mat4</span>.<span class="pl-en">rotate</span>(modelViewMatrix, modelViewMatrix, cubeRotation<span class="pl-k"> *</span><span class="pl-c1"> .7</span>, [<span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-c1">0</span>]);
 
 </pre>
 

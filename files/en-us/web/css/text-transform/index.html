@@ -8,6 +8,7 @@ tags:
   - Reference
   - Text
   - 'recipe:css-property'
+browser-compat: css.properties.text-transform
 ---
 <div>{{CSSRef}}</div>
 
@@ -46,7 +47,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 text-transform: none;
 text-transform: capitalize;
 text-transform: uppercase;
@@ -96,13 +97,13 @@ text-transform: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="none"><code>none</code></h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: none
@@ -110,7 +111,7 @@ text-transform: unset;
 &lt;/p&gt;
 </pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: none;
 }
 strong { float: right; }</pre>
@@ -121,14 +122,14 @@ strong { float: right; }</pre>
 
 <h3 id="capitalize_General">capitalize (General)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: capitalize
   &lt;strong&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: capitalize;
 }
 strong { float: right; }</pre>
@@ -139,14 +140,14 @@ strong { float: right; }</pre>
 
 <h3 id="capitalize_Punctuation">capitalize (Punctuation)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: capitalize
   &lt;strong&gt;&lt;span&gt;(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: capitalize;
 }
 strong { float: right; }</pre>
@@ -157,14 +158,14 @@ strong { float: right; }</pre>
 
 <h3 id="capitalize_Symbols">capitalize (Symbols)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: capitalize
   &lt;strong&gt;&lt;span&gt;ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: capitalize;
 }
 strong { float: right; }</pre>
@@ -175,14 +176,14 @@ strong { float: right; }</pre>
 
 <h3 id="capitalize_Dutch_ij_digraph">capitalize (Dutch ij digraph)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong lang="nl"&gt;The Dutch word: "<span lang="nl">ijsland</span>" starts with a digraph.&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: capitalize
   &lt;strong&gt;&lt;span lang="nl"&gt;The Dutch word: "<span lang="nl">ijsland</span>" starts with a digraph.&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: capitalize;
 }
 strong { float: right; }</pre>
@@ -193,14 +194,14 @@ strong { float: right; }</pre>
 
 <h3 id="uppercase_General">uppercase (General)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: uppercase
   &lt;strong&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: uppercase;
 }
 strong { float: right; }</pre>
@@ -211,14 +212,14 @@ strong { float: right; }</pre>
 
 <h3 id="uppercase_Greek_Vowels">uppercase (Greek Vowels)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: uppercase
-  &lt;strong&gt;&lt;span&gt;Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"&lt;/span&gt;&lt;/strong&gt;
+  &lt;strong&gt;&lt;span lang="el"&gt;Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: uppercase;
 }
 strong { float: right; }</pre>
@@ -229,14 +230,14 @@ strong { float: right; }</pre>
 
 <h3 id="lowercase_General">lowercase (General)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: lowercase
   &lt;strong&gt;&lt;span&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: lowercase;
 }
 strong { float: right; }</pre>
@@ -247,14 +248,14 @@ strong { float: right; }</pre>
 
 <h3 id="lowercase_Greek_Σ">lowercase (Greek Σ)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: lowercase
   &lt;strong&gt;&lt;span&gt;Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: lowercase;
 }
 strong { float: right; }</pre>
@@ -265,14 +266,14 @@ strong { float: right; }</pre>
 
 <h3 id="lowercase_Lithuanian">lowercase (Lithuanian)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;Ĩ is a Lithuanian LETTER as is J́&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: lowercase
   &lt;strong&gt;&lt;span lang="lt"&gt;Ĩ is a Lithuanian LETTER as is J́&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: lowercase;
 }
 strong { float: right; }</pre>
@@ -283,14 +284,14 @@ strong { float: right; }</pre>
 
 <h3 id="full-width_General">full-width (General)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;()*+,-./:;&lt;=&gt;?@{|}~&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: full-width
   &lt;strong&gt;&lt;span&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;()*+,-./:;&lt;=&gt;?@{|}~&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: full-width;
 }
 strong { width: 100%; float: right; }</pre>
@@ -301,14 +302,14 @@ strong { width: 100%; float: right; }</pre>
 
 <h3 id="full-width_Japanese_half-width_katakana">full-width (Japanese half-width katakana)</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Initial String
+<pre class="brush: html">&lt;p&gt;Initial String
   &lt;strong&gt;ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;text-transform: full-width
   &lt;strong&gt;&lt;span&gt;ｳｪﾌﾞﾌﾟﾛｸﾞﾗﾐﾝｸﾞの勉強&lt;/span&gt;&lt;/strong&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   text-transform: full-width;
 }
 strong { width: 100%; float: right; }</pre>
@@ -319,11 +320,11 @@ strong { width: 100%; float: right; }</pre>
 
 <h3 id="full-size-kana">full-size-kana</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ&lt;/p&gt;
 &lt;p&gt;ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ&lt;/p&gt;
 &lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p:nth-of-type(2) {
+<pre class="brush: css">p:nth-of-type(2) {
   text-transform: full-size-kana;
 }</pre>
 
@@ -360,7 +361,7 @@ strong { width: 100%; float: right; }</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-transform")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

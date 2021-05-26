@@ -16,8 +16,7 @@ tags:
 
 <div>Fired when a command is executed using its associated keyboard shortcut.</div>
 
-
-<div>The listener is passed the command's name. This matches the name given to the command in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</div>
+<p>The listener is passed the command's name. This matches the name given to the command in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -64,7 +63,6 @@ browser.commands.onCommand.hasListener(listener)
 <div>Given a manifest.json entry like this:</div>
 
 
-<div>
 <pre class="brush: json line-numbers language-json">&quot;commands&quot;: {
   &quot;toggle-feature&quot;: {
     &quot;suggested_key&quot;: {
@@ -73,13 +71,12 @@ browser.commands.onCommand.hasListener(listener)
     &quot;description&quot;: &quot;Send a 'toggle-feature' event&quot;
   }
 }</pre>
-</div>
 
-<div>You could listen for this particular command like this:</div>
+<p>You could listen for this particular command like this:</p>
 
 
 <div>
-<pre class="notranslate brush: js line-numbers language-js">browser.commands.onCommand.addListener(function(command) {
+<pre class="brush: js line-numbers language-js">browser.commands.onCommand.addListener(function(command) {
   if (command == &quot;toggle-feature&quot;) {
     console.log(&quot;toggling the feature!&quot;);
   }

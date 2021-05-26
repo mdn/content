@@ -32,12 +32,12 @@ tags:
 
 <p>So for example, you could create a new <code>PaymentRequest</code> instance like so:</p>
 
-<pre class="brush: js notranslate">var request = new PaymentRequest(buildSupportedPaymentMethodData(),
+<pre class="brush: js">var request = new PaymentRequest(buildSupportedPaymentMethodData(),
                                  buildShoppingCartDetails());</pre>
 
 <p>The functions invoked inside the constructor return the required object parameters:</p>
 
-<pre class="brush: js notranslate">function buildSupportedPaymentMethodData() {
+<pre class="brush: js">function buildSupportedPaymentMethodData() {
   // Example supported payment methods:
   return [{
     supportedMethods: 'basic-card',
@@ -69,7 +69,7 @@ function buildShoppingCartDetails() {
 
 <p>Once the <code>PaymentRequest</code> object has been created, you call the {{domxref("PaymentRequest.show()")}} method on it to initiate the payment request. This returns a promise that fulfills with a {{domxref("PaymentResponse")}} object if the payment is successful:</p>
 
-<pre class="brush: js notranslate">request.show().then(function(paymentResponse) {
+<pre class="brush: js">request.show().then(function(paymentResponse) {
   // Here we would process the payment. For this demo, simulate immediate success:
   paymentResponse.complete('success')
   .then(function() {
@@ -87,7 +87,7 @@ function buildShoppingCartDetails() {
 
 <p>{{domxref("PaymentRequest.canMakePayment()")}} can be used to check whether the <code>PaymentRequest</code> object is capable of making a payment before you start the payment process. It returns a promise that fulfills with a boolean indicating whether it is or not, for example:</p>
 
-<pre class="brush: js notranslate">// Dummy payment request to check whether payment can be made
+<pre class="brush: js">// Dummy payment request to check whether payment can be made
 new PaymentRequest(buildSupportedPaymentMethodData(),
       {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}})
       .canMakePayment()
@@ -116,7 +116,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(),
 
 <p>In the following snippet, a merchant page performs this check, and if it returns <code>true</code> updates the checkout button to use <code>PaymentRequest</code> instead of legacy web forms.</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">const checkoutButton = document.getElementById('checkout-button');
+<pre class="brush: js">const checkoutButton = document.getElementById('checkout-button');
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
@@ -135,7 +135,7 @@ if (window.PaymentRequest) {
         buildShoppingCartDetails());
   });
 }
-</code></pre>
+</pre>
 
 <div class="note">
 <p><strong>Note</strong>: See our <a href="https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html">Feature detect support demo</a> for the full code.</p>
@@ -151,25 +151,25 @@ if (window.PaymentRequest) {
 
 <p>In the following snippet we do just this — depending on whether the user can make a fast payment or needs to add payment credentials first, the title of the checkout button changes between "Fast Checkout with W3C" and "Setup W3C Checkout". In both cases, the checkout button calls {{domxref("PaymentRequest.show()")}}.</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">const checkoutButton = document.getElementById('checkout-button');
-checkoutButton.innerText = "Loading...";
+<pre class="brush: js">const checkoutButton = document.getElementById('checkout-button');
+checkoutButton.innerText = &quot;Loading...&quot;;
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
   request.canMakePayment().then(function(canMakeAFastPayment) {
     if (canMakeAFastPayment) {
-      checkoutButton.innerText = "Fast Checkout with W3C";
+      checkoutButton.innerText = &quot;Fast Checkout with W3C&quot;;
     } else {
-      checkoutButton.innerText = "Setup W3C Checkout";
+      checkoutButton.innerText = &quot;Setup W3C Checkout&quot;;
     }
   }).catch(function(error) {
     // The user may have turned off the querying functionality in their
     // privacy settings. The website does not know whether they can make
     // a fast payment, so pick a generic title.
-    checkoutButton.innerText = "Checkout with W3C";
+    checkoutButton.innerText = &quot;Checkout with W3C&quot;;
   });
 }
-</code></pre>
+</pre>
 
 <div class="note">
 <p><strong>Note</strong>: See our <a href="https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html">Customizing the payment button demo</a> for the full code.</p>
@@ -179,7 +179,7 @@ if (window.PaymentRequest) {
 
 <p>If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePayment()")}} will return <code>true</code> even before all line items and their prices are known, you can instantiate <code>PaymentRequest</code> with dummy data and pre-query <code>.canMakePayment()</code>. If you call <code>.canMakePayment()</code> multiple times, keep in mind that the first parameter to the <code>PaymentRequest</code> constructor should contain the same method names and data.</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">// The page has loaded. Should the page use PaymentRequest?
+<pre class="brush: js">// The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
 const supportedPaymentMethods = ...
@@ -223,7 +223,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
   } else {
     window.location.href = '/legacy-web-form-checkout';
   }
-}</code></pre>
+}</pre>
 
 <div class="note">
 <p><strong>Note</strong>: See our <a href="https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html">Checking user can make payments before prices are known demo</a> for the full code.</p>
@@ -235,7 +235,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 <p>The code looks something like this:</p>
 
-<pre class="brush: js notranslate">checkoutButton.addEventListener('click', function() {
+<pre class="brush: js">checkoutButton.addEventListener('click', function() {
   var request = new PaymentRequest(buildSupportedPaymentMethodData(),
     buildShoppingCartDetails());
     request.show().then(function(paymentResponse) {
@@ -266,7 +266,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 <p>If the merchant desires to collect additional information not part of the API (e.g., additional delivery instructions), the merchant can show a page with additional <code>&lt;input type="text"&gt;</code> fields after the checkout.</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">request.show()
+<pre class="brush: js">request.show()
 .then(function(paymentResponse) {
     // Process payment here.
     // Close the UI:
@@ -282,7 +282,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 .catch(function(error) {
     // Handle error.
 });
-</code></pre>
+</pre>
 
 <div class="note">
 <p><strong>Note</strong>: See our <a href="https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html">Show additional user interface after successful payment demo</a> for the full code.</p>
@@ -294,7 +294,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 <p>The merchant code would look like this:</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">let paymentRequest = new PaymentRequest(
+<pre class="brush: js">let paymentRequest = new PaymentRequest(
     [{supportedMethods: 'https://example.com/preauth'}], ...);
 // Send `CanMakePayment` event to the payment handler.
 paymentRequest.canMakePayment()
@@ -309,16 +309,16 @@ paymentRequest.canMakePayment()
     .catch(function(ex1) {
       // Unexpected error occurred.
     });
-</code></pre>
+</pre>
 
 <p>The payment handler would include the following code:</p>
 
-<pre class="brush: js notranslate"><code class="javascript language-javascript">self.addEventListener('canmakepayment', function(evt) {
+<pre class="brush: js">self.addEventListener('canmakepayment', function(evt) {
   // Pre-authorize here.
   let preAuthSuccess = ...;
   evt.respondWith(preAuthSuccess);
 });
-</code></pre>
+</pre>
 
 <p>This payment handler would need to live in a service worker at <code>https://example.com/preauth</code> scope.</p>
 

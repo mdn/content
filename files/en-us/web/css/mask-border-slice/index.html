@@ -9,7 +9,8 @@ tags:
   - NeedsCompatTable
   - NeedsExample
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.mask-border-slice
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* All sides */
+<pre class="brush:css no-line-numbers">/* All sides */
 mask-border-slice: 30%;
 
 /* vertical | horizontal */
@@ -64,7 +65,7 @@ mask-border-slice: unset;
 
 <p>The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.</p>
 
-<p><a href="/files/3814/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="/files/3814/border-image-slice.png" style="margin: 1px; padding: 1em; width: 460px;"></a></p>
+<p><a href="border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png"></a></p>
 
 <p>The above diagram illustrates the location of each region.</p>
 
@@ -82,7 +83,7 @@ mask-border-slice: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -90,11 +91,11 @@ mask-border-slice: unset;
 
 <p>This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define the size of the slices taken from the source image, and used to create the border mask.</p>
 
-<pre class="brush: css notranslate">mask-border-slice: 30 fill;</pre>
+<pre class="brush: css">mask-border-slice: 30 fill;</pre>
 
 <p>Chromium-based browsers support an outdated version of this property — <code>mask-box-image-slice</code> — with a prefix:</p>
 
-<pre class="brush: css notranslate">-webkit-mask-box-image-slice: 30 fill;</pre>
+<pre class="brush: css">-webkit-mask-box-image-slice: 30 fill;</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: The <code><a href="/en-US/docs/Web/CSS/mask-border">mask-border</a></code> page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.</p>
@@ -125,7 +126,7 @@ mask-border-slice: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.mask-border-slice")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -136,5 +137,5 @@ mask-border-slice: unset;
   <li>{{cssxref("mask-border-repeat")}}</li>
   <li>{{cssxref("mask-border-source")}}</li>
   <li>{{cssxref("mask-border-width")}}</li>
-  <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
 </ul>

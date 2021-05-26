@@ -9,6 +9,7 @@ tags:
 - Reference
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.@@iterator
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>[Symbol.iterator]()</pre>
+<pre class="brush: js">[Symbol.iterator]()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -29,7 +30,7 @@ tags:
 
 <h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
 
-<pre class="brush: js notranslate">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 for (let n of arr) {
@@ -39,7 +40,7 @@ for (let n of arr) {
 
 <h3 id="Alternative_iteration">Alternative iteration</h3>
 
-<pre class="brush: js notranslate">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // 10
 console.log(eArr.next().value); // 20
@@ -50,26 +51,11 @@ console.log(eArr.next().value); // 50
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator',
-        '%TypedArray%.prototype[@@iterator]()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.@@iterator")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

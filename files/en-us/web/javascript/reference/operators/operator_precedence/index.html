@@ -2,9 +2,9 @@
 title: Operator precedence
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
 tags:
-- Guide
-- JavaScript
-- precedence
+  - Guide
+  - JavaScript
+  - precedence
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -14,18 +14,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-    repository. If you'd like to contribute to the interactive examples project, please
-    clone <a
-        href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-    and send us a pull request.</div>
 
 <h2 id="Precedence_And_Associativity">Precedence And Associativity</h2>
 
 <p>Consider an expression describable by the representation below. Note that both
     OP<sub>1</sub> and OP<sub>2</sub> are fill-in-the-blanks for OPerators.</p>
 
-<pre class="brush: js notranslate">a OP<sub>1</sub> b OP<sub>2</sub> c</pre>
+<pre class="brush: js">a OP<sub>1</sub> b OP<sub>2</sub> c</pre>
 
 <p>If <code>OP<sub>1</sub></code> and <code>OP<sub>2</sub></code> have different
     precedence levels (see the table below), the operator with the highest precedence goes
@@ -33,7 +28,7 @@ tags:
     precedence than addition and executed first, even though addition is written first in
     the code.</p>
 
-<pre class="brush: js notranslate">console.log(3 + 10 * 2);   // logs 23
+<pre class="brush: js">console.log(3 + 10 * 2);   // logs 23
 console.log(3 + (10 * 2)); // logs 23 because parentheses here are superfluous
 console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
 </pre>
@@ -44,7 +39,7 @@ console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
     <code>a OP<sub>1</sub> (b OP<sub>2</sub> c)</code>. Assignment operators are
     right-associative, so you can write:</p>
 
-<pre class="brush: js notranslate">a = b = 5; // same as writing a = (b = 5);
+<pre class="brush: js">a = b = 5; // same as writing a = (b = 5);
 </pre>
 
 <p>with the expected result that <code>a</code> and <code>b</code> get the value 5. This
@@ -65,7 +60,7 @@ console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -75,7 +70,7 @@ console.log(echo("left", 6) / echo("right", 2));
 </pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the right side
 3
@@ -84,7 +79,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -93,7 +88,7 @@ function echo(name, num) {
 console.log(echo("left", 2) ** echo("right", 3));</pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the right side
 8</pre>
@@ -116,7 +111,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -126,7 +121,7 @@ console.log(echo("left", 6) / echo("middle", 2) / echo("right", 3));
 </pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the middle side
 Evaluating the right side
@@ -136,7 +131,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -146,7 +141,7 @@ console.log(echo("left", 2) ** echo("middle", 3) ** echo("right", 2));
 </pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the middle side
 Evaluating the right side
@@ -156,7 +151,7 @@ Evaluating the right side
         </tr>
         <tr>
             <td>
-                <pre class="brush: js notranslate">
+                <pre class="brush: js">
 function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
@@ -165,7 +160,7 @@ function echo(name, num) {
 console.log((echo("left", 2) ** echo("middle", 3)) ** echo("right", 2));</pre>
             </td>
             <td>
-                <pre class="brush: plain notranslate">
+                <pre class="brush: plain">
 Evaluating the left side
 Evaluating the middle side
 Evaluating the right side
@@ -201,7 +196,7 @@ Evaluating the right side
     include logical conjunction ("AND"), nullish-coalescing, optional chaining, and the
     conditional operator. Some more examples follow.</p>
 
-<pre class="brush: js notranslate">a || (b * c);  // evaluate `a` first, then produce `a` if `a` is "truthy"
+<pre class="brush: js">a || (b * c);  // evaluate `a` first, then produce `a` if `a` is "truthy"
 a &amp;&amp; (b &lt; c);  // evaluate `a` first, then produce `a` if `a` is "falsy"
 a ?? (b || c); // evaluate `a` first, then produce `a` if `a` is not `null` and not `undefined`
 a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` or `undefined`
@@ -209,7 +204,7 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">3 &gt; 2 &amp;&amp; 2 &gt; 1
+<pre class="brush: js">3 &gt; 2 &amp;&amp; 2 &gt; 1
 // returns true
 
 3 &gt; 2 &gt; 1
@@ -220,7 +215,9 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
 
 <h2 id="Table">Table</h2>
 
-<p>The following table is ordered from highest (21) to lowest (1) precedence.</p>
+<p>The following table lists operators in order from highest precedence (21) to lowest precedence (1).</p>
+
+<p>Note that <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a> is intentionally not included in the table — because, to quote an <a href="https://stackoverflow.com/a/48656377">an answer at Stack Overflow</a>, “<a href="https://stackoverflow.com/q/44934828/1048572">Spread syntax is not an operator</a> and therefore does not have a precedence. It is part of the array literal and function call (and object literal) syntax.”</p>
 
 <table class="fullwidth-table">
     <tbody>
@@ -275,13 +272,13 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
         </tr>
         <tr>
             <td rowspan="2">18</td>
-            <td>{{jsxref("Operators/Arithmetic_Operators","Postfix
+            <td>{{jsxref("Operators","Postfix
                 Increment","#Increment", 1)}}</td>
             <td rowspan="2">n/a</td>
             <td><code>… ++</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators/Arithmetic_Operators","Postfix
+            <td>{{jsxref("Operators","Postfix
                 Decrement","#Decrement", 1)}}</td>
             <td><code>… --</code></td>
         </tr>
@@ -309,13 +306,13 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
         </tr>
         <tr>
             <td><a
-                    href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">Prefix
+                    href="/en-US/docs/Web/JavaScript/Reference/Operators#increment">Prefix
                     Increment</a></td>
             <td><code>++ …</code></td>
         </tr>
         <tr>
             <td><a
-                    href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement">Prefix
+                    href="/en-US/docs/Web/JavaScript/Reference/Operators#decrement">Prefix
                     Decrement</a></td>
             <td><code>-- …</code></td>
         </tr>
@@ -498,7 +495,7 @@ a?.b.c;        // evaluate `a` first, then produce `undefined` if `a` is `null` 
         <tr>
             <td rowspan="16">3</td>
             <td rowspan="16"><a
-                    href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Assignment</a>
+                    href="/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators">Assignment</a>
             </td>
             <td rowspan="16">right-to-left</td>
             <td><code>… = …</code></td>

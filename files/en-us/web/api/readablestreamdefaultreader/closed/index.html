@@ -2,24 +2,25 @@
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
 tags:
-- API
-- Property
-- ReadableStreamDefaultReader
-- Reference
-- Streams
-- closed
+  - API
+  - Property
+  - ReadableStreamDefaultReader
+  - Reference
+  - Streams
+  - closed
 ---
 <div>{{APIRef("Streams")}}</div>
 
 <p class="summary">The <strong><code>closed</code></strong> read-only property of the
-  {{domxref("ReadableStreamDefaultReader")}} interface returns a promise that fulfills if
-  the stream becomes closed or the reader's lock is released, or rejects if the stream
-  errors.</p>
+  {{domxref("ReadableStreamDefaultReader")}} interface returns a
+  {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
+  is released, or rejects if the stream throws an error. This property enables you
+  to write code that responds to an end to the streaming process.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var><code>var <em>closed</em> = </code>readableStreamDefaultReader</var>.closed;</pre>
+  class="brush: js"><var><code>var <em>closed</em> = </code>readableStreamDefaultReader</var>.closed;</pre>
 
 <h3 id="Value">Value</h3>
 

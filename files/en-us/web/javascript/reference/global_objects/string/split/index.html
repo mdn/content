@@ -8,6 +8,7 @@ tags:
 - Reference
 - Regular Expressions
 - String
+browser-compat: javascript.builtins.String.split
 ---
 <div>{{JSRef}}</div>
 
@@ -18,16 +19,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>str</var>.split([<var>separator</var>[, <var>limit</var>]])</pre>
+<pre class="brush: js">
+split()
+split(separator)
+split(separator, limit)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -107,26 +106,24 @@ tags:
 
 <h3 id="Using_split">Using <code>split()</code></h3>
 
-<div id="split_empty_string">
-  <p>When the string is empty, <code>split()</code> returns an array containing one empty
-    string, rather than an empty array. If the string and separator are both empty
-    strings, an empty array is returned.</p>
+<p>When the string is empty, <code>split()</code> returns an array containing one empty
+  string, rather than an empty array. If the string and separator are both empty
+  strings, an empty array is returned.</p>
 
-  <pre class="brush: js notranslate">const myString = ''
+<pre class="brush: js">const myString = ''
 const splits = myString.split()
 
 console.log(splits)
 
 // ↪ [""]
 </pre>
-</div>
 
 <p>The following example defines a function that splits a string into an array of strings
   using <code><var>separator</var></code>. After splitting the string, the function logs
   messages indicating the original string (before the split), the separator used, the
   number of elements in the array, and the individual array elements.</p>
 
-<pre class="brush: js notranslate">function splitString(stringToSplit, separator) {
+<pre class="brush: js">function splitString(stringToSplit, separator) {
   const arrayOfStrings = stringToSplit.split(separator)
 
   console.log('The original string is: ', stringToSplit)
@@ -147,7 +144,7 @@ splitString(monthString, comma)
 
 <p>This example produces the following output:</p>
 
-<pre class="brush: plain notranslate">The original string is: "Oh brave new world that has such people in it."
+<pre class="brush: plain">The original string is: "Oh brave new world that has such people in it."
 The separator is: " "
 The array has 10 elements: Oh / brave / new / world / that / has / such / people / in / it.
 
@@ -167,7 +164,7 @@ The array has 12 elements: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep /
   the semicolon from the string. <code>nameList</code> is the array returned as a result
   of <code>split()</code>.</p>
 
-<pre class="brush: js notranslate">const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
+<pre class="brush: js">const names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand '
 
 console.log(names)
 
@@ -180,7 +177,7 @@ console.log(nameList)
 <p>This logs two lines; the first line logs the original string, and the second line logs
   the resulting array.</p>
 
-<pre class="brush: plain notranslate">Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
+<pre class="brush: plain">Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
 </pre>
 
@@ -189,7 +186,7 @@ console.log(nameList)
 <p>In the following example, <code>split()</code> looks for spaces in a string and returns
   the first 3 splits that it finds.</p>
 
-<pre class="brush: js notranslate">const myString = 'Hello World. How are you doing?'
+<pre class="brush: js">const myString = 'Hello World. How are you doing?'
 const splits = myString.split(' ', 3)
 
 console.log(splits)
@@ -197,7 +194,7 @@ console.log(splits)
 
 <p>This script displays the following:</p>
 
-<pre class="brush: js notranslate">["Hello", "World.", "How"]
+<pre class="brush: js">["Hello", "World.", "How"]
 </pre>
 
 <h3 id="Splitting_with_a_RegExp_to_include_parts_of_the_separator_in_the_result">Splitting
@@ -206,7 +203,7 @@ console.log(splits)
 <p>If <code><var>separator</var></code> is a regular expression that contains capturing
   parentheses <code>(</code><code>)</code>, matched results are included in the array.</p>
 
-<pre class="brush: js notranslate">const myString = 'Hello 1 word. Sentence number 2.'
+<pre class="brush: js">const myString = 'Hello 1 word. Sentence number 2.'
 const splits = myString.split(/(\d)/)
 
 console.log(splits)
@@ -214,11 +211,11 @@ console.log(splits)
 
 <p>This script displays the following:</p>
 
-<pre class="brush: js notranslate">[ "Hello ", "1", " word. Sentence number ", "2", "." ]
+<pre class="brush: js">[ "Hello ", "1", " word. Sentence number ", "2", "." ]
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note: </strong><code>\d</code> matches the <a
+  <p><strong>Note:</strong> <code>\d</code> matches the <a
       href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character
       class</a> for digits between 0 and 9.</p>
 </div>
@@ -226,9 +223,9 @@ console.log(splits)
 <h3 id="Reversing_a_String_using_split">Reversing a String using <code>split()</code></h3>
 
 <div class="warning">
-  <p>This is not a robust way to reverse a string:</p>
+  <p><strong>Warning:</strong> This is not a robust way to reverse a string:</p>
 
-  <pre class="brush: js example-bad notranslate">const str = 'asdfghjkl'
+  <pre class="brush: js example-bad">const str = 'asdfghjkl'
 const strReverse = str.split('').reverse().join('')
 // 'lkjhgfdsa'
 
@@ -239,7 +236,7 @@ const strReverse = str.split('').reverse().join('')
     unicode-aware split. (Use, for example, <a
       href="https://github.com/mathiasbynens/esrever">esrever</a> instead.)</p>
 
-  <pre class="brush: js example-bad notranslate">const str = 'résumé'
+  <pre class="brush: js example-bad">const str = 'résumé'
 const strReverse = str.split(/(?:)/u).reverse().join('')
 // =&gt; "́emuśer"
 </pre>
@@ -251,28 +248,12 @@ const strReverse = str.split(/(?:)/u).reverse().join('')
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.split")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

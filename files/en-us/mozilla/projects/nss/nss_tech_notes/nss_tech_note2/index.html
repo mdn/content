@@ -5,8 +5,8 @@ slug: Mozilla/Projects/NSS/NSS_Tech_Notes/nss_tech_note2
 <h1 id="Using_the_PKCS_11_Module_Logger">Using the PKCS #11 Module Logger</h1>
 <h2 id="NSS_Technical_Note_2">NSS Technical Note: 2</h2>
 <ul>
- <li><a href="#Modes"><b>Modes of Operation</b></a></li>
- <li><a href="#Extracting"><b>Extracting Output from Log files</b></a></li>
+ <li><a href="#modes"><b>Modes of Operation</b></a></li>
+ <li><a href="#extracting"><b>Extracting Output from Log files</b></a></li>
 </ul>
 <p>The logger displays all activity between NSS and a specified PKCS #11 module. It works by inserting a special set of entry points between NSS and the module.</p>
 <p>To enable the module logger, you must set the environment variable NSS_DEBUG_PKCS11_MODULE to the name of the target module. For example, to log the softoken, use:</p>

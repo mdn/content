@@ -6,7 +6,7 @@ tags:
   - Firefox
   - Guide
   - Mozilla
-  - Obsolete
+  - Deprecated
   - WebExtensions
 ---
 <div>{{AddonSidebar}}</div>
@@ -36,7 +36,7 @@ tags:
 
 <p>Here's "content-script.js":</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 If the click was on a link, send a message to the background page.
 The message contains the link's URL.
 */
@@ -60,7 +60,7 @@ window.addEventListener("click", notifyExtension);
 
 <p>Here's "background-script.js":</p>
 
-<pre class="notranslate brush: js">/*
+<pre class="brush: js">/*
 Log that we received the message.
 Then display a notification. The notification contains the URL,
 which we read from the message.
@@ -221,7 +221,7 @@ chrome.runtime.onMessage.addListener(notify);
 
 <pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
 
-<p>{{EmbedYouTube("/9jdHDCKIN-U")}}</p>
+<p>{{EmbedYouTube("9jdHDCKIN-U")}}</p>
 
 <p>Now the scope of the toolbox is the popup. In the Inspector, you can examine and modify the popup's HTML and CSS. In the Debugger, you can search for any scripts loaded into the popup, and set breakpoints in them.</p>
 

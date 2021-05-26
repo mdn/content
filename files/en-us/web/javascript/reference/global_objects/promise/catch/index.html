@@ -7,6 +7,7 @@ tags:
 - Method
 - Promise
 - Prototype
+browser-compat: javascript.builtins.Promise.catch
 ---
 <div>{{JSRef}}</div>
 
@@ -21,15 +22,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/promise-catch.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>p</var>.catch(<var>onRejected</var>);
+<pre class="brush: js"><var>p</var>.catch(<var>onRejected</var>);
 
 p.catch(function(<var>reason</var>) {
    // rejection
@@ -60,7 +56,7 @@ p.catch(function(<var>reason</var>) {
   {{jsxref("Promise")}}.</p>
 
 <div class="warning">
-  <p>Note the examples below are throwing instances of <a
+  <p><strong>Warning:</strong> The examples below are throwing instances of <a
       href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>. This is
     considered good practice in contrast to throwing Strings; otherwise, the part doing
     the catching would have to perform checks to see if the argument was a string or an
@@ -69,7 +65,7 @@ p.catch(function(<var>reason</var>) {
 
 <p><strong>Demonstration of the internal call:</strong></p>
 
-<pre class="brush: js notranslate">// overriding original Promise.prototype.then/catch just to add some logs
+<pre class="brush: js">// overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
     var originalThen = Promise.prototype.then;
     var originalCatch = Promise.prototype.catch;
@@ -105,7 +101,7 @@ Promise.resolve().catch(function XXX(){});
 
 <h3 id="Using_and_chaining_the_catch_method">Using and chaining the catch method</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -135,7 +131,7 @@ p1.then(function(value) {
 
 <h3 id="Gotchas_when_throwing_errors">Gotchas when throwing errors</h3>
 
-<pre class="brush: js notranslate">// Throwing an error will call the catch method most of the time
+<pre class="brush: js">// Throwing an error will call the catch method most of the time
 var p1 = new Promise(function(resolve, reject) {
   throw new Error('Uh-oh!');
 });
@@ -167,7 +163,7 @@ p3.catch(function(e) {
 
 <h3 id="If_it_is_resolved">If it is resolved</h3>
 
-<pre class="brush: js notranslate">//Create a promise which would not call onReject
+<pre class="brush: js">//Create a promise which would not call onReject
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
@@ -186,28 +182,12 @@ p2.then(function (value) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-promise.prototype.catch',
-        'Promise.prototype.catch')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">To contribute to this compatibility data, please write a pull request
-  against this repository: <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.
-</div>
 
-<p>{{Compat("javascript.builtins.Promise.catch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

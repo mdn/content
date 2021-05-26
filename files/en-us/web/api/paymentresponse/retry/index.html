@@ -2,16 +2,16 @@
 title: PaymentResponse.retry()
 slug: Web/API/PaymentResponse/retry
 tags:
-- API
-- Commerce
-- Method
-- Payment Request
-- Payment Request API
-- PaymentResponse
-- Reference
-- Web Payments
-- payment
-- retry
+  - API
+  - Commerce
+  - Method
+  - Payment Request
+  - Payment Request API
+  - PaymentResponse
+  - Reference
+  - Web Payments
+  - payment
+  - retry
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
+<pre class="brush: js"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -72,12 +72,12 @@ tags:
   <li>If <code>show()</code> is rejected, the payment request failed, usually because
     either there's already one being processed, because the {{Glossary("user agent")}}
     doesn't support any of the specified payment methods, or because of a security issue.
-    See the <a href="/en-US/docs/Web/API/PaymentRequest/show#Exceptions">list of
+    See the <a href="/en-US/docs/Web/API/PaymentRequest/show#exceptions">list of
       exceptions</a> for <code>show()</code> for further details. Call
     <code>complete("fail")</code> to close the payment request.</li>
 </ol>
 
-<pre class="brush: js notranslate">async function handlePayment() {
+<pre class="brush: js">async function handlePayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
   try {
@@ -100,7 +100,7 @@ tags:
 <p><u><strong>try { await paymentRequest.retry(errorFields); } catch (DOMException err) {
       ... }</strong></u></p>
 
-<pre class="brush: JS notranslate">async function doPaymentRequest() {
+<pre class="brush: JS">async function doPaymentRequest() {
   const request = new PaymentRequest(methodData, details, options);
   const response = await request.show();
   await recursiveValidate(request, response);
@@ -165,10 +165,7 @@ doPaymentRequest();
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentResponse.retry")}}</p>
-</div>
+<p>{{Compat("api.PaymentResponse.retry")}}</p>
 
 <h2 id="See_also">See also</h2>
 

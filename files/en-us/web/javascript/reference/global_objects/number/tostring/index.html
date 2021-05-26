@@ -6,6 +6,7 @@ tags:
 - Method
 - Number
 - Prototype
+browser-compat: javascript.builtins.Number.toString
 ---
 <div>{{JSRef}}</div>
 
@@ -14,15 +15,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-tostring.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>numObj</var>.toString([<var>radix</var>])</pre>
+<pre class="brush: js">
+toString()
+toString(radix)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -74,7 +73,7 @@ tags:
 
 <h3 id="Using_toString">Using toString</h3>
 
-<pre class="brush: js notranslate">let count = 10
+<pre class="brush: js">let count = 10
 
 console.log(count.toString())    // displays '10'
 console.log((17).toString())     // displays '17'
@@ -91,23 +90,11 @@ console.log((-0xff).toString(2)) // displays '-11111111'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.prototype.tostring',
-        'Number.prototype.tostring')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.toString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

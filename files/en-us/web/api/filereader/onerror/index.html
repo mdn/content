@@ -1,10 +1,10 @@
 ---
-title: onerror
+title: FileReader.onerror
 slug: Web/API/FileReader/onerror
 ---
 <p>The <a href="/en-US/docs/Web/API/FileReader">FileReader</a> onerror handler receives an Event object, not an Error object, as a parameter, but an error can be accessed from the FileReader object, as <code><a href="/en-US/docs/Web/API/FileReader/error">instanceOfFileReader.error</a></code></p>
 
-<pre class="brush: js line-numbers language-js notranslate">// Callback from a &lt;input type="file" onchange="onChange(event)"&gt;
+<pre class="brush: js">// Callback from a &lt;input type="file" onchange="onChange(event)"&gt;
 function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();

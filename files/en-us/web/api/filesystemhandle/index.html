@@ -10,19 +10,19 @@ tags:
   - handle
   - working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+<div>{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
-<p class="summary">The <strong><code>FileSystemHandle</code></strong> interface of the {{domxref('File System Access API')}} is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemEntry</code> directly but rather it's child interfaces {{domxref('FileSystemFileEntry')}} and {{domxref('FileSystemDirectoryEntry')}}</p>
+<p class="summary">The <strong><code>FileSystemHandle</code></strong> interface of the {{domxref('File System Access API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemHandle</code> directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.</p>
 
 <h2 id="Interfaces_based_on_FileSystemHandle">Interfaces based on FileSystemHandle</h2>
 
 <p>Below is a list of interfaces based on the FileSystemHandle interface.</p>
 
 <dl>
- <dt>{{domxref("FileSystemFileEntry")}}</dt>
- <dd>Represents a handle to a file system entry.</dd>
- <dt>{{domxref("FileSystemDirectoryEntry")}}</dt>
- <dd>Provides a handle to a file system directory.</dd>
+ <dt>{{domxref("FileSystemFileHandle")}}</dt>
+ <dd>Represents a handle to a file entry.</dd>
+ <dt>{{domxref("FileSystemDirectoryHandle")}}</dt>
+ <dd>Provides a handle to a directory entry.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -51,16 +51,16 @@ tags:
 
 <p>The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory</p>
 
-<pre class="brush: js notranslate">// store a reference to our file handle
+<pre class="brush: js">// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker();
 
-  if (fileHandle.type === 'file') {
+  if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.type === 'directory')
+  } else if (fileHandle.kind === 'directory')
     // run directory code
   }
 
@@ -71,7 +71,7 @@ async function getFile() {
 
 <p>The following asynchronous function returns true if user has granted read or readwrite permissions to the file handle. Permission is requested if not.</p>
 
-<pre class="brush: js notranslate">// fileHandle is a FileSystemFileHandle
+<pre class="brush: js">// fileHandle is a FileSystemFileHandle
 // withWrite is a boolean set to true if write
 
 async function verifyPermission(fileHandle, withWrite) {
@@ -99,7 +99,7 @@ async function verifyPermission(fileHandle, withWrite) {
 
 <p>The following function compares a single entry with an array of entries, and returns a new array with any matching entries removed.</p>
 
-<pre class="brush: js notranslate">function removeMatches(fileEntry, entriesArr) {
+<pre class="brush: js">function removeMatches(fileEntry, entriesArr) {
 
   let newArr = entriesArr.filter( entry =&gt; !fileEntry.isSameEntry(entry) )
 

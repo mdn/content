@@ -8,6 +8,7 @@ tags:
 - Prototype
 - Reference
 - flat
+browser-compat: javascript.builtins.Array.flat
 ---
 <div>{{JSRef}}</div>
 
@@ -18,8 +19,8 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>var newArray = arr</var>.flat(<em>[depth]</em>);</pre>
+<pre class="brush: js">flat()
+flat(depth)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -37,7 +38,7 @@ tags:
 
 <h3 id="reduce_and_concat">reduce and concat</h3>
 
-<pre class="brush: js notranslate">const arr = [1, 2, [3, 4]];
+<pre class="brush: js">const arr = [1, 2, [3, 4]];
 
 // To flat single level array
 arr.flat();
@@ -51,7 +52,7 @@ const flattened = arr =&gt; [].concat(...arr);
 
 <h3 id="reduce_concat_isArray_recursivity">reduce + concat + isArray + recursivity</h3>
 
-<pre class="brush: js notranslate">const arr = [1, 2, [3, 4, [5, 6]]];
+<pre class="brush: js">const arr = [1, 2, [3, 4, [5, 6]]];
 
 // to enable deep level flatten use recursion with reduce and concat
 function flatDeep(arr, d = 1) {
@@ -65,7 +66,7 @@ flatDeep(arr, Infinity);
 
 <h3 id="Use_a_stack">Use a stack</h3>
 
-<pre class="brush: js notranslate">// non recursive flatten deep using a stack
+<pre class="brush: js">// non recursive flatten deep using a stack
 // note that depth control is hard/inefficient as we will need to tag EACH value with its own depth
 // also possible w/o reversing on shift/unshift, but array OPs on the end tends to be faster
 function flatten(input) {
@@ -92,7 +93,7 @@ flatten(arr);
 
 <h3 id="Use_Generator_function">Use Generator function</h3>
 
-<pre class="brush: js notranslate">function* flatten(array, depth) {
+<pre class="brush: js">function* flatten(array, depth) {
     if(depth === undefined) {
       depth = 1;
     }
@@ -110,17 +111,11 @@ const flattened = [...flatten(arr, Infinity)];
 // [1, 2, 3, 4, 5, 6]
 </pre>
 
-<div class="hidden">
-  <p>Please do not add polyfills on this article. For reference, please check: <a
-      href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a>
-  </p>
-</div>
-
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Flattening_nested_arrays">Flattening nested arrays</h3>
 
-<pre class="brush: js notranslate">const arr1 = [1, 2, [3, 4]];
+<pre class="brush: js">const arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -141,33 +136,18 @@ arr4.flat(Infinity);
 
 <p>The flat method removes empty slots in arrays:</p>
 
-<pre class="brush: js notranslate">const arr5 = [1, 2, , 4, 5];
+<pre class="brush: js">const arr5 = [1, 2, , 4, 5];
 arr5.flat();
 // [1, 2, 4, 5]
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.flat', 'Array.prototype.flat')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.flat")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -176,4 +156,5 @@ arr5.flat();
   <li>{{jsxref("Array.prototype.map()")}}</li>
   <li>{{jsxref("Array.prototype.reduce()")}}</li>
   <li>{{jsxref("Array.prototype.concat()")}}</li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A polyfill</a></li>
 </ul>

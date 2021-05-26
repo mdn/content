@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Number
   - Property
+browser-compat: javascript.builtins.Number.MAX_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>
 
@@ -15,7 +16,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (!Number.MAX_SAFE_INTEGER) {
+<pre class="brush: js">if (!Number.MAX_SAFE_INTEGER) {
     Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;
 }
 </pre>
@@ -40,34 +40,23 @@ tags:
 
 <h3 id="Return_value_of_MAX_SAFE_INTEGER">Return value of MAX_SAFE_INTEGER</h3>
 
-<pre class="brush: js notranslate">Number.MAX_SAFE_INTEGER; // 9007199254740991
+<pre class="brush: js">Number.MAX_SAFE_INTEGER; // 9007199254740991
 </pre>
 
 <h3 id="Numbers_higher_than_safe_integer">Numbers higher than safe integer</h3>
 
 <p>This returns 2 because in floating points, the value is actually the decimal trailing "1" except for in subnormal precision cases such as zero.</p>
 
-<pre class="brush: js notranslate">Number.MAX_SAFE_INTEGER * Number.EPSILON; // 2
+<pre class="brush: js">Number.MAX_SAFE_INTEGER * Number.EPSILON; // 2
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.max_safe_integer', 'Number.MAX_SAFE_INTEGER')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.MAX_SAFE_INTEGER")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

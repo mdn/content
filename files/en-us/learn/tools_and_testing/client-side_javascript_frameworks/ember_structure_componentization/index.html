@@ -39,7 +39,7 @@ tags:
 
 <p>The landing page HTML of our application is defined in <code>app/templates/application.hbs</code>. This already exists, and its contents currently look like so:</p>
 
-<pre class="brush: html notranslate">\{{!-- The following component displays Ember's default welcome message. --}}
+<pre class="brush: html">\{{!-- The following component displays Ember's default welcome message. --}}
 &lt;WelcomePage /&gt;
 \{{!-- Feel free to remove this! --}}
 
@@ -50,7 +50,7 @@ tags:
 
 <p>However, we don't want this. Instead, we want it to contain the TodoMVC app structure. To start with, delete the contents of <code>application.hbs</code> and replace them with the following:</p>
 
-<pre class="brush: html notranslate">&lt;section class="todoapp"&gt;
+<pre class="brush: html">&lt;section class="todoapp"&gt;
   &lt;h1&gt;todos&lt;/h1&gt;
   &lt;input
     class="new-todo"
@@ -70,7 +70,7 @@ tags:
 
 <p>It doesn't take too much effort to get our HTML looking like a fully-featured to-do list app. Update the <code>application.hbs</code> file again so its content looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;section class="todoapp"&gt;
+<pre class="brush: html">&lt;section class="todoapp"&gt;
   &lt;h1&gt;todos&lt;/h1&gt;
   &lt;input
     class="new-todo"
@@ -188,11 +188,11 @@ tags:
  <li>
   <p>Enter the following command into your terminal:</p>
 
-  <pre class="brush: bash notranslate">ember generate component header</pre>
+  <pre class="brush: bash">ember generate component header</pre>
 
   <p>These will generate some new files, as shown in the resulting terminal output:</p>
 
-  <pre class="notranslate">installing component
+  <pre>installing component
   create app/components/header.hbs
   skip app/components/header.js
   tip to add a class, run `ember generate component-class header`
@@ -211,7 +211,7 @@ installing component-test
 
 <p>Before we start adding any component code, let’s create the scaffolding for the other components. Enter the following lines into your terminal, one by one:</p>
 
-<pre class="brush: bash notranslate">ember generate component todo-list
+<pre class="brush: bash">ember generate component todo-list
 ember generate component todo
 ember generate component footer</pre>
 
@@ -225,7 +225,7 @@ ember generate component footer</pre>
  <li>
   <p>The <code>header.hbs</code> file should be updated to contain the following:</p>
 
-  <pre class="brush: html notranslate">&lt;input
+  <pre class="brush: html">&lt;input
   class="new-todo"
   aria-label="What needs to be done?"
   placeholder="What needs to be done?"
@@ -235,7 +235,7 @@ ember generate component footer</pre>
  <li>
   <p><code>todo-list.hbs</code> should be updated to contain this chunk of code:</p>
 
-  <pre class="brush: html notranslate">&lt;section class="main"&gt;
+  <pre class="brush: html">&lt;section class="main"&gt;
   &lt;input id="mark-all-complete" class="toggle-all" type="checkbox"&gt;
   &lt;label for="mark-all-complete"&gt;Mark all as complete&lt;/label&gt;
 
@@ -252,7 +252,7 @@ ember generate component footer</pre>
  <li>
   <p>Add the following into the <code>todo.hbs</code> file:</p>
 
-  <pre class="brush: html notranslate">&lt;li&gt;
+  <pre class="brush: html">&lt;li&gt;
   &lt;div class="view"&gt;
     &lt;input
       aria-label="Toggle the completion of this todo"
@@ -273,7 +273,7 @@ ember generate component footer</pre>
  <li>
   <p><code>footer.hbs</code> should be updated to contain the following:</p>
 
-  <pre class="brush: html notranslate">&lt;footer class="footer"&gt;
+  <pre class="brush: html">&lt;footer class="footer"&gt;
   &lt;span class="todo-count"&gt;
     &lt;strong&gt;0&lt;/strong&gt; todos left
   &lt;/span&gt;
@@ -294,7 +294,7 @@ ember generate component footer</pre>
  <li>
   <p>Finally, the contents of <code>application.hbs</code> should be updated so that they call the appropriate components, like so:</p>
 
-  <pre class="brush: html notranslate">&lt;section class="todoapp"&gt;
+  <pre class="brush: html">&lt;section class="todoapp"&gt;
   &lt;h1&gt;todos&lt;/h1&gt;
 
   &lt;Header /&gt;
@@ -368,5 +368,15 @@ ember generate component footer</pre>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

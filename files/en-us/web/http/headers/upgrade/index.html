@@ -4,6 +4,8 @@ slug: Web/HTTP/Headers/Upgrade
 tags:
   - HTTP
   - HTTP Header
+  - Request header
+  - Response header
   - Upgrade
 ---
 <p>{{HTTPSidebar}}</p>
@@ -18,7 +20,7 @@ tags:
 	<tbody>
 		<tr>
 			<th scope="row">Header type</th>
-			<td>{{Glossary("General header")}}</td>
+			<td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
 		</tr>
 		<tr>
 			<th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -33,7 +35,7 @@ tags:
 
 <p>For example, the client might send a <code>GET</code> request as shown, listing the preferred protocols to switch to (in this case "example/1" and "foo/2"):</p>
 
-<pre class="notranslate">GET /index.html HTTP/1.1
+<pre>GET /index.html HTTP/1.1
 Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
@@ -49,7 +51,7 @@ Upgrade: example/1, foo/2</pre>
 <ol>
 	<li>Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an <code>Upgrade</code> header that specifies the protocol(s) being switched to. For example:
 
-	<pre class="notranslate"><code>HTTP/1.1 101 Switching Protocols
+	<pre><code>HTTP/1.1 101 Switching Protocols
 Upgrade: foo/2
 Connection: Upgrade</code></pre>
 	</li>
@@ -62,7 +64,7 @@ Connection: Upgrade</code></pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate">Connection: upgrade
+<pre>Connection: upgrade
 Upgrade: <em>protocol_name</em>[<strong>/</strong><em>protocol_version</em>]
 </pre>
 
@@ -71,7 +73,7 @@ Upgrade: <em>protocol_name</em>[<strong>/</strong><em>protocol_version</em>]
 <ul>
 	<li>The {{HTTPHeader("Connection")}} header with type <code>upgrade</code> must <em>always</em> be sent with the <code>Upgrade</code> header (as shown above).</li>
 	<li>Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
-	<pre class="notranslate">  Connection: upgrade
+	<pre>  Connection: upgrade
   Upgrade: a_protocol/1, example ,another_protocol/2.2
 </pre>
 	</li>
@@ -86,11 +88,11 @@ Upgrade: <em>protocol_name</em>[<strong>/</strong><em>protocol_version</em>]
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="notranslate">Connection: upgrade
+<pre>Connection: upgrade
 Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
 </pre>
 
-<pre class="notranslate">Connection: Upgrade
+<pre>Connection: Upgrade
 Upgrade: websocket
 </pre>
 

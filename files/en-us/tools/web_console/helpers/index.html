@@ -9,8 +9,6 @@ tags:
 ---
 <p>{{ToolsSidebar}}</p>
 
-<h2 id="The_commands">The commands</h2>
-
 <p>The JavaScript command line provided by the Web Console offers a few built-in helper functions that make certain tasks easier.</p>
 
 <dl>
@@ -30,32 +28,20 @@ tags:
 	<dd>Evaluates the <a href="/en-US/docs/Web/XPath">XPath</a> <code>xpath</code> expression in the context of <code>element</code> and returns an array of matching nodes. If unspecified, <code>element</code> defaults to <code>document</code>. The resultType parameter specifies the type of result to return; it can be an <a href="/en-US/docs/Web/API/XPathResult#constants">XPathResult constant</a>, or a corresponding string: <code>"number"</code>, <code>"string"</code>, <code>"bool"</code>, <code>"node"</code>, or <code>"nodes"</code>; if not provided, <code>ANY_TYPE</code> is used.</dd>
 	<dt><code>:block</code></dt>
 	<dd>(Starting in Firefox 80) Followed by an unquoted string, blocks requests where the URL contains that string. In the <strong><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></strong>, the string now appears and is selected in the <a href="/en-US/docs/Tools/Network_Monitor/request_list#blocking_specific_urls"><strong>Request Blocking</strong> sidebar</a>.  Unblock with <code>:unblock</code>.</dd>
-	<dt id="help"><code>cd()</code> {{deprecated_inline("gecko74")}}</dt>
-	<dd>
-	<p>Switches JavaScript evaluation context to a different iframe in the page. This helper accepts multiple different ways of identifying the frame to switch to. You can supply any of the following:</p>
-
-	<ul>
-		<li>a selector string to be passed to <code>document.querySelector</code> to locate the iframe element</li>
-		<li>the iframe element itself</li>
-		<li>the content window inside the iframe</li>
-	</ul>
-
-	<p>See <a href="/en-US/docs/Tools/Working_with_iframes">working with iframes</a>.</p>
-	</dd>
 	<dt><code>clear()</code></dt>
 	<dd>Clears the console output area.</dd>
 	<dt id="clearHistory"><code>clearHistory()</code></dt>
 	<dd>Just like a normal command line, the console command line <a href="/en-US/docs/Tools/Web_Console#command_history">remembers the commands you've typed</a>. Use this function to clear the console's command history.</dd>
 	<dt><code>copy()</code></dt>
 	<dd>Copies the argument to the clipboard. If the argument is a string, it's copied as-is. If the argument is a DOM node, its <code><a href="/en-US/docs/Web/API/Element/outerHTML">outerHTML</a></code> is copied. Otherwise, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify</a></code> will be called on the argument, and the result will be copied to the clipboard.</dd>
-	<dt><code>help()</code>{{Deprecated_Inline(62)}}<br>
-	<code style="margin-right: 1ch;">:help</code>{{Gecko_MinVersion_Inline(62)}}</dt>
+	<dt id="help"><code>help()</code> {{deprecated_inline}}<br>
+	<code style="margin-right: 1ch;">:help</code></dt>
 	<dd>Displays help text. Actually, in a delightful example of recursion, it brings you to this page.</dd>
 	<dt><code>inspect()</code></dt>
 	<dd>Given an object, generates <a href="/en-US/docs/Tools/Web_Console/Rich_output">rich output</a> for that object. Once you select the object in the output area, you can use the arrow keys to navigate the object.</dd>
 	<dt><code>keys()</code></dt>
 	<dd>Given an object, returns a list of the keys (or property names) on that object. This is a shortcut for <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a>.</dd>
-	<dt id="pprint"><code>pprint() {{Obsolete_Inline(74)}}</code></dt>
+	<dt id="pprint"><code>pprint() {{deprecated_inline}}</code></dt>
 	<dd>Formats the specified value in a readable way; this is useful for dumping the contents of objects and arrays.</dd>
 	<dt id="screenshot"><code>:screenshot</code></dt>
 	<dd>Creates a screenshot of the current page with the supplied filename. If you don't supply a filename, the image file will be named with the following format:<br>
@@ -132,7 +118,7 @@ tags:
 
 <p>Let's take a look at the contents of that node by using the <code>$()</code> and <code>inspect()</code> functions:</p>
 
-<pre class="brush: js; no-line-numbers notranslate">inspect($(".title"))</pre>
+<pre class="brush: js; no-line-numbers">inspect($(".title"))</pre>
 
 <p>This automatically generates rich output for the object, showing you the contents of the first DOM node that matches the CSS selector <code>".title"</code>, which is of course the first element with class <code>"title"</code>. You can use the up- and down-arrow keys to navigate through the output, the right-arrow key to expand an item, and the left-arrow key to collapse it.</p>
 

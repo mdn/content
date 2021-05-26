@@ -18,13 +18,13 @@ tags:
 
 <p>Let's look at a trivial quick example:</p>
 
-<pre class="brush: html notranslate">&lt;template id="my-paragraph"&gt;
+<pre class="brush: html">&lt;template id="my-paragraph"&gt;
   &lt;p&gt;My paragraph&lt;/p&gt;
 &lt;/template&gt;</pre>
 
 <p>This won't appear in your page until you grab a reference to it with JavaScript and then append it to the DOM, using something like the following:</p>
 
-<pre class="brush: js notranslate">let template = document.getElementById('my-paragraph');
+<pre class="brush: js">let template = document.getElementById('my-paragraph');
 let templateContent = template.content;
 document.body.appendChild(templateContent);</pre>
 
@@ -34,7 +34,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>Templates are useful on their own, but they work even better with web components. Let's define a web component that uses our template as the content of its shadow DOM. We'll call it <code>&lt;my-paragraph&gt;</code>:</p>
 
-<pre class="brush: js notranslate">customElements.define('my-paragraph',
+<pre class="brush: js">customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
       super();
@@ -53,7 +53,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>So for example:</p>
 
-<pre class="brush: html notranslate">&lt;template id="my-paragraph"&gt;
+<pre class="brush: html">&lt;template id="my-paragraph"&gt;
   &lt;style&gt;
     p {
       color: white;
@@ -66,7 +66,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>Now we can use it by just adding it to our HTML document:</p>
 
-<pre class="brush: html notranslate">&lt;my-paragraph&gt;&lt;/my-paragraph&gt;
+<pre class="brush: html">&lt;my-paragraph&gt;&lt;/my-paragraph&gt;
 </pre>
 
 <div class="note">
@@ -81,19 +81,19 @@ document.body.appendChild(templateContent);</pre>
 
 <p>So, if we want to add a slot into our trivial example, we could update our template's paragraph element like this:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;slot name="my-text"&gt;My default text&lt;/slot&gt;&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;&lt;slot name="my-text"&gt;My default text&lt;/slot&gt;&lt;/p&gt;</pre>
 
 <p>If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, <code>&lt;my-paragraph&gt;</code>  just contains the fallback content "My default text".</p>
 
 <p>To define the slot's content, we include an HTML structure inside the <code>&lt;my-paragraph&gt;</code> element with a {{htmlattrxref("slot")}} attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:</p>
 
-<pre class="brush: html notranslate">&lt;my-paragraph&gt;
+<pre class="brush: html">&lt;my-paragraph&gt;
   &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
 &lt;/my-paragraph&gt;</pre>
 
 <p>or</p>
 
-<pre class="brush: html notranslate">&lt;my-paragraph&gt;
+<pre class="brush: html">&lt;my-paragraph&gt;
   &lt;ul slot="my-text"&gt;
     &lt;li&gt;Let's have some different text!&lt;/li&gt;
     &lt;li&gt;In a list!&lt;/li&gt;
@@ -102,7 +102,7 @@ document.body.appendChild(templateContent);</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Elements that can be inserted into slots are known as {{domxref("Slotable")}}; when an element has been inserted in a slot, it is said to be <em>slotted</em>.</p>
+<p><strong>Note</strong>: Nodes that can be inserted into slots are known as <em>Slotable</em> nodes; when an node has been inserted in a slot, it is said to be <em>slotted</em>.</p>
 </div>
 
 <div class="notecard note">
@@ -134,7 +134,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement("template")}} element to create a new "element-details-template" <a href="/en-US/docs/Web/API/DocumentFragment">document fragment</a> containing some <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">named slots</a>:</p>
 
-<pre class="brush: html notranslate">&lt;template id="element-details-template"&gt;
+<pre class="brush: html">&lt;template id="element-details-template"&gt;
   &lt;style&gt;
   details {font-family: "Open Sans Light",Helvetica,Arial}
   .name {font-weight: bold; color: #217ac0; font-size: 120%}
@@ -179,7 +179,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>Next, let’s create a new custom element named <strong><code>&lt;element-details&gt;</code></strong> and use {{DOMXref("Element.attachShadow")}} to attach to it, as its <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a>, that document fragment we created with our {{HTMLElement("template")}} element above. This uses exactly the same pattern as we saw in our earlier trivial example.</p>
 
-<pre class="brush: js notranslate">customElements.define('element-details',
+<pre class="brush: js">customElements.define('element-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -197,7 +197,7 @@ document.body.appendChild(templateContent);</pre>
 
 <p>Now let’s take that <strong><code>&lt;element-details&gt;</code></strong> element and actually use it in our document:</p>
 
-<pre class="brush: html notranslate">&lt;element-details&gt;
+<pre class="brush: html">&lt;element-details&gt;
   &lt;span slot="element-name"&gt;slot&lt;/span&gt;
   &lt;span slot="description"&gt;A placeholder inside a web
     component that users can fill with their own markup,
@@ -230,14 +230,14 @@ document.body.appendChild(templateContent);</pre>
 
 <p>As a finishing touch, we'll add a tiny bit more CSS for the {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, and {{HTMLElement("dd")}} elements in our doc:</p>
 
-<pre class="brush: css notranslate">  dl { margin-left: 6px; }
+<pre class="brush: css">  dl { margin-left: 6px; }
   dt { font-weight: bold; color: #217ac0; font-size: 110% }
   dt { font-family: Consolas, "Liberation Mono", Courier }
   dd { margin-left: 16px }
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">body { margin-top: 47px }</pre>
+<pre class="brush: css">body { margin-top: 47px }</pre>
 </div>
 
 <h3 id="Result">Result</h3>
@@ -259,7 +259,7 @@ document.body.appendChild(templateContent);</pre>
 <div class="hidden">
 <h5 id="full_example">full example</h5>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;slot example&lt;/title&gt;

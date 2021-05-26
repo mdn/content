@@ -2,12 +2,12 @@
 title: AudioParam.setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
 tags:
-- API
-- AudioParam
-- Method
-- Reference
-- Web Audio API
-- setTargetAtTime
+  - API
+  - AudioParam
+  - Method
+  - Reference
+  - Web Audio API
+  - setTargetAtTime
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>paramRef</em> = <em>param</em>.setTargetAtTime(<em>target</em>, <em>startTime</em>, <em>timeConstant</em>);</pre>
+  class="brush: js">var <em>paramRef</em> = <em>param</em>.setTargetAtTime(<em>target</em>, <em>startTime</em>, <em>timeConstant</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,7 +29,7 @@ tags:
   </dd>
   <dt>startTime</dt>
   <dd>The time that the exponential transition will begin, in the same time coordinate
-    system as {{domxref("AudioContext.currentTime")}}. If it is less than or equal to
+    system as {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. If it is less than or equal to
     <code>AudioContext.currentTime</code>, the parameter will start changing immediately.
   </dd>
   <dt>timeConstant</dt>
@@ -220,14 +220,11 @@ atTimeMinus.onclick = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioParam.setTargetAtTime")}}</p>
-</div>
+<p>{{Compat("api.AudioParam.setTargetAtTime")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

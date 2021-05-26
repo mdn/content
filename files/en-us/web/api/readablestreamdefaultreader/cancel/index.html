@@ -2,19 +2,17 @@
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
 tags:
-- API
-- Method
-- ReadableStreamDefaultReader
-- Reference
-- Streams
-- cancel
+  - API
+  - Method
+  - ReadableStreamDefaultReader
+  - Reference
+  - Streams
+  - cancel
 ---
 <div>{{APIRef("Streams")}}</div>
 
 <p class="summary">The <strong><code>cancel()</code></strong> method of the
-  {{domxref("ReadableStreamDefaultReader")}} interface cancels the stream, signaling a
-  loss of interest in the stream by a consumer. The supplied reason argument will be given
-  to the underlying source, which may or may not use it.</p>
+  {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.</p>
 
 <p>Cancel is used when you've completely finished with the stream and don't need any more
   data from it, even if there are chunks enqueued waiting to be read. That data is lost
@@ -29,13 +27,13 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = <em>readableStreamDefaultReader</em>.cancel(<em>reason</em>);</pre>
+  class="brush: js">var <em>promise</em> = <em>readableStreamDefaultReader</em>.cancel(<em>reason</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt>reason {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} providing a human-readable reason for the cancellation.
+  <dd>A human-readable reason for the cancellation. This value may or may not be used.
   </dd>
 </dl>
 

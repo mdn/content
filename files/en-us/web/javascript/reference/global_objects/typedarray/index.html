@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray
 ---
 <div>{{JSRef}}</div>
 
@@ -20,11 +21,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
@@ -168,11 +164,15 @@ tags:
   {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their
   constructors:</p>
 
-<pre class="brush: js notranslate">new <var>TypedArray</var>();
-new <var>TypedArray</var>(<var>length</var>);
-new <var>TypedArray</var>(<var>typedArray</var>);
-new <var>TypedArray</var>(<var>object</var>);
-new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);
+<pre class="brush: js">
+new TypedArray()
+new TypedArray(length)
+new TypedArray(typedArray)
+new TypedArray(object)
+
+new TypedArray(buffer)
+new TypedArray(buffer, byteOffset)
+new TypedArray(buffer, byteOffset, length)
 </pre>
 
 <p>Where <var>TypedArray</var> is a constructor for one of the concrete types.</p>
@@ -353,11 +353,11 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
   constructor as a function without <code>new</code> will throw a {{jsxref("TypeError")}}.
 </p>
 
-<pre class="brush: js example-bad notranslate">var dv = Int8Array([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new Int8Array([1, 2, 3]);</pre>
+<pre class="brush: js example-good">var dv = new Int8Array([1, 2, 3]);</pre>
 
 <h3 id="Property_access">Property access</h3>
 
@@ -368,7 +368,7 @@ new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>len
   look at object properties. You can still use named properties, just like with all
   objects.</p>
 
-<pre class="brush: js notranslate">// Setting and getting using standard array syntax
+<pre class="brush: js">// Setting and getting using standard array syntax
 var int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
@@ -389,22 +389,11 @@ Int8Array.prototype.foo = 'bar';
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

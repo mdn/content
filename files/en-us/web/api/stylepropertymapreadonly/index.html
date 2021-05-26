@@ -44,7 +44,7 @@ tags:
 
 <p>We have to have an element to observe:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
    This is a paragraph with some text. We can add some CSS, or not. The
    style map will include all the default and inherted CSS property values.
 &lt;/p&gt;
@@ -52,7 +52,7 @@ tags:
 
 <p>We add a touch of CSS with a custom property to better demonstrate the output:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
    --someVariable: 1.6em;
    --someOtherVariable: translateX(33vw);
    --anotherVariable: 42;
@@ -61,7 +61,7 @@ tags:
 
 <p>We add JavaScript to grab our paragraph and return back a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.</p>
 
-<pre class="brush: js notranslate">// get the element
+<pre class="brush: js">// get the element
 const myElement = document.querySelector('p');
 
 // get the &lt;dl&gt; we'll be populating

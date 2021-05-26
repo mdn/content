@@ -53,7 +53,7 @@ tags:
 
 <h3 id="Dont_use_preprocessors">Don't use preprocessors</h3>
 
-<p>Don't use preprocessor syntax, e.g. <a href="https://sass-lang.com/">Sass</a>, <a href="http://lesscss.org/">Less</a>, or <a href="http://stylus-lang.com/">Stylus,</a> in your MDN example code. MDN documents the vanilla CSS language, and using preprocessors only serves to raise the bar to understanding the examples, potentially confusing readers.</p>
+<p>Don't use preprocessor syntax, e.g. <a href="https://sass-lang.com/">Sass</a>, <a href="https://lesscss.org/">Less</a>, or <a href="https://stylus-lang.com/">Stylus,</a> in your MDN example code. MDN documents the vanilla CSS language, and using preprocessors only serves to raise the bar to understanding the examples, potentially confusing readers.</p>
 
 <h3 id="Dont_use_specific_CSS_methodologies">Don't use specific CSS methodologies</h3>
 
@@ -81,7 +81,7 @@ tags:
 
 <p>Use this:</p>
 
-<pre class="brush: css example-good notranslate">p {
+<pre class="brush: css example-good">p {
   color: white;
   background-color: black;
   padding: 1rem;
@@ -89,7 +89,7 @@ tags:
 
 <p>Not this:</p>
 
-<pre class="brush: css example-bad notranslate">p { color: white; background-color: black; padding: 1rem; }</pre>
+<pre class="brush: css example-bad">p { color: white; background-color: black; padding: 1rem; }</pre>
 
 <p>In addition, keep these specifics in mind:</p>
 
@@ -107,11 +107,11 @@ tags:
 
 <p>To start with, it is often harder to understand what the shorthand is doing. It takes a while to pick apart exactly what {{cssxref("font")}} syntax is doing, for example:</p>
 
-<pre class="brush: css notranslate">font: small-caps bold 2rem/1.5 sans-serif;</pre>
+<pre class="brush: css">font: small-caps bold 2rem/1.5 sans-serif;</pre>
 
 <p>Whereas this is more immediate in terms of understanding:</p>
 
-<pre class="brush: css notranslate">font-variant: small-caps;
+<pre class="brush: css">font-variant: small-caps;
 font-weight: bold;
 font-size: 2rem;
 line-height: 1.5;
@@ -134,7 +134,7 @@ font-family: sans-serif;</pre>
 
 <p>In addition, some shorthands only work as expected if you include the different value components in a certain order. In CSS animations for example:</p>
 
-<pre class="brush: css notranslate">/* duration | timing-function | delay | iteration-count
+<pre class="brush: css">/* duration | timing-function | delay | iteration-count
    direction | fill-mode | play-state | name */
 animation: 3s ease-in 1s 2 reverse both paused slidein;</pre>
 
@@ -144,7 +144,7 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;</pre>
 
 <p>Where quotes can or should be included, use them, and use double quotes. For example:</p>
 
-<pre class="brush: css example-good notranslate">[data-vegetable="liquid"] {
+<pre class="brush: css example-good">[data-vegetable="liquid"] {
   background-color: goldenrod;
   background-image: url("../../media/examples/lizard.png");
 }</pre>
@@ -153,18 +153,18 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;</pre>
 
 <p>Function parameters should have spaces after their separating commas, but not before:</p>
 
-<pre class="brush: css example-good notranslate">color: rgb(255, 0, 0);
+<pre class="brush: css example-good">color: rgb(255, 0, 0);
 background-image: linear-gradient(to bottom, red, black);</pre>
 
 <h3 id="CSS_comments">CSS comments</h3>
 
 <p>Use CSS-style comments to comment code that isn't self-documenting:</p>
 
-<pre class="brush: css example-good notranslate">/* This is a CSS-style comment */</pre>
+<pre class="brush: css example-good">/* This is a CSS-style comment */</pre>
 
 <p>Put your comments on separate lines preceding the code they are referring to:</p>
 
-<pre class="brush: css example-good notranslate">h3 {
+<pre class="brush: css example-good">h3 {
   /* Creates a red drop shadow, offset 1px right and down, w/2px blur radius */
   text-shadow: 1px 1px 2px red;
   /* Sets the font-size to double the default document font size */
@@ -179,7 +179,7 @@ background-image: linear-gradient(to bottom, red, black);</pre>
 
 <p>Bad:</p>
 
-<pre class="brush: css example-bad notranslate">.bad-code {
+<pre class="brush: css example-bad">.bad-code {
   font-size: 4rem !important;
 }</pre>
 
@@ -189,13 +189,13 @@ background-image: linear-gradient(to bottom, red, black);</pre>
 
 <p>When turning off borders (and any other properties that can take <code>0</code> or <code>none</code> as values), use <code>0</code> rather than <code>none</code>:</p>
 
-<pre class="brush: css example-good notranslate">border: 0;</pre>
+<pre class="brush: css example-good">border: 0;</pre>
 
 <h3 id="Use_mobile_first_media_queries">Use "mobile first" media queries</h3>
 
 <p>When including different sets of styles for different target viewport sizes using media queries inside the same stylesheet, it is a good idea to make the default styling before any media queries have been applied to the document the narrow screen/mobile styling, and then override this for wider viewports inside successive media queries.</p>
 
-<pre class="brush: css example-good notranslate">/*Default CSS layout for narrow screens*/
+<pre class="brush: css example-good">/*Default CSS layout for narrow screens*/
 
 @media (min-width: 480px) {
   /*CSS for medium width screens*/
@@ -219,13 +219,13 @@ background-image: linear-gradient(to bottom, red, black);</pre>
 
 <p>Good:</p>
 
-<pre class="brush: css example-good notranslate">.editorial-summary {
+<pre class="brush: css example-good">.editorial-summary {
   ...
 }</pre>
 
 <p>Bad:</p>
 
-<pre class="brush: css example-bad notranslate">#editorial-summary {
+<pre class="brush: css example-bad">#editorial-summary {
   ...
 }</pre>
 
@@ -235,7 +235,7 @@ background-image: linear-gradient(to bottom, red, black);</pre>
 
 <p>Do this:</p>
 
-<pre class="brush: css example-good notranslate">h1,
+<pre class="brush: css example-good">h1,
 h2,
 h3 {
   font-family: sans-serif;
@@ -244,7 +244,7 @@ h3 {
 
 <p>Not this:</p>
 
-<pre class="brush: css example-bad notranslate">h1, h2, h3 {
+<pre class="brush: css example-bad">h1, h2, h3 {
   font-family: sans-serif;
   text-align: center;
 }</pre>

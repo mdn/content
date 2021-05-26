@@ -44,10 +44,10 @@ tags:
 <p>Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, <code>mouseenter</code> differs in that it doesn't <a href="/en-US/docs/Web/API/Event/bubbles">bubble</a> and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.</p>
 
 <div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="mouseenter.png"></div>
+<div style="text-align: center;"><img class="default internal" src="mouseenter.png"></div>
 One <code>mouseenter</code> event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
-<div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="mouseover.png"></div>
+<div style="text-align: center;"><img class="default internal" src="mouseover.png"></div>
 A single <code>mouseover</code> event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.</div>
 
 <p>With deep hierarchies, the number of <code>mouseenter</code> events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for <code>mouseover</code> events.</p>
@@ -64,7 +64,7 @@ A single <code>mouseover</code> event is sent to the deepest element of the DOM 
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id='mouseTarget'&gt;
+<pre class="brush: html">&lt;div id='mouseTarget'&gt;
  &lt;ul id="unorderedList"&gt;
   &lt;li&gt;No events yet!&lt;/li&gt;
  &lt;/ul&gt;
@@ -74,7 +74,7 @@ A single <code>mouseover</code> event is sent to the deepest element of the DOM 
 
 <p>Styling the <code>div</code> to make it more visible.</p>
 
-<pre class="brush: css notranslate">#mouseTarget {
+<pre class="brush: css">#mouseTarget {
   box-sizing: border-box;
   width:15rem;
   border:1px solid #333;
@@ -82,7 +82,7 @@ A single <code>mouseover</code> event is sent to the deepest element of the DOM 
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var enterEventCount = 0;
+<pre class="brush: js">var enterEventCount = 0;
 var leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');

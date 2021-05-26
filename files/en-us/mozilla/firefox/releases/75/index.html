@@ -33,7 +33,7 @@ tags:
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>Support for the {{cssxref("min")}}, {{cssxref("max")}}, and {{cssxref("clamp")}} functions has been implemented ({{bug(1519519)}}).</li>
+ <li>Support for the {{cssxref("min()")}}, {{cssxref("max()")}}, and {{cssxref("clamp()")}} functions has been implemented ({{bug(1519519)}}).</li>
  <li>The <code>all</code> value of the {{cssxref("text-decoration-skip-ink")}} property has been added ({{bug(1611965)}})</li>
 </ul>
 
@@ -55,9 +55,9 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Public_static_fields">Public static class fields</a> are now supported ({{bug(1535804)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Locale">Intl.Locale</a></code> class is now supported ({{bug(1613713)}}).</li>
- <li>The <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Function/caller"><code>Function.caller</code></a> property has been updated to be aligned with the latest <a href="https://github.com/claudepache/es-legacy-function-reflection">ECMAScript spec proposal</a>. Previously throwing a <code>TypeError</code>, it now returns <code>null</code> if the caller is a strict, async, or generator function ({{bug(1610206)}}).</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields#public_static_fields">Public static class fields</a> are now supported ({{bug(1535804)}}).</li>
+ <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale">Intl.Locale</a></code> class is now supported ({{bug(1613713)}}).</li>
+ <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller"><code>Function.caller</code></a> property has been updated to be aligned with the latest <a href="https://github.com/claudepache/es-legacy-function-reflection">ECMAScript spec proposal</a>. Previously throwing a <code>TypeError</code>, it now returns <code>null</code> if the caller is a strict, async, or generator function ({{bug(1610206)}}).</li>
 </ul>
 
 <h3 id="APIs">APIs</h3>
@@ -75,7 +75,7 @@ tags:
 <p>Firefox 75 sees numerous additions to the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#Implicit_tofrom_keyframes">Implicit to/from keyframes</a> are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ({{bug(1618773)}}). This includes enabling of support for:
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes">Implicit to/from keyframes</a> are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ({{bug(1618773)}}). This includes enabling of support for:
 
   <ul>
    <li><code><a href="/en-US/docs/Web/API/Animation/commitStyles">Animation.commitStyles()</a></code></li>

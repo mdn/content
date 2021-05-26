@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.direction
 ---
 <div>{{CSSRef}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 direction: ltr;
 direction: rtl;
 
@@ -51,16 +52,31 @@ direction: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Setting_right-to-left_direction">Setting right-to-left direction</h3>
 
-<pre class="brush: css notranslate">blockquote {
+<p>In the example below are two strings of text, both which are displaying using <code>direction: rtl</code>. While the Arabic text is displayed correctly with this setting, the English text now has a full stop in an unusual location.</p>
+<div id="Example">
+
+<pre class="brush: css">blockquote {
   direction: rtl;
+  width: 300px;
 }
 </pre>
+
+<pre class="brush: html">&lt;blockquote&gt;
+&lt;p&gt;This paragraph is in English but incorrectly goes right to left.&lt;p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.&lt;p&gt;
+&lt;/blockquote&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample('Example', '100%', 600)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -88,15 +104,12 @@ direction: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.properties.direction")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{Cssxref("unicode-bidi")}}</li>
  <li>{{Cssxref("writing-mode")}}</li>
- <li>{{Cssxref("dir")}}</li>
+ <li>The HTML {{htmlattrxref("dir")}} global attribute</li>
 </ul>

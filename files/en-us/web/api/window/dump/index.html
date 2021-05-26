@@ -2,11 +2,11 @@
 title: Window.dump()
 slug: Web/API/Window/dump
 tags:
-- API
-- HTML DOM
-- Method
-- Non-standard
-- Window
+  - API
+  - HTML DOM
+  - Method
+  - Non-standard
+  - Window
 ---
 <div>{{ ApiRef() }} {{Non-standard_header}}</div>
 
@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.dump(<em>message</em>);
+<pre class="brush: js">window.dump(<em>message</em>);
 
 dump(<em>message</em>);
 </pre>
@@ -34,8 +34,8 @@ dump(<em>message</em>);
   option was not specified then the output goes to stderr. Output from dump() is not sent
   to the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>. Output can be
   sent to the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> using <a
-    href="/en-US/docs/Web/API/Console.log">console.log()</a>. Privileged code can also use
-  <code><a href="/en-US/docs/Components.utils.reportError" title="Components.utils.reportError">Components.utils.reportError</a></code>
+    href="/en-US/docs/Web/API/Console/log">console.log()</a>. Privileged code can also use
+  <code><a href="/en-US/docs/Components.utils.reportError">Components.utils.reportError</a></code>
   and
   <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService</a></code>
   to log messages to the <a href="/en-US/docs/Error_Console">Error Console</a>/<a
@@ -44,8 +44,7 @@ dump(<em>message</em>);
 <p><code>dump()</code> is also available to XPCOM components implemented in JavaScript,
   even though {{domxref("window")}} is not the global object in components. It is also
   explicitly made available in <a
-    href="/en-US/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object"
-    title="Methods available on the Sandbox object">sandboxes</a>. However, this use of
+    href="/en-US/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object">sandboxes</a>. However, this use of
   <code>dump</code> is not affected by the preference mentioned below -- it will always be
   shown. It is therefore advisable to either check this preference yourself or use a
   debugging preference of your own to make sure you don't send lots of debugging content
@@ -53,7 +52,7 @@ dump(<em>message</em>);
   <code>dump</code> output from XPCOM components goes to <code>stderr</code>, while
   <code>dump </code>called elsewhere will output to <code>stdout</code>.</p>
 
-<p>In <a href="/en-US/docs/Gecko">Gecko</a> <code>dump()</code> is <strong>disabled by
+<p>In <a href="/en-US/docs/Mozilla/Gecko">Gecko</a> <code>dump()</code> is <strong>disabled by
     default</strong> – it doesn't do anything but doesn't raise an error either. To see
   the <code>dump</code> output you have to enable it by setting the preference
   <code>browser.dom.window.dump.enabled</code> to <code>true</code>. You can set the

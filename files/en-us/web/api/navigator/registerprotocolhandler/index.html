@@ -2,13 +2,13 @@
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 tags:
-- API
-- HTML DOM
-- Method
-- Navigator
-- Reference
-- Web-Based Protocol Handlers
-- registerProtocolHandler
+  - API
+  - HTML DOM
+  - Method
+  - Navigator
+  - Reference
+  - Web-Based Protocol Handlers
+  - registerProtocolHandler
 ---
 <div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
 
@@ -22,14 +22,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
+<pre class="brush: js">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
 </pre>
 
 <div class="note"><strong>Note:</strong> The original implementation required three
   arguments:
   <code>navigator.registerProtocolHandler(<var>scheme</var>, <var>url, title</var>)</code>,
   which most browsers still support (see the <a
-    href="#Browser_compatibility">compatibility table below</a>). It is recommended to
+    href="#browser_compatibility">compatibility table below</a>). It is recommended to
   still set the title, since browsers that support the updated spec will most likely be
   backwards-compatible and still accept the title (but not use it).</div>
 
@@ -48,7 +48,7 @@ tags:
     <div class="note"><strong>Note:</strong> The handler URL must use the
       <code>https</code> scheme. Older browsers also supported <code>http</code>.</div>
   </dd>
-  <dt><code><var>title</var></code> {{Obsolete_Inline}}</dt>
+  <dt><code><var>title</var></code> {{deprecated_inline}}</dt>
   <dd>A human-readable title string for the handler. <strong>This will be displayed to the
       user</strong>, such as prompting “Allow this site to handle [scheme] links?” or
     listing registered handlers in the browser’s settings.
@@ -130,7 +130,7 @@ tags:
 <p>If your site is <code>burgers.example.com</code>, you can register a protocol handler
   for it to handle <code>web+burger:</code> links, like so:</p>
 
-<pre class="brush: js notranslate">navigator.registerProtocolHandler("web+burger",
+<pre class="brush: js">navigator.registerProtocolHandler("web+burger",
                                   "https://burgers.example.com/?burger=%s",
                                   "Burger handler"); // last title arg included for compatibility
 </pre>
@@ -148,7 +148,7 @@ tags:
 
 <p><img
     alt="A browser notification reads “Add Burger handler (www.google.co.uk) as an application for burger links?”, and offers an “Add Application” button and a close to ignore the handler request."
-    src="https://mdn.mozillademos.org/files/9683/protocolregister.png"></p>
+    src="protocolregister.png"></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -177,7 +177,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web-based_protocol_handlers">Web-based protocol handlers</a>
+  <li><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers">Web-based protocol handlers</a>
   </li>
   <li><a
       href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler

@@ -2,14 +2,14 @@
 title: AudioContext.getOutputTimestamp()
 slug: Web/API/AudioContext/getOutputTimestamp
 tags:
-- API
-- Audio
-- AudioContext
-- Method
-- Reference
-- Web Audio API
-- getOutputTimestamp
-- sound
+  - API
+  - Audio
+  - AudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - getOutputTimestamp
+  - sound
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -24,7 +24,7 @@ tags:
 <ul>
   <li><code>AudioTimestamp.contextTime</code>: The time of the sample frame currently
     being rendered by the audio output device (i.e., output audio stream position), in the
-    same units and origin as the context's {{domxref("AudioContext.currentTime")}}.
+    same units and origin as the context's {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
     Basically, this is the time after the audio context was first created.</li>
   <li><code>AudioTimestamp.performanceTime</code>: An estimation of the moment when the
     sample frame corresponding to the stored <code>contextTime</code> value was rendered
@@ -36,7 +36,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var timestamp = AudioContext.getOutputTimestamp()</pre>
+  class="brush: js">var timestamp = context.getOutputTimestamp()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,7 +48,7 @@ tags:
 
 <ul>
   <li><code>contextTime</code>: A point in the time coordinate system of the
-    {{domxref("AudioContext.currentTime","currentTime")}} for the
+    {{domxref("BaseAudioContext/currentTime","currentTime")}} for the
     <code>BaseAudioContext</code>; the time after the audio context was first created.
   </li>
   <li><code>performanceTime</code>: A point in the time coordinate system of a
@@ -104,8 +104,7 @@ function outputTimestamps() {
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Web Audio
-        API','#dom-audiocontext-getoutputtimestamp','getOutputTimestamp()')}}</td>
+      <td>{{SpecName('Web Audio API','#dom-audiocontext-getoutputtimestamp','getOutputTimestamp()')}}</td>
       <td>{{Spec2('Web Audio API')}}</td>
       <td>Initial definition.</td>
     </tr>
@@ -114,7 +113,4 @@ function outputTimestamps() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioContext.getOutputTimestamp")}}</p>
-</div>
+<p>{{Compat("api.AudioContext.getOutputTimestamp")}}</p>

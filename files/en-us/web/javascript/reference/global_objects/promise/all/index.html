@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Promise
+browser-compat: javascript.builtins.Promise.all
 ---
 <div>{{JSRef}}</div>
 
@@ -18,14 +19,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/promise-all.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository.
-  If you'd like to contribute to the interactive demo project, please clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Promise.all(<var>iterable</var>);</pre>
+<pre class="brush: js">Promise.all(<var>iterable</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -91,7 +88,7 @@ tags:
 
 <p><code>Promise.all</code> waits for all fulfillments (or the first rejection).</p>
 
-<pre class="brush: js notranslate">var p1 = Promise.resolve(3);
+<pre class="brush: js">var p1 = Promise.resolve(3);
 var p2 = 1337;
 var p3 = new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; {
@@ -106,7 +103,7 @@ Promise.all([p1, p2, p3]).then(values =&gt; {
 <p>If the <var>iterable</var> contains non-promise values, they will be ignored, but still
   counted in the returned promise array value (if the promise is fulfilled):</p>
 
-<pre class="brush: js notranslate">// this will be counted as if the iterable passed is empty, so it gets fulfilled
+<pre class="brush: js">// this will be counted as if the iterable passed is empty, so it gets fulfilled
 var p = Promise.all([1,2,3]);
 // this will be counted as if the iterable passed contains only the resolved promise with value "444", so it gets fulfilled
 var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
@@ -131,7 +128,7 @@ setTimeout(function() {
 <p>This following example demonstrates the asynchronicity (or synchronicity, if the
   <var>iterable</var> passed is empty) of <code>Promise.all</code>:</p>
 
-<pre class="brush: js notranslate">// we are passing as argument an array of promises that are already resolved,
+<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.all as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -153,7 +150,7 @@ setTimeout(function() {
 
 <p>The same thing happens if <code>Promise.all</code> rejects:</p>
 
-<pre class="brush: js notranslate">var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+<pre class="brush: js">var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(function() {
@@ -170,7 +167,7 @@ setTimeout(function() {
 <p>But, <code>Promise.all</code> resolves synchronously <strong>if and only if</strong>
   the <var>iterable</var> passed is empty:</p>
 
-<pre class="brush: js notranslate">var p = Promise.all([]); // will be immediately resolved
+<pre class="brush: js">var p = Promise.all([]); // will be immediately resolved
 var p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
 console.log(p);
 console.log(p2)
@@ -192,7 +189,7 @@ setTimeout(function() {
   if you pass in four promises that resolve after a timeout and one promise that rejects
   immediately, then <code>Promise.all</code> will reject immediately.</p>
 
-<pre class="brush: js notranslate">var p1 = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; resolve('one'), 1000);
 });
 var p2 = new Promise((resolve, reject) =&gt; {
@@ -224,7 +221,7 @@ Promise.all([p1, p2, p3, p4, p5])
 
 <p>It is possible to change this behavior by handling possible rejections:</p>
 
-<pre class="brush: js notranslate">var p1 = new Promise((resolve, reject) =&gt; {
+<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; resolve('p1_delayed_resolution'), 1000);
 });
 
@@ -243,25 +240,12 @@ Promise.all([
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">To contribute to this compatibility data, please write a pull request
-  against this repository: <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.
-</p>
 
-<p>{{Compat("javascript.builtins.Promise.all")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

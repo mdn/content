@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.font-size
 ---
 <div>{{CSSRef}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;absolute-size&gt; values */
+<pre class="brush:css no-line-numbers">/* &lt;absolute-size&gt; values */
 font-size: xx-small;
 font-size: x-small;
 font-size: small;
@@ -93,7 +94,7 @@ font-size: unset;
 
 <p>Using an <code>em</code> value creates a dynamic or computed font size (historically the <code>em</code> unit was derived from the width of a capital "M" in a given typeface.). The numeric value acts as a multiplier of the <code>font-size</code> property of the element on which it is used. Consider this example:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-size: 2em;
 }
 </pre>
@@ -104,7 +105,7 @@ font-size: unset;
 
 <p>In order to calculate the <code>em</code> equivalent for any pixel value required, you can use this formula:</p>
 
-<pre class="brush: plain notranslate">em = desired element pixel value / parent element font-size in pixels</pre>
+<pre class="brush: plain">em = desired element pixel value / parent element font-size in pixels</pre>
 
 <p>For example, suppose the <code>font-size</code> of the <code>&lt;body&gt;</code> of the page is set to <code>16px</code>. If the font-size you want is <code>12px</code>, then you should specify <code>0.75em</code> (because 12/16 = 0.75). Similarly, if you want a font size of <code>10px</code>, then specify <code>0.625em</code> (10/16 = 0.625); for <code>22px</code>, specify <code>1.375em</code> (22/16).</p>
 
@@ -112,14 +113,14 @@ font-size: unset;
 
 <p>One important fact to keep in mind: em values compound. Take the following HTML and CSS:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
 }
 span {
   font-size: 1.6em;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
 &lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;
 &lt;/div&gt;
 </pre>
@@ -136,7 +137,7 @@ span {
 
 <p>The CSS below is nearly identical to the previous example. The only exception is that the unit has been changed to <code>rem</code>.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
 }
 span {
@@ -146,7 +147,7 @@ span {
 
 <p>Then we apply this CSS to the same HTML, which looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;</pre>
 
 <p>{{EmbedLiveSample("Rems", 400, 40)}}</p>
 
@@ -164,7 +165,7 @@ span {
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -172,7 +173,7 @@ span {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.small {
+<pre class="brush: css">.small {
   font-size: xx-small;
 }
 .larger {
@@ -188,7 +189,7 @@ span {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h1 class="small"&gt;Small H1&lt;/h1&gt;
+<pre class="brush: html">&lt;h1 class="small"&gt;Small H1&lt;/h1&gt;
 &lt;h1 class="larger"&gt;Larger H1&lt;/h1&gt;
 &lt;h1 class="point"&gt;24 point H1&lt;/h1&gt;
 &lt;h1 class="percent"&gt;200% H1&lt;/h1&gt;</pre>
@@ -233,9 +234,9 @@ span {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("css.properties.font-size")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

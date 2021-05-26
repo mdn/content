@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let rtcConfiguration = {
+<pre class="brush: js">let rtcConfiguration = {
   bundlePolicy: <em>policy</em>
 };
 
@@ -76,7 +76,7 @@ rtcConfiguration.bundlePolicy = <em>policy</em>;
 <p>The <code>bundlePolicy</code> configuration option for an
   {{domxref("RTCPeerConnection")}} specifies how the ICE agent should handle negotiation
   if the remote peer isn't compatible with the <a
-    href="https://tools.ietf.org/html/draft-ietf-mmusic-sdp-bundle-negotiation">SDP BUNDLE
+    href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation">SDP BUNDLE
     standard</a>. If the remote peer <em>is</em> bundle compatible, the policy is moot and
   all media tracks and the data channel are bundled onto a single
   {{domxref("RTCDtlsTransport")}} at the completion of the negotiation process. Any other
@@ -103,7 +103,7 @@ rtcConfiguration.bundlePolicy = <em>policy</em>;
   use. It also specifies <code>stun:stun.example.com</code> as the {{Glossary("STUN")}}
   server for {{Glossary("ICE")}} to use during negotiation.</p>
 
-<pre class="brush: js notranslate">let config = {
+<pre class="brush: js">let config = {
   iceServers: [
     {
       urls: [ "stun:stun.example.com" ]
@@ -124,8 +124,7 @@ let pc = new RTCPeerConnection(config);</pre>
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('WebRTC
-        1.0','#dom-rtcconfiguration-bundlepolicy','RTCConfiguration.bundlePolicy')}}</td>
+      <td>{{SpecName('WebRTC 1.0','#dom-rtcconfiguration-bundlepolicy','RTCConfiguration.bundlePolicy')}}</td>
       <td>{{Spec2('WebRTC 1.0')}}</td>
       <td>Initial definition.</td>
     </tr>
@@ -134,15 +133,12 @@ let pc = new RTCPeerConnection(config);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCConfiguration.bundlePolicy")}}</p>
-</div>
+<p>{{Compat("api.RTCConfiguration.bundlePolicy")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="https://tools.ietf.org/html/draft-ietf-mmusic-sdp-bundle-negotiation">SDP
+  <li><a href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation">SDP
       BUNDLE draft specification</a></li>
 </ul>

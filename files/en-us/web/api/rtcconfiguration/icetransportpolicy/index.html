@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>rtcConfiguration</em> = {
+<pre class="brush: js">let <em>rtcConfiguration</em> = {
   iceTransportPolicy: <em>policy</em>
 };
 
@@ -67,7 +67,7 @@ let <em>policy</em> = <em>rtcConfiguration</em>.iceTransportPolicy;
 
 <p>In this example, a new connection is configured to only accept relay candidates.</p>
 
-<pre class="brush: js notranslate">let config = {
+<pre class="brush: js">let config = {
   iceServers: [
     {
       urls: [ "stun:stun.example.com" ]
@@ -88,8 +88,7 @@ let pc = new RTCPeerConnection(config);</pre>
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('WebRTC
-        1.0','#dom-rtcconfiguration-icetransportpolicy','RTCCandidate.iceTransportPolicy')}}
+      <td>{{SpecName('WebRTC 1.0','#dom-rtcconfiguration-icetransportpolicy','RTCCandidate.iceTransportPolicy')}}
       </td>
       <td>{{Spec2('WebRTC 1.0')}}</td>
       <td>Initial definition.</td>
@@ -99,7 +98,4 @@ let pc = new RTCPeerConnection(config);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCConfiguration.iceTransportPolicy")}}</p>
-</div>
+<p>{{Compat("api.RTCConfiguration.iceTransportPolicy")}}</p>

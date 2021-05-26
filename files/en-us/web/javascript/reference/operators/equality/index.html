@@ -6,6 +6,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.equality
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -17,15 +18,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">x == y
+<pre class="brush: js">x == y
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -75,12 +71,12 @@ tags:
 
 <h3 id="Comparison_with_no_type_conversion">Comparison with no type conversion</h3>
 
-<pre class="brush: js notranslate">1 == 1;              // true
+<pre class="brush: js">1 == 1;              // true
 "hello" == "hello";  // true</pre>
 
 <h3 id="Comparison_with_type_conversion">Comparison with type conversion</h3>
 
-<pre class="brush: js notranslate">"1" ==  1;            // true
+<pre class="brush: js">"1" ==  1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
@@ -96,7 +92,7 @@ number1 == number2;   // false</pre>
 
 <h3 id="Comparison_of_objects">Comparison of objects</h3>
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+<pre class="brush: js">const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 == object2 // false
@@ -110,7 +106,7 @@ object2 == object2 // true</pre>
   operands are <code>String</code> objects, then they are compared as objects and must
   reference the same object for comparison to succeed:</p>
 
-<pre class="brush: js notranslate">const string1 = "hello";
+<pre class="brush: js">const string1 = "hello";
 const string2 = String("hello");
 const string3 = new String("hello");
 const string4 = new String("hello");
@@ -123,28 +119,17 @@ console.log(string4 == string4); // true</pre>
 
 <h3 id="Comparing_Dates_and_strings">Comparing Dates and strings</h3>
 
-<pre class="brush: js notranslate">const d = new Date('December 17, 1995 03:24:00');
+<pre class="brush: js">const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s);    //true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.equality")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

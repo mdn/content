@@ -39,11 +39,11 @@ tags:
 
 <p>As we looked at in <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a>, the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names, and the browser travels down the list until it finds a font it has available on the system it is running on:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }</pre>
 
-<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font, etc.</p>
+<p>This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts">Web-safe fonts</a>. You can use the font stack to specify preferable fonts, followed by web-safe alternatives, followed by the default system font, but this adds overhead in terms of testing to make sure that your designs look ok with each font.</p>
 
 <h2 id="Web_fonts">Web fonts</h2>
 
@@ -51,24 +51,32 @@ tags:
 
 <p>First of all, you have a {{cssxref("@font-face")}} block at the start of the CSS, which specifies the font file(s) to download:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: "myFont";
-  src: url("myFont.woff");
+  src: url("myFont.woff2");
 }</pre>
 
 <p>Below this you can then use the font family name specified inside @font-face to apply your custom font to anything you like, as normal:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: "myFont", "Bitstream Vera Serif", serif;
 }</pre>
 
 <p>The syntax does get a bit more complex than this; we'll go into more detail below.</p>
 
-<p>There are two important things to bear in mind about web fonts:</p>
+<p>Here are some important things to bear in mind about web fonts:</p>
 
 <ol>
- <li>Browsers support different font formats, so you'll need multiple font formats for decent cross-browser support. For example, most modern browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2), the most efficient format around, but older versions of IE only support EOT (Embedded Open Type) fonts, and you might need to include an SVG version of the font to support older versions of iPhone and Android browsers. We'll show you below how to generate the required code.</li>
- <li>Fonts generally aren't free to use. You have to pay for them, and/or follow other license conditions such as crediting the font creator in the code (or on your site). You shouldn't steal fonts and use them without giving proper credit.</li>
+  <li>Fonts generally aren't free to use. You have to pay for them, and/or follow other license conditions such as crediting the font creator in the code (or on your site). You shouldn't steal fonts and use them without giving proper credit.</li>
+ <li>All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
+  </li>
+  <li>
+     WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
+  </li>
+  <li>
+    The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it’s able to use. That's why the format you list first should be the best, preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
+  </li>
+  <li>If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Fontsquirrel Webfont Generator to generate the required files.</li>
 </ol>
 
 <div class="note">
@@ -90,8 +98,8 @@ tags:
 <p>For this example, we'll use two web fonts, one for the headings, and one for the body text. To start with, we need to find the font files that contain the fonts. Fonts are created by font foundries and are stored in different file formats. There are generally three types of sites where you can obtain fonts:</p>
 
 <ul>
- <li>A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include <a href="https://www.fontsquirrel.com/">Font Squirrel</a>, <a href="http://www.dafont.com/">dafont</a>, and <a href="https://everythingfonts.com/">Everything Fonts</a>.</li>
- <li>A paid font distributor: This is a site that makes fonts available for a charge, such as <a href="http://www.fonts.com/">fonts.com</a> or <a href="http://www.myfonts.com/">myfonts.com</a>. You can also buy fonts directly from font foundries, for example <a href="https://www.linotype.com/">Linotype</a>, <a href="http://www.monotype.com">Monotype</a>, or <a href="http://www.exljbris.com/">Exljbris</a>.</li>
+ <li>A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include <a href="https://www.fontsquirrel.com/">Font Squirrel</a>, <a href="https://www.dafont.com/">dafont</a>, and <a href="https://everythingfonts.com/">Everything Fonts</a>.</li>
+ <li>A paid font distributor: This is a site that makes fonts available for a charge, such as <a href="https://www.fonts.com/">fonts.com</a> or <a href="https://www.myfonts.com/">myfonts.com</a>. You can also buy fonts directly from font foundries, for example <a href="https://www.linotype.com/">Linotype</a>, <a href="https://www.monotype.com">Monotype</a>, or <a href="https://www.exljbris.com/">Exljbris</a>.</li>
  <li>An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the {{anch("Using an online font service")}} section for more details.</li>
 </ul>
 
@@ -100,7 +108,7 @@ tags:
 <p>In each case, unzip the font package (Web fonts are usually distributed in ZIP files containing the font file(s) and licensing information). You may find multiple font files in the package — some fonts are distributed as a family with different variants available, for example thin, medium, bold, italic, thin italic, etc. For this example, we just want you to concern yourself with a single font file for each choice.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Under the "Find fonts" section in the right-hand column, you can click on the different tags and classifications to filter the displayed choices.</p>
+<p><strong>Note</strong>: In Font Squirrel, under the "Find fonts" section in the right-hand column, you can click on the different tags and classifications to filter the displayed choices.</p>
 </div>
 
 <h3 id="Generating_the_required_code">Generating the required code</h3>
@@ -115,22 +123,24 @@ tags:
  <li>Click <em>Download your kit</em>.</li>
 </ol>
 
-<p>After the generator has finished processing, you should get a ZIP file to download — save it in the same directory as your HTML and CSS.</p> 
+<p>After the generator has finished processing, you should get a ZIP file to download — save it in the same directory as your HTML and CSS.</p>
+
+<p>If you need to support legacy browsers, select the "Expert" mode in the Fontsquirrel Webfont Generator, select SVG, EOT and TTF formats before downloading your kit.</p>
 
   <p>Web services for font generation typically limit file sizes. In such a case, consider using tools such as:</p>
 <ol>
   <li><a href="https://github.com/bramstein/sfnt2woff-zopfli">sfnt2woff-zopfli</a> for converting ttf to woff</li>
   <li><a href="https://fontforge.org/">fontforge</a> for converting from ttf to svg</li>
-  <li><a href="http://people.apache.org/~clay/batik/ttf2svg.html">batik ttf2svf</a>for converting from ttf to svg</li>
+  <li><a href="https://people.apache.org/~clay/batik/ttf2svg.html">batik ttf2svf</a>for converting from ttf to svg</li>
   <li><a href="https://github.com/google/woff2">woff2</a>for converting from ttf to woff2</li>
 </ol>
 
 <h3 id="Implementing_the_code_in_your_demo">Implementing the code in your demo</h3>
 
-<p>At this point, unzip the webfont kit you just generated. Inside the unzipped directory you'll see three useful items:</p>
+<p>At this point, unzip the webfont kit you just generated. Inside the unzipped directory you'll see some useful items:</p>
 
 <ul>
- <li>Multiple versions of each font: (for example <code>.ttf</code>, <code>.woff</code>, <code>.woff2</code>, etc.; the exact fonts provided will be updated over time as browser support requirements change). As mentioned above, multiple fonts are needed for cross browser support — this is Fontsquirrel's way of making sure you've got everything you need.</li>
+ <li>Two versions of each font: the <code>.woff</code>, <code>.woff2</code> files.</li>
  <li>A demo HTML file for each font — load these in your browser to see what the font will look like in different usage contexts.</li>
  <li>A <code>stylesheet.css</code> file, which contains the generated @font-face code you'll need.</li>
 </ul>
@@ -142,7 +152,14 @@ tags:
  <li>Open up the <code>stylesheet.css</code> file and copy both the <code>@font-face</code> blocks contained inside into your <code>web-font-start.css</code> file — you need to put them at the very top, before any of your CSS, as the fonts need to be imported before you can use them on your site.</li>
  <li>Each of the <code>url()</code> functions points to a font file that we want to import into our CSS — we need to make sure the paths to the files are correct, so add <code>fonts/</code> to the start of each path (adjust as necessary).</li>
  <li>Now you can use these fonts in your font stacks, just like any web safe or default system font. For example:
-  <pre class="brush: css notranslate">font-family: 'zantrokeregular', serif;</pre>
+   <pre class="brush: css">@font-face {
+    font-family: 'zantrokeregular';
+    src: url('fonts/zantroke-webfont.woff2') format('woff2'),
+         url('fonts/zantroke-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}</pre>
+  <pre class="brush: css">font-family: 'zantrokeregular', serif;</pre>
  </li>
 </ol>
 
@@ -151,12 +168,12 @@ tags:
 <p><img alt="" src="web-font-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: If you have any problems getting this to work, feel free to compare your version to our finished files — see <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html">web-font-finished.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css">web-font-finished.css</a> (<a href="https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html">run the finished example live</a>).</p>
+<p><strong>Note</strong>: If you have any problems getting this to work, feel free to compare your version to our finished files — see <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html">web-font-finished.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css">web-font-finished.css</a>. You can also download the <a href="https://github.com/mdn/learning-area/tree/master/css/styling-text/web-fonts">code from GitHub</a> or <a href="https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html">run the finished example live</a>.</p>
 </div>
 
 <h2 id="Using_an_online_font_service">Using an online font service</h2>
 
-<p>Online font services generally store and serve fonts for you, so you don't have to worry about writing the <code>@font-face</code> code, and generally just need to insert a simple line or two of code into your site to make everything work. Examples include <a href="https://fonts.adobe.com/">Adobe Fonts</a> and <a href="http://www.typography.com/cloud/welcome/">Cloud.typography</a>. Most of these services are subscription-based, with the notable exception of <a href="https://www.google.com/fonts">Google Fonts</a>, a useful free service, especially for rapid testing work and writing demos.</p>
+<p>Online font services generally store and serve fonts for you, so you don't have to worry about writing the <code>@font-face</code> code, and generally just need to insert a simple line or two of code into your site to make everything work. Examples include <a href="https://fonts.adobe.com/">Adobe Fonts</a> and <a href="https://www.typography.com/cloud/welcome/">Cloud.typography</a>. Most of these services are subscription-based, with the notable exception of <a href="https://www.google.com/fonts">Google Fonts</a>, a useful free service, especially for rapid testing work and writing demos.</p>
 
 <p>Most of these services are easy to use, so we won't cover them in great detail. Let's have a quick look at Google fonts, so you can get the idea. Again, use copies of <code>web-font-start.html</code> and <code>web-font-start.css</code> as your starting point.</p>
 
@@ -177,24 +194,20 @@ tags:
 
 <p>Let's explore that <code>@font-face</code> syntax generated for you by fontsquirrel. This is what one of the blocks looks like:</p>
 
-<pre class="brush: css notranslate">@font-face {
-  font-family: 'ciclefina';
-  src: url('fonts/cicle_fina-webfont.eot');
-  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
-         url('fonts/cicle_fina-webfont.woff') format('woff'),
-         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
-         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+<pre class="brush: css">@font-face {
+  font-family: 'zantrokeregular';
+  src: url('zantroke-webfont.woff2') format('woff2'),
+       url('zantroke-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }</pre>
 
-<p>This is referred to as "bulletproof @font-face syntax", after a post by Paul Irish from early on when <code>@font-face</code> started to get popular (<a href="https://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face Syntax</a>). Let's go through it to see what it does:</p>
+<p>Let's go through it to see what it does:</p>
 
 <ul>
  <li><code>font-family</code>: This line specifies the name you want to refer to the font as. You can put this as anything you like, as long as you use it consistently throughout your CSS.</li>
- <li><code>src</code>: These lines specify the paths to the font files to be imported into your CSS (the <code>url</code> part), and the format of each font file (the <code>format</code> part). The latter part in each case is optional, but it is useful to declare it because it allows browsers to find a font they can use faster. Multiple declarations can be listed, separated by commas — the browser will search through them and use the first one it can find that it understands — it is therefore best to put newer, better formats like WOFF2 earlier on, and older, not so good formats like TTF later on. The one exception to this is the EOT fonts — they are placed first to fix a couple of bugs in older versions of IE whereby it will try to use the first thing it finds, even if it can't actually use the font.</li>
- <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
+ <li><code>src</code>: These lines specify the paths to the font files to be imported into your CSS (the <code>url</code> part), and the format of each font file (the <code>format</code> part). The latter part in each case is optional, but it is useful to declare it because it allows browsers to find a font they can use faster. Multiple declarations can be listed, separated by commas. As the browser will search through them and use the first one it can find that it understands, it is best to put newer, better formats like WOFF2 earlier on.</li>
+ <li>{{cssxref("font-weight")}}/{{cssxref("font-style")}}: These lines specify what weight the font has, and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of {{cssxref("font-weight")}}/{{cssxref("font-style")}} to choose between them, rather than having to call all the different members of the font family different names. <a href="https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">@font-face tip: define font-weight and font-style to keep your CSS simple</a> by Roger Johansson shows what to do in more detail.</li>
 </ul>
 
 <div class="note">

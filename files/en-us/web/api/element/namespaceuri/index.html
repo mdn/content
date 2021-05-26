@@ -2,12 +2,12 @@
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
 tags:
-- API
-- DOM
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- Property
-- Reference
+  - API
+  - DOM
+  - NeedsBrowserCompatibility
+  - NeedsMobileBrowserCompatibility
+  - Property
+  - Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -15,14 +15,10 @@ tags:
   namespace URI of the element, or <code>null</code> if the element is not in a namespace.
 </p>
 
-<div class="note">
-  <p>Before DOM4 this API was defined within the {{domxref("Node")}} interface.</p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>namespace</var> = <var>element</var>.namespaceURI</pre>
+  class="brush: js"><var>namespace</var> = <var>element</var>.namespaceURI</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -44,8 +40,8 @@ tags:
 
 <p>In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML documents is
   <code>null</code>. In later versions, in compliance with HTML5, it is
-  <code><a class="external" href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>
-  as in XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
+  <code><a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>
+  as in XHTML.</p>
 
 <p>You can create an element with the specified <code>namespaceURI</code> using the DOM
   Level 2 method <a href="/en-US/docs/Web/API/Document/createElementNS"
@@ -85,5 +81,4 @@ tags:
   <li>{{domxref("Element.localName")}}</li>
   <li>{{domxref("Element.prefix")}}</li>
   <li>{{domxref("Attr.namespaceURI")}}</li>
-  <li>{{domxref("Node.namespaceURI")}}</li>
 </ul>

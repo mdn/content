@@ -2,12 +2,12 @@
 title: OscillatorNode.stop()
 slug: Web/API/OscillatorNode/stop
 tags:
-- API
-- Method
-- OscillatorNode
-- Reference
-- Web Audio API
-- stop
+  - API
+  - Method
+  - OscillatorNode
+  - Reference
+  - Web Audio API
+  - stop
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -20,14 +20,14 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">oscillator.stop(<em>when</em>); // stop playing oscillator at <em>when</em></pre>
+  class="brush: js">oscillator.stop(<em>when</em>); // stop playing oscillator at <em>when</em></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><em>when </em>{{optional_inline}}</dt>
   <dd>An optional double representing the <a
-      href="/en-US/docs/Web/API/AudioContext/currentTime">audio context time</a> when the
+      href="/en-US/docs/Web/API/BaseAudioContext/currentTime">audio context time</a> when the
     oscillator should stop. If a value is not included, it defaults to <code>0</code>. If
     the time is equal to or before the current audio context time, the oscillator will
     stop playing immediately.</dd>
@@ -72,14 +72,11 @@ oscillator.stop(audioCtx.currentTime + 2); // stop 2 seconds after the current t
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.OscillatorNode.stop")}}</p>
-</div>
+<p>{{Compat("api.OscillatorNode.stop")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

@@ -2,12 +2,12 @@
 title: ByteLengthQueuingStrategy.ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 tags:
-- API
-- ByteLengthQueuingStrategy
-- Constructor
-- Experimental
-- Reference
-- Streams
+  - API
+  - ByteLengthQueuingStrategy
+  - Constructor
+  - Experimental
+  - Reference
+  - Streams
 ---
 <div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>byteLengthQueuingStrategy</em> = new ByteLengthQueuingStrategy({<em>highWaterMark</em>});</pre>
+  class="brush: js">var <em>byteLengthQueuingStrategy</em> = new ByteLengthQueuingStrategy({<em>highWaterMark</em>});</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,21 +40,21 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre
-  class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> queuingStrategy <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ByteLengthQueuingStrategy</span><span class="punctuation token">(</span><span class="punctuation token">{</span> highWaterMark<span class="punctuation token">:</span> <span class="number token">1</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  class="brush: js line-numbers  language-js">const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-<span class="keyword token">const</span> readableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ReadableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">start</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">pull</span><span class="punctuation token">(</span>controller<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">cancel</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"stream error:"</span><span class="punctuation token">,</span> err<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+const readableStream = new ReadableStream({
+  start(controller) {
+    ...
+  },
+  pull(controller) {
+    ...
+  },
+  cancel(err) {
+    console.log(&quot;stream error:&quot;, err);
+  }
+}, queuingStrategy);
 
-<span class="keyword token">var</span> size <span class="operator token">=</span> queuingStrategy<span class="punctuation token">.</span><span class="function token">size</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span></code>;</pre>
+var size = queuingStrategy.size(chunk);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

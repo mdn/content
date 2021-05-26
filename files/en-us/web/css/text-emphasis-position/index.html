@@ -6,13 +6,14 @@ tags:
   - CSS Property
   - CSS Text Decoration
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.text-emphasis-position
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>text-emphasis-position</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Initial value */
+<pre class="brush:css no-line-numbers">/* Initial value */
 text-emphasis-position: over right;
 
 /* Keywords value */
@@ -69,8 +70,8 @@ text-emphasis-position: unset;
 			<td>Japanese</td>
 			<td rowspan="3">over</td>
 			<td rowspan="3">right</td>
-			<td rowspan="3"><img alt="Emphasis marks appear over each emphasized character in horizontal Japanese text." src="https://drafts.csswg.org/css-text-decor-3/images/text-emphasis-ja.png" style="height: 28px; width: 225px;" title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"></td>
-			<td rowspan="4"><img alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text." src="https://drafts.csswg.org/css-text-decor-3/images/text-emphasis-v.gif" style="height: 89px; width: 34px;" title="Emphasis applied on the right of a fragment of Japanese text"></td>
+			<td rowspan="3"><img alt="Emphasis marks appear over each emphasized character in horizontal Japanese text." src="text-emphasis-ja.png" title="Emphasis (shown in blue for clarity) applied above a fragment of Japanese text"></td>
+			<td rowspan="4"><img alt="Emphasis marks appear on the right of each emphasized character in vertical Japanese text." src="text-emphasis-v.gif" title="Emphasis applied on the right of a fragment of Japanese text"></td>
 		</tr>
 		<tr>
 			<td>Korean</td>
@@ -82,7 +83,7 @@ text-emphasis-position: unset;
 			<td>Chinese</td>
 			<td>under</td>
 			<td>right</td>
-			<td><img alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text." src="https://drafts.csswg.org/css-text-decor-3/images/text-emphasis-zh.gif" style="height: 28px; width: 133px;" title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"></td>
+			<td><img alt="Emphasis marks appear below each emphasized character in horizontal Simplified Chinese text." src="text-emphasis-zh.gif" title="Emphasis (shown in blue for clarity) applied below a fragment of Chinese text"></td>
 		</tr>
 	</tbody>
 </table>
@@ -97,8 +98,7 @@ text-emphasis-position: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}
-</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -106,7 +106,7 @@ text-emphasis-position: unset;
 
 <p>Some editors prefer to hide emphasis marks when they conflict with ruby. In HTML, this can be done with the following style rule:</p>
 
-<pre class="brush: css notranslate">ruby {
+<pre class="brush: css">ruby {
   text-emphasis: none;
 }
 </pre>
@@ -115,7 +115,7 @@ text-emphasis-position: unset;
 
 <p>Some other editors prefer to hide ruby when they conflict with emphasis marks. In HTML, this can be done with the following pattern:</p>
 
-<pre class="brush: css notranslate">em {
+<pre class="brush: css">em {
   text-emphasis: dot; /* Set text-emphasis for &lt;em&gt; elements */
 }
 
@@ -144,7 +144,7 @@ em rt {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-emphasis-position")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

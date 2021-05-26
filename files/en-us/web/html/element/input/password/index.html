@@ -14,6 +14,7 @@ tags:
   - Reference
   - Web
   - password
+browser-compat: html.elements.input.input-password
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -141,7 +142,7 @@ tags:
 
 <p>Here we see the most basic password input, with a label established using the {{HTMLElement("label")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password"&gt;</pre>
 
 <p>{{EmbedLiveSample("A_simple_password_input", 600, 40)}}</p>
@@ -162,7 +163,7 @@ tags:
 </dl>
 
 <div id="Autocomplete_sample1">
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password:&lt;/label&gt;
 &lt;input id="userPassword" type="password" autocomplete="current-password"&gt;</pre>
 </div>
 
@@ -172,7 +173,7 @@ tags:
 
 <p>To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean {{htmlattrxref("required", "input")}} attribute.</p>
 
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password" required&gt;
 &lt;input type="submit" value="Submit"&gt;</pre>
 
@@ -182,7 +183,7 @@ tags:
 
 <p>If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the {{htmlattrxref("inputmode", "input")}} attribute to request a specific one. The most obvious use case for this is if the password is required to be numeric (such as a PIN). Mobile devices with virtual keyboards, for example, may opt to switch to a numeric keypad layout instead of a full keyboard, to make entering the password easier. If the PIN is for one-time use, set the {{htmlattrxref("autocomplete", "input")}} attribute to either <code>off</code> or <code>one-time-code</code> to suggest that it's not saved.</p>
 
-<pre class="brush: html notranslate">&lt;label for="pin"&gt;PIN: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="pin"&gt;PIN: &lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric"&gt;</pre>
 
 <p>{{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}</p>
@@ -191,7 +192,7 @@ tags:
 
 <p>As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The {{htmlattrxref("size", "input")}} attribute is used to ensure that the password entry control is eight characters wide.</p>
 
-<pre class="brush: html notranslate">&lt;label for="pin"&gt;PIN:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="pin"&gt;PIN:&lt;/label&gt;
 &lt;input id="pin" type="password" inputmode="numeric" minlength="4"
        maxlength="8" size="8"&gt;</pre>
 
@@ -203,14 +204,14 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="userPassword"&gt;Password: &lt;/label&gt;
 &lt;input id="userPassword" type="password" size="12"&gt;
 &lt;button id="selectAll"&gt;Select All&lt;/button&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">document.getElementById("selectAll").onclick = function() {
+<pre class="brush: js">document.getElementById("selectAll").onclick = function() {
   document.getElementById("userPassword").select();
 }</pre>
 
@@ -227,7 +228,7 @@ tags:
 <p>In this example, only values consisting of at least four and no more than eight hexadecimal digits are valid.</p>
 
 <div id="Validation_sample1">
-<pre class="brush: html notranslate">&lt;label for="hexId"&gt;Hex ID: &lt;/label&gt;
+<pre class="brush: html">&lt;label for="hexId"&gt;Hex ID: &lt;/label&gt;
 &lt;input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
        title="Enter an ID consisting of 4-8 hexadecimal digits"
        autocomplete="new-password"&gt;</pre>
@@ -250,7 +251,7 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;label for="ssn"&gt;SSN:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="ssn"&gt;SSN:&lt;/label&gt;
 &lt;input type="password" id="ssn" inputmode="numeric" minlength="9" maxlength="12"
     pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
     required autocomplete="off"&gt;
@@ -258,7 +259,7 @@ tags:
 &lt;label for="ssn"&gt;Value:&lt;/label&gt;
 &lt;span id="current"&gt;&lt;/span&gt;</pre>
 
-<p>This uses a {{htmlattrxref("pattern", "input")}} which limits the entered value to strings representing legal Socal Security numbers. Obviously, this regexp doesn't guarantee a valid SSN (since we don't have access to the Social Security Administration's database), but it does ensure the number could be one; it generally avoids values that cannot be valid. In addition, it allows the three groups of digits to be separated by a space, a dash ("-"), or nothing.</p>
+<p>This uses a {{htmlattrxref("pattern", "input")}} which limits the entered value to strings representing legal Social Security numbers. Obviously, this regexp doesn't guarantee a valid SSN (since we don't have access to the Social Security Administration's database), but it does ensure the number could be one; it generally avoids values that cannot be valid. In addition, it allows the three groups of digits to be separated by a space, a dash ("-"), or nothing.</p>
 
 <p>The {{htmlattrxref("inputmode", "input")}} is set to <code>numeric</code> to encourage devices with virtual keyboards to switch to a numeric keypad layout for easier entry. The {{htmlattrxref("minlength", "input")}} and {{htmlattrxref("maxlength", "input")}} attributes are set to 9 and 12, respectively, to require that the value be at least nine and no more than 12 characters (the former without separating characters between the groups of digits and the latter with them). The {{htmlattrxref("required", "input")}} attribute is used to indicate that this control must have a value. Finally, {{htmlattrxref("autocomplete", "input")}} is set to <code>off</code> to avoid password managers and session restore features trying to set its value, since this isn't a password at all.</p>
 
@@ -266,7 +267,7 @@ tags:
 
 <p>This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the <code>pattern</code>.</p>
 
-<pre class="brush: js notranslate">var ssn = document.getElementById("ssn");
+<pre class="brush: js">var ssn = document.getElementById("ssn");
 var current = document.getElementById("current");
 
 ssn.oninput = function(event) {
@@ -279,31 +280,11 @@ ssn.oninput = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#password-state-(type=password)', '&lt;input type="password"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#password-state-typepassword', '&lt;input type="password"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-password")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

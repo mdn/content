@@ -45,7 +45,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,7 +60,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.addEventListener('ended', (event) =&gt; {
   console.log('Video stopped either because 1) it was over, ' +
@@ -69,7 +69,7 @@ video.addEventListener('ended', (event) =&gt; {
 
 <p>Using the <code>onended</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const video = document.querySelector('video');
+<pre class="brush: js">const video = document.querySelector('video');
 
 video.onended = (event) =&gt; {
   console.log('Video stopped either because 1) it was over, ' +
@@ -131,12 +131,12 @@ video.onended = (event) =&gt; {
  <li>{{HTMLElement("video")}}</li>
  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams</a>
   <ul>
-   <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams: ended event</a><a href="/en-US/docs/Web/API/Media_Streams_API/ended_event">: ended event</a></li>
+   <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams: ended event</a><a href="/en-US/docs/Web/API/MediaStreamTrack/ended_event">: ended event</a></li>
   </ul>
  </li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>
   <ul>
-   <li><a href="/en-US/docs/Web/API/Web_Audio_API/ended_event">Web audio API: ended event</a></li>
+   <li><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event">Web audio API: ended event</a></li>
   </ul>
  </li>
 </ul>

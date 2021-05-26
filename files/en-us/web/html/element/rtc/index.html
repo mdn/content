@@ -2,6 +2,7 @@
 title: '<rtc>: The Ruby Text Container element'
 slug: Web/HTML/Element/rtc
 tags:
+  - Deprecated
   - Element
   - HTML
   - HTML text-level semantics
@@ -12,7 +13,7 @@ tags:
   - Web
   - rtc
 ---
-<div>{{HTMLRef}}</div>
+<div>{{HTMLRef}}{{deprecated_header}}</div>
 
 <p>The <strong>HTML Ruby Text Container (<code>&lt;rtc&gt;</code>) element</strong> embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations.</p>
 
@@ -26,7 +27,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a> or {{HTMLElement("rt")}} elements.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a> or {{HTMLElement("rt")}} elements.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -53,7 +54,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html highlight[8] notranslate">&lt;div class="info"&gt;
+<pre class="brush: html highlight[8]">&lt;div class="info"&gt;
   &lt;ruby&gt;
     &lt;rbc&gt;
       &lt;rb&gt;旧&lt;/rb&gt;&lt;rt&gt;jiù&lt;/rt&gt;
@@ -66,7 +67,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">.info {
+<pre class="brush: css">.info {
   padding-top: 10px;
   font-size: 36px;
 }

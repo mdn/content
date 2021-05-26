@@ -15,13 +15,13 @@ tags:
 
 <p class="summary">The future of mobile gaming is definitely web, and many developers choose the <a href="/en-US/docs/Web/Apps/Mobile_First">mobile first</a> approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML5 game, and enjoy playing on a mobile touch-enabled device.</p>
 
-<p class="note"><strong>Note</strong>: The game <a class="external external-icon" href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.</p>
+<p class="note"><strong>Note</strong>: The game <a class="external external-icon" href="https://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.</p>
 
 <h2 id="Pure_JavaScript_approach">Pure JavaScript approach</h2>
 
 <p>We could implement touch events on our own — setting up event listeners and assigning relevant functions to them would be quite straightforward:</p>
 
-<pre class="brush: js notranslate">var el = document.getElementsByTagName("canvas")[0];
+<pre class="brush: js">var el = document.getElementsByTagName("canvas")[0];
 el.addEventListener("touchstart", handleStart);
 el.addEventListener("touchmove", handleMove);
 el.addEventListener("touchend", handleEnd);
@@ -46,12 +46,12 @@ el.addEventListener("touchcancel", handleCancel);</pre>
 
 <p>We will use two events: <code>touchstart </code>and,<code>touchmove</code> both handled by one function. Why? The function <code>touchHandler</code> will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (<code>touchstart</code>), and when the finger is moved on the screen (<code>touchmove</code>):</p>
 
-<pre class="brush: js notranslate">document.addEventListener("touchstart", touchHandler);
+<pre class="brush: js">document.addEventListener("touchstart", touchHandler);
 document.addEventListener("touchmove", touchHandler);</pre>
 
 <p>The <code>touchHandler</code> function looks like this:</p>
 
-<pre class="brush: js notranslate">function touchHandler(e) {
+<pre class="brush: js">function touchHandler(e) {
     if(e.touches) {
         playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
         playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
@@ -68,11 +68,11 @@ document.addEventListener("touchmove", touchHandler);</pre>
 
 <h2 id="Touch_events_in_Phaser">Touch events in Phaser</h2>
 
-<p>We don't have to do this on our own; frameworks like Phaser offer systems for managing touch events for us — see <a href="http://phaser.io/docs/2.6.1/Phaser.Touch.html">managing the touch events</a>.</p>
+<p>We don't have to do this on our own; frameworks like Phaser offer systems for managing touch events for us — see <a href="https://phaser.io/docs/2.6.1/Phaser.Touch.html">managing the touch events</a>.</p>
 
 <h3 id="Pointer_theory">Pointer theory</h3>
 
-<p>A <a href="http://phaser.io/docs/2.6.1/Phaser.Pointer.html">pointer</a> represents a single finger on the touch screen. Phaser starts two pointers by default, so two fingers can perform an action at once. Captain Rogers is a simple game — it can be controlled by two fingers, the left one moving the ship and the right one controlling the ship's gun. There's no multitouch or gestures — everything is handled by single pointer inputs.</p>
+<p>A <a href="https://phaser.io/docs/2.6.1/Phaser.Pointer.html">pointer</a> represents a single finger on the touch screen. Phaser starts two pointers by default, so two fingers can perform an action at once. Captain Rogers is a simple game — it can be controlled by two fingers, the left one moving the ship and the right one controlling the ship's gun. There's no multitouch or gestures — everything is handled by single pointer inputs.</p>
 
 <p>You can add more pointers to the game by using; <code>this.game.input.addPointer</code> up to ten pointers can be managed simultaneously. The most recently used pointer is available in the <code>this.game.input.activePointer</code> object — the most recent finger active on the screen.</p>
 
@@ -84,7 +84,7 @@ document.addEventListener("touchmove", touchHandler);</pre>
 
 <p>Instead of using the pointers directly it is also possible to listen for <code>this.game.input</code> events, like <code>onDown</code>, <code>onUp</code>, <code>onTap</code> and <code>onHold</code>:</p>
 
-<pre class="brush: js notranslate">this.game.input.onDown.add(itemTouched, this);
+<pre class="brush: js">this.game.input.onDown.add(itemTouched, this);
 
 function itemTouched(pointer) {
     // do something
@@ -94,7 +94,7 @@ function itemTouched(pointer) {
 
 <p>This approach uses the generally available <code>this.game.input</code> object, but you can also detect the actions on any game objects like sprites or buttons by using <code>onInputOver</code>, <code>onInputOut</code>, <code>onInputDown</code>, <code>onInputUp</code>, <code>onDragStart</code>, or <code>onDragStop</code>:</p>
 
-<pre class="brush: js notranslate">this.button.events.onInputOver.add(itemTouched, this);
+<pre class="brush: js">this.button.events.onInputOver.add(itemTouched, this);
 
 function itemTouched(button, pointer) {
     // do something
@@ -108,13 +108,13 @@ function itemTouched(button, pointer) {
 
 <p>The easiest way to add an interactive object that will listen for user input is to create a button:</p>
 
-<pre class="brush: js notranslate">var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);</pre>
+<pre class="brush: js">var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);</pre>
 
 <p>This one is formed in the <code>MainMenu</code> state — it will be placed ten pixels from the top left corner of the screen, use the <code>logo-enclave</code> image, and execute the <code>clickEnclave()</code> function when it is touched. This will work on mobile and desktop out of the box. There are a few buttons in the main menu, including the one that will start the game.</p>
 
 <p>For the actual gameplay, instead of creating more buttons and covering the small mobile screen with them, we can use something a little bit different: we'll create invisible areas which respond to the given action. From a design point of view, it is better to make the field of activity bigger without covering half of the screen with button images. For example, tapping on the right side of the screen will fire the weapon:</p>
 
-<pre class="brush: js notranslate">this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
+<pre class="brush: js">this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);</pre>
 
@@ -122,7 +122,7 @@ this.buttonShoot.onInputUp.add(this.goShootReleased, this);</pre>
 
 <p>Moving the player could be managed by creating the four directional buttons, but we can take the advantage of touch screens and drag the player's ship around:</p>
 
-<pre class="brush: js notranslate">var player = this.game.add.sprite(30, 30, 'ship');
+<pre class="brush: js">var player = this.game.add.sprite(30, 30, 'ship');
 player.inputEnabled = true;
 player.input.enableDrag();
 player.events.onDragStart.add(onDragStart, this);
@@ -136,16 +136,16 @@ function onDragStart(sprite, pointer) {
 
 <h3 id="Dedicated_plugins">Dedicated plugins</h3>
 
-<p>You could go even further and use dedicated plugins like <a href="http://phaser.io/shop/plugins/virtualjoystick">Virtual Joystick</a> — this is a paid, official Phaser plugin, but you can find free and <a href="https://github.com/Gamegur-us/phaser-touch-control-plugin">open source alternatives</a>. The initialization of Virtual Joystick looks like this:</p>
+<p>You could go even further and use dedicated plugins like <a href="https://phaser.io/shop/plugins/virtualjoystick">Virtual Joystick</a> — this is a paid, official Phaser plugin, but you can find free and <a href="https://github.com/Gamegur-us/phaser-touch-control-plugin">open source alternatives</a>. The initialization of Virtual Joystick looks like this:</p>
 
-<pre class="brush: js notranslate">this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
+<pre class="brush: js">this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
 this.stick = this.pad.addStick(30, 30, 80, 'generic');</pre>
 
 <p>In the <code>create()</code> function of the <code>Game</code> state we're creating a virtual pad and a generic stick that has four directional virtual buttons by default. This is placed 30 pixels from the top and left edges of the screen and is 80 pixels wide.</p>
 
 <p>The stick being pressed can be handled during the gameplay in the <code>update</code> function like so:</p>
 
-<pre class="brush: js notranslate">if(this.stick.isDown) {
+<pre class="brush: js">if(this.stick.isDown) {
     // move the player
 }</pre>
 

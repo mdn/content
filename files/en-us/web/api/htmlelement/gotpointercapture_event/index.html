@@ -38,7 +38,7 @@ tags:
 
 <p>This example gets a <code>&lt;p&gt;</code> element and listens for the <code>gotpointercapture</code> event. It then calls <code>setPointerCapture()</code> on the element on a <code>pointerdown</code> event, which will trigger <code>gotpointercapture</code>.</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('gotpointercapture', () =&gt; {
   console.log('I\'ve been captured!')
@@ -51,7 +51,7 @@ para.addEventListener('pointerdown', (event) =&gt; {
 
 <p>The same example, using the <code>ongotpointercapture</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.ongotpointercapture = () =&gt; {
   console.log('I\'ve been captured!')

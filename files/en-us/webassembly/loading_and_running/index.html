@@ -28,14 +28,14 @@ tags:
 
 <p>The quickest, most efficient way to fetch a wasm module is using the newer {{jsxref("WebAssembly.instantiateStreaming()")}} method, which can take a <code>fetch()</code> call as its first argument, and will handle fetching, compiling, and instantiating the module in one step, accessing the raw byte code as it streams from the server:</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 .then(results =&gt; {
   // Do something with the results!
 });</pre>
 
 <p>If we used the older {{jsxref("WebAssembly.instantiate()")}} method, which doesn't work on the direct stream, we'd need an extra step of converting the fetched byte code to an {{domxref("ArrayBuffer")}}, like so:</p>
 
-<pre class="brush: js notranslate">fetch('module.wasm').then(response =&gt;
+<pre class="brush: js">fetch('module.wasm').then(response =&gt;
   response.arrayBuffer()
 ).then(bytes =&gt;
   WebAssembly.instantiate(bytes, importObject)
@@ -47,7 +47,7 @@ tags:
 
 <p>The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a Promise that resolves to an object containing both the compiled module object and an instantiated instance of it. The object looks like this:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   module : Module // The newly compiled WebAssembly.Module object,
   instance : Instance // A new WebAssembly.Instance of the module object
 }</pre>
@@ -57,14 +57,14 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">Second overload example</a>.</p>
+<p><strong>Note</strong>: The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example">Second overload example</a>.</p>
 </div>
 
 <h3 id="Running_your_WebAssembly_code">Running your WebAssembly code</h3>
 
 <p>Once you've got your WebAssembly instance available in your JavaScript, you can then start using features of it that have been exported via the {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} property. Your code might look something like this:</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 .then(obj =&gt; {
   // Call an exported function:
   obj.instance.exports.exported_func();
@@ -94,7 +94,7 @@ tags:
 
 <p>The final code looks like this:</p>
 
-<pre class="brush: js notranslate">request = new XMLHttpRequest();
+<pre class="brush: js">request = new XMLHttpRequest();
 request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();

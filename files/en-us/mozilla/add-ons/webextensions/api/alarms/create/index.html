@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.alarms.create(
+<pre class="brush: js">browser.alarms.create(
   name,              // optional string
   alarmInfo          // optional object
 )
@@ -55,7 +55,7 @@ tags:
 
 <p>Create a one-time delay-based alarm with "" for the name:</p>
 
-<pre class="notranslate brush: js">const delayInMinutes = 5;
+<pre class="brush: js">const delayInMinutes = 5;
 
 <span class="pl-smi">browser</span>.<span class="pl-smi">alarms</span>.<span class="pl-en">create</span>({
   delayInMinutes
@@ -63,7 +63,7 @@ tags:
 
 <p>Create a periodic delay-based alarm named "my-periodic-alarm":</p>
 
-<pre class="notranslate brush: js">const delayInMinutes = 5;
+<pre class="brush: js">const delayInMinutes = 5;
 const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
@@ -73,7 +73,7 @@ browser.alarms.create("my-periodic-alarm", {
 
 <p>Create a periodic absolute alarm named "my-periodic-alarm":</p>
 
-<pre class="notranslate brush: js">const when = 1545696000;
+<pre class="brush: js">const when = 1545696000;
 const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {

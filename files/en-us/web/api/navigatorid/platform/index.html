@@ -11,7 +11,7 @@ tags:
 - Reference
 - platform
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+<p>{{ APIRef("HTML DOM") }} {{Deprecated_Header}}</p>
 
 <p>Returns a string representing the platform of the browser. The specification allows
   browsers to always return the empty string, so don't rely on this property to get a
@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>platform</em> = navigator.platform
+<pre class="brush: js"><em>platform</em> = navigator.platform
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -29,12 +29,11 @@ tags:
   <code>platform</code> is a string that must be an empty string or a string representing
   the platform on which the browser is executing.</p>
 
-<p>For example: "<code>MacIntel</code>", "<code>Win32</code>",
-  "<code>FreeBSD i386</code>", "<code>WebTV OS</code>"</p>
+<p>For example: "<code>MacIntel</code>", "<code>Win32</code>", "<code>FreeBSD i386</code>", "<code>WebTV OS</code>"</p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">console.log(navigator.platform);</pre>
+<pre class="brush: js">console.log(navigator.platform);</pre>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

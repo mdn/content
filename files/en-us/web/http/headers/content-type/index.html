@@ -3,14 +3,14 @@ title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 tags:
   - Content-Type
-  - Entity header
   - HTTP
+  - HTTP header
+  - Representation header
   - Reference
-  - header
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Content-Type</code></strong> entity header is used to indicate the {{Glossary("MIME type","media type")}} of the resource.</p>
+<p>The <strong><code>Content-Type</code></strong> representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).</p>
 
 <p>In responses, a <code>Content-Type</code> header tells the client what the content type of the returned content actually is. Browsers will do MIME sniffing in some cases and will not necessarily follow the value of this header; to prevent this behavior, the header {{HTTPHeader("X-Content-Type-Options")}} can be set to <code>nosniff</code>.</p>
 
@@ -20,7 +20,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
+   <td>{{Glossary("Representation header")}}</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -40,7 +40,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Content-Type: text/html; charset=UTF-8
+<pre class="brush: html">Content-Type: text/html; charset=UTF-8
 Content-Type: multipart/form-data; boundary=something
 </pre>
 
@@ -61,7 +61,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <p>In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the <code>Content-Type</code> of the request is specified by the <code>enctype</code> attribute on the {{HTMLElement("form")}} element.</p>
 
-<pre class="brush: html notranslate">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
+<pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;
   &lt;input type="file" name="myFile"&gt;
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
@@ -70,7 +70,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <p>The request looks something like this (less interesting headers are omitted here):</p>
 
-<pre class="notranslate">POST /foo HTTP/1.1
+<pre>POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
 
@@ -114,7 +114,7 @@ Content-Type: text/plain
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}</li>
+ <li>{{HTTPHeader("Accept")}}</li>
  <li>{{HTTPHeader("Content-Disposition")}}</li>
  <li>{{HTTPStatus("206")}} Partial Content</li>
  <li>{{HTTPHeader("X-Content-Type-Options")}}</li>

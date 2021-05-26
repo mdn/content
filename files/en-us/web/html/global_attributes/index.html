@@ -6,6 +6,7 @@ tags:
   - HTML
   - Reference
   - Web
+browser-compat: html.global_attributes
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
@@ -44,7 +45,7 @@ tags:
   <li><code>false</code>, which indicates that the element must not be editable.</li>
  </ul>
  </dd>
- <dt><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">{{HTMLAttrDef("contextmenu")}}</a> {{Obsolete_Inline}}</dt>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">{{HTMLAttrDef("contextmenu")}}</a> {{deprecated_inline}}</dt>
  <dd>The <code><a href="#attr-id"><strong>id</strong></a></code> of a {{HTMLElement("menu")}} to use as the contextual menu for this element.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">{{HTMLAttrDef("data-*")}}</a></dt>
  <dd>Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the <a href="/en-US/docs/Web/HTML">HTML</a> and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLOrForeignElement/dataset")}} property gives access to them.</dd>
@@ -78,7 +79,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> The <code>item*</code> attributes are part of the <a class="external" href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>.</p>
+<p><strong>Note:</strong> The <code>item*</code> attributes are part of the <a href="https://html.spec.whatwg.org/multipage/microdata.html#microdata">WHATWG HTML Microdata feature</a>.</p>
 </div>
 
 <dl>
@@ -93,7 +94,7 @@ tags:
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/itemtype">{{HTMLAttrDef("itemtype")}}</a></dt>
  <dd>Specifies the URL of the vocabulary that will be used to define <code>itemprop</code>s (item properties) in the data structure. {{HTMLAttrxRef("itemscope")}} is used to set the scope of where in the data structure the vocabulary set by <code>itemtype</code> will be active.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/lang">{{HTMLAttrDef("lang")}}</a></dt>
- <dd>Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one “language tag” (made of hyphen-separated “language subtags”) in the format defined in <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>. <a href="#attr-xml:lang"><strong>xml:lang</strong></a> has priority over it.</dd>
+ <dd>Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one “language tag” (made of hyphen-separated “language subtags”) in the format defined in <a href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>. <a href="#attr-xml:lang"><strong>xml:lang</strong></a> has priority over it.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/nonce">{{HTMLAttrDef("nonce")}}</a></dt>
  <dd>A cryptographic nonce ("number used once") which can be used by <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> to determine whether or not a given fetch will be allowed to proceed.</dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/part">{{HTMLAttrDef("part")}}</a></dt>
@@ -119,7 +120,7 @@ tags:
  </dd>
  <dt><a href="/en-US/docs/Web/HTML/Global_attributes/title">{{HTMLAttrDef("title")}}</a></dt>
  <dd>Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.</dd>
- <dt><a href="/en-US/docs/Web/HTML/Global_attributes/translate">{{HTMLAttrDef("translate")}}</a> {{Experimental_Inline}}</dt>
+ <dt><a href="/en-US/docs/Web/HTML/Global_attributes/translate">{{HTMLAttrDef("translate")}}</a></dt>
  <dd>An enumerated attribute that is used to specify whether an element's attribute values and the values of its {{DOMxRef("Text")}} node children are to be translated when the page is localized, or whether to leave them unchanged. It can have the following values:
  <ul>
   <li>empty string and <code>yes</code>, which indicates that the element will be translated.</li>
@@ -145,7 +146,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.global_attributes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -5,6 +5,7 @@ tags:
 - Constructor
 - JavaScript
 - Reference
+browser-compat: javascript.builtins.Error.Error
 ---
 <div>{{JSRef}}</div>
 
@@ -13,8 +14,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+<pre class="brush: js">
+new Error()
+new Error(message)
+new Error(message, fileName)
+new Error(message, fileName, lineNumber)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,7 +45,7 @@ tags:
   <code>Error</code> will produce the same output that constructing an <code>Error</code>
   object via the <code>new</code> keyword would.</p>
 
-<pre class="brush: js notranslate">// this...
+<pre class="brush: js">// this...
 const x = Error('I was created using a function call!')
 
 // ...has the same functionality as this.
@@ -48,25 +53,11 @@ const y = new Error('I was constructed via the "new" keyword!')</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Error.Error")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

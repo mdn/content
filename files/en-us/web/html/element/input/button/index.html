@@ -11,6 +11,7 @@ tags:
   - Input Type
   - Reference
   - button
+browser-compat: html.elements.input.input-button
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -54,7 +55,7 @@ tags:
 <p>An <code>&lt;input type="button"&gt;</code> elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.</p>
 
 <div id="summary-example3">
-<pre class="brush: html notranslate">&lt;input type="button" value="Click Me"&gt;</pre>
+<pre class="brush: html">&lt;input type="button" value="Click Me"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
@@ -62,7 +63,7 @@ tags:
 <p>If you don't specify a <code>value</code>, you get an empty button:</p>
 
 <div id="summary-example1">
-<pre class="brush: html notranslate">&lt;input type="button"&gt;</pre>
+<pre class="brush: html">&lt;input type="button"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
@@ -75,12 +76,12 @@ tags:
 
 <p>We'll begin by creating a simple button with a {{event("click")}} event handler that starts our machine (well, it toggles the <code>value</code> of the button and the text content of the following paragraph):</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;input type="button" value="Start machine"&gt;
 &lt;/form&gt;
 &lt;p&gt;The machine is stopped.&lt;/p&gt;</pre>
 
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+<pre class="brush: js">const button = document.querySelector('input');
 const paragraph = document.querySelector('p');
 
 button.addEventListener('click', updateButton);
@@ -106,7 +107,7 @@ function updateButton() {
 <p>In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> for a useful list of those).</p>
 
 <div id="accesskey-example1">
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;input type="button" value="Start machine" accesskey="s"&gt;
 &lt;/form&gt;
 &lt;p&gt;The machine is stopped.&lt;/p&gt;
@@ -114,7 +115,7 @@ function updateButton() {
 </div>
 
 <div class="hidden">
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+<pre class="brush: js">const button = document.querySelector('input');
 const paragraph = document.querySelector('p');
 
 button.addEventListener('click', updateButton);
@@ -141,7 +142,7 @@ function updateButton() {
 <p>To disable a button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
 
 <div id="disable-example1">
-<pre class="brush: html notranslate">&lt;input type="button" value="Disable me" disabled&gt;</pre>
+<pre class="brush: html">&lt;input type="button" value="Disable me" disabled&gt;</pre>
 </div>
 
 <p>You can enable and disable buttons at run time by setting <code>disabled</code> to <code>true</code> or <code>false</code>. In this example our button starts off enabled, but if you press it, it is disabled using <code>button.disabled = true</code>. A {{domxref("WindowOrWorkerGlobalScope/setTimeout","setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.</p>
@@ -149,9 +150,9 @@ function updateButton() {
 <div class="hidden">
 <h6 id="Hidden_code_1">Hidden code 1</h6>
 
-<pre class="brush: html notranslate">&lt;input type="button" value="Enabled"&gt;</pre>
+<pre class="brush: html">&lt;input type="button" value="Enabled"&gt;</pre>
 
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+<pre class="brush: js">const button = document.querySelector('input');
 
 button.addEventListener('click', disableButton);
 
@@ -174,14 +175,14 @@ function disableButton() {
 <div class="hidden">
 <h6 id="Hidden_code_2">Hidden code 2</h6>
 
-<pre class="brush: html notranslate">&lt;fieldset&gt;
+<pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;Button group&lt;/legend&gt;
   &lt;input type="button" value="Button 1"&gt;
   &lt;input type="button" value="Button 2"&gt;
   &lt;input type="button" value="Button 3"&gt;
 &lt;/fieldset&gt;</pre>
 
-<pre class="brush: js notranslate">const button = document.querySelector('input');
+<pre class="brush: js">const button = document.querySelector('input');
 const fieldset = document.querySelector('fieldset');
 
 button.addEventListener('click', disableButton);
@@ -208,7 +209,7 @@ function disableButton() {
 
 <p>The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.</p>
 
-<pre class="brush: html notranslate">&lt;div class="toolbar"&gt;
+<pre class="brush: html">&lt;div class="toolbar"&gt;
   &lt;input type="color" aria-label="select pen color"&gt;
   &lt;input type="range" min="2" max="50" value="30" aria-label="select pen size"&gt;&lt;span class="output"&gt;30&lt;/span&gt;
   &lt;input type="button" value="Clear canvas"&gt;
@@ -219,7 +220,7 @@ function disableButton() {
 &lt;/canvas&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: #ccc;
   margin: 0;
   overflow: hidden;
@@ -248,7 +249,7 @@ span {
 }</pre>
 </div>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector('.myCanvas');
+<pre class="brush: js">var canvas = document.querySelector('.myCanvas');
 var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight-85;
 var ctx = canvas.getContext('2d');
@@ -313,31 +314,11 @@ draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-button")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

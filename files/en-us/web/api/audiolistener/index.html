@@ -6,16 +6,15 @@ tags:
   - AudioListener
   - Interface
   - Reference
-  - Référence(2)
   - Web Audio API
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <code>AudioListener</code> interface represents the position and orientation of the unique person listening to the audio scene, and is used in <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">audio spatialization</a>. All {{domxref("PannerNode")}}s spatialize in relation to the <code>AudioListener</code> stored in the {{domxref("BaseAudioContext.listener")}} attribute.</p>
+<p>The <code>AudioListener</code> interface represents the position and orientation of the unique person listening to the audio scene, and is used in <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">audio spatialization</a>. All {{domxref("PannerNode")}}s spatialize in relation to the <code>AudioListener</code> stored in the {{domxref("BaseAudioContext.listener")}} attribute.</p>
 
 <p>It is important to note that there is only one listener per context and that it isn't an {{domxref("AudioNode")}}.</p>
 
-<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="https://mdn.mozillademos.org/files/14311/WebAudioListenerReduced.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -60,9 +59,9 @@ tags:
 <h2 id="Deprecated_features">Deprecated features</h2>
 
 <dl>
-	<dt>{{domxref("AudioListener.dopplerFactor")}} {{obsolete_inline}}</dt>
+	<dt>{{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}</dt>
 	<dd>A double value representing the amount of pitch shift to use when rendering a <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler effect</a>.</dd>
-	<dt>{{domxref("AudioListener.speedOfSound")}} {{obsolete_inline}}</dt>
+	<dt>{{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}</dt>
 	<dd>Is a double value representing the speed of sound, in <em>meters per second</em>.</dd>
 </dl>
 
@@ -80,7 +79,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createPanner","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -101,13 +100,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioListener")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

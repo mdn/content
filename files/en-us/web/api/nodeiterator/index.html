@@ -17,7 +17,7 @@ tags:
 	{{domxref("Document.createNodeIterator()")}} method, as follows:</p>
 
 <pre
-	class="brush: js notranslate">const <var>nodeIterator</var> = document.createNodeIterator(<var>root</var>, <var>whatToShow</var>, <var>filter</var>);</pre>
+	class="brush: js">const <var>nodeIterator</var> = document.createNodeIterator(<var>root</var>, <var>whatToShow</var>, <var>filter</var>);</pre>
 
 <h2 id="Properties">Properties</h2>
 
@@ -52,7 +52,7 @@ tags:
 					<td>Shows all nodes.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
+					<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
 					<td><code>2</code></td>
 					<td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful
 						only when creating a {{ domxref("NodeIterator") }} with an {{
@@ -63,7 +63,7 @@ tags:
 						tree.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}
+					<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
 					</td>
 					<td><code>8</code></td>
 					<td>Shows {{ domxref("CDATASection") }} nodes.</td>
@@ -94,7 +94,7 @@ tags:
 					<td>Shows {{ domxref("Element") }} nodes.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
+					<td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
 					<td><code>32</code></td>
 					<td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when
 						creating a {{ domxref("NodeIterator") }} with an {{
@@ -105,13 +105,13 @@ tags:
 					</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}
+					<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}
 					</td>
 					<td><code>16</code></td>
 					<td>Shows {{ domxref("EntityReference") }} nodes.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
+					<td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
 					<td><code>2048</code></td>
 					<td>Shows {{ domxref("Notation") }} nodes. This is meaningful only
 						when creating a {{ domxref("NodeIterator") }} with a {{
@@ -156,7 +156,7 @@ tags:
 <p><em>This interface doesn't inherit any method.</em></p>
 
 <dl>
-	<dt>{{domxref("NodeIterator.detach()")}} {{obsolete_inline()}}</dt>
+	<dt>{{domxref("NodeIterator.detach()")}} {{deprecated_inline}}</dt>
 	<dd>This operation is a no-op. It doesn't do anything. Previously it was telling the
 		engine that the <code>NodeIterator</code> was no more used, but this is now
 		useless.</dd>

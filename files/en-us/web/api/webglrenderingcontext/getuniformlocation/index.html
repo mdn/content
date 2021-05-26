@@ -45,7 +45,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>WebGLUniformLocation</em> = <em>WebGLRenderingContext</em>.getUniformLocation(<em>program</em>, <em>name</em>);
+<pre class="brush: js"><em>WebGLUniformLocation</em> = <em>WebGLRenderingContext</em>.getUniformLocation(<em>program</em>, <em>name</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -132,10 +132,12 @@ gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
-<div class="callout-box">This code snippet is taken from <a
+<div class="notecard note">
+    <h3>Note</h3>
+    <p>This code snippet is taken from <a
         href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the
         function <code>animateScene()</code></a> in "A basic 2D WebGL animation example."
-    See that article for the full sample and to see the resulting animation in action.
+    See that article for the full sample and to see the resulting animation in action.</p>
 </div>
 
 <p>After setting the current shading program to <code>shaderProgram</code>, this code

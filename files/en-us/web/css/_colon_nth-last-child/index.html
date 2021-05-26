@@ -1,6 +1,6 @@
 ---
 title: ':nth-last-child()'
-slug: 'Web/CSS/:nth-last-child'
+slug: Web/CSS/:nth-last-child
 tags:
   - CSS
   - Layout
@@ -8,12 +8,13 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.nth-last-child
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>:nth-last-child()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches elements based on their position among a group of siblings, counting from the end.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects every fourth element
+<pre class="brush: css no-line-numbers">/* Selects every fourth element
    among any group of siblings,
    counting backwards from the last one */
 :nth-last-child(4n) {
@@ -46,8 +47,7 @@ tags:
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">{{csssyntax}}
-</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -76,7 +76,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;First line&lt;/td&gt;
@@ -99,7 +99,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid blue;
 }
 
@@ -125,11 +125,11 @@ tr:nth-last-child(2) {
 
 <h3 id="Quantity_query">Quantity query</h3>
 
-<p>A <em>quantity query</em> styles elements depending on how many of them there are. In this example, list items turn red when there are at least three of them in a given list. This is accomplished by combining the capabilities of the <code>nth-last-child</code> pseudo-class and the <a href="/en-US/docs/Web/CSS/General_sibling_selectors">general sibling combinator</a>.</p>
+<p>A <em>quantity query</em> styles elements depending on how many of them there are. In this example, list items turn red when there are at least three of them in a given list. This is accomplished by combining the capabilities of the <code>nth-last-child</code> pseudo-class and the <a href="/en-US/docs/Web/CSS/General_sibling_combinator">general sibling combinator</a>.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h4&gt;A list of four items (styled):&lt;/h4&gt;
+<pre class="brush: html">&lt;h4&gt;A list of four items (styled):&lt;/h4&gt;
 &lt;ol&gt;
   &lt;li&gt;One&lt;/li&gt;
   &lt;li&gt;Two&lt;/li&gt;
@@ -145,7 +145,7 @@ tr:nth-last-child(2) {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">/* If there are at least three list items,
+<pre class="brush: css">/* If there are at least three list items,
    style them all */
 li:nth-last-child(n+3),
 li:nth-last-child(n+3) ~ li {
@@ -182,10 +182,7 @@ li:nth-last-child(n+3) ~ li {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.selectors.nth-last-child")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

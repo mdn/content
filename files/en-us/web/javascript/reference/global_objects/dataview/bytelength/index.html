@@ -7,6 +7,7 @@ tags:
   - Property
   - Prototype
   - TypedArrays
+browser-compat: javascript.builtins.DataView.byteLength
 ---
 <div>{{JSRef}}</div>
 
@@ -14,7 +15,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Description">Description</h2>
 
@@ -24,7 +24,7 @@ tags:
 
 <h3 id="Using_the_byteLength_property">Using the byteLength property</h3>
 
-<pre class="brush:js notranslate">var buffer = new ArrayBuffer(8);
+<pre class="brush:js">var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.byteLength; // 8 (matches the byteLength of the buffer)
 
@@ -37,22 +37,11 @@ dataview3.byteLength; // 6 (due to the offset of the constructed DataView)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.DataView.byteLength")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

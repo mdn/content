@@ -35,10 +35,14 @@ tags:
  <dd>Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.</dd>
  <dt>{{domxref("Navigator.geolocation")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.</dd>
+ <dt>{{domxref("Navigator.hid")}} {{readonlyInline}}</dt>
+ <dd>Returns an {{domxref("HID")}} object providing methods
+  for connecting to HID devices, listing attached HID devices, and event
+  handlers for connected HID devices.</dd>
  <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyInline}}</dt>
  <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} flag indicating whether the host browser is Java-enabled or not.</dd>
+ <dd>Returns false.</dd>
  <dt>{{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.</dd>
  <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
@@ -55,16 +59,18 @@ tags:
  <dd>Returns a reference to a {{domxref("MediaDevices")}} object which can then be used to get information about available media devices ({{domxref("MediaDevices.enumerateDevices()")}}), find out what constrainable properties are supported for media on the user's computer and user agent ({{domxref("MediaDevices.getSupportedConstraints()")}}), and to request access to media using {{domxref("MediaDevices.getUserMedia()")}}.</dd>
  <dt>{{domxref("Navigator.mediaSession")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns {{domxref("MediaSession")}} object which can be used to provide metadata that can be used by the browser to present information about the currently-playing media to the user, such as in a global media controls UI.</dd>
- <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.</dd>
- <dt>{{domxref("Navigator.onLine")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorOnLine.onLine")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the browser is working online.</dd>
  <dt>{{domxref("Navigator.permissions")}} {{readonlyinline}} {{experimental_inline}}</dt>
  <dd>Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</dd>
- <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("NavigatorPlugins.plugins")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("PluginArray")}} listing the plugins installed in the browser.</dd>
  <dt>{{domxref("Navigator.presentation")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Returns a reference to the {{domxref("Presentation")}} API.</dd>
+ <dt>{{domxref("Navigator.serial")}} {{readonlyInline}}</dt>
+ <dd>Returns a {{domxref("Serial")}} object,  which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.</dd>
  <dt>{{domxref("Navigator.serviceWorker")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the <a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated document</a>.</dd>
  <dt>{{domxref("NavigatorStorage.storage")}} {{readonlyinline}}</dt>
@@ -76,7 +82,7 @@ tags:
  <dt>{{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>Indicates whether the user agent is controlled by automation.</dd>
  <dt>{{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns {{domxref("XR")}} object, which represents the entry point into the <a href="/en-US/docs/Web/API/WebXR_API">WebXR API</a>.</dd>
+ <dd>Returns {{domxref("XRSystem")}} object, which represents the entry point into the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>.</dd>
 </dl>
 
 <h3 id="Non-standard_properties">Non-standard properties</h3>
@@ -115,8 +121,6 @@ tags:
  <dd>Always returns <code>'Gecko'</code>, on any browser. This property is kept only for compatibility purpose.</dd>
  <dt>{{domxref("Navigator.productSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the build number of the current browser (e.g., "20060909").</dd>
- <dt>{{domxref("Navigator.storageQuota")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref('StorageQuota')}} interface which provides means to query and request storage usage and quota information.</dd>
  <dt>{{domxref("Navigator.vendorSub")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the vendor version number (e.g. "6.1").</dd>
 </dl>
@@ -128,12 +132,16 @@ tags:
 <dl>
  <dt>{{domxref("Navigator.canShare()")}}</dt>
  <dd>Returns <code>true</code> if a call to <code>Navigator.share()</code> would succeed.</dd>
+ <dt>{{domxref("Navigator.clearAppBadge()")}}</dt>
+ <dd>Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</dd>
  <dt>{{domxref("Navigator.registerProtocolHandler()")}}</dt>
  <dd>Allows web sites to register themselves as a possible handler for a given protocol.</dd>
  <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.</dd>
  <dt>{{domxref("Navigator.sendBeacon()")}}</dt>
  <dd>Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.</dd>
+ <dt>{{domxref("Navigator.setAppBadge()")}}</dt>
+ <dd>Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</dd>
  <dt>{{domxref("Navigator.share()")}}</dt>
  <dd>Invokes the native sharing mechanism of the current platform.</dd>
  <dt>{{domxref("Navigator.vibrate()")}}</dt>
@@ -174,6 +182,6 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <div>{{Compat("api.Navigator")}}</div>

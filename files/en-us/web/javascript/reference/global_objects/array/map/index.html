@@ -9,6 +9,7 @@ tags:
 - Prototype
 - Reference
 - polyfill
+browser-compat: javascript.builtins.Array.map
 ---
 <div>{{JSRef}}</div>
 
@@ -18,32 +19,39 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/array-map.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>newArray</var> = <var>arr</var>.map(<var>callback</var>(<var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
-  // return element for <em>newArray,</em> after executing something
-}[, <var>thisArg</var>]);
+<pre class="brush: js">
+// Arrow function
+map((element) => { ... } )
+map((element, index) => { ... } )
+map((element, index, array) => { ... } )
+
+// Callback function
+map(callbackFn)
+map(callbackFn, thisArg)
+
+// Inline callback function
+map(function callbackFn(element) { ... })
+map(function callbackFn(element, index) { ... })
+map(function callbackFn(element, index, array){ ... })
+map(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>Function that is called for every element of <code><var>arr</var></code>. Each time
-      <code><var>callback</var></code> executes, the returned value is added to
+      <code><var>callbackFn</var></code> executes, the returned value is added to
       <code><var>newArray</var></code>.</p>
 
-    <p>The <code><var>callback</var></code> function accepts the following arguments:</p>
+    <p>The <code><var>callbackFn</var></code> function accepts the following arguments:</p>
 
     <dl>
-      <dt><code><var>currentValue</var></code></dt>
+      <dt><code><var>element</var></code></dt>
       <dd>The current element being processed in the array.</dd>
       <dt><code><var>index</var></code>{{optional_inline}}</dt>
       <dd>The index of the current element being processed in the array.</dd>
@@ -52,7 +60,7 @@ tags:
     </dl>
   </dd>
   <dt><code>thisArg</code>{{optional_inline}}</dt>
-  <dd>Value to use as <code>this</code> when executing <code><var>callback</var></code>.
+  <dd>Value to use as <code>this</code> when executing <code><var>callbackFn</var></code>.
   </dd>
 </dl>
 
@@ -62,9 +70,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p><code>map</code> calls a provided <code><var>callback</var></code> function
+<p><code>map</code> calls a provided <code><var>callbackFn</var></code> function
   <strong>once for each element</strong> in an array, in order, and constructs a new array
-  from the results. <code><var>callback</var></code> is invoked only for indexes of the
+  from the results. <code><var>callbackFn</var></code> is invoked only for indexes of the
   array which have assigned values (including {{jsxref("undefined")}}).</p>
 
 <p>It is <em>not</em> called for missing elements of the array; that is:</p>
@@ -89,24 +97,24 @@ tags:
 
 <h3 id="Parameters_in_Detail">Parameters in Detail</h3>
 
-<p><code><var>callback</var></code> is invoked with three arguments: the value of the
+<p><code><var>callbackFn</var></code> is invoked with three arguments: the value of the
   element, the index of the element, and the array object being mapped.</p>
 
 <p>If a <code>thisArg</code> parameter is provided, it will be used as callback's
   <code>this</code> value. Otherwise, the value {{jsxref("undefined")}} will be used as
   its <code>this</code> value. The <code>this</code> value ultimately observable by
-  <code><var>callback</var></code> is determined according to <a
+  <code><var>callbackFn</var></code> is determined according to <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for
     determining the <code>this</code> seen by a function</a>.</p>
 
 <p><code>map</code> does not mutate the array on which it is called (although
-  <code><var>callback</var></code>, if invoked, may do so).</p>
+  <code><var>callbackFn</var></code>, if invoked, may do so).</p>
 
 <p>The range of elements processed by <code>map</code> is set before the first invocation
-  of <code><var>callback</var></code>. Elements which are appended to the array after the
-  call to <code>map</code> begins will not be visited by <code><var>callback</var></code>.
+  of <code><var>callbackFn</var></code>. Elements which are appended to the array after the
+  call to <code>map</code> begins will not be visited by <code><var>callbackFn</var></code>.
   If existing elements of the array are changed after the call to <code>map</code>, their
-  value will be the value at the time <code><var>callback</var></code> visits them.
+  value will be the value at the time <code><var>callbackFn</var></code> visits them.
   Elements that are deleted after the call to <code>map</code> begins and before being
   visited are not visited.</p>
 
@@ -126,7 +134,7 @@ tags:
   their original values and that <code>callback.call</code> evaluates to the original
   value of <code>{{jsxref("Function.prototype.call")}}</code>.</p>
 
-<pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.19
+<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: https://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
 
@@ -225,7 +233,7 @@ if (!Array.prototype.map) {
 <p>The following code takes an array of numbers and creates a new array containing the
   square roots of the numbers in the first array.</p>
 
-<pre class="brush: js notranslate">let numbers = [1, 4, 9]
+<pre class="brush: js">let numbers = [1, 4, 9]
 let roots = numbers.map(function(num) {
     return Math.sqrt(num)
 })
@@ -239,7 +247,7 @@ let roots = numbers.map(function(num) {
 <p>The following code takes an array of objects and creates a new array containing the
   newly reformatted objects.</p>
 
-<pre class="brush: js notranslate">let kvArray = [{key: 1, value: 10},
+<pre class="brush: js">let kvArray = [{key: 1, value: 10},
                {key: 2, value: 20},
                {key: 3, value: 30}]
 
@@ -263,7 +271,7 @@ let reformattedArray = kvArray.map(obj =&gt; {
   argument is used with it. The argument will automatically be assigned from each element
   of the array as <code>map</code> loops through the original array.</p>
 
-<pre class="brush: js notranslate">let numbers = [1, 4, 9]
+<pre class="brush: js">let numbers = [1, 4, 9]
 let doubles = numbers.map(function(num) {
   return num * 2
 })
@@ -277,7 +285,7 @@ let doubles = numbers.map(function(num) {
 <p>This example shows how to use map on a {{jsxref("String")}} to get an array of bytes in
   the ASCII encoding representing the character values:</p>
 
-<pre class="brush: js notranslate">let map = Array.prototype.map
+<pre class="brush: js">let map = Array.prototype.map
 let a = map.call('Hello World', function(x) {
   return x.charCodeAt(0)
 })
@@ -294,7 +302,7 @@ let a = map.call('Hello World', function(x) {
 <p>In this case, we return all the selected <code>option</code>s' values on the screen:
 </p>
 
-<pre class="brush: js notranslate">let elems = document.querySelectorAll('select option:checked')
+<pre class="brush: js">let elems = document.querySelectorAll('select option:checked')
 let values = Array.prototype.map.call(elems, function(obj) {
   return obj.value
 })
@@ -313,7 +321,7 @@ let values = Array.prototype.map.call(elems, function(obj) {
 
 <p>Consider:</p>
 
-<pre class="brush: js notranslate">["1", "2", "3"].map(parseInt)</pre>
+<pre class="brush: js">["1", "2", "3"].map(parseInt)</pre>
 
 <p>While one might expect <code>[1, 2, 3]</code>, the actual result is
   <code>[1, NaN, NaN]</code>.</p>
@@ -333,7 +341,7 @@ let values = Array.prototype.map.call(elems, function(obj) {
 
 <p>Here is a concise example of the iteration steps:</p>
 
-<pre class="brush: js notranslate">// parseInt(string, radix) -&gt; map(parseInt(value, index))
+<pre class="brush: js">// parseInt(string, radix) -&gt; map(parseInt(value, index))
 /*  first iteration  (index is 0): */ parseInt("1", 0)  // 1
 /*  second iteration (index is 1): */ parseInt("2", 1)  // NaN
 /*  third iteration  (index is 2): */ parseInt("3", 2)  // NaN
@@ -341,7 +349,7 @@ let values = Array.prototype.map.call(elems, function(obj) {
 
 <p>Then let's talk about solutions.</p>
 
-<pre class="brush: js notranslate">function returnInt(element) {
+<pre class="brush: js">function returnInt(element) {
   return parseInt(element, 10)
 }
 
@@ -364,7 +372,7 @@ let values = Array.prototype.map.call(elems, function(obj) {
 <p>One alternative output of the map method being called with {{jsxref("parseInt")}} as a
   parameter runs as follows:</p>
 
-<pre class="brush: js notranslate">let xs = ['10', '10', '10']
+<pre class="brush: js">let xs = ['10', '10', '10']
 
 xs = xs.map(parseInt)
 
@@ -375,7 +383,7 @@ console.log(xs)
 
 <p>When {{jsxref("undefined")}} or nothing is returned:</p>
 
-<pre class="brush: js notranslate">let numbers = [1, 2, 3, 4]
+<pre class="brush: js">let numbers = [1, 2, 3, 4]
 let filteredNumbers = numbers.map(function(num, index) {
   if (index &lt; 3) {
      return num
@@ -389,25 +397,11 @@ let filteredNumbers = numbers.map(function(num, index) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.map")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

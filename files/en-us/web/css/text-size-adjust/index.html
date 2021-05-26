@@ -9,12 +9,13 @@ tags:
   - NeedsExample
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.text-size-adjust
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
 <p>The <strong><code>text-size-adjust</code></strong> <a href="/en-US/docs/Web/API/CSS">CSS</a> property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush: css no-line-numbers">/* Keyword values */
 text-size-adjust: none;
 text-size-adjust: auto;
 
@@ -52,7 +53,7 @@ text-size-adjust: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -60,7 +61,7 @@ text-size-adjust: unset;
 
 <p>As hinted at above, on a properly designed responsive site the <code>text-size-adjust</code> behavior is not needed, so developers can elect to turn it off by specifying a value of none:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }</pre>
@@ -86,12 +87,12 @@ text-size-adjust: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-size-adjust")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a class="link-https" href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16">Apple's documentation</a></li>
- <li><a class="external" href="http://dbaron.org/log/20111126-font-inflation">Gecko's behavior description</a>, by L. David Baron</li>
- <li><a class="external" href="https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS">Microsoft's documentation</a></li>
+ <li><a href="http://dbaron.org/log/20111126-font-inflation">Gecko's behavior description</a>, by L. David Baron</li>
+ <li><a href="https://msdn.microsoft.com/library/windows/apps/ff462082(v=vs.105).aspx#BKMK_AdjustingTextSizewithCustomCSS">Microsoft's documentation</a></li>
 </ul>

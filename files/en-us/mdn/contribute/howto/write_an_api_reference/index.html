@@ -111,7 +111,7 @@ tags:
 <ul>
  <li>We document methods defined on the <u>prototype</u> of an object implementing this interface (instance methods), and methods defined on the actual class itself (static methods). On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods). Usually only instance methods exist, in which case you can put these under the title "Methods".</li>
  <li>We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.</li>
- <li>We do document properties and methods defined in mixins, though we use the mixin name as interface name. (This is not optimal as the mixin name will not appear in the console, but it prevents the duplication of documentation. We may revisit this in the future.)</li>
+ <li>We do document properties and methods defined in mixins. Please see the <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins">contribution guide for mixins</a> for more details.</li>
  <li>Special methods like the stringifier (<code>toString()</code>) and the jsonizer (<code>toJSON()</code>) are also listed if they do exist.</li>
  <li>Named constructors (like <code>Image()</code>  for {{domxref("HTMLImageElement")}} ) are also listed, if relevant.</li>
 </ul>
@@ -275,7 +275,7 @@ tags:
    <li>\{{Non-standard_header}}</li>
   </ul>
  </li>
- <li><strong>Description</strong>: the first paragraph of the interface page should provide  a  short concise description of the interface's overarching purpose.  You may also want to include a couple more paragraphs if any additional description is required. Note that if the interface defines a mixin, you shouldn't use the term "Interface" to describe it, but mixin instead — it isn't really a standalone interface as such, but a mixin that adds functionality to multiple other interfaces. Similarly, if the interface is actually a dictionary, you should use that term instead of "interface".</li>
+ <li><strong>Description</strong>: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. If the interface is actually a dictionary, you should use that term instead of "interface".</li>
  <li><strong>Inheritance diagram:</strong> Use the {{TemplateLink("InheritanceDiagram")}} macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use \{{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.</li>
  <li>
   <p><strong>List of properties, List of methods</strong>: These sections should be titled  "Properties" and "Methods", and provide links (using the \{{domxref}} macro) to a reference  page for each property/method of that interface, along with a description of what  each one does. These should be marked up using description/definition  lists, which can be created using the  "Definition List", "Definition  Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \{{domxref}} macro" section for a quicker way to create links to other pages.<br>
@@ -422,7 +422,7 @@ tags:
 <p>The following are exemplary examples of Interface pages:</p>
 
 <ul>
- <li>{{domxref("DocumentOrShadowRoot/getAnimations")}} from the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>.</li>
+ <li>{{domxref("Document.getAnimations")}} from the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>.</li>
  <li>{{domxref("WindowOrWorkerGlobalScope/fetch")}} from the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</li>
 </ul>
 

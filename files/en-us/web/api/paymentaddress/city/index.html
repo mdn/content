@@ -16,7 +16,7 @@ tags:
 - town
 - village
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}}</div>
 
 <p><span class="seoSummary">The <strong><code>city</code></strong> read-only property of
     the {{domxref('PaymentAddress')}} interface returns a string containing the city or
@@ -25,33 +25,13 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>paymentCity</em> = <em>PaymentAddress</em>.city;</pre>
+  class="brush: js">var <em>paymentCity</em> = <em>PaymentAddress</em>.city;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A {{domxref("DOMString")}} indicating the city or town portion of the address described
   by the {{domxref("PaymentAddress")}} object.</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#dom-paymentaddress-city','PaymentAddress.city')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentAddress.city")}}</p>
-</div>
+<p>{{Compat("api.PaymentAddress.city")}}</p>

@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <var>isPictureInPictureAvailable</var> = <var>document</var>.pictureInPictureEnabled;
+<pre class="brush: js">let <var>isPictureInPictureAvailable</var> = <var>document</var>.pictureInPictureEnabled;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -43,7 +43,7 @@ tags:
   {{htmlElement("video")}} element the value of <code>pictureInPictureEnabled</code> is
   checked, in order to avoid making the call if the feature is not available.</p>
 
-<pre class="brush: js notranslate">function requestPictureInPicture() {
+<pre class="brush: js">function requestPictureInPicture() {
   if (document.pictureInPictureEnabled) {
     videoElement.requestPictureInPicture();
   } else {
@@ -82,6 +82,6 @@ tags:
   <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
   <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
   <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
-  <li>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</li>
+  <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
   <li>{{CSSxRef(":picture-in-picture")}}</li>
 </ul>

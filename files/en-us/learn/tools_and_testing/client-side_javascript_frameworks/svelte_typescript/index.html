@@ -42,15 +42,15 @@ tags:
 
 <p>Clone the github repo (if you haven't already done it) with:</p>
 
-<pre class="brush: bash notranslate">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
 <p>Then to get to the current app state, run</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/07-typescript-support</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/07-typescript-support</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/07-typescript-support</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/07-typescript-support</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -73,10 +73,6 @@ tags:
 <p>First class TypeScript support has been Svelte's most requested feature for quite some time. Thanks to the hard work of the Svelte team, together with many contributors, we have an <a href="https://svelte.dev/blog/svelte-and-typescript">official solution</a> ready to be put to the test. In this section we'll show you how to setup a Svelte project With TypeScript support to give it a try.</p>
 
 <h2 id="Why_TypeScript">Why TypeScript?</h2>
-
-<p>Recently TypeScript has seen enormous growth. From last year's <a href="https://octoverse.github.com/">GitHub octoverse report</a> we can see that TypeScript is the <a href="https://octoverse.github.com/#top-languages-over-time">7th most used</a> and <a href="https://octoverse.github.com/#fastest-growing-languages">5th fastest growing</a> language used on GitHub. According to <a href="https://insights.stackoverflow.com/survey/2019#overview">StackOverflow's 2019 Developer Survey</a> it is the <a href="https://insights.stackoverflow.com/survey/2019#most-loved-dreaded-and-wanted">third most loved language</a>, right behind Rust and Python.</p>
-
-<p>So TypeScript is going through a great phase of adoption.</p>
 
 <p>TypeScript's main advantages are:</p>
 
@@ -107,7 +103,7 @@ tags:
 
 <p>You can start a new Svelte TypeScript project using the <a href="https://github.com/sveltejs/template">standard template</a>. All you have to do is run the following terminal commands (run them somewhere where you are storing your Svelte test projects — it creates a new directory):</p>
 
-<pre class="brush: bash notranslate">npx degit sveltejs/template svelte-typescript-app
+<pre class="brush: bash">npx degit sveltejs/template svelte-typescript-app
 
 cd svelte-typescript-app
 
@@ -118,7 +114,7 @@ node scripts/setupTypeScript.js
 
 <p>Then you'll have to tell npm to download dependencies and start the project in development mode, like we usually do:</p>
 
-<pre class="brush: bash notranslate">npm install
+<pre class="brush: bash">npm install
 
 npm run dev</pre>
 
@@ -134,14 +130,14 @@ npm run dev</pre>
 
 <p>Go to the root directory of the project and enter these commands:</p>
 
-<pre class="brush: bash notranslate">npx degit sveltejs/template/scripts scripts       # download script file to a scripts folder
+<pre class="brush: bash">npx degit sveltejs/template/scripts scripts       # download script file to a scripts folder
 
 node scripts/setupTypeScript.js                   # run it
 Converted to TypeScript.</pre>
 
 <p>You will need to re-run your dependency manager to get started.</p>
 
-<pre class="brush: bash notranslate">npm install                                       # download new dependencies
+<pre class="brush: bash">npm install                                       # download new dependencies
 
 npm run dev                                       # start the app in development mode</pre>
 
@@ -225,7 +221,7 @@ npm run dev                                       # start the app in development
 	<li>
 	<p>Give <code>todo.type.ts</code> the following content:</p>
 
-	<pre class="brush: js notranslate">export type TodoType = {
+	<pre class="brush: js">export type TodoType = {
   id: number
   name: string
   completed: boolean
@@ -241,7 +237,7 @@ npm run dev                                       # start the app in development
 	<li>
 	<p>Let's <code>import</code> the type and use it to declare the <code>todo</code> property. Replace the <code>export let todo</code> line with the following:</p>
 
-	<pre class="brush: js notranslate">import type { TodoType } from '../types/todo.type'
+	<pre class="brush: js">import type { TodoType } from '../types/todo.type'
 
 export let todo: TodoType</pre>
 
@@ -252,7 +248,7 @@ export let todo: TodoType</pre>
 	<li>
 	<p>Now from <code>Todos.svelte</code>, we will instantiate a Todo component with a literal object as its parameter before the call to the <code>MoreActions</code> component, like this:</p>
 
-	<pre class="brush: html notranslate">&lt;hr /&gt;
+	<pre class="brush: html">&lt;hr /&gt;
 
 &lt;Todo todo={ { name: 'a new task with no id!', completed: false } } /&gt;
 
@@ -285,11 +281,11 @@ export let todo: TodoType</pre>
 
 <p>Let's start by running the validate script in watch mode inside your project root:</p>
 
-<pre class="brush: bash notranslate">npm run validate -- --watch</pre>
+<pre class="brush: bash">npm run validate -- --watch</pre>
 
 <p>this should output something like the following:</p>
 
-<pre class="brush: bash notranslate">svelte-check "--watch"
+<pre class="brush: bash">svelte-check "--watch"
 
 Loading svelte-check in workspace: ./svelte-todo-typescript
 Getting Svelte diagnostics...
@@ -308,7 +304,7 @@ svelte-check found no errors and no warnings</pre>
 	<li>
 	<p>Add <code>lang="ts"</code> into your <code>Alert.svelte</code> component's <code>&lt;script&gt;</code> tag. You'll see some warnings in the output of the <code>validate</code> script:</p>
 
-	<pre class="brush: bash notranslate">$ npm run validate -- --watch
+	<pre class="brush: bash">$ npm run validate -- --watch
 &gt; svelte-check "--watch"
 
 ./svelte-todo-typescript
@@ -334,7 +330,7 @@ Warn: Parameter 'ms' implicitly has an 'any' type, but a better type may be infe
 	<li>
 	<p>You can fix these by specifying the corresponding types, like so:</p>
 
-	<pre class="brush: js notranslate">export let ms = 3000
+	<pre class="brush: js">export let ms = 3000
 
   let visible: boolean
   let timeout: number
@@ -356,7 +352,7 @@ Warn: Parameter 'ms' implicitly has an 'any' type, but a better type may be infe
 <ol>
 	<li>Add the <code>lang='ts'</code> attribute, like before. TypeScript will warn us about the <code>todos</code> prop and the <code>t</code> variable in the call to <code>todos.filter(t =&gt;...)</code>.
 
-	<pre class="brush: bash notranslate">Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
+	<pre class="brush: bash">Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
   export let todos
 
 Warn: Parameter 't' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
@@ -365,7 +361,7 @@ Warn: Parameter 't' implicitly has an 'any' type, but a better type may be infer
 	<li>
 	<p>We will use the <code>TodoType</code> we already defined to tell TypeScript that <code>todos</code> is a <code>TodoType</code> array — replace your <code>export let todos</code> line with the following:</p>
 
-	<pre class="brush: js notranslate">import type { TodoType } from '../types/todo.type'
+	<pre class="brush: js">import type { TodoType } from '../types/todo.type'
 
 export let todos: TodoType[]</pre>
 	</li>
@@ -373,11 +369,11 @@ export let todos: TodoType[]</pre>
 
 <p>Notice that now TypeScript can infer that the <code>t</code> variable in <code>todos.filter(t =&gt; t.completed)</code> is of type <code>TodoType</code>. Nevertheless, if we think it makes our code easier to read, we could specify it like this:</p>
 
-<pre class="brush: js notranslate">$: completedTodos = todos.filter((t: TodoType) =&gt; t.completed).length</pre>
+<pre class="brush: js">$: completedTodos = todos.filter((t: TodoType) =&gt; t.completed).length</pre>
 
 <p>Most of the time TypeScript will be able to correctly infer the reactive variable type, but sometimes you might get an "implicitly has an 'any' type" error when working with reactive assignments. In those cases you can declare the typed variable in a different statement, like this:</p>
 
-<pre class="brush: js notranslate">let completeTodos: number
+<pre class="brush: js">let completeTodos: number
 $: completedTodos = todos.filter((t: TodoType) =&gt; t.completed).length</pre>
 
 <p>You can't specify the type in the reactive assignment itself. The following statement <code>$: completedTodos: number = todos.filter[...]</code> is invalid. For more information read <a href="https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-type-reactive-assignments--i-get-an-implicitly-has-type-any-error">How do I type reactive assignments? / I get an "implicitly has type 'any' error"</a>.</p>
@@ -396,7 +392,7 @@ $: completedTodos = todos.filter((t: TodoType) =&gt; t.completed).length</pre>
 	<li>
 	<p>Give it the following contents:</p>
 
-	<pre class="brush: js notranslate">export enum Filter {
+	<pre class="brush: js">export enum Filter {
   ALL = 'all',
   ACTIVE = 'active',
   COMPLETED = 'completed',
@@ -405,7 +401,7 @@ $: completedTodos = todos.filter((t: TodoType) =&gt; t.completed).length</pre>
 	<li>
 	<p>Now we will use this from the <code>FilterButton</code> component. Replace the content of the <code>FilterButton.svelte</code> file with the following:</p>
 
-	<pre class="brush: html notranslate">&lt;!-- components/FilterButton.svelte --&gt;
+	<pre class="brush: html">&lt;!-- components/FilterButton.svelte --&gt;
 &lt;script lang='ts'&gt;
   import { Filter } from '../types/filter.enum'
 
@@ -445,12 +441,12 @@ $: completedTodos = todos.filter((t: TodoType) =&gt; t.completed).length</pre>
 	<li>
 	<p>Next, import the <code>Filter</code> enum — add the following <code>import</code> statement below your existing ones:</p>
 
-	<pre class="brush: js notranslate">import { Filter } from '../types/filter.enum'</pre>
+	<pre class="brush: js">import { Filter } from '../types/filter.enum'</pre>
 	</li>
 	<li>
 	<p>Now we will use it whenever we reference the current filter. Replace your two filter-related blocks with the following:</p>
 
-	<pre class="brush: js notranslate">let filter: Filter = Filter.ALL
+	<pre class="brush: js">let filter: Filter = Filter.ALL
   const filterTodos = (filter: Filter, todos) =&gt;
     filter === Filter.ACTIVE ? todos.filter(t =&gt; !t.completed) :
     filter === Filter.COMPLETED ? todos.filter(t =&gt; t.completed) :
@@ -467,7 +463,7 @@ $: {
 
 	<p>Start by importing the <code>TodoType</code> and telling TypeScript that our <code>todos</code> variable is an array of <code>TodoType</code>. Replace <code>export let todos = []</code> with the following two lines:</p>
 
-	<pre class="brush: js notranslate">import type { TodoType } from '../types/todo.type'
+	<pre class="brush: js">import type { TodoType } from '../types/todo.type'
 
 export let todos: TodoType[] = []</pre>
 	</li>
@@ -476,7 +472,7 @@ export let todos: TodoType[] = []</pre>
 
 	<p>Update your <code>&lt;script&gt;</code> section to look like this:</p>
 
-	<pre class="brush: js notranslate">&lt;script lang='ts'&gt;
+	<pre class="brush: js">&lt;script lang='ts'&gt;
   import FilterButton from './FilterButton.svelte'
   import Todo from './Todo.svelte'
   import MoreActions from './MoreActions.svelte'
@@ -540,7 +536,7 @@ export let todos: TodoType[] = []</pre>
 
 <p>We are encountering the following errors related to passing <code>todos</code> to the <code>TodosStatus.svelte</code> (and <code>Todo.svelte</code>) components:</p>
 
-<pre class="brush: bash notranslate">./src/components/Todos.svelte:70:39
+<pre class="brush: bash">./src/components/Todos.svelte:70:39
 Error: Type 'TodoType[]' is not assignable to type 'undefined'. (ts)
   &lt;TodosStatus bind:this={todosStatus} {todos} /&gt;
 
@@ -559,14 +555,14 @@ Error: Type 'TodoType' is not assignable to type 'undefined'. (ts)
 	<li>
 	<p>Then import the <code>TodoType</code> and declare the <code>todos</code> prop as an array of <code>TodoType</code>. Replace the first line of the <code>&lt;script&gt;</code> section with the following:</p>
 
-	<pre class="brush: js notranslate">import type { TodoType } from '../types/todo.type'
+	<pre class="brush: js">import type { TodoType } from '../types/todo.type'
 
 export let todos: TodoType[]</pre>
 	</li>
 	<li>
 	<p>We will also specify the <code>headingEl</code>, which we used to bind to the heading tag, as an <code>HTMLElement</code>. Update the <code>let headingEl</code> line with the following:</p>
 
-	<pre class="brush: js notranslate">let headingEl: HTMLElement</pre>
+	<pre class="brush: js">let headingEl: HTMLElement</pre>
 	</li>
 	<li>
 	<p>Finally, you'll notice the following error reported, related to where we set the <code>tabindex</code> attribute. That's because TypeScript is type-checking the <code>&lt;h2&gt;</code> element and expects <code>tabindex</code> to be of type <code>number</code>.</p>
@@ -575,7 +571,7 @@ export let todos: TodoType[]</pre>
 
 	<p>To fix it, replace <code>tabindex="-1"</code> with <code>tabindex={-1}</code>, like this:</p>
 
-	<pre class="brush: html notranslate">&lt;h2 id="list-heading" bind:this={headingEl} tabindex={-1}&gt;{completedTodos} out of {totalTodos} items completed&lt;/h2&gt;</pre>
+	<pre class="brush: html">&lt;h2 id="list-heading" bind:this={headingEl} tabindex={-1}&gt;{completedTodos} out of {totalTodos} items completed&lt;/h2&gt;</pre>
 
 	<p>This way TypeScript can prevent us from incorrectly assigning it to a string variable.</p>
 	</li>
@@ -592,12 +588,12 @@ export let todos: TodoType[]</pre>
 	<li>
 	<p>The warning will indicate that we have to specify a type for the <code>nameEl</code> variable. Set its type to <code>HTMLElement</code> like this:</p>
 
-	<pre class="brush: js notranslate">let nameEl: HTMLElement     // reference to the name input DOM node</pre>
+	<pre class="brush: js">let nameEl: HTMLElement     // reference to the name input DOM node</pre>
 	</li>
 	<li>
 	<p>Last for this file, we need to specify the correct type for our <code>autofocus</code> variable; update its definition like this:</p>
 
-	<pre class="brush: js notranslate">export let autofocus: boolean = false</pre>
+	<pre class="brush: js">export let autofocus: boolean = false</pre>
 	</li>
 </ol>
 
@@ -612,7 +608,7 @@ export let todos: TodoType[]</pre>
 	<li>
 	<p>Let's import the <code>TodoType</code>, and set the type of the <code>todo</code> prop. Replace the <code>export let todo</code> line with the following:</p>
 
-	<pre class="brush: js notranslate">import type { TodoType } from '../types/todo.type'
+	<pre class="brush: js">import type { TodoType } from '../types/todo.type'
 
 export let todo: TodoType</pre>
 	</li>
@@ -623,7 +619,7 @@ export let todo: TodoType</pre>
 
 	<p>We'll use it in the <code>update()</code> function — update yours like so:</p>
 
-	<pre class="brush: js notranslate">function update(updatedTodo: Partial&lt;TodoType&gt;) {
+	<pre class="brush: js">function update(updatedTodo: Partial&lt;TodoType&gt;) {
   todo = { ...todo, ...updatedTodo }    // applies modifications to todo
   dispatch('update', todo)              // emit update event
 }</pre>
@@ -633,7 +629,7 @@ export let todo: TodoType</pre>
 	<li>
 	<p>Now svelte-check tells us that we have to define the type of our action function parameters:</p>
 
-	<pre class="brush: bash notranslate">./07-next-steps/src/components/Todo.svelte:45:24
+	<pre class="brush: bash">./07-next-steps/src/components/Todo.svelte:45:24
 Warn: Parameter 'node' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
   const focusOnInit = (node) =&gt; node &amp;&amp; typeof node.focus === 'function' &amp;&amp; node.focus()
 
@@ -653,7 +649,7 @@ Warn: Parameter 'node' implicitly has an 'any' type, but a better type may be in
 	<li>
 	<p>Rename it to <code>actions.ts</code> and add the type of the node parameter. It should end up looking like this:</p>
 
-	<pre class="brush: js notranslate">// actions.ts
+	<pre class="brush: js">// actions.ts
 export function selectOnFocus(node: HTMLInputElement) {
   if (node &amp;&amp; typeof node.select === 'function' ) {               // make sure node is defined and has a select() method
     const onFocus = () =&gt; node.select()                           // event handler
@@ -667,7 +663,7 @@ export function selectOnFocus(node: HTMLInputElement) {
 	<li>
 	<p>Now update <code>Todo.svelte</code> and <code>NewTodo.svelte</code> where we import the actions file. Remember that imports in TypeScript don't include the file extension. In each case it should end up like this:</p>
 
-	<pre class="brush: js notranslate">import { selectOnFocus } from '../actions'</pre>
+	<pre class="brush: js">import { selectOnFocus } from '../actions'</pre>
 	</li>
 </ol>
 
@@ -686,7 +682,7 @@ export function selectOnFocus(node: HTMLInputElement) {
 	<li>
 	<p>Set the type of our <code>initialTodos</code> array to <code>TodoType[]</code>. This is how the contents will end up:</p>
 
-	<pre class="brush: js notranslate">// stores.ts
+	<pre class="brush: js">// stores.ts
 import { writable } from 'svelte/store'
 import { localStore } from './localStore.js'
 import type { TodoType } from './types/todo.type'
@@ -703,7 +699,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 	<li>
 	<p>Remember to update the <code>import</code> statements in <code>App.svelte</code>, <code>Alert.svelte</code>, and <code>Todos.svelte</code>. Just remove the <code>.js</code> extension, like this:</p>
 
-	<pre class="brush: js notranslate">import { todos } from '../stores'</pre>
+	<pre class="brush: js">import { todos } from '../stores'</pre>
 	</li>
 </ol>
 
@@ -711,7 +707,7 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 
 <p>Update the <code>import</code> statement in <code>stores.ts</code>, like so:</p>
 
-<pre class="brush: js notranslate">import { localStore } from './localStore'</pre>
+<pre class="brush: js">import { localStore } from './localStore'</pre>
 
 <ol>
 	<li>
@@ -729,14 +725,14 @@ export const todos = localStore('mdn-svelte-todo', initialTodos)</pre>
 	<li>
 	<p>Give it the following content:</p>
 
-	<pre class="brush: js notranslate">export type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue }</pre>
+	<pre class="brush: js">export type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue }</pre>
 
 	<p>The <code>|</code> operator lets us declare variables that could store values of two or more types. A <code>JsonValue</code> could be a string, a number, a boolean, and so on. In this case we are also making use of recursive types, to specify that a <code>JsonValue</code> can have an array of <code>JsonValue</code>, and also an object with properties of type <code>JsonValue</code>.</p>
 	</li>
 	<li>
 	<p>We will import our <code>JsonValue</code> type and use it accordingly. Update your <code>localStore.ts</code> file like this:</p>
 
-	<pre class="brush: js notranslate">// localStore.ts
+	<pre class="brush: js">// localStore.ts
 import { writable } from 'svelte/store'
 
 import type { JsonValue } from './types/json.type'
@@ -772,7 +768,7 @@ export const localStore = (key: string, initial: JsonValue) =&gt; {          // 
 
 <p>And best of all, it will even work with the <a href="https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values"><code>$store</code> auto-subscription syntax</a>. If we try to save an invalid value to our <code>todos</code> store using the <code>$store</code> syntax, like this:</p>
 
-<pre class="brush: html notranslate">&lt;!-- App.svelte --&gt;
+<pre class="brush: html">&lt;!-- App.svelte --&gt;
 &lt;script lang="ts"&gt;
   import Todos from './components/Todos.svelte'
   import Alert from './components/Alert.svelte'
@@ -786,7 +782,7 @@ export const localStore = (key: string, initial: JsonValue) =&gt; {          // 
 
 <p>The validate script will report the following error:</p>
 
-<pre class="brush: bash notranslate">&gt; npm run validate
+<pre class="brush: bash">&gt; npm run validate
 
 Getting Svelte diagnostics...
 ====================================
@@ -813,7 +809,7 @@ Error: Argument of type '{ handler: () =&gt; void; }' is not assignable to param
 
 <p>Let's see a quick example, a simple <code>Stack</code> class that let's us <code>push</code> and <code>pop</code> elements, like this:</p>
 
-<pre class="brush: js notranslate">export class Stack {
+<pre class="brush: js">export class Stack {
   private elements = []
 
   push = (element) =&gt; this.elements.push(element)
@@ -826,14 +822,14 @@ Error: Argument of type '{ handler: () =&gt; void; }' is not assignable to param
 
 <p>In this case <code>elements</code> is an array of type <code>any</code>, and accordingly the <code>push()</code> and <code>pop()</code> methods both receive and return a variable of type <code>any</code>. So it's perfectly valid to do something like the following:</p>
 
-<pre class="brush: js notranslate">const anyStack = new Stack()
+<pre class="brush: js">const anyStack = new Stack()
 
 anyStack.push(1)
 anyStack.push('hello')</pre>
 
 <p>But what if we wanted to have a <code>Stack</code> that would only work with type <code>string</code>? We could do the following:</p>
 
-<pre class="brush: js notranslate">export class StringStack {
+<pre class="brush: js">export class StringStack {
   private elements: string[] = []
 
   push = (element: string) =&gt; this.elements.push(element)
@@ -850,7 +846,7 @@ anyStack.push('hello')</pre>
 
 <p>This is our <code>Stack</code> class reimplemented using generics:</p>
 
-<pre class="brush: js notranslate">export class Stack&lt;T&gt; {
+<pre class="brush: js">export class Stack&lt;T&gt; {
   private elements: T[] = []
 
   push = (element: T): number =&gt; this.elements.push(element)
@@ -865,7 +861,7 @@ anyStack.push('hello')</pre>
 
 <p>This is how we would use our generic <code>Stack</code>:</p>
 
-<pre class="brush: js notranslate">const numberStack = new Stack&lt;number&gt;()
+<pre class="brush: js">const numberStack = new Stack&lt;number&gt;()
 numberStack.push(1)</pre>
 
 <p>Now TypeScript knows that our stack can only accept numbers, and will issue an error if we try to push anything else:</p>
@@ -886,21 +882,21 @@ numberStack.push(1)</pre>
 
 <p>That's because when we defined our alert store in the <code>stores.ts</code> file with:</p>
 
-<pre class="brush: js notranslate">export const alert = writable('Welcome to the To-Do list app!')</pre>
+<pre class="brush: js">export const alert = writable('Welcome to the To-Do list app!')</pre>
 
 <p>TypeScript inferred the generic type to be <code>string</code>. If we wanted to be explicit about it, we could do the following:</p>
 
-<pre class="brush: js notranslate">export const alert = writable&lt;string&gt;('Welcome to the To-Do list app!')</pre>
+<pre class="brush: js">export const alert = writable&lt;string&gt;('Welcome to the To-Do list app!')</pre>
 
 <p>Now we'll make our <code>localStore</code> store support generics. Remember that we defined the <code>JsonValue</code> type to prevent the usage of our <code>localStore</code> store with values that cannot be persisted using <code>JSON.stringify()</code>. Now we want the consumers of <code>localStore</code> to be able to specify the type of data to persist, but instead of working with any type they should comply with the <code>JsonValue</code> type. We'll specify that with a Generic constraint, like this:</p>
 
-<pre class="brush: js notranslate">export const localStore = &lt;T extends JsonValue&gt;(key: string, initial: T)</pre>
+<pre class="brush: js">export const localStore = &lt;T extends JsonValue&gt;(key: string, initial: T)</pre>
 
 <p>We define a generic type <code>T</code> and specify that it must be compatible with the <code>JsonValue</code> type. Then we'll use the <code>T</code> type appropriately.</p>
 
 <p>Our <code>localStore.ts</code> file will end up like this — try the new code now in your version:</p>
 
-<pre class="brush: js notranslate">// localStore.ts
+<pre class="brush: js">// localStore.ts
 import { writable } from 'svelte/store'
 
 import type { JsonValue } from './types/json.type'
@@ -934,7 +930,7 @@ export const localStore = &lt;T extends JsonValue&gt;(key: string, initial: T) =
 
 <p>Once again, if we wanted to be explicit about it, we could do so in the <code>stores.ts</code> file like this:</p>
 
-<pre class="brush: js notranslate">const initialTodos: TodoType[] = [
+<pre class="brush: js">const initialTodos: TodoType[] = [
   { id: 1, name: 'Visit MDN web docs', completed: true },
   { id: 2, name: 'Complete the Svelte Tutorial', completed: false },
 ]
@@ -949,11 +945,11 @@ export const todos = localStore&lt;TodoType[]&gt;('mdn-svelte-todo', initialTodo
 
 <p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
 
-<pre class="brush: bash notranslate">cd mdn-svelte-tutorial/08-next-steps</pre>
+<pre class="brush: bash">cd mdn-svelte-tutorial/08-next-steps</pre>
 
 <p>Or directly download the folder's content:</p>
 
-<pre class="brush: bash notranslate">npx degit opensas/mdn-svelte-tutorial/08-next-steps</pre>
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/08-next-steps</pre>
 
 <p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
 
@@ -976,52 +972,62 @@ export const todos = localStore&lt;TodoType[]&gt;('mdn-svelte-todo', initialTodo
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
-	<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
-	<li>React
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-	</ul>
-	</li>
-	<li>Ember
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-	</ul>
-	</li>
-	<li>Vue
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-	</ul>
-	</li>
-	<li>Svelte
-	<ul>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-		<li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-	</ul>
-	</li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li>React
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+  </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
+ </li>
 </ul>

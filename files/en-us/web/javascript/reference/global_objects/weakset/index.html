@@ -6,6 +6,7 @@ tags:
   - ECMAScript 2015
   - JavaScript
   - WeakSet
+browser-compat: javascript.builtins.WeakSet
 ---
 <div>{{JSRef}}</div>
 
@@ -32,7 +33,7 @@ tags:
 
 <p><code>WeakSet</code>s are ideal for this purpose:</p>
 
-<pre class="brush: js notranslate">// Execute a callback on everything stored inside an object
+<pre class="brush: js">// Execute a callback on everything stored inside an object
 function execRecursively(fn, subject, _refs = null){
   if(!_refs)
     _refs = new WeakSet();
@@ -86,7 +87,7 @@ execRecursively(obj =&gt; console.log(obj), foo);
 
 <h3 id="Using_the_WeakSet_object">Using the WeakSet object</h3>
 
-<pre class="brush: js notranslate">const ws = new WeakSet();
+<pre class="brush: js">const ws = new WeakSet();
 const foo = {};
 const bar = {};
 
@@ -104,22 +105,11 @@ ws.has(bar);    // true, bar is retained</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.WeakSet")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

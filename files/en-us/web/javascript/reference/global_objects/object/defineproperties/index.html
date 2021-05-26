@@ -2,10 +2,11 @@
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 tags:
-- ECMAScript 5
-- JavaScript
-- Method
-- Object
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Object
+browser-compat: javascript.builtins.Object.defineProperties
 ---
 <div>{{JSRef}}</div>
 
@@ -14,16 +15,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">Object.defineProperties(<var>obj</var>, <var>props</var>)</pre>
+  class="brush: js">Object.defineProperties(<var>obj</var>, <var>props</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,13 +27,12 @@ tags:
   <dt><code><var>obj</var></code></dt>
   <dd>The object on which to define or modify properties.</dd>
   <dt><code><var>props</var></code></dt>
-  <dd>An object whose keys represent the names of properties to be defined or modified and
+  <dd>
+    <p>An object whose keys represent the names of properties to be defined or modified and
     whose values are objects describing those properties. Each value in <code>props</code>
     must be either a data descriptor or an accessor descriptor; it cannot be both (see
-    {{jsxref("Object.defineProperty()")}} for more details).</dd>
-  <dd>Data descriptors and accessor descriptors may optionally contain the following keys:
-  </dd>
-  <dd>
+    {{jsxref("Object.defineProperty()")}} for more details).</p>
+    <p>Data descriptors and accessor descriptors may optionally contain the following keys:</p>
     <dl>
       <dt><code>configurable</code></dt>
       <dd><code>true</code> if and only if the type of this property descriptor may be
@@ -61,7 +56,7 @@ tags:
       </dd>
       <dt><code>writable</code></dt>
       <dd><code>true</code> if and only if the value associated with the property may be
-        changed with an {{jsxref("Operators/Assignment_Operators", "assignment operator",
+        changed with an {{jsxref("Operators#assignment_operators", "assignment operator",
         "", 1)}}.<br>
         <strong>Defaults to <code>false</code>.</strong>
       </dd>
@@ -99,7 +94,7 @@ tags:
 
 <h3 id="Using_Object.defineProperties">Using Object.defineProperties</h3>
 
-<pre class="brush: js notranslate">var obj = {};
+<pre class="brush: js">var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -120,7 +115,7 @@ Object.defineProperties(obj, {
   equivalent (note the comment in <code>isCallable</code>) to the following
   reimplementation in JavaScript:</p>
 
-<pre class="brush: js highlight:[8] notranslate">function defineProperties(obj, properties) {
+<pre class="brush: js highlight:[8]">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -184,23 +179,11 @@ Object.defineProperties(obj, {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.defineproperties',
-        'Object.defineProperties')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.defineProperties")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

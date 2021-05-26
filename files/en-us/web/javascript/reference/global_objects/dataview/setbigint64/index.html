@@ -10,6 +10,7 @@ tags:
 - Reference
 - TypedArrays
 - setBigInt64
+browser-compat: javascript.builtins.DataView.setBigInt64
 ---
 <div>{{JSRef}}</div>
 
@@ -21,8 +22,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>dataview</var>.setBigInt64(byteOffset, value [, littleEndian])</pre>
+<pre class="brush: js">
+setBigInt64(byteOffset, value)
+setBigInt64(byteOffset, value, littleEndian)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -66,21 +69,11 @@ dataview.getBigInt64(0); // 3n
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-dataview.prototype.setbigint64',
-        'DataView.prototype.setBigInt64()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.DataView.setBigInt64")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

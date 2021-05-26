@@ -23,7 +23,7 @@ tags:
 
 <p>Flexbox was implemented in an experimental way in several web browsers. At the time the method of creating experimental implementations was to use a vendor prefix. The idea of these prefixes was to allow implementations of the spec to be tested and explored by browser engineers and web developers alike without clashing with other implementations. The idea was not to use the experimental implementations in production code. However, prefixes ultimately were used in production code, and changes to the experimental specification caused people to need to update their sites to keep up.</p>
 
-<p><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">In 2009</a>, the specification looked quite different. To create a flex container you would use <code>display: box</code> and there were a number of <code>box-*</code> properties, which did things that you will recognise from flexbox today.</p>
+<p><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">In 2009</a>, the specification looked quite different. To create a flex container you would use <code>display: box</code> and there were a number of <code>box-*</code> properties, which did things that you will recognize from flexbox today.</p>
 
 <p>There was an <a href="https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">update to the spec</a> that updated the syntax to <code>display: flexbox</code> — this was again vendor-prefixed.</p>
 
@@ -48,7 +48,7 @@ tags:
 
 <p>If you want to include very old browsers with flexbox support then you can include the vendor prefixes in your CSS in addition to the unprefixed version. This is becoming less and less of a requirement today as support is widespread. </p>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,15 +103,15 @@ tags:
 
 <h2 id="Feature_Queries_and_flexbox">Feature Queries and flexbox</h2>
 
-<p>You can use <a href="/en-US/docs/Web/CSS/%40supports">feature queries</a> to detect flexbox support:</p>
+<p>You can use <a href="/en-US/docs/Web/CSS/@supports">feature queries</a> to detect flexbox support:</p>
 
-<pre class="brush: css notranslate">@supports (display: flex) {
+<pre class="brush: css">@supports (display: flex) {
   // code for supporting browsers
 }</pre>
 
 <p>Note that Internet Explorer 11 does not support feature queries yet <em>does</em> support flexbox. If you decide the IE11 implementation is too buggy and you wish to serve it the fallback layout then you could use feature queries to serve flexbox rules only to those browsers with good flexbox support. Remember that if you want to include versions of browsers that had vendor-prefixed flexbox you would need to include the prefixed version in your feature query. The following feature query would include UC Browser, which supports feature queries and old flexbox syntax, prefixed:</p>
 
-<pre class="brush: css notranslate">@supports (display: flex) or (display: -webkit-box) {
+<pre class="brush: css">@supports (display: flex) or (display: -webkit-box) {
   // code for supporting browsers
 }</pre>
 

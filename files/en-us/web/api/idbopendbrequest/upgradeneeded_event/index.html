@@ -36,7 +36,7 @@ tags:
 
 <p>This example opens a database and handles the <code>upgradeneeded</code> event by making any necessary updates to the object store.</p>
 
-<pre class="brush: js notranslate">// Open the database
+<pre class="brush: js">// Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
 dBOpenRequest.addEventListener('upgradeneeded', event =&gt; {
@@ -56,7 +56,7 @@ dBOpenRequest.addEventListener('upgradeneeded', event =&gt; {
 
 <p>This is the same example, but uses the onupgradeneeded event handler property.</p>
 
-<pre class="brush: js notranslate">// Open the database
+<pre class="brush: js">// Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
 dBOpenRequest.onupgradeneeded = event =&gt; {
@@ -81,6 +81,6 @@ dBOpenRequest.onupgradeneeded = event =&gt; {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB">Using IndexedDB</a></li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
  <li>{{DOMxRef("IDBOpenDBRequest.onupgradeneeded", "onupgradeneeded")}} event handler property</li>
 </ul>

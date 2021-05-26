@@ -10,13 +10,13 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p>Use this <strong>CSS reference</strong> to browse an <a href="#keyword_index">alphabetical index</a> of all of the standard <a href="/en-US/docs/Web/CSS">CSS</a> properties, <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>, <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, <a href="/en-US/docs/Web/CSS/CSS_Types">data types</a>, <a href="/en-US/docs/Web/CSS/CSS_Functions">functional notations</a> and <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a>. You can also browse <a href="#concepts">key CSS concepts</a> and a list of <a href="#selectors">selectors organized by type</a>. Also included is a brief <a href="#dom-css_cssom">DOM-CSS / CSSOM reference</a>.</p>
+<p>Use this <strong>CSS reference</strong> to browse an <a href="#index">alphabetical index</a> of all of the standard <a href="/en-US/docs/Web/CSS">CSS</a> properties, <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>, <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, <a href="/en-US/docs/Web/CSS/CSS_Types">data types</a>, <a href="/en-US/docs/Web/CSS/CSS_Functions">functional notations</a> and <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a>. You can also browse <a href="#concepts">key CSS concepts</a> and a list of <a href="#selectors">selectors organized by type</a>. Also included is a brief <a href="#dom-css_cssom">DOM-CSS / CSSOM reference</a>.</p>
 
 <h2 id="Basic_rule_syntax">Basic rule syntax</h2>
 
 <h3 id="Style_rule_syntax">Style rule syntax</h3>
 
-<pre class="brush: css notranslate"><var>style-rule</var> <strong>::=</strong>
+<pre class="brush: css"><var>style-rule</var> <strong>::=</strong>
     <var>selectors-list</var> <strong>{</strong>
       <var>properties-list</var>
     <strong>}</strong>
@@ -24,7 +24,7 @@ tags:
 
 <p>... where :</p>
 
-<pre class="brush: css notranslate"><var>selectors-list</var> <strong>::=</strong>
+<pre class="brush: css"><var>selectors-list</var> <strong>::=</strong>
     <var>selector</var>[<strong>:</strong><var>pseudo-class</var>] [<strong>::</strong><var>pseudo-element</var>]
     [<strong>,</strong> <var>selectors-list</var>]
 
@@ -36,7 +36,7 @@ tags:
 
 <h4 id="Style_rule_examples">Style rule examples</h4>
 
-<pre class="brush: css notranslate">strong {
+<pre class="brush: css">strong {
   color: red;
 }
 
@@ -159,9 +159,9 @@ div.menu-bar li:hover &gt; ul {
 <h3 id="Major_object_types">Major object types</h3>
 
 <ul>
- <li>{{DOMxRef("DocumentOrShadowRoot.styleSheets")}}</li>
+ <li>{{DOMxRef("Document.styleSheets")}}</li>
  <li><code>{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}</code></li>
- <li><code>cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}</code> <span style="white-space: nowrap;">(selector &amp; style)</span></li>
+ <li><code>cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}</code> (selector &amp; style)</li>
  <li><code>cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}</code></li>
  <li>{{DOMxRef("HTMLElement.style")}}</li>
  <li><code>HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}</code> (just style)</li>
@@ -179,9 +179,9 @@ div.menu-bar li:hover &gt; ul {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a> (prefixed with <code style="white-space: nowrap;">-moz-</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a> (mostly prefixed with <code style="white-space: nowrap;">-webkit-</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_Extensions">Microsoft CSS extensions</a> (prefixed with <code style="white-space: nowrap;">-ms-</code>)</li>
+ <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a> (prefixed with <code>-moz-</code>)</li>
+ <li><a href="/en-US/docs/Web/CSS/WebKit_Extensions">WebKit CSS extensions</a> (mostly prefixed with <code>-webkit-</code>)</li>
+ <li><a href="/en-US/docs/Web/CSS/Microsoft_Extensions">Microsoft CSS extensions</a> (prefixed with <code>-ms-</code>)</li>
 </ul>
 
 <h2 id="External_Links">External Links</h2>

@@ -61,7 +61,7 @@ tags:
 
 <p>The configuration is set up in the <code>INSTALLED_APPS</code> and <code>MIDDLEWARE</code> sections of the project file (<strong>locallibrary/locallibrary/settings.py</strong>), as shown below:</p>
 
-<pre class="brush: python notranslate">INSTALLED_APPS = [
+<pre class="brush: python">INSTALLED_APPS = [
     ...
 <strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
 <strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
@@ -83,7 +83,7 @@ MIDDLEWARE = [
   <h4>Note</h4>
   <p>You can also create users programmatically, as shown below. You would have to do this, for example, if developing an interface to allow users to create their own logins (you shouldn't give users access to the admin site).</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.models import User
+<pre class="brush: python">from django.contrib.auth.models import User
 
 # Create user and save to the database
 user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
@@ -112,7 +112,7 @@ user.save()
 
 <ol>
  <li>Navigate back to the home page of the admin site</li>
- <li>Click the <strong>Add</strong> button next to <em>Users</em> to open the <em>Add user</em> dialogue.<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Click the <strong>Add</strong> button next to <em>Users</em> to open the <em>Add user</em> dialog box.<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>Enter an appropriate <strong>Username</strong> and <strong>Password</strong>/<strong>Password confirmation</strong> for your test user</li>
  <li>Press <strong>SAVE</strong> to create the user.<br>
   <br>
@@ -148,7 +148,7 @@ user.save()
 
 <p>Add the following to the bottom of the project urls.py file (<strong>locallibrary/locallibrary/urls.py</strong>) file:</p>
 
-<pre class="brush: python notranslate">#Add Django site authentication urls (for login, logout, password management)
+<pre class="brush: python">#Add Django site authentication urls (for login, logout, password management)
 
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
@@ -161,7 +161,7 @@ urlpatterns += [
   <h4>Note</h4>
   <p>Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.</p>
 
-<pre class="brush: python notranslate">accounts/ login/ [name='login']
+<pre class="brush: python">accounts/ login/ [name='login']
 accounts/ logout/ [name='logout']
 accounts/ password_change/ [name='password_change']
 accounts/ password_change/done/ [name='password_change_done']
@@ -173,7 +173,7 @@ accounts/ reset/done/ [name='password_reset_complete']</pre>
 
 <p>Now try to navigate to the login URL (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>). This will fail again, but with an error that tells you that we're missing the required template (<strong>registration/login.html</strong>) on the template search path. You'll see the following lines listed in the yellow section at the top:</p>
 
-<pre class="brush: python notranslate">Exception Type:    TemplateDoesNotExist
+<pre class="brush: python">Exception Type:    TemplateDoesNotExist
 Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>The next step is to create a registration directory on the search path and then add the <strong>login.html</strong> file.</p>
@@ -194,15 +194,24 @@ Exception Value:    <strong>registration/login.html</strong></pre>
                  |_registration</p>
 </div>
 
-<p>To make these directories visible to the template loader (i.e. to put this directory in the template search path) open the project settings (<strong>/locallibrary/locallibrary/settings.py</strong>), and update the <code>TEMPLATES</code> section's <code>'DIRS'</code> line as shown.</p>
+<p>To make the <strong>templates</strong> directory visible to the template loader we need to add it in the template search path. Open the project settings (<strong>/locallibrary/locallibrary/settings.py</strong>).</p>
 
-<pre class="brush: python notranslate">TEMPLATES = [
-    {
-        ...
-<strong>        'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
-        'APP_DIRS': True,
-        ...
-</pre>
+
+<p>Then import the <code>os</code> module (add the following line near the top of the file).</p>
+    <pre class="brush: python">import os # needed by code below</pre>
+ 
+<p>Update the <code>TEMPLATES</code> section's <code>'DIRS'</code> line as shown:</p>
+
+<pre class="brush: python">    ...
+    TEMPLATES = [
+      {
+       ...
+    <strong>   'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
+       'APP_DIRS': True,
+       ...
+    </pre>
+
+
 
 <h3 id="Login_template">Login template</h3>
 
@@ -212,7 +221,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>Create a new HTML file called /<strong>locallibrary/templates/registration/login.html</strong> and give it the following contents:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -260,7 +269,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>Open the project settings (<strong>/locallibrary/locallibrary/settings.py</strong>) and add the text below to the bottom. Now when you log in you should be redirected to the site homepage by default.</p>
 
-<pre class="brush: python notranslate"># Redirect to home URL after login (Default redirects to /accounts/profile/)
+<pre class="brush: python"># Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
 </pre>
 
@@ -270,7 +279,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Create and open /<strong>locallibrary/templates/registration/logged_out.html</strong>. Copy in the text below:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;p&gt;Logged out!&lt;/p&gt;
@@ -291,7 +300,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This is the form used to get the user's email address (for sending the password reset email). Create <strong>/locallibrary/templates/registration/password_reset_form.html</strong>, and give it the following contents:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;form action="" method="post"&gt;
@@ -309,7 +318,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This form is displayed after your email address has been collected. Create <strong>/locallibrary/templates/registration/password_reset_done.html</strong>, and give it the following contents:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;p&gt;We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.&lt;/p&gt;
@@ -320,7 +329,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This template provides the text of the HTML email containing the reset link that we will send to users. Create <strong>/locallibrary/templates/registration/password_reset_email.html</strong>, and give it the following contents:</p>
 
-<pre class="brush: html notranslate">Someone asked for password reset for email \{{ email }}. Follow the link below:
+<pre class="brush: html">Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 </pre>
 
@@ -328,7 +337,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This page is where you enter your new password after clicking the link in the password reset email. Create <strong>/locallibrary/templates/registration/password_reset_confirm.html</strong>, and give it the following contents:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
     {% if validlink %}
@@ -363,7 +372,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create <strong>/locallibrary/templates/registration/password_reset_complete.html</strong>, and give it the following contents:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
   &lt;h1&gt;The password has been changed!&lt;/h1&gt;
@@ -387,7 +396,7 @@ LOGIN_REDIRECT_URL = '/'
   <h4>Note</h4>
   <p>The password reset system requires that your website supports email, which is beyond the scope of this article, so this part <strong>won't work yet</strong>. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).</p>
 
-  <pre class="brush: python notranslate">EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</pre>
+  <pre class="brush: python">EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</pre>
 
   <p>For more information, see <a href="https://docs.djangoproject.com/en/3.1/topics/email/">Sending email</a> (Django docs).</p>
 </div>
@@ -404,7 +413,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Open the base template (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) and copy the following text into the <code>sidebar</code> block, immediately before the <code>endblock</code> template tag.</p>
 
-<pre class="brush: html notranslate">  &lt;ul class="sidebar-nav"&gt;
+<pre class="brush: html">  &lt;ul class="sidebar-nav"&gt;
 
     ...
 
@@ -429,7 +438,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>If you're using function-based views, the easiest way to restrict access to your functions is to apply the <code>login_required</code> decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (<code>settings.LOGIN_URL</code>), passing the current absolute path as the <code>next</code> URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.decorators import login_required
+<pre class="brush: python">from django.contrib.auth.decorators import login_required
 
 @login_required
 def my_view(request):
@@ -442,14 +451,14 @@ def my_view(request):
 
 <p>Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from <code>LoginRequiredMixin</code>. You need to declare this mixin first in the superclass list, before the main view class.</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
+<pre class="brush: python">from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
     ...</pre>
 
 <p>This has exactly the same redirect behavior as the <code>login_required</code> decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (<code>login_url</code>), and a URL parameter name instead of "<code>next</code>" to insert the current absolute path (<code>redirect_field_name</code>).</p>
 
-<pre class="brush: python notranslate">class MyView(LoginRequiredMixin, View):
+<pre class="brush: python">class MyView(LoginRequiredMixin, View):
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 </pre>
@@ -468,23 +477,23 @@ class MyView(LoginRequiredMixin, View):
 
 <p>Open <strong>catalog/models.py</strong>, and import the <code>User</code> model from <code>django.contrib.auth.models</code> (add this just below the previous import line at the top of the file, so <code>User</code> is available to subsequent code that makes use of it):</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.models import User
+<pre class="brush: python">from django.contrib.auth.models import User
 </pre>
 
 <p>Next, add the <code>borrower</code> field to the <code>BookInstance</code> model:</p>
 
-<pre class="brush: python notranslate">borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+<pre class="brush: python">borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 </pre>
 
 <p>While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue. While we could calculate this in the template itself, using a <a href="https://docs.python.org/3/library/functions.html#property">property</a> as shown below will be much more efficient.</p>
 
 <p>Add this somewhere near the top of the file:</p>
 
-<pre class="brush: python notranslate">from datetime import date</pre>
+<pre class="brush: python">from datetime import date</pre>
 
 <p class="brush: python">Now add the following property definition to the <code>BookInstance</code> class:</p>
 
-<pre class="brush: python notranslate">@property
+<pre class="brush: python">@property
 def is_overdue(self):
     if self.due_back and date.today() &gt; self.due_back:
         return True
@@ -497,7 +506,7 @@ def is_overdue(self):
 
 <p>Now that we've updated our models, we'll need to make fresh migrations on the project and then apply those migrations:</p>
 
-<pre class="brush: bash notranslate">python3 manage.py makemigrations
+<pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate
 </pre>
 
@@ -505,7 +514,7 @@ python3 manage.py migrate
 
 <p>Now open <strong>catalog/admin.py</strong>, and add the <code>borrower</code> field to the <code>BookInstanceAdmin</code> class in both the <code>list_display</code> and the <code>fieldsets</code> as shown below. This will make the field visible in the Admin section, allowing us to assign a <code>User</code> to a <code>BookInstance</code> when needed.</p>
 
-<pre class="brush: python notranslate">@admin.register(BookInstance)
+<pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
     list_filter = ('status', 'due_back')
@@ -534,7 +543,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Add the following to catalog/views.py:</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
+<pre class="brush: python">from django.contrib.auth.mixins import LoginRequiredMixin
 
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     """Generic class-based view listing books on loan to current user."""
@@ -551,7 +560,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Now open <strong>/catalog/urls.py</strong> and add a <code>path()</code> pointing to the above view (you can just copy the text below to the end of the file).</p>
 
-<pre class="brush: python notranslate">urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
 ]</pre>
 
@@ -559,7 +568,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Now, all we need to do for this page is add a template. First, create the template file <strong>/catalog/templates/catalog/bookinstance_list_borrowed_user.html</strong> and give it the following contents:</p>
 
-<pre class="brush: python notranslate">{% extends "base_generic.html" %}
+<pre class="brush: python">{% extends "base_generic.html" %}
 
 {% block content %}
     &lt;h1&gt;Borrowed books&lt;/h1&gt;
@@ -587,12 +596,14 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>The very last step is to add a link for this new page into the sidebar. We'll put this in the same section where we display other information for the logged in user.</p>
 
-<p>Open the base template (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) and add the line in bold to the sidebar as shown.</p>
+<p>Open the base template (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) and add the "My Borrowed" line to the sidebar in the position shown below.</p>
 
-<pre class="brush: python notranslate"> &lt;ul class="sidebar-nav"&gt;
+<pre class="brush: python"> &lt;ul class="sidebar-nav"&gt;
    {% if user.is_authenticated %}
    &lt;li&gt;User: \{{ user.get_username }}&lt;/li&gt;
-<strong>   &lt;li&gt;&lt;a href="{% url 'my-borrowed' %}"&gt;My Borrowed&lt;/a&gt;&lt;/li&gt;</strong>
+
+   &lt;li&gt;&lt;a href="{% url 'my-borrowed' %}"&gt;My Borrowed&lt;/a&gt;&lt;/li&gt;
+   
    &lt;li&gt;&lt;a href="{% url 'logout'%}?next=\{{request.path}}"&gt;Logout&lt;/a&gt;&lt;/li&gt;
    {% else %}
    &lt;li&gt;&lt;a href="{% url 'login'%}?next=\{{request.path}}"&gt;Login&lt;/a&gt;&lt;/li&gt;
@@ -616,7 +627,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Defining permissions is done on the model "<code>class Meta</code>" section, using the <code>permissions</code> field. You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value. For example, we might define a permission to allow a user to mark that a book has been returned as shown:</p>
 
-<pre class="brush: python notranslate">class BookInstance(models.Model):
+<pre class="brush: python">class BookInstance(models.Model):
     ...
     class Meta:
         ...
@@ -630,7 +641,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>The current user's permissions are stored in a template variable called <code>\{{ perms }}</code>. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. <code>\{{ perms.catalog.can_mark_returned }}</code> will be <code>True</code> if the user has this permission, and <code>False</code> otherwise. We typically test for the permission using the template <code>{% if %}</code> tag as shown:</p>
 
-<pre class="brush: python notranslate">{% if perms.catalog.can_mark_returned %}
+<pre class="brush: python">{% if perms.catalog.can_mark_returned %}
     &lt;!-- We can mark a BookInstance as returned. --&gt;
     &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
 {% endif %}
@@ -642,7 +653,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Function view decorator:</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.decorators import permission_required
+<pre class="brush: python">from django.contrib.auth.decorators import permission_required
 
 @permission_required('catalog.can_mark_returned')
 @permission_required('catalog.can_edit')
@@ -651,7 +662,7 @@ def my_view(request):
 
 <p>A permission-required mixin for class-based views.</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.mixins import PermissionRequiredMixin
+<pre class="brush: python">from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class MyView(PermissionRequiredMixin, View):
     permission_required = 'catalog.can_mark_returned'
@@ -671,7 +682,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>Normally you will want the <code>PermissionRequiredMixin</code> behavior: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use <code>@login_required</code> and <code>@permission_required</code> with <code>raise_exception=True</code> as shown:</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.decorators import login_required, permission_required
+<pre class="brush: python">from django.contrib.auth.decorators import login_required, permission_required
 
 @login_required
 @permission_required('catalog.can_mark_returned', raise_exception=True)
@@ -726,7 +737,7 @@ def my_view(request):
  <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><strong>Django Tutorial Part 8: User authentication and permissions</strong></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>

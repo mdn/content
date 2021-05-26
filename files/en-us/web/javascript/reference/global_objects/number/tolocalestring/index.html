@@ -2,11 +2,12 @@
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 tags:
-- Internationalization
-- JavaScript
-- Method
-- Number
-- Prototype
+  - Internationalization
+  - JavaScript
+  - Method
+  - Number
+  - Prototype
+browser-compat: javascript.builtins.Number.toLocaleString
 ---
 <div>{{JSRef}}</div>
 
@@ -17,8 +18,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><code><em>numObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+<pre class="brush: js">
+toLocaleString()
+toLocaleString(locales)
+toLocaleString(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,7 +33,7 @@ tags:
   entirely implementation dependent.</p>
 
 <div>See the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code>
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code>
     constructor</a> for details on these parameters and how to use them.</div>
 
 <h3 id="Return_value">Return value</h3>
@@ -39,8 +43,8 @@ tags:
 <h2 id="Performance">Performance</h2>
 
 <p>When formatting large numbers of numbers, it is better to create a
-  {{jsxref("NumberFormat")}} object and use the function provided by its
-  {{jsxref("NumberFormat.format")}} property.</p>
+  {{jsxref("Intl/NumberFormat")}} object and use the function provided by its
+  {{jsxref("Intl/NumberFormat/format")}} property.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -149,30 +153,12 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.prototype.tolocalestring',
-        'Number.prototype.toLocaleString')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring',
-        'Number.prototype.toLocaleString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.Number.toLocaleString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

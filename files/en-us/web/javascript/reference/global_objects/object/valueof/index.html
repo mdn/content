@@ -6,6 +6,7 @@ tags:
 - Method
 - Object
 - Prototype
+browser-compat: javascript.builtins.Object.valueOf
 ---
 <div>{{JSRef}}</div>
 
@@ -16,14 +17,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>object</var>.valueOf()</pre>
+<pre class="brush: js">valueOf()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <p>The primitive value of the specified object.</p>
 
 <div class="notecard note">
-  <p>A <a
+  <p><strong>Note:</strong> A <a
       href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">(unary)
       plus sign</a> can sometimes be used as a shorthand for <code>valueOf</code>, e.g. in
     <code>+new Number()</code>. Also see <a href="#using_unary_plus">Using unary plus</a>.
@@ -57,7 +58,7 @@ tags:
   to the object's <code>valueOf</code> method:</p>
 
 <pre
-  class="brush: js notranslate">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
+  class="brush: js">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
 
 <p>With the preceding code in place, any time an object of type <code>MyNumberType</code>
   is used in a context where it is to be represented as a primitive value, JavaScript
@@ -66,7 +67,7 @@ tags:
 <p>An object's <code>valueOf</code> method is usually invoked by JavaScript, but you can
   invoke it yourself as follows:</p>
 
-<pre class="brush: js notranslate"><var>myNumberType</var>.valueOf()</pre>
+<pre class="brush: js"><var>myNumberType</var>.valueOf()</pre>
 
 <div class="note">
   <p><strong>Note:</strong> Objects in string contexts convert via the
@@ -81,7 +82,7 @@ tags:
 
 <h3 id="Using_valueOf_on_custom_types">Using valueOf on custom types</h3>
 
-<pre class="brush: js notranslate">function MyNumberType(n) {
+<pre class="brush: js">function MyNumberType(n) {
     this.number = n;
 }
 
@@ -95,7 +96,7 @@ myObj + 3; // 7
 
 <h3 id="Using_unary_plus">Using unary plus</h3>
 
-<pre class="brush: js notranslate">+"5" // 5 (string to number)
+<pre class="brush: js">+"5" // 5 (string to number)
 +"" // 0 (string to number)
 +"1 + 2" // NaN (doesn't evaluate)
 +new Date() // same as (new Date()).getTime()
@@ -114,23 +115,11 @@ myObj + 3; // 7
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.valueof',
-        'Object.prototype.valueOf')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.valueOf")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:js notranslate">var uninstalling = browser.management.uninstall(
+<pre class="brush:js">var uninstalling = browser.management.uninstall(
   id,                  // string
   options              // object
 )
@@ -56,7 +56,7 @@ tags:
 
 <p>Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.</p>
 
-<pre class="notranslate brush: js">var id = "my-addon-id";
+<pre class="brush: js">var id = "my-addon-id";
 
 function onCanceled(error) {
   console.log(`Uninstall canceled: ${error}`);
@@ -75,7 +75,7 @@ uninstalling.then(null, onCanceled);</pre>
 </div>
 
 <div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

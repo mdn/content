@@ -5,10 +5,11 @@ tags:
   - Global attributes
   - HTML
   - Reference
+browser-compat: html.global_attributes.lang
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>The <strong><code>lang</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in <a class="external" href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>.</p>
+<p>The <strong><code>lang</code></strong> <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in <a href="https://www.ietf.org/rfc/bcp/bcp47.txt"><em>Tags for Identifying Languages (BCP47)</em></a>.</p>
 
 <p class="note">The default value of <code>lang</code> is <code>unknown</code>, therefore it is recommended to always specify this attribute with the appropriate value.</p>
 
@@ -39,7 +40,7 @@ tags:
 <p>To find the correct subtag codes for a language, try <a href="https://r12a.github.io/app-subtags/" rel="external">the Language Subtag Lookup</a>.</p>
 </div>
 
-<p>Even if the <strong>lang</strong> attribute is set, it may not be taken into account, as the <a href="/en-US/docs/Web/HTML/Global_attributes/xml:lang"><strong>xml:lang</strong></a> attribute has priority.</p>
+<p>Even if the <strong>lang</strong> attribute is set, it may not be taken into account, as the <a href="/en-US/docs/Web/HTML/Global_attributes#attr-xml:lang"><strong>xml:lang</strong></a> attribute has priority.</p>
 
 <p>For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while <code>:lang(es)</code> matches both <code>lang="es-ES"</code> and <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> would <em>not</em> match <code>lang="xyzzy-Zorp!"</code>.</p>
 
@@ -47,13 +48,13 @@ tags:
 
 <p>WCAG Success Criterion 3.1.1 <strong>requires</strong> that a page language is specified in a way which may be 'programmatically determined' (i.e. via the <strong><code>lang</code></strong> attribute).</p>
 
-<p>WCAG Sucesss criterion 3.1.2 requires that pages with <strong>parts</strong> in different languages have the languages of those parts specified too. Again, the <strong><code>lang</code></strong> attribute is the correct mechanism for this.</p>
+<p>WCAG Success Criterion 3.1.2 requires that pages with <strong>parts</strong> in different languages have the languages of those parts specified too. Again, the <strong><code>lang</code></strong> attribute is the correct mechanism for this.</p>
 
 <p>The purpose of these requirements is primarily to allow assistive technologies such as screen readers to invoke the correct pronunciation.</p>
 
 <p>For example, the language menu on this site (MDN) includes a <strong><code>lang</code></strong> attribute for each entry:</p>
 
-<pre class="notranslate"> <code id="data">&lt;div class="dropdown-container language-menu"&gt;
+<pre> <code id="data">&lt;div class="dropdown-container language-menu"&gt;
 	&lt;button id="header-language-menu" type="button" class="dropdown-menu-label" aria-haspopup="true" aria-owns="language-menu" aria-label="Current language is English. Choose your preferred language."&gt;English
 		&lt;span class="dropdown-arrow-down" aria-hidden="true"&gt;▼&lt;/span&gt;
 	&lt;/button&gt;
@@ -116,22 +117,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "dom.html#attr-lang", "lang")}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.global_attributes.lang")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
 - Method
 - Reference
 - parseInt
+browser-compat: javascript.builtins.parseInt
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
@@ -18,7 +19,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">parseInt(<var>string</var> [, <var>radix</var>])</pre>
+<pre class="brush: js">
+parseInt(string)
+parseInt(string, radix)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,13 +33,18 @@ tags:
     abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.
   </dd>
   <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
-  <dd>An integer between <code>2</code> and <code>36</code> that represents the
+  <dd>
+    <p>An integer between <code>2</code> and <code>36</code> that represents the
     <em>radix</em> (the base in mathematical numeral systems) of the
     <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong>
     default to <code>10</code>! If the radix value is not of the <code>Number</code> type
-    it will be coerced to a <code>Number</code></dd>
-  <dd class="notecard warning">The <a href="#description">description below</a> explains
-    in more detail what happens when <code><var>radix</var></code> is not provided.</dd>
+    it will be coerced to a <code>Number</code>.</p>
+    <div class="notecard warning">
+    <p><strong>Warning:</strong> The <a href="#description">description below</a> explains
+    in more detail what happens when <code><var>radix</var></code> is not provided.
+    </p>
+    </div>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -90,12 +99,6 @@ tags:
     (a zero, followed by lowercase or uppercase X), <code><var>radix</var></code> is
     assumed to be <code>16</code> and the rest of the string is parsed as a hexadecimal
     number.</li>
-  <li>If the input <code>string</code> begins with "<code>0</code>" (a zero),
-    <code><var>radix</var></code> is assumed to be <code>8</code> (octal) or
-    <code>10</code> (decimal). Exactly which radix is chosen is implementation-dependent.
-    ECMAScript 5 clarifies that <code>10</code> (decimal) <em>should</em> be used, but not
-    all browsers support this yet. For this reason, <strong>always specify a
-      <code><var>radix</var></code> when using <code>parseInt</code></strong>.</li>
   <li>If the input <code>string</code> begins with any other value, the radix is
     <code>10</code> (decimal).</li>
 </ol>
@@ -115,7 +118,7 @@ tags:
   <code><var>thatNumber</var>.toString(<var>radix</var>)</code>.</p>
 
 <div class="notecard warning">
-  <p><strong>{{jsxref("BigInt")}} Warning:</strong> <code>parseInt</code> converts a
+  <p><strong>Warning:</strong> <code>parseInt</code> converts a
     {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
     This is because trailing non-numeric values, including "<code>n</code>", are
     discarded.</p>
@@ -123,36 +126,23 @@ tags:
 
 <h3 id="Octal_interpretations_with_no_radix">Octal interpretations with no radix</h3>
 
-<p>Although discouraged by ECMAScript 3 and forbidden by ECMAScript 5, many
-  implementations interpret a numeric string beginning with a leading <code>0</code> as
-  octal. The following may have an octal result, or it may have a decimal result.
-  <strong>Always specify a <code><var>radix</var></code> to avoid this unreliable
-    behavior.</strong></p>
+<p>Please note that following information doesn't apply to recent implementations as of 2021.</p>
 
-<pre class="brush: js notranslate">parseInt('0e0')  // 0
+<p>Although discouraged by ECMAScript 3, many ECMAScript 3
+  implementations had interpreted a numeric string beginning with a leading <code>0</code> as
+  octal. The following might have had an octal result, or it might have had a decimal result.</p>
+
+<pre class="brush: js">parseInt('0e0')  // 0
 parseInt('08')   // 0, because '8' is not an octal digit.
 </pre>
 
 <p>The ECMAScript 5 specification of the function <code>parseInt</code> no longer allows
   implementations to treat Strings beginning with a <code>0</code> character as octal
-  values.</p>
+  values. Many implementations have adopted this behavior as of 2021.</p>
 
-<p>ECMAScript 5 states:</p>
-
-<blockquote>
-  <p>The <code>parseInt</code> function produces an integer value dictated by
-    interpretation of the contents of the string argument according to the specified
-    radix. Leading whitespace in string is ignored. If radix is <code>undefined</code> or
-    <code>0</code>, it is assumed to be <code>10</code> except when the number begins with
-    the character pairs <code>0x</code> or <code>0X</code>, in which case a radix of
-    <code>16</code> is assumed.</p>
-</blockquote>
-
-<p>This differs from ECMAScript 3, which merely <em>discouraged</em> (but allowed) octal
-  interpretation.</p>
-
-<p>Many implementations have not adopted this behavior as of 2013. And, because older
-  browsers must be supported, <strong>always specify a radix</strong>.</p>
+<pre class="brush: js">parseInt('0e0')  // 0
+parseInt('08')   // 8
+</pre>
 
 <h3 id="A_stricter_parse_function">A stricter parse function</h3>
 
@@ -160,7 +150,7 @@ parseInt('08')   // 0, because '8' is not an octal digit.
 
 <p>Regular expressions can help:</p>
 
-<pre class="brush: js notranslate">function filterInt(value) {
+<pre class="brush: js">function filterInt(value) {
   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
     return Number(value)
   } else {
@@ -184,7 +174,7 @@ console.log(filterInt('1.61803398875'))      // NaN
 
 <p>The following examples all return <code>15</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('0xF', 16)
+<pre class="brush: js">parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
 parseInt(021, 8)
@@ -201,13 +191,13 @@ parseInt('12', 13)
 
 <p>The following examples all return <code>NaN</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('Hello', 8)  // Not a number at all
+<pre class="brush: js">parseInt('Hello', 8)  // Not a number at all
 parseInt('546', 2)    // Digits other than 0 or 1 are invalid for binary radix
 </pre>
 
 <p>The following examples all return <code>-15</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('-F', 16)
+<pre class="brush: js">parseInt('-F', 16)
 parseInt('-0F', 16)
 parseInt('-0XF', 16)
 parseInt(-15.1, 10)
@@ -220,7 +210,7 @@ parseInt('-12', 13)
 
 <p>The following examples all return <code>4</code>.</p>
 
-<pre class="brush: js notranslate">parseInt(4.7, 10)
+<pre class="brush: js">parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // Very large number becomes 4
 parseInt(0.00000000000434, 10)  // Very small number becomes 4
 </pre>
@@ -228,7 +218,7 @@ parseInt(0.00000000000434, 10)  // Very small number becomes 4
 <p>If the number is greater than 1e+21 (including) or less than 1e-7 (including), it will
   return <code>1</code>. (when using radix 10).</p>
 
-<pre class="brush: js notranslate">parseInt(0.0000001,10);
+<pre class="brush: js">parseInt(0.0000001,10);
 parseInt(0.000000123,10);
 parseInt(1e-7,10);
 parseInt(1000000000000000000000,10);
@@ -238,25 +228,25 @@ parseInt(1e+21,10);
 
 <p>The following example returns <code>224</code>:</p>
 
-<pre class="brush: js notranslate">parseInt('0e0', 16)
+<pre class="brush: js">parseInt('0e0', 16)
 </pre>
 
 <p>{{jsxref("BigInt")}} values lose precision:</p>
 
-<pre class="brush: js notranslate">parseInt('900719925474099267n')
+<pre class="brush: js">parseInt('900719925474099267n')
 // 900719925474099300</pre>
 
 <p><code>parseInt</code> doesn't work with <a
     href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">numeric
     separators</a>:</p>
 
-<pre class="brush: js notranslate">parseInt('123_456')
+<pre class="brush: js">parseInt('123_456')
 // 123
 </pre>
 
 <p>The radix is coerced to a <code>Number</code>:</p>
 
-<pre class="brush: js notranslate">const obj = {
+<pre class="brush: js">const obj = {
   valueOf() {return 8}
 };
 parseInt('11', obj); // 9
@@ -269,22 +259,11 @@ parseInt('11', obj); // 11</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.parseInt")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

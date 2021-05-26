@@ -2,30 +2,28 @@
 title: BaseAudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
 tags:
-- API
-- AudioContext
-- BaseAudioContext
-- Method
-- Reference
-- Web Audio API
-- createPanner
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - createPanner
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <code>createPanner()</code> method of the {{ domxref("BaseAudioContext") }}
-    Interface is used to create a new {{domxref("PannerNode")}}, which is used to
-    spatialize an incoming audio stream in 3D space.</p>
-</div>
+<p>The <code>createPanner()</code> method of the {{ domxref("BaseAudioContext") }}
+  Interface is used to create a new {{domxref("PannerNode")}}, which is used to
+  spatialize an incoming audio stream in 3D space.</p>
 
 <p>The panner node is spatialized in relation to the AudioContext's
-  {{domxref("AudioListener") }} (defined by the {{domxref("AudioContext.listener") }}
+  {{domxref("AudioListener") }} (defined by the {{domxref("BaseAudioContext/listener", "AudioContext.listener")}}
   attribute), which represents the position and orientation of the person listening to the
   audio.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">baseAudioCtx.createPanner();</pre>
+<pre class="brush: js">createPanner();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -57,7 +55,7 @@ tags:
   {{domxref("AudioListener.setOrientation()")}}) if it still supports those but not the
   new properties.</p>
 
-<pre class="brush: js notranslate">// set up listener and panner position information
+<pre class="brush: js">// set up listener and panner position information
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -140,8 +138,9 @@ function positionPanner() {
   pannerData.textContent = `Panner data: X ${xPos} Y ${yPos} Z ${zPos}`;
 }</pre>
 
-<div class="note">
-  <p><strong>Note</strong>: In terms of working out what position values to apply to the
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>In terms of working out what position values to apply to the
     listener and panner, to make the sound appropriate to what the visuals are doing on
     screen, there is quite a bit of math involved, but you will soon get used to it with a
     bit of experimentation.</p>
@@ -167,16 +166,11 @@ function positionPanner() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.BaseAudioContext.createPanner")}}</p>
-  </div>
-</div>
+<p>{{Compat("api.BaseAudioContext.createPanner")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

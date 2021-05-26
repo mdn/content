@@ -3,9 +3,10 @@ title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
 tags:
   - Cache-Control
-  - General Header
   - HTTP
   - HTTP Header
+  - Request header
+  - Response header
   - Reference
 ---
 <div>{{HTTPSidebar}}</div>
@@ -16,7 +17,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Header type</th>
-   <td>{{Glossary("General header")}}</td>
+   <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -43,7 +44,7 @@ tags:
 
 <p>Standard <code>Cache-Control</code> directives that can be used by the client in an HTTP request.</p>
 
-<pre class="brush: html notranslate">Cache-Control: max-age=&lt;seconds&gt;
+<pre class="brush: html">Cache-Control: max-age=&lt;seconds&gt;
 Cache-Control: max-stale[=&lt;seconds&gt;]
 Cache-Control: min-fresh=&lt;seconds&gt;
 Cache-Control: no-cache
@@ -56,7 +57,7 @@ Cache-Control: only-if-cached
 
 <p>Standard <code>Cache-Control</code> directives that can be used by the server in an HTTP response.</p>
 
-<pre class="brush: html notranslate">Cache-Control: must-revalidate
+<pre class="brush: html">Cache-Control: must-revalidate
 Cache-Control: no-cache
 Cache-Control: no-store
 Cache-Control: no-transform
@@ -71,7 +72,7 @@ Cache-Control: s-maxage=&lt;seconds&gt;
 
 <p>Extension <code>Cache-Control</code> directives are not part of the core HTTP caching standards document. Check the <a href="#browser_compatibility">compatibility table</a> for their support; user-agents that don't recognize them should ignore them.</p>
 
-<pre class="brush: html notranslate">Cache-Control: immutable
+<pre class="brush: html">Cache-Control: immutable
 Cache-Control: stale-while-revalidate=&lt;seconds&gt;
 Cache-Control: stale-if-error=&lt;seconds&gt;
 </pre>
@@ -114,7 +115,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dt><code>must-revalidate</code></dt>
- <dd>Indicates that once a resource becomes stale, caches must not use their stale copy without successful <a href="/en-US/docs/Web/HTTP/Caching#Cache_validation">validation</a> on the origin server.</dd>
+ <dd>Indicates that once a resource becomes stale, caches must not use their stale copy without successful <a href="/en-US/docs/Web/HTTP/Caching#cache_validation">validation</a> on the origin server.</dd>
  <dt><code>proxy-revalidate</code></dt>
  <dd>Like <code>must-revalidate</code>, but only for shared caches (e.g., proxies). Ignored by private caches.</dd>
  <dt><code>immutable</code></dt>
@@ -139,18 +140,18 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 <dl>
  <dt>Good:</dt>
  <dd>
- <pre class="example-good brush: http no-line-numbers notranslate">Cache-Control: no-store</pre>
+ <pre class="example-good brush: http no-line-numbers">Cache-Control: no-store</pre>
 
  <div class="notecard note">
  <p>The <code>no-store</code> directive will prevent a new resource being cached, but it will not prevent the cache from responding with a non-stale resource that was cached as the result of an earlier request. Setting <code>max-age=0</code> as well forces the cache to revalidate (clears the cache).</p>
 
- <pre class="brush: html notranslate">Cache-Control: no-store, max-age=0
+ <pre class="brush: html">Cache-Control: no-store, max-age=0
 </pre>
  </div>
  </dd>
  <dt>Bad:</dt>
  <dd>
- <pre class="example-bad brush: http no-line-numbers notranslate">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
+ <pre class="example-bad brush: http no-line-numbers">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
  </dd>
 </dl>
 
@@ -158,7 +159,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <p>For the files in the application that will not change, you can usually add aggressive caching by sending the response header below. This includes static files that are served by the application such as images, CSS files and JavaScript files, for example. In addition, see also the <code>Expires</code> header.</p>
 
-<pre class="brush: http no-line-numbers notranslate">Cache-Control: public, max-age=604800, immutable
+<pre class="brush: http no-line-numbers">Cache-Control: public, max-age=604800, immutable
 </pre>
 
 <h3 id="Requiring_revalidation">Requiring revalidation</h3>
@@ -166,13 +167,13 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 <p><code>no-cache</code> and <code>max-age=0, must-revalidate</code> indicates same meaning.<br>
  Clients can cache a resource but must revalidate each time before using it. This means HTTP request occurs each time though, it can skip downloading HTTP body if the content is valid.</p>
 
-<pre class="brush: http no-line-numbers notranslate">Cache-Control: no-cache</pre>
+<pre class="brush: http no-line-numbers">Cache-Control: no-cache</pre>
 
-<pre class="brush: http no-line-numbers notranslate">Cache-Control: max-age=0, must-revalidate</pre>
+<pre class="brush: http no-line-numbers">Cache-Control: max-age=0, must-revalidate</pre>
 
 <p><strong>Note</strong>: Following may serve stale resource if server is down or lose connectivity.</p>
 
-<pre class="brush: http no-line-numbers notranslate">Cache-Control: max-age=0</pre>
+<pre class="brush: http no-line-numbers">Cache-Control: max-age=0</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -210,7 +211,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Caching_FAQ">HTTP Caching FAQ</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Caching">HTTP Caching FAQ</a></li>
  <li><a href="https://www.mnot.net/cache_docs/">Caching Tutorial for Web Authors and Webmasters</a></li>
  <li>Guide: <em><a href="https://csswizardry.com/2019/03/cache-control-for-civilians"><code>Cache-Control</code> for civilians</a></em></li>
  <li>{{HTTPHeader("Age")}}</li>

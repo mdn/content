@@ -12,7 +12,7 @@ tags:
   - WebVR
   - timeStamp
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
 <p>The <strong><code>timestamp</code></strong> read-only property of the {{domxref("VRFrameData")}} interface returns a constantly increasing timestamp value representing the time a frame update occurred.</p>
 
@@ -30,37 +30,37 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> frameData <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">VRFrameData</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> vrDisplay<span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js">var frameData = new VRFrameData();
+var vrDisplay;
 
-navigator<span class="punctuation token">.</span><span class="function token">getVRDisplays</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>displays<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  vrDisplay <span class="operator token">=</span> displays<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Display found'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="comment token">// Starting the presentation when the button is clicked: It can only be called in response to a user gesture</span>
-  btn<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    vrDisplay<span class="punctuation token">.</span><span class="function token">requestPresent</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="punctuation token">{</span> source<span class="punctuation token">:</span> canvas <span class="punctuation token">}</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="function token">drawVRScene</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+navigator.getVRDisplays().then(function(displays) {
+  vrDisplay = displays[0];
+  console.log('Display found');
+  // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+  btn.addEventListener('click', function() {
+    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      drawVRScene();
+    });
+  });
+});
 
-<span class="comment token">// WebVR: Draw the scene for the WebVR display.</span>
-<span class="keyword token">function</span> <span class="function token">drawVRScene</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// WebVR: Request the next frame of the animation</span>
-  vrSceneFrame <span class="operator token">=</span> vrDisplay<span class="punctuation token">.</span><span class="function token">requestAnimationFrame</span><span class="punctuation token">(</span>drawVRScene<span class="punctuation token">)</span><span class="punctuation token">;</span>
+// WebVR: Draw the scene for the WebVR display.
+function drawVRScene() {
+  // WebVR: Request the next frame of the animation
+  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
 
-  <span class="comment token">// Populate frameData with the data of the next frame to display</span>
-  vrDisplay<span class="punctuation token">.</span><span class="function token">getFrameData</span><span class="punctuation token">(</span>frameData<span class="punctuation token">)</span><span class="punctuation token">;
+  // Populate frameData with the data of the next frame to display
+  vrDisplay.getFrameData(frameData);
 
   // grab the current timestamp on each run of the rendering loop
   // and do something with it
-  framedata.timestamp</span>
+  framedata.timestamp
 
-    <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>
+    ...
 
-  <span class="comment token">// WebVR: Indicates that we are ready to present the rendered frame to the VR display</span>
-  vrDisplay<span class="punctuation token">.</span><span class="function token">submitFrame</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  // WebVR: Indicates that we are ready to present the rendered frame to the VR display
+  vrDisplay.submitFrame();
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

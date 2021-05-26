@@ -2,14 +2,15 @@
 title: Intl.DateTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 tags:
-- DateTimeFormat
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Method
-- Prototype
-- Reference
+  - DateTimeFormat
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.DateTimeFormat.format
 ---
 <div>{{JSRef}}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateTimeFormat</var>.format(<var>date</var>)</pre>
+<pre class="brush: js">format(date)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -35,7 +36,7 @@ tags:
 <h2 id="Description">Description</h2>
 
 <p>The <code>format</code> getter formats a date into a string according to the locale and
-	formatting options of this {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} object.
+	formatting options of this {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object.
 </p>
 
 <h2 id="Examples">Examples</h2>
@@ -45,7 +46,7 @@ tags:
 <p>Use the <code>format</code> getter function for formatting a single date, here for
 	Serbia:</p>
 
-<pre class="brush: js notranslate">var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+<pre class="brush: js">var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 var dateTimeFormat = new Intl.DateTimeFormat('sr-RS', options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
@@ -54,11 +55,11 @@ console.log(dateTimeFormat.format(new Date()));
 <h3 id="Using_format_with_map">Using format with map</h3>
 
 <p>Use the <code>format</code> getter function for formatting all dates in an array. Note
-	that the function is bound to the {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+	that the function is bound to the {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 	from which it was obtained, so it can be passed directly to
 	{{jsxref("Array.prototype.map()")}}.</p>
 
-<pre class="brush: js notranslate">var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
+<pre class="brush: js">var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
 var options = { year: 'numeric', month: 'long' };
 var dateTimeFormat = new Intl.DateTimeFormat('pt-BR', options);
 var formatted = a.map(dateTimeFormat.format);
@@ -78,7 +79,7 @@ console.log(formatted.join('; '));
 <p>For this reason you cannot expect to be able to compare the results of
 	<code>format()</code> to a static value:</p>
 
-<pre class="brush: js; example-bad notranslate">let d = new Date("2019-01-01T00:00:00.000000Z");
+<pre class="brush: js; example-bad">let d = new Date("2019-01-01T00:00:00.000000Z");
 let formattedDate = Intl.DateTimeFormat(undefined, {
   year: 'numeric',
   month: 'numeric',
@@ -94,30 +95,18 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 </pre>
 
 <div class="notecard note">
-	<p><strong>Note</strong>: See also this <a
+	<p><strong>Note:</strong> See also this <a
 			href="https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results">StackOverflow
 			thread</a> for more details and examples.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-intl.datetimeformat.prototype.format',
-				'Intl.DateTimeFormat.format')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.DateTimeFormat.format")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

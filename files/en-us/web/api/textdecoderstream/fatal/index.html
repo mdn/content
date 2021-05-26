@@ -1,0 +1,50 @@
+---
+title: TextDecoderStream.fatal
+slug: Web/API/TextDecoderStream/fatal
+tags:
+  - API
+  - Property
+  - Reference
+  - fatal
+  - TextDecoderStream
+---
+<p>{{APIRef("Encoding API")}}</p>
+
+<p class="summary">The <strong><code>fatal</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref("boolean")}} indicating if the error mode of the <code>TextDecoderStream</code> object is set to <code>fatal</code>.</p>
+
+<p>The two possible values of error mode are <code>fatal</code> or <code>replacement</code>, the default being <code>replacement</code> which pushes a replacement character <code>U+FFFD</code> (�) to the output.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>fatal</var> = <var>TextDecoderStream</var>.fatal;</pre>
+
+<h3>Value</h3>
+<p>A {{jsxref("boolean")}} which will return <code>true</code> if the error mode is set to <code>fatal</code>. Otherwise it returns <code>false</code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush:js">stream = new TextDecoderStream();
+console.log(stream.fatal); // returns false</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+     <td>{{SpecName("Encoding", "#dom-textdecoder-fatal", "TextDecoderStream.fatal")}}</td>
+     <td>{{Spec2("Encoding")}}</td>
+     <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.TextDecoderStream.fatal")}}</p>

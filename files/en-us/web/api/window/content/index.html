@@ -8,9 +8,9 @@ slug: Web/API/Window/content
 <p><strong>Note</strong>: Since Firefox 57 (initially Nightly-only), both the <code>content</code> and <code>_content</code> variants are only available to chrome (privileged) code, and not available to the web anymore.</p>
 </div>
 
-<p>Returns a <a href="/en-US/docs/DOM/window">Window object</a> for the primary content window. This is useful in XUL windows that have a <code>&lt;browser&gt;</code> (or <code>tabbrowser</code> or <code>&lt;iframe&gt;</code>) with <code>type="content-primary"</code> attribute on it — the most famous example is Firefox main window, <code>browser.xul</code>. In such cases, <code>content</code> returns a reference to the <code>Window</code> object for the document currently displayed in the browser. It is a shortcut for <code><var>browserRef</var>.contentWindow</code>.</p>
+<p>Returns a <a href="/en-US/docs/Web/API/Window">Window object</a> for the primary content window. This is useful in XUL windows that have a <code>&lt;browser&gt;</code> (or <code>tabbrowser</code> or <code>&lt;iframe&gt;</code>) with <code>type="content-primary"</code> attribute on it — the most famous example is Firefox main window, <code>browser.xul</code>. In such cases, <code>content</code> returns a reference to the <code>Window</code> object for the document currently displayed in the browser. It is a shortcut for <code><var>browserRef</var>.contentWindow</code>.</p>
 
-<p>In unprivileged content (webpages), <code>content</code> is normally equivalent to <a href="/en-US/DOM/window.top">top</a> (except in the case of a webpage loaded in a sidebar, <code>content</code> still refers to the <code>Window</code> of the currently selected tab).</p>
+<p>In unprivileged content (webpages), <code>content</code> is normally equivalent to <a href="/en-US/docs/Web/API/Window/top">top</a> (except in the case of a webpage loaded in a sidebar, <code>content</code> still refers to the <code>Window</code> of the currently selected tab).</p>
 
 <div class="note">
 <p><strong>Note</strong>: Some examples use <code>_content</code> instead of <code>content</code>. The former has been deprecated for a long time, and you should use <code>content</code> in any new code.</p>

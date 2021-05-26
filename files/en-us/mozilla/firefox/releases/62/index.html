@@ -21,7 +21,7 @@ tags:
  <li>You now have four options for the location of the Developer Tools. In addition to the default location on the bottom of the window, you can choose to locate the tools on either the left or right sides of the main window or in a separate window ({{bug(1192642)}}).</li>
  <li>A close button has been added to the <a href="/en-US/docs/Tools/Web_Console/Split_console">split console</a> toolbar.</li>
  <li>If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ({{bug(1456069)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>'s <a href="/en-US/docs/Tools/Network_Monitor#Cookies">Cookies tab</a> now shows the cookie <code>samesite</code> attribute ({{bug(1452715)}}).</li>
+ <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>'s <a href="/en-US/docs/Tools/Network_Monitor#cookies">Cookies tab</a> now shows the cookie <code>samesite</code> attribute ({{bug(1452715)}}).</li>
  <li><a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive design mode</a> now works inside container tabs ({{bug(1306975)}}).</li>
  <li>When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our <a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS error documentation</a> ({{bug(1475391)}}).</li>
  <li>Create a screenshot of the current page (with an optional filename) from the Console tab ({{bug(1464461)}}) using the following command:<br>
@@ -52,7 +52,7 @@ tags:
 <h4 id="Removals_2">Removals</h4>
 
 <ul>
- <li>All <a href="/en-US/docs/Web/CSS/display#XUL_values">XUL <code>display</code> values</a> with the exception of <code>-moz-box</code> and <code>-moz-inline-box</code> have been removed from non-XUL documents in {{bug(1288572)}}.</li>
+ <li>All <a href="/en-US/docs/Web/CSS/display#xul_values">XUL <code>display</code> values</a> with the exception of <code>-moz-box</code> and <code>-moz-inline-box</code> have been removed from non-XUL documents in {{bug(1288572)}}.</li>
 </ul>
 
 <h3 id="SVG">SVG</h3>
@@ -65,7 +65,7 @@ tags:
  <li>The {{jsxref("WebAssembly.Global()")}} constructor is now supported, along with global variables in WebAssembly ({{bug(1464656)}}).</li>
  <li>The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).</li>
  <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta">import.meta</a></code> property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).</li>
- <li>JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">string literals</a> may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the TC39 proposal <a href="https://github.com/tc39/proposal-json-superset">json-superset</a>).</li>
+ <li>JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals">string literals</a> may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the TC39 proposal <a href="https://github.com/tc39/proposal-json-superset">json-superset</a>).</li>
  <li>For out-of-bounds <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return <code>false</code> instead of <code>true</code> ({{bug(1308735)}}).</li>
 </ul>
 
@@ -117,7 +117,7 @@ tags:
 <ul>
  <li>The {{event("userproximity")}} and {{event("deviceproximity")}} events (see also {{domxref("UserProximityEvent")}} and {{domxref("DeviceProximityEvent")}}) have been disabled by default behind the <code>device.sensors.proximity.enabled</code> preference ({{bug(1462308)}}).</li>
  <li>The {{event("devicelight")}} event (see also {{domxref("DeviceLightEvent")}}) has been disabled by default behind the <code>device.sensors.ambientLight.enabled</code> preference ({{bug(1462308)}}).</li>
- <li>The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} <a href="/en-US/docs/Web/Guide/Events/Mutation_events">mutation events</a> are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}, see also this <a href="https://www.fxsitecompat.com/en-CA/docs/2018/domattrmodified-and-domsubtreemodified-events-are-no-longer-fired-when-style-attribute-is-changed-via-cssom/">site compatibility post</a>).</li>
+ <li>The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} <a href="/en-US/docs/Web/API/MutationEvent">mutation events</a> are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}, see also this <a href="https://www.fxsitecompat.com/en-CA/docs/2018/domattrmodified-and-domsubtreemodified-events-are-no-longer-fired-when-style-attribute-is-changed-via-cssom/">site compatibility post</a>).</li>
  <li>Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ({{bug(1408301)}}).</li>
  <li>Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ({{bug(1459871)}}).</li>
  <li>{{domxref("window.getComputedStyle()")}} no longer returns <code>null</code> when called on a <code>Window</code> which has no presentation ({{bug(1467722)}}).</li>

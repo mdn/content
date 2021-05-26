@@ -23,7 +23,7 @@ tags:
 
 <p>That function, in turn, uses {{domxref("RTCPeerConnection.getStats", "getStats()")}} to obtain statistics for the connection and to make use of that data.</p>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   myPeerConnection = new RTCPeerConnection(pcOptions);
 
   statsInterval = window.setInterval(getConnectionStats, 1000);
@@ -70,7 +70,7 @@ function getConnectionStats() {
  <tbody>
   <tr>
    <th scope="row" style="vertical-align: top;"><code>candidate-pair</code></th>
-   <td>Statistics describing the change from one {{domxref("RTCIceTransport")}} to another, such as during an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.</td>
+   <td>Statistics describing the change from one {{domxref("RTCIceTransport")}} to another, such as during an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a>.</td>
    <td>
     <ul class="directory-tree">
      <li>{{domxref("RTCIceCandidatePairStats")}}
@@ -335,7 +335,7 @@ function getConnectionStats() {
    </td>
   </tr>
   <tr>
-   <th scope="row"><code>stream</code> {{obsolete_inline}}</th>
+   <th scope="row"><code>stream</code> {{deprecated_inline}}</th>
    <td>Statistics about a particular media {{domxref("MediaStream")}}. This has been obsoleted since the transition to WebRTC being track-based rather than stream-based.</td>
    <td>
     <ul class="directory-tree">
@@ -348,7 +348,7 @@ function getConnectionStats() {
    </td>
   </tr>
   <tr>
-   <th scope="row"><code>track</code> {{obsolete_inline}}</th>
+   <th scope="row"><code>track</code> {{deprecated_inline}}</th>
    <td>
     <p>Statistics related to a specific {{domxref("MediaStreamTrack")}}'s attachment to one of the connection's senders or receivers. The referenced object's type depends on the track type.</p>
 

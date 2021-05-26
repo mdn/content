@@ -37,7 +37,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const videoElement = document.querySelector('video');
+<pre class="brush: js">const videoElement = document.querySelector('video');
 videoElement.audioTracks.addEventListener('change', (event) =&gt; {
     console.log(`'${event.type}' event fired`);
 });
@@ -52,7 +52,7 @@ toggleTrackButton.addEventListener('click', () =&gt; {
 
 <p>Using the <code>onchange</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const videoElement = document.querySelector('video');
+<pre class="brush: js">const videoElement = document.querySelector('video');
 videoElement.audioTracks.onchange = (event) =&gt; {
     console.log(`'${event.type}' event fired`);
 };

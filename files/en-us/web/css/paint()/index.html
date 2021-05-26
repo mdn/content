@@ -9,6 +9,7 @@ tags:
   - Houdini
   - Reference
   - Web
+browser-compat: css.types.image.paint
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">paint(<var>workletName</var>, <var>parameters</var>)</pre>
+<pre class="brush: css">paint(<var>workletName</var>, <var>parameters</var>)</pre>
 
 <p>where:</p>
 
@@ -33,7 +34,7 @@ tags:
 
 <p>You can pass additional arguments via the CSS paint() function. In this example, we passed two arguments: whether the background-image on a group of list items is filled or just has a stroke outline, and the width of that outline:</p>
 
-<pre class="brush: html hidden notranslate">&lt;ul&gt;
+<pre class="brush: html hidden">&lt;ul&gt;
     &lt;li&gt;item 1&lt;/li&gt;
     &lt;li&gt;item 2&lt;/li&gt;
     &lt;li&gt;item 3&lt;/li&gt;
@@ -56,10 +57,10 @@ tags:
     &lt;li&gt;item 20&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<pre class="brush: js hidden notranslate">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+<pre class="brush: js hidden">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
 </pre>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
    --boxColor: hsla(55, 90%, 60%, 1.0);
    background-image: paint(hollowHighlights, stroke, 2px);
 }
@@ -99,7 +100,7 @@ li:nth-of-type(3n+1) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.image.paint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

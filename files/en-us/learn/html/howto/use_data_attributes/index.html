@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{LearnSidebar}}</div>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. <a href="/en-US/docs/Web/HTML/Global_attributes/data-*"><code>data-* </code>attributes</a> allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, extra properties on DOM, or {{domxref("Node.setUserData()")}}.</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. <a href="/en-US/docs/Web/HTML/Global_attributes/data-*"><code>data-*</code> attributes</a> allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, extra properties on DOM, or {{domxref("Node.setUserData()")}}.</p>
 
 <h2 id="HTML_syntax">HTML syntax</h2>
 
@@ -41,7 +41,7 @@ article.dataset.parent // "cars"</pre>
 
 <h2 id="CSS_access">CSS access</h2>
 
-<p>Note that, as data attributes are plain HTML attributes, you can even access them from <a href="/en-US/docs/Web/CSS">CSS</a>. For example to show the parent data on the article you can use <a href="/en-US/docs/Web/CSS/content">generated content</a> in CSS with the {{cssxref("attr()")}} function:</p>
+<p>Note that, as data attributes are plain HTML attributes, you can even access them from <a href="/en-US/docs/Web/CSS">CSS</a>. For example to show the parent data on the article you can use <a href="/en-US/docs/Web/CSS/content">generated content</a> in CSS with the <a href="/en-US/docs/Web/CSS/attr()"><code>attr()</code></a> function:</p>
 
 <pre class="brush: css">article::before {
   content: attr(data-parent);

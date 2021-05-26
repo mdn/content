@@ -2,11 +2,12 @@
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 tags:
-- JavaScript
-- Method
-- Object
-- Prototype
-- hasOwnProperty
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+  - hasOwnProperty
+browser-compat: javascript.builtins.Object.hasOwnProperty
 ---
 <div>{{JSRef}}</div>
 
@@ -16,15 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>obj</var>.hasOwnProperty(<var>prop</var>)</pre>
+<pre class="brush: js">hasOwnProperty(prop)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -48,33 +44,12 @@ tags:
   {{jsxref("Object")}} is an {{jsxref("Array")}}, <code>hasOwnProperty</code> method can
   check whether an index exists.</p>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js notranslate">;(function(hasOwnProp) { // IIFE with guarding semicolon
-  function hasOwnProperty(name) {
-    if (this == null) { throw new TypeError("Cannot convert undefined or null to object!") }
-    var O = Object(this), key = String(name);
-    var _proto = O.__proto__ || O.constructor.prototype || {}; // Object.prototype
-    return key in O &amp;&amp; ( !(key in _proto) || O[key] !== _proto[key] );
-  }
-  if (!hasOwnProp) {
-    try {
-      Object.defineProperty( Object.prototype, 'hasOwnProperty', {
-        enumerable: false, configurable: true, writable: true,
-        value: hasOwnProperty
-      });
-    } catch (e) { // Object.defineProperty isn't supported
-      Object.prototype['hasOwnProperty'] = hasOwnProperty;
-    }
-  }
-})(Object.prototype.hasOwnProperty);</pre>
-
 <h2 id="Note">Note</h2>
 
 <p><code>hasOwnProperty</code> returns true even if the value of the property is
   <code>null</code> or <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">o = new Object();
+<pre class="brush: js">o = new Object();
 o.propOne = null;
 o.hasOwnProperty('propOne');   // returns true
 o.propTwo = undefined;
@@ -89,7 +64,7 @@ o.hasOwnProperty('propTwo');   // returns true
 <p>The following example determines whether the <code>o</code> object contains a property
   named <code>prop</code>:</p>
 
-<pre class="brush: js notranslate">o = new Object();
+<pre class="brush: js">o = new Object();
 o.hasOwnProperty('prop');   // returns false
 o.prop = 'exists';
 o.hasOwnProperty('prop');   // returns true
@@ -100,7 +75,7 @@ o.hasOwnProperty('prop');   // returns true
 <p>The following example differentiates between direct properties and properties inherited
   through the prototype chain:</p>
 
-<pre class="brush: js notranslate">o = new Object();
+<pre class="brush: js">o = new Object();
 o.prop = 'exists';
 o.hasOwnProperty('prop');             // returns true
 o.hasOwnProperty('toString');         // returns false
@@ -117,7 +92,7 @@ o.hasOwnProperty('hasOwnProperty');   // returns false
   <code>hasOwnProperty</code> itself is confined strictly to enumerable items (as with
   {{jsxref("Object.getOwnPropertyNames()")}}).</p>
 
-<pre class="brush: js notranslate">var buz = {
+<pre class="brush: js">var buz = {
   fog: 'stack'
 };
 
@@ -139,7 +114,7 @@ for (var name in buz) {
   possibility exists that an object might have a property with this name, it is necessary
   to use an <em>external</em> <code>hasOwnProperty</code> to get correct results:</p>
 
-<pre class="brush: js notranslate">var foo = {
+<pre class="brush: js">var foo = {
   hasOwnProperty: function() {
     return false;
   },
@@ -161,28 +136,16 @@ Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.hasownproperty',
-        'Object.prototype.hasOwnProperty')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.hasOwnProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and
+  <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and
       ownership of properties</a></li>
   <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
   <li>{{jsxref("Statements/for...in", "for...in")}}</li>

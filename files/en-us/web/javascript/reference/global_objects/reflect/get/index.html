@@ -7,6 +7,7 @@ tags:
 - Method
 - Reference
 - Reflect
+browser-compat: javascript.builtins.Reflect.get
 ---
 <div>{{JSRef}}</div>
 
@@ -17,7 +18,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.get(<var>target</var>, <var>propertyKey</var>[, <var>receiver</var>])
+<pre class="brush: js">
+Reflect.get(target, propertyKey)
+Reflect.get(target, propertyKey, receiver)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -85,22 +88,11 @@ Reflect.get(obj, 'foo', y) // "3bar"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

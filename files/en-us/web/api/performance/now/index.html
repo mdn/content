@@ -2,11 +2,11 @@
 title: performance.now()
 slug: Web/API/Performance/now
 tags:
-- API
-- Method
-- Performance
-- Reference
-- Web Performance API
+  - API
+  - Method
+  - Performance
+  - Reference
+  - Web Performance API
 ---
 <div>{{APIRef("High Resolution Timing")}}</div>
 
@@ -16,7 +16,7 @@ tags:
 <p>{{AvailableInWorkers}}</p>
 
 <p>The returned value represents the time elapsed since the <a
-    href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>.</p>
+    href="/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin">time origin</a>.</p>
 
 <p>Bear in mind the following points:</p>
 
@@ -40,18 +40,18 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>t</em> = performance.now();</pre>
+<pre class="brush: js"><em>t</em> = performance.now();</pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">const t0 = performance.now();
+<pre class="brush: js">const t0 = performance.now();
 doSomething();
 const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 </pre>
 
 <p>Unlike other timing data available to JavaScript (for example <a
-    href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>),
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>),
   the timestamps returned by <code>performance.now()</code> are not limited to
   one-millisecond resolution. Instead, they represent times as floating-point numbers with
   up to microsecond precision.</p>
@@ -69,7 +69,7 @@ console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
   In Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by
   default and defaults to 1ms.</p>
 
-<pre class="brush: js notranslate">// reduced time precision (1ms) in Firefox 60
+<pre class="brush: js">// reduced time precision (1ms) in Firefox 60
 performance.now();
 // 8781416
 // 8781815
@@ -93,7 +93,7 @@ performance.now();
   isolate your document using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
   {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:</p>
 
-<pre class="brush: plain notranslate">Cross-Origin-Opener-Policy: same-origin
+<pre class="brush: plain">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 

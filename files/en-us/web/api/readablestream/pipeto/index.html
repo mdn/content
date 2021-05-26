@@ -2,19 +2,19 @@
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 tags:
-- API
-- Experimental
-- Method
-- ReadableStream
-- Reference
-- Streams
-- pipeTo
+  - API
+  - Experimental
+  - Method
+  - ReadableStream
+  - Reference
+  - Streams
+  - pipeTo
 ---
 <div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
 <p class="summary">The <strong><code>pipeTo()</code></strong> method of the
   {{domxref("ReadableStream")}} interface pipes the current <code>ReadableStream</code> to
-  a given {{domxref("WritableStream")}} and returns a promise that fulfills when the
+  a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the
   piping process completes successfully, or rejects if any errors were encountered.</p>
 
 <p>Piping a stream will generally lock it for the duration of the pipe, preventing other
@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = <em>readableStream</em>.pipeTo(<em>destination</em>[, <em>options</em>]);</pre>
+  class="brush: js">var <em>promise</em> = <em>readableStream</em>.pipeTo(<em>destination</em>[, <em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

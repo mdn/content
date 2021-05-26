@@ -4,9 +4,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toSource
 tags:
 - JavaScript
 - Method
-- Obsolete
+- Deprecated
 - Prototype
 - Symbol
+browser-compat: javascript.builtins.Symbol.toSource
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
@@ -17,10 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>Symbol</var>.toSource()
-
-var sym = Symbol()
-sym.toSource()</pre>
+<pre class="brush: js">toSource()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -33,14 +31,14 @@ sym.toSource()</pre>
 <p>For the built-in <code>Symbol</code> object, <code>toSource</code> returns the
   following string indicating that the source code is not available:</p>
 
-<pre class="brush: js notranslate">"function Symbol() {
+<pre class="brush: js">"function Symbol() {
    [native code]
 }"</pre>
 
 <p>For instances of <code>Symbol</code>, <code>toSource</code> returns a string
   representing the source code.</p>
 
-<pre class="brush: js notranslate">"Symbol()"</pre>
+<pre class="brush: js">"Symbol()"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -48,7 +46,7 @@ sym.toSource()</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Symbol.toSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

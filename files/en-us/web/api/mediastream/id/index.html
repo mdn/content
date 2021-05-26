@@ -2,11 +2,11 @@
 title: MediaStream.id
 slug: Web/API/MediaStream/id
 tags:
-- MediaStream
-- Property
-- Read-only
-- Reference
-- Web
+  - MediaStream
+  - Property
+  - Read-only
+  - Reference
+  - Web
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
@@ -16,17 +16,17 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>id</em> = <em>mediaStream</em>.id;
+<pre class="brush: js">var <em>id</em> = <em>mediaStream</em>.id;
 </pre>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js"><code class="language-html">var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+<pre class="brush: js">var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 p.then(function(stream) {
    console.log(stream.id);
 })
-</code></pre>
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -61,7 +61,7 @@ tags:
 
 <p>The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:</p>
 
-<pre class="brush: js notranslate">async function registerPeriodicNewsCheck() {
+<pre class="brush: js">async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
     await registration.periodicSync.register('get-latest-news', {
@@ -77,7 +77,7 @@ tags:
 
 <p>This code checks to see if a Periodic Background Sync task with a given tag is registered.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.getTags().then(tags =&gt; {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
@@ -89,7 +89,7 @@ tags:
 
 <p>The following code removes a Periodic Background Sync task to stop articles syncing in the background.</p>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.ready.then(registration =&gt; {
+<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
   registration.periodicSync.unregister('get-latest-news');
 });
 </pre>
@@ -98,7 +98,7 @@ tags:
 
 <p>The following example shows how to respond to a periodic sync event in the service worker.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('periodicsync', event =&gt; {
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }

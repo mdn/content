@@ -6,6 +6,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.unary_plus
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><strong>Operator:</strong> +<var>x</var>
+<pre class="brush: js"><strong>Operator:</strong> +<var>x</var>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -34,7 +35,7 @@ tags:
 
 <h3 id="Usage_with_numbers">Usage with numbers</h3>
 
-<pre class="brush: js notranslate">const x = 1;
+<pre class="brush: js">const x = 1;
 const y = -1;
 
 console.log(+x);
@@ -44,7 +45,7 @@ console.log(+y);
 
 <h3 id="Usage_with_non-numbers">Usage with non-numbers</h3>
 
-<pre class="brush: js notranslate">+true  // 1
+<pre class="brush: js">+true  // 1
 +false // 0
 +null  // 0
 +function(val){ return val } // NaN
@@ -53,20 +54,11 @@ console.log(+y);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-unary-plus-operator', 'Unary plus operator')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.unary_plus")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

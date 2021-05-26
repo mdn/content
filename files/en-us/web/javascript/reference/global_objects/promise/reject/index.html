@@ -7,6 +7,7 @@ tags:
 - Method
 - Promise
 - Reference
+browser-compat: javascript.builtins.Promise.reject
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/promise-reject.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Promise.reject(<var>reason</var>);</pre>
+<pre class="brush: js">Promise.reject(<var>reason</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +43,7 @@ tags:
 <h3 id="Using_the_static_Promise.reject_method">Using the static Promise.reject() method
 </h3>
 
-<pre class="brush: js notranslate">Promise.reject(new Error('fail')).then(function() {
+<pre class="brush: js">Promise.reject(new Error('fail')).then(function() {
   // not called
 }, function(error) {
   console.error(error); // Stacktrace
@@ -55,27 +51,12 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">To contribute to this compatibility data, please write a pull request
-  against this repository: <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.
-</div>
 
-<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

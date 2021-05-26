@@ -25,8 +25,8 @@ tags:
 
 <p>In addition, every kind of DOM node is represented by an interface based on
   <code>Node</code>. These include {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}}
-  (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, and {{DOMxRef("CDATASection")}} are
-  all based on), {{DOMxRef("ProcessingInstruction")}}, {{DOMxRef("DocumentType")}},
+  (which {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef("CDATASection")}} and
+  {{DOMxRef("ProcessingInstruction")}} are all based on), {{DOMxRef("DocumentType")}},
   {{DOMxRef("Notation")}}, {{DOMxRef("Entity")}}, and {{DOMxRef("EntityReference")}}.</p>
 
 <p>In some cases, a particular feature of the base <code>Node</code> interface may not
@@ -153,32 +153,6 @@ tags:
   <dd>Returns / Sets the textual content of an element and all its descendants.</dd>
 </dl>
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
-
-<dl>
-  <dt>{{DOMxRef("Node.localName")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{DOMxRef("DOMString")}} representing the local part of the qualified name
-    of an element.
-    <div class="notecard note">
-      <p><strong>Note:</strong> In Firefox 3.5 and earlier, the property upper-cases the
-        local name for HTML elements (but not XHTML elements). In later versions, this
-        does not happen, so the property is in lower case for both HTML and XHTML.</p>
-    </div>
-  </dd>
-  <dt>{{DOMxRef("Node.namespaceURI")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>The namespace URI of this node, or <code>null</code> if it is no namespace.
-    <div class="notecard note">
-      <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no
-        namespace. In later versions, HTML elements are in the
-        <code><a class="linkification-ext external" href="https://www.w3.org/1999/xhtml/">http://www.w3.org/1999/xhtml/</a></code>
-        namespace in both HTML and XML trees.</p>
-    </div>
-  </dd>
-  <dt>{{DOMxRef("Node.prefix")}} {{Obsolete_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>Is a {{DOMxRef("DOMString")}} representing the namespace prefix of the node, or
-    <code>null</code> if no prefix is specified.</dd>
-</dl>
-
 <h2 id="Methods">Methods</h2>
 
 <p><em>In addition to the properties below, <code>Node</code> inherits methods from its
@@ -241,16 +215,16 @@ tags:
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
-  <dt>{{DOMxRef("Node.getUserData()")}} {{Obsolete_Inline}}</dt>
+  <dt>{{DOMxRef("Node.getUserData()")}} {{deprecated_inline}}</dt>
   <dd>Allows a user to get some {{DOMxRef("DOMUserData")}} from the node.</dd>
-  <dt>{{DOMxRef("Node.hasAttributes()")}} {{Obsolete_Inline}}</dt>
+  <dt>{{DOMxRef("Node.hasAttributes()")}} {{deprecated_inline}}</dt>
   <dd>Returns a {{jsxref("Boolean")}} indicating if the element has any attributes, or
     not.</dd>
-  <dt>{{DOMxRef("Node.isSupported()")}} {{Obsolete_Inline}}</dt>
+  <dt>{{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}</dt>
   <dd>Returns a {{jsxref("Boolean")}} flag containing the result of a test whether the DOM
     implementation implements a specific feature and this feature is supported by the
     specific node.</dd>
-  <dt>{{DOMxRef("Node.setUserData()")}} {{Obsolete_Inline}}</dt>
+  <dt>{{DOMxRef("Node.setUserData()")}} {{deprecated_inline}}</dt>
   <dd>Allows a user to attach, or remove, {{DOMxRef("DOMUserData")}} to the node.</dd>
 </dl>
 
@@ -259,7 +233,7 @@ tags:
 <h3 id="Remove_all_children_nested_within_a_node">Remove all children nested within a node
 </h3>
 
-<pre class="brush: js notranslate">function removeAllChildren(element) {
+<pre class="brush: js">function removeAllChildren(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild)
   }
@@ -267,7 +241,7 @@ tags:
 
 <h4 id="Sample_usage">Sample usage</h4>
 
-<pre class="brush: js notranslate">/* Note: or use document.body.textContent = "" */
+<pre class="brush: js">/* Note: or use document.body.textContent = "" */
 removeAllChildren(document.body)</pre>
 
 <h3 id="Recurse_through_child_nodes">Recurse through child nodes</h3>
@@ -275,7 +249,7 @@ removeAllChildren(document.body)</pre>
 <p>The following function recursively calls a callback function for each node contained by
   a root node (including the root itself):</p>
 
-<pre class="brush: js notranslate">function eachNode(rootNode, callback) {
+<pre class="brush: js">function eachNode(rootNode, callback) {
 	if (!callback) {
 		const nodes = []
 		eachNode(rootNode, function(node) {
@@ -302,7 +276,7 @@ removeAllChildren(document.body)</pre>
 <h4 id="Syntax">Syntax</h4>
 
 <pre
-  class="brush: js notranslate">eachNode(<var>rootNode</var>, <var>callback</var>)</pre>
+  class="brush: js">eachNode(<var>rootNode</var>, <var>callback</var>)</pre>
 
 <h4 id="Description">Description</h4>
 
@@ -339,13 +313,13 @@ removeAllChildren(document.body)</pre>
   each <code>&lt;span&gt;</code> tag in a <code>&lt;div&gt;</code> element named
   <code>"box"</code>:</p>
 
-<pre class="brush: html notranslate">&lt;div id="box"&gt;
+<pre class="brush: html">&lt;div id="box"&gt;
   &lt;span&gt;Foo&lt;/span&gt;
   &lt;span&gt;Bar&lt;/span&gt;
   &lt;span&gt;Baz&lt;/span&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: js notranslate">const box = document.getElementById("box")
+<pre class="brush: js">const box = document.getElementById("box")
 eachNode(box, function(node) {
   if (null != node.textContent) {
     console.log(node.textContent)
@@ -354,7 +328,7 @@ eachNode(box, function(node) {
 
 <p>The above will result in the following strings printing to the user's console:</p>
 
-<pre class="brush: js notranslate">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
+<pre class="brush: js">"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"</pre>
 
 <div class="notecard note">
   <p><strong>Note:</strong> Whitespace forms part of a {{DOMxRef("Text")}} node, meaning
@@ -369,7 +343,7 @@ eachNode(box, function(node) {
 
 <p>We use a wrapper function named <code>grep</code> to do the searching:</p>
 
-<pre class="brush: js notranslate">function grep(parentNode, pattern) {
+<pre class="brush: js">function grep(parentNode, pattern) {
 	const matches = []
 	let endScan = false
 
@@ -404,7 +378,7 @@ eachNode(box, function(node) {
 
 <p>For example, to find {{DOMxRef("Text")}} nodes that contain typos:</p>
 
-<pre class="brush: js notranslate">const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
+<pre class="brush: js">const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
 const pattern = new RegExp("\\b(" + typos.join("|") + ")\\b", "gi")
 const mistakes = grep(document.body, pattern)
 console.log(mistakes)

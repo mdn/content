@@ -10,6 +10,7 @@ tags:
   - Localization
   - Reference
   - RelativeTimeFormat
+browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
 <div>{{JSRef}}</div>
 
@@ -17,7 +18,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
+<pre class="brush: js">
+new Intl.RelativeTimeFormat()
+new Intl.RelativeTimeFormat(locales)
+new Intl.RelativeTimeFormat(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -29,7 +34,7 @@ tags:
 	<dt><code><var>options</var></code> {{optional_inline}}</dt>
 	<dd>
 		<p>An object with some or all of the following properties:</p>
-		
+
 		<dl>
 			<dt><code>localeMatcher</code></dt>
 			<dd>The locale matching algorithm to use. Possible values are "<code>lookup</code>" and "<code>best fit</code>"; the default is "<code>best fit</code>". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.</dd>
@@ -60,7 +65,7 @@ tags:
 
 <p>The following example shows how to create a relative time formatter using the English language.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // other values: "lookup"
@@ -80,7 +85,7 @@ rtf.format(1, "day");
 
 <p>If <code>numeric:auto</code> option is passed, it will produce the string <code>yesterday</code> or <code>tomorrow</code> instead of <code>1 day ago</code> or <code>in 1 day</code>. This allows to not always have to use numeric values in the output.</p>
 
-<pre class="brush: js notranslate">// Create a relative time formatter in your locale
+<pre class="brush: js">// Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
@@ -95,22 +100,11 @@ rtf.format(1, "day");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-intl-relativetimeformat-constructor', 'RelativeTimeFormat()')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

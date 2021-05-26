@@ -7,6 +7,7 @@ tags:
 - Language feature
 - Operator
 - Primary Expression
+browser-compat: javascript.operators.async_function
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -20,13 +21,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">async function [<var>name</var>]([<var>param1</var>[, <var>param2</var>[, ..., <var>paramN</var>]]]) {
+<pre class="brush: js">async function [<var>name</var>]([<var>param1</var>[, <var>param2</var>[, ..., <var>paramN</var>]]]) {
    <var>statements</var>
 }</pre>
 
-<p>As of ES2015, you can also use <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow
-    functions</a>.</p>
+<p>As of ES2015, you can also use <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>.</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,16 +41,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>An <code>async function</code> expression is very similar to, and has almost the same
-  syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The
-  main difference between an async <code>function</code> expression and an async
-  <code>function</code> statement is the <em>function name</em>, which can be omitted in
-  <code>async function</code> expressions to create <em>anonymous</em> functions. An
-  <code>async function</code> expression can be used as an <a
-    href="/en-US/docs/Glossary/IIFE">IIFE</a> (Immediately Invoked Function Expression)
-  which runs as soon as it is defined. See also the chapter about <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions">functions</a> for more
-  information.</p>
+<p>An <code>async function</code> expression is very similar to, and has almost the same syntax as, an {{jsxref('Statements/async_function', 'async function statement')}}. The main difference between an async <code>function</code> expression and an async <code>function</code> statement is the <em>function name</em>, which can be omitted in <code>async function</code> expressions to create <em>anonymous</em> functions. An <code>async function</code> expression can be used as an <a href="/en-US/docs/Glossary/IIFE">IIFE</a> (Immediately Invoked Function Expression) which runs as soon as it is defined. See also the chapter about <a href="/en-US/docs/Web/JavaScript/Reference/Functions">functions</a> for more information.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -86,26 +76,11 @@ add(10).then(v =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.operators.async_function_expression")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

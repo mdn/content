@@ -13,7 +13,6 @@ tags:
 
 <h2 id="Character_classes"><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character classes</a></h2>
 
-<div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">the original article</a></div>
 
 <table class="standard-table">
  <thead>
@@ -132,10 +131,10 @@ tags:
      <li>For characters that are usually treated specially, indicates that the next character is not special and should be interpreted literally. For example, "*" is a special character that means 0 or more occurrences of the preceding character should be matched; for example, <code>/a*/</code> means match 0 or more "a"s. To match <code>*</code> literally, precede it with a backslash; for example, <code>/a\*/</code> matches "a*".</li>
     </ul>
 
-    <p>Note that some characters like <code>:</code>, <code>-</code>, <code>@</code>, etc. neither have a special meaning when escaped nor when unescaped. Escape sequences like <code>\:</code>, <code>\-</code>, <code>\@</code> will be equivalent to their literal, unescaped character equivalents in regular expressions. However, in regular expressions with the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">unicode flag</a>, these will cause an <em>invalid identity escape</em> error. This is done to ensure backward compatibility with existing code that uses new escape sequences like <code>\p</code> or <code>\k</code>.</p>
+    <p>Note that some characters like <code>:</code>, <code>-</code>, <code>@</code>, etc. neither have a special meaning when escaped nor when unescaped. Escape sequences like <code>\:</code>, <code>\-</code>, <code>\@</code> will be equivalent to their literal, unescaped character equivalents in regular expressions. However, in regular expressions with the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2">unicode flag</a>, these will cause an <em>invalid identity escape</em> error. This is done to ensure backward compatibility with existing code that uses new escape sequences like <code>\p</code> or <code>\k</code>.</p>
 
     <div class="notecard note">
-    <p>To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
+    <p><strong>Note:</strong> To match this character literally, escape it with itself. In other words to search for <code>\</code> use <code>/\\/</code>.</p>
     </div>
    </td>
   </tr>
@@ -144,7 +143,6 @@ tags:
 
 <h2 id="Assertions"><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a></h2>
 
-<div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">the original article</a></div>
 
 <h3 id="Boundary-type_assertions">Boundary-type assertions</h3>
 
@@ -162,7 +160,7 @@ tags:
     <p>Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, <code>/^A/</code> does not match the "A" in "an A", but does match the first "A" in "An A".</p>
 
     <div class="notecard note">
-    <p>This character has a different meaning when it appears at the start of a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
+    <p><strong>Note:</strong> This character has a different meaning when it appears at the start of a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
     </div>
    </td>
   </tr>
@@ -201,7 +199,7 @@ tags:
 <h3 id="Other_assertions">Other assertions</h3>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The <code>?</code> character may also be used as a quantifier.</p>
+<p><strong>Note:</strong> The <code>?</code> character may also be used as a quantifier.</p>
 </div>
 
 <table class="standard-table">
@@ -242,7 +240,6 @@ tags:
 
 <h2 id="Groups_and_ranges"><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Groups and ranges</a></h2>
 
-<div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">the original article</a></div>
 
 <table class="standard-table">
  <thead>
@@ -280,7 +277,7 @@ tags:
     <p>A negated or complemented character class. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character class as a normal character. For example, <code>[^abc]</code> is the same as <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in "chop".</p>
 
     <div class="notecard note">
-    <p>The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">beginning of input</a>.</p>
+    <p><strong>Note:</strong> The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">beginning of input</a>.</p>
     </div>
    </td>
   </tr>
@@ -310,7 +307,7 @@ tags:
     <p>For example, <code>/(?&lt;title&gt;\w+), yes \k&lt;title&gt;/</code> matches "Sir, yes Sir" in "Do you copy? Sir, yes Sir!".</p>
 
     <div class="notecard note">
-    <p><code>\k</code> is used literally here to indicate the beginning of a back reference to a Named capture group.</p>
+    <p><strong>Note:</strong> <code>\k</code> is used literally here to indicate the beginning of a back reference to a Named capture group.</p>
     </div>
    </td>
   </tr>
@@ -331,7 +328,6 @@ tags:
 
 <h2 id="Quantifiers"><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">Quantifiers</a></h2>
 
-<div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">the original article</a></div>
 
 <div class="notecard note">
 <p><strong>Note:</strong> In the following, <em>item</em> refers not only to singular characters, but also includes <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character classes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a>, <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups and ranges</a>.</p>
@@ -406,9 +402,8 @@ tags:
 
 <h2 id="Unicode_property_escapes"><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a></h2>
 
-<div class="hidden">If you are looking to contribute to this document, please also edit <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">the original article</a></div>
 
-<pre class="brush: js notranslate">// Non-binary values
+<pre class="brush: js">// Non-binary values
 \p{<em>UnicodePropertyValue</em>}
 \p{<em>UnicodePropertyName</em>=<em>UnicodePropertyValue</em>}
 

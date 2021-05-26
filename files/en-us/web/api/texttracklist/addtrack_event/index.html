@@ -39,7 +39,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const mediaElement = document.querySelector('video, audio');
+<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
 
 mediaElement.textTracks.addEventListener('addtrack', (event) =&gt; {
   console.log(`Text track: ${event.track.label} added`);
@@ -47,7 +47,7 @@ mediaElement.textTracks.addEventListener('addtrack', (event) =&gt; {
 
 <p>Using the <code>onaddtrack</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const mediaElement = document.querySelector('video, audio');
+<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
 
 mediaElement.textTracks.onaddtrack = (event) =&gt; {
   console.log(`Text track: ${event.track.label} added`);
@@ -80,5 +80,5 @@ mediaElement.textTracks.onaddtrack = (event) =&gt; {
  <li>This event on <code><a href="/en-US/docs/Web/API/AudioTrackList">AudioTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code></li>
  <li>This event on <code><a href="/en-US/docs/Web/API/MediaStream">MediaStream</a></code> targets: <code><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack</a></code></li>
  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
 </ul>

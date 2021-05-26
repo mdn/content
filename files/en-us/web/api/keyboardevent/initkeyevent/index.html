@@ -2,12 +2,12 @@
 title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 tags:
-- API
-- DOM
-- Deprecated
-- KeyboardEvent
-- Method
-- Reference
+  - API
+  - DOM
+  - Deprecated
+  - KeyboardEvent
+  - Method
+  - Reference
 ---
 <p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
 
@@ -17,7 +17,7 @@ tags:
   this way must have been created with the
   {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code> method.
   <code>initKeyEvent()</code> must be called to set the event before it is <a
-    href="/en-US/docs/Web/API/EventTarget.dispatchEvent">dispatched</a>.</p>
+    href="/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</a>.</p>
 
 <div class="note">
   <p><strong>Do not use this method anymore, use the
@@ -34,7 +34,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>event</em>.initKeyEvent (<em>type</em>, <em>bubbles</em>, <em>cancelable</em>, <em>viewArg</em>,
+<pre class="brush: js"><em>event</em>.initKeyEvent (<em>type</em>, <em>bubbles</em>, <em>cancelable</em>, <em>viewArg</em>,
                     <em>ctrlKeyArg</em>, <em>altKeyArg</em>, <em>shiftKeyArg</em>, <em>metaKeyArg</em>,
                     <em>keyCodeArg</em>, <em>charCodeArg</em>)
 </pre>
@@ -46,10 +46,10 @@ tags:
   <dd>Is a {{domxref("DOMString")}} representing the type of event.</dd>
   <dt><em><code>bubbles</code></em></dt>
   <dd>Is a {{jsxref("Boolean")}} indicating whether the event should bubble up through the
-    event chain or not (see <a href="/en-US/docs/DOM/event.bubbles">bubbles</a>).</dd>
+    event chain or not (see <a href="/en-US/docs/Web/API/Event/bubbles">bubbles</a>).</dd>
   <dt><em><code>cancelable</code></em></dt>
   <dd>Is a {{jsxref("Boolean")}} i indicating whether the event can be canceled (see <a
-      href="/en-US/docs/DOM/event.cancelable">cancelable</a>).</dd>
+      href="/en-US/docs/Web/API/Event/cancelable">cancelable</a>).</dd>
   <dt><em><code>viewArg</code></em></dt>
   <dd>Specifies the {{domxref("UIEvent.view")}}; this value may be <code>null</code>.</dd>
   <dt><em><code>ctrlKeyArg</code></em></dt>

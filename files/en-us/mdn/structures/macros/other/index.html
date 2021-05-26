@@ -49,7 +49,7 @@ tags:
 <p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/page.ejs">page</a></code> lets you embed some or all of a specific page into a document. It accepts five parameters:</p>
 
 <ol>
- <li>The URI of the page to transclude. For example, "/en-US/docs/Project:MDN/About".</li>
+ <li>The URI of the page to transclude. For example, "/en-US/docs/MDN/About".</li>
  <li>The name of the section within the page to transclude. This can be specified either as the title string or as the ID of a block to copy over. If not specified, the entire article is transcluded. {{optional_inline}}</li>
  <li>The revision number of the page version to transclude. This feature is not currently implemented, but would allow including text from specific versions of an article. {{unimplemented_inline}}</li>
  <li>A Boolean value indicating whether or not to show the heading of the top-level section being transcluded. This is useful if you wish to specify your own heading. The default value is false, meaning the heading is not included by default. {{optional_inline}}</li>
@@ -72,16 +72,6 @@ tags:
 
 <p>{{Page("/en-US/docs/MDN/About", "How you can help", 0, 1)}}</p>
 
-<h3 id="Creating_new_badges">Creating new badges</h3>
-
-<p>We also have badges that don't have icon bubbles. The generic template for this is <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SimpleBadge.ejs">SimpleBadge</a></code>, which accepts three parameters:</p>
-
-<ol>
- <li>Text to display in the badge.</li>
- <li>Name of a CSS class to use as the background for the badge.</li>
- <li>(Optional) Text to display in a tooltip when hovering over the badge.</li>
-</ol>
-
 <h2 id="Deprecated">Deprecated</h2>
 
 <p>These macros have been replace by other ways of doing the same thing, and should no longer be used. If you find them in existing articles, please replace them.</p>
@@ -98,6 +88,6 @@ tags:
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/funcref.ejs">funcref</a></code> creates links to global functions (usually C++) documented on top-level pages. However, such pages are no longer created at the top-level of MDN.</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/spec.ejs">spec</a></code> inserts a link to a specification. <strong>Replacement:</strong> Use {{TemplateLink("Spec2")}} or <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SpecName.ejs">SpecName</a></code> instead.</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code> allows you to link to a Mozilla source code file without having to type a long MXR URL using this syntax: <code>\{\{Source("browser/Makefile.in")\}\}</code>. This gives you: {{ Source("browser/Makefile.in") }}. The text of the link is the path provided; if you want different text, then just provide a second parameter, like so: <code>\{\{Source("browser/Makefile.in", "the browser/ Makefile.in")\}\}</code>, which produces {{ Source("browser/Makefile.in", "the browser/ Makefile.in") }}. Note that the link will be to the very latest version of the file in bleeding-edge code.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Source_cvs.ejs">Source_cvs</a></code> works just like <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code>, except it links to the <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS" title="en-US/docs/Developer Guide/Source Code/CVS">CVS</a> repository instead of the newer <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> one.</li>
+ <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Source_cvs.ejs">Source_cvs</a></code> works just like <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/source.ejs">source</a></code>, except it links to the <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS">CVS</a> repository instead of the newer <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> one.</li>
  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LXRSearch.ejs">LXRSearch</a></code> can be used to create an LXR search URL.</li>
 </ul>

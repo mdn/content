@@ -2,13 +2,13 @@
 title: RTCDataChannel.label
 slug: Web/API/RTCDataChannel/label
 tags:
-- Experimental
-- Property
-- RTCDataChannel
-- Read-only
-- Reference
-- WebRTC
-- label
+  - Experimental
+  - Property
+  - RTCDataChannel
+  - Read-only
+  - Reference
+  - WebRTC
+  - label
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
@@ -31,7 +31,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>name</em> = <em>aDataChannel</em>.label;
+<pre class="brush: js">var <em>name</em> = <em>aDataChannel</em>.label;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -46,12 +46,12 @@ tags:
   time later, sets the content of a UI element to display the channel's name.</p>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+var dc = pc.createDataChannel(&quot;my channel&quot;);
 
 /* ... */
-<code>
-document.getElementById("channel-name").innerHTML =
-          "&lt;span class='channelName'&gt;" + dc.label + "&lt;/span&gt;";</code></pre>
+
+document.getElementById(&quot;channel-name&quot;).innerHTML =
+          &quot;&lt;span class='channelName'&gt;&quot; + dc.label + &quot;&lt;/span&gt;&quot;;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -80,7 +80,7 @@ document.getElementById("channel-name").innerHTML =
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.id")}}</li>
   <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>

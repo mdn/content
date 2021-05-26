@@ -2,9 +2,10 @@
 title: label
 slug: Web/JavaScript/Reference/Statements/label
 tags:
-- JavaScript
-- Language feature
-- Statement
+  - JavaScript
+  - Language feature
+  - Statement
+browser-compat: javascript.statements.label
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -14,15 +15,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>label</em> :
+<pre class="brush: js"><em>label</em> :
   <em>statement</em>
 </pre>
 
@@ -52,7 +48,7 @@ tags:
 <h3 id="Using_a_labeled_continue_with_for_loops">Using a labeled continue with for loops
 </h3>
 
-<pre class="brush: js notranslate">var i, j;
+<pre class="brush: js">let i, j;
 
 loop1:
 for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
@@ -81,8 +77,8 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 <p>Given an array of items and an array of tests, this example counts the number of items
   that passes all the tests.</p>
 
-<pre class="brush: js notranslate">var itemsPassed = 0;
-var i, j;
+<pre class="brush: js">let itemsPassed = 0;
+let i, j;
 
 top:
 for (i = 0; i &lt; items.length; i++) {
@@ -97,7 +93,7 @@ for (i = 0; i &lt; items.length; i++) {
 
 <h3 id="Using_a_labeled_break_with_for_loops">Using a labeled break with for loops</h3>
 
-<pre class="brush: js notranslate">var i, j;
+<pre class="brush: js">let i, j;
 
 loop1:
 for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
@@ -122,8 +118,8 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 <p>Given an array of items and an array of tests, this example determines whether all
   items pass all tests.</p>
 
-<pre class="brush: js notranslate">var allPass = true;
-var i, j;
+<pre class="brush: js">let allPass = true;
+let i, j;
 
 top:
 for (i = 0; i &lt; items.length; i++) {
@@ -140,7 +136,7 @@ for (i = 0; i &lt; items.length; i++) {
 <p>You can use labels within simple blocks, but only <code>break</code> statements can
   make use of non-loop labels.</p>
 
-<pre class="brush: js notranslate">foo: {
+<pre class="brush: js">foo: {
   console.log('face');
   break foo;
   console.log('this will not be executed');
@@ -156,43 +152,32 @@ console.log('swap');
 
 <p>Starting with ECMAScript 2015, labeled function declarations are now standardized for
   non-strict code in the <a
-    href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">web
+    href="https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">web
     compatibility annex of the specification</a>.</p>
 
-<pre class="brush: js notranslate">L: function F() {}</pre>
+<pre class="brush: js">L: function F() {}</pre>
 
 <p>In <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> code,
   however, this will throw a {{jsxref("SyntaxError")}}:</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled</pre>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generator
     functions</a> can neither be labeled in strict code, nor in non-strict code:</p>
 
-<pre class="brush: js notranslate">L: function* F() {}
+<pre class="brush: js">L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-labelled-statements', 'Labelled statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.label")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

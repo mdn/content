@@ -37,7 +37,7 @@ tags:
  <dt><code>lastModified</code></dt>
  <dd><code>number</code>. The time the tab or window was closed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
  <dt><code>tab</code>{{optional_inline}}</dt>
- <dd><code>object</code>. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain <code>url</code>, <code>title</code>, and <code>favIconUrl</code> only if the extension has the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+ <dd><code>object</code>. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain <code>url</code>, <code>title</code>, and <code>favIconUrl</code> only if the extension has the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access the tab's URL.</dd>
  <dt><code>window</code>{{optional_inline}}</dt>
  <dd><code>object</code>. If the object represents a closed window, then this property is present and will be a {{WebExtAPIRef("windows.Window")}} object.</dd>
 </dl>

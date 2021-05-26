@@ -5,6 +5,7 @@ tags:
   - Function
   - JavaScript
   - Property
+browser-compat: javascript.builtins.Function.length
 ---
 <div>{{JSRef}}</div>
 
@@ -12,13 +13,12 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/function-length.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0,0,1)}}</div>
 
 <h2 id="Description">Description</h2>
 
-<p><code>length</code> is a property of a function object, and indicates how many arguments the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.</p>
+<p><code>length</code> is a property of a function object, and indicates how many arguments the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.</p>
 
 <h3 id="Data_property_of_the_Function_constructor">Data property of the Function constructor</h3>
 
@@ -32,7 +32,7 @@ tags:
 
 <h3 id="Using_function_length">Using function length</h3>
 
-<pre class="brush: js notranslate">console.log(Function.length); /* 1 */
+<pre class="brush: js">console.log(Function.length); /* 1 */
 
 console.log((function()        {}).length); /* 0 */
 console.log((function(a)       {}).length); /* 1 */
@@ -47,25 +47,11 @@ console.log((function(a, b = 1, c) {}).length);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Function.length")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

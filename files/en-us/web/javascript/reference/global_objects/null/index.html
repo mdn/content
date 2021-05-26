@@ -2,10 +2,11 @@
 title: 'null'
 slug: Web/JavaScript/Reference/Global_Objects/null
 tags:
-- JavaScript
-- Language feature
-- Literal
-- Primitive
+  - JavaScript
+  - Language feature
+  - Literal
+  - Primitive
+browser-compat: javascript.builtins.null
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">null</pre>
+<pre class="brush: js">null</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -28,10 +29,10 @@ tags:
   to no object. In APIs, <code>null</code> is often retrieved in a place where an object
   can be expected but no object is relevant. </p>
 
-<pre class="brush: js notranslate">// foo does not exist. It is not defined and has never been initialized:
+<pre class="brush: js">// foo does not exist. It is not defined and has never been initialized:
 foo; //ReferenceError: foo is not defined</pre>
 
-<pre class="brush: js notranslate">// foo is known to exist now but it has no type or value:
+<pre class="brush: js">// foo is known to exist now but it has no type or value:
 var foo = null;
 foo; //null
 </pre>
@@ -42,11 +43,11 @@ foo; //null
   <code>undefined</code></h3>
 
 <p>When checking for <code>null</code> or <code>undefined</code>, beware of the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">differences
+    href="/en-US/docs/Web/JavaScript/Reference/Operators">differences
     between equality (==) and identity (===) operators</a>, as the former performs
   type-conversion.</p>
 
-<pre class="brush: js notranslate">typeof null          // "object" (not "null" for legacy reasons)
+<pre class="brush: js">typeof null          // "object" (not "null" for legacy reasons)
 typeof undefined     // "undefined"
 null === undefined   // false
 null  == undefined   // true
@@ -58,20 +59,11 @@ isNaN(1 + undefined) // true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-null-value', 'null value')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.null")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

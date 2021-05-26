@@ -9,6 +9,7 @@ tags:
   - Web
   - font
   - 'recipe:css-property'
+browser-compat: css.properties.font-style
 ---
 <div>{{CSSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">font-style: normal;
+<pre class="brush:css no-line-numbers">font-style: normal;
 font-style: italic;
 font-style: oblique;
 font-style: oblique 10deg;
@@ -56,12 +57,12 @@ font-style: unset;
 
 <p>For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which <code>font-style: oblique</code> can accept an <code>&lt;angle&gt;</code>.</p>
 
-<div style="border: 10px solid #f5f9fa; padding: 1rem;">{{EmbedLiveSample("variable-font-example", 1200, 180, "", "", "example-outcome-frame")}}</div>
+<div>{{EmbedLiveSample("variable-font-example", 1200, 180)}}</div>
 
 <h4 id="HTML">HTML</h4>
 
 <div id="variable-font-example">
-<pre class="brush: html notranslate">&lt;header&gt;
+<pre class="brush: html">&lt;header&gt;
     &lt;input type="range" id="slant" name="slant" min="-90" max="90" /&gt;
     &lt;label for="slant"&gt;Slant&lt;/label&gt;
 &lt;/header&gt;
@@ -72,7 +73,7 @@ font-style: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">/*
+<pre class="brush: css">/*
 AmstelvarAlpha-VF is created by <span class="col-11 mr-2 text-gray-dark">David Berlow</span> (https://github.com/TypeNetwork/Amstelvar)
 and is used here under the terms of its license:
 https://github.com/TypeNetwork/Amstelvar/blob/master/OFL.txt
@@ -100,7 +101,7 @@ label {
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">html, body {
+<pre class="brush: css">html, body {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
@@ -128,7 +129,7 @@ header {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">let slantLabel = document.querySelector('label[for="slant"]');
+<pre class="brush: js">let slantLabel = document.querySelector('label[for="slant"]');
 let slantInput = document.querySelector('#slant');
 let sampleText = document.querySelector('.sample');
 
@@ -159,20 +160,20 @@ update();
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Font_styles">Font styles</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;p class="normal"&gt;This paragraph is normal.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="normal"&gt;This paragraph is normal.&lt;/p&gt;
 &lt;p class="italic"&gt;This paragraph is italic.&lt;/p&gt;
 &lt;p class="oblique"&gt;This paragraph is oblique.&lt;/p&gt;
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.normal {
+<pre class="brush: css">.normal {
   font-style: normal;
 }
 
@@ -222,9 +223,9 @@ update();
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("css.properties.font-style")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

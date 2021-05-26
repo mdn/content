@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
+<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -122,7 +122,7 @@ tags:
     <code>acceptNode</code>, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the <code>whatToShow</code> check.
   </dd>
-  <dt><code>entityReferenceExpansion</code> {{optional_inline}} {{obsolete_inline}}</dt>
+  <dt><code>entityReferenceExpansion</code> {{optional_inline}} {{deprecated_inline}}</dt>
   <dd>A {{domxref("Boolean")}} flag indicating if when discarding an
     {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
   </dd>
@@ -140,7 +140,7 @@ tags:
   that is created to advance through the nodes (now all elements) and push them into an
   array.</p>
 
-<pre class="brush: js notranslate">var treeWalker = document.createTreeWalker(
+<pre class="brush: js">var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
   { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },

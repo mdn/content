@@ -42,7 +42,7 @@ tags:
  <br>
  Example here, we use an HTML Canvas as source of the {{domxref("MediaStream")}}, and stop recording after 9 seconds.</p>
 
-<pre class="brush: js notranslate">var canvas = document.querySelector("canvas");
+<pre class="brush: js">var canvas = document.querySelector("canvas");
 
 // Optional frames per second argument.
 var stream = canvas.captureStream(25);
@@ -98,13 +98,13 @@ setTimeout(event =&gt; {
 
 <p>In this code snippet, <code>enumerateDevices()</code> is used to examine the available input devices, locate those which are audio input devices, and create {{HTMLElement("option")}} elements that are then added to a {{HTMLElement("select")}} element representing an input source picker.</p>
 
-<pre class="brush: js notranslate">navigator.mediaDevices.enumerateDevices()
+<pre class="brush: js">navigator.mediaDevices.enumerateDevices()
 .then(function(devices) {
   devices.forEach(function(device) {
     let menu = document.getElementById("inputdevices");
     if (device.kind == "audioinput") {
       let item = document.createElement("option");
-      item.innerHTML = device.label;
+      item.innerText = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
     }
@@ -157,7 +157,7 @@ setTimeout(event =&gt; {
  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a></li>
  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a></li>
  <li><a href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a></li>
- <li>{{domxref("navigator.mediaDevices.getUserMedia()")}}</li>
+ <li>{{domxref("MediaDevices.getUserMedia")}}</li>
  <li><a href="https://addpipe.com/blog/mediarecorder-api/">HTML5’s Media Recorder API in Action on Chrome and Firefox</a></li>
  <li><a href="https://github.com/ai/audio-recorder-polyfill">MediaRecorder polyfill</a> for Safari and Edge</li>
  <li><a href="https://github.com/chrisjohndigital/TutorRoom">TutorRoom</a>: HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API (<a href="https://github.com/chrisjohndigital/TutorRoom">source on GitHub</a>)</li>

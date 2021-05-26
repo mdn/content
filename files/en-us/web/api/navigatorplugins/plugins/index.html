@@ -10,17 +10,17 @@ tags:
 - Property
 - Reference
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
 
 <p>Returns a {{DOMxRef("PluginArray")}} object, listing the {{DOMxRef("Plugin")}} objects
-  describing the <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugins</a> installed in
+  describing the plugins installed in
   the application.</p>
 
 <div class="note">
   <p>In Firefox 29 and later, enumeration of the <code>navigator.plugins</code> array may
     be restricted as a privacy measure. Applications that must check for the presence of a
     browser plugin should query <code>navigator.plugins</code> or
-    {{DOMxRef("navigator.mimeTypes")}} by exact name instead of enumerating the
+    {{DOMxRef("NavigatorPlugins.mimeTypes", "navigator.mimeTypes")}} by exact name instead of enumerating the
     <code>navigator.plugins</code> array and comparing every plugin's name. This privacy
     change does not disable any plugins; it just hides some plugin names from enumeration.
   </p>
@@ -28,7 +28,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>plugins</var> = navigator.plugins;
+<pre class="brush: js">var <var>plugins</var> = navigator.plugins;
 </pre>
 
 <p><code>plugins</code> is {{DOMxRef("PluginArray")}} object used to access

@@ -7,30 +7,21 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.async_function
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary">An async function is a function declared with
-    the <code>async</code> keyword<strong>.</strong> Async functions are instances of the
-    {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} constructor, and the
-    <code>await</code> keyword is permitted within them. The <code>async</code> and
-    <code>await</code> keywords enable asynchronous, promise-based behavior to be written
-    in a cleaner style, avoiding the need to explicitly configure promise chains.</span>
-</p>
+<p>An async function is a function declared with the <code>async</code> keyword, and the <code>await</code> keyword is permitted within them. The <code>async</code> and <code>await</code> keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.</p>
 
 <p>Async functions may also be defined {{jsxref("Operators/async_function", "as
   expressions", "", 1)}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive demo is stored in a GitHub repository.
-  If you'd like to contribute to the interactive demo project, please clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">async function <var>name</var>([<var>param</var>[, <var>param</var>[, ...<var>param</var>]]]) {
+<pre class="brush: js">async function <var>name</var>([<var>param</var>[, <var>param</var>[, ...<var>param</var>]]]) {
    <var>statements</var>
 }
 </pre>
@@ -55,21 +46,15 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Async functions can contain zero or more {{jsxref("Operators/await", "await")}}
-  expressions. Await expressions suspend progress through an async function, yielding
-  control and subsequently resuming progress only when an awaited promise-based
-  asynchronous operation is either fulfilled or rejected. The resolved value of the
-  promise is treated as the return value of the await expression. Use of
-  <code>async</code> / <code>await</code> enables the use of ordinary <code>try</code> /
-  <code>catch</code> blocks around asynchronous code.</p>
+<p>Async functions can contain zero or more {{jsxref("Operators/await", "await")}} expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of <code>async</code> and <code>await</code> enables the use of ordinary <code>try</code> / <code>catch</code> blocks around asynchronous code.</p>
 
 <div class="note">
-  <p>The <code>await</code> keyword is only valid inside async functions. If you use it
-    outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.</p>
+  <p><strong>Note:</strong> The <code>await</code> keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.</p>
+  <p><code>await</code> can be used on its own with <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules.</a></p>
 </div>
 
 <div class="note">
-  <p>The purpose of <code>async</code>/<code>await</code> is to simplify the syntax
+  <p><strong>Note:</strong> The purpose of <code>async</code>/<code>await</code> is to simplify the syntax
     necessary to consume promise-based APIs. The behavior
     of <code>async</code>/<code>await</code> is similar to combining <a
       href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">generators</a> and
@@ -81,17 +66,38 @@ tags:
 
 <p>For example, the following:</p>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    <var>return 1</var>
 }
 </pre>
 
-<p>...is equivalent to:</p>
+<p>...is similar to:</p>
 
-<pre class="brush: js notranslate">function <var>foo</var>() {
+<pre class="brush: js">function <var>foo</var>() {
    <var>return Promise.resolve(1)</var>
 }
 </pre>
+
+<div class="notecard note">
+    <h4 id="checking_equality_with_promise_resolve_vs_async_return">Checking equality with <code>Promise.resolve</code> vs <code>async</code> return</h4>
+    <p>Even though the return value of an async function behaves as if it's wrapped in a <code>Promise.resolve</code>, they are not equivalent.</p>
+    <p>An async function will return a different <em>reference</em>, whereas <code>Promise.resolve</code> returns the same reference if the given value is a promise.</p>
+    <p>It can be a problem when you want to check the equality of a promise and a return value of an async function.</p>
+    <pre class="brush: js">const p = new Promise((res, rej) => {
+  res(1);
+})
+
+async function asyncReturn() {
+  return p;
+}
+
+function basicReturn() {
+  return Promise.resolve(p);
+}
+
+console.log(p === basicReturn()); // true
+console.log(p === asyncReturn()); // false</pre>
+</div>
 
 <p>The body of an async function can be thought of as being split by zero or more await
   expressions. Top-level code, up to and including the first await expression (if there is
@@ -101,14 +107,14 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    <var>await 1</var>
 }
 </pre>
 
 <p>...is equivalent to:</p>
 
-<pre class="brush: js notranslate">function <var>foo</var>() {
+<pre class="brush: js">function <var>foo</var>() {
    <var>return Promise.resolve(1).then(() =&gt; undefined)</var>
 }
 </pre>
@@ -139,7 +145,7 @@ tags:
     current promise.</li>
 </ol>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    const result1 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1')))
 </var>   const result2 = <var>await new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('2')))</var>
 }
@@ -155,7 +161,7 @@ foo()</pre>
   chain. This is because <code>p2</code> will not be "wired into" the promise chain until
   control returns from <code>p1</code>.</p>
 
-<pre class="brush: js notranslate">async function <var>foo</var>() {
+<pre class="brush: js">async function <var>foo</var>() {
    const p1 = <var>new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1'), 1000))
 </var>   const p2 = <var>new Promise((_,reject) =&gt; setTimeout(() =&gt; reject('2'), 500))
    const results = [await p1, await p2] // Do not do this! Use Promise.all or Promise.allSettled instead.</var>
@@ -167,7 +173,7 @@ foo().catch(() =&gt; {}) // Attempt to swallow all errors...
 
 <h3 id="Async_functions_and_execution_order">Async functions and execution order</h3>
 
-<pre class="brush: js notranslate">function resolveAfter2Seconds() {
+<pre class="brush: js">function resolveAfter2Seconds() {
   console.log("starting slow promise")
   return new Promise(resolve =&gt; {
     setTimeout(function() {
@@ -259,9 +265,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 </p>
 
 <div class="warning">
-  <h4 id="Error_Handling">Error Handling</h4>
-
-  <p>Note that functions <code>concurrentStart</code> and <code>concurrentPromise</code>
+  <p><strong>Warning:</strong> The functions <code>concurrentStart</code> and <code>concurrentPromise</code>
     are not functionally equivalent.</p>
 
   <p>In <code>concurrentStart</code>, if promise <code>fast</code> rejects before promise
@@ -280,7 +284,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 <p>An API that returns a {{jsxref("Promise")}} will result in a promise chain, and it
   splits the function into many parts. Consider the following code:</p>
 
-<pre class="brush: js notranslate">function getProcessedData(url) {
+<pre class="brush: js">function getProcessedData(url) {
   return downloadData(url) // returns a promise
     .catch(e =&gt; {
       return downloadFallbackData(url)  // returns a promise
@@ -293,7 +297,7 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 
 <p>it can be rewritten with a single async function as follows:</p>
 
-<pre class="brush: js notranslate">async function getProcessedData(url) {
+<pre class="brush: js">async function getProcessedData(url) {
   let v
   try {
     v = await downloadData(url)
@@ -310,17 +314,14 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
   it's not already a promise itself (as in this example).</p>
 
 <div class="notecard note">
-  <h4 id="return_await_promiseValue_vs._return_promiseValue">return await promiseValue vs.
-    return promiseValue</h4>
-
-  <p>The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not
+  <p><strong>Note:</strong> The implicit wrapping of return values in {{jsxref("Promise.resolve")}} does not
     imply that <code>return await promiseValue</code> is functionally equivalent to
     <code>return promiseValue</code>.</p>
 
   <p>Consider the following rewrite of the above code. It returns <code>null</code> if
     <code>processDataInWorker</code> rejects with an error:</p>
 
-  <pre class="brush: js notranslate">async function getProcessedData(url) {
+  <pre class="brush: js">async function getProcessedData(url) {
   let v
   try {
     v = await downloadData(url)
@@ -349,26 +350,11 @@ setTimeout(parallel, 10000) // truly parallel: after 1 second, logs "fast", then
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.statements.async_function")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

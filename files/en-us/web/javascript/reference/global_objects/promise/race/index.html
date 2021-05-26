@@ -7,6 +7,7 @@ tags:
 - Method
 - Promise
 - Reference
+browser-compat: javascript.builtins.Promise.race
 ---
 <div>{{JSRef}}</div>
 
@@ -16,14 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive demo is stored in a GitHub repository.
-  If you'd like to contribute to the interactive demo project, please clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Promise.race(<var>iterable</var>);</pre>
+<pre class="brush: js">Promise.race(<var>iterable</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,7 +55,7 @@ tags:
 <p>This following example demonstrates the asynchronicity of <code>Promise.race</code>:
 </p>
 
-<pre class="brush: js notranslate">// we are passing as argument an array of promises that are already resolved,
+<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -79,7 +76,7 @@ setTimeout(function(){
 
 <p>An empty iterable causes the returned promise to be forever pending:</p>
 
-<pre class="brush: js notranslate">var foreverPendingPromise = Promise.race([]);
+<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
 setTimeout(function(){
     console.log('the stack is now empty');
@@ -96,7 +93,7 @@ setTimeout(function(){
   promise, then <code>Promise.race</code> will resolve to the first of these values found
   in the array:</p>
 
-<pre class="brush: js notranslate">var foreverPendingPromise = Promise.race([]);
+<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
 var alreadyFulfilledProm = Promise.resolve(100);
 
 var arr = [foreverPendingPromise, alreadyFulfilledProm, "non-Promise value"];
@@ -123,7 +120,7 @@ setTimeout(function(){
 <h3 id="Using_Promise.race_–_examples_with_setTimeout">Using Promise.race – examples with
   setTimeout</h3>
 
-<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
     setTimeout(() =&gt; resolve('one'), 500);
 });
 var p2 = new Promise(function(resolve, reject) {
@@ -167,24 +164,53 @@ Promise.race([p5, p6])
 });
 </pre>
 
+<h3 id="Comparison_with_Promise.any">Comparison with Promise.any</h3>
+
+<p><code>Promise.race</code> takes the first settled {{jsxref("Promise")}}.</p>
+
+<pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log('succeeded with value:', value);
+}).catch((reason) => {
+  // Only promise1 is fulfilled, but promise2 is faster
+  console.log('failed with reason:', reason);
+});
+// expected output: "failed with reason: two"
+</pre>
+
+<p>{{jsxref("Promise.any")}} takes the first fulfilled {{jsxref("Promise")}}.</p>
+
+<pre class="brush: js">const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(reject, 100, 'two');
+});
+
+Promise.any([promise1, promise2]).then((value) => {
+  // Only promise1 is fulfilled, even though promise2 settled sooner
+  console.log('succeeded with value:', value);
+}).catch((reason) => {
+  console.log('failed with reason:', reason);
+});
+// expected output: "succeeded with value: one"
+</pre>
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Promise.race")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

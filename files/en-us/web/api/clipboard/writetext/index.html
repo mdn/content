@@ -26,18 +26,10 @@ tags:
     href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, is granted
   automatically to pages when they are in the active tab.</p>
 
-<div class="note">
-  <p><strong>Note:</strong> Browser support for the asynchronous clipboard APIs is still
-    in the process of being implemented. Be sure to check the {{anch("Browser
-    compatibility", "compatibility table")}} as well as
-    {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
-    information.</p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = navigator.clipboard.writeText(<em>newClipText</em>)</pre>
+  class="brush: js">var <em>promise</em> = navigator.clipboard.writeText(<em>newClipText</em>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,7 +48,7 @@ tags:
 
 <p>This example sets the clipboard's contents to the string "&lt;empty clipboard&gt;".</p>
 
-<pre class="brush: js notranslate">navigator.clipboard.writeText("&lt;empty clipboard&gt;").then(function() {
+<pre class="brush: js">navigator.clipboard.writeText("&lt;empty clipboard&gt;").then(function() {
   /* clipboard successfully set */
 }, function() {
   /* clipboard write failed */

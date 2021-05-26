@@ -2,12 +2,12 @@
 title: OfflineAudioContext.startRendering()
 slug: Web/API/OfflineAudioContext/startRendering
 tags:
-- API
-- Method
-- OfflineAudioContext
-- Reference
-- Web Audio API
-- startRendering
+  - API
+  - Method
+  - OfflineAudioContext
+  - Reference
+  - Web Audio API
+  - startRendering
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -30,14 +30,14 @@ tags:
 
 <p>Event-based version:</p>
 
-<pre class="brush: js notranslate">offlineAudioCtx.startRendering();
+<pre class="brush: js">offlineAudioCtx.startRendering();
 offlineAudioCtx.oncomplete = function(e) {
   // e.renderedBuffer contains the output buffer
 }</pre>
 
 <p>Promise-based version:</p>
 
-<pre class="brush: js notranslate">offlineAudioCtx.startRendering().then(function(buffer) {
+<pre class="brush: js">offlineAudioCtx.startRendering().then(function(buffer) {
   // buffer contains the output buffer
 });
 </pre>
@@ -54,7 +54,7 @@ offlineAudioCtx.oncomplete = function(e) {
 
 <p>In this simple example, we declare both an {{domxref("AudioContext")}} and an
   <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an
-  audio track via XHR ({{domxref("AudioContext.decodeAudioData")}}), then the
+  audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the
   <code>OfflineAudioContext</code> to render the audio into an
   {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio
   graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using
@@ -146,14 +146,11 @@ getData();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.OfflineAudioContext.startRendering")}}</p>
-</div>
+<p>{{Compat("api.OfflineAudioContext.startRendering")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

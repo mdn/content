@@ -6,6 +6,7 @@ tags:
   - Function
   - JavaScript
   - Property
+browser-compat: javascript.builtins.Function.name
 ---
 <div>{{JSRef}}</div>
 
@@ -16,7 +17,7 @@ tags:
 <div>{{js_property_attributes(0,0,1)}}</div>
 
 <div class="note">
-<p>Note that in non-standard, pre-ES2015 implementations the <code>configurable</code> attribute was <code>false</code> as well.</p>
+<p><strong>Note:</strong> In non-standard, pre-ES2015 implementations the <code>configurable</code> attribute was <code>false</code> as well.</p>
 </div>
 
 <h2 id="JavaScript_compressors_and_minifiers">JavaScript compressors and minifiers</h2>
@@ -27,7 +28,7 @@ tags:
 
 <p>Source code such as:</p>
 
-<pre class="brush: js notranslate">function Foo() {};
+<pre class="brush: js">function Foo() {};
 let foo = new Foo();
 
 if (foo.constructor.name === 'Foo') {
@@ -39,7 +40,7 @@ if (foo.constructor.name === 'Foo') {
 
 <p>may be compressed to:</p>
 
-<pre class="brush: js notranslate">function a() {};
+<pre class="brush: js">function a() {};
 let b = new a();
 if (b.constructor.name === 'Foo') {
   console.log("'foo' is an instance of 'Foo'");
@@ -56,7 +57,7 @@ if (b.constructor.name === 'Foo') {
 
 <p>The <code>name</code> property returns the name of a function statement.</p>
 
-<pre class="brush: js notranslate">function doSomething() {}
+<pre class="brush: js">function doSomething() {}
 doSomething.name; // "doSomething"
 </pre>
 
@@ -64,13 +65,13 @@ doSomething.name; // "doSomething"
 
 <p>Functions created with the syntax <code>new Function(...)</code> or just <code>Function(...)</code> create {{jsxref("Function")}} objects and their name is "anonymous".</p>
 
-<pre class="brush: js notranslate">(new Function).name; // "anonymous"</pre>
+<pre class="brush: js">(new Function).name; // "anonymous"</pre>
 
 <h3 id="Anonymous_function_expression">Anonymous function expression</h3>
 
 <p>Anonymous function expressions that were created using the keyword <code>function</code> or arrow functions would have <code>""</code> (an empty string) as their name.</p>
 
-<pre class="brush: js notranslate">(function() {}).name; // ""
+<pre class="brush: js">(function() {}).name; // ""
 (() =&gt; {}).name; // ""
 </pre>
 
@@ -78,7 +79,7 @@ doSomething.name; // "doSomething"
 
 <p>Variables and methods can infer the name of an anonymous function from its syntactic position (new in ECMAScript 2015).</p>
 
-<pre class="brush: js notranslate">let f = function() {};
+<pre class="brush: js">let f = function() {};
 let object = {
   someMethod: function() {}
 };
@@ -89,7 +90,7 @@ console.log(object.someMethod.name); // "someMethod"
 
 <p>You can define a function with a name in a {{jsxref("Operators/Function", "function expression", "", 1)}}:</p>
 
-<pre class="brush: js notranslate">let object = {
+<pre class="brush: js">let object = {
   someMethod: function object_someMethod() {}
 };
 console.log(object.someMethod.name); // logs "object_someMethod"
@@ -100,11 +101,8 @@ try { object_someMethod } catch(e) { console.log(e); }
 
 <p>The name property is read-only and cannot be changed by the assigment operator:</p>
 
-<div class="hidden">
-<p>Example below contradicts with what is said at the beginning of this section and doesn't work as described.</p>
-</div>
 
-<pre class="brush: js notranslate"> let object = {
+<pre class="brush: js"> let object = {
   // anonymous
   someMethod: function() {}
 };
@@ -117,7 +115,7 @@ console.log(object.someMethod.name); // someMethod
 
 <h3 id="Shorthand_method_names">Shorthand method names</h3>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   foo(){}
 };
 o.foo.name; // "foo";</pre>
@@ -126,7 +124,7 @@ o.foo.name; // "foo";</pre>
 
 <p>{{jsxref("Function.bind()")}} produces a function whose name is "bound " plus the function name.</p>
 
-<pre class="brush: js notranslate">function foo() {};
+<pre class="brush: js">function foo() {};
 foo.bind({}).name; // "bound foo"
 </pre>
 
@@ -134,7 +132,7 @@ foo.bind({}).name; // "bound foo"
 
 <p>When using <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code> accessor properties, "get" or "set" will appear in the function name.</p>
 
-<pre class="brush: js notranslate">let o = {
+<pre class="brush: js">let o = {
   get foo(){},
   set foo(x){}
 };
@@ -147,7 +145,7 @@ descriptor.set.name; // "set foo";</pre>
 
 <p>You can use <code>obj.constructor.name</code> to check the "class" of an object (but be sure to read the warnings below):</p>
 
-<pre class="brush: js notranslate">function Foo() {}  // ES2015 Syntax: class Foo {}
+<pre class="brush: js">function Foo() {}  // ES2015 Syntax: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
@@ -159,7 +157,7 @@ console.log(fooInstance.constructor.name); // logs "Foo"
 
 <p>Therefore we can't obtain the class name for virtually any class with a static method property <code>name()</code>:</p>
 
-<pre class="brush: js notranslate">class Foo {
+<pre class="brush: js">class Foo {
   constructor() {}
   static name() {}
 }
@@ -167,20 +165,20 @@ console.log(fooInstance.constructor.name); // logs "Foo"
 
 <p>With a <code>static name()</code> method <code>Foo.name</code> no longer holds the actual class name but a reference to the <code>name()</code> function object. Above class definition in ES2015 syntax will behave in Chrome or Firefox similar to the following snippet in ES5 syntax:</p>
 
-<pre class="brush: js notranslate">function Foo() {}
+<pre class="brush: js">function Foo() {}
 Object.defineProperty(Foo, 'name', { writable: true });
 Foo.name = function() {};
 </pre>
 
 <p>Trying to obtain the class of <code>fooInstance</code> via <code>fooInstance.constructor.name</code> won't give us the class name at all but a reference to the static class method. Example:</p>
 
-<pre class="brush: js notranslate">let fooInstance = new Foo();
+<pre class="brush: js">let fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs function name()
 </pre>
 
 <p>You may also see from the ES5 syntax example that in Chrome or Firefox our static definition of <code>Foo.name</code> becomes <em>writable</em>. The built-in definition in the absence of a custom static definition is <em>read-only</em>:</p>
 
-<pre class="brush: js notranslate">Foo.name = 'Hello';
+<pre class="brush: js">Foo.name = 'Hello';
 console.log(Foo.name); // logs "Hello" if class Foo has a static name() property but "Foo" if not.
 </pre>
 
@@ -190,7 +188,7 @@ console.log(Foo.name); // logs "Hello" if class Foo has a static name() property
 
 <p>If a {{jsxref("Symbol")}} is used a function name and the symbol has a description, the method's name is the description in square brackets.</p>
 
-<pre class="brush: js notranslate">let sym1 = Symbol("foo");
+<pre class="brush: js">let sym1 = Symbol("foo");
 let sym2 = Symbol();
 let o = {
   [sym1]: function(){},
@@ -202,28 +200,14 @@ o[sym2].name; // ""</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-instances-name', 'name')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Function.name")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{jsxref("Function")}}</li>
 </ul>
-</div>

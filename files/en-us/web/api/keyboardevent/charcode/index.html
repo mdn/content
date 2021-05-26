@@ -2,12 +2,12 @@
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
 tags:
-- API
-- DOM
-- Deprecated
-- KeyboardEvent
-- Property
-- Reference
+  - API
+  - DOM
+  - Deprecated
+  - KeyboardEvent
+  - Property
+  - Reference
 ---
 <div>{{ ApiRef("DOM Events") }} {{non-standard_header}} {{deprecated_header}}</div>
 
@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>code</em> = <em>event</em>.charCode;
+<pre class="brush: js">var <em>code</em> = <em>event</em>.charCode;
 </pre>
 
 <h3 id="Return_value">Return value</h3>
@@ -34,13 +34,13 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
 &lt;input type="text" /&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">let input = document.querySelector('input');
+<pre class="brush: js">let input = document.querySelector('input');
 let log = document.querySelector('#log');
 
 input.addEventListener('keypress', function(e) {
@@ -76,7 +76,7 @@ input.addEventListener('keypress', function(e) {
       inputted). I'm not sure if other IME's work this way.</span></li>
   <li>For a list of the <code>charCode</code> values associated with particular keys, run
     <a
-      href="/en-US/docs/Web/API/Document_Object_Model/Examples#Example_7:_Displaying_Event_Object_Properties">Example
+      href="/en-US/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties">Example
       7: Displaying Event Object Properties</a> and view the resulting HTML table.</li>
 </ul>
 
@@ -92,8 +92,7 @@ input.addEventListener('keypress', function(e) {
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName('DOM3
-        Events','#widl-KeyboardEvent-charCode','KeyboardEvent.charCode')}}</td>
+      <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-charCode','KeyboardEvent.charCode')}}</td>
       <td>{{Spec2('DOM3 Events')}}</td>
       <td>Initial definition; specified as deprecated</td>
     </tr>

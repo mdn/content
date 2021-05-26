@@ -1,6 +1,6 @@
 ---
 title: ':checked'
-slug: 'Web/CSS/:checked'
+slug: Web/CSS/:checked
 tags:
   - ':checked'
   - CSS
@@ -14,12 +14,13 @@ tags:
   - button
   - checkbox
   - radio
+browser-compat: css.selectors.checked
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:checked</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-class</a> selector represents any <strong>radio </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>), <strong>checkbox </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>), or <strong>option</strong> ({{HTMLElement("option")}} in a {{HTMLElement("select")}}) element that is checked or toggled to an <code>on</code> state.</p>
+<p>The <strong><code>:checked</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> selector represents any <strong>radio </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>), <strong>checkbox </strong>(<code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>), or <strong>option</strong> ({{HTMLElement("option")}} in a {{HTMLElement("select")}}) element that is checked or toggled to an <code>on</code> state.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Matches any checked/selected radio, checkbox, or option */
+<pre class="brush: css no-line-numbers">/* Matches any checked/selected radio, checkbox, or option */
 :checked {
   margin-left: 25px;
   border: 1px solid blue;
@@ -34,7 +35,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -42,7 +43,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;input type="radio" name="my-input" id="yes"&gt;
   &lt;label for="yes"&gt;Yes&lt;/label&gt;
 
@@ -64,7 +65,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div,
+<pre class="brush: css">div,
 select {
   margin: 8px;
 }
@@ -101,7 +102,7 @@ option:checked {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" id="expand-toggle" /&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="expand-toggle" /&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -121,7 +122,7 @@ option:checked {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">/* Hide the toggle checkbox */
+<pre class="brush: css">/* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
 }
@@ -160,7 +161,7 @@ option:checked {
 
 <p>You can use the <code>:checked</code> pseudo-class to build an image gallery with full-size images that show only when the user clicks on a thumbnail. See <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a> for a possible cue.</p>
 
-<div class="note"><strong>Note:</strong> For an analogous effect, but based on the <a class="internal" href="/en-US/docs/CSS/:hover"><code>:hover</code></a> pseudo-class and without hidden radioboxes, see <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a>, taken from the <a class="internal" href="/en-US/docs/CSS/:hover">:hover</a> reference page.</div>
+<div class="note"><strong>Note:</strong> For an analogous effect, but based on the <a class="internal" href="/en-US/docs/Web/CSS/:hover"><code>:hover</code></a> pseudo-class and without hidden radioboxes, see <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a>, taken from the <a class="internal" href="/en-US/docs/Web/CSS/:hover">:hover</a> reference page.</div>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -200,7 +201,7 @@ option:checked {
 
 <div>
 
-<p>{{Compat("css.selectors.checked")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

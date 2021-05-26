@@ -38,7 +38,7 @@ tags:
 <p><em>The following properties have been removed from the specification and should not be used.</em></p>
 
 <dl>
- <dt>{{domxref("RTCIceServer.url", "url")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("RTCIceServer.url", "url")}} {{deprecated_inline}}</dt>
  <dd>This obsolete property is a string specifies a single ICE server's URL. <strong>Do not use this property; use {{domxref("RTCIceServer.urls", "urls")}} instead.</strong> Because many older books and examples still use this, we include it to help developers update their code or make sense of older examples.</dd>
 </dl>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>The configuration below establishes two ICE servers. The first one, <code>stun:stun.services.mozilla.com</code>, requires authentication, so the username and password are provided. The second server has two URLs: <code>stun:stun.example.com</code> and <code>stun:stun-1.example.com</code>.</p>
 
-<pre class="brush: js notranslate">var configuration = { iceServers: [{
+<pre class="brush: js">var configuration = { iceServers: [{
                           urls: "stun:stun.services.mozilla.com",
                           username: "louis@mozilla.com",
                           credential: "webrtcdemo"
@@ -64,10 +64,7 @@ var pc = new RTCPeerConnection(configuration);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.RTCIceServer")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

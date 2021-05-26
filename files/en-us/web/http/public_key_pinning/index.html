@@ -6,7 +6,7 @@ tags:
   - Guide
   - HPKP
   - HTTP
-  - Obsolete
+  - Deprecated
   - Security
 ---
 <p>{{HTTPSidebar}}{{deprecated_header}}</p>
@@ -25,7 +25,7 @@ tags:
 
 <p>To enable this feature for your site, you need to return the {{HTTPHeader("Public-Key-Pins")}} HTTP header when your site is accessed over HTTPS:</p>
 
-<pre class="notranslate">Public-Key-Pins: pin-sha256="base64=="; max-age=<em>expireTime</em> [; includeSubDomains][; report-uri="<em>reportURI"</em>]</pre>
+<pre>Public-Key-Pins: pin-sha256="base64=="; max-age=<em>expireTime</em> [; includeSubDomains][; report-uri="<em>reportURI"</em>]</pre>
 
 <dl>
  <dt><code>pin-sha256</code></dt>
@@ -52,21 +52,21 @@ tags:
 
 <p>The following commands will help you extract the Base64 encoded information from a key file, a certificate signing request, or a certificate.</p>
 
-<pre class="notranslate">openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<pre>openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
 
-<pre class="notranslate">openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<pre>openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
 
-<pre class="notranslate">openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<pre>openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
 
-<pre class="notranslate">openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<pre>openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
 
 <p>The following command will extract the Base64 encoded information for a website.</p>
 
-<pre class="notranslate">openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+<pre>openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
 
 <h3 id="Example_HPKP_Header">Example HPKP Header</h3>
 
-<pre class="notranslate">Public-Key-Pins:
+<pre>Public-Key-Pins:
   pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
   pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
   max-age=5184000; includeSubDomains;
@@ -94,29 +94,29 @@ tags:
 
 <p>Adding a line similar to the following to your webserver's config will enable HPKP on your Apache. This requires <code>mod_headers</code> enabled.</p>
 
-<pre class="notranslate">Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"</pre>
+<pre>Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"</pre>
 
 <h4 id="Nginx">Nginx</h4>
 
 <p>Adding the following line and inserting the appropriate <code>pin-sha256="..."</code> values will enable HPKP on your nginx. This requires the <code>ngx_http_headers_module.</code></p>
 
-<pre class="notranslate">add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;</pre>
+<pre>add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;</pre>
 
 <h4 id="Lighttpd">Lighttpd</h4>
 
 <p>The following line with your relevant key information (pin-sha256="..." fields) will enable HPKP on lighttpd.</p>
 
-<pre class="notranslate">setenv.add-response-header  = ( "Public-Key-Pins" =&gt; "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")</pre>
+<pre>setenv.add-response-header  = ( "Public-Key-Pins" =&gt; "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")</pre>
 
 <p><strong>Note:</strong> This requires the <code>mod_setenv</code> server.module loaded which can be included by the following if not already loaded.</p>
 
-<pre class="notranslate">server.modules += ( "mod_setenv" )</pre>
+<pre>server.modules += ( "mod_setenv" )</pre>
 
 <h4 id="IIS">IIS</h4>
 
 <p>Add the following line to the Web.config file to send the <code>Public-Key-Pins</code> header:</p>
 
-<pre class="brush: xml notranslate">&lt;system.webServer&gt;
+<pre class="brush: xml">&lt;system.webServer&gt;
   ...
 
   &lt;httpProtocol&gt;

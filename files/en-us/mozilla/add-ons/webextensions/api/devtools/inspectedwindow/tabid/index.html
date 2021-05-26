@@ -17,7 +17,7 @@ tags:
 
 <p>This can be sent to the extension's background page, so that background page can use the {{WebExtAPIRef("tabs")}} API to interact with the tab:</p>
 
-<pre class="notranslate brush: js">// devtools-panel.js
+<pre class="brush: js">// devtools-panel.js
 
 const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 
@@ -28,7 +28,7 @@ attachContentScriptButton.addEventListener("click", () =&gt; {
   });
 });</pre>
 
-<pre class="notranslate brush: js">// background.js
+<pre class="brush: js">// background.js
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {

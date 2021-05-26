@@ -2,27 +2,30 @@
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
 tags:
-- API
-- DOM
-- Element
-- Method
-- Non-standard
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - Non-standard
+  - Reference
+  - Deprecated
 ---
-<div>{{non-standard_header}} {{ APIRef("DOM") }} {{ gecko_minversion_header("2.0") }}
-</div>
+<div>{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}</div>
 
 <p>Call this method during the handling of a mousedown event to retarget all mouse events
   to this element until the mouse button is released or {{
   domxref("document.releaseCapture()") }} is called.</p>
 
-<div class="warning"><strong>Warning:</strong> This interface never had much cross-browser
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This interface never had much cross-browser
   support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
-  from the Pointer Events API.</div>
+  from the Pointer Events API.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>element</em>.setCapture(<em>retargetToElement</em>);
+<pre class="brush: js"><em>element</em>.setCapture(<em>retargetToElement</em>);
 </pre>
 
 <dl>
@@ -36,7 +39,7 @@ tags:
 <p>In this example, the current mouse coordinates are drawn while you mouse around after
   clicking and holding down on an element.</p>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Mouse Capture Example&lt;/title&gt;
   &lt;style type="text/css"&gt;
@@ -83,7 +86,7 @@ tags:
 &lt;/html&gt;
 </pre>
 
-<p><a href="/samples/domref/mousecapture.html">View Live Examples</a></p>
+<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html">View Live Examples</a></p>
 
 <h2 id="Notes">Notes</h2>
 

@@ -8,6 +8,7 @@ tags:
   - HTML forms
   - Input Type
   - Reference
+browser-compat: html.elements.input.input-email
 ---
 <div>{{HTMLRef}}</div>
 
@@ -153,7 +154,7 @@ tags:
 
 <p>Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. The specification does, however, allow browsers latitude on this. For example, the element could be integrated with the user's device's built-in address book to allow picking e-mail addresses from that list. In its most basic form, an <code>email</code> input can be implemented like this:</p>
 
-<pre class="brush: html notranslate">&lt;input id="emailAddress" type="email"&gt;</pre>
+<pre class="brush: html">&lt;input id="emailAddress" type="email"&gt;</pre>
 
 <p>{{ EmbedLiveSample('A_simple_email_input', 600, 40) }}</p>
 
@@ -163,7 +164,7 @@ tags:
 
 <p>By adding the <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code> Boolean attribute, the input can be configured to accept multiple e-mail addresses.</p>
 
-<pre class="brush: html notranslate">&lt;input id="emailAddress" type="email" multiple&gt;</pre>
+<pre class="brush: html">&lt;input id="emailAddress" type="email" multiple&gt;</pre>
 
 <p>{{ EmbedLiveSample('Allowing_multiple_e-mail_addresses', 600, 40) }}</p>
 
@@ -198,7 +199,7 @@ tags:
 
 <p>Here, we have an <code>email</code> input with the placeholder <code>sophie@example.com</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" placeholder="sophie@example.com"&gt;</pre>
+<pre class="brush: html">&lt;input type="email" placeholder="sophie@example.com"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
 
@@ -210,7 +211,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example the <code>email</code> edit box is 15 characters wide:</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" size="15"&gt;</pre>
+<pre class="brush: html">&lt;input type="email" size="15"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
 
@@ -220,7 +221,7 @@ tags:
 
 <p>The example below creates a 32 character-wide e-mail address entry box, requiring that the contents be no shorter than 3 characters and no longer than 64 characters.</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" size="32" minlength="3" maxlength="64"&gt;</pre>
+<pre class="brush: html">&lt;input type="email" size="32" minlength="3" maxlength="64"&gt;</pre>
 
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
@@ -229,7 +230,7 @@ tags:
 <p>As always, you can provide a default value for an <code>email</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
 <div id="Default_value">
-<pre class="brush: html notranslate">&lt;input type="email" value="default@example.com"&gt;</pre>
+<pre class="brush: html">&lt;input type="email" value="default@example.com"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
@@ -238,7 +239,7 @@ tags:
 
 <p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used e-mail addresses more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the email entry box.</p>
 
-<pre class="brush: html notranslate">&lt;input type="email" size="40" list="defaultEmails"&gt;
+<pre class="brush: html">&lt;input type="email" size="40" list="defaultEmails"&gt;
 
 &lt;datalist id="defaultEmails"&gt;
   &lt;option value="jbond007@mi6.defence.gov.uk"&gt;
@@ -252,7 +253,7 @@ tags:
 
 <p>With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the e-mail address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested e-mail addresses. Then, as the user types, the list is filtered to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.</p>
 
-<p><img alt="Animation: Using keyboard entry to filter the list of suggested e-mail addresses" src="html-input-email1.gif" style="border-style: solid; border-width: 1px; height: 168px; width: 352px;"></p>
+<p><img alt="Animation: Using keyboard entry to filter the list of suggested e-mail addresses" src="html-input-email1.gif" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Validation">Validation</h2>
 
@@ -266,7 +267,7 @@ tags:
 
 <p>Browsers that support the <code>email</code> input type automatically provide validation to ensure that only text that matches the standard format for Internet e-mail addresses is entered into the input box. Browsers that implement the specification should be using an algorithm equivalent to the following regular expression:</p>
 
-<pre class="brush: js notranslate">/^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+<pre class="brush: js">/^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
 [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 </pre>
 
@@ -285,7 +286,7 @@ tags:
 <p>Since inputs of type <code>email</code> validate against both the standard e-mail address validation <em>and</em> the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 16px sans-serif;
 }
 
@@ -306,7 +307,7 @@ label::after {
 }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
  &lt;div class="emailBox"&gt;
    &lt;label for="emailAddress"&gt;Your e-mail address&lt;/label&gt;&lt;br&gt;
    &lt;input id="emailAddress" type="email" size="64" maxLength="64" required
@@ -331,7 +332,7 @@ label::after {
 
 <p>An appropriate {{htmlattrxref("placeholder", "input")}} is provided—<code>username@beststartupever.com</code>—to demonstrate what constitutes a valid entry. This string demonstrates both that an e-mail address should be entered, and suggests that it should be a corporate beststartupever.com account. This is in addition to the fact that using type <code>email</code> will validate the text to ensure that it's formatted like an e-mail address. If the text in the input box isn't an e-mail address, you'll get an error message that looks something like this:</p>
 
-<p><img alt="" src="enter-valid-email-address.png" style="height: 125px; width: 530px;"></p>
+<p><img alt="" src="enter-valid-email-address.png"></p>
 
 <p>If we left things at that, we would at least be validating on legitimate e-mail addresses. But we want to go one step farther: we want to make sure that the e-mail address is in fact in the form "<em>username</em>@beststartupever.com". This is where we'll use {{htmlattrxref("pattern", "input")}}. We set <code>pattern</code> to <code>.+@beststartupever.com</code>. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".</p>
 
@@ -341,7 +342,7 @@ label::after {
 
 <p>That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate e-mail address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate e-mail address."</p>
 
-<p><img alt="" src="email-pattern-match-bad.png" style="height: 140px; width: 536px;"></p>
+<p><img alt="" src="email-pattern-match-bad.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
@@ -353,7 +354,7 @@ label::after {
 
 <p>As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its {{htmlattrxref("for", "label")}} attribute referencing the <code>emailAddress</code> ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.</p>
 
-<pre class="brush: html notranslate">&lt;label for="emailAddress"&gt;Email&lt;/label&gt;&lt;br/&gt;
+<pre class="brush: html">&lt;label for="emailAddress"&gt;Email&lt;/label&gt;&lt;br/&gt;
 &lt;input id="emailAddress" type="email" placeholder="user@example.gov"
        list="defaultEmails" size="64" maxlength="256" multiple&gt;
 
@@ -369,28 +370,11 @@ label::after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#email-state-(type=email)', '&lt;input type="email"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.input.input-email")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,7 +6,8 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
+browser-compat: css.properties.border-image-width
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush:css no-line-numbers">/* Keyword value */
 border-image-width: auto;
 
 /* &lt;length&gt; value */
@@ -71,7 +72,7 @@ border-image-width: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -79,13 +80,13 @@ border-image-width: unset;
 
 <p>This example creates a border image using the following ".png" file, which is 90 by 90 pixels:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10470/border.png"></p>
+<p><img alt="" src="border.png"></p>
 
 <p>Thus, each circle in the source image is 30 by 30 pixels.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
    no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
@@ -93,7 +94,7 @@ border-image-width: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   border: 20px solid;
   border-image: url("https://mdn.mozillademos.org/files/10470/border.png") 30 round;
   border-image-width: 16px;
@@ -125,7 +126,7 @@ border-image-width: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-image-width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

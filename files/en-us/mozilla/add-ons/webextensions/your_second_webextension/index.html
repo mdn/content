@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}
+<div>{{AddonSidebar}}</div>
 <p>If you've been through the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a> article, you've already got an idea of how to write an extension. <span class="seoSummary">In this article, we'll write a slightly more complex extension that demonstrates a few more of the APIs.</span></p>
 
 <p>The extension adds a new button to the Firefox toolbar. When the user clicks the button, we display a popup enabling them to choose an animal. Once they choose an animal, we'll replace the current page's content with a picture of the chosen animal.</p>
@@ -107,7 +107,7 @@ cd beastify</pre>
 
 <p>The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager (you can open this by visiting the URL "about:addons"). Our manifest.json promised that we would have an icon for the toolbar at "icons/beasts-48.png".</p>
 
-<p>Create the "icons" directory and save an icon there named "beasts-48.png".  You could use <a href="https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png">the one from our example</a>, which is taken from the <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a>, and used under the terms of its <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">license</a>.</p>
+<p>Create the "icons" directory and save an icon there named "beasts-48.png".  You could use <a href="https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png">the one from our example</a>, which is taken from the <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a>, and used under the terms of its <a href="https://www.aha-soft.com/free-icons/free-retina-icon-set/">license</a>.</p>
 
 <p>If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the <code>96</code> property of the <code>icons</code> object in manifest.json:</p>
 
@@ -215,7 +215,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 
 <p>Here's the JavaScript for the popup:</p>
 
-<pre class="notranslate brush: js">/**
+<pre class="brush: js">/**
  * CSS to hide everything on the page,
  * except for elements that have the "beastify-image" class.
  */
@@ -346,7 +346,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <p>Create a new directory, under the extension root, called "content_scripts" and create a new file in it called "beastify.js", with the following contents:</p>
 
-<pre class="notranslate brush: js">(function() {
+<pre class="brush: js">(function() {
   /**
    * Check and set a global guard variable.
    * If this content script is injected into the same page again,
@@ -454,7 +454,6 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 <pre class="brush: bash">cd beastify
 web-ext run</pre>
-</div>
 
 <h2 id="Whats_next">What's next?</h2>
 

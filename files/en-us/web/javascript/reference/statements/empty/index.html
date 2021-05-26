@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.empty
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -13,15 +14,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/statement-empty.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">;
+<pre class="brush: js">;
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -41,7 +37,7 @@ tags:
 <p>The empty statement is sometimes used with loop statements. See the following example
   with an empty loop body:</p>
 
-<pre class="brush: js notranslate">let arr = [1, 2, 3];
+<pre class="brush: js">let arr = [1, 2, 3];
 
 // Assign all array values to 0
 for (let i = 0; i &lt; arr.length; arr[i++] = 0) /* empty statement */ ;
@@ -57,7 +53,7 @@ console.log(arr);
 
 <p>In the following example, the usage is probably not intentional:</p>
 
-<pre class="brush: js example-bad notranslate">if (condition);       // Caution, this "if" does nothing!
+<pre class="brush: js example-bad">if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
 </pre>
 
@@ -68,7 +64,7 @@ console.log(arr);
   not matter, and also the <code>launchRocket()</code> function in the <code>else</code>
   case will not be executed.</p>
 
-<pre class="brush: js example-bad notranslate">if (one)
+<pre class="brush: js example-bad">if (one)
   doOne();
 else if (two)
   doTwo();
@@ -81,22 +77,11 @@ else
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.empty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

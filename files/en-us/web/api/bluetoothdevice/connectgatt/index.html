@@ -1,29 +1,29 @@
 ---
-title: connectGATT()
+title: BluetoothDevice.connectGATT()
 slug: Web/API/BluetoothDevice/connectGATT
 tags:
-- API
-- Method
-- Non-standard
-- Obsolete
-- Reference
-- Web Bluetooth API
-- connectGATT
+  - API
+  - Method
+  - Non-standard
+  - Deprecated
+  - Reference
+  - Web Bluetooth API
+  - connectGATT
 ---
 <p>{{APIRef("Bluetooth API")}}{{Non-standard_Header}}{{deprecated_header}}</p>
 
 <p>The BluetoothDevice.connectGATT() method returns a {{jsxref("Promise")}} that resolves
-  to an instance of {{DOMxRef("BluetoothGATTRemoteServer")}}.</p>
+  to an instance of {{DOMxRef("BluetoothRemoteGATTServer")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">instanceOfBluetoothDevice.connectGATT().then(function(BluetoothGATTRemoteServer) { ... })</pre>
+  class="brush: js">instanceOfBluetoothDevice.connectGATT().then(function(BluetoothGATTRemoteServer) { ... })</pre>
 
 <h3 id="Returns">Returns</h3>
 
 <p>A {{JSxRef("Promise")}} that resolves to an instance
-  of {{DOMxRef("BluetoothGATTRemoteServer")}}.</p>
+  of {{DOMxRef("BluetoothRemoteGATTServer")}}.</p>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -31,7 +31,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BluetoothDevice.connectGATT")}}</p>
-</div>
+<p>{{Compat("api.BluetoothDevice.connectGATT")}}</p>

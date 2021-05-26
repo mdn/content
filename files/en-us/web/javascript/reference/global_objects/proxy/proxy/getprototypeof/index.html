@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Proxy
+browser-compat: javascript.builtins.Proxy.handler.getPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
 </div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-    repository. If you'd like to contribute to the interactive examples project, please
-    clone <a
-        href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-    and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">const <var>p</var> = new Proxy(<var>obj</var>, {
+<pre class="brush: js">const <var>p</var> = new Proxy(<var>obj</var>, {
   getPrototypeOf(<var>target</var>) {
   ...
   }
@@ -76,7 +72,7 @@ tags:
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<pre class="brush: js notranslate">const obj = {};
+<pre class="brush: js">const obj = {};
 const proto = {};
 const handler = {
     getPrototypeOf(target) {
@@ -93,7 +89,7 @@ console.log(Object.getPrototypeOf(p) === proto);    // true
 <h3 id="Five_ways_to_trigger_the_getPrototypeOf_trap">Five ways to trigger the
     getPrototypeOf trap</h3>
 
-<pre class="brush: js notranslate">const obj = {};
+<pre class="brush: js">const obj = {};
 const p = new Proxy(obj, {
     getPrototypeOf(target) {
         return Array.prototype;
@@ -110,7 +106,7 @@ console.log(
 
 <h3 id="Two_kinds_of_exceptions">Two kinds of exceptions</h3>
 
-<pre class="brush: js example-bad notranslate">const obj = {};
+<pre class="brush: js example-bad">const obj = {};
 const p = new Proxy(obj, {
     getPrototypeOf(target) {
         return 'foo';
@@ -129,27 +125,11 @@ Object.getPrototypeOf(p); // TypeError: expected same prototype value
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{SpecName('ESDraft',
-                '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof',
-                '[[GetPrototypeOf]]')}}</td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-    <p>{{Compat("javascript.builtins.Proxy.handler.getPrototypeOf")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

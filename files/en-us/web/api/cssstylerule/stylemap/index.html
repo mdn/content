@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-    class="brush: js notranslate">var stylePropertyMap = <em>cssStyleRule</em>.styleMap;</pre>
+    class="brush: js">var stylePropertyMap = <em>cssStyleRule</em>.styleMap;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -29,7 +29,7 @@ tags:
 <p>The following example shows <code>styleMap</code> being used to modify a style using
     the {{domxref('StylePropertyMap.set()')}} method.</p>
 
-<pre class="brush: js notranslate">const stylesheet = document.styleSheets[0];
+<pre class="brush: js">const stylesheet = document.styleSheets[0];
 
 Object.values(stylesheet.cssRules).forEach(block =&gt; {
   if (block.selectorText === 'button') {

@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>PermissionState</var> = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);</pre>
+  class="brush: js">var <var>PermissionState</var> = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,14 +46,18 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p>None.</p>
+<dl>
+  <dt><code>TypeError</code></dt>
+  <dd>If <code>mode</code> is specified with a value other than
+    <code>'read'</code> or <code>'readwrite'</code></dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The following asynchronous function returns true if user has granted read or readwrite
   permissions to the file handle. Permission is requested if not.</p>
 
-<pre class="brush: js notranslate">// fileHandle is a FileSystemFileHandle
+<pre class="brush: js">// fileHandle is a FileSystemFileHandle
 // withWrite is a boolean set to true if write
 
 async function verifyPermission(fileHandle, withWrite) {

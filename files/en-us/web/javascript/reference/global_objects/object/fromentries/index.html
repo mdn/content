@@ -2,10 +2,11 @@
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 tags:
-- JavaScript
-- Method
-- Object
-- Reference
+  - JavaScript
+  - Method
+  - Object
+  - Reference
+browser-compat: javascript.builtins.Object.fromEntries
 ---
 <p>{{JSRef}}</p>
 
@@ -14,15 +15,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.fromEntries(<var>iterable</var>);</pre>
+<pre class="brush: js">Object.fromEntries(<var>iterable</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -30,7 +26,7 @@ tags:
   <dt><code><var>iterable</var></code></dt>
   <dd>An iterable such as {{jsxref("Array")}} or {{jsxref("Map")}} or other objects
     implementing the <a
-      href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable
+      href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">iterable
       protocol</a>.</dd>
 </dl>
 
@@ -58,7 +54,7 @@ tags:
 <p>With <code>Object.fromEntries</code>, you can convert from {{jsxref("Map")}} to
   {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+<pre class="brush: js">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 </pre>
@@ -68,7 +64,7 @@ console.log(obj); // { foo: "bar", baz: 42 }
 <p>With <code>Object.fromEntries</code>, you can convert from {{jsxref("Array")}} to
   {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+<pre class="brush: js">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 </pre>
@@ -77,10 +73,10 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 <p>With <code>Object.fromEntries</code>, its reverse method
   {{jsxref("Object.entries()")}}, and <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">array
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2">array
     manipulation methods</a>, you are able to transform objects like this:</p>
 
-<pre class="brush: js notranslate">const object1 = { a: 1, b: 2, c: 3 };
+<pre class="brush: js">const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
   Object.entries(object1)
@@ -90,30 +86,14 @@ const object2 = Object.fromEntries(
 console.log(object2);
 // { a: 2, b: 4, c: 6 }</pre>
 
-<div class="hidden">
-  <p>Please do not add polyfills on MDN pages. For more details, refer to: <a
-      href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a>
-  </p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.fromEntries")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

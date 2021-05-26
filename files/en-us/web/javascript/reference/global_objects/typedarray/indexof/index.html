@@ -8,6 +8,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.indexOf
 ---
 <div>{{JSRef}}</div>
 
@@ -20,23 +21,20 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/typedarray-indexof.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>typedarray</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var> = 0])</pre>
+<pre class="brush: js">
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code><var>searchElement</var></code></dt>
   <dd>Element to locate in the typed array.</dd>
-  <dt><code><var>fromIndex</var></code></dt>
+  <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
   <dd>The index to start the search at. If the index is greater than or equal to the typed
     array's length, -1 is returned, which means the typed array will not be searched. If
     the provided index value is a negative number, it is taken as the offset from the end
@@ -70,23 +68,11 @@ uint8.indexOf(2, -3); // 0
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof',
-        'TypedArray.prototype.indexOf')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.indexOf")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

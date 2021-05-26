@@ -42,11 +42,11 @@ tags:
 
 <p>In HTML, each paragraph has to be wrapped in a {{htmlelement("p")}} element, like so:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</pre>
 
 <p>Each heading has to be wrapped in a heading element:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</pre>
 
 <p>There are six heading elements: {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}}, and {{htmlelement("h6")}}. Each element represents a different level of content in the document; <code>&lt;h1&gt;</code> represents the main heading, <code>&lt;h2&gt;</code> represents subheadings, <code>&lt;h3&gt;</code> represents sub-subheadings, and so on.</p>
 
@@ -54,7 +54,7 @@ tags:
 
 <p>For example, in this story, the <code>&lt;h1&gt;</code> element represents the title of the story, the <code>&lt;h2&gt;</code> elements represent the title of each chapter, and the <code>&lt;h3&gt;</code> elements represent sub-sections of each chapter:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;The Crushing Bore&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;The Crushing Bore&lt;/h1&gt;
 
 &lt;p&gt;By Chris Mills&lt;/p&gt;
 
@@ -89,7 +89,7 @@ tags:
 <p>This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:</p>
 
 <ul>
- <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually <a class="external external-icon" href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
+ <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually <a class="external external-icon" href="https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
  <li>Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of {{glossary("SEO")}} (Search Engine Optimization).</li>
  <li>Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a <a class="external external-icon" href="https://en.wikipedia.org/wiki/Screen_reader" title="screen readers">screen reader</a>. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.</li>
  <li>To style content with {{glossary("CSS")}}, or make it do interesting things with {{glossary("JavaScript")}}, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.</li>
@@ -106,7 +106,7 @@ tags:
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -123,7 +123,7 @@ My legs are made of cardboard and I am married to a fish.&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -143,7 +143,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -230,13 +230,13 @@ textarea.onkeyup = function(){
 
 <p>In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context, the {{htmlelement("h1")}} element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;This is a top level heading&lt;/h1&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;This is a top level heading&lt;/h1&gt;</pre>
 
 <p>By default, the browser will give it a large font size to make it look like a heading (although you could style it to look like anything you wanted using CSS). More importantly, its semantic value will be used in multiple ways, for example by search engines and screen readers (as mentioned above).</p>
 
 <p>On the other hand, you could make any element <em>look</em> like a top level heading. Consider the following:</p>
 
-<pre class="brush: html notranslate">&lt;span style="font-size: 32px; margin: 21px 0; display: block;"&gt;Is this a top level heading?&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span style="font-size: 32px; margin: 21px 0; display: block;"&gt;Is this a top level heading?&lt;/span&gt;</pre>
 
 <p>This is a {{htmlelement("span")}} element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning. (You'll find out more about these later on in the course.) We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.</p>
 
@@ -248,14 +248,14 @@ textarea.onkeyup = function(){
 
 <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:</p>
 
-<pre class="notranslate">milk
+<pre>milk
 eggs
 bread
 hummus</pre>
 
 <p>Every unordered list starts off with a {{htmlelement("ul")}} element—this wraps around all the list items:</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
 milk
 eggs
 bread
@@ -264,7 +264,7 @@ hummus
 
 <p>The last step is to wrap each list item in a {{htmlelement("li")}} (list item) element:</p>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;milk&lt;/li&gt;
   &lt;li&gt;eggs&lt;/li&gt;
   &lt;li&gt;bread&lt;/li&gt;
@@ -278,7 +278,7 @@ hummus
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -296,7 +296,7 @@ hummus&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -316,7 +316,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -401,7 +401,7 @@ textarea.onkeyup = function(){
 
 <p>Ordered lists are lists in which the order of the items <em>does</em> matter. Let's take a set of directions as an example:</p>
 
-<pre class="notranslate">Drive to the end of the road
+<pre>Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
@@ -409,7 +409,7 @@ The school is on your right, 300 meters up the road</pre>
 
 <p>The markup structure is the same as for unordered lists, except that you have to wrap the list items in an {{htmlelement("ol")}} element, rather than <code>&lt;ul&gt;</code>:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Drive to the end of the road&lt;/li&gt;
   &lt;li&gt;Turn right&lt;/li&gt;
   &lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;
@@ -424,7 +424,7 @@ The school is on your right, 300 meters up the road</pre>
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -443,7 +443,7 @@ The school is on your right, 300 meters up the road&lt;/textarea&gt;
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -463,7 +463,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -551,7 +551,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_4">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -597,7 +597,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -617,7 +617,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -704,7 +704,7 @@ textarea.onkeyup = function(){
 
 <p>It is perfectly ok to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet. Let's take the second list from our recipe example:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
   &lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;
   &lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;
@@ -715,7 +715,7 @@ textarea.onkeyup = function(){
 
 <p>Since the last two bullets are very closely related to the one before them (they read like sub-instructions or choices that fit below that bullet), it might make sense to nest them inside their own unordered list and put that list inside the current fourth bullet. This would look like so:</p>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
   &lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;
   &lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;
@@ -745,7 +745,7 @@ textarea.onkeyup = function(){
 
 <p>In HTML we use the {{htmlelement("em")}} (emphasis) element to mark up such instances. As well as making the document more interesting to read, these are recognized by screen readers and spoken out in a different tone of voice. Browsers style this as italic by default, but you shouldn't use this tag purely to get italic styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps an {{htmlelement("i")}} element (see below).</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Strong_importance">Strong importance</h3>
 
@@ -757,13 +757,13 @@ textarea.onkeyup = function(){
 
 <p>In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark up such instances. As well as making the document more useful, again these are recognized by screen readers and spoken in a different tone of voice. Browsers style this as bold text by default, but you shouldn't use this tag purely to get bold styling. To do that, you'd use a {{htmlelement("span")}} element and some CSS, or perhaps a {{htmlelement("b")}} element (see below).</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt;.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;I am counting on you. &lt;strong&gt;Do not&lt;/strong&gt; be late!&lt;/p&gt;</pre>
 
 <p>You can nest strong and emphasis inside one another if desired:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt; —
+<pre class="brush: html">&lt;p&gt;This liquid is &lt;strong&gt;highly toxic&lt;/strong&gt; —
 if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;</pre>
 
 <h3 id="Active_learning_Lets_be_important!">Active learning: Let's be important!</h3>
@@ -773,7 +773,7 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
 <div class="hidden">
 <h6 id="Playable_code_5">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -795,7 +795,7 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -815,7 +815,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -914,7 +914,7 @@ textarea.onkeyup = function(){
 <p>A kind warning about underline: <strong>People strongly associate underlining with hyperlinks.</strong> Therefore, on the web, it's best to underline only links. Use the <code>&lt;u&gt;</code> element when it's semantically appropriate, but consider using CSS to change the default underline to something more appropriate on the web. The example below illustrates how it can be done.</p>
 </div>
 
-<pre class="brush: html notranslate">&lt;!-- scientific names --&gt;
+<pre class="brush: html">&lt;!-- scientific names --&gt;
 &lt;p&gt;
   The Ruby-throated Hummingbird (&lt;i&gt;Archilochus colubris&lt;/i&gt;)
   is the most common hummingbird in Eastern North America.

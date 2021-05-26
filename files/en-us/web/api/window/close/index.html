@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">window.close();</pre>
+<pre class="brush: js">window.close();</pre>
 
 <h2 id="Examples">Examples</h2>
 
@@ -46,20 +46,6 @@ function openWindow() {
 
 function closeOpenedWindow() {
   openedWindow.close();
-}
-</pre>
-
-<h3 id="Closing_the_current_window">Closing the current window</h3>
-
-<p>In the past, when you called the <code>window</code> object's <code>close()</code>
-  method directly, rather than calling <code>close()</code> on a <code>window</code>
-  <strong>instance</strong>, the browser closed the frontmost window, whether your script
-  created that window or not. This is no longer the case; for security reasons, scripts
-  are no longer allowed to close windows they didn't open. (Firefox 46.0.1: scripts can
-  not close windows, they had not opened)</p>
-
-<pre class="brush: js">function closeCurrentWindow() {
-  window.close();
 }
 </pre>
 

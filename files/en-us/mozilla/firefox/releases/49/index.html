@@ -17,8 +17,8 @@ tags:
 <ul>
  <li>JavaScript errors logged into the console <a href="https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/">now provide a [Learn more] link</a> for additional debugging help ({{bug(1179876)}}).</li>
  <li>CSS autocomplete: show more suggestions in autocomplete popup ({{bug("1260419")}}).</li>
- <li>The Animation Inspector now <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Further_information_about_animation_compositing">exposes animation performance information</a> in DevTools ({{bug("1254408")}}).</li>
- <li>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_context_menu">Inspector's context menu</a> has been reorganized to be cleaner and easier to use ({{bug("1211613")}}).</li>
+ <li>The Animation Inspector now <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#further_information_about_animation_compositing">exposes animation performance information</a> in DevTools ({{bug("1254408")}}).</li>
+ <li>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_context_menu">Inspector's context menu</a> has been reorganized to be cleaner and easier to use ({{bug("1211613")}}).</li>
  <li>The Inspector now supports <code>#RRGGBBAA</code> and <code>#RGBA</code> syntax for color values ({{bug("1271191")}}).</li>
  <li>The developer tools no longer display self-closing tags (such as {{HTMLElement("br")}} and {{HTMLElement("img")}} as if they have a closing tag on HTML pages; the behavior is unchanged for XHTML pages ({{bug("820926")}}).</li>
  <li>Accessibility improvements!
@@ -30,10 +30,10 @@ tags:
  </li>
  <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).</li>
  <li>In the <em>about:debugging</em> Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).</li>
- <li>In the <em>about:debugging</em> Workers page, a warning message will be displayed in the Service Workers section if <a href="/en-US/docs/Tools/about:debugging#Service_workers_not_compatible">service workers are incompatible</a> with the current browser configuration ({{bug(1266415)}}).</li>
- <li><em>about:debugging</em> now has a <a href="/en-US/docs/Tools/about:debugging#Tabs">new Tabs page</a> available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).</li>
- <li>The <em>Disable Cache</em> option in the <a href="/en-US/docs/Tools/Settings#Advanced_settings">Toolbox Advanced settings</a> has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/the <a href="/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
- <li>The <a href="/en-US/docs/Tools/Storage_Inspector#IndexedDB">Storage Inspector now allows IndexedDB databases to be deleted</a> via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).</li>
+ <li>In the <em>about:debugging</em> Workers page, a warning message will be displayed in the Service Workers section if <a href="/en-US/docs/Tools/about:debugging#service_workers_not_compatible">service workers are incompatible</a> with the current browser configuration ({{bug(1266415)}}).</li>
+ <li><em>about:debugging</em> now has a <a href="/en-US/docs/Tools/about:debugging#tabs">new Tabs page</a> available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).</li>
+ <li>The <em>Disable Cache</em> option in the <a href="/en-US/docs/Tools/Settings#advanced_settings">Toolbox Advanced settings</a> has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/the <a href="/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
+ <li>The <a href="/en-US/docs/Tools/Storage_Inspector#indexeddb">Storage Inspector now allows IndexedDB databases to be deleted</a> via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>
@@ -55,19 +55,19 @@ tags:
  <li>Added support for the <code>round</code> and <code>space</code> keywords to {{cssxref("background-repeat")}} ({{bug("548372")}}).</li>
  <li>On {{cssxref("background-clip")}}, the keyword <code>text</code> is now activated by default ({{bug(1264905)}}).</li>
  <li>Added support for specifying colors with an alpha channel using 4- and 8-digit CSS hex <a href="/en-US/docs/Web/CSS/color_value">color</a> values (#RRGGBBAA and #RGBA) ({{bug("567283")}}).</li>
- <li>The pseudo-class {{cssxref(":dir()")}} has been unprefixed ({{bug(859301)}}).</li>
+ <li>The pseudo-class {{cssxref(":dir")}} has been unprefixed ({{bug(859301)}}).</li>
  <li>In our experimental implementation (not yet activated by default) of {{cssxref("clip-path")}}, we can now interpolate between {{cssxref("&lt;basic-shape&gt;")}} values ({{bug(1110460)}}).</li>
  <li>Added the <a href="/en-US/docs/Web/CSS/length#q"><code>q</code> length unit</a> ({{bug(1274526)}}).</li>
  <li>The property {{cssxref("text-align-last")}} has been unprefixed ({{bug(1039541)}}).</li>
- <li>Added support for {{cssxref("overflow-wrap")}}, replacing {{cssxref("word-wrap")}} that is still supported as an alternative name ({{bug(955857)}}).</li>
+ <li>Added support for {{cssxref("overflow-wrap")}}, replacing <code>word-wrap</code> that is still supported as an alternative name ({{bug(955857)}}).</li>
  <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a> implementation has been improved:
   <ul>
-   <li>Implemented {{cssxref("&lt;percentage&gt;")}} for the {{cssxref("grid-gap")}}, {{cssxref("grid-row-gap")}}, and {{cssxref("grid-column-gap")}} properties ({{bug(1266268)}}).</li>
+   <li>Implemented {{cssxref("&lt;percentage&gt;")}} for the <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties ({{bug(1266268)}}).</li>
    <li>Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}<code>:baseline</code> and <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>
    <li>Implemented grid item baseline content alignment ({{bug(1256429)}}).</li>
   </ul>
  </li>
- <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Masks">CSS Masks</a> implementation has been improved:
+ <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Masking">CSS Masks</a> implementation has been improved:
   <ul>
    <li>The {{cssxref("mask-origin")}} property now uses <code>border-box</code> instead of <code>padding-box</code> as initial value, to match the spec ({{bug(1258286)}}).</li>
    <li>The {{cssxref("mask-repeat")}} property now supports the <code>space</code> and <code>round</code> values ({{bug(1258626)}}).</li>
@@ -80,7 +80,7 @@ tags:
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>The ES2015 {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ({{bug(888969)}}).</li>
+ <li>The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ({{bug(888969)}}).</li>
  <li>The ES2015 {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}, and {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} methods, and {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter have been implemented ({{bug(887016)}}).</li>
  <li>The deprecated, non-standard <code>flags</code> argument of <code>String.prototype.</code>{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ({{bug(1108382)}}).</li>
  <li>The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ({{bug(1265136)}}).</li>
@@ -94,10 +94,10 @@ tags:
  <li>The method {{domxref("DOMTokenList.supports()")}} has been added ({{bug(1257849)}}).</li>
  <li>The {{domxref("DOMTokenList.replace()")}} method has been added ({{bug(1224186)}}).</li>
  <li>Leading <code>'?'</code> characters are now ignored in the parameter of the {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor ({{bug(1268361)}}).</li>
- <li>The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement.origin")}}, and {{domxref("HTMLAreaElement.origin")}} for URL using the <code>blob:</code> scheme is no longer incorrectly <code>null</code> but is instead the origin of the URL formed by removing the leading <code>blob:</code> ({{bug(1270451)}}).</li>
+ <li>The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.orgin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the <code>blob:</code> scheme is no longer incorrectly <code>null</code> but is instead the origin of the URL formed by removing the leading <code>blob:</code> ({{bug(1270451)}}).</li>
  <li>In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns <code>'prerender'</code> ({{bug(1069772)}}).</li>
  <li>The {{domxref("Window.isSecureContext")}} property has been implemented ({{bug(1162772)}}).</li>
- <li>The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("ParentNode.append()")}} and {{domxref("ParentNode.prepend()")}} methods have been implemented ({{bug(911477)}}).</li>
+ <li>The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).</li>
  <li>The {{domxref("TouchList.identifiedTouch()")}} method has been removed ({{bug(1188539)}}).</li>
  <li>By default, the <code>scrollbars</code> {{domxref("Window")}} feature is enabled when calling {{domxref("Window.open()")}}. In the past, while it was strongly recommended to enable it, it wasn't the default ({{bug(1257887)}}).</li>
  <li>Added the <em>experimental</em> and <em>non-standard</em> {{domxref("HTMLMediaElement.seekToNextFrame()")}} method, which allows seeking frame-by-frame through video content ({{bug(1235301)}}). While you're encouraged to experiment with this method to help us understand how useful it is, <em>do not use it in production code!</em></li>
@@ -171,15 +171,15 @@ tags:
  <li>{{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} return empty headers in case the preference <code>network.http.keep_empty_response_headers_as_empty_string</code> is set to <code>true</code> ({{bug(669259)}}).</li>
  <li>The Firefox OS-only <a href="/en-US/docs/Archive/Firefox_OS/API/Data_Store_API">Data Store API</a> has been removed ({{bug(1261009)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> event handlers {{domxref("Document.onfullscreenchange")}} and {{domxref("Document.onfullscreenerror")}} have been removed from {{domxref("Element")}} as they were never fired there; the prefixed versions of these event handlers have been kept there for compatibility purposes, however ({{bug(1270386)}}). Note that this is not yet activated by default, but is behind the <code>full-screen-api.unprefix.enabled</code> preference ({{bug(1268749)}}).</li>
- <li>The obsolete {{domxref("Document.mozFullScreen")}} property has been unprefixed to {{domxref("Document.fullscreen")}} {{bug(1269157)}}. Note that this is not yet activated by default by behind the <code>full-screen-api.unprefix.enabled</code> preference ({{bug(1268749)}}).</li>
- <li>The read-only properties {{domxref("Document.fullscreenElement")}} and {{domxref("Document.fullscreenEnabled")}} no longer throw an exception if an attempt is made to change their values; instead, the new value is silently ignored and the setter function is a no-op ({{bug(1269798)}}).</li>
+ <li>The obsolete <code>Document.mozFullScreen</code> property has been unprefixed to {{domxref("Document.fullscreen")}} {{bug(1269157)}}. Note that this is not yet activated by default by behind the <code>full-screen-api.unprefix.enabled</code> preference ({{bug(1268749)}}).</li>
+ <li>The read-only properties {{domxref("Document/fullscreenElement", "Document.fullscreenElement")}} and {{domxref("Document.fullscreenEnabled")}} no longer throw an exception if an attempt is made to change their values; instead, the new value is silently ignored and the setter function is a no-op ({{bug(1269798)}}).</li>
  <li>Any kind of data can now be retrieved from the clipboard using {{domxref("DataTransfer.getData()")}}: previously, only data of certain MIME types were supported {{bug(860857)}}.</li>
  <li>Our implementation of the <a href="/en-US/docs/Web/API/Frame_Timing_API">Frame Timing API</a>, consisting of the two interfaces <code>PerformanceCompositeTiming</code> and <code>PerformanceRenderTiming</code>, has been removed as the spec has been completely rewritten ({{bug(1271846)}}).</li>
  <li>To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a <code>PositionAlign</code> enum instead of an <code>Align</code> enum ({{bug(1276129)}}).</li>
- <li>The speech synthesis part of <a href="/en-US/docs/Web/API/Web_Speech_API#Speech_synthesis">Web Speech API</a> is now activated by default ({{bug(1268633)}}).</li>
+ <li>The speech synthesis part of <a href="/en-US/docs/Web/API/Web_Speech_API#speech_synthesis">Web Speech API</a> is now activated by default ({{bug(1268633)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline API</a> is now available by default in Nightly (though not in Aurora, Beta or Release).</li>
- <li>The {{event("install")}} event, and the {{domxref("Window.oninstall")}} event handler, are now supported for <a href="/en-US/docs/Web/Manifest">Web Manifests</a> ({{bug(1265279)}}).</li>
- <li>When using the {{domxref("AudioContext.createPeriodicWave()")}} method of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — <code>{disableNormalization: true}</code> ({{bug(1265405)}}).</li>
+ <li>The {{event("install")}} event, and the {{domxref("Window/onappinstalled", "Window.oninstall")}} event handler, are now supported for <a href="/en-US/docs/Web/Manifest">Web Manifests</a> ({{bug(1265279)}}).</li>
+ <li>When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — <code>{disableNormalization: true}</code> ({{bug(1265405)}}).</li>
  <li>In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a <code>PositionAlignSetting</code> enum as per spec; previously it returned an <code>AlignSetting</code> enum ({{bug(1276129)}}).</li>
  <li>The Speech Synthesis part of the Web Speech API is now enabled by default across all desktop browsers ({{bug(1268633)}}).</li>
  <li>The {{domxref("Animation.Animation()", "Animation()")}} constructor of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> now accepts a null timeline ({{bug(1096776)}}).</li>
@@ -233,65 +233,65 @@ tags:
  <li>    The following properties now also work prefixed with <code>-webkit</code>:
 
   <ul>
-   <li>{{cssxref("-webkit-align-items")}}</li>
-   <li>{{cssxref("-webkit-align-content")}}</li>
-   <li>{{cssxref("-webkit-align-self")}}</li>
-   <li>{{cssxref("-webkit-animation")}}</li>
-   <li>{{cssxref("-webkit-animation-delay")}}</li>
-   <li>{{cssxref("-webkit-animation-direction")}}</li>
-   <li>{{cssxref("-webkit-animation-duration")}}</li>
-   <li>{{cssxref("-webkit-animation-fill-mode")}}</li>
-   <li>{{cssxref("-webkit-animation-iteration-count")}}</li>
-   <li>{{cssxref("-webkit-animation-name")}}</li>
-   <li>{{cssxref("-webkit-animation-play-state")}}</li>
-   <li>{{cssxref("-webkit-animation-timing-function")}}</li>
-   <li>{{cssxref("-webkit-backface-visibility")}}</li>
-   <li>{{cssxref("-webkit-background-clip")}}</li>
-   <li>{{cssxref("-webkit-background-origin")}}</li>
-   <li>{{cssxref("-webkit-background-size")}}</li>
-   <li>{{cssxref("-webkit-border-bottom-left-radius")}}</li>
-   <li>{{cssxref("-webkit-border-bottom-right-radius")}}</li>
-   <li>{{cssxref("-webkit-border-image")}}</li>
-   <li>{{cssxref("-webkit-border-top-left-radius")}}</li>
-   <li>{{cssxref("-webkit-border-top-right-radius")}}</li>
-   <li>{{cssxref("-webkit-border-radius")}}</li>
-   <li>{{cssxref("-webkit-box-shadow")}}</li>
-   <li>{{cssxref("-webkit-filter")}}</li>
-   <li>{{cssxref("-webkit-flex")}}</li>
-   <li>{{cssxref("-webkit-flex-basis")}}</li>
-   <li>{{cssxref("-webkit-flex-direction")}}</li>
-   <li>{{cssxref("-webkit-flex-flow")}}</li>
-   <li>{{cssxref("-webkit-flex-grow")}}</li>
-   <li>{{cssxref("-webkit-flex-shrink")}}</li>
-   <li>{{cssxref("-webkit-flex-wrap")}}</li>
-   <li>{{cssxref("-webkit-justify-content")}}</li>
-   <li>{{cssxref("-webkit-order")}}</li>
-   <li>{{cssxref("-webkit-perspective")}}</li>
-   <li>{{cssxref("-webkit-perspective-origin")}}</li>
-   <li>{{cssxref("-webkit-text-size-adjust")}}</li>
-   <li>{{cssxref("-webkit-transform")}}</li>
-   <li>{{cssxref("-webkit-transform-origin")}}</li>
-   <li>{{cssxref("-webkit-transform-style")}}</li>
-   <li>{{cssxref("-webkit-transition")}}</li>
-   <li>{{cssxref("-webkit-transition-delay")}}</li>
-   <li>{{cssxref("-webkit-transition-duration")}}</li>
-   <li>{{cssxref("-webkit-transition-property")}}</li>
-   <li>{{cssxref("-webkit-transition-timing-function")}}</li>
-   <li>{{cssxref("-webkit-user-select")}}</li>
+   <li><code>-webkit-align-items</code></li>
+   <li><code>-webkit-align-content</code></li>
+   <li><code>-webkit-align-self</code></li>
+   <li><code>-webkit-animation</code></li>
+   <li><code>-webkit-animation-delay</code></li>
+   <li><code>-webkit-animation-direction</code></li>
+   <li><code>-webkit-animation-duration</code></li>
+   <li><code>-webkit-animation-fill-mode</code></li>
+   <li><code>-webkit-animation-iteration-count</code></li>
+   <li><code>-webkit-animation-name</code></li>
+   <li><code>-webkit-animation-play-state</code></li>
+   <li><code>-webkit-animation-timing-function</code></li>
+   <li><code>-webkit-backface-visibility</code></li>
+   <li><code>-webkit-background-clip</code></li>
+   <li><code>-webkit-background-origin</code></li>
+   <li><code>-webkit-background-size</code></li>
+   <li><code>-webkit-border-bottom-left-radius</code></li>
+   <li><code>-webkit-border-bottom-right-radius</code></li>
+   <li><code>-webkit-border-image</code></li>
+   <li><code>-webkit-border-top-left-radius</code></li>
+   <li><code>-webkit-border-top-right-radius</code></li>
+   <li><code>-webkit-border-radius</code></li>
+   <li><code>-webkit-box-shadow</code></li>
+   <li><code>-webkit-filter</code></li>
+   <li><code>-webkit-flex</code></li>
+   <li><code>-webkit-flex-basis</code></li>
+   <li><code>-webkit-flex-direction</code></li>
+   <li><code>-webkit-flex-flow</code></li>
+   <li><code>-webkit-flex-grow</code></li>
+   <li><code>-webkit-flex-shrink</code></li>
+   <li><code>-webkit-flex-wrap</code></li>
+   <li><code>-webkit-justify-content</code></li>
+   <li><code>-webkit-order</code></li>
+   <li><code>-webkit-perspective</code></li>
+   <li><code>-webkit-perspective-origin</code></li>
+   <li><code>-webkit-text-size-adjust</code></li>
+   <li><code>-webkit-transform</code></li>
+   <li><code>-webkit-transform-origin</code></li>
+   <li><code>-webkit-transform-style</code></li>
+   <li><code>-webkit-transition</code></li>
+   <li><code>-webkit-transition-delay</code></li>
+   <li><code>-webkit-transition-duration</code></li>
+   <li><code>-webkit-transition-property</code></li>
+   <li><code>-webkit-transition-timing-function</code></li>
+   <li><code>-webkit-user-select</code></li>
   </ul>
  </li>
  <li>The following properties map to the equivalent prefixed property:
   <ul>
-   <li>{{cssxref("-webkit-box-flex")}}</li>
-   <li>{{cssxref("-webkit-box-ordinal-group")}}</li>
-   <li>{{cssxref("-webkit-box-orient")}}</li>
-   <li>{{cssxref("-webkit-box-align")}}</li>
-   <li>{{cssxref("-webkit-box-pack")}}</li>
+   <li><code>-webkit-box-flex</code></li>
+   <li><code>-webkit-box-ordinal-group</code></li>
+   <li><code>-webkit-box-orient</code></li>
+   <li><code>-webkit-box-align</code></li>
+   <li><code>-webkit-box-pack</code></li>
   </ul>
  </li>
  <li>For {{cssxref("&lt;image&gt;")}} values:
   <ul>
-   <li>The following functions map to their unprefixed equivalents: {{cssxref("-webkit-linear-gradient", "-webkit-linear-gradient()")}}, {{cssxref("-webkit-radial-gradient", "-webkit-radial-gradient()")}}, {{cssxref("-webkit-repeating-linear-gradient", "-webkit-repeating-linear-gradient()")}}, and {{cssxref("-webkit-repeating-radial-gradient","-webkit-repeating-radial-gradient()")}}.</li>
+   <li>The following functions map to their unprefixed equivalents: <code>-webkit-linear-gradient()</code>, <code>-webkit-radial-gradient()</code>, <code>-webkit-repeating-linear-gradient()</code>, and <code>-webkit-repeating-radial-gradient()</code>.</li>
    <li>The outdated <code>-webkit-gradient</code> is supported (and translated to a regular gradient)</li>
   </ul>
  </li>
@@ -311,7 +311,7 @@ tags:
    <li>{{cssxref("-webkit-text-stroke")}}</li>
   </ul>
  </li>
- <li>The {{domxref("WebKitCSSMatrix")}} interface is an alias of {{domxref("DOMMatrix")}}</li>
+ <li>The <code>WebKitCSSMatrix</code> interface is an alias of {{domxref("DOMMatrix")}}</li>
  <li>The following media query features have been implemented:
   <ul>
    <li><code>-webkit-min-device-pixel-ratio</code> as an alias of <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution">min-resolution</a></code> with the same value (in <code>dppx)</code>, though this feature is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1237720">disabled by default</a> (behind about:config pref <code>layout.css.prefixes.device-pixel-ratio-webkit</code>)</li>

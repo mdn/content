@@ -36,7 +36,7 @@ tags:
 
 <p>Using <code>addEventListener()</code>:</p>
 
-<pre class="brush: js notranslate">const mediaElement = document.querySelectorAll('video, audio')[0];
+<pre class="brush: js">const mediaElement = document.querySelectorAll('video, audio')[0];
 mediaElement.textTracks.addEventListener('change', (event) =&gt; {
     console.log(`'${event.type}' event fired`);
 });
@@ -44,7 +44,7 @@ mediaElement.textTracks.addEventListener('change', (event) =&gt; {
 
 <p>Using the <code>onchange</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const mediaElement = document.querySelector('video, audio');
+<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
 mediaElement.textTracks.onchange = (event) =&gt; {
     console.log(`'${event.type}' event fired`);
 };
@@ -76,5 +76,5 @@ mediaElement.textTracks.onchange = (event) =&gt; {
  <li>This event on <code><a href="/en-US/docs/Web/API/VideoTrackList">VideoTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change</a></code></li>
  <li>This event on <code><a href="/en-US/docs/Web/API/AudioTrackList">AudioTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/AudioTrackList/change_event">change</a></code></li>
  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+ <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
 </ul>

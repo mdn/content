@@ -2,10 +2,10 @@
 title: IDBObjectStore.delete()
 slug: Web/API/IDBObjectStore/delete
 tags:
-- API
-- IndexedDB
-- Method
-- Reference
+  - API
+  - IndexedDB
+  - Method
+  - Reference
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -18,7 +18,7 @@ tags:
     records to be deleted from a store. To delete all records in a store, use 
     {{domxref("IDBObjectStore.clear")}}.</p>
 
-  <p>Bear in mind that if you are using a {{domxref("cursor", "IDBCursor")}}, you can use
+  <p>Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
     the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
     record — without having to explicitly look up the record's key.</p>
 
@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>request</em> = <em>objectStore</em>.delete(<em>Key</em>);
+<pre class="brush: js">var <em>request</em> = <em>objectStore</em>.delete(<em>Key</em>);
 
 var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
 </pre>
@@ -154,10 +154,7 @@ function deleteData() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBObjectStore.delete")}}</p>
-</div>
+<p>{{Compat("api.IDBObjectStore.delete")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -168,8 +165,6 @@ function deleteData() {
   <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
   <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
   <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+  <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
+      Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

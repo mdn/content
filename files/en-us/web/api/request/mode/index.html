@@ -2,13 +2,13 @@
 title: Request.mode
 slug: Web/API/Request/mode
 tags:
-- API
-- Experimental
-- Fetch
-- Property
-- Reference
-- mode
-- request
+  - API
+  - Experimental
+  - Fetch
+  - Property
+  - Reference
+  - mode
+  - request
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>myMode</var> = <var>request</var>.mode;</pre>
+  class="brush: js">var <var>myMode</var> = <var>request</var>.mode;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -49,7 +49,7 @@ tags:
         data across domains.</li>
       <li><code>cors</code> — Allows cross-origin requests, for example to access various
         APIs offered by 3rd party vendors. These are expected to adhere to the <a
-          href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS protocol</a>. Only a <a
+          href="/en-US/docs/Web/HTTP/CORS">CORS protocol</a>. Only a <a
           href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">limited
           set</a> of headers are exposed in the {{domxref("Response")}}, but the body is
         readable.</li>
@@ -72,7 +72,7 @@ tags:
 <p>However, for requests created other than by the {{domxref("Request.Request")}}
   constructor, <code>no-cors</code> is typically used as the mode; for example, for
   embedded resources where the request is initiated from markup, unless the
-  <code><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code>
+  <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code>
   attribute is present, the request is in most cases made using the <code>no-cors</code>
   mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
   (except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},
@@ -113,8 +113,8 @@ var myMode = myRequest.mode; // returns "cors" by default</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

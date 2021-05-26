@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.getYear
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>dateObj</var>.getYear()</code></pre>
+<pre class="brush: js">getYear()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -64,7 +65,7 @@ tags:
 
 <p>The second statement assigns the value 95 to the variable <code>year</code>.</p>
 
-<pre class="brush: js notranslate">var Xmas = new Date('December 25, 1995 23:15:00');
+<pre class="brush: js">var Xmas = new Date('December 25, 1995 23:15:00');
 var year = Xmas.getYear(); // returns 95
 </pre>
 
@@ -72,7 +73,7 @@ var year = Xmas.getYear(); // returns 95
 
 <p>The second statement assigns the value 100 to the variable <code>year</code>.</p>
 
-<pre class="brush: js notranslate">var Xmas = new Date('December 25, 2000 23:15:00');
+<pre class="brush: js">var Xmas = new Date('December 25, 2000 23:15:00');
 var year = Xmas.getYear(); // returns 100
 </pre>
 
@@ -80,7 +81,7 @@ var year = Xmas.getYear(); // returns 100
 
 <p>The second statement assigns the value -100 to the variable <code>year</code>.</p>
 
-<pre class="brush: js notranslate">var Xmas = new Date('December 25, 1800 23:15:00');
+<pre class="brush: js">var Xmas = new Date('December 25, 1800 23:15:00');
 var year = Xmas.getYear(); // returns -100
 </pre>
 
@@ -90,30 +91,18 @@ var year = Xmas.getYear(); // returns -100
 <p>The third statement assigns the value 95 to the variable <code>year</code>,
   representing the year 1995.</p>
 
-<pre class="brush: js notranslate">var Xmas = new Date('December 25, 2015 23:15:00');
+<pre class="brush: js">var Xmas = new Date('December 25, 2015 23:15:00');
 Xmas.setYear(95);
 var year = Xmas.getYear(); // returns 95
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.getYear")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

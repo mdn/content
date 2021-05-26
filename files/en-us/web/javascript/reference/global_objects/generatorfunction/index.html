@@ -2,12 +2,13 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 tags:
-- Constructor
-- ECMAScript 2015
-- GeneratorFunction
-- Iterator
-- JavaScript
-- Reference
+  - Constructor
+  - ECMAScript 2015
+  - GeneratorFunction
+  - Iterator
+  - JavaScript
+  - Reference
+browser-compat: javascript.builtins.GeneratorFunction
 ---
 <div>{{JSRef}}</div>
 
@@ -23,8 +24,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">new GeneratorFunction ([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</pre>
+<pre class="brush: js">
+new Function(arg1, functionBody)
+new Function(arg1, arg2, functionBody)
+new Function(arg1, ... , argN, functionBody)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -79,26 +83,11 @@ console.log(iterator.next().value); // 20
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.GeneratorFunction")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -108,6 +97,6 @@ console.log(iterator.next().value); // 20
   <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
   <li>{{jsxref("Statements/function", "function statement", "", 1)}}</li>
   <li>{{jsxref("Operators/function", "function expression", "", 1)}}</li>
-  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+  <li>{{jsxref("Functions", "Functions and function scope", "", 1)}}
   </li>
 </ul>

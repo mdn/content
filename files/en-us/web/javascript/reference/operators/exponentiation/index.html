@@ -6,6 +6,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.exponentiation
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -17,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><strong>Operator:</strong> <var>var1</var> ** <var>var2</var>
+<pre class="brush: js"><strong>Operator:</strong> <var>var1</var> ** <var>var2</var>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -36,7 +37,7 @@ tags:
   is, you cannot put a unary operator (<code>+/-/~/!/delete/void/typeof</code>)
   immediately before the base number; doing so will cause a SyntaxError.</p>
 
-<pre class="brush: js notranslate">-2 ** 2;
+<pre class="brush: js">-2 ** 2;
 // 4 in Bash, -4 in other languages.
 // This is invalid in JavaScript, as the operation is ambiguous.
 
@@ -53,7 +54,7 @@ tags:
 
 <h3 id="Basic_exponentiation">Basic exponentiation</h3>
 
-<pre class="brush: js notranslate">2 ** 3   // 8
+<pre class="brush: js">2 ** 3   // 8
 3 ** 2   // 9
 3 ** 2.5 // 15.588457268119896
 10 ** -1 // 0.1
@@ -62,7 +63,7 @@ NaN ** 2 // NaN
 
 <h3 id="Associativity">Associativity</h3>
 
-<pre class="brush: js notranslate">2 ** 3 ** 2   // 512
+<pre class="brush: js">2 ** 3 ** 2   // 512
 2 ** (3 ** 2) // 512
 (2 ** 3) ** 2 // 64</pre>
 
@@ -70,30 +71,21 @@ NaN ** 2 // NaN
 
 <p>To invert the sign of the result of an exponentiation expression:</p>
 
-<pre class="brush: js notranslate">-(2 ** 2) // -4
+<pre class="brush: js">-(2 ** 2) // -4
 </pre>
 
 <p>To force the base of an exponentiation expression to be a negative number:</p>
 
-<pre class="brush: js notranslate">(-2) ** 2 // 4
+<pre class="brush: js">(-2) ** 2 // 4
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-exp-operator', 'Exponentiation operator')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.exponentiation")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,15 +2,15 @@
 title: CacheStorage.match()
 slug: Web/API/CacheStorage/match
 tags:
-- API
-- CacheStorage
-- Experimental
-- Method
-- Reference
-- Service Workers
-- Service worker API
-- ServiceWorker
-- match
+  - API
+  - CacheStorage
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - Service worker API
+  - ServiceWorker
+  - match
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">caches.match(<em>request</em>, <em>options</em>).then(function(<em>response</em>) {
+<pre class="brush: js">caches.match(<em>request</em>, <em>options</em>).then(function(<em>response</em>) {
   // Do something with the response
 });
 </pre>
@@ -92,7 +92,7 @@ tags:
   <li>If this fails (e.g., because the network is down), return a fallback response.</li>
 </ol>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
+<pre class="brush: js">self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request).then(function(response) {
     // caches.match() always resolves
     // but in case of success response will have value
@@ -142,7 +142,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>

@@ -7,12 +7,13 @@ tags:
   - Reference
   - min-content
   - sizing
+browser-compat: css.properties.width.min-content
 ---
 <p>The <code>min-content</code> sizing keyword represents the intrinsic minimum width of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate"><code>/* Used as a length */
+<pre class="brush: css"><code>/* Used as a length */
 width: min-content;
 inline-size: min-content;
 height: min-content;
@@ -28,13 +29,13 @@ grid-template-columns: 200px 1fr min-content;</code>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="item"&gt;Item&lt;/div&gt;
+<pre class="brush: html">&lt;div class="item"&gt;Item&lt;/div&gt;
 &lt;div class="item"&gt;Item with more text in it.&lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.item {
+<pre class="brush: css">.item {
   width: min-content;
   background-color: #8ca0ff;
   padding: 5px;
@@ -50,7 +51,7 @@ grid-template-columns: 200px 1fr min-content;</code>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;Item&lt;/div&gt;
   &lt;div&gt;
     Item with more text in it.
@@ -60,7 +61,7 @@ grid-template-columns: 200px 1fr min-content;</code>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">#container {
+<pre class="brush: css">#container {
   display: grid;
   grid-template-columns: min-content min-content 1fr;
   grid-gap: 5px;
@@ -111,4 +112,4 @@ grid-template-columns: 200px 1fr min-content;</code>
 
 <h3 id="Supported_for_width_and_other_sizing_properties">Supported for width (and other sizing properties)</h3>
 
-<p>{{Compat("css.properties.width.min-content")}}</p>
+<p>{{Compat}}</p>

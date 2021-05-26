@@ -6,10 +6,11 @@ tags:
   - JavaScript
   - Number
   - Reference
+browser-compat: javascript.builtins.Number
 ---
 <div>{{JSRef}}</div>
 
-<div><strong><code>Number</code></strong> is a <a href="/en-US/docs/Glossary/Primitive#Primitive_wrapper_objects_in_JavaScript">primitive wrapper object</a> used to represent and manipulate numbers like <code>37</code> or <code>-9.25</code>.</div>
+<div><strong><code>Number</code></strong> is a <a href="/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript">primitive wrapper object</a> used to represent and manipulate numbers like <code>37</code> or <code>-9.25</code>.</div>
 
 <p>The <strong><code>Number</code></strong> constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the <strong><code>Number()</code> function</strong>.</p>
 
@@ -17,7 +18,7 @@ tags:
 
 <p>A number literal like <code>37</code> in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a {{jsxref("BigInt")}} type, but it was not designed to replace Number for everyday uses. <code>37</code> is still a Number, not a BigInt.)</p>
 
-<p>Number may also be expressed in literal forms like <code>0b101</code>, <code>0o13</code>, <code>0x0A</code>. Learn more on numeric <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">lexical grammar here</a>.</p>
+<p>Number may also be expressed in literal forms like <code>0b101</code>, <code>0o13</code>, <code>0x0A</code>. Learn more on numeric <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals">lexical grammar here</a>.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -25,13 +26,13 @@ tags:
 
 <h3 id="Literal_syntax">Literal syntax</h3>
 
-<pre class="brush: js notranslate">123    // one-hundred twenty-three
+<pre class="brush: js">123    // one-hundred twenty-three
 123.0  // same
 123 === 123.0  // true</pre>
 
 <h3 id="Function_syntax">Function syntax</h3>
 
-<pre class="brush: js notranslate">Number('123')  // returns the number 123
+<pre class="brush: js">Number('123')  // returns the number 123
 Number('123') === 123  // true
 
 Number("unicorn")  // NaN
@@ -64,7 +65,7 @@ Number(undefined)  // NaN
  <dd>Special value representing negative infinity. Returned on overflow.</dd>
  <dt>{{jsxref("Number.POSITIVE_INFINITY")}}</dt>
  <dd>Special value representing infinity. Returned on overflow.</dd>
- <dt>{{jsxref("Number.prototype")}}</dt>
+ <dt>{{jsxref("Number", "Number.prototype")}}</dt>
  <dd>Allows the addition of properties to the <code>Number</code> object.</dd>
 </dl>
 
@@ -108,7 +109,7 @@ Number(undefined)  // NaN
 
 <p>The following example uses the <code>Number</code> object's properties to assign values to several numeric variables:</p>
 
-<pre class="brush: js notranslate">const biggestNum     = Number.MAX_VALUE
+<pre class="brush: js">const biggestNum     = Number.MAX_VALUE
 const smallestNum    = Number.MIN_VALUE
 const infiniteNum    = Number.POSITIVE_INFINITY
 const negInfiniteNum = Number.NEGATIVE_INFINITY
@@ -119,8 +120,8 @@ const notANum        = Number.NaN
 
 <p>The following example shows the minimum and maximum integer values that can be represented as <code>Number</code> object. (More details on this are described in the ECMAScript standard, chapter <em><a href="https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type">6.1.6 The Number Type</a>.</em>)</p>
 
-<pre class="brush: js notranslate">const biggestInt  = Number.MAX_SAFE_INTEGER  //  (<code>2<sup>53</sup> - 1</code>) =&gt;  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER  // -(<code>2<sup>53</sup> - 1</code>) =&gt; -9007199254740991</pre>
+<pre class="brush: js">const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =&gt;  9007199254740991
+const smallestInt = Number.MIN_SAFE_INTEGER  // -(2**53 - 1) =&gt; -9007199254740991</pre>
 
 <p>When parsing data that has been serialized to JSON, integer values falling outside of this range can be expected to become corrupted when JSON parser coerces them to <code>Number</code> type.</p>
 
@@ -132,7 +133,7 @@ const smallestInt = Number.MIN_SAFE_INTEGER  // -(<code>2<sup>53</sup> - 1</code
 
 <p>The following example converts the {{jsxref("Date")}} object to a numerical value using <code>Number</code> as a function:</p>
 
-<pre class="brush: js notranslate">let d = new Date('December 17, 1995 03:24:00')
+<pre class="brush: js">let d = new Date('December 17, 1995 03:24:00')
 console.log(Number(d))
 </pre>
 
@@ -140,7 +141,7 @@ console.log(Number(d))
 
 <h3 id="Convert_numeric_strings_and_null_to_numbers">Convert numeric strings and null to numbers</h3>
 
-<pre class="brush: js notranslate">Number('123')     // 123
+<pre class="brush: js">Number('123')     // 123
 Number('123') === 123 /// true
 Number('12.3')    // 12.3
 Number('12.00')   // 12
@@ -156,24 +157,12 @@ Number('-Infinity') //-Infinity</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number-objects', 'Number')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.Number")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

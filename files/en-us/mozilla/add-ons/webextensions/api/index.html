@@ -6,24 +6,21 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<div>
 <p><span class="seoSummary">JavaScript APIs for WebExtensions</span> can be used inside the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a> and in any other documents bundled with the extension, including <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">browser action</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">page action</a> popups, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebars</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a>, or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">new tab pages</a>. A few of these APIs can also be accessed by an extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts">content scripts</a>. (See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis">list in the content script guide</a>.)</p>
 
 <p>To use the more powerful APIs, you need to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">request permission</a> in your extension's <code>manifest.json</code>.</p>
 
 <p>You can access the APIs using the <code>browser</code> namespace:</p>
 
-<pre class="notranslate brush: js line-numbers language-js">function logTabs(tabs) {
+<pre class="brush: js line-numbers language-js">function logTabs(tabs) {
   console.log(tabs)
 }
 
 browser.tabs.query({currentWindow: true}, logTabs)</pre>
-</div>
 
-<div>
 <p>Many of the APIs are asynchronous, returning a {{JSxRef("Promise")}}:</p>
 
-<pre class="notranslate brush: js line-numbers language-js">function logCookie(c) {
+<pre class="brush: js line-numbers language-js">function logCookie(c) {
   console.log(c)
 }
 
@@ -35,9 +32,7 @@ let setCookie = browser.cookies.set(
   {url: &quot;https://developer.mozilla.org/&quot;}
 );
 setCookie.then(logCookie, logError)</pre>
-</div>
 
-<div>
 <h2 id="Browser_API_differences">Browser API differences</h2>
 
 <p>Note that this is different from Google Chrome's extension system, which uses the <code>chrome</code> namespace instead of <code>browser</code>, and which uses callbacks instead of promises for asynchronous functions. As a porting aid, the Firefox implementation of WebExtensions APIs supports <code>chrome</code> and callbacks as well as <code>browser</code> and promises. Mozilla has also written a polyfill which enables code that uses <code>browser</code> and promises to work unchanged in Chrome: <a class="external external-icon" href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
@@ -59,6 +54,5 @@ setCookie.then(logCookie, logError)</pre>
 <h2 id="JavaScript_API_listing">JavaScript API listing</h2>
 
 <p>See below for a complete list of JavaScript APIs:</p>
-</div>
 
 <div>{{LandingPageListSubpages}}</div>

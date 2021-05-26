@@ -2,18 +2,19 @@
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
 tags:
-- Caching
-- Deprecated
-- HTTP
-- header
-- request
+  - Caching
+  - Deprecated
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
 ---
 <div>{{HTTPSidebar}}</div>
 
 <p>The <code><strong>Pragma</strong></code> HTTP/1.0 general header is an
   implementation-specific header that may have various effects along the request-response
   chain. It is used for backwards compatibility with HTTP/1.0 caches where the
-  <code>Cache-Control</code> HTTP/1.1 header is not yet present.</p>
+  {{HTTPHeader("Cache-Control")}} HTTP/1.1 header is not yet present.</p>
 
 <div class="note">
   <p><strong>Note</strong>: <code>Pragma</code> is not specified for HTTP responses and is
@@ -28,8 +29,7 @@ tags:
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("General header")}}, but response behavior is not specified and thus
-        implementation-specific.</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}} (response behavior is not specified and thus implementation-specific).</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Pragma: no-cache
+<pre class="brush: html">Pragma: no-cache
 </pre>
 
 <h2 id="Directives">Directives</h2>

@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Containerless_media">Containerless media</h2>
 
-<p>WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support <a href="/en-US/docs/Web/Media/Formats/Video_codecs#VP8">VP8</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">H.264</a>'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">Opus</a> codec as well as <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711</a>'s PCMA and PCMU formats.</p>
+<p>WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> and <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">H.264</a>'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">Opus</a> codec as well as <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#G.711">G.711</a>'s PCMA and PCMU formats.</p>
 
 <p>These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancelation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.</p>
 
@@ -92,7 +92,7 @@ tags:
 
 <h3 id="VP8">VP8</h3>
 
-<p>VP8, which we <a href="/en-US/docs/Web/Media/Formats/Video_codecs#VP8">describe in general</a> in the main <a href="/en-US/docs/Web/Media/Formats/Video_codecs">guide to video codecs used on the web</a>, has some specific requirements that must be followed when using it to encode or decode a video track on a WebRTC connection.</p>
+<p>VP8, which we <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">describe in general</a> in the main <a href="/en-US/docs/Web/Media/Formats/Video_codecs">guide to video codecs used on the web</a>, has some specific requirements that must be followed when using it to encode or decode a video track on a WebRTC connection.</p>
 
 <p>Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an aspect ratio of 1:1).</p>
 
@@ -104,7 +104,7 @@ tags:
 
 <p>Support for AVC's Constrained Baseline (CB) profile is required in all fully-compliant WebRTC implementations. CB is a subset of the main profile, and is specifically designed for low-complexity, low-delay applications such as mobile video and videoconferencing, as well as for platforms with lower performing video processing capabilities.</p>
 
-<p>Our <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">overview of AVC</a> and its features can be found in the main video codec guide.</p>
+<p>Our <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">overview of AVC</a> and its features can be found in the main video codec guide.</p>
 
 <h4 id="Special_parameter_support_requirements">Special parameter support requirements</h4>
 
@@ -116,11 +116,11 @@ tags:
 
 <dl>
  <dt><code>max-br</code></dt>
- <dd>If specified and supported by the software, the <code>max-br</code> parameter specifies the maximum video bit rate in units of 1,000 bps for VCL and 1,200 bps for NAL. You'll find details about this on <a href="https://tools.ietf.org/html/rfc6184#page-47">page 47 of RFC 6184</a>.</dd>
+ <dd>If specified and supported by the software, the <code>max-br</code> parameter specifies the maximum video bit rate in units of 1,000 bps for VCL and 1,200 bps for NAL. You'll find details about this on <a href="https://datatracker.ietf.org/doc/html/rfc6184#page-47">page 47 of RFC 6184</a>.</dd>
  <dt><code>max-cpb</code></dt>
- <dd>If specified and supported by the software, <code>max-cpb</code> specifies the maximum coded picture buffer size. This is a fairly complicated parameter whose unit size can vary. See <a href="https://tools.ietf.org/html/rfc6184#page-45">page 45 of RFC 6184</a> for details.</dd>
+ <dd>If specified and supported by the software, <code>max-cpb</code> specifies the maximum coded picture buffer size. This is a fairly complicated parameter whose unit size can vary. See <a href="https://datatracker.ietf.org/doc/html/rfc6184#page-45">page 45 of RFC 6184</a> for details.</dd>
  <dt><code>max-dpb</code></dt>
- <dd>If specified and supported, <code>max-dpb</code> indicates the maximum decoded picture buffer size, given in units of 8/3 macroblocks. See <a href="https://tools.ietf.org/html/rfc6184#page-46">RFC 6184, page 46</a> for further details.</dd>
+ <dd>If specified and supported, <code>max-dpb</code> indicates the maximum decoded picture buffer size, given in units of 8/3 macroblocks. See <a href="https://datatracker.ietf.org/doc/html/rfc6184#page-46">RFC 6184, page 46</a> for further details.</dd>
  <dt><code>max-fs</code></dt>
  <dd>If specified and supported by the software, <code>max-fs</code> specifies the maximum size of a single video frame, given as a number of macroblocks.</dd>
  <dt><code>max-mbps</code></dt>
@@ -173,7 +173,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">Opus</a></th>
+   <th scope="row"><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">Opus</a></th>
    <td>Chrome, Edge, Firefox, Safari</td>
   </tr>
   <tr>
@@ -233,7 +233,7 @@ tags:
 
 <h3 id="Opus">Opus</h3>
 
-<p>The Opus format, defined by {{RFC(6716)}} is the primary format for audio in WebRTC. The RTP payload format for Opus is found in {{RFC(7587)}}. You can find more general information about Opus and its capabilities, and how other APIs can support Opus, in the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">corresponding section</a> of our <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">guide to audio codecs used on the web</a>.</p>
+<p>The Opus format, defined by {{RFC(6716)}} is the primary format for audio in WebRTC. The RTP payload format for Opus is found in {{RFC(7587)}}. You can find more general information about Opus and its capabilities, and how other APIs can support Opus, in the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#opus">corresponding section</a> of our <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">guide to audio codecs used on the web</a>.</p>
 
 <p>Both the speech and general audio modes should be supported. Opus's scalability and flexibility are useful when dealing with audio that may have varying degrees of complexity. Its support of in-band stereo signals allows support for stereo without complicating the demultiplexing process.</p>
 
@@ -294,13 +294,13 @@ tags:
 
 <p>There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:</p>
 
-<pre class="brush: js notranslate">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
+<pre class="brush: js">codecList = RTCRtpSender.getCapabilities("video").codecs;</pre>
 
 <p>Now <code>codecList</code> is an array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one codec configuration. Also present in the list will be entries for retransmission (RTX), redundant coding (RED), and forward error correction (FEC).</p>
 
 <p>If the connection is in the process of starting up, you can use the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event to watch for the completion of {{Glossary("ICE")}} candidate gathering, then fetch the list.</p>
 
-<pre class="brush: js notranslate">let codecList = null;
+<pre class="brush: js">let codecList = null;
 
 peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
   if (peerConnection.iceGatheringState === "complete") {
@@ -333,7 +333,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>Once you have a list of the available codecs, you can alter it and then send the revised list to {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} to rearrange the codec list. This changes the order of preference of the codecs, letting you tell WebRTC to prefer a different codec over all others.</p>
 
-<pre class="brush: js notranslate">function changeVideoCodec(mimeType) {
+<pre class="brush: js">function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
   transceivers.forEach(transceiver =&gt; {
@@ -364,7 +364,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) =&gt; {
 
 <p>The <code>preferCodec()</code> function called by the code above looks like this to move a specified codec to the top of the list (to be prioritized during negotiation):</p>
 
-<pre class="brush: js notranslate">function preferCodec(codecs, mimeType) {
+<pre class="brush: js">function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
   let count = codecs.length;

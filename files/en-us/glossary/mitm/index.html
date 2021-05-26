@@ -5,9 +5,9 @@ tags:
   - Glossary
   - Security
 ---
-<p>A <strong>Man-in-the-middle attack</strong> (MitM) intercepts a communication between two systems. For example, a Wi-Fi router can be compromised.</p>
+<p>A <strong>manipulator-in-the-middle attack</strong> (MitM) intercepts a communication between two systems. For example, a Wi-Fi router can be compromised.</p>
 
-<p>Comparing this to physical mail: If you're writing letters to each other, the mailman can intercept each letter you mail. They open it, read it, eventually modify it, and then repackage the letter and only then send it to whom you intended to sent the letter for. The original recipient would then mail you a letter back, and the mailman would again open the letter, read it, eventually modify it, repackage it, and give it to you. You wouldn't know there's a man in the middle in your communication channel – the mailman is invisible to you and to your recipient.</p>
+<p>Comparing this to physical mail: If you're writing letters to each other, the mail carrier can intercept each letter you mail. They open it, read it, eventually modify it, and then repackage the letter and only then send it to whom you intended to sent the letter for. The original recipient would then mail you a letter back, and the mail carrier would again open the letter, read it, eventually modify it, repackage it, and give it to you. You wouldn't know there's a manipulator in the middle in your communication channel – the mail carrier is invisible to you and to your recipient.</p>
 
 <p>In physical mail and in online communication, MITM attacks are tough to defend. A few tips:</p>
 
@@ -17,12 +17,12 @@ tags:
  <li>Check for HTTPS in your address bar and ensure encryption is in-place before logging in.</li>
 </ul>
 
-<div>
 <h2 id="Learn_more">Learn more</h2>
 
 <ul>
- <li>OWASP Article: <a href="https://www.owasp.org/index.php/Man-in-the-middle_attack">Man-in-the-middle attack</a></li>
+ <li>OWASP: <a href="https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack">Manipulator-in-the-middle attack</a></li>
+ <li>PortSwigger: <a href="https://portswigger.net/daily-swig/mitm">
+Latest manipulator-in-the-middle attacks news</a></li> 
  <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">Man-in-the-middle attack</a></li>
  <li>The {{HTTPHeader("Public-Key-Pins")}} header ({{Glossary("HPKP")}}) can significantly decrease the risk of MITM by instructing browsers to require a whitelisted certificate for all subsequent connections to that website.</li>
 </ul>
-</div>

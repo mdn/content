@@ -21,7 +21,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>contentIndexObject</var> = ServiceWorkerRegistration.index;</pre>
+  class="brush: js">var <var>contentIndexObject</var> = ServiceWorkerRegistration.index;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>Here is an example from the main script:</p>
 
-<pre class="brush: js notranslate">// reference registration
+<pre class="brush: js">// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -48,7 +48,7 @@ if ('index' in registration) {
 
 <p>From the {{domxref('ServiceWorker','service worker')}}:</p>
 
-<pre class="brush: js notranslate">// service worker script
+<pre class="brush: js">// service worker script
 
 const contentIndex = self.registration.index;
 </pre>
@@ -63,8 +63,7 @@ const contentIndex = self.registration.index;
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Content Index
-        API','#extensions-to-service-worker-registration','index')}}</td>
+      <td>{{SpecName('Content Index API','#extensions-to-service-worker-registration','index')}}</td>
       <td>{{Spec2('Content Index API')}}</td>
       <td>Initial definition.</td>
     </tr>

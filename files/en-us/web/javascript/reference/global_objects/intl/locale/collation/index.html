@@ -10,6 +10,7 @@ tags:
   - Localization
   - Prototype
   - Reference
+browser-compat: javascript.builtins.Intl.Locale.collation
 ---
 <div>{{JSRef}}</div>
 
@@ -46,7 +47,7 @@ tags:
 		<tr>
 			<td>
 				<div class="notecard warning">
-					<p>The <code>direct</code> collation type has been deprected. Do not use.</p>
+					<p><strong>Warning:</strong> The <code>direct</code> collation type has been deprected. Do not use.</p>
 				</div>
 				<p>direct</p>
 			</td>
@@ -119,11 +120,11 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>Like other locale subtags, the collation type can be added to the {{jsxref("Locale", "Intl.Locale")}} object via the locale string, or a configuration object argument to the constructor.</p>
+<p>Like other locale subtags, the collation type can be added to the {{jsxref("Intl/Locale", "Intl.Locale")}} object via the locale string, or a configuration object argument to the constructor.</p>
 
 <h3 id="Adding_a_collation_type_via_the_locale_string">Adding a collation type via the locale string</h3>
 
-<p>In the <a href="https://www.unicode.org/reports/tr35/">Unicode locale string spec</a>, collation types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the <code>-u</code> extension. Thus, the collation type can be added to the inital locale identifier string that is passed into the {{jsxref("Locale/Locale", "Locale")}} constructor. To add the collation type, first add the <code>-u</code> extension to the string. Next, add the <code>-co</code> extension to indicate that you are adding a collation type. Finally, add the collation to the string.</p>
+<p>In the <a href="https://www.unicode.org/reports/tr35/">Unicode locale string spec</a>, collation types are locale key "extension subtags". These subtags add additional data about the locale, and are added to locale identifiers by using the <code>-u</code> extension. Thus, the collation type can be added to the initial locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. To add the collation type, first add the <code>-u</code> extension to the string. Next, add the <code>-co</code> extension to indicate that you are adding a collation type. Finally, add the collation to the string.</p>
 
 <pre class="brush: js">let stringColl = new Intl.Locale("en-Latn-US-u-co-emoji");
 console.log(stringColl.collation); // Prints "emoji"
@@ -131,29 +132,18 @@ console.log(stringColl.collation); // Prints "emoji"
 
 <h3 id="Adding_a_collation_type_via_the_configuration_object_argument">Adding a collation type via the configuration object argument</h3>
 
-<p>The {{jsxref("Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can contain any of several extension types, including collation types. Set the <code>collation</code> property of the configuration object to your desired collation type, and then pass it into the constructor.</p>
+<p>The {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor has an optional configuration object argument, which can contain any of several extension types, including collation types. Set the <code>collation</code> property of the configuration object to your desired collation type, and then pass it into the constructor.</p>
 
 <pre class="brush: js">let configColl = new Intl.Locale("en-Latn-US", {collation: "emoji"});
 console.log(configColl.collation); // Prints "emoji"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-Intl.Locale.prototype.collation')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.Locale.collation")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

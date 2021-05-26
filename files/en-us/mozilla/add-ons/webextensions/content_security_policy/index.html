@@ -31,7 +31,7 @@ tags:
       Include a third-party script.
       See also https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity.
     --&gt;
-    &lt;script&gt;
+    &lt;script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
       crossorigin="anonymous"&gt;
@@ -91,11 +91,11 @@ tags:
 
 <p>Under the default CSP extensions are not allowed to evaluate strings as JavaScript. This means that the following are not permitted:</p>
 
-<pre class="notranslate brush: js">eval("console.log('some output');");</pre>
+<pre class="brush: js">eval("console.log('some output');");</pre>
 
-<pre class="notranslate brush: js">window.setTimeout("alert('Hello World!');", 500);</pre>
+<pre class="brush: js">window.setTimeout("alert('Hello World!');", 500);</pre>
 
-<pre class="notranslate brush: js">var f = new Function("console.log('foo');");</pre>
+<pre class="brush: js">var f = new Function("console.log('foo');");</pre>
 
 <h3 id="Inline_JavaScript">Inline JavaScript</h3>
 

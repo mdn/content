@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Shared Memory
+browser-compat: javascript.builtins.Atomics.notify
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.notify(typedArray, index, count)
+<pre class="brush: js">Atomics.notify(typedArray, index, count)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -58,7 +59,7 @@ tags:
 
 <p>Given a shared <code>Int32Array</code>:</p>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 </pre>
 
@@ -66,32 +67,23 @@ const int32 = new Int32Array(sab);
   long as that is true, it will not go on. However, once the writing thread has stored a
   new value, it will be notified by the writing thread and return the new value (123).</p>
 
-<pre class="brush: js notranslate">Atomics.wait(int32, 0, 0);
+<pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123</pre>
 
 <p>A writing thread stores a new value and notifies the waiting thread once it has
   written:</p>
 
-<pre class="brush: js notranslate">console.log(int32[0]); // 0;
+<pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
 Atomics.notify(int32, 0, 1);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-atomics.notify', 'Atomics.notify')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Atomics.notify")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

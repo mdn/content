@@ -2,13 +2,13 @@
 title: LockManager.request()
 slug: Web/API/LockManager/request
 tags:
-- API
-- Experimental
-- LockManager
-- Method
-- Reference
-- Web Locks API
-- request()
+  - API
+  - Experimental
+  - LockManager
+  - Method
+  - Reference
+  - Web Locks API
+  - request()
 ---
 <p>{{APIRef("Web Locks")}}{{SeeCompatTable}}</p>
 
@@ -34,14 +34,14 @@ tags:
 <p>This shared/exclusive lock pattern is common in database transaction architecture, for
   example to allow multiple simultaneous readers (each requests a <code>"shared"</code>
   lock) but only one writer (a single <code>"exclusive"</code> lock). This is known as the
-  readers-writer pattern. In the <a href="/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
+  readers-writer pattern. In the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
   this is exposed as <code>"readonly"</code> and <code>"readwrite"</code> transactions
   which have the same semantics.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
+  class="brush: js">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 

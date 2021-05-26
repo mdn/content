@@ -35,7 +35,7 @@ tags:
 
 <p>WebGL measures all distances and lengths in <strong>meters</strong>. WebXR inherits this standard, as well as the fact that the world is a cube two meters wide, two meters tall, and two meters deep. Each of the three axes has a minimum value of -1.0 and a maximum of 1.0, with the center of the cube located at (0, 0, 0).</p>
 
-<p><img alt="Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1." src="https://mdn.mozillademos.org/files/17034/DefaultSpaceDimensions.svg" style="height: 384px; width: 640px;"></p>
+<p><img alt="Diagram showing a WebXR space whose X, Y, and Z coordinate axes each have a minimum value of -1 and a maximum of 1." src="defaultspacedimensions.svg"></p>
 
 <p>This two cubic meter space encompasses the entire universe for the purposes of your code. Everything you draw must have its coordinates mapped to fit into this space, either explicitly within your code, or by using a transform to adjust the coordinates of all vertices. The most efficient way, of course, is to design your objects and code to use the same coordinate system as WebGL does.</p>
 
@@ -45,7 +45,7 @@ tags:
 
 <p>Angles are specified using <strong>{{interwiki("wikipedia", "radians")}}</strong>. To convert degrees to radians, multiply the value in degrees by <code>π/180</code>. The following code snippet shows two simple functions, <code>degreesToRadians()</code> and <code>radiansToDegrees()</code>, which convert back and forth between the two units for measuring angles.</p>
 
-<pre class="brush: js notranslate">const RADIANS_PER_DEGREE = Math.PI / 180.0;
+<pre class="brush: js">const RADIANS_PER_DEGREE = Math.PI / 180.0;
 
 let degreesToRadians = (deg) =&gt; deg * RADIANS_PER_DEGREE;
 let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
@@ -53,7 +53,13 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <h4 id="Times_and_durations">Times and durations</h4>
 
-<div class="callout-box">Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a small amount of imprecision to the clock in order to prevent it from being used in <a href="/en-US/docs/Web/Privacy#Fingerprinting">fingerprinting</a> and timing-based attacks.</div>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Note that for security reasons, <code>DOMHighResTimeStamp</code> usually introduces a
+  small amount of imprecision to the clock in order to prevent it from being used in <a
+    href="/en-US/docs/Web/Privacy#fingerprinting">fingerprinting</a> and timing-based
+  attacks.</p>
+</div>
 
 <p>All times and durations in WebXR are measured using the {{domxref("DOMHighResTimeStamp")}} type, which is a double-precision floating-point value specifying the time in milliseconds relative to the starting time. Since the value is a floating-point number, it may be accurate to well better than the millisecond level, depending on the platform and hardware.</p>
 
@@ -64,9 +70,9 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 <p>We offer a <a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web">guide to matrix mathematics as it pertains to 3D geometry</a>, including how matrices are used for the three primary transforms that need to be performed when rendering 3D scenes:</p>
 
 <ul>
- <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Translation_matrix">Translation</a></strong> is the use of a matrix to shift the position of a point through the virtual space. This motion can be along any of the object's axes, or any combination of them.</li>
- <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Rotation_matrix">Rotation</a></strong> is the application of a matrix that rotates a point around the origin of the object's coordinate system.</li>
- <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#Scale_matrix">Scaling</a></strong> is the use of a matrix to alter the size of an object.</li>
+ <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#translation_matrix">Translation</a></strong> is the use of a matrix to shift the position of a point through the virtual space. This motion can be along any of the object's axes, or any combination of them.</li>
+ <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#rotation_matrix">Rotation</a></strong> is the application of a matrix that rotates a point around the origin of the object's coordinate system.</li>
+ <li><strong><a href="/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web#scale_matrix">Scaling</a></strong> is the use of a matrix to alter the size of an object.</li>
 </ul>
 
 <p>Note that when we say that a transform applies to a point, it also, by extension, can be applied to a <em>collection</em> of points. Since an object is represented by some number of polygons made up of a number of points in space, applying the same transform to every point that makes up the object will apply that same transform to the entire object overall. Transforms can also be applied to vectors, since vectors are described using a coordinate value to define the direction and magnitude of the vector.</p>
@@ -79,7 +85,10 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>Thus it's all about creating a sense of space. From the perspective of an XR developer, designing the stage is the part that matters most to your users. Like an architect or a set designer, you have the power to create moods and experiences through a physical environment. How you structure that space will both depend on and influence how users can interact and explore it.</p>
 
-<div class="callout-box" style="text-align: justify;">A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.</div>
+<div class="notecard note">
+  <h3>Note</h3>
+  <p>A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.</p>
+</div>
 
 <p>In WebXR, the fundamental concept of a <strong>space</strong>—as in, a coordinate space in which a scene takes place—is represented by an instance of {{domxref("XRSpace")}}. The space is used to make determinations about the relative positions and motion of objects and other entities (such as light sources and cameras) within the user's environment.</p>
 
@@ -89,7 +98,7 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 
 <p>The directionality of the coordinate system can be seen in the following diagram:</p>
 
-<p><img alt="Diagram showing the coordinate system used by WebGL and WebXR." src="https://mdn.mozillademos.org/files/17033/webgl_coordinates.svg" style="height: 487px; width: 487px;"></p>
+<p><img alt="Diagram showing the coordinate system used by WebGL and WebXR." src="webgl_coordinates.svg"></p>
 
 <p>An {{domxref("XRRigidTransform")}} called the <strong>origin offset</strong> is used to transform points from the space's own effective coordinate system to the XR device's native coordinate system. The origin offset is initially an identity transform, since typically the two origins are aligned when the space is first established. However, as changes in alignment accumulate over time the origin offset may change to compensate.</p>
 
@@ -174,7 +183,8 @@ let radiansToDegrees = (rad) =&gt; rad / RADIANS_PER_DEGREE;
 <p>XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object conforming to the {{domxref("XRSessionInit")}} dictionary which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.</p>
+<h4>Note</h4>
+<p>At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.</p>
 </div>
 
 <p><strong>&lt;&lt;&lt;--- insert table of reference space requirements here ---&gt;&gt;&gt;</strong></p>

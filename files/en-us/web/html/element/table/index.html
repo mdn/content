@@ -23,7 +23,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a></td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -90,7 +90,7 @@ tags:
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
  <dd>
- <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p>
+ <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#rgb_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color kewords</a> can also be used.</p>
 
  <p>To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.</p>
  </dd>
@@ -144,7 +144,7 @@ tags:
 
 <h3 id="Simple_table">Simple table</h3>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;John&lt;/td&gt;
     &lt;td&gt;Doe&lt;/td&gt;
@@ -160,7 +160,7 @@ tags:
 
 <h3 id="Further_simple_examples">Further simple examples</h3>
 
-<pre class="brush: html notranslate">&lt;p&gt;Simple table with header&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Simple table with header&lt;/p&gt;
 &lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;First name&lt;/th&gt;
@@ -249,7 +249,7 @@ tags:
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">table
+<pre class="brush: css">table
 {
 border-collapse: collapse;
 border-spacing: 0px;
@@ -274,7 +274,7 @@ border: 1px solid black;
 
 <h5 id="HTML">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;3&lt;/td&gt;
@@ -291,7 +291,7 @@ border: 1px solid black;
 
 <h5 id="JavaScript">JavaScript</h5>
 
-<pre class="brush: js notranslate">HTMLTableSectionElement.prototype.sort = function(cb){
+<pre class="brush: js">HTMLTableSectionElement.prototype.sort = function(cb){
   Array
     .prototype
     .slice
@@ -321,7 +321,7 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 
 <h5 id="HTML_2">HTML</h5>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Numbers&lt;/th&gt;
@@ -346,7 +346,7 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 
 <h5 id="JavaScript_2">JavaScript</h5>
 
-<pre class="brush: js notranslate">for (let table of document.querySelectorAll('table')) {
+<pre class="brush: js">for (let table of document.querySelectorAll('table')) {
   for (let th of table.tHead.rows[0].cells) {
     th.onclick = function(){
       const tBody = table.tBodies[0];
@@ -376,7 +376,7 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 <p>This example provides one way to display tables in small spaces. We've hidden the HTML content as it is very large, and there is nothing remarkable about it. The CSS is more useful to inspect in this example.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;1&lt;sup&gt;3&lt;/sup&gt; equals:
@@ -555,7 +555,7 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 
 <p>To keep the table headers on the page while scrolling down we've set {{cssxref("position")}} to sticky on the <code>&lt;th&gt;</code> elements. Note that we have <strong>not</strong> set {{cssxref("border-collapse")}}  to <code>collapse</code>, as if we do the header cannot be separated correctly from the rest of the table.</p>
 
-<pre class="brush: css notranslate">table,
+<pre class="brush: css">table,
 th,
 td {
     border: 1px solid;
@@ -613,7 +613,7 @@ tr:last-child td {
 <p>This helps people navigating with the aid of assistive technology such as a screen reader, people experiencing low vision conditions, and people with cognitive concerns.</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#Adding_a_caption_to_your_table_with_caption">MDN Adding a caption to your table with &lt;caption&gt;</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#adding_a_caption_to_your_table_with_caption">MDN Adding a caption to your table with &lt;caption&gt;</a></li>
  <li><a href="https://www.w3.org/WAI/tutorials/tables/caption-summary/">Caption &amp; Summary • Tables • W3C WAI Web Accessibility Tutorials</a></li>
 </ul>
 
@@ -623,7 +623,7 @@ tr:last-child td {
 
 <h4 id="Example">Example</h4>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;Color names and values&lt;/caption&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
@@ -651,7 +651,7 @@ tr:last-child td {
 <p>Providing a declaration of <code>scope="col"</code> on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of <code>scope="row"</code> on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users">MDN Tables for visually impaired users</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users">MDN Tables for visually impaired users</a></li>
  <li><a href="https://www.w3.org/WAI/tutorials/tables/two-headers/">Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials</a></li>
  <li><a href="https://www.w3.org/WAI/tutorials/tables/irregular/">Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials</a></li>
  <li><a href="https://www.w3.org/TR/WCAG20-TECHS/H63.html">H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0</a></li>
@@ -666,7 +666,7 @@ tr:last-child td {
 <p>If the table cannot be broken apart, use a combination of the {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to programmatically associate each table cell with the header(s) the cell is associated with.</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users">MDN Tables for visually impaired users</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users">MDN Tables for visually impaired users</a></li>
  <li><a href="https://www.w3.org/WAI/tutorials/tables/multi-level/">Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials</a></li>
  <li><a href="https://www.w3.org/TR/WCAG20-TECHS/H43.html">H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0</a></li>
 </ul>

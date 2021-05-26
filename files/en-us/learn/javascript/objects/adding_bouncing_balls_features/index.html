@@ -92,7 +92,7 @@ Ball.prototype.collisionDetect = function() {
 }</pre>
 As discussed above, the only addition is to check if the ball exists — by using <code>balls[j].exists</code> in the <code>if</code> conditional.
 	</li>
-  
+
 
 </ol>
 
@@ -145,7 +145,7 @@ As discussed above, the only addition is to check if the ball exists — by usin
 
 <p>This method will add an <code>onkeydown</code> event listener to the <code>window</code> object so that when certain keyboard keys are pressed, we can move the evil circle around. The following code block should be put inside the method definition:</p>
 
-<pre class="brush: js notranslate">let _this = this;
+<pre class="brush: js">let _this = this;
 window.onkeydown = function(e) {
     if (e.key === 'a') {
       _this.x -= _this.velX;
@@ -188,7 +188,7 @@ window.onkeydown = function(e) {
 <ol>
 	<li>In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".</li>
 	<li>In your CSS file, add the following rule at the bottom:
-	<pre class="brush: css notranslate">p {
+	<pre class="brush: css">p {
   position: absolute;
   margin: 0;
   top: 35px;

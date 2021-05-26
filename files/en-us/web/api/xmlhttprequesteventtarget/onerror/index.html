@@ -14,10 +14,14 @@ tags:
 <p>The <strong><code>XMLHttpRequestEventTarget.onerror</code></strong> is the function
 	called when an {{domxref("XMLHttpRequest")}} transaction fails due to an error.</p>
 
+<p>It's important to note that this is only called if there's an error at the
+  <em>network</em> level. If the error only exists at the <em>application</em> level
+  (e.g. an HTTP error code is sent), this method will not be called.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate"><em>XMLHttpRequest</em>.onerror = <em>callback</em>;</pre>
+	class="brush: js"><em>XMLHttpRequest</em>.onerror = <em>callback</em>;</pre>
 
 <h3 id="Values">Values</h3>
 

@@ -1,6 +1,6 @@
 ---
 title: ':required'
-slug: 'Web/CSS/:required'
+slug: Web/CSS/:required
 tags:
   - CSS
   - Layout
@@ -8,12 +8,13 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.required
 ---
 <div>{{ CSSRef }}</div>
 
 <p>The <strong><code>:required</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the {{ htmlattrxref("required", "input") }} attribute set on it.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any required &lt;input&gt; */
+<pre class="brush: css no-line-numbers">/* Selects any required &lt;input&gt; */
 input:required {
   border: 1px dashed red;
 }</pre>
@@ -26,7 +27,7 @@ input:required {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,7 +35,7 @@ input:required {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div class="field"&gt;
     &lt;label for="url_input"&gt;Enter a URL:&lt;/label&gt;
     &lt;input type="url" id="url_input"&gt;
@@ -48,7 +49,7 @@ input:required {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">label {
+<pre class="brush: css">label {
   display: block;
   margin: 1px;
   padding: 1px;
@@ -80,7 +81,7 @@ input:required:invalid {
 <p>If the form also contains <a href="/en-US/docs/Web/CSS/:optional">optional</a> inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.3_%E2%80%94_Input_Assistance_Help_users_avoid_and_correct_mistakes">MDN Understanding WCAG, Guideline 3.3 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes">MDN Understanding WCAG, Guideline 3.3 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html" rel="noopener">Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -115,11 +116,11 @@ input:required:invalid {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.required")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
 </ul>

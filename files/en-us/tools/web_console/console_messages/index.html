@@ -129,7 +129,7 @@ slug: Tools/Web_Console/Console_messages
 
 <h4 id="Source_maps">Source maps</h4>
 
-<p>The Web Console understands <a href="http://blog.teamtreehouse.com/introduction-source-maps">source maps</a>. This means that if your JavaScript sources are compressed, you can supply a source map for them. Then any messages or errors your source generates will show up in the Web Console with a link back to the original source, not the compressed version.</p>
+<p>The Web Console understands <a href="https://blog.teamtreehouse.com/introduction-source-maps">source maps</a>. This means that if your JavaScript sources are compressed, you can supply a source map for them. Then any messages or errors your source generates will show up in the Web Console with a link back to the original source, not the compressed version.</p>
 
 <h4 id="Async_stack_frames">Async stack frames</h4>
 
@@ -219,7 +219,7 @@ slug: Tools/Web_Console/Console_messages
 <h3 id="Logging">Logging</h3>
 
 <div class="note">
-<p>Messages logged from <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>, add-ons, and <a href="/en-US/docs/Mozilla/ChromeWorkers">Chrome Workers</a> are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">filtering</a> feature to show them.</p>
+<p>Messages logged from <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>, add-ons, and <a href="/en-US/docs/Mozilla/API/ChromeWorkers">Chrome Workers</a> are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">filtering</a> feature to show them.</p>
 </div>
 
 <p>The Logging category includes messages logged using the <a href="/en-US/docs/Web/API/Console">Console</a> API.</p>
@@ -231,7 +231,7 @@ slug: Tools/Web_Console/Console_messages
  <li><code><a href="/en-US/docs/Web/API/Console/clear">clear()</a></code></li>
  <li><a href="/en-US/docs/Web/API/Console/count"><code>count()</code></a></li>
  <li><a href="/en-US/docs/Web/API/Console/dir"><code>dir()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.dirxml"><code>dirxml()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/dirxml"><code>dirxml()</code></a></li>
  <li><a href="/en-US/docs/Web/API/Console/error"><code>error()</code></a></li>
  <li><code>exception()</code></li>
  <li><code><a href="/en-US/docs/Web/API/Console/group">group()</a></code></li>
@@ -247,7 +247,7 @@ slug: Tools/Web_Console/Console_messages
 
 <p>The console prints a stack trace for all error messages, like this:</p>
 
-<pre class="brush: js notranslate">function foo() {
+<pre class="brush: js">function foo() {
   console.error("it explodes");
 }
 
@@ -298,7 +298,7 @@ doStuff();</pre>
  <dd>Copies the selected object to the clipboard.</dd>
 </dl>
 
-<h2 id="Filtering_and_searching"><a name="filtering-and-searching">Filtering and searching</a></h2>
+<h2 id="Filtering_and_searching">Filtering and searching</h2>
 
 <h3 id="Filtering_by_category">Filtering by category</h3>
 

@@ -33,7 +33,7 @@ tags:
 <p>The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.</p>
 
 <dl>
- <dt>{{HTMLAttrDef("align")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("align")}}{{deprecated_inline}}</dt>
  <dd>A {{DOMxRef("DOMString")}} which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using <code>align</code> on every cell in the row individually. Possible values are:
  <dl>
   <dt><code>left</code></dt>
@@ -54,15 +54,15 @@ tags:
  <p>Instead of using the obsolete <code>align</code> attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish <code>left</code>, <code>center</code>, <code>right</code>, or <code>justify</code> alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as <code>"."</code> or <code>","</code>).</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("bgcolor")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}</dt>
  <dd>
- <p>A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an <a href="/en-US/docs/Web/CSS/color_value#rgb()">hexadecimal <code>#RRGGBB</code> or <code>#RGB</code> value</a> or a <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color keyword</a>. Omitting the attribute or setting it to <code>null</code> in JavaScript causes the row's cells to inherit the row's parent element's background color.</p>
+ <p>A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an <a href="/en-US/docs/Web/CSS/color_value#rgb()">hexadecimal <code>#RRGGBB</code> or <code>#RGB</code> value</a> or a <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color keyword</a>. Omitting the attribute or setting it to <code>null</code> in JavaScript causes the row's cells to inherit the row's parent element's background color.</p>
 
  <div class="note">
  <p>The {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/Web/CSS">CSS</a>. To give a similar effect as the <code>bgcolor</code> attribute, use the <a href="/en-US/docs/Web/CSS">CSS</a> property {{CSSxRef("background-color")}}.</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("char")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("char")}}{{deprecated_inline}}</dt>
  <dd>
  <p>A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (<code>"."</code>) or comma (<code>","</code>) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to <code>char</code>, this attribute is ignored.</p>
 
@@ -70,7 +70,7 @@ tags:
  <p>This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the <code>char</code> property, such as <code>text-align: "."</code>.</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("charoff")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("charoff")}}{{deprecated_inline}}</dt>
  <dd>
  <p>A {{DOMxRef("DOMString")}} indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the <code>char</code> attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with <code>char</code> being set to <code>"."</code>, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.</p>
 
@@ -78,7 +78,7 @@ tags:
  <p>This attribute is obsolete, and was never widely supported anyway.</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("valign")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("valign")}}{{deprecated_inline}}</dt>
  <dd>
  <p>A {{DOMxRef("DOMString")}} specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:</p>
 
@@ -113,7 +113,7 @@ tags:
 
 <p>There are just four rows (including one header row), each with four columns (including one header column). Not even the table section elements are used; instead, the browser is allowed to determine this automatically. We'll add {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and {{HTMLElement("tfoot")}} in the next example.</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Name&lt;/th&gt;
     &lt;th&gt;ID&lt;/th&gt;
@@ -144,7 +144,7 @@ tags:
 
 <p>This simple CSS just adds a solid black border around the table and around each of its cells, including those specified using both {{HTMLElement("th")}} and {{HTMLElement("td")}}. That way, both header and data cells are easily demarcated.</p>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid black;
 }
 
@@ -178,7 +178,7 @@ th, td {
 
 <p>The HTML is similar to the previous example's, except for the addition of the new column in each data row, and the changes to the header. Those changes make the HTML look like this:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th rowspan="2"&gt;Name&lt;/th&gt;
     &lt;th rowspan="2"&gt;ID&lt;/th&gt;
@@ -217,7 +217,7 @@ th, td {
 <p>The CSS is unchanged from before.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid black;
 }
 
@@ -234,7 +234,7 @@ th, td {
 
 <p>The HTML is where the action is here, and the action is pretty simple.</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -277,7 +277,7 @@ th, td {
 <p>Once again, we haven't touched the CSS.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid black;
 }
 
@@ -305,7 +305,7 @@ th, td {
 <p>{{EmbedLiveSample("Basic_styling", 500, 200)}}</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -348,7 +348,7 @@ th, td {
 
 <p>This time, the HTML is unchanged, so let's dive right into the CSS.</p>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
 }
@@ -380,7 +380,7 @@ th, td {
 <p>There is no change to the HTML again. See what proper preparation of your HTML can do for you?</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -425,7 +425,7 @@ th, td {
 
 <h5 id="The_table_and_base_styles">The table and base styles</h5>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border-spacing: 0;
@@ -434,7 +434,7 @@ th, td {
 
 <p>Here we've added the {{CSSxRef("border-spacing")}} and {{CSSxRef("border-collapse")}} properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.</p>
 
-<pre class="brush: css notranslate">th, td {
+<pre class="brush: css">th, td {
   border: 1px solid black;
   padding:4px 6px;
 }
@@ -449,7 +449,7 @@ th {
 
 <p>We're going to look at the top header in two pieces. First, the overall styling of the header:</p>
 
-<pre class="brush: css notranslate">thead &gt; tr {
+<pre class="brush: css">thead &gt; tr {
   background-color: rgb(228, 240, 245);
 }
 
@@ -463,7 +463,7 @@ thead &gt; tr:nth-of-type(2) {
 
 <p>Let's style these two header cells with green and red hues to represent the "good" of a new member and the "bummer" of a canceled membership.</p>
 
-<pre class="brush: css notranslate">thead &gt; tr:last-of-type &gt; th:nth-of-type(1) {
+<pre class="brush: css">thead &gt; tr:last-of-type &gt; th:nth-of-type(1) {
   background-color: rgb(225, 255, 225);
 }
 
@@ -477,7 +477,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
 
 <p>It's common to help improve readability of table data by alternating row colors. Let's add a bit of color to every even row:</p>
 
-<pre class="brush: css notranslate">tbody &gt; tr:nth-of-type(even) {
+<pre class="brush: css">tbody &gt; tr:nth-of-type(even) {
   background-color: rgb(237, 238, 242);
 }</pre>
 
@@ -485,7 +485,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
 
 <p>Since we want the first column to stand out as well, we'll add some custom styling here, too.</p>
 
-<pre class="brush: css notranslate">tbody &gt; tr &gt; th:first-of-type {
+<pre class="brush: css">tbody &gt; tr &gt; th:first-of-type {
   text-align: left;
   background-color: rgb(225, 229, 244);
 }</pre>
@@ -496,7 +496,7 @@ thead &gt; tr:last-of-type &gt; th:nth-of-type(2) {
 
 <p>Finally, since it's standard practice to right-justify currency values in tables, let's do that here.</p>
 
-<pre class="brush: css notranslate">tbody &gt; tr &gt; td:last-of-type {
+<pre class="brush: css">tbody &gt; tr &gt; td:last-of-type {
   text-align:right;
 }</pre>
 

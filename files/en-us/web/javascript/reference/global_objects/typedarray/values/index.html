@@ -9,6 +9,7 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+browser-compat: javascript.builtins.TypedArray.values
 ---
 <div>{{JSRef}}</div>
 
@@ -19,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>arr</var>.values()</pre>
+<pre class="brush: js">values()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -29,7 +30,7 @@ tags:
 
 <h3 id="Iteration_using_for...of_loop">Iteration using for...of loop</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var iterator = arr.values();
 
 for (let letter of iterator) {
@@ -41,11 +42,11 @@ for (let letter of iterator) {
   <code>Array.prototype[Symbol.iterator]</code>.</p>
 
 <pre
-  class="brush: js notranslate">Array.prototype.values === Array.prototype[Symbol.iterator]      //true</pre>
+  class="brush: js">Array.prototype.values === Array.prototype[Symbol.iterator]      //true</pre>
 
 <h3 id="Iteration_using_.next">Iteration using .next()</h3>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var iterator = arr.values();
 iterator.next();               // Object { value: "a", done: false }
 iterator.next().value;         // "b"
@@ -56,12 +57,12 @@ iterator.next();               // Object { value: undefined, done: true }
 iteraror.next().value;         // undefined </pre>
 
 <div class="notecard warning">
-  <p>One-use: the array iterator object is one use or temporary object</p>
+  <p><strong>Warning:</strong> One-use: the array iterator object is one use or temporary object</p>
 </div>
 
 <p>example:</p>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
  var iterator = arr.values();
  for (let letter of iterator) {
  console.log(letter);
@@ -80,7 +81,7 @@ console.log(letter);
   object; instead it stores the address of the array used in its creation and so depends
   on the values stored in that array.</p>
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
+<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
 var iterator = arr.values();
 console.log(iterator);        // Array Iterator {  }
 iterator.next().value;        // "a"
@@ -89,33 +90,17 @@ iterator.next().value;        //  "n"
 </pre>
 
 <div class="notecard note">
-  <p>if the values in the array changed the array iterator object values change too.</p>
+  <p><strong>Note:</strong> If the values in the array changed the array iterator object values change too.</p>
 </div>
 
-<p class="hidden"><strong>TODO</strong>: please write about why we need it, use cases.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.TypedArray.values")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

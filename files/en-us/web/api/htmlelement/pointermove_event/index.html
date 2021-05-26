@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/Events/pointercancel">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
+<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -41,7 +41,7 @@ tags:
 
 <p>To add a handler for <code>pointermove</code> events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.addEventListener('pointermove', (event) =&gt; {
   console.log('Pointer moved');
@@ -49,7 +49,7 @@ para.addEventListener('pointermove', (event) =&gt; {
 
 <p>You can also use the <code>onpointermove</code> event handler property:</p>
 
-<pre class="brush: js notranslate">const para = document.querySelector('p');
+<pre class="brush: js">const para = document.querySelector('p');
 
 para.onpointermove = (event) =&gt; {
   console.log('Pointer moved');

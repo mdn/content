@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Shared Memory
+browser-compat: javascript.builtins.Atomics.isLockFree
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.isLockFree(size)
+<pre class="brush: js">Atomics.isLockFree(size)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -38,7 +39,7 @@ tags:
 
 <h3 id="Using_isLockFree">Using isLockFree</h3>
 
-<pre class="brush: js notranslate">Atomics.isLockFree(1); // true
+<pre class="brush: js">Atomics.isLockFree(1); // true
 Atomics.isLockFree(2); // true
 Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
@@ -49,21 +50,11 @@ Atomics.isLockFree(8); // true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-atomics.islockfree', 'Atomics.isLockFree')}}
-			</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Atomics.isLockFree")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -21,7 +21,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary">An <dfn>HTTP cookie</dfn> (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with later requests to the same server.</span> Typically, it's used to tell if two requests came from the same browser — keeping a user logged-in, for example. It remembers stateful information for the <a href="/en-US/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless">stateless</a> HTTP protocol.</p>
+<p class="summary"><span class="seoSummary">An <dfn>HTTP cookie</dfn> (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with later requests to the same server.</span> Typically, it's used to tell if two requests came from the same browser — keeping a user logged-in, for example. It remembers stateful information for the <a href="/en-US/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless">stateless</a> HTTP protocol.</p>
 
 <p>Cookies are mainly used for three purposes:</p>
 
@@ -48,11 +48,11 @@ tags:
 
 <p>The {{HTTPHeader("Set-Cookie")}} HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:</p>
 
-<pre class="brush: html notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
+<pre class="brush: html">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
 
 <p>This shows the server sending headers to tell the client to store a pair of cookies:</p>
 
-<pre class="notranslate">HTTP/2.0 200 OK
+<pre>HTTP/2.0 200 OK
 Content-Type: text/html
 Set-Cookie: yummy_cookie=choco
 Set-Cookie: tasty_cookie=strawberry
@@ -61,7 +61,7 @@ Set-Cookie: tasty_cookie=strawberry
 
 <p id="The_client_sends_back_to_the_server_its_cookies_previously_stored">Then, with every subsequent request to the server, the browser sends back all previously stored cookies to the server using the {{HTTPHeader("Cookie")}} header.</p>
 
-<pre class="notranslate">GET /sample_page.html HTTP/2.0
+<pre>GET /sample_page.html HTTP/2.0
 Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
@@ -69,7 +69,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <ul>
  <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
- <li><a href="https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value">Node.JS</a></li>
+ <li><a href="https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value">Node.JS</a></li>
  <li><a href="https://docs.python.org/3/library/http.cookies.html">Python</a></li>
  <li><a href="https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html">Ruby on Rails</a></li>
 </ul>
@@ -86,13 +86,13 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>For example:</p>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;</pre>
+<pre>Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: When an <code>Expires</code> date is set, the time and date set is relative to the client the cookie is being set on, not the server.</p>
 </div>
 
-<p>If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever the user authenticates. This technique helps prevent <a href="/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">session fixation attacks</a>, where a third party can reuse a user's session.</p>
+<p>If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever the user authenticates. This technique helps prevent <a href="/en-US/docs/Web/Security/Types_of_attacks#session_fixation">session fixation attacks</a>, where a third party can reuse a user's session.</p>
 
 <h3 id="Restrict_access_to_cookies">Restrict access to cookies</h3>
 
@@ -100,11 +100,11 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>A cookie with the <code>Secure</code> attribute is sent to the server only with an encrypted request over the HTTPS protocol, never with unsecured HTTP (except on localhost), and therefore can't easily be accessed by a {{Glossary("MitM", "man-in-the-middle")}} attacker. Insecure sites (with <code>http:</code> in the URL) can't set cookies with the <code>Secure</code> attribute. However, do not assume that <code>Secure</code> prevents all access to sensitive information in cookies; for example, it can be read and modified by someone with access to the client's hard disk (or JavaScript if the <code>HttpOnly</code> attribute is not set).</p>
 
-<p>A cookie with the <code>HttpOnly</code> attribute is inaccessible to the JavaScript {{domxref("Document.cookie")}} API; it is sent only to the server. For example, cookies that persist server-side sessions don't need to be available to JavaScript, and should have the <code>HttpOnly</code> attribute. This precaution helps mitigate cross-site scripting (<a href="/en-US/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)">XSS</a>) attacks.</p>
+<p>A cookie with the <code>HttpOnly</code> attribute is inaccessible to the JavaScript {{domxref("Document.cookie")}} API; it is sent only to the server. For example, cookies that persist server-side sessions don't need to be available to JavaScript, and should have the <code>HttpOnly</code> attribute. This precaution helps mitigate cross-site scripting (<a href="/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)">XSS</a>) attacks.</p>
 
 <p>Here is an example:</p>
 
-<pre class="notranslate">Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly</pre>
+<pre>Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly</pre>
 
 <h3 id="Define_where_cookies_are_sent">Define where cookies are sent</h3>
 
@@ -130,16 +130,16 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h4 id="SameSite_attribute">SameSite attribute</h4>
 
-<p>The <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite"><code>SameSite</code> </a>attribute lets servers specify whether/when cookies are sent with cross-origin requests (where {{Glossary("Site")}} is defined by the registrable domain), which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</p>
+<p>The <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite"><code>SameSite</code> </a>attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain), which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).</p>
 
 <p>It takes three possible values: <code>Strict</code>, <code>Lax</code>, and <code>None</code>. With <code>Strict</code>, the cookie is sent only to the same site as the one that originated it; <code>Lax</code> is similar, except that cookies are sent when the user <em>navigates</em> to the cookie's origin site, for example, by following a link from an external site; <code>None</code> specifies that cookies are sent on both originating and cross-site requests, but <em>only in secure contexts</em> (i.e. if <code>SameSite=None</code> then the <code>Secure</code> attribute must also be set). If no <code>SameSite</code> attribute is set then the cookie is treated as <code>Lax</code>.</p>
 
 <p>Here is an example:</p>
 
-<pre class="notranslate">Set-Cookie: mykey=myvalue; SameSite=Strict</pre>
+<pre>Set-Cookie: mykey=myvalue; SameSite=Strict</pre>
 
 <div class="notecard note">
-<p>Standard related to <code>SameSite</code> recently changed (MDN documents the new behavior above). See the cookies <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#Browser_compatibility">Browser compatibility</a> table for information about how the attribute is handled in specific browser versions:</p>
+<p>Standard related to <code>SameSite</code> recently changed (MDN documents the new behavior above). See the cookies <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Browser compatibility</a> table for information about how the attribute is handled in specific browser versions:</p>
 
 <ul>
  <li><code>SameSite=Lax</code> is the new default if <code>SameSite</code> is not specified. Previously the default was that cookies were sent for all requests.</li>
@@ -151,7 +151,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>The design of the cookie mechanism is such that a server is unable to confirm that a cookie was set on a secure origin or even to tell <em>where</em> a cookie was originally set.</p>
 
-<p>A vulnerable application on a sub-domain can set a cookie with the <code>Domain</code> attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a <em>session fixation</em> attack. See <a href="/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">session fixation</a> for primary mitigation methods.</p>
+<p>A vulnerable application on a sub-domain can set a cookie with the <code>Domain</code> attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a <em>session fixation</em> attack. See <a href="/en-US/docs/Web/Security/Types_of_attacks#session_fixation">session fixation</a> for primary mitigation methods.</p>
 
 <p>As a <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">defense-in-depth measure</a>, however, it is possible to use <em>cookie prefixes</em> to assert specific facts about the cookie. Two prefixes are available:</p>
 
@@ -168,20 +168,20 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <p>On the application server, the web application <em>must</em> check for the full cookie name including the prefix—user agents <em>do not</em> strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.</p>
 </div>
 
-<p>For more information about cookie prefixes and the current state of browser support, see the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>.</p>
+<p>For more information about cookie prefixes and the current state of browser support, see the <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>.</p>
 
 <h4 id="JavaScript_access_using_Document.cookie">JavaScript access using Document.cookie</h4>
 
 <p>New cookies can be created via JavaScript using the {{domxref("Document.cookie")}} property, and existing cookies can be accessed from JavaScript as well, if the <code>HttpOnly</code> flag is not set.</p>
 
-<pre class="brush: js notranslate">document.cookie = "yummy_cookie=choco";
+<pre class="brush: js">document.cookie = "yummy_cookie=choco";
 document.cookie = "tasty_cookie=strawberry";
 console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"</pre>
 
 <p>Cookies created via JavaScript cannot include the <code>HttpOnly</code> flag.</p>
 
-<p>Please note the security issues in the <a href="/en-US/docs/Web/HTTP/Cookies#Security">Security</a> section below. Cookies available to JavaScript can be stolen through XSS.</p>
+<p>Please note the security issues in the <a href="/en-US/docs/Web/HTTP/Cookies#security">Security</a> section below. Cookies available to JavaScript can be stolen through XSS.</p>
 
 <h2 id="Security">Security</h2>
 
@@ -193,7 +193,7 @@ console.log(document.cookie);
 
 <ul>
  <li>Use the <code>HttpOnly</code> attribute to prevent access to cookie values via JavaScript.</li>
- <li>Cookies that are used for sensitive information (such as indicating authentication) should have a short lifetime, with the <code>SameSite</code> attribute set to <code>Strict</code> or <code>Lax</code>. (See <a href="#">SameSite cookies</a>, above.) In <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">browsers that support SameSite</a>, this has the effect of ensuring that the authentication cookie is not sent with cross-site requests, so such a request is effectively unauthenticated to the application server.</li>
+ <li>Cookies that are used for sensitive information (such as indicating authentication) should have a short lifetime, with the <code>SameSite</code> attribute set to <code>Strict</code> or <code>Lax</code>. (See <a href="#">SameSite cookies</a>, above.) In <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility">browsers that support SameSite</a>, this has the effect of ensuring that the authentication cookie is not sent with cross-site requests, so such a request is effectively unauthenticated to the application server.</li>
 </ul>
 
 <h2 id="Tracking_and_privacy">Tracking and privacy</h2>
@@ -245,7 +245,7 @@ console.log(document.cookie);
  <li>{{domxref("Navigator.cookieEnabled")}}</li>
  <li><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite cookies</a></li>
  <li><a href="/en-US/docs/Tools/Storage_Inspector">Inspecting cookies using the Storage Inspector</a></li>
- <li><a class="external" href="https://tools.ietf.org/html/rfc6265">Cookie specification: RFC 6265</a></li>
+ <li><a href="https://datatracker.ietf.org/doc/html/rfc6265">Cookie specification: RFC 6265</a></li>
  <li><a href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie on Wikipedia</a></li>
  <li><a href="https://gdpr.eu/cookies/">Cookies, the GDPR, and the ePrivacy Directive</a></li>
 </ul>

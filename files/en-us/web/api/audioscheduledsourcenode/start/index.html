@@ -2,18 +2,18 @@
 title: AudioScheduledSourceNode.start()
 slug: Web/API/AudioScheduledSourceNode/start
 tags:
-- API
-- Audio
-- AudioScheduledSourceNode
-- Media
-- Method
-- NeedsExample
-- Node
-- Reference
-- Web Audio API
-- play
-- sound
-- start
+  - API
+  - Audio
+  - AudioScheduledSourceNode
+  - Media
+  - Method
+  - NeedsExample
+  - Node
+  - Reference
+  - Web Audio API
+  - play
+  - sound
+  - start
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>AudioScheduledSourceNode</em>.start([<em>when</em> [, offset [, duration]]]);
+<pre class="brush: js"><em>AudioScheduledSourceNode</em>.start([<em>when</em> [, offset [, duration]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -33,7 +33,7 @@ tags:
   <dt><code>when</code> {{optional_inline}}</dt>
   <dd>The time, in seconds, at which the sound should begin to play. This value is
     specified in the same time coordinate system as the {{domxref("AudioContext")}} is
-    using for its {{domxref("AudioContext.currentTime", "currentTime")}} attribute. A
+    using for its {{domxref("BaseAudioContext/currentTime", "currentTime")}} attribute. A
     value of 0 (or omitting the <code>when</code> parameter entirely) causes the sound to
     start playback immediately.</dd>
   <dt><code>offset</code> {{optional_inline}}</dt>
@@ -66,7 +66,7 @@ tags:
 <p>This example demonstrates how to create an {{domxref("OscillatorNode")}} which is
   scheduled to start playing in 2 seconds and stop playing 1 second after that. The times
   are calculated by adding the desired number of seconds to the context's current time
-  stamp returned by {{domxref("AudioContext.currentTime")}}.</p>
+  stamp returned by {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.</p>
 
 <pre class="brush: js">context = new AudioContext();
 osc = context.createOscillator();
@@ -97,15 +97,12 @@ osc.stop(context.currentTime + 3);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioScheduledSourceNode.start")}}</p>
-</div>
+<p>{{Compat("api.AudioScheduledSourceNode.start")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
   <li>{{domxref("AudioScheduledSourceNode.stop", "stop()")}}</li>
   <li>{{domxref("AudioScheduledSourceNode")}}</li>

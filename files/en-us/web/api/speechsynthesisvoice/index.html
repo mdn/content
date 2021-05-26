@@ -34,7 +34,8 @@ tags:
 
 <p>The following snippet is excerpted from our <a class="external external-icon" href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>.</p>
 
-<pre class="brush: js">function populateVoiceList() {
+<pre class="brush: js">var synth = window.speechSynthesis;
+function populateVoiceList() {
   voices = synth.getVoices();
 
   for(i = 0; i &lt; voices.length ; i++) {

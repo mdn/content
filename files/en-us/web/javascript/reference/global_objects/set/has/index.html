@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - set
+browser-compat: javascript.builtins.Set.has
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>mySet</var>.has(<var>value</var>);</pre>
+<pre class="brush: js">has(value)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +43,7 @@ tags:
 
 <h3 id="Using_the_has_method">Using the has() method</h3>
 
-<pre class="brush: js notranslate">var mySet = new Set();
+<pre class="brush: js">var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // returns true
@@ -64,22 +60,11 @@ set1.add({'key1': 1}); // now set1 contains 2 entries
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Set.has")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

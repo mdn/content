@@ -24,7 +24,7 @@ tags:
  <dt>{{domxref("HTMLLinkElement.as")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the type of content being loaded by the HTML link.</dd>
  <dt>{{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See <a href="/en-US/docs/Web/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a> for details.</dd>
+ <dd>Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for details.</dd>
  <dt>{{domxref("HTMLLinkElement.disabled")}}</dt>
  <dd>Is a <code>Boolean</code> which represents whether the link is disabled; currently only used with style sheet links.</dd>
  <dt>{{domxref("HTMLLinkElement.href")}}</dt>
@@ -50,13 +50,13 @@ tags:
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{domxref("HTMLLinkElement.charset")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the character encoding for the target resource.</dd>
- <dt>{{domxref("HTMLLinkElement.rev")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
  <div class="note"><strong>Note</strong>: Currently the W3C HTML 5.2 spec states that <code>rev</code> is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.</div>
  </dd>
- <dt>{{domxref("HTMLLinkElement.target")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.</dd>
 </dl>
 
@@ -109,10 +109,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.HTMLLinkElement")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

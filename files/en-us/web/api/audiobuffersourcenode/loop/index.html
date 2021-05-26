@@ -2,15 +2,15 @@
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- Loop
-- Media
-- Property
-- Reference
-- Web Audio API
-- sound
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - Loop
+  - Media
+  - Property
+  - Reference
+  - Web Audio API
+  - sound
 ---
 <div>{{ APIRef("Web Audio API") }}</div>
 
@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>loopingEnabled</var> = <var>AudioBufferSourceNode</var>.loop;
+<pre class="brush: js">var <var>loopingEnabled</var> = <var>AudioBufferSourceNode</var>.loop;
 <var>AudioBufferSourceNode</var>.loop = true | false;
 </pre>
 
@@ -41,7 +41,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, the {{domxref("AudioContext.decodeAudioData")}} function is used to
+<p>In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
   decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
   are provided to play and stop the audio playback, and a slider control is used to change
   the <code>playbackRate</code> property value on the fly. When the audio is played, it
@@ -111,10 +111,7 @@ play.onclick = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioBufferSourceNode.loop")}}</p>
-</div>
+<p>{{Compat("api.AudioBufferSourceNode.loop")}}</p>
 
 <h2 id="See_also">See also</h2>
 

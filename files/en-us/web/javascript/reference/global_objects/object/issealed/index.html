@@ -7,6 +7,7 @@ tags:
 - JavaScript 1.8.5
 - Method
 - Object
+browser-compat: javascript.builtins.Object.isSealed
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-issealed.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.isSealed(<var>obj</var>)</pre>
+<pre class="brush: js">Object.isSealed(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +43,7 @@ tags:
 
 <h3 id="Using_Object.isSealed">Using Object.isSealed</h3>
 
-<pre class="brush: js notranslate">// Objects aren't sealed by default.
+<pre class="brush: js">// Objects aren't sealed by default.
 var empty = {};
 Object.isSealed(empty); // === false
 
@@ -98,7 +94,7 @@ Object.isFrozen(s3); // === true
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it was a sealed ordinary object, return <code>true</code>.</p>
 
-<pre class="brush: js notranslate">Object.isSealed(1);
+<pre class="brush: js">Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isSealed(1);
@@ -107,25 +103,11 @@ Object.isSealed(1);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.isSealed")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

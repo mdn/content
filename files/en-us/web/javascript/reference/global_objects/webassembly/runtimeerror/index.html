@@ -8,6 +8,7 @@ tags:
   - Reference
   - RuntimeError
   - WebAssembly
+browser-compat: javascript.builtins.WebAssembly.RuntimeError
 ---
 <div>{{JSRef}}</div>
 
@@ -55,39 +56,22 @@ tags:
 <pre class="brush: js">try {
   throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
 } catch (e) {
-  console.log(e instanceof RuntimeError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "RuntimeError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // returns the location where the code was run
+  console.log(e instanceof WebAssembly.RuntimeError); // true
+  console.log(e.message);                             // "Hello"
+  console.log(e.name);                                // "RuntimeError"
+  console.log(e.fileName);                            // "someFile"
+  console.log(e.lineNumber);                          // 10
+  console.log(e.columnNumber);                        // 0
+  console.log(e.stack);                               // returns the location where the code was run
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#exceptiondef-runtimeerror', 'WebAssembly constructors')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard', 'NativeError')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.WebAssembly.RuntimeError")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

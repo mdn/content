@@ -21,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>mediaMetadata</em> = navigator.mediaSession.metadata;
+<pre class="brush: js">var <em>mediaMetadata</em> = navigator.mediaSession.metadata;
 navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
 
 <h3 id="Value">Value</h3>
@@ -34,7 +34,7 @@ navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
 <p>The following example checks for compatibility and creates a new media session with the
   relevant metadata:</p>
 
-<pre class="brush: js notranslate">if ('mediaSession' in navigator) {
+<pre class="brush: js">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -61,8 +61,7 @@ navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Media
-        Session','#dom-mediasession-metadata','MediaSession.metadata')}}</td>
+      <td>{{SpecName('Media Session','#dom-mediasession-metadata','MediaSession.metadata')}}</td>
       <td>{{Spec2('Media Session')}}</td>
       <td>Initial definition.</td>
     </tr>
@@ -71,7 +70,4 @@ navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.MediaSession.metadata")}}</p>
-</div>
+<p>{{Compat("api.MediaSession.metadata")}}</p>

@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.toGMTString
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
@@ -24,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateObj</var>.toGMTString()</pre>
+<pre class="brush: js">toGMTString()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -39,7 +40,7 @@ tags:
   using the operating system's time-zone offset and returns a string value that is similar
   to the following form. The exact format depends on the platform.</p>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var str = today.toGMTString();  // deprecated! use toUTCString()
 
 console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
@@ -47,23 +48,11 @@ console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.togmtstring',
-        'Date.prototype.toGMTString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.toGMTString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

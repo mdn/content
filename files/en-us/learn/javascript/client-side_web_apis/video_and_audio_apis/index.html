@@ -35,7 +35,7 @@ tags:
 
 <p>The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a>, a typical implementation looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;video controls&gt;
+<pre class="brush: html">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
   &lt;source src="rabbit320.webm" type="video/webm"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
@@ -71,7 +71,7 @@ tags:
 
 <p>Open the HTML index file. You'll see a number of features; the HTML is dominated by the video player and its controls:</p>
 
-<pre class="notranslate">&lt;div class="player"&gt;
+<pre class="brush: html">&lt;div class="player"&gt;
   &lt;video controls&gt;
     &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
     &lt;source src="video/sintel-short.webm" type="video/webm"&gt;
@@ -106,7 +106,7 @@ tags:
 
 <p>Now open the CSS file and have a look inside. The CSS for the example is not too complicated, but we'll highlight the most interesting bits here. First of all, notice the <code>.controls</code> styling:</p>
 
-<pre class="brush: css notranslate">.controls {
+<pre class="brush: css">.controls {
   visibility: hidden;
   opacity: 0.5;
   width: 400px;
@@ -134,7 +134,7 @@ tags:
 
 <p>Next, let's look at our button icons:</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
    font-family: 'HeydingsControlsRegular';
    src: url('fonts/heydings_controls-webfont.eot');
    src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
@@ -167,7 +167,7 @@ button:before {
 
 <p>Last but not least, let's look at the CSS for the timer:</p>
 
-<pre class="brush: css notranslate">.timer {
+<pre class="brush: css">.timer {
   line-height: 38px;
   font-size: 10px;
   font-family: monospace;
@@ -211,7 +211,7 @@ button:before {
  <li>
   <p>At the top of this file, insert the following code:</p>
 
-  <pre class="brush: js notranslate">const media = document.querySelector('video');
+  <pre class="brush: js">const media = document.querySelector('video');
 const controls = document.querySelector('.controls');
 
 const play = document.querySelector('.play');
@@ -235,7 +235,7 @@ const timerBar = document.querySelector('.timer div');
  <li>
   <p>Next, insert the following at the bottom of your code:</p>
 
-  <pre class="brush: js notranslate">media.removeAttribute('controls');
+  <pre class="brush: js">media.removeAttribute('controls');
 controls.style.visibility = 'visible';</pre>
 
   <p>These two lines remove the default browser controls from the video, and make the custom controls visible.</p>
@@ -250,13 +250,13 @@ controls.style.visibility = 'visible';</pre>
  <li>
   <p>First of all, add the following to the bottom of your code, so that the <code>playPauseMedia()</code> function is invoked when the play button is clicked:</p>
 
-  <pre class="brush: js notranslate">play.addEventListener('click', playPauseMedia);
+  <pre class="brush: js">play.addEventListener('click', playPauseMedia);
 </pre>
  </li>
  <li>
   <p>Now to define <code>playPauseMedia()</code> — add the following, again at the bottom of your code:</p>
 
-  <pre class="brush: js notranslate">function playPauseMedia() {
+  <pre class="brush: js">function playPauseMedia() {
   if(media.paused) {
     play.setAttribute('data-icon','u');
     media.play();
@@ -278,7 +278,7 @@ controls.style.visibility = 'visible';</pre>
  <li>
   <p>Next, let's add functionality to handle stopping the video. Add the following <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> lines below the previous one you added:</p>
 
-  <pre class="brush: js notranslate">stop.addEventListener('click', stopMedia);
+  <pre class="brush: js">stop.addEventListener('click', stopMedia);
 media.addEventListener('ended', stopMedia);
 </pre>
 
@@ -287,7 +287,7 @@ media.addEventListener('ended', stopMedia);
  <li>
   <p>Next, let's define <code>stopMedia()</code> — add the following function below <code>playPauseMedia()</code>:</p>
 
-  <pre class="brush: js notranslate">function stopMedia() {
+  <pre class="brush: js">function stopMedia() {
   media.pause();
   media.currentTime = 0;
   play.setAttribute('data-icon','P');
@@ -308,14 +308,14 @@ media.addEventListener('ended', stopMedia);
  <li>
   <p>First of all, add the following two <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> lines below the previous ones:</p>
 
-  <pre class="brush: js notranslate">rwd.addEventListener('click', mediaBackward);
+  <pre class="brush: js">rwd.addEventListener('click', mediaBackward);
 fwd.addEventListener('click', mediaForward);
 </pre>
  </li>
  <li>
   <p>Now on to the event handler functions — add the following code below your previous functions to define <code>mediaBackward()</code> and <code>mediaForward()</code>:</p>
 
-  <pre class="brush: js notranslate">let intervalFwd;
+  <pre class="brush: js">let intervalFwd;
 let intervalRwd;
 
 function mediaBackward() {
@@ -363,7 +363,7 @@ function mediaForward() {
  <li>
   <p>Finally, we need to define the <code>windBackward()</code> and <code>windForward()</code> functions invoked in the <code>setInterval()</code> calls. Add the following below your two previous functions:</p>
 
-  <pre class="brush: js notranslate">function windBackward() {
+  <pre class="brush: js">function windBackward() {
   if(media.currentTime &lt;= 3) {
     rwd.classList.remove('active');
     clearInterval(intervalRwd);
@@ -394,15 +394,15 @@ function windForward() {
 
 <h4 id="Updating_the_elapsed_time">Updating the elapsed time</h4>
 
-<p>The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the <code>&lt;video&gt;</code> element. The frequency with which this event fires depends on your browser, CPU power, etc (<a href="http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video">see this stackoverflow post</a>).</p>
+<p>The very last piece of our media player to implement is the time elapsed displays. To do this we'll run a function to update the time displays every time the {{event("timeupdate")}} event is fired on the <code>&lt;video&gt;</code> element. The frequency with which this event fires depends on your browser, CPU power, etc (<a href="https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video">see this stackoverflow post</a>).</p>
 
 <p>Add the following <code>addEventListener()</code> line just below the others:</p>
 
-<pre class="brush: js notranslate">media.addEventListener('timeupdate', setTime);</pre>
+<pre class="brush: js">media.addEventListener('timeupdate', setTime);</pre>
 
 <p>Now to define the <code>setTime()</code> function. Add the following at the bottom of your file:</p>
 
-<pre class="brush: js notranslate">function setTime() {
+<pre class="brush: js">function setTime() {
   let minutes = Math.floor(media.currentTime / 60);
   let seconds = Math.floor(media.currentTime - minutes * 60);
   let minuteValue;
@@ -446,7 +446,7 @@ function windForward() {
 
 <p>First of all, add the following lines inside the <code>stopMedia()</code> function — anywhere will do:</p>
 
-<pre class="brush: js notranslate">rwd.classList.remove('active');
+<pre class="brush: js">rwd.classList.remove('active');
 fwd.classList.remove('active');
 clearInterval(intervalRwd);
 clearInterval(intervalFwd);
@@ -474,7 +474,7 @@ clearInterval(intervalFwd);
  <li>
   <p>Can you work out a way to turn the timer inner <code>&lt;div&gt;</code> element into a true seek bar/scrobbler — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the <code><a href="/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:</p>
 
-  <pre class="brush: js notranslate">document.onclick = function(e) {
+  <pre class="brush: js">document.onclick = function(e) {
   console.log(e.x) + ',' + console.log(e.y)
 }</pre>
  </li>

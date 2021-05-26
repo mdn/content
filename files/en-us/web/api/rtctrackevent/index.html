@@ -61,7 +61,7 @@ tags:
 
 <p>This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID <code>videobox</code> to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.</p>
 
-<pre class="brush: js notranslate">peerConnection.addEventListener("track", e =&gt; {
+<pre class="brush: js">peerConnection.addEventListener("track", e =&gt; {
   let videoElement = document.getElementById("videobox");
   videoElement.srcObject = e.streams[0];
 }, false);</pre>

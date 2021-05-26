@@ -33,7 +33,6 @@ tags:
  <li>Dedicated workers are workers that are utilized by a single script. This context is represented by either a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.</li>
  <li>{{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.</li>
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.</li>
- <li>Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to <a href="https://developer.mozilla.org/en/js-ctypes">js-ctypes</a> in your worker. See {{DOMxRef("ChromeWorker")}} for more details.</li>
 </ul>
 
 <div class="note">
@@ -57,7 +56,7 @@ tags:
 <ul>
  <li>{{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers), </li>
  <li>{{domxref("WorkerGlobalScope.close", "close()")}} {{non-standard_inline}} (dedicated and shared workers only), </li>
- <li>{{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers and <a href="/en-US/docs/Mozilla/Gecko/Chrome/API/ChromeWorker">chrome workers</a> only).</li>
+ <li>{{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers and only).</li>
 </ul>
 
 <h3 id="Supported_Web_APIs">Supported Web APIs</h3>
@@ -126,5 +125,4 @@ tags:
  <li>{{domxref("Worker")}} interface</li>
  <li>{{domxref("SharedWorker")}} interface</li>
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
- <li><a href="/en-US/docs/Web/API/ChromeWorker">ChromeWorker</a>: for using workers in privileged/chrome code</li>
 </ul>

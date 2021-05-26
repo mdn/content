@@ -2,105 +2,84 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 tags:
-- API
-- Property
-- Read-only
-- Reference
-- Storage
-- Web Storage
-- Window
-- WindowLocalStorage
-- localStorage
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - Storage
+  - Web Storage
+  - Window
+  - WindowLocalStorage
+  - localStorage
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p><span class="seoSummary">The read-only <strong><code>localStorage</code></strong>
-		property allows you to access a {{DOMxRef("Storage")}} object for the
-		{{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across
-		browser sessions.</span> <code>localStorage</code> is similar to
-	{{DOMxRef("Window.sessionStorage", "sessionStorage")}}, except that while data stored
-	in <code>localStorage</code> has no expiration time, data stored in
-	<code>sessionStorage</code> gets cleared when the page session ends — that is, when
-	the page is closed. (Data in a <code>localStorage</code> object created in a "private
-	browsing" or "incognito" session is cleared when the last "private" tab is closed.)
-</p>
+<p><span class="seoSummary">The <strong><code>localStorage</code></strong> read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.</span></p>
 
-<p>Data stored in either <code>localStorage</code> <strong>is specific to the protocol of
-		the page</strong>. In particular, data stored by a script on a site accessed with
-	HTTP (e.g., <a class="external external-icon" href="http://example.com"
-		rel="noopener">http://example.com</a>) is put in a different
-	<code>localStorage</code> object from the same site accessed with HTTPS (e.g., <a
-		class="external link-https external-icon" href="https://example.com"
-		rel="noopener">https://example.com</a>).</p>
-
-<p>The keys and the values are <em>always</em> in the UTF-16 {{domxref("DOMString")}}
-	format, which uses two bytes per character. As with objects, integer keys are
-	automatically converted to strings.</p>
+<p><code>localStorage</code> is similar to {{DOMxRef("Window.sessionStorage", "sessionStorage")}}, except that while <code>localStorage</code> data has no expiration time, <code>sessionStorage</code> data gets cleared when the page session ends — that is, when the page is closed. (<code>localStorage</code> data for a document loaded in a "private browsing" or "incognito" session is cleared when the last "private" tab is closed.) </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-	class="brush: js notranslate"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
-
+<pre class="brush: js"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
 <h3 id="Value">Value</h3>
 
-<p>A {{DOMxRef("Storage")}} object which can be used to access the current origin's local
-	storage space.</p>
+<p>A {{DOMxRef("Storage")}} object which can be used to access the current origin's local storage space.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
 <dl>
-	<dt><code>SecurityError</code></dt>
-	<dd>The request violates a policy decision, or the origin is not <a
-			href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">a
-			valid scheme/host/port tuple</a> (this can happen if the origin uses the
-		<code>file:</code> or <code>data:</code> scheme, for example). For example, the
-		user may have their browser configured to deny permission to persist data for the
-		specified origin.</dd>
+  <dt><code>SecurityError</code></dt>
+  <dd>The request violates a policy decision, or the origin is not <a href="/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin">a valid scheme/host/port tuple</a> (this can happen if the origin uses the <code>file:</code> or <code>data:</code> schemes, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.</dd>
 </dl>
+
+<h2 id="Description">Description</h2>
+
+<p>The keys and the values stored with <code>localStorage</code> are <em>always</em> in the UTF-16 {{domxref("DOMString")}} format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.</p>
+
+<p><code>localStorage</code> data <strong>is specific to the protocol of the document</strong>. In particular, for a site loaded over HTTP (e.g., <code>http://example.com</code>), <code>localStorage</code> returns a different object than <code>localStorage</code> for the corresponding site loaded over HTTPS (e.g., <code>https://example.com</code>).</p>
+
+<p>For documents loaded from <code>file:</code> URLs (that is, files opened in the browser directly from the user’s local filesystem, rather than being served from a web server) the requirements for <code>localStorage</code> behavior are undefined and may vary among different browsers.</p>
+
+<p>In all current browsers, <code>localStorage</code> seems to return a different object for each <code>file:</code> URL. In other words, each <code>file:</code> URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn’t rely on it because, as mentioned above, the requirements for <code>file:</code> URLs remains undefined. So it’s possible that browsers may change their <code>file:</code> URL handling for <code>localStorage</code> at any time. In fact some browsers <em>have</em> changed their handling for it over time.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object
-	and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.</p>
+<p>The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.</p>
 
-<pre class="brush: js notranslate">localStorage.setItem('myCat', 'Tom');</pre>
+<pre class="brush: js">localStorage.setItem('myCat', 'Tom');</pre>
 
 <p>The syntax for reading the <code>localStorage</code> item is as follows:</p>
 
-<pre class="brush: js notranslate">const cat = localStorage.getItem('myCat');</pre>
+<pre class="brush: js">const cat = localStorage.getItem('myCat');</pre>
 
 <p>The syntax for removing the <code>localStorage</code> item is as follows:</p>
 
-<pre class="brush: js notranslate">localStorage.removeItem('myCat');</pre>
+<pre class="brush: js">localStorage.removeItem('myCat');</pre>
 
 <p>The syntax for removing all the <code>localStorage</code> items is as follows:</p>
 
-<pre class="brush: js notranslate">localStorage.clear();
+<pre class="brush: js">localStorage.clear();
 </pre>
 
-<div class="note">
-	<p><strong>Note</strong>: Please refer to the <a
-			href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-			Web Storage API</a> article for a full example.</p>
+<div class="note"> <p><strong>Note</strong>: Please refer to the <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> article for a full example.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("HTML WHATWG", "webstorage.html#dom-localstorage",
-				"localStorage")}}</td>
-			<td>{{Spec2("HTML WHATWG")}}</td>
-			<td></td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "webstorage.html#dom-localstorage",
+        "localStorage")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -110,7 +89,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-			Web Storage API</a></li>
-	<li>{{DOMxRef("Window.sessionStorage")}}</li>
+  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
+  <li>{{DOMxRef("Window.sessionStorage")}}</li>
 </ul>

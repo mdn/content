@@ -39,7 +39,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>promise</em> = navigator.clipboard.read();</pre>
+  class="brush: js">var <em>promise</em> = navigator.clipboard.read();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +59,7 @@ tags:
   image, an error message is presented. Otherwise, an image element referred to using the
   variable <code>imgElem</code> has its source replaced with the clipboard's contents.</p>
 
-<pre class="brush: js notranslate">// First, ask the Permissions API if we have some kind of access to
+<pre class="brush: js">// First, ask the Permissions API if we have some kind of access to
 // the "clipboard-read" feature.
 
 navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {

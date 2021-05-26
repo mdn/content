@@ -8,6 +8,7 @@ tags:
 - Reference
 - RegExp
 - Regular Expressions
+browser-compat: javascript.builtins.RegExp.@@matchAll
 ---
 <div>{{JSRef}}</div>
 
@@ -17,15 +18,10 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 </div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
+<pre class="brush: js"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +40,7 @@ tags:
 <p>This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For
   example, the following two examples return same result.</p>
 
-<pre class="brush: js notranslate">'abc'.matchAll(/a/);
+<pre class="brush: js">'abc'.matchAll(/a/);
 
 /a/[Symbol.matchAll]('abc');</pre>
 
@@ -59,7 +55,7 @@ tags:
   {{jsxref("String.prototype.matchAll()")}}, except for the different value of
   <code>this</code> and the different order of arguments.</p>
 
-<pre class="brush: js notranslate">let re = /[0-9]+/g;
+<pre class="brush: js">let re = /[0-9]+/g;
 let str = '2016-01-02';
 let result = re[Symbol.matchAll](str);
 
@@ -75,7 +71,7 @@ console.log(Array.from(result, x =&gt; x[0]));
 <p>For example, to return an {{jsxref("Array")}} instead of an <a
     href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a>:</p>
 
-<pre class="brush: js notranslate">class MyRegExp extends RegExp {
+<pre class="brush: js">class MyRegExp extends RegExp {
   [Symbol.matchAll](str) {
     const result = RegExp.prototype[Symbol.matchAll].call(this, str);
     if (!result) {
@@ -95,23 +91,11 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-regexp-prototype-matchall',
-        'RegExp.prototype[@@matchAll]')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp.@@matchAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

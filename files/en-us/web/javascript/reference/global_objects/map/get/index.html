@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Map.get
 ---
 <div>{{JSRef}}</div>
 
@@ -18,15 +19,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>myMap</var>.get(<var>key</var>)</pre>
+<pre class="brush: js">get(key)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -44,7 +40,7 @@ tags:
 
 <h3 id="Using_get">Using get()</h3>
 
-<pre class="brush: js notranslate">let myMap = new Map();
+<pre class="brush: js">let myMap = new Map();
 myMap.set('bar', 'foo');
 
 myMap.get('bar');   // Returns "foo"
@@ -53,20 +49,11 @@ myMap.get('baz');   // Returns undefined
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Map.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -24,7 +24,7 @@ tags:
 
 <p>For example, if you type:</p>
 
-<pre class="brush: js notranslate">function foo() {</pre>
+<pre class="brush: js">function foo() {</pre>
 
 <p>and then <kbd>Enter</kbd>, the Console does not immediately execute the input, but behaves as if you had pressed <kbd>Shift</kbd>+<kbd>Enter</kbd> , so you can finish entering the function definition.</p>
 
@@ -34,7 +34,7 @@ tags:
 
 <p><img alt="Web Console in multi-line mode" src="web_console_multi.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>You can enter multiple lines of JavaScript by default in this mode, pressing <kbd>Enter</kbd> after each one. To execute the snippet that is currently in the editing pane, click the <strong>Run</strong> button or press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or <kbd>Cmd</kbd>+<kbd>Return</kbd> on MacOS). The snippet is echoed under the input prompt (in the right-side pane), followed by the result. You can also select a range of lines in the editing pane, and run just the code on those lines.</p>
+<p>You can enter multiple lines of JavaScript by default in this mode, pressing <kbd>Enter</kbd> after each one. To execute the snippet that is currently in the editing pane, click the <strong>Run</strong> button or press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or <kbd>Cmd</kbd>+<kbd>Return</kbd> on MacOS). The snippet is echoed under the input prompt (in the right-side pane), followed by the result.</p>
 
 <p>Starting in Firefox 76, if the code snippet is more than five lines long, only the first five lines are echoed in the console, preceded by a disclosure triangle (or "twistie"), and followed by an ellipsis (…). Click anywhere in the area containing the echoed code to show the whole snippet; click again in that area to collapse it.</p>
 
@@ -74,7 +74,8 @@ tags:
 <h2 id="Instant_evaluation">Instant evaluation</h2>
 
 <div class="notecard note">
-<p>This feature is available in Firefox Nightly, in versions labeled 74 and later.</p>
+  <h4>Note</h4>
+  <p>This feature is available in Firefox Nightly, in versions labeled 74 and later.</p>
 </div>
 
 <p>When the "instant evaluation" feature is enabled, the interpreter displays results of expressions as you're typing them in single-line mode. Note that the result might be an error message. Expressions that have side effects are not evaluated.</p>
@@ -94,7 +95,8 @@ tags:
 <p>The output is highlighted as well where appropriate.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Syntax highlighting is not visible in your browser if Accessibility features have been enabled.</p>
+  <h4>Note</h4>
+  <p>Syntax highlighting is not visible in your browser if Accessibility features have been enabled.</p>
 </div>
 
 <h2 id="Execution_history">Execution history</h2>
@@ -106,7 +108,7 @@ tags:
 	<li>In multi-line mode, use the  <strong>⋀</strong> and <strong>⋁</strong> icons in the editing panel's toolbar.</li>
 </ul>
 
-<p>The expression history is persisted across sessions. To clear the history, use the <code>clearHistory()</code> <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#helper_commands">helper function</a>.</p>
+<p>The expression history is persisted across sessions. To clear the history, use the <code>clearHistory()</code> <a href="#helper_commands">helper function</a>.</p>
 
 <p>You can initiate a reverse search through the expression history, much like you can in bash on Linux and Mac or PowerShell on Windows. On Windows and Linux press <kbd>F9</kbd>. On Mac press <kbd>Ctrl</kbd>+<kbd>R</kbd> (<strong>note:</strong> not <kbd>Cmd</kbd>+<kbd>R</kbd>!) to initiate the reverse search.</p>
 
@@ -122,69 +124,9 @@ tags:
 
 <h2 id="Working_with_iframes">Working with iframes</h2>
 
-<div class="notecard warning">
-<p>Deprecated since Firefox 74 ({{Bug(1605327)}}); see <a href="/en-US/docs/Tools/Working_with_iframes">Working with iframes</a> for the newer, more-reliable technique. (<code>cd()</code> apparently never worked well cross-origin.)</p>
-</div>
-
-<p>If a page contains embedded <a href="/en-US/docs/Web/HTML/Element/iframe">iframes</a>, you can use the <code>cd()</code> function to change the console's scope to a specific iframe, and then you can execute functions defined in the document hosted by that iframe. There are three ways to select an iframe using <code>cd()</code>:</p>
-
-<p>You can pass the iframe DOM element:</p>
-
-<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
-cd(frame);</pre>
-
-<p>You can pass a CSS selector that matches the iframe:</p>
-
-<pre class="brush: js notranslate">cd("#frame1");</pre>
-
-<p>You can pass the iframe's global window object:</p>
-
-<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
-cd(frame.contentWindow);
-</pre>
-
-<p>To switch the context back to the top-level window, call <code>cd()</code> with no arguments:</p>
-
-<pre class="brush: js notranslate">cd();</pre>
-
-<p>For example, suppose we have a document that embeds an iframe:</p>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;iframe id="frame1" src="static/frame/my-frame1.html"&gt;&lt;/iframe&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<p>The iframe defines a new function:</p>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;script&gt;
-      function whoAreYou() {
-        return "I'm frame1";
-      }
-   &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<p>You can switch context to the iframe like this:</p>
-
-<pre class="brush: js notranslate">cd("#frame1");</pre>
-
-<p>Now you'll see that the global window's document is the iframe:</p>
-
-<p><img alt="" src="web-console-iframe-document.png" style="display: block; margin-left: auto; margin-right: auto;">And you can call the function defined in the iframe:</p>
-
-<p><img alt="" src="web-console-iframe-function.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><a href="/en-US/docs/Tools/Working_with_iframes">Working with iframes</a> explains how to direct all debugging tools to target a particular iframe, including the command line interpreter.</p>
 
 <h2 id="Helper_commands">Helper commands</h2>
 
-<p>{{ page("en-US/docs/Tools/Web_Console/Helpers", "The commands") }}</p>
+<p>The JavaScript command line provided by the Web Console offers a few built-in helper functions that make certain tasks easier.
+  For more information see <a href="/en-US/docs/Tools/Web_Console/Helpers">Web Console Helpers</a>.</p>

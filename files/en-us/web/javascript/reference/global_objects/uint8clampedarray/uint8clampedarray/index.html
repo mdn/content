@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Reference
 - TypedArray
+browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
 ---
 <div>{{JSRef}}</div>
 
@@ -18,12 +19,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">new Uint8ClampedArray(); // new in ES2017
-new Uint8ClampedArray(<var>length</var>);
-new Uint8ClampedArray(<var>typedArray</var>);
-new Uint8ClampedArray(<var>object</var>);
-new Uint8ClampedArray(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);</pre>
+<pre class="brush: js">
+new Uint8ClampedArray(); // new in ES2017
+new Uint8ClampedArray(length);
+new Uint8ClampedArray(typedArray);
+new Uint8ClampedArray(object);
+
+new Uint8ClampedArray(buffer);
+new Uint8ClampedArray(buffer, byteOffset);
+new Uint8ClampedArray(buffer, byteOffset, length);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -59,7 +64,7 @@ new Uint8ClampedArray(<var>buffer</var> [, <var>byteOffset</var> [, <var>length<
 <h3 id="Different_ways_to_create_a_Uint8ClampedArray">Different ways to create a
   Uint8ClampedArray</h3>
 
-<pre class="brush: js notranslate">// From a length
+<pre class="brush: js">// From a length
 var uintc8 = new Uint8ClampedArray(2);
 uintc8[0] = 42;
 uintc8[1] = 1337;
@@ -89,23 +94,11 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray
-        constructors')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Uint8ClampedArray.Uint8ClampedArray")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
@@ -114,12 +107,12 @@ var uintc8 = new Uint8ClampedArray(iterable);
   <code>Uint8ClampedArray</code> constructor as a function without <code>new</code>, will
   throw a {{jsxref("TypeError")}} from now on.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = Uint8ClampedArray([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Uint8ClampedArray([1, 2, 3]);
 // TypeError: calling a builtin Uint8ClampedArray constructor
 // without new is forbidden</pre>
 
 <pre
-  class="brush: js example-good notranslate">var dv = new Uint8ClampedArray([1, 2, 3]);</pre>
+  class="brush: js example-good">var dv = new Uint8ClampedArray([1, 2, 3]);</pre>
 
 <h2 id="See_also">See also</h2>
 

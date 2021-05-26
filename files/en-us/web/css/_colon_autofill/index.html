@@ -6,10 +6,11 @@ tags:
   - Pseudo-class
   - Reference
   - Selector
+browser-compat: css.selectors.autofill
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:autofill</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class must stop matching if the user edits the field.</p>
+<p>The <strong><code>:autofill</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.</p>
 
 <div class="notecard note"><p><strong>Note:</strong> The user agent style sheets of many browsers use <code>!important</code> in their <code>:-webkit-autofill</code> style declarations, making them non-overrideable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:</p>
 <pre class="brush:css">background-color: rgb(232, 240, 254) !important;
@@ -41,7 +42,7 @@ input:autofill {
 
 <pre class="brush: html">&lt;form method="post" action=""&gt;
   &lt;label for="email"&gt;Email&lt;/label&gt; &lt;input type="email" name="email" id="email" autocomplete="email"&gt;
-&lt;form&gt;
+&lt;/form&gt;
 </pre>
 
 <p>{{EmbedLiveSample('Examples')}}</p>
@@ -67,7 +68,7 @@ input:autofill {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.autofill")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

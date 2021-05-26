@@ -7,6 +7,7 @@ tags:
 - JavaScript
 - Method
 - Reference
+browser-compat: javascript.builtins.JSON.parse
 ---
 <div>{{JSRef}}</div>
 
@@ -17,15 +18,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">JSON.parse(<var>text</var>[, <var>reviver</var>])</pre>
+<pre class="brush: js">
+JSON.parse(text)
+JSON.parse(text, reviver)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,7 +49,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
+<pre class="brush: js">// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
 if (typeof JSON.parse !== "function") {
     var rx_one = /^[\],:{}\s]*$/;
     var rx_two = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g;
@@ -151,7 +150,7 @@ if (typeof JSON.parse !== "function") {
 
 <h3 id="Using_JSON.parse">Using JSON.parse()</h3>
 
-<pre class="brush: js notranslate">JSON.parse('{}');              // {}
+<pre class="brush: js">JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
@@ -175,7 +174,7 @@ JSON.parse('null');            // null
   certain to return all untransformed values as-is, otherwise, they will be deleted from
   the resulting object.</p>
 
-<pre class="brush: js notranslate">JSON.parse('{"p": 5}', (key, value) =&gt;
+<pre class="brush: js">JSON.parse('{"p": 5}', (key, value) =&gt;
   typeof value === 'number'
     ? value * 2 // return value * 2 for numbers
     : value     // return everything else unchanged
@@ -200,7 +199,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; 
 <h3 id="JSON.parse_does_not_allow_trailing_commas">JSON.parse() does not allow trailing
   commas</h3>
 
-<pre class="brush: js example-bad notranslate">// both will throw a SyntaxError
+<pre class="brush: js example-bad">// both will throw a SyntaxError
 JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
 </pre>
@@ -208,28 +207,17 @@ JSON.parse('{"foo" : 1, }');
 <h3 id="JSON.parse_does_not_allow_single_quotes">JSON.parse() does not allow single quotes
 </h3>
 
-<pre class="brush: js example-bad notranslate">// will throw a SyntaxError
+<pre class="brush: js example-bad">// will throw a SyntaxError
 JSON.parse("{'foo': 1}");
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.JSON.parse")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

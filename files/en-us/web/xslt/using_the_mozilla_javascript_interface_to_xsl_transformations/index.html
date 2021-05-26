@@ -10,16 +10,17 @@ tags:
 
 <p>To start, you need to create an {{domxref("XSLTProcessor")}} object:</p>
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var processor = new XSLTProcessor();
-</pre>
-</div>
+
+<pre class="brush: js">var processor = new XSLTProcessor();</pre>
 
 <h3 id="Specifying_the_stylesheet">Specifying the stylesheet</h3>
 
 <p>Before you can use it, you must import a stylesheet with the {{domxref("XSLTProcessor.importStylesheet()")}} method. It has a single parameter, which is the DOM Node of the XSLT stylesheet to import.</p>
 
-<p>{{ note("The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.") }}</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.</p>
+</div>
 
 <pre class="brush: js">var testTransform = document.implementation.createDocument("", "test", null);
 // just an example to get a transform into a script as a DOM
@@ -32,7 +33,7 @@ function onload() {
 }
 </pre>
 
-<p>{{domxref("XSLTProcessor.importStylesheet()")}} requires one argument, a DOM Node. If that node is a document node, you can pass in a full XSL Transform or a <a class="external" href="https://www.w3.org/TR/xslt#result-element-stylesheet">literal result element transform</a>, otherwise it must be an <code>xsl:stylesheet</code> or <code>xsl:transform</code> element.</p>
+<p>{{domxref("XSLTProcessor.importStylesheet()")}} requires one argument, a DOM Node. If that node is a document node, you can pass in a full XSL Transform or a <a href="https://www.w3.org/TR/xslt#result-element-stylesheet">literal result element transform</a>, otherwise it must be an <code>xsl:stylesheet</code> or <code>xsl:transform</code> element.</p>
 
 <h3 id="Transforming_the_document">Transforming the document</h3>
 
@@ -45,7 +46,7 @@ function onload() {
 <pre class="brush: js">var newDocument = processor.transformToDocument(domToBeTransformed);
 </pre>
 
-<p>The resultant object depends on the <a class="external" href="https://www.w3.org/TR/xslt#output">output method</a> of the stylesheet:</p>
+<p>The resultant object depends on the <a href="https://www.w3.org/TR/xslt#output">output method</a> of the stylesheet:</p>
 
 <ul>
  <li><strong>html</strong> - {{domxref("HTMLDocument")}}</li>
@@ -73,11 +74,11 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 
 <h3 id="Setting_parameters">Setting parameters</h3>
 
-<p>You can control <a class="external" href="https://www.w3.org/TR/xslt#variables">parameters for the stylesheet</a> using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See <a class="external" href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters">The XSLT/JavaScript Interface in Gecko</a> for an example.</p>
+<p>You can control <a href="https://www.w3.org/TR/xslt#variables">parameters for the stylesheet</a> using the {{domxref("XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor.removeParameter()")}} methods. These all take a namespace URI and a local name as the first two parameters, with {{domxref("XSLTProcessor.setParameter()")}} taking a third - the value of the parameter to be set. See <a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters">The XSLT/JavaScript Interface in Gecko</a> for an example.</p>
 
 <h3 id="Resetting">Resetting</h3>
 
-<p>The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcessor.reset()")}} method, which can be used to remove all stylesheets and parameters then put the processor back into its initial state. This method is implemented in <a href="/en/Gecko">Mozilla</a> 1.3 and later.</p>
+<p>The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcessor.reset()")}} method, which can be used to remove all stylesheets and parameters then put the processor back into its initial state. This method is implemented in Gecko 1.3 and later.</p>
 
 <h3 id="Resources">Resources</h3>
 
@@ -106,8 +107,8 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 <h3 id="See_also">See also</h3>
 
 <ul>
- <li><a href="/en/The_XSLT/JavaScript_Interface_in_Gecko">The XSLT JavaScript Interface in Gecko</a></li>
- <li><a href="/en/DOM/document.load">document.load()</a> regarding the loading of XML documents (as used above)</li>
+ <li><a href="/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">The XSLT JavaScript Interface in Gecko</a></li>
+ <li><a href="/en-US/docs/Web/API/XMLDocument/load">document.load()</a> regarding the loading of XML documents (as used above)</li>
 </ul>
 
 <div class="originaldocinfo">
@@ -119,4 +120,3 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
  <li>Copyright Information: Copyright (C) Mike Hearn</li>
 </ul>
 </div>
-

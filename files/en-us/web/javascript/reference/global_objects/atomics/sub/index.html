@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Shared Memory
+browser-compat: javascript.builtins.Atomics.sub
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.sub(<var>typedArray</var>, <var>index</var>, <var>value</var>)
+<pre class="brush: js">Atomics.sub(<var>typedArray</var>, <var>index</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,7 +55,7 @@ tags:
 
 <h3 id="Using_sub">Using sub</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 48;
 
@@ -64,22 +65,11 @@ Atomics.load(ta, 0); // 36
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-atomics.sub', 'Atomics.sub')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Atomics.sub")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

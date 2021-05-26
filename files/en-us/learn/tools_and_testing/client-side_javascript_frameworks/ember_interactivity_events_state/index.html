@@ -52,7 +52,7 @@ tags:
 
 <p>Add the new line shown below to your <code>header.hbs</code> file:</p>
 
-<pre class="brush: html notranslate">&lt;input
+<pre class="brush: html">&lt;input
   class='new-todo'
   aria-label='What needs to be done?'
   placeholder='What needs to be done?'
@@ -66,11 +66,11 @@ tags:
 
 <p>To create a header class to go with your header component, type this in to your terminal:</p>
 
-<pre class="brush: bash notranslate">ember generate component-class header</pre>
+<pre class="brush: bash">ember generate component-class header</pre>
 
 <p>This will create the following empty class file — <code>todomvc/app/components/header.js</code>:</p>
 
-<pre class="brush: js notranslate">import Component from '@glimmer/component';
+<pre class="brush: js">import Component from '@glimmer/component';
 
 export default class HeaderComponent extends Component {
 
@@ -78,7 +78,7 @@ export default class HeaderComponent extends Component {
 
 <p>Inside this file we will implement the event handler code. Update the content to the following:</p>
 
-<pre class="brush: js notranslate">import Component from '@glimmer/component';
+<pre class="brush: js">import Component from '@glimmer/component';
 import { action } from '@ember/object';
 
 export default class HeaderComponent extends Component {
@@ -114,18 +114,18 @@ export default class HeaderComponent extends Component {
 
 <p>Run this terminal command to generate a service for us to store our todo-list data in:</p>
 
-<pre class="brush: bash notranslate">ember generate service todo-data</pre>
+<pre class="brush: bash">ember generate service todo-data</pre>
 
 <p>This should give you a terminal output like so:</p>
 
-<pre class="notranslate">installing service
+<pre>installing service
   create app/services/todo-data.js
 installing service-test
   create tests/unit/services/todo-data-test.js</pre>
 
 <p>This creates a <code>todo-data.js</code> file inside the <code>todomvc/app/services</code> directory to contain our service, which initially contains an import statement and an empty class:</p>
 
-<pre class="brush: js notranslate">import Service from '@ember/service';
+<pre class="brush: js">import Service from '@ember/service';
 
 export default class TodoDataService extends Service {
 
@@ -135,11 +135,11 @@ export default class TodoDataService extends Service {
 
 <p>Add the following <code>import</code> statement below the existing one:</p>
 
-<pre class="brush: js notranslate">import { tracked } from '@glimmer/tracking';</pre>
+<pre class="brush: js">import { tracked } from '@glimmer/tracking';</pre>
 
 <p>Now add the following class below the previous line you added:</p>
 
-<pre class="brush: js notranslate">class Todo {
+<pre class="brush: js">class Todo {
   @tracked text = '';
   @tracked isCompleted = false;
 
@@ -154,11 +154,11 @@ export default class TodoDataService extends Service {
 
 <p>First add another <code>import</code> statement below the previous one, to make actions available inside the service:</p>
 
-<pre class="brush: js notranslate">import { action } from '@ember/object';</pre>
+<pre class="brush: js">import { action } from '@ember/object';</pre>
 
 <p>Update the existing <code>export default class TodoDataService extends Service { … }</code> block as follows:</p>
 
-<pre class="brush: js notranslate">export default class TodoDataService extends Service {
+<pre class="brush: js">export default class TodoDataService extends Service {
   @tracked todos = [];
 
   @action
@@ -179,15 +179,15 @@ export default class TodoDataService extends Service {
 
 <p>First of all, the service needs to be injected into the template via the <code>@inject</code> decorator, which we’ll rename to <code>@service</code> for semantic clarity. To do this, add the following <code>import</code> line to <code>header.js</code>, beneath the two existing <code>import</code> lines:</p>
 
-<pre class="brush: js notranslate">import { inject as service } from '@ember/service';</pre>
+<pre class="brush: js">import { inject as service } from '@ember/service';</pre>
 
 <p>With this import in place, we can now make the <code>todo-data</code> service available inside the <code>HeaderComponent</code> class via the <code>todos</code> object, using the <code>@service</code> decorator. Add the following line just below the opening <code>export...</code> line:</p>
 
-<pre class="brush: js notranslate">@service('todo-data') todos;</pre>
+<pre class="brush: js">@service('todo-data') todos;</pre>
 
 <p>Now the placeholder <code>alert(text);</code> line can be replaced with a call to our new <code>add()</code> function. Replace it with the following:</p>
 
-<pre class="brush: js notranslate">this.todos.add(text);</pre>
+<pre class="brush: js">this.todos.add(text);</pre>
 
 <p>If we try this out in the todo app in our browser (<code>npm start</code>, go to <code>localhost:4200</code>), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the <a href="https://guides.emberjs.com/release/ember-inspector/installation/">Ember Inspector</a> however, we can see that our todo was added:</p>
 
@@ -199,13 +199,13 @@ export default class TodoDataService extends Service {
 
 <p>In order to retrieve the todos from the service, our <code>TodoList</code> component first needs a backing component class to contain this functionality. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to stop the development server, and enter the following terminal command:</p>
 
-<pre class="brush: bash notranslate">ember generate component-class todo-list</pre>
+<pre class="brush: bash">ember generate component-class todo-list</pre>
 
 <p>This generates the new component class <code>todomvc/app/components/todo-list.js</code>.</p>
 
 <p>Populate this file with the following code, which exposes the <code>todo-data</code> service, via the <code>todos</code> property, to our template. This makes it accessible via <code>this.todos</code> inside both the class and the template:</p>
 
-<pre class="brush: js notranslate">import Component from '@glimmer/component';
+<pre class="brush: js">import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 
 export default class TodoListComponent extends Component {
@@ -216,18 +216,18 @@ export default class TodoListComponent extends Component {
 
 <p>To do this, go back to your <code>todo-data.js</code> file and add the following below the <code>@tracked todos = [];</code> line:</p>
 
-<pre class="brush: js notranslate">get all() {
+<pre class="brush: js">get all() {
   return this.todos;
 }</pre>
 
 <p>Now we can access the data using <code>this.todos.all</code>, which is much more intuitive. To put this in action, go to your <code>todo-list.hbs</code> component, and replace the static component calls:</p>
 
-<pre class="brush: js notranslate">&lt;Todo /&gt;
+<pre class="brush: js">&lt;Todo /&gt;
 &lt;Todo /&gt;</pre>
 
 <p>With a dynamic <code>#each</code> block (which is basically syntactic sugar over the top of JavaScript's <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>) that creates a <code>&lt;Todo /&gt;</code> component for each todo available in the list of todos returned by the service’s <code>all()</code> getter:</p>
 
-<pre class="brush: js notranslate" dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">\{{#each this.todos.all as |todo|}}
+<pre class="brush: js" dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">\{{#each this.todos.all as |todo|}}
   &lt;Todo @todo=\{{todo}} /&gt;
 \{{/each}}</pre>
 
@@ -243,11 +243,11 @@ export default class TodoListComponent extends Component {
 
 <p>This is because the text label inside each list item is hardcoded to that text, as seen in <code>todo.hbs</code>:</p>
 
-<pre class="brush: html notranslate">&lt;label&gt;Buy Movie Tickets&lt;/label&gt;</pre>
+<pre class="brush: html">&lt;label&gt;Buy Movie Tickets&lt;/label&gt;</pre>
 
 <p>Update this line to use the Argument <code>@todo</code> — which will represent the Todo that we passed in to this component when it was invoked in <code>todo-list.hbs</code>, in the line <code>&lt;Todo @todo=\{{todo}} /&gt;</code>:</p>
 
-<pre class="brush: js notranslate">&lt;label&gt;\{{@todo.text}}&lt;/label&gt;</pre>
+<pre class="brush: js">&lt;label&gt;\{{@todo.text}}&lt;/label&gt;</pre>
 
 <p>OK, try it again. You should find that now the text submitted in the <code>&lt;input&gt;</code> is properly reflected in the UI:</p>
 
@@ -309,5 +309,15 @@ export default class TodoListComponent extends Component {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

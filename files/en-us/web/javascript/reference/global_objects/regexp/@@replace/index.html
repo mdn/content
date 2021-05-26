@@ -8,6 +8,7 @@ tags:
 - Reference
 - RegExp
 - Regular Expressions
+browser-compat: javascript.builtins.RegExp.@@replace
 ---
 <div>{{JSRef}}</div>
 
@@ -18,15 +19,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>regexp</var>[Symbol.replace](<var>str<var>, <var>newSubStr</var>|<var>function</var>)</var></var></pre>
+<pre class="brush: js"><var>regexp</var>[Symbol.replace](<var>str<var>, <var>newSubStr</var>|<var>function</var>)</var></var></pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +51,7 @@ tags:
   <code>pattern</code> argument is a {{jsxref("RegExp")}} object.  For example, following
   two examples return same result.</p>
 
-<pre class="brush: js notranslate">'abc'.replace(/a/, 'A');
+<pre class="brush: js">'abc'.replace(/a/, 'A');
 
 /a/[Symbol.replace]('abc', 'A');</pre>
 
@@ -74,7 +70,7 @@ tags:
   {{jsxref("String.prototype.replace()")}}, except the different <code>this</code> and the
   different arguments order.</p>
 
-<pre class="brush: js notranslate">var re = /-/g;
+<pre class="brush: js">var re = /-/g;
 var str = '2016-01-01';
 var newstr = re[Symbol.replace](str, '.');
 console.log(newstr);  // 2016.01.01
@@ -85,7 +81,7 @@ console.log(newstr);  // 2016.01.01
 <p>Subclasses of {{jsxref("RegExp")}} can override the <code>[@@replace]()</code> method
   to modify the default behavior.</p>
 
-<pre class="brush: js notranslate">class MyRegExp extends RegExp {
+<pre class="brush: js">class MyRegExp extends RegExp {
   constructor(pattern, flags, count) {
     super(pattern, flags);
     this.count = count;
@@ -107,24 +103,11 @@ console.log(newstr); // ###34567</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@replace',
-        'RegExp.prototype[@@replace]')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.RegExp.@@replace")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

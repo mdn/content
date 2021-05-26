@@ -1,0 +1,87 @@
+---
+title: Firefox 89 for developers
+slug: Mozilla/Firefox/Releases/89
+tags:
+  - '89'
+  - Firefox
+  - Mozilla
+  - Release
+---
+<p>{{FirefoxSidebar}}{{draft}}</p>
+
+<p class="summary">This article provides information about the changes in Firefox 89 that will affect developers. Firefox 89 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">June 1, 2021</a>.</p>
+
+<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+
+<h3 id="Developer_Tools">Developer Tools</h3>
+
+<h4 id="removals_devtools">Removals</h4>
+
+<h3 id="HTML">HTML</h3>
+
+<h4 id="removals_html">Removals</h4>
+
+<h3 id="CSS">CSS</h3>
+
+<ul>
+  <li>The {{cssxref("@media/forced-colors","forced-colors")}} media feature has been implemented ({{bug(1659511)}}).</li>
+  <li>The {{cssxref("@font-face/ascent-override", "ascent-override")}}, {{cssxref("@font-face/descent-override", "descent-override")}}, and {{cssxref("@font-face/line-gap-override", "line-gap-override")}} <code>@font-face</code> descriptors have been implemented ({{bug(1681691)}}) and ({{bug(1704494)}}).</li>
+  <li>The <code>type()</code> function for {{cssxref("image-set()","image-set()")}} has been implemented ({{bug(1695404)}}).</li>
+</ul>
+
+<h4 id="removals_css">Removals</h4>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>s can now be created with a length greater than 2GB-1 (up to 8GB) on 64-bit systems ({{bug(1703505)}}).</li>
+</ul>
+
+<h4 id="removals_js">Removals</h4>
+
+<h3 id="HTTP">HTTP</h3>
+
+<h4 id="removals_http">Removals</h4>
+
+<h3 id="Security">Security</h3>
+
+<h4 id="removals_sec">Removals</h4>
+
+<h3 id="APIs">APIs</h3>
+
+<h4 id="DOM">DOM</h4>
+
+<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+
+<h4 id="removals_media">Removals</h4>
+
+<ul>
+  <li>The following sensor events and their associated handlers have been removed (primarily for better compatibility with other major browser engines, and to address concerns related to privacy leaks):
+     <ul>
+       <li>{{domxref("DeviceProximityEvent")}} and its event handler <code>window.ondeviceproximity</code> ({{bug(1699707)}}).</li>
+       <li>{{domxref("UserProximityEvent")}} and its event handler <code>window.onuserproximity</code>) ({{bug(1699707)}})</li>
+       <li>{{domxref("DeviceLightEvent")}} and its event handler <code>window.ondevicelight</code> ({{bug(1701824)}}).</li>
+     </ul>
+  </li>
+ </ul>
+
+
+<h3 id="WebAssembly">WebAssembly</h3>
+
+<h4 id="removals_wasm">Removals</h4>
+
+<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<h4 id="removals_webdriver">Removals</h4>
+
+<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+
+<ul>
+  <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading">Dynamic JS module imports</a> are now working in WebExtension content scripts ({{bug(1536094)}}).</li>
+</ul>
+
+<h4 id="removals_webext">Removals</h4>
+
+<h2 id="Older_versions">Older versions</h2>
+
+<p>{{Firefox_for_developers(88)}}</p>

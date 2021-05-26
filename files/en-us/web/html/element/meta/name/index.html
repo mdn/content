@@ -98,7 +98,7 @@ tags:
 
   <p>For example, to indicate that a document prefers dark mode but does render functionally in light mode as well:</p>
 
-  <pre class="brush: html notranslate">&lt;meta name="color-scheme" content="dark light"&gt;</pre>
+  <pre class="brush: html">&lt;meta name="color-scheme" content="dark light"&gt;</pre>
 
   <p>This works at the document level in the same way that the CSS {{cssxref("color-scheme")}} property lets individual elements specify their preferred and accepted color schemes. Your styles can adapt to the current color scheme using the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} CSS media feature.</p>
  </li>
@@ -180,7 +180,7 @@ tags:
   <div>Disabling zooming capabilities by setting <code>user-scalable</code> to a value of <code>no</code> prevents people experiencing low vision conditions from being able to read and understand page content.</div>
 
   <ul>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
    <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
   </ul>
 
@@ -192,7 +192,7 @@ tags:
 
 <h3 id="Other_metadata_names">Other metadata names</h3>
 
-<p>The <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:</p>
+<p>The <a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:</p>
 
 <ul>
  <li><code>creator</code>: the name of the creator of the document, such as an organization or institution. If there are more than one, several {{HTMLElement("meta")}} elements should be used.</li>
@@ -232,32 +232,32 @@ tags:
     <tr>
      <td><code>all</code></td>
      <td>Equivalent to <code>index, follow</code></td>
-     <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
+     <td><a href="https://support.google.com/webmasters/answer/79812">Google</a></td>
     </tr>
     <tr>
      <td><code>none</code></td>
      <td>Equivalent to <code>noindex, nofollow</code></td>
-     <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
+     <td><a href="https://support.google.com/webmasters/answer/79812">Google</a></td>
     </tr>
     <tr>
      <td><code>noarchive</code></td>
      <td>Requests the search engine not to cache the page content.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a class="external" href="https://help.yahoo.com/kb/search-for-desktop/SLN2213.html">Yahoo</a>, <a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a href="https://help.yahoo.com/kb/search-for-desktop/SLN2213.html">Yahoo</a>, <a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
     <tr>
      <td><code>nosnippet</code></td>
      <td>Prevents displaying any description of the page in search engine results.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>, <a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
     <tr>
      <td><code>noimageindex</code></td>
      <td>Requests this page not to appear as the referring page of an indexed image.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a></td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a></td>
     </tr>
     <tr>
      <td><code>nocache</code></td>
      <td>Synonym of <code>noarchive</code>.</td>
-     <td><a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
    </tbody>
   </table>
@@ -298,6 +298,6 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("html.elements.meta.name")}}</p>

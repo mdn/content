@@ -14,6 +14,7 @@ tags:
   - Reference
   - Time
   - datetime-local
+browser-compat: html.elements.input.input-datetime-local
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
+<p>The control's UI varies in general from browser to browser; at the moment support is patchy, with Chrome/Opera/Edge and Safari 14.1 on desktop and most modern versions of mobile browsers having usable implementations. In other browsers, these degrade gracefully to simple <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> controls.</p>
 
 <p>The control is intended to represent <em>a local date and time</em>, not necessarily <em>the user's local date and time</em>. In other words, an implementation should allow any valid combination of year, month, day, hour, and minute - even if such a combination is invalid in the user's local time zone (such as times within a daylight saving time spring-forward transition gap). Some mobile browsers (particularly on iOS) do not currently implement this correctly.</p>
 
@@ -33,13 +34,13 @@ tags:
 
 <p>For those of you not using a supporting browser, the Chrome/Opera <code>datetime-local</code> control looks like the below screenshot. Clicking the down arrow on the right hand side brings up a date picker to allow you to choose a date; you have to enter the time manually.</p>
 
-<p><img alt="" src="datetime-local-chrome.png" style="display: block; height: 224px; margin: 0px auto; width: 280px;"></p>
+<p><img alt="" src="datetime-local-chrome.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The Edge <code>datetime-local</code> control looks like the below; clicking the date and the time parts of the value bring up two separate pickers for you, so you can easily set both the date and the time. This is somewhat like having <code>date</code> and <code>time</code> widgets both created for you and merged into one.</p>
 
-<p><img alt="" src="datetime-local-picker-edge1.png" style="display: block; height: 398px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="" src="datetime-local-picker-edge1.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="" src="datetime-local-picker-edge2.png" style="display: block; height: 394px; margin: 0px auto; width: 264px;"></p>
+<p><img alt="" src="datetime-local-picker-edge2.png" style="display: block; margin: 0px auto;"></p>
 
 <table class="properties">
  <tbody>
@@ -72,7 +73,7 @@ tags:
 
 <p>You can set a default value for the input by including a date and time inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
-<pre class="brush: html notranslate">&lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
 &lt;input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Value', 600, 60) }}</p>
@@ -83,9 +84,9 @@ tags:
 <p><strong>Note:</strong> Also bear in mind that if such data is submitted via HTTP <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code>, the colon character will need to be escaped for inclusion in the URL parameters, e.g. <code>partydate=2017-06-01T08%3A30</code>. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.</p>
 </div>
 
-<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
+<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} <code>value</code> property, for example:</p>
 
-<pre class="brush: js notranslate">var dateControl = document.querySelector('input[type="datetime-local"]');
+<pre class="brush: js">var dateControl = document.querySelector('input[type="datetime-local"]');
 dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>There are several methods provided by JavaScript's {{jsxref("Date")}} that can be used to convert numeric date information into a properly-formatted string, or you can do it manually. For example, the {{jsxref("Date.toISOString()")}} method can be used for this purpose.</p>
@@ -147,7 +148,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>The simplest use of <code>&lt;input type="datetime-local"&gt;</code> involves a basic <code>&lt;input&gt;</code> and {{htmlelement("label")}} element combination, as seen below:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
     &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
     &lt;input id="party" type="datetime-local" name="partydate"&gt;
 &lt;/form&gt;</pre>
@@ -158,7 +159,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of <code>2017-06-01T08:30</code> and a maximum datetime of <code>2017-06-30T16:30</code>:</p>
 
-<pre class="brush: html notranslate">  &lt;form&gt;
+<pre class="brush: html">  &lt;form&gt;
     &lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
     &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30"&gt;
   &lt;/form&gt;</pre>
@@ -186,11 +187,11 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a <code><a href="/en-US/docs/Web/HTML/Element/input/hidden">hidden</a></code> input type. For example:</p>
 
-<pre class="brush: html notranslate">&lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;</pre>
+<pre class="brush: html">&lt;input type="hidden" id="timezone" name="timezone" value="-08:00"&gt;</pre>
 
 <p>On the other hand, if you were required to allow the user to enter a timezone along with a date/time input, you could provide a means of inputting a timezone, such as a {{htmlelement("select")}} element:</p>
 
-<pre class="brush: html notranslate">&lt;select name="timezone_offset" id="timezone-offset" class="span5"&gt;
+<pre class="brush: html">&lt;select name="timezone_offset" id="timezone-offset" class="span5"&gt;
     &lt;option value="-12:00"&gt;(GMT -12:00) Eniwetok, Kwajalein&lt;/option&gt;
     &lt;option value="-11:00"&gt;(GMT -11:00) Midway Island, Samoa&lt;/option&gt;
     &lt;option value="-10:00"&gt;(GMT -10:00) Hawaii&lt;/option&gt;
@@ -216,7 +217,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>Let's look at an example; here we've set minimum and maximum date/time values, and also made the field required:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
     &lt;div&gt;
         &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
         &lt;input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required&gt;
@@ -233,11 +234,11 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="datetime-local-error.png" style="display: block; height: 100px; margin: 0px auto; width: 558px;"></p>
+<p><img alt="" src="datetime-local-error.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -264,9 +265,9 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
+<p>As mentioned above, the major problem with using datetime-local inputs at the time of writing is browser support — Chrome/Opera/Edge and Safari support it on desktop, and most modern browsers on mobile. As an example, the <code>datetime-local</code> picker on Firefox for Android looks like this:</p>
 
-<p><img alt="" src="datetime-local-fxa.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="" src="datetime-local-fxa.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
@@ -285,7 +286,7 @@ input:valid+span:after {
 
 <p>One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your <code>datetime-local</code> input. Even though the <code>datetime-local</code> input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="party"&gt;Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):&lt;/label&gt;
     &lt;input id="party" type="datetime-local" name="partydate"
@@ -308,7 +309,7 @@ input:valid+span:after {
 <p>We still have a problem.</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
 }
 
@@ -347,12 +348,12 @@ input:valid + span:after {
 
 <p>The problem is with the client side of things: parsing of dates with more than 4 digits in the year.</p>
 
-<pre class="brush: html notranslate">&lt;!--midnight of January 1st, 10000: the exact time of Y10K--&gt;
+<pre class="brush: html">&lt;!--midnight of January 1st, 10000: the exact time of Y10K--&gt;
 &lt;input type="datetime-local" value="+010000-01-01T05:00"/&gt;</pre>
 
 <p>It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:</p>
 
-<pre class="brush: js notranslate">function setValue(element, date) {
+<pre class="brush: js">function setValue(element, date) {
     var isoString = date.toISOString()
     element.value = isoString.substring(0, (isoString.indexOf("T")|0) + 6|0);
 }</pre>
@@ -367,7 +368,7 @@ input:valid + span:after {
 
 <p>The HTML looks like so:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div class="nativeDateTimePicker"&gt;
     &lt;label for="party"&gt;Choose a date and time for your party:&lt;/label&gt;
     &lt;input type="datetime-local" id="party" name="bday"&gt;
@@ -422,7 +423,7 @@ input:valid + span:after {
 <p>The months are hard-coded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year respectively (see the code comments below for detailed explanations of how these functions work.) We also decided to dynamically generate the hours and minutes, as there are so many of them!</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -450,7 +451,7 @@ input:valid+span:after {
 
 <p>The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports <code>&lt;input type="datetime-local"&gt;</code>, we create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>datetime-local</code>, then immediately check what its type is set to. Browsers that don't support <code>datetime-local</code> return <code>text</code>, since that's what <code>datetime-local</code> falls back to. If <code>&lt;input type="datetime-local"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.</p>
 
-<pre class="brush: js notranslate">// define variables
+<pre class="brush: js">// define variables
 var nativePicker = document.querySelector('.nativeDateTimePicker');
 var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
 var fallbackLabel = document.querySelector('.fallbackLabel');
@@ -598,31 +599,11 @@ daySelect.onchange = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-datetime-local")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -630,6 +611,6 @@ daySelect.onchange = function() {
  <li>The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code></li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">Date and time formats used in HTML</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#Date_and_time_picker">Date and Time picker tutorial</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker">Date and Time picker tutorial</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Compatibility of CSS properties</a></li>
 </ul>

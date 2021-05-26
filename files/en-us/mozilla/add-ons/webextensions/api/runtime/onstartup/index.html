@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.runtime.onStartup.addListener(<var>listener</var>)
+<pre class="brush: js">browser.runtime.onStartup.addListener(<var>listener</var>)
 browser.runtime.onStartup.removeListener(<var>listener</var>)
 browser.runtime.onStartup.hasListener(<var>listener</var>)
 </pre>
@@ -57,7 +57,7 @@ browser.runtime.onStartup.hasListener(<var>listener</var>)
 
 <p>Open <a href="https://giphy.com/explore/cat">https://giphy.com/explore/cat</a> when the browser starts up:</p>
 
-<pre class="notranslate brush: js">function handleStartup() {
+<pre class="brush: js">function handleStartup() {
   browser.tabs.create({
     url: "https://giphy.com/explore/cat"
   });

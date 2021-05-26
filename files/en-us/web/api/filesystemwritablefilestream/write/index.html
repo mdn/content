@@ -2,13 +2,13 @@
 title: FileSystemWritableFileStream.write()
 slug: Web/API/FileSystemWritableFileStream/write
 tags:
-- File
-- File System Access API
-- FileSystemWritableFileStream
-- Method
-- stream
-- working with files
-- write
+  - File
+  - File System Access API
+  - FileSystemWritableFileStream
+  - Method
+  - stream
+  - working with files
+  - write
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">FileSystemWritableFileStream.write(data).then(...);</pre>
+  class="brush: js">FileSystemWritableFileStream.write(data).then(...);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -77,7 +77,7 @@ tags:
 <p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently
   closed.</p>
 
-<pre class="brush: js notranslate">async function saveFile() {
+<pre class="brush: js">async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -96,7 +96,7 @@ tags:
 <p>The following show different examples of options that can be passed into the
   <code>write()</code> method.</p>
 
-<pre class="brush: js notranslate">// just pass in the data (no options)
+<pre class="brush: js">// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position
@@ -119,8 +119,7 @@ writableStream.write({ type: "truncate", size: size })
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('File System Access
-        API','#api-filesystemwritablefilestream-write','write')}}</td>
+      <td>{{SpecName('File System Access API','#api-filesystemwritablefilestream-write','write')}}</td>
       <td>{{Spec2('File System Access API')}}</td>
       <td>Initial definition.</td>
     </tr>
@@ -134,7 +133,7 @@ writableStream.write({ type: "truncate", size: size })
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
   <li><a href="https://web.dev/file-system-access/">The File System Access API:
       simplifying access to local files</a></li>
 </ul>

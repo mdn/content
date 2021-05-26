@@ -2,52 +2,50 @@
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 tags:
-- API
-- Audio
-- AudioContext
-- BaseAudioContext
-- Buffer
-- Media
-- Method
-- Reference
-- Web Audio
-- Web Audio API
-- createBuffer
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - Buffer
+  - Media
+  - Method
+  - Reference
+  - Web Audio
+  - Web Audio API
+  - createBuffer
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <code>createBuffer()</code> method of the {{ domxref("BaseAudioContext") }}
-    Interface is used to create a new, empty {{ domxref("AudioBuffer") }} object, which
-    can then be populated by data, and played via an {{ domxref("AudioBufferSourceNode")
-    }}</p>
+<p>The <code>createBuffer()</code> method of the {{ domxref("BaseAudioContext") }}
+  Interface is used to create a new, empty {{ domxref("AudioBuffer") }} object, which
+  can then be populated by data, and played via an {{ domxref("AudioBufferSourceNode")
+  }}</p>
 
-  <p>For more details about audio buffers, check out the {{ domxref("AudioBuffer") }}
-    reference page.</p>
-</div>
+<p>For more details about audio buffers, check out the {{ domxref("AudioBuffer") }}
+  reference page.</p>
 
 <div class="note">
   <p><strong>Note</strong>: <code>createBuffer()</code> used to be able to take compressed
-    data and give back decoded samples, but this ability was removed from the spec,
-    because all the decoding was done on the main thread, therefore
+    data and give back decoded samples, but this ability was removed from the specification,
+    because all the decoding was done on the main thread, so
     <code>createBuffer()</code> was blocking other code execution. The asynchronous method
-    <code>decodeAudioData()</code> does the same thing — takes compressed audio, say, an
+    <code>decodeAudioData()</code> does the same thing — takes compressed audio, such as an
     MP3 file, and directly gives you back an {{ domxref("AudioBuffer") }} that you can
-    then set to play via in an {{ domxref("AudioBufferSourceNode") }}. For simple uses
+    then play via an {{ domxref("AudioBufferSourceNode") }}. For simple use cases
     like playing an MP3, <code>decodeAudioData()</code> is what you should be using.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>buffer</em> = <em>baseAudioContext</em>.createBuffer(<em>numOfchannels</em>, <em>length</em>, <em>sampleRate</em>);</pre>
+  class="brush: js">var <em>buffer</em> = <em>baseAudioContext</em>.createBuffer(<em>numOfchannels</em>, <em>length</em>, <em>sampleRate</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <div class="note">
   <p><strong>Note</strong>: For an in-depth explanation of how audio buffers work, and
     what these parameters mean, read <a
-      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">Audio
+      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">Audio
       buffers: frames, samples and channels</a> from our Basic concepts guide.</p>
 </div>
 
@@ -165,14 +163,11 @@ source.start();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BaseAudioContext.createBuffer")}}</p>
-</div>
+<p>{{Compat("api.BaseAudioContext.createBuffer")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

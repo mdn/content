@@ -10,7 +10,7 @@ tags:
 - Property
 - Reference
 ---
-<div>{{APIRef("Canvas API")}}{{non-standard_header}}</div>
+<div>{{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}</div>
 
 <p>The non-standard <strong><code>HTMLCanvasElement.mozOpaque</code></strong> property is
   a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML
@@ -18,14 +18,17 @@ tags:
   not translucency will be a factor. If the canvas knows there's no translucency, painting
   performance can be optimized.</p>
 
-<p class="note">This has been standardized as setting the <code>alpha</code> option to
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This has been standardized as setting the <code>alpha</code> option to
   <code>false</code> when creating a drawing context with
   {{domxref("HTMLCanvasElement.getContext()")}}. Use of <code>mozOpaque</code> should be
   avoided. Firefox will stop supporting it in the future.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>opaque</em> = <em>canvas</em>.mozOpaque;
+<pre class="brush: js">var <em>opaque</em> = <em>canvas</em>.mozOpaque;
 <em>canvas</em>.mozOpaque = true;
 </pre>
 

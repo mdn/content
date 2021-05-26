@@ -11,6 +11,7 @@ tags:
   - polyfill
   - at
   - Experimental
+browser-compat: javascript.builtins.TypedArray.at
 ---
 <div>{{JSRef}}</div>
 
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>item</var> = typedArr.at(index)</pre>
+<pre class="brush: js">at(index)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -42,7 +43,7 @@ tags:
 
 <p>The following example provides a function which returns the last element found in a specified array.</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
 // A function which returns the last item of a given array
@@ -58,7 +59,7 @@ console.log(lastItem); // Logs: 18
 
 <p>Here we compare different ways to select the penultimate (last but one) item of a {{jsxref('TypedArray')}}. Whilst all below methods are valid, it highlights the succinctness and readability of the <code>at()</code> method.</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 // Our typed array with values
 const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
 
@@ -77,24 +78,12 @@ console.log(atWay); // Logs: 11
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Relative Indexing Method', '#sec-%typedarray.prototype%-additions', 'Relative Indexing Method')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
-<p>{{Compat("javascript.builtins.TypedArray.at")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

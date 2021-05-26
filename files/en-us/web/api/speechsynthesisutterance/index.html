@@ -75,7 +75,7 @@ tags:
 
 <p>Inside the <code>inputForm.onsubmit</code> handler, we stop the form submitting with {{domxref("Event.preventDefault","preventDefault()")}}, use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.</p>
 
-<pre class="brush: js notranslate">var synth = window.speechSynthesis;
+<pre class="brush: js">var synth = window.speechSynthesis;
 var voices = synth.getVoices();
 
 var inputForm = document.querySelector('form');
@@ -117,10 +117,7 @@ inputForm.onsubmit = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesisUtterance")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

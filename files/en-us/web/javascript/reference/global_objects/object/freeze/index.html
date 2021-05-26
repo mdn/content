@@ -13,6 +13,7 @@ tags:
 - Reference
 - freeze
 - lock
+browser-compat: javascript.builtins.Object.freeze
 ---
 <div>{{JSRef}}</div>
 
@@ -26,15 +27,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Object.freeze(<var>obj</var>)</pre>
+<pre class="brush: js">Object.freeze(<var>obj</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,7 +64,7 @@ tags:
   cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
   it were a frozen ordinary object, and be returned.</p>
 
-<pre class="brush: js notranslate">&gt; Object.freeze(1)
+<pre class="brush: js">&gt; Object.freeze(1)
 TypeError: 1 is not an object // ES5 code
 
 &gt; Object.freeze(1)
@@ -78,7 +74,7 @@ TypeError: 1 is not an object // ES5 code
 <p>An {{domxref("ArrayBufferView")}} with elements will cause a {{jsxref("TypeError")}},
   as they are views over memory and will definitely cause other possible issues:</p>
 
-<pre class="brush: js notranslate">&gt; Object.freeze(new Uint8Array(0)) // No elements
+<pre class="brush: js">&gt; Object.freeze(new Uint8Array(0)) // No elements
 <em>Uint8Array</em> []
 
 &gt; Object.freeze(new Uint8Array(1)) // Has elements
@@ -109,7 +105,7 @@ TypeError: Cannot freeze array buffer views with elements
 
 <h3 id="Freezing_objects">Freezing objects</h3>
 
-<pre class="brush: js notranslate">const obj = {
+<pre class="brush: js">const obj = {
   prop() {},
   foo: 'bar'
 };
@@ -158,7 +154,7 @@ obj.__proto__ = { x: 20 }
 
 <h3 id="Freezing_arrays">Freezing arrays</h3>
 
-<pre class="brush: js notranslate">let a = [0];
+<pre class="brush: js">let a = [0];
 Object.freeze(a); // The array cannot be modified now.
 
 a[0] = 1; // fails silently
@@ -178,7 +174,7 @@ a.push(2); // throws a TypeError</pre>
   <em>constant</em>. The following example shows that a frozen object is not constant
   (freeze is shallow).</p>
 
-<pre class="brush: js notranslate">const obj1 = {
+<pre class="brush: js">const obj1 = {
   internal: {}
 };
 
@@ -202,7 +198,7 @@ obj1.internal.a // 'aValue'</pre>
   objects are not frozen and may be the target of property addition, removal or value
   re-assignment operations.</p>
 
-<pre class="brush: js notranslate">const employee = {
+<pre class="brush: js">const employee = {
   name: "Mayank",
   designation: "Developer",
   address: {
@@ -229,7 +225,7 @@ console.log(employee.address.city) // Output: "Noida"
   recursively when an object is in the process of being made immutable. You still run a
   risk of freezing an object that shouldn't be frozen, such as [window].</p>
 
-<pre class="brush: js notranslate">function deepFreeze(object) {
+<pre class="brush: js">function deepFreeze(object) {
   // Retrieve the property names defined on object
   const propNames = Object.getOwnPropertyNames(object);
 
@@ -260,22 +256,11 @@ obj2.internal.a; // null
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.freeze")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

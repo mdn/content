@@ -8,6 +8,7 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.text-combine-upright
 ---
 <div>{{CSSRef}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <p>This is used to produce an effect that is known as tate-chū-yoko (<span lang="ja">縦中横</span>) in Japanese, or as <span lang="zh-Hant">直書橫向</span> in Chinese.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 text-combine-upright: none;
 text-combine-upright: all;
 
@@ -48,7 +49,7 @@ text-combine-upright: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -58,12 +59,12 @@ text-combine-upright: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p lang="ja" class="exampleText"&gt;平成20年4月16日に&lt;/p&gt;
+<pre class="brush: html">&lt;p lang="ja" class="exampleText"&gt;平成20年4月16日に&lt;/p&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.exampleText {
+<pre class="brush: css">.exampleText {
   writing-mode: vertical-lr;
   text-combine-upright: digits 2;
   font: 36px serif;
@@ -79,14 +80,14 @@ text-combine-upright: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p lang="zh-Hant"&gt;民國&lt;span class="num"&gt;105&lt;/span
+<pre class="brush: html">&lt;p lang="zh-Hant"&gt;民國&lt;span class="num"&gt;105&lt;/span
 &gt;年&lt;span class="num"&gt;4&lt;/span
 &gt;月&lt;span class="num"&gt;29&lt;/span&gt;日&lt;/p&gt;
 </pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">html { writing-mode: vertical-rl; font: 24px serif }
+<pre class="brush: css">html { writing-mode: vertical-rl; font: 24px serif }
 .num { text-combine-upright: all }
 </pre>
 
@@ -120,7 +121,7 @@ text-combine-upright: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.text-combine-upright")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

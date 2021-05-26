@@ -2,15 +2,15 @@
 title: MediaMetadata.title
 slug: Web/API/MediaMetadata/title
 tags:
-- API
-- Audio
-- Media
-- Media Session API
-- MediaMetadata
-- Property
-- Reference
-- Title
-- Video
+  - API
+  - Audio
+  - Media
+  - Media Session API
+  - MediaMetadata
+  - Property
+  - Reference
+  - Title
+  - Video
 ---
 <p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
 
@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var title = mediaMetaData.title
+<pre class="brush: js">var title = mediaMetaData.title
 mediaMetaData.title = title</pre>
 
 <h3 id="Value">Value</h3>
@@ -33,20 +33,20 @@ mediaMetaData.title = title</pre>
   for the media session.</p>
 
 <pre
-  class="brush: js notranslate line-numbers language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span><span class="string token">'mediaSession'</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>mediaSession<span class="punctuation token">.</span>metadata <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaMetadata</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-    title<span class="punctuation token">:</span> <span class="string token">'Unforgettable'</span><span class="punctuation token">,</span>
-    artist<span class="punctuation token">:</span> <span class="string token">'Nat King Cole'</span><span class="punctuation token">,</span>
-    album<span class="punctuation token">:</span> <span class="string token">'The Ultimate Collection (Remastered)'</span><span class="punctuation token">,</span>
-    artwork<span class="punctuation token">:</span> <span class="punctuation token">[</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/96x96'</span><span class="punctuation token">,</span>   sizes<span class="punctuation token">:</span> <span class="string token">'96x96'</span><span class="punctuation token">,</span>   type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/128x128'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'128x128'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/192x192'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'192x192'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/256x256'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'256x256'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/384x384'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'384x384'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-      <span class="punctuation token">{</span> src<span class="punctuation token">:</span> <span class="string token">'https://dummyimage.com/512x512'</span><span class="punctuation token">,</span> sizes<span class="punctuation token">:</span> <span class="string token">'512x512'</span><span class="punctuation token">,</span> type<span class="punctuation token">:</span> <span class="string token">'image/png'</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="punctuation token">]</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+  class="brush: js">if ('mediaSession' in navigator) {
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: 'Unforgettable',
+    artist: 'Nat King Cole',
+    album: 'The Ultimate Collection (Remastered)',
+    artwork: [
+      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
+      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
+      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
+      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
+      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
+      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
+    ]
+  });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -67,7 +67,4 @@ mediaMetaData.title = title</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.MediaMetadata.title")}}</p>
-</div>
+<p>{{Compat("api.MediaMetadata.title")}}</p>

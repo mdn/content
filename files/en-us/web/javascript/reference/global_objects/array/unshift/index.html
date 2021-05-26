@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Array.unshift
 ---
 <div>{{JSRef}}</div>
 
@@ -17,8 +18,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>arr</var>.unshift(<var>element1</var>[, ...[, <var>elementN</var>]])</pre>
+<pre class="brush: js">
+unshift(element0)
+unshift(element0, element1)
+unshift(element0, element1, ... , elementN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -52,7 +56,7 @@ tags:
 
 <p>See example:</p>
 
-<pre class="brush: js notranslate">let arr = [4, 5, 6]
+<pre class="brush: js">let arr = [4, 5, 6]
 
 arr.unshift(1, 2, 3)
 console.log(arr);
@@ -89,24 +93,11 @@ arr.unshift([-7, -6], [-5])  // the new array length is 8
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.unshift',
-        'Array.prototype.unshift')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Array.unshift")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

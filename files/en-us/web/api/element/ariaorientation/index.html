@@ -1,0 +1,73 @@
+---
+title: Element.ariaOrientation
+slug: Web/API/Element/ariaOrientation
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaOrientation
+  - AriaAttributes
+  - AriaMixin
+  - Element
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaOrientation</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute"><code>aria-orientation</code></a> attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaOrientation</var> = element.ariaOrientation;
+<var>element</var>.ariaOrientation = <var>ariaOrientation</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+
+<dl>
+  <dt><code>"horizontal"</code></dt>
+  <dd>The element is horizontal.</dd>
+  <dt><code>"vertical"</code></dt>
+  <dd>The element is vertical.</dd>
+  <dt><code>"undefined"</code></dt>
+  <dd>The element's orientation is unknown.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-orientation</code> attribute on the element with an ID of <code>handle_zoomSlider</code> is set to "vertical". Using <code>ariaOrientation</code> we update the value to "horizontal".</p>
+
+<pre class="brush: html">&lt;a href="#" id="handle_zoomSlider"
+  role="slider"
+  aria-orientation="vertical"
+  aria-valuemin="0"
+  aria-valuemax="17"
+  aria-valuenow="14" >
+&lt;span&gt;11&lt;/span&gt;
+&lt;/a&gt;</pre>
+
+<pre class="brush: js">let el = document.getElementById('handle_zoomSlider');
+console.log(el.ariaOrientation); // "vertical"
+el.ariaOrientation = "horizontal"
+console.log(el.ariaOrientation); // "horizontal"</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariaorientation','ariaOrientation')}}</td>
+   <td>{{Spec2('ARIA 1.2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Element.ariaOrientation")}}</p>

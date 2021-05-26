@@ -17,21 +17,21 @@ tags:
 
 <ul>
  <li>The {{HTMLElement("progress")}} element is no longer incorrectly classified as a form element, and therefore no longer has a <code>form</code> attribute.</li>
- <li>The default modifier keys for the <code><a href="/en-US/docs/HTML/Global_attributes" title="Global attributes">accesskey</a></code> of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.</li>
+ <li>The default modifier keys for the <code><a href="/en-US/docs/Web/HTML/Global_attributes" title="Global attributes">accesskey</a></code> of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_event_reference/input">input</a> events are fired also on editing host element of <a href="/en-US/docs/DOM/Element.contentEditable" title="Element.contentEditable">contenteditable</a> editor and root element of <a href="/en-US/docs/DOM/document.designMode" title="document.designMode">designMode</a> editor.</li>
+ <li><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a> events are fired also on editing host element of <a href="/en-US/docs/Web/API/HTMLElement/contentEditable" title="Element.contentEditable">contenteditable</a> editor and root element of <a href="/en-US/docs/Web/API/Document/designMode" title="document.designMode">designMode</a> editor.</li>
  <li>{{domxref("DOMException", "DOMException.code")}} is now deprecated per latest DOM Level 4 specification.</li>
  <li>The {{domxref("Range.insertNode()")}} method now works correctly when used on collapsed ranges.</li>
  <li>The {{domxref("BlobBuilder", "MozBlobBuilder")}} interface has been deprecated in favor of the constructor on {{domxref("Blob")}}. If you use <code>MozBlobBuilder</code> you'll see a warning message in the Web Console.</li>
  <li>The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ({{bug(736686)}}).</li>
- <li>Support for the <a href="/en-US/docs/DOM/DOM_Mutation_Observers">Mutation Observers</a> has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.</li>
+ <li>Support for the <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.</li>
  <li>The {{domxref("HTMLImageElement")}} interface's <code>x</code> and <code>y</code> properties were removed in Gecko 7.0 {{geckoRelease("7.0")}} but restored in this release for compatibility reasons.</li>
  <li>The {{domxref("Document")}} methods <code>execCommandShowHelp()</code> and <code>queryCommandText()</code>, which never did anything, have been removed.</li>
- <li>The <code>GeoPositionAddress</code> interface, an obsolete part of the <a href="/en-US/docs/Using_geolocation">Geolocation</a> API, has been removed.</li>
+ <li>The <code>GeoPositionAddress</code> interface, an obsolete part of the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation</a> API, has been removed.</li>
  <li>{{domxref("Storage", "localStorage/sessionStorage")}} now correctly return <code>undefined</code> instead of <code>null</code> for undeclared keys through property access.ff</li>
  <li>The {{domxref("ImageData")}} object has been implemented ({{bug(550309)}}).</li>
  <li>Attributes and methods related to child nodes on {{domxref("Attr")}} interface where obsoleted ({{bug(737122)}}).</li>
@@ -59,7 +59,7 @@ tags:
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
- <li>Gecko now supports the new <a href="/en-US/docs/HTTP">HTTP</a> <a href="/en-US/docs/HTTP/HTTP_response_codes#308"><code>308 Permanent Redirect</code></a> status code. As Gecko doesn't make a distinction between permanent and temporary redirects, it behaves like the <a href="/en-US/docs/HTTP/HTTP_response_codes#307"><code>307 Temporary Redirect</code></a> status code, as it forbids the user agent from changing the HTTP method used between the two requests (<code>POST</code> will stay <code>POST</code>, <code>GET</code> will stay <code>GET</code>).</li>
+ <li>Gecko now supports the new <a href="/en-US/docs/Web/HTTP">HTTP</a> <a href="/en-US/docs/Web/HTTP/Status#308"><code>308 Permanent Redirect</code></a> status code. As Gecko doesn't make a distinction between permanent and temporary redirects, it behaves like the <a href="/en-US/docs/Web/HTTP/Status#307"><code>307 Temporary Redirect</code></a> status code, as it forbids the user agent from changing the HTTP method used between the two requests (<code>POST</code> will stay <code>POST</code>, <code>GET</code> will stay <code>GET</code>).</li>
 </ul>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
@@ -92,7 +92,7 @@ tags:
 <h3 id="Spellchecking">Spellchecking</h3>
 
 <ul>
- <li>Dictionary names are now parsed as full <a href="https://tools.ietf.org/html/bcp47">BCP 47</a> language tags (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>). Developers are encouraged to not hard-code the name of their language in their dictionary names.</li>
+ <li>Dictionary names are now parsed as full <a href="https://datatracker.ietf.org/doc/html/bcp47">BCP 47</a> language tags (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>). Developers are encouraged to not hard-code the name of their language in their dictionary names.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

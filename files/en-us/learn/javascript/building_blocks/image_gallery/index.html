@@ -46,7 +46,7 @@ tags:
 
 <p>You have been provided with some HTML, CSS and image assets and a few lines of JavaScript code; you need to write the necessary JavaScript to turn this into a working program. The HTML body looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Image gallery example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Image gallery example&lt;/h1&gt;
 
 &lt;div class="full-img"&gt;
   &lt;img class="displayed-img" src="images/pic1.jpg"&gt;
@@ -107,12 +107,12 @@ tags:
 <ol>
  <li>Checks the current class name set on the <code>&lt;button&gt;</code> — you can again achieve this by using <code>getAttribute()</code>.</li>
  <li>If the class name is <code>"dark"</code>, changes the <code>&lt;button&gt;</code> class to <code>"light"</code> (using <code><a href="/en-US/docs/Web/API/Element/setAttribute">setAttribute()</a></code>), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay <code>&lt;div&gt;</code> to <code>"rgba(0,0,0,0.5)"</code>.</li>
- <li>If the class name not <code>"dark"</code>, changes the <code>&lt;button&gt;</code> class to <code>"dark"</code>, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay <code>&lt;div&gt;</code> to <code>"rgba(0,0,0,0)"</code>.</li>
+ <li>If the class name is not <code>"dark"</code>, changes the <code>&lt;button&gt;</code> class to <code>"dark"</code>, its text content back to "Darken", and the {{cssxref("background-color")}} of the overlay <code>&lt;div&gt;</code> to <code>"rgba(0,0,0,0)"</code>.</li>
 </ol>
 
 <p>The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.</p>
 
-<pre class="brush: js notranslate">btn.setAttribute('class', xxx);
+<pre class="brush: js">btn.setAttribute('class', xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;</pre>
 

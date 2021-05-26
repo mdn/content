@@ -6,12 +6,13 @@ tags:
   - CSS Property
   - Deprecated
   - 'recipe:css-property'
+browser-compat: css.properties.ime-mode
 ---
 <div>{{CSSRef}} {{deprecated_header}}</div>
 
 <p>The <strong><code>ime-mode</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property controls the state of the input method editor (IME) for text fields. This property is obsolete.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 ime-mode: auto;
 ime-mode: normal;
 ime-mode: active;
@@ -53,7 +54,7 @@ ime-mode: unset;
 
 <p>Unlike Internet Explorer, Firefox's implementation of <code>ime-mode</code> allows this property on <code>&lt;input type="password"&gt;</code>. However, this makes for a bad user experience, and password fields <em>should not</em> enable the IME. Users may correct the inappropriate behavior of sites that don't follow this recommendation by placing the following CSS into their user stylesheet:</p>
 
-<pre class="brush: css notranslate">input[type=password] {
+<pre class="brush: css">input[type=password] {
   ime-mode: auto !important;
 }</pre>
 
@@ -65,7 +66,7 @@ ime-mode: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -73,7 +74,7 @@ ime-mode: unset;
 
 <p>This example disables input method support for a form field. In the past, this was commonly used on fields that entered data into databases which didn't support extended character sets.</p>
 
-<pre class="brush: html notranslate">&lt;input type="text" name="name" value="initial value" style="ime-mode: disabled"&gt;</pre>
+<pre class="brush: html">&lt;input type="text" name="name" value="initial value" style="ime-mode: disabled"&gt;</pre>
 
 <div class="note">
 <p><strong>Note:</strong> You shouldn't rely on disabling IME to prevent extended characters from passing through your form. Even with IME disabled, users can still paste extended characters into your form's fields.</p>
@@ -100,7 +101,4 @@ ime-mode: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.properties.ime-mode")}}</p>
-</div>
+<p>{{Compat}}</p>

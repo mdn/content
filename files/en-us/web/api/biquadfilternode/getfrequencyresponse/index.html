@@ -2,14 +2,14 @@
 title: BiquadFilterNode.getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
 tags:
-- API
-- Audio
-- BiquadFilterNode
-- Method
-- Reference
-- Web Audio API
-- filter
-- getFrequencyResponse
+  - API
+  - Audio
+  - BiquadFilterNode
+  - Method
+  - Reference
+  - Web Audio API
+  - filter
+  - getFrequencyResponse
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -26,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>BiquadFilterNode</em>.getFrequencyResponse(<em>frequencyArray</em>, <em>magResponseOutput</em>, <em>phaseResponseOutput</em>);
+<pre class="brush: js"><em>BiquadFilterNode</em>.getFrequencyResponse(<em>frequencyArray</em>, <em>magResponseOutput</em>, <em>phaseResponseOutput</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -39,14 +39,14 @@ tags:
   <dd>A {{jsxref("Float32Array")}} to receive the computed magnitudes of the frequency
     response for each frequency value in the <code>frequencyArray</code>. For any
     frequency in <code>frequencyArray</code> whose value is outside the range 0.0 to
-    <code>sampleRate</code>/2 (where {{domxref("AudioContext.sampleRate", "sampleRate")}}
+    <code>sampleRate</code>/2 (where {{domxref("BaseAudioContext/sampleRate", "sampleRate")}}
     is the sample rate of the {{domxref("AudioContext")}}), the corresponding value in
     this array is {{jsxref("NaN")}}. These are unitless values.</dd>
   <dt><code>phaseResponseOutput</code></dt>
   <dd>A {{jsxref("Float32Array")}} to receive the computed phase response values in
     radians for each frequency value in the input <code>frequencyArray</code>. For any
     frequency in <code>frequencyArray</code> whose value is outside the range 0.0 to
-    <code>sampleRate</code>/2 (where {{domxref("AudioContext.sampleRate", "sampleRate")}}
+    <code>sampleRate</code>/2 (where {{domxref("BaseAudioContext/sampleRate", "sampleRate")}}
     is the sample rate of the {{domxref("AudioContext")}}), the corresponding value in
     this array is {{jsxref("NaN")}}.</dd>
 </dl>
@@ -136,14 +136,11 @@ calcFrequencyResponse();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.BiquadFilterNode.getFrequencyResponse")}}</p>
-</div>
+<p>{{Compat("api.BiquadFilterNode.getFrequencyResponse")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

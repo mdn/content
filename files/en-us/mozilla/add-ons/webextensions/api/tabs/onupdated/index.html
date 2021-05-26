@@ -79,7 +79,12 @@ browser.tabs.onUpdated.hasListener(listener)
    <li>"sharingState"</li>
    <li>"status"</li>
    <li>"title"</li>
+   <li>"url"</li>
   </ul>
+
+  <div class="notecard note">
+    <p><strong>Note:</strong> The "url" value is supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".</p>
+  </div>
   </dd>
   <dt><code>tabId</code></dt>
   <dd><code>Integer</code>. Fire this event only for the tab identified by this ID.</dd>
@@ -124,7 +129,7 @@ browser.tabs.onUpdated.hasListener(listener)
 
 <p>Listen for and log all the change info and new state:</p>
 
-<pre class="notranslate brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("Updated tab: " + tabId);
   console.log("Changed attributes: ");
   console.log(changeInfo);
@@ -136,7 +141,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <p>Log changes to URLs:</p>
 
-<pre class="notranslate brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
     console.log("Tab: " + tabId +
                 " URL changed to " + changeInfo.url);
@@ -149,7 +154,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);</pre>
 
 <p>Log changes only to tabs whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</p>
 
-<pre class="notranslate brush: js">const pattern1 = "https://developer.mozilla.org/*";
+<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -166,7 +171,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
 
 <p>Log changes only to the <code>pinned</code> property of tabs (i.e. pin and unpin actions):</p>
 
-<pre class="notranslate brush: js">const filter = {
+<pre class="brush: js">const filter = {
   properties: ["pinned"]
 }
 
@@ -185,7 +190,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
  <li>whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</li>
 </ul>
 
-<pre class="notranslate brush: js">const pattern1 = "https://developer.mozilla.org/*";
+<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -211,7 +216,7 @@ browser.tabs.onUpdated.addListener(
  <li>and which are part of the current browser window at the time the update event is fired:</li>
 </ul>
 
-<pre class="notranslate brush: js">const pattern1 = "https://developer.mozilla.org/*";
+<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {

@@ -6,8 +6,9 @@ tags:
 - CSSPrimitiveValue
 - Method
 - getFloatValue
+- Deprecated
 ---
-<div>{{APIRef("DOM")}}</div>
+<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>getFloatValue()</strong></code> method of the
   {{domxref("CSSPrimitiveValue")}} interface is used to get a float value in a specified
@@ -17,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>floatValue</var> = <var>cssPrimitiveValue</var>.getFloatValue(unit);</pre>
+  class="brush: js">var <var>floatValue</var> = <var>cssPrimitiveValue</var>.getFloatValue(unit);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -157,7 +158,4 @@ console.log(cssValue.getFloatValue(CSSPrimitiveValue.CSS_CM));</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.CSSPrimitiveValue.getFloatValue")}}</p>
-</div>
+<p>{{Compat("api.CSSPrimitiveValue.getFloatValue")}}</p>

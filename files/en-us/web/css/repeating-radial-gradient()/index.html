@@ -11,6 +11,7 @@ tags:
   - Layout
   - Reference
   - Web
+browser-compat: css.types.image.gradient.repeating-radial-gradient
 ---
 <div>{{CSSRef}}</div>
 
@@ -28,7 +29,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* A gradient at the center of its container,
+<pre class="brush: css no-line-numbers">/* A gradient at the center of its container,
    starting red, changing to blue, and finishing green,
    with the colors repeating every 30px */
 repeating-radial-gradient(circle at center, red 0, blue, green 30px);
@@ -85,7 +86,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 <h3 id="Formal_syntax">Formal syntax</h3>
 
-<pre class="brush: css notranslate">repeating-radial-gradient(
+<pre class="brush: css">repeating-radial-gradient(
        [[ circle  || <a href="/en-US/docs/CSS/length">&lt;length&gt;</a> ]                     [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
         [ ellipse || [<a href="/en-US/docs/CSS/length">&lt;length&gt;</a> | <a href="/en-US/docs/CSS/percentage">&lt;percentage&gt;</a> ]{2}] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
         [[ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
@@ -104,16 +105,16 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
 <h3 id="Black_and_white_gradient">Black and white gradient</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   width: 120px;
   height: 120px;
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
 }
 </pre>
@@ -123,16 +124,16 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
 <h3 id="Farthest-corner">Farthest-corner</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   width: 240px;
   height: 120px;
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.radial-gradient {
+<pre class="brush: css">.radial-gradient {
   background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
       red, black 5%, blue 5%, green 10%);
   background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
@@ -169,7 +170,7 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("css.types.image.gradient.repeating-radial-gradient")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

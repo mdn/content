@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>targetDocument</em>.onfullscreenchange = <em>fullscreenChangeHandler</em>;
+<pre class="brush: js"><em>targetDocument</em>.onfullscreenchange = <em>fullscreenChangeHandler</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -44,7 +44,7 @@ tags:
   adjustments to the app's user interface to present itself optimally when it's in
   full-screen mode versus being displayed in a window.</p>
 
-<pre class="brush: js notranslate">function toggleFullscreen() {
+<pre class="brush: js">function toggleFullscreen() {
   let elem = document.querySelector("video");
 
   elem.onfullscreenchange = handleFullscreenChange;

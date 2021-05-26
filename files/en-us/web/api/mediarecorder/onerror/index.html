@@ -2,15 +2,15 @@
 title: MediaRecorder.onerror
 slug: Web/API/MediaRecorder/onerror
 tags:
-- API
-- Audio
-- Media Capture
-- Media Recorder API
-- MediaRecorder
-- Property
-- Reference
-- Video
-- onerror
+  - API
+  - Audio
+  - Media Capture
+  - Media Recorder API
+  - MediaRecorder
+  - Property
+  - Reference
+  - Video
+  - onerror
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
@@ -25,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>MediaRecorder</em>.onerror = <em>errorHandlerFunction</em>;
+<pre class="brush: js"><em>MediaRecorder</em>.onerror = <em>errorHandlerFunction</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -76,46 +76,46 @@ tags:
   exceptions are thrown during the setup process.</p>
 
 <div class="codecopy codecopy-lg">
-  <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">recordStream</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> recorder <span class="operator token">=</span> <span class="keyword token">null</span><span class="punctuation token">;</span>
-  <span class="keyword token">let</span> bufferList <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+  <pre class="brush: js line-numbers  language-js">function recordStream(stream) {
+  let recorder = null;
+  let bufferList = [];
 
-  <span class="keyword token">try</span> <span class="punctuation token">{</span>
-    recorder <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MediaRecorder</span><span class="punctuation token">(</span>stream<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">catch</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  try {
+    recorder = new MediaRecorder(stream);
+  } catch(err) {
     return err.name;     /* return the error name */
-  <span class="punctuation token">}</span>
+  }
 
-  recorder<span class="punctuation token">.</span>ondataavailable <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    bufferList<span class="punctuation token">.</span><span class="function token">push</span><span class="punctuation token">(</span>event<span class="punctuation token">.</span>data<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
+  recorder.ondataavailable = function(event) {
+    bufferList.push(event.data);
+  };
 
-  recorder<span class="punctuation token">.</span>onerror <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">let</span> error <span class="operator token">=</span> event<span class="punctuation token">.</span>error<span class="punctuation token">;
+  recorder.onerror = function(event) {
+    let error = event.error;
 
     switch(error.name) {
       case InvalidStateError:
-        showNotification("You can't record the video right " +
-                         "now. Try again later.");
+        showNotification(&quot;You can't record the video right &quot; +
+                         &quot;now. Try again later.&quot;);
         break;
       case SecurityError:
-        showNotification("Recording the specified source " +
-                         "is not allowed due to security " +
-                         "restrictions.");
+        showNotification(&quot;Recording the specified source &quot; +
+                         &quot;is not allowed due to security &quot; +
+                         &quot;restrictions.&quot;);
         break;
       default:
-        showNotification("A problem occurred while trying " +
-                         "to record the video.");
+        showNotification(&quot;A problem occurred while trying &quot; +
+                         &quot;to record the video.&quot;);
         break;
-    }</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;
+    }
+  };
 
   /* this would be a good place to create a Worker to handle
-     writing the buffers to disk periodically */</span>
+     writing the buffers to disk periodically */
 
-  recorder<span class="punctuation token">.</span><span class="function token">start</span><span class="punctuation token">(</span><span class="number token">100</span><span class="punctuation token">)</span><span class="punctuation token">;</span>  <span class="comment token">/* 100ms time slices per buffer */</span>
-  <span class="keyword token">return</span> recorder<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  recorder.start(100);  /* 100ms time slices per buffer */
+  return recorder;
+}</pre>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -143,7 +143,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
       the MediaRecorder API</a></li>
   <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
     getUserMedia + Web Audio API visualization demo, by <a

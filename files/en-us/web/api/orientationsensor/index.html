@@ -14,7 +14,7 @@ tags:
 ---
 <div>{{APIRef("Generic Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>OrientationSensor</code></strong> interface of the <a href="/docs/Web/API/Sensor_APIs">Sensor APIs</a> is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it. </span></p>
+<p><span class="seoSummary">The <strong><code>OrientationSensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it. </span></p>
 
 <p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
 
@@ -65,7 +65,7 @@ sensor.start();</pre>
 
 <h3 id="Permissions_Example">Permissions Example</h3>
 
-<p>Using orientation sensors requires requsting permissions for multiple device sensors. Becuase the {{domxref('Permissions')}} uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.</p>
+<p>Using orientation sensors requires requsting permissions for multiple device sensors. Because the {{domxref('Permissions')}} uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.</p>
 
 <pre class="brush: js">const sensor = new AbsoluteOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),

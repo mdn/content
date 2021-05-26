@@ -28,7 +28,7 @@ tags:
 
 <p>Creating an {{domxref("URL")}} object for a given URL parses the URL and provides quick access to its constituent parts through its properties.</p>
 
-<pre class="brush: js notranslate">let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
+<pre class="brush: js">let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
 let host = addr.host;
 let path = addr.pathname;
 </pre>
@@ -39,7 +39,7 @@ let path = addr.pathname;
 
 <p>Most of the properties of <code>URL</code> are settable; you can write new values to them to alter the URL represented by the object. For example, to create a URL and set its username:</p>
 
-<pre class="brush: js notranslate">let myUsername = "someguy";
+<pre class="brush: js">let myUsername = "someguy";
 let addr = new URL("https://mysite.com/login");
 addr.username = myUsername;
 </pre>
@@ -50,7 +50,7 @@ addr.username = myUsername;
 
 <p>The {{domxref("URL.search", "search")}} property on a <code>URL</code> contains the query string portion of the URL. For example, if the URL is <code>https://mysite.com/login?user=someguy&amp;page=news</code>, then the value of the <code>search</code> property is <code>?user=someguy&amp;page=news</code>. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:</p>
 
-<pre class="brush: js notranslate">let addr = new URL("https://mysite.com/login?user=someguy&amp;page=news");
+<pre class="brush: js">let addr = new URL("https://mysite.com/login?user=someguy&amp;page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
@@ -74,15 +74,13 @@ try {
 </ul>
 </div>
 
-<p>Older versions of the specification included an interface called {{domxref("URLUtilsReadOnly")}}, which has since been merged into the {{domxref("WorkerLocation")}} interface.</p>
-
 <h2 id="Examples">Examples</h2>
 
 <p>If you want to process the parameters included in a URL, you could do it manually, but it's much easier to create a <code>URL</code> object to do it for you. The <code>fillTableWithParameters()</code> function below takes as input a {{domxref("HTMLTableElement")}} object representing a {{HTMLElement("table")}}. Rows are added to the table, one for each key found in the parameters, with the first column containing the key's name, and the second column having the value.</p>
 
 <p>Note the call to {{domxref("URLSearchParams.sort()")}} to sort the parameter list before generating the table.</p>
 
-<pre class="brush: js notranslate">function fillTableWithParameters(tbl) {
+<pre class="brush: js">function fillTableWithParameters(tbl) {
   let url = new URL(document.location.href);
   url.searchParams.sort();
   let keys = url.searchParams.keys();
@@ -121,10 +119,7 @@ try {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.URL")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

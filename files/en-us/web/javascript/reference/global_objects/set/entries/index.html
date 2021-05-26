@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - set
+browser-compat: javascript.builtins.Set.entries
 ---
 <div>{{JSRef}}</div>
 
@@ -22,15 +23,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><em>mySet</em>.entries()</code></pre>
+<pre class="brush: js">entries()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -41,7 +37,7 @@ tags:
 
 <h3 id="Using_entries">Using entries()</h3>
 
-<pre class="brush:js notranslate">var mySet = new Set();
+<pre class="brush:js">var mySet = new Set();
 mySet.add('foobar');
 mySet.add(1);
 mySet.add('baz');
@@ -55,23 +51,11 @@ console.log(setIter.next().value); // ["baz", "baz"]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-set.prototype.entries', 'Set.prototype.entries')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Set.entries")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

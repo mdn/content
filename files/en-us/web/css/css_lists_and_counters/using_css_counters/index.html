@@ -22,11 +22,11 @@ tags:
 
 <h3 id="Displaying_a_counter">Displaying a counter</h3>
 
-<p>The value of a counter can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function in a {{cssxref("content")}} property.</p>
+<p>The value of a counter can be displayed using either the {{cssxref("counter()", "counter()")}} or {{cssxref("counters()", "counters()")}} function in a {{cssxref("content")}} property.</p>
 
-<p>The {{cssxref("counter")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, <var>style</var>)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element.The counter is rendered in the specified style (<code>decimal</code> by default).</p>
+<p>The {{cssxref("counter()")}} function has two forms: 'counter(<var>name</var>)' or 'counter(<var>name</var>, <var>style</var>)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element.The counter is rendered in the specified style (<code>decimal</code> by default).</p>
 
-<p>The {{cssxref("counters")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the specified style (<code>decimal</code> by default).</p>
+<p>The {{cssxref("counters()")}} function also has two forms: 'counters(<var>name</var>, <var>string</var>)' or 'counters(<var>name</var>, <var>string</var>, <var>style</var>)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the specified style (<code>decimal</code> by default).</p>
 
 <h3 id="Basic_example">Basic example</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   counter-reset: section;                       /* Set a counter named 'section', and its initial value is 0. */
 }
 
@@ -48,7 +48,7 @@ h3::before {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h3&gt;Introduction&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;h3&gt;Body&lt;/h3&gt;
 &lt;h3&gt;Conclusion&lt;/h3&gt;</pre>
 
@@ -56,15 +56,43 @@ h3::before {
 
 <p>{{EmbedLiveSample("Basic_example", "100%", 150)}}</p>
 
+<h3 id="A_more_sophisticated_example">A more sophisticated example</h3>
+
+<p>A counter must not necessarily be shown every time is incremented. This example counts all links, however the counter is shown only when a link has no text, as a convenient replacement.</p>
+
+<h4 id="CSS2">CSS</h4>
+
+<pre class="brush: css">:root {
+  counter-reset: link;
+}
+
+a[href] {
+  counter-increment: link;
+}
+
+a[href]:empty::after {
+  content: "[" counter(link) "]";
+}</pre>
+
+<h4 id="HTML2">HTML</h4>
+
+<pre class="brush: html">&lt;p&gt;See &lt;a href="https://www.mozilla.org/"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Do not forget to &lt;a href="contact-me.html"&gt;leave a message&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;See also &lt;a href="https://developer.mozilla.org/"&gt;&lt;/a&gt;&lt;/p&gt;</pre>
+
+<h4 id="Result2">Result</h4>
+
+<p>{{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}</p>
+
 <h2 id="Nesting_counters">Nesting counters</h2>
 
-<p>A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements. Using the {{cssxref("counters")}} function, separating text can be inserted between different levels of nested counters.</p>
+<p>A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements. Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.</p>
 
 <h3 id="Example_of_a_nested_counter">Example of a nested counter</h3>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   counter-reset: section;                /* Creates a new instance of the
                                             section counter with each ol
                                             element */
@@ -82,7 +110,7 @@ li::before {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
   &lt;li&gt;item               &lt;!-- 2     --&gt;
     &lt;ol&gt;

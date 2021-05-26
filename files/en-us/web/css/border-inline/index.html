@@ -8,21 +8,17 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.border-inline
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>border-inline</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for setting the individual logical inline border property values in a single place in the style sheet.</p>
 
-<pre class="brush:css no-line-numbers notranslate">border-inline: 1px;
-border-inline: 2px dotted;
-border-inline: medium dashed blue;
-</pre>
+<div>{{EmbedInteractiveExample("pages/css/border-inline.html")}}</div>
 
 <p>The physical borders to which <code>border-inline</code> maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
 <p>The borders in the other dimension can be set with {{cssxref("border-block")}}, which sets {{cssxref("border-block-start")}}, and {{cssxref("border-block-end")}}.</p>
-
-<p>{{cssinfo}}</p>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
 
@@ -35,6 +31,10 @@ border-inline: medium dashed blue;
 </ul>
 
 <h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers">border-inline: 1px;
+border-inline: 2px dotted;
+border-inline: medium dashed blue;</pre>
 
 <h3 id="Values">Values</h3>
 
@@ -55,7 +55,7 @@ border-inline: medium dashed blue;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -63,14 +63,14 @@ border-inline: medium dashed blue;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -106,7 +106,7 @@ border-inline: medium dashed blue;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-inline")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

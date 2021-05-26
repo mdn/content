@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Number
   - Property
+browser-compat: javascript.builtins.Number.EPSILON
 ---
 <div>{{JSRef}}</div>
 
@@ -15,7 +16,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
@@ -27,7 +27,7 @@ tags:
 
 <h3 id="Testing_equality">Testing equality</h3>
 
-<pre class="brush: js notranslate">x = 0.2;
+<pre class="brush: js">x = 0.2;
 y = 0.3;
 z = 0.1;
 equal = (Math.abs(x - y + z) &lt; Number.EPSILON);
@@ -35,29 +35,18 @@ equal = (Math.abs(x - y + z) &lt; Number.EPSILON);
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">if (Number.EPSILON === undefined) {
+<pre class="brush: js">if (Number.EPSILON === undefined) {
     Number.EPSILON = Math.pow(2, -52);
 }
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.EPSILON")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.@@toPrimitive
 ---
 <div>{{JSRef}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Date()[Symbol.toPrimitive](<var>hint</var>);</pre>
+<pre class="brush: js">Date()[Symbol.toPrimitive](<var>hint</var>);</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -46,7 +47,7 @@ tags:
 
 <h3 id="Returning_date_primitives">Returning date primitives</h3>
 
-<pre class="brush: js notranslate">const testDate = new Date(1590757517834);
+<pre class="brush: js">const testDate = new Date(1590757517834);
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
 testDate[Symbol.toPrimitive]('string');
@@ -60,23 +61,11 @@ testDate[Symbol.toPrimitive]('default');
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive',
-        'Date.prototype.@@toPrimitive')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.@@toPrimitive")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

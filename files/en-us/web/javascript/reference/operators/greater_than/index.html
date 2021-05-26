@@ -6,6 +6,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.greater_than
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">x &gt; y</pre>
+<pre class="brush: js">x &gt; y</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -30,13 +31,13 @@ tags:
 
 <h3 id="String_to_string_comparison">String to string comparison</h3>
 
-<pre class="brush: js notranslate">console.log("a" &gt; "b");        // false
+<pre class="brush: js">console.log("a" &gt; "b");        // false
 console.log("a" &gt; "a");        // false
 console.log("a" &gt; "3");        // true</pre>
 
 <h3 id="String_to_number_comparison">String to number comparison</h3>
 
-<pre class="brush: js notranslate">console.log("5" &gt; 3);          // true
+<pre class="brush: js">console.log("5" &gt; 3);          // true
 console.log("3" &gt; 3);          // false
 console.log("3" &gt; 5);          // false
 
@@ -48,18 +49,18 @@ console.log("3" &gt; 5n);         // false</pre>
 
 <h3 id="Number_to_Number_comparison">Number to Number comparison</h3>
 
-<pre class="brush: js notranslate">console.log(5 &gt; 3);            // true
+<pre class="brush: js">console.log(5 &gt; 3);            // true
 console.log(3 &gt; 3);            // false
 console.log(3 &gt; 5);            // false</pre>
 
 <h3 id="Number_to_BigInt_comparison">Number to BigInt comparison</h3>
 
-<pre class="brush: js notranslate">console.log(5n &gt; 3);           // true
+<pre class="brush: js">console.log(5n &gt; 3);           // true
 console.log(3 &gt; 5n);           // false</pre>
 
 <h3 id="Comparing_Boolean_null_undefined_NaN">Comparing Boolean, null, undefined, NaN</h3>
 
-<pre class="brush: js notranslate">console.log(true &gt; false);     // true
+<pre class="brush: js">console.log(true &gt; false);     // true
 console.log(false &gt; true);     // false
 
 console.log(true &gt; 0);         // true
@@ -76,21 +77,11 @@ console.log(NaN &gt; 3);          // false</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational operators')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.greater_than")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

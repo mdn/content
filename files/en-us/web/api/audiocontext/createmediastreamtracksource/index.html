@@ -2,39 +2,37 @@
 title: AudioContext.createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
 tags:
-- API
-- Audio
-- AudioContext
-- MediaStreamTrack
-- MediaStreamTrackAudioSource
-- Method
-- Node
-- Reference
-- Web Audio API
-- createMediaStreamTrackSource
-- sound
-- source
-- track
+  - API
+  - Audio
+  - AudioContext
+  - MediaStreamTrack
+  - MediaStreamTrackAudioSource
+  - Method
+  - Node
+  - Reference
+  - Web Audio API
+  - createMediaStreamTrackSource
+  - sound
+  - source
+  - track
 ---
 <p>{{draft}}{{ APIRef("Web Audio API") }}</p>
 
-<div>
-  <p>The <strong><code>createMediaStreamTrackSource()</code></strong> method of the {{
-    domxref("AudioContext") }} interface creates and returns a
-    {{domxref("MediaStreamTrackAudioSourceNode")}} which represents an audio source whose
-    data comes from the specified {{domxref("MediaStreamTrack")}}.</p>
+<p>The <strong><code>createMediaStreamTrackSource()</code></strong> method of the {{
+  domxref("AudioContext") }} interface creates and returns a
+  {{domxref("MediaStreamTrackAudioSourceNode")}} which represents an audio source whose
+  data comes from the specified {{domxref("MediaStreamTrack")}}.</p>
 
-  <p>This differs from {{domxref("AudioContext.createMediaStreamSource",
-    "createMediaStreamSource()")}}, which creates a
-    {{domxref("MediaStreamAudioSourceNode")}} whose audio comes from the audio track in a
-    specified {{domxref("MediaStream")}} whose {{domxref("MediaStreamTrack.id", "id")}} is
-    first, lexicographically (alphabetically).</p>
-</div>
+<p>This differs from {{domxref("AudioContext.createMediaStreamSource",
+  "createMediaStreamSource()")}}, which creates a
+  {{domxref("MediaStreamAudioSourceNode")}} whose audio comes from the audio track in a
+  specified {{domxref("MediaStream")}} whose {{domxref("MediaStreamTrack.id", "id")}} is
+  first, lexicographically (alphabetically).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>audioCtx</em> = new AudioContext();
+  class="brush: js">var <em>audioCtx</em> = new AudioContext();
 var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -59,11 +57,11 @@ var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</e
   in the stream returned by <code>getUserMedia()</code>.</p>
 
 <p>Then a {{domxref("BiquadFilterNode")}} is created using
-  {{domxref("AudioContext.createBiquadFilter", "createBiquadFilter()")}}, and it's
+  {{domxref("BaseAudioContext/createBiquadFilter", "createBiquadFilter()")}}, and it's
   configured as desired to perform a lowshelf filter on the audio coming from the source.
   The output from the microphone is then routed into the new biquad filter, and the
   filter's output is in turn routed to the audio context's
-  {{domxref("AudioContext.destination", "destination")}}.</p>
+  {{domxref("BaseAudioContext/destination", "destination")}}.</p>
 
 <pre class="brush: js">navigator.mediaDevices.getUserMedia ({audio: true, video: false})
 .then(function(stream) {
@@ -108,16 +106,13 @@ var <em>track</em> = <em>audioCtx</em>.createMediaStreamTrackSource(<em>track</e
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.AudioContext.createMediaStreamTrackSource")}}</p>
-</div>
+<p>{{Compat("api.AudioContext.createMediaStreamTrackSource")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>Web Audio API</li>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
   <li>{{domxref("MediaStreamTrackAudioSource")}}</li>
 </ul>

@@ -24,11 +24,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Transparent_content_model">Transparent</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model">Transparent</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -36,7 +36,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -61,12 +61,12 @@ tags:
  <dt>{{htmlattrdef("cite")}}</dt>
  <dd>A URI for a resource that explains the change (for example, meeting minutes).</dd>
  <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>This attribute indicates the time and date of the change and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see <a href="/en-US/docs/Web/HTML/Date_and_time_formats#Date_strings">Date strings</a>. The format of the string if it includes both date and time is covered in <a href="/en-US/docs/Web/HTML/Date_and_time_formats#Local_date_and_time_strings">Local date and time strings</a>.</dd>
+ <dd>This attribute indicates the time and date of the change and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see <a href="/en-US/docs/Web/HTML/Date_and_time_formats#date_strings">Date strings</a>. The format of the string if it includes both date and time is covered in <a href="/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings">Local date and time strings</a>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;,
+<pre class="brush: html">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;,
 here is the rest of the paragraph.&lt;/p&gt;
 &lt;del&gt;&lt;p&gt;This paragraph has been deleted.&lt;/p&gt;&lt;/del&gt;</pre>
 
@@ -78,7 +78,7 @@ here is the rest of the paragraph.&lt;/p&gt;
 
 <p>The presence of the <code>del</code> element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.</p>
 
-<pre class="notranslate">del::before,
+<pre>del::before,
 del::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);

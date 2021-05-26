@@ -6,6 +6,7 @@ tags:
   - Namespace
   - Shared Memory
   - Specifications
+browser-compat: javascript.builtins.Atomics
 ---
 <div>{{JSRef}}</div>
 
@@ -56,7 +57,7 @@ tags:
 
 <h3 id="Using_Atomics">Using Atomics</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 ta[0]; // 0
@@ -95,39 +96,28 @@ Atomics.load(ta, 0); // 11
 
 <p>Given a shared <code>Int32Array</code>:</p>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 </pre>
 
 <p>A reading thread is sleeping and waiting on location 0 which is expected to be 0. As long as that is true, it will not go on. However, once the writing thread has stored a new value, it will be notified by the writing thread and return the new value (123).</p>
 
-<pre class="brush: js notranslate">Atomics.wait(int32, 0, 0);
+<pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123</pre>
 
 <p>A writing thread stores a new value and notifies the waiting thread once it has written:</p>
 
-<pre class="brush: js notranslate">console.log(int32[0]); // 0;
+<pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
 Atomics.notify(int32, 0, 1);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Atomics")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -139,7 +129,3 @@ Atomics.notify(int32, 0, 1);</pre>
  <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
  <li><a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks</a></li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 25px; top: 2197px;">
-<div class="gtx-trans-icon"></div>
-</div>

@@ -45,7 +45,7 @@ tags:
    <td>No</td>
   </tr>
   <tr>
-   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
+   <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
    <td>No</td>
   </tr>
  </tbody>
@@ -53,14 +53,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">PATCH /file.txt HTTP/1.1
+<pre class="brush: html">PATCH /file.txt HTTP/1.1
 </pre>
 
 <h2 id="Example">Example</h2>
 
 <h3 id="Request">Request</h3>
 
-<pre class="line-numbers  language-html notranslate">PATCH /file.txt HTTP/1.1
+<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -70,11 +70,11 @@ Content-Length: 100
 
 <h3 id="Response">Response</h3>
 
-<p>A successful response is indicated by any <a href="https://tools.ietf.org/html/rfc7231#section-6.3">2xx</a> status code.</p>
+<p>A successful response is indicated by any <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.3">2xx</a> status code.</p>
 
 <p>In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.</p>
 
-<pre class="newpage notranslate">HTTP/1.1 204 No Content
+<pre class="newpage">HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 

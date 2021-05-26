@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Proxy
+browser-compat: javascript.builtins.Proxy.revocable
 ---
 <div>{{JSRef}}</div>
 
@@ -14,21 +15,19 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Proxy.revocable(<var>target</var>, <var>handler</var>);
+<pre class="brush: js">Proxy.revocable(<var>target</var>, <var>handler</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
-<div>
-  <dl>
-    <dt><code><var>target</var></code></dt>
-    <dd>A target object to wrap with <code>Proxy</code>. It can be any sort of object,
-      including a native array, a function, or even another proxy.</dd>
-    <dt><code><var>handler</var></code></dt>
-    <dd>An object whose properties are functions define the behavior of proxy
-      <code><var>p</var></code> when an operation is performed on it.</dd>
-  </dl>
-</div>
+<dl>
+  <dt><code><var>target</var></code></dt>
+  <dd>A target object to wrap with <code>Proxy</code>. It can be any sort of object,
+    including a native array, a function, or even another proxy.</dd>
+  <dt><code><var>handler</var></code></dt>
+  <dd>An object whose properties are functions define the behavior of proxy
+    <code><var>p</var></code> when an operation is performed on it.</dd>
+</dl>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -73,23 +72,11 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-proxy.revocable', 'Proxy Revocation Functions')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Proxy.revocable")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,27 +2,27 @@
 title: XRWebGLLayer.getNativeFramebufferScaleFactor() static method
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor
 tags:
-- API
-- AR
-- Effective
-- Factor
-- Reality
-- Reference
-- Scaling
-- Static
-- Static Method
-- VR
-- Virtual
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRWebGLLayer
-- augmented
-- framebuffer
-- getNativeFramebufferScaleFactor
-- native
-- resolution
+  - API
+  - AR
+  - Effective
+  - Factor
+  - Reality
+  - Reference
+  - Scaling
+  - Static
+  - Static Method
+  - VR
+  - Virtual
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRWebGLLayer
+  - augmented
+  - framebuffer
+  - getNativeFramebufferScaleFactor
+  - native
+  - resolution
 ---
 <p>{{securecontext_header}}{{APIRef("WebXR Device API")}}</p>
 
@@ -50,7 +50,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <em>nativeScaling</em> = XRWebGLLayer.getNativeFramebufferScaleFactor(<em>session</em>);</pre>
+  class="brush: js">let <em>nativeScaling</em> = XRWebGLLayer.getNativeFramebufferScaleFactor(<em>session</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -83,8 +83,7 @@ tags:
   1280x1440 pixels). Consider a frame buffer which at full size looks like this:</p>
 
 <p><img alt="Diagram showing how a framebuffer is divided between two eyes' viewpoints"
-    src="https://mdn.mozillademos.org/files/17011/TwoViewsOneFramebuffer.svg"
-    style="height: 430px; width: 640px;"></p>
+    src="twoviewsoneframebuffer.svg"></p>
 
 <p>If, on this device, it's determined that due to GPU limitations the browser needs to
   reduce image quality in order to improve performance to an acceptable level, it might
@@ -93,8 +92,7 @@ tags:
   dividing the frame buffer between views is shown in the following diagram.</p>
 
 <p><img alt="Diagram showing frame buffer as scalled to half resolution"
-    src="https://mdn.mozillademos.org/files/17013/TwoViewsOneFrame-ScaledBy2.svg"
-    style="height: 430px; width: 640px;"></p>
+    src="twoviewsoneframe-scaledby2.svg"></p>
 
 <p>Now the width and height of the frame buffer are 50% what they were before, resulting
   in a total frame buffer size of 1280 by 720 pixels, with each eye's half of the buffer
@@ -102,8 +100,7 @@ tags:
   representing these two views:</p>
 
 <p><img alt=""
-    src="https://mdn.mozillademos.org/files/17014/TwoViewsViewportCoords-ScaledBy2.svg"
-    style="height: 430px; width: 640px;"></p>
+    src="twoviewsviewportcoords-scaledby2.svg"></p>
 
 <p>Since each eye gets half of the frame buffer, the result is that the left eye gets a
   640x720 portion of the buffer with the viewport's <code>x</code> and <code>y</code> at
@@ -111,7 +108,7 @@ tags:
   frame buffer, with its viewport's <code>x</code> set at 639.</p>
 
 <p>While <a
-    href="/en-US/docs/Web/API/XRWebGLLayer#Rendering_every_view_in_a_frame">rendering a
+    href="/en-US/docs/Web/API/XRWebGLLayer#rendering_every_view_in_a_frame">rendering a
     frame for this scene</a>, we get the viewport for the view and apply it to WebGL, then
   render the scene. This ensures that the scene we render will not only match the
   viewpoint we need to express (which is defined by the position and orientation data in
@@ -152,8 +149,7 @@ tags:
   {{domxref("XRRenderState")}} dictionary's {{domxref("XRRenderState.baseLayer")}}
   property. The result is a rendering context that looks like the diagram below:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17012/TwoViewsViewportCoords.svg"
-    style="height: 504px; width: 751px;"></p>
+<p><img alt="" src="twoviewsviewportcoords.svg"></p>
 
 <p>Each time the {{domxref("XRViewerPose")}}'s {{domxref("XRViewerPose.views", "views")}}
   are iterated over for rendering, the rendering loop obtains an {{domxref("XRView")}} for
@@ -171,8 +167,7 @@ tags:
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('WebXR','#dom-xrwebgllayer-getnativeframebufferscalefactor','static
-        XRWebGLLayer.getNativeFramebufferScaleFactor()')}}</td>
+      <td>{{SpecName('WebXR','#dom-xrwebgllayer-getnativeframebufferscalefactor','static XRWebGLLayer.getNativeFramebufferScaleFactor()')}}</td>
       <td>{{Spec2('WebXR')}}</td>
       <td>Initial definition.</td>
     </tr>

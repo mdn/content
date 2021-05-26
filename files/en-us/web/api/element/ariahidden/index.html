@@ -1,0 +1,66 @@
+---
+title: Element.ariaHidden
+slug: Web/API/Element/ariaHidden
+tags:
+  - API
+  - Property
+  - Reference
+  - ariaHidden
+  - AriaAttributes
+  - AriaMixin
+  - Element
+---
+<div>{{DefaultAPISidebar("DOM")}}</div>
+
+<p class="summary">The <strong><code>ariaHidden</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute"><code>aria-hidden</code></a> attribute, which indicates whether the element is exposed to an accessibility API.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate">var <var>ariaHidden</var> = element.ariaHidden;
+<var>element</var>.ariaHidden = <var>ariaHidden</var></pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} with one of the following values:</p>
+
+<dl>
+  <dt><code>"true"</code></dt>
+  <dd>The element is hidden from the accessibility API.</dd>
+  <dt><code>"false"</code></dt>
+  <dd>The element is exposed to the accessibility API as if it were rendered.</dd>
+  <dt><code>undefined</code></dt>
+  <dd>The element's hidden state is determined by the user agent based on whether it is rendered.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example the <code>aria-hidden</code> attribute on the element with an ID of <code>hidden</code> is set to "true". Using <code>ariaHidden</code> we update the value to "false".</p>
+
+<pre class="brush: html">&lt;div id="hidden" aria-hidden="true"&gt;Some things are better left unsaid.&lt;/div&gt;</pre>
+
+<pre class="brush: js">let el = document.getElementById('hidden');
+console.log(el.ariaHidden); // true
+el.ariaHidden = "false"
+console.log(el.ariaHidden); // false</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-ariahidden','ariaHidden')}}</td>
+   <td>{{Spec2('ARIA 1.2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.Element.ariaHidden")}}</p>

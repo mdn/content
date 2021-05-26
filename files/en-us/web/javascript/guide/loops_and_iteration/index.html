@@ -2,11 +2,11 @@
 title: Loops and iteration
 slug: Web/JavaScript/Guide/Loops_and_iteration
 tags:
-- Guide
-- JavaScript
-- Loop
-- Syntax
-- 'l10n:priority'
+  - Guide
+  - JavaScript
+  - Loop
+  - Syntax
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}}
   {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling",
@@ -20,7 +20,7 @@ tags:
   take <em>X</em> steps in one direction, then <em>Y</em> steps in another. For example,
   the idea "Go five steps to the east" could be expressed this way as a loop:</p>
 
-<pre class="brush: js notranslate">for (let step = 0; step &lt; 5; step++) {
+<pre class="brush: js">for (let step = 0; step &lt; 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
   console.log('Walking east one step');
 }
@@ -55,7 +55,7 @@ tags:
 
 <p>A <code>for</code> statement looks as follows:</p>
 
-<pre class="brush: js notranslate">for ([initialExpression]; [conditionExpression]; [incrementExpression])
+<pre class="brush: js">for ([initialExpression]; [conditionExpression]; [incrementExpression])
   statement
 </pre>
 
@@ -89,7 +89,7 @@ tags:
   element, performs the succeeding <code>if</code> statement, and increments
   <code>i</code> by after each pass through the loop.</p>
 
-<pre class="brush: html notranslate">&lt;form name="selectForm"&gt;
+<pre class="brush: html">&lt;form name="selectForm"&gt;
   &lt;p&gt;
     &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
     &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
@@ -130,7 +130,7 @@ btn.addEventListener('click', function() {
 
 <p>A <code>do...while</code> statement looks as follows:</p>
 
-<pre class="brush: js notranslate">do
+<pre class="brush: js">do
   <em>statement</em>
 while (condition);
 </pre>
@@ -149,7 +149,7 @@ while (condition);
 <p>In the following example, the <code>do</code> loop iterates at least once and
   reiterates until <code><em>i</em></code> is no longer less than <code>5</code>.</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 do {
   i += 1;
   console.log(i);
@@ -161,7 +161,7 @@ do {
   specified condition evaluates to <code>true</code>. A <code>while</code> statement looks
   as follows:</p>
 
-<pre class="brush: js notranslate">while (<em>condition</em>)
+<pre class="brush: js">while (<em>condition</em>)
   <em>statement</em>
 </pre>
 
@@ -183,7 +183,7 @@ do {
 <p>The following <code>while</code> loop iterates as long as <em><code>n</code></em> is
   less than <code>3</code>:</p>
 
-<pre class="brush: js notranslate">let n = 0;
+<pre class="brush: js">let n = 0;
 let x = 0;
 while (n &lt; 3) {
   n++;
@@ -214,7 +214,7 @@ while (n &lt; 3) {
   following <code>while</code> loop execute forever because the condition never becomes
   <code>false</code>:</p>
 
-<pre class="example-bad brush: js notranslate">// Infinite loops are bad!
+<pre class="example-bad brush: js">// Infinite loops are bad!
 while (true) {
   console.log('Hello, world!');
 }</pre>
@@ -228,7 +228,7 @@ while (true) {
 
 <p>The syntax of the labeled statement looks like the following:</p>
 
-<pre class="brush: js notranslate">label :
+<pre class="brush: js">label :
    statement
 </pre>
 
@@ -241,7 +241,7 @@ while (true) {
 <p>In this example, the label <code>markLoop</code> identifies a <code>while</code> loop.
 </p>
 
-<pre class="brush: js notranslate">markLoop:
+<pre class="brush: js">markLoop:
 while (theMark === true) {
    doSomething();
 }</pre>
@@ -261,7 +261,7 @@ while (theMark === true) {
 
 <p>The syntax of the <code>break</code> statement looks like this:</p>
 
-<pre class="brush: js notranslate">break;
+<pre class="brush: js">break;
 break [<em>label</em>];
 </pre>
 
@@ -277,7 +277,7 @@ break [<em>label</em>];
 <p>The following example iterates through the elements in an array until it finds the
   index of an element whose value is <code>theValue</code>:</p>
 
-<pre class="brush: js notranslate">for (let i = 0; i &lt; a.length; i++) {
+<pre class="brush: js">for (let i = 0; i &lt; a.length; i++) {
   if (a[i] === theValue) {
     break;
   }
@@ -286,7 +286,7 @@ break [<em>label</em>];
 <h3 id="Example_2_Breaking_to_a_label"><strong>Example 2:</strong> Breaking to a label
 </h3>
 
-<pre class="brush: js notranslate">let x = 0;
+<pre class="brush: js">let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
   console.log('Outer loops: ' + x);
@@ -324,7 +324,7 @@ labelCancelLoops: while (true) {
 
 <p>The syntax of the <code>continue</code> statement looks like the following:</p>
 
-<pre class="brush: js notranslate">continue [<em>label</em>];
+<pre class="brush: js">continue [<em>label</em>];
 </pre>
 
 <h3 id="Example_1_3">Example 1</h3>
@@ -334,7 +334,7 @@ labelCancelLoops: while (true) {
   <code>n</code> takes on the values <code>1</code>, <code>3</code>, <code>7</code>, and
   <code>12</code>.</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 let n = 0;
 while (i &lt; 5) {
   i++;
@@ -374,7 +374,7 @@ while (i &lt; 5) {
 <p>If <code>continue</code> had a label of <em><code>checkiandj</code></em>, the program
   would continue at the top of the <em><code>checkiandj</code></em> statement.</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 let j = 10;
 checkiandj:
   while (i &lt; 4) {
@@ -400,7 +400,7 @@ checkiandj:
   JavaScript executes the specified statements. A <code>for...in</code> statement looks as
   follows:</p>
 
-<pre class="brush: js notranslate">for (variable in object)
+<pre class="brush: js">for (variable in object)
   statement
 </pre>
 
@@ -410,7 +410,7 @@ checkiandj:
   iterates over all the object's properties and returns a string that lists the property
   names and their values.</p>
 
-<pre class="brush: js notranslate">function dump_props(obj, obj_name) {
+<pre class="brush: js">function dump_props(obj, obj_name) {
   let result = '';
   for (let i in obj) {
     result += obj_name + '.' + i + ' = ' + obj[i] + '&lt;br&gt;';
@@ -423,7 +423,7 @@ checkiandj:
 <p>For an object <code>car</code> with properties <code>make</code> and
   <code>model</code>, <code>result</code> would be:</p>
 
-<pre class="brush: js notranslate">car.make = Ford
+<pre class="brush: js">car.make = Ford
 car.model = Mustang
 </pre>
 
@@ -441,13 +441,13 @@ car.model = Mustang
 <h2 id="for...of_statement"><code>for...of</code> statement</h2>
 
 <p>The {{jsxref("statements/for...of","for...of")}} statement creates a loop Iterating
-  over <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable objects</a> (including
+  over <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">iterable objects</a> (including
   {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}},
   {{jsxref("functions/arguments","arguments")}} object and so on), invoking a custom
   iteration hook with statements to be executed for the value of each distinct property.
 </p>
 
-<pre class="brush: js notranslate">for (<em>variable</em> of <em>object</em>)
+<pre class="brush: js">for (<em>variable</em> of <em>object</em>)
   <em>statement</em>
 </pre>
 
@@ -455,7 +455,7 @@ car.model = Mustang
   {{jsxref("statements/for...in","for...in")}} loop. While <code>for...in</code> iterates
   over property names, <code>for...of</code> iterates over property values:</p>
 
-<pre class="brush:js notranslate">const arr = [3, 5, 7];
+<pre class="brush:js">const arr = [3, 5, 7];
 arr.foo = 'hello';
 
 for (let i in arr) {

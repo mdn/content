@@ -20,7 +20,7 @@ tags:
 <h2 id="HTML_content">HTML content</h2>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;p&gt;Click the "Start" button to begin video recording for a few seconds. You can stop
+<pre class="brush: html">&lt;p&gt;Click the "Start" button to begin video recording for a few seconds. You can stop
    the video by clicking the creatively-named "Stop" button. The "Download"
    button will download the received data (although it's in a raw, unwrapped form
    that isn't very useful).
@@ -31,7 +31,7 @@ tags:
 
 <p>Let's start by looking at the key bits of the HTML. There's a little more than this, but it's just informational rather than being part of the core operation of the app.</p>
 
-<pre class="brush: html notranslate">&lt;div class="left"&gt;
+<pre class="brush: html">&lt;div class="left"&gt;
   &lt;div id="startButton" class="button"&gt;
     Start
   &lt;/div&gt;
@@ -42,7 +42,7 @@ tags:
 
 <p>We present our main interface in two columns. On the left is a start button and a {{HTMLElement("video")}} element which displays the video preview; this is the video the user's camera sees. Note that the {{htmlattrxref("autoplay", "video")}} attribute is used so that as soon as the stream starts to arrive from the camera, it immediately gets displayed, and the {{htmlattrxref("muted", "video")}} attribute is specified to ensure that the sound from the user's microphone isn't output to their speakers, causing an ugly feedback loop.</p>
 
-<pre class="brush: html notranslate">&lt;div class="right"&gt;
+<pre class="brush: html">&lt;div class="right"&gt;
   &lt;div id="stopButton" class="button"&gt;
     Stop
   &lt;/div&gt;
@@ -59,12 +59,12 @@ tags:
 <p>Below the playback element is a button for downloading the recorded video.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;div class="bottom"&gt;
+<pre class="brush: html">&lt;div class="bottom"&gt;
   &lt;pre id="log"&gt;&lt;/pre&gt;
 &lt;/div&gt;</pre>
 <strong>CSS content</strong>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -119,7 +119,7 @@ h2 {
 
 <p>We start by establishing some global variables we'll need.</p>
 
-<pre class="brush: js notranslate">let preview = document.getElementById("preview");
+<pre class="brush: js">let preview = document.getElementById("preview");
 let recording = document.getElementById("recording");
 let startButton = document.getElementById("startButton");
 let stopButton = document.getElementById("stopButton");
@@ -135,25 +135,25 @@ let recordingTimeMS = 5000;
 
 <p>Next, we create some utility functions that will get used later.</p>
 
-<pre class="brush: js notranslate">function log(msg) {
+<pre class="brush: js">function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
 </pre>
 
 <p>The <code>log()</code> function is used to output text strings to a {{HTMLElement("div")}} so we can share information with the user. Not very pretty but it gets the job done for our purposes.</p>
 
-<pre class="brush: js notranslate">function wait(delayInMS) {
+<pre class="brush: js">function wait(delayInMS) {
   return new Promise(resolve =&gt; setTimeout(resolve, delayInMS));
 }
 </pre>
 
-<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("window.setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
+<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
 
 <h3 id="Starting_media_recording">Starting media recording</h3>
 
 <p>The <code>startRecording()</code> function handles starting the recording process:</p>
 
-<pre class="brush: js notranslate">function startRecording(stream, lengthInMS) {
+<pre class="brush: js">function startRecording(stream, lengthInMS) {
   let recorder = new MediaRecorder(stream);
   let data = [];
 
@@ -201,7 +201,7 @@ let recordingTimeMS = 5000;
 
 <p>The <code>stop()</code> function stops the input media:</p>
 
-<pre class="brush: js notranslate">function stop(stream) {
+<pre class="brush: js">function stop(stream) {
   stream.getTracks().forEach(track =&gt; track.stop());
 }
 </pre>
@@ -212,7 +212,7 @@ let recordingTimeMS = 5000;
 
 <p>Now let's look at the most intricate piece of code in this example: our event handler for clicks on the start button:</p>
 
-<pre class="brush: js notranslate">startButton.addEventListener("click", function() {
+<pre class="brush: js">startButton.addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
     video: true,
     audio: true
@@ -238,7 +238,7 @@ let recordingTimeMS = 5000;
 
 <dl>
  <dt>Lines 2-4</dt>
- <dd>{{domxref("navigator.mediaDevices.getUserMedia()")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.</dd>
+ <dd>{{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.</dd>
  <dt>Lines 5-9</dt>
  <dd>When the Promise returned by <code>getUserMedia()</code> is resolved, the preview {{HTMLElement("video")}} element's {{domxref("HTMLMediaElement.srcObject","srcObject")}} property is set to be the input stream, which causes the video being captured by the user's camera to be displayed in the preview box. Since the <code>&lt;video&gt;</code> element is muted, the audio won't play. The "Download" button's link is then set to refer to the stream as well. Then, in line 8, we arrange for <code>preview.captureStream()</code> to call <code>preview.mozCaptureStream()</code> so that our code will work on Firefox, on which the {{domxref("MediaRecorder.captureStream()")}} method is prefixed. Then a new {{jsxref("Promise")}} which resolves when the preview video starts to play is created and returned.</dd>
  <dt>Line 10</dt>
@@ -257,7 +257,7 @@ let recordingTimeMS = 5000;
 
 <p>The last bit of code adds a handler for the {{event("click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-<pre class="brush: js notranslate">stopButton.addEventListener("click", function() {
+<pre class="brush: js">stopButton.addEventListener("click", function() {
   stop(preview.srcObject);
 }, false);</pre>
 
@@ -270,7 +270,7 @@ let recordingTimeMS = 5000;
 
 <p>{{ EmbedLiveSample('Example', 600, 440, "", "", "", "camera;microphone") }}</p>
 
-<p>You can {{LiveSampleLink("Example", "take a look at all the code")}}, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.</p>
+<p>You can {{LiveSampleLink("Example", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.</p>
 
 <h2 id="See_also">See also</h2>
 

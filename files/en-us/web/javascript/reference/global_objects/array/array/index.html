@@ -6,6 +6,7 @@ tags:
 - Constructor
 - JavaScript
 - Reference
+browser-compat: javascript.builtins.Array.Array
 ---
 <div>{{JSRef}}</div>
 
@@ -14,10 +15,15 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">[<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
+<pre class="brush: js">
+// literal constructor
+[element0, element1, ..., elementN]
 
-new Array(<var>element0</var>, <var>element1</var>[, ...[, <var>elementN</var>]])
-new Array(<var>arrayLength</var>)</pre>
+// construct from elements
+new Array(element0, element1, ..., elementN)
+
+// construct from array length
+new Array(arrayLength)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -78,20 +84,11 @@ console.log(fruits[0]);     // "Apple"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array-constructor', 'Array constructor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.Array")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

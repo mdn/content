@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong>Document Object Model</strong> (<strong>DOM</strong>) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory.</span> Usually, that means JavaScript, although modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language, as such.</p>
+<p><span class="seoSummary">The <strong>Document Object Model</strong> (<strong>DOM</strong>) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory.</span> Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.</p>
 
 <p>The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.</p>
 
@@ -54,8 +54,6 @@ tags:
  <li>{{DOMxRef("NodeFilter")}}</li>
  <li>{{DOMxRef("NodeIterator")}}</li>
  <li>{{DOMxRef("NodeList")}}</li>
- <li>{{DOMxRef("NonDocumentTypeChildNode")}}</li>
- <li>{{DOMxRef("ParentNode")}}</li>
  <li>{{DOMxRef("ProcessingInstruction")}}</li>
  <li>{{DOMxRef("Selection")}} {{Experimental_Inline}}</li>
  <li>{{DOMxRef("Range")}}</li>
@@ -101,7 +99,7 @@ tags:
 
 <p>A document containing HTML is described using the {{DOMxRef("Document")}} interface, which is extended by the HTML specification to include various HTML-specific features. In particular, the {{domxref("Element")}} interface is enhanced to become {{domxref("HTMLElement")}} and various subclasses, each representing one of (or a family of closely related) elements.</p>
 
-<p>The HTML DOM API provides access to various browser features such as tabs and windows, CSS styles and stylesheets, browser history, and so forth. These interfaces are discussed further in <a href="/en-US/docs/Web/API/HTML_DOM">the HTML DOM API</a> documentation.</p>
+<p>The HTML DOM API provides access to various browser features such as tabs and windows, CSS styles and stylesheets, browser history, and so forth. These interfaces are discussed further in <a href="/en-US/docs/Web/API/HTML_DOM_API">the HTML DOM API</a> documentation.</p>
 
 <h2 id="SVG_interfaces">SVG interfaces</h2>
 
@@ -120,7 +118,6 @@ tags:
  <li>{{DOMxRef("SVGAnimateTransformElement")}}</li>
  <li>{{DOMxRef("SVGCircleElement")}}</li>
  <li>{{DOMxRef("SVGClipPathElement")}}</li>
- <li>{{DOMxRef("SVGColorProfileElement")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGComponentTransferFunctionElement")}}</li>
  <li>{{DOMxRef("SVGCursorElement")}}</li>
  <li>{{DOMxRef("SVGDefsElement")}}</li>
@@ -190,7 +187,6 @@ tags:
  <li>{{DOMxRef("SVGRectElement")}}</li>
  <li>{{DOMxRef("SVGScriptElement")}}</li>
  <li>{{DOMxRef("SVGSetElement")}}</li>
- <li>{{DOMxRef("SVGSolidcolorElement")}} {{Experimental_Inline}}</li>
  <li>{{DOMxRef("SVGStopElement")}}</li>
  <li>{{DOMxRef("SVGStyleElement")}}</li>
  <li>{{DOMxRef("SVGSVGElement")}}</li>
@@ -301,17 +297,12 @@ tags:
  <li>{{DOMxRef("SVGCSSRule")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGDocument")}}</li>
  <li>{{DOMxRef("SVGException")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGExternalResourcesRequired")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGFitToViewBox")}}</li>
- <li>{{DOMxRef("SVGLangSpace")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGLocatable")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGRenderingIntent")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGStylable")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGTests")}}</li>
- <li>{{DOMxRef("SVGTransformable")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGUnitTypes")}}</li>
  <li>{{DOMxRef("SVGUseElementShadowRoot")}}</li>
- <li>{{DOMxRef("SVGURIReference")}}</li>
  <li>{{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}</li>
  <li>{{DOMxRef("SVGZoomAndPan")}}</li>
  <li>{{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}</li>

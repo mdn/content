@@ -2,10 +2,10 @@
 title: 'SyntaxError: for-in loop head declarations may not have initializers'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 tags:
-- Error
-- JavaScript
-- Strict Mode
-- SyntaxError
+  - Error
+  - JavaScript
+  - Strict Mode
+  - SyntaxError
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Message">Message</h2>
 
-<pre class="brush: js notranslate">SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
+<pre class="brush: js">SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
 SyntaxError: for-in loop head declarations may not have initializers (Firefox)
 SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
 </pre>
@@ -68,7 +68,7 @@ for (var i in obj) {
 <h3 id="Array_iteration">Array iteration</h3>
 
 <p>The for...in loop <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in">shouldn't
+    href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in">shouldn't
     be used for Array iteration</a>. Did you intend to use a
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> loop
   instead of a <code>for-in</code> loop to iterate an {{jsxref("Array")}}? The

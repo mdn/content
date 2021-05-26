@@ -18,7 +18,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>Boolean</var> = FileSystemHandle1.isSameEntry(FileSystemHandle2);</pre>
+  class="brush: js">var <var>Boolean</var> = FileSystemHandle1.isSameEntry(FileSystemHandle2);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
 <p>The following function compares a single entry with an array of entries, and returns a
   new array with any matching entries removed.</p>
 
-<pre class="brush: js notranslate">function removeMatches(fileEntry, entriesArr) {
+<pre class="brush: js">function removeMatches(fileEntry, entriesArr) {
 
   let newArr = entriesArr.filter( entry =&gt; !fileEntry.isSameEntry(entry) )
 

@@ -8,6 +8,7 @@ tags:
   - Global Objects
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.Array
 ---
 <div>{{JSRef}}</div>
 
@@ -17,13 +18,13 @@ tags:
 
 <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can change at any time, and data can be stored at non-contiguous locations in the array, JavaScript arrays are not guaranteed to be dense; this depends on how the programmer chooses to use them. In general, these are convenient characteristics; but if these features are not desirable for your particular use, you might consider using typed arrays.</p>
 
-<p>Arrays cannot use strings as element indexes (as in an <a href="https://en.wikipedia.org/wiki/Associative_array">associative array</a>) but must use integers. Setting or accessing via non-integers using <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties">bracket notation</a> (or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">dot notation</a>) will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's <a href="/en-US/docs/Web/JavaScript/Data_structures#Properties">object property collection</a>. The array's object properties and list of array elements are separate, and the array's <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Array_methods">traversal and mutation operations</a> cannot be applied to these named properties.</p>
+<p>Arrays cannot use strings as element indexes (as in an <a href="https://en.wikipedia.org/wiki/Associative_array">associative array</a>) but must use integers. Setting or accessing via non-integers using <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties">bracket notation</a> (or <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">dot notation</a>) will not set or retrieve an element from the array list itself, but will set or access a variable associated with that array's <a href="/en-US/docs/Web/JavaScript/Data_structures#properties">object property collection</a>. The array's object properties and list of array elements are separate, and the array's <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_methods">traversal and mutation operations</a> cannot be applied to these named properties.</p>
 
 <h3 id="Common_operations">Common operations</h3>
 
 <p><strong>Create an Array</strong></p>
 
-<pre class="brush: js notranslate">let fruits = ['Apple', 'Banana']
+<pre class="brush: js">let fruits = ['Apple', 'Banana']
 
 console.log(fruits.length)
 // 2
@@ -31,7 +32,7 @@ console.log(fruits.length)
 
 <p><strong>Access an Array item using the index position</strong></p>
 
-<pre class="brush: js notranslate">let first = fruits[0]
+<pre class="brush: js">let first = fruits[0]
 // Apple
 
 let last = fruits[fruits.length - 1]
@@ -40,7 +41,7 @@ let last = fruits[fruits.length - 1]
 
 <p><strong>Loop over an Array</strong></p>
 
-<pre class="brush: js notranslate">fruits.forEach(function(item, index, array) {
+<pre class="brush: js">fruits.forEach(function(item, index, array) {
   console.log(item, index)
 })
 // Apple 0
@@ -49,31 +50,31 @@ let last = fruits[fruits.length - 1]
 
 <p><strong>Add an item to the end of an Array</strong></p>
 
-<pre class="brush: js notranslate">let newLength = fruits.push('Orange')
+<pre class="brush: js">let newLength = fruits.push('Orange')
 // ["Apple", "Banana", "Orange"]
 </pre>
 
 <p><strong>Remove an item from the end of an Array</strong></p>
 
-<pre class="brush: js notranslate">let last = fruits.pop() // remove Orange (from the end)
+<pre class="brush: js">let last = fruits.pop() // remove Orange (from the end)
 // ["Apple", "Banana"]
 </pre>
 
 <p><strong>Remove an item from the beginning of an Array</strong></p>
 
-<pre class="brush: js notranslate">let first = fruits.shift() // remove Apple from the front
+<pre class="brush: js">let first = fruits.shift() // remove Apple from the front
 // ["Banana"]
 </pre>
 
 <p><strong>Add an item to the beginning of an Array</strong></p>
 
-<pre class="brush: js notranslate">let newLength = fruits.unshift('Strawberry') // add to the front
+<pre class="brush: js">let newLength = fruits.unshift('Strawberry') // add to the front
 // ["Strawberry", "Banana"]
 </pre>
 
 <p><strong>Find the index of an item in the Array</strong></p>
 
-<pre class="brush: js notranslate">fruits.push('Mango')
+<pre class="brush: js">fruits.push('Mango')
 // ["Strawberry", "Banana", "Mango"]
 
 let pos = fruits.indexOf('Banana')
@@ -82,13 +83,13 @@ let pos = fruits.indexOf('Banana')
 
 <p><strong>Remove an item by index position</strong></p>
 
-<pre class="brush: js notranslate">let removedItem = fruits.splice(pos, 1) // this is how to remove an item
+<pre class="brush: js">let removedItem = fruits.splice(pos, 1) // this is how to remove an item
 
 // ["Strawberry", "Mango"]</pre>
 
 <p><strong>Remove items from an index position</strong></p>
 
-<pre class="brush: js notranslate">let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
+<pre class="brush: js">let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
 console.log(vegetables)
 // ["Cabbage", "Turnip", "Radish", "Carrot"]
 
@@ -108,7 +109,7 @@ console.log(removedItems)
 
 <p><strong>Copy an Array</strong></p>
 
-<pre class="brush: js notranslate">let shallowCopy = fruits.slice() // this is how to make a copy
+<pre class="brush: js">let shallowCopy = fruits.slice() // this is how to make a copy
 // ["Strawberry", "Mango"]
 </pre>
 
@@ -118,7 +119,7 @@ console.log(removedItems)
 
 <p>Using an invalid index number returns <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">let arr = ['this is the first element', 'this is the second element', 'this is the last element']
+<pre class="brush: js">let arr = ['this is the first element', 'this is the second element', 'this is the last element']
 console.log(arr[0])              // logs 'this is the first element'
 console.log(arr[1])              // logs 'this is the second element'
 console.log(arr[arr.length - 1]) // logs 'this is the last element'
@@ -126,19 +127,19 @@ console.log(arr[arr.length - 1]) // logs 'this is the last element'
 
 <p>Array elements are object properties in the same way that <code>toString</code> is a property (to be specific, however, <code>toString()</code> is a method). Nevertheless, trying to access an element of an array as follows throws a syntax error because the property name is not valid:</p>
 
-<pre class="brush: js notranslate">console.log(arr.0) // a syntax error
+<pre class="brush: js">console.log(arr.0) // a syntax error
 </pre>
 
 <p>There is nothing special about JavaScript arrays and the properties that cause this. JavaScript properties that begin with a digit cannot be referenced with dot notation and must be accessed using bracket notation.</p>
 
 <p>For example, if you had an object with a property named <code>3d</code>, it can only be referenced using bracket notation.</p>
 
-<pre class="brush: js notranslate">let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+<pre class="brush: js">let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
 console.log(years.0)   // a syntax error
 console.log(years[0])  // works properly
 </pre>
 
-<pre class="brush: js notranslate">renderer.3d.setTexture(model, 'character.png')     // a syntax error
+<pre class="brush: js">renderer.3d.setTexture(model, 'character.png')     // a syntax error
 renderer['3d'].setTexture(model, 'character.png')  // works properly
 </pre>
 
@@ -146,7 +147,7 @@ renderer['3d'].setTexture(model, 'character.png')  // works properly
 
 <p>The <code>2</code> in <code>years[2]</code> is coerced into a string by the JavaScript engine through an implicit <code>toString</code> conversion. As a result, <code>'2'</code> and <code>'02'</code> would refer to two different slots on the <code>years</code> object, and the following example could be <code>true</code>:</p>
 
-<pre class="brush: js notranslate">console.log(years['2'] != years['02'])
+<pre class="brush: js">console.log(years['2'] != years['02'])
 </pre>
 
 <h3 id="Relationship_between_length_and_numerical_properties">Relationship between length and numerical properties</h3>
@@ -157,7 +158,7 @@ renderer['3d'].setTexture(model, 'character.png')  // works properly
 
 <p>Other methods (e.g., {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array.length", "length")}} property.</p>
 
-<pre class="brush: js notranslate">const fruits = []
+<pre class="brush: js">const fruits = []
 fruits.push('banana', 'apple', 'peach')
 
 console.log(fruits.length) // 3
@@ -165,7 +166,7 @@ console.log(fruits.length) // 3
 
 <p>When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array.length", "length")}} property accordingly:</p>
 
-<pre class="brush: js notranslate">fruits[5] = 'mango'
+<pre class="brush: js">fruits[5] = 'mango'
 console.log(fruits[5])            // 'mango'
 console.log(Object.keys(fruits))  // ['0', '1', '2', '5']
 console.log(fruits.length)        // 6
@@ -173,7 +174,7 @@ console.log(fruits.length)        // 6
 
 <p>Increasing the {{jsxref("Array.length", "length")}}.</p>
 
-<pre class="brush: js notranslate">fruits.length = 10
+<pre class="brush: js">fruits.length = 10
 console.log(fruits)              // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]
 console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
 console.log(fruits.length)       // 10
@@ -182,7 +183,7 @@ console.log(fruits[8])           // undefined
 
 <p>Decreasing the {{jsxref("Array.length", "length")}} property does, however, delete elements.</p>
 
-<pre class="brush: js notranslate">fruits.length = 2
+<pre class="brush: js">fruits.length = 2
 console.log(Object.keys(fruits)) // ['0', '1']
 console.log(fruits.length)       // 2
 </pre>
@@ -195,7 +196,7 @@ console.log(fruits.length)       // 2
 
 <p>To help explain these properties and elements, see this example and then refer to the table below:</p>
 
-<pre class="brush: js notranslate">// Match one d followed by one or more b's followed by one d
+<pre class="brush: js">// Match one d followed by one or more b's followed by one d
 // Remember matched b's and the following d
 // Ignore case
 
@@ -349,7 +350,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 
 <p>The following example creates an array, <code><var>msgArray</var></code>, with a length of <code>0</code>, then assigns values to <code>msgArray[0]</code> and <code>msgArray[99]</code>, changing the <code>length</code> of the array to <code>100</code>.</p>
 
-<pre class="brush: js notranslate">let msgArray = []
+<pre class="brush: js">let msgArray = []
 msgArray[0] = 'Hello'
 msgArray[99] = 'world'
 
@@ -362,7 +363,7 @@ if (msgArray.length === 100) {
 
 <p>The following creates a chessboard as a two-dimensional array of strings. The first move is made by copying the <code>'p'</code> in <code>board[6][4]</code> to <code>board[4][4]</code>. The old position at <code>[6][4]</code> is made blank.</p>
 
-<pre class="brush: js notranslate">let board = [
+<pre class="brush: js">let board = [
   ['R','N','B','Q','K','B','N','R'],
   ['P','P','P','P','P','P','P','P'],
   [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -382,7 +383,7 @@ console.log(board.join('\n'))
 
 <p>Here is the output:</p>
 
-<pre class="brush: plain notranslate">R,N,B,Q,K,B,N,R
+<pre class="brush: plain">R,N,B,Q,K,B,N,R
 P,P,P,P,P,P,P,P
  , , , , , , ,
  , , , , , , ,
@@ -403,7 +404,7 @@ r,n,b,q,k,b,n,r
 
 <h3 id="Using_an_array_to_tabulate_a_set_of_values">Using an array to tabulate a set of values</h3>
 
-<pre class="brush: js notranslate">values = []
+<pre class="brush: js">values = []
 for (let x = 0; x &lt; 10; x++){
  values.push([
   2 ** x,
@@ -414,7 +415,7 @@ console.table(values)</pre>
 
 <p>Results in</p>
 
-<pre class="brush: plain notranslate">// The first column is the index
+<pre class="brush: plain">// The first column is the index
 0	1	0
 1	2	2
 2	4	8
@@ -429,33 +430,21 @@ console.table(values)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Initial publication</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-objects', 'Array')}}</td>
-   <td>ECMAScript 1</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>From the JavaScript Guide:
   <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties">“Indexing object properties”</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Array_object">“Indexed collections: <code>Array</code> object”</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties">“Indexing object properties”</a></li>
+   <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object">“Indexed collections: <code>Array</code> object”</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/JavaScript_typed_arrays">Typed Arrays</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed Arrays</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length">RangeError: invalid array length</a></li>
 </ul>

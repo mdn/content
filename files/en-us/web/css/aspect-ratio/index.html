@@ -8,12 +8,13 @@ tags:
   - Reference
   - aspect-ratio
   - 'recipe:css-property'
+browser-compat: css.properties.aspect-ratio
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>aspect-ratio</code></strong>  <a href="/en-US/docs/CSS">CSS</a> property sets a <strong>preferred aspect ratio</strong> for the box, which will be used in the calculation of auto sizes and some other layout functions.</p>
 
-<pre class="brush:css no-line-numbers notranslate">aspect-ratio: 1 / 1;
+<pre class="brush:css no-line-numbers">aspect-ratio: 1 / 1;
 
 /* Global values */
 aspect-ratio: inherit;
@@ -25,7 +26,7 @@ aspect-ratio: unset;
 
 <dl>
  <dt>{{cssxref("&lt;auto&gt;")}}</dt>
- <dd>Replaced elements with an intrinsic aspect ratio use <em>that</em> aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.</dd>
+ <dd><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a> with an intrinsic aspect ratio use <em>that</em> aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.</dd>
  <dt>{{cssxref("&lt;ratio&gt;")}}</dt>
  <dd>The box’s preferred aspect ratio is the specified ratio of <code>width</code> / <code>height</code>. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by <code>box-sizing</code>.</dd>
 </dl>
@@ -36,23 +37,23 @@ aspect-ratio: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Examples_of_values_for_aspect-ratio">Examples of values for aspect-ratio</h3>
 
-<pre class="brush: css notranslate">aspect-ratio: 1 / 1;
+<pre class="brush: css">aspect-ratio: 1 / 1;
 aspect-ratio: 16 / 9;
 </pre>
 
 <h2 id="Mapping_width_and_height_to_aspect-ratio">Mapping width and height to aspect-ratio</h2>
 
-<p>Browsers have added an internal <code>aspect-ratio</code> property that applies to replaced elements and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet. </p>
+<p>Browsers have added an internal <code>aspect-ratio</code> property that applies to <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a> and other related elements that accept <code>width</code> and <code>height</code> attributes. This appears in the browser's internal UA stylesheet. </p>
 
 <p>In Firefox, the internal stylesheet rule looks like this:</p>
 
-<pre class="brush: css notranslate">img, input[type="image"], video, embed, iframe, marquee, object, table {
+<pre class="brush: css">img, input[type="image"], video, embed, iframe, marquee, object, table {
   aspect-ratio: attr(width) / attr(height);
 }</pre>
 
@@ -79,7 +80,7 @@ aspect-ratio: 16 / 9;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.aspect-ratio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

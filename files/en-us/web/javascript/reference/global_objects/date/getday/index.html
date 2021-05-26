@@ -7,25 +7,20 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.getDay
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>getDay()</code></strong> method returns the
+<p>The <strong><code>getDay()</code></strong> method returns the
     day of the week for the specified date according to local time, where 0 represents
-    Sunday.</span> For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
-</p>
+    Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>dateObj</var>.getDay()</pre>
+<pre class="brush: js">getDay()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -40,7 +35,7 @@ tags:
   value of the {{jsxref("Date")}} object <code>Xmas95</code>. December 25, 1995, is a
   Monday.</p>
 
-<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
@@ -52,7 +47,7 @@ console.log(weekday); // 1
     with an <code>options</code> parameter. Using this method, the internationalization is
     made easier:</p>
 
-  <pre class="brush: js notranslate">var options = { weekday: 'long'};
+  <pre class="brush: js">var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 // Monday
 console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
@@ -62,23 +57,11 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.getDay")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

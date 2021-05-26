@@ -7,6 +7,7 @@ tags:
   - Keyword
   - Lexical Grammar
   - Literal
+browser-compat: javascript.grammar
 ---
 <div>{{JsSidebar("More")}}</div>
 
@@ -166,7 +167,7 @@ tags:
 
 <p>The first way is the <code>//</code> comment<strong>;</strong> this makes all text following it on the same line into a comment. For example:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   // This is a one line JavaScript comment
   console.log('Hello world!');
 }
@@ -177,7 +178,7 @@ comment();
 
 <p>For example, you can use it on a single line:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* This is a one line JavaScript comment */
   console.log('Hello world!');
 }
@@ -185,7 +186,7 @@ comment();</pre>
 
 <p>You can also make multiple-line comments, like this:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* This comment spans multiple lines. Notice
      that we don't need to end the comment until we're done. */
   console.log('Hello world!');
@@ -194,14 +195,14 @@ comment();</pre>
 
 <p>You can also use it in the middle of a line, if you wish, although this can make your code harder to read so it should be used with caution:</p>
 
-<pre class="brush: js notranslate">function comment(x) {
+<pre class="brush: js">function comment(x) {
   console.log('Hello ' + x /* insert the value of x */ + ' !');
 }
 comment('world');</pre>
 
 <p>In addition, you can use it to disable code to prevent it from running, by wrapping code in a comment, like this:</p>
 
-<pre class="brush: js notranslate">function comment() {
+<pre class="brush: js">function comment() {
   /* console.log('Hello world!'); */
 }
 comment();</pre>
@@ -216,17 +217,17 @@ comment();</pre>
 
 <p>The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:</p>
 
-<pre class="brush: js notranslate">#!/usr/bin/env node
+<pre class="brush: js">#!/usr/bin/env node
 
 console.log("Hello world");
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Hashbang comments in JavaScript mimic <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">shebangs in Unix</a> used to run files with proper interpreter.</p>
+<p><strong>Note:</strong> Hashbang comments in JavaScript mimic <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">shebangs in Unix</a> used to run files with proper interpreter.</p>
 </div>
 
 <div class="notecard warning">
-<p>Although <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.</p>
+<p><strong>Warning:</strong> Although <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.</p>
 </div>
 
 <p>You must only use the <code>#!</code> comment style to specify a JavaScript interpreter. In all other cases just use a <code>//</code> comment (or mulitiline comment).</p>
@@ -330,14 +331,14 @@ console.log("Hello world");
 
 <p>Reserved words actually only apply to <em>Identifier</em>s (vs.<em> IdentifierName</em>s) . As described in <a href="https://es5.github.com/#A.1">es5.github.com/#A.1</a>, these are all <em>IdentifierName</em>s which do not exclude <em>ReservedWords</em>.</p>
 
-<pre class="brush: js notranslate">a.import
+<pre class="brush: js">a.import
 a['import']
 a = { import: 'test' }.
 </pre>
 
 <p>On the other hand the following is illegal because it's an <em>Identifier</em>, which is an <em>IdentifierName</em> without the reserved words. Identifiers are used for <em>FunctionDeclaration</em>, <em>FunctionExpression</em>,<em> VariableDeclaration</em> and so on. <em>IdentifierNames</em> are used for <em>MemberExpression</em>,<em> CallExpression</em> and so on.</p>
 
-<pre class="brush: js notranslate">function import() {} // Illegal.</pre>
+<pre class="brush: js">function import() {} // Illegal.</pre>
 
 <h3 id="Identifiers_with_special_meanings">Identifiers with special meanings</h3>
 
@@ -355,13 +356,13 @@ a = { import: 'test' }.
 
 <p>See also {{jsxref("null")}} for more information.</p>
 
-<pre class="brush: js notranslate">null</pre>
+<pre class="brush: js">null</pre>
 
 <h3 id="Boolean_literal">Boolean literal</h3>
 
 <p>See also {{jsxref("Boolean")}} for more information.</p>
 
-<pre class="brush: js notranslate">true
+<pre class="brush: js">true
 false</pre>
 
 <h3 id="Numeric_literals">Numeric literals</h3>
@@ -370,7 +371,7 @@ false</pre>
 
 <h4 id="Decimal">Decimal</h4>
 
-<pre class="brush: js notranslate">1234567890
+<pre class="brush: js">1234567890
 42
 
 // Caution when using with a leading zero:
@@ -384,7 +385,7 @@ false</pre>
 
 <p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and <code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
 
-<pre class="brush: js notranslate">0e-5   // =&gt; 0
+<pre class="brush: js">0e-5   // =&gt; 0
 0e+5   // =&gt; 0
 5e1    // =&gt; 50
 175e-2 // =&gt; 1.75
@@ -396,7 +397,7 @@ false</pre>
 
 <p>Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (<code>0b</code> or <code>0B</code>). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the <code>0b</code> are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".</p>
 
-<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
 var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
@@ -404,7 +405,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
 <p>Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (<code>0o</code> or <code>0O)</code>. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the <code>0o</code> are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".</p>
 
-<pre class="brush: js notranslate">var n = 0O755; // 493
+<pre class="brush: js">var n = 0O755; // 493
 var m = 0o644; // 420
 
 // Also possible with just a leading zero (see note about decimals above)
@@ -416,7 +417,7 @@ var m = 0o644; // 420
 
 <p>Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (<code>0x</code> or <code>0X)</code>. If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".</p>
 
-<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
 </pre>
@@ -425,7 +426,7 @@ var m = 0o644; // 420
 
 <p>The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending <code>n</code> to the end of an integer.</p>
 
-<pre class="brush: js notranslate">123456789123456789n     // 123456789123456789
+<pre class="brush: js">123456789123456789n     // 123456789123456789
 0o777777777777n         // 68719476735
 0x123456789ABCDEFn      // 81985529216486895‬
 0b11101001010101010101n // 955733
@@ -433,12 +434,12 @@ var m = 0o644; // 420
 
 <p>Note that legacy octal numbers with just a leading zero won't work for <code>BigInt</code>:</p>
 
-<pre class="brush: js example-bad notranslate">// 0755n
+<pre class="brush: js example-bad">// 0755n
 // SyntaxError: invalid BigInt syntax</pre>
 
 <p>For octal <code>BigInt</code> numbers, always use zero followed by the letter "o" (uppercase or lowercase):</p>
 
-<pre class="brush: js example-good notranslate">0o755n</pre>
+<pre class="brush: js example-good">0o755n</pre>
 
 <p>For more information about <code>BigInt</code>, see also <a href="/en-US/docs/Web/JavaScript/Data_structures#BigInt_type">JavaScript data structures</a>.</p>
 
@@ -446,7 +447,7 @@ var m = 0o644; // 420
 
 <p>To improve readability for numeric literals, underscores (<code>_</code>, <code>U+005F</code>) can be used as separators:</p>
 
-<pre class="brush: js notranslate">// separators in decimal numbers
+<pre class="brush: js">// separators in decimal numbers
 1_000_000_000_000
 1_050.95
 
@@ -465,7 +466,7 @@ var m = 0o644; // 420
 
 <p>Note these limitations:</p>
 
-<pre class="brush: js example-bad notranslate">// More than one underscore in a row is not allowed
+<pre class="brush: js example-bad">// More than one underscore in a row is not allowed
 100__000; // SyntaxError
 
 // Not allowed at the end of numeric literals
@@ -479,7 +480,7 @@ var m = 0o644; // 420
 
 <p>See also {{jsxref("Object")}} and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a> for more information.</p>
 
-<pre class="brush: js notranslate">var o = { a: 'foo', b: 'bar', c: 42 };
+<pre class="brush: js">var o = { a: 'foo', b: 'bar', c: 42 };
 
 // shorthand notation. New in ES2015
 var a = 'foo', b = 'bar', c = 42;
@@ -493,7 +494,7 @@ var o = { a: a, b: b, c: c };
 
 <p>See also {{jsxref("Array")}} for more information.</p>
 
-<pre class="brush: js notranslate">[1954, 1974, 1990, 2014]</pre>
+<pre class="brush: js">[1954, 1974, 1990, 2014]</pre>
 
 <h3 id="String_literals">String literals</h3>
 
@@ -509,14 +510,14 @@ var o = { a: a, b: b, c: c };
 
 <p>Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.</p>
 
-<pre class="brush: js notranslate">'foo'
+<pre class="brush: js">'foo'
 "bar"</pre>
 
 <h4 id="Hexadecimal_escape_sequences">Hexadecimal escape sequences</h4>
 
 <p>Hexadecimal escape sequences consist of <code>\x</code> followed by exactly two hexadecimal digits representing a code unit or code point in the range 0x0000 to 0x00FF.</p>
 
-<pre class="brush: js notranslate">'\xA9' // "©"
+<pre class="brush: js">'\xA9' // "©"
 </pre>
 
 <h4 id="Unicode_escape_sequences">Unicode escape sequences</h4>
@@ -525,7 +526,7 @@ var o = { a: a, b: b, c: c };
 
 <p>See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.charCodeAt()")}}.</p>
 
-<pre class="brush: js notranslate">'\u00A9' // "©" (U+A9)</pre>
+<pre class="brush: js">'\u00A9' // "©" (U+A9)</pre>
 
 <h4 id="Unicode_code_point_escapes">Unicode code point escapes</h4>
 
@@ -533,7 +534,7 @@ var o = { a: a, b: b, c: c };
 
 <p>See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.codePointAt()")}}.</p>
 
-<pre class="brush: js notranslate">'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+<pre class="brush: js">'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
 
 // the same character represented as a surrogate pair
 '\uD87E\uDC04'</pre>
@@ -542,7 +543,7 @@ var o = { a: a, b: b, c: c };
 
 <p>See also {{jsxref("RegExp")}} for more information.</p>
 
-<pre class="brush: js notranslate">/ab+c/g
+<pre class="brush: js">/ab+c/g
 
 // An "empty" regular expression literal
 // The empty non-capturing group is necessary
@@ -553,7 +554,7 @@ var o = { a: a, b: b, c: c };
 
 <p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template strings</a> for more information.</p>
 
-<pre class="brush: js notranslate">`string text`
+<pre class="brush: js">`string text`
 
 `string text line 1
  string text line 2`
@@ -580,7 +581,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>1. A semicolon is inserted before, when a <a href="#line_terminators">Line terminator</a> or "}" is encountered that is not allowed by the grammar.</p>
 
-<pre class="brush: js notranslate">{ 1
+<pre class="brush: js">{ 1
 2 } 3
 
 // is transformed by ASI into:
@@ -592,7 +593,7 @@ tag `string text ${expression} string text`</pre>
 
 <p>Here <code>++</code> is not treated as a <a href="/en-US/docs/Web/JavaScript/Reference/Operators#Increment">postfix operator</a> applying to variable <code>b</code>, because a line terminator occurs between <code>b</code> and <code>++</code>.</p>
 
-<pre class="brush: js notranslate">a = b
+<pre class="brush: js">a = b
 ++c
 
 // is transformend by ASI into
@@ -612,7 +613,7 @@ a = b;
 	<li><code>module</code></li>
 </ul>
 
-<pre class="brush: js notranslate">return
+<pre class="brush: js">return
 a + b
 
 // is transformed by ASI into
@@ -621,35 +622,15 @@ return;
 a + b;
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-		</tr>
-	</tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.grammar")}}</p>
-
-<h3 id="Implementation_Progress">Implementation Progress</h3>
-
-<p>The following table provides a daily implementation status for this feature, because this feature has not yet reached cross-browser stability. The data is generated by running the relevant feature tests in <a href="https://github.com/tc39/test262">Test262</a>, the standard test suite of JavaScript, in the nightly build, or latest release of each browser's JavaScript engine.</p>
-
-<div>{{EmbedTest262ReportResultsTable("hashbang")}}</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/">Jeff Walden: Binary and octal numbers</a></li>
+	<li><a href="https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar">Lexical grammar in the ECMAScript specification</a></li>
+  <li><a href="http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/">Jeff Walden: Binary and octal numbers</a></li>
 	<li><a href="http://mathiasbynens.be/notes/javascript-escapes">Mathias Bynens: JavaScript character escape sequences</a></li>
 	<li>{{jsxref("Boolean")}}</li>
 	<li>{{jsxref("Number")}}</li>

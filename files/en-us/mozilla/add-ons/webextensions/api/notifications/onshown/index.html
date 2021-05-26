@@ -60,7 +60,7 @@ browser.notifications.onShown.hasListener(listener)
 
 <p>Add a listener to the {{WebExtAPIRef("notifications.onShown")}} event and log its details:</p>
 
-<pre class="notranslate brush: js">function logShown(itemId) {
+<pre class="brush: js">function logShown(itemId) {
   console.log(`shown: ${itemId}`);
   browser.notifications.getAll().then((all) =&gt; {
     console.log(all[itemId]);

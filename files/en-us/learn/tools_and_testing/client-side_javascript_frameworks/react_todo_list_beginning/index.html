@@ -65,7 +65,7 @@ tags:
 
 <p>Then, copy and paste the following commands into your terminal to delete some unneeded files. Make sure you’re starting in the app's root directory!</p>
 
-<pre class="brush: bash notranslate"># Move into the src directory of your project
+<pre class="brush: bash"># Move into the src directory of your project
 cd src
 # Delete a few files
 rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
@@ -87,7 +87,7 @@ cd ..</pre>
 
 <p>Copy the following snippet to your clipboard, then paste it into <code>App.js</code> so that it replaces the existing <code>App()</code> function:</p>
 
-<pre class="brush: js notranslate">function App(props) {
+<pre class="brush: js">function App(props) {
   return (
     &lt;div className="todoapp stack-large"&gt;
       &lt;h1&gt;TodoMatic&lt;/h1&gt;
@@ -188,7 +188,7 @@ cd ..</pre>
 
 <p>Now open <code>public/index.html</code> and change the <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> element’s text to <code>TodoMatic</code>. This way, it will match the <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> at the top of our app.</p>
 
-<pre class="brush: html notranslate">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
+<pre class="brush: html">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
 
 <p>When your browser refreshes, you should see something like this:</p>
 
@@ -209,7 +209,7 @@ cd ..</pre>
 
 <p>You may notice some unusual attributes here. For example:</p>
 
-<pre class="brush: html notranslate">&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
+<pre class="brush: html">&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
   &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
   &lt;span&gt;all&lt;/span&gt;
   &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
@@ -221,7 +221,7 @@ cd ..</pre>
 
 <p>Further down, you can find our <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> element:</p>
 
-<pre class="brush: html notranslate">&lt;ul
+<pre class="brush: html">&lt;ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
@@ -233,7 +233,7 @@ cd ..</pre>
 
 <p>Finally, the labels and inputs in our list items have some attributes unique to JSX:</p>
 
-<pre class="brush: html notranslate">&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
+<pre class="brush: html">&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
 &lt;label className="todo-label" htmlFor="todo-0"&gt;
   Eat
 &lt;/label&gt;</pre>
@@ -253,7 +253,7 @@ cd ..</pre>
 
 <p>Paste the following CSS code into <code>src/index.css</code> so that it replaces what's currently there:</p>
 
-<pre class="brush: css notranslate">/* RESETS */
+<pre class="brush: css">/* RESETS */
 *,
 *::before,
 *::after {
@@ -604,5 +604,15 @@ body {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

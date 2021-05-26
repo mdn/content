@@ -4,7 +4,6 @@ slug: Learn/Common_questions/What_is_a_URL
 tags:
   - Beginner
   - Infrastructure
-  - NeedsActiveLearning
   - URL
   - resources
   - urls
@@ -32,46 +31,70 @@ tags:
 
 <p><strong>URL</strong> stands for <em>Uniform Resource Locator</em>. A URL is nothing more than the address of a given unique resource on the Web. In theory, each valid URL points to a unique resource. Such resources can be an HTML page, a CSS document, an image, etc. In practice, there are some exceptions, the most common being a URL pointing to a resource that no longer exists or that has moved. As the resource represented by the URL and the URL itself are handled by the Web server, it is up to the owner of the web server to carefully manage that resource and its associated URL.</p>
 
-<h2 id="Active_Learning">Active Learning</h2>
-
-<p><em>There is no active learning available yet. <a href="/en-US/docs/MDN/Contribute/Getting_started">Please, consider contributing</a>.</em></p>
-
 <h2 id="Basics_anatomy_of_a_URL">Basics: anatomy of a URL</h2>
 
 <p>Here are some examples of URLs:</p>
 
-<pre class="notranslate">https://developer.mozilla.org
+<pre>https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <p>Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).</p>
 
-<p>A URL is composed of different parts, some mandatory and others optional. Let's see the most important parts using the following URL:</p>
+<p>A URL is composed of different parts, some mandatory and others optional. The most important parts are highlighted on the URL below (details are provided in the following sections):</p>
 
-<pre class="notranslate">http://www.example.com:80/path/to/myfile.html?key1=value1&amp;key2=value2#SomewhereInTheDocument</pre>
+<img alt="full  url" src="mdn-url-all.png">
 
-<dl>
- <dt><img alt="Protocol" src="mdn-url-protocol@x2_update.png"></dt>
- <dd><code>http</code> is the protocol. The first part of the URL indicates which protocol the browser must use. A protocol is a set method for exchanging or transferring data around a computer network. Usually for websites it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as <code>mailto:</code> (to open a mail client) or <code>ftp:</code> to handle file transfer, so don't be surprised if you see such protocols.</dd>
- <dd><code>://</code> marks the end of the scheme (protocol) and the start of the authority. If there is a <code>//</code> after the colon (<code>:</code>), this indicates that what follows is the authority. The colon acts as a delimiter between the scheme and the authority component which is preceded by two slashes. The authority in a URL is <code>//www.example.com:80</code>, where the domain name is <code>www.example.com</code> and the port is <code>:80</code>. One example of a URL that doesn't use an authority is the mail client (<code>mailto:foobar</code>). It contains a scheme but doesn't use an authority component. Therefore, the colon is not preceded by two slashes and only acts as a delimiter between the scheme and mail address.</dd>
- <dt><img alt="Domain Name" src="mdn-url-domain@x2.png"></dt>
- <dd><code>www.example.com</code> is the domain name. It indicates which Web server is being requested. Alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.</dd>
- <dt><img alt="Port" src="mdn-url-port@x2.png"></dt>
- <dd><code>:80</code> is the port. It indicates the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.</dd>
- <dt><img alt="Path to the file" src="mdn-url-path@x2.png"></dt>
- <dd><code>/path/to/myfile.html</code> is the path to the resource on the Web server. In the early days of the Web, a path like this represented a physical file location on the Web server. Nowadays, it is mostly an abstraction handled by Web servers without any physical reality.</dd>
- <dt><img alt="Parameters" src="mdn-url-parameters@x2.png"></dt>
- <dd><code>?key1=value1&amp;key2=value2</code> are extra parameters provided to the Web server. Those parameters are a list of key/value pairs separated with the <code>&amp;</code> symbol. The Web server can use those parameters to do extra stuff before returning the resource. Each Web server has its own rules regarding parameters, and the only reliable way to know if a specific Web server is handling parameters is by asking the Web server owner.</dd>
- <dt><img alt="Anchor" src="mdn-url-anchor@x2.png"></dt>
- <dd><code>#SomewhereInTheDocument</code> is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the <strong>#</strong>, also known as the <em><strong>fragment identifier</strong>, is never sent to the server with the request.</em></dd>
-</dl>
+<div class="notecard note">
+  <h4>Tip</h4>
+  <p>You might think of a URL like a regular postal mail address: the <em>scheme</em> represents the postal service you want to use, the <em>domain name</em> is the city or town, and the <em>port</em> is like the zip code; the <em>path</em> represents the building where your mail should be delivered; the <em>parameters</em> represent extra information such as the number of the apartment in the building; and, finally, the <em>anchor</em> represents the actual person to whom you've addressed your mail.</p>
+</div>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>There are <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">some extra parts and some extra rules</a> regarding URLs, but they are not relevant for regular users or Web developers. Don\'t worry about this, you don\'t need to know them to build and use fully functional URLs.</p>
+  <p>There are <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">some extra parts and some extra rules</a> regarding URLs, but they are not relevant for regular users or Web developers. Don't worry about this, you don't need to know them to build and use fully functional URLs.</p>
 </div>
 
-<p>You might think of a URL like a regular postal mail address: the <em>protocol</em> represents the postal service you want to use, the <em>domain name</em> is the city or town, and the <em>port</em> is like the zip code; the <em>path</em> represents the building where your mail should be delivered; the <em>parameters</em> represent extra information such as the number of the apartment in the building; and, finally, the <em>anchor</em> represents the actual person to whom you've addressed your mail.</p>
+<h2 id="Scheme">Scheme</h2>
+
+<img alt="Scheme" src="mdn-url-protocol@x2_update.png">
+
+<p>The first part of the URL is the <em>scheme</em>, which indicates the protocol that the browser must use to request the resouce (a protocol is a set method for exchanging or transferring data around a computer network). Usually for websites the protocol is HTTPS or HTTP (its unsecured version). Addressing web pages requires one of these two, but browsers also know how to handle other schemes such as <code>mailto:</code> (to open a mail client) or <code>ftp:</code> to handle file transfer, so don't be surprised if you see such protocols.</p>
+
+<h2 id="Authority">Authority</h2>
+
+<img alt="Authority" src="mdn-url-authority.png">
+
+
+<p>Next follows the <em>authority</em>, which is separated from the scheme by the character pattern <code>://</code>. If present the authority includes both the <em>domain</em> (e.g. <code>www.example.com</code>) and the <em>port</em> (<code>80</code>), separated by a colon:</p>
+<ul>
+  <li>The domain indicates which Web server is being requested. Usually this is a domain name, but an {{Glossary("IP address")}} may also be used (but this is rare as it is much less convenient).</li>
+  <li>The port indicates the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.</li>
+</ul>
+
+<div class="notecard note">
+  <h4>Note</h4>
+<p>The separator between the scheme and authority is <code>://</code>. The colon separates the scheme from the next part of the URL, while <code>//</code> indicates that the next part of the URL is the authority.</p>
+<p>One example of a URL that doesn't use an authority is the mail client (<code>mailto:foobar</code>). It contains a scheme but doesn't use an authority component. Therefore, the colon is not followed by two slashes and only acts as a delimiter between the scheme and mail address.</p>
+</div>
+
+ <h2 id="Path_to_resource">Path to resource</h2>
+
+ <img alt="Path to the file" src="mdn-url-path@x2.png">
+ <p><code>/path/to/myfile.html</code> is the path to the resource on the Web server. In the early days of the Web, a path like this represented a physical file location on the Web server. Nowadays, it is mostly an abstraction handled by Web servers without any physical reality.</p>
+
+
+ <h2 id="Parameters">Parameters</h2>
+
+ <img alt="Parameters" src="mdn-url-parameters@x2.png">
+
+ <p><code>?key1=value1&amp;key2=value2</code> are extra parameters provided to the Web server. Those parameters are a list of key/value pairs separated with the <code>&amp;</code> symbol. The Web server can use those parameters to do extra stuff before returning the resource. Each Web server has its own rules regarding parameters, and the only reliable way to know if a specific Web server is handling parameters is by asking the Web server owner.</p>
+
+ <h2 id="Anchor">Anchor</h2>
+
+ <img alt="Anchor" src="mdn-url-anchor@x2.png">
+ <p><code>#SomewhereInTheDocument</code> is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the <strong>#</strong>, also known as the <em><strong>fragment identifier</strong>, is never sent to the server with the request.</em></p>
+
 
 <h2 id="How_to_use_URLs">How to use URLs</h2>
 
@@ -108,17 +131,17 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 <dl>
  <dt>Full URL (the same as the one we used before)</dt>
  <dd>
- <pre class="notranslate">https://developer.mozilla.org/en-US/docs/Learn</pre>
+ <pre>https://developer.mozilla.org/en-US/docs/Learn</pre>
  </dd>
  <dt>Implicit protocol</dt>
  <dd>
- <pre class="notranslate">//developer.mozilla.org/en-US/docs/Learn</pre>
+ <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
 
  <p>In this case, the browser will call that URL with the same protocol as the one used to load the document hosting that URL.</p>
  </dd>
  <dt>Implicit domain name</dt>
  <dd>
- <pre class="notranslate">/en-US/docs/Learn</pre>
+ <pre>/en-US/docs/Learn</pre>
 
  <p>This is the most common use case for an absolute URL within an HTML document. The browser will use the same protocol and the same domain name as the one used to load the document hosting that URL. <strong>Note:</strong> <em>it isn't possible to omit the domain name without omitting the protocol as well</em>.</p>
  </dd>
@@ -131,12 +154,11 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 <dl>
  <dt>Sub-resources</dt>
  <dd>
- <pre class="notranslate">Skills/Infrastructure/Understanding_URLs
-</pre>
+ <pre>Skills/Infrastructure/Understanding_URLs</pre>
  Because that URL does not start with <code>/</code>, the browser will attempt to find the document in a sub-directory of the one containing the current resource. So in this example,  we really want to reach this URL: <code>https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs</code></dd>
  <dt>Going back in the directory tree</dt>
  <dd>
- <pre class="notranslate">../CSS/display</pre>
+ <pre>../CSS/display</pre>
 
  <p>In this case, we use the <code>../</code> writing convention — inherited from the UNIX file system world — to tell the browser we want to go up from one directory. Here we want to reach this URL: <code>https://developer.mozilla.org/en-US/docs/Learn/../CSS/display</code>, which can be simplified to: <code>https://developer.mozilla.org/en-US/docs/CSS/display</code></p>
  </dd>

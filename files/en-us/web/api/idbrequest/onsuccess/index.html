@@ -2,14 +2,14 @@
 title: IDBRequest.onsuccess
 slug: Web/API/IDBRequest/onsuccess
 tags:
-- API
-- Database
-- IDBRequest
-- IndexedDB
-- Property
-- Reference
-- Storage
-- onsuccess
+  - API
+  - Database
+  - IDBRequest
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - onsuccess
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -20,14 +20,14 @@ tags:
     fired when the result of a request is successfully returned.</p>
 
   <p>The event handler takes one parameter, a success <a
-      href="/en-US/docs/Web/Events/success">Event</a> with type="success".</p>
+      href="/en-US/docs/Web/API/IDBRequest/success_event">Event</a> with type="success".</p>
 
   <p>{{AvailableInWorkers}}</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">request.onsuccess = function(event) { ... };</pre>
+<pre class="brush: js">request.onsuccess = function(event) { ... };</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -91,16 +91,13 @@ objectStoreTitleRequest.onsuccess = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.IDBRequest.onsuccess")}}</p>
-</div>
+<p>{{Compat("api.IDBRequest.onsuccess")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li><a href="/en-US/docs/Web/Events/success">Success Event</a></li>
+  <li><a href="/en-US/docs/Web/API/IDBRequest/success_event">Success Event</a></li>
   <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
   <li>Using transactions: {{domxref("IDBTransaction")}}</li>
   <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

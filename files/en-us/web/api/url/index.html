@@ -21,7 +21,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>URL</code></strong> interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.</span> You normally create a new <code>URL</code> object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.</p>
 
-<p>If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("Window.URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.</p>
+<p>If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -83,20 +83,20 @@ tags:
 
 <p>The constructor takes a <code>url</code> parameter, and an optional <code>base</code> parameter to use as a base if the <code>url</code> parameter is a relative URL:</p>
 
-<pre class="brush: js notranslate">const url = new URL('../cats', 'http://www.example.com/dogs');
+<pre class="brush: js">const url = new URL('../cats', 'http://www.example.com/dogs');
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 </pre>
 
 <p>URL properties can be set to construct the URL:</p>
 
-<pre class="brush: js notranslate">url.hash = 'tabby';
+<pre class="brush: js">url.hash = 'tabby';
 console.log(url.href); // "http://www.example.com/cats#tabby"
 </pre>
 
 <p>URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:</p>
 
-<pre class="brush: js notranslate">url.pathname = 'démonstration.html';
+<pre class="brush: js">url.pathname = 'démonstration.html';
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 </pre>
 
@@ -104,14 +104,14 @@ console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 
 <p>To get the search params from the current window's URL, you can do this:</p>
 
-<pre class="brush: js notranslate">// https://some.site/?id=123
+<pre class="brush: js">// https://some.site/?id=123
 const parsedUrl = new URL(window.location.href);
 console.log(parsedUrl.searchParams.get("id")); // "123"
 </pre>
 
 <p>The {{domxref("URL.toString", "toString()")}} method of <code>URL</code> just returns the value of the {{domxref("URL.href", "href")}} property, so the constructor can be used to normalize and encode a URL directly.</p>
 
-<pre class="brush: js notranslate">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</pre>
+<pre class="brush: js">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -146,6 +146,6 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 <ul>
  <li><a href="/en-US/docs/Web/API/URL_API">URL API</a></li>
  <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></li>
- <li>Property to obtain a <code>URL</code> object: {{domxref("Window.URL")}}.</li>
+ <li>Property to obtain a <code>URL</code> object: {{domxref("URL")}}.</li>
  <li>{{domxref("URLSearchParams")}}.</li>
 </ul>

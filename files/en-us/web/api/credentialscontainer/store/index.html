@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">CredentialsContainer.store(Credential).then(function(Credential) { ... } )</pre>
+  class="brush: js">CredentialsContainer.store(Credential).then(function(Credential) { ... } )</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -47,7 +47,7 @@ tags:
 <p>This code would be executed after a user signs up or logs in and the server confirms
   the credential is correct.</p>
 
-<pre class="brush: js notranslate">// Check if the browser supports password credentials (and the Credential Management API)
+<pre class="brush: js">// Check if the browser supports password credentials (and the Credential Management API)
 if ("PasswordCredential" in window) {
   let credential = new PasswordCredential({
     id: "example-username",
@@ -82,7 +82,4 @@ if ("PasswordCredential" in window) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.CredentialsContainer.store")}}</p>
-</div>
+<p>{{Compat("api.CredentialsContainer.store")}}</p>

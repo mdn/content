@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>exitPromise</em> = <em>document</em>.exitPictureInPicture();
+<pre class="brush: js"><em>exitPromise</em> = <em>document</em>.exitPictureInPicture();
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -41,7 +41,7 @@ tags:
 <p>This example causes the current document to exit picture-in-picture mode whenever the
   mouse button is clicked within it.</p>
 
-<pre class="brush: js notranslate">document.onclick = function (event) {
+<pre class="brush: js">document.onclick = function (event) {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture()
       .then(() =&gt; console.log("Document Exited from Picture-in-Picture mode"))
@@ -82,6 +82,6 @@ tags:
   <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
   <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
   <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
-  <li>{{DOMxRef("DocumentOrShadowRoot.pictureInPictureElement")}}</li>
+  <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
   <li>{{CSSxRef(":picture-in-picture")}}</li>
 </ul>

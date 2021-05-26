@@ -14,7 +14,7 @@ tags:
 <p class="summary"><strong>Variable fonts</strong> are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.</p>
 
 <div class="warning">
-<p><strong>Warning</strong>: In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
+<p><strong>Warning</strong>: In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to High Sierra (10.13) does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
 </div>
 
 <h2 id="Variable_Fonts_what_they_are_and_how_they_differ">Variable Fonts: what they are, and how they differ</h2>
@@ -64,7 +64,7 @@ tags:
  <li>
   <p>When using <code>font-variation-settings</code> it is important to note that axis names are case-sensitive. The registered axis names must be in lower case, and custom axes must be in upper case. For example:</p>
 
-  <pre class="brush: css notranslate">font-variation-settings: 'wght' 375, 'GRAD' 88;</pre>
+  <pre class="brush: css">font-variation-settings: 'wght' 375, 'GRAD' 88;</pre>
 
   <p><code>wght</code> (weight) is a registered axis, and <code>GRAD</code> (grade) is a custom one.</p>
  </li>
@@ -79,7 +79,7 @@ tags:
 
 <p>It should be noted that at this point there is no way in the <code>@font-face</code> declaration to 'map' a specific point on the variation axis of a variable font to the keyword <code>bold</code> (or any other keyword). This can generally be resolved fairly easily, but does require an extra step in writing your CSS:</p>
 
-<pre class="brush: css notranslate">font-weight: 375;
+<pre class="brush: css">font-weight: 375;
 
 font-variation-settings: 'wght' 375;</pre>
 
@@ -95,7 +95,7 @@ font-variation-settings: 'wght' 375;</pre>
 <p><strong>Note</strong>: The % symbol is not used when utilizing <code>font-variation-settings</code>.</p>
 </div>
 
-<pre class="brush: css notranslate">font-stretch: 115%;
+<pre class="brush: css">font-stretch: 115%;
 
 font-variation-settings: 'wdth' 115;
 </pre>
@@ -110,7 +110,7 @@ font-variation-settings: 'wdth' 115;
 
 <p>In CSS, both italic and oblique are applied to text using the {{cssxref("font-style")}} property. Also note the introduction of <code>font-synthesis: none;</code>—which will prevent browsers from accidentally applying the variation axis and a synthesized italic. This can be used to prevent faux-bolding as well.</p>
 
-<pre class="brush: css notranslate">font-style: italic;
+<pre class="brush: css">font-style: italic;
 
 font-variation-settings: 'ital' 1;
 
@@ -128,7 +128,7 @@ font-synthesis: none;</pre>
 <p><strong>Note</strong>: The <code>deg</code> keyword is not used when utilizing <code>font-variation-settings</code>.</p>
 </div>
 
-<pre class="brush: css notranslate">font-style: oblique 14deg;
+<pre class="brush: css">font-style: oblique 14deg;
 
 font-variation-settings: 'slnt' 14;</pre>
 
@@ -146,7 +146,7 @@ font-variation-settings: 'slnt' 14;</pre>
 
 <p>There is a new attribute, {{cssxref("font-optical-sizing")}}, created to support variable fonts in CSS. When using <code>font-optical-sizing</code>, the only allowed values are <code>auto</code> or <code>none</code> — so this attribute only allows for turning optical sizing on or off. However when using <code>font-variation-settings: 'opsz' &lt;num&gt;</code>, you can supply a numeric value. In most cases you would want to match the <code>font-size</code> (the physical size the type is being rendered) with the <code>opsz</code> value (which is how optical sizing is intended to be applied when using <code>auto</code>). The option to provide a specific value is provided so that should it be necessary to override the default — for legibility, aesthetic, or some other reason — a specific value can be applied.</p>
 
-<pre class="brush: css notranslate">font-optical-sizing: auto;
+<pre class="brush: css">font-optical-sizing: auto;
 
 font-variation-settings: 'opsz' 36;</pre>
 
@@ -162,7 +162,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <p>Grade may become one of the more common custom axes as it has a known history in typeface design. The practice of designing different grades of a typeface was often done in reaction to intended use and printing technique. The term 'grade' refers to the relative weight or density of the typeface design, but differs from traditional 'weight' in that the physical space the text occupies does not change, so changing the text grade doesn't change the overall layout of the text or elements around it. This makes grade a useful axis of variation as it can be varied or animated without causing reflow of the text itself.</p>
 
-<pre class="brush: css notranslate">font-variation-settings: 'GRAD' 88;</pre>
+<pre class="brush: css">font-variation-settings: 'GRAD' 88;</pre>
 
 <p>The following live example's CSS can be edited to allow you to play with font grade values.</p>
 
@@ -176,9 +176,9 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <h4 id="Example_for_a_standard_upright_Roman_font">Example for a standard upright (Roman) font:</h4>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: normal;
@@ -187,9 +187,9 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <h4 id="Example_for_a_font_that_includes_both_upright_and_italics">Example for a font that includes both upright and italics:</h4>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: oblique 0deg 20deg;
@@ -201,9 +201,9 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <h4 id="Example_for_a_font_that_contains_only_italics_and_no_upright_characters">Example for a font that contains only italics and no upright characters:</h4>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: italic;
@@ -211,9 +211,9 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <h4 id="Example_for_a_font_that_contains_an_oblique_slant_axis">Example for a font that contains an oblique (slant) axis:</h4>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
  font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
+ src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
  font-style: oblique 0deg 12deg;
@@ -231,7 +231,7 @@ font-variation-settings: 'opsz' 36;</pre>
 
 <p>Variable font support can be checked with CSS Feature Queries (see {{cssxref("@supports")}}), so it's possible to use variable fonts in production and scope the CSS calling the variable fonts inside a feature query block.</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
  font-family: some-non-variable-font-family;
 }
 

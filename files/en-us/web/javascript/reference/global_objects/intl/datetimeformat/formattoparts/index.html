@@ -2,14 +2,15 @@
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 tags:
-- DateTimeFormat
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Method
-- Prototype
-- Reference
+  - DateTimeFormat
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 ---
 <div>{{JSRef}}</div>
 
@@ -19,8 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>dateTimeFormat</var>.formatToParts(<var>date</var>)</pre>
+<pre class="brush: js">formatToParts(date)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -41,7 +41,7 @@ tags:
   locale-specific parts. The structure the <code>formatToParts()</code> method returns,
   looks like this:</p>
 
-<pre class="brush: js notranslate">[
+<pre class="brush: js">[
   { type: 'day', value: '17' },
   { type: 'weekday', value: 'Monday' }
 ]</pre>
@@ -101,7 +101,7 @@ tags:
 <p><code>DateTimeFormat</code> outputs localized, opaque strings that cannot be
   manipulated directly:</p>
 
-<pre class="brush: js notranslate">var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+<pre class="brush: js">var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
 var formatter = new Intl.DateTimeFormat('en-us', {
   weekday: 'long',
@@ -125,7 +125,7 @@ formatter.format(date);
   produced by <code>DateTimeFormat</code> formatters by providing you the string in parts:
 </p>
 
-<pre class="brush: js notranslate">formatter.formatToParts(date);
+<pre class="brush: js">formatter.formatToParts(date);
 
 // return value:
 [
@@ -156,7 +156,7 @@ formatter.format(date);
     href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>,
   and {{jsxref("Array.prototype.join()")}}.</p>
 
-<pre class="brush: js notranslate">var dateString = formatter.formatToParts(date).map(({type, value}) =&gt; {
+<pre class="brush: js">var dateString = formatter.formatToParts(date).map(({type, value}) =&gt; {
   switch (type) {
     case 'dayPeriod': return `&lt;b&gt;${value}&lt;/b&gt;`;
     default : return value;
@@ -167,7 +167,7 @@ formatter.format(date);
 <p>This will make the day period bold, when using the <code>formatToParts()</code> method.
 </p>
 
-<pre class="brush: js notranslate">console.log(formatter.format(date));
+<pre class="brush: js">console.log(formatter.format(date));
 // "Monday, 12/17/2012, 3:00:42.000 AM"
 
 console.log(dateString);
@@ -185,7 +185,7 @@ console.log(dateString);
   value) will yield both the and the <code>yearName</code> Gregorian
   <code>relatedYear</code>:</p>
 
-<pre class="brush: js notranslate">let opts = { year: "numeric", month: "numeric", day: "numeric" };
+<pre class="brush: js">let opts = { year: "numeric", month: "numeric", day: "numeric" };
 let df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
@@ -201,7 +201,7 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 <p>If the <code>year</code> option is not set in the bag (to any value), the result will
   include only the <code>relatedYear</code>:</p>
 
-<pre class="brush: js notranslate">let df = new Intl.DateTimeFormat("zh-u-ca-chinese");
+<pre class="brush: js">let df = new Intl.DateTimeFormat("zh-u-ca-chinese");
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
@@ -216,7 +216,7 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 <p>In cases where the <code>year</code> would be output, <code>.format()</code> may
   commonly present these side-by-side:</p>
 
-<pre class="brush: js notranslate">let df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
+<pre class="brush: js">let df = new Intl.DateTimeFormat("zh-u-ca-chinese", {year: "numeric"});
 df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
@@ -224,7 +224,7 @@ df.format(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 <p>This also makes it possible to mix locale and calendar in both <code>format</code>:</p>
 
-<pre class="brush: js notranslate">let df = new Intl.DateTimeFormat("en-u-ca-chinese", {year: "numeric"});
+<pre class="brush: js">let df = new Intl.DateTimeFormat("en-u-ca-chinese", {year: "numeric"});
 let date = Date.UTC(2012, 11, 17, 3, 0, 42);
 df.format(date);
 
@@ -234,7 +234,7 @@ df.format(date);
 
 <p>And <code>formatToParts</code>:</p>
 
-<pre class="brush: js notranslate">let opts = {month: 'numeric', day: 'numeric', year: "numeric"};
+<pre class="brush: js">let opts = {month: 'numeric', day: 'numeric', year: "numeric"};
 let df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
 let date = Date.UTC(2012, 11, 17, 3);
 df.formatToParts(date)
@@ -251,29 +251,17 @@ df.formatToParts(date)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts',
-        'Intl.DateTimeFormat.prototype.formatToParts')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{jsxref("Intl.DateTimeFormat")}}</li>
-  <li>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format()")}}</li>
+  <li>{{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
   <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>

@@ -17,11 +17,11 @@ tags:
 - WebRTC API
 - rtc
 ---
-<p>{{deprecated_header}}{{APIRef("Payment Request API")}}</p>
+<p>{{deprecated_header}}{{APIRef("Payment Request API")}}{{Non-standard_header}}</p>
 
 <p><span class="seoSummary">The <strong><code>languageCode</code></strong> read-only
     property of the {{domxref('PaymentAddress')}} interface returns a string containing
-    the <a href="https://tools.ietf.org/html/bcp47">BCP-47</a> language code for the
+    the <a href="https://datatracker.ietf.org/doc/html/bcp47">BCP-47</a> language code for the
     address.</span> This is used while localizing the displayy of the address, allowing
   the determination of the field separators and the order of fields when formatting the
   address.</p>
@@ -29,18 +29,15 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>paymentLanguageCode</em> = <em>PaymentAddress</em>.languageCode;</pre>
+  class="brush: js">var <em>paymentLanguageCode</em> = <em>PaymentAddress</em>.languageCode;</pre>
 
 <h3 id="Value">Value</h3>
 
 <p>A {{domxref("DOMString")}} providing the <a
-    href="https://tools.ietf.org/html/bcp47">BCP-47</a> format language code indicating
+    href="https://datatracker.ietf.org/doc/html/bcp47">BCP-47</a> format language code indicating
   the language the address was written in, such as <code>"en-US"</code>,
   <code>"pt-BR"</code>, or <code>"ja-JP"</code>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentAddress.languageCode")}}</p>
-</div>
+<p>{{Compat("api.PaymentAddress.languageCode")}}</p>

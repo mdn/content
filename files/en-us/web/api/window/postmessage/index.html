@@ -26,15 +26,12 @@ tags:
 <p>Broadly, one window may obtain a reference to another (<em>e.g.,</em> via
   <code>targetWindow = window.opener</code>), and then dispatch a
   {{domxref("MessageEvent")}} on it with <code>targetWindow.postMessage()</code>. The
-  receiving window is then free to <a href="/en-US/docs/Web/Guide/Events">handle this
-    event</a> as needed. The arguments passed to <code>window.postMessage()</code>
-  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the
-    receiving window through the event object</a>.</p>
+  receiving window is then free to <a href="/en-US/docs/Web/Events/Event_handlers">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code>
+  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the receiving window through the event object</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
+<pre class="brush: js"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
 
 <dl>
   <dt><code><em>targetWindow</em></code></dt>
@@ -81,7 +78,7 @@ tags:
 <p>A <code>window</code> can listen for dispatched messages by executing the following
   JavaScript:</p>
 
-<pre class="brush: js notranslate">window.addEventListener("message", (event) =&gt; {
+<pre class="brush: js">window.addEventListener("message", (event) =&gt; {
   if (event.origin !== "http://example.org:8080")
     return;
 
@@ -144,7 +141,7 @@ tags:
     value (protects victims from your origin)</li>
 </ul>
 
-<pre class="brush: plain notranslate">Cross-Origin-Opener-Policy: same-origin
+<pre class="brush: plain">Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 </pre>
 
@@ -152,7 +149,7 @@ Cross-Origin-Embedder-Policy: require-corp
   {{domxref("WindowOrWorkerGlobalScope.crossOriginIsolated", "crossOriginIsolated")}}
   property available to window and worker contexts:</p>
 
-<pre class="brush: js notranslate">if (crossOriginIsolated) {
+<pre class="brush: js">if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
@@ -164,7 +161,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
  * In window A's scripts, with A being on &lt;http://example.com:8080&gt;:
  */
 
@@ -191,7 +188,7 @@ window.addEventListener("message", (event) =&gt; {
 }, false);
 </pre>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
  * In the popup's scripts, running on &lt;http://example.com&gt;:
  */
 
@@ -228,11 +225,11 @@ window.addEventListener("message", (event) =&gt; {
   not possible for the caller of <code>postMessage</code> to detect when an event handler
   listening for events sent by <code>postMessage</code> throws an exception.</p>
 
-<p><code>postMessage()</code> schedules the {{domxref("MessageEvent")}} to be dispatched
-  <em>only after all pending execution contexts have finished</em>. For example, if
-  <code>postMessage()</code> is invoked in an event handler, that event handler will run
-  to completion, as will any remaining handlers for that same event, before the
-  {{domxref("MessageEvent")}} is dispatched.</p>
+<p>After <code>postMessage()</code> is called, the {{domxref("MessageEvent")}} will be
+  dispatched <em>only after all pending execution contexts have finished</em>.
+  For example, if <code>postMessage()</code> is invoked in an event handler, that event
+  handler will run to completion, as will any remaining handlers for that same event,
+  before the {{domxref("MessageEvent")}} is dispatched.</p>
 
 <p>The value of the <code>origin</code> property of the dispatched event is not affected
   by the current value of <code>document.domain</code> in the calling window.</p>
@@ -301,4 +298,5 @@ window.addEventListener("message", (event) =&gt; {
 <ul>
   <li>{{domxref("Document.domain")}}</li>
   <li>{{domxref("CustomEvent")}}</li>
+  <li>{{domxref("BroadcastChannel")}} - For same-origin communication.</li>
 </ul>

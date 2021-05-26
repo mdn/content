@@ -76,11 +76,11 @@ tags:
 
  <p>As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.</p>
 
- <div class="note"><strong>Note:</strong> The equivalent <code>text-align</code> property for the <code>align="char"</code> is not implemented in any browsers yet. See the <a href="/en-US/docs/Web/CSS/text-align#Browser_compatibility"><code>text-align</code>'s browser compatibility section</a> for the <code>&lt;string&gt;</code> value.</div>
+ <div class="note"><strong>Note:</strong> The equivalent <code>text-align</code> property for the <code>align="char"</code> is not implemented in any browsers yet. See the <a href="/en-US/docs/Web/CSS/text-align#browser_compatibility"><code>text-align</code>'s browser compatibility section</a> for the <code>&lt;string&gt;</code> value.</div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
  <dd>
- <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p>
+ <p>The background color of the table. It is a <a href="/en-US/docs/Web/CSS/color_value#rgb_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color kewords</a> can also be used.</p>
 
  <p>As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.</p>
  </dd>
@@ -93,7 +93,7 @@ tags:
  <dt>{{ htmlattrdef("valign") }} {{deprecated_inline}}</dt>
  <dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
  <ul>
-  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
+  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
   <li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li>
   <li><code>middle</code>, which will center the text in the cell;</li>
   <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
@@ -125,7 +125,7 @@ tags:
 
 <p>The table's HTML is shown here. Note that all of the body cells including information about students are contained within a single <code>&lt;tbody&gt;</code> element.</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Student ID&lt;/th&gt;
@@ -156,7 +156,7 @@ tags:
 
 <p>The CSS to style our table is shown next.</p>
 
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 2px solid #555;
   border-collapse: collapse;
   font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
@@ -164,7 +164,7 @@ tags:
 
 <p>First, the table's overall style attributes are set, configuring the thickness, style, and color of the table's exterior borders and using {{cssxref("border-collapse")}} to ensure that the border lines are shared among adjacent cells rather than each having its own borders with space in between. {{cssxref("font")}} is used to establish an initial font for the table.</p>
 
-<pre class="brush: css notranslate">th, td {
+<pre class="brush: css">th, td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -172,7 +172,7 @@ tags:
 
 <p>Then the style is set for the majority of the cells in the table, including all data cells but also those styles shared between our {{HTMLElement("td")}} and {{HTMLElement("th")}} cells. The cells are given a light gray outline which is a single pixel thick, padding is adjusted, and all cells are left-aligned using {{cssxref("text-align")}}</p>
 
-<pre class="brush: css notranslate">thead &gt; tr &gt; th {
+<pre class="brush: css">thead &gt; tr &gt; th {
   background-color: #cce;
   font-size: 18px;
   border-bottom: 2px solid #999;
@@ -202,7 +202,7 @@ tags:
 
 <p>The revised HTML looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Student ID&lt;/th&gt;
@@ -257,7 +257,7 @@ tags:
 <h4 id="CSS_2">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">table {
+<pre class="brush: css">table {
   border: 2px solid #555;
   border-collapse: collapse;
   font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
@@ -278,7 +278,7 @@ thead &gt; tr &gt; th {
 
 <p>Most of the CSS is unchanged. We do, however, add a slightly more subtle style for header cells contained directly within a <code>&lt;tbody&gt;</code> (as opposed to those which reside in a {{HTMLElement("thead")}}). This is used for the headers indicating each table section's corresponding major.</p>
 
-<pre class="brush: css notranslate">tbody &gt; tr &gt; th {
+<pre class="brush: css">tbody &gt; tr &gt; th {
   background-color: #dde;
   border-bottom: 1.5px solid #bbb;
   font-weight: normal;

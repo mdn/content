@@ -29,7 +29,7 @@ tags:
    <td>
     <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
 
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
+    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with <a href="https://nodejs.org/en/download/" rel="noopener noreferrer" target="_blank">Node</a> and <a href="https://www.npmjs.com/get-npm" rel="noopener noreferrer" target="_blank">npm</a> installed.</p>
    </td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ tags:
 
 <p>Your file should now look like this:</p>
 
-<pre class="brush: html notranslate">&lt;template&gt; &lt;/template&gt;
+<pre class="brush: html">&lt;template&gt; &lt;/template&gt;
 &lt;script&gt;
   export default {};
 &lt;/script&gt;</pre>
@@ -65,7 +65,7 @@ tags:
  <li>
   <p>Inside that <code>&lt;div&gt;</code>, let's add a checkbox and a corresponding label. Add an <code>id</code> to the checkbox, and a <code>for</code> attribute mapping the checkbox to the label, as shown below.</p>
 
-  <pre class="brush: html notranslate">&lt;template&gt;
+  <pre class="brush: html">&lt;template&gt;
   &lt;div&gt;
     &lt;input type="checkbox" id="todo-item" checked="false" /&gt;
     &lt;label for="todo-item"&gt;My Todo Item&lt;/label&gt;
@@ -85,7 +85,7 @@ tags:
  <li>
   <p>At the top of your <code>&lt;script&gt;</code> tag, add the following to import your <code>ToDoItem</code> component:</p>
 
-  <pre class="brush: js notranslate">import ToDoItem from './components/ToDoItem.vue';</pre>
+  <pre class="brush: js">import ToDoItem from './components/ToDoItem.vue';</pre>
  </li>
  <li>
   <p>Inside your component object, add the <code>components</code> property, and inside it add your <code>ToDoItem</code> component to register it.</p>
@@ -94,7 +94,7 @@ tags:
 
 <p>Your <code>&lt;script&gt;</code> contents should now look like this:</p>
 
-<pre class="brush: js notranslate">import ToDoItem from './components/ToDoItem.vue';
+<pre class="brush: js">import ToDoItem from './components/ToDoItem.vue';
 
 export default {
   name: 'app',
@@ -114,7 +114,7 @@ export default {
 
 <p>Your <code>App.vue</code> <code>&lt;template&gt;</code> contents should now look something like this:</p>
 
-<pre class="brush: html notranslate">&lt;div id="app"&gt;
+<pre class="brush: html">&lt;div id="app"&gt;
   &lt;h1&gt;To-Do List&lt;/h1&gt;
   &lt;ul&gt;
     &lt;li&gt;
@@ -168,7 +168,7 @@ export default {
 
 <p>Your component object should now look like this:</p>
 
-<pre class="brush: js notranslate">&lt;script&gt;
+<pre class="brush: js">&lt;script&gt;
   export default {
     props: {
       label: { required: true, type: String },
@@ -187,7 +187,7 @@ export default {
 
 <p>Your component’s template section should now look like this:</p>
 
-<pre class="brush: html notranslate">&lt;template&gt;
+<pre class="brush: html">&lt;template&gt;
   &lt;div&gt;
     &lt;input type="checkbox" id="todo-item" checked="false" /&gt;
     &lt;label for="todo-item"&gt;\{{label}}&lt;/label&gt;
@@ -196,7 +196,7 @@ export default {
 
 <p>Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:</p>
 
-<pre class="notranslate">[Vue warn]: Missing required prop: "label"
+<pre>[Vue warn]: Missing required prop: "label"
 
 found in
 
@@ -207,9 +207,9 @@ found in
 
 <p>This is because we marked the <code>label</code> as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.</p>
 
-<p>Inside your <code>App.vue </code>file, add a <code>label</code> prop to the <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> component, just like a regular HTML attribute:</p>
+<p>Inside your <code>App.vue</code> file, add a <code>label</code> prop to the <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> component, just like a regular HTML attribute:</p>
 
-<pre class="brush: html notranslate">&lt;to-do-item label="My ToDo Item"&gt;&lt;/to-do-item&gt;</pre>
+<pre class="brush: html">&lt;to-do-item label="My ToDo Item"&gt;&lt;/to-do-item&gt;</pre>
 
 <p>Now you'll see the label in your app, and the warning won't be spat out in the console again.</p>
 
@@ -223,7 +223,7 @@ found in
 
 <p>To work around this, we can manage the <code>done</code> state using Vue’s <code>data</code> property. The <code>data</code> property is where you can manage local state in a component, it lives inside the component object alongside the <code>props</code> property and has the following structure:</p>
 
-<pre class="brush: js notranslate">data() {
+<pre class="brush: js">data() {
   return {
     key: value
   }
@@ -241,7 +241,7 @@ found in
 
 <p>Update the component object like so:</p>
 
-<pre class="brush: js notranslate">export default {
+<pre class="brush: js">export default {
   props: {
     label: { required: true, type: String },
     done: { default: false, type: Boolean }
@@ -257,13 +257,13 @@ found in
 
 <p>So now we need to attach the <code>isDone</code> property to our component. In a similar fashion to how Vue uses <code>\{{}}</code> expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: <code><strong>v-bind</strong></code>. The <code>v-bind</code> expression looks like this:</p>
 
-<pre class="notranslate">v-bind:attribute="expression"</pre>
+<pre>v-bind:attribute="expression"</pre>
 
 <p>In other words, you prefix whatever attribute/prop you want to bind to with <code>v-bind:</code>. In most cases, you can use a shorthand for the <code>v-bind</code> property, which is to just prefix the attribute/prop with a colon. So <code>:attribute="expression"</code> works the same as <code>v-bind:attribute="expression"</code>.</p>
 
 <p>So in the case of the checkbox in our <code>ToDoItem</code> component, we can use <code>v-bind</code> to map the <code>isDone</code> property to the <code>checked</code> attribute on the <code>&lt;input&gt;</code> element. Both of the following are equivalent:</p>
 
-<pre class="brush: html notranslate">&lt;input type="checkbox" id="todo-item" v-bind:checked="isDone" /&gt;
+<pre class="brush: html">&lt;input type="checkbox" id="todo-item" v-bind:checked="isDone" /&gt;
 
 &lt;input type="checkbox" id="todo-item" :checked="isDone" /&gt;</pre>
 
@@ -273,7 +273,7 @@ found in
 
 <p>Test out your component by passing <code>:done="true"</code> to the <code>ToDoItem</code> call in <code>App.vue</code>. Note that you need to use the <code>v-bind</code> syntax, because otherwise <code>true</code> is passed as a string. The displayed checkbox should be checked.</p>
 
-<pre class="brush: js notranslate">&lt;template&gt;
+<pre class="brush: js">&lt;template&gt;
   &lt;div id="app"&gt;
     &lt;h1&gt;My To-Do List&lt;/h1&gt;
     &lt;ul&gt;
@@ -295,7 +295,7 @@ found in
 
 <p>Let’s add the package to our project with npm; stop your server and enter the following command into your terminal:</p>
 
-<pre class="brush: bash notranslate">npm install --save lodash.uniqueid</pre>
+<pre class="brush: bash">npm install --save lodash.uniqueid</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
@@ -303,11 +303,11 @@ found in
 
 <p>We can now import this package into our <code>ToDoItem</code> component. Add the following line at the top of <code>ToDoItem.vue</code>’s <code>&lt;script&gt;</code> element:</p>
 
-<pre class="brush: js notranslate">import uniqueId from 'lodash.uniqueid';</pre>
+<pre class="brush: js">import uniqueId from 'lodash.uniqueid';</pre>
 
 <p>Next, add an <code>id</code> field to our data property, so the component object ends up looking like so (<code>uniqueId()</code> returns the specified prefix — <code>todo-</code> — with a unique string appended to it):</p>
 
-<pre class="brush: js notranslate">import uniqueId from 'lodash.uniqueid';
+<pre class="brush: js">import uniqueId from 'lodash.uniqueid';
 
 export default {
   props: {
@@ -324,7 +324,7 @@ export default {
 
 <p>Next, bind the <code>id</code> to both our checkbox’s <code>id</code> attribute and the label’s <code>for</code> attribute, updating the existing <code>id</code> and <code>for</code> attributes as shown:</p>
 
-<pre class="brush: js notranslate">&lt;template&gt;
+<pre class="brush: js">&lt;template&gt;
   &lt;div&gt;
     &lt;input type="checkbox" :id="id" :checked="isDone" /&gt;
     &lt;label :for="id"&gt;\{{label}}&lt;/label&gt;
@@ -389,5 +389,15 @@ export default {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

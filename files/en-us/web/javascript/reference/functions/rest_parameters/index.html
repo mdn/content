@@ -7,6 +7,7 @@ tags:
 - Language feature
 - Rest
 - Rest parameters
+browser-compat: javascript.functions.rest_parameters
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -19,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">function f(<var>a</var>, <var>b</var>, ...<var>theArgs</var>) {
+<pre class="brush: js">function f(<var>a</var>, <var>b</var>, ...<var>theArgs</var>) {
   // ...
 }</pre>
 
@@ -32,7 +33,7 @@ tags:
     JavaScript array.</a>. Only the last parameter in a function definition can be a rest
   parameter.</p>
 
-<pre class="brush: js notranslate">function myFun(a,  b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a,  b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -80,7 +81,7 @@ myFun("one", "two", "three", "four", "five", "six")
 <p>Rest parameters were introduced to reduce the boilerplate code that was commonly used
   for converting a set of arguments to an array.</p>
 
-<pre class="brush: js notranslate">// Before rest parameters, "arguments" could be converted to a normal array using:
+<pre class="brush: js">// Before rest parameters, "arguments" could be converted to a normal array using:
 
 function f(a, b) {
 
@@ -113,7 +114,7 @@ function f(...args) {
   the 3<sup>rd</sup>, 4<sup>th</sup>, 5<sup>th</sup>, 6<sup>th</sup> ...
   <var>n</var><sup>th</sup> — as many arguments that the user includes.</p>
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -129,7 +130,7 @@ myFun("one", "two", "three", "four", "five", "six")
 <p>Below, even though there is just one value, the last argument still gets put into an
   array.</p>
 
-<pre class="brush: js notranslate">// using the same function definition from example above
+<pre class="brush: js">// using the same function definition from example above
 
 myFun("one", "two", "three")
 
@@ -140,7 +141,7 @@ myFun("one", "two", "three")
 <p>Below, the third argument isn't provided, but <code>manyMoreArgs</code> is still an
   array (albeit an empty one).</p>
 
-<pre class="brush: js notranslate">// using the same function definition from example above
+<pre class="brush: js">// using the same function definition from example above
 
 myFun("one", "two")
 
@@ -153,7 +154,7 @@ myFun("one", "two")
 <p>Since <code>theArgs</code> is an array, a count of its elements is given by the
   <code>length</code> property:</p>
 
-<pre class="brush: js notranslate">function fun1(...theArgs) {
+<pre class="brush: js">function fun1(...theArgs) {
   console.log(theArgs.length)
 }
 
@@ -168,7 +169,7 @@ fun1(5, 6, 7)  // 3
   parameter into an array. Each one of the parameter values collected into the array is
   then multiplied by the first parameter, and the array is returned:</p>
 
-<pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
+<pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(element =&gt; {
     return multiplier * element
   })
@@ -183,7 +184,7 @@ console.log(arr)  // [30, 50, 84]
 <p><code>Array</code> methods can be used on rest parameters, but not on the
   <code>arguments</code> object:</p>
 
-<pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
+<pre class="brush: js">function sortRestArgs(...theArgs) {
   let sortedArgs = theArgs.sort()
   return sortedArgs
 }
@@ -202,7 +203,7 @@ console.log(sortArguments(5, 3, 7, 1))
 <p>To use <code>Array</code> methods on the <code>arguments</code> object, it must be
   converted to a real array first.</p>
 
-<pre class="brush: js notranslate">function sortArguments() {
+<pre class="brush: js">function sortArguments() {
   let args = Array.from(arguments)
   let sortedArgs = args.sort()
   return sortedArgs
@@ -212,23 +213,11 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.functions.rest_parameters")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -240,11 +229,9 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions"
       title="Functions and function scope">Functions</a></li>
-  <li><a class="external"
-      href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original
+  <li><a       href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original
       proposal at ecmascript.org</a></li>
-  <li><a class="external"
-      href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript
+  <li><a       href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript
       arguments object and beyond</a></li>
   <li><a
       href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring

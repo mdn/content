@@ -2,29 +2,30 @@
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 tags:
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- Method
-- PluralRules
-- Prototype
-- Reference
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - Method
+  - PluralRules
+  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Intl.PluralRules.prototype.resolvedOptions()</code></strong> method
 	returns a new object with properties reflecting the locale and plural formatting
-	options computed during initialization of this {{jsxref("PluralRules")}} object.</p>
+	options computed during initialization of this {{jsxref("Intl/PluralRules")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>pluralRule</var>.resolvedOptions()</pre>
+<pre class="brush: js">resolvedOptions()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
 <p>A new object with properties reflecting the locale and plural formatting options
-	computed during the initialization of the given {{jsxref("PluralRules")}} object.</p>
+	computed during the initialization of the given {{jsxref("Intl/PluralRules")}} object.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -47,15 +48,12 @@ tags:
 <p>Only one of the following two groups of properties is included:</p>
 
 <dl>
-	<dt><code>minimumIntegerDigits</code></dt>
-	<dt><code>minimumFractionDigits</code></dt>
-	<dt><code>maximumFractionDigits</code></dt>
+	<dt><code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code>, <code>maximumFractionDigits</code></dt>
 	<dd>The values provided for these properties in the <code>options</code> argument or
 		filled in as defaults. These properties are present only if neither
 		<code>minimumSignificantDigits</code> nor <code>maximumSignificantDigits</code>
 		was provided in the <code>options</code> argument.</dd>
-	<dt><code>minimumSignificantDigits</code></dt>
-	<dt><code>maximumSignificantDigits</code></dt>
+	<dt><code>minimumSignificantDigits</code>, <code>maximumSignificantDigits</code></dt>
 	<dd>The values provided for these properties in the <code>options</code> argument or
 		filled in as defaults. These properties are present only if at least one of them
 		was provided in the <code>options</code> argument.</dd>
@@ -79,27 +77,14 @@ usedOptions.type;                  // "cardinal"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft',
-				'#sec-intl.pluralrules.prototype.resolvedoptions',
-				'Intl.PluralRules.prototype.resolvedOptions')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.PluralRules.resolvedOptions")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
+	<li>{{jsxref("Intl/PluralRules", "Intl.PluralRules")}}</li>
 </ul>

@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="notranslate brush: js">browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})</pre>
+<pre class="brush: js">browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -38,7 +38,7 @@ tags:
  <dd>
  <dl>
   <dt><code>append</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Determines whether to move the tabs in <code>tabIds</code> before or after <code>tabId </code>in the succession. If <code>false</code>, the tabs are moved before <code>tabId</code>, if <code>true</code>, the tabs are moved after <code>tabId</code>. Defaults to <code>false</code>.</dd>
+  <dd><code>boolean</code>. Determines whether to move the tabs in <code>tabIds</code> before or after <code>tabId</code> in the succession. If <code>false</code>, the tabs are moved before <code>tabId</code>, if <code>true</code>, the tabs are moved after <code>tabId</code>. Defaults to <code>false</code>.</dd>
   <dt><code>insert</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. Determines whether to link up the current predecessors or successor (depending on <code>options.append</code>) of <code>tabId</code> to the other side of the chain after it is prepended or appended. If true, one of the following happens: if <code>options.append</code> is <code>false</code>, the first tab in the array is set as the successor of any current predecessors of <code>tabId</code>; if <code>options.append</code> is <code>true</code>, the current successor of tabId is set as the successor of the last tab in the array. Defaults to <code>false</code>.</dd>
  </dl>

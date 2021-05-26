@@ -68,7 +68,7 @@ tags:
  <li><a href="https://github.com/ef4/prember">PREmber</a>: Static website rendering for blogs or marketing content.</li>
  <li><a href="https://ember-fastboot.com/">FastBoot</a>: Server-side rendering, including improving search-engine optimization (SEO), or improving initial render performance of complex, highly interactive web pages.</li>
  <li><a href="https://empress-blog.netlify.com/welcome">empress-blog</a>: Authoring blog posts in markdown while optimizing for SEO with PREmber.</li>
- <li><a href="http://ember-service-worker.com/">ember-service-worker</a>: Configuring a PWA so that the app can be installed on mobile devices, just like apps from the device's respective app-store.</li>
+ <li><a href="https://ember-service-worker.com/">ember-service-worker</a>: Configuring a PWA so that the app can be installed on mobile devices, just like apps from the device's respective app-store.</li>
 </ul>
 
 <h3 id="Native_mobile_apps">Native mobile apps</h3>
@@ -107,7 +107,7 @@ tags:
 
 <h2 id="Getting_started">Getting started</h2>
 
-<p>The rest of the Ember material you'll find here consists of a multi-part tutorial, in which we'll make a version of the classic <a href="http://todomvc.com/">TodoMVC sample app</a>, teaching you how to use the essentials of the Ember framework along the way. TodoMVC is a basic to-do tracking app implemented in many different technologies.</p>
+<p>The rest of the Ember material you'll find here consists of a multi-part tutorial, in which we'll make a version of the classic <a href="https://todomvc.com/">TodoMVC sample app</a>, teaching you how to use the essentials of the Ember framework along the way. TodoMVC is a basic to-do tracking app implemented in many different technologies.</p>
 
 <p><a href="https://nullvoxpopuli.github.io/ember-todomvc-tutorial/">Here is the completed Ember version</a>, for reference.</p>
 
@@ -135,18 +135,18 @@ tags:
  <li>
   <p>Now type the following into your terminal to install ember-cli:</p>
 
-  <pre class="notranslate">npm install -g ember-cli</pre>
+  <pre>npm install -g ember-cli</pre>
 
   <p>This tool provides the <code>ember</code> program in your terminal, which is used to create, build, develop, test, and scaffold your application (run <code>ember --help</code> for a full list of commands and their options).</p>
  </li>
  <li>
   <p>To create a brand new application, type the following in your terminal. This creates a new directory inside the current directory you are in called todomvc, containing the scaffolding for a new Ember app. Make sure you navigate to somewhere appropriate in the terminal before you run it. (Good suggestions are your "desktop" or "documents" directories, so that it is easy to find):</p>
 
-  <pre class="brush: bash notranslate">ember new todomvc</pre>
+  <pre class="brush: bash">ember new todomvc</pre>
 
   <p>Or, on Windows:</p>
 
-  <pre class="brush: bash notranslate">npx ember-cli new todomvc</pre>
+  <pre class="brush: bash">npx ember-cli new todomvc</pre>
  </li>
 </ol>
 
@@ -176,7 +176,7 @@ tags:
  <li>
   <p>Now run the following command to place the common todomvc CSS inside your app:</p>
 
-  <pre class="brush: bash notranslate">npm install --save-dev todomvc-app-css todomvc-common</pre>
+  <pre class="brush: bash">npm install --save-dev todomvc-app-css todomvc-common</pre>
  </li>
  <li>
   <p>Next, find the <a href="https://github.com/ember-cli/ember-cli/blob/master/blueprints/app/files/ember-cli-build.js">ember-cli-build.js</a> file inside the todomvc directory (it's right there inside the root) and open it in your chosen code editor. ember-cli-build.js is responsible for configuring details about how your project is built — including bundling all your files together, asset minification, and creating sourcemaps — with reasonable defaults, so you don't typically need to worry about this file.</p>
@@ -186,14 +186,14 @@ tags:
  <li>
   <p>In <code>ember-cli-build.js</code>, find the following code:</p>
 
-  <pre class="brush: js notranslate">let app = new EmberApp(defaults, {
+  <pre class="brush: js">let app = new EmberApp(defaults, {
     // Add options here
   });</pre>
  </li>
  <li>
   <p>Add the following lines underneath it before saving the file:</p>
 
-  <pre class="brush: js notranslate">  app.import('node_modules/todomvc-common/base.css');
+  <pre class="brush: js">  app.import('node_modules/todomvc-common/base.css');
   app.import('node_modules/todomvc-app-css/index.css');</pre>
 
   <p>For more information on what <code>ember-cli-build.js</code> does, and for other ways in which you can customize your build / pipeline, the Ember Guides have a page on <a href="https://guides.emberjs.com/release/addons-and-dependencies/">Addons and Dependencies</a>.</p>
@@ -201,7 +201,7 @@ tags:
  <li>
   <p>Finally, find <code>app.css</code>, located at <code>app/styles/app.css</code>, and paste in the following:</p>
 
-  <pre class="brush: css notranslate">:focus,
+  <pre class="brush: css">:focus,
 .view label:focus,
 .todo-list li .toggle:focus + label,
 .toggle-all:focus + label {
@@ -217,11 +217,11 @@ tags:
 
 <p>You may start the app in <em>development</em> mode by typing the following command in your terminal, while inside the <code>todomvc</code> directory:</p>
 
-<pre class="brush: bash notranslate">ember server</pre>
+<pre class="brush: bash">ember server</pre>
 
 <p>This should give you an output similar to the following:</p>
 
-<pre class="notranslate">Build successful (190ms) – Serving on http://localhost:4200/
+<pre>Build successful (190ms) – Serving on http://localhost:4200/
 
 Slowest Nodes (totalTime &gt;= 5%)          | Total (avg)
 -----------------------------------------+-----------
@@ -295,5 +295,15 @@ Concat: Vendor Styles/assets/vend... (1) | 12ms     </pre>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

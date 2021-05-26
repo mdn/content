@@ -11,7 +11,7 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}{{Fx_MinVersion_Header(4)}}</p>
+<p>{{FirefoxSidebar}}</p>
 
 <p>This article offers details on changes in Firefox 4 that may impact existing extensions.</p>
 
@@ -19,7 +19,7 @@ tags:
 
 <h3 id="The_status_bar">The status bar</h3>
 
-<p>The status bar has been removed from Firefox 4, with a new add-on bar added in its place. See <a href="/en-US/docs/The_add-on_bar">The add-on bar</a> for details.</p>
+<p>The status bar has been removed from Firefox 4, with a new add-on bar added in its place. See <a href="/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar">The add-on bar</a> for details.</p>
 
 <h3 id="Toolbars">Toolbars</h3>
 
@@ -39,7 +39,7 @@ tags:
 
 <ul>
  <li>The <code>TabClose</code>, <code>TabSelect</code>, and <code>TabOpen</code> events no longer bubble up to the {{XULElem("tabbrowser")}} element (<code>gBrowser</code>). Event listeners for those events should be added to <code>gBrowser.tabContainer</code> rather than to <code>gBrowser</code> directly.</li>
- <li>The tab context menu is no longer an anonymous child of the {{XULElem("tabbrowser")}}. It can therefore be overlaid directly with <a href="/en-US/docs/XUL_Overlays">XUL overlays</a>. It can also be accessed more directly in JavaScript via <code>gBrowser.tabContextMenu</code>. See <a class="external" href="http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">this blog post</a> for more details.</li>
+ <li>The tab context menu is no longer an anonymous child of the {{XULElem("tabbrowser")}}. It can therefore be overlaid directly with <a href="/en-US/docs/XUL_Overlays">XUL overlays</a>. It can also be accessed more directly in JavaScript via <code>gBrowser.tabContextMenu</code>. See <a class="external" href="https://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">this blog post</a> for more details.</li>
 </ul>
 
 <h2 id="XPCOM_changes">XPCOM changes</h2>
@@ -64,7 +64,7 @@ tags:
 
 <h2 id="XPI_unpacking">XPI unpacking</h2>
 
-<p>Firefox 4 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=533038">no longer extracts XPIs</a> when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify <a href="https://developer.mozilla.org/en/Install_Manifests#unpack"><code>&lt;em:unpack&gt;</code></a> in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.</p>
+<p>Firefox 4 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=533038">no longer extracts XPIs</a> when installing extensions. It just places the XPI file in the user profile, and then reads the chrome files and others directly out of the XPI. A jar inside the XPI still works, but is no longer necessary, so that can make your development or build easier. This was done mainly for performance reasons on slow OSes, and allows better cache invalidation, which also helps developers. However, not all kinds of files can be read from within the XPI yet, so if your extension uses one of those, you need to specify <a href="/en-US/Install_Manifests#unpack"><code>&lt;em:unpack&gt;</code></a> in your install.rdf to cause Firefox to still extract your XPI and use single files, otherwise your extension will fail when trying to access these files.</p>
 
 <p>If your extension only contains these types of files then you do not need to make any changes:</p>
 
@@ -114,10 +114,10 @@ tags:
 
 <h3 id="Installing_extensions_globally">Installing extensions globally</h3>
 
-<p>The <code>-install-global-extension</code> and <code>-install-global-theme</code> command line options have been removed. Handling global installation has always been complicated, and discussions are in progress as to how to address the subject going forward. In the meantime, see <a href="/en-US/docs/Installing_extensions">Installing extensions</a> for information on ways to automatically install add-ons.</p>
+<p>The <code>-install-global-extension</code> and <code>-install-global-theme</code> command line options have been removed. Handling global installation has always been complicated, and discussions are in progress as to how to address the subject going forward. In the meantime, see <a href="https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/">Installing extensions</a> for information on ways to automatically install add-ons.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://blog.mozilla.com/addons/2010/11/11/making-add-on-compatible-firefox-4/">Making Your Add-on Compatible with Firefox 4</a> (blog post)</li>
+ <li><a class="external" href="https://blog.mozilla.com/addons/2010/11/11/making-add-on-compatible-firefox-4/">Making Your Add-on Compatible with Firefox 4</a> (blog post)</li>
 </ul>

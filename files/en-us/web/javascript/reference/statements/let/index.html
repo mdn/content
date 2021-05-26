@@ -9,6 +9,7 @@ tags:
 - Variable declaration
 - Variables
 - let
+browser-compat: javascript.statements.let
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -17,16 +18,11 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/statement-let.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">let <var>name1</var> [= <var>value1</var>] [, <var>name2</var> [= <var>value2</var>]] [, ..., <var>nameN</var> [= <var>valueN</var>];</pre>
+  class="brush: js">let <var>name1</var> [= <var>value1</var>] [, <var>name2</var> [= <var>value2</var>]] [, ..., <var>nameN</var> [= <var>valueN</var>];</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -43,7 +39,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring
     Assignment </a>syntax can also be used to declare variables.</p>
 
-<pre class="brush: js notranslate">let <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
+<pre class="brush: js">let <var>{ bar }</var> = <em>foo</em>; // where foo = { bar:10, baz:12 };
 /* This creates a variable with the name 'bar', which has a value of 10 */</pre>
 
 <h2 id="Description">Description</h2>
@@ -65,13 +61,13 @@ tags:
 </p>
 
 <div class="notecard note">
-  <p>Many issues with <code>let</code> variables can be avoided by declaring them at the
+  <p><strong>Note:</strong> Many issues with <code>let</code> variables can be avoided by declaring them at the
     top of the scope in which they are used (doing so may impact readibility).</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Scoping_rules_2">Scoping rules</h3>
+<h3 id="Scoping_rules">Scoping rules</h3>
 
 <p>Variables declared by <strong><code>let</code></strong> have their scope in the block
   for which they are declared, as well as in any contained sub-blocks. In this way,
@@ -79,7 +75,7 @@ tags:
   <strong><code>var</code></strong>. The main difference is that the scope of a
   <strong><code>var</code></strong> variable is the entire enclosing function:</p>
 
-<pre class="brush: js notranslate">function varTest() {
+<pre class="brush: js">function varTest() {
   var x = 1;
   {
     var x = 2;  // same variable!
@@ -98,11 +94,11 @@ function letTest() {
 }
 </pre>
 
-<p id="Scoping_rules">At the top level of programs and functions,
+<p>At the top level of programs and functions,
   <strong><code>let</code></strong>, unlike <strong><code>var</code></strong>, does not
   create a property on the global object. For example:</p>
 
-<pre class="brush: js notranslate">var x = 'global';
+<pre class="brush: js">var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
@@ -114,7 +110,7 @@ console.log(this.y); // undefined
   <strong><code>let</code></strong> bindings to share one or more private members without
   using <a href="/en-US/docs/Web/JavaScript/Closures">closures</a>:</p>
 
-<pre class="brush: js notranslate">var Thing;
+<pre class="brush: js">var Thing;
 
 {
   let privateScope = new WeakMap();
@@ -161,7 +157,7 @@ thing.showPrivate();
 <p>Redeclaring the same variable within the same function or block scope raises a
   {{jsxref("SyntaxError")}}.</p>
 
-<pre class="brush: js example-bad notranslate">if (x) {
+<pre class="brush: js example-bad">if (x) {
   let foo;
   let foo; // SyntaxError thrown.
 }
@@ -170,7 +166,7 @@ thing.showPrivate();
 <p>You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements
   because there is only one block.</p>
 
-<pre class="brush: js example-bad notranslate">let x = 1;
+<pre class="brush: js example-bad">let x = 1;
 switch(x) {
   case 0:
     let foo;
@@ -185,7 +181,7 @@ switch(x) {
   create a new block scoped lexical environment, which will not produce the redeclaration
   errors shown above.</p>
 
-<pre class="brush: js notranslate">let x = 1;
+<pre class="brush: js">let x = 1;
 
 switch(x) {
   case 0: {
@@ -207,7 +203,7 @@ switch(x) {
   {{jsxref("ReferenceError")}}.</p>
 
 <div class="notecard note">
-  <p>This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
+  <p><strong>Note:</strong> This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
     which will return a value of <code>undefined</code> if they are accessed before they
     are declared.</p>
 </div>
@@ -215,7 +211,7 @@ switch(x) {
 <p>The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
   until the initialization has completed.</p>
 
-<pre class="brush: js example-bad notranslate">{ // TDZ starts at beginning of scope
+<pre class="brush: js example-bad">{ // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
@@ -229,7 +225,7 @@ switch(x) {
   appears before the variable is declared, the function is <em>called</em> outside the
   TDZ.</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
     // TDZ starts at beginning of scope
     const func = () =&gt; console.log(letVar); // OK
 
@@ -245,14 +241,14 @@ switch(x) {
 <p>Using the <code>typeof</code> operator for a <code>let</code> variable in its TDZ will
   throw a {{jsxref("ReferenceError")}}:</p>
 
-<pre class="brush: js example-bad notranslate">// results in a 'ReferenceError'
+<pre class="brush: js example-bad">// results in a 'ReferenceError'
 console.log(typeof i);
 let i = 10;</pre>
 
 <p>This differs from using <code>typeof</code> for undeclared variables, and variables
   that hold a value of <code>undefined</code>:</p>
 
-<pre class="brush: js notranslate">// prints out 'undefined'
+<pre class="brush: js">// prints out 'undefined'
 console.log(typeof undeclaredVariable);
 </pre>
 
@@ -260,7 +256,7 @@ console.log(typeof undeclaredVariable);
 
 <p>The following code results in a <code>ReferenceError</code> at the line shown:</p>
 
-<pre class="brush: js example-bad notranslate">function test(){
+<pre class="brush: js example-bad">function test(){
    var foo = 33;
    if(foo) {
       let foo = (foo + 55); // ReferenceError
@@ -284,7 +280,7 @@ test();</pre>
 <p>This is still in the temporal dead zone as its declaration statement has not been
   reached and terminated.</p>
 
-<pre class="brush: js example-bad notranslate">function go(n) {
+<pre class="brush: js example-bad">function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
@@ -302,7 +298,7 @@ go({a: [1, 2, 3]});
   to that block. Note the difference between <code><strong>var</strong></code>, whose
   scope is inside the function where it is declared.</p>
 
-<pre class="brush: js notranslate">var a = 1;
+<pre class="brush: js">var a = 1;
 var b = 2;
 
 if (a === 1) {
@@ -322,7 +318,7 @@ console.log(b); // 2
   to <code><strong>var</strong></code> being hoisted to the top of the block. This results
   in an implicit re-declaration of the variable.</p>
 
-<pre class="brush: js example-bad notranslate">let x = 1;
+<pre class="brush: js example-bad">let x = 1;
 
 {
   var x = 2; // SyntaxError for re-declaration
@@ -331,23 +327,11 @@ console.log(b); // 2
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const
-        Declarations')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.let")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

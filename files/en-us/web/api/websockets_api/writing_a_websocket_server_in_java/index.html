@@ -14,7 +14,7 @@ tags:
  <br>
  Although other server-side languages can be used to create a WebSocket server, this example uses Oracle Java to simplify the example code<span style="line-height: 1.5;">.</span></p>
 
-<p>This server conforms to <a href="https://tools.ietf.org/html/rfc6455">RFC 6455</a>, so it only handles connections from Chrome version 16, Firefox 11, IE 10 and higher.</p>
+<p>This server conforms to <a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a>, so it only handles connections from Chrome version 16, Firefox 11, IE 10 and higher.</p>
 
 <h2 id="First_steps">First steps</h2>
 
@@ -55,9 +55,9 @@ public class WebSocket {
 <p>Methods:</p>
 
 <ul>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a></span>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a></span>()</code><br>
   Returns an input stream for this socket.</li>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a></span>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a></span>()</code><br>
   Returns an output stream for this socket.</li>
 </ul>
 
@@ -163,7 +163,7 @@ public class WebSocket {
 </table>
 
 <p>FIN: You can send your message in frames, but now keep things simple.<br>
- <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> means this is a text. </span><a href="https://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;">Full list of Opcodes</a></p>
+ <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> means this is a text. </span><a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2" style="line-height: 1.572;">Full list of Opcodes</a></p>
 
 <p>- 134:</p>
 
@@ -202,5 +202,5 @@ public class WebSocket {
 <h2 id="Related">Related</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
 </ul>

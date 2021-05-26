@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - fround
+browser-compat: javascript.builtins.Math.fround
 ---
 <div>{{JSRef}}</div>
 
@@ -17,16 +18,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-fround.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">var <var>singleFloat</var> = Math.fround(<var>doubleFloat</var>);</pre>
+<pre class="brush: js">Math.fround(doubleFloat)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -66,14 +61,14 @@ tags:
 <p>The number 1.5 can be precisely represented in the binary numeral system, and is
   identical in 32-bit and 64-bit:</p>
 
-<pre class="brush: js notranslate">Math.fround(1.5); // 1.5
+<pre class="brush: js">Math.fround(1.5); // 1.5
 Math.fround(1.5) === 1.5; // true
 </pre>
 
 <p>However, the number 1.337 cannot be precisely represented in the binary numeral system,
   so it differs in 32-bit and 64-bit:</p>
 
-<pre class="brush: js notranslate">Math.fround(1.337); // 1.3370000123977661
+<pre class="brush: js">Math.fround(1.337); // 1.3370000123977661
 Math.fround(1.337) === 1.337; // false
 </pre>
 
@@ -87,7 +82,7 @@ Math.fround(1.337) === 1.337; // false
     </semantics>
   </math> is too big for a 32-bit float, so <code>Infinity</code> is returned:</p>
 
-<pre class="brush: js notranslate">2 ** 150; // 1.42724769270596e+45
+<pre class="brush: js">2 ** 150; // 1.42724769270596e+45
 Math.fround(2 ** 150); // Infinity
 </pre>
 
@@ -95,7 +90,7 @@ Math.fround(2 ** 150); // Infinity
   "NaN", "not-a-number")}} (<code>NaN</code>), <code>Math.fround()</code> will return
   <code>NaN</code>:</p>
 
-<pre class="brush: js notranslate">Math.fround('abc'); // NaN
+<pre class="brush: js">Math.fround('abc'); // NaN
 Math.fround(NaN); // NaN
 </pre>
 
@@ -104,7 +99,7 @@ Math.fround(NaN); // NaN
 <p>This can be emulated with the following function, if {{jsxref("Float32Array")}} are
   supported:</p>
 
-<pre class="brush: js notranslate">Math.fround = Math.fround || (function (array) {
+<pre class="brush: js">Math.fround = Math.fround || (function (array) {
   return function(x) {
     return array[0] = x, array[0];
   };
@@ -113,7 +108,7 @@ Math.fround(NaN); // NaN
 
 <p>Supporting older browsers is slower, but also possible:</p>
 
-<pre class="brush: js notranslate">if (!Math.fround) Math.fround = function(arg) {
+<pre class="brush: js">if (!Math.fround) Math.fround = function(arg) {
   arg = Number(arg);
   // Return early for ±0 and NaN.
   if (!arg) return arg;
@@ -132,22 +127,11 @@ Math.fround(NaN); // NaN
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.fround")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

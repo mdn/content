@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Reference
   - WebAssembly
+browser-compat: javascript.builtins.WebAssembly.Memory
 ---
 <div>{{JSRef}}</div>
 
@@ -40,11 +41,11 @@ tags:
 
 <p>There are two ways to get a <code>WebAssembly.Memory</code> object. The first way is to construct it from JavaScript. The following snippet creates a new WebAssembly Memory instance with an initial size of 10 pages (640KiB), and a maximum size of 100 pages (6.4MiB). Its <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">buffer</a></code> property will return an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.</p>
 
-<pre class="brush: js notranslate">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
+<pre class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
 <p>The following example (see <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> on GitHub, and <a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">view it live also</a>) fetches and instantiates the loaded memory.wasm byte code using the {{jsxref("WebAssembly.instantiateStreaming()")}} method, while importing the memory created in the line above. It then stores some values in that memory, then exports a function and uses it to sum some values.</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj =&gt; {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i &lt; 10; i++) {
@@ -56,7 +57,7 @@ tags:
 
 <p>The second way to get a WebAssembly.Memory object is to have it exported by a WebAssembly module. This memory can be accessed in the <code>exports</code> property of the Web Assembly instance (after the memory is exported within the Web Assembly module). The following snippet imports a memory exported from WebAssembly with the name <code>memory</code>, and then prints out the first element of the memory, interpreted as an Uint32Array.</p>
 
-<pre class="brush: js notranslate">WebAssembly.instantiateStreaming(fetch('memory.wasm'))
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'))
 .then(obj =&gt; {
    var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
    console.log(i32[0]);
@@ -66,31 +67,17 @@ tags:
 
 <p>By default, WebAssembly memories are unshared. You can create a <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared memory</a> by passing <code>shared: true</code> in the constructor's initialization object:</p>
 
-<pre class="brush: js notranslate">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared: true});</pre>
+<pre class="brush: js">let memory = new WebAssembly.Memory({initial:10, maximum:100, shared: true});</pre>
 
 <p>This memory's <code>buffer</code> property will return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#memories', 'Memory')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.WebAssembly.Memory")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

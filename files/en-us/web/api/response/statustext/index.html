@@ -2,13 +2,13 @@
 title: Response.statusText
 slug: Web/API/Response/statusText
 tags:
-- API
-- Experimental
-- Fetch
-- Property
-- Reference
-- Response
-- statusText
+  - API
+  - Experimental
+  - Fetch
+  - Property
+  - Reference
+  - Response
+  - statusText
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -19,7 +19,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js notranslate">var <var>myStatusText</var> = <var>response</var>.statusText;</pre>
+	class="brush: js">var <var>myStatusText</var> = <var>response</var>.statusText;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -37,7 +37,7 @@ tags:
 		href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response
 		live</a>) we create a new {{domxref("Request")}} object using the
 	{{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-	fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob
+	fetch this request using {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}, extract a blob
 	from the response using {{domxref("Body.blob")}}, create an object URL out of it using
 	{{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
 
@@ -80,8 +80,8 @@ fetch(myRequest).then(function(response) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-	<li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+	<li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+	<li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
 	</li>
 	<li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

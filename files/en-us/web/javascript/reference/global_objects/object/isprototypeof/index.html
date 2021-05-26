@@ -2,12 +2,13 @@
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 tags:
-- JavaScript
-- Method
-- Object
-- Prototype
-- Reference
-- isPrototype
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+  - Reference
+  - isPrototype
+browser-compat: javascript.builtins.Object.isPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
@@ -16,14 +17,9 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <div class="note">
-  <p><code>isPrototypeOf()</code> differs from the {{jsxref("Operators/instanceof",
+  <p><strong>Note:</strong> <code>isPrototypeOf()</code> differs from the {{jsxref("Operators/instanceof",
     "instanceof")}} operator. In the expression
     "<code>object instanceof AFunction</code>", the <code>object</code> prototype chain is
     checked against <code>AFunction.prototype</code>, not against <code>AFunction</code>
@@ -33,7 +29,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</pre>
+  class="brush: js">isPrototypeOf(object)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -68,56 +64,48 @@ tags:
   <code>Bar.prototype</code>, <code>Foo.prototype</code> and <code>Object.prototype</code>
   exist in the prototype chain for object <code>baz</code>:</p>
 
-<pre class="brush: js notranslate">function Foo() {}
+<pre class="brush: js">function Foo() {}
 function Bar() {}
 function Baz() {}
 
 Bar.prototype = Object.create(Foo.prototype);
 Baz.prototype = Object.create(Bar.prototype);
 
-var baz = new Baz();
+const foo = new Foo();
+const bar = new Bar();
+const baz = new Baz();
 
-console.log(Baz.prototype.isPrototypeOf(baz)); // true
-console.log(Bar.prototype.isPrototypeOf(baz)); // true
-console.log(Foo.prototype.isPrototypeOf(baz)); // true
+// prototype chains:
+// foo: Foo &lt;- Object
+// bar: Bar &lt;- Foo &lt;- Object
+// baz: Baz &lt;- Bar &lt;- Foo &lt;- Object
+console.log(Baz.prototype.isPrototypeOf(baz));    // true
+console.log(Baz.prototype.isPrototypeOf(bar));    // false
+console.log(Baz.prototype.isPrototypeOf(foo));    // false
+console.log(Bar.prototype.isPrototypeOf(baz));    // true
+console.log(Bar.prototype.isPrototypeOf(foo));    // false
+console.log(Foo.prototype.isPrototypeOf(baz));    // true
+console.log(Foo.prototype.isPrototypeOf(bar));    // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 </pre>
 
-<p><code>isPrototypeOf()</code> method, along with the {{jsxref("Operators/instanceof",
-  "instanceof")}} operator particularly comes in handy if you have code that can only
-  function when dealing with objects descended from a specific prototype chain, e.g., to
-  guarantee that certain methods or properties will be present on that object.</p>
+<p>The <code>isPrototypeOf()</code> method — along with the {{jsxref("Operators/instanceof", "instanceof")}} operator — comes in particularly handy if you have code that can only function when dealing with objects descended from a specific prototype chain; e.g., to guarantee that certain methods or properties will be present on that object.</p>
 
-<p>For example, check if <code>baz</code> object descends from <code>Foo.prototype</code>:
+<p>For example, to execute some code that’s only safe to run if a <code>baz</code> object has <code>Foo.prototype</code> in its prototype chain, you can do this:
 </p>
 
-<pre class="brush: js notranslate">if (Foo.prototype.isPrototypeOf(baz)) {
+<pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
   // do something safe
 }
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.isprototypeof',
-        'Object.prototype.isPrototypeOf')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("javascript.builtins.Object.isPrototypeOf")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -127,5 +115,5 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
   <li>
     <div>{{jsxref("Object.setPrototypeOf()")}}</div>
   </li>
-  <li>{{jsxref("Object.prototype.__proto__")}} </li>
+  <li>{{jsxref("Object/proto")}} </li>
 </ul>

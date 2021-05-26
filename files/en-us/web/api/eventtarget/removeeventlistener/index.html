@@ -2,15 +2,15 @@
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 tags:
-- API
-- DOM
-- DOM Element Methods
-- EventTarget
-- Gecko
-- Method
-- Reference
-- browser compatibility
-- removeEventListener
+  - API
+  - DOM
+  - DOM Element Methods
+  - EventTarget
+  - Gecko
+  - Method
+  - Reference
+  - browser compatibility
+  - removeEventListener
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -22,10 +22,12 @@ tags:
     and various optional options that may affect the matching process; see
     {{anch("Matching event listeners for removal")}}</span></p>
 
+<p>Note that event listeners can also be removed by passing an {{domxref("AbortSignal")}} to an {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the signal.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>target</var>.removeEventListener(<var>type</var>, <var>listener</var>[, <var>options</var>]);
+  class="brush: js"><var>target</var>.removeEventListener(<var>type</var>, <var>listener</var>[, <var>options</var>]);
 <var>target</var>.removeEventListener(<var>type</var>, <var>listener</var>[, <var>useCapture</var>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -84,11 +86,11 @@ tags:
 <p>For example, consider this call to <code>addEventListener()</code>:</p>
 
 <pre
-  class="brush: js notranslate"><var>element</var>.addEventListener("mousedown", handleMouseDown, true);</pre>
+  class="brush: js"><var>element</var>.addEventListener("mousedown", handleMouseDown, true);</pre>
 
 <p>Now consider each of these two calls to <code>removeEventListener()</code>:</p>
 
-<pre class="brush: js notranslate"><var>element</var>.removeEventListener("mousedown", handleMouseDown, false);     // Fails
+<pre class="brush: js"><var>element</var>.removeEventListener("mousedown", handleMouseDown, false);     // Fails
 <var>element</var>.removeEventListener("mousedown", handleMouseDown, true);      // Succeeds
 </pre>
 
@@ -98,7 +100,7 @@ tags:
 <p>Now consider this:</p>
 
 <pre
-  class="brush: js notranslate"><var>element</var>.addEventListener("mousedown", handleMouseDown, { passive: true });</pre>
+  class="brush: js"><var>element</var>.addEventListener("mousedown", handleMouseDown, { passive: true });</pre>
 
 <p>Here, we specify an <code><var>options</var></code> object in which
   <code>passive</code> is set to <code>true</code>, while the other options are left to
@@ -111,7 +113,7 @@ tags:
 <p>Only the <code>capture</code> setting matters to <code>removeEventListener()</code>.
 </p>
 
-<pre class="brush: js notranslate"><var>element</var>.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Succeeds
+<pre class="brush: js"><var>element</var>.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Succeeds
 <var>element</var>.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Succeeds
 <var>element</var>.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Fails
 <var>element</var>.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Succeeds
@@ -140,7 +142,7 @@ tags:
 <p>This example shows how to add a <code>mouseover</code>-based event listener that
   removes a <code>click</code>-based event listener.</p>
 
-<pre class="brush: js notranslate">const body = document.querySelector('body')
+<pre class="brush: js">const body = document.querySelector('body')
 const clickTarget = document.getElementById('click-target')
 const mouseOverTarget = document.getElementById('mouse-over-target')
 
@@ -211,9 +213,9 @@ mouseOverTarget.addEventListener('mouseover', function () {
   beginning of your scripts, allowing the use of <code>addEventListener()</code> and
   <code>removeEventListener()</code> in implementations that do not natively support it.
   However, this method will not work on Internet Explorer 7 or earlier, since extending
-  the {{domxref("Element.prototype")}} was not supported until Internet Explorer 8.</p>
+  the <code>Element.prototype</code> was not supported until Internet Explorer 8.</p>
 
-<pre class="brush: js notranslate">if (!Element.prototype.addEventListener) {
+<pre class="brush: js">if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
@@ -268,5 +270,4 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 <ul>
   <li>{{domxref("EventTarget.addEventListener()")}}</li>
-  <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}</li>
 </ul>

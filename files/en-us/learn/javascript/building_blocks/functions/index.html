@@ -47,7 +47,7 @@ tags:
 
 <p>We've made use of functions built in to the browser a lot in this course. Every time we manipulated a text string, for example:</p>
 
-<pre class="brush: js  notranslate">let myText = 'I am a string';
+<pre class="brush: js">let myText = 'I am a string';
 let newString = myText.replace('string', 'sausage');
 console.log(newString);
 // the replace() string function takes a source string,
@@ -56,7 +56,7 @@ console.log(newString);
 
 <p>Or every time we manipulated an array:</p>
 
-<pre class="brush: js  notranslate">let myArray = ['I', 'love', 'chocolate', 'frogs'];
+<pre class="brush: js">let myArray = ['I', 'love', 'chocolate', 'frogs'];
 let madeAString = myArray.join(' ');
 console.log(madeAString);
 // the join() function takes an array, joins
@@ -65,7 +65,7 @@ console.log(madeAString);
 
 <p>Or every time we generated a random number:</p>
 
-<pre class="brush: js  notranslate">let myNumber = Math.random();
+<pre class="brush: js">let myNumber = Math.random();
 // the random() function generates a random number between
 // 0 and up to but not including 1, and returns that number</pre>
 
@@ -87,7 +87,7 @@ console.log(madeAString);
 
 <p>You've also seen a lot of <strong>custom functions</strong> in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a> example (see also the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">source code</a>) from our <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">loops article</a>, we included a custom <code>draw()</code> function that looked like this:</p>
 
-<pre class="brush: js  notranslate">function draw() {
+<pre class="brush: js">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);
   for (let i = 0; i &lt; 100; i++) {
     ctx.beginPath();
@@ -99,11 +99,11 @@ console.log(madeAString);
 
 <p>This function draws 100 random circles inside a {{htmlelement("canvas")}} element. Every time we want to do that, we can just invoke the function with this:</p>
 
-<pre class="brush: js  notranslate">draw();</pre>
+<pre class="brush: js">draw();</pre>
 
 <p>rather than having to write all that code out again every time we want to repeat it. And functions can contain whatever code you like — you can even call other functions from inside functions. The above function for example calls the <code>random()</code> function three times, which is defined by the following code:</p>
 
-<pre class="brush: js  notranslate">function random(number) {
+<pre class="brush: js">function random(number) {
   return Math.floor(Math.random()*number);
 }</pre>
 
@@ -113,7 +113,7 @@ console.log(madeAString);
 
 <p>You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.</p>
 
-<pre class="brush: js  notranslate">function myFunction() {
+<pre class="brush: js">function myFunction() {
   alert('hello');
 }
 
@@ -128,19 +128,19 @@ myFunction();
 
 <p>You may see functions defined and invoked in slightly different ways. So far we have just created a function like so:</p>
 
-<pre class="brush: js  notranslate">function myFunction() {
+<pre class="brush: js">function myFunction() {
   alert('hello');
 }</pre>
 
 <p>But you can also create a function that doesn't have a name:</p>
 
-<pre class="brush: js  notranslate">function() {
+<pre class="brush: js">function() {
   alert('hello');
 }</pre>
 
 <p>This is called an <strong>anonymous function</strong> — it has no name! It also won't do anything on its own. You generally use an anonymous function along with an event handler, for example the following would run the code inside the function whenever the associated button is clicked:</p>
 
-<pre class="brush: js  notranslate">const myButton = document.querySelector('button');
+<pre class="brush: js">const myButton = document.querySelector('button');
 
 myButton.onclick = function() {
   alert('hello');
@@ -150,7 +150,7 @@ myButton.onclick = function() {
 
 <p>You can also assign an anonymous function to be the value of a variable, for example:</p>
 
-<pre class="brush: js  notranslate">const myGreeting = function() {
+<pre class="brush: js">const myGreeting = function() {
   alert('hello');
 }</pre>
 
@@ -160,26 +160,26 @@ myButton.onclick = function() {
 
 <p>This function could now be invoked using:</p>
 
-<pre class="brush: js  notranslate">myGreeting();</pre>
+<pre class="brush: js">myGreeting();</pre>
 
 <p>This effectively gives the function a name; you can also assign the function to be the value of multiple variables, for example:</p>
 
-<pre class="brush: js  notranslate">let anotherGreeting = myGreeting;</pre>
+<pre class="brush: js">let anotherGreeting = myGreeting;</pre>
 
 <p>This function could now be invoked using either of:</p>
 
-<pre class="brush: js  notranslate">myGreeting();
+<pre class="brush: js">myGreeting();
 anotherGreeting();</pre>
 
 <p>But this would just be confusing, so don't do it! When creating functions, it is better to just stick to this form:</p>
 
-<pre class="brush: js  notranslate">function myGreeting() {
+<pre class="brush: js">function myGreeting() {
   alert('hello');
 }</pre>
 
 <p>You will mainly use anonymous functions to just run a load of code in response to an event firing — like a button being clicked — using an event handler. Again, this looks something like this:</p>
 
-<pre class="brush: js  notranslate">myButton.onclick = function() {
+<pre class="brush: js">myButton.onclick = function() {
   alert('hello');
   // I can put as much code
   // inside here as I want
@@ -195,11 +195,11 @@ anotherGreeting();</pre>
 
 <p>As an example, the browser's built-in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> function doesn't require any parameters. When called, it always returns a random number between 0 and 1:</p>
 
-<pre class="brush: js  notranslate">let myNumber = Math.random();</pre>
+<pre class="brush: js">let myNumber = Math.random();</pre>
 
 <p>The browser's built-in string <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:</p>
 
-<pre class="brush: js  notranslate">let myText = 'I am a string';
+<pre class="brush: js">let myText = 'I am a string';
 let newString = myText.replace('string', 'sausage');</pre>
 
 <div class="note">
@@ -208,7 +208,7 @@ let newString = myText.replace('string', 'sausage');</pre>
 
 <p>It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join()</a> function's parameter is optional:</p>
 
-<pre class="brush: js  notranslate">let myArray = ['I', 'love', 'chocolate', 'frogs'];
+<pre class="brush: js">let myArray = ['I', 'love', 'chocolate', 'frogs'];
 let madeAString = myArray.join(' ');
 // returns 'I love chocolate frogs'
 let madeAString = myArray.join();
@@ -226,20 +226,20 @@ let madeAString = myArray.join();
 
 <p>For example, say you have an HTML file that is calling in two external JavaScript files, and both of them have a variable and a function defined that use the same name:</p>
 
-<pre class="brush: html  notranslate">&lt;!-- Excerpt from my HTML --&gt;
+<pre class="brush: html">&lt;!-- Excerpt from my HTML --&gt;
 &lt;script src="first.js"&gt;&lt;/script&gt;
 &lt;script src="second.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   greeting();
 &lt;/script&gt;</pre>
 
-<pre class="brush: js  notranslate">// first.js
+<pre class="brush: js">// first.js
 let name = 'Chris';
 function greeting() {
   alert('Hello ' + name + ': welcome to our company.');
 }</pre>
 
-<pre class="brush: js  notranslate">// second.js
+<pre class="brush: js">// second.js
 let name = 'Zaptec';
 function greeting() {
   alert('Our company is called ' + name + '.');
@@ -257,7 +257,7 @@ function greeting() {
 
 <p><img alt="" src="mdn-mozilla-zoo.png" style="display: block; margin: 0 auto;"></p>
 
-<p>The zoo keeper is like the global scope — he or she has the keys to access every enclosure, to restock food, tend to sick animals, etc.</p>
+<p>The zoo keeper is like the global scope — they have the keys to access every enclosure, to restock food, tend to sick animals, etc.</p>
 
 <h3 id="Active_learning_Playing_with_scope">Active learning: Playing with scope</h3>
 
@@ -267,14 +267,14 @@ function greeting() {
  <li>First, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html">function-scope.html</a> example. This contains two functions called <code>a()</code> and <code>b()</code>, and three variables — <code>x</code>, <code>y</code>, and <code>z</code> — two of which are defined inside the functions, and one in the global scope. It also contains a third function called <code>output()</code>, which takes a single parameter and outputs it in a paragraph on the page.</li>
  <li>Open the example up in a browser and in your text editor.</li>
  <li>Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
-  <pre class="brush: js  notranslate">output(x);</pre>
-  You should see the value of variable <code>x</code> output to the screen.</li>
+  <pre class="brush: js">output(x);</pre>
+  You should see the value of variable <code>x</code> printed to the browser viewport.</li>
  <li>Now try entering the following in your console
-  <pre class="brush: js  notranslate">output(y);
+  <pre class="brush: js">output(y);
 output(z);</pre>
-  Both of these should return an error along the lines of "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Why is that? Because of function scope — <code>y</code> and <code>z</code> are locked inside the <code>a()</code> and <code>b()</code> functions, so <code>output()</code> can't access them when called from the global scope.</li>
+  Both of these should throw an error into the console along the lines of "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: y is not defined</a>". Why is that? Because of function scope — <code>y</code> and <code>z</code> are locked inside the <code>a()</code> and <code>b()</code> functions, so <code>output()</code> can't access them when called from the global scope.</li>
  <li>However, what about when it's called from inside another function? Try editing <code>a()</code> and <code>b()</code> so they look like this:
-  <pre class="brush: js  notranslate">function a() {
+  <pre class="brush: js">function a() {
   let y = 2;
   output(y);
 }
@@ -285,11 +285,11 @@ function b() {
 }</pre>
   Save the code and reload it in your browser, then try calling the <code>a()</code> and <code>b()</code> functions from the JavaScript console:
 
-  <pre class="brush: js  notranslate">a();
+  <pre class="brush: js">a();
 b();</pre>
-  You should see the <code>y</code> and <code>z</code> values output in the page. This works fine, as the <code>output()</code> function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. <code>output()</code> itself is available from anywhere, as it is defined in the global scope.</li>
+  You should see the <code>y</code> and <code>z</code> values printed in the browser viewport. This works fine, as the <code>output()</code> function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. <code>output()</code> itself is available from anywhere, as it is defined in the global scope.</li>
  <li>Now try updating your code like this:
-  <pre class="brush: js  notranslate">function a() {
+  <pre class="brush: js">function a() {
   let y = 2;
   output(x);
 }
@@ -298,13 +298,13 @@ function b() {
   let z = 3;
   output(x);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
-  <pre class="brush: js  notranslate">a();
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
+  <pre class="brush: js">a();
 b();</pre>
-  Both the <code>a()</code> and <code>b()</code> call should output the value of x — 1. These work fine because even though the <code>output()</code> calls are not in the same scope as <code>x</code> is defined in, <code>x</code> is a global variable so is available inside all code, everywhere.</li>
+  Both the <code>a()</code> and <code>b()</code> call should print the value of x to the browser viewport. These work fine because even though the <code>output()</code> calls are not in the same scope as <code>x</code> is defined in, <code>x</code> is a global variable so is available inside all code, everywhere.</li>
  <li>Finally, try updating your code like this:
-  <pre class="brush: js  notranslate">function a() {
+  <pre class="brush: js">function a() {
   let y = 2;
   output(z);
 }
@@ -313,11 +313,11 @@ function b() {
   let z = 3;
   output(y);
 }</pre>
-  Save and reload again, and try this again in your JavaScript console:</li>
- <li>
-  <pre class="brush: js  notranslate">a();
+ </li>
+ <li>Save and reload again, and try this again in your JavaScript console:
+  <pre class="brush: js">a();
 b();</pre>
-  This time the <code>a()</code> and <code>b()</code> calls will both return an annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>
+  This time the <code>a()</code> and <code>b()</code> calls will throw that annoying <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: <em>variable name</em> is not defined</a> error into the console — this is because the <code>output()</code> calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.</li>
 </ol>
 
 <div class="note">
@@ -332,7 +332,7 @@ b();</pre>
 
 <p>Keep in mind that you can call a function from anywhere, even inside another function.  This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:</p>
 
-<pre class="brush: js  notranslate">function myBigFunction() {
+<pre class="brush: js">function myBigFunction() {
   let myValue;
 
   subFunction1();
@@ -355,7 +355,7 @@ function subFunction3() {
 
 <p>Just make sure that the values being used inside the function are properly in scope. The example above would throw an error <code>ReferenceError: myValue is not defined</code>, because although the <code>myValue</code> variable is defined in the same scope as the function calls, it is not defined inside the function definitions — the actual code that is run when the functions are called. To make this work, you'd have to pass the value into the function as a parameter, like this:</p>
 
-<pre class="brush: js  notranslate">function myBigFunction() {
+<pre class="brush: js">function myBigFunction() {
   let myValue = 1;
 
   subFunction1(myValue);

@@ -2,10 +2,11 @@
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+browser-compat: javascript.builtins.Math.cbrt
 ---
 <div>{{JSRef}}</div>
 
@@ -57,15 +58,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code>Math.cbrt(<var>x</var>)</code></pre>
+<pre class="brush: js">Math.cbrt(x)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -116,7 +112,7 @@ tags:
     </semantics>
   </math> so this can be emulated by the following function:</p>
 
-<pre class="brush: js notranslate">if (!Math.cbrt) {
+<pre class="brush: js">if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
     return function cbrt(x){
       // ensure negative numbers remain negative:
@@ -130,7 +126,7 @@ tags:
 
 <h3 id="Using_Math.cbrt">Using Math.cbrt()</h3>
 
-<pre class="brush: js notranslate">Math.cbrt(NaN); // NaN
+<pre class="brush: js">Math.cbrt(NaN); // NaN
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
 Math.cbrt(-Infinity); // -Infinity
@@ -143,32 +139,16 @@ Math.cbrt(2);  // 1.2599210498948732
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-</div><a href="https://github.com/mdn/browser-compat-data"> and send us a pull request.
 
-  <p>{{Compat("javascript.builtins.Math.cbrt")}}</p>
+<p>{{Compat}}</p>
 
-  <h2 id="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
-  <ul>
-    <li>{{jsxref("Math.pow()")}}</li>
-    <li>{{jsxref("Math.sqrt()")}}</li>
-  </ul>
-</a>
+<ul>
+  <li>{{jsxref("Math.pow()")}}</li>
+  <li>{{jsxref("Math.sqrt()")}}</li>
+</ul>

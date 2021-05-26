@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Reference
+browser-compat: javascript.builtins.Date.parse
 ---
 <div>{{JSRef}}</div>
 
@@ -21,22 +22,17 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-parse.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <p>Direct call:</p>
 
-<pre class="brush: js notranslate">Date.parse(<var>dateString</var>)
+<pre class="brush: js">Date.parse(<var>dateString</var>)
 </pre>
 
 <p>Implicit call:</p>
 
-<pre class="brush: js notranslate">new Date(<var>dateString</var>)
+<pre class="brush: js">new Date(<var>dateString</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -90,7 +86,7 @@ tags:
   implementation-specific date formats</h3>
 
 <div class="notecard note">
-  <p>This section contains implementation-specific behavior that can be inconsistent
+  <p><strong>Note:</strong> This section contains implementation-specific behavior that can be inconsistent
     across implementations.</p>
 </div>
 
@@ -144,7 +140,7 @@ Date.parse('foo-bar 2014');
 <h3 id="Differences_in_assumed_time_zone">Differences in assumed time zone</h3>
 
 <div class="notecard note">
-  <p>This section contains implementation-specific behavior that can be inconsistent
+  <p><strong>Note:</strong> This section contains implementation-specific behavior that can be inconsistent
     across implementations.</p>
 </div>
 
@@ -179,7 +175,7 @@ Date.parse("2019-01-01T00:00:00.000+00:00")
 <h3 id="Non-standard_date_strings">Non-standard date strings</h3>
 
 <div class="notecard note">
-  <p>This section contains implementation-specific behavior that can be inconsistent
+  <p><strong>Note:</strong> This section contains implementation-specific behavior that can be inconsistent
     across implementations.</p>
 </div>
 
@@ -232,22 +228,11 @@ Date.parse("2019-01-01T00:00:00.000+00:00")
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.parse', 'Date.parse')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.parse")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 

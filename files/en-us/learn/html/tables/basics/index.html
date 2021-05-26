@@ -55,7 +55,7 @@ tags:
 <p>The point of a table is that it is rigid. Information is easily interpreted by making visual associations between row and column headers. Look at the table below for example and find a Jovian gas giant with 62 moons. You can find the answer by associating the relevant row and column headers.</p>
 
 <table>
- <caption>Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>.</caption>
+ <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>.</caption>
  <thead>
   <tr>
    <td colspan="2"></td>
@@ -183,7 +183,7 @@ tags:
    <td>5906.4</td>
    <td>-225</td>
    <td>5</td>
-   <td>Declassified as a planet in 2006, but this <a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
+   <td>Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
   </tr>
  </tbody>
 </table>
@@ -218,10 +218,10 @@ tags:
  <li>First of all, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">blank-template.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> in a new directory on your local machine.</li>
  <li>The content of every table is enclosed by these two tags : <strong><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong>. Add these inside the body of your HTML.</li>
  <li>The smallest container inside a table is a table cell, which is created by a <strong><code><a href="/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong> element ('td' stands for 'table data'). Add the following inside your table tags:
-  <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
+  <pre class="brush: html">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
  </li>
  <li>If we want a row of four cells, we need to copy these tags three times. Update the contents of your table to look like so:
-  <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
+  <pre class="brush: html">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
 &lt;td&gt;I'm your second cell.&lt;/td&gt;
 &lt;td&gt;I'm your third cell.&lt;/td&gt;
 &lt;td&gt;I'm your fourth cell.&lt;/td&gt;</pre>
@@ -235,7 +235,7 @@ tags:
 <ol>
  <li>Place the four cells you've already created inside <code>&lt;tr&gt;</code> tags, like so:
 
-  <pre class="brush: html notranslate">&lt;tr&gt;
+  <pre class="brush: html">&lt;tr&gt;
   &lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
   &lt;td&gt;I'm your second cell.&lt;/td&gt;
   &lt;td&gt;I'm your third cell.&lt;/td&gt;
@@ -272,7 +272,7 @@ tags:
 
 <p>Now let's turn our attention to table headers — special cells that go at the start of a row or column and define the type of data that row or column contains (as an example, see the "Person" and "Age" cells in the first example shown in this article). To illustrate why they are useful, have a look at the following table example. First the source code:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&amp;nbsp;&lt;/td&gt;
     &lt;td&gt;Knocky&lt;/td&gt;
@@ -384,7 +384,7 @@ tags:
 
 <p>The initial markup looks like this:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Animals&lt;/th&gt;
   &lt;/tr&gt;
@@ -468,7 +468,7 @@ tags:
 
 <p>Take the following simple example:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Data 1&lt;/th&gt;
     &lt;th style="background-color: yellow"&gt;Data 2&lt;/th&gt;
@@ -504,7 +504,7 @@ tags:
 
 <p>This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a <code>class</code> set on all three in a real project and specify the styling in a separate stylesheet). Instead of doing this, we can specify the information once, on a <code>&lt;col&gt;</code> element. <code>&lt;col&gt;</code> elements are  specified inside a <code>&lt;colgroup&gt;</code> container just below the opening <code>&lt;table&gt;</code> tag. We could create the same effect as we see above by specifying our table as follows:</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;colgroup&gt;
     &lt;col&gt;
     &lt;col style="background-color: yellow"&gt;
@@ -527,7 +527,7 @@ tags:
 
 <p>If we wanted to apply the styling information to both columns, we could just include one <code>&lt;col&gt;</code> element with a span attribute on it, like this:</p>
 
-<pre class="brush: html notranslate">&lt;colgroup&gt;
+<pre class="brush: html">&lt;colgroup&gt;
   &lt;col style="background-color: yellow" span="2"&gt;
 &lt;/colgroup&gt;</pre>
 
@@ -562,7 +562,6 @@ tags:
 
 <div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
 
-<div>
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
@@ -570,4 +569,3 @@ tags:
  <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
 </ul>
-</div>

@@ -9,6 +9,7 @@ tags:
   - Object
   - Reference
   - set
+browser-compat: javascript.builtins.Set
 ---
 <div>{{JSRef}}</div>
 
@@ -81,72 +82,72 @@ tags:
 
 <h3 id="Using_the_Set_object">Using the Set object</h3>
 
-<pre class="brush: js notranslate">let mySet = new Set()
+<pre class="brush: js">const mySet1 = new Set()
 
-mySet.add(1)           // Set [ 1 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add('some text') // Set [ 1, 5, 'some text' ]
-let o = {a: 1, b: 2}
-mySet.add(o)
+mySet1.add(1)           // Set [ 1 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add('some text') // Set [ 1, 5, 'some text' ]
+const o = {a: 1, b: 2}
+mySet1.add(o)
 
-mySet.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
+mySet1.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
 
-mySet.has(1)              // true
-mySet.has(3)              // false, since 3 has not been added to the set
-mySet.has(5)              // true
-mySet.has(Math.sqrt(25))  // true
-mySet.has('Some Text'.toLowerCase()) // true
-mySet.has(o)       // true
+mySet1.has(1)              // true
+mySet1.has(3)              // false, since 3 has not been added to the set
+mySet1.has(5)              // true
+mySet1.has(Math.sqrt(25))  // true
+mySet1.has('Some Text'.toLowerCase()) // true
+mySet1.has(o)       // true
 
-mySet.size         // 5
+mySet1.size         // 5
 
-mySet.delete(5)    // removes 5 from the set
-mySet.has(5)       // false, 5 has been removed
+mySet1.delete(5)    // removes 5 from the set
+mySet1.has(5)       // false, 5 has been removed
 
-mySet.size         // 4, since we just removed one value
+mySet1.size         // 4, since we just removed one value
 
-console.log(mySet)
+console.log(mySet1)
 // logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
 // logs Set(4) { 1, "some text", {…}, {…} } in Chrome
 </pre>
 
 <h3 id="Iterating_Sets">Iterating Sets</h3>
 
-<pre class="brush: js notranslate">// iterate over items in set
+<pre class="brush: js">// iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet) console.log(item)
+for (let item of mySet1) console.log(item)
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.keys()) console.log(item)
+for (let item of mySet1.keys()) console.log(item)
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.values()) console.log(item)
+for (let item of mySet1.values()) console.log(item)
 
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 // (key and value are the same here)
-for (let [key, value] of mySet.entries()) console.log(key)
+for (let [key, value] of mySet1.entries()) console.log(key)
 
 // convert Set object to an Array object, with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>
-let myArr = Array.from(mySet) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+const myArr = Array.from(mySet1) // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
 // the following will also work if run in an HTML document
-mySet.add(document.body)
-mySet.has(document.querySelector('body')) // true
+mySet1.add(document.body)
+mySet1.has(document.querySelector('body')) // true
 
 // converting between Set and Array
-mySet2 = new Set([1, 2, 3, 4])
+const mySet2 = new Set([1, 2, 3, 4])
 mySet2.size                    // 4
 [...mySet2]                    // [1, 2, 3, 4]
 
 // intersect can be simulated via
-let intersection = new Set([...set1].filter(x =&gt; set2.has(x)))
+const intersection = new Set([...mySet1].filter(x =&gt; mySet2.has(x)))
 
 // difference can be simulated via
-let difference = new Set([...set1].filter(x =&gt; !set2.has(x)))
+const difference = new Set([...mySet1].filter(x =&gt; !mySet2.has(x)))
 
 // Iterate set entries with forEach()
-mySet.forEach(function(value) {
+mySet1.forEach(function(value) {
   console.log(value)
 })
 
@@ -157,7 +158,7 @@ mySet.forEach(function(value) {
 
 <h3 id="Implementing_basic_set_operations">Implementing basic set operations</h3>
 
-<pre class="brush: js notranslate">function isSuperset(set, subset) {
+<pre class="brush: js">function isSuperset(set, subset) {
     for (let elem of subset) {
         if (!set.has(elem)) {
             return false
@@ -205,21 +206,21 @@ function difference(setA, setB) {
 }
 
 // Examples
-let setA = new Set([1, 2, 3, 4])
-let setB = new Set([2, 3])
-let setC = new Set([3, 4, 5, 6])
+const setA = new Set([1, 2, 3, 4])
+const setB = new Set([2, 3])
+const setC = new Set([3, 4, 5, 6])
 
-isSuperset(setA, setB)          // =&gt; true
-union(setA, setC)               // =&gt; Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC)        // =&gt; Set [3, 4]
-symmetricDifference(setA, setC) // =&gt; Set [1, 2, 5, 6]
-difference(setA, setC)          // =&gt; Set [1, 2]
+isSuperset(setA, setB)          // returns true
+union(setA, setC)               // returns Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC)        // returns Set {3, 4}
+symmetricDifference(setA, setC) // returns Set {1, 2, 5, 6}
+difference(setA, setC)          // returns Set {1, 2}
 
 </pre>
 
 <h3 id="Relation_with_Array_objects">Relation with Array objects</h3>
 
-<pre class="brush: js notranslate">let myArray = ['value1', 'value2', 'value3']
+<pre class="brush: js">let myArray = ['value1', 'value2', 'value3']
 
 // Use the regular Set constructor to transform an Array into a Set
 let mySet = new Set(myArray)
@@ -232,7 +233,7 @@ console.log([...mySet]) // Will show you exactly the same Array as myArray
 
 <h3 id="Remove_duplicate_elements_from_the_array">Remove duplicate elements from the array</h3>
 
-<pre class="brush: js notranslate">// Use to remove duplicate elements from the array
+<pre class="brush: js">// Use to remove duplicate elements from the array
 
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
@@ -242,19 +243,19 @@ console.log([...new Set(numbers)])
 
 <h3 id="Relation_with_Strings">Relation with Strings</h3>
 
-<pre class="brush: js notranslate">let text = 'India'
+<pre class="brush: js">let text = 'India'
 
-let mySet = new Set(text)  // Set ['I', 'n', 'd', 'i', 'a']
+const mySet = new Set(text)  // Set(5) {'I', 'n', 'd', 'i', 'a'}
 mySet.size  // 5
 
 //case sensitive &amp; duplicate ommision
-new Set("Firefox")  // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
-new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 </pre>
 
 <h3 id="Use_Set_to_ensure_the_uniqueness_of_a_list_of_values">Use Set to ensure the uniqueness of a list of values</h3>
 
-<pre class="brush: js notranslate" dir="ltr">const array = Array
+<pre class="brush: js" dir="ltr">const array = Array
   .from(document.querySelectorAll('[id]'))
   .map(function(e) {
       return e.id
@@ -265,22 +266,11 @@ console.assert(set.size == array.length);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set-objects', 'Set')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

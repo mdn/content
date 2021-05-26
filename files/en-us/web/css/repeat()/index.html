@@ -9,6 +9,7 @@ tags:
   - Layout
   - Reference
   - Web
+browser-compat: css.properties.grid-template-columns.repeat
 ---
 <div>{{CSSRef}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <p>This function can be used in the CSS Grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;track-repeat&gt; values */
+<pre class="brush: css no-line-numbers">/* &lt;track-repeat&gt; values */
 repeat(4, 1fr)
 repeat(4, [col-start] 250px [col-end])
 repeat(4, [col-start] 60% [col-end])
@@ -81,7 +82,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;
     This item is 50 pixels wide.
   &lt;/div&gt;
@@ -101,7 +102,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+<pre class="brush: css; highlight[3]">#container {
   display: grid;
   grid-template-columns: repeat(2, 50px 1fr) 100px;
   grid-gap: 5px;
@@ -143,7 +144,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.grid-template-columns.repeat")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

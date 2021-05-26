@@ -32,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>htmlImageElement</em>.srcset = <em>imageCandidateStrings</em>;
+<pre class="brush: js"><em>htmlImageElement</em>.srcset = <em>imageCandidateStrings</em>;
 let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
 </pre>
 
@@ -76,14 +76,14 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
   are valid image candidate strings:</p>
 
 <pre
-  class="brush: html notranslate">"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"</pre>
+  class="brush: html">"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"</pre>
 
 <p>This string provides versions of an image to be used at the standard pixel density
   (<code>1x</code>) as well as double that pixel density (<code>2x</code>). Also available
   is a version of the image for use at a width of 2048 pixels (<code>2048w</code>).</p>
 
 <pre
-  class="brush: html notranslate">"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"</pre>
+  class="brush: html">"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"</pre>
 
 <p>This string provides versions of a header image to use when the {{Glossary("user
   agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px. An
@@ -91,7 +91,7 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
   used for any other width.</p>
 
 <pre
-  class="brush: html notranslate">"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x, icon-ultra.png 3x, icon.svg"</pre>
+  class="brush: html">"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x, icon-ultra.png 3x, icon.svg"</pre>
 
 <p>Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel
   densities of 2x and 3x. A fallback image is provided as an SVG file that should be used
@@ -111,7 +111,7 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
   <code>srcset</code> attribute is that the 200-pixel version should be used for 1x
   displays while the 400-pixel version should be used for 2x displays.</p>
 
-<pre class="brush: html notranslate">&lt;div class="box"&gt;
+<pre class="brush: html">&lt;div class="box"&gt;
   &lt;img src="/files/16797/clock-demo-200px.png"
        alt="Clock"
        srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x"&gt;
@@ -126,7 +126,7 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
   browser to wrap the string within the width available regardless of where in the string
   the wrap must occur.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 200px;
   border: 2px solid rgba(150, 150, 150, 255);
   padding: 0.5em;
@@ -144,7 +144,7 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
   {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
   the URL selected by the browser from the <code>srcset</code>.</p>
 
-<pre class="brush: js notranslate">let box = document.querySelector(".box");
+<pre class="brush: js">let box = document.querySelector(".box");
 let image = box.querySelector("img");
 
 let newElem = document.createElement("p");

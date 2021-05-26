@@ -6,6 +6,7 @@ tags:
   - Class
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.Boolean
 ---
 <div>{{JSRef}}</div>
 
@@ -19,7 +20,7 @@ tags:
 
 <p><strong>Any</strong> object of which the value is not {{jsxref("undefined")}} or {{jsxref("null")}}, including a <code>Boolean</code> object whose value is <code>false</code>, evaluates to <code>true</code> when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to <code>true</code>:</p>
 
-<pre class="brush: js notranslate">var x = new Boolean(false);
+<pre class="brush: js">var x = new Boolean(false);
 if (x) {
   // this code is executed
 }
@@ -27,7 +28,7 @@ if (x) {
 
 <p>This behavior does not apply to <code>Boolean</code> primitives. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to <code>false</code>:</p>
 
-<pre class="brush: js notranslate">var x = false;
+<pre class="brush: js">var x = false;
 if (x) {
   // this code is not executed
 }
@@ -35,14 +36,14 @@ if (x) {
 
 <p>Do not use a <code>Boolean</code> object to convert a non-boolean value to a boolean value. To perform this task, instead, use <code>Boolean</code> as a function, or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">double NOT operator</a>:</p>
 
-<pre class="brush: js notranslate">var x = Boolean(expression);     // use this...
+<pre class="brush: js">var x = Boolean(expression);     // use this...
 var x = !!(expression);          // ...or this
 var x = new Boolean(expression); // don't use this!
 </pre>
 
 <p>If you specify any object, including a <code>Boolean</code> object whose value is <code>false</code>, as the initial value of a <code>Boolean</code> object, the new <code>Boolean</code> object has a value of <code>true</code>.</p>
 
-<pre class="brush: js notranslate">var myFalse = new Boolean(false);   // initial value of false
+<pre class="brush: js">var myFalse = new Boolean(false);   // initial value of false
 var g = Boolean(myFalse);       // initial value of true
 var myString = new String('Hello'); // string object
 var s = Boolean(myString);      // initial value of true
@@ -72,9 +73,9 @@ var s = Boolean(myString);      // initial value of true
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">Creating Boolean objects with an initial value of false</h3>
+<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">Creating <code>Boolean</code> objects with an initial value of <code>false</code></h3>
 
-<pre class="brush: js notranslate">var bNoParam = new Boolean();
+<pre class="brush: js">var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
@@ -83,7 +84,7 @@ var bfalse = new Boolean(false);
 
 <h3 id="Creating_Boolean_objects_with_an_initial_value_of_true">Creating <code>Boolean</code> objects with an initial value of <code>true</code></h3>
 
-<pre class="brush: js notranslate">var btrue = new Boolean(true);
+<pre class="brush: js">var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
@@ -93,25 +94,11 @@ var bObjProto = new Boolean({});
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean-objects', 'Boolean')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Boolean")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

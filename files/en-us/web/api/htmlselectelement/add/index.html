@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>collection</var>.add(item[, before]);
+<pre class="brush: js"><var>collection</var>.add(item[, before]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -41,7 +41,7 @@ tags:
 
 <h3 id="Creating_Elements_from_Scratch">Creating Elements from Scratch</h3>
 
-<pre class="brush: js notranslate">var sel = document.createElement("select");
+<pre class="brush: js">var sel = document.createElement("select");
 var opt1 = document.createElement("option");
 var opt2 = document.createElement("option");
 
@@ -65,7 +65,7 @@ sel.add(opt2, null);
 
 <p>The before parameter is optional. So the following is accepted.</p>
 
-<pre class="brush: js notranslate">...
+<pre class="brush: js">...
 sel.add(opt1);
 sel.add(opt2);
 ...
@@ -73,7 +73,7 @@ sel.add(opt2);
 
 <h3 id="Append_to_an_Existing_Collection">Append to an Existing Collection</h3>
 
-<pre class="brush: js notranslate">var sel = document.getElementById("existingList");
+<pre class="brush: js">var sel = document.getElementById("existingList");
 
 var opt = document.createElement("option");
 opt.value = "3";
@@ -101,14 +101,14 @@ sel.add(opt, null);
 
 <p>The before parameter is optional. So the following is accepted.</p>
 
-<pre class="brush:js notranslate">...
+<pre class="brush:js">...
 sel.add(opt);
 ...
 </pre>
 
 <h3 id="Inserting_to_an_Existing_Collection">Inserting to an Existing Collection</h3>
 
-<pre class="brush: js notranslate">var sel = document.getElementById("existingList");
+<pre class="brush: js">var sel = document.getElementById("existingList");
 
 var opt = document.createElement("option");
 opt.value = "3";

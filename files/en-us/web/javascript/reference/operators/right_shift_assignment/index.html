@@ -7,6 +7,7 @@ tags:
 - Language feature
 - Operator
 - Reference
+browser-compat: javascript.operators.right_shift_assignment
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -17,14 +18,14 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><strong>Operator:</strong> x &gt;&gt;= y
+<pre class="brush: js"><strong>Operator:</strong> x &gt;&gt;= y
 <strong>Meaning:</strong>  x   = x &gt;&gt; y</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_right_shift_assignment">Using right shift assignment</h3>
 
-<pre class="brush: js notranslate">let a = 5; //   (00000000000000000000000000000101)
+<pre class="brush: js">let a = 5; //   (00000000000000000000000000000101)
 a &gt;&gt;= 2;   // 1 (00000000000000000000000000000001)
 
 let b = -5; //  (-00000000000000000000000000000101)
@@ -32,21 +33,11 @@ b &gt;&gt;= 2;  // -2 (-00000000000000000000000000000010)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.right_shift_assignment")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

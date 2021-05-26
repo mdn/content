@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><var>tokenList</var>.forEach(<var>callback</var> [, <var>thisArg</var>]);
+<pre class="brush: js"><var>tokenList</var>.forEach(<var>callback</var> [, <var>thisArg</var>]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -36,7 +36,7 @@ tags:
     </dl>
   </dd>
   <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-  <dd>Value to use as {{jsxref("this")}} when executing <code><var>callback</var></code>.
+  <dd>Value to use as {{jsxref("Operators/this", "this")}} when executing <code><var>callback</var></code>.
   </dd>
 </dl>
 
@@ -54,11 +54,11 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+<pre class="brush: js">let span = document.querySelector("span");
 let classes = span.classList;
 let iterator = classes.values();
 
@@ -78,7 +78,7 @@ classes.forEach(
 <p>This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
   <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
 
-<pre class="brush: js notranslate">if (window.DOMTokenList &amp;&amp; !DOMTokenList.prototype.forEach) {
+<pre class="brush: js">if (window.DOMTokenList &amp;&amp; !DOMTokenList.prototype.forEach) {
   DOMTokenList.prototype.forEach = function (callback, thisArg) {
     thisArg = thisArg || window;
     for (var i = 0; i &lt; this.length; i++) {
@@ -110,10 +110,7 @@ classes.forEach(
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.DOMTokenList.forEach")}}</p>
-</div>
+<p>{{Compat("api.DOMTokenList.forEach")}}</p>
 
 <h2 id="See_also">See also</h2>
 

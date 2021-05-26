@@ -26,7 +26,7 @@ tags:
 
 <p>To kick this all off we want to create a collision detection function that will loop through all the bricks and compare every single brick's position with the ball's coordinates as each frame is drawn. For better readability of the code we will define the <code>b</code> variable for storing the brick object in every loop of the collision detection:</p>
 
-<pre class="brush: js notranslate">function collisionDetection() {
+<pre class="brush: js">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -46,7 +46,7 @@ tags:
 
 <p>Let's write that down in code:</p>
 
-<pre class="brush: js notranslate">function collisionDetection() {
+<pre class="brush: js">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -63,7 +63,7 @@ tags:
 
 <p>The above code will work as desired and the ball changes its direction. The problem is that the bricks are staying where they are. We have to figure out a way to get rid of the ones we've already hit with the ball. We can do that by adding an extra parameter to indicate whether we want to paint each brick on the screen or not. In the part of the code where we initialize the bricks, let's add a <code>status</code> property to each brick object. Update the following part of the code as indicated by the highlighted line:</p>
 
-<pre class="brush: js highlight:[5] notranslate">var bricks = [];
+<pre class="brush: js highlight:[5]">var bricks = [];
 for(var c=0; c&lt;brickColumnCount; c++) {
     bricks[c] = [];
     for(var r=0; r&lt;brickRowCount; r++) {
@@ -73,7 +73,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <p>Next we'll check the value of each brick's <code>status</code> property in the <code>drawBricks()</code> function before drawing it — if <code>status</code> is <code>1</code>, then draw it, but if it's <code>0</code>, then it was hit by the ball and we don't want it on the screen anymore. Update your <code>drawBricks()</code> function as follows:</p>
 
-<pre class="brush: js highlight:[4,5,6,7,8,9,10,11,12,13,14] notranslate">function drawBricks() {
+<pre class="brush: js highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             if(bricks[c][r].status == 1) {
@@ -95,7 +95,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <p>Now we need to involve the brick <code>status</code> property in the <code>collisionDetection()</code> function: if the brick is active (its status is <code>1</code>) we will check whether the collision happens; if a collision does occur we'll set the status of the given brick to <code>0</code> so it won't be painted on the screen. Update your <code>collisionDetection()</code> function as indicated below:</p>
 
-<pre class="brush: js highlight:[5,6,7,8,9,10] notranslate">function collisionDetection() {
+<pre class="brush: js highlight:[5,6,7,8,9,10]">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
         for(var r=0; r&lt;brickRowCount; r++) {
             var b = bricks[c][r];
@@ -113,7 +113,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <p>The last thing to do is to add a call to the <code>collisionDetection()</code> function to our main <code>draw()</code> function. Add the following line to the <code>draw()</code> function, just below the <code>drawPaddle()</code> call:</p>
 
-<pre class="brush: js notranslate">collisionDetection();
+<pre class="brush: js">collisionDetection();
 </pre>
 
 <h2 id="Compare_your_code">Compare your code</h2>

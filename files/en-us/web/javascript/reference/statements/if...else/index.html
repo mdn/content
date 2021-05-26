@@ -8,27 +8,24 @@ tags:
 - Statement
 - else
 - if
+browser-compat: javascript.statements.if_else
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary">The <strong><code>if</code> statement</strong> executes a
+<p><span class="seoSummary">The <strong><code>if</code></strong> statement executes a
     statement if a specified condition is {{Glossary("truthy")}}. If the condition is
     {{Glossary("falsy")}}, another statement can be executed.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">if (<var>condition</var>)
+<pre class="brush: js">if (<var>condition</var>) {
    <var>statement1</var>
-[else
-   <var>statement2</var>]
+} else {
+   <var>statement2</var>
+}
 </pre>
 
 <dl>
@@ -151,22 +148,11 @@ if (b) // this condition is truthy
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-if-statement', 'if statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.if_else")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

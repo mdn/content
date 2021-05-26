@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">controller.abort();</pre>
+<pre class="brush: js">controller.abort();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>When the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (see <code>{signal}</code>, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
 
-<pre class="brush: js notranslate">var controller = new AbortController();
+<pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -57,7 +57,7 @@ function fetchVideo() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: When <code>abort()</code> is called, the <code>fetch()</code> promise rejects with an <code>AbortError</code>.</p>
+<p><strong>Note</strong>: When <code>abort()</code> is called, the <code>fetch()</code> promise rejects with an <code>Error</code> of type <code>DOMException</code>, with name <code>AbortError</code>.</p>
 </div>
 
 <p>You can find a full working example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">see it running live also</a>).</p>

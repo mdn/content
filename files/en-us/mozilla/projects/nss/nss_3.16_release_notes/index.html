@@ -35,7 +35,7 @@ slug: Mozilla/Projects/NSS/NSS_3.16_release_notes
 <h2 id="Notable_Changes_in_NSS_3.16">Notable Changes in NSS 3.16</h2>
 <ul>
  <li>ECC is enabled by default. It is no longer necessary to set the environment variable NSS_ENABLE_ECC=1 when building NSS. To disable ECC, set the environment variable NSS_DISABLE_ECC=1 when building NSS.</li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903885">Bug 903885</a>: (CVE-2014-1492) In a wildcard certificate, the wildcard character should not be embedded within the U-label of an internationalized domain name. See the last bullet point in <a href="https://tools.ietf.org/html/rfc6125#section-7.2">RFC 6125, Section 7.2</a>.</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=903885">Bug 903885</a>: (CVE-2014-1492) In a wildcard certificate, the wildcard character should not be embedded within the U-label of an internationalized domain name. See the last bullet point in <a href="https://datatracker.ietf.org/doc/html/rfc6125#section-7.2">RFC 6125, Section 7.2</a>.</li>
  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=962760">Bug 962760</a>: libpkix should not include the common name of CA as DNS names when evaluating name constraints.</li>
  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=981170">Bug 981170</a>: AESKeyWrap_Decrypt should not return SECSuccess for invalid keys.</li>
  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=974693">Bug 974693</a>: Fix a memory corruption in sec_pkcs12_new_asafe.</li>

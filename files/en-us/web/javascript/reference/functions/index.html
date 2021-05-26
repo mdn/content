@@ -2,12 +2,13 @@
 title: Functions
 slug: Web/JavaScript/Reference/Functions
 tags:
-- Function
-- Functions
-- Guide
-- JavaScript
-- Parameter
-- parameters
+  - Function
+  - Functions
+  - Guide
+  - JavaScript
+  - Parameter
+  - parameters
+browser-compat: javascript.functions
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -20,7 +21,7 @@ tags:
 <p>In JavaScript, functions are first-class objects, because they can have properties and
    methods just like any other object. What distinguishes them from other objects is that
    functions can be called. In brief, they are
-   <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">Function</a></code>
+   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></code>
    objects.</p>
 
 <p>For more examples and explanations, see also the <a
@@ -50,7 +51,7 @@ tags:
    referred object's properties, that change is visible outside the function, as shown in
    the following example:</p>
 
-<pre class="brush: js notranslate">/* Declare the function 'myFunc' */
+<pre class="brush: js">/* Declare the function 'myFunc' */
 function myFunc(theObject) {
   theObject.brand = "Toyota";
 }
@@ -94,18 +95,18 @@ console.log(mycar.brand);
       href="/en-US/docs/Web/JavaScript/Reference/Statements/function">function
       statement</a> for details):</p>
 
-<pre class="brush: js notranslate">function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+<pre class="brush: js">function <var>name</var>([<var>param</var>[, <var>param</var>[, ... <var>param</var>]]]) {
+   <var>statements</var>
 }
 </pre>
 
 <dl>
-   <dt><code>name</code></dt>
-   <dd>The function name.</dd>
-   <dt><code>param</code></dt>
-   <dd>The name of an argument to be passed to the function.</dd>
-   <dt><code>statements</code></dt>
-   <dd>The statements comprising the body of the function.</dd>
+  <dt><code><var>name</var></code></dt>
+  <dd>The function name.</dd>
+  <dt><code><var>param</var></code></dt>
+  <dd>The name of an argument to be passed to the function.</dd>
+  <dt><code><var>statements</var></code></dt>
+  <dd>The statements comprising the body of the function.</dd>
 </dl>
 
 <h3 id="The_function_expression_function_expression">The function expression
@@ -119,32 +120,32 @@ console.log(mycar.brand);
    expressions. Function expressions are not <em>hoisted</em> onto the beginning of the
    scope, therefore they cannot be used before they appear in the code.</p>
 
-<pre class="brush: js notranslate">function [<em>name</em>]([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+<pre class="brush: js">function [<var>name</var>]([<var>param</var>[, <var>param</var>[, ... <var>param</var>]]]) {
+   <var>statements</var>
 }
 </pre>
 
 <dl>
-   <dt><code>name</code></dt>
-   <dd>The function name. Can be omitted, in which case the function becomes known as an
-      anonymous function.</dd>
-   <dt><code>param</code></dt>
-   <dd>The name of an argument to be passed to the function.</dd>
-   <dt><code>statements</code></dt>
-   <dd>The statements comprising the body of the function.</dd>
+  <dt><code><var>name</var></code></dt>
+  <dd>The function name. Can be omitted, in which case the function becomes known as an
+    anonymous function.</dd>
+  <dt><code><var>param</var></code></dt>
+  <dd>The name of an argument to be passed to the function.</dd>
+  <dt><code><var>statements</var></code></dt>
+  <dd>The statements comprising the body of the function.</dd>
 </dl>
 
 <p>Here is an example of an <strong>anonymous</strong> function expression (the
    <code>name</code> is not used):</p>
 
-<pre class="brush: js notranslate">var myFunction = function() {
+<pre class="brush: js">var myFunction = function() {
     statements
 }</pre>
 
 <p>It is also possible to provide a name inside the definition in order to create a
    <strong>named</strong> function expression:</p>
 
-<pre class="brush: js notranslate">var myFunction = function namedFunction(){
+<pre class="brush: js">var myFunction = function namedFunction(){
     statements
 }
 </pre>
@@ -161,7 +162,7 @@ console.log(mycar.brand);
       href="/en-US/docs/Glossary/IIFE">IIFE (Immediately Invoked Function Expression)</a>.
 </p>
 
-<pre class="brush: js notranslate">(function() {
+<pre class="brush: js">(function() {
     statements
 })();</pre>
 
@@ -173,18 +174,18 @@ console.log(mycar.brand);
 <p>There is a special syntax for generator function declarations (see
    {{jsxref('Statements/function*', 'function* statement')}} for details):</p>
 
-<pre class="brush: js notranslate">function* <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+<pre class="brush: js">function* <var>name</var>([<var>param</var>[, <var>param</var>[, ... <var>param</var>]]]) {
+   <var>statements</var>
 }
 </pre>
 
 <dl>
-   <dt><code>name</code></dt>
-   <dd>The function name.</dd>
-   <dt><code>param</code></dt>
-   <dd>The name of an argument to be passed to the function.</dd>
-   <dt><code>statements</code></dt>
-   <dd>The statements comprising the body of the function.</dd>
+  <dt><code><var>name</var></code></dt>
+  <dd>The function name.</dd>
+  <dt><code><var>param</var></code></dt>
+  <dd>The name of an argument to be passed to the function.</dd>
+  <dt><code><var>statements</var></code></dt>
+  <dd>The statements comprising the body of the function.</dd>
 </dl>
 
 <h3 id="The_generator_function_expression_function*_expression">The generator function
@@ -194,19 +195,19 @@ console.log(mycar.brand);
    function declaration (see {{jsxref('Operators/function*', 'function* expression')}} for
    details):</p>
 
-<pre class="brush: js notranslate">function* [<em>name</em>]([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+<pre class="brush: js">function* [<var>name</var>]([<var>param</var>[, <var>param</var>[, ... <var>param</var>]]]) {
+   <var>statements</var>
 }
 </pre>
 
 <dl>
-   <dt><code>name</code></dt>
-   <dd>The function name. Can be omitted, in which case the function becomes known as an
-      anonymous function.</dd>
-   <dt><code>param</code></dt>
-   <dd>The name of an argument to be passed to the function.</dd>
-   <dt><code>statements</code></dt>
-   <dd>The statements comprising the body of the function.</dd>
+  <dt><code><var>name</var></code></dt>
+  <dd>The function name. Can be omitted, in which case the function becomes known as an
+    anonymous function.</dd>
+  <dt><code><var>param</var></code></dt>
+  <dd>The name of an argument to be passed to the function.</dd>
+  <dt><code><var>statements</var></code></dt>
+  <dd>The statements comprising the body of the function.</dd>
 </dl>
 
 <h3 id="The_arrow_function_expression_>">The arrow function expression (=&gt;)</h3>
@@ -216,7 +217,7 @@ console.log(mycar.brand);
       href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow
       functions</a> for details):</p>
 
-<pre class="brush: js notranslate">([param[, param]]) =&gt; {
+<pre class="brush: js">([param[, param]]) =&gt; {
    statements
 }
 
@@ -224,13 +225,13 @@ param =&gt; expression
 </pre>
 
 <dl>
-   <dt><code>param</code></dt>
-   <dd>The name of an argument. Zero arguments need to be indicated with <code>()</code>. 
-      For only one argument, the parentheses are not required.
-      (like <code>foo =&gt; 1</code>)</dd>
-   <dt><code>statements or expression</code></dt>
-   <dd>Multiple statements need to be enclosed in brackets. A single expression requires
-      no brackets. The expression is also the implicit return value of the function.</dd>
+  <dt><code><var>param</var></code></dt>
+  <dd>The name of an argument. Zero arguments need to be indicated with <code>()</code>. 
+    For only one argument, the parentheses are not required.
+    (like <code>foo =&gt; 1</code>)</dd>
+  <dt><code><var>statements</var></code> or <code><var>expression</var></code></dt>
+  <dd>Multiple statements need to be enclosed in brackets. A single expression requires
+    no brackets. The expression is also the implicit return value of the function.</dd>
 </dl>
 
 <h3 id="The_Function_constructor">The <code>Function</code> constructor</h3>
@@ -244,14 +245,14 @@ param =&gt; expression
 <p>As all other objects, {{jsxref("Function")}} objects can be created using the
    <code>new</code> operator:</p>
 
-<pre class="brush: js notranslate">new Function (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)
+<pre class="brush: js">new Function (<var>arg1</var>, <var>arg2</var>, ... <var>argN</var>, <var>functionBody</var>)
 </pre>
 
 <dl>
-   <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
-   <dd>Zero or more names to be used by the function as formal parameters. Each must be a
-      proper JavaScript identifier.</dd>
-   <dt><code>functionBody</code></dt>
+  <dt><code><var>arg1</var>, <var>arg2</var>, ... <var>argN</var></code></dt>
+  <dd>Zero or more names to be used by the function as formal parameters. Each must be a
+    proper JavaScript identifier.</dd>
+  <dt><code><var>functionBody</var></code></dt>
    <dd>A string containing the JavaScript statements comprising the function body.</dd>
 </dl>
 
@@ -277,18 +278,18 @@ param =&gt; expression
 <p>As all other objects, {{jsxref("GeneratorFunction")}} objects can be created using the
    <code>new</code> operator:</p>
 
-<pre class="brush: js notranslate">new GeneratorFunction (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)
+<pre class="brush: js">new GeneratorFunction (<var>arg1</var>, <var>arg2</var>, ... <var>argN</var>, <var>functionBody</var>)
 </pre>
 
 <dl>
-   <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
-   <dd>Zero or more names to be used by the function as formal argument names. Each must
-      be a string that conforms to the rules for a valid JavaScript identifier or a list
-      of such strings separated with a comma; for example "<code>x</code>",
-      "<code>theValue</code>", or "<code>a,b</code>".</dd>
-   <dt><code>functionBody</code></dt>
-   <dd>A string containing the JavaScript statements comprising the function definition.
-   </dd>
+  <dt><code><var>arg1</var>, <var>arg2</var>, ... <var>argN</var></code></dt>
+  <dd>Zero or more names to be used by the function as formal argument names. Each must
+    be a string that conforms to the rules for a valid JavaScript identifier or a list
+    of such strings separated with a comma; for example "<code>x</code>",
+    "<code>theValue</code>", or "<code>a,b</code>".</dd>
+  <dt><code><var>functionBody</var></code></dt>
+  <dd>A string containing the JavaScript statements comprising the function definition.
+  </dd>
 </dl>
 
 <p>Invoking the <code>GeneratorFunction</code> constructor as a function (without using
@@ -317,19 +318,19 @@ param =&gt; expression
       href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a>.</p>
 
 <ul>
-   <li>
-      <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></code>:
-      An array-like object containing the arguments passed to the currently executing
-      function.</li>
-   <li>
-      <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code>
-      : The currently executing function.</li>
-   <li>
-      <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code>
-      : The function that invoked the currently executing function.</li>
-   <li>
-      <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>:
-      The number of arguments passed to the function.</li>
+  <li>
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code>:
+    An array-like object containing the arguments passed to the currently executing
+    function.</li>
+  <li>
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code>
+    : The currently executing function.</li>
+  <li>
+    <code><a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code>
+    : The function that invoked the currently executing function.</li>
+  <li>
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/length">arguments.length</a></code>:
+    The number of arguments passed to the function.</li>
 </ul>
 
 <h2 id="Defining_method_functions">Defining method functions</h2>
@@ -341,14 +342,12 @@ param =&gt; expression
    The syntax for defining getters and setters uses the object literal syntax.</p>
 
 <dl>
-   <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></dt>
-   <dd>
-      <p>Binds an object property to a function that will be called when that property is
-         looked up.</p>
-   </dd>
-   <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></dt>
-   <dd>Binds an object property to a function to be called when there is an attempt to set
-      that property.</dd>
+  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></dt>
+  <dd>Binds an object property to a function that will be called when that property is
+        looked up.</dd>
+  <dt><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></dt>
+  <dd>Binds an object property to a function to be called when there is an attempt to set
+    that property.</dd>
 </dl>
 
 <h3 id="Method_definition_syntax">Method definition syntax</h3>
@@ -358,7 +357,7 @@ param =&gt; expression
       href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method
       definitions</a> for more information.</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   foo() {},
   bar() {}
 };</pre>
@@ -369,29 +368,29 @@ param =&gt; expression
 <p>Compare the following:</p>
 
 <p>A function defined with the <code>Function</code> <em>constructor</em> assigned to the
-   variable <code>multiply:</code></p>
+   variable <code>multiply</code>:</p>
 
-<pre class="brush: js notranslate">var multiply = new Function('x', 'y', 'return x * y');</pre>
+<pre class="brush: js">var multiply = new Function('x', 'y', 'return x * y');</pre>
 
 <p>A <em>function declaration</em> of a function named <code>multiply</code>:</p>
 
-<pre class="brush: js notranslate">function multiply(x, y) {
+<pre class="brush: js">function multiply(x, y) {
    return x * y;
 } // there is no semicolon here
 </pre>
 
 <p>A <em>function expression</em> of an anonymous function assigned to the variable
-   <code>multiply:</code></p>
+   <code>multiply</code>:</p>
 
-<pre class="brush: js notranslate">var multiply = function(x, y) {
+<pre class="brush: js">var multiply = function(x, y) {
    return x * y;
 };
 </pre>
 
 <p>A <em>function expression</em> of a function named <code>func_name</code> assigned to
-   the variable <code>multiply:</code></p>
+   the variable <code>multiply</code>:</p>
 
-<pre class="brush: js notranslate">var multiply = function func_name(x, y) {
+<pre class="brush: js">var multiply = function func_name(x, y) {
    return x * y;
 };
 </pre>
@@ -407,7 +406,7 @@ param =&gt; expression
    <code>undefined</code> if the function name was previously declared via a
    <code>var</code> statement). For example:</p>
 
-<pre class="brush: js notranslate">var y = function x() {};
+<pre class="brush: js">var y = function x() {};
 alert(x); // throws an error
 </pre>
 
@@ -429,7 +428,7 @@ alert(x); // throws an error
    JavaScript engine, the serialized form of the function shows as if it has the name
    "anonymous". For example, <code>alert(new Function())</code> outputs:</p>
 
-<pre class="brush: js notranslate">function anonymous() {
+<pre class="brush: js">function anonymous() {
 }
 </pre>
 
@@ -437,7 +436,7 @@ alert(x); // throws an error
    variable that can be accessed within the function. For example, the following would
    result in an error:</p>
 
-<pre class="brush: js notranslate">var foo = new Function("alert(anonymous);");
+<pre class="brush: js">var foo = new Function("alert(anonymous);");
 foo();
 </pre>
 
@@ -445,7 +444,7 @@ foo();
    constructor, a function defined by a function declaration can be used before the
    function declaration itself. For example:</p>
 
-<pre class="brush: js notranslate">foo(); // alerts FOO!
+<pre class="brush: js">foo(); // alerts FOO!
 function foo() {
    alert('FOO!');
 }
@@ -456,7 +455,7 @@ function foo() {
    defined by a <code>Function</code> constructor does not inherit any scope other than
    the global scope (which all functions inherit).</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
  * Declare and initialize a variable 'p' (global)
  * and a function 'myFunc' (to change the scope) inside which
  * declare a varible with same name 'p' (current) and
@@ -504,7 +503,7 @@ myFunc();
    within the function generated by parsing a <code>Function constructor</code> 's string
    aren't parsed repeatedly. For example:</p>
 
-<pre class="brush: js notranslate">var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+<pre class="brush: js">var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
 foo(); // The segment "function() {\n\talert(bar);\n}" of the function body string is not re-parsed.</pre>
 
 <p>A function declaration is very easily (and often unintentionally) turned into a
@@ -516,7 +515,7 @@ foo(); // The segment "function() {\n\talert(bar);\n}" of the function body stri
       element" is a non-nested statement in the script or a function body:</li>
 </ul>
 
-<pre class="brush: js notranslate">var x = 0;               // source element
+<pre class="brush: js">var x = 0;               // source element
 if (x === 0) {           // source element
    x = 10;               // not a source element
    function boo() {}     // not a source element
@@ -533,7 +532,7 @@ function foo() {         // source element
 
 <h3 id="Examples">Examples</h3>
 
-<pre class="brush: js notranslate">// function declaration
+<pre class="brush: js">// function declaration
 function foo() {}
 
 // function expression
@@ -564,7 +563,7 @@ function a() {
    with ES2015, functions inside blocks are now scoped to that block. Prior to ES2015,
    block-level functions were forbidden in strict mode.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<pre class="brush: js">'use strict';
 
 function f() {
   return 1;
@@ -589,7 +588,7 @@ f() === 1; // true
 <p>In non-strict code, function declarations inside blocks behave strangely. For example:
 </p>
 
-<pre class="brush: js notranslate">if (shouldDefineZero) {
+<pre class="brush: js">if (shouldDefineZero) {
    function zero() {     // DANGER: compatibility risk
       console.log("This is zero.");
    }
@@ -609,7 +608,7 @@ f() === 1; // true
 <p>A safer way to define functions conditionally is to assign a function expression to a
    variable:</p>
 
-<pre class="brush: js notranslate">var zero;
+<pre class="brush: js">var zero;
 if (shouldDefineZero) {
    zero = function() {
       console.log("This is zero.");
@@ -624,7 +623,7 @@ if (shouldDefineZero) {
 <p>The following function returns a string containing the formatted representation of a
    number padded with leading zeros.</p>
 
-<pre class="brush: js notranslate">// This function returns a string padded with leading zeros
+<pre class="brush: js">// This function returns a string padded with leading zeros
 function padZeros(num, totalLen) {
    var numStr = num.toString();             // Initialize return value as string
    var numZeros = totalLen - numStr.length; // Calculate no. of zeros
@@ -637,7 +636,7 @@ function padZeros(num, totalLen) {
 
 <p>The following statements call the padZeros function.</p>
 
-<pre class="brush: js notranslate">var result;
+<pre class="brush: js">var result;
 result = padZeros(42,4); // returns "0042"
 result = padZeros(42,2); // returns "42"
 result = padZeros(5,4);  // returns "0005"
@@ -650,7 +649,7 @@ result = padZeros(5,4);  // returns "0005"
    object has a property called <code>noFunc</code> that is a function. If so, it is used;
    otherwise, some other action is taken.</p>
 
-<pre class="brush: js notranslate"> if ('function' === typeof window.noFunc) {
+<pre class="brush: js"> if ('function' === typeof window.noFunc) {
    // use noFunc()
  } else {
    // do something else
@@ -662,38 +661,28 @@ result = padZeros(5,4);  // returns "0005"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-   <tbody>
-      <tr>
-         <th scope="col">Specification</th>
-      </tr>
-      <tr>
-         <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}}
-         </td>
-      </tr>
-   </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.functions")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-   <li>{{jsxref("Statements/function", "function statement")}}</li>
-   <li>{{jsxref("Operators/function", "function expression")}}</li>
-   <li>{{jsxref("Statements/function*", "function* statement")}}</li>
-   <li>{{jsxref("Operators/function*", "function* expression")}}</li>
-   <li>{{jsxref("Function")}}</li>
-   <li>{{jsxref("GeneratorFunction")}}</li>
-   <li>{{jsxref("Functions/Arrow_functions", "Arrow functions")}}</li>
-   <li>{{jsxref("Functions/Default_parameters", "Default parameters")}}</li>
-   <li>{{jsxref("Functions/rest_parameters", "Rest parameters")}}</li>
-   <li>{{jsxref("Functions/arguments", "Arguments object")}}</li>
-   <li>{{jsxref("Functions/get", "getter")}}</li>
-   <li>{{jsxref("Functions/set", "setter")}}</li>
-   <li>{{jsxref("Functions/Method_definitions", "Method definitions")}}</li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope">Functions
-         and function scope</a></li>
+  <li>{{jsxref("Statements/function", "function statement")}}</li>
+  <li>{{jsxref("Operators/function", "function expression")}}</li>
+  <li>{{jsxref("Statements/function*", "function* statement")}}</li>
+  <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+  <li>{{jsxref("Function")}}</li>
+  <li>{{jsxref("GeneratorFunction")}}</li>
+  <li>{{jsxref("Functions/Arrow_functions", "Arrow functions")}}</li>
+  <li>{{jsxref("Functions/Default_parameters", "Default parameters")}}</li>
+  <li>{{jsxref("Functions/rest_parameters", "Rest parameters")}}</li>
+  <li>{{jsxref("Functions/arguments", "Arguments object")}}</li>
+  <li>{{jsxref("Functions/get", "getter")}}</li>
+  <li>{{jsxref("Functions/set", "setter")}}</li>
+  <li>{{jsxref("Functions/Method_definitions", "Method definitions")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions
+        and function scope</a></li>
 </ul>

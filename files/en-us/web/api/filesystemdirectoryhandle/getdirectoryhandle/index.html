@@ -2,12 +2,12 @@
 title: FileSystemDirectoryHandle.getDirectoryHandle()
 slug: Web/API/FileSystemDirectoryHandle/getDirectoryHandle
 tags:
-- Directories
-- Directory
-- File
-- File System Access API
-- FileSystemDirectoryHandle
-- Method
+  - Directories
+  - Directory
+  - File
+  - File System Access API
+  - FileSystemDirectoryHandle
+  - Method
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>FileSystemDirectoryHandle</var> = FileSystemDirectoryHandle.getDirectoryHandle();</pre>
+  class="brush: js">var <var>FileSystemDirectoryHandle</var> = FileSystemDirectoryHandle.getDirectoryHandle();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,7 +61,7 @@ tags:
 <p>The following example returns a directory handle with the specified name, if the
   directory does not exist it is created.</p>
 
-<pre class="brush: js notranslate">const dirName = 'directoryToGetName';
+<pre class="brush: js">const dirName = 'directoryToGetName';
 
 // assuming we have a directory handle: 'currentDirHandle'
 const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pre>
@@ -76,8 +76,7 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('File System Access
-        API','#dom-filesystemdirectoryhandle-getdirectoryhandle','getDirectoryHandle')}}
+      <td>{{SpecName('File System Access API','#dom-filesystemdirectoryhandle-getdirectoryhandle','getDirectoryHandle')}}
       </td>
       <td>{{Spec2('File System Access API')}}</td>
       <td>Initial definition.</td>
@@ -92,7 +91,7 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/docs/Web/API/File_System_Access_API">File System Access API</a></li>
+  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
   <li><a href="https://web.dev/file-system-access/">The File System Access API:
       simplifying access to local files</a></li>
 </ul>

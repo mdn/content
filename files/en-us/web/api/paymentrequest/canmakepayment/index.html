@@ -2,15 +2,15 @@
 title: PaymentRequest.canMakePayment()
 slug: Web/API/PaymentRequest/canMakePayment
 tags:
-- API
-- Experimental
-- Method
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Reference
-- Secure context
-- canMakePayment
+  - API
+  - Experimental
+  - Method
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Reference
+  - Secure context
+  - canMakePayment
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
@@ -28,11 +28,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><em>paymentRequest</em>.canMakePayment()
-    .then( <em>canPay</em> =&gt; { ... })
-    .catch( <em>error</em> =&gt; { ... })
+<pre class="brush: js">paymentRequest.canMakePayment()
+    .then( canPay =&gt; { ... })
+    .catch( error =&gt; { ... })
 
-<em>canPay</em> = await <em>paymentRequest</em>.canMakePayment();</code>
+canPay = await paymentRequest.canMakePayment();
 </pre>
 
 <h3 id="Returns">Returns</h3>
@@ -118,10 +118,7 @@ async function initPaymentRquest() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentRequest.canMakePayment")}}</p>
-</div>
+<p>{{Compat("api.PaymentRequest.canMakePayment")}}</p>
 
 <h2 id="See_also">See also</h2>
 

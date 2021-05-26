@@ -8,12 +8,13 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.last-of-type
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>:last-of-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents the last element of its type among a group of sibling elements.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;p&gt; that is the last element
+<pre class="brush: css no-line-numbers">/* Selects any &lt;p&gt; that is the last element
    of its type among its siblings */
 p:last-of-type {
   color: lime;
@@ -25,8 +26,7 @@ p:last-of-type {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}
-</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,13 +34,13 @@ p:last-of-type {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Heading&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Heading&lt;/h2&gt;
 &lt;p&gt;Paragraph 1&lt;/p&gt;
 &lt;p&gt;Paragraph 2&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">p:last-of-type {
+<pre class="brush: css">p:last-of-type {
   color: red;
   font-style: italic;
 }</pre>
@@ -55,7 +55,7 @@ p:last-of-type {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;article&gt;
+<pre class="brush: html">&lt;article&gt;
   &lt;div&gt;This `div` is first.&lt;/div&gt;
   &lt;div&gt;This &lt;span&gt;nested `span` is last&lt;/span&gt;!&lt;/div&gt;
   &lt;div&gt;This &lt;em&gt;nested `em` is first&lt;/em&gt;, but this &lt;em&gt;nested `em` is last&lt;/em&gt;!&lt;/div&gt;
@@ -66,7 +66,7 @@ p:last-of-type {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">article :last-of-type {
+<pre class="brush: css">article :last-of-type {
   background-color: pink;
 }</pre>
 
@@ -100,10 +100,7 @@ p:last-of-type {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.selectors.last-of-type")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

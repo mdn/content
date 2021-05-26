@@ -2,17 +2,18 @@
 title: GlobalEventHandlers.onkeypress
 slug: Web/API/GlobalEventHandlers/onkeypress
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - Deprecated
 ---
 <div>{{ApiRef("HTML DOM")}} {{deprecated_header}}</div>
 
 <p>The <code><strong>onkeypress</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
   processes {{event("keypress")}} events.</p>
 
 <p>The <code>keypress</code> event <em>should</em> fire when the user presses a key on the
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>target</em>.onkeypress = <var>functionRef</var>;
+<pre class="brush: js"><em>target</em>.onkeypress = <var>functionRef</var>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -162,7 +163,7 @@ input.onpaste = event =&gt; false;</pre>
 
   <ul>
     <li>The <code>keypress</code> event is no longer fired for <a
-        href="/en-US/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">non-printable
+        href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable
         keys</a> (see {{bug(968056)}} for Firefox 65's implementation of this), except for
       the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and
       <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for

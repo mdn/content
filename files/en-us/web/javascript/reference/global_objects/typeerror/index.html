@@ -7,6 +7,7 @@ tags:
   - Object
   - Reference
   - TypeError
+browser-compat: javascript.builtins.TypeError
 ---
 <div>{{JSRef}}</div>
 
@@ -48,7 +49,7 @@ tags:
 
 <h3 id="Catching_a_TypeError">Catching a TypeError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   null.f()
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -63,7 +64,7 @@ tags:
 
 <h3 id="Creating_a_TypeError">Creating a TypeError</h3>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   throw new TypeError('Hello', "someFile.js", 10)
 } catch (e) {
   console.log(e instanceof TypeError)  // true
@@ -78,25 +79,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.TypeError")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -28,9 +28,9 @@ tags:
 
 <h2 id="Overview_of_IndexedDB">Overview of IndexedDB</h2>
 
-<p>IndexedDB lets you store and retrieve objects that are indexed with a "key." All changes that you make to the database happen within transactions. Like most web storage solutions, IndexedDB follows a <a class="external" href="https://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
+<p>IndexedDB lets you store and retrieve objects that are indexed with a "key." All changes that you make to the database happen within transactions. Like most web storage solutions, IndexedDB follows a <a href="https://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
 
-<p>IndexedDB is an <a href="/en-US/docs/IndexedDB#Asynchronous_API">asynchronous</a> API that can be used in most contexts, including <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>. It used to include a <a href="/en-US/docs/IndexedDB#Synchronous_API">synchronous</a> version also, for use in web workers, but this was removed from the spec due to lack of interest by the web community.</p>
+<p>IndexedDB is an <a href="/en-US/docs/Web/API/IndexedDB_API#asynchronous_api">asynchronous</a> API that can be used in most contexts, including <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>. It used to include a <a href="/en-US/docs/Web/API/IndexedDB_API#synchronous_api">synchronous</a> version also, for use in web workers, but this was removed from the spec due to lack of interest by the web community.</p>
 
 <p>IndexedDB used to have a competing spec, WebSQL Database, but the W3C deprecated it on November 18, 2010. While both IndexedDB and WebSQL are solutions for storage, they do not offer the same functionalities. WebSQL Database is a relational database access system, whereas IndexedDB is an indexed table system.</p>
 
@@ -48,7 +48,7 @@ tags:
   <p>This transaction model is really useful when you consider what might happen if a user opened two instances of your web app in two different tabs simultaneously. Without transactional operations, the two instances could interfere with each other's modifications. If you are not familiar with transactions in a database, read the <a class="link-https" href="https://en.wikipedia.org/wiki/Database_transaction">Wikipedia article on transactions</a>. Also see <a href="#gloss_transaction">transaction</a> under the Definitions section.</p>
  </li>
  <li>
-  <p><strong>The IndexedDB API is mostly asynchronous.</strong> The API doesn't give you data by returning values; instead, you have to pass a callback function. You don't "store" a value into the database, or "retrieve" a value out of the database through synchronous means. Instead, you "request" that a database operation happens. You get notified by a DOM event when the operation finishes, and the type of event you get lets you know if the operation succeeded or failed. This sounds a little complicated at first, but there are sanity measures baked in. It's not that different from the way that <a href="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a> works.</p>
+  <p><strong>The IndexedDB API is mostly asynchronous.</strong> The API doesn't give you data by returning values; instead, you have to pass a callback function. You don't "store" a value into the database, or "retrieve" a value out of the database through synchronous means. Instead, you "request" that a database operation happens. You get notified by a DOM event when the operation finishes, and the type of event you get lets you know if the operation succeeded or failed. This sounds a little complicated at first, but there are sanity measures baked in. It's not that different from the way that <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> works.</p>
  </li>
  <li>
   <p><strong>IndexedDB uses a lot of requests. </strong>Requests are objects that receive the success or failure DOM events that were mentioned previously. They have <code style="font-size: 14px;">onsuccess</code> and <code style="font-size: 14px;">onerror</code> properties, and you can call <code style="font-size: 14px;">addEventListener()</code> and <code style="font-size: 14px;">removeEventListener()</code> on them. They also have <code style="font-size: 14px;">readyState</code>, <code style="font-size: 14px;">result</code>, and <code style="font-size: 14px;">errorCode</code> properties that tell you the status of the request. The <code style="font-size: 14px;">result</code> property is particularly magical, as it can be many different things, depending on how the request was generated (for example, an <code style="font-size: 14px;">IDBCursor</code> instance, or the key for a value that you just inserted into the database).</p>
@@ -59,15 +59,15 @@ tags:
  <li>
   <p><strong>IndexedDB is object-oriented.</strong> IndexedDB is not a relational database with tables representing collections of rows and columns. This important and fundamental difference affects the way you design and build your applications.</p>
 
-  <p>In a traditional relational data store, you would have a table that stores a collection of rows of data and columns of named types of data. IndexedDB, on the other hand, requires you to create an object store for a type of data and persist JavaScript objects to that store. Each object store can have a collection of indexes that makes it efficient to query and iterate across. If you are not familiar with object-oriented database management systems, read the <a class="external" href="https://en.wikipedia.org/wiki/Object_database">Wikipedia article on object database</a>.</p>
+  <p>In a traditional relational data store, you would have a table that stores a collection of rows of data and columns of named types of data. IndexedDB, on the other hand, requires you to create an object store for a type of data and persist JavaScript objects to that store. Each object store can have a collection of indexes that makes it efficient to query and iterate across. If you are not familiar with object-oriented database management systems, read the <a href="https://en.wikipedia.org/wiki/Object_database">Wikipedia article on object database</a>.</p>
  </li>
  <li>
-  <p><strong>IndexedDB does not use Structured Query Language (<abbr>SQL</abbr>).</strong> It uses queries on an index that produces a cursor, which you use to iterate across the result set. If you are not familiar with NoSQL systems, read the <a class="external" href="https://en.wikipedia.org/wiki/NoSQL">Wikipedia article on NoSQL</a>.</p>
+  <p><strong>IndexedDB does not use Structured Query Language (<abbr>SQL</abbr>).</strong> It uses queries on an index that produces a cursor, which you use to iterate across the result set. If you are not familiar with NoSQL systems, read the <a href="https://en.wikipedia.org/wiki/NoSQL">Wikipedia article on NoSQL</a>.</p>
  </li>
  <li>
   <p><a name="origin"><strong>IndexedDB adheres to a same-origin policy</strong></a>. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.</p>
 
-  <p>The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in <a class="external" href="http://www.example.com/app/">http://www.example.com/app/</a> can retrieve data from <a class="external" href="http://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve data from <a class="external" href="http://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a class="link-https" href="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol), because they have different origins.</p>
+  <p>The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in <a href="http://www.example.com/app/">http://www.example.com/app/</a> can retrieve data from <a href="http://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve data from <a href="http://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a class="link-https" href="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol), because they have different origins.</p>
 
   <div class="note"><strong>Note</strong>: Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">never accept third party cookies</a> (see {{bug("1147821")}}.)</div>
  </li>
@@ -108,8 +108,8 @@ tags:
  <p>For the reference documentation on object store, see {{domxref("IDBObjectStore")}}.</p>
  </dd>
  <dt><a name="gloss_version">version</a></dt>
- <dd>When a database is first created, its version is the integer 1. Each database has one version at a time; a database can't exist in multiple versions at once. The only way to change the version is by opening it with a greater version than the current one. This will start a <a href="/en-US/docs/Web/API/IDBVersionChangeRequest"><code>versionchange</code></a> <em>transaction</em> and fire an <a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB"><code>upgradeneeded</code></a> event. The only place where the schema of the database can be updated is inside the handler of that event.</dd>
- <dd>Note: This definition describes the <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
+ <dd>When a database is first created, its version is the integer 1. Each database has one version at a time; a database can't exist in multiple versions at once. The only way to change the version is by opening it with a greater version than the current one. This will start a <a href="/en-US/docs/Web/API/IDBVersionChangeRequest"><code>versionchange</code></a> <em>transaction</em> and fire an <a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event"><code>upgradeneeded</code></a> event. The only place where the schema of the database can be updated is inside the handler of that event.</dd>
+ <dd>Note: This definition describes the <a href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/Web/API/IDBDatabase#setversion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
  <dt><a name="gloss_database_connection">database connection</a></dt>
  <dd>An operation created by opening a <em><a href="#gloss_database">database</a></em>. A given database can have multiple connections at the same time.</dd>
  <dt><a name="gloss_transaction">transaction</a></dt>
@@ -120,7 +120,7 @@ tags:
 
  <p>Transactions are expected to be short-lived, so the browser can terminate a transaction that takes too long, in order to free up storage resources that the long-running transaction has locked. You can abort the transaction, which rolls back the changes made to the database in the transaction. And you don't even have to wait for the transaction to start or be active to abort it.</p>
 
- <p>The three modes of transactions are: <code>readwrite</code>, <code>readonly</code>, and <code>versionchange</code>. The only way to create and delete object stores and indexes is by using a <a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB"><code>versionchange</code></a> transaction. To learn more about transaction types, see the reference article for <a href="/en-US/docs/IndexedDB">IndexedDB</a>.</p>
+ <p>The three modes of transactions are: <code>readwrite</code>, <code>readonly</code>, and <code>versionchange</code>. The only way to create and delete object stores and indexes is by using a <a href="/en-US/docs/Web/API/IDBDatabase/versionchange_event"><code>versionchange</code></a> transaction. To learn more about transaction types, see the reference article for <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 
  <p>Because everything happens within a transaction, it is a very important concept in IndexedDB. To learn more about transactions, especially on how they relate to versioning, see {{domxref("IDBTransaction")}}, which also has reference documentation.</p>
  </dd>
@@ -132,7 +132,7 @@ tags:
 
  <p>Alternatively, you can also look up records in an object store using the <a href="#gloss_key"> key</a><em>.</em></p>
 
- <p>To learn more on using indexes, see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index">Using IndexedDB</a>. For the reference documentation on index, see <a href="/en-US/docs/Web/API/IDBKeyRange" rel="internal">IDBKeyRange</a>.</p>
+ <p>To learn more on using indexes, see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index">Using IndexedDB</a>. For the reference documentation on index, see <a href="/en-US/docs/Web/API/IDBKeyRange" rel="internal">IDBKeyRange</a>.</p>
  </dd>
 </dl>
 
@@ -143,7 +143,7 @@ tags:
  <dd>
  <p>A data value by which stored values are organized and retrieved in the object store. The object store can derive the key from one of three sources: a <em><a href="#gloss_keygenerator">key generator</a></em>, a <em><a href="#gloss_keypath">key path</a></em>, or an explicitly specified value. The key must be of a data type that has a number that is greater than the one before it. Each record in an object store must have a key that is unique within the same store, so you cannot have multiple records with the same key in a given object store.</p>
 
- <p>A key can be one of the following types: <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String">string</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date">date</a>, float, a binary blob, and <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array">array</a>. For arrays, the key can range from an empty value to infinity. And you can include an array within an array.</p>
+ <p>A key can be one of the following types: <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">date</a>, float, a binary blob, and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>. For arrays, the key can range from an empty value to infinity. And you can include an array within an array.</p>
 
  <p>Alternatively, you can also look up records in an object store using the <em><a href="#gloss_index">index</a>.</em></p>
  </dd>
@@ -157,11 +157,11 @@ tags:
  <dd>Defines where the browser should extract the key from in the object store or index. A valid key path can include one of the following: an empty string, a JavaScript identifier, or multiple JavaScript identifiers separated by periods or an array containing any of those. It cannot include spaces.</dd>
  <dt><a name="gloss_value">value</a></dt>
  <dd>
- <p>Each record has a value, which could include anything that can be expressed in JavaScript, including <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Boolean" rel="internal">boolean</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Number" rel="internal">number</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String">string</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date">date</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object">object</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" rel="internal">array</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp" rel="internal">regexp</a>, <a href="/en-US/docs/JavaScript/Reference/Global_Objects/undefined">undefined</a>, and null.</p>
+ <p>Each record has a value, which could include anything that can be expressed in JavaScript, including <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" rel="internal">boolean</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" rel="internal">number</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">date</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" rel="internal">array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" rel="internal">regexp</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>, and null.</p>
 
  <p>When an object or array is stored, the properties and values in that object or array can also be anything that is a valid value.</p>
 
- <p><a href="/en-US/docs/DOM/Blob">Blobs</a> and files can be stored, cf. <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">specification</a> {{ fx_minversion_inline("11") }}.</p>
+ <p><a href="/en-US/docs/Web/API/Blob">Blobs</a> and files can be stored, cf. <a href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">specification</a>.</p>
  </dd>
 </dl>
 
@@ -185,7 +185,7 @@ tags:
 <p>IndexedDB is designed to cover most cases that need client-side storage. However, it is not designed for a few cases like the following:</p>
 
 <ul>
- <li>Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting">locale-aware sorting</a> has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.</li>
+ <li>Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale-aware sorting</a> has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.</li>
  <li>Synchronizing. The API is not designed to take care of synchronizing with a server-side database. You have to write code that synchronizes a client-side indexedDB database with a server-side database.</li>
  <li>Full text searching. The API<span style="direction: ltr;"> does not have an</span><span style="direction: ltr;"> equivalent of the <code>LIKE</code> operator in SQL. </span></li>
 </ul>
@@ -210,7 +210,7 @@ tags:
 
 <ul>
  <li><a href="https://www.w3.org/TR/IndexedDB/"><span style="direction: ltr;">Indexed Database API Specification</span></a></li>
- <li><a href="/en-US/docs/IndexedDB">IndexedDB API Reference</a></li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API Reference</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li><a class="external" href="https://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="https://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>

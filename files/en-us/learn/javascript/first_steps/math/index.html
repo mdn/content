@@ -73,14 +73,14 @@ tags:
 
 <ol>
  <li>First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
-  <pre class="brush: js notranslate">let myInt = 5;
+  <pre class="brush: js">let myInt = 5;
 let myFloat = 6.667;
 myInt;
 myFloat;</pre>
  </li>
  <li>Number values are typed in without quote marks — try declaring and initializing a couple more variables containing numbers before you move on.</li>
  <li>Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
-  <pre class="brush: js notranslate">typeof myInt;
+  <pre class="brush: js">typeof myInt;
 typeof myFloat;</pre>
   You should get <code>"number"</code> returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!</li>
 </ol>
@@ -91,7 +91,7 @@ typeof myFloat;</pre>
 
 <p>For example, to round your number to a fixed number of decimal places, use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed()</a></code> method. Type the following lines into your browser's <a href="/en-US/docs/Tools/Web_Console">console</a>:</p>
 
-<pre class="brush: js notranslate">let lotsOfDecimal = 1.766584958675746364;
+<pre class="brush: js">let lotsOfDecimal = 1.766584958675746364;
 lotsOfDecimal;
 let twoDecimalPlaces = lotsOfDecimal.toFixed(2);
 twoDecimalPlaces;</pre>
@@ -102,16 +102,16 @@ twoDecimalPlaces;</pre>
 
 <p>For example, try typing these lines into your console:</p>
 
-<pre class="brush: js notranslate">let myNumber = '74';
+<pre class="brush: js">let myNumber = '74';
 myNumber + 3;</pre>
 
 <p>You end up with the result 743, not 77, because <code>myNumber</code> is actually defined as a string. You can test this by typing in the following:</p>
 
-<pre class="brush: js notranslate">typeof myNumber;</pre>
+<pre class="brush: js">typeof myNumber;</pre>
 
 <p>To fix the calculation, you can do this:</p>
 
-<pre class="brush: js notranslate">Number(myNumber) + 3;</pre>
+<pre class="brush: js">Number(myNumber) + 3;</pre>
 
 <h2 id="Arithmetic_operators">Arithmetic operators</h2>
 
@@ -182,19 +182,19 @@ myNumber + 3;</pre>
 
 <ol>
  <li>First try entering some simple examples of your own, such as
-  <pre class="brush: js notranslate">10 + 7
+  <pre class="brush: js">10 + 7
 9 * 8
 60 % 3</pre>
  </li>
  <li>You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
-  <pre class="brush: js notranslate">let num1 = 10;
+  <pre class="brush: js">let num1 = 10;
 let num2 = 50;
 9 * num1;
 num1 ** 3;
 num2 / num1;</pre>
  </li>
  <li>Last for this section, try entering some more complex expressions, such as:
-  <pre class="brush: js notranslate">5 + 10 * 3;
+  <pre class="brush: js">5 + 10 * 3;
 num2 % 9 * num1;
 num2 + num1 / 8 + 2;</pre>
  </li>
@@ -206,7 +206,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Let's look at the last example from above, assuming that <code>num2</code> holds the value 50 and <code>num1</code> holds the value 10 (as originally stated above):</p>
 
-<pre class="brush: js notranslate">num2 + num1 / 8 + 2;</pre>
+<pre class="brush: js">num2 + num1 / 8 + 2;</pre>
 
 <p>As a human being, you may read this as <em>"50 plus 10 equals 60"</em>, then <em>"8 plus 2 equals 10"</em>, and finally <em>"60 divided by 10 equals 6"</em>.</p>
 
@@ -216,7 +216,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:</p>
 
-<pre class="brush: js notranslate">(num2 + num1) / (8 + 2);</pre>
+<pre class="brush: js">(num2 + num1) / (8 + 2);</pre>
 
 <p>Try it and see.</p>
 
@@ -228,7 +228,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (<code>++</code>) and decrement (<code>--</code>) operators. We used <code>++</code> in our "Guess the number" game back in our <a href="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">first splash into JavaScript</a> article, when we added 1 to our <code>guessCount</code> variable to keep track of how many guesses the user has left after each turn.</p>
 
-<pre class="brush: js notranslate">guessCount++;</pre>
+<pre class="brush: js">guessCount++;</pre>
 
 <div class="note">
 <p><strong>Note</strong>: These operators are most commonly used in <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">loops</a>, which you'll learn about later on in the course. For example, say you wanted to loop through a list of prices, and add sales tax to each one. You'd use a loop to go through each value in turn and do the necessary calculation for adding the sales tax in each case. The incrementor is used to move to the next value when needed. We've actually provided a simple example showing how this is done — <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">check it out live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">look at the source code</a> to see if you can spot the incrementors! We'll look at loops in detail later on in the course.</p>
@@ -236,20 +236,20 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:</p>
 
-<pre class="brush: js notranslate">3++;</pre>
+<pre class="brush: js">3++;</pre>
 
 <p>So, you can only increment an existing variable. Try this:</p>
 
-<pre class="brush: js notranslate">let num1 = 4;
+<pre class="brush: js">let num1 = 4;
 num1++;</pre>
 
 <p>Okay, strangeness number 2! When you do this, you'll see a value of 4 returned — this is because the browser returns the current value, <em>then</em> increments the variable. You can see that it's been incremented if you return the variable value again:</p>
 
-<pre class="brush: js notranslate">num1;</pre>
+<pre class="brush: js">num1;</pre>
 
 <p>The same is true of <code>--</code> : try the following</p>
 
-<pre class="brush: js notranslate">let num2 = 6;
+<pre class="brush: js">let num2 = 6;
 num2--;
 num2;</pre>
 
@@ -261,7 +261,7 @@ num2;</pre>
 
 <p>Assignment operators are operators that assign a value to a variable. We have already used the most basic one, <code>=</code>, loads of times — it assigns the variable on the left the value stated on the right:</p>
 
-<pre class="brush: js notranslate">let x = 3; // x contains the value 3
+<pre class="brush: js">let x = 3; // x contains the value 3
 let y = 4; // y contains the value 4
 x = y; // x now contains the same value y contains, 4</pre>
 
@@ -313,7 +313,7 @@ x = y; // x now contains the same value y contains, 4</pre>
 
 <p>Note that you can quite happily use other variables on the right hand side of each expression, for example:</p>
 
-<pre class="brush: js notranslate">let x = 3; // x contains the value 3
+<pre class="brush: js">let x = 3; // x contains the value 3
 let y = 4; // y contains the value 4
 x *= y; // x now contains the value 12</pre>
 
@@ -408,11 +408,11 @@ x *= y; // x now contains the value 12</pre>
 
 <p>We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:</p>
 
-<pre class="brush: html notranslate">&lt;button&gt;Start machine&lt;/button&gt;
+<pre class="brush: html">&lt;button&gt;Start machine&lt;/button&gt;
 &lt;p&gt;The machine is stopped.&lt;/p&gt;
 </pre>
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
+<pre class="brush: js">const btn = document.querySelector('button');
 const txt = document.querySelector('p');
 
 btn.addEventListener('click', updateBtn);

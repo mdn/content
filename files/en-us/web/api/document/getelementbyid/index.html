@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>element</var> = <var>document</var>.getElementById(<var>id</var>);
+<pre class="brush: js">var <var>element</var> = <var>document</var>.getElementById(<var>id</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -38,7 +38,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;getElementById example&lt;/title&gt;
 &lt;/head&gt;
@@ -51,7 +51,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function changeColor(newColor) {
+<pre class="brush: js">function changeColor(newColor) {
   var elem = document.getElementById('para');
   elem.style.color = newColor;
 }</pre>
@@ -68,7 +68,7 @@ tags:
 
 <h2 id="Example_2">Example</h2>
 
-<pre class="brush: html notranslate">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -94,12 +94,12 @@ tags:
 
 <p><strong>Elements not in the document</strong> are not searched by <code>getElementById()</code>. When creating an element and assigning it an ID, you have to insert the element into the document tree with {{domxref("Node.insertBefore()")}} or a similar method before you can access it with <code>getElementById()</code>:</p>
 
-<pre class="brush: js notranslate">var element = document.createElement('div');
+<pre class="brush: js">var element = document.createElement('div');
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el will be null!
 </pre>
 
-<p><strong>Non-HTML documents</strong>. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The <code>id</code> attribute is defined to be of ID type in the common cases of <a href="/en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL">XUL</a>, and other. Implementations that do not know whether attributes are of type ID or not are expected to return <code>null</code>.</p>
+<p><strong>Non-HTML documents</strong>. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The <code>id</code> attribute is defined to be of ID type in the common cases of <a href="/en-US/docs/Glossary/XHTML">XHTML</a>, <a href="/en-US/docs/XUL">XUL</a>, and other. Implementations that do not know whether attributes are of type ID or not are expected to return <code>null</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -144,5 +144,5 @@ var el = document.getElementById('testqq'); // el will be null!
 <ul>
  <li>{{domxref("Document")}} reference for other methods and properties you can use to get references to elements in the document.</li>
  <li>{{domxref("Document.querySelector()")}} for selectors via queries like <code>'div.myclass'</code></li>
- <li><a href="/en-US/docs/xml/xml:id">xml:id</a> - has a utility method for allowing <code>getElementById()</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
+ <li><a href="https://www.w3.org/TR/xml-id/">xml:id</a> - has a utility method for allowing <code>getElementById()</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
 </ul>

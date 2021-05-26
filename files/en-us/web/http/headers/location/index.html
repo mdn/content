@@ -22,7 +22,7 @@ tags:
     {{HTTPMethod("GET")}} method, {{HTTPStatus("307")}} (Temporary Redirect) and
     {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the
     original request;</li>
-  <li>{{HTTPStatus("301")}} (Permanent Redirect) and {{HTTPStatus("302")}} (Found) doesn't
+  <li>{{HTTPStatus("301")}} (Moved Permanently) and {{HTTPStatus("302")}} (Found) doesn't
     change the method most of the time, though older user-agents may (so you basically
     don't know).</li>
 </ul>
@@ -55,7 +55,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html notranslate">Location: &lt;url&gt;
+<pre class="brush: html">Location: &lt;url&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>

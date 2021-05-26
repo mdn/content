@@ -23,7 +23,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">history.pushState(<var>state</var>, <var>title</var> [, <var>url</var>])</pre>
+  class="brush: js">history.pushState(<var>state</var>, <var>title</var> [, <var>url</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +46,7 @@ tags:
   <dd><a href="https://github.com/whatwg/html/issues/2174">Most browsers currently ignore
       this parameter</a>, although they may use it in the future. Passing the empty string
     here should be safe against future changes to the method. Alternatively, you could
-    pass a short title for the state to which you're moving. If you need the title to be
+    pass a short title for the state to which you're moving. If you don't need the title to be
     changed you could use {{domxref("Document.title", "document.title")}}.</dd>
   <dt><code>url</code> {{optional_inline}}</dt>
   <dd>The new history entry's URL is given by this parameter. Note that the browser won't
@@ -86,7 +86,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">const state = { 'page_id': 1, 'user_id': 5 }
+<pre class="brush: js">const state = { 'page_id': 1, 'user_id': 5 }
 const title = ''
 const url = 'hello-world.html'
 
@@ -95,7 +95,7 @@ history.pushState(state, title, url)
 
 <h3 id="Change_a_query_parameter">Change a query parameter</h3>
 
-<pre class="brush: js notranslate">const url = new URL(window.location);
+<pre class="brush: js">const url = new URL(window.location);
 url.searchParams.set('foo', 'bar');
 window.history.pushState({}, '', url);</pre>
 

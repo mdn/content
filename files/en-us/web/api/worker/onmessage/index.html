@@ -6,7 +6,6 @@ tags:
   - EventHandler
   - Property
   - Reference
-  - Référence(2)
   - Web Workers
   - Worker
   - onmessage
@@ -14,6 +13,8 @@ tags:
 <p>{{APIRef("Web Workers API")}}</p>
 
 <p>The <strong><code>onmessage</code></strong> property of the {{domxref("Worker")}} interface represents an {{domxref("EventHandler")}}, that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).</p>
+
+<p>Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}} blocks the thread receiving it.</p>
 
 <div class="note">
 <p><strong>Note</strong>: The message payload is available in the {{event("message")}} event's <code>data</code> property.</p>

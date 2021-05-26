@@ -5,23 +5,19 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.return
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong><code>return</code> statement</strong> ends function execution and
+<p>The <strong><code>return</code></strong> statement ends function execution and
   specifies a value to be returned to the function caller.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-return.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">return [<var>expression</var>]; </pre>
+<pre class="brush: js">return [<var>expression</var>]; </pre>
 
 <dl>
   <dt><code><var>expression</var></code></dt>
@@ -36,7 +32,7 @@ tags:
   example, the following function returns the square of its argument, <code>x</code>,
   where <code>x</code> is a number.</p>
 
-<pre class="brush: js notranslate">function square(x) {
+<pre class="brush: js">function square(x) {
    return x * x;
 }
 var demo = square(3);
@@ -47,7 +43,7 @@ var demo = square(3);
 
 <p>The following return statements all break the function execution:</p>
 
-<pre class="brush: js notranslate">return;
+<pre class="brush: js">return;
 return true;
 return false;
 return x;
@@ -61,24 +57,26 @@ return x + y / 3;
     semicolon insertion (ASI)</a>. No line terminator is allowed between the
   <code>return</code> keyword and the expression.</p>
 
-<pre class="brush: js notranslate">return
+<pre class="brush: js">return
 a + b;
 </pre>
 
 <p>is transformed by ASI into:</p>
 
-<pre class="brush: js notranslate">return;
+<pre class="brush: js">return;
 a + b;
 </pre>
 
 <p>The console will warn "unreachable code after return statement".</p>
 
-<div class="note">Starting with Firefox 40, a warning is shown in the console if
-  unreachable code is found after a <code>return</code> statement.</div>
+<div class="note">
+  <p><strong>Note:</strong> Starting with Firefox 40, a warning is shown in the console if
+  unreachable code is found after a <code>return</code> statement.</p>
+</div>
 
 <p>To avoid this problem (to prevent ASI), you could use parentheses:</p>
 
-<pre class="brush: js notranslate">return (
+<pre class="brush: js">return (
   a + b
 );
 </pre>
@@ -89,7 +87,7 @@ a + b;
 
 <p>A function immediately stops at the point where <code>return</code> is called.</p>
 
-<pre class="brush: js notranslate">function counter() {
+<pre class="brush: js">function counter() {
   for (var count = 1; ; count++) {  // infinite loop
     console.log(count + 'A'); // until 5
       if (count === 5) {
@@ -119,7 +117,7 @@ counter();
 <p>See also the article about <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>.
 </p>
 
-<pre class="brush: js notranslate">function magic() {
+<pre class="brush: js">function magic() {
   return function calc(x) { return x * 42; };
 }
 
@@ -129,22 +127,11 @@ answer(1337); // 56154
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.return")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

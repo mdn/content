@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">speechSynthesisInstance.onvoiceschanged = function() { ... };
+<pre class="brush: js">speechSynthesisInstance.onvoiceschanged = function() { ... };
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -40,7 +40,8 @@ tags:
   With Chrome however, you have to wait for the event to fire before populating the list,
   hence the bottom if statement seen below.</p>
 
-<pre class="brush: js">var voices = [];
+<pre class="brush: js">var synth = window.speechSynthesis;
+var voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
@@ -84,10 +85,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.SpeechSynthesis.onvoiceschanged")}}</p>
-</div>
+<p>{{Compat("api.SpeechSynthesis.onvoiceschanged")}}</p>
 
 <h2 id="See_also">See also</h2>
 

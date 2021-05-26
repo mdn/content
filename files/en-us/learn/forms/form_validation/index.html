@@ -108,13 +108,13 @@ tags:
 
 <p>Let's start with a simple example: an input that allows you to choose whether you prefer a banana or a cherry. This example involves a simple text {{HTMLElement("input")}} with an associated {{htmlelement("label")}} and a submit {{htmlelement("button")}}. Find the source code on GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> and a live example below.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
   &lt;input id="choose" name="i_like"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -132,7 +132,7 @@ input:valid {
 
 <p>Add a <code>required</code> attribute to your input, as shown below.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or cherry? (required)&lt;/label&gt;
   &lt;input id="choose" name="i_like" required&gt;
   &lt;button&gt;Submit&lt;/button&gt;
@@ -140,7 +140,7 @@ input:valid {
 
 <p>Note the CSS that is included in the example file:</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -187,7 +187,7 @@ input:valid {
 
 <p>Let's implement an example. Update your HTML to add a <a href="/en-US/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> attribute like this:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
   &lt;input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
@@ -195,7 +195,7 @@ input:valid {
 </pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -240,7 +240,7 @@ input:valid {
 
 <p>Now delete the contents of the <code>&lt;body&gt;</code> element, and replace it with the following:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
     &lt;input type="text" id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
@@ -260,7 +260,7 @@ input:valid {
 </ul>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -289,7 +289,7 @@ div {
 
 <p>Here is a full example to show usage of HTML's built-in validation features. First, some HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;fieldset&gt;
       &lt;legend&gt;Do you have a driver's license?&lt;abbr title="This field is mandatory" aria-label="required"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
@@ -338,7 +338,7 @@ div {
 
 <p>And now some CSS to style the HTML:</p>
 
-<pre class="brush: css notranslate">form {
+<pre class="brush: css">form {
   font: 1em sans-serif;
   max-width: 320px;
 }
@@ -435,7 +435,7 @@ input:focus:invalid {
 
 <p>We'll start with some simple HTML (feel free to put this in a blank HTML file; use a fresh copy of <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> as a basis, if you like):</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="mail"&gt;I would like you to provide me with an e-mail address:&lt;/label&gt;
   &lt;input type="email" id="mail" name="mail"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
@@ -443,7 +443,7 @@ input:focus:invalid {
 
 <p>And add the following JavaScript to the page:</p>
 
-<pre class="brush: js notranslate">const email = document.getElementById("mail");
+<pre class="brush: js">const email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
@@ -473,7 +473,7 @@ email.addEventListener("input", function (event) {
 
 <p>First, the HTML. Again, feel free to build this along with us:</p>
 
-<pre class="brush: html notranslate">&lt;form novalidate&gt;
+<pre class="brush: html">&lt;form novalidate&gt;
   &lt;p&gt;
     &lt;label for="mail"&gt;
       &lt;span&gt;Please enter an email address:&lt;/span&gt;
@@ -496,7 +496,7 @@ email.addEventListener("input", function (event) {
 
 <p>Now onto some basic CSS to improve the look of the form slightly, and provide some visual feedback when the input data is invalid:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
@@ -550,7 +550,7 @@ input:focus:invalid {
 
 <p>Now lets look at the JavaScript that implements the custom error validation.</p>
 
-<pre class="brush: js notranslate">// There are many ways to pick a DOM node; here we get the form itself and the email
+<pre class="brush: js">// There are many ways to pick a DOM node; here we get the form itself and the email
 // input box, as well as the span element into which we will place the error message.
 const form  = document.getElementsByTagName('form')[0];
 
@@ -638,10 +638,10 @@ function showError() {
  <dt>How can I help the user to correct invalid data?</dt>
  <dd>In order to reduce the user's frustration, it's very important to provide as much helpful information as possible in order to guide them in correcting their inputs. You should offer up-front suggestions so they know what's expected, as well as clear error messages. If you want to dig into form validation UI requirements, here are some useful articles you should read:
  <ul>
-  <li>SmashingMagazine: <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Form-Field Validation: The Errors-Only Approach</a></li>
-  <li>SmashingMagazine: <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Web Form Validation: Best Practices and Tutorials</a></li>
-  <li>Six Revision: <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" rel="external">Best Practices for Hints and Validation in Web Forms</a></li>
-  <li>A List Apart: <a href="http://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
+  <li>SmashingMagazine: <a href="https://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Form-Field Validation: The Errors-Only Approach</a></li>
+  <li>SmashingMagazine: <a href="https://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Web Form Validation: Best Practices and Tutorials</a></li>
+  <li>WebFX: <a href="https://www.webfx.com/blog/web-design/10-tips-for-optimizing-web-form-submission-usability/" rel="external">10 Tips for Optimizing Web Form Submission Usability</a></li>
+  <li>A List Apart: <a href="https://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Inline Validation in Web Forms</a></li>
  </ul>
  </dd>
 </dl>
@@ -652,7 +652,7 @@ function showError() {
 
 <p>The HTML is almost the same; we just removed the HTML validation features.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;label for="mail"&gt;
         &lt;span&gt;Please enter an email address:&lt;/span&gt;
@@ -667,7 +667,7 @@ function showError() {
 
 <p>Similarly, the CSS doesn't need to change very much; we've just turned the {{cssxref(":invalid")}} CSS pseudo-class into a real class and avoided using the attribute selector that doesn't work on Internet Explorer 6.</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
@@ -723,7 +723,7 @@ input:focus.invalid {
 
 <p>The big changes are in the JavaScript code, which needs to do much more heavy lifting.</p>
 
-<pre class="brush: js notranslate">// There are fewer ways to pick a DOM node with legacy browsers
+<pre class="brush: js">// There are fewer ways to pick a DOM node with legacy browsers
 const form  = document.getElementsByTagName('form')[0];
 const email = document.getElementById('mail');
 
@@ -799,7 +799,7 @@ addEvent(form, "submit", function () {
 
 <p>{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 130)}}</p>
 
-<p>As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as <a href="https://rickharrison.github.com/validate.js/" rel="external">Validate.js</a>.</p>
+<p>As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as <a href="https://rickharrison.github.io/validate.js/" rel="external">Validate.js</a>.</p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 

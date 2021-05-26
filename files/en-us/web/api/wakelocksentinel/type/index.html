@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <var>type</var> = <em>sentinel</em>.type;</pre>
+<pre class="brush: js">var <var>type</var> = <em>sentinel</em>.type;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -38,7 +38,7 @@ tags:
 <p>This example shows an asynchronous function that acquires a
 	{{domxref("WakeLockSentinel")}}, then logs the type to the console.</p>
 
-<pre class="brush: js notranslate">const requestWakeLock = async () =&gt; {
+<pre class="brush: js">const requestWakeLock = async () =&gt; {
   wakeLock = await navigator.wakeLock.request('screen');
   console.log(wakeLock.type); // logs 'screen'
 };

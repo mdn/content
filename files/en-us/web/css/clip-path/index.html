@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web
   - 'recipe:css-property'
+browser-compat: css.properties.clip-path
 ---
 <div>{{CSSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 clip-path: none;
 
 /* <var>&lt;clip-source&gt;</var> values */
@@ -92,14 +93,14 @@ clip-path: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Comparison_of_HTML_and_SVG">Comparison of HTML and SVG</h3>
 
 <div class="hidden" id="clip-path">
-<pre class="brush: html notranslate">&lt;svg class="defs"&gt;
+<pre class="brush: html">&lt;svg class="defs"&gt;
   &lt;defs&gt;
     &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
       &lt;path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" /&gt;
@@ -388,7 +389,7 @@ clip-path: unset;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html,body {
+<pre class="brush: css">html,body {
   height: 100%;
   box-sizing: border-box;
   background: #EEE;
@@ -524,7 +525,7 @@ svg text.em {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;img id="clipped" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
+<pre class="brush: html">&lt;img id="clipped" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
     alt="MDN logo"&gt;
 &lt;svg height="0" width="0"&gt;
   &lt;defs&gt;
@@ -548,7 +549,7 @@ svg text.em {
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#clipped {
+<pre class="brush: css">#clipped {
   margin-bottom: 20px;
   clip-path: url(#cross);
 }
@@ -557,7 +558,7 @@ svg text.em {
 <div class="hidden">
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const clipPathSelect = document.getElementById("clipPath");
+<pre class="brush: js">const clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", function (evt) {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
@@ -599,7 +600,7 @@ clipPathSelect.addEventListener("change", function (evt) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.clip-path")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

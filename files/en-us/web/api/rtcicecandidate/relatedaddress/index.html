@@ -2,19 +2,19 @@
 title: RTCIceCandidate.relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
 tags:
-- API
-- Address
-- IP
-- Property
-- RTCIceCandidate
-- Read-only
-- Reference
-- SDP
-- STUN
-- TURN
-- WebRTC
-- WebRTC API
-- relatedAddress
+  - API
+  - Address
+  - IP
+  - Property
+  - RTCIceCandidate
+  - Read-only
+  - Reference
+  - SDP
+  - STUN
+  - TURN
+  - WebRTC
+  - WebRTC API
+  - relatedAddress
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -22,7 +22,7 @@ tags:
     interface's read-only <strong><code>relatedAddress</code></strong> property is a
     string indicating the <strong>related address</strong> of a relay or reflexive
     candidate.</span> If the candidate is a host candidate (that is, its
-  {{domxref("RTCIceCandidate.ip", "ip")}} is in fact the real IP address of the remote
+  {{domxref("RTCIceCandidate/address", "ip")}} is in fact the real IP address of the remote
   peer), <code>relatedAddress</code> is <code>null</code>.</p>
 
 <p>The <code>relatedAddress</code> field's value is set when the
@@ -40,7 +40,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>relAddress</em> = <em>RTCIceCandidate</em>.relatedAddress;</pre>
+  class="brush: js">var <em>relAddress</em> = <em>RTCIceCandidate</em>.relatedAddress;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
   checked, and then debugging output is presented, based on the candidate type, including
-  the candidate's {{domxref("RTCIceCandidate.ip", "ip")}} and <code>relatedAddress</code>.
+  the candidate's {{domxref("RTCIceCandidate/address", "ip")}} and <code>relatedAddress</code>.
 </p>
 
 <pre class="brush: js">switch(candidate.type) {
@@ -114,10 +114,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.RTCIceCandidate.relatedAddress")}}</p>
-</div>
+<p>{{Compat("api.RTCIceCandidate.relatedAddress")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -129,5 +126,5 @@ tags:
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC
       session</a></li>
   <li>{{domxref("RTCIceCanddiate.relatedPort")}}</li>
-  <li>{{domxref("RTCIceCandidate.ip")}} and {{domxref("RTCIceCandidate.port")}}</li>
+  <li>{{domxref("RTCIceCandidate.address")}} and {{domxref("RTCIceCandidate.port")}}</li>
 </ul>

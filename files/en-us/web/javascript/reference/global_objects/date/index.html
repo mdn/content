@@ -9,14 +9,14 @@ tags:
   - Time
   - Unix Epoch
   - timeStamp
+browser-compat: javascript.builtins.Date
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">JavaScript <strong><code>Date</code></strong> objects represent a single moment in time in a platform-independent format.</span> <code>Date</code> objects contain a <code>Number</code> that represents milliseconds since 1 January 1970 UTC.</p>
+<p>JavaScript <strong><code>Date</code></strong> objects represent a single moment in time in a platform-independent format. <code>Date</code> objects contain a <code>Number</code> that represents milliseconds since 1 January 1970 UTC.</p>
 
 <div class="notecard note">
-<p>TC39 is working on <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, a new Date/Time API.<br>
- Read more about it on the <a href="https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/">Igalia blog</a> and fill out the <a href="https://forms.gle/iL9iZg7Y9LvH41Nv8">survey</a>. It needs real-world feedback from web developers, but is not yet ready for production use!</p>
+<p><strong>Note:</strong> TC39 is working on <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, a new Date/Time API. Read more about it on the <a href="https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/">Igalia blog</a>. It is not yet ready for production use!</p>
 </div>
 
 <h2 id="Description">Description</h2>
@@ -39,7 +39,9 @@ tags:
 
 <dl>
  <dt>{{jsxref("Date/Date", "Date()")}}</dt>
- <dd>Creates a new <code>Date</code> object.</dd>
+ <dd>When called as a function, returns a string representation of the current date and time, exactly as <code>new Date().toString()</code> does.</dd>
+ <dt>{{jsxref("Date/Date", "new Date()")}}</dt>
+ <dd>When called as a constructor, returns a new <code>Date</code> object.</dd>
 </dl>
 
 <h2 id="Static_methods">Static methods</h2>
@@ -166,7 +168,7 @@ tags:
 <p><strong>Note:</strong> Parsing of date strings with the <code>Date</code> constructor (and <code>Date.parse</code>, they are equivalent) is strongly discouraged due to browser differences and inconsistencies.</p>
 </div>
 
-<pre class="brush: js notranslate">let today = new Date()
+<pre class="brush: js">let today = new Date()
 let birthday = new Date('December 17, 1995 03:24:00')
 let birthday = new Date('1995-12-17T03:24:00')
 let birthday = new Date(1995, 11, 17)            // the month is 0-indexed
@@ -176,7 +178,7 @@ let birthday = new Date(628021800000)            // passing epoch timestamp
 
 <h3 id="To_get_Date_Month_and_Year_or_Time"> To get Date, Month and Year or Time</h3>
 
-<pre class="brush: js notranslate">let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
+<pre class="brush: js">let [month, date, year]    = new Date().toLocaleDateString("en-US").split("/")
 let [hour, minute, second] = new Date().toLocaleTimeString("en-US").split(/:| /)</pre>
 
 <h3 id="Two_digit_years_map_to_1900_–_1999">Two digit years map to 1900 – 1999</h3>
@@ -185,7 +187,7 @@ let [hour, minute, second] = new Date().toLocaleTimeString("en-US").split(/:| /)
 
 <p>In order to create and get dates between the years <code>0</code> and <code>99</code> the {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}} methods should be used.</p>
 
-<pre class="brush: js notranslate">let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+<pre class="brush: js">let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Deprecated method; 98 maps to 1998 here as well
 date.setYear(98)            // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
@@ -199,7 +201,7 @@ date.setFullYear(98)        // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 
 <p>Due to the differing lengths of days (due to daylight saving changeover), months, and years, expressing elapsed time in units greater than hours, minutes, and seconds requires addressing a number of issues, and should be thoroughly researched before being attempted.</p>
 
-<pre class="brush: js notranslate">// Using Date objects
+<pre class="brush: js">// Using Date objects
 let start = Date.now()
 
 // The event to time goes here:
@@ -208,7 +210,7 @@ let end = Date.now()
 let elapsed = end - start // elapsed time in milliseconds
 </pre>
 
-<pre class="brush: js notranslate">// Using built-in methods
+<pre class="brush: js">// Using built-in methods
 let start = new Date()
 
 // The event to time goes here:
@@ -217,7 +219,7 @@ let end = new Date()
 let elapsed = end.getTime() - start.getTime() // elapsed time in milliseconds
 </pre>
 
-<pre class="brush: js notranslate">// To test a function and get back its return
+<pre class="brush: js">// To test a function and get back its return
 function printElapsedTime(fTest) {
   let nStartTime = Date.now(),
       vReturn = fTest(),
@@ -236,29 +238,18 @@ let yourFunctionReturn = printElapsedTime(yourFunction)
 
 <h3 id="Get_the_number_of_seconds_since_the_ECMAScript_Epoch">Get the number of seconds since the ECMAScript Epoch</h3>
 
-<pre class="brush: js notranslate">let seconds = Math.floor(Date.now() / 1000)
+<pre class="brush: js">let seconds = Math.floor(Date.now() / 1000)
 </pre>
 
 <p>In this case, it's important to return only an integer—so a simple division won't do. It's also important to only return actually elapsed seconds. (That's why this code uses {{jsxref("Math.floor()")}}, and <em>not</em> {{jsxref("Math.round()")}}.)</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date-objects', 'Date')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

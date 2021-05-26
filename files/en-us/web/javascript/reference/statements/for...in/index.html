@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.for_in
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -18,8 +19,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">for (<var>variable</var> in <var>object</var>)
-  statement</pre>
+<pre class="brush: js">for (<var>variable</var> in <var>object</var>) {
+  <var>statement</var>
+}
+</pre>
 
 <dl>
   <dt><code><var>variable</var></code></dt>
@@ -108,7 +111,7 @@ tags:
 <p>The <code>for...in</code> loop below iterates over all of the object's enumerable,
   non-Symbol properties and logs a string of the property names and their values.</p>
 
-<pre class="brush: js notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var obj = {a: 1, b: 2, c: 3};
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -125,7 +128,7 @@ for (const prop in obj) {
   {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: the inherited
   properties are not displayed.</p>
 
-<pre class="brush: js notranslate">var triangle = {a: 1, b: 2, c: 3};
+<pre class="brush: js">var triangle = {a: 1, b: 2, c: 3};
 
 function ColoredTriangle() {
   this.color = 'red';
@@ -147,21 +150,11 @@ for (const prop in obj) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in
-        statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.for_in")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_Initializer_expressions_in_strict_mode">Compatibility: Initializer
   expressions in strict mode</h3>
@@ -169,7 +162,7 @@ for (const prop in obj) {
 <p>Prior to Firefox 40, it was possible to use an initializer expression
   (<code>i=0</code>) in a <code>for...in</code> loop:</p>
 
-<pre class="brush: js example-bad notranslate">var obj = {a: 1, b: 2, c: 3};
+<pre class="brush: js example-bad">var obj = {a: 1, b: 2, c: 3};
 for (var i = 0 in obj) {
   console.log(obj[i]);
 }

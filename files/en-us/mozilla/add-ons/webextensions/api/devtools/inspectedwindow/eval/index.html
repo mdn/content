@@ -102,7 +102,7 @@ tags:
 
 <p>This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.</p>
 
-<pre class="notranslate brush: js">function handleError(error) {
+<pre class="brush: js">function handleError(error) {
   if (error.isError) {
     console.log(`Devtools error: ${error.code}`);
   } else {
@@ -130,7 +130,7 @@ evalButton.addEventListener("click", () =&gt; {
 
 <p>This uses the <code>$0</code> helper to set the background color of the element that's currently selected in the Inspector:</p>
 
-<pre class="notranslate brush: js">const evalButton = document.querySelector("#reddinate");
+<pre class="brush: js">const evalButton = document.querySelector("#reddinate");
 const evalString = "$0.style.backgroundColor = 'red'";
 
 function handleError(error) {
@@ -155,7 +155,7 @@ evalButton.addEventListener("click", () =&gt; {
 
 <p>This uses the <code>inspect()</code> helper to select the first &lt;h1&gt; element in the page:</p>
 
-<pre class="notranslate brush: js">const inspectButton = document.querySelector("#inspect");
+<pre class="brush: js">const inspectButton = document.querySelector("#inspect");
 const inspectString = "inspect(document.querySelector('h1'))";
 
 function handleError(error) {

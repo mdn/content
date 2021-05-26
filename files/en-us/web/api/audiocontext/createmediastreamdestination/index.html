@@ -6,14 +6,13 @@ tags:
   - AudioContext
   - Method
   - Reference
-  - Référence(2)
   - Web Audio API
   - createMediaStreamDestination
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>The <code>createMediaStreamDestination()</code> method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.</p>
+<p>The <code>createMediaStreamDestination()</code> method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.</p>
 </div>
 
 <p>The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s <code>stream</code> attribute. This stream can be used in a similar way as a <code>MediaStream</code> obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the <code>RTCPeerConnection</code> <code>addStream()</code> method.</p>
@@ -22,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 var destination = audioCtx.createMediaStreamDestination();</pre>
 
 <h3 id="Returns">Returns</h3>
@@ -37,7 +36,7 @@ var destination = audioCtx.createMediaStreamDestination();</pre>
 
 <p>From here, you can play and save the opus file.</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;createMediaStreamDestination() demo&lt;/title&gt;
@@ -108,13 +107,10 @@ var destination = audioCtx.createMediaStreamDestination();</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.AudioContext.createMediaStreamDestination")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

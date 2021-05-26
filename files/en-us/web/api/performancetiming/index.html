@@ -14,10 +14,11 @@ tags:
   - Timing
   - legacy
 ---
-<div>{{APIRef("Navigation Timing")}}</div>
+<div>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</div>
 
-<div class="warning">
-<p>This interface is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This interface is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
 </div>
 
 <p>The <strong><code>PerformanceTiming</code></strong> interface is a legacy interface kept for backwards compatibility and contains properties that offer performance timing information for various events which occur during the loading and use of the current page. You get a <code>PerformanceTiming</code> object describing your page using the {{domxref("Performance.timing", "window.performance.timing")}} property.</p>
@@ -105,10 +106,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PerformanceTiming")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

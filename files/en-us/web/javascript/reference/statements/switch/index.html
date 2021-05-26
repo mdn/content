@@ -7,10 +7,11 @@ tags:
 - Reference
 - Statement
 - Web
+browser-compat: javascript.statements.switch
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><span class="seoSummary">The <strong><code>switch</code> statement</strong> evaluates
+<p><span class="seoSummary">The <strong><code>switch</code></strong> statement evaluates
     an <a
       href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">expression</a>,
     matching the expression's value to a <code>case</code> clause, and executes <a
@@ -22,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">switch (<var>expression</var>) {
+<pre class="brush: js">switch (<var>expression</var>) {
   case <var>value1</var>:
     //Statements executed when the
     //result of expression matches value1
@@ -98,7 +99,7 @@ tags:
   <code>break</code> were omitted, the statement for the <code>case 'Cherries'</code>
   would also be executed.</p>
 
-<pre class="brush: js notranslate">switch (expr) {
+<pre class="brush: js">switch (expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -131,7 +132,7 @@ console.log("Is there anything else you'd like?");
 
 <p>See example here:</p>
 
-<pre class="brush: js notranslate">var foo = 0;
+<pre class="brush: js">var foo = 0;
 switch (foo) {
   case -1:
     console.log('negative 1');
@@ -155,7 +156,7 @@ switch (foo) {
 <p>Yes, you can! JavaScript will drop you back to the <code>default</code> if it can't
   find a match:</p>
 
-<pre class="brush: js notranslate">var foo = 5;
+<pre class="brush: js">var foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
@@ -186,17 +187,17 @@ switch (foo) {
 <p>This is an example of a single operation sequential <code>case</code> statement, where
   four different values perform exactly the same.</p>
 
-<pre class="brush: js notranslate">var Animal = 'Giraffe';
+<pre class="brush: js">var Animal = 'Giraffe';
 switch (Animal) {
   case 'Cow':
   case 'Giraffe':
   case 'Dog':
   case 'Pig':
-    console.log('This animal will go on Noah\'s Ark.');
+    console.log('This animal is not extinct.');
     break;
   case 'Dinosaur':
   default:
-    console.log('This animal will not.');
+    console.log('This animal is extinct.');
 }</pre>
 
 <h4 id="Multi-case_chained_operations">Multi-<code>case</code> : chained operations</h4>
@@ -207,7 +208,7 @@ switch (Animal) {
   not have to be numerically sequential. In JavaScript, you can even mix in definitions of
   strings into these <code>case</code> statements as well.</p>
 
-<pre class="brush: js notranslate">var foo = 1;
+<pre class="brush: js">var foo = 1;
 var output = 'Output: ';
 switch (foo) {
   case 0:
@@ -283,7 +284,7 @@ switch (foo) {
 
 <p>Take a look at this example:</p>
 
-<pre class="brush: js notranslate">const action = 'say_hello';
+<pre class="brush: js">const action = 'say_hello';
 switch (action) {
   case 'say_hello':
     let message = 'hello';
@@ -310,7 +311,7 @@ switch (action) {
 
 <p>We can easily fix this by wrapping our <code>case</code> clauses with brackets:</p>
 
-<pre class="brush: js notranslate">const action = 'say_hello';
+<pre class="brush: js">const action = 'say_hello';
 switch (action) {
   case 'say_hello': <strong>{ // added brackets</strong>
     let message = 'hello';
@@ -333,22 +334,11 @@ switch (action) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.switch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

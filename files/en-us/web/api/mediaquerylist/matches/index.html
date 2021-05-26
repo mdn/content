@@ -2,16 +2,16 @@
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
 tags:
-- API
-- Adaptive Design
-- CSSOM
-- CSSOM View
-- DOM
-- Media Queries
-- MediaQueryList
-- Property
-- Reference
-- matches
+  - API
+  - Adaptive Design
+  - CSSOM
+  - CSSOM View
+  - DOM
+  - Media Queries
+  - MediaQueryList
+  - Property
+  - Reference
+  - matches
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -27,7 +27,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <var>matches</var> = &lt;varm&gt;MediaQueryList.matches;</pre>
+  class="brush: js">var <var>matches</var> = &lt;varm&gt;MediaQueryList.matches;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -40,7 +40,7 @@ tags:
   <code><a href="/en-US/docs/Web/CSS/@media/orientation">orientation</a></code> media
   feature:</p>
 
-<pre class="brush: js notranslate">function addMQListener(mq, callback) {
+<pre class="brush: js">function addMQListener(mq, callback) {
   if (mq.addEventListener) {
     mq.addEventListener("change", callback);
   } else {
@@ -85,8 +85,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
       code</a></li>
   <li>{{DOMxRef("window.matchMedia()")}}</li>
   <li>{{DOMxRef("MediaQueryList")}}</li>

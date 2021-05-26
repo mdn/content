@@ -21,11 +21,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td>Either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a> or zero or more {{HTMLElement("option")}} elements.</td>
+   <td>Either <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a> or zero or more {{HTMLElement("option")}} elements.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -33,7 +33,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -58,7 +58,7 @@ tags:
 
 <h3 id="Basic_datalist">Basic datalist</h3>
 
-<pre class="brush: html notranslate">&lt;label for="myBrowser"&gt;Choose a browser from this list:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="myBrowser"&gt;Choose a browser from this list:&lt;/label&gt;
 &lt;input list="browsers" id="myBrowser" name="myBrowser" /&gt;
 &lt;datalist id="browsers"&gt;
   &lt;option value="Chrome"&gt;
@@ -84,7 +84,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;input
+<pre class="brush: html">&lt;input
   list=""
   name="option"
   id="input"
@@ -99,7 +99,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">datalist {
+<pre class="brush: css">datalist {
   position: absolute;
   background-color: lightgrey;
   font-family: sans-serif;
@@ -116,8 +116,12 @@ option {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">input.onfocus = function () {
+<pre class="brush: js">input.onfocus = function () {
   datalist.style.display = 'block';
+}
+
+input.onblur = function () {
+  datalist.style.display = 'none';
 }
 
 for (let option of datalist.options) {

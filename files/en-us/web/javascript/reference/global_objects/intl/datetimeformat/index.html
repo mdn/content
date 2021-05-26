@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Localization
   - Reference
+browser-compat: javascript.builtins.Intl.DateTimeFormat
 ---
 <div>{{JSRef}}</div>
 
@@ -27,23 +28,23 @@ tags:
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
-	<dt>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
+	<dt>{{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
 	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
-	<dt>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format()")}}</dt>
-	<dd>Getter function that formats a date according to the locale and formatting options of this {{jsxref("DateTimeFormat", "DateTimeFormat")}} object.</dd>
-	<dt>{{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</dt>
+	<dt>{{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}</dt>
+	<dd>Getter function that formats a date according to the locale and formatting options of this {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} object.</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</dt>
 	<dd>Returns an {{jsxref("Array")}} of objects representing the date string in parts that can be used for custom locale-aware formatting.</dd>
-	<dt>{{jsxref("DateTimeFormat.resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}</dt>
+	<dt>{{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}</dt>
 	<dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
-	<dt>{{jsxref("DateTimeFormat.formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</dt>
-	<dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/">Dates</a> and formats the date range in the most concise way based on the locale and options provided when instantiating {{jsxref("DateTimeFormat", "DateTimeFormat")}}.</dd>
-	<dt>{{jsxref("DateTimeFormat.formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}</dt>
-	<dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/">Dates</a> and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</dt>
+	<dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Dates</a> and formats the date range in the most concise way based on the locale and options provided when instantiating {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}</dt>
+	<dd>This method receives two <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Dates</a> and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -52,7 +53,7 @@ tags:
 
 <p>In basic use without specifying a locale, <code>DateTimeFormat</code> uses the default locale and default options.</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -64,7 +65,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 
 <p>This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the <code>locales</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
 
@@ -99,7 +100,7 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 
 <p>The date and time formats can be customized using the <code>options</code> argument:</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -148,7 +149,7 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 
 <p>The used calendar and numbering formats can also be set independently via <code>options</code> arguments:</p>
 
-<pre class="brush: js notranslate">var options = {calendar: 'chinese', numberingSystem: 'arab'};
+<pre class="brush: js">var options = {calendar: 'chinese', numberingSystem: 'arab'};
 var dateFormat = new Intl.DateTimeFormat('default', options);
 var usedOptions = dateFormat.resolvedOptions();
 
@@ -168,22 +169,11 @@ console.log(usedOptions.timeZone);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#datetimeformat-objects', 'Intl.DateTimeFormat')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.DateTimeFormat")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
 - Method
 - Reference
 - Reflect
+browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
 <div>{{JSRef}}</div>
 
@@ -20,7 +21,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)
+<pre class="brush: js">Reflect.deleteProperty(<var>target</var>, <var>propertyKey</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,7 +55,7 @@ tags:
 
 <h3 id="Using_Reflect.deleteProperty">Using <code>Reflect.deleteProperty()</code></h3>
 
-<pre class="brush: js notranslate">let obj = { x: 1, y: 2 }
+<pre class="brush: js">let obj = { x: 1, y: 2 }
 Reflect.deleteProperty(obj, 'x')  // true
 obj                               // { y: 2 }
 
@@ -71,21 +72,11 @@ Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo')  // false
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.deleteProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
 - Method
 - Reference
 - Reflect
+browser-compat: javascript.builtins.Reflect.apply
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)
+<pre class="brush: js">Reflect.apply(<var>target</var>, <var>thisArgument</var>, <var>argumentsList</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -57,7 +53,7 @@ tags:
     object</a>).</p>
 
 <pre
-  class="brush: js notranslate">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+  class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
 
 <p>With <code>Reflect.apply()</code> this becomes less verbose and easier to understand.
 </p>
@@ -66,7 +62,7 @@ tags:
 
 <h3 id="Using_Reflect.apply">Using Reflect.apply()</h3>
 
-<pre class="brush: js notranslate">Reflect.apply(Math.floor, undefined, [1.75]);
+<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])
@@ -81,22 +77,11 @@ Reflect.apply(''.charAt, 'ponies', [3])
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.apply")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

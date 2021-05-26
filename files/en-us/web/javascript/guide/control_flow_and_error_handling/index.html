@@ -2,16 +2,16 @@
 title: Control flow and error handling
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 tags:
-- Beginner
-- Decision making
-- Error Handling
-- Flow control
-- Guide
-- JavaScript
-- Logic
-- control
-- 'l10n:priority'
-- statements
+  - Beginner
+  - Decision making
+  - Error Handling
+  - Flow control
+  - Guide
+  - JavaScript
+  - Logic
+  - control
+  - l10n:priority
+  - statements
 ---
 <div>{{jsSidebar("JavaScript Guide")}}
   {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
@@ -34,7 +34,7 @@ tags:
 <p>The most basic statement is a <dfn>block statement</dfn>, which is used to group
   statements. The block is delimited by a pair of curly brackets:</p>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   <var>statement_1</var>;
   <var>statement_2</var>;
   ⋮
@@ -55,7 +55,7 @@ tags:
 <p>Here, <code>{ x++; }</code> is the block statement.</p>
 
 <div class="notecard note">
-  <p><strong>Important</strong>: JavaScript before ECMAScript2015 (6<sup>th</sup> edition)
+  <p><strong>Note:</strong> JavaScript before ECMAScript2015 (6<sup>th</sup> edition)
     <strong>does not</strong> have block scope!  In older JavaScript, variables introduced
     within a block are scoped to the containing function or script, and the effects of
     setting them persist beyond the block itself. In other words, <em>block statements do
@@ -95,7 +95,7 @@ console.log(x); // outputs 2
 
 <p>An <code>if</code> statement looks like this:</p>
 
-<pre class="brush: js notranslate">if (<var>condition</var>) {
+<pre class="brush: js">if (<var>condition</var>) {
   <var>statement_1</var>;
 } else {
   <var>statement_2</var>;
@@ -103,7 +103,7 @@ console.log(x); // outputs 2
 
 <p>Here, the <code><var>condition</var></code> can be any expression that evaluates to
   <code>true</code> or <code>false</code>. (See <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description">Boolean</a>
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description">Boolean</a>
   for an explanation of what evaluates to <code>true</code> and <code>false</code>.)</p>
 
 <p>If <code><var>condition</var></code> evaluates to <code>true</code>,
@@ -115,7 +115,7 @@ console.log(x); // outputs 2
 <p>You can also compound the statements using <code>else if</code> to have multiple
   conditions tested in sequence, as follows:</p>
 
-<pre class="brush: js notranslate">if (<var>condition_1</var>) {
+<pre class="brush: js">if (<var>condition_1</var>) {
   <var>statement_1</var>;
 } else if (<var>condition_2</var>) {
   <var>statement_2</var>;
@@ -135,7 +135,7 @@ console.log(x); // outputs 2
 <p>In general, it's good practice to always use block statements—<em>especially</em> when
   nesting <code>if</code> statements:</p>
 
-<pre class="brush: js notranslate">if (<var>condition</var>) {
+<pre class="brush: js">if (<var>condition</var>) {
   <var>statement_1_runs_if_condition_is_true</var>;
   <var>statement_2_runs_if_condition_is_true</var>;
 } else {
@@ -181,7 +181,7 @@ if (x = y) {
   conditional statement.</p>
 
 <div class="notecard note">
-  <p><strong>Caution:</strong> Do not confuse the primitive boolean values
+  <p><strong>Note:</strong> Do not confuse the primitive boolean values
     <code>true</code> and <code>false</code> with the true and false values of the
     {{jsxref("Boolean")}} object!</p>
 
@@ -219,7 +219,7 @@ if (b == true) // this condition evaluates to false
 
 <p>A <code>switch</code> statement looks like this:</p>
 
-<pre class="brush: js notranslate">switch (<var>expression</var>) {
+<pre class="brush: js">switch (<var>expression</var>) {
   case <var>label_1</var>:
     <var>statements_1</var>
     [break;]
@@ -313,7 +313,7 @@ console.log("Is there anything else you'd like?");</pre>
 
 <ul>
   <li><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types">ECMAScript
+      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types">ECMAScript
       exceptions</a></li>
   <li><a href="/en-US/docs/Web/API/DOMException"
       title="The DOMException interface represents an abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API."><code>DOMException</code></a>
@@ -327,7 +327,7 @@ console.log("Is there anything else you'd like?");</pre>
 <p>Use the <code>throw</code> statement to throw an exception. A <code>throw</code>
   statement specifies the value to be thrown:</p>
 
-<pre class="brush: js notranslate">throw <var>expression</var>;
+<pre class="brush: js">throw <var>expression</var>;
 </pre>
 
 <p>You may throw any expression, not just expressions of a specific type. The following
@@ -410,7 +410,7 @@ catch (e) {
 <p>You can use a <code>catch</code> block to handle all exceptions that may be generated
   in the <code>try</code> block.</p>
 
-<pre class="brush: js notranslate">catch (<var>catchID</var>) {
+<pre class="brush: js">catch (<var>catchID</var>) {
   <var>statements</var>
 }
 </pre>
@@ -437,7 +437,7 @@ catch (err) {
 </pre>
 
 <div class="notecard note">
-  <p><strong>Best practice:</strong> When logging errors to the console inside
+  <p><strong>Note:</strong> When logging errors to the console inside
     a <code>catch</code> block, using <code>console.error()</code> rather than
     <code>console.log()</code> is advised for debugging. It formats the message as an
     error, and adds it to the list of error messages generated by the page. </p>
@@ -543,7 +543,7 @@ try {
 </ol>
 
 <p>For more information, see <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">nested
+    href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks">nested
     try-blocks</a> on the
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>
   reference page.</p>

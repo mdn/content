@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let <em>myReplaceState</em> = <em>Animation</em>.replaceState;
+<pre class="brush: js">let <em>myReplaceState</em> = <em>Animation</em>.replaceState;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -24,7 +24,7 @@ tags:
 <p>A string that represents the replace state of the animation. The value can be one of:</p>
 
 <ul>
- <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href="/en-US/docs/Web/API/Animation#Automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</li>
+ <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href="/en-US/docs/Web/API/Animation#automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</li>
  <li><code>persisted</code>: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.</li>
  <li><code>removed</code>: The animation has been explicitly removed.</li>
 </ul>
@@ -75,10 +75,7 @@ document.body.addEventListener('mousemove', evt =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Animation.replaceState")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

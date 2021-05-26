@@ -47,7 +47,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em>myMode</em> = <em>sourceBuffer</em>.mode;
+<pre class="brush: js">var <em>myMode</em> = <em>sourceBuffer</em>.mode;
 
 <em>sourceBuffer</em>.mode = 'sequence';
 </pre>
@@ -90,7 +90,7 @@ tags:
   is currently set to <code>'segments'</code>, thus setting the play order to the sequence
   in which media segments are appended.</p>
 
-<pre class="brush: js notranslate">var curMode = sourceBuffer.mode;
+<pre class="brush: js">var curMode = sourceBuffer.mode;
 if (curMode == 'segments') {
   sourceBuffer.mode = 'sequence';
 }</pre>
@@ -115,10 +115,7 @@ if (curMode == 'segments') {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.SourceBuffer.mode")}}</p>
-</div>
+<p>{{Compat("api.SourceBuffer.mode")}}</p>
 
 <h2 id="See_also">See also</h2>
 

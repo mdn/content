@@ -6,6 +6,7 @@ tags:
 - Method
 - Number
 - Reference
+browser-compat: javascript.builtins.Number.isInteger
 ---
 <div>{{JSRef}}</div>
 
@@ -14,15 +15,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Number.isInteger(<var>value</var>)</pre>
+<pre class="brush: js">Number.isInteger(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -46,7 +42,7 @@ tags:
 
 <h3 id="Using_isInteger">Using isInteger</h3>
 
-<pre class="brush: js notranslate">Number.isInteger(0);         // true
+<pre class="brush: js">Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 Number.isInteger(99999999999999999999999); // true
@@ -69,7 +65,7 @@ Number.isInteger(5.0000000000000001); // true
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="brush: js notranslate">Number.isInteger = Number.isInteger || function(value) {
+<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
   return typeof value === 'number' &amp;&amp;
     isFinite(value) &amp;&amp;
     Math.floor(value) === value;
@@ -78,22 +74,11 @@ Number.isInteger(5.0000000000000001); // true
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Number.isInteger")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

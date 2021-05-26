@@ -2,15 +2,15 @@
 title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Media Capture
-- Media Recorder API
-- MediaRecorder
-- Reference
-- Video
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Media Capture
+  - Media Recorder API
+  - MediaRecorder
+  - Reference
+  - Video
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>mediaRecorder</em> = new MediaRecorder(<em>stream</em>[, <em>options</em>]);</pre>
+  class="brush: js">var <em>mediaRecorder</em> = new MediaRecorder(<em>stream</em>[, <em>options</em>]);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -65,6 +65,11 @@ tags:
       <p>If bits per second values are not specified for video and/or audio, the default
         adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
         the sample rate and the number of channels.</p>
+    </div>
+    <div class="notecard note">
+      <p>Video resolution, frame rate and similar settings are specified as constraints
+        when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
+        not here in the MediaRecorder API.</p>
     </div>
   </dd>
 </dl>
@@ -126,7 +131,7 @@ if (navigator.mediaDevices.getUserMedia) {
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
       the MediaRecorder API</a></li>
   <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
     getUserMedia + Web Audio API visualization demo, by <a
@@ -134,5 +139,5 @@ if (navigator.mediaDevices.getUserMedia) {
       href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
   <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
       demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("Navigator.mediaDevices.getUserMedia()")}}</li>
+  <li>{{domxref("MediaDevices.getUserMedia")}}</li>
 </ul>

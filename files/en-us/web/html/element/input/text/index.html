@@ -12,6 +12,7 @@ tags:
   - Text
   - text entry
   - text input
+browser-compat: html.elements.input.input-text
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -46,9 +47,9 @@ tags:
 
 <h2 id="Value">Value</h2>
 
-<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement.value", "value")}} property in JavaScript.</p>
+<p>The {{htmlattrxref("value", "input")}} attribute is a {{domxref("DOMString")}} that contains the current value of the text entered into the text field. You can retrieve this using the {{domxref("HTMLInputElement")}} <code>value</code> property in JavaScript.</p>
 
-<pre class="brush: js notranslate">let theText = myTextInput.value;
+<pre class="brush: js">let theText = myTextInput.value;
 </pre>
 
 <p>If no validation constraints are in place for the input (see {{anch("Validation")}} for more details), the value may be an empty string ("").</p>
@@ -142,7 +143,7 @@ tags:
 
 <h3 id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</h3>
 
-<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement.value")}} property.</p>
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
@@ -225,7 +226,7 @@ tags:
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"&gt;
@@ -239,13 +240,13 @@ tags:
 
 <p>{{EmbedLiveSample("Basic_example", 600, 50)}}</p>
 
-<p>When submitted, the data name/value pair sent to the server will be <code>uname=Chris</code> (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.</p>
+<p>When submitted, the data name/value pair sent to the server will be <code>name=Chris</code> (if "Chris" was entered as the input value before submission). You must remember to include {{htmlattrxref("name", "input")}} attribute on the {{HTMLElement("input")}} element, otherwise the text field's value won't be included with the submitted data.</p>
 
 <h3 id="Setting_placeholders">Setting placeholders</h3>
 
 <p>You can provide a useful placeholder inside your text input that can provide a hint as to what to enter by including using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"
@@ -266,7 +267,7 @@ tags:
 
 <p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the text input can display at a time. This affects the width of the element, letting you specify the width in terms of characters rather than pixels. In this example, for instance, the input is 30 characters wide:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name"
@@ -292,7 +293,7 @@ tags:
 
 <p>There are useful pseudo-classes available for styling form elements to help the user see when their values are valid or invalid. These are {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) mark next to inputs containing valid values, and a cross (X) next to inputs containing invalid values.</p>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -318,7 +319,7 @@ input:valid+span:after {
 
 <p>You can use the {{htmlattrxref("required","input")}} attribute as an easy way of making entering a value required before form submission is allowed:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required&gt;
@@ -330,7 +331,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
+<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 </div>
 
 <p>This renders like so:</p>
@@ -345,7 +346,7 @@ input:valid+span:after {
 
 <p>The example below requires that the entered value be 4–8 characters in length.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="10"
@@ -359,7 +360,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
+<pre class="brush: css">div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }</pre>
 </div>
 
 <p>This renders like so:</p>
@@ -374,11 +375,11 @@ input:valid+span:after {
 
 <h3 id="Specifying_a_pattern">Specifying a pattern</h3>
 
-<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
+<p>You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see <a href="/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course on using regular expressions to validate inputs).</p>
 
 <p>The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="uname"&gt;Choose a username: &lt;/label&gt;
     &lt;input type="text" id="uname" name="name" required size="45"
@@ -392,7 +393,7 @@ input:valid+span:after {
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -429,31 +430,11 @@ input:valid+span:after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="text"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="text"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-text")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

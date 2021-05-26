@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Method
 - Shared Memory
+browser-compat: javascript.builtins.Atomics.or
 ---
 <div>{{JSRef}}</div>
 
@@ -16,15 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/atomics-or.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Atomics.or(<var>typedArray</var>, <var>index</var>, <var>value</var>)
+<pre class="brush: js">Atomics.or(<var>typedArray</var>, <var>index</var>, <var>value</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -96,7 +92,7 @@ tags:
 <p>For example, a bitwise OR of <code>5 | 1</code> results in <code>0101</code> which is 5
   in decimal.</p>
 
-<pre class="brush: plain notranslate">5  0101
+<pre class="brush: plain">5  0101
 1  0001
    ----
 5  0101
@@ -106,7 +102,7 @@ tags:
 
 <h3 id="Using_or">Using or</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 2;
 
@@ -115,22 +111,11 @@ Atomics.load(ta, 0);  // 3</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-atomics.or', 'Atomics.or')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Atomics.or")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

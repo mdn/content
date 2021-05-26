@@ -2,13 +2,13 @@
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
 tags:
-- API
-- CSSOM View
-- Deprecated
-- Method
-- NeedsUpdate
-- Screen Orientation
-- screen
+  - API
+  - CSSOM View
+  - Deprecated
+  - Method
+  - NeedsUpdate
+  - Screen Orientation
+  - screen
 ---
 <p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
 
@@ -18,14 +18,14 @@ tags:
 
 <div class="notecard note">
   <p><strong>Note:</strong> This method only works for installed Web apps or for Web pages
-    in <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">full-screen mode</a>.
+    in <a href="/en-US/docs/Web/API/Fullscreen_API">full-screen mode</a>.
   </p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><var>lockAllowed</var> = window.screen.lockOrientation(<var>orientation</var>);</pre>
+  class="brush: js"><var>lockAllowed</var> = window.screen.lockOrientation(<var>orientation</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -50,7 +50,7 @@ tags:
   <dd>It represents the orientation of the screen when it is in its secondary portrait
     mode. A screen is considered in its secondary portrait mode if the device is held 180°
     from its normal position and that position is in portrait, or if the normal position
-    of the device is in landscape and the device held is turned by 90° anticlockwise. The
+    of the device is in landscape and the device held is turned by 90° counterclockwise. The
     normal position is device dependant.</dd>
   <dt><code>landscape-primary</code></dt>
   <dd>It represents the orientation of the screen when it is in its primary landscape
@@ -63,7 +63,7 @@ tags:
     mode. A screen is considered in its secondary landscape mode if the device held is
     180° from its normal position and that position is in landscape, or if the normal
     position of the device is in portrait and the device held is turned by 90°
-    anticlockwise. The normal position is device dependant.</dd>
+    counterclockwise. The normal position is device dependant.</dd>
   <dt><code>portrait</code></dt>
   <dd>It represents both <code>portrait-primary</code> and
     <code>portrait-secondary</code>.</dd>
@@ -145,6 +145,6 @@ if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"]
   <li>{{DOMxRef("Screen.orientation")}}</li>
   <li>{{DOMxRef("Screen.unlockOrientation()")}}</li>
   <li>{{DOMxRef("Screen.onorientationchange")}}</li>
-  <li><a href="/en-US/docs/Managing_screen_orientation">Managing screen orientation</a>
+  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>
   </li>
 </ul>

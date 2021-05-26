@@ -7,6 +7,7 @@ tags:
   - Language feature
   - Operator
   - Reference
+browser-compat: javascript.operators.left_shift
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -14,11 +15,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><code><var>a</var> &lt;&lt; <var>b</var></code>
+<pre class="brush: js"><code><var>a</var> &lt;&lt; <var>b</var></code>
 </pre>
 
 <h2 id="Description">Description</h2>
@@ -27,7 +27,7 @@ tags:
 
 <p>For example, <code>9 &lt;&lt; 2</code> yields 36:</p>
 
-<pre class="brush: js notranslate">.    9 (base 10): 00000000000000000000000000001001 (base 2)
+<pre class="brush: js">.    9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 &lt;&lt; 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
 </pre>
@@ -39,29 +39,18 @@ tags:
 
 <h3 id="Using_left_shift">Using left shift</h3>
 
-<pre class="brush: js notranslate">9 &lt;&lt; 3; // 72
+<pre class="brush: js">9 &lt;&lt; 3; // 72
 
 // 9 * (2 ** 3) = 9 * (8) = 72
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators', 'Bitwise Shift Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.left_shift")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

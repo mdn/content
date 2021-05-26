@@ -9,6 +9,7 @@ tags:
 - Reference
 - Window
 - requestIdleCallback
+- polyfill
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
@@ -31,7 +32,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
+  class="brush: js"><code>var <em>handle</em> = <em>window</em>.requestIdleCallback(<em>callback</em>[, <em>options</em>])</code></pre>
 
 <h3 id="Returns">Return value</h3>
 
@@ -51,7 +52,7 @@ tags:
     <ul>
       <li><code>timeout</code>: If <code>timeout</code> is specified and has a positive
         value, and the callback has not already been called by the time <em>timeout</em>
-        milliseconds have passed, the callback will be called during the next idle period,
+        milliseconds have passed, a task to execute the callback is queued in the event loop,
         even if doing so risks causing a negative performance impact.</li>
     </ul>
   </dd>
@@ -92,4 +93,5 @@ tags:
   <li>{{domxref("window.setTimeout()")}}</li>
   <li>{{domxref("window.setInterval()")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
 </ul>

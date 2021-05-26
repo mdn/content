@@ -8,6 +8,7 @@ tags:
 - Reference
 - String
 - lastIndexOf
+browser-compat: javascript.builtins.String.lastIndexOf
 ---
 <div>{{JSRef}}</div>
 
@@ -18,16 +19,13 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate"><var>str</var>.lastIndexOf(<var>searchValue</var>[, <var>fromIndex</var>])</pre>
+<pre class="brush: js">
+lastIndexOf(searchValue)
+lastIndexOf(searchValue, fromIndex)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +53,7 @@ tags:
   is <code>0</code>, and the index of the last character is
   <code><var>str</var>.length - 1</code>.</p>
 
-<pre class="brush: js notranslate">'canal'.lastIndexOf('a');     // returns 3
+<pre class="brush: js">'canal'.lastIndexOf('a');     // returns 3
 'canal'.lastIndexOf('a', 2);  // returns 1
 'canal'.lastIndexOf('a', 0);  // returns -1
 'canal'.lastIndexOf('x');     // returns -1
@@ -76,7 +74,7 @@ tags:
 <p>The <code>lastIndexOf()</code> method is case sensitive. For example, the following
   expression returns <code>-1</code>:</p>
 
-<pre class="brush: js notranslate">'Blue Whale, Killer Whale'.lastIndexOf('blue'); // returns -1
+<pre class="brush: js">'Blue Whale, Killer Whale'.lastIndexOf('blue'); // returns -1
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -87,7 +85,7 @@ tags:
   <code>lastIndexOf()</code> to locate values in the string
   "<code>Brave new world</code>".</p>
 
-<pre class="brush: js notranslate">let anyString = 'Brave new world';
+<pre class="brush: js">let anyString = 'Brave new world';
 
 console.log('The index of the first w from the beginning is ' + anyString.indexOf('w'));
 // logs 8
@@ -101,28 +99,12 @@ console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new')
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.lastindexof',
-        'String.prototype.lastIndexOf')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.lastIndexOf")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

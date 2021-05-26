@@ -30,11 +30,11 @@ tags:
 <dl>
  <dt>{{domxref('PaymentRequest.id')}} {{readonlyinline}}{{securecontext_inline}}</dt>
  <dd>An unique identifier for a particular <code>PaymentRequest</code>, which can be set via <code>details.id</code>. When none is set, it defaults to a UUID.</dd>
- <dt>{{domxref('PaymentRequest.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}</dt>
+ <dt>{{domxref('PaymentRequest.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
  <dd>If requested via payment options, returns the shipping address chosen by the user for the purposes of calculating shipping. This property is only populated if the constructor is called with the <code>requestShipping</code> flag set to true. Additionally, in some browsers, the parts of the address will be redacted for privacy until the user indicates they are ready to complete the transaction (i.e., they hit "Pay").</dd>
- <dt>{{domxref('PaymentRequest.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}</dt>
+ <dt>{{domxref('PaymentRequest.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
  <dd>Returns the identifier of the selected shipping option. This property is only populated if the constructor is called with the <code>requestShipping</code> flag set to true.</dd>
- <dt>{{domxref('PaymentRequest.shippingType')}} {{readonlyinline}} {{securecontext_inline}}</dt>
+ <dt>{{domxref('PaymentRequest.shippingType')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
  <dd>Returns the type of shipping used to fulfill the transaction. This will be one of <code>shipping</code>, <code>delivery</code>, <code>pickup</code>, or <code>null</code> if a value was not provided in the constructor.</dd>
 </dl>
 
@@ -58,10 +58,10 @@ tags:
  <dt>{{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} {{securecontext_inline}}</dt>
  <dd>With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.<br>
  Also available using the {{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}} event handler property.</dd>
- <dt>{{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}</dt>
+ <dt>{{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}{{deprecated_inline}}</dt>
  <dd>Dispatched whenever the user changes their shipping address.<br>
  Also available using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property.</dd>
- <dt>{{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}</dt>
+ <dt>{{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}{{deprecated_inline}}</dt>
  <dd>Dispatched whenever the user changes a shipping option.<br>
  Also available using the {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}} event handler property.</dd>
 </dl>
@@ -85,7 +85,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.PaymentRequest")}}</p>
-</div>

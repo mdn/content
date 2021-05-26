@@ -27,7 +27,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>var content</em> = <em>element</em>.outerHTML;
+<pre class="brush: js"><em>var content</em> = <em>element</em>.outerHTML;
 
 <em>element</em>.outerHTML = <em>htmlString</em>;
 </pre>
@@ -85,11 +85,11 @@ console.log(d.outerHTML);
 <pre class="brush: js">var container = document.getElementById("container");
 var d = document.getElementById("d");
 
-console.log(container.firstChild.nodeName); // logs "DIV"
+console.log(container.firstElementChild.nodeName); // logs "DIV"
 
 d.outerHTML = "&lt;p&gt;This paragraph replaced the original div.&lt;/p&gt;";
 
-console.log(container.firstChild.nodeName); // logs "P"
+console.log(container.firstElementChild.nodeName); // logs "P"
 
 // The #d div is no longer part of the document tree,
 // the new paragraph replaced it.

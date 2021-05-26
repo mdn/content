@@ -11,6 +11,7 @@ tags:
   - Reference
   - Style
   - revert
+browser-compat: css.types.global_keywords.revert
 ---
 <div>{{CSSRef}}</div>
 
@@ -46,12 +47,12 @@ tags:
 
 <p>So in the below example, we set custom <code>font-weight</code> in a global stylesheet, but then try to unset and revert. Unset will keep the text normal because this is an initial value for font-weight property. Revert will revert to bold because this is a default value for headers in most browsers.</p>
 
-<pre class="brush: css notranslate">h3 {
+<pre class="brush: css">h3 {
   font-weight: normal;
   color: blue;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;h3 style="font-weight: unset; color: unset;"&gt;This will still have font-weight: normal, but color: black&lt;/h3&gt;
+<pre class="brush: html">&lt;h3 style="font-weight: unset; color: unset;"&gt;This will still have font-weight: normal, but color: black&lt;/h3&gt;
 &lt;p&gt;Just some text&lt;/p&gt;
 &lt;h3 style="font-weight: revert; color: revert;"&gt;This should have its original font-weight (bold) and color: black&lt;/h3&gt;
 &lt;p&gt;Just some text&lt;/p&gt;</pre>
@@ -62,13 +63,13 @@ tags:
 
 <p>Reverting all values is useful when you did heavy modifications for something and then want to revert to defaults. So to iterate on above example instead of reverting font-weight and color separately you could just revert all of them.</p>
 
-<pre class="brush: css notranslate">h3 {
+<pre class="brush: css">h3 {
   font-weight: normal;
   color: blue;
   border-bottom: 1px solid grey;
 }</pre>
 
-<pre class="brush: html notranslate">&lt;h3&gt;This will have custom styles&lt;/h3&gt;
+<pre class="brush: html">&lt;h3&gt;This will have custom styles&lt;/h3&gt;
 &lt;p&gt;Just some text&lt;/p&gt;
 &lt;h3 style="all: revert"&gt;This should be reverted to browser/user defaults&lt;/h3&gt;
 &lt;p&gt;Just some text&lt;/p&gt;</pre>
@@ -79,12 +80,12 @@ tags:
 
 <p>Reverting effectively removes the value for the element you select with some rule and only for that element. To illustrate this we will set a green color on a section and red color on a paragraph.</p>
 
-<pre class="brush: css notranslate">section { color: darkgreen }
+<pre class="brush: css">section { color: darkgreen }
 p { color: red }
 section.with-revert { color: revert }
 </pre>
 
-<pre class="brush: html notranslate">&lt;section&gt;
+<pre class="brush: html">&lt;section&gt;
   &lt;h3&gt;This will be dark green&lt;/h3&gt;
   &lt;p&gt;Text in paragraph will be red.&lt;/p&gt;
   This will also be dark green.
@@ -123,7 +124,7 @@ section.with-revert { color: revert }
 <div>
 <div>
 
-<p>{{Compat("css.types.global_keywords.revert")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 

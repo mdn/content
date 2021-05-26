@@ -14,7 +14,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">var <var>text</var> = <var>CSSStyleRule</var>.selectorText;
+<pre class="syntaxbox">var <var>text</var> = <var>CSSStyleRule</var>.selectorText;
 <var>CSSStyleRule</var>.selectorText = <var>text</var>;</pre>
 
 
@@ -25,11 +25,11 @@ tags:
 
 <p>The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. <code>myRules[0].selectorText</code> therefore returns a literal string of the selector, in this case <code>"h1"</code>.
 </p>
-  
+
 <pre class="brush: css">h1 {
   color: pink;
 }</pre>
-  
+
 <pre class="brush: js">let text = document.styleSheets[0].selectorText;
 console.log(myRules[0].selectorText); // a string containing "h1".</pre>
 

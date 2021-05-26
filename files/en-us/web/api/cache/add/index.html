@@ -15,7 +15,7 @@ tags:
 
 <p><span class="seoSummary">The <strong><code>add()</code></strong> method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache. </span>The <code>add()</code> method is functionally equivalent to the following:</p>
 
-<pre class="brush: js notranslate">fetch(url).then(function(response) {
+<pre class="brush: js">fetch(url).then(function(response) {
   if (!response.ok) {
     throw new TypeError('bad response status');
   }
@@ -30,7 +30,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="sytaxbox notranslate"><em>cache</em>.add(<em>request</em>).then(function() {
+<pre class="sytaxbox"><em>cache</em>.add(<em>request</em>).then(function() {
   // request has been added to the cache
 });
 </pre>
@@ -71,7 +71,7 @@ tags:
 
 <p>This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.</p>
 
-<pre class="brush: js notranslate">this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.add('/sw-test/index.html');
@@ -99,15 +99,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.Cache.add")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}}</li>
 </ul>

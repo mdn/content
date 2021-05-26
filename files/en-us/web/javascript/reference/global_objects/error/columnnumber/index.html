@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Property
   - Prototype
+browser-compat: javascript.builtins.Error.columnNumber
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
@@ -15,7 +16,7 @@ tags:
 
 <h3 id="Using_columnNumber">Using columnNumber</h3>
 
-<pre class="brush: js notranslate">var e = new Error('Could not parse input');
+<pre class="brush: js">var e = new Error('Could not parse input');
 throw e;
 console.log(e.columnNumber) // 0
 </pre>
@@ -26,10 +27,7 @@ console.log(e.columnNumber) // 0
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.Error.columnNumber")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

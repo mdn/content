@@ -17,7 +17,6 @@ tags:
 
 <h2 id="Types">Types</h2>
 
-<div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
 <h3 id="Boundary-type_assertions">Boundary-type assertions</h3>
 
@@ -35,7 +34,7 @@ tags:
     <p>Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, <code>/^A/</code> does not match the "A" in "an A", but does match the first "A" in "An A".</p>
 
     <div class="notecard note">
-    <p>This character has a different meaning when it appears at the start of a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
+    <p><strong>Note:</strong> This character has a different meaning when it appears at the start of a <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>.</p>
     </div>
    </td>
   </tr>
@@ -74,7 +73,7 @@ tags:
 <h3 id="Other_assertions">Other assertions</h3>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The <code>?</code> character may also be used as a quantifier.</p>
+<p><strong>Note:</strong> The <code>?</code> character may also be used as a quantifier.</p>
 </div>
 
 <table class="standard-table">
@@ -214,23 +213,6 @@ let ripe_oranges = oranges.filter( fruit =&gt; fruit.match(/(?&lt;=ripe )orange/
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-assertion', 'RegExp: Assertions')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>For browser compatibility information, check out the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
-
 <h2 id="See_also">See also</h2>
 
 <ul>
@@ -244,4 +226,5 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
   </ul>
  </li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">The <code>RegExp()</code> constructor</a></li>
+ <li><a href="https://tc39.es/ecma262/#sec-assertion">Assertions in the ECMAScript specification</a></li>
 </ul>

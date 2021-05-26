@@ -50,7 +50,8 @@ synth.addEventListener('voiceschanged', function() {
 
 <p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged">onvoiceschanged</a></code> event handler property:</p>
 
-<pre class="brush: js">synth.onvoiceschanged = function() {
+<pre class="brush: js">var synth = window.speechSynthesis;
+synth.onvoiceschanged = function() {
   var voices = synth.getVoices();
   for(i = 0; i &lt; voices.length ; i++) {
     var option = document.createElement('option');
@@ -81,10 +82,7 @@ synth.addEventListener('voiceschanged', function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
 <p>{{Compat("api.SpeechSynthesis.voiceschanged_event")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

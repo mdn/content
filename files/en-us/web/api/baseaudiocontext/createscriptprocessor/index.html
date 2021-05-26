@@ -2,21 +2,18 @@
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
 tags:
-- API
-- AudioContext
-- BaseAudioContext
-- Method
-- Reference
-- Web Audio API
-- createScriptProcessor
+  - API
+  - AudioContext
+  - BaseAudioContext
+  - Method
+  - Reference
+  - Web Audio API
+  - createScriptProcessor
 ---
 <p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
 
-<div>
-  <p>The <code>createScriptProcessor()</code> method of the
-    {{domxref("BaseAudioContext")}} interface creates a {{domxref("ScriptProcessorNode")}}
-    used for direct audio processing.</p>
-</div>
+<p>The <code>createScriptProcessor()</code> method of the {{domxref("BaseAudioContext")}} interface
+  creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.</p>
 
 <div class="note">
   <p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this
@@ -28,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>scriptProcessor</em> = <em>audioCtx</em>.createScriptProcessor(<em>bufferSize</em>, <em>numberOfInputChannels</em>, <em>numberOfOutputChannels</em>);</pre>
+  class="brush: js">var <em>scriptProcessor</em> = <em>audioCtx</em>.createScriptProcessor(<em>bufferSize</em>, <em>numberOfInputChannels</em>, <em>numberOfOutputChannels</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -70,7 +67,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>The following example shows basic usage of a <code>ScriptProcessorNode</code> to take a
-  track loaded via {{domxref("AudioContext.decodeAudioData()")}}, process it, adding a bit
+  track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
   of white noise to each audio sample of the input track (buffer) and play it through the
   {{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
   <code>scriptNode.onaudioprocess</code> function takes the associated
@@ -176,16 +173,11 @@ source.onended = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-  <div>
-
-    <p>{{Compat("api.BaseAudioContext.createScriptProcessor")}}</p>
-  </div>
-</div>
+<p>{{Compat("api.BaseAudioContext.createScriptProcessor")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
   </li>
 </ul>

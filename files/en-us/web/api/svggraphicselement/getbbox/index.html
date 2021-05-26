@@ -1,5 +1,5 @@
 ---
-title: getBBox()
+title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 tags:
 - API
@@ -11,13 +11,14 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>SVGGraphicsElement.getBBox()</strong></code> allows us to determine
+<p>The <code><strong>SVGGraphicsElement.getBBox()</strong></code> method allows us to determine
   the coordinates of the smallest rectangle in which the object fits. The coordinates
   returned are with respect to the current SVG space (after the application of all
   geometry attributes on all the elements contained in the target element).</p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> <code>getBBox()</code> must return the actual bounding box at
+  <h4>Note</h4>
+  <p><code>getBBox()</code> must return the actual bounding box at
     the time the method was called—even in case the element has not yet been rendered. It
     also does not account for any transformation applied to the element or its parents.
   </p>
@@ -31,7 +32,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">let bboxRect = <var>object</var>.getBBox();</pre>
+<pre class="brush: js">let bboxRect = <var>object</var>.getBBox();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -66,7 +67,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
     &lt;g id="group_text_1"&gt;
         &lt;text x="5" y="16" transform="scale(2, 2)"&gt;Hello World!&lt;/text&gt;
         &lt;text x="8" y="32" transform="translate(0 20) scale(1.25 1)"&gt;Hello World Again!&lt;/text&gt;
@@ -80,7 +81,7 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">var rectBBox = document.querySelector('#rect_1');
+<pre class="brush: js">var rectBBox = document.querySelector('#rect_1');
 var rectBoundingClientRect = document.querySelector('#rect_2');
 var groupElement = document.querySelector('#group_text_1');
 

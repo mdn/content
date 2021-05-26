@@ -8,7 +8,7 @@ tags:
   - Gecko 1.9.2
   - Plugins
 ---
-<div>{{FirefoxSidebar}}</div><p>{{ gecko_minversion_header("1.9.2") }}</p>
+<div>{{FirefoxSidebar}}</div>
 <p>Several changes were made in Gecko 1.9.2 that may impact plug-in developers in particular. This article provides a list of those changes.</p>
 <h2 id="Interface_changes">Interface changes</h2>
 <p>The {{ interface("nsIPluginInstance") }} method <code>destroy()</code> has been removed, since it wasn't doing anything anyway.</p><h2 id="Mac_OS_X_specific_changes">Mac OS X specific changes</h2>
@@ -17,5 +17,5 @@ tags:
 <h3 id="main()_no_longer_a_supported_entry_point">main() no longer a supported entry point</h3>
 <p>In August, 2008, plug-in developers were informed that <code>main()</code> would no longer be supported as an entry point. This change has taken effect in Gecko 1.9.2. Plug-ins need to be updated to use <code>NPN_GetEntryPoints()</code> instead.</p>
 <h2 id="See_also">See also</h2>
-<ul> <li><a class="internal" href="/en-US/docs/Firefox_3.6_for_developers">Firefox 3.6 for developers</a></li>
+<ul> <li><a class="internal" href="/en-US/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers</a></li>
 </ul>

@@ -20,7 +20,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>fetchEvent</em> = new FetchEvent(<em>type</em>, <em>init</em>);</pre>
+  class="brush: js">var <em>fetchEvent</em> = new FetchEvent(<em>type</em>, <em>init</em>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -36,7 +36,7 @@ tags:
     <dl>
       <dt><code>clientId</code> {{ReadOnlyInline}}</dt>
       <dd>The {{domxref("Client")}} that the current service worker is controlling.</dd>
-      <dt><code>isReload</code> {{obsolete_inline}} {{ReadOnlyInline}}</dt>
+      <dt><code>isReload</code> {{deprecated_inline}} {{ReadOnlyInline}}</dt>
       <dd>A {{jsxref("Boolean")}} that signifies whether the page was reloaded or not when
         the event was dispatched. <code>true</code> if yes, and <code>false</code> if not.
         Typically, pressing the refresh button in a browser is a reload, while clicking a

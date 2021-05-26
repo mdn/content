@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <var>gl</var>.bindFramebuffer(<var>target</var>, <var>framebuffer</var>);
+<pre class="brush: js">void <var>gl</var>.bindFramebuffer(<var>target</var>, <var>framebuffer</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -40,7 +40,10 @@ tags:
     </ul>
   </dd>
   <dt>framebuffer</dt>
-  <dd>A {{domxref("WebGLFramebuffer")}} object to bind.</dd>
+  <dd>
+    A {{domxref("WebGLFramebuffer")}} object to bind.
+    If <code>framebuffer</code> is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

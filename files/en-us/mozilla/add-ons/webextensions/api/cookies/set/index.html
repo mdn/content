@@ -74,7 +74,7 @@ tags:
 
 <p>This example sets a cookie for the document hosted by the currently active tab:</p>
 
-<pre class="notranslate brush: js">var getActive = browser.tabs.query({active: true, currentWindow: true});
+<pre class="brush: js">var getActive = browser.tabs.query({active: true, currentWindow: true});
 getActive.then(setCookie);
 
 function setCookie(tabs) {

@@ -1,18 +1,19 @@
 ---
 title: '::placeholder'
-slug: 'Web/CSS/::placeholder'
+slug: Web/CSS/::placeholder
 tags:
   - '::placeholder'
   - CSS
   - Pseudo-element
   - Reference
   - Selector
+browser-compat: css.selectors.placeholder
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>::placeholder</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the <a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">placeholder text</a> in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.</p>
+<p>The <strong><code>::placeholder</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the <a href="/en-US/docs/Learn/Forms#the_placeholder_attribute">placeholder text</a> in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.</p>
 
-<pre class="brush: css no-line-numbers notranslate">::placeholder {
+<pre class="brush: css no-line-numbers">::placeholder {
   color: blue;
   font-size: 1.5em;
 }</pre>
@@ -25,7 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
@@ -41,7 +42,7 @@ tags:
 
 <ul>
  <li><a href="https://webaim.org/resources/contrastchecker/" rel="noopener">WebAIM: Color Contrast Checker</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="noopener">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
@@ -53,7 +54,7 @@ tags:
 
 <p>With this implementation, the hint content is available even if information is entered into the input field, and the input appears free of preexisting input when the page is loaded. Most screen reading technology will use <code>aria-describedby</code> to read the hint after the input's label text is announced, and the person using the screen reader can mute it if they find the extra information unnecessary.</p>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;label for="user-email"&gt;Your email address&lt;/label&gt;
+<pre class="brush:html line-numbers language-html">&lt;label for="user-email"&gt;Your email address&lt;/label&gt;
 &lt;span id="user-email-hint" class="input-hint"&gt;Example: jane@sample.com&lt;/span&gt;
 &lt;input id="user-email" aria-describedby="user-email-hint" name="email" type="email"&gt;
 </pre>
@@ -64,7 +65,7 @@ tags:
 
 <h3 id="Windows_High_Contrast_Mode">Windows High Contrast Mode</h3>
 
-<p>Placeholder text will appear with the same styling as user-entered text content when rendered in <a href="/en-US/docs/Web/CSS/-ms-high-contrast">Windows High Contrast Mode</a>. This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.</p>
+<p>Placeholder text will appear with the same styling as user-entered text content when rendered in <a href="/en-US/docs/Web/CSS/@media/-ms-high-contrast">Windows High Contrast Mode</a>. This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.</p>
 
 <ul>
  <li><a href="http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast">Greg Whitworth — How to use -ms-high-contrast</a></li>
@@ -87,11 +88,11 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Type here..."&gt;</pre>
+<pre class="brush:html line-numbers language-html">&lt;input placeholder="Type here..."&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">input::placeholder {
+<pre class="brush: css">input::placeholder {
   color: red;
   font-size: 1.2em;
   font-style: italic;
@@ -107,13 +108,13 @@ tags:
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush:html line-numbers language-html notranslate">&lt;input placeholder="Default opacity..."&gt;
+<pre class="brush:html line-numbers language-html">&lt;input placeholder="Default opacity..."&gt;
 &lt;input placeholder="Full opacity..." class="force-opaque"&gt;
 </pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">::placeholder {
+<pre class="brush: css">::placeholder {
   color: green;
 }
 
@@ -147,15 +148,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.selectors.placeholder")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>The {{cssxref(":placeholder-shown")}} pseudo-class styles an element that <em>has</em> an active placeholder.</li>
  <li>Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
 </ul>

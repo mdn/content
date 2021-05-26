@@ -7,6 +7,7 @@ tags:
 - Prototype
 - Reference
 - String
+browser-compat: javascript.builtins.String.charAt
 ---
 <div>{{JSRef}}</div>
 
@@ -16,16 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js notranslate">let <var>character</var> = <var>str</var>.charAt(<var>index</var>)</pre>
+<pre class="brush: js">charAt(index)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,7 +57,7 @@ tags:
 <p>The following example displays characters at different locations in the string
   "<code>Brave new world</code>":</p>
 
-<pre class="brush: js notranslate">var anyString = 'Brave new world';
+<pre class="brush: js">var anyString = 'Brave new world';
 console.log("The character at index 0   is '" + anyString.charAt()   + "'");
 // No index was provided, used 0 as default
 
@@ -76,7 +71,7 @@ console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
 
 <p>These lines display the following:</p>
 
-<pre class="brush: js notranslate">The character at index 0   is 'B'
+<pre class="brush: js">The character at index 0   is 'B'
 
 The character at index 0   is 'B'
 The character at index 1   is 'r'
@@ -92,7 +87,7 @@ The character at index 999 is ''
   provides a whole character, even if the string contains characters that are not in the
   Basic Multi-lingual Plane.</p>
 
-<pre class="brush: js notranslate">var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
+<pre class="brush: js">var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
 for (var i = 0, chr; i &lt; str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
@@ -148,7 +143,7 @@ function getWholeChar(str, i) {
   an incrementing variable automatically (if the character warrants it in being a
   surrogate pair).</p>
 
-<pre class="brush: js notranslate">let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
+<pre class="brush: js">let str = 'A\uD87E\uDC04Z'  // We could also use a non-BMP character directly
 for (let i = 0, chr; i &lt; str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i)
 
@@ -209,7 +204,7 @@ function getWholeCharAndI(str, i) {
   index, to treat the surrogate pairs within a string as the single characters they
   represent, one can use the following:</p>
 
-<pre class="brush: js notranslate">function fixedCharAt(str, idx) {
+<pre class="brush: js">function fixedCharAt(str, idx) {
   let ret = ''
   str += ''
   let end = str.length
@@ -240,23 +235,11 @@ function getWholeCharAndI(str, i) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.charat',
-        'String.prototype.charAt')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.charAt")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

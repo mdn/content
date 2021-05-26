@@ -9,7 +9,7 @@ tags:
 
 <h2 id="Weak_ciphers_disabled_by_default">Weak ciphers disabled by default</h2>
 
-<p><a href="/en-US/docs/Firefox_2_for_developers">Firefox 2</a> disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.</p>
+<p><a href="/en-US/docs/Mozilla/Firefox/Releases/2">Firefox 2</a> disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.</p>
 
 <p>The preferred encryption methods are <code>TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> and <code>TLS_RSA_WITH_3DES_EDE_CBC_SHA</code>. Some servers refer to these as <code>SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> and <code>SSL_RSA_WITH_3DES_EDE_CBC_SHA</code>.</p>
 
@@ -18,9 +18,9 @@ tags:
 <h2 id="New_features">New features</h2>
 
 <ul>
- <li>Firefox 2 supports <a class="external" href="http://en.wikipedia.org/wiki/Elliptic_curve_cryptography">Elliptic Curve Cryptography</a> in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.</li>
- <li>Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per <a class="external" href="https://tools.ietf.org/html/rfc3546">RFC 3546</a>.</li>
- <li>When Firefox 2 makes an <a class="external" href="http://en.wikipedia.org/wiki/Ocsp">OCSP</a> request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.</li>
+ <li>Firefox 2 supports <a class="external" href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography">Elliptic Curve Cryptography</a> in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.</li>
+ <li>Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per <a class="external" href="https://datatracker.ietf.org/doc/html/rfc3546">RFC 3546</a>.</li>
+ <li>When Firefox 2 makes an <a class="external" href="https://en.wikipedia.org/wiki/Ocsp">OCSP</a> request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.</li>
 </ul>
 
 <h2 id="Determining_what_ciphers_are_available">Determining what ciphers are available</h2>

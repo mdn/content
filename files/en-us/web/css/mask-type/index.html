@@ -8,12 +8,13 @@ tags:
   - Reference
   - SVG
   - 'recipe:css-property'
+browser-compat: css.properties.mask-type
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>mask-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets whether an SVG {{svgElement("mask")}} element is used as a <em>luminance</em> or an <em>alpha</em> mask. It applies to the <code>&lt;mask&gt;</code> element itself.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 mask-type: luminance;
 mask-type: alpha;
 
@@ -44,7 +45,7 @@ mask-type: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -52,7 +53,7 @@ mask-type: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="redsquare"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="redsquare"&gt;&lt;/div&gt;
 &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
   &lt;defs&gt;
@@ -66,7 +67,7 @@ mask-type: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.redsquare {
+<pre class="brush: css">.redsquare {
   height: 100px;
   width: 100px;
   background-color: rgb(128, 128, 128);
@@ -82,7 +83,7 @@ mask-type: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="redsquare"&gt;&lt;/div&gt;
+<pre class="brush: html">&lt;div class="redsquare"&gt;&lt;/div&gt;
 &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
   &lt;defs&gt;
@@ -96,13 +97,12 @@ mask-type: unset;
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.redsquare {
+<pre class="brush: css">.redsquare {
   height: 100px;
   width: 100px;
   background-color: rgb(128, 128, 128);
   border: solid 1px black;
   mask: url("#m");
-  mask-type:luminance;
 }</pre>
 
 <h4 id="Result_2">Result</h4>
@@ -130,7 +130,7 @@ mask-type: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.mask-type")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

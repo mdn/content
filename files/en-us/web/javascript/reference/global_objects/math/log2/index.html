@@ -7,6 +7,7 @@ tags:
 - Math
 - Method
 - Reference
+browser-compat: javascript.builtins.Math.log2
 ---
 <div>{{JSRef}}</div>
 
@@ -58,15 +59,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-log2.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Math.log2(<var>x</var>)</pre>
+<pre class="brush: js">Math.log2(<var>x</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -98,7 +94,7 @@ tags:
   imprecise values on some inputs (like 1 &lt;&lt; 29), wrap into
   {{jsxref("Math.round()")}} if working with bit masks.</p>
 
-<pre class="brush: js notranslate">if (!Math.log2) Math.log2 = function(x) {
+<pre class="brush: js">if (!Math.log2) Math.log2 = function(x) {
   return Math.log(x) * Math.LOG2E;
 };
 </pre>
@@ -107,7 +103,7 @@ tags:
 
 <h3 id="Using_Math.log2">Using Math.log2()</h3>
 
-<pre class="brush: js notranslate">Math.log2(3);    // 1.584962500721156
+<pre class="brush: js">Math.log2(3);    // 1.584962500721156
 Math.log2(2);    // 1
 Math.log2(1);    // 0
 Math.log2(0);    // -Infinity
@@ -117,22 +113,11 @@ Math.log2(1024); // 10
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.log2")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

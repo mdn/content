@@ -8,12 +8,13 @@ tags:
   - Deprecated
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.scroll-snap-coordinate
 ---
 <div>{{CSSRef}}{{deprecated_header}}</div>
 
 <p>The <strong><code>scroll-snap-coordinate</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the x and y coordinate positions within an element that will align with its nearest ancestor scroll container's {{cssxref("scroll-snap-destination")}} for each respective axis.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword value */
+<pre class="brush:css no-line-numbers">/* Keyword value */
 scroll-snap-coordinate: none;
 
 /* &lt;position&gt; values */
@@ -44,7 +45,7 @@ scroll-snap-coordinate: unset;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -52,7 +53,7 @@ scroll-snap-coordinate: unset;</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
+<pre class="brush: html">&lt;div id="container"&gt;
   &lt;div&gt;
     &lt;p&gt;At coordinate (0, 0)&lt;/p&gt;
     &lt;div class="scrollContainer coordinate0"&gt;
@@ -84,7 +85,7 @@ scroll-snap-coordinate: unset;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">#container {
+<pre class="brush: css">#container {
   display: flex;
 }
 
@@ -141,7 +142,7 @@ scroll-snap-coordinate: unset;</pre>
 
 <p class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
-<p>{{Compat("css.properties.scroll-snap-coordinate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Reference
 - TypedArray
+browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
 <div>{{JSRef}}</div>
 
@@ -18,11 +19,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">new Int16Array(); // new in ES2017
-new Int16Array(<var>length</var>);
-new Int16Array(<var>typedArray</var>);
-new Int16Array(<var>object</var>);
-new Int16Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);</pre>
+<pre class="brush: js">
+new Int16Array(); // new in ES2017
+new Int16Array(length);
+new Int16Array(typedArray);
+new Int16Array(object);
+
+new Int16Array(buffer);
+new Int16Array(buffer, byteOffset);
+new Int16Array(buffer, byteOffset, length);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -58,7 +64,7 @@ new Int16Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]
 <h3 id="Different_ways_to_create_an_Int16Array">Different ways to create an Int16Array
 </h3>
 
-<pre class="brush: js notranslate">// From a length
+<pre class="brush: js">// From a length
 var int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
@@ -86,23 +92,11 @@ var int16 = new Int16Array(iterable);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray
-        constructors')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Int16Array.Int16Array")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 
@@ -111,11 +105,11 @@ var int16 = new Int16Array(iterable);
   <code>Int16Array</code> constructor as a function without <code>new</code>, will throw a
   {{jsxref("TypeError")}} from now on.</p>
 
-<pre class="brush: js example-bad notranslate">var dv = Int16Array([1, 2, 3]);
+<pre class="brush: js example-bad">var dv = Int16Array([1, 2, 3]);
 // TypeError: calling a builtin Int16Array constructor
 // without new is forbidden</pre>
 
-<pre class="brush: js example-good notranslate">var dv = new Int16Array([1, 2, 3]);</pre>
+<pre class="brush: js example-good">var dv = new Int16Array([1, 2, 3]);</pre>
 
 <h2 id="See_also">See also</h2>
 

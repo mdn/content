@@ -9,6 +9,7 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+browser-compat: javascript.builtins.RegExp.leftContext
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
@@ -26,7 +27,7 @@ tags:
 
 <h3 id="Using_leftContext_and">Using leftContext and $`</h3>
 
-<pre class="brush: js notranslate">var re = /world/g;
+<pre class="brush: js">var re = /world/g;
 re.test('hello world!');
 RegExp.leftContext; // "hello "
 RegExp['$`'];       // "hello "
@@ -34,25 +35,11 @@ RegExp['$`'];       // "hello "
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Legacy RegExp features')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("javascript.builtins.RegExp.leftContext")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

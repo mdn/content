@@ -66,14 +66,14 @@ tags:
 
 <p>So, let's attach a ref to our "Edit" Button in <code>ToDoItem.vue</code>. Update it like this:</p>
 
-<pre class="brush: html notranslate">&lt;button type="button" class="btn" ref="editButton" @click="toggleToItemEditForm"&gt;
+<pre class="brush: html">&lt;button type="button" class="btn" ref="editButton" @click="toggleToItemEditForm"&gt;
   Edit
   &lt;span class="visually-hidden"&gt;\{{label}}&lt;/span&gt;
 &lt;/button&gt;</pre>
 
 <p>To access the value associated with our ref, we use the <code>$refs</code> property provided on our component instance. To see the value of the ref when we click our "Edit" button, add a <code>console.log()</code> to our <code>toggleToItemEditForm()</code> method, like so:</p>
 
-<pre class="brush: js notranslate">toggleToItemEditForm() {
+<pre class="brush: js">toggleToItemEditForm() {
   console.log(this.$refs.editButton);
   this.isEditing = true;
 }</pre>
@@ -86,14 +86,14 @@ tags:
 
 <p>For convenience, create a new method which takes no arguments called <code>focusOnEditButton()</code>. Inside it, assign your <code>ref</code> to a variable, and then call the <code>focus()</code> method on the ref.</p>
 
-<pre class="brush: js notranslate">focusOnEditButton() {
+<pre class="brush: js">focusOnEditButton() {
   const editButtonRef = this.$refs.editButton;
   editButtonRef.focus();
 }</pre>
 
 <p>Next, add a call to <code>this.focusOnEditButton()</code> at the end of the <code>itemEdited()</code> and <code>editCancelled()</code> methods:</p>
 
-<pre class="brush: js notranslate">itemEdited(newItemName) {
+<pre class="brush: js">itemEdited(newItemName) {
   this.$emit("item-edited", newItemName);
   this.isEditing = false;
   this.focusOnEditButton();
@@ -113,7 +113,7 @@ editCancelled() {
 
 <p>Since the <code>focusOnEditButton()</code> method needs to be invoked after the DOM has updated, we can wrap the existing function body inside a <code>$nextTick()</code> call.</p>
 
-<pre class="brush: js notranslate">focusOnEditButton() {
+<pre class="brush: js">focusOnEditButton() {
   this.$nextTick(() =&gt; {
     const editButtonRef = this.$refs.editButton;
     editButtonRef.focus();
@@ -151,17 +151,17 @@ editCancelled() {
 
 <p>In <code>ToDoItemEditForm.vue</code>, attach <code>ref="labelInput"</code> to the <code>&lt;input&gt;</code> element, like so:</p>
 
-<pre class="brush: html notranslate">&lt;input :id="id" ref="labelInput" type="text" autocomplete="off" v-model.lazy.trim="newName" /&gt;</pre>
+<pre class="brush: html">&lt;input :id="id" ref="labelInput" type="text" autocomplete="off" v-model.lazy.trim="newName" /&gt;</pre>
 
 <p>Next, add a <code>mounted()</code> property just inside your component object — <strong>note that this should not be put inside the <code>methods</code> property, but rather at the same hierarchy level as <code>props</code>, <code>data()</code>, and <code>methods</code>.</strong> Lifecycle methods are special methods that sit on their own, not alongside the user-defined methods. This should take no inputs. Note that you cannot use an arrow function here since we need access to <code>this</code> to access our <code>labelInput</code> ref.</p>
 
-<pre class="brush: js notranslate">mounted() {
+<pre class="brush: js">mounted() {
 
 }</pre>
 
 <p>Inside your <code>mounted()</code> method, assign your <code>labelInput</code> ref to a variable, and then call the <code>focus()</code> function of the ref. You don't have to use <code>$nextTick</code> here because the component has already been added to the DOM when <code>mounted()</code> is called.</p>
 
-<pre class="brush: js notranslate">mounted() {
+<pre class="brush: js">mounted() {
    const labelInputRef = this.$refs.labelInput;
    labelInputRef.focus();
 }</pre>
@@ -180,7 +180,7 @@ editCancelled() {
 
 <p>Inside <code>App.vue</code>, update your <code>&lt;h2&gt;</code> as follows:</p>
 
-<pre class="brush: html notranslate"> &lt;h2 id="list-summary" ref="listSummary" tabindex="-1"&gt;\{{listSummary}}&lt;/h2&gt;</pre>
+<pre class="brush: html"> &lt;h2 id="list-summary" ref="listSummary" tabindex="-1"&gt;\{{listSummary}}&lt;/h2&gt;</pre>
 
 <div class="notecard note">
 <p><strong>Note</strong>: <code><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code> is a really powerful tool for handling certian accessibility problems. However, it should be used with caution. Over-using <code>tabindex="-1"</code> can cause problems for all sorts of users, so only use it exactly where you need to. You should also almost never use <code>tabindex</code> &gt; = <code>0</code>, as it can cause problems for users since it can make the DOM flow and the tab-order mismatch, and/or add non-interactive elements to the tab order. This can be confusing to users, especially those using screen readers and other assistive technology.</p>
@@ -188,7 +188,7 @@ editCancelled() {
 
 <p>Now that we have a <code>ref</code> and have let browsers know that we can programmatically focus the <code>&lt;h2&gt;</code>, we need to set focus on it. At the end of <code>deleteToDo()</code>, use the <code>listSummary</code> ref to set focus on the <code>&lt;h2&gt;</code>. Since the <code>&lt;h2&gt;</code> is always rendered in the app, you do not need to worry about using <code>$nextTick</code> of lifecycle methods to handle focusing it.</p>
 
-<pre class="brush: js notranslate">deleteToDo(toDoId) {
+<pre class="brush: js">deleteToDo(toDoId) {
     const itemIndex = this.ToDoItems.findIndex(item =&gt; item.id === toDoId);
     this.ToDoItems.splice(itemIndex, 1);
     this.$refs.listSummary.focus();
@@ -257,5 +257,15 @@ editCancelled() {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

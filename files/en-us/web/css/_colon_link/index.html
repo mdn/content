@@ -8,12 +8,13 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.link
 ---
 <div>{{ CSSRef }}</div>
 
-<p>The <strong><code>:link</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("link")}} element that has an <code>href</code> attribute.</p>
+<p>The <strong><code>:link</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an <code>href</code> attribute.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;a&gt; that has not been visited yet */
+<pre class="brush: css no-line-numbers">/* Selects any &lt;a&gt; that has not been visited yet */
 a:link {
   color: red;
 }</pre>
@@ -26,7 +27,7 @@ a:link {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css notranslate">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -34,14 +35,14 @@ a:link {
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;a href="#ordinary-target"&gt;This is an ordinary link.&lt;/a&gt;&lt;br&gt;
+<pre class="brush: html">&lt;a href="#ordinary-target"&gt;This is an ordinary link.&lt;/a&gt;&lt;br&gt;
 &lt;a href=""&gt;You've already visited this link.&lt;/a&gt;&lt;br&gt;
 &lt;a&gt;Placeholder link (won't get styled)&lt;/a&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">a:link {
+<pre class="brush: css">a:link {
   background-color: gold;
   color: green;
 }
@@ -92,10 +93,7 @@ a:link {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-<p>{{Compat("css.selectors.link")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

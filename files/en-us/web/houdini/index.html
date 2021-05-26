@@ -19,7 +19,7 @@ tags:
 
 <p>A feature of CSS Houdini is the <a href="/en-US/docs/Web/API/Worklet">Worklet</a>. With worklets, you can create modular CSS, requiring a single line of JavaScript to import configurable components: no pre-processors, post-processors or JavaScript frameworks needed.</p>
 
-<pre class="brush: js notranslate">&lt;script&gt;
+<pre class="brush: js">&lt;script&gt;
   CSS.paintWorklet.addModule('csscomponent.js');
 &lt;/script&gt;
 </pre>
@@ -28,8 +28,8 @@ tags:
 
 <p>The CSS <code>paint()</code> function parameters include the name of the worklet, along with optional parameters. The worklet also has access to the element's custom properties: they don't need to be passed as function arguments.</p>
 
-<pre class="brush: css notranslate">li {
-	background-image: paint(myComponent, stroke, 10px);
+<pre class="brush: css">li {
+    background-image: paint(myComponent, stroke, 10px);
     --highlights: blue;
     --lowlights: green;
 }</pre>
@@ -82,5 +82,5 @@ tags:
 
 <ul>
   <li>The <a href="https://houdini.how/">Worklet library</a> for examples and code.</li>
-  <li><a href="http://houdini.glitch.me/">Interactive introduction to Houdini</a></li>
+  <li><a href="https://houdini.glitch.me/">Interactive introduction to Houdini</a></li>
 </ul>

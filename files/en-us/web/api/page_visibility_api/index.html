@@ -50,11 +50,11 @@ tags:
 
 <ul>
  <li>Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.</li>
- <li>Timers such as {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
+ <li>Timers such as {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
  <li>Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
   <ul>
    <li>In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.</li>
-   <li>Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>). In Chrome, this value is 10 seconds.</li>
+   <li>Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>). In Chrome, this value is 10 seconds.</li>
    <li>Timer tasks are only permitted when the budget is non-negative.</li>
    <li>Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.</li>
    <li>The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.</li>
@@ -76,7 +76,7 @@ tags:
 
 <p>The example, which pauses the video when you switch to another tab and plays again when you return to its tab, was created with the following code:</p>
 
-<pre class="brush: js notranslate">// Set the name of the hidden property and the change event for visibility
+<pre class="brush: js">// Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
 if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
@@ -150,7 +150,7 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
  <dd>An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.</dd>
 </dl>
 
-<pre class="brush: js notranslate">//startSimulation and pauseSimulation defined elsewhere
+<pre class="brush: js">//startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();

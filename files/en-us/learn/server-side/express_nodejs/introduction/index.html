@@ -102,7 +102,7 @@ server.listen(port, hostname, () =&gt; {
  <li>Add additional request processing "middleware" at any point within the request handling pipeline.</li>
 </ul>
 
-<p>While <em>Express</em> itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, <code>POST</code> data, security headers, and <em>many</em> more. You can find a list of middleware packages maintained by the Express team at <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a> (along with a list of some popular 3rd party packages).</p>
+<p>While <em>Express</em> itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, <code>POST</code> data, security headers, and <em>many</em> more. You can find a list of middleware packages maintained by the Express team at <a href="https://expressjs.com/en/resources/middleware.html">Express Middleware</a> (along with a list of some popular 3rd party packages).</p>
 
 <div class="note">
 <p><strong>Note:</strong> This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.</p>
@@ -182,7 +182,7 @@ const app = express();
 <p>You can also create your own modules that can be imported in the same way.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organise your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
+<p><strong>Tip:</strong> You will <em>want</em> to create your own modules, because this allows you to organize your code into manageable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
 </div>
 
 <p>To make objects available outside of a module you just need to expose them as additional properties on the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
@@ -244,7 +244,7 @@ console.log('Second');
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your <em>callback functions</em> is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js">The Node.js Way - Understanding Error-First Callbacks</a> (fredkschott.com).</p>
+<p><strong>Note:</strong> A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your <em>callback functions</em> is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: <a href="https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js">The Node.js Way - Understanding Error-First Callbacks</a> (fredkschott.com).</p>
 </div>
 
 <h3 id="Creating_route_handlers">Creating route handlers</h3>
@@ -275,7 +275,7 @@ console.log('Second');
 
 <p>Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).</p>
 
-<p>Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of <em>/wiki/</em>). In <em>Express</em> this is achieved by using the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> object. For example, we can create our wiki route in a module named <strong>wiki.js</strong>, and then export the <code>Router</code> object, as shown below:</p>
+<p>Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of <em>/wiki/</em>). In <em>Express</em> this is achieved by using the <code><a href="https://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> object. For example, we can create our wiki route in a module named <strong>wiki.js</strong>, and then export the <code>Router</code> object, as shown below:</p>
 
 <pre class="brush: js">// wiki.js - Wiki route module
 
@@ -315,9 +315,9 @@ app.use('/wiki', wiki);</pre>
 <p><strong>Note:</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can <em>also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
 </div>
 
-<p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="http://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>
+<p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="https://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>
 
-<p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="http://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
+<p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="https://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
 
 <pre class="brush: bash">$ npm install morgan
 </pre>
@@ -364,11 +364,11 @@ app.listen(3000);</pre>
 <p><strong>JavaScript Tip:</strong> Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.</p>
 </div>
 
-<p>The Express documentation has a lot more excellent documentation about <a href="https://expressjs.com/en/guide/using-middleware.html">using</a> and <a href="http://expressjs.com/en/guide/writing-middleware.html">writing</a> Express middleware.</p>
+<p>The Express documentation has a lot more excellent documentation about <a href="https://expressjs.com/en/guide/using-middleware.html">using</a> and <a href="https://expressjs.com/en/guide/writing-middleware.html">writing</a> Express middleware.</p>
 
 <h3 id="Serving_static_files">Serving static files</h3>
 
-<p>You can use the <a href="http://expressjs.com/en/4x/api.html#express.static">express.static</a> middleware to serve static files, including your images, CSS and JavaScript (<code>static()</code> is the only middleware function that is actually <strong>part</strong> of <em>Express</em>). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '<strong>public'</strong> at the same level as where you call node:</p>
+<p>You can use the <a href="https://expressjs.com/en/4x/api.html#express.static">express.static</a> middleware to serve static files, including your images, CSS and JavaScript (<code>static()</code> is the only middleware function that is actually <strong>part</strong> of <em>Express</em>). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '<strong>public'</strong> at the same level as where you call node:</p>
 
 <pre class="brush: js">app.use(express.static('public'));
 </pre>
@@ -387,7 +387,7 @@ http://localhost:3000/about.html
 app.use(express.static('media'));
 </pre>
 
-<p>You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we <a href="http://expressjs.com/en/4x/api.html#app.use">specify a mount path</a> so that the files are loaded with the prefix "/media":</p>
+<p>You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we <a href="https://expressjs.com/en/4x/api.html#app.use">specify a mount path</a> so that the files are loaded with the prefix "/media":</p>
 
 <pre class="brush: js">app.use('/media', express.static('public'));
 </pre>
@@ -422,10 +422,10 @@ http://localhost:3000/media/cry.mp3</code>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the <a href="http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses">FAQ</a>.</p>
+<p><strong>Note:</strong> HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the <a href="https://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses">FAQ</a>.</p>
 </div>
 
-<p>For more information see <a href="http://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs).</p>
+<p>For more information see <a href="https://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs).</p>
 
 <h3 id="Using_databases">Using databases</h3>
 
@@ -486,13 +486,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'some_template_engine_name');
 </pre>
 
-<p>The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.&lt;template_extension&gt;" that contains placeholders for data variables named 'title' and "message", you would call <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> in a route handler function to create and send the HTML response:</p>
+<p>The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.&lt;template_extension&gt;" that contains placeholders for data variables named 'title' and "message", you would call <code><a href="https://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> in a route handler function to create and send the HTML response:</p>
 
 <pre class="brush: js">app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
 });</pre>
 
-<p>For more information see <a href="http://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs).</p>
+<p>For more information see <a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs).</p>
 
 <h3 id="File_structure">File structure</h3>
 
@@ -512,14 +512,14 @@ app.set('view engine', 'some_template_engine_name');
  <li><a href="https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44">Venkat.R - Manage Multiple Node versions</a></li>
  <li><a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (Node API docs)</li>
  <li><a href="https://expressjs.com/">Express</a> (home page)</li>
- <li><a href="http://expressjs.com/en/starter/basic-routing.html">Basic routing</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/routing.html">Routing guide</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/starter/basic-routing.html">Basic routing</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/guide/routing.html">Routing guide</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs)</li>
  <li><a href="https://expressjs.com/en/guide/using-middleware.html">Using middleware</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/writing-middleware.html">Writing middleware for use in Express apps</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/guide/writing-middleware.html">Writing middleware for use in Express apps</a> (Express docs)</li>
  <li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/starter/static-files.html">Serving static files in Express</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/starter/static-files.html">Serving static files in Express</a> (Express docs)</li>
+ <li><a href="https://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs)</li>
 </ul>
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>

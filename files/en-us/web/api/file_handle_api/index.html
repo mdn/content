@@ -8,7 +8,7 @@ tags:
 ---
 <p>{{non-standard_header}}</p>
 
-<p>The FileHandle API allows for the manipulating of files, including creating files and modifying their content (unlike the <a href="/en-US/docs/DOM/File">File API</a>). Because the files manipulated through that API can be physically stored on the device, the editing part uses a turn-based locking mechanism in order to avoid race issues.</p>
+<p>The FileHandle API allows for the manipulating of files, including creating files and modifying their content (unlike the <a href="/en-US/docs/Web/API/File">File API</a>). Because the files manipulated through that API can be physically stored on the device, the editing part uses a turn-based locking mechanism in order to avoid race issues.</p>
 
 <h2 id="API_Overview">API Overview</h2>
 
@@ -27,7 +27,7 @@ tags:
 
 <h3 id="Create_a_FileHandle">Create a FileHandle</h3>
 
-<p>Because the intent is to allow the storage of files through IndexedDB, creating a {{domxref("FileHandle")}} instance requires an <a href="/en-US/docs/IndexedDB/IDBFactory#open">IndexedDB Database</a>.</p>
+<p>Because the intent is to allow the storage of files through IndexedDB, creating a {{domxref("IDBMutableFile")}} instance requires an <a href="/en-US/docs/Web/API/IDBFactory#open">IndexedDB Database</a>.</p>
 
 <div style="overflow: hidden;">
 <pre class="brush: js">var IDBReq = indexedDB.open("myFileStorageDataBase");

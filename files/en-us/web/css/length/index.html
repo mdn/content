@@ -9,13 +9,14 @@ tags:
   - Reference
   - Web
   - length
+browser-compat: css.types.length
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>&lt;length&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Although {{cssxref("&lt;percentage&gt;")}} values are also CSS dimensions, and are usable in some of the same properties that accept <code>&lt;length&gt;</code> values, they are not themselves <code>&lt;length&gt;</code> values. See {{cssxref("&lt;length-percentage&gt;")}}.</p>
+<p><strong>Note:</strong> Although {{cssxref("&lt;percentage&gt;")}} values are usable in some of the same properties that accept <code>&lt;length&gt;</code> values, they are not themselves <code>&lt;length&gt;</code> values. See {{cssxref("&lt;length-percentage&gt;")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -125,7 +126,7 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
+<pre class="brush: html">&lt;div class="outer"&gt;
   &lt;div class="input-container"&gt;
     &lt;label&gt;Enter width:&lt;/label&gt;
     &lt;input type="text" id="length"&gt;
@@ -139,7 +140,7 @@ tags:
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
   font-weight: bold;
   box-sizing: border-box;
@@ -193,7 +194,7 @@ label {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">const inputDiv = document.querySelector('.inner');
+<pre class="brush: js">const inputDiv = document.querySelector('.inner');
 const inputElem = document.querySelector('input');
 const resultsDiv = document.querySelector('.results');
 
@@ -250,7 +251,7 @@ inputElem.addEventListener('change', () =&gt; {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.length")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

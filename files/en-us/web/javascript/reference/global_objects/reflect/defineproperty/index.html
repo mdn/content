@@ -7,6 +7,7 @@ tags:
 - Method
 - Reference
 - Reflect
+browser-compat: javascript.builtins.Reflect.defineProperty
 ---
 <div>{{JSRef}}</div>
 
@@ -15,15 +16,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
+<pre class="brush: js">Reflect.defineProperty(<var>target</var>, <var>propertyKey</var>, <var>attributes</var>)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -54,7 +50,7 @@ tags:
   {{jsxref("Object.defineProperty")}} which is similar.</p>
 
 <div class="notecard note">
-  <p><strong>One key difference:</strong> <code>Object.defineProperty</code> returns the
+  <p><strong>Note:</strong> <code>Object.defineProperty</code> returns the
     object or throws a {{jsxref("TypeError")}} if the property has not been successfully
     defined. <code>Reflect.defineProperty</code>, however, returns a {{jsxref("Boolean")}}
     indicating whether or not the property was successfully defined.</p>
@@ -64,7 +60,7 @@ tags:
 
 <h3 id="Using_Reflect.defineProperty">Using Reflect.defineProperty()</h3>
 
-<pre class="brush: js notranslate">let obj = {}
+<pre class="brush: js">let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true
 obj.x                                         // 7
 </pre>
@@ -82,7 +78,7 @@ obj.x                                         // 7
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>
   block here:</p>
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
   // success
 } else {
   // failure
@@ -90,23 +86,11 @@ obj.x                                         // 7
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.defineProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

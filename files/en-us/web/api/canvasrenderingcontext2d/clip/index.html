@@ -2,11 +2,11 @@
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 ---
 <div>{{APIRef}}</div>
 
@@ -21,7 +21,7 @@ tags:
   drawn.</p>
 
 <p><img alt="" class="internal"
-    src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png"></p>
+    src="canvas_clipping_path.png"></p>
 
 <div class="note">
   <p><strong>Note</strong>: Be aware that the clipping region is only constructed from
@@ -33,7 +33,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">void <em>ctx</em>.clip([<em>fillRule</em>]);
+<pre class="brush: js">void <em>ctx</em>.clip([<em>fillRule</em>]);
 void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
 </pre>
 
@@ -66,7 +66,7 @@ void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
@@ -74,7 +74,7 @@ void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
 <p>The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
 </p>
 
-<pre class="brush: js highlight:[7] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[7]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circular clipping region
@@ -102,12 +102,12 @@ ctx.fillRect(0, 0, 100, 100);
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js highlight:[8] notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js highlight:[8]">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create clipping path
@@ -135,11 +135,11 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<pre class="brush: js notranslate">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create two clipping paths

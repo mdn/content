@@ -13,7 +13,7 @@ tags:
 - payment
 - paymentAddress
 ---
-<p>{{APIRef("Payment Request API")}}</p>
+<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
 
 <p><span class="seoSummary">The <strong><code>addressLine</code></strong> read-only
     property of the {{domxref('PaymentAddress')}} interface is an array of
@@ -25,7 +25,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js notranslate">var <em>paymentAddressLines</em> = <em>PaymentAddress</em>.addressLine;</pre>
+  class="brush: js">var <em>paymentAddressLines</em> = <em>PaymentAddress</em>.addressLine;</pre>
 
 <h3 id="Value">Value</h3>
 
@@ -68,28 +68,6 @@ tags:
   London SE1 0HS<br>
   United Kingdom</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Payment','#dom-paymentaddress-addressline','PaymentAddress.addressLine')}}
-      </td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
-
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-  <p>{{Compat("api.PaymentAddress.addressLine")}}</p>
-</div>
+<p>{{Compat("api.PaymentAddress.addressLine")}}</p>

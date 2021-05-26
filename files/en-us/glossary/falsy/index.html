@@ -26,8 +26,8 @@ tags:
    <td>The {{jsxref("Number")}} negative zero (so, also <code>-0.0</code>, etc., and <code>-0x0</code>).</td>
   </tr>
   <tr>
-   <td><code>0n</code>, <code>-0n</code></td>
-   <td>The {{jsxref("BigInt")}} zero and negative zero (so, also <code>0x0n</code>/<code>-0x0n</code>).</td>
+   <td><code>0n</code></td>
+   <td>The {{jsxref("BigInt")}} zero (so, also <code>0x0n</code>). Note that there is no {{jsxref("BigInt")}} negative zero — the negation of <code>0n</code> is <code>0n</code>.</td>
   </tr>
   <tr>
    <td><code>""</code>, <code>''</code>, <code>``</code></td>
@@ -56,7 +56,7 @@ tags:
 
 <p>Examples of <em>falsy</em> values in JavaScript (which are coerced to false in Boolean contexts, and thus <em>bypass</em> the <code>if</code> block):</p>
 
-<pre class="brush: js notranslate">if (false)
+<pre class="brush: js">if (false)
 if (null)
 if (undefined)
 if (0)
@@ -70,7 +70,7 @@ if ("")
 
 <p>If the first object is falsy, it returns that object</p>
 
-<pre class="brush: js notranslate">false &amp;&amp; "dog"
+<pre class="brush: js">false &amp;&amp; "dog"
 // ↪ false
 
 0 &amp;&amp; "dog"

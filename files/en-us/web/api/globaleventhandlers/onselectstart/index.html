@@ -23,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate"><em>object</em>.onselectstart = <em>functionRef</em>;
+<pre class="brush: js"><em>object</em>.onselectstart = <em>functionRef</em>;
 </pre>
 
 <h3 id="Value">Value</h3>
@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js notranslate">document.onselectstart = function() {
+<pre class="brush: js">document.onselectstart = function() {
   console.log('Selection started!');
 };
 </pre>
@@ -44,7 +44,7 @@ tags:
     href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key
     quote generator</a> demo.</p>
 
-<pre class="brush: js notranslate">document.onselectstart = () =&gt; {
+<pre class="brush: js">document.onselectstart = () =&gt; {
   return false; // cancel selection
 };</pre>
 
@@ -58,8 +58,7 @@ tags:
       <th scope="col">Comment</th>
     </tr>
     <tr>
-      <td>{{SpecName('Selection
-        API','#dom-globaleventhandlers-onselectstart','GlobalEventHandlers.onselectstart')}}
+      <td>{{SpecName('Selection API','#dom-globaleventhandlers-onselectstart','GlobalEventHandlers.onselectstart')}}
       </td>
       <td>{{Spec2('Selection API')}}</td>
       <td>Initial definition.</td>

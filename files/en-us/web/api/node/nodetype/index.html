@@ -16,7 +16,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">var <em><var>type</var></em> = <em>node</em>.nodeType;
+<pre class="brush: js">var <em><var>type</var></em> = <em>node</em>.nodeType;
 </pre>
 
 <p>Returns an integer which specifies the type of the node. Possible values are listed in
@@ -87,8 +87,7 @@ tags:
   </tbody>
 </table>
 
-<h3 id="Deprecated_node_type_constants_deprecated_inline">Deprecated node type constants
-  {{deprecated_inline()}}</h3>
+<h3 id="Deprecated_node_type_constants_deprecated_inline">Deprecated node type constants {{deprecated_inline}}</h3>
 
 <div class="notecard note">
   <p>The following constants have been deprecated and should not be used anymore.</p>
@@ -126,7 +125,7 @@ tags:
 
 <h3 id="Different_types_of_nodes">Different types of nodes</h3>
 
-<pre class="brush: js notranslate">document.nodeType === Node.DOCUMENT_NODE; // true
+<pre class="brush: js">document.nodeType === Node.DOCUMENT_NODE; // true
 document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
 
 document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
@@ -143,7 +142,7 @@ p.firstChild.nodeType === Node.TEXT_NODE; // true
 <p>This example checks if the first node inside the document element is a comment, and
   displays a message if not.</p>
 
-<pre class="brush: js notranslate">var node = document.documentElement.firstChild;
+<pre class="brush: js">var node = document.documentElement.firstChild;
 if (node.nodeType !== Node.COMMENT_NODE) {
   console.warn("You should comment your code!");
 }

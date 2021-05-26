@@ -2,11 +2,12 @@
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 tags:
-- ECMAScript 2015
-- JavaScript
-- Method
-- Number
-- isNaN
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Number
+  - isNaN
+browser-compat: javascript.builtins.Number.isNaN
 ---
 <div>{{JSRef}}</div>
 
@@ -16,15 +17,10 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js notranslate">Number.isNaN(<var>value</var>)</pre>
+<pre class="brush: js">Number.isNaN(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -40,8 +36,8 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>Due to both equality operators, {{jsxref("Operators/Comparison_Operators", "==",
-  "#Equality")}} and {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}},
+<p>Due to both equality operators, {{jsxref("Operators", "==",
+  "#Equality")}} and {{jsxref("Operators", "===", "#Identity")}},
   evaluating to <code>false</code> when checking if {{jsxref("NaN")}} <em>is</em>
   {{jsxref("NaN")}}, the function <code>Number.isNaN()</code> has become necessary. This
   situation is unlike all other possible value comparisons in JavaScript.</p>
@@ -57,7 +53,7 @@ tags:
 
 <h3 id="Using_isNaN">Using isNaN</h3>
 
-<pre class="brush: js notranslate">Number.isNaN(NaN);        // true
+<pre class="brush: js">Number.isNaN(NaN);        // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0);      // true
 
@@ -82,29 +78,18 @@ Number.isNaN(' ');
 <p>The following works because NaN is the only value in JavaScript which is not equal to
   itself.</p>
 
-<pre class="brush: js notranslate">Number.isNaN = Number.isNaN || function isNaN(input) {
+<pre class="brush: js">Number.isNaN = Number.isNaN || function isNaN(input) {
     return typeof input === 'number' &amp;&amp; input !== input;
 }
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Number.isNaN")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

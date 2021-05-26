@@ -70,7 +70,7 @@ tags:
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 250px;"&gt;
 &lt;/div&gt;
@@ -86,7 +86,7 @@ tags:
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -106,7 +106,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">const textarea = document.getElementById('code');
+<pre class="brush: js">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 const output = document.querySelector('.output');
@@ -158,7 +158,7 @@ textarea.onkeydown = function(e){
 
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+  let caretPos = textarea.selectionStart;
 
   const front = (textarea.value).substring(0, caretPos);
   const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
@@ -193,7 +193,7 @@ textarea.onkeyup = function(){
 
 <p>There are some serious {{anch("Security concerns")}} to consider with <code>&lt;iframe&gt;</code>s, as we'll discuss below, but this doesn't mean that you shouldn't use them in your websites — it just requires some knowledge and careful thinking. Let's explore the code in a bit more detail. Say you wanted to include the MDN glossary on one of your web pages — you could try something like this:</p>
 
-<pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+<pre>&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
         allowfullscreen sandbox&gt;
   &lt;p&gt;
@@ -234,17 +234,15 @@ textarea.onkeyup = function(){
 <p>{{interwiki('wikipedia','Clickjacking')}} is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.</p>
 </div>
 
-<p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) You won't actually see anything displayed on the page, and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told <em>Load denied by X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary does not permit framing</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
+<p>A quick example first though — try loading the previous example we showed above into your browser — you can <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">find it live on GitHub</a> (<a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html">see the source code</a> too.) Instead of the page you expected, you'll probably see some kind of message to the effect of "I can't open this page", and if you look at the <em>Console</em> in the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll see a message telling you why. In Firefox, you'll get told something like <em>The loading of “https://developer.mozilla.org/en-US/docs/Glossary” in a frame is denied by “X-Frame-Options“ directive set to “DENY“.</em>. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside <code>&lt;iframe&gt;</code>s (see {{anch("Configure CSP directives")}}, below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.</p>
 
 <h4 id="Only_embed_when_necessary">Only embed when necessary</h4>
 
 <p>Sometimes it makes sense to embed third-party content — like youtube videos and maps — but you can save yourself a lot of headaches if you only embed third-party content when completely necessary. A good rule of thumb for web security is <em>"You can never be too cautious. If you made it, double-check it anyway. If someone else made it, assume it's dangerous until proven otherwise."</em></p>
 
-<div>
 <p>Besides security, you should also be aware of intellectual property issues. Most content is copyrighted, offline and online, even content you might not expect (for example, most images on <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>). Never display content on your webpage unless you own it or the owners have given you written, unequivocal permission. Penalties for copyright infringement are severe. Again, you can never be too cautious.</p>
 
 <p>If the content is licensed, you must obey the license terms. For example, the content on MDN is <a href="/en-US/docs/MDN/About#copyrights_and_licenses">licensed under CC-BY-SA</a>. That means, you must <a href="https://wiki.creativecommons.org/wiki/Best_practices_for_attribution">credit us properly</a> when you quote our content, even if you make substantial changes.</p>
-</div>
 
 <h4 id="Use_HTTPS">Use HTTPS</h4>
 
@@ -273,7 +271,7 @@ textarea.onkeyup = function(){
 <p><strong>Note</strong>: Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an <code>iframe</code>). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.</p>
 </div>
 
-<h4 id="Configure_CSP_directives">Configure CSP directives</h4>
+<h4 id="configure_csp_directives">Configure CSP directives</h4>
 
 <p>{{Glossary("CSP")}} stands for <strong><a href="/en-US/docs/Web/HTTP/CSP">content security policy</a></strong> and provides <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">a set of HTTP Headers</a> (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing <code>&lt;iframe&gt;</code>s, you can <em><a href="/en-US/docs/Web/HTTP/Headers/X-Frame-Options">configure your server to send an appropriate <code>X-Frame-Options</code>  header.</a></em> This can prevent other websites from embedding your content in their web pages (which would enable {{interwiki('wikipedia','clickjacking')}} and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.</p>
 
@@ -332,13 +330,9 @@ textarea.onkeyup = function(){
  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note</strong>: <code>&lt;object&gt;</code> requires a <code>data</code> attribute, a <code>type</code> attribute, or both. If you use both, you may also use the {{htmlattrxref('typemustmatch','object')}} attribute (only implemented in Firefox and Chrome, as of this writing). <code>typemustmatch</code> keeps the embedded file from running unless the <code>type</code> attribute provides the correct media type. <code>typemustmatch</code> can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).</p>
-</div>
-
 <p>Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a> too):</p>
 
-<pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
+<pre class="brush: html">&lt;embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
        name="whoosh" align="middle" allowScriptAccess="sameDomain"
        allowFullScreen="false" type="application/x-shockwave-flash"
@@ -348,15 +342,15 @@ textarea.onkeyup = function(){
 
 <p>Now let's look at an <code>&lt;object&gt;</code> example that embeds a PDF into a page (see the <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> and the <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch&gt;
+<pre class="brush: html">&lt;object data="mypdf.pdf" type="application/pdf"
+        width="800" height="1200"&gt;
   &lt;p&gt;You don't have a PDF plugin, but you can
     &lt;a href="mypdf.pdf"&gt;download the PDF file.
     &lt;/a&gt;
   &lt;/p&gt;
 &lt;/object&gt;</pre>
 
-<p>PDFs were a necessary stepping stone between paper and digital, but they pose many <a href="http://webaim.org/techniques/acrobat/acrobat">accessibility challenges</a> and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.</p>
+<p>PDFs were a necessary stepping stone between paper and digital, but they pose many <a href="https://webaim.org/techniques/acrobat/acrobat">accessibility challenges</a> and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.</p>
 
 <h3 id="The_case_against_plugins">The case against plugins</h3>
 
