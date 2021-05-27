@@ -52,10 +52,10 @@ slice(beginIndex, endIndex)
       <code>Number(<var>endIndex</var>)</code> is not positive,
       an empty string is returned.</p>
 
-    <p>If <code><var>endIndex</var></code> is specified,
+    <p>If <code><var>endIndex</var></code> is specified and positive or equal to zero,
       <code><var>endIndex</var></code> should be greater than
       <code><var>beginIndex</var></code>, otherwise an empty string is returned. (For
-      example, <code>slice(-3, 0)</code>, <code>slice(-1, -3)</code>, or <code>slice(3, 1)</code>
+      example, <code>slice(-3, 0)</code>, or <code>slice(3, 1)</code>
       returns <code>""</code>.)</p>
   </dd>
 </dl>
