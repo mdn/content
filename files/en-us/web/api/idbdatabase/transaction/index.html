@@ -2,13 +2,13 @@
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -114,7 +114,7 @@ var transaction = db.transaction('my-store-name');</pre>
   <tbody>
     <tr>
       <td>
-        <code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">InvalidStateError</a></code>
+        <code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err">InvalidStateError</a></code>
       </td>
       <td>
         <p>The <code>close()</code> method has previously been called on this
@@ -182,8 +182,7 @@ transaction.onerror = function(event) {
 var objectStore = transaction.objectStore("toDoList");
 // etc.</pre>
 
-<h2 id="Specification"><span style="font-size: 2.14285714285714rem;">Specification</span>
-</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
   <tbody>

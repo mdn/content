@@ -31,6 +31,18 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
+<ul>
+  <li>
+    The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames"><code>Intl.DisplayNames</code></a> built-in object has been implemented. This enables the consistent translation of language, region and script display names:
+    <pre class="notranslate brush: js">
+// Get display names of currency code in English
+let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+// Get currency names
+currencyNames.of('USD'); // "US Dollar"
+currencyNames.of('EUR'); // "Euro"</pre>
+  </li>
+ </ul>
+
 <h4 id="Removals_4">Removals</h4>
 
 <h3 id="HTTP">HTTP</h3>

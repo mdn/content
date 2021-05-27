@@ -16,13 +16,13 @@ slug: Tools/Memory/Dominators
 
 <p>In modern JavaScript implementations, the runtime decides whether an object is no longer needed based on <em>reachability</em>. In this system the heap is represented as one or more graphs. Each node in the graph represents an object, and each connection between nodes (edge) represents a reference from one object to another. The graph starts at a root node, indicated in these diagrams with "R".</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12383/memory-graph.svg" style="display: block; height: 268px; margin-left: auto; margin-right: auto; width: 384px;"></p>
+<p><img alt="" src="memory-graph.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>During garbage collection, the runtime traverses the graph, starting at the root, and marks every object it finds. Any objects it doesn't find are unreachable, and can be deallocated.</p>
 
 <p>So when an object becomes unreachable (for example, because it is only referenced by a single local variable which goes out of scope) then any objects it references also become unreachable, as long as no other objects reference them:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12375/memory-graph-unreachable.svg" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 383px;"></p>
+<p><img alt="" src="memory-graph-unreachable.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Conversely, this means that objects are kept alive as long as some other reachable object is holding a reference to them.</p>
 
@@ -41,16 +41,16 @@ slug: Tools/Memory/Dominators
 
 <p>A related concept is that of the <em>dominator</em>. Node B is said to dominate node A if every path from the root to A passes through B:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12379/memory-graph-dominators.svg" style="display: block; height: 309px; margin-left: auto; margin-right: auto; width: 471px;"></p>
+<p><img alt="" src="memory-graph-dominators.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>If any of node A's dominators are freed, then node A itself becomes eligible for garbage collection.</p>
 
 <p><a id="immediate_dominator">If node B dominates node A, but does not dominate any of A's other dominators, then B is the <em>immediate dominator</em> of A:</a></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12381/memory-graph-immediate-dominator.svg" style="display: block; height: 309px; margin-left: auto; margin-right: auto; width: 467px;"></p>
+<p><img alt="" src="memory-graph-immediate-dominator.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p><a id="multiple-paths">One slight subtlety here is that if an object A is referenced by two other objects B and C, then neither object is its dominator</a>, because you could remove either B or C from the graph, and A would still be retained by its other referrer. Instead, the immediate dominator of A would be its first common ancestor:<br>
- <img alt="" src="https://mdn.mozillademos.org/files/12331/memory-graph-dominator-multiple-references.svg" style="display: block; height: 283px; margin-left: auto; margin-right: auto; width: 211px;"></p>
+ <img alt="" src="memory-graph-dominator-multiple-references.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="See_also">See also</h2>
 

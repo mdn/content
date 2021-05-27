@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{HTTPSidebar}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>encrypted-media</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME). When this policy is enabled, the {{domxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}. </span></p>
+<p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>encrypted-media</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME). When this policy is enabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} will reject with a {{domxref("DOMException")}}. </span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -43,7 +43,7 @@ tags:
    <td>Initial definition.</td>
   </tr>
   <tr>
-   <td>{{SpecName("EME","#feature-policy-integration","Feature Policy integration")}}</td>
+   <td>{{SpecName("EME","#permissions-policy-integration","Permissions Policy integration")}}</td>
    <td>{{Spec2("EME")}}</td>
    <td></td>
   </tr>

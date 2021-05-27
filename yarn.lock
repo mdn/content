@@ -28,17 +28,17 @@
   dependencies:
     extend "3.0.2"
 
-"@mdn/yari@0.4.29":
-  version "0.4.29"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.29.tgz#a9015759d17e506e9dfcbe9e8ca3264338ca5767"
-  integrity sha512-OFlrDhukezV92vgpTVFr6w83wqklMmHTO4VoGBVp4u/n8UvJG8uyWgiDtgNRHJbAnEbzW4l7lM0//3mBRSZ6Yw==
+"@mdn/yari@0.4.36":
+  version "0.4.36"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.36.tgz#e80a6dcb7b8ccb6b6dd4b30f1df6f5cb8e652701"
+  integrity sha512-LWoeYexOlub19NdHj4Qe1wliCexxG7reVHD0ug8YdXXBTDGZEbg2xa+07c0J2IQrcBlRR0S+L+h1+g2e/uRZ5Q==
   dependencies:
     "@caporal/core" "2.0.2"
     "@mdn/browser-compat-data" "3.0.5"
     accept-language-parser "1.5.0"
     chalk "4.1.0"
     cheerio "1.0.0-rc.5"
-    cli-progress "^3.8.2"
+    cli-progress "^3.9.0"
     compression "1.7.4"
     cookie "0.4.1"
     cookie-parser "1.4.5"
@@ -633,10 +633,10 @@ cli-cursor@^2.1.0:
   dependencies:
     restore-cursor "^2.0.0"
 
-cli-progress@^3.8.2:
-  version "3.8.2"
-  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.8.2.tgz#abaf1fc6d6401351f16f068117a410554a0eb8c7"
-  integrity sha512-qRwBxLldMSfxB+YGFgNRaj5vyyHe1yMpVeDL79c+7puGujdKJHQHydgqXDcrkvQgJ5U/d3lpf6vffSoVVUftVQ==
+cli-progress@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.9.0.tgz#25db83447deb812e62d05bac1af9aec5387ef3d4"
+  integrity sha512-g7rLWfhAo/7pF+a/STFH/xPyosaL1zgADhI0OM83hl3c7S43iGvJWEAV2QuDOnQ8i6EMBj/u4+NTd0d5L+4JfA==
   dependencies:
     colors "^1.1.2"
     string-width "^4.2.0"

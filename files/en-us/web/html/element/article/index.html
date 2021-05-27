@@ -22,11 +22,11 @@ tags:
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Sectioning_content">sectioning content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a></td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">sectioning content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#palpable_content">palpable content</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -34,7 +34,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>. Note that an <code>&lt;article&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">flow content</a>. Note that an <code>&lt;article&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -67,14 +67,15 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: html notranslate">&lt;article class="film_review"&gt;
-  &lt;header&gt;
-    &lt;h2&gt;Jurassic Park&lt;/h2&gt;
-  &lt;/header&gt;
+  &lt;h2&gt;Jurassic Park&lt;/h2&gt;
   &lt;section class="main_review"&gt;
+    &lt;h3&gt;Review&lt;/h3&gt;
     &lt;p&gt;Dinos were great!&lt;/p&gt;
   &lt;/section&gt;
   &lt;section class="user_reviews"&gt;
+    &lt;h3&gt;User reviews&lt;/h3&gt;
     &lt;article class="user_review"&gt;
+      &lt;h4&gt;Too scary!&lt;/h4&gt;
       &lt;p&gt;Way too scary for me.&lt;/p&gt;
       &lt;footer&gt;
         &lt;p&gt;
@@ -85,6 +86,7 @@ tags:
       &lt;/footer&gt;
     &lt;/article&gt;
     &lt;article class="user_review"&gt;
+      &lt;h4&gt;Love the dinos!&lt;/h4&gt;
       &lt;p&gt;I agree, dinos are my favorite.&lt;/p&gt;
       &lt;footer&gt;
         &lt;p&gt;

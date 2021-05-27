@@ -8,11 +8,11 @@ tags:
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p>You can examine and edit CSS in the Inspector's <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#CSS_pane">CSS pane</a>.</p>
+<p>You can examine and edit CSS in the Inspector's <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#css_pane">CSS pane</a>.</p>
 
 <h2 id="Examine_CSS_rules">Examine CSS rules</h2>
 
-<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view">Rules view</a> lists all the rules that apply to the selected element, ordered from most-specific to least-specific:</p>
+<p>The <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#rules_view">Rules view</a> lists all the rules that apply to the selected element, ordered from most-specific to least-specific:</p>
 
 <p><img alt="Rules view panel as of Firefox 72" src="rules_view_fx_72.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
@@ -23,7 +23,7 @@ tags:
  <li><a href="#viewing_and_changing_classes_on_an_element">toggle classes</a>;</li>
  <li>add a new rule;</li>
  <li>change the display based on the color scheme preference (as of Firefox 72, you must set <code>devtools.inspector.color-scheme-simulation.enabled</code> to <strong>true</strong> in the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> to enable this feature);</li>
- <li>change the display based on <a href="#View_media_rules_for_Print">print media rules</a>.</li>
+ <li>change the display based on <a href="#view_media_rules_for_print">print media rules</a>.</li>
 </ul>
 
 <p><img alt="Toolbar buttons of the Rules view, as of Fx 72" src="rules_view_buttons_fx_72.png" style="display: block; margin: 0px auto;"></p>
@@ -50,7 +50,7 @@ tags:
 
 <p>In addition to compatibility tooltips, the <em>CSS Compatibility View</em> shows any CSS compatibility issues for both the selected element and for the current page (as a whole).<img alt="Screenshot of the Compatibility view" src="compat_view.png"></p>
 
-<p>For more information see:  <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Compatibility_view">Page Inspector &gt; CSS Compatibility View</a>.</p>
+<p>For more information see:  <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#compatibility_view">Page Inspector &gt; CSS Compatibility View</a>.</p>
 
 <h3 id="Rule_display">Rule display</h3>
 
@@ -60,16 +60,16 @@ tags:
 
 <ul>
  <li><em>Highlight matched elements</em>: next to the selector is a target icon: click this to highlight all nodes in the page that match this selector.</li>
- <li><em>Overridden declaration</em>: declarations that are overridden by later rules are crossed out. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Overridden_declarations">overridden declarations</a>.</li>
+ <li><em>Overridden declaration</em>: declarations that are overridden by later rules are crossed out. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations">overridden declarations</a>.</li>
  <li><em>Inactive rules</em> (not shown): if a rule is inactive (e.g., <code>padding</code> on a <code>:visited</code> pseudo-element), it is colored gray, with an info icon that gives more information when clicked.</li>
- <li><em>Filter rules containing this property</em>: next to overridden declarations is an icon you can click to filter the rules list to show only those rules that include that property. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Overridden_declarations">overridden declarations</a>.</li>
+ <li><em>Filter rules containing this property</em>: next to overridden declarations is an icon you can click to filter the rules list to show only those rules that include that property. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations">overridden declarations</a>.</li>
  <li><em>Enable/disable</em>: if you hover over a declaration, a checkbox appears next to it: you can use this to toggle the declaration on or off.</li>
- <li><em>Filename and line number</em>: on the right-hand side is a link to the rule. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Link_to_CSS_file">link to CSS file</a>.</li>
+ <li><em>Filename and line number</em>: on the right-hand side is a link to the rule. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#link_to_css_file">link to CSS file</a>.</li>
 </ul>
 
 <p>If the element has a <code><a href="/en-US/docs/Web/CSS/display">display: grid</a></code> declaration, then it gets a grid icon next to it, like this: <img alt="" src="screen_shot_2016-12-16_at_10.51.15_am.png">. Click that icon to display the grid overlaid on the page, including grid lines and tracks. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Examine grid layouts</a> for more on this.</p>
 
-<p>To view <a href="/en-US/docs/Web/CSS/Cascade">user-agent styles</a> (<em>i.e.,</em> browser-default CSS rules), enable "Inspector &gt; Show Browser Styles" under the <a href="/en-US/docs/Tools/Settings">developer tool settings</a> panel. (Note that this setting is independent of the "Browser styles" checkbox in the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Examine_computed_CSS">Computed view</a>.)</p>
+<p>To view <a href="/en-US/docs/Web/CSS/Cascade">user-agent styles</a> (<em>i.e.,</em> browser-default CSS rules), enable "Inspector &gt; Show Browser Styles" under the <a href="/en-US/docs/Tools/Settings">developer tool settings</a> panel. (Note that this setting is independent of the "Browser styles" checkbox in the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#examine_computed_css">Computed view</a>.)</p>
 
 <p>User-agent styles are displayed against a different background, and the link to the filename and line number contains the prefix <code>(user agent)</code>:</p>
 
@@ -155,7 +155,7 @@ tags:
 
 <p>Click the button to see checkboxes that you can use to enable the {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, {{cssxref(":focus-visible")}} and {{cssxref(":visited")}} pseudo-classes for the selected element:</p>
 
-<p><img alt="" src="show_pseudo_classes_hover.png" style="border: 1px solid black; display: block; margin: 0px auto;">This feature can also be accessed from the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_menu">popup menu in the HTML view</a>.</p>
+<p><img alt="" src="show_pseudo_classes_hover.png" style="border: 1px solid black; display: block; margin: 0px auto;">This feature can also be accessed from the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">popup menu in the HTML view</a>.</p>
 
 <p>If you enable one of these pseudo-classes for a node, an orange dot appears in the markup view next to all nodes to which the pseudo-class has been applied. In addition, the information that appears on the page itself show you what pseudo-class you are examining. For example:</p>
 
@@ -176,7 +176,7 @@ tags:
 
 <p>You can copy the location of the source file: right-click the link and select "Copy Location".</p>
 
-<p>The Inspector understands CSS source maps. That means that if you are using a CSS preprocessor that has support for source maps, and you've enabled source map support in the <a href="/en-US/docs/Tools/Tools_Toolbox#Style_Editor">Style Editor settings</a>, then the link will take you to the original source, not the generated CSS. Read more about CSS source map support in the <a href="/en-US/docs/Tools/Style_Editor#Source_map_support">Style Editor documentation</a>.</p>
+<p>The Inspector understands CSS source maps. That means that if you are using a CSS preprocessor that has support for source maps, and you've enabled source map support in the <a href="/en-US/docs/Tools/Tools_Toolbox#style_editor">Style Editor settings</a>, then the link will take you to the original source, not the generated CSS. Read more about CSS source map support in the <a href="/en-US/docs/Tools/Style_Editor#source_map_support">Style Editor documentation</a>.</p>
 
 <h3 id="Overridden_declarations">Overridden declarations</h3>
 
@@ -237,7 +237,7 @@ tags:
 
 <h2 id="Examine_computed_CSS">Examine computed CSS</h2>
 
-<p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#Computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
+<p>To see the complete computed CSS for the selected element, select the <a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#computed_view">Computed panel</a> in the righthand pane. This panel shows the calculated value that each CSS property has for the selected element. (This calculated value is exactly the same as what <a href="/en-US/docs/Web/API/Window/getComputedStyle">getComputedStyle </a>would return.)</p>
 
 <p><img alt="" src="computed_css.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 

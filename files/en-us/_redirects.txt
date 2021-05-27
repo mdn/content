@@ -431,7 +431,6 @@
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:-moz-ui-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
-/en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
 /en-US/docs/CSS/::-moz-page-sequence	/en-US/docs/Web/CSS/::-moz-page-sequence
 /en-US/docs/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
@@ -7909,6 +7908,9 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
 /en-US/docs/The_data_URL_scheme	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+/en-US/docs/Thunderbird/Autoconfiguration	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/Definition
+/en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	/en-US/docs/Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
 /en-US/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Toolbox	/en-US/docs/Tools/Tools_Toolbox
 /en-US/docs/Tools/DOM_Inspector	/en-US/docs/Tools/DOM_Property_Viewer
@@ -11421,6 +11423,7 @@
 /en-US/docs/Web/CSS/:-moz-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/Web/CSS/:-moz-ui-invalid	/en-US/docs/Web/CSS/:user-invalid
 /en-US/docs/Web/CSS/:-ms-input-placeholder	/en-US/docs/Web/CSS/:placeholder-shown
+/en-US/docs/Web/CSS/:-webkit-autofill	/en-US/docs/Web/CSS/:autofill
 /en-US/docs/Web/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/Web/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
@@ -11480,6 +11483,7 @@
 /en-US/docs/Web/CSS/CSS_Functionals	/en-US/docs/Web/CSS/CSS_Functions
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_In_Grid_Layout	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_Concepts_of_Logical_Properties_and_Values	/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
