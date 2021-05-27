@@ -233,10 +233,19 @@ function clearOutputCookieValue() {
     output.textContent = '> Do something here!'
   }
 }
+
+function clearOutputDoOnce() {
+  const output = document.getElementById('do-once')
+  output.textContent = ''
+}
 </pre>
 
 <pre
 	class="brush: html">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;
+
+&lt;button onclick="clearOutputDoOnce()"&gt;
+  Clear
+&lt;/button&gt;
 
 &lt;div&gt;
   &lt;code id="do-once"&gt;&lt;/code&gt;
@@ -257,11 +266,19 @@ function clearOutputCookieValue() {
   const output = document.getElementById('reset-once')
   output.textContent = '> Reset!'
 }
+
+function clearOutputResetOnce() {
+  const output = document.getElementById('reset-once')
+  output.textContent = ''
+}
 </pre>
 
 <pre
 	class="brush: html">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;
 
+&lt;button onclick="clearOutputResetOnce()"&gt;
+  Clear
+&lt;/button&gt;
 
 &lt;div&gt;
   &lt;code id="reset-once"&gt;&lt;/code&gt;
