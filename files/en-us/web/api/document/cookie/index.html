@@ -237,11 +237,19 @@ function checkACookieExists() {
   }
 }
 
+function resetOutputACookieExists() {
+  const output = document.getElementById('a-cookie-existence')
+  output.textContent = ''
+}
+
 </pre>
 
 <pre
 	class="brush: html">&lt;button onclick="checkACookieExists()"&gt;
   Check a cookie exists
+&lt;/button&gt;
+&lt;button onclick="resetOutputACookieExists()"&gt;
+  Reset
 &lt;/button&gt;
 
 &lt;div&gt;
@@ -260,11 +268,19 @@ function checkACookieExists() {
     output.textContent = '>> The cookie "reader" has a value of "1"'
   }
 }
+
+function resetASpecificValueOfTheCookie() {
+  const output = document.getElementById('a-specific-value-of-the-cookie')
+  output.textContent = ''
+}
 </pre>
 
 <pre
 	class="brush: html">&lt;button onclick="checkCookieHasASpecificValue()"&gt;
   Check that a cookie has a specific value
+&lt;/button&gt;
+&lt;button onclick="resetASpecificValueOfTheCookie()"&gt;
+  Reset
 &lt;/button&gt;
 
 &lt;div&gt;
