@@ -150929,22 +150929,6 @@
       "Sheppy"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:10.182Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "mfuji09",
-      "hoang4",
-      "Himself65",
-      "Sheppy",
-      "sideshowbarker",
-      "charnz",
-      "cbalisky",
-      "DingoEatingFuzz",
-      "qwertypants"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:10:29.687Z",
     "contributors": [

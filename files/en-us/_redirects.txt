@@ -10991,6 +10991,7 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/Destructing_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 /en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Member_Operators	/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors
+/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/en-US/docs/Web/JavaScript/Reference/Operators/
 /en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /en-US/docs/Web/JavaScript/Reference/Operators/constructor	/en-US/docs/Web/JavaScript/Reference/Classes/constructor
 /en-US/docs/Web/JavaScript/Reference/Operators/extends	/en-US/docs/Web/JavaScript/Reference/Classes/extends
