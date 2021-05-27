@@ -145,7 +145,11 @@ tags:
 
 <h3 id="Example_1_Simple_usage">Example #1: Simple usage</h3>
 
-<pre class="brush: js">document.cookie = "name=oeschger; SameSite=None; Secure";
+<pre class="brush: js">// Note that we are setting `SameSite=None;` in this example because the example
+// needs to work cross-origin.
+// It is more common not to set the `SameSite` attribute, which results in the default,
+// and more secure, value of `SameSite=Lax;`
+document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 function alertCookie() {
   alert(document.cookie);
@@ -190,6 +194,10 @@ function alertCookieValue() {
 <pre class="brush: js">function doOnce() {
   if (!document.cookie.split('; ').find(row =&gt; row.startsWith('doSomethingOnlyOnce'))) {
     alert("Do something here!");
+    // Note that we are setting `SameSite=None;` in this example because the example
+    // needs to work cross-origin.
+    // It is more common not to set the `SameSite` attribute, which results in the default,
+    // and more secure, value of `SameSite=Lax;`
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
   }
 }</pre>
@@ -202,6 +210,10 @@ function alertCookieValue() {
 <h3 id="Example_4_Reset_the_previous_cookie">Example #4: Reset the previous cookie</h3>
 
 <pre class="brush: js">function resetOnce() {
+  // Note that we are setting `SameSite=None;` in this example because the example
+  // needs to work cross-origin.
+  // It is more common not to set the `SameSite` attribute, which results in the default,
+  // and more secure, value of `SameSite=Lax;`
   document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
 }</pre>
 
@@ -212,7 +224,11 @@ function alertCookieValue() {
 
 <h3 id="Example_5_Check_a_cookie_existence">Example #5: Check a cookie existence</h3>
 
-<pre class="brush: js">document.cookie = "reader=1; SameSite=None; Secure";
+<pre class="brush: js">// Note that we are setting `SameSite=None;` in this example because the example
+// needs to work cross-origin.
+// It is more common not to set the `SameSite` attribute, which results in the default,
+// and more secure, value of `SameSite=Lax;`
+document.cookie = "reader=1; SameSite=None; Secure";
 
 function checkACookieExists() {
   if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader='))) {
