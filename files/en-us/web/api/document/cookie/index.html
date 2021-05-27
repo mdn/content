@@ -232,7 +232,7 @@ document.cookie = "reader=1; SameSite=None; Secure";
 
 function checkACookieExists() {
   if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader='))) {
-		const output = document.getElementById('a-cookie-existence')
+    const output = document.getElementById('a-cookie-existence')
     output.textContent = '>> The cookie "reader" exists'
   }
 }
