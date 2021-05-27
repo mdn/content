@@ -151,15 +151,30 @@ tags:
 // and more secure, value of `SameSite=Lax;`
 document.cookie = "name=oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
-function alertCookie() {
-  alert(document.cookie);
+
+function showCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = '> ' + document.cookie
+}
+
+function clearOutputCookies() {
+  const output = document.getElementById('cookies')
+  output.textContent = ''
 }
 </pre>
 
-<pre class="brush: html">&lt;button onclick="alertCookie()"&gt;Show cookies&lt;/button&gt;
+<pre class="brush: html">&lt;button onclick="showCookies()"&gt;Show cookies&lt;/button&gt;
+
+&lt;button onclick="clearOutputCookies()"&gt;
+  Clear
+&lt;/button&gt;
+
+&lt;div&gt;
+  &lt;code id="cookies"&gt;&lt;/code&gt;
+&lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('Example_1_Simple_usage', 200, 36)}}</p>
+<p>{{EmbedLiveSample('Example_1_Simple_usage', 200, 72)}}</p>
 
 <h3 id="Example_2_Get_a_sample_cookie_named_test2">Example #2: Get a sample cookie named
 	<em>test2</em></h3>
@@ -176,15 +191,30 @@ const cookieValue = document.cookie
   .find(row =&gt; row.startsWith('test2='))
   .split('=')[1];
 
-function alertCookieValue() {
-  alert(cookieValue);
+function showCookieValue() {
+  const output = document.getElementById('cookie-value')
+  output.textContent = '> ' + cookieValue
+}
+
+function clearOutputCookieValue() {
+  const output = document.getElementById('cookie-value')
+  output.textContent = ''
 }
 </pre>
 
 <pre
-	class="brush: html">&lt;button onclick="alertCookieValue()"&gt;Show cookie value&lt;/button&gt;</pre>
+	class="brush: html">&lt;button onclick="showCookieValue()"&gt;Show cookie value&lt;/button&gt;
 
-<p>{{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 36)}}</p>
+&lt;button onclick="clearOutputCookieValue()"&gt;
+  Clear
+&lt;/button&gt;
+
+&lt;div&gt;
+  &lt;code id="cookie-value"&gt;&lt;/code&gt;
+&lt;/div&gt;
+</pre>
+
+<p>{{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 72)}}</p>
 
 <h3 id="Example_3_Do_something_only_once">Example #3: Do something only once</h3>
 
@@ -193,19 +223,27 @@ function alertCookieValue() {
 
 <pre class="brush: js">function doOnce() {
   if (!document.cookie.split('; ').find(row =&gt; row.startsWith('doSomethingOnlyOnce'))) {
-    alert("Do something here!");
     // Note that we are setting `SameSite=None;` in this example because the example
     // needs to work cross-origin.
     // It is more common not to set the `SameSite` attribute, which results in the default,
     // and more secure, value of `SameSite=Lax;`
     document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
+
+    const output = document.getElementById('do-once')
+    output.textContent = '> Do something here!'
   }
-}</pre>
+}
+</pre>
 
 <pre
-	class="brush: html">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;</pre>
+	class="brush: html">&lt;button onclick="doOnce()"&gt;Only do something once&lt;/button&gt;
 
-<p>{{EmbedLiveSample('Example_3_Do_something_only_once', 200, 36)}}</p>
+&lt;div&gt;
+  &lt;code id="do-once"&gt;&lt;/code&gt;
+&lt;/div&gt;
+</pre>
+
+<p>{{EmbedLiveSample('Example_3_Do_something_only_once', 200, 72)}}</p>
 
 <h3 id="Example_4_Reset_the_previous_cookie">Example #4: Reset the previous cookie</h3>
 
@@ -215,12 +253,22 @@ function alertCookieValue() {
   // It is more common not to set the `SameSite` attribute, which results in the default,
   // and more secure, value of `SameSite=Lax;`
   document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
-}</pre>
+
+  const output = document.getElementById('reset-once')
+  output.textContent = '> Reset!'
+}
+</pre>
 
 <pre
-	class="brush: html">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;</pre>
+	class="brush: html">&lt;button onclick="resetOnce()"&gt;Reset only once cookie&lt;/button&gt;
 
-<p>{{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 36)}}</p>
+
+&lt;div&gt;
+  &lt;code id="reset-once"&gt;&lt;/code&gt;
+&lt;/div&gt;
+</pre>
+
+<p>{{EmbedLiveSample('Example_4_Reset_the_previous_cookie', 200, 72)}}</p>
 
 <h3 id="Example_5_Check_a_cookie_existence">Example #5: Check a cookie existence</h3>
 
@@ -233,11 +281,11 @@ document.cookie = "reader=1; SameSite=None; Secure";
 function checkACookieExists() {
   if (document.cookie.split(';').some((item) =&gt; item.trim().startsWith('reader='))) {
     const output = document.getElementById('a-cookie-existence')
-    output.textContent = '>> The cookie "reader" exists'
+    output.textContent = '> The cookie "reader" exists'
   }
 }
 
-function resetOutputACookieExists() {
+function clearOutputACookieExists() {
   const output = document.getElementById('a-cookie-existence')
   output.textContent = ''
 }
@@ -248,8 +296,9 @@ function resetOutputACookieExists() {
 	class="brush: html">&lt;button onclick="checkACookieExists()"&gt;
   Check a cookie exists
 &lt;/button&gt;
-&lt;button onclick="resetOutputACookieExists()"&gt;
-  Reset
+
+&lt;button onclick="clearOutputACookieExists()"&gt;
+  Clear
 &lt;/button&gt;
 
 &lt;div&gt;
@@ -265,11 +314,11 @@ function resetOutputACookieExists() {
 <pre class="brush: js">function checkCookieHasASpecificValue() {
   if (document.cookie.split(';').some((item) =&gt; item.includes('reader=1'))) {
     const output = document.getElementById('a-specific-value-of-the-cookie')
-    output.textContent = '>> The cookie "reader" has a value of "1"'
+    output.textContent = '> The cookie "reader" has a value of "1"'
   }
 }
 
-function resetASpecificValueOfTheCookie() {
+function clearASpecificValueOfTheCookie() {
   const output = document.getElementById('a-specific-value-of-the-cookie')
   output.textContent = ''
 }
@@ -279,8 +328,9 @@ function resetASpecificValueOfTheCookie() {
 	class="brush: html">&lt;button onclick="checkCookieHasASpecificValue()"&gt;
   Check that a cookie has a specific value
 &lt;/button&gt;
-&lt;button onclick="resetASpecificValueOfTheCookie()"&gt;
-  Reset
+
+&lt;button onclick="clearASpecificValueOfTheCookie()"&gt;
+  Clear
 &lt;/button&gt;
 
 &lt;div&gt;
