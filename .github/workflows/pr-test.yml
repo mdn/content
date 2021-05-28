@@ -58,7 +58,7 @@ jobs:
       - uses: technote-space/get-diff-action@v4.1.1
         id: git_diff_content
         with:
-          PATTERNS: files/**/*.html
+          PATTERNS: files/**/*.(html|md)
           SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content
