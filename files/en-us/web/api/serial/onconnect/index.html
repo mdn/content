@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
 
-<p class="summary">The <strong><code>onconnect</code></strong> {{event("Event_handlers")}} of the {{domxref("Serial")}} interface is called when a port has been connected from a device. This method receives an {{domxref("Event")}} object. The target of this event is the {{domxref("SerialPort")}} interface that has been disconnected.
+<p class="summary">The <strong><code>onconnect</code></strong> {{domxref("EventHandler")}} of the {{domxref("Serial")}} interface is called when a port has been connected from a device. This method receives an {{domxref("Event")}} object. The target of this event is the {{domxref("SerialPort")}} interface that has been disconnected.
 
 <p>This event is only fired for ports associated with removable devices such as those connected via USB. The user must grant the origin permission to access this device during a call to {{domxref("Serial.requestPort()","requestPort()")}} before this event will be fired.</p>
 
