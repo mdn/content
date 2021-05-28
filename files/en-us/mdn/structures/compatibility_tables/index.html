@@ -451,14 +451,14 @@ git push</pre>
 
 <p>Once your new compatibility data has been included in the main <a href="https://github.com/mdn/browser-compat-data">browser-compat-data</a> repo, you can start dynamically generating browser compatibility and specification tables based on that data on MDN pages.</p>
 
-<p>First you need to find the "address" for the relevant compatibility data you wish to include. This can be determined by inspecting its source file. For example:</p>
+<p>First you need to find the query string for the relevant compatibility data you wish to include. This can be determined by inspecting its source file. For example:</p>
 <ul>
-  <li>{{domxref("AbortController")}} compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json">AbortController.json</a> and has address <code>api.AbortController</code>.</li>
-  <li>{{HTTPHeader("Content-Type")}} HTTP header compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> and has address <code>http.headers.Content-Type</code>.</li>
-  <li>{{domxref("VRDisplay.capabilities")}} property compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json">VRDisplay.json</a> and has address key is <code>api.VRDisplay.capabilities</code>.</li>
+  <li>{{domxref("AbortController")}} compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json">AbortController.json</a> and can be queried using <code>api.AbortController</code>.</li>
+  <li>{{HTTPHeader("Content-Type")}} HTTP header compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> and the query is <code>http.headers.Content-Type</code>.</li>
+  <li>{{domxref("VRDisplay.capabilities")}} property compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json">VRDisplay.json</a> and its query is <code>api.VRDisplay.capabilities</code>.</li>
 </ul>
 
-<p>The compatibility data address should be specified in the page front-matter using the <code>browser-compat</code> key.
+<p>The compatibility data query should be specified in the page front-matter using the <code>browser-compat</code> key.
   For example, for the {{domxref("AbortController")}} this would be added as shown below:</p>
   
 <pre>---
