@@ -23,8 +23,9 @@ tags:
 <h2 id="What_went_wrong">What went wrong?</h2>
 
 <p>The {{Glossary("HTTP")}} request which makes use of CORS failed because the HTTP
-  connection failed at either the network or protocol level. The error is not directly
-  related to CORS, but is a fundamental network error of some kind.</p>
+  connection failed at either the network or protocol level. A CORS request need to 
+  conform to rules specified by the server in header fields Access-Control-Allow-Origin, 
+  Access-Control-Allow-Headers and Access-Control-Allow-Methods.</p>
 
 <p>In many cases, it is caused by a browser plugin (e.g. an ad blocker or privacy
   protector) blocking the request.</p>
@@ -42,6 +43,12 @@ tags:
   <li>The server did not respond to the actual request (even if it responded to the
     {{Glossary("Preflight request")}}). One scenario might be an HTTP service being
     developed that panicked without returning any data.</li>
+  <li>The request to the server was made from a domain not specified in the list of allowed 
+    domains in the Access-Control-Allow-Origin header field.</li>
+  <li>The request to the server included a header field not included in the 
+    Access-Control-Allow-Headers response header field.</li>
+  <li>The request method was not included in the Access-Control-Allow-Methods response
+    header field.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
