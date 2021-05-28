@@ -12,7 +12,7 @@ tags:
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <strong><code>onmessage</code></strong> property of the {{domxref("Worker")}} interface represents an {{domxref("EventHandler")}}, that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).</p>
+<p>The <strong><code>onmessage</code></strong> property of the {{domxref("Worker")}} interface represents an {{event("Event_handlers")}}, that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).</p>
 
 <p>Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}} blocks the thread receiving it.</p>
 
