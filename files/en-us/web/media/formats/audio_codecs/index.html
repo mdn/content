@@ -309,7 +309,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Licensing</th>
-   <td>For streaming or distributing AAC-encoded content: no license required; developers of codecs are required to obtain a patent license through <a href="http://www.via-corp.com/us/en/licensing.html">VIA Licensing</a></td>
+   <td>For streaming or distributing AAC-encoded content: no license required; developers of codecs are required to obtain a patent license through <a href="https://www.via-corp.com/licensing/aac/">VIA Licensing</a></td>
   </tr>
  </tbody>
 </table>
@@ -622,15 +622,13 @@ tags:
 
 <a id="g.711"></a>
 <h3 id="g.711_pulse_code_modulation_of_voice_frequencies">G.711 (Pulse Code Modulation of Voice Frequencies)</h3>
+<p>The <strong>G.711</strong> specification, published by the International Telecommunications Union (ITU), was issued in 1972 to define standard audio encoding for telephone applications. It supports voice-grade audio covering frequencies from 300 to 3400 Hz. It is used extensively for telephone traffic and voicemail, and it is the highest quality audio encoding which can be transmitted through the public telephone network.</p>
 
-<p>The <strong>G.711</strong> specification, published by the International Telecommunications Union (ITU), was initially created in 1972 to define standards for encoding the voice frequencies on telephone lines into digital form. The audio is encoded using Pulse Code Modulation (PCM) with either {{interwiki("wikipedia", "M-law", "µ-law")}} or {{interwiki("wikipedia", "A-law")}} encoding.</p>
+<p>G.711 is not a high fidelity codec, but is instead optimized to support a wide range of voice levels (from whisper to shout) while maintaining high intelligibility and low computational complexity. G.711 uses a logarithmic companding algorithm which provides 14 bits of dynamic range in an 8-bit sample. It uses a sampling rate of 8000 samples/sec, corresponding to a bitrate of 64000 bps.</p>
 
-<p>The primary benefit to µ-law encoding is that the byte <code>0x00</code> never appears in the encoded audio, which may be beneficial in certain applications or networking environments. µ-law is primarily used in North America and Japan, with A-law being predominant elsewhere.</p>
+<p>There are two flavors of G.711 which indicate the exact mathematical equation for the algorithm: {{interwiki("wikipedia", "M-law", "µ-law")}} (commonly used in North America and Japan) and {{interwiki("wikipedia", "A-law")}} (common in the rest of the world). There is no substantial quality difference between the two laws, and it is simple to transcode audio from one to the other. Nevertheless, it is important to specify which law is in use in any replay application or file format. A-law audio will replay poorly if mistakenly uncompressed with the µ-law algorithm, and viceversa.</p>
 
-<p>The drawbacks to G.711 are obvious: small 8-bit samples and narrow audio frequency bandwidth. That having been said, it's been in use for decades, is "good enough" for voice applications, and is vital if you may need to interface with a standard telephone network. This codec is required to be supported by all WebRTC solutions because it's a simple, easy to implement, and widely-used and compatible codec.</p>
-
-<p>Typically, most modern applications will use G.711 only as a fallback option, unless the limitations have specific value to their use cases. Opus, for example, offers a narrowband encoding at a 40 kbps bit rate. Still, G.711 provides a least common denominator which can be fallen back upon when needed.</p>
-
+<p>This codec is required to be supported by all <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> solutions because it is simple, easy to implement, widely-used, and broadly compatible across all modern computing platforms.</p>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -643,23 +641,23 @@ tags:
   </tr>
   <tr>
    <th scope="row">Supported sample formats</th>
-   <td>14-bit signed integer (µ-law) or 13-bit unsigned integer (A-law); encoded audio is 8 bits per sample</td>
+   <td>encoded audio is 8 bits per sample</td>
   </tr>
   <tr>
    <th scope="row">Supported sample rates</th>
-   <td>8 kHz (± 50 parts per million</td>
+   <td>8 kHz</td>
   </tr>
   <tr>
    <th scope="row">Recommended minimum bit rate for stereo sound</th>
-   <td>n/a (stereo not supported)</td>
+   <td>128 kbps</td>
   </tr>
   <tr>
    <th scope="row">Compression</th>
-   <td>None</td>
+   <td>Logarithmic companding (µ-law or A-law)</td>
   </tr>
   <tr>
    <th scope="row">Maximum audio channels</th>
-   <td>1</td>
+   <td>2</td>
   </tr>
   <tr>
    <th scope="row">Audio frequency bandwidth</th>
@@ -698,7 +696,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Container support</th>
-   <td>3GP</td>
+   <td>3GP, WAV</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible</th>
