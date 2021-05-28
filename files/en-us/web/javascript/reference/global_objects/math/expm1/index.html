@@ -6,12 +6,13 @@ tags:
 - Math
 - Method
 - Reference
+- Polyfill
 browser-compat: javascript.builtins.Math.expm1
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Math.expm1()</code></strong> function returns
-  <code>e<sup>x</sup> - 1</code>, where <code>x</code> is the argument, and
+  <code>e^x - 1</code>, where <code>x</code> is the argument, and
   {{jsxref("Math.E", "e", "", 1)}} the base of the natural logarithms.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-expm1.html")}}</div>
@@ -30,7 +31,7 @@ browser-compat: javascript.builtins.Math.expm1
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A number representing <code>e<sup>x</sup> - 1</code>, where <code>e</code> is
+<p>A number representing <code>e^x - 1</code>, where <code>e</code> is
   {{jsxref("Math.E", "Euler's number", "", 1)}} and <code>x</code> is the argument.</p>
 
 <h2 id="Description">Description</h2>
@@ -59,6 +60,7 @@ Math.expm1(1);  // 1.718281828459045
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Math.expm1</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
   <li>{{jsxref("Math.E")}}</li>
   <li>{{jsxref("Math.exp()")}}</li>
   <li>{{jsxref("Math.log()")}}</li>

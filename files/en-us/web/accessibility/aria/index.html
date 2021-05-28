@@ -6,12 +6,12 @@ tags:
   - Accessibility
   - HTML
 ---
-<p class="summary"><span class="seoSummary">Accessible Rich Internet Applications <strong>(ARIA) </strong>is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. </span></p>
+<p class="summary"><span class="seoSummary">Accessible Rich Internet Applications <strong>(ARIA) </strong> is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. </span></p>
 
-<p><span class="seoSummary">It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies</span> when there is not otherwise a mechanism. For example, ARIA enables accessible navigation landmarks in HTML4, JavaScript widgets, form hints and error messages, live content updates, and more. </p>
+<p><span class="seoSummary">It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies</span> when there is not otherwise a mechanism. For example, ARIA enables accessible navigation landmarks in HTML4, JavaScript widgets, form hints and error messages, live content updates, and more. </p>
 
 <div class="warning">
-<p>Many of these widgets were later incorporated into HTML5, and <strong>developers should prefer using the correct semantic HTML element over using ARIA</strong>, if such an element exists. For instance, native elements have built-in <a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">keyboard accessibility</a>, roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behavior in script.</p>
+<p>Many of these widgets were later incorporated into HTML5, and <strong>developers should prefer using the correct semantic HTML element over using ARIA</strong>, if such an element exists. For instance, native elements have built-in <a href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">keyboard accessibility</a>, roles and states. However, if you choose to use ARIA, you are responsible for mimicking (the equivalent) browser behavior in script.</p>
 </div>
 
 <p>Here's the markup for a progress bar widget:</p>
@@ -37,22 +37,22 @@ progressBar.setAttribute("aria-valuemax", 100);
 // Create a function that can be called at any time to update
 // the value of the progress bar.
 function updateProgress(percentComplete) {
-  progressBar.setAttribute("aria-valuenow", percentComplete);
+  progressBar.setAttribute("aria-valuenow", percentComplete);
 }</pre>
 
 <div class="note">
-<p>Note that ARIA was invented after HTML4, so does not validate in HTML4 or its XHTML variants. However, the accessibility gains it provides far outweigh any technical invalidity.</p>
+<p>Note that ARIA was invented after HTML4, so does not validate in HTML4 or its XHTML variants. However, the accessibility gains it provides far outweigh any technical invalidity.</p>
 
-<p>In HTML5, all ARIA attributes validate. The new landmark elements (<code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> etc) have built-in ARIA roles, so there is no need to duplicate them.</p>
+<p>In HTML5, all ARIA attributes validate. The new landmark elements (<code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> etc) have built-in ARIA roles, so there is no need to duplicate them.</p>
 </div>
 
 <h2 id="Support">Support</h2>
 
-<p>Like any other web technology, there are varying degrees of support for ARIA. Support is based on the operating system and browser being used, as well as the kind of assistive technology interfacing with it. In addition, the version of the operating system, browser, and assistive technology are contributing factors. Older software versions may not support certain ARIA roles, have only partial support, or misreport its functionality.</p>
+<p>Like any other web technology, there are varying degrees of support for ARIA. Support is based on the operating system and browser being used, as well as the kind of assistive technology interfacing with it. In addition, the version of the operating system, browser, and assistive technology are contributing factors. Older software versions may not support certain ARIA roles, have only partial support, or misreport its functionality.</p>
 
-<p>It is also important to acknowledge that some people who rely on assistive technology are reluctant to upgrade their software, for fear of losing the ability to interact with their computer and browser. Because of this, it is important to <a href="/en-US/docs/Learn/Accessibility/HTML">use semantic HTML elements</a> whenever possible, as semantic HTML has far better support for assistive technology.</p>
+<p>It is also important to acknowledge that some people who rely on assistive technology are reluctant to upgrade their software, for fear of losing the ability to interact with their computer and browser. Because of this, it is important to <a href="/en-US/docs/Learn/Accessibility/HTML">use semantic HTML elements</a> whenever possible, as semantic HTML has far better support for assistive technology.</p>
 
-<p>It is also important to test your authored ARIA with actual assistive technology. Much as how browser emulators and simulators are not an effective solution for testing full support, proxy assistive technology solutions aren't sufficient to fully guarantee functionality.</p>
+<p>It is also important to test your authored ARIA with actual assistive technology. Much as how browser emulators and simulators are not an effective solution for testing full support, proxy assistive technology solutions aren't sufficient to fully guarantee functionality.</p>
 
 <h2 class="Documentation" id="Tutorials">Tutorials</h2>
 

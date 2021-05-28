@@ -8,6 +8,7 @@ tags:
 - Reference
 - TypedArray
 - TypedArrays
+- Polyfill
 browser-compat: javascript.builtins.TypedArray.reduceRight
 ---
 <div>{{JSRef}}</div>
@@ -36,7 +37,7 @@ reduceRight(callbackFn, initialValue)
 reduceRight(function callbackFn(accumulator, currentValue) { ... })
 reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
 reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, thisArg)
+reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -117,6 +118,7 @@ reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>TypedArray.prototype.reduceRight</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li>{{jsxref("TypedArray.prototype.reduce()")}}</li>
   <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
 </ul>

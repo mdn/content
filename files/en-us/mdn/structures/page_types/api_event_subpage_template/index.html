@@ -16,13 +16,13 @@ tags:
 <div class="notecard note">
 <h3 id="Title_and_slug">Title and slug</h3>
 
-<p>An API event subpage should have a <em>title</em> of <em>Name</em>Of<em>TheParentInterface + ": " + NameOfTheEvent + " event"</em>. For example, the <a href="/en-US/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange</a> event of the <a href="/en-US/docs/Web/API/Window">Window</a> interface has a <em>title</em> of <em>Window: vrdisplaypresentchange</em> event.</p>
+<p>An API event subpage should have a <em>title</em> of <em>Name</em>Of<em>TheParentInterface + ": " + NameOfTheEvent + " event"</em>. For example, the <a href="/en-US/docs/Web/API/Window/orientationchange_event">orientationchange</a> event of the <a href="/en-US/docs/Web/API/Window">Window</a> interface has a <em>title</em> of <em>Window: orientationchange</em> event.</p>
 
 <p>The <em>Slug</em> (the last segment at the end of the URL) should be filled in as <em>NameOfTheEventHandler + "_event</em>", so <code>vrdisplaypresentchange</code>'s slug is <em>vrdisplaypresentchange</em>_event.</p>
 
 <h3 id="Top_macros">Top macros</h3>
 
-<p>There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
+<p>There are several macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
 
 <ul>
  <li>\{{draft()}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
@@ -30,7 +30,7 @@ tags:
  <li>\{{securecontext_header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
  <li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
  <li>
-  <div>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</div>
+  <div>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to the <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/GroupData.json">GroupData.json</a> file in our Yari repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</div>
  </li>
 </ul>
 
@@ -38,9 +38,9 @@ tags:
 
 <p>In an API event subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Event</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the parent interface (e.g. <strong>Window</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
 
-<p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
+<p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
 
-<h3 id="Browser_compatibility">Browser compatibility</h3>
+<h3 id="Browser_compatibility_h3">Browser compatibility</h3>
 
 <p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
 
@@ -58,7 +58,7 @@ tags:
 
 <!-- Remove above here before publishing -->
 
-<div>{{draft}}{{SeeCompatTable}}{{securecontext_header}}{{deprecated_header}}{{APIRef("GroupDataName")}}</div>
+<div>{{draft()}}{{SeeCompatTable}}{{securecontext_header}}{{deprecated_header}}{{APIRef("GroupDataName")}}</div>
 
 <p class="summary">The summary paragraph — start by naming the event, saying what interface it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the property's summary on the corresponding API reference page.</p>
 
@@ -116,7 +116,7 @@ tags:
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility_2">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat("path.to.feature.NameOfTheEvent_event")}}</p>
 

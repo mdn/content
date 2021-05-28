@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Number
   - Property
+  - Polyfill
 browser-compat: javascript.builtins.Number.EPSILON
 ---
 <div>{{JSRef}}</div>
@@ -21,7 +22,7 @@ browser-compat: javascript.builtins.Number.EPSILON
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>EPSILON</code> property has a value of approximately <code>2.2204460492503130808472633361816E-16</code>, or <code>2<sup>-52</sup></code>.</p>
+<p>The <code>EPSILON</code> property has a value of approximately <code>2.2204460492503130808472633361816E-16</code>, or <code>2^-52</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -51,5 +52,6 @@ equal = (Math.abs(x - y + z) &lt; Number.EPSILON);
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>Number.EPSILON</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
  <li>The {{jsxref("Number")}} object it belongs to</li>
 </ul>

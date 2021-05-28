@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - TypedArray
 - TypedArrays
+- Polyfill
 browser-compat: javascript.builtins.TypedArray
 ---
 <div>{{JSRef}}</div>
@@ -120,8 +121,8 @@ browser-compat: javascript.builtins.TypedArray
     </tr>
     <tr>
       <td>{{jsxref("Float32Array")}}</td>
-      <td><code>1.2</code>×<code>10<sup>-38</sup></code> to
-        <code>3.4</code>×<code>10<sup>38</sup></code></td>
+      <td><code>1.2E-38</code> to
+        <code>3.4E38</code></td>
       <td>4</td>
       <td>32-bit IEEE floating point number (7 significant digits e.g.,
         <code>1.234567</code>)</td>
@@ -130,8 +131,8 @@ browser-compat: javascript.builtins.TypedArray
     </tr>
     <tr>
       <td>{{jsxref("Float64Array")}}</td>
-      <td><code>5.0</code>×<code>10<sup>-324</sup></code> to
-        <code>1.8</code>×<code>10<sup>308</sup></code></td>
+      <td><code>5E-324</code> to
+        <code>1.8E308</code></td>
       <td>8</td>
       <td>64-bit IEEE floating point number (16 significant digits e.g.,
         <code>1.23456789012345</code>)</td>
@@ -140,7 +141,7 @@ browser-compat: javascript.builtins.TypedArray
     </tr>
     <tr>
       <td>{{jsxref("BigInt64Array")}}</td>
-      <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+      <td><code>-2^63</code> to <code>2^63 - 1</code></td>
       <td>8</td>
       <td>64-bit two's complement signed integer</td>
       <td><code>bigint</code></td>
@@ -148,7 +149,7 @@ browser-compat: javascript.builtins.TypedArray
     </tr>
     <tr>
       <td>{{jsxref("BigUint64Array")}}</td>
-      <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+      <td><code>0</code> to <code>2^64 - 1</code></td>
       <td>8</td>
       <td>64-bit unsigned integer</td>
       <td><code>bigint</code></td>
@@ -398,6 +399,7 @@ Int8Array.prototype.foo = 'bar';
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of typed arrays is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
   <li>{{jsxref("ArrayBuffer")}}</li>
   <li>{{jsxref("DataView")}}</li>

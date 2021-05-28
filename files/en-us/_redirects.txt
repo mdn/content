@@ -3997,14 +3997,11 @@
 /en-US/docs/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
 /en-US/docs/HTML/Forms_in_HTML5	/en-US/docs/Learn/Forms
 /en-US/docs/HTML/Global_attributes	/en-US/docs/Web/HTML/Global_attributes
-/en-US/docs/HTML/HTML5	/en-US/docs/Web/Guide/HTML/HTML5
-/en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation
+/en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/Guide/HTML/Constraint_validation
 /en-US/docs/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn/Forms
-/en-US/docs/HTML/HTML5/HTML5_Parser	/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser
+/en-US/docs/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn/HTML
 /en-US/docs/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Element
-/en-US/docs/HTML/HTML5/HTML5_Thematic_Classification	/en-US/docs/Web/Guide/HTML/HTML5
 /en-US/docs/HTML/HTML5/HTML5_element_list	/en-US/docs/Web/HTML/Element
-/en-US/docs/HTML/HTML5/Introduction_to_HTML5	/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /en-US/docs/HTML/HTML5/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/HTML/HTML_Elements	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/HTML_Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
@@ -4021,7 +4018,7 @@
 /en-US/docs/HTML/Inline_elements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/HTML/Intro	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
-/en-US/docs/HTML/Introduction_to_HTML5	/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/en-US/docs/HTML/Introduction_to_HTML5	/en-US/docs/Learn/HTML
 /en-US/docs/HTML/Link_types	/en-US/docs/Web/HTML/Link_types
 /en-US/docs/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
@@ -4033,7 +4030,6 @@
 /en-US/docs/HTML/WebVTT	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/HTML/aside	/en-US/docs/Web/HTML/Element/aside
 /en-US/docs/HTML/tag	/en-US/docs/Web/HTML/Element
-/en-US/docs/HTML5_support_in_Mozilla	/en-US/docs/Web/Guide/HTML/HTML5
 /en-US/docs/HTML:Block-level_elements	/en-US/docs/Web/HTML/Block-level_elements
 /en-US/docs/HTML:Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/HTML:Element	/en-US/docs/Web/HTML/Element
@@ -7143,9 +7139,10 @@
 /en-US/docs/Web/API/CharacterData.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
 /en-US/docs/Web/API/CharacterData/nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
 /en-US/docs/Web/API/CharacterData/previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
-/en-US/docs/Web/API/CharacterData/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/ChildNode.nextElementSibling	/en-US/docs/Web/API/Element/nextElementSibling
-/en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/ChildNode/remove
+/en-US/docs/Web/API/ChildNode.remove	/en-US/docs/Web/API/Element/remove
+/en-US/docs/Web/API/ChildNode/remove	/en-US/docs/Web/API/Element/remove
+/en-US/docs/Web/API/ChildNode/replaceWith	/en-US/docs/Web/API/Element/replaceWith
 /en-US/docs/Web/API/Childnode.previousElementSibling	/en-US/docs/Web/API/Element/previousElementSibling
 /en-US/docs/Web/API/Client/focus	/en-US/docs/Web/API/WindowClient/focus
 /en-US/docs/Web/API/Client/focused	/en-US/docs/Web/API/WindowClient/focused
@@ -7336,7 +7333,6 @@
 /en-US/docs/Web/API/DocumentTouch.createTouchList	/en-US/docs/Web/API/Document/createTouchList
 /en-US/docs/Web/API/DocumentTouch/createTouch	/en-US/docs/Web/API/Document/createTouch
 /en-US/docs/Web/API/DocumentTouch/createTouchList	/en-US/docs/Web/API/Document/createTouchList
-/en-US/docs/Web/API/DocumentType/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/Document_Object_Model/Events	/en-US/docs/Learn/JavaScript/Building_blocks/Events
 /en-US/docs/Web/API/Document_Object_Model/Preface	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
@@ -7404,7 +7400,6 @@
 /en-US/docs/Web/API/Element/pointerout_event	/en-US/docs/Web/API/HTMLElement/pointerout_event
 /en-US/docs/Web/API/Element/pointerover_event	/en-US/docs/Web/API/HTMLElement/pointerover_event
 /en-US/docs/Web/API/Element/pointerup_event	/en-US/docs/Web/API/HTMLElement/pointerup_event
-/en-US/docs/Web/API/Element/remove	/en-US/docs/Web/API/ChildNode/remove
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
@@ -10598,10 +10593,13 @@
 /en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/en-US/docs/Learn/Forms/Styling_web_forms
 /en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets	/en-US/docs/Learn/Forms/Basic_native_form_controls
 /en-US/docs/Web/Guide/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
+/en-US/docs/Web/Guide/HTML/HTML5	/en-US/docs/Glossary/HTML5
+/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation	/en-US/docs/Web/Guide/HTML/Constraint_validation
 /en-US/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn/Forms
+/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn/HTML
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Element
-/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/en-US/docs/Web/Guide/HTML/HTML5
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/en-US/docs/Web/HTML/Element
+/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/en-US/docs/Learn/HTML
 /en-US/docs/Web/Guide/HTML/HTML5/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Web/Guide/HTML/Hyperlink	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 /en-US/docs/Web/Guide/HTML/Inline_event_handler	/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_—_don't_use_these
@@ -10671,7 +10669,6 @@
 /en-US/docs/Web/HTML/Elements/textarea	/en-US/docs/Web/HTML/Element/textarea
 /en-US/docs/Web/HTML/Focus_management_in_HTML	/en-US/docs/Web/API/Document/hasFocus
 /en-US/docs/Web/HTML/Forms_in_HTML	/en-US/docs/Learn/Forms
-/en-US/docs/Web/HTML/HTML5	/en-US/docs/Web/Guide/HTML/HTML5
 /en-US/docs/Web/HTML/Inline_elemente	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML

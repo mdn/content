@@ -8,6 +8,7 @@ tags:
 - TypedArray
 - TypedArrays
 - from
+- Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
 <div>{{JSRef}}</div>
@@ -158,52 +159,6 @@ Uint8Array.from(s);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>You can partially work around this by inserting the following code at the beginning of
-    your scripts, allowing use of much of the functionality of <code>from()</code> in
-    implementations that do not natively support it.</p>
-
-<pre class="brush: js">if (!Int8Array.__proto__.from) {
-    (function () {
-        Int8Array.__proto__.from = function (obj, func, thisObj) {
-
-            var typedArrayClass = Int8Array.__proto__;
-            if(typeof this !== 'function') {
-                throw new TypeError('# is not a constructor');
-            }
-            if (this.__proto__ !== typedArrayClass) {
-                throw new TypeError('this is not a typed array.');
-            }
-
-            func = func || function (elem) {
-                    return elem;
-                };
-
-            if (typeof func !== 'function') {
-                throw new TypeError('specified argument is not a function');
-            }
-
-            obj = Object(obj);
-            if (!obj['length']) {
-                return new this(0);
-            }
-            var copy_data = [];
-            for(var i = 0; i &lt; obj.length; i++) {
-                copy_data.push(obj[i]);
-            }
-
-            copy_data = copy_data.map(func, thisObj);
-
-            var typed_array = new this(copy_data.length);
-            for(var i = 0; i &lt; typed_array.length; i++) {
-                typed_array[i] = copy_data[i];
-            }
-            return typed_array;
-        }
-    })();
-}</pre>
-
 <h2 id="Specifications">Specifications</h2>
 
 {{Specifications}}
@@ -215,7 +170,9 @@ Uint8Array.from(s);
 <h2 id="See_also">See also</h2>
 
 <ul>
+    <li>A polyfill of <code>TypedArray.from</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
     <li>{{jsxref("TypedArray.of()")}}</li>
     <li>{{jsxref("Array.from()")}}</li>
     <li>{{jsxref("Array.prototype.map()")}}</li>
+    <li><a href="https://github.com/behnammodi/polyfill/blob/v0.0.1/int-8-array.polyfill.js">A polyfill</a></li>
 </ul>
