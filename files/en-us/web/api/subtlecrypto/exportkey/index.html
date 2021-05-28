@@ -216,7 +216,8 @@ async function exportCryptoKey(key) {
   );
   const exportedAsString = ab2str(exported);
   const exportedAsBase64 = window.btoa(exportedAsString);
-  const pemExported = `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
+  const pemExported = `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY--browser-compat: api.SubtleCrypto.exportKey
+---`;
 
   const exportKeyOutput = document.querySelector(".exported-key");
   exportKeyOutput.textContent = pemExported;
@@ -303,7 +304,7 @@ window.crypto.subtle.generateKey(
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.exportKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

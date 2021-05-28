@@ -369,7 +369,8 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3Xo3U13dc+xojwQYWoJLCbOQ5fOVY8Llnqc
   function importRsaKey(pem) {
     // fetch the part of the PEM string between header and footer
     const pemHeader = "-----BEGIN PUBLIC KEY-----";
-    const pemFooter = "-----END PUBLIC KEY-----";
+    const pemFooter = "-----END PUBLIC KEY--browser-compat: api.SubtleCrypto.importKey
+---";
     const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
     // base64 decode the string to get the binary data
     const binaryDerString = window.atob(pemContents);
@@ -444,7 +445,7 @@ function importPrivateKey(jwk) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.importKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
