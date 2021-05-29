@@ -68,14 +68,14 @@ jobs:
           python-version: "3.8"
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.3
+        uses: snok/install-poetry@v1.1.6
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.6
         with:
           path: yari/deployer/.venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
@@ -107,11 +107,19 @@ jobs:
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
+
+          poetry run deployer upload \
+            --prefix="pr$PR_NUMBER" \
+            --no-redirects \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
+
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
-            --analyze-flaws --analyze-dangerous-content \
+            --analyze-flaws \
+            --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
+            --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT

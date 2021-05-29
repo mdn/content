@@ -7,7 +7,6 @@ tags:
   - Games
   - JavaScript
   - Makey Makey
-  - Proximity
   - TV Leap Motion
   - Voice
 ---
@@ -21,7 +20,7 @@ tags:
 
 <p>Playing games on a TV screen doesn't always have to be done through consoles. There's already a Gamepad API working on the desktop computers, so we can imitate the experience, but we can go even further. Modern smart TVs can handle HTML5 games, because they have a built-in browser that can be used as a gaming platform. Smart TVs are shipped with remote controls, which can be used to control your games if you know how.</p>
 
-<p>The earliest demo of <a class="external external-icon" href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> was adjusted to work on a huge TV. Interestingly enough, the first Captain Rogers game (Asteroid Belt of Sirius) was optimized for low-end, small-screen, cheap smartphones running Firefox OS, so you can see the difference three years can make — you can read the whole story in our <a href="https://hacks.mozilla.org/2016/01/building-games-for-firefox-os-tv/">Building games for Firefox OS TV</a> Hacks post.</p>
+<p>The earliest demo of <a class="external external-icon" href="https://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda</a> was adjusted to work on a huge TV. Interestingly enough, the first Captain Rogers game (Asteroid Belt of Sirius) was optimized for low-end, small-screen, cheap smartphones running Firefox OS, so you can see the difference three years can make — you can read the whole story in our <a href="https://hacks.mozilla.org/2016/01/building-games-for-firefox-os-tv/">Building games for Firefox OS TV</a> Hacks post.</p>
 
 <p><img alt="Panasonic TV remote controls for the game Captain Rogers: Battle at Andromeda." src="controls-tvremote.png" style="display: block; margin: 0px auto;"></p>
 
@@ -69,9 +68,9 @@ if(this.cursors.right.isDown) {
 
 <p>As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.</p>
 
-<p>There's good <a href="https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html">Hello World</a> and <a href="https://developer.leapmotion.com/getting-started/javascript">Getting Started</a> JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about <a href="http://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455">using Leap Motion plugin for Kiwi.js</a>, or the case study of <a href="http://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/">building a web game with Leap Motion and Pixi.js</a>. Be sure to visit the <a href="https://github.com/leapmotion/leapjs">LeapJS repository on GitHub</a> to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a <a href="https://developer.leapmotion.com/gallery/category/javascript">gallery of working examples</a> you can look at.</p>
+<p>There's good <a href="https://developer.leapmotion.com/documentation/javascript/devguide/Sample_Tutorial.html">Hello World</a> and <a href="https://developer.leapmotion.com/getting-started/javascript">Getting Started</a> JavaScript tutorials available on the Leap Motion documentation pages, which will get you through the basics. You can also check out the tutorial about <a href="https://gamedevelopment.tutsplus.com/tutorials/add-motion-control-to-a-kiwijs-game-with-the-leap-motion-controller--cms-20455">using Leap Motion plugin for Kiwi.js</a>, or the case study of <a href="https://arstechnica.com/business/2014/04/building-a-gesture-controlled-web-game-with-leap-motion/">building a web game with Leap Motion and Pixi.js</a>. Be sure to visit the <a href="https://github.com/leapmotion/leapjs">LeapJS repository on GitHub</a> to learn about the JavaScript client for the Leap Motion controller and read the documentation there. If all else fails, there's also a <a href="https://developer.leapmotion.com/gallery/category/javascript">gallery of working examples</a> you can look at.</p>
 
-<p>To get the Leap Motion working on your computer you have to first install it by following the steps at <a href="http://leapmotion.com/setup">leapmotion.com/setup</a>. When everything is installed and the controller is connected to your computer we can proceed with implementing support in our <a href="https://github.com/end3r/JavaScript-Game-Controls/">little demo</a>. First, we add a <code>&lt;script&gt;</code> tag with the <code>url</code> pointing at <a href="http://js.leapmotion.com/leap-0.6.4.min.js">this file</a>, and add <code>&lt;div id="output"&gt;&lt;/div&gt;</code> just before the closing <code>&lt;/body&gt;</code> tag for outputting diagnostic information.</p>
+<p>To get the Leap Motion working on your computer you have to first install it by following the steps at <a href="https://leapmotion.com/setup">leapmotion.com/setup</a>. When everything is installed and the controller is connected to your computer we can proceed with implementing support in our <a href="https://github.com/end3r/JavaScript-Game-Controls/">little demo</a>. First, we add a <code>&lt;script&gt;</code> tag with the <code>url</code> pointing at <a href="https://js.leapmotion.com/leap-0.6.4.min.js">this file</a>, and add <code>&lt;div id="output"&gt;&lt;/div&gt;</code> just before the closing <code>&lt;/body&gt;</code> tag for outputting diagnostic information.</p>
 
 <p>We will need a few helper variables for our code to work — one for the purpose of calculating the degrees from radians, two for holding the horizontal and vertical amount of degrees our hand is leaning above the controller, one for the threshold of that lean, and one for the state of our hand's grab status. We next add these lines after all the event listeners for keyboard and mouse, but before the <code>draw</code> method:</p>
 
@@ -146,27 +145,10 @@ var grabStrength = 0;</pre>
 
 <p>This approach won't give us the full flexibility of using a Gamepad, or even Leap Motion, but it's definitely an interesting, unconventional alternative. You can use it to scroll a page hands-free, or play theremin, but it should also be enough to move the ship up and down the screen if implemented correctly.</p>
 
-<h2 id="Proximity_API">Proximity API</h2>
-
-<p>Another interesting idea is to use the built-in proximity sensors of your hardware to detect how far an object, for example a hand, is from the given sensor. It could work similar to the doppler effect in terms of manipulating the player's ship on the screen by moving your hand closer or further from the device.</p>
-
-<p>An event listener for device proximity would look like this:</p>
-
-<pre class="brush: js">window.addEventListener('deviceproximity', function(event) {
-    var min = event.min;
-    var max = event.max;
-    var proximity = event.value;
-});</pre>
-
-<p>The <code>min</code> and <code>max</code> values are the minimum and the maximum distances respectively between which the sensor can detect the exact <code>proximity</code> value. All three are calculated in centimeters.</p>
-
-<div class="note">
-<p><strong>Note</strong>: See the {{domxref("DeviceProximityEvent")}} reference page for more details.</p>
-</div>
 
 <h2 id="MaKey_MaKey">MaKey MaKey</h2>
 
-<p>If you want to go completely bananas you can use <a href="http://makeymakey.com/">MaKey MaKey</a>, a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.</p>
+<p>If you want to go completely bananas you can use <a href="https://makeymakey.com/">MaKey MaKey</a>, a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.</p>
 
 <p><img alt="Controlling a banana piano using Makey Makey." src="controls-banana.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 

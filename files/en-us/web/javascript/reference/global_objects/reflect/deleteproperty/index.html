@@ -7,6 +7,8 @@ tags:
 - Method
 - Reference
 - Reflect
+- Polyfill
+browser-compat: javascript.builtins.Reflect.deleteProperty
 ---
 <div>{{JSRef}}</div>
 
@@ -71,25 +73,16 @@ Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo')  // false
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.deleteProperty")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Reflect.deleteProperty</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
   <li>{{jsxref("Reflect")}}</li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code>
       operator</a></li>

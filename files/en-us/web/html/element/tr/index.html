@@ -33,7 +33,7 @@ tags:
 <p>The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.</p>
 
 <dl>
- <dt>{{HTMLAttrDef("align")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("align")}}{{deprecated_inline}}</dt>
  <dd>A {{DOMxRef("DOMString")}} which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using <code>align</code> on every cell in the row individually. Possible values are:
  <dl>
   <dt><code>left</code></dt>
@@ -54,15 +54,15 @@ tags:
  <p>Instead of using the obsolete <code>align</code> attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish <code>left</code>, <code>center</code>, <code>right</code>, or <code>justify</code> alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as <code>"."</code> or <code>","</code>).</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("bgcolor")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}</dt>
  <dd>
- <p>A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an <a href="/en-US/docs/Web/CSS/color_value#rgb()">hexadecimal <code>#RRGGBB</code> or <code>#RGB</code> value</a> or a <a href="/en-US/docs/Web/CSS/color_value#Color_keywords">color keyword</a>. Omitting the attribute or setting it to <code>null</code> in JavaScript causes the row's cells to inherit the row's parent element's background color.</p>
+ <p>A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an <a href="/en-US/docs/Web/CSS/color_value#rgb()">hexadecimal <code>#RRGGBB</code> or <code>#RGB</code> value</a> or a <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color keyword</a>. Omitting the attribute or setting it to <code>null</code> in JavaScript causes the row's cells to inherit the row's parent element's background color.</p>
 
  <div class="note">
  <p>The {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/Web/CSS">CSS</a>. To give a similar effect as the <code>bgcolor</code> attribute, use the <a href="/en-US/docs/Web/CSS">CSS</a> property {{CSSxRef("background-color")}}.</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("char")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("char")}}{{deprecated_inline}}</dt>
  <dd>
  <p>A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (<code>"."</code>) or comma (<code>","</code>) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to <code>char</code>, this attribute is ignored.</p>
 
@@ -70,7 +70,7 @@ tags:
  <p>This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the <code>char</code> property, such as <code>text-align: "."</code>.</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("charoff")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("charoff")}}{{deprecated_inline}}</dt>
  <dd>
  <p>A {{DOMxRef("DOMString")}} indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the <code>char</code> attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with <code>char</code> being set to <code>"."</code>, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.</p>
 
@@ -78,7 +78,7 @@ tags:
  <p>This attribute is obsolete, and was never widely supported anyway.</p>
  </div>
  </dd>
- <dt>{{HTMLAttrDef("valign")}}{{Obsolete_Inline("HTML5")}}</dt>
+ <dt>{{HTMLAttrDef("valign")}}{{deprecated_inline}}</dt>
  <dd>
  <p>A {{DOMxRef("DOMString")}} specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:</p>
 

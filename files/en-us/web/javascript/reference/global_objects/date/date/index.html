@@ -6,6 +6,7 @@ tags:
 - Date
 - JavaScript
 - Reference
+browser-compat: javascript.builtins.Date.Date
 ---
 <div>{{JSRef}}</div>
 
@@ -20,9 +21,15 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">new Date()
-new Date(<var>value</var>)
-new Date(<var>dateString</var>)
-new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]])
+new Date(value)
+new Date(dateString)
+
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 </pre>
 
 <div class="notecard note">
@@ -146,22 +153,11 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date-constructor', 'Date')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.Date")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

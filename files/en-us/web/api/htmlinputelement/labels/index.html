@@ -12,7 +12,8 @@ tags:
 
 <p>The <code><strong>HTMLInputElement.labels</strong></code> read-only property returns a
   {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
-  {{HTMLElement("input")}} element.</p>
+  {{HTMLElement("input")}} element, if the element is not hidden. If the element has the
+  type <code>hidden</code>, the property returns <code>null</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 

@@ -8,6 +8,8 @@ tags:
   - Promise
   - Reference
   - promise.all
+  - Polyfill
+browser-compat: javascript.builtins.Promise
 ---
 <div>{{JSRef}}</div>
 
@@ -36,11 +38,11 @@ tags:
 <p><img alt="" src="promises.png"></p>
 
 <div class="notecard note">
-<p><strong>Not to be confused with:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
+<p><strong>Note:</strong> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider the <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> with no arguments: <code>f = () =&gt; <em>expression</em></code> to create the lazily-evaluated expression, and <code>f()</code> to evaluate.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked-in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contain more details about promise terminology.</p>
+<p><strong>Note:</strong> A promise is said to be <em>settled</em> if it is either fulfilled or rejected, but not pending. You will also hear the term <em>resolved</em> used with promises — this means that the promise is settled or “locked-in” to match the state of another promise. <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a> contain more details about promise terminology.</p>
 </div>
 
 <h3 id="Chained_Promises">Chained Promises</h3>
@@ -177,7 +179,7 @@ window.addEventListener("message", (event) =&gt; {
 <p>In the above example, the inner text of the <code>&lt;iframe&gt;</code> will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.</p>
+<p><strong>Note:</strong> Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.</p>
 </div>
 
 <h2 id="Constructor">Constructor</h2>
@@ -191,23 +193,31 @@ window.addEventListener("message", (event) =&gt; {
 
 <dl>
  <dt>{{JSxRef("Promise.all", "Promise.all(iterable)")}}</dt>
- <dd>Wait for all promises to be resolved, or for any to be rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</dd>
- <dd>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</dd>
+ <dd>
+   <p>Wait for all promises to be resolved, or for any to be rejected.</p>
+   <p>If the returned promise resolves, it is resolved with an aggregating array of the values from the resolved promises, in the same order as defined in the iterable of multiple promises.</p>
+   <p>If it rejects, it is rejected with the reason from the first promise in the iterable that was rejected.</p>
+ </dd>
  <dt>{{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}</dt>
- <dd>Wait until all promises have settled (each may resolve or reject).</dd>
- <dd>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</dd>
+ <dd>
+   <p>Wait until all promises have settled (each may resolve or reject).</p>
+   <p>Returns a Promise that resolves after all of the given promises have either resolved or rejected, with an array of objects that each describe the outcome of each promise.</p>
+ </dd>
  <dt>{{JSxRef("Promise.any", "Promise.any(iterable)")}}</dt>
  <dd>Takes an iterable of Promise objects and, as soon as one of the promises in the iterable fulfills, returns a single promise that resolves with the value from that promise.</dd>
  <dt>{{JSxRef("Promise.race", "Promise.race(iterable)")}}</dt>
- <dd>Wait until any of the promises is resolved or rejected.</dd>
- <dd>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</dd>
- <dd>If it rejects, it is rejected with the reason from the first promise that was rejected.</dd>
+ <dd>
+   <p>Wait until any of the promises is resolved or rejected.</p>
+   <p>If the returned promise resolves, it is resolved with the value of the first promise in the iterable that resolved.</p>
+   <p>If it rejects, it is rejected with the reason from the first promise that was rejected.</p>
+ </dd>
  <dt>{{JSxRef("Promise.reject", "Promise.reject(reason)")}}</dt>
  <dd>Returns a new <code>Promise</code> object that is rejected with the given reason.</dd>
  <dt>{{JSxRef("Promise.resolve", "Promise.resolve(value)")}}</dt>
- <dd>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</dd>
- <dd>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</dd>
+ <dd>
+   <p>Returns a new <code>Promise</code> object that is resolved with the given value. If the value is a thenable (i.e. has a <code>then</code> method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.</p>
+   <p>Generally, if you don't know if a value is a promise or not, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} it instead and work with the return value as a promise.</p>
+ </dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
@@ -394,25 +404,17 @@ if ("Promise" in window) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise-objects', 'Promise')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.Promise")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>Promise</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-promise"><code>core-js</code></a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
  <li><a href="http://promisesaplus.com/">Promises/A+ specification</a></li>
  <li><a href="https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53">Venkatraman.R - JS Promise (Part 1, Basics)</a></li>

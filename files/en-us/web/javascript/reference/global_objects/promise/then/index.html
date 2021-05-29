@@ -7,6 +7,7 @@ tags:
 - Method
 - Promise
 - Prototype
+browser-compat: javascript.builtins.Promise.then
 ---
 <div>{{JSRef}}</div>
 
@@ -16,13 +17,9 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
 
-<p class="hidden">The source for this interactive demo is stored in a GitHub repository.
-  If you'd like to contribute to the interactive demo project, please clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</p>
 
 <div class="note">
-  <p>If one or both arguments are omitted or are provided non-functions, then
+  <p><strong>Note:</strong> If one or both arguments are omitted or are provided non-functions, then
     <code>then</code> will be missing the handler(s), but will not generate any errors. If
     the <code>Promise</code> that <code>then</code> is called on adopts a state
     (<code>fulfillment</code> or <code>rejection</code>) for which <code>then</code> has
@@ -318,24 +315,12 @@ p3.then(function(v) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.Promise.then")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

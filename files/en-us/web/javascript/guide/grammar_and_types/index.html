@@ -25,7 +25,7 @@ tags:
 <p>A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they <em>must</em> be separated by semicolons.</p>
 
 <div class="notecard note">
-<p>ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
+<p><strong>Note:</strong> ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
 </div>
 
 <p>It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.</p>
@@ -48,7 +48,7 @@ tags:
 <p>Comments behave like whitespace, and are discarded during script execution.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: <code>#!/usr/bin/env node</code>.</p>
+<p><strong>Note:</strong> You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: <code>#!/usr/bin/env node</code>.</p>
 
 <p>This is called <strong>hashbang comment</strong> syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments">Hashbang comments</a> for more details.</p>
 </div>
@@ -347,7 +347,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p><code>parseInt</code> only returns whole numbers, so its use is diminished for decimals.</p>
 
 <div class="notecard note">
-<p>Additionally, a best practice for <code>parseInt</code> is to always include the <em>radix</em> parameter. The radix parameter is used to specify which numerical system is to be used.</p>
+<p><strong>Note:</strong> Additionally, a best practice for <code>parseInt</code> is to always include the <em>radix</em> parameter. The radix parameter is used to specify which numerical system is to be used.</p>
 </div>
 
 <pre class="brush: js">parseInt('101', 2) // 5</pre>
@@ -382,7 +382,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 </pre>
 
 <div class="note">
-<p><strong>Note :</strong> An array literal is a type of <em>object initializer</em>. See <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">Using Object Initializers</a>.</p>
+<p><strong>Note:</strong> An array literal is a type of <em>object initializer</em>. See <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">Using Object Initializers</a>.</p>
 </div>
 
 <p>If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.</p>
@@ -411,7 +411,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>In the following example, the <code>length</code> of the array is three. There is no <code>myList[3]</code>. All other commas in the list indicate a new element.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Trailing commas can create errors in older browser versions and it is a best practice to remove them.</p>
+<p><strong>Note:</strong> Trailing commas can create errors in older browser versions and it is a best practice to remove them.</p>
 </div>
 
 <pre class="brush: js">let myList = ['home', , 'school', ];
@@ -436,7 +436,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>The Boolean type has two literal values: <code>true</code> and <code>false</code>.</p>
 
 <div class="notecard note">
-<p><strong>Be careful:</strong> Do not confuse the primitive Boolean values <code>true</code> and <code>false</code> with the true and false values of the {{jsxref("Boolean")}} object.</p>
+<p><strong>Note:</strong> Do not confuse the primitive Boolean values <code>true</code> and <code>false</code> with the true and false values of the {{jsxref("Boolean")}} object.</p>
 
 <p>The Boolean object is a wrapper around the primitive Boolean data type. See {{jsxref("Boolean")}} for more information.</p>
 </div>
@@ -495,7 +495,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
 
 <div class="notecard warning">
-<p><strong>Do not use an object literal at the beginning of a statement!</strong> This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
+<p><strong>Warning:</strong> Do not use an object literal at the beginning of a statement! This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
 </div>
 
 <p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Saturn</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>(carTypes("Honda"))</code>; the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>

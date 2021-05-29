@@ -48,10 +48,8 @@ browser-compat: html.elements.video
 
  <p>In some browsers (e.g. Chrome 70.0) autoplay doesn't work if no <code>muted</code> attribute is present.</p>
  </dd>
- <dt>{{htmlattrdef("autoPictureInPicture")}} {{experimental_inline}}</dt>
+ <dt>{{htmlattrdef("autopictureinpicture")}} {{experimental_inline}}</dt>
  <dd>A Boolean attribute which if <code>true</code> indicates that the element should automatically toggle picture-in-picture mode when the user switches back and forth between this document and another document or application.</dd>
- <dt>{{htmlattrdef("buffered")}}</dt>
- <dd>An attribute you can read to determine the time ranges of the buffered media. This attribute contains a {{domxref("TimeRanges")}} object.</dd>
  <dt>{{htmlattrdef("controls")}}</dt>
  <dd>If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.</dd>
  <dt>{{htmlattrdef("controlslist")}} {{experimental_inline}}</dt>
@@ -59,7 +57,7 @@ browser-compat: html.elements.video
  <dd>
  <p>The allowed values are <code>nodownload</code>, <code>nofullscreen</code> and <code>noremoteplayback</code>.</p>
 
- <p>Use the <a href="#disable_pip"><code>disablePictureInPicture</code></a> attribute if you want to disable the Picture-In-Picture mode (and the control).</p>
+ <p>Use the <a href="#disable_pip"><code>disablepictureinpicture</code></a> attribute if you want to disable the Picture-In-Picture mode (and the control).</p>
  </dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>This enumerated attribute indicates whether to use CORS to fetch the related video. <a href="/en-US/docs/Web/HTML/CORS_enabled_image">CORS-enabled resources</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
@@ -70,20 +68,12 @@ browser-compat: html.elements.video
   <dd>Sends a cross-origin request with a credential. In other words, it sends the <code>Origin:</code> HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code>Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
  </dl>
  When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <code>anonymous</code> was used. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for additional information.</dd>
- <dt>{{htmlattrdef("currentTime")}}</dt>
- <dd>
- <p>Reading <code>currentTime</code> returns a double-precision floating-point value indicating the current playback position of the media specified in seconds. If the media has not started playing yet, the time offset at which it will begin is returned. Setting <code>currentTime</code> sets the current playback position to the given time and seeks the media to that position if the media is currently loaded.</p>
-
- <p>If the media is being streamed, it's possible that the {{Glossary("user agent")}} may not be able to obtain some parts of the resource if that data has expired from the media buffer. Other media may have a media timeline that doesn't start at 0 seconds, so setting <code>currentTime</code> to a time before that would fail. The {{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} method can be used to determine the beginning point of the media timeline's reference frame.</p>
- </dd>
- <dt id="disable_pip"><a href="https://wicg.github.io/picture-in-picture/#disable-pip">{{htmlattrdef("disablePictureInPicture")}}</a> {{experimental_inline}}</dt>
+ <dt id="disable_pip"><a href="https://wicg.github.io/picture-in-picture/#disable-pip">{{htmlattrdef("disablepictureinpicture")}}</a> {{experimental_inline}}</dt>
  <dd>Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.</dd>
- <dt><a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">{{htmlattrdef("disableRemotePlayback")}}</a> {{experimental_inline}}</dt>
+ <dt><a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">{{htmlattrdef("disableremoteplayback")}}</a> {{experimental_inline}}</dt>
  <dd>A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc).
  <p>In Safari, you can use <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> as a fallback.</p>
  </dd>
- <dt>{{htmlattrdef("duration")}} {{ReadOnlyInline}}</dt>
- <dd>A double-precision floating-point value which indicates the duration (total length) of the media in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>The height of the video's display area, in <a href="https://drafts.csswg.org/css-values/#px">CSS pixels</a> (absolute values only; <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">no percentages</a>.)</dd>
  <dt>{{htmlattrdef("loop")}}</dt>

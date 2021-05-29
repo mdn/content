@@ -6,10 +6,11 @@ tags:
   - Class
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.BigInt
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt</code></strong> is a built-in object whose constructor returns a <code>bigint</code> {{Glossary("Primitive", "primitive")}} — also called a <strong>BigInt value</strong>, or sometimes just a <strong>BigInt</strong> — to represent whole numbers larger than  2<sup>53</sup> - 1 (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"><code>Number.MAX_SAFE_INTEGER</code></a>), which is the largest number JavaScript can represent with a <code>number</code> {{Glossary("Primitive", "primitive")}} (or <em>Number value</em>). BigInt values can be used for arbitrarily large integers.</p>
+<p><strong><code>BigInt</code></strong> is a built-in object whose constructor returns a <code>bigint</code> {{Glossary("Primitive", "primitive")}} — also called a <strong>BigInt value</strong>, or sometimes just a <strong>BigInt</strong> — to represent whole numbers larger than  2^53 - 1 (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER"><code>Number.MAX_SAFE_INTEGER</code></a>), which is the largest number JavaScript can represent with a <code>number</code> {{Glossary("Primitive", "primitive")}} (or <em>Number value</em>). BigInt values can be used for arbitrarily large integers.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -52,7 +53,7 @@ typeof BigInt('1') === 'bigint'  // true
 
 <p>The following operators may be used with BigInt values or object-wrapped BigInt values:</p>
 
-<pre>+ * - **</pre>
+<pre>+ * - % **</pre>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators">Bitwise operators</a> are supported as well, except <code>&gt;&gt;&gt;</code> (zero-fill right shift), as every BigInt value is signed.</p>
 
@@ -88,7 +89,7 @@ bigN * -1n
 <pre class="brush: js">const expected = 4n / 2n
 // ↪ 2n
 
-const rounded = 5n / 2n
+const truncated = 5n / 2n
 // ↪ 2n, not 2.5n
 
 </pre>
@@ -216,7 +217,7 @@ Boolean(12n)
 
 <p>Because coercing between Number values and BigInt values can lead to loss of precision, the following are recommended:</p>
 <ul>
-  <li>Only use a BigInt value when values greater than 2<sup>53</sup> are reasonably expected.</li>
+  <li>Only use a BigInt value when values greater than 2^53 are reasonably expected.</li>
   <li>Don’t coerce between BigInt values and Number values.</li>
 </ul>
 
@@ -268,23 +269,12 @@ nthPrime(20n)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("ESDraft", "#sec-bigint-objects", "<code>BigInt</code> objects")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
-<p>{{Compat("javascript.builtins.BigInt")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

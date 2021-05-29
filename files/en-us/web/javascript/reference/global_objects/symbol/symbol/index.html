@@ -6,6 +6,8 @@ tags:
 - JavaScript
 - Reference
 - Symbol
+- Polyfill
+browser-compat: javascript.builtins.Symbol.Symbol
 ---
 <div>{{JSRef}}</div>
 
@@ -23,7 +25,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">Symbol([<var>description</var>])</pre>
+<pre class="brush: js">
+Symbol()
+Symbol(description)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -76,25 +81,15 @@ typeof symObj // =&gt; "object"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-symbol-constructor', 'Symbol constructor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Symbol.Symbol")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Symbol</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-symbol"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Glossary/Symbol">Glossary: Symbol data type</a></li>
 </ul>

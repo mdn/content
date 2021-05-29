@@ -185,7 +185,7 @@ var header = React.createElement("header", null,
 
 <h2 id="Styling_components">Styling components</h2>
 
-<p>Each framework offers a way to define styles for your components — or for the application as a whole. Although each framework’s approach to defining the styles of a component is slightly different, all of them give you multiple ways to do so. With the addition of some helper modules, you can style your framework apps in <a href="https://sass-lang.com/">Sass</a> or <a href="http://lesscss.org/">Less</a>, or transpile your CSS stylesheets with <a href="https://postcss.org/">PostCSS</a>.</p>
+<p>Each framework offers a way to define styles for your components — or for the application as a whole. Although each framework’s approach to defining the styles of a component is slightly different, all of them give you multiple ways to do so. With the addition of some helper modules, you can style your framework apps in <a href="https://sass-lang.com/">Sass</a> or <a href="https://lesscss.org/">Less</a>, or transpile your CSS stylesheets with <a href="https://postcss.org/">PostCSS</a>.</p>
 
 <h2 id="Handling_dependencies">Handling dependencies</h2>
 
@@ -221,7 +221,7 @@ var header = React.createElement("header", null,
   &lt;/Home&gt;
 &lt;/App&gt;</pre>
 
-<p>Our <code>App</code> component has data that our <code>AuthorCredit</code> component needs. We could rewrite <code>Home</code> and <code>Article</code> so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: <code>Home</code> and <code>Article</code> don’t actually make use of the author's portrait or byline, but if we want to get that information into the <code>AuthorCredit</code>, we will need to change <code>Home</code> and <code>Author</code> to accommodate it.</p>
+<p>Our <code>App</code> component has data that our <code>AuthorCredit</code> component needs. We could rewrite <code>Home</code> and <code>Article</code> so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: <code>Home</code> and <code>Article</code> don’t actually make use of the author's portrait or byline, but if we want to get that information into the <code>AuthorCredit</code>, we will need to change <code>Home</code> and <code>Article</code> to accommodate it.</p>
 
 <p>The problem of passing data through many layers of components is called prop drilling, and it’s not ideal for large applications.</p>
 
@@ -235,7 +235,7 @@ var header = React.createElement("header", null,
 
 <p>The <em>render</em> phase is the most crucial to understand, because it is repeated the most times as your user interacts with your application. It's run every time the browser needs to render something new, whether that new information is an addition to what's in the browser, a deletion, or an edit of what’s there.</p>
 
-<p>This <a href="http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">diagram of a React component's lifecycle</a> offers a general overview of the concept.</p>
+<p>This <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">diagram of a React component's lifecycle</a> offers a general overview of the concept.</p>
 
 <h2 id="Rendering_elements">Rendering elements</h2>
 

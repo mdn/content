@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Map.forEach
 ---
 <div>{{JSRef}}</div>
 
@@ -20,13 +21,29 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>myMap</var>.forEach(<var>callback</var>([<var>value</var>][, <var>key</var>][, <var>map</var>])[, <var>thisArg</var>])</pre>
+<pre class="brush: js">
+// Arrow function
+forEach(() => { ... } )
+forEach((value) => { ... } )
+forEach((value, key) => { ... } )
+forEach((value, key, map) => { ... } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function callbackFn() { ... })
+forEach(function callbackFn(value) { ... })
+forEach(function callbackFn(value, key) { ... })
+forEach(function callbackFn(value, key, map) { ... })
+forEach(function callbackFn(value, key, map) { ... }, thisArg)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code><var>callback</var></code></dt>
+  <dt><code><var>callbackFn</var></code></dt>
   <dd>
     <p>Function to execute for each entry of <code><var>myMap</var></code>. It takes the
       following arguments:</p>
@@ -96,23 +113,11 @@ new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Map.forEach")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

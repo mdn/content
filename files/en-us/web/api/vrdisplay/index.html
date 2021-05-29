@@ -22,62 +22,53 @@ tags:
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt>{{domxref("VRDisplay.capabilities")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the <code>VRDisplay</code>.</dd>
- <dt>{{domxref("VRDisplay.depthFar")}}</dt>
+ <dt>{{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}</dt>
  <dd>Gets and sets the z-depth defining the far plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the furthest viewable boundary of the scene.</dd>
- <dt>{{domxref("VRDisplay.depthNear")}}</dt>
+ <dt>{{domxref("VRDisplay.depthNear")}} {{deprecated_inline}}</dt>
  <dd>Gets and sets the z-depth defining the near plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the nearest viewable boundary of the scene.</dd>
- <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns an identifier for this particular VRDisplay, which is also used as an association point in the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> (see {{domxref("Gamepad.displayId")}}).</dd>
- <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a human-readable name to identify the <code>VRDisplay</code>.</dd>
- <dt>{{domxref("VRDisplay.isConnected")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.hardwareUnitId")}} {{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponsing controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.</dd>
+ <dt>{{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the <code>VRDisplay</code> is connected to the computer.</dd>
- <dt>{{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the <code>VRDisplay</code> is currently having content presented through it.</dd>
- <dt>{{domxref("VRDisplay.stageParameters")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("VRDisplay.stageParameters")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the <code>VRDisplay</code> is capable of supporting room-scale experiences.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt>{{domxref("VRDisplay.getEyeParameters()")}}</dt>
+ <dt>{{domxref("VRDisplay.getEyeParameters()")}} {{deprecated_inline}}</dt>
  <dd>Returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.</dd>
- <dt>{{domxref("VRDisplay.getFrameData()")}}</dt>
+ <dt>{{domxref("VRDisplay.getFrameData()")}} {{deprecated_inline}}</dt>
  <dd>Accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.</dd>
- <dt>{{domxref("VRDisplay.getLayers()")}}</dt>
+ <dt>{{domxref("VRDisplay.getImmediatePose()")}} {{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref("VRPose")}} object defining the current pose of the <code>VRDisplay</code>, with no prediction applied. This is no longer needed, and has been removed from the spec.</dd>
+ <dt>{{domxref("VRDisplay.getLayers()")}} {{deprecated_inline}}</dt>
  <dd>Returns the layers currently being presented by the <code>VRDisplay</code>.</dd>
- <dt>{{domxref("VRDisplay.resetPose()")}}</dt>
+ <dt>{{domxref("VRDisplay.getPose()")}} {{deprecated_inline}}</dt>
+ <dd>Returns a {{domxref("VRPose")}} object defining the future predicted pose of the <code>VRDisplay</code> as it will be when the current frame is actually presented. <strong>This method is deprecated — instead, you should use {{domxref("VRDisplay.getFrameData()")}}, which also provides a {{domxref("VRPose")}} object.</strong></dd>
+ <dt>{{domxref("VRDisplay.resetPose()")}} {{deprecated_inline}}</dt>
  <dd>Resets the pose for this <code>VRDisplay</code>, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.</dd>
- <dt>{{domxref("VRDisplay.cancelAnimationFrame()")}}</dt>
+ <dt>{{domxref("VRDisplay.cancelAnimationFrame()")}} {{deprecated_inline}}</dt>
  <dd>A special implementation of {{domxref("Window.cancelAnimationFrame")}} that allows callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}} to be unregistered.</dd>
- <dt>{{domxref("VRDisplay.requestAnimationFrame()")}}</dt>
+ <dt>{{domxref("VRDisplay.requestAnimationFrame()")}} {{deprecated_inline}}</dt>
  <dd>A special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the <code>VRDisplay</code> presentation is rendered.</dd>
- <dt>{{domxref("VRDisplay.requestPresent()")}}</dt>
+ <dt>{{domxref("VRDisplay.requestPresent()")}} {{deprecated_inline}}</dt>
  <dd>Starts the <code>VRDisplay</code> presenting a scene.</dd>
- <dt>{{domxref("VRDisplay.exitPresent()")}}</dt>
+ <dt>{{domxref("VRDisplay.exitPresent()")}} {{deprecated_inline}}</dt>
  <dd>Stops the <code>VRDisplay</code> presenting a scene.</dd>
- <dt>{{domxref("VRDisplay.submitFrame()")}}</dt>
+ <dt>{{domxref("VRDisplay.submitFrame()")}} {{deprecated_inline}}</dt>
  <dd>Captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the <code>VRDisplay</code>.</dd>
 </dl>
 
-<h3 id="Deprecated_methods">Deprecated methods</h3>
-
-<dl>
- <dt>{{domxref("VRDisplay.getPose()")}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("VRPose")}} object defining the future predicted pose of the <code>VRDisplay</code> as it will be when the current frame is actually presented. <strong>This method is deprecated — instead, you should use {{domxref("VRDisplay.getFrameData()")}}, which also provides a {{domxref("VRPose")}} object.</strong></dd>
-</dl>
-
-<h3 id="Obsolete_methods">Obsolete methods</h3>
-
-<dl>
- <dt>{{domxref("VRDisplay.getImmediatePose()")}} {{obsolete_inline}}</dt>
- <dd>Returns a {{domxref("VRPose")}} object defining the current pose of the <code>VRDisplay</code>, with no prediction applied. This is no longer needed, and has been removed from the spec.</dd>
- <dt>{{domxref("VRDisplay.hardwareUnitId")}} {{obsolete_inline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponsing controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.</dd>
-</dl>
 
 <h2 id="Examples">Examples</h2>
 

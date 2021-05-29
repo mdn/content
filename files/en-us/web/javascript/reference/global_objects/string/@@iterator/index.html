@@ -9,6 +9,8 @@ tags:
 - Prototype
 - Reference
 - String
+- Polyfill
+browser-compat: javascript.builtins.String.@@iterator
 ---
 <div>{{JSRef}}</div>
 
@@ -56,27 +58,16 @@ for (var v of str) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype-@@iterator',
-        'String.prototype[@@iterator]()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.@@iterator")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>String.prototype[@@iterator]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration
       protocols</a></li>
 </ul>

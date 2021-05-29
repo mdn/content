@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.setDate
 ---
 <div>{{JSRef}}</div>
 
@@ -19,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>dateObj</var>.setDate(<var>dayValue</var>)</pre>
+<pre class="brush: js">setDate(dayValue)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -49,34 +50,22 @@ tags:
 
 <h3 id="Using_setDate">Using setDate()</h3>
 
-<pre class="brush: js">var theBigDay = new Date(1962, 6, 7); // 1962-07-07 (7th of July 1962)
+<pre class="brush: js">const theBigDay = new Date(1962, 6, 7, 12); // noon of 1962-07-07 (7th of July 1962)
 theBigDay.setDate(24);  // 1962-07-24 (24th of July 1962)
 theBigDay.setDate(32);  // 1962-08-01 (1st of August 1962)
-theBigDay.setDate(22);  // 1962-08-22 (22th of August 1962)
-theBigDay.setDate(0);   // 1962-07-31 (31th of July 1962)
+theBigDay.setDate(22);  // 1962-08-22 (22nd of August 1962)
+theBigDay.setDate(0);   // 1962-07-31 (31st of July 1962)
 theBigDay.setDate(98);  // 1962-10-06 (6th of October 1962)
 theBigDay.setDate(-50); // 1962-08-11 (11th of August 1962)
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.setdate', 'Date.prototype.setDate')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.setDate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

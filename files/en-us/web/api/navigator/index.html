@@ -35,6 +35,10 @@ tags:
  <dd>Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.</dd>
  <dt>{{domxref("Navigator.geolocation")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.</dd>
+ <dt>{{domxref("Navigator.hid")}} {{readonlyInline}}</dt>
+ <dd>Returns an {{domxref("HID")}} object providing methods
+  for connecting to HID devices, listing attached HID devices, and event
+  handlers for connected HID devices.</dd>
  <dt>{{domxref("NavigatorConcurrentHardware.hardwareConcurrency")}} {{readonlyInline}}</dt>
  <dd>Returns the number of logical processor cores available.</dd>
  <dt>{{domxref("NavigatorPlugins.javaEnabled")}} {{readonlyInline}}</dt>
@@ -130,6 +134,8 @@ tags:
  <dd>Returns <code>true</code> if a call to <code>Navigator.share()</code> would succeed.</dd>
  <dt>{{domxref("Navigator.clearAppBadge()")}}</dt>
  <dd>Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</dd>
+ <dt>{{domxref("Navigator.getBattery()")}}</dt>
+ <dd>Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.</dd>
  <dt>{{domxref("Navigator.registerProtocolHandler()")}}</dt>
  <dd>Allows web sites to register themselves as a possible handler for a given protocol.</dd>
  <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}}</dt>
@@ -177,7 +183,5 @@ tags:
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <div>{{Compat("api.Navigator")}}</div>

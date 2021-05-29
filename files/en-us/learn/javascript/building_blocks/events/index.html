@@ -53,8 +53,9 @@ tags:
 
 <p>Each available event has an <strong>event handler</strong>, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires. When such a block of code is defined to run in response to an event, we say we are <strong>registering an event handler</strong>. Note: Event handlers are sometimes called <strong>event listeners</strong> — they are pretty much interchangeable for our purposes, although strictly speaking, they work together. The listener listens out for the event happening, and the handler is the code that is run in response to it happening.</p>
 
-<div class="note">
-<p><strong>Note</strong>: Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.</p>
 </div>
 
 <h3 id="A_simple_example">A simple example</h3>
@@ -133,7 +134,7 @@ btn.onclick = bgChange;</pre>
 <ul>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onfocus">btn.onfocus</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onblur">btn.onblur</a></code> — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button. These are often used to display information about filling in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.</li>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ondblclick">btn.ondblclick</a></code> — The color changes only when the button is double-clicked.</li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeypress">window.onkeypress</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">window.onkeydown</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">window.onkeyup</a></code> — The color changes when a key is pressed on the keyboard. The <code>keypress</code> event refers to a general press (button down and then up), while <code>keydown</code> and <code>keyup</code> refer to just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event handler on the button itself — we've had to register it on the <a href="/en-US/docs/Web/API/Window">window</a> object, which represents the entire browser window.</li>
+ <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeydown">window.onkeydown</a></code>, <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onkeyup">window.onkeyup</a></code> — The color changes when a key is pressed on the keyboard. The <code>keydown</code> and <code>keyup</code> refer to just the key down and key up parts of the keystroke, respectively. Note: It doesn't work if you try to register this event handler on the button itself — we've had to register it on the <a href="/en-US/docs/Web/API/Window">window</a> object, which represents the entire browser window.</li>
  <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> and <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.</li>
 </ul>
 
@@ -151,8 +152,9 @@ btn.onclick = bgChange;</pre>
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<div class="note">
-<p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">see it running live</a>).</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">see it running live</a>).</p>
 </div>
 
 <p>The earliest method of registering event handlers found on the Web involved <strong>event handler HTML attributes</strong> (or <strong>inline event handlers</strong>) like the one shown above — the attribute value is literally the JavaScript code you want to run when the event occurs. The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:</p>
@@ -177,8 +179,9 @@ for (let i = 0; i &lt; buttons.length; i++) {
   button.onclick = bgChange;
 });</pre>
 
-<div class="note">
-<p><strong>Note</strong>: Separating your programming logic from your content also makes your site more friendly to search engines.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Separating your programming logic from your content also makes your site more friendly to search engines.</p>
 </div>
 
 <h3 id="adding_and_removing_event_handlers">Adding and removing event handlers</h3>
@@ -254,8 +257,9 @@ myElement.addEventListener('click', functionB);</pre>
 element.onclick = function2;
 etc.</pre>
 
-<div class="note">
-<p><strong>Note</strong>: If you are called on to support browsers older than Internet Explorer 8, you may run into difficulties, as such ancient browsers use different event models from newer browsers. But never fear, most JavaScript libraries (for example <code>jQuery</code>) have built-in functions that abstract away cross-browser differences. Don't worry about this too much at this stage in your learning journey.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>If you are called on to support browsers older than Internet Explorer 8, you may run into difficulties, as such ancient browsers use different event models from newer browsers. But never fear, most JavaScript libraries (for example <code>jQuery</code>) have built-in functions that abstract away cross-browser differences. Don't worry about this too much at this stage in your learning journey.</p>
 </div>
 
 <h2 id="Other_event_concepts">Other event concepts</h2>
@@ -274,14 +278,16 @@ etc.</pre>
 
 btn.addEventListener('click', bgChange);</pre>
 
-<div class="note">
-<p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">see it running live</a>).</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You can find the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">full source code</a> for this example on GitHub (also <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">see it running live</a>).</p>
 </div>
 
 <p>Here you can see we are including an event object, <strong>e</strong>, in the function, and in the function setting a background color style on <code>e.target</code> — which is the button itself. The <code>target</code> property of the event object is always a reference to the element the event occurred upon. So, in this example, we are setting a random background color on the button, not the page.</p>
 
-<div class="note">
-<p><strong>Note</strong>: You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function. <code>e</code>/<code>evt</code>/<code>event</code> are most commonly used by developers because they are short and easy to remember. It's always good to be consistent — with yourself, and with others if possible.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function. <code>e</code>/<code>evt</code>/<code>event</code> are most commonly used by developers because they are short and easy to remember. It's always good to be consistent — with yourself, and with others if possible.</p>
 </div>
 
 <p><code>e.target</code> is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them. You might, for example, have a set of 16 tiles that disappear when selected. It is useful to always be able to just set the thing to disappear as <code>e.target</code>, rather than having to select it in some more difficult way. In the following example (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html">useful-eventtarget.html</a> for the full source code; also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html">running live</a> here), we create 16 {{htmlelement("div")}} elements using JavaScript. We then select all of them using {{domxref("document.querySelectorAll()")}}, then loop through each one, adding an <code>onclick</code> handler to each that makes it so that a random color is applied to each one when selected:</p>
@@ -393,8 +399,9 @@ form.onsubmit = function(e) {
 
 <p>{{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<div class="note">
-<p><strong>Note</strong>: for the full source code, see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html">preventdefault-validation.html</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html">running live</a> here.)</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>for the full source code, see <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html">preventdefault-validation.html</a> (also see it <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html">running live</a> here.)</p>
 </div>
 
 <h3 id="Event_bubbling_and_capture">Event bubbling and capture</h3>
@@ -539,7 +546,8 @@ video.onclick = function() {
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In cases where both types of event handlers are present, bubbling and capturing, the capturing phase will run first, followed by the bubbling phase.</p>
+  <h4>Note</h4>
+  <p>In cases where both types of event handlers are present, bubbling and capturing, the capturing phase will run first, followed by the bubbling phase.</p>
 </div>
 
 <h4 id="Fixing_the_problem_with_stopPropagation">Fixing the problem with stopPropagation()</h4>
@@ -555,12 +563,14 @@ video.onclick = function() {
 
 <p>You can try making a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">show-video-box.html source code</a> and fixing it yourself, or looking at the fixed result in <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">show-video-box-fixed.html</a> (also see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html">source code</a> here).</p>
 
-<div class="note">
-<p><strong>Note</strong>: Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a consensus, they ended up with this system that included both, which is the one modern browsers implemented.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, and setting the optional third property to <code>true</code>.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>As mentioned above, by default all event handlers are registered in the bubbling phase, and this makes more sense most of the time. If you really want to register an event in the capturing phase instead, you can do so by registering your handler using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>, and setting the optional third property to <code>true</code>.</p>
 </div>
 
 <h4 id="Event_delegation">Event delegation</h4>
@@ -586,9 +596,10 @@ video.onclick = function() {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://www.quirksmode.org/js/events_order.html">Event order</a> (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.</li>
- <li><a href="http://www.quirksmode.org/js/events_access.html">Event accessing</a> (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.</li>
+ <li><a href="https://domevents.dev/">domevents.dev</a> — a very useful interactive playground app that enables learning about the behavior of the DOM Event system through exploration.</li>
  <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+ <li><a href="https://www.quirksmode.org/js/events_order.html">Event order</a> (discussion of capturing and bubbling) — an excellently detailed piece by Peter-Paul Koch.</li>
+ <li><a href="https://www.quirksmode.org/js/events_access.html">Event accessing</a> (discussion of the event object) — another excellently detailed piece by Peter-Paul Koch.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</p>
@@ -601,6 +612,6 @@ video.onclick = function() {
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+ <li><strong>Introduction to events</strong></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
 </ul>

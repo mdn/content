@@ -13,12 +13,13 @@ tags:
   - Input Type
   - Reference
   - Time
+browser-compat: html.elements.input.input-time
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{htmlelement("input")}} elements of type <strong><code>time</code></strong> create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).</span></p>
 
-<p>The control's user interface will vary from browser to browser. Support is good in modern browsers, with Safari being the sole major browser not yet implementing it; in Safari, and any other browsers that don't support <code>&lt;time&gt;</code>, it degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+<p>The control's user interface varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}</div>
 
@@ -86,7 +87,7 @@ tags:
 
 <p>{{ EmbedLiveSample('value-sample1', 600, 60) }}</p>
 
-<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
+<p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} <code>value</code> property, for example:</p>
 
 <pre class="brush: js">var timeControl = document.querySelector('input[type="time"]');
 timeControl.value = '15:30';</pre>
@@ -184,10 +185,6 @@ startTime.addEventListener("input", function() {
 
 <h2 id="Using_time_inputs">Using time inputs</h2>
 
-<p>Although among the date and time input types <code>time</code> has the widest browser support, it is not yet approaching universal, so it is likely that you'll need to provide an alternative method for entering the date and time, so that Safari users (and users of other non-supporting browsers) can still easily enter time values.</p>
-
-<p>We'll look at basic and more complex uses of <code>&lt;input type="time"&gt;</code>, then offer advice on mitigating the browser support issue later on (see {{anch("Handling browser support")}}).</p>
-
 <h3 id="Basic_uses_of_time">Basic uses of time</h3>
 
 <p>The simplest use of <code>&lt;input type="time"&gt;</code> involves a basic <code>&lt;input&gt;</code> and {{htmlelement("label")}} element combination, as seen below:</p>
@@ -283,7 +280,7 @@ input:valid+span:after {
 
 <h4 id="Making_min_and_max_cross_midnight">Making min and max cross midnight</h4>
 
-<p>By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is <a href="https://html.spec.whatwg.org/C/#has-a-reversed-range">in the HTML spec</a>, it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. No information is yet available about when or if Safari will add it. Be prepared for this situation to arise:</p>
+<p>By setting a {{htmlattrxref("min", "input")}} attribute greater than the {{htmlattrxref("max", "input")}} attribute, the valid time range will wrap around midnight to produce a valid time range which crosses midnight. This functionality is not supported by any other input types. While this feature is <a href="https://html.spec.whatwg.org/C/#has-a-reversed-range">in the HTML spec</a>, it is not yet universally supported. Chrome-based browsers support it starting in version 82 and Firefox added it in version 76. Safari as of version 14.1 does not support this. Be prepared for this situation to arise:</p>
 
 <pre class="brush: js">const input = document.createElement('input');
 input.type = 'time';
@@ -330,13 +327,13 @@ if (input.validity.valid &amp;&amp; input.type === 'time') {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, Safari and a few other, less common, browsers don't yet support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the <code>time</code> picker on Chrome for Android looks like this:</p>
+<p>As mentioned, older versions of Safari and a few other, less common, browsers don't support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the <code>time</code> picker on Chrome for Android looks like this:</p>
 
 <p><img alt="" src="chrome-android-time.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
-<p>The second problem is the more serious; as mentioned previously, <code>time</code> inputs' values are always normalized to the format <code>hh:mm</code> or <code>hh:mm:ss</code>. With a text input, on the other hand, by default the browser has no idea of what format the time should be in, and there multiple ways in which people write times, such as:</p>
+<p>The second problem is the more serious; as mentioned previously, <code>time</code> inputs' values are always normalized to the format <code>hh:mm</code> or <code>hh:mm:ss</code>. With a text input, on the other hand, by default the browser has no idea of what format the time should be in, and there are multiple ways in which people write times, such as:</p>
 
 <ul>
  <li><code>3.00 pm</code></li>
@@ -521,28 +518,13 @@ function populateMinutes() {
  hourSelect.onchange = setMinutesToZero;
  minuteSelect.onchange = setMinutesToZero;</pre>
 
-<h2 id="Specifications">Specifications</h2>
+ <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#time-state-(type=time)', '&lt;input type="time"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+ <p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+ <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-time")}}</p>
+ <p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

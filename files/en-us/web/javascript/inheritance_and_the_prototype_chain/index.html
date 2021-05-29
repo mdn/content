@@ -25,7 +25,7 @@ tags:
 <p>JavaScript objects are dynamic "bags" of properties (referred to as <strong>own properties</strong>). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.</p>
 
 <div class="note">
-<p>Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.</p>
+<p><strong>Note:</strong> Following the ECMAScript standard, the notation <code>someObject.[[Prototype]]</code> is used to designate the prototype of <code>someObject</code>. Since ECMAScript 2015, the <code>[[Prototype]]</code> is accessed using the accessors {{jsxref("Object.getPrototypeOf()")}} and {{jsxref("Object.setPrototypeOf()")}}. This is equivalent to the JavaScript property <code>__proto__</code> which is non-standard but de-facto implemented by many browsers.</p>
 
 <p>It should not be confused with the <code><em>func</em>.prototype</code> property of functions, which instead specifies the <code>[[Prototype]]</code> to be assigned to all <em>instances</em> of objects created by the given function when used as a constructor. The <code><strong>Object.prototype</strong></code> property represents the {{jsxref("Object")}} prototype object.</p>
 </div>
@@ -305,7 +305,7 @@ delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
-<p>In the following example, calling <code>new Graph()</code> creates a <code>Graph</code> instance that its own <code>vertices</code> property, and that doesn’t inherit any <code>vertices</code> property. So when the <code>vertices</code> property is deleted from that <code>Graph</code> instance, the instance then has neither its own <code>vertices</code> property nor any inherited <code>vertices</code> property.</p>
+<p>In the following example, calling <code>new Graph()</code> creates a <code>Graph</code> instance that has its own <code>vertices</code> property, and that doesn’t inherit any <code>vertices</code> property. So when the <code>vertices</code> property is deleted from that <code>Graph</code> instance, the instance then has neither its own <code>vertices</code> property nor any inherited <code>vertices</code> property.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertices = [4,4];
@@ -378,7 +378,7 @@ console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 
 <h4 class="name">#1: New initialization</h4>
 <div class="notecard warning">
-<p>One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
+<p><strong>Warning:</strong> One misfeature that is often used is to extend <code>Object.prototype</code> or one of the other built-in prototypes.</p>
 
 <p>This technique is called monkey patching and breaks <em>encapsulation</em>. While used by popular frameworks such as Prototype.js, there is still no good reason for cluttering built-in types with additional <em>non-standard</em> functionality.</p>
 

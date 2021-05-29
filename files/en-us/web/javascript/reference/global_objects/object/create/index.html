@@ -8,7 +8,8 @@ tags:
   - 'Null'
   - Object
   - Reference
-  - polyfill
+  - Polyfill
+browser-compat: javascript.builtins.Object.create
 ---
 <p>{{JSRef}}</p>
 
@@ -20,8 +21,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">Object.create(<var>proto</var>, [<var>propertiesObject</var>])</pre>
+<pre class="brush: js">
+Object.create(proto)
+Object.create(proto, propertiesObject)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -408,26 +411,16 @@ o2 = Object.create({p: 42}) */
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.create', 'Object.create')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.create")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.create</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.defineProperty()")}}</li>
   <li>{{jsxref("Object.defineProperties()")}}</li>
   <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>

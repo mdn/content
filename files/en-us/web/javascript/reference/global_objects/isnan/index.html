@@ -5,13 +5,14 @@ tags:
   - JavaScript
   - Method
   - Reference
+browser-compat: javascript.builtins.isNaN
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
 <p>The <code><strong>isNaN()</strong></code> function determines whether a value is
-  {{jsxref("NaN")}} or not. Note, coercion inside the <code>isNaN</code> function has <a
-    href="#description">interesting</a> rules; you may alternatively want to use
-  {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015.</p>
+  {{jsxref("NaN")}} or not. Because coercion inside the <code>isNaN</code>
+  function can be <a href="#Confusing_special-case_behavior">surprising</a>, you may alternatively
+  want to use {{jsxref("Number.isNaN()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</div>
 
@@ -79,8 +80,8 @@ tags:
 <p>A polyfill for <code>isNaN</code> would be (the polyfill leverages the unique
   never-equal-to-itself characteristic of <code>NaN</code>):</p>
 
-<pre class="brush: js">var isNaN = function(value) {
-    var n = Number(value);
+<pre class="brush: js">const isNaN = function(value) {
+    const n = Number(value);
     return n !== n;
 };</pre>
 
@@ -133,22 +134,11 @@ isNaN('blabla');   // true: "blabla" is converted to a number.
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.isNaN")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

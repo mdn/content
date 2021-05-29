@@ -7,6 +7,8 @@ tags:
   - Method
   - Object
   - Prototype
+  - Polyfill
+browser-compat: javascript.builtins.Object.lookupGetter
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
@@ -15,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>obj</var>.__lookupGetter__(<var>sprop</var>)</pre>
+<pre class="brush: js">__lookupGetter__(sprop)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -61,27 +63,16 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.__lookupGetter__',
-        'Object.prototype.__lookupGetter__()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.lookupGetter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.prototype.__lookupGetter__</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
   <li>{{jsxref("Functions/get", "get")}} operator</li>
   <li>{{jsxref("Object.getOwnPropertyDescriptor()")}} and

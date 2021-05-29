@@ -7,7 +7,8 @@ tags:
 - Method
 - Reference
 - Time
-- polyfill
+- Polyfill
+browser-compat: javascript.builtins.Date.now
 ---
 <div>{{JSRef}}</div>
 
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <var>timeInMs</var> = Date.now();</pre>
+<pre class="brush: js">Date.now()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -26,7 +27,7 @@ tags:
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>This method was standardized in ECMA-262 5<sup>th</sup> edition. Engines which have not
+<p>This method was standardized in ECMA-262 5th edition. Engines which have not
   been updated to support this method can work around the absence of this method using the
   following shim:</p>
 
@@ -68,29 +69,17 @@ Date.now();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.now', 'Date.now')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.Date.now")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Date.now</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-date"><code>core-js</code></a></li>
   <li>{{domxref("Performance.now()")}} — provides timestamps with sub-millisecond
     resolution for use in measuring web page performance</li>
   <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>

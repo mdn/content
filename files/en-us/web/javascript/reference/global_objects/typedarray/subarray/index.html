@@ -7,6 +7,8 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+- Polyfill
+browser-compat: javascript.builtins.TypedArray.subarray
 ---
 <div>{{JSRef}}</div>
 
@@ -22,7 +24,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>typedarr</var>ay.subarray([<var>begin</var>[, <var>end</var>]])
+<pre class="brush: js">
+subarray()
+subarray(begin)
+subarray(begin, end)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -69,27 +74,16 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray',
-        'TypedArray.prototype.subarray')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.subarray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>TypedArray.prototype.subarray</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
   <li>{{jsxref("TypedArray")}}</li>
   <li>{{jsxref("ArrayBuffer")}}</li>

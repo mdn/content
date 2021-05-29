@@ -8,13 +8,14 @@ tags:
   - Reference
   - Selector
   - WebKit
+browser-compat: css.selectors.file-selector-button
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>::file-selector-button</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> represents the button of an {{HTMLElement("input") }} of  <code><a href="/en-US/docs/Web/HTML/Element/input/file">type="file"</a></code>.</p>
 
 <div class="notecard note">
-<p>WebKit/Blink compatible browsers like Chrome, Opera and Safari (indicated by the <code>-webkit</code> prefix) support a non-standard pseudo-class <code>::-webkit-file-upload-button</code> which serves the same purpose.</p>
+<p>Older versions of WebKit/Blink compatible browsers like Chrome, Opera and Safari (indicated by the <code>-webkit</code> prefix) supported a non-standard pseudo-class <code>::-webkit-file-upload-button</code> which serves the same purpose.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -60,7 +61,7 @@ input[type=file]::file-selector-button:hover {
 
 <p>{{EmbedLiveSample("basic_example", "100%", 150)}}</p>
 
-<p>Example with fallback for browsers supporting the <code>-webkit</code> prefix. Note that as a selector you will need to write out the whole code block twice, as an unrecognized selector invalidates the whole list.</p>
+<p>Example with fallback for older browsers supporting the <code>-webkit</code> prefix. Note that as a selector you will need to write out the whole code block twice, as an unrecognized selector invalidates the whole list.</p>
 
 <p>Note that <code>::file-selector-button</code> is a whole element, and as such matches the rules from the UA stylesheet. In particular, fonts and colors won't necessarily inherit from the <code>input</code> element.</p>
 
@@ -115,11 +116,26 @@ input[type=file]::file-selector-button:hover {
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>The pseudo-element <a href="https://github.com/w3c/csswg-drafts/issues/5049#issuecomment-666449792">has been resolved on by the CSS WG</a> however the edit has not yet been made in a specification.</p>
+<table class="standard-table">
+  <thead>
+  <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{SpecName('CSS4 Pseudo-Elements', '#file-selector-button-pseudo', '::file-selector-button')}}</td>
+    <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
+    <td>Initial definition.</td>
+  </tr>
+  </tbody>
+</table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.file-selector-button")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

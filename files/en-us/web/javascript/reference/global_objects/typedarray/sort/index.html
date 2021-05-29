@@ -8,6 +8,8 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+- Polyfill
+browser-compat: javascript.builtins.TypedArray.sort
 ---
 <div>{{JSRef}}</div>
 
@@ -23,8 +25,19 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarray</var>.sort([<var>compareFunction</var>])</pre>
+<pre class="brush: js">
+// Functionless
+sort()
+
+// Arrow function
+sort((firstEl, secondEl) => { ... } )
+
+// Compare function
+sort(compareFn)
+
+// Inline compare function
+sort(function compareFn(firstEl, secondEl) { ... })
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -60,26 +73,15 @@ numbers.sort((a, b) =&gt; a - b); // compare numbers
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort',
-        'TypedArray.prototype.sort')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.sort")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>TypedArray.prototype.sort</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li>{{jsxref("Array.prototype.sort()")}}</li>
 </ul>

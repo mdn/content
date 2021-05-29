@@ -64,9 +64,9 @@ new IntersectionObserver(callback, options);
 <p>Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.</p>
 
 <p>Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:</p>
-<pre class="brush: js">Array slice();
-Array slice(begin);
-Array slice(begin, end);</pre>
+<pre class="brush: js">slice();
+slice(begin);
+slice(begin, end);</pre>
 
 <p>Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:</p>
 
@@ -108,6 +108,37 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 <p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
 
 <pre class="brush: js">match(request, options);</pre>
+
+<h5 id="Callback_syntax_blocks">Callback syntax blocks</h5>
+
+<p>For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:</p>
+
+<pre class="brush: js">
+// Arrow function
+filter((currentValue) => { ... } )
+filter((currentValue, index) => { ... } )
+filter((currentValue, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(currentValue) { ... })
+filter(function callbackFn(currentValue, index) { ... })
+filter(function callbackFn(currentValue, index, array){ ... })
+filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
+
+<h5 id="Syntax_for_arbitrary_number_of_parameters">Syntax for arbitrary number of parameters</h5>
+
+<p>For methods that accept an arbitrary number of parameters, the syntax block is written like this:</p>
+
+<pre class="brush: js">
+unshift(element0)
+unshift(element0, element1)
+unshift(element0, element1, ... , elementN)
+</pre>
 
 <h4 id="Parameters_section">Parameters section</h4>
 

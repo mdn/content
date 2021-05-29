@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Localization
   - Reference
+browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
 <div>{{JSRef}}</div>
 
@@ -21,8 +22,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-	class="brush: js">new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
+<pre class="brush: js">
+new Intl.DateTimeFormat()
+new Intl.DateTimeFormat(locales)
+new Intl.DateTimeFormat(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -74,24 +78,23 @@ tags:
 				</ul>
 
 				<div class="notecard note">
-					<p><code>dateStyle</code> can be used with <code>timeStyle</code>, but
+					<p><strong>Note:</strong> <code>dateStyle</code> can be used with <code>timeStyle</code>, but
 						not with other options (e.g. <code>weekday</code>,
 						<code>hour</code>, <code>month</code>, etc.).</p>
 				</div>
 			</dd>
 			<dt><code>timeStyle</code></dt>
-			<dd>The time formatting style to use when calling <code>format()</code>.
-				Possible values include:
+			<dd>
+        <p>The time formatting style to use when calling <code>format()</code>.
+				Possible values include:</p>
 				<ul>
 					<li>"<code>full</code>"</li>
 					<li>"<code>long</code>"</li>
 					<li>"<code>medium</code>"</li>
 					<li>"<code>short</code>"</li>
 				</ul>
-			</dd>
-			<dd>
 				<div class="notecard note">
-					<p><code>timeStyle</code> can be used with <code>dateStyle</code>, but
+					<p><strong>Note:</strong> <code>timeStyle</code> can be used with <code>dateStyle</code>, but
 						not with other options (e.g. <code>weekday</code>,
 						<code>hour</code>, <code>month</code>, etc.).</p>
 				</div>
@@ -225,12 +228,7 @@ tags:
 			<dd>The representation of the second. Possible values are
 				"<code>numeric</code>", "<code>2-digit</code>".</dd>
 			<dt><code>fractionalSecondDigits</code></dt>
-			<dd>
-				<div class="notecard note">
-					<p class="noinclude">Added in Firefox 84, Chrome 84, etc. See
-						compatibility table for more information.</p>
-				</div>
-				The number of digits used to represent fractions of a second (any
+			<dd>The number of digits used to represent fractions of a second (any
 				additional digits are truncated). Possible values are:
 
 				<ul>
@@ -294,23 +292,11 @@ console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-intl-datetimeformat-constructor',
-				'Intl.DateTimeFormat')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.DateTimeFormat.DateTimeFormat")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

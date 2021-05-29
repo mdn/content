@@ -8,6 +8,8 @@ tags:
 - Prototype
 - TypedArray
 - TypedArrays
+- Polyfill
+browser-compat: javascript.builtins.TypedArray.fill
 ---
 <div>{{JSRef}}</div>
 
@@ -22,8 +24,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>typedarray</var>.fill(<var>value</var>[, <var>start = 0</var>[, <var>end = this.length</var>]])</pre>
+<pre class="brush: js">
+fill(value)
+fill(value, start)
+fill(value, start, end)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -81,26 +86,15 @@ if (!Uint8Array.prototype.fill) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill',
-        'TypedArray.prototype.fill')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.fill")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>TypedArray.prototype.fill</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li>{{jsxref("Array.prototype.fill()")}}</li>
 </ul>

@@ -8,17 +8,20 @@ tags:
   - Method
   - Non-standard
   - Reference
+  - Deprecated
 ---
-<div>{{non-standard_header}} {{ APIRef("DOM") }}
-</div>
+<div>{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}</div>
 
 <p>Call this method during the handling of a mousedown event to retarget all mouse events
   to this element until the mouse button is released or {{
   domxref("document.releaseCapture()") }} is called.</p>
 
-<div class="warning"><strong>Warning:</strong> This interface never had much cross-browser
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This interface never had much cross-browser
   support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
-  from the Pointer Events API.</div>
+  from the Pointer Events API.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 

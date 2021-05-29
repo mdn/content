@@ -8,6 +8,8 @@ tags:
 - Reference
 - Regular Expressions
 - String
+- Polyfill
+browser-compat: javascript.builtins.String.matchAll
 ---
 <div>{{JSRef}}</div>
 
@@ -23,7 +25,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>str</var>.matchAll(<var>regexp</var>)</pre>
+<pre class="brush: js">matchAll(regexp)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -139,32 +141,17 @@ array[1];
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.matchall',
-        'String.prototype.matchAll')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table on this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.matchAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>String.prototype.matchAll</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li>{{jsxref("String.prototype.match()")}}</li>
   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Using regular
       expressions in JavaScript</a></li>

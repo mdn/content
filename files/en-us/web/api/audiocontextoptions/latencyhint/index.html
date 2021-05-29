@@ -15,6 +15,7 @@ tags:
 - Web Audio API
 - latency
 - latencyHint
+browser-compat: api.AudioContextOptions.latencyHint
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -37,7 +38,7 @@ var <em>latencyHint</em> = <em>audioContextOptions</em>.latencyHint;</pre>
 <p>The preferred maximum latency for the <code>AudioContext</code>. There are two ways
   this value can be specified.</p>
 
-<p>The best way to specify the preferred latency is to use a value form the string enum
+<p>The best way to specify the preferred latency is to use a value from the string enum
   {{domxref("AudioContextLatencyCategory")}}. In fact, the default value of
   <code>latencyHint</code> is <code>"interactive"</code> (meaning the browser should try
   to use the lowest possible and reliable latency it can).</p>
@@ -69,7 +70,7 @@ var <em>latencyHint</em> = <em>audioContextOptions</em>.latencyHint;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioContextOptions.latencyHint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

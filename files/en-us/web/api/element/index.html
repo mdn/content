@@ -87,8 +87,6 @@ tags:
  <dd>Returns the shadow root that is hosted by the element, regardless if its open or closed. <strong>Available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
  <dt>{{DOMxRef("Element.slot")}} {{Experimental_Inline}}</dt>
  <dd>Returns the name of the shadow DOM slot the element is inserted in.</dd>
- <dt>{{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
  <dt>{{DOMxRef("Element.tagName")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("String")}} with the name of the tag for the given element.</dd>
 </dl>
@@ -216,6 +214,10 @@ tags:
  <dd>Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNames()")}}</dt>
  <dd>Returns an array of attribute names from the current element.</dd>
+ <dt>{{DOMxRef("Element.getAttributeNode()")}}</dt>
+ <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
+ <dt>{{DOMxRef("Element.getAttributeNodeNS()")}}</dt>
+ <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNS()")}}</dt>
  <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getBoundingClientRect()")}}</dt>
@@ -252,14 +254,20 @@ tags:
  <dd>Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.releasePointerCapture()")}}</dt>
  <dd>Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.</dd>
- <dt>{{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("Element.remove()")}}</dt>
  <dd>Removes the element from the children list of its parent.</dd>
  <dt>{{DOMxRef("Element.removeAttribute()")}}</dt>
  <dd>Removes the named attribute from the current node.</dd>
+ <dt>{{DOMxRef("Element.removeAttributeNode()")}}</dt>
+ <dd>Removes the node representation of the named attribute from the current node.</dd>
  <dt>{{DOMxRef("Element.removeAttributeNS()")}}</dt>
  <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("EventTarget.removeEventListener()")}}</dt>
  <dd>Removes an event listener from the element.</dd>
+ <dt>{{DOMxRef("Element.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.</dd>
+ <dt>{{DOMxRef("Element.replaceWith()")}}</dt>
+ <dd>Replaces the element in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.</dd>
  <dt>{{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}</dt>
  <dd>Asynchronously asks the browser to make the element full-screen.</dd>
  <dt>{{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}</dt>
@@ -274,29 +282,18 @@ tags:
  <dd>Scrolls to a particular set of coordinates inside a given element.</dd>
  <dt>{{DOMxRef("Element.setAttribute()")}}</dt>
  <dd>Sets the value of a named attribute of the current node.</dd>
+ <dt>{{DOMxRef("Element.setAttributeNode()")}}</dt>
+ <dd>Sets the node representation of the named attribute from the current node.</dd>
+ <dt>{{DOMxRef("Element.setAttributeNodeNS()")}}</dt>
+ <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("Element.setAttributeNS()")}}</dt>
  <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}</dt>
+ <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}</dt>
  <dd>Sets up mouse event capture, redirecting all mouse events to this element.</dd>
  <dt>{{DOMxRef("Element.setPointerCapture()")}}</dt>
  <dd>Designates a specific element as the capture target of future <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a>.</dd>
  <dt>{{DOMxRef("Element.toggleAttribute()")}}</dt>
  <dd>Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.</dd>
-</dl>
-
-<h3 id="Obsolete_methods">Obsolete methods</h3>
-
-<dl>
- <dt>{{DOMxRef("Element.getAttributeNode()")}} {{Obsolete_Inline}}</dt>
- <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.getAttributeNodeNS()")}} {{Obsolete_Inline}}</dt>
- <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.removeAttributeNode()")}} {{Obsolete_Inline}}</dt>
- <dd>Removes the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNode()")}} {{Obsolete_Inline}}</dt>
- <dd>Sets the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNodeNS()")}} {{Obsolete_Inline}}</dt>
- <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -512,7 +509,7 @@ tags:
   <tr>
    <td>{{SpecName('Element Traversal', '#ecmascript-bindings', 'Element')}}</td>
    <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added inheritance of the {{DOMxRef("ElementTraversal")}} interface.</td>
+   <td>Added inheritance of the <code>ElementTraversal</code> interface.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM WHATWG', '#interface-element', 'Element')}}</td>

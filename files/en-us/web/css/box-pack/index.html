@@ -8,6 +8,7 @@ tags:
   - Reference
   - box-pack
   - 'recipe:css-property'
+browser-compat: css.properties.box-pack
 ---
 <div>{{CSSRef}}{{Non-standard_header}}</div>
 
@@ -52,7 +53,12 @@ box-pack: unset;
 
 <p>The edge of the box designated the <em>start</em> for packing purposes depends on the box's orientation and direction:</p>
 
-<table class="standard-table" style="text-align: center;">
+<ul>
+  <li>For horizontal elements, the <em>start</em> is the top edge.</li>
+  <li>For vertical elements, the <em>start</em> is the left edge.</li>
+</ul>
+
+<table class="standard-table">
  <tbody>
   <tr>
    <th></th>
@@ -60,12 +66,12 @@ box-pack: unset;
    <th><strong>Reverse</strong></th>
   </tr>
   <tr>
-   <th style="text-align: right;"><strong>Horizontal</strong></th>
+   <th><strong>Horizontal</strong></th>
    <td>left</td>
    <td>right</td>
   </tr>
   <tr>
-   <th style="text-align: right;"><strong>Vertical</strong></th>
+   <th><strong>Vertical</strong></th>
    <td>top</td>
    <td>bottom</td>
   </tr>
@@ -135,7 +141,7 @@ div.example p {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("css.properties.box-pack")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

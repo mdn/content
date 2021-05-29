@@ -8,6 +8,7 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.mask-repeat
 ---
 <div>{{CSSRef}}</div>
 
@@ -117,45 +118,7 @@ mask-repeat: unset;
 
 <h3 id="Setting_repeat_for_a_single_mask">Setting repeat for a single mask</h3>
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css; highlight[6]">#masked {
-  width: 250px;
-  height: 250px;
-  background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-repeat: repeat; /* Can be changed in the live sample */
-  margin-bottom: 10px;
-}
-</pre>
-
-<div class="hidden">
-<h4 id="HTML_Content">HTML Content</h4>
-
-<pre class="brush: html">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="repetition"&gt;
-  &lt;option value="repeat-x"&gt;repeat-x&lt;/option&gt;
-  &lt;option value="repeat-y"&gt;repeat-y&lt;/option&gt;
-  &lt;option value="repeat" selected&gt;repeat&lt;/option&gt;
-  &lt;option value="space"&gt;space&lt;/option&gt;
-  &lt;option value="round"&gt;round&lt;/option&gt;
-  &lt;option value="no-repeat"&gt;no-repeat&lt;/option&gt;
-&lt;/select&gt;
-</pre>
-
-<h4 id="JavaScript_Content">JavaScript Content</h4>
-
-<pre class="brush: js">var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskRepeat = evt.target.value;
-});
-</pre>
-</div>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Setting_repeat_for_a_single_mask", "290px", "290px")}}</p>
+<p>{{EmbedGHLiveSample("css-examples/masking/mask-repeat.html", '100%', 700)}}</p>
 
 <h3 id="Multiple_mask_image_support">Multiple mask image support</h3>
 
@@ -190,7 +153,7 @@ repetition.addEventListener("change", function (evt) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.mask-repeat")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

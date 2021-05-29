@@ -8,6 +8,7 @@ tags:
 - Reference
 - Regular Expressions
 - String
+browser-compat: javascript.builtins.String.search
 ---
 <div>{{JSRef}}</div>
 
@@ -19,16 +20,17 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>str</var>.search(<var>regexp</var>)</pre>
+<pre class="brush: js">search(regexp)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt><code><var>regexp</var></code></dt>
-  <dd>A <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular
-      expression</a> object.</dd>
-  <dd>If a non-RegExp object <code><var>regexp</var></code> is passed, it is implicitly
-    converted to a {{jsxref("RegExp")}} with <code>new RegExp(<var>regexp</var>)</code>.
+  <dd>
+    <p>A <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular
+      expression</a> object.</p>
+    <p>If a non-RegExp object <code><var>regexp</var></code> is passed, it is implicitly
+    converted to a {{jsxref("RegExp")}} with <code>new RegExp(<var>regexp</var>)</code>.</p>
   </dd>
 </dl>
 
@@ -63,23 +65,11 @@ console.log(str.search(reDot)) // returns -1 cannot find '.' dot punctuation</pr
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.search',
-        'String.prototype.search')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.String.search")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

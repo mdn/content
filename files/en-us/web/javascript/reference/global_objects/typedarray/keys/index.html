@@ -10,6 +10,8 @@ tags:
 - Reference
 - TypedArray
 - TypedArrays
+- Polyfill
+browser-compat: javascript.builtins.TypedArray.keys
 ---
 <div>{{JSRef}}</div>
 
@@ -21,7 +23,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>arr</var>.keys()</pre>
+<pre class="brush: js">keys()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
@@ -53,27 +55,16 @@ console.log(eArr.next().value); // 4
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys',
-        '%TypedArray%.prototype.keys()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray.keys")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>TypedArray.prototype.keys</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
   <li>{{jsxref("TypedArray")}}</li>
   <li>{{jsxref("TypedArray.prototype.entries()")}}</li>

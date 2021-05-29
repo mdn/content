@@ -7,6 +7,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.setUTCHours
 ---
 <div>{{JSRef}}</div>
 
@@ -20,8 +21,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>dateObj</var>.setUTCHours(<var>hoursValue</var>[, <var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]]])</pre>
+<pre class="brush: js">
+setUTCHours(hoursValue)
+setUTCHours(hoursValue, minutesValue)
+setUTCHours(hoursValue, minutesValue, secondsValue)
+setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -70,23 +75,11 @@ theBigDay.setUTCHours(8);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.setutchours',
-        'Date.prototype.setUTCHours')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.setUTCHours")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

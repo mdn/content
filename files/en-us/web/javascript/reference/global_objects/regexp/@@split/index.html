@@ -8,6 +8,8 @@ tags:
 - Reference
 - RegExp
 - Regular Expressions
+- Polyfill
+browser-compat: javascript.builtins.RegExp.@@split
 ---
 <div>{{JSRef}}</div>
 
@@ -88,27 +90,16 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@split',
-        'RegExp.prototype[@@split]')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp.@@split")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>RegExp.prototype[@@split]</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li>{{jsxref("String.prototype.split()")}}</li>
   <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
   <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>

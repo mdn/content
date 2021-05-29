@@ -10,7 +10,7 @@ tags:
   - Reference
   - Service Workers
 ---
-<div>{{SeeCompatTable}}</div>
+<div>{{ApiRef("Push API")}}</div>
 
 <p class="summary">The <strong>Push API</strong> gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.</p>
 
@@ -35,14 +35,6 @@ tags:
 
 <p>Activating a service worker to deliver a push message can result in increased resource usage, particularly of the battery. Different browsers have different schemes for handling this, there is currently no standard mechanism. Firefox allows a limited number (quota) of push messages to be sent to an application, although Push messages that generate notifications are exempt from this limit. The limit is refreshed each time the site is visited. In comparison, Chrome applies no limit, but requires that every push message causes a notification to be displayed.</p>
 
-<div class="note">
-<p><strong>Note</strong>: As of Gecko 44, the allowed quota of push messages per application is not incremented when a new notification fires, when another is still visible, for a period of three seconds. This handles cases where a burst of Push messages is received, and not all generate a visible notification.</p>
-</div>
-
-<div class="note">
-<p><strong>Note</strong>: Chrome versions earlier than 52 require you to set up a project on <a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a> to send push messages, and use the associated project number and API key when sending push notifications. It also requires an app manifest, with some special parameters to use this service.</p>
-</div>
-
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
@@ -54,6 +46,8 @@ tags:
  <dd>Provides access to push data sent by a server, and includes methods to manipulate the received data.</dd>
  <dt>{{domxref("PushSubscription")}}</dt>
  <dd>Provides a subcription's URL endpoint, and allows unsubscription from a push service.</dd>
+ <dt>{{domxref("PushSubscriptionOptions")}}</dt>
+ <dd>Represents the options associated with the push subscription.</dd>
 </dl>
 
 <h2 id="Service_worker_additions">Service worker additions</h2>
@@ -99,8 +93,6 @@ tags:
 <p>{{Compat("api.PushEvent")}}</p>
 
 <h3 id="PushMessageData"><code>PushMessageData</code></h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.PushMessageData")}}</p>
 

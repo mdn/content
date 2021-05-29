@@ -1,0 +1,68 @@
+---
+title: HID
+slug: Web/API/HID
+tags:
+  - API
+  - Advanced
+  - WebHID
+  - WebHID API
+---
+<div>{{ APIRef("WebHID API") }}{{SeeCompatTable}}</div>
+
+<p>The <strong><code>HID</code></strong> interface provides methods for connecting to <em>HID devices</em>, listing attached HID devices and event handlers for connected HID devices.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>This interface also inherits properties of its parent, {{domxref("EventTarget")}}.</em></p>
+
+<h3 id="Event_handlers">Event handlers</h3>
+
+<dl>
+ <dt>{{domxref("HID.onconnect")}}</dt>
+ <dd>Fired when an HID device is connected.</dd>
+ <dt>{{domxref("HID.ondisconnect")}}</dt>
+ <dd>Fired when an HID device is disconnected.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p><em>This interface also inherits methods of its parent, {{domxref("EventTarget")}}.</em></p>
+
+<dl>
+ <dt>{{domxref("HID.getDevices","getDevices()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
+ </dd>
+ <dt>{{domxref("HID.requestDevices","requestDevice()")}}</dt>
+ <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects from the HID device selected from popup.
+ <div class="note">You can only select one HID device from the popup at a time from this {{jsxref("Promise")}}, but the array might contain multiple {{domxref("HIDDevice")}}s.</div>
+ </dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+     <td>{{SpecName('WebHID', '#dom-hid', 'HID')}}</td>
+     <td>{{Spec2('WebHID')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HID")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("WebHID API")}}</li>
+</ul>

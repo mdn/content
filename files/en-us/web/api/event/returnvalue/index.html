@@ -10,8 +10,9 @@ tags:
 - action
 - default
 - returnValue
+- Deprecated
 ---
-<div>{{APIRef("DOM Events")}}</div>
+<div>{{APIRef("DOM Events")}}{{Deprecated_Header}}</div>
 
 <p><span class="seoSummary">The {{domxref("Event")}} property
     <code><strong>returnValue</strong></code> indicates whether the default action for
@@ -19,8 +20,9 @@ tags:
   default, allowing the default action to occur. Setting this property to
   <code>false</code> prevents the default action.</p>
 
-<div class="note">
-  <p><strong>Note:</strong> While <code>returnValue</code> has been adopted into the DOM
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>While <code>returnValue</code> has been adopted into the DOM
     standard, it is present primarily to support existing code. You should use
     {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
     {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical

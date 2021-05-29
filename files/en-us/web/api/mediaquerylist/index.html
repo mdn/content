@@ -34,9 +34,9 @@ tags:
 <p><em>The <code>MediaQueryList</code> interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}.</em></p>
 
 <dl>
- <dt>{{DOMxRef("MediaQueryList.addListener", "addListener()")}}</dt>
+ <dt>{{DOMxRef("MediaQueryList.addListener", "addListener()")}}{{deprecated_inline}}</dt>
  <dd>Adds to the <code>MediaQueryList</code> a callback which is invoked whenever the media query status—whether or not the document matches the media queries in the list—changes. This method exists primarily for backward compatibility; if possible, you should instead use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to watch for the {{domxref("EventTarget.change_event", "change")}} event.</dd>
- <dt>{{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}</dt>
+ <dt>{{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}{{deprecated_inline}}</dt>
  <dd>Removes the specified listener callback from the callbacks to be invoked when the <code>MediaQueryList</code> changes media query status, which happens any time the document switches between matching and not matching the media queries listed in the <code>MediaQueryList</code>. This method has been kept for backward compatibility; if possible, you should generally use {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} to remove change notification callbacks (which should have previously been added using <code>addEventListener()</code>).</dd>
 </dl>
 

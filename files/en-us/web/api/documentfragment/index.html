@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - Web Components
+browser-compat: api.DocumentFragment
 ---
 <div>{{ APIRef("DOM") }}</div>
 
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface has no specific properties, but inherits those of its parent, {{domxref("Node")}}, and implements those of the {{domxref("ParentNode")}} interface.</em></p>
+<p><em>This interface has no specific properties, but inherits those of its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
  <dt>{{ domxref("DocumentFragment.childElementCount") }} {{readonlyInline}} </dt>
@@ -38,7 +39,7 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface inherits the methods of its parent, {{domxref("Node")}}, and implements those of the {{domxref("ParentNode")}} interface.</em></p>
+<p><em>This interface inherits the methods of its parent, {{domxref("Node")}}.</em></p>
 
 <dl>
  <dt>{{DOMxRef("DocumentFragment.append()")}}</dt>
@@ -49,6 +50,8 @@ tags:
  <dd>Returns the first {{domxref("Element")}} node within the <code>DocumentFragment</code>, in document order, that matches the specified selectors.</dd>
  <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
  <dd>Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the <code>DocumentFragment</code> that match the specified selectors.</dd>
+ <dt>{{DOMxRef("DocumentFragment.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a <code>DocumentFragment</code> with a specified new set of children.</dd>
  <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
  <dd>Returns the first {{domxref("Element")}} node within the <code style="font-size: 14px;">DocumentFragment</code>, in document order, that matches the specified ID. Functionally equivalent to {{domxref("Document.getElementById()")}}.</dd>
 </dl>
@@ -102,7 +105,7 @@ list.appendChild(fragment)
   <tr>
    <td>{{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added the constructor and the implementation of {{domxref("ParentNode")}}.</td>
+   <td>Added the constructor and the implementation of <code>ParentNode</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}</td>
@@ -129,7 +132,7 @@ list.appendChild(fragment)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DocumentFragment")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -97,7 +97,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code>×<code>10<sup>-38</sup></code> to <code>3.4</code>×<code>10<sup>38</sup></code></td>
+   <td><code>1.2E-38</code> to <code>3.4E38</code></td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.123456</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -105,7 +105,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code>×<code>10<sup>-324</sup></code> to <code>1.8</code>×<code>10<sup>308</sup></code></td>
+   <td><code>5E-324</code> to <code>1.8E308</code></td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -113,7 +113,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+   <td><code>-2^63</code> to <code>2^63 - 1</code></td>
    <td>8</td>
    <td>64-bit two's complement signed integer</td>
    <td><code>bigint</code></td>
@@ -121,7 +121,7 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+   <td><code>0</code> to <code>2^64 - 1</code></td>
    <td>8</td>
    <td>64-bit unsigned integer</td>
    <td><code>bigint</code></td>
@@ -226,7 +226,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);</pre>
 
 <p>Then you can access, for example, the amount due with <code>amountDueView[0]</code>.</p>
 
-<div class="note"><strong>Note:</strong> The <a href="https://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</div>
+<div class="note"><p><strong>Note:</strong> The <a href="https://en.wikipedia.org/wiki/Data_structure_alignment">data structure alignment</a> in a C structure is platform-dependent. Take precautions and considerations for these padding differences.</p></div>
 
 <h3 id="Conversion_to_normal_arrays">Conversion to normal arrays</h3>
 
@@ -244,25 +244,6 @@ const normalArray = [...typedArray];</pre>
 
 <pre class="brush:js">const typedArray = new Uint8Array([1, 2, 3, 4]);
 const normalArray = Array.prototype.slice.call(typedArray);</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("javascript.builtins.Int8Array")}}</p>
 
 <h2 id="See_also">See also</h2>
 

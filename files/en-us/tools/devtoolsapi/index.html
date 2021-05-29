@@ -522,7 +522,7 @@ gDevTools.once(&quot;netmonitor-init&quot;).then(toolbox =&gt; {
       &lt;tabpanels flex="1"/&gt;
     &lt;/tabbox&gt;</pre>
 
-<p>A sidebar is composed of tabs. Each tab will hold an iframe. For example, in the Inspector, there are 3 tabs (Computed View, Rule View, Layout View). The user can select the tab he wants to see.</p>
+<p>A sidebar is composed of tabs. Each tab will hold an iframe. For example, in the Inspector, there are 3 tabs (Computed View, Rule View, Layout View). The user can select the tab they want to see.</p>
 
 <p>If the availability of the tabs depends on some tool-related conditions, we might want to not let the user select a tab. This API provides methods to hide the tabstripe. For example, in the Web Console, there are 2 views (Network View and Object View). These views are only available in certain conditions controlled by the WebConsole code. So it's up the WebConsole the hide and show the sidebar, and select the correct tab.</p>
 

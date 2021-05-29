@@ -7,6 +7,7 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+browser-compat: javascript.builtins.RegExp
 ---
 <div>{{JSRef}}</div>
 
@@ -94,7 +95,7 @@ let re = new RegExp('\\w+')
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{JSxRef("RegExp.prototype.compile()")}}</dt>
+ <dt>{{JSxRef("RegExp.prototype.compile()")}} {{deprecated_inline}}</dt>
  <dd>(Re-)compiles a regular expression during execution of a script.</dd>
  <dt>{{JSxRef("RegExp.prototype.exec()")}}</dt>
  <dd>Executes a search for a match in its string parameter.</dd>
@@ -210,27 +211,16 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 </pre>
 
 <div class="notecard note">
-<p>Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the <a href="/en-US/docs/Web/API/URL_API">URL API</a>.</p>
+<p><strong>Note:</strong> Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the <a href="/en-US/docs/Web/API/URL_API">URL API</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox-specific_notes">Firefox-specific notes</h3>
 
@@ -254,6 +244,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of many modern <code>RegExp</code> features is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a> chapter in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
  <li>{{jsxref("String.prototype.match()")}}</li>
  <li>{{jsxref("String.prototype.replace()")}}</li>

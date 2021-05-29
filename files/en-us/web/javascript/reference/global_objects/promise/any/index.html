@@ -6,6 +6,8 @@ tags:
   - Method
   - Promise
   - Reference
+  - Polyfill
+browser-compat: javascript.builtins.Promise.any
 ---
 <div>{{JSRef}}</div>
 
@@ -122,26 +124,16 @@ Promise.any([coffee, tea]).then(value =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Promise.any')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Promise.any")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>Promise.any</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-promise"><code>core-js</code></a></li>
  <li>{{JSxRef("Promise")}}</li>
  <li>{{JSxRef("Promise.allSettled()")}}</li>
  <li>{{JSxRef("Promise.all()")}}</li>

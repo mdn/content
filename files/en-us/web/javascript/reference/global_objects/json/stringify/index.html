@@ -8,6 +8,8 @@ tags:
 - Objects
 - Reference
 - stringify
+- Polyfill
+browser-compat: javascript.builtins.JSON.stringify
 ---
 <div>{{JSRef}}</div>
 
@@ -20,8 +22,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</pre>
+<pre class="brush: js">
+JSON.stringify(value)
+JSON.stringify(value, replacer)
+JSON.stringify(value, replacer, space)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -308,11 +313,11 @@ JSON.stringify(circularReference);
 <h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">Issue with plain
   JSON.stringify for use as JavaScript</h3>
 
-<p>Historically, JSON was not a completely strict subset of JavaScript. The literal code 
-  points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in 
-  string literals and property names in JSON text. But they could not appear literally in 
-  similar context in JavaScript text, only using Unicode escapes as <code>\u2028</code> and 
-  <code>\u2029</code>. This recently changed: now both code points may appear literally in 
+<p>Historically, JSON was not a completely strict subset of JavaScript. The literal code
+  points U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR could appear literally in
+  string literals and property names in JSON text. But they could not appear literally in
+  similar context in JavaScript text, only using Unicode escapes as <code>\u2028</code> and
+  <code>\u2029</code>. This recently changed: now both code points may appear literally in
   strings in JSON and JavaScript both.</p>
 
 <p>Therefore, if compatibility with older JavaScript engines is required, it is perilous
@@ -346,7 +351,7 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: Properties of non-array objects are not guaranteed to be
+  <p><strong>Note:</strong> Properties of non-array objects are not guaranteed to be
     stringified in any particular order. Do not rely on ordering of properties within the
     same object within the stringification.</p>
 </div>
@@ -420,25 +425,15 @@ console.log(restoredSession);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.JSON.stringify")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of modern <code>JSON.stringify</code> behavior (symbol and well-formed unicode) is available in <a href="https://github.com/zloirock/core-js#ecmascript-function"><code>core-js</code></a></li>
   <li>{{JSxRef("JSON.parse()")}}</li>
 </ul>

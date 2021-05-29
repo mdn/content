@@ -6,6 +6,8 @@ tags:
 - JavaScript
 - TypedArray
 - TypedArrays
+- Polyfill
+browser-compat: javascript.builtins.TypedArray
 ---
 <div>{{JSRef}}</div>
 
@@ -119,8 +121,8 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("Float32Array")}}</td>
-      <td><code>1.2</code>×<code>10<sup>-38</sup></code> to
-        <code>3.4</code>×<code>10<sup>38</sup></code></td>
+      <td><code>1.2E-38</code> to
+        <code>3.4E38</code></td>
       <td>4</td>
       <td>32-bit IEEE floating point number (7 significant digits e.g.,
         <code>1.234567</code>)</td>
@@ -129,8 +131,8 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("Float64Array")}}</td>
-      <td><code>5.0</code>×<code>10<sup>-324</sup></code> to
-        <code>1.8</code>×<code>10<sup>308</sup></code></td>
+      <td><code>5E-324</code> to
+        <code>1.8E308</code></td>
       <td>8</td>
       <td>64-bit IEEE floating point number (16 significant digits e.g.,
         <code>1.23456789012345</code>)</td>
@@ -139,7 +141,7 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("BigInt64Array")}}</td>
-      <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+      <td><code>-2^63</code> to <code>2^63 - 1</code></td>
       <td>8</td>
       <td>64-bit two's complement signed integer</td>
       <td><code>bigint</code></td>
@@ -147,7 +149,7 @@ tags:
     </tr>
     <tr>
       <td>{{jsxref("BigUint64Array")}}</td>
-      <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+      <td><code>0</code> to <code>2^64 - 1</code></td>
       <td>8</td>
       <td>64-bit unsigned integer</td>
       <td><code>bigint</code></td>
@@ -163,11 +165,15 @@ tags:
   {{jsxref("BigInt64Array")}}. These objects all have a common syntax for their
   constructors:</p>
 
-<pre class="brush: js">new <var>TypedArray</var>();
-new <var>TypedArray</var>(<var>length</var>);
-new <var>TypedArray</var>(<var>typedArray</var>);
-new <var>TypedArray</var>(<var>object</var>);
-new <var>TypedArray</var>(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);
+<pre class="brush: js">
+new TypedArray()
+new TypedArray(length)
+new TypedArray(typedArray)
+new TypedArray(object)
+
+new TypedArray(buffer)
+new TypedArray(buffer, byteOffset)
+new TypedArray(buffer, byteOffset, length)
 </pre>
 
 <p>Where <var>TypedArray</var> is a constructor for one of the concrete types.</p>
@@ -384,26 +390,16 @@ Int8Array.prototype.foo = 'bar';
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.TypedArray")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of typed arrays is available in <a href="https://github.com/zloirock/core-js#ecmascript-typed-arrays"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
   <li>{{jsxref("ArrayBuffer")}}</li>
   <li>{{jsxref("DataView")}}</li>

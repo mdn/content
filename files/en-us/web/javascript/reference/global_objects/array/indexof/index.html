@@ -8,7 +8,8 @@ tags:
 - Prototype
 - Reference
 - indexof
-- polyfill
+- Polyfill
+browser-compat: javascript.builtins.Array.indexOf
 ---
 <div>{{JSRef}}</div>
 
@@ -20,8 +21,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>arr</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var>])</pre>
+<pre class="brush: js">
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -205,27 +208,16 @@ if (!Array.prototype.indexOf) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.prototype.indexof',
-        'Array.prototype.indexOf')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.indexOf")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Array.prototype.indexOf</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
   <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
   <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
   <li>{{jsxref("String.prototype.indexOf()")}}</li>

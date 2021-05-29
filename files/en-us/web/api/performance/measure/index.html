@@ -87,7 +87,7 @@ setTimeout(function() {
     performance.measure("measure a to b", markerNameA, markerNameB);
     performance.measure("measure a to now", markerNameA);
     performance.measure("measure from navigation start to b", undefined, markerNameB);
-    performance.measure("measure from the start of navigation to now");
+    performance.measure("measure from navigation start to now");
 
     // Pull out all of the measurements.
     console.log(performance.getEntriesByType("measure"));

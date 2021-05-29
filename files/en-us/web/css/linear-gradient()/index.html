@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web
   - gradient
+browser-compat: css.types.image.gradient.linear-gradient
 ---
 <div>{{CSSRef}}</div>
 
@@ -79,7 +80,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);</pre>
 
 <p>A linear gradient is defined by an axis—the <em>gradient line</em>—and two or more <em>color-stop points</em>. Each point on the axis is a distinct color; to create a smooth gradient, the <code>linear-gradient()</code> function draws a series of colored lines perpendicular to the gradient line, each one matching the color of the point where it intersects the gradient line.</p>
 
-<p><img alt="linear-gradient.png" src="linear-gradient.png" style="float: left;"></p>
+<p><img alt="linear-gradient.png" src="linear-gradient.png"></p>
 
 <p>The gradient line is defined by the center of the box containing the gradient image and by an angle. The colors of the gradient are determined by two or more points: the starting point, the ending point, and, in between, optional color-stop points.</p>
 
@@ -98,7 +99,7 @@ linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);</pre>
 
 <p>If two or more color stops are at the same location, the transition will be a hard line between the first and last colors declared at that location. </p>
 
-<p>Color stops should be listed in ascending order. Subsequent color stops of lower value will override the value of the previous color stop creating a hard transition. The following changes from red to yellow at the 30% mark, and then transitions from yellow to blue over 35% of the gradient</p>
+<p>Color stops should be listed in ascending order. Subsequent color stops of lower value will override the value of the previous color stop creating a hard transition. The following changes from red to yellow at the 40% mark, and then transitions from yellow to blue over 25% of the gradient</p>
 
 <pre class="brush: css">linear-gradient(red 40%, yellow 30%, blue 65%);
 </pre>
@@ -192,7 +193,7 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("css.types.image.gradient.linear-gradient")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

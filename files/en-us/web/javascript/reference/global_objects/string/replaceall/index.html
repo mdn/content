@@ -8,6 +8,8 @@ tags:
 - Reference
 - String
 - regex
+- Polyfill
+browser-compat: javascript.builtins.String.replaceAll
 ---
 <div>{{JSRef}}</div>
 
@@ -23,11 +25,16 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const newStr = <var>str</var>.replaceAll(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)
+<pre class="brush: js">
+replaceAll(regexp, newSubstr)
+replaceAll(regexp, replacerFunction)
+
+replaceAll(substr, newSubstr)
+replaceAll(substr, replacerFunction)
 </pre>
 
 <div class="notecard note">
-  <p>when using a `<var>regexp</var>` you have to set the global ("g") flag; otherwise, it
+  <p><strong>Note:</strong> When using a `<var>regexp</var>` you have to set the global ("g") flag; otherwise, it
     will throw a <code>TypeError</code>: "replaceAll must be called with a global RegExp".
   </p>
 </div>
@@ -38,7 +45,7 @@ tags:
   <dt><code><var>regexp</var></code> (pattern)</dt>
   <dd>A {{jsxref("RegExp")}} object or literal with the global flag. The matches are
     replaced with <code><var>newSubstr</var></code> or the value returned by the specified
-    <code><var>function</var></code>. A RegExp without the global ("g") flag will throw a
+    <code><var>replacerFunction</var></code>. A RegExp without the global ("g") flag will throw a
     <code>TypeError</code>: "replaceAll must be called with a global RegExp".</dd>
   <dt><code><var>substr</var></code></dt>
   <dd>A {{jsxref("String")}} that is to be replaced by <code><var>newSubstr</var></code>.
@@ -50,7 +57,7 @@ tags:
     of special replacement patterns are supported; see the "<a
       href="#Specifying_a_string_as_a_parameter">Specifying a string as a parameter</a>"
     section below.</dd>
-  <dt><code><var>function</var></code> (replacement)</dt>
+  <dt><code><var>replacerFunction</var></code> (replacement)</dt>
   <dd>A function to be invoked to create the new substring to be used to replace the
     matches to the given <code><var>regexp</var></code> or <code><var>substr</var></code>.
     The arguments supplied to this function are described in the "<a
@@ -176,32 +183,17 @@ TypeError: replaceAll must be called with a global RegExp
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.prototype.replaceall',
-        'String.prototype.replaceAll')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.replaceAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>String.prototype.replaceAll</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li>{{jsxref("String.prototype.replace", "String.prototype.replace()")}}</li>
   <li>{{jsxref("String.prototype.match", "String.prototype.match()")}}</li>
   <li>{{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}</li>

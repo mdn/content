@@ -22,7 +22,7 @@ jobs:
           node-version: "12"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.6
         id: cached-node_modules
         with:
           path: |
@@ -55,7 +55,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.0.6
+      - uses: technote-space/get-diff-action@v4.1.1
         id: git_diff_content
         with:
           PATTERNS: files/**/*.html
@@ -110,6 +110,12 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > build/NR
 
+          # Save the raw diff blob and store that inside the ./build/
+          # directory.
+          # The purpose of this is for the PR Review Companion to later
+          # be able to use this raw diff file for the benefit of analyzing.
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > build/DIFF
+
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
@@ -136,7 +142,7 @@ jobs:
           name: build
           path: build/
 
-      - uses: technote-space/get-diff-action@v4.0.6
+      - uses: technote-space/get-diff-action@v4.1.1
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
@@ -150,7 +156,7 @@ jobs:
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
 
-      - uses: technote-space/get-diff-action@v4.0.6
+      - uses: technote-space/get-diff-action@v4.1.1
         id: git_diff_redirects
         with:
           PATTERNS: files/**/_redirects.txt

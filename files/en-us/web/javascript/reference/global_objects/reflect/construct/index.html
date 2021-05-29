@@ -7,6 +7,8 @@ tags:
 - Method
 - Reference
 - Reflect
+- Polyfill
+browser-compat: javascript.builtins.Reflect.construct
 ---
 <div>{{JSRef}}</div>
 
@@ -19,7 +21,9 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">Reflect.construct(<var>target</var>, <var>argumentsList</var>[, <var>newTarget</var>])
+<pre class="brush: js">
+Reflect.construct(target, argumentsList)
+Reflect.construct(target, argumentsList, newTarget)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -152,27 +156,16 @@ d.getFullYear()    // 1776
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{SpecName('ESDraft', '#sec-reflect.construct', 'Reflect.construct')}}
-            </td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Reflect.construct")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+    <li>A polyfill of <code>Reflect.construct</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-reflect"><code>core-js</code></a></li>
     <li>{{jsxref("Reflect")}}</li>
     <li>{{jsxref("Operators/new", "new")}}</li>
     <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code>

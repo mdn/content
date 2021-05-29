@@ -11,7 +11,7 @@ tags:
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>The <code><strong>onerror</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that processes {{event("error")}} events.</p>
+<p>The <code><strong>onerror</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} that processes {{event("error")}} events.</p>
 
 <p>Error events are fired at various targets for different kinds of errors:</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>A good example for this is when you are using an image tag, and need to specify a backup image in case the one you need is not available on the server for any reason.</p>
 
-<pre class="brush: html">&lt;img src=&quot;imagenotfound.gif&quot; onerror=&quot;this.onerror=null;this.src='imagefound.gif';&quot; /&gt;
+<pre class="brush: html">&lt;img src=&quot;imagefound.gif&quot; onerror=&quot;this.onerror=null;this.src='imagenotfound.gif';&quot; /&gt;
 </pre>
 
 <p>The reason we have the <code>this.onerror=null</code> in the function is that the browser will be stuck in an endless loop if the onerror image itself generates an error.</p>

@@ -10,13 +10,14 @@ tags:
 - Statement
 - asynchronous
 - await
+browser-compat: javascript.statements.for_await_of
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
 <p>The <strong><code>for await...of</code> statement</strong> creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code>-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.</p>
 
 <div class="notecard note">
-  <p><code>for await...of</code> doesn't work with async iterators that are not async
+  <p><strong>Note:</strong> <code>for await...of</code> doesn't work with async iterators that are not async
     iterables.</p>
 </div>
 
@@ -166,10 +167,10 @@ for (let numOrPromise of generator()) {
 </pre>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: be aware of yielding rejected promises from sync generator. In
+  <p><strong>Note:</strong> Be aware of yielding rejected promises from sync generator. In
     such case <code>for await...of</code> throws when consuming rejected promise and
     DOESN'T CALL <code>finally</code> blocks within that generator. This can be
-    undesireable if you need to free some allocated resources with
+    undesirable if you need to free some allocated resources with
     <code>try/finally</code>.</p>
 </div>
 
@@ -240,23 +241,11 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language:
-        The for-in, for-of, and for-await-of Statements')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.for_await_of")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

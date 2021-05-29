@@ -7,6 +7,7 @@ tags:
 - JavaScript
 - Reference
 - TypedArrays
+browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
 ---
 <div>{{JSRef}}</div>
 
@@ -21,10 +22,13 @@ tags:
 
 <pre
   class="brush: js">new BigUint64Array();
-new BigUint64Array(<var>length</var>);
-new BigUint64Array(<var>typedArray</var>);
-new BigUint64Array(<var>object</var>);
-new BigUint64Array(<var>buffer</var> [, <var>byteOffset</var> [, <var>length</var>]]);</pre>
+new BigUint64Array(length);
+new BigUint64Array(typedArray);
+new BigUint64Array(object);
+
+new BigUint64Array(buffer);
+new BigUint64Array(buffer, byteOffset);
+new BigUint64Array(buffer, byteOffset, length);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -88,22 +92,11 @@ var biguint64 = new BigUint64Array(iterable);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("ESDraft", "#sec-typedarray-constructors", "BigUint64Array")}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.BigUint64Array.BigUint64Array")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,6 +9,7 @@ tags:
 - NeedsExample
 - Reference
 - credential management
+browser-compat: api.CredentialsContainer.get
 ---
 <p>{{APIRef("Credential Management")}}{{SeeCompatTable}}</p>
 
@@ -66,7 +67,7 @@ tags:
       <li><code>mediation</code>: A {{jsxref("String")}} indicating whether the user will
         be required to log on for every visit to the website. Valid values are
         <code>"silent"</code>, <code>"optional"</code>, or <code>"required"</code>.</li>
-      <li><code>unmediated</code>: {{deprecated_inline()}} A {{jsxref("Boolean")}}
+      <li><code>unmediated</code>: {{deprecated_inline}} A {{jsxref("Boolean")}}
         indicating the returned {{domxref("Credential")}} instance should not require user
         mediation.</li>
       <li><code>signal</code>: An instance of {{domxref("AbortSignal")}} that can indicate
@@ -111,7 +112,7 @@ tags:
 
 <div>
 
-  <p>{{Compat("api.CredentialsContainer.get")}}</p>
+  <p>{{Compat}}</p>
 
   <h2 id="See_also">See also</h2>
 

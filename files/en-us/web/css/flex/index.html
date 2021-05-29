@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.flex
 ---
 <div>{{CSSRef}}</div>
 
@@ -33,7 +34,8 @@ flex: auto;
 flex: initial;
 flex: none;
 
-/* One value, unitless number: flex-grow */
+/* One value, unitless number: flex-grow
+flex-basis is then equal to 0. */
 flex: 2;
 
 /* One value, width/height: flex-basis */
@@ -281,9 +283,7 @@ flex.addEventListener("click", function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("css.properties.flex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

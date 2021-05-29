@@ -9,7 +9,12 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">April 19, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.</p>
+
+<div class="note notecard">
+  <h4>Note</h4>
+  <p>See also <a href="https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/">Never too late for Firefox 88</a> on Mozilla Hacks.</p>
+</div>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -27,8 +32,7 @@ tags:
 
 <ul>
   <li>The {{cssxref(":user-valid")}} and {{cssxref(":user-invalid")}} pseudo-classes have been implemented ({{bug(1694141)}}).</li>
-  <li>The {{cssxref("image-set()","image-set()")}} functional notation is now implemented for {{cssxref("content")}} and {{cssxref("cursor")}} ({{bug(1695402)}} and {{bug(1695403)}}).</li>
-  <li>The {{cssxref("image-set()")}} functional notation is now enabled ({{bug(1698133)}}).</li>
+  <li>The {{cssxref("image-set()")}} functional notation is now enabled ({{bug(1698133)}}), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in {{bug(1695402)}} and {{bug(1695403)}}.</li>
   <li>The default <code>monospace</code> font for MacOS has been changed to Menlo ({{bug(1342741)}}).</li>
   <li>The <code>collapse</code> value of {{cssxref("visibility")}} is now implemented for ruby annotations ({{bug(1697529)}}).</li>
   <li>The <code>alternate</code> value for {{cssxref("ruby-position")}} has been implemented, and is the new initial value for the property ({{bug(1694748)}}).</li>
@@ -39,7 +43,7 @@ tags:
 
 <ul>
   <li>The {{cssxref(":-moz-submit-invalid")}} pseudo-class has been hidden behind a preference, thereby removing it from web content ({{bug(1694129)}}).</li>
-  <li>Default styling for the non-standard {{cssxref(":user-invalid")}} and {{cssxref(":-moz-ui-valid")}} has been removed ({{bug(1693969)}}).</li>
+  <li>Default styling for the non-standard {{cssxref(":-moz-ui-invalid")}} and {{cssxref(":-moz-ui-valid")}} has been removed ({{bug(1693969)}}).</li>
 </ul>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -52,7 +56,7 @@ tags:
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
-  <li>FTP has been disabled on all releases (preference <code>network.ftp.enabled</code> now defaults to <code>false</code>), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). Complementing this change, the extension setting <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a> has been made read-only, and web extensions can now register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol handlers</a> for FTP ({{bug(1626365)}}).</li>
+  <li>FTP has been disabled on all releases (preference <code>network.ftp.enabled</code> now defaults to <code>false</code>), with the intent of removing it altogether in Firefox 90 ({{bug(1691890)}}). Complementing this change, the extension setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a></code> has been made read-only, and web extensions can now register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">protocol handlers</a> for FTP ({{bug(1626365)}}).</li>
 </ul>
 
 <h3 id="Security">Security</h3>
@@ -69,7 +73,11 @@ tags:
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
 
-<p><em>No changes.</em></p>
+<ul>
+  <li>Marionette will no longer be enabled unless the <code>--marionette</code> command line argument or the <code>MOZ_MARIONETTE</code> environment variable is specified. As such the <code>marionette.enabled</code> preference is no longer used. With this change the state of <code>navigator.webdriver</code> now correctly reflects the enabled state of Marionette ({{bug(1593343)}}).</li>
+  <li>Fixed a bug where pointer actions other than <code>down</code> and <code>up</code> inappropriately led to buttons being pressed ({{bug(1686361)}}).</li>
+  <li>Fixed a race condition in <code>WebDriver:GetCurrentURL</code> that could have led the command to return the URL of the previously opened page, or even a hang in Marionette ({{bug(1664881)}}).</li>
+</ul>
 
 <h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
 

@@ -10,6 +10,8 @@ tags:
   - JavaScript
   - Method
   - Object
+  - Polyfill
+browser-compat: javascript.builtins.Object.is
 ---
 <div>{{JSRef}}</div>
 
@@ -126,26 +128,16 @@ Object.is(NaN, Number.NaN)        // true
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.is', 'Object.is')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.is")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.is</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li><a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">Equality
       comparisons and sameness</a> — a comparison of all three built-in sameness
     facilities</li>

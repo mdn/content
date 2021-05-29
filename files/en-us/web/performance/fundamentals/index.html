@@ -44,7 +44,7 @@ tags:
 
 <p><strong>Memory usage</strong> is another key metric. Unlike responsiveness and framerate, users don't directly perceive memory usage, but memory usage closely approximates "user state". An ideal system would maintain 100% of user state at all times: all applications in the system would run simultaneously, and all applications would retain the state created by the user the last time the user interacted with the application (application state is stored in computer memory, which is why the approximation is close).</p>
 
-<p>From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of <strong>free</strong> memory. Memory is a resource, and free memory is a unused resource. Rather, a well-designed system has been optimized to <strong>use</strong> as much memory as possible to maintain user state, while meeting other UPP goals.</p>
+<p>From this comes an important but counter-intuitive corollary: a well-designed system does not maximize the amount of <strong>free</strong> memory. Memory is a resource, and free memory is an unused resource. Rather, a well-designed system has been optimized to <strong>use</strong> as much memory as possible to maintain user state, while meeting other UPP goals.</p>
 
 <p>That doesn't mean the system should <strong>waste</strong> memory. When a system uses more memory than necessary to maintain some particular user state, the system is wasting a resource it could use to retain some other user state. In practice, no system can maintain all user states. Intelligently allocating memory to user state is an important concern that we go over in more detail below.</p>
 

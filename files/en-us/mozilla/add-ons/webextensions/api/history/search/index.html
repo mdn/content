@@ -46,9 +46,9 @@ tags:
   </dd>
   <dd>Specify an empty string (<code>""</code>) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.</dd>
   <dt><code>startTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
+  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
   <dt><code>endTime</code> {{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
+  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
   <dt><code>maxResults</code> {{optional_inline}}</dt>
   <dd><code>number</code>. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a <code>maxResults</code> value less than 1.</dd>
  </dl>
@@ -110,8 +110,6 @@ searching.then(onGot);</pre>
 <p>{{WebExtExamples}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.history.search")}}</p>
 

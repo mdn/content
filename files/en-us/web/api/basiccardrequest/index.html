@@ -15,6 +15,7 @@ tags:
   - Reference
   - card
   - payment
+browser-compat: api.BasicCardRequest
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
@@ -32,7 +33,7 @@ tags:
 <p>These properties have been removed from the Payment Method: Basic Card specification and should no longer be used.</p>
 
 <dl>
-	<dt>{{domxref('BasicCardRequest.supportedTypes')}} {{obsolete_inline}} {{optional_inline}} {{securecontext_inline}}</dt>
+	<dt>{{domxref('BasicCardRequest.supportedTypes')}} {{deprecated_inline}} {{optional_inline}} {{securecontext_inline}}</dt>
 	<dd>This obsolete property was used to provide an optional array of {{domxref("DOMString")}}s representing the card types that the retailer supports (e.g. <code>credit</code>, <code>debit</code>, <code>prepaid</code>). If the property is missing, it implies that all the card types are supported. Instead of using this property, it is up to the server to check support for the card given the information coded into the account number.</dd>
 </dl>
 
@@ -135,4 +136,4 @@ try {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BasicCardRequest")}}</p>
+<p>{{Compat}}</p>

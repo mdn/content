@@ -49,7 +49,7 @@ btn.addEventListener('click', () =&gt; {
   let myDate;
   for(let i = 0; i &lt; 10000000; i++) {
     let date = new Date();
-    myDate = date
+    myDate = date;
   }
 
   console.log(myDate);
@@ -77,14 +77,14 @@ btn.addEventListener('click', () =&gt; {
     ctx.fillStyle = 'rgba(0,0,255, 0.2)';
     ctx.beginPath();
     ctx.arc(random(0, canvas.width), random(0, canvas.height), 10, degToRad(0), degToRad(360), false);
-    ctx.fill()
+    ctx.fill();
   }
 }
 
 fillBtn.addEventListener('click', expensiveOperation);
 
 alertBtn.addEventListener('click', () =&gt;
-  alert('You clicked me!')
+  alert('You clicked me!');
 );</pre>
 
 <p>If you click the first button and then quickly click the second one, you'll see that the alert does not appear until the circles have finished being rendered. The first operation blocks the second one until it has finished running.</p>
@@ -119,7 +119,7 @@ Thread 2: Task C --&gt; Task D</pre>
 <pre>  Main thread: Task A --&gt; Task C
 Worker thread: Expensive task B</pre>
 
-<p>With this in mind, have a look at <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">see it running live</a>), again with your browser's JavaScript console open. This is a rewrite of our previous example that calculates the 10 million dates in a separate worker thread. Now when you click the button, the browser is able to display the paragraph before the dates have finished calculating. The first operation no longer blocks the second.</p>
+<p>With this in mind, have a look at <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">see it running live</a>), again with your browser's JavaScript console open. This is a rewrite of our previous example that calculates the 10 million dates, but this time we're using a worker for the calculation. You can see the worker's code here: <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/worker.js">worker.js</a>. Now when you click the button, the browser is able to display the paragraph before the dates have finished calculating. Once the worker has finished calculating, it logs the final date to the console. The first operation no longer blocks the second.</p>
 
 <h2 id="Asynchronous_code">Asynchronous code</h2>
 

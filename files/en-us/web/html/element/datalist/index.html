@@ -74,67 +74,6 @@ tags:
 
 <p>{{EmbedLiveSample("Basic_datalist", '100%', 100)}}</p>
 
-<h3 id="Customizing_datalist_styles">Customizing datalist styles</h3>
-
-<p>The style of the list produced by a <code>&lt;datalist&gt;</code> element is platform-dependent, so if you want to customize the display of the options, you have to implement your own custom solution that overrides the default behavior. The below example provides a simple solution for this. Note how we haven't specified the <code>&lt;datalist&gt;</code> <code>id</code> inside the <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> <code>list</code> attribute in this case, as that stops the browser-specific display of the data list items from kicking in. Instead, we are setting the selected <code>&lt;datalist&gt;</code> value in the <code>&lt;input&gt;</code> via JavaScript.</p>
-
-<div class="notecard note">
-<p><strong>Note</strong>: Since <code><a href="/en-US/docs/Web/CSS/::after">::after</a></code> is not permitted on <code>&lt;input&gt;</code> elements, if you want to reproduce the arrow-down icon you will have to wrap the <code>&lt;input&gt;</code> element in another element that you can hang the styling on (or some other suitable solution).</p>
-</div>
-
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;input
-  list=""
-  name="option"
-  id="input"
-  autocomplete="off"
-&gt;
-
-&lt;datalist id="datalist"&gt;
-  &lt;option&gt;Carrots&lt;/option&gt;
-  &lt;option&gt;Peas&lt;/option&gt;
-  &lt;option&gt;Beans&lt;/option&gt;
-&lt;/datalist&gt;</pre>
-
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">datalist {
-  position: absolute;
-  background-color: lightgrey;
-  font-family: sans-serif;
-  font-size: 0.8rem;
-}
-
-option {
-  background-color: #bbb;
-  padding: 4px;
-  margin-bottom: 1px;
-  cursor: pointer;
-}
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">input.onfocus = function () {
-  datalist.style.display = 'block';
-}
-
-for (let option of datalist.options) {
-  option.onclick = function () {
-    input.value = this.value;
-    datalist.style.display = 'none';
-  }
-}
-
-datalist.style.width = input.offsetWidth + 'px';
-datalist.style.left = input.offsetLeft + 'px';
-datalist.style.top = input.offsetTop + input.offsetHeight + 'px';</pre>
-
-<h4 id="Result_2">Result</h4>
-
-<p>{{EmbedLiveSample('Customizing_datalist_styles', '100%', 200)}}</p>
-
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">

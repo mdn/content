@@ -7,11 +7,13 @@ tags:
   - Method
   - Object
   - Prototype
+  - Polyfill
+browser-compat: javascript.builtins.Object.defineSetter
 ---
 <div>{{JSRef}}</div>
 
 <div class="warning">
-  <p>This feature is deprecated in favor of defining setters using the <a
+  <p><strong>Warning:</strong> This feature is deprecated in favor of defining setters using the <a
       href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object
       initializer syntax</a> or the {{jsxref("Object.defineProperty()")}} API.</p>
 
@@ -24,8 +26,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>obj</var>.__defineSetter__(<var>prop</var>, <var>fun</var>)</pre>
+<pre class="brush: js">__defineSetter__(prop, fun)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -87,27 +88,16 @@ console.log(o.anotherValue); // 5
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-object.prototype.__defineSetter__',
-        'Object.prototype.__defineSetter__()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Object.defineSetter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.prototype.__defineSetter__</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
   <li>{{jsxref("Functions/set", "set")}} operator</li>
   <li>{{jsxref("Object.defineProperty()")}}</li>

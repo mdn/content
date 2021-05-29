@@ -6,6 +6,8 @@ tags:
 - ECMAScript 2015
 - JavaScript
 - Method
+- Polyfill
+browser-compat: javascript.builtins.Array.of
 ---
 <div>{{JSRef}}</div>
 
@@ -30,8 +32,11 @@ Array(1, 2, 3);    // [1, 2, 3]
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>element<em>N</em></var>]]])</pre>
+<pre class="brush: js">
+Array.of(element0)
+Array.of(element0, element1)
+Array.of(element0, element1, ... , elementN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -69,26 +74,16 @@ Array.of(undefined); // [undefined]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-array.of', 'Array.of')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Array.of")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Array.of</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
   <li><a href="https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js">A
     polyfill</a></li>
   <li>{{jsxref("Array")}}</li>
