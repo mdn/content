@@ -61,6 +61,7 @@ myHeaders.get('Content-Type'); // Returns "image/jpeg"
 <pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
+myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
 </pre>
 
 <div class="note">
