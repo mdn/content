@@ -26975,12 +26975,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/AddressErrors/regionCode": {
-    "modified": "2020-10-15T22:08:49.176Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/AddressErrors/sortingCode": {
     "modified": "2020-10-15T22:08:48.856Z",
     "contributors": [
@@ -44801,18 +44795,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/Element/tabStop": {
-    "modified": "2020-10-15T21:34:32.666Z",
-    "contributors": [
-      "fscholz",
-      "Jedipedia",
-      "valtlai",
-      "rolfedh",
-      "Sebastianz",
-      "teoli",
-      "jpmedley"
-    ]
-  },
   "Web/API/Element/tagName": {
     "modified": "2020-10-15T21:06:35.308Z",
     "contributors": [
@@ -51630,16 +51612,6 @@
       "GT",
       "Callek",
       "JesseW"
-    ]
-  },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2020-10-15T21:31:35.664Z",
-    "contributors": [
-      "mfluehr",
-      "sideshowbarker",
-      "fscholz",
-      "alicebeckett",
-      "teoli"
     ]
   },
   "Web/API/HTMLElement/gotpointercapture_event": {
@@ -68488,16 +68460,6 @@
       "fscholz",
       "libbymc",
       "dgashmdn"
-    ]
-  },
-  "Web/API/PaymentAddress/regionCode": {
-    "modified": "2020-10-15T22:02:38.019Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "chrisdavidmills",
-      "mnoorenberghe",
-      "marcoscaceres"
     ]
   },
   "Web/API/PaymentAddress/sortingCode": {

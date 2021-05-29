@@ -4080,7 +4080,7 @@
 /en-US/docs/HTML:Inline_elements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/HTML:The_Importance_of_Correct_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/HTML:tag	/en-US/docs/Web/HTML/Element
-/en-US/docs/HTMLElement.forceSpellCheck	/en-US/docs/Web/API/HTMLElement/forceSpellCheck
+/en-US/docs/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/HTMLObjectElement.type	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/HTMLSpanElemen	/en-US/docs/Web/API/HTMLSpanElement
@@ -6808,6 +6808,7 @@
 /en-US/docs/Web-related_technologies	/en-US/docs/Related
 /en-US/docs/Web/API/AbortController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/AbstractWorker/onerror
+/en-US/docs/Web/API/AddressErrors/regionCode	/en-US/docs/Web/API/AddressErrors
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
@@ -7401,6 +7402,7 @@
 /en-US/docs/Web/API/Element/pointerover_event	/en-US/docs/Web/API/HTMLElement/pointerover_event
 /en-US/docs/Web/API/Element/pointerup_event	/en-US/docs/Web/API/HTMLElement/pointerup_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
+/en-US/docs/Web/API/Element/tabStop	/en-US/docs/Web/API/ShadowRoot/delegatesFocus
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
@@ -7606,8 +7608,8 @@
 /en-US/docs/Web/API/HTMLElement.dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/HTMLElement.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/Web/API/HTMLElement.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
-/en-US/docs/Web/API/HTMLElement.forceSpellCheck	/en-US/docs/Web/API/HTMLElement/forceSpellCheck
-/en-US/docs/Web/API/HTMLElement.forceSpellCheck()	/en-US/docs/Web/API/HTMLElement/forceSpellCheck
+/en-US/docs/Web/API/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
+/en-US/docs/Web/API/HTMLElement.forceSpellCheck()	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement.isContentEditable	/en-US/docs/Web/API/HTMLElement/isContentEditable
 /en-US/docs/Web/API/HTMLElement.lang	/en-US/docs/Web/API/HTMLElement/lang
 /en-US/docs/Web/API/HTMLElement.offsetHeight	/en-US/docs/Web/API/HTMLElement/offsetHeight
@@ -7625,6 +7627,7 @@
 /en-US/docs/Web/API/HTMLElement/blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
 /en-US/docs/Web/API/HTMLElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/HTMLElement/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLElement/nonce	/en-US/docs/Web/API/HTMLOrForeignElement/nonce
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
@@ -8244,6 +8247,7 @@
 /en-US/docs/Web/API/Path2D.Path2D	/en-US/docs/Web/API/Path2D/Path2D
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
+/en-US/docs/Web/API/PaymentAddress/regionCode	/en-US/docs/Web/API/PaymentAddress
 /en-US/docs/Web/API/PaymentRequest/PaymentRequest.onmerchantvalidation	/en-US/docs/Web/API/PaymentRequest/onmerchantvalidation
 /en-US/docs/Web/API/PaymentRequest/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
