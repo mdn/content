@@ -37,10 +37,21 @@ top: sign( --value );</pre>
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Background_image_position">Background image position</h3>
+
 For example, in <a href="/en-US/docs/Web/CSS/background-position"><code>background-position</code></a> positive percentages resolve to a negative length, and vice versa, if the background image is larger than the background area. Thus <code>sign(10%)</code> might return <code>1</code> or <code>-1</code>, depending on how the percentage is resolved! (Or even <code>0</code>, if it’s resolved against a zero length.)
 
 <pre class="brush: css;">div {
   background-position: sign(10%);
+}</pre>
+
+<h3 id="Position_direction">Position direction</h3>
+
+Another usecase is to control the <a href="/en-US/docs/Web/CSS/position"><code>position</code></a> of the element. Either a positive or a nagative value.
+
+<pre class="brush: css;">div {
+  position: absolute;
+  top: calc( 100px * sign( var( --value ) ) );
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
