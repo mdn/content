@@ -2,11 +2,16 @@
 title: Sec-Fetch-User
 slug: Web/HTTP/Headers/Sec-Fetch-User
 tags:
+  - Sec-Fetch-User
   - Fetch metadate request headers
   - HTTP
-  - HTTP Headers
+  - HTTP Header
+  - Reference
+  - Request header
+  - Experimental
+browser-compat: http.headers.Sec-Fetch-User
 ---
-<p>{{HTTPSidebar}}{{Draft}}</p>
+<p>{{HTTPSidebar}}{{Draft}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
 
@@ -18,7 +23,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes, since it has prefix <code>Sec-</code></td>
+   <td>yes (prefix <code>Sec-</code>)</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
@@ -33,7 +38,7 @@ tags:
 Sec-Fetch-User: ?1
 </pre>
 
-<h2 id="Value">Value</h2>
+<h2 id="Directives">Directives</h2>
 
 <p>The value will always be <code>?1</code>. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.</p>
 
@@ -43,26 +48,11 @@ Sec-Fetch-User: ?1
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch Metadata','#sec-fetch-user-header', 'Sec-Fetch-User')}}</td>
-   <td>{{Spec2("Fetch Metadata")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Sec-Fetch-User")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -70,4 +60,5 @@ Sec-Fetch-User: ?1
  <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
+ <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
 </ul>

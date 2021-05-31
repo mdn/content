@@ -2,11 +2,17 @@
 title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
 tags:
+  - Sec-Fetch-Mode
   - Fetch Metadata Request Headers
   - HTTP
   - HTTP Header
+  - Reference
+  - Request header
+  - Experimental
+browser-compat: http.headers.Sec-Fetch-Mode
+
 ---
-<div>{{HTTPSidebar}}{{Draft}}</div>
+<div>{{HTTPSidebar}}{{Draft}}{{SeeCompatTable}}</div>
 
 <p>The <strong><code>Sec-Fetch-Mode</code></strong> fetch metadata header indicates the request's mode.</p>
 
@@ -18,7 +24,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes, since it has prefix <code>Sec-</code></td>
+   <td>yes (prefix <code>Sec-</code>)</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
@@ -37,7 +43,7 @@ Sec-Fetch-Mode: same-origin
 Sec-Fetch-Mode: websocket
 </pre>
 
-<h2 id="Values">Values</h2>
+<h2 id="Directives">Directives</h2>
 
 <dl>
  <dt><code>cors</code></dt>
@@ -60,26 +66,11 @@ Sec-Fetch-Mode: websocket
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch Metadata','#sec-fetch-mode-header', 'Sec-Fetch-Mode')}}</td>
-   <td>{{Spec2("Fetch Metadata")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Sec-Fetch-Mode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -87,4 +78,5 @@ Sec-Fetch-Mode: websocket
  <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
+ <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
 </ul>

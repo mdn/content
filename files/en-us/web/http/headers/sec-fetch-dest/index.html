@@ -2,11 +2,16 @@
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
 tags:
+  - Sec-Fetch-Dest
   - Fetch Metadata Request Headers
   - HTTP
-  - HTTP Headers
+  - HTTP Header
+  - Reference
+  - Request header
+  - Experimental
+browser-compat: http.headers.Sec-Fetch-Dest
 ---
-<p>{{HTTPSidebar}}{{Draft}}</p>
+<p>{{HTTPSidebar}}{{Draft}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>Sec-Fetch-Dest</code></strong> fetch metadata header indicates the request's destination, that is how the fetched data will be used.</p>
 
@@ -18,7 +23,7 @@ tags:
 		</tr>
 		<tr>
 			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>yes, since it has prefix <code>Sec-</code></td>
+			<td>yes (prefix <code>Sec-</code>)</td>
 		</tr>
 		<tr>
 			<th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
@@ -35,6 +40,8 @@ Sec-Fetch-Dest: document
 Sec-Fetch-Dest: embed
 Sec-Fetch-Dest: empty
 Sec-Fetch-Dest: font
+Sec-Fetch-Dest: frame
+Sec-Fetch-Dest: iframe
 Sec-Fetch-Dest: image
 Sec-Fetch-Dest: manifest
 Sec-Fetch-Dest: nested-document
@@ -53,7 +60,7 @@ Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: audioworklet
 </pre>
 
-<h2 id="Values">Values</h2>
+<h2 id="Directives">Directives</h2>
 
 <dl>
 	<dt><code>audio</code></dt>
@@ -67,6 +74,10 @@ Sec-Fetch-Dest: audioworklet
 	<dt><code>empty</code></dt>
 	<dd></dd>
 	<dt><code>font</code></dt>
+	<dd></dd>
+	<dt><code>frame</code></dt>
+	<dd></dd>
+	<dt><code>iframe</code></dt>
 	<dd></dd>
 	<dt><code>image</code></dt>
 	<dd></dd>
@@ -104,26 +115,11 @@ Sec-Fetch-Dest: audioworklet
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <thead>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-     </thead>
-     <tbody>
-         <tr>
-            <td>{{SpecName('Fetch Metadata','#sec-fetch-dest-header', 'Sec-Fetch-Dest')}}</td>
-            <td>{{Spec2("Fetch Metadata")}}</td>
-            <td>Initial definition</td>
-         </tr>
-     </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Sec-Fetch-Dest")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -131,4 +127,5 @@ Sec-Fetch-Dest: audioworklet
 	<li>{{HTTPHeader("Sec-Fetch-Mode")}}</li>
 	<li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
 	<li>{{HTTPHeader("Sec-Fetch-User")}}</li>
+	<li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
 </ul>
