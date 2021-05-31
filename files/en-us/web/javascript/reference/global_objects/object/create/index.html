@@ -185,11 +185,10 @@ ocn.prototype.toString = Object.toString; // since new object lacks method then 
 </pre>
 
 <p><br>
-  Adding the missing object-method by using the standard-object as new object's prototype
-  does not work either:</p>
+  Adding the missing object-method by calling <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf"><code>Object.setPrototypeOf()</code></a> with the name of the standard-object itself as the second argument does not work either:</p>
 
 <pre class="brush: js">ocn = Object.create( null );        // create "null" object (same as before)
-Object.setPrototypeOf(ocn, Object); // set new object's prototype to the standard-object
+Object.setPrototypeOf(ocn, Object); // wrong; sets new object's prototype to the Object() function
 
 &gt; ocn.toString() // error: Function.prototype.toString requires that 'this' be a Function
 </pre>
