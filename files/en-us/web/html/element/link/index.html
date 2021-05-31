@@ -17,8 +17,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/tabbed/link.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>To link an external stylesheet, you'd include a <code>&lt;link&gt;</code> element inside your {{HTMLElement("head")}} like this:</p>
 
 <pre class="brush: html no-line-numbers">&lt;link href="main.css" rel="stylesheet"&gt;</pre>
@@ -46,7 +44,7 @@ tags:
 <pre class="brush: html no-line-numbers">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
-<p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
+<p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
 
 <p>Other usage notes:</p>
 
@@ -295,7 +293,7 @@ myStylesheet.onerror = function() {
 
 <h3 id="Preload_examples">Preload examples</h3>
 
-<p>You can find a number of <code>&lt;link rel="preload"&gt;</code> examples in <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with <code>rel="preload"</code></a>.</p>
+<p>You can find a number of <code>&lt;link rel="preload"&gt;</code> examples in <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with <code>rel="preload"</code></a>.</p>
 
 <h2 id="Technical_summary">Technical summary</h2>
 

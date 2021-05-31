@@ -21,8 +21,6 @@ browser-compat: html.elements.input.input-tel
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>Despite the fact that inputs of type <code>tel</code> are functionally identical to standard <code>text</code> inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.</p>
 
 <div class="note">
@@ -107,13 +105,13 @@ browser-compat: html.elements.input.input-tel
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the telephone number field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the telephone number input has no minimum length.</p>
 
-<p>The telephone number field will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+<p>The telephone number field will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
