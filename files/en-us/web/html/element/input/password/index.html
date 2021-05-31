@@ -22,8 +22,6 @@ browser-compat: html.elements.input.input-password
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>Specifics of how the entry process works may vary from browser to browser; mobile devices, for example, often display the typed character for a moment before obscuring it, to allow the user to be sure they pressed the key they meant to press; this is helpful given the small size of keys and the ease with which the wrong one can be pressed, especially on virtual keyboards.</p>
 
 <div class="note">
@@ -108,13 +106,13 @@ browser-compat: html.elements.input.input-password
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the password field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the password field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the password entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the password input has no minimum length.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
