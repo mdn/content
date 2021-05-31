@@ -15,8 +15,7 @@ tags:
 <p class="summary">The <strong><code>ariaDisabled</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-disabled</code> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</p>
 
 <div class="notecard note">
-  <h3>Note</h3>
-  <p>Where possible use an HTML {{htmlelement("input")}} element with <code>type="button"</code> or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.</p>
+  <p><strong>Note:</strong> Where possible, use the {{htmlelement("input")}} element with <code>type="button"</code> or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -29,10 +28,9 @@ tags:
 
 <dl>
   <dt><code>"true"</code></dt>
-  <dd>The element is enabled.</dd>
+  <dd>The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.</dd>
   <dt><code>"false"</code></dt>
-  <dd>The element and all focusable descendants are disabled and its value cannot be changed by the user.</dd>
-</dl>
+  <dd>The element is enabled.</dl>
 
 <h2 id="Examples">Examples</h2>
 
