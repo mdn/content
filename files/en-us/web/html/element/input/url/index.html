@@ -23,8 +23,6 @@ browser-compat: html.elements.input.input-url
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.</p>
 
 <p>On browsers that don't support inputs of type <code>url</code>, a <code>url</code> input falls back to being a standard {{HTMLElement("input/text", "text")}} input.</p>
@@ -118,13 +116,13 @@ browser-compat: html.elements.input.input-url
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no minimum length.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
