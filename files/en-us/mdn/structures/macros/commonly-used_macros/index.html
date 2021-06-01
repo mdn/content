@@ -9,42 +9,43 @@ tags:
 ---
 <p>{{MDNSidebar}}</p>
 
-<p><span class="seoSummary">This page lists many of the general-purpose macros created for use on MDN. For how-to information on using these macros, see <a href="/en-US/docs/MDN/Structures/Macros">Using macros</a>.</span> See <a href="/en-US/docs/MDN/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated.</p>
+<p>This page lists many of the general-purpose macros created for use on MDN. For additional how-to information on using these macros, see <a href="/en-US/docs/MDN/Structures/Macros">Using macros</a>.</p>
 
-<p>See also the <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
+<p>See <a href="/en-US/docs/MDN/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated. See the <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
 
 <h2 id="Linking">Linking</h2>
 
-<h3 id="Creating_a_single_hyperlink">Creating a single hyperlink</h3>
+<p>MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.</p>
 
-<p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">In general, you don't need to use macros for creating arbitrary links. Use the <strong>Link</strong> button in the Editor interface to create links. </p>
+<p>Link macros are recommended over normal HTML links because they are succint and translation-friendly. For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.</p>
 
-<ul>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Glossary.ejs">Glossary</a></code> macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required and two optional parameters:
 
-  <p>Examples:</p>
+<h3 id="Glossary_links">Glossary links</h3>
 
-  <ol>
-   <li>The term's name (such as "HTML").</li>
-   <li>The text to display in the article instead of the term name (this should be used rarely).{{Optional_Inline}}</li>
-   <li>If this parameter is specified and is non-zero, the custom styling normally applied to glossary links is not applied.{{Optional_Inline}}</li>
-  </ol>
+<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Glossary.ejs">Glossary</a></code> macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required parameter and one optional parameter:</p>
+
+<ol>
+  <li>The term's name (such as "HTML").
+    <ul>
+      <li><code>\{{Glossary("HTML")}}</code> yields {{Glossary("HTML")}}</li>
+     </ul>
+  </li>
+  <li>Optional: The text to display in the article instead of the term name.</li>
+  <ul>
+    <li><code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code> yields {{Glossary("CSS", "Cascading Style Sheets")}}</li>
+   </ul>
+ </ol>
+
+  <h3 id="Links_to_in-page_sections">Links to in-page sections</h3>
+
+  <p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:</p>
 
   <ul>
-   <li><code>\{{Glossary("HTML")}}</code> yields {{Glossary("HTML")}}</li>
-   <li><code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code> yields {{Glossary("CSS", "Cascading Style Sheets")}}</li>
-   <li><code>\{{Glossary("HTML", "", 1)}}</code> yields {{Glossary("HTML", "", 1)}}</li>
-  </ul>
- </li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:
-  <ul>
-   <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
-   <li>
-    <p>Demo: {{anch("Linking to pages in references")}}</p>
-   </li>
-  </ul>
- </li>
-</ul>
+    <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
+    <li>
+     <p>Demo: {{anch("Linking to pages in references")}}</p>
+    </li>
+   </ul>
 
 <h3 id="Linking_to_pages_in_references">Linking to pages in references</h3>
 

@@ -20,8 +20,6 @@ browser-compat: html.elements.input.input-file
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <table class="properties">
  <tbody>
   <tr>
@@ -107,7 +105,7 @@ browser-compat: html.elements.input.input-file
  </tbody>
 </table>
 
-<h3 id="htmlattrdefaccept">{{htmlattrdef("accept")}}</h3>
+<h3 id="attr-accept"><code id="accept">accept</code></h3>
 
 <p>The <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of <strong>{{anch("Unique file type specifiers", "unique file type specifiers")}}</strong>. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.</p>
 
@@ -116,17 +114,17 @@ browser-compat: html.elements.input.input-file
 <pre class="brush: html">&lt;input type="file" id="docpicker"
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
 
-<h3 id="htmlattrdefcapture">{{htmlattrdef("capture")}}</h3>
+<h3 id="attr-capture"><code id="capture">capture</code></h3>
 
 <p>The <a href="/en-US/docs/Web/HTML/Attributes/capture"><code>capture</code></a> attribute value is a string that specifies which camera to use for capture of image or video data, if the <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute indicates that the input should be of one of those types. A value of <code>user</code> indicates that the user-facing camera and/or microphone should be used. A value of <code>environment</code> specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.</p>
 
 <div class="note"><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</div>
 
-<h3 id="htmlattrdeffiles">{{htmlattrdef("files")}}</h3>
+<h3 id="attr-files"><code id="files">files</code></h3>
 
 <p>A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.</p>
 
-<h3 id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</h3>
+<h3 id="attr-multiple"><code id="multiple">multiple</code></h3>
 
 <p>When the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> Boolean attribute is specified, the file input allows the user to select more than one file.</p>
 
@@ -149,7 +147,7 @@ browser-compat: html.elements.input.input-file
  </tbody>
 </table>
 
-<h3 id="htmlattrdefwebkitdirectory_non-standard_inline">{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</h3>
+<h3 id="attr-webkitdirectory"><code id="webkitdirectory">webkitdirectory</code> {{non-standard_inline}}</h3>
 
 <div id="webkitdirectory-include">
 <p>The Boolean <code>webkitdirectory</code> attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.</p>

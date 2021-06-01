@@ -10,10 +10,11 @@ tags:
   - Web Workers
   - Workers
   - onerror
+browser-compat: api.AbstractWorker.onerror
 ---
 <p>{{ APIRef("Web Workers API") }}</p>
 
-<p>The <code><strong>AbstractWorker</strong></code><strong><code>.onerror</code></strong> property of the {{domxref("AbstractWorker")}} interface represents an {{domxref("EventHandler")}}, that is a function to be called when the {{event("error")}} event occurs and bubbles through the {{domxref("Worker")}}.</p>
+<p>The <code><strong>AbstractWorker</strong></code><strong><code>.onerror</code></strong> property of the {{domxref("AbstractWorker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs and bubbles through the {{domxref("Worker")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -48,7 +49,7 @@ myWorker.onerror = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AbstractWorker.onerror")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Cross-origin_worker_error_behavior">Cross-origin worker error behavior</h3>
 

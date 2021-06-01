@@ -17,12 +17,13 @@ tags:
 - rtc
 - state
 - statechange
+browser-compat: api.RTCIceTransport.onstatechange
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
 <p><span class="seoSummary">The <code><strong>onstatechange</strong></code> event handler
     for the {{domxref("RTCIceTransport")}} interface is a property which specifies a
-    function to serve as the {{domxref("EventHandler")}} for the {{event("statechange")}}
+    function to serve as the {{event("Event_handlers", "event handler")}} for the {{event("statechange")}}
     event that is fired whenever the transport's {{domxref("RTCIceTransport.state",
     "state")}} changes.</span></p>
 
@@ -78,7 +79,7 @@ iceTransport.onstatechange = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceTransport.onstatechange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
