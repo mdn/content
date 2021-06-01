@@ -366,9 +366,8 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 <p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more
   often than once per second in inactive tabs.</p>
 
-<h2 id="The_this_problem">The "<a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a>"
-  problem</h2>
+
+<h2 id="The_this_problem">The "this" problem</h2>
 
 <p>When you pass a method to <code>setInterval()</code> or any other function, it is
   invoked with the wrong <a
@@ -482,17 +481,6 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
     problem</a> for details). The following code is also <a
     href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 
-<div class="note">For a more complex but still modular version of it
-  (<code><em>Daemon</em></code>) see <a
-    href="/en-US/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons">JavaScript Daemons Management</a>.
-  This more complex version is nothing but a big and scalable collection of methods for
-  the <code><em>Daemon</em></code> constructor. However, the <code><em>Daemon</em></code>
-  constructor itself is nothing but a clone of <code><em>MiniDaemon</em></code> with an
-  added support for <em>init</em> and <em>onstart</em> functions declarable during the
-  instantiation of the <code><em>daemon</em></code>. <strong>So the
-    <code><em>MiniDaemon</em></code> framework remains the recommended way for simple
-    animations</strong>, because <code><em>Daemon</em></code> without its collection of
-  methods is essentially a clone of it.</div>
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
@@ -792,10 +780,8 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <ul>
   <li>A polyfill of <code>setInterval</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
-  <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/Timers">JavaScript timers</a></li>
   <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</li>
   <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</li>
   <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons">Daemons management</a></li>
 </ul>
