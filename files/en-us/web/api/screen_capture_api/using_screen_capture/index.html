@@ -48,8 +48,6 @@ tags:
 <figcaption><strong><em>Starting screen capture: <code>Promise</code> style</em></strong>
 
 <pre class="brush: js">function startCapture(displayMediaOptions) {
- let captureStream = null;
-
  return navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     .catch(err =&gt; { console.error("Error:" + err); return null; });
 }</pre>
