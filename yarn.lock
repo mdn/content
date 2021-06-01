@@ -34,19 +34,19 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.4.tgz#27704e32b997db5bdf9cacdb331694f09629fe83"
-  integrity sha512-J8vDIdqtOv0O9IzZrOJgUPHlncNePoLfr0/Hsb4x5IMFtn1xlLbaOfD+moFYhHGhXBd/6FfTKgD+DvDSI3zhYA==
+"@mdn/browser-compat-data@3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.5.tgz#7671e4ba4d344e20d969fe4a9086d453ac168a59"
+  integrity sha512-Pu2Usbl9YTpeNxYKRebFRE4fV85I/thTMpF1eKS2EsgODg9VkcK0/oRZqEFhR6/So5wSPYIBHvfmVFXx0uCt/g==
 
-"@mdn/yari@0.4.510":
-  version "0.4.510"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.510.tgz#7a22397d92db6999b9591b5e06c493fbdb4b7593"
-  integrity sha512-Zvk3qGqQCqewykrVF51UYM4w47p6R/H6me6M3eIqX23oICEfQSfUOrjxpBN6UTBRBJNBY58Yv5dtqktXusHqFA==
+"@mdn/yari@0.4.518":
+  version "0.4.518"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.518.tgz#3f8147666bc2cb5750a1ae469b7af593063a392f"
+  integrity sha512-CyE1BmuRZUvOCY+WzYclbp//PmyM1QO3V7gDjwpxuWozmYZwC1Z8Hl3C6B5KSoP2VSKs5vUCLpv8Wgjzs8yd7g==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "3.3.4"
+    "@mdn/browser-compat-data" "3.3.5"
     accept-language-parser "1.5.0"
     browser-specs "^1.38.0"
     chalk "4.1.1"
@@ -56,7 +56,7 @@
     cookie "0.4.1"
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
-    dayjs "1.10.4"
+    dayjs "1.10.5"
     dotenv "10.0.0"
     ejs "3.1.6"
     express "4.17.1"
@@ -1075,10 +1075,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@1.10.4:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
-  integrity sha512-RI/Hh4kqRc1UKLOAf/T5zdMMX5DQIlDxwUe3wSyMMnEbGunnpENCdbUgM+dW7kXidZqCttBrmw7BhN4TMddkCw==
+dayjs@1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
+  integrity sha512-BUFis41ikLz+65iH6LHQCDm4YPMj5r1YFLdupPIyM4SGcXMmtiLQ7U37i+hGS8urIuqe7I/ou3IS1jVc4nbN4g==
 
 debug@2.6.9:
   version "2.6.9"

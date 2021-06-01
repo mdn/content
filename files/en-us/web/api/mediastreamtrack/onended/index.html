@@ -9,11 +9,12 @@ tags:
 - Property
 - Reference
 - onended
+browser-compat: api.MediaStreamTrack.onended
 ---
 <p>{{ APIRef("Media Capture and Streams") }}</p>
 
 <p>The <code><strong>MediaStreamTrack.onended</strong></code> event handler is used to
-  specify a function which serves as an {{domxref("EventHandler")}} to be called when the
+  specify a function which serves as an {{event("Event_handlers", "event handler")}} to be called when the
   <code><a href="/en-US/docs/Web/API/MediaStreamTrack/ended_event">ended</a></code> event
   occurs on the track. This event occurs when the track will no longer provide data to the
   stream for any reason, including the end of the media input being reached, the user
@@ -27,7 +28,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A function to serve as an {{domxref("EventHandler")}} for the
+<p>A function to serve as an {{event("Event_handlers", "event handler")}} for the
   <code><a href="/en-US/docs/Web/API/MediaStreamTrack/ended_event">ended</a></code> event.
   The event handler function receives a single parameter: the event object, which is a
   simple {{domxref("Event")}} object.</p>
@@ -66,7 +67,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamTrack.onended")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -14,18 +14,28 @@ tags:
   - rgb
   - rgba
   - unit
+  - lch
+  - lab
 browser-compat: css.types.color
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
+<p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color.
+  A <code>&lt;color&gt;</code> may also include an <a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
 
 <p>A <code>&lt;color&gt;</code> can be defined in any of the following ways:</p>
 
 <ul>
- <li>Using a keyword (such as <code>blue</code> or <code>transparent</code>)</li>
- <li>Using the <a href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB cubic-coordinate</a> system (via the #-hexadecimal or the <code>rgb()</code> and <code>rgba()</code> functional notations)</li>
- <li>Using the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL cylindrical-coordinate</a> system (via the <code>hsl()</code> and <code>hsla()</code> functional notations)</li>
+ <li>Using a keyword (such as <code>blue</code> or <code>transparent</code>). All existing keywords specify a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a></li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB cubic-coordinate</a> system (via the #-hexadecimal or the <code>rgb()</code> and <code>rgba()</code> functional notations).
+  These always specify a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a></li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL cylindrical-coordinate</a> system (via the <code>hsl()</code> and <code>hsla()</code> functional notations).
+  These always specify a color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a></li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC">LCH cylindrical coordinate system</a>, via the <code>lch()</code> functional notation.
+   This can specify any visible color.</li>
+ <li>Using the <a href="https://en.wikipedia.org/wiki/CIELAB_color_space">Lab coordinate system</a>, via the <code>lab()</code> functional notation.
+   This can specify any visible color.</li>
+ <li>Using the <code>color()</code> functional notation, to specify a color in a variety of predifined or custom color spaces.</li>
 </ul>
 
 <div class="note">
@@ -866,7 +876,7 @@ browser-compat: css.types.color
 
 <h3 id="RGB_colors">RGB colors</h3>
 
-<p>The RGB color model defines a given color according to its red, green, and blue components. An optional alpha component represents the color's transparency.</p>
+<p>The RGB color model defines a given color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a> according to its red, green, and blue components. An optional alpha component represents the color's transparency.</p>
 
 <h4 id="Syntax_2">Syntax</h4>
 
@@ -889,9 +899,11 @@ browser-compat: css.types.color
 
 <h3 id="HSL_colors">HSL colors</h3>
 
-<p>The HSL color model defines a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.</p>
+<p>The HSL color model defines a given color in the <a href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a> according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.</p>
 
-<p>Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).</p>
+<p>Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
+  However, using HSL to create color variations can produce surprising results, as it is not <a href="https://en.wikipedia.org/wiki/Color_difference#Tolerance">perceptually uniform</a>. For example, both <code>hsl(240 100% 50%)</code> and <code>hsl(60 100% 50%)</code> have the same lightness, even though the former is much darker than the latter.
+  </p>
 
 <h4 id="Syntax_3">Syntax</h4>
 
@@ -1205,6 +1217,32 @@ browser-compat: css.types.color
  <p>User's preference for the text color of visited links. Should be used with the default document background color.</p>
  </dd>
 </dl>
+
+<h3 id="Lab_colors">Lab colors</h3>
+  
+<p>CSS Color 4 introduced Lab colors.
+Lab colors are specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lab()"><code>lab()</code></a> functional notation.
+They are not limited to a specific color space, and can represent the entire spectrum of human vision.</p>
+  
+<h3 id="LCH_colors">LCH colors</h3>
+  
+<p>CSS Color 4 introduced LCH colors.
+LCH colors are specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/lch()"><code>lch()</code></a> functional notation.
+They are not limited to a specific color space, and can represent the entire spectrum of human vision.</p>
+
+<p>In fact, LCH is the polar form of Lab. It is more human friendly than Lab, as its chroma and hue components specify qualities of the desired color, as opposed to mixing.
+It is similar to HSL in that way, although it is far more perceptually uniform.
+Unlike HSL that describes both <code>hsl(60 100% 50%)</code> <code>hsl(240 100% 50%)</code> as having the same lightness, LCH (and Lab) correctly ascribes different lightnesses to them:
+the former (yellow) has an L of 97.6 and the latter (blue) an L of 29.6. 
+Therefore, LCH can be used to create palettes across entirely different colors, with predictable results.
+Please note that LCH hue is not the same as HSL hue and LCH chroma is not the same as HSL saturation, although they do share some conceptual similarities.</p>
+
+  
+<h3 id="color_colors">color() colors</h3>
+  
+<p>CSS Color 4 introduced this notation.
+Colors specified via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color()"><code>color()</code></a> function can specify a color in any of the predefined color spaces, 
+  as well as custom color spaces, defined via the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@color-profile"><code>@color-profile</code></a> rule.</p>
 
 <h2 id="Interpolation">Interpolation</h2>
 
@@ -1542,7 +1580,7 @@ hsla(240 100% 50% / 5%)      <span style="background: hsla(240,100%,50%,0.05);">
   <tr>
    <td>{{SpecName('CSS4 Colors', '#changes-from-3')}}</td>
    <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>Adds <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and <code>hsla()</code> as aliases of <code>rgb()</code> and <code>hsl()</code> (both with identical parameter syntax), space-separated function parameters as an alternative to commas, percentages for alpha values, and angles for the hue component in <code>hsl()</code> colors.</td>
+    <td>Adds LCH and Lab colors, the <code>color()</code> functional notation, <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and <code>hsla()</code> as aliases of <code>rgb()</code> and <code>hsl()</code> (both with identical parameter syntax), space-separated function parameters as an alternative to commas, percentages for alpha values, and angles for the hue component in <code>hsl()</code> colors.</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}</td>

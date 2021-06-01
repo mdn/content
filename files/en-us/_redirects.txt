@@ -4080,7 +4080,7 @@
 /en-US/docs/HTML:Inline_elements	/en-US/docs/Web/HTML/Inline_elements
 /en-US/docs/HTML:The_Importance_of_Correct_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/HTML:tag	/en-US/docs/Web/HTML/Element
-/en-US/docs/HTMLElement.forceSpellCheck	/en-US/docs/Web/API/HTMLElement/forceSpellCheck
+/en-US/docs/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/HTMLObjectElement.type	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/HTMLSpanElemen	/en-US/docs/Web/API/HTMLSpanElement
@@ -5498,7 +5498,6 @@
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Web/HTTP/Link_prefetching_FAQ
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
-/en-US/docs/Localizations_and_character_encodings	/en-US/docs/Web/Guide/Localizations_and_character_encodings
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
@@ -6808,6 +6807,7 @@
 /en-US/docs/Web-related_technologies	/en-US/docs/Related
 /en-US/docs/Web/API/AbortController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/AbstractWorker.onerror	/en-US/docs/Web/API/AbstractWorker/onerror
+/en-US/docs/Web/API/AddressErrors/regionCode	/en-US/docs/Web/API/AddressErrors
 /en-US/docs/Web/API/AmbientLightSensor/reading	/en-US/docs/Web/API/AmbientLightSensor/illuminance
 /en-US/docs/Web/API/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor
 /en-US/docs/Web/API/AmbientLightSensorReading/AmbientLightSensorReading	/en-US/docs/Web/API/AmbientLightSensor/AmbientLightSensor
@@ -7401,6 +7401,7 @@
 /en-US/docs/Web/API/Element/pointerover_event	/en-US/docs/Web/API/HTMLElement/pointerover_event
 /en-US/docs/Web/API/Element/pointerup_event	/en-US/docs/Web/API/HTMLElement/pointerup_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
+/en-US/docs/Web/API/Element/tabStop	/en-US/docs/Web/API/ShadowRoot/delegatesFocus
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
@@ -7606,8 +7607,8 @@
 /en-US/docs/Web/API/HTMLElement.dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/HTMLElement.dir	/en-US/docs/Web/API/HTMLElement/dir
 /en-US/docs/Web/API/HTMLElement.focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
-/en-US/docs/Web/API/HTMLElement.forceSpellCheck	/en-US/docs/Web/API/HTMLElement/forceSpellCheck
-/en-US/docs/Web/API/HTMLElement.forceSpellCheck()	/en-US/docs/Web/API/HTMLElement/forceSpellCheck
+/en-US/docs/Web/API/HTMLElement.forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
+/en-US/docs/Web/API/HTMLElement.forceSpellCheck()	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement.isContentEditable	/en-US/docs/Web/API/HTMLElement/isContentEditable
 /en-US/docs/Web/API/HTMLElement.lang	/en-US/docs/Web/API/HTMLElement/lang
 /en-US/docs/Web/API/HTMLElement.offsetHeight	/en-US/docs/Web/API/HTMLElement/offsetHeight
@@ -7625,6 +7626,7 @@
 /en-US/docs/Web/API/HTMLElement/blur	/en-US/docs/Web/API/HTMLOrForeignElement/blur
 /en-US/docs/Web/API/HTMLElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/HTMLElement/focus	/en-US/docs/Web/API/HTMLOrForeignElement/focus
+/en-US/docs/Web/API/HTMLElement/forceSpellCheck	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/API/HTMLElement/invalid_event	/en-US/docs/Web/API/HTMLInputElement/invalid_event
 /en-US/docs/Web/API/HTMLElement/nonce	/en-US/docs/Web/API/HTMLOrForeignElement/nonce
 /en-US/docs/Web/API/HTMLElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
@@ -8244,6 +8246,7 @@
 /en-US/docs/Web/API/Path2D.Path2D	/en-US/docs/Web/API/Path2D/Path2D
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
+/en-US/docs/Web/API/PaymentAddress/regionCode	/en-US/docs/Web/API/PaymentAddress
 /en-US/docs/Web/API/PaymentRequest/PaymentRequest.onmerchantvalidation	/en-US/docs/Web/API/PaymentRequest/onmerchantvalidation
 /en-US/docs/Web/API/PaymentRequest/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
@@ -10991,6 +10994,7 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/Destructing_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 /en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Member_Operators	/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors
+/en-US/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/en-US/docs/Web/JavaScript/Reference/Operators/
 /en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /en-US/docs/Web/JavaScript/Reference/Operators/constructor	/en-US/docs/Web/JavaScript/Reference/Classes/constructor
 /en-US/docs/Web/JavaScript/Reference/Operators/extends	/en-US/docs/Web/JavaScript/Reference/Classes/extends
