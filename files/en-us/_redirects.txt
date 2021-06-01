@@ -1704,7 +1704,6 @@
 /en-US/docs/DOM/SVGSymbolElement	/en-US/docs/Web/API/SVGSymbolElement
 /en-US/docs/DOM/SVGTRefElement	/en-US/docs/Web/API/SVGTRefElement
 /en-US/docs/DOM/SVGTSpanElement	/en-US/docs/Web/API/SVGTSpanElement
-/en-US/docs/DOM/SVGTests	/en-US/docs/Web/API/SVGTests
 /en-US/docs/DOM/SVGTextElement	/en-US/docs/Web/API/SVGTextElement
 /en-US/docs/DOM/SVGTextPositioningElement	/en-US/docs/Web/API/SVGTextPositioningElement
 /en-US/docs/DOM/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
@@ -3075,7 +3074,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGSymbolElement	/en-US/docs/Web/API/SVGSymbolElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTRefElement	/en-US/docs/Web/API/SVGTRefElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTSpanElement	/en-US/docs/Web/API/SVGTSpanElement
-/en-US/docs/Document_Object_Model_(DOM)/SVGTests	/en-US/docs/Web/API/SVGTests
 /en-US/docs/Document_Object_Model_(DOM)/SVGTextElement	/en-US/docs/Web/API/SVGTextElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTextPositioningElement	/en-US/docs/Web/API/SVGTextPositioningElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
