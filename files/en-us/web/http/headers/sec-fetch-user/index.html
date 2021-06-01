@@ -11,9 +11,11 @@ tags:
   - Experimental
 browser-compat: http.headers.Sec-Fetch-User
 ---
-<p>{{HTTPSidebar}}{{Draft}}{{SeeCompatTable}}</p>
+<p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
 
-<p>The <strong><code>Sec-Fetch-User</code></strong> fetch metadata header is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
+<p>The <strong><code>Sec-Fetch-User</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is only sent for requests initiated by user activation, and its value will always be <code>?1</code>.</p>
+
+<p>A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.</p>
 
 <table class="properties">
  <tbody>
@@ -27,15 +29,14 @@ browser-compat: http.headers.Sec-Fetch-User
   </tr>
   <tr>
    <th scope="row">{{Glossary("CORS-safelisted request header")}}</th>
-   <td></td>
+   <td>no</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">
-Sec-Fetch-User: ?1
+<pre class="brush: http">Sec-Fetch-User: ?1
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -44,7 +45,13 @@ Sec-Fetch-User: ?1
 
 <h2 id="Examples">Examples</h2>
 
-<p>TODO</p>
+<p>If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:</p>
+
+<pre class="brush: http">Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
