@@ -1,0 +1,58 @@
+---
+title: MIDIPort.state
+slug: Web/API/MIDIPort/state
+tags:
+  - API
+  - Property
+  - Reference
+  - state
+  - MIDIPort
+browser-compat: api.MIDIPort.state
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+
+<p class="summary">The <strong><code>state</code></strong> read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let state = MIDIPort.state;
+</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString","string")}} containing the state of the port. One of:</p>
+<dl>
+  <dt><code>"disconnected"</code></dt>
+  <dd>The device that this MIDIPort represents is disconnected from the system.</dd>
+  <dt><code>"connected"</code></dt>
+  <dd>The device that this MIDIPort represents is currently connected.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example loops through all input ports and prints the state of each to the console.</p>
+
+<pre class="brush: js">for (let entry of midiAccess.inputs) {
+  let input = entry[1];
+  console.log(input.state);
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('WebMIDI API','#dom-midiport-state','MIDIPort.state')}}</td>
+    <td>{{Spec2('WebMIDI API')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
