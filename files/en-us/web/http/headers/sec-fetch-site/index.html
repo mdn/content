@@ -15,9 +15,9 @@ browser-compat: http.headers.Sec-Fetch-Site
 
 <p>The <strong><code>Sec-Fetch-Site</code></strong> {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.</p>
 
-<p>In other words, this header tells the server getting the request whether it is coming from the same origin, the same site, a different site, or is a "user initiated" request. The server can use this information to decide if the request should be allowed. Same-origin requests would usually be allowed by default, but the other requests may depend on what resource is being requested, or information in other {{Glossary("Fetch metadata request header","Fetch metadata request headers")}}.</p>
-
-<p>By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.</p>
+<p>In other words, this header tells a server whether a request for a resource is coming from the same origin, the same site, a different site, or is a "user initiated" request. The server can then use this information to decide if the request should be allowed.</p>
+  
+<p>Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in other {{Glossary("Fetch metadata request header","Fetch metadata request headers")}}. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.</p>
 
 <table class="properties">
  <tbody>
