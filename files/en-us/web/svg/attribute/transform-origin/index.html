@@ -84,7 +84,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 <pre class="brush: html">&lt;h4&gt;Reference image&lt;/h4&gt;
 
 &lt;figure&gt;
-  &lt;svg width="200" height="200" viewBox="0 0 200 200"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;
     &lt;circle cx="100" cy="100" r="100" stroke="none" fill="black"/&gt;
     &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
     &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
@@ -108,7 +108,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 &lt;h4&gt;Transformation with transform-origin&lt;/h4&gt;
 
 &lt;figure&gt;
-  &lt;svg width="200" height="200" viewBox="0 0 200 200"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;
     &lt;defs&gt;
       &lt;g id="target-g-1"&gt;
         &lt;circle cx="100" cy="100" r="100" stroke="none"/&gt;
@@ -122,7 +122,7 @@ browser-compat: svg.attributes.presentation.transform-origin
         transform="scale(0.75 0.75)"
         transform-origin="100 100"/&gt;
 
-    &lt;svg x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
       &lt;use href="#target-g-1" fill="red"
         transform="scale(0.5 0.5)"
         transform-origin="100 100"/&gt;
@@ -139,7 +139,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 &lt;h4&gt;Transformation without transform-origin&lt;/h4&gt;
 
 &lt;figure&gt;
-  &lt;svg width="200" height="200" viewBox="0 0 200 200"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;
     &lt;defs&gt;
       &lt;g id="target-g-1"&gt;
         &lt;circle cx="100" cy="100" r="100" stroke="none"/&gt;
@@ -152,7 +152,7 @@ browser-compat: svg.attributes.presentation.transform-origin
     &lt;use href="#target-g-1" fill="blue"
         transform="translate(100 100) scale(0.75 0.75) translate(-100 -100)"/&gt;
     
-    &lt;svg x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
+    &lt;svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
       &lt;use href="#target-g-1" fill="red"
           transform="translate(100 100) scale(0.5 0.5) translate(-100 -100)"/&gt;
       &lt;use href="#target-g-1" fill="yellow"
