@@ -63,17 +63,17 @@ Sec-Fetch-Site: none
 The browser will generate the <code>Sec-Fetch-Site: same-origin</code> header as shown below, and the server will typically allow the request:</p>
 
  <pre class="brush: http">GET /foo.json
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: cors
 Sec-Fetch-Dest: none
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
 </pre>
 
 <p>A fetch request to the same URL from another site, for example <code>potentially-evil.com</code>, causes the browser to generate a different header (e.g. <code>Sec-Fetch-Site: cross-site</code>), which the server can choose to accept or reject:</p>
 
 <pre class="brush: http">GET /foo.json
-Sec-Fetch-Site: cross-site
-Sec-Fetch-Mode: cors
 Sec-Fetch-Dest: none
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: cross-site
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -92,4 +92,5 @@ Sec-Fetch-Dest: none
  <li>{{HTTPHeader("Sec-Fetch-User")}}</li>
  <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
  <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
+ <li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
 </ul>
