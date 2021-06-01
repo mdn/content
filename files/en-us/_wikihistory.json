@@ -44896,60 +44896,6 @@
       "louisremi"
     ]
   },
-  "Web/API/ElementCSSInlineStyle": {
-    "modified": "2020-10-15T22:27:29.203Z",
-    "contributors": [
-      "ExE-Boss"
-    ]
-  },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:10:28.594Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "sideshowbarker",
-      "jorams",
-      "mfluehr",
-      "Hirse",
-      "fscholz",
-      "Jessidhia",
-      "Granjow",
-      "tshinnic",
-      "hostmaster",
-      "inad9300",
-      "CapitalQ",
-      "Sheppy",
-      "raghav710",
-      "AJFunk",
-      "annamalai-saro",
-      "btnwtn",
-      "pcat",
-      "lockedscope",
-      "gmanpersona",
-      "Nickolay",
-      "teoli",
-      "kscarfone",
-      "Markus Prokott",
-      "ajaybhat",
-      "ethertank",
-      "miketaylr",
-      "enderandpeter",
-      "Brettz9",
-      "kitchin",
-      "Versae",
-      "DBaron",
-      "Waldo",
-      "Riboribo",
-      "Mgjbot",
-      "Jabez",
-      "Ptak82",
-      "BenoitL",
-      "AlexWagner",
-      "Dria",
-      "JesseW",
-      "Callek"
-    ]
-  },
   "Web/API/Encoding_API": {
     "modified": "2020-12-13T21:01:48.901Z",
     "contributors": [

@@ -50,7 +50,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 
 <h2 id="Modify_an_element_style">Modify an element's style</h2>
 
-<p>The element {{domxref("ElementCSSInlineStyle.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
+<p>The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set <em>in-line</em> (e.g, <code>&lt;td style="background-color: lightblue"&gt;</code> returns the string "<code>background-color:lightblue</code>", or directly for that element using <code>element.style.propertyName</code>, even though there may be other styles on the element from a stylesheet).</p>
 
 <p>Also, when you set this property on an element, you override any styles that have been set elsewhere for that element's particular property you are setting. Setting the <code>border</code> property, for example, will override settings made elsewhere for that element's <code>border</code> property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.</p>
 
