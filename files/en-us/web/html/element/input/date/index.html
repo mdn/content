@@ -22,8 +22,6 @@ browser-compat: html.elements.input.input-date
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <p>The input UI generally varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <p>Among browsers with custom interfaces for selecting dates are Chrome, Edge, and Opera, whose date control looks like so:</p>
@@ -109,19 +107,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
  </tbody>
 </table>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="attr-max"><code id="max">max</code></h3>
 
-<p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
+<p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>later than or equal to</strong> the one in the <code>min</code> attribute.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="attr-min"><code id="min">min</code></h3>
 
-<p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
+<p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>earlier than or equal to</strong> the one in the <code>max</code> attribute.</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="attr-step"><code id="step">step</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
