@@ -5498,7 +5498,6 @@
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Web/HTTP/Link_prefetching_FAQ
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
-/en-US/docs/Localizations_and_character_encodings	/en-US/docs/Web/Guide/Localizations_and_character_encodings
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
