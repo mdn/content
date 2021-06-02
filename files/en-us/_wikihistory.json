@@ -49104,13 +49104,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/GeometryUtils": {
-    "modified": "2020-10-15T22:00:19.133Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/API/GestureEvent": {
     "modified": "2020-10-15T21:40:54.623Z",
     "contributors": [
