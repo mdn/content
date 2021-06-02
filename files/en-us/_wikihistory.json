@@ -74038,15 +74038,6 @@
       "teoli"
     ]
   },
-  "Web/API/RTCPeerConnection_idpvalidationerror_event": {
-    "modified": "2020-10-15T21:28:53.407Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "mfluehr",
-      "teoli"
-    ]
-  },
   "Web/API/RTCRemoteOutboundRtpStreamStats": {
     "modified": "2020-10-15T22:31:17.114Z",
     "contributors": [

@@ -8405,6 +8405,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIdentityErrorEvent	/en-US/docs/Web/API/RTCIdentityErrorEvent
 /en-US/docs/Web/API/RTCPeerConnectionIdentityEvent	/en-US/docs/Web/API/RTCIdentityEvent
 /en-US/docs/Web/API/RTCPeerConnectionIdentityEvent.assertion	/en-US/docs/Web/API/RTCIdentityEvent/assertion
+/en-US/docs/Web/API/RTCPeerConnection_idpvalidationerror_event	/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
@@ -10303,7 +10304,7 @@
 /en-US/docs/Web/Events/icegatheringstatechange_event	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
 /en-US/docs/Web/Events/identityresult	/en-US/docs/Web/API/RTCPeerConnection/identityresult_event
 /en-US/docs/Web/Events/idpassertionerror	/en-US/docs/Web/API/RTCPeerConnection/idpassertionerror_event
-/en-US/docs/Web/Events/idpvalidationerror	/en-US/docs/Web/API/RTCPeerConnection_idpvalidationerror_event
+/en-US/docs/Web/Events/idpvalidationerror	/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event
 /en-US/docs/Web/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/Events/install	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
