@@ -11,16 +11,15 @@ tags:
   - Web
   - WebP
   - picture
+browser-compat: html.elements.picture
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;picture&gt;</code> element</strong> contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.</span></p>
+<p>The <strong><code>&lt;picture&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.</p>
 
 <p>The browser will consider each child <code>&lt;source&gt;</code> element and choose the best match among them. If no matches are found—or the browser doesn't support the <code>&lt;picture&gt;</code> element—the URL of the <code>&lt;img&gt;</code> element's {{htmlattrxref("src", "img")}} attribute is selected. The selected image is then presented in the space occupied by the <code>&lt;img&gt;</code> element.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}</div>
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <p>To decide which URL to load, the {{Glossary("user agent")}} examines each <code>&lt;source&gt;</code>'s {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, and {{htmlattrxref("type", "source")}} attributes to select a compatible image that best matches the current layout and capabilities of the display device.</p>
 
@@ -136,26 +135,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.picture")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

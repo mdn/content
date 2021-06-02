@@ -353,7 +353,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
   console.log(tasks[0])
 }</pre>
 
-<p>Next, we'll add <code>toggleTaskCompleted</code> to the props of each <code>&lt;Todo/&gt;</code> component rendered inside our <code>taskList</code>; update it like so:</p>
+<p>Next, we'll add <code>toggleTaskCompleted</code> to the props of each <code>&lt;Todo /&gt;</code> component rendered inside our <code>taskList</code>; update it like so:</p>
 
 <pre class="brush: js">const taskList = tasks.map(task =&gt; (
   &lt;Todo
@@ -405,7 +405,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <h2 id="Deleting_a_task">Deleting a task</h2>
 
-<p>Deleting a task will follow a similar pattern to toggling its completed state: We need to define a function for updating our state, then pass that function into <code>&lt;Todo/&gt;</code> as a prop and call it when the right event happens.</p>
+<p>Deleting a task will follow a similar pattern to toggling its completed state: We need to define a function for updating our state, then pass that function into <code>&lt;Todo /&gt;</code> as a prop and call it when the right event happens.</p>
 
 <h3 id="The_deleteTask_callback_prop">The <code>deleteTask</code> callback prop</h3>
 
@@ -428,7 +428,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
   /&gt;
 ));</pre>
 
-<p>In <code>Todo.js</code>, we want to call <code>props.deleteTask()</code> when the "Delete" button is pressed. <code>deleteTask()</code> needs to know the ID of the task that called it, so it can delete the correct task from the state</p>
+<p>In <code>Todo.js</code>, we want to call <code>props.deleteTask()</code> when the "Delete" button is pressed. <code>deleteTask()</code> needs to know the ID of the task that called it, so it can delete the correct task from the state.</p>
 
 <p>Update the "Delete" button inside Todo.js, like so:</p>
 

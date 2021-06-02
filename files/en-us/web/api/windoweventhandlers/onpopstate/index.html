@@ -10,11 +10,12 @@ tags:
 - Property
 - Window
 - events
+browser-compat: api.WindowEventHandlers.onpopstate
 ---
 <div>{{APIRef}}</div>
 
 <p>The <strong><code>onpopstate</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing <code><a href="/en-US/docs/Web/API/Window/popstate_event">popstate</a></code>
   events on the window.</p>
 
@@ -85,7 +86,7 @@ history.go(2);  // alerts "location: http://example.com/example.html?page=3, sta
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

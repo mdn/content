@@ -22,7 +22,7 @@ jobs:
           node-version: "12"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: cached-node_modules
         with:
           path: |
@@ -58,7 +58,7 @@ jobs:
       - uses: technote-space/get-diff-action@v4.1.1
         id: git_diff_content
         with:
-          PATTERNS: files/**/*.html
+          PATTERNS: files/**/*.+(html|md)
           SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content

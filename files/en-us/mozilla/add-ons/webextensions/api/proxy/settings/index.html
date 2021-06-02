@@ -10,6 +10,7 @@ tags:
   - Reference
   - Settings
   - WebExtensions
+browser-compat: webextensions.api.proxy.settings
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -29,9 +30,8 @@ tags:
  <dd><code>string</code>. A URL to use to configure the proxy.</dd>
  <dt><code>autoLogin</code>{{optional_inline}}</dt>
  <dd><code>boolean</code>. Do not prompt for authentication if the password is saved. Defaults to <code>false</code>.</dd>
- <dt><code>ftp</code>{{optional_inline}} {{Deprecated_Inline}}</dt>
+  <dt><code>ftp</code>{{optional_inline}} {{Deprecated_Inline}}</dt>
  <dd><code>string</code>. The address of the FTP proxy. Can include a port.
-</dd>
  <dt><code>http</code>{{optional_inline}}</dt>
  <dd><code>string</code>. The address of the HTTP proxy. Can include a port.</dd>
  <dt><code>httpProxyAll</code>{{optional_inline}}</dt>
@@ -65,6 +65,4 @@ browser.proxy.settings.set({value: proxySettings});</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.proxy.settings", 10)}}</p>
+<p>{{Compat}}</p>

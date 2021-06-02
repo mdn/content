@@ -243,7 +243,8 @@ voldec.addEventListener('click', function(e) {
 <p>Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a simple <code>click</code> event listener to the <code>progress</code> element:</p>
 
 <pre class="brush: js">progress.addEventListener('click', function(e) {
-   var pos = (e.pageX  - this.offsetLeft) / this.offsetWidth;
+   var rect = this.getBoundingClientRect();
+   var pos = (e.pageX  - rect.left) / this.offsetWidth;
    video.currentTime = pos * video.duration;
 });
 </pre>

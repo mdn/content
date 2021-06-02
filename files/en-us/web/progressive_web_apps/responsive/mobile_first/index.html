@@ -13,7 +13,7 @@ tags:
   - Mobile first
 ---
 <div class="summary">
-  <p><span class="seoSummary">This article provides a guide to implementing a website layout that follows the principle of <strong>mobile first</strong>. This means a creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.</span></p>
+  <p><span class="seoSummary">This article provides a guide to implementing a website layout that follows the principle of <strong>mobile first</strong>. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.</span></p>
 </div>
 
 <h2 id="First_things_first_—_mobile_as_a_default">First things first — mobile as a default</h2>
@@ -65,7 +65,7 @@ tags:
 
 <pre class="brush: bash">sudo npm install -g volo</pre>
 
-<p>(You'll also need to <a href="http://nodejs.org/download/">get Node.js</a> too if you don't already have it)</p>
+<p>(You'll also need to <a href="https://nodejs.org/download/">get Node.js</a> too if you don't already have it)</p>
 
 <p>I then created my sample project using</p>
 
@@ -81,11 +81,11 @@ tags:
 
 <h3 id="Built-in_features_of_the_Mortar_template">Built-in features of the Mortar template</h3>
 
-<p>Mortar templates contain a number of built-in features: Read <a href="/en-US/docs/Web/Apps/App_templates">Using app templates</a> for more details. In this sample app, I have used a couple of the built-in features to:</p>
+<p>Mortar templates contain a number of built-in features. In this sample app, I have used a couple of the built-in features to:</p>
 
 <ul>
  <li>Include an install button that works for Firefox OS, Firefox Aurora, Chrome and iOS app installs (as explained on the <a href="https://github.com/wavysandbox/install/blob/master/README.md">Install GitHub page</a>). To make the install button work, all you have to do is put a <code>&lt;button&gt;</code> on the page with an ID of <code>install-btn</code>. Magic!</li>
- <li>Selectively include JavaScript libraries according to media query and feature tests (<a href="http://requirejs.org/">require.js</a> is built in, which is helpful and very easy to use.)</li>
+ <li>Selectively include JavaScript libraries according to media query and feature tests (<a href="https://requirejs.org/">require.js</a> is built in, which is helpful and very easy to use.)</li>
 </ul>
 
 <h3 id="HTML_structure">HTML structure</h3>
@@ -232,7 +232,7 @@ nav {
 
 <p>Feature detection involves doing tests (usually in JavaScript) to determine whether a browser supports a certain feature, and then serving CSS or JavaScript to suit that situation. This can be very useful for mobile first, as you may well want to hide bits of code from the "mobile version" and only include them for the "desktop version", or vice versa.</p>
 
-<p>You can write your own feature detects (Mark Pilgrim's <a href="http://diveintohtml5.info/everything.html">All-In-One Almost-Alphabetical Guide to Detecting Everything</a> is a good start), but really it is much better to use a dedicated existing solution, such as <a href="http://modernizr.com/">Modernizr</a>. Modernizr is a good choice as it not only includes a feature detect for just about everything (CSS, HTML5, some other bits besides), it is also fairly reliable, and you can create your own custom version with only the feature detects you need in it, using the <a href="http://modernizr.com/download/">Modernizr Download Builder</a>. The full uncompressed Modernizr library is 42KB, but the version we are using in this demo is only 8KB.</p>
+<p>You can write your own feature detects (Mark Pilgrim's <a href="http://diveintohtml5.info/everything.html">All-In-One Almost-Alphabetical Guide to Detecting Everything</a> is a good start), but really it is much better to use a dedicated existing solution, such as <a href="https://modernizr.com/">Modernizr</a>. Modernizr is a good choice as it not only includes a feature detect for just about everything (CSS, HTML5, some other bits besides), it is also fairly reliable, and you can create your own custom version with only the feature detects you need in it, using the <a href="https://modernizr.com/download/">Modernizr Download Builder</a>. The full uncompressed Modernizr library is 42KB, but the version we are using in this demo is only 8KB.</p>
 
 <p>I put Modernizr inside my <code>js/lib</code> directory, then included it by putting the following construct inside my HTML file:</p>
 
