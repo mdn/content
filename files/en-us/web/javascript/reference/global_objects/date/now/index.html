@@ -7,7 +7,7 @@ tags:
 - Method
 - Reference
 - Time
-- polyfill
+- Polyfill
 browser-compat: javascript.builtins.Date.now
 ---
 <div>{{JSRef}}</div>
@@ -27,7 +27,7 @@ browser-compat: javascript.builtins.Date.now
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>This method was standardized in ECMA-262 5<sup>th</sup> edition. Engines which have not
+<p>This method was standardized in ECMA-262 5th edition. Engines which have not
   been updated to support this method can work around the absence of this method using the
   following shim:</p>
 
@@ -79,6 +79,7 @@ Date.now();
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Date.now</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-date"><code>core-js</code></a></li>
   <li>{{domxref("Performance.now()")}} — provides timestamps with sub-millisecond
     resolution for use in measuring web page performance</li>
   <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>

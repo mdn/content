@@ -9,6 +9,8 @@ tags:
 - Reference
 - Window
 - setImmediate
+- Polyfill
+browser-compat: api.Window.setImmediate
 ---
 <div>{{APIRef("HTML DOM")}}{{Non-standard_header}}</div>
 
@@ -90,11 +92,12 @@ var <em>immediateID</em> = setImmediate(<em>func</em>);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.setImmediate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>setImmediate</code> is available in <a href="https://github.com/zloirock/core-js#setimmediate"><code>core-js</code></a></li>
   <li>{{DOMxRef("Window.clearImmediate()")}}</li>
   <li><a class="external"
       href="http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html">Microsoft

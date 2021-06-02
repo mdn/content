@@ -102,34 +102,77 @@ overflow: unset;
 
 <h3 id="Setting_different_overflow_values_for_text">Setting different overflow values for text</h3>
 
-<pre class="brush: css">p {
-  width: 12em;
-  height: 6em;
+<h4>HTML</h4>
+
+<pre class="brush: html">
+  &lt;div&gt;
+    &lt;code&gt;visible&lt;/code&gt;
+    &lt;p class="visible"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;hidden&lt;/code&gt;
+    &lt;p class="hidden"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;scroll&lt;/code&gt;
+    &lt;p class="scroll"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;auto&lt;/code&gt;
+    &lt;p class="auto"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+div {
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+p {
+  width: 8em;
+  height: 5em;
   border: dotted;
-  overflow: visible; /* content is not clipped */
+}
+
+p.visible {
+  overflow: visible;
+}
+
+p.hidden {
+  overflow: hidden;
+}
+
+p.scroll {
+  overflow: scroll;
+}
+
+p.auto {
+  overflow: auto;
 }
 </pre>
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+<h4>Result</h4>
 
-<pre class="brush: css">p { overflow: hidden; /* no scrollbars are provided */ }
-</pre>
-
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p { overflow: scroll; /* always show scrollbars */ }
-</pre>
-
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p { overflow: auto; /* append scrollbars if necessary */ }
-</pre>
-
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+{{EmbedLiveSample("Setting_different_overflow_values_for_text", "600", "250")}}
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -39,121 +39,96 @@ attr(data-something, "default");
 
 <dl>
  <dt><code>attribute-name</code></dt>
- <dd>Is the name of an attribute on the HTML element referenced in the CSS.</dd>
+ <dd>The name of an attribute on the HTML element referenced in the CSS.</dd>
  <dt><code>&lt;type-or-unit&gt;</code> {{Experimental_Inline}}</dt>
- <dd>Is a keyword representing either the type of the attribute's value, or its unit, as in HTML some attributes have implicit units. If the use of <code>&lt;type-or-unit&gt;</code> as a value for the given attribute is invalid, the <code>attr()</code> expression will be invalid too. If omitted, it defaults to <code>string</code>. The list of valid values are:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Keyword</th>
-    <th scope="col">Associated type</th>
-    <th scope="col">Comment</th>
-    <th scope="col">Default value</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>string</code></td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;string&gt;")}}</td>
-    <td>The attribute value is treated as a CSS {{CSSxRef("&lt;string&gt;")}}. It is NOT reparsed, and in particular the characters are used as-is instead of CSS escapes being turned into different characters.</td>
-    <td>An empty string.</td>
-   </tr>
-   <tr>
-    <td><code>color</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;color&gt;")}}</td>
-    <td>The attribute value is parsed as a hash (3- or 6-value hash) or a keyword. It must be a valid CSS {{CSSxRef("&lt;string&gt;")}} value.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>currentcolor</code></td>
-   </tr>
-   <tr>
-    <td><code>url</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;url&gt;")}}</td>
-    <td>The attribute value is parsed as a string that is used inside a CSS <code>url()</code> function.<br>
-     Relative URL are resolved relatively to the original document, not relatively to the style sheet.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td>The url <code>about:invalid</code> that points to a non-existent document with a generic error condition.</td>
-   </tr>
-   <tr>
-    <td><code>integer</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;integer&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;integer&gt;")}}. If it is not valid, that is not an integer or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>number</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;number&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>length</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;length&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;length&gt;")}} dimension, that is including the unit (e.g. <code>12.5em</code>). If it is not valid, that is not a length or out of the range accepted by the CSS property, the default value is used.<br>
-     If the given unit is a relative length, <code>attr()</code> computes it to an absolute length.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>em</code>, <code>ex</code>, <code>px</code>, <code>rem</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, <code>mm</code>, <code>cm</code>, <code>in</code>, <code>pt</code>, or <code>pc</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;length&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as a {{CSSxRef("&lt;length&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.<br>
-     If the given unit is a relative length, <code>attr()</code> computes it to an absolute length.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>angle</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;angle&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;angle&gt;")}} dimension, that is including the unit (e.g. <code>30.5deg</code>). If it is not valid, that is not an angle or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0deg</code>, or, if <code>0deg</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>deg</code>, <code>grad</code>, <code>rad</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;angle&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as an {{CSSxRef("&lt;angle&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0deg</code>, or, if <code>0deg</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>time</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;time&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;time&gt;")}} dimension, that is including the unit (e.g. <code>30.5ms</code>). If it is not valid, that is not a time or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0s</code>, or, if <code>0s</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>s</code>, <code>ms</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;time&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as an{{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0s</code>, or, if <code>0s</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>frequency</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;frequency&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;frequency&gt;")}} dimension, that is including the unit (e.g. <code>30.5kHz</code>). If it is not valid, that is not a frequency or out of the range accepted by the CSS property, the default value is used.</td>
-    <td><code>0Hz</code>, or, if <code>0Hz</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>Hz</code>, <code>kHz</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;frequency&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as a {{CSSxRef("&lt;frequency&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0Hz</code>, or, if <code>0Hz</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-   <tr>
-    <td><code>%</code> {{Experimental_Inline}}</td>
-    <td style="white-space: nowrap;">{{CSSxRef("&lt;percentage&gt;")}}</td>
-    <td>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as a {{CSSxRef("&lt;percentage&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.<br>
-     If the given value is used as a length, <code>attr()</code> computes it to an absolute length.<br>
-     Leading and trailing spaces are stripped.</td>
-    <td><code>0%</code>, or, if <code>0%</code> is not a valid value for the property, the property's minimum value.</td>
-   </tr>
-  </tbody>
- </table>
+ <dd><p>A keyword representing either the type of the attribute's value, or its unit, as in HTML some attributes have implicit units. If the use of <code>&lt;type-or-unit&gt;</code> as a value for the given attribute is invalid, the <code>attr()</code> expression will be invalid too. If omitted, it defaults to <code>string</code>. The list of valid values are:</p>
+   <dl>
+     <dt><code>string</code></dt>
+     <dd>
+       <p>The attribute value is treated as a CSS {{CSSxRef("&lt;string&gt;")}}. It is NOT reparsed, and in particular the characters are used as-is instead of CSS escapes being turned into different characters.</p>
+       <p>Default value: an empty string.</p>
+     </dd>
+     <dt><code>color</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a hash (3- or 6-value hash) or a keyword. It must be a valid CSS {{CSSxRef("&lt;string&gt;")}} value. Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>currentcolor</code>.</p>
+     </dd>
+     <dt><code>url</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a string that is used inside a CSS <code>url()</code> function.
+        Relative URL are resolved relatively to the original document, not relatively to the style sheet.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: the url <code>about:invalid</code> that points to a non-existent document with a generic error condition.</p>
+     </dd>
+     <dt><code>integer</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;integer&gt;")}}. If it is not valid, that is not an integer or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>number</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>length</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;length&gt;")}} dimension, that is including the unit (e.g. <code>12.5em</code>). If it is not valid, that is not a length or out of the range accepted by the CSS property, the default value is used.
+        If the given unit is a relative length, <code>attr()</code> computes it to an absolute length.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>em</code>, <code>ex</code>, <code>px</code>, <code>rem</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, <code>mm</code>, <code>cm</code>, <code>in</code>, <code>pt</code>, or <code>pc</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as a {{CSSxRef("&lt;length&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+        If the given unit is a relative length, <code>attr()</code> computes it to an absolute length.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0</code>, or, if <code>0</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>angle</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;angle&gt;")}} dimension, that is including the unit (e.g. <code>30.5deg</code>). If it is not valid, that is not an angle or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0deg</code>, or, if <code>0deg</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>deg</code>, <code>grad</code>, <code>rad</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as an {{CSSxRef("&lt;angle&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0deg</code>, or, if <code>0deg</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>time</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;time&gt;")}} dimension, that is including the unit (e.g. <code>30.5ms</code>). If it is not valid, that is not a time or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0s</code>, or, if <code>0s</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>s</code>, <code>ms</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as an{{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0s</code>, or, if <code>0s</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>frequency</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;frequency&gt;")}} dimension, that is including the unit (e.g. <code>30.5kHz</code>). If it is not valid, that is not a frequency or out of the range accepted by the CSS property, the default value is used.</p>
+       <p>Default value: <code>0Hz</code>, or, if <code>0Hz</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>Hz</code>, <code>kHz</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as a {{CSSxRef("&lt;frequency&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0Hz</code>, or, if <code>0Hz</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+     <dt><code>%</code> {{Experimental_Inline}}</dt>
+     <dd>
+       <p>The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. <code>12.5</code>), and interpreted as a {{CSSxRef("&lt;percentage&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
+        If the given value is used as a length, <code>attr()</code> computes it to an absolute length.
+        Leading and trailing spaces are stripped.</p>
+       <p>Default value: <code>0%</code>, or, if <code>0%</code> is not a valid value for the property, the property's minimum value.</p>
+     </dd>
+  </dl>
  </dd>
  <dt><code>&lt;fallback&gt;</code> {{Experimental_Inline}}</dt>
  <dd>The value to be used if the associated attribute is missing or contains an invalid value. If not set, CSS will use the default value defined for each <code>&lt;type-or-unit&gt;</code>.</dd>

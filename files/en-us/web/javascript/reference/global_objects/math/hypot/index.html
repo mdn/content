@@ -6,6 +6,7 @@ tags:
 - Math
 - Method
 - Reference
+- Polyfill
 browser-compat: javascript.builtins.Math.hypot
 ---
 <div>{{JSRef}}</div>
@@ -125,8 +126,8 @@ Math.hypot(value0, value1, ... , valueN)
 
 <p><code>Math.hypot</code> also avoids overflow/underflow problems if the magnitude of
   your numbers is very large. The largest number you can represent in JS is
-  <code>Number.MAX_VALUE</code>, which is around 10<sup>308</sup>. If your numbers are
-  larger than about 10<sup>154</sup>, taking the square of them will result in Infinity.
+  <code>Number.MAX_VALUE</code>, which is around 10^308. If your numbers are
+  larger than about 10^154, taking the square of them will result in Infinity.
   For example, <code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. If you use
   <code>hypot()</code> instead, you get better answer:
   <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code> . This is also true with very
@@ -206,6 +207,7 @@ Math.hypot(-3);            // 3, the same as Math.abs(-3)
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Math.hypot</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-math"><code>core-js</code></a></li>
   <li>{{jsxref("Math.abs()")}}</li>
   <li>{{jsxref("Math.pow()")}}</li>
   <li>{{jsxref("Math.sqrt()")}}</li>
