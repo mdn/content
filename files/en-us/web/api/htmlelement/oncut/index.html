@@ -9,11 +9,12 @@ tags:
 - NeedsSpecTable
 - Property
 - Reference
+browser-compat: api.HTMLElement.oncut
 ---
 <div>{{ APIRef("HTML DOM") }} {{SeeCompatTable}}</div>
 
 <p>The <code><strong>HTMLElement.oncut</strong></code> property of the
-  {{domxref("HTMLElement")}} interface is an {{domxref("EventHandler")}} that processes
+  {{domxref("HTMLElement")}} interface is an {{event("Event_handlers", "event handler")}} that processes
   {{event("cut")}} events.</p>
 
 <p>The <code>cut</code> event fires when the user attempts to cut text.</p>
@@ -71,7 +72,7 @@ editor.oncut = preventCut;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.oncut")}}</p>
+<p>{{Compat}}</p>
 
 <p>Since Firefox 13, the preference <code>dom.event.clipboardevents.enabled</code>
   controls this feature. It defaults to <code>true</code> but can be disabled.</p>

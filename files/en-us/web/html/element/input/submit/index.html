@@ -15,6 +15,7 @@ tags:
   - form
   - submit
   - submit button
+browser-compat: html.elements.input.input-submit
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -95,7 +96,7 @@ tags:
   </tr>
   <tr>
    <td><code>{{anch("formnovalidate")}}</code></td>
-   <td>A Boolean which, if present, means the form's fields will not be subjected to <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> before submitting the data to the server</td>
+   <td>A Boolean which, if present, means the form's fields will not be subjected to <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> before submitting the data to the server</td>
   </tr>
   <tr>
    <td><code>{{anch("formtarget")}}</code></td>
@@ -104,13 +105,13 @@ tags:
  </tbody>
 </table>
 
-<h3 id="htmlattrdefformaction">{{htmlattrdef("formaction")}}</h3>
+<h3 id="attr-formaction"><code id="formaction">formaction</code></h3>
 
 <p>A string indicating the URL to which to submit the data. This takes precedence over the {{htmlattrxref("action", "form")}} attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.</p>
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
+<h3 id="attr-formenctype"><code id="formenctype">formenctype</code></h3>
 
 <p>A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:</p>
 
@@ -127,7 +128,7 @@ tags:
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
+<h3 id="attr-formmethod"><code id="formmethod">formmethod</code></h3>
 
 <p>A string indicating the HTTP method to use when submitting the form's data; this value overrides any {{htmlattrxref("method", "form")}} attribute given on the owning form. Permitted values are:</p>
 
@@ -142,13 +143,13 @@ tags:
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
+<h3 id="attr-formnovalidate"><code id="formnovalidate">formnovalidate</code></h3>
 
 <p>A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.</p>
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
+<h3 id="attr-formtarget"><code id="formtarget">formtarget</code></h3>
 
 <p>A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a <strong>browsing context</strong> (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.</p>
 
@@ -245,31 +246,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-submit")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

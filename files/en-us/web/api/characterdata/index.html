@@ -6,6 +6,7 @@ tags:
   - DOM
   - Interface
   - Node
+browser-compat: api.CharacterData
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -39,10 +40,12 @@ tags:
  <dd>Removes the specified amount of characters, starting at the specified offset, from the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the shortened {{domxref("DOMString")}}.</dd>
  <dt>{{domxref("CharacterData.insertData()")}}</dt>
  <dd>Inserts the specified characters, at the specified offset, in the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
+ <dt>{{domxref("CharacterData.remove()")}}</dt>
  <dd>Removes the object from its parent children list.</dd>
  <dt>{{domxref("CharacterData.replaceData()")}}</dt>
  <dd>Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
+ <dt>{{DOMxRef("CharacterData.replaceWith()")}}</dt>
+ <dd>Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.</dd>
  <dt>{{domxref("CharacterData.substringData()")}}</dt>
  <dd>Returns a {{domxref("DOMString")}} containing the part of <code>CharacterData.data</code> of the specified length and starting at the specified offset.</dd>
 </dl>
@@ -81,11 +84,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.CharacterData")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

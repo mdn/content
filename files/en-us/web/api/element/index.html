@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - Web API
+browser-compat: api.Element
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -87,8 +88,6 @@ tags:
  <dd>Returns the shadow root that is hosted by the element, regardless if its open or closed. <strong>Available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
  <dt>{{DOMxRef("Element.slot")}} {{Experimental_Inline}}</dt>
  <dd>Returns the name of the shadow DOM slot the element is inserted in.</dd>
- <dt>{{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
  <dt>{{DOMxRef("Element.tagName")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("String")}} with the name of the tag for the given element.</dd>
 </dl>
@@ -224,6 +223,8 @@ tags:
  <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getBoundingClientRect()")}}</dt>
  <dd>Returns the size of an element and its position relative to the viewport.</dd>
+ <dt>{{domxref("Element.getBoxQuads()")}} {{experimental_inline}}</dt>
+ <dd>Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.</dd>
  <dt>{{DOMxRef("Element.getClientRects()")}}</dt>
  <dd>Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.</dd>
  <dt>{{DOMxRef("Element.getElementsByClassName()")}}</dt>
@@ -256,7 +257,7 @@ tags:
  <dd>Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.releasePointerCapture()")}}</dt>
  <dd>Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.</dd>
- <dt>{{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("Element.remove()")}}</dt>
  <dd>Removes the element from the children list of its parent.</dd>
  <dt>{{DOMxRef("Element.removeAttribute()")}}</dt>
  <dd>Removes the named attribute from the current node.</dd>
@@ -268,6 +269,8 @@ tags:
  <dd>Removes an event listener from the element.</dd>
  <dt>{{DOMxRef("Element.replaceChildren()")}}</dt>
  <dd>Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.</dd>
+ <dt>{{DOMxRef("Element.replaceWith()")}}</dt>
+ <dd>Replaces the element in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.</dd>
  <dt>{{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}</dt>
  <dd>Asynchronously asks the browser to make the element full-screen.</dd>
  <dt>{{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}</dt>
@@ -545,4 +548,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element")}}</p>
+<p>{{Compat}}</p>

@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Method
   - Number
+  - Polyfill
 browser-compat: javascript.builtins.Number.isSafeInteger
 ---
 <div>{{JSRef}}</div>
@@ -24,13 +25,13 @@ browser-compat: javascript.builtins.Number.isSafeInteger
     fit the IEEE-754 representation.</li>
 </ul>
 
-<p>For example, <code>2<sup>53</sup> - 1</code> is a safe integer: it can be exactly
+<p>For example, <code>2^53 - 1</code> is a safe integer: it can be exactly
   represented, and no other integer rounds to it under any IEEE-754 rounding mode. In
-  contrast, <code>2<sup>53</sup></code> is <em>not</em> a safe integer: it can be exactly
-  represented in IEEE-754, but the integer <code>2<sup>53</sup> + 1</code> can't be
-  directly represented in IEEE-754 but instead rounds to <code>2<sup>53</sup></code> under
+  contrast, <code>2^53</code> is <em>not</em> a safe integer: it can be exactly
+  represented in IEEE-754, but the integer <code>2^53 + 1</code> can't be
+  directly represented in IEEE-754 but instead rounds to <code>2^53</code> under
   round-to-nearest and round-to-zero rounding. The safe integers consist of all integers
-  from <code>-(2<sup>53</sup> - 1)</code> inclusive to <code>2<sup>53</sup> - 1</code>
+  from <code>-(2^53 - 1)</code> inclusive to <code>2^53 - 1</code>
   inclusive (± <code>9007199254740991</code> or ± 9,007,199,254,740,991).</p>
 
 <p>Handling values larger or smaller than ~9 quadrillion with full precision requires
@@ -91,6 +92,7 @@ Number.isSafeInteger(3.0);                  // true
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Number.isSafeInteger</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-number"><code>core-js</code></a></li>
   <li>The {{jsxref("Number")}} object it belongs to.</li>
   <li>{{jsxref("Number.MIN_SAFE_INTEGER")}}</li>
   <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>

@@ -11,14 +11,13 @@ tags:
   - Input Type
   - Reference
   - button
+browser-compat: html.elements.input.input-button
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>button</code></strong> are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{event("click")}} event).</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div class="note">
 <p><strong>Note</strong>: While <code>&lt;input&gt;</code> elements of type <code>button</code> are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}’s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.</p>
@@ -197,7 +196,7 @@ function disableButton() {
 <p>{{EmbedLiveSample("Hidden_code_2", 650, 60)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Firefox will, unlike other browsers, by default, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
+<p><strong>Note</strong>: Firefox will, unlike other browsers, by default, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
 </div>
 
 <h2 id="Validation">Validation</h2>
@@ -313,31 +312,11 @@ draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-button")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

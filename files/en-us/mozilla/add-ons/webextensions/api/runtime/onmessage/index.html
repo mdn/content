@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - onmessage
   - runtime
+browser-compat: webextensions.api.runtime.onMessage
 ---
 <p>{{AddonSidebar()}}</p>
 
@@ -111,7 +112,7 @@ browser.runtime.onMessage.hasListener(<var>listener</var>)
  <p>The <code><var>listener</var></code> function can return either a Boolean or a {{jsxref("Promise")}}.</p>
 
  <div class="notecard note">
- <p><strong>Important:</strong> Do not call <code>addListener()</code> using an <code>async</code> function:</p>
+ <p><strong>Important:</strong> If you pass an async function to <code>addListener()</code>, the listener will return a Promise for every message it receives, preventing other listeners from responding:</p>
 
  <pre class="brush: js example-bad">// don't do this
 browser.runtime.onMessage.addListener(
@@ -121,15 +122,14 @@ browser.runtime.onMessage.addListener(
 );
 </pre>
 
- <p>This will cause the listener to consume every message it receives, effectively blocking all other listeners from receiving and processing messages.</p>
-
- <p>If you want to take an asynchronous approach, use a Promise instead, like this:</p>
+ <p>If you only want the listener to respond to messages of a certain type, you must define the listener as a non-<code>async</code> function, and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or undefined:</p>
 
  <pre class="brush: js example-good">browser.runtime.onMessage.addListener(
   (data, sender) =&gt; {
     if (data.type === 'handle_me') {
       return Promise.resolve('done');
     }
+    return false;
   }
 );
 </pre>
@@ -139,9 +139,7 @@ browser.runtime.onMessage.addListener(
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.runtime.onMessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 

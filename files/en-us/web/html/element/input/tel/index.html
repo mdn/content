@@ -13,14 +13,13 @@ tags:
   - Input Type
   - Phone Numbers
   - Reference
+browser-compat: html.elements.input.input-tel
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>tel</strong></code> are used to let the user enter and edit a telephone number. Unlike <code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>Despite the fact that inputs of type <code>tel</code> are functionally identical to standard <code>text</code> inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.</p>
 
@@ -100,31 +99,31 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
+<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+<h3 id="attr-maxlength"><code id="maxlength">maxlength</code>></h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the telephone number field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the telephone number field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the telephone number input has no minimum length.</p>
 
-<p>The telephone number field will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+<p>The telephone number field will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
 
 <p>See {{anch("Pattern validation")}} below for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefplaceholder", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefreadonly", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefsize", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-size", 0, 1, 2)}}</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -149,11 +148,11 @@ tags:
  </tbody>
 </table>
 
-<h3 id="htmlattrdefautocorrect_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
+<h3 id="attr-autocorrect"><code id="autocorrect">autocorrect</code> {{non-standard_inline}}</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</p>
 
-<h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
+<h3 id="attr-mozactionhint"><code id="mozactionhint">mozactionhint</code> {{non-standard_inline}}</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</p>
 
@@ -498,33 +497,11 @@ input:valid+span:after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#telephone-state-(type=tel)', '&lt;input type="tel"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#tel-state-typetel', '&lt;input type="tel"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.input.input-tel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

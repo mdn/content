@@ -10,6 +10,7 @@ tags:
   - Reference
   - Window
   - open
+browser-compat: api.Window.open
 ---
 <div>{{APIRef}}</div>
 
@@ -135,7 +136,9 @@ function openRequestedPopup() {
 <div class="note">
   <p><strong>Tip</strong>: Note that in some browsers, users can override the
     <code><var>windowFeatures</var></code> settings and enable (or prevent the disabling
-    of) features</p>
+    of) features. Further, control of some window features is available only on some browsers
+    and platforms (See <a href="#popup_condition">popup condition</a> section)
+  </p>
 </div>
 
 <h3 id="Position_and_size_features">Position and size features</h3>
@@ -760,7 +763,7 @@ function openRequestedSinglePopup(url) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Notes">Notes</h2>
 

@@ -2,27 +2,27 @@
 title: AudioWorkletProcessor.parameterDescriptors (static getter)
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 tags:
-- API
-- AudioWorkletProcessor
-- Experimental
-- Property
-- Reference
-- parameterDescriptors
+  - API
+  - AudioWorkletProcessor
+  - Experimental
+  - Property
+  - Reference
+  - parameterDescriptors
+
+browser-compat: api.AudioWorkletProcessor.parameterDescriptors
 ---
 <div>{{APIRef("Web Audio API")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The read-only <strong><code>parameterDescriptors</code></strong>
-  property of an {{domxref("AudioWorkletProcessor")}}-derived class is a <em>static
-    getter</em>, which returns an iterable of {{domxref("AudioParamDescriptor")}}-based
-  objects.</p>
+<p>The read-only <strong><code>parameterDescriptors</code></strong> property of an {{domxref("AudioWorkletProcessor")}}-derived class is a <em>static getter</em>,
+  which returns an iterable of {{domxref("AudioParamDescriptor")}}-based objects.</p>
 
-<p class="summary">The property is not a part of the {{domxref("AudioWorkletProcessor")}}
+<p>The property is not a part of the {{domxref("AudioWorkletProcessor")}}
   interface, but, if defined, it is called internally by the
   {{domxref("AudioWorkletProcessor")}} constructor to create a list of custom
   {{domxref("AudioParam")}} objects in the {{domxref("AudioWorkletNode.parameters",
   "parameters")}} property of the associated {{domxref("AudioWorkletNode")}}.</p>
 
-<p class="summary">Defining the getter is optional.</p>
+<p>Defining the getter is optional.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -49,7 +49,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioWorkletNode/parameters", "Examples")}}</p>
+<p>See <a href="/en-US/docs/Web/API/AudioWorkletNode/parameters#examples"><code>AudioWorkletNode.parameters</code></a> for example code showing how to add static <code>parameterDescriptors</code> getter to a custom <code>AudioWorkletProcessor</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -71,7 +71,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioWorkletProcessor.parameterDescriptors")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

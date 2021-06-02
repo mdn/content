@@ -7,7 +7,7 @@ tags:
 - JavaScript
 - Method
 - Reference
-- polyfill
+- Polyfill
 browser-compat: javascript.builtins.Array.from
 ---
 <div>{{JSRef}}</div>
@@ -175,7 +175,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>Array.from()</code> was added to the ECMA-262 standard in the 6<sup>th</sup>
+<p><code>Array.from()</code> was added to the ECMA-262 standard in the 6th
     Edition (ES2015). As such, it may not be present in other implementations of the
     standard. </p>
 
@@ -185,13 +185,13 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <div class="notecard note">
     <p><strong>Note:</strong> This algorithm is exactly as specified in
-        ECMA-262 6<sup>th</sup> Edition (assuming <code>Object</code> and
+        ECMA-6th> Edition (assuming <code>Object</code> and
         <code>TypeError</code> have their original values and that
         <code><var>callback</var>.call()</code> evaluates to the original value of
         {{jsxref("Function.prototype.call()")}}).</p>
 
     <p>In addition, since true iterables cannot be polyfilled, this implementation does
-        not support generic iterables as defined in the 6<sup>th</sup> Edition of
+        not support generic iterables as defined in the 6th Edition of
         ECMA-262.</p>
 </div>
 
@@ -334,6 +334,7 @@ if (!Array.from) {
 <h2 id="See_also">See also</h2>
 
 <ul>
+    <li>A polyfill of <code>Array.from</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
     <li>{{jsxref("Array")}}</li>
     <li>{{jsxref("Array.prototype.map()")}}</li>
     <li>{{jsxref("TypedArray.from()")}}</li>

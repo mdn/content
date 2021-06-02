@@ -7,7 +7,7 @@ tags:
 - JavaScript
 - Method
 - Prototype
-- polyfill
+- Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
 <div>{{JSRef}}</div>
@@ -37,7 +37,7 @@ reduceRight(callbackFn, initialValue)
 reduceRight(function callbackFn(accumulator, currentValue) { ... })
 reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
 reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, thisArg)
+reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -375,5 +375,6 @@ console.log(compose(inc, double)(2)); // 5
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Array.prototype.reduceRight</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
   <li>{{jsxref("Array.prototype.reduce()")}}</li>
 </ul>

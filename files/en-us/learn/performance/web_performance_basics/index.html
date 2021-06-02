@@ -5,17 +5,18 @@ tags:
   - Best practices
   - Website performance
 ---
-<p>{{draft}}There are many <a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">reasons</a> why your website should perform as well as possible.<br>
+<p>{{draft}}</p>
+<p>There are many <a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">reasons</a> why your website should perform as well as possible.<br>
  Below is a quick review of best practices, tools, APIs with links to provide more information about each topic.</p>
 
 <h2 id="Best_practices">Best practices</h2>
 
 <ul>
  <li>Start with learning the <a href="/en-US/docs/Web/Performance/Critical_rendering_path">critical rendering path</a> of the browser. Knowing this will help you understand how to improve the performance of the site.</li>
- <li>Using <a href="/en-US/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints">resource hints</a> such as <code>rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload</code></li>
+ <li>Using <em>resource hints</em> such as <a href="/en-US/docs/Web/HTML/Link_types/preconnect"><code>rel=preconnect</code></a>, <a href="/en-US/docs/Web/HTML/Link_types/dns-prefetch"><code>rel=dns-prefetch</code></a>, <a href="/en-US/docs/Web/HTML/Link_types/prefetch"><code>rel=prefetch</code></a>, <a href="/en-US/docs/Web/HTML/Link_types/preload"><code>rel=preload</code></a>.</li>
  <li>Keep the size of Javascript to a <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">minimum</a>. Only use as much Javascript as needed for the current page.</li>
  <li><a href="/en-US/docs/Learn/Performance/CSS">CSS</a> performance factors</li>
- <li>Use <a href="/en-US/docs/Learn/Performance/HTTP2">HTTP/2</a> on your server (or CDN).</li>
+ <li>Use {{Glossary("HTTP_2", "HTTP/2")}} on your server (or CDN).</li>
  <li>Use a CDN for resources which can reduce load times significantly.</li>
  <li>Compress your resources using <a href="https://www.gnu.org/software/gzip/" rel="nofollow noopener">gzip</a>, <a href="https://github.com/google/brotli" rel="nofollow noopener">Brotli</a>, and <a href="https://github.com/google/zopfli" rel="nofollow noopener">Zopfli</a>.</li>
  <li>Image optimization (use CSS animation, or SVG if possible).</li>
@@ -64,7 +65,7 @@ tags:
  <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility. </li>
  <li>Test your page's speed using <a href="https://webpagetest.org/">WebPageTest.org</a>, where you can use different real device types and locations.</li>
  <li>Try the <a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome User Experience Report</a> which quantifies real user metrics.</li>
- <li>Define a<a href="/en-US/docs/Web/Performance/Performance_budget"> performance budget.</a></li>
+ <li>Define a <a href="/en-US/docs/Web/Performance/Performance_budgets">performance budget</a>.</li>
 </ul>
 
 <h3 id="APIs">APIs</h3>

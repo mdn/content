@@ -13,6 +13,7 @@ tags:
   - Input Type
   - Reference
   - Time
+browser-compat: html.elements.input.input-time
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
@@ -21,8 +22,6 @@ tags:
 <p>The control's user interface varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Appearance">Appearance</h2>
 
@@ -162,19 +161,19 @@ startTime.addEventListener("input", function() {
     href="#making_min_and_max_cross_midnight">making min and max cross midnight</a> section of this article.</p>
 </div>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
+<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="attr-max"><code id="max">max</code></h3>
 
 <p>A string indicating the latest time to accept, specified in the same {{anch("Time value format", "time value format")}} as described above. If the specified string isn't a valid time, no maximum value is set.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="attr-min"><code id="min">min</code></h3>
 
 <p>A string specifying the earliest time to accept, given in the {{anch("Time value format", "time value format")}} described previously. If the value specified isn't a valid time string, no minimum value is set.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefreadonly", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="attr-step"><code id="step">step</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
@@ -390,7 +389,7 @@ input:valid+span:after {
 }</pre>
 </div>
 
-<p>The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the <a href="http://timepicker.co/">jQuery timepicker plugin</a>.</p>
+<p>The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the <a href="https://timepicker.co/">jQuery timepicker plugin</a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -517,28 +516,13 @@ function populateMinutes() {
  hourSelect.onchange = setMinutesToZero;
  minuteSelect.onchange = setMinutesToZero;</pre>
 
-<h2 id="Specifications">Specifications</h2>
+ <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#time-state-(type=time)', '&lt;input type="time"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+ <p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+ <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-time")}}</p>
+ <p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
 - Method
 - Object
 - Prototype
+- Polyfill
 browser-compat: javascript.builtins.Object.toString
 ---
 <div>{{JSRef}}</div>
@@ -42,7 +43,7 @@ o.toString(); // returns [object Object]
   <p><strong>Note:</strong> Starting in JavaScript 1.8.5, <code>toString()</code> called
     on {{jsxref("null")}} returns <code>[object <em>Null</em>]</code>, and
     {{jsxref("undefined")}} returns <code>[object <em>Undefined</em>]</code>, as defined
-    in the 5<sup>th</sup> Edition of ECMAScript and subsequent Errata.</p>
+    in the 5th Edition of ECMAScript and subsequent Errata.</p>
 
   <p>See <a href="#using_tostring_to_detect_object_class">Using <code>toString()</code> to
       detect object class</a>.</p>
@@ -183,6 +184,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.prototype.toString</code> with <code>Symbol.toStringTag</code> support is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.prototype.toSource()")}}</li>
   <li>{{jsxref("Object.prototype.valueOf()")}}</li>
   <li>{{jsxref("Number.prototype.toString()")}}</li>

@@ -342,7 +342,7 @@ setCookie.then(logCookie, logError);</pre>
 
 <dl>
  <dt>On Linux and Mac</dt>
- <dd>Chrome passes one argument to the native app, which is the origin of the extension that started it, in the form: <code>chrome-extension://«<var>extensionID</var>»</code>. This enables the app to identify the extension.</dd>
+ <dd>Chrome passes one argument to the native app, which is the origin of the extension that started it, in the form: <code>chrome-extension://«<var>extensionID/</var>»</code> (trailing slash required). This enables the app to identify the extension.</dd>
  <dt>On Windows</dt>
  <dd>
  <p>Chrome passes two arguments:</p>

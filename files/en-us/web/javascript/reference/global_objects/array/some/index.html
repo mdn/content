@@ -8,7 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
-- polyfill
+- Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
 <div>{{JSRef}}</div>
@@ -104,12 +104,12 @@ some(function callbackFn(element, index, array) { ... }, thisArg)
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>some()</code> was added to the ECMA-262 standard in the 5<sup>th</sup> edition,
+<p><code>some()</code> was added to the ECMA-262 standard in the 5th edition,
   and it may not be present in all implementations of the standard. You can work around
   this by inserting the following code at the beginning of your scripts, allowing use of
   <code>some()</code> in implementations which do not natively support it.</p>
 
-<p>This algorithm is exactly the one specified in ECMA-262, 5<sup>th</sup> edition,
+<p>This algorithm is exactly the one specified in ECMA-262, 5th edition,
   assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and
   that <code><var>fun</var>.call</code> evaluates to the original value of
   {{jsxref("Function.prototype.call()")}}.</p>
@@ -225,6 +225,7 @@ getBoolean('true');  // true</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Array.prototype.some</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-array"><code>core-js</code></a></li>
   <li>{{jsxref("Array.prototype.every()")}}</li>
   <li>{{jsxref("Array.prototype.forEach()")}}</li>
   <li>{{jsxref("Array.prototype.find()")}}</li>

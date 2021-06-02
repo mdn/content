@@ -9,6 +9,7 @@ tags:
   - PaymentRequest
   - Reference
   - paymentAddress
+browser-compat: api.PaymentAddress
 ---
 <div>{{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}</div>
 
@@ -37,8 +38,6 @@ tags:
  <dd>A {{domxref("DOMString")}} giving the name of the recipient, purchaser, or contact person at the payment address.</dd>
  <dt>{{domxref('PaymentAddress.region')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} containing the top level administrative subdivision of the country, for example a state, province, oblast, or prefecture.</dd>
- <dt>{{domxref('PaymentAddress.regionCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the region of the address, represented as a "code element" of an <a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO3166-2</a> country subdivision name (e.g. "QLD" for Queensland, Australia, "CA" for California, and so on).</dd>
  <dt>{{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
  <dd>A {{domxref("DOMString")}} providing a postal sorting code such as is used in France.</dd>
 </dl>
@@ -126,4 +125,4 @@ doPaymentRequest();
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentAddress")}}</p>
+<p>{{Compat}}</p>

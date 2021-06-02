@@ -7,7 +7,9 @@ tags:
   - Glossary
   - Protocol
 ---
-<p><strong>FTP </strong>(File Transfer Protocol) was the standard {{glossary("protocol")}} for many years for transferring files from one {{glossary("host")}} to another over the Internet. Increasingly, though, teams and hosting accounts don't allow FTP and instead rely on a version control system like Git. You will still find it used on older hosting accounts, but it is safe to say that FTP is no longer considered best practice.</p>
+<p><strong>FTP</strong> (File Transfer Protocol) is an insecure {{glossary("protocol")}} for transferring files from one {{glossary("host")}} to another over the Internet.</p>
+
+<p>For many years it was the defacto standard way of transferring files, but as it is inherently insecure, it is no longer supported by many hosting accounts. Instead you should use SFTP (a secure, encrypted version of FTP) or another secure method for transferring files like Rsync over SSH.</p>
 
 <h2 id="Learn_more">Learn more</h2>
 

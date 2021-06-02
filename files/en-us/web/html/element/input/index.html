@@ -12,14 +12,13 @@ tags:
   - MakeBrowserAgnostic
   - Reference
   - Web
+browser-compat: html.elements.input
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;input&gt;</code> element</strong> is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. </span>The <code>&lt;input&gt;</code> element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.</p>
+<p>The <strong><code>&lt;input&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The <code>&lt;input&gt;</code> element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="input_types">&lt;input&gt; types</h2>
 
@@ -578,7 +577,7 @@ tags:
  </dd>
  <dt id="htmlattrdefmax"><a href="/en-US/docs/Web/HTML/Attributes/max">{{htmlattrdef("max")}}</a></dt>
  <dd>
- <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
+ <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
 
  <p>There is a special case: if the data type is periodic (such as for dates or times), the value of <code>max</code> may be lower than the value of <code>min</code>, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.</p>
  </dd>
@@ -586,11 +585,11 @@ tags:
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value <code>0</code> or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
- <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the <code>maxlength</code> attribute. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the <code>maxlength</code> attribute. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
  <dt id="htmlattrdefmin">{{htmlattrdef("min")}}</dt>
  <dd>
- <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a number, then the element has no minimum value.</p>
+ <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a number, then the element has no minimum value.</p>
 
  <p>This value must be less than or equal to the value of the <code>max</code> attribute. If the <code>min</code> attribute is present but is not specified or is invalid, no <code>min</code> value is applied. If the <code>min</code> attribute is valid and a non-empty value is less than the minimum allowed by the <code>min</code> attribute, constraint validation will prevent form submission. See {{anch("Client-side validation")}} for more information.</p>
 
@@ -600,7 +599,7 @@ tags:
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
- <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
  <dt id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</dt>
  <dd>
@@ -650,7 +649,7 @@ let hatSize = form.elements["hat-size"];
  <dt id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</dt>
  <dd>
  <div id="pattern-include">
- <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+ <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
  <p>If the <code>pattern</code> attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.</p>
 
@@ -1279,40 +1278,6 @@ nameInput.addEventListener('invalid', () =&gt; {
  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}</td>
-   <td>{{Spec2('HTML Media Capture')}}</td>
-   <td>Adds the <code>capture</code> attribute</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sec-forms.html#the-input-element', '&lt;input&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
 <h3 id="Labels_2">Labels</h3>
@@ -1331,18 +1296,22 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <ul>
  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1</a></li>
- <li><a href="http://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5 | Adrian Roselli</a></li>
+ <li><a href="https://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5 | Adrian Roselli</a></li>
  <li><a href="https://a11yproject.com/posts/large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
 </ul>
 
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("html.elements.input")}}</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form constraint validation</a></li>
+ <li><a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">Form constraint validation</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
  <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
  <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
