@@ -144,7 +144,6 @@ p.awesome {
 
 <p>The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are <em>not</em> considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of <a href="#selector_types">selector types</a>.</p>
 
-<div id="The_not_exception-example">
 <p>This chunk of CSS ...</p>
 
 <pre class="brush: css">div.outer p {
@@ -168,8 +167,7 @@ div:not(.outer) p {
 
 <p>... appears on the screen like this:</p>
 
-<p>{{EmbedLiveSample("The_not_exception-example")}}</p>
-</div>
+<p>{{EmbedLiveSample("The_is_and_not_exceptions")}}</p>
 
 <h3 id="The_where_exception">The :where() exception {{Experimental_Inline}}</h3>
 
