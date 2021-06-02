@@ -67718,14 +67718,6 @@
       "adria"
     ]
   },
-  "Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T21:42:33.846Z",
-    "contributors": [
-      "kebo",
-      "some-body",
-      "fscholz"
-    ]
-  },
   "Web/API/OffscreenCanvas/transferToImageBitmap": {
     "modified": "2020-10-15T21:42:31.163Z",
     "contributors": [
