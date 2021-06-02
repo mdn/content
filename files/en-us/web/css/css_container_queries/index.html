@@ -41,7 +41,7 @@ tags:
 <p>However, we don't often know how big things are in both dimensions. When we use media queries, most of the time we care about the available width (or inline size). We define columns as a percentage or fraction of the space in that dimension. Therefore, container queries extend the contain property by allowing size to be indicated in one dimension only. This is described as single-axis containment.</p>
 <p>The following CSS creates a container with containment on the inline axis only. The content can grow to as large as it needs to be on the block axis.</p>
 
-<pre class="brush:css">.sidebar {
+<pre class="brush: css">.sidebar {
   contain: layout inline-size;
 }</pre>
 
@@ -49,7 +49,7 @@ tags:
 
 <p>A container query is created using <code>@container</code>. This will query the nearest containment context. To cause the card to display as two columns only if the sidebar is wider than 700px, we use the following CSS:</p>
 
-<pre class="brush:css">@container (min-width: 700px){
+<pre class="brush: css">@container (min-width: 700px){
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;
