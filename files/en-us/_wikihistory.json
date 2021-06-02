@@ -73497,12 +73497,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:26:32.623Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
   "Web/API/RTCPeerConnection/getIdentityAssertion": {
     "modified": "2020-10-15T21:28:58.062Z",
     "contributors": [

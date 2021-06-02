@@ -8394,7 +8394,6 @@
 /en-US/docs/Web/API/RTCPeerConnection.signalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
 /en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection.createAnswer()	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCPeerConnection/addTransceiver()	/en-US/docs/Web/API/RTCPeerConnection/addTransceiver
-/en-US/docs/Web/API/RTCPeerConnection/defaultIceServers	/en-US/docs/Web/API/RTCPeerConnection/getDefaultIceServers
 /en-US/docs/Web/API/RTCPeerConnection/getLocalStreams	/en-US/docs/Web/API/RTCPeerConnection/getSenders
 /en-US/docs/Web/API/RTCPeerConnection/getRemoteStreams	/en-US/docs/Web/API/RTCPeerConnection/getReceivers
 /en-US/docs/Web/API/RTCPeerConnection/icecandidate	/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event
