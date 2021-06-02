@@ -6991,6 +6991,8 @@
 /en-US/docs/Web/API/Blob.type	/en-US/docs/Web/API/Blob/type
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
+/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliar	/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
+/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutRespponse	/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
 /en-US/docs/Web/API/BluetoothDevice.name	/en-US/docs/Web/API/BluetoothDevice/name
 /en-US/docs/Web/API/BluetoothDevice.paired	/en-US/docs/Web/API/BluetoothDevice/paired
 /en-US/docs/Web/API/BluetoothDevice.uuids	/en-US/docs/Web/API/BluetoothDevice/uuids
