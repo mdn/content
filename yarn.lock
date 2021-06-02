@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.5.tgz#7671e4ba4d344e20d969fe4a9086d453ac168a59"
   integrity sha512-Pu2Usbl9YTpeNxYKRebFRE4fV85I/thTMpF1eKS2EsgODg9VkcK0/oRZqEFhR6/So5wSPYIBHvfmVFXx0uCt/g==
 
-"@mdn/yari@0.4.518":
-  version "0.4.518"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.518.tgz#3f8147666bc2cb5750a1ae469b7af593063a392f"
-  integrity sha512-CyE1BmuRZUvOCY+WzYclbp//PmyM1QO3V7gDjwpxuWozmYZwC1Z8Hl3C6B5KSoP2VSKs5vUCLpv8Wgjzs8yd7g==
+"@mdn/yari@0.4.526":
+  version "0.4.526"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.526.tgz#746b4a3797a11ac32f6d10f64fac9d3ef0775de9"
+  integrity sha512-J+EBMuuGXI1rdwUUCye7bBvpgtDlUwG/Pehs6dhEdjOZfJYzW10onWU3xkcEVNW5R7p7MH/LCOBjWNuv/Vcjjg==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "3.3.5"
     accept-language-parser "1.5.0"
-    browser-specs "^1.38.0"
+    browser-specs "^1.38.1"
     chalk "4.1.1"
     cheerio "1.0.0-rc.6"
     cli-progress "^3.9.0"
@@ -62,7 +62,7 @@
     express "4.17.1"
     fast-xml-parser "3.19.0"
     fdir "5.1.0"
-    file-type "16.4.0"
+    file-type "16.5.0"
     front-matter "^4.0.2"
     fs-extra "10.0.0"
     glob "^7.1.7"
@@ -549,10 +549,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^1.38.0:
-  version "1.38.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.38.0.tgz#82fe393dad2e6e8cf490fd9e3937d56b41103281"
-  integrity sha512-0Gz9dq536oGZHbwFOxqhaTABoFts92zpmBRcpfkGqRX/837WmXzuBtdpEmN4x9OG+ct050TUmlFp492dWifaaA==
+browser-specs@^1.38.1:
+  version "1.38.1"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-1.38.1.tgz#118287e660d4d8c0bc5ca3241d4c39f9eba33e87"
+  integrity sha512-AlsiRTsTepSTPg6+GaMBh0fKOuwl02np4jBg8oPFrR6K5l+N7f0SsR7daIOGFC36zzB4aeYFcp6rG468EbMYsw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1662,15 +1662,14 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-file-type@16.4.0:
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.4.0.tgz#464197e44bd94a452d77b09085d977ae0dad2df4"
-  integrity sha512-MDAkwha3wHg11Lp++2T3Gu347eC/DB4r7nYj6iZaf1l7UhGBh2746QKxg0BWC8w2dJsxUEmH8KvLueX+GthN2w==
+file-type@16.5.0:
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.0.tgz#16a2626f3b33bac612f6e81e52216f3a7c8e12a2"
+  integrity sha512-OxgWA9tbL8N/WP00GD1z8O0MiwQKFyWRs1q+3FhjdvcGgKqwxcejyGWso3n4/IMU6DdwV+ARZ4A7TTnPkDcSiw==
   dependencies:
     readable-web-to-node-stream "^3.0.0"
     strtok3 "^6.0.3"
     token-types "^2.0.0"
-    typedarray-to-buffer "^3.1.5"
 
 file-type@5.2.0, file-type@^5.2.0:
   version "5.2.0"
@@ -2595,11 +2594,6 @@ is-svg@4.2.2, is-svg@^4.2.1:
   integrity sha512-JlA7Mc7mfWjdxxTkJ094oUK9amGD7gQaj5xA/NCY0vlVvZ1stmj4VX+bRuwOMN93IHRZ2ctpPH/0FO6DqvQ5Rw==
   dependencies:
     html-comment-regex "^1.1.2"
-
-is-typedarray@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
-  integrity sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
 
 is-unicode-supported@^0.1.0:
   version "0.1.0"
@@ -4535,13 +4529,6 @@ type-is@~1.6.17, type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
-
-typedarray-to-buffer@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"
-  integrity sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
-  dependencies:
-    is-typedarray "^1.0.0"
 
 unbzip2-stream@^1.0.9:
   version "1.4.3"
