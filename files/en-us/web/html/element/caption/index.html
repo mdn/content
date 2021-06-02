@@ -85,6 +85,8 @@ browser-compat: html.elements.caption
 
 <p>When the <code>&lt;table&gt;</code> element that contains the <code>&lt;caption&gt;</code> is the only descendant of a {{HTMLElement("figure")}} element, you should use the {{HTMLElement("figcaption")}} element instead of <code>&lt;caption&gt;</code>.</p>
 
+<p>A {{cssxref("background-color")}} on the table will not include the caption. Add a <code>background-color</code> to the <code>&lt;caption&gt;</code> element as well if you want the same color to be behind both.</p>
+
 <h2 id="Example">Example</h2>
 
 <p>This simple example presents a table that includes a caption.</p>
@@ -108,7 +110,6 @@ browser-compat: html.elements.caption
 <div class="hidden">
 <pre class="brush: css">caption {
   caption-side: top;
-  align: right;
 }
 table {
   border-collapse: collapse;
@@ -121,8 +122,6 @@ table, th, td {
 </div>
 
 <p>{{EmbedLiveSample('Example', 650, 100)}}</p>
-
-<p><code>table {background: red;}</code> do not alter caption. For that you need <code>display: block</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
