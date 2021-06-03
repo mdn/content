@@ -82,40 +82,7 @@ tags:
 <p><strong>Note:</strong> Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and <em>not</em> to filter the available choices.</p>
 </div>
 
-<p>There are three new constraints added to <code>MediaTrackConstraints</code> (as well as to {{domxref("MediaTrackSupportedConstraints")}} and {{domxref("MediaTrackSettings")}}) for configuring a screen capture stream:</p>
-
-<dl>
- <dt>{{domxref("MediaTrackConstraints.cursor", "cursor")}}</dt>
- <dd>
- <p>Indicates whether or not to capture the mouse cursor, and if so, whether to do so all the time or only while the mouse is in motion. The possible values are:</p>
-
- <dl>
-  <dt><code>always</code></dt>
-  <dd>The mouse cursor should always be captured in the generated stream.</dd>
-  <dt><code>motion</code></dt>
-  <dd>The cursor should only be visible while moving, and, at the discretion of the {{Glossary("user agent")}}, for a brief time before after moving. Then the cursor is removed from the stream.</dd>
-  <dt><code>never</code></dt>
-  <dd>The cursor should never be visible in the generated stream.</dd>
- </dl>
- </dd>
-   <dt>{{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}}</dt>
- <dd>
- <p>A {{domxref("ConstrainDOMString")}} which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:</p>
-
- <dl>
-  <dt><code>application</code></dt>
-  <dd>The stream contains all of the windows of the application chosen by the user rendered into the one video track.</dd>
-  <dt><code>browser</code></dt>
-  <dd>The stream contains the contents of a single browser tab selected by the user.</dd>
-  <dt><code>monitor</code></dt>
-  <dd>The stream's video track contains the entire contents of one or more of the user's screens.</dd>
-  <dt><code>window</code></dt>
-  <dd>The stream contains a single window selected by the user for sharing.</dd>
- </dl>
- </dd>
- <dt>{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}</dt>
- <dd>A Boolean which if <code>true</code> indicates that the capture should include offscreen areas of the source, if there are any.</dd>
-</dl>
+<p>There are same new constraints added to <code>MediaTrackConstraints</code> (as well as to {{domxref("MediaTrackSupportedConstraints")}} and {{domxref("MediaTrackSettings")}}) for configuring a screen capture stream:</p> <a href="/en-US/docs/Web/API/MediaTrackConstraints#properties_of_shared_screen_tracks">Properties of shared screen tracks</a>.
 
 <p>None of the constraints are applied in any way until after the content to capture has been selected. The contraints alter what you see in the resulting stream.</p>
 
