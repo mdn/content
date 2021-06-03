@@ -13,7 +13,9 @@ tags:
 ---
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</div>
 
-<p><span class="seoSummary">The <strong>same-origin policy</strong> is a critical security mechanism that restricts how a document or script loaded from one {{Glossary("origin")}} can interact with a resource from another origin.</span> It helps isolate potentially malicious documents, reducing possible attack vectors.</p>
+<p><span class="seoSummary">The <strong>same-origin policy</strong> is a critical security mechanism that restricts how a document or script loaded by one {{Glossary("origin")}} can interact with a resource from another origin.</span></p>
+
+<p>It helps isolate potentially malicious documents, reducing possible attack vectors. For example, it prevents a malicious website on the Internet from running JS in a browser to read data from a third-party webmail service (which the user is signed into) or a company intranet (which is protected from direct access by the attacker by not having a public IP address) and relaying that data to the attacker.</p>
 
 <h2 id="Definition_of_an_origin">Definition of an origin</h2>
 
