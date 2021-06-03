@@ -1,20 +1,20 @@
 ---
-title: AbstractWorker.onerror
-slug: Web/API/AbstractWorker/onerror
+title: Worker.onerror
+slug: Web/API/Worker/onerror
 tags:
   - API
-  - AbstractWorker
+  - Worker
   - EventHandler
   - Property
   - Reference
   - Web Workers
   - Workers
   - onerror
-browser-compat: api.AbstractWorker.onerror
+browser-compat: api.Worker.onerror
 ---
-<p>{{ APIRef("Web Workers API") }}</p>
+<div>{{APIRef("Web Workers API")}}</div>
 
-<p>The <code><strong>AbstractWorker</strong></code><strong><code>.onerror</code></strong> property of the {{domxref("AbstractWorker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs.</p>
+<p>The <code><strong>onerror</strong></code> property of the {{domxref("Worker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -40,7 +40,7 @@ myWorker.onerror = function() {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('HTML WHATWG', "#handler-abstractworker-onerror", "AbstractWorker.onerror")}}</td>
+   <td>{{SpecName('HTML WHATWG', "#handler-abstractworker-onerror", "onerror")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td></td>
   </tr>
@@ -50,13 +50,3 @@ myWorker.onerror = function() {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
-<h3 id="Cross-origin_worker_error_behavior">Cross-origin worker error behavior</h3>
-
-<p>In earlier browser versions, trying to load a cross-origin worker script threw a <code>SecurityError</code>; in newer browsers an {{event("error")}} event is thrown instead due to a spec change. Find out more information on how to deal with this in <a href="https://www.fxsitecompat.com/en-CA/docs/2016/loading-cross-origin-worker-now-fires-error-event-instead-of-throwing-worker-in-sandboxed-iframe-no-longer-allowed/">Loading cross-origin worker now fires error event instead of throwing; worker in sandboxed iframe no longer allowed</a>.</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{domxref("AbstractWorker")}} interface it belongs to.</li>
-</ul>

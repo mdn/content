@@ -29,13 +29,13 @@ browser-compat: api.Worker
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}, and implements properties from {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <h3 id="Event_handlers">Event handlers</h3>
 
 <dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs. This is inherited from {{domxref("AbstractWorker")}}.</dd>
+ <dt>{{domxref("Worker.onerror")}}</dt>
+ <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
  <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> occurs — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
  <dt>{{domxref("Worker.onmessageerror")}}</dt>
@@ -44,7 +44,7 @@ browser-compat: api.Worker
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}, and implements methods from {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Worker.postMessage()")}}</dt>

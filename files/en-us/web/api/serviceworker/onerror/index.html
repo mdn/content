@@ -1,0 +1,52 @@
+---
+title: ServiceWorker.onerror
+slug: Web/API/ServiceWorker/onerror
+tags:
+  - API
+  - ServiceWorker
+  - EventHandler
+  - Property
+  - Reference
+  - Web Workers
+  - Workers
+  - onerror
+browser-compat: api.ServiceWorker.onerror
+---
+<div>{{APIRef("Service Workers API")}}</div>
+
+<p>The <code><strong>onerror</strong></code> property of the {{domxref("ServiceWorker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">myWorker.onerror = function() { ... };</pre>
+
+<h2 id="Example">Example</h2>
+
+<p>The following code snippet shows creation of a <a href="/en-US/docs/Web/API/Worker" title="The Worker interface represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread."><code>Worker</code></a> object using the <a href="/en-US/docs/Web/API/Worker/Worker" title="The Worker() constructor creates a Worker that executes the script at the specified URL. This script must obey the same-origin policy."><code>Worker()</code></a> constructor and setting up of an <code>onerror</code> handler on the resulting object:</p>
+
+<pre class="brush: js">var myWorker = new Worker('worker.js');
+
+myWorker.onerror = function() {
+  console.log('There is an error with your worker!');
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#handler-abstractworker-onerror", "onerror")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
