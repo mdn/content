@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Web MIDI API")}}</p>
 
-<p class="summary">The Web MIDI API provides the ability to connect to and interact with Musical Instrument Digital Interface (MIDI) Devices.</p>
+<p class="summary">The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.</p>
 
 <p>The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.</p>
 
@@ -28,16 +28,16 @@ tags:
  <dt>{{domxref("MIDIInput")}}</dt>
  <dd>Provides a method for dealing with MIDI messages from an input port.</dd>
  <dt>{{domxref("MIDIOutput")}}</dt>
- <dd>Queues messages to the linked MIDI port, messages can be sent immediately or after a specified delay.</dd>
+ <dd>Queues messages to the linked MIDI port. Messages can be sent immediately or after a specified delay.</dd>
  <dt>{{domxref("MIDIMessageEvent")}}</dt>
- <dd>Represents the event passed to {{domxref("MIDIInput.onmidimessage")}}.</dd>
+ <dd>The event passed to {{domxref("MIDIInput.onmidimessage")}}.</dd>
  <dt>{{domxref("MIDIConnectionEvent")}}</dt>
- <dd>Represents the event passed to the {{domxref("MIDIAccess.onstatechange")}} and {{domxref("MIDIPort.onstatechange")}} event handlers, when a port becomes available or unavailable.</dd>
+ <dd>The event passed to the {{domxref("MIDIAccess.onstatechange")}} and {{domxref("MIDIPort.onstatechange")}} event handlers, when a port becomes available or unavailable.</dd>
 </dl>
 
 <h2>Examples</h2>
 
-<h3>Gaining access to the MISI port</h3>
+<h3>Gaining access to the MIDI port</h3>
 
 <p>In the following example the {{domxref("MIDIAccess")}} interface is used to gain access to a MIDI device.</p>
 
@@ -55,7 +55,7 @@ navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
 
 <h3>Listing inputs and outputs</h3>
 
-<p>In this example the list or input and output ports are retrieved and printed to the console.</p>
+<p>In this example the list of input and output ports are retrieved and printed to the console.</p>
 
 <pre class="brush: js">function listInputsAndOutputs( midiAccess ) {
   for (var entry of midiAccess.inputs) {
