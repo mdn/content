@@ -156,11 +156,10 @@ attr(data-something, "default");
 
 <p>{{EmbedLiveSample("content_property", "100%", 50)}}</p>
 
-<h3 id="&lt;color&gt;_value">&lt;color&gt; value</h3>
+<h3 id="color_value">color value</h3>
 
 <p>{{SeeCompatTable}}</p>
 
-<div id="color-value">
 <h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html">&lt;div class="background" data-background="lime"&gt;background expected to be red if your browser does not support advanced usage of attr()&lt;/div&gt;</pre>
@@ -180,9 +179,10 @@ attr(data-something, "default");
 .background[data-background] {
   background-color: attr(data-background color, red);
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample("color-value", "100%", 50)}}</p>
+<h4>Result</h4>
+
+<p>{{EmbedLiveSample("color_value", "100%", 50)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
