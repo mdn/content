@@ -8,6 +8,7 @@ tags:
 - SubtleCrypto
 - Web Crypto API
 - importKey
+browser-compat: api.SubtleCrypto.importKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -144,7 +145,7 @@ tags:
 
 <p>You can use this format to import or export RSA or Elliptic Curve private keys.</p>
 
-<p>The PKCS #8 format is defined in <a href="https://tools.ietf.org/html/rfc5208">RFC
+<p>The PKCS #8 format is defined in <a href="https://datatracker.ietf.org/doc/html/rfc5208">RFC
     5208</a>., using the <a
     href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">ASN.1 notation</a>:
 </p>
@@ -194,7 +195,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 <p>You can use this format to import or export RSA or Elliptic Curve public keys.</p>
 
 <p><code>SubjectPublicKey</code> is defined in <a
-    href="https://tools.ietf.org/html/rfc5280#section-4.1">RFC 5280, Section 4.1</a> using
+    href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">RFC 5280, Section 4.1</a> using
   the <a href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">ASN.1
     notation:</a></p>
 
@@ -241,7 +242,7 @@ gQIDAQAB
 <p>You can use JSON Web Key format to import or export RSA or Elliptic Curve public or
   private keys, as well as AES and HMAC secret keys.</p>
 
-<p>JSON Web Key format is defined in <a href="https://tools.ietf.org/html/rfc7517">RFC
+<p>JSON Web Key format is defined in <a href="https://datatracker.ietf.org/doc/html/rfc7517">RFC
     7517</a>. It describes a way to represent public, private, and secret keys as JSON
   objects.</p>
 
@@ -444,7 +445,7 @@ function importPrivateKey(jwk) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.importKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -452,8 +453,8 @@ function importPrivateKey(jwk) {
   <li>
     <code><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey()</a></code>
   </li>
-  <li><a href="https://tools.ietf.org/html/rfc5208">PKCS #8 format</a>.</li>
-  <li><a href="https://tools.ietf.org/html/rfc5280#section-4.1">SubjectPublicKeyInfo
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</a>.</li>
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo
       format</a>.</li>
-  <li><a href="https://tools.ietf.org/html/rfc7517">JSON Web Key format</a>.</li>
+  <li><a href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</a>.</li>
 </ul>

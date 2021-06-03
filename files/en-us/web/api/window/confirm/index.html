@@ -8,12 +8,13 @@ tags:
   - Reference
   - Window
   - confirm
+browser-compat: api.Window.confirm
 ---
 <div>{{ApiRef("Window")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Window.confirm()</strong></code> method
-    displays a modal dialog with an optional message and two buttons: OK and
-    Cancel.</span></p>
+<p><code>window.confirm()</code> instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.</p>
+
+<p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,7 +25,7 @@ tags:
 
 <dl>
   <dt><code>message</code></dt>
-  <dd>A string you want to display in the alert dialog.</dd>
+  <dd>A string you want to display in the confirmation dialog.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -76,7 +77,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.confirm")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web-Based Protocol Handlers
   - registerProtocolHandler
+browser-compat: api.Navigator.registerProtocolHandler
 ---
 <div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
 
@@ -48,7 +49,7 @@ tags:
     <div class="note"><strong>Note:</strong> The handler URL must use the
       <code>https</code> scheme. Older browsers also supported <code>http</code>.</div>
   </dd>
-  <dt><code><var>title</var></code> {{Obsolete_Inline}}</dt>
+  <dt><code><var>title</var></code> {{deprecated_inline}}</dt>
   <dd>A human-readable title string for the handler. <strong>This will be displayed to the
       user</strong>, such as prompting “Allow this site to handle [scheme] links?” or
     listing registered handlers in the browser’s settings.
@@ -172,7 +173,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.registerProtocolHandler")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

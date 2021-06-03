@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.z-index
 ---
 <div>{{CSSRef}}</div>
 
@@ -44,9 +45,9 @@ z-index: unset;
 
 <dl>
  <dt><a id="auto"><code>auto</code></a></dt>
- <dd>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box.</dd>
+ <dd>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is <code>0</code>.</dd>
  <dt><a id="integer"><code>&lt;integer&gt;</code></a></dt>
- <dd>This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is <code>0</code>. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</dd>
+ <dd>This {{cssxref("&lt;integer&gt;")}} is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</dd>
 </dl>
 
 <h2 id="Formal_definition">Formal definition</h2>
@@ -55,7 +56,7 @@ z-index: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -129,7 +130,7 @@ z-index: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.z-index")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

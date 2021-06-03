@@ -18,7 +18,7 @@ slug: Mozilla/Projects/NSS/Reference/NSPR_functions
 <ul> <li><a class="internal" href="/en-US/PR_Now">PR_Now</a></li>
 </ul>
 <h3 id="Interval_time">Interval time</h3>
-<p>The NSPR socket I/O functions <a class="internal" href="/en-US/PR_Recv"><code>PR_Recv</code></a> and <a class="internal" href="/en-US/PR_Send"><code>PR_Send</code></a> (used by the NSS SSL functions) take a <code>PRIntervalTime</code> timeout parameter.  <code>PRIntervalTime</code> has an abstract, platform-dependent time unit.  Call <a class="internal" href="/en-US/PR_SecondsToInterval"><code>PR_SecondsToInterval</code></a> or <code><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a> </code>to convert a time interval in seconds or milliseconds to <code>PRIntervalTime</code>.</p>
+<p>The NSPR socket I/O functions <a class="internal" href="/en-US/PR_Recv"><code>PR_Recv</code></a> and <a class="internal" href="/en-US/PR_Send"><code>PR_Send</code></a> (used by the NSS SSL functions) take a <code>PRIntervalTime</code> timeout parameter.  <code>PRIntervalTime</code> has an abstract, platform-dependent time unit.  Call <a class="internal" href="/en-US/PR_SecondsToInterval"><code>PR_SecondsToInterval</code></a> or <code><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a></code> to convert a time interval in seconds or milliseconds to <code>PRIntervalTime</code>.</p>
 <ul> <li><a class="internal" href="/en-US/PR_SecondsToInterval">PR_SecondsToInterval</a></li> <li><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a></li>
 </ul>
 <h3 id="NSPR_IO_layering">NSPR I/O layering</h3>

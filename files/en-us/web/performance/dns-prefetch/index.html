@@ -54,14 +54,14 @@ tags:
 
 <p>The logic behind pairing these hints is because support for dns-prefetch is better than support for preconnect. Browsers that don’t support preconnect will still get some added benefit by falling back to dns-prefetch. Because this is an HTML feature, it is very fault-tolerant. If a non-supporting browser encounters a dns-prefetch hint—or any other resource hint—your site won’t break. You just won’t receive the benefits it provides.</p>
 
-<p>Some resources such as fonts are loaded in anonymous mode. In such cases you should set the <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a> attribute with the preconnect hint. If you omit it, the browser will only perform the DNS lookup.</p>
+<p>Some resources such as fonts are loaded in anonymous mode. In such cases you should set the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute with the preconnect hint. If you omit it, the browser will only perform the DNS lookup.</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></li>
  <li><a href="/en-US/docs/Web/HTML/Attributes/rel">HTML attribute: rel</a></li>
- <li><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></li>
  <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
  <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
  <li><a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP header </a><a href="/en-US/docs/Web/HTTP/Headers/Link" title="The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;link&gt; element.">Link</a></li>

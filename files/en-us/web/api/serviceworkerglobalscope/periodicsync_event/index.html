@@ -1,0 +1,81 @@
+---
+title: 'ServiceWorkerGlobalScope: periodicsync event'
+slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
+tags:
+  - Offline
+  - PWA
+  - Periodic Background Synchronization
+  - ServiceWorkerGlobalScope
+  - events
+browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
+---
+<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+
+<p class="summary">The <strong><code>periodicsync</code></strong> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("PeriodicSyncEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{domxref('ServiceWorkerGlobalScope.onperiodicsync')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows how to respond to a periodic sync event in the service worker.</p>
+
+<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
+  if (event.tag == 'get-latest-news') {
+    event.waitUntil(fetchAndCacheLatestNews());
+  }
+});
+</pre>
+
+<p>You can also set up the event handler using the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} property:</p>
+
+<pre class="brush: js">self.onperiodicsync = (event) =&gt; {
+  ...
+};
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Periodic Background Sync','#extensions-to-serviceworkerregistration','periodicsync')}}</td>
+   <td>{{Spec2('Periodic Background Sync')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
+ <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
+</ul>

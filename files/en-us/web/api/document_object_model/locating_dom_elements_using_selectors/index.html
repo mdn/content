@@ -27,11 +27,11 @@ tags:
 
 <p>The selector methods accept one or more comma-separated selectors to determine what element or elements should be returned. For example, to select all paragraph (<code>p</code>) elements in a document whose CSS class is either <code>warning</code> or <code>note</code>, you can do the following:</p>
 
-<pre class="brush: js">var special = document.querySelectorAll("p.warning, p.note");</pre>
+<pre class="brush: js">const special = document.querySelectorAll("p.warning, p.note");</pre>
 
 <p>You can also query by ID. For example:</p>
 
-<pre class="brush: js">var el = document.querySelector("#main, #basic, #exclamation");</pre>
+<pre class="brush: js">const el = document.querySelector("#main, #basic, #exclamation");</pre>
 
 <p>After executing the above code, <code>el</code> contains the first element in the document whose ID is one of <code>main</code>, <code>basic</code>, or <code>exclamation</code>.</p>
 

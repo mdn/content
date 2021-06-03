@@ -50,7 +50,7 @@ This property is IE specific. Although it is well supported by IE, most other br
  <p>Returns a copy of <code style="font-size: 1rem; letter-spacing: -0.00278rem;">TextRange</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;">.</span></p>
  </dd>
  <dt>{{domxref("TextRange.execCommand()")}}</dt>
- <dd>Executes a <a href="/zh-CN/docs/Web/API/Document/execCommand">command</a> on the current document, the current selection, or the given scope.</dd>
+ <dd>Executes a <a href="/en-US/docs/Web/API/Document/execCommand">command</a> on the current document, the current selection, or the given scope.</dd>
  <dt>{{domxref("TextRange.expand()")}}</dt>
  <dd>Expand the range to include the full range of specified units. For example, expanding a <code>"word"</code> means that the words at both ends of the range will completely included in the range. <code>xpand to wor</code> may become <code>expand to words</code>, etc.</dd>
  <dt>{{domxref("TextRange.findText()")}}</dt>
@@ -95,15 +95,15 @@ range.moveToElementText(element);
 range.select();
 // Selected "SomeTextToBeSelected"</pre>
 
-<pre class="brush:html"><code>&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;TextRange Example&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;p id="test"&gt;</code>SomeTextToBeSelected<code>&lt;/p&gt;
+  &lt;p id=&quot;test&quot;&gt;SomeTextToBeSelected&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Notes">Notes</h2>
 
@@ -126,7 +126,7 @@ alert(range.text);
 
 <p>The <code>document.selection</code> object is the primary purpose of <code>TextRange</code>. This object is used to process the selected ranges in the document, and is mainly implemented by using the <code>TextRange</code> interface. According to the standard, a window / document may have multiple non adjacent selection, but only Firefox can select multiple ranges through <kbd>Ctrl</kbd>; generally, only one selected <code>TextRange</code> is allowed in ie. </p>
 
-<p>However, in other browsers, <code>document</code> does not have a so-called <code>selection</code> attribute - they operate on the selection through the standard <a href="/en-US/docs/Web/API/Selection_API">Selection API</a>, that is, they get the <code>Selection</code> object through the <code>window.getselection()</code> method, and use the standard <code>Range</code> object to process the text fragment. IE9 and later also gave up the <code>document.selection</code> object and switched to the standard interface (although <code>TextRange</code> has been reserved, it has lost its function in most cases).</p>
+<p>However, in other browsers, <code>document</code> does not have a so-called <code>selection</code> attribute - they operate on the selection through the standard <a href="/en-US/docs/Web/API/Selection">Selection API</a>, that is, they get the <code>Selection</code> object through the <code>window.getselection()</code> method, and use the standard <code>Range</code> object to process the text fragment. IE9 and later also gave up the <code>document.selection</code> object and switched to the standard interface (although <code>TextRange</code> has been reserved, it has lost its function in most cases).</p>
 
 <p>It's easy to get confused. Generally, if the script only needs to be compatible with the latest browser, the standard interface is the best choice; however, the current website still wants to be compatible with IE8 or below browsers. Therefore, the best way is to deal with both at the same time, that is, try to use <code>TextRange</code> mode when the standard interface is not supported, but do not regard it as the only choice.</p>
 
@@ -144,7 +144,7 @@ alert(range.text);
   <tr>
    <th scope="row" style="width: 15%;">{{domxref("TextRange")}}{{non-standard_inline()}}</th>
    <td>≤8(Standard API after IE9)</td>
-   <td style="width: 60%;">No Support (See <a href="/en-US/docs/Web/API/Selection_API">Selection API</a>)</td>
+   <td style="width: 60%;">No Support (See <a href="/en-US/docs/Web/API/Selection">Selection API</a>)</td>
   </tr>
  </tbody>
 </table>
@@ -153,5 +153,5 @@ alert(range.text);
 
 <ul>
  <li>{{domxref("Selection")}} and {{domxref("Range")}} standard interface</li>
- <li><a href="/en-US/docs/Web/API/Selection_API">Selection API</a> to replace this non-standard interface</li>
+ <li><a href="/en-US/docs/Web/API/Selection">Selection API</a> to replace this non-standard interface</li>
 </ul>

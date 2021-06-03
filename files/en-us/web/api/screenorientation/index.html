@@ -8,12 +8,13 @@ tags:
   - Screen Orientation API
   - ScreenOrientation
   - screen
+browser-compat: api.ScreenOrientation
 ---
 <p>{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>ScreenOrientation</code></strong> interface of the <a href="/en-US/docs/Web/API/Screen_Orientation_API">Screen Orientation API</a> provides information about the current orientation of the document.</p>
 
-<p>A <strong><code>ScreenOrientation</code></strong> instance object can be retrieved using the <a href="/en-US/docs/Web/API/Screen/orientation"><code>window.screen.orientation</code></a> property.</p>
+<p>A <strong><code>ScreenOrientation</code></strong> instance object can be retrieved using the <a href="/en-US/docs/Web/API/Screen/orientation"><code>screen.orientation</code></a> property.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -28,7 +29,7 @@ tags:
 
 <dl>
  <dt>{{DOMxRef("ScreenOrientation.onchange")}}</dt>
- <dd>The {{DOMxRef("EventHandler")}} called whenever the screen changes orientation.</dd>
+ <dd>The {{event("Event_handlers", "event handler")}} called whenever the screen changes orientation.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -59,4 +60,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ScreenOrientation")}}</p>
+<p>{{Compat}}</p>

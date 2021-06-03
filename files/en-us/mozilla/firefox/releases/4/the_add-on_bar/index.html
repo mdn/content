@@ -36,7 +36,7 @@ newItem.appendChild(itemLabel);
 addonBar.appendChild(newItem);
 itemLabel.value = "Hello world!";
 </pre>
-<p>To add the button only once, create a bool pref to check if it is the first run. <a class="external" href="http://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512">For example</a>:</p>
+<p>To add the button only once, create a bool pref to check if it is the first run. <a class="external" href="https://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512">For example</a>:</p>
 <pre class="brush: js">var firstrun = Services.prefs.getBoolPref("extensions.YOUREXT.firstrun");
 
 var curVersion = "0.0.0";
@@ -75,5 +75,5 @@ overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/ov
 </ul>
 <h2 id="See_also">See also</h2>
 <ul>
- <li>The <a class="external" href="http://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers">Firefox 4 add-on bar for developers</a>, by Mike Kaply</li>
+ <li>The <a class="external" href="https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers">Firefox 4 add-on bar for developers</a>, by Mike Kaply</li>
 </ul>

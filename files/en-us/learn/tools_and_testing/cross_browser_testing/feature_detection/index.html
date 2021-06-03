@@ -39,7 +39,7 @@ tags:
 
 <p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
-<pre class="language-js">if ("geolocation" in navigator) {
+<pre class="brush: js">if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
   });
@@ -162,12 +162,12 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
   <tr>
    <td><em>Method on element return value</em></td>
    <td>Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.</td>
-   <td>See <a href="http://diveinto.html5doctor.com/detect.html#video-formats">Dive Into HTML5 Video Formats detection</a> test.</td>
+   <td>See <a href="https://diveinto.html5doctor.com/detect.html#video-formats">Dive Into HTML5 Video Formats detection</a> test.</td>
   </tr>
   <tr>
    <td><em>Property on element retains value</em></td>
    <td>Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a certain value, then check to see if the value is retained.</td>
-   <td>See <a href="http://diveinto.html5doctor.com/detect.html#input-types">Dive into HTML5 <code>&lt;input&gt;</code> types detection</a> test.</td>
+   <td>See <a href="https://diveinto.html5doctor.com/detect.html#input-types">Dive into HTML5 <code>&lt;input&gt;</code> types detection</a> test.</td>
   </tr>
  </tbody>
 </table>
@@ -176,7 +176,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 <p><strong>Note</strong>: The double <code>NOT</code> in the above example (<code>!!</code>) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.</p>
 </div>
 
-<p>The <a href="http://diveinto.html5doctor.com/detect.html">Dive into HTML5 Detecting HTML5 Features</a> page has a lot more useful feature detection tests besides the ones listed above, and you can generally find a feature detection test for most things by searching for "detect support for YOUR-FEATURE-HERE" in your favorite search engine. Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of <a href="https://github.com/Modernizr/Modernizr/wiki/Undetectables">Undetectables</a>.</p>
+<p>The <a href="https://diveinto.html5doctor.com/detect.html">Dive into HTML5 Detecting HTML5 Features</a> page has a lot more useful feature detection tests besides the ones listed above, and you can generally find a feature detection test for most things by searching for "detect support for YOUR-FEATURE-HERE" in your favorite search engine. Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of <a href="https://github.com/Modernizr/Modernizr/wiki/Undetectables">Undetectables</a>.</p>
 
 <h4 id="matchMedia">matchMedia</h4>
 

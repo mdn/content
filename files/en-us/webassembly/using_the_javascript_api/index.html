@@ -32,7 +32,7 @@ tags:
 <ol>
  <li>First we need a wasm module! Grab our <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> file and save a copy in a new directory on your local machine.</li>
  <li>Next, let’s create a simple HTML file called <code>index.html</code> in the same directory as your wasm file (can use our <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">simple template</a> if you haven’t got one easily available).</li>
- <li>Now, to help us understand what is going on here, let’s look at the text representation of our wasm module (which we also meet in <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
+ <li>Now, to help us understand what is going on here, let’s look at the text representation of our wasm module (which we also meet in <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#a_first_look_at_the_text_format">Converting WebAssembly format to wasm</a>):
   <pre class="brush: js">(module
   (func $i (import "imports" "imported_func") (param i32))
   (func (export "exported_func")
@@ -83,7 +83,7 @@ tags:
 
 <p>In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the “wasm://” entry.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15823/wasm-debug.png" style="display: block; height: 317px; margin: 0px auto; width: 1019px;"></p>
+<p><img alt="" src="wasm-debug.png" style="display: block; margin: 0px auto;"></p>
 
 <p>In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See <a href="https://www.youtube.com/watch?v=R1WtBkMeGds">WebAssembly debugging with Firefox DevTools</a> for a video preview.</p>
 
@@ -91,7 +91,7 @@ tags:
 
 <p>In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called <a href="https://webassembly.org/docs/semantics/#linear-memory">Linear Memory</a> that are read and written by <a href="https://webassembly.org/docs/semantics/#linear-memory-accesses">load and store instructions</a> inside the module.  In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.</p>
 
-<p>Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object.  This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Shared_memories">shared memories</a>, which can be transferred between Window and Worker contexts using <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code>, and used in multiple places.</p>
+<p>Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object.  This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories">shared memories</a>, which can be transferred between Window and Worker contexts using <code><a href="/en-US/docs/Web/API/Window/postMessage">postMessage()</a></code>, and used in multiple places.</p>
 
 <p>In JavaScript, a Memory instance can be thought of as a resizable <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> (or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a></code>, in the case of shared memories) and, just as with <code>ArrayBuffers</code>, a single web app can create many independent Memory objects.  You can create one using the {{jsxref("WebAssembly.Memory()")}} constructor, which takes as arguments an initial size and (optionally) a maximum size and a <code>shared</code> property that states whether it is a shared memory or not.</p>
 
@@ -292,7 +292,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
  <li>One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing <a href="https://webassembly.org/docs/dynamic-linking">dynamic linking</a>.</li>
 </ul>
 
-<p>You can see multiplicity in action in our Understanding text format article — see the <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking section</a>.</p>
+<p>You can see multiplicity in action in our Understanding text format article — see the <a href="/en-US/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking">Mutating tables and dynamic linking section</a>.</p>
 
 <h2 id="Summary">Summary</h2>
 

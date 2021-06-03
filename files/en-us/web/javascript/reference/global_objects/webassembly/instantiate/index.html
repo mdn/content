@@ -9,6 +9,7 @@ tags:
 - Reference
 - WebAssembly
 - instantiate
+browser-compat: javascript.builtins.WebAssembly.instantiate
 ---
 <div>{{JSRef}}</div>
 
@@ -29,7 +30,7 @@ tags:
 </ul>
 
 <div class="warning">
-  <p><strong>Important</strong>: This method is not the most efficient way of fetching and
+  <p><strong>Warning:</strong> This method is not the most efficient way of fetching and
     instantiating wasm modules. If at all possible, you should use the newer
     {{jsxref("WebAssembly.instantiateStreaming()")}} method instead, which fetches,
     compiles, and instantiates a module all in one step, directly from the raw bytecode,
@@ -41,7 +42,7 @@ tags:
 <h3 id="Primary_overload_—_taking_wasm_binary_code">Primary overload — taking wasm binary
   code</h3>
 
-<pre class="brush: js">Promise&lt;ResultObject&gt; WebAssembly.instantiate(bufferSource, importObject);
+<pre class="brush: js">WebAssembly.instantiate(bufferSource, importObject);
 </pre>
 
 <h4 id="Parameters">Parameters</h4>
@@ -86,7 +87,7 @@ tags:
 <h3 id="Secondary_overload_—_taking_a_module_object_instance">Secondary overload — taking
   a module object instance</h3>
 
-<pre class="brush: js">Promise&lt;WebAssembly.Instance&gt; WebAssembly.instantiate(module, importObject);
+<pre class="brush: js">WebAssembly.instantiate(module, importObject);
 </pre>
 
 <h4 id="Parameters_2">Parameters</h4>
@@ -147,7 +148,7 @@ fetch('simple.wasm').then(response =&gt;
 );</pre>
 
 <div class="note">
-  <p><strong>Note</strong>: You can also find this example at <a
+  <p><strong>Note:</strong> You can also find this example at <a
       href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html">index.html</a>
     on GitHub (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">view
       it live also</a>).</p>
@@ -197,23 +198,11 @@ onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('WebAssembly JS', '#dom-webassembly-instantiate', 'instantiate()')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.WebAssembly.instantiate")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

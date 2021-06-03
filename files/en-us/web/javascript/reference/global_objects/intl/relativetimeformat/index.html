@@ -9,6 +9,7 @@ tags:
   - Localization
   - RelativeTimeFormat
   - Reference
+browser-compat: javascript.builtins.Intl.RelativeTimeFormat
 ---
 <div>{{JSRef}}</div>
 
@@ -27,18 +28,18 @@ tags:
 <h2 id="Static_methods">Static methods</h2>
 
 <dl>
-	<dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
+	<dt>{{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
 	<dd>Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
-	<dt>{{jsxref("RelativeTimeFormat.format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
+	<dt>{{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}</dt>
 	<dd>Formats a <code>value</code> and a <code>unit</code> according to the locale and formatting options of the given {{jsxref("Intl.RelativeTimeFormat")}} object.</dd>
-	<dt>{{jsxref("RelativeTimeFormat.formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
+	<dt>{{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}</dt>
 	<dd>Returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.</dd>
-	<dt>{{jsxref("RelativeTimeFormat.resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
+	<dt>{{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}</dt>
 	<dd>Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.</dd>
 </dl>
 
@@ -86,22 +87,11 @@ rtf.formatToParts(100, "day");
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

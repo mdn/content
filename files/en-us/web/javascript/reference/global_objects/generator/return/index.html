@@ -8,6 +8,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Generator.return
 ---
 <div>{{JSRef}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><var>gen</var>.return(<var>value</var>)</pre>
+<pre class="brush: js">return(<var>value</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -51,8 +52,7 @@ g.next();        // { value: undefined, done: true }
 <p>If <code>return(<var>value</var>)</code> is called on a generator that is already in
   "completed" state, the generator will remain in "completed" state.</p>
 
-<p>If no argument is provided, the <code>value</code> property of returned object is the
-  same as if <code>.next()</code>. If an argument is provided, it will be set to the value
+<p>If no argument is provided, the <code>value</code> property of the returned object will be "<code>undefined</code>". If an argument is provided, it will be set to the value
   of the <code>value</code> property of the returned object.</p>
 
 <pre class="brush: js">function* gen() {
@@ -72,23 +72,11 @@ g.return(1); // { value: 1, done: true }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-generator.prototype.return',
-        'Generator.prototype.return')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Generator.return")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

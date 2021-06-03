@@ -1,0 +1,91 @@
+---
+title: ':user-valid (:-moz-ui-valid)'
+slug: web/css/:user-valid
+tags:
+  - CSS
+  - CSS Selectors
+  - Pseudo-class
+  - Reference
+  - Selector
+browser-compat: css.selectors.user-valid
+---
+<div>{{CSSRef}}</div>
+
+<p>The <strong><code>:user-valid</code></strong> CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents any validated form element whose value validates correctly based on its <a href="/en-US/docs/Learn/Forms#constraint_validation">validation constraints</a>. However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The pseudo-class behaves in the same way as the non-standard <code>:-moz-ui-valid</code> pseudo-class.</p>
+</div>
+
+<p>This pseudo-class is applied according to the following rules:</p>
+
+<ul>
+ <li>If the control does not have focus, and the value is valid, apply this pseudo-class.</li>
+ <li>If the control has focus, and the value was valid (including empty) when it gained focus, apply this pseudo-class.</li>
+ <li>If the control has focus, and the value was invalid when it gained focus, re-validate on every keystroke.</li>
+ <li>If the element is required, the preceding rules apply only if the user has changed the value or attempted to submit the form.</li>
+</ul>
+
+<p>The result is that if the control was valid when the user started interacting with it, the validity styling is changed only when the user shifts focus to another control. However, if the user is trying to correct a previously-flagged value, the control shows immediately when the value becomes valid. Required items are flagged as invalid only if the user changes them or attempts to submit an unchanged invalid value.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+{{CSSSyntax}}
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Setting_valid">Setting a color and symbol on :user-valid</h3>
+
+<p>In the following example, the green border and ✅ only display once the user has interacted with the field.
+Try changing the email address to another valid email to see it in action.</p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;label for="email"&gt;Email *: &lt;/label&gt;
+  &lt;input id="email" name="email" type="email" value="test@example.com" required&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/form&gt;</pre>
+
+<pre class="brush: css">input:user-valid {
+  border: 2px solid green;
+}
+
+input:user-valid + span::before {
+  content: '✓';
+  color: green;
+}</pre>
+
+<p>{{EmbedLiveSample("Setting_valid", 140, 100)}}</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("CSS4 Selectors", "#user-valid-pseudo", ":user-valid")}}</td>
+			<td>{{Spec2("CSS4 Selectors")}}</td>
+			<td>Adds :user-valid</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{CSSxRef(":valid")}}</li>
+ <li>{{CSSxRef(":invalid")}}</li>
+ <li>{{CSSxRef(":required")}}</li>
+ <li>{{CSSxRef(":optional")}}</li>
+ <li>{{CSSxRef(":user-invalid")}}</li>
+</ul>

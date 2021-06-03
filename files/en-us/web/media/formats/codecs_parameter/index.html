@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</div>
 
-<p>At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as <code>video/mp4</code> or <code>audio/mpeg</code>. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> file with the MIME type <code>video/mp4</code> doesn't say anything about what format the actual media within takes.</p>
+<p>At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as <code>video/mp4</code> or <code>audio/mpeg</code>. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MPEG-4</a> file with the MIME type <code>video/mp4</code> doesn't say anything about what format the actual media within takes.</p>
 
 <p>For that reason, the <code>codecs</code> parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.</p>
 
@@ -29,13 +29,13 @@ tags:
 
 <dl>
  <dt><code>audio/mpeg</code></dt>
- <dd>An audio file using the <a href="/en-US/docs/Web/Media/Formats/Containers#MPEG">MPEG</a> file type, such as an MP3.</dd>
+ <dd>An audio file using the <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a> file type, such as an MP3.</dd>
  <dt><code>video/ogg</code></dt>
- <dd>A video file using the <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a> file type.</dd>
+ <dd>A video file using the <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a> file type.</dd>
  <dt><code>video/mp4</code></dt>
- <dd>A video file using the <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> file type.</dd>
+ <dd>A video file using the <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MPEG-4</a> file type.</dd>
  <dt><code>video/quicktime</code></dt>
- <dd>A video file in Apple's <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime">QuickTime</a> format. As noted elsewhere, this format was once commonly used on the web but no longer is, since it required a plugin to use.</dd>
+ <dd>A video file in Apple's <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a> format. As noted elsewhere, this format was once commonly used on the web but no longer is, since it required a plugin to use.</dd>
 </dl>
 
 <p>However, each of these MIME types is vague. All of these file types support a variety of codecs, and those codecs may have any number of profiles, levels, and other configuration factors. For this reason, you can add the <code>codecs</code> parameter to the media type.</p>
@@ -44,11 +44,11 @@ tags:
 
 <dl>
  <dt><code>audio/ogg; codecs=vorbis</code></dt>
- <dd>An <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a> file containing a <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> audio track.</dd>
+ <dd>An <a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a> file containing a <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis">Vorbis</a> audio track.</dd>
  <dt><code>video/webm; codecs="vp8, vorbis"</code></dt>
- <dd>A <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> file containing <a href="/en-US/docs/Web/Media/Formats/Video_codecs#VP8">VP8</a> video and/or <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Vorbis">Vorbis</a> audio.</dd>
+ <dd>A <a href="/en-US/docs/Web/Media/Formats/Containers#webm">WebM</a> file containing <a href="/en-US/docs/Web/Media/Formats/Video_codecs#vp8">VP8</a> video and/or <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis">Vorbis</a> audio.</dd>
  <dt><code>video/mp4; codecs="avc1.4d002a"</code></dt>
- <dd>An <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> file containing <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a> (H.264) video, Main Profile, Level 4.2.</dd>
+ <dd>An <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MPEG-4</a> file containing <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">AVC</a> (H.264) video, Main Profile, Level 4.2.</dd>
 </dl>
 
 <p>As is the case with any MIME type parameter, <code>codecs</code> must be changed to <code>codecs*</code> (note the asterisk character, <code>*</code>) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.</p>
@@ -215,7 +215,7 @@ tags:
 
 <h3 id="ISO_Base_Media_File_Format_MP4_QuickTime_and_3GP"><a id="ISO-BMFF">ISO Base Media File Format: MP4, QuickTime, and 3GP</a></h3>
 
-<p>All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the <code>codecs</code> parameter. These media types include <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MPEG-4</a> (and, in fact, the <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime">QuickTime</a> file format upon which MPEG-4 is based) as well as <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>. Both video and audio tracks can be described using the <code>codecs</code> parameter with the following MIME types:</p>
+<p>All media types based upon the {{interwiki("wikipedia", "ISO Base Media File Format")}} (ISO BMFF) share the same syntax for the <code>codecs</code> parameter. These media types include <a href="/en-US/docs/Web/Media/Formats/Containers#mp4">MPEG-4</a> (and, in fact, the <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a> file format upon which MPEG-4 is based) as well as <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>. Both video and audio tracks can be described using the <code>codecs</code> parameter with the following MIME types:</p>
 
 <table class="standard-table">
  <caption>Base MIME types supporting the ISO BMFF codecs parameter</caption>
@@ -259,7 +259,7 @@ tags:
 
 <p>Each codec described by the <code>codecs</code> parameter can be specified either as the container's name (<code>3gp</code>, <code>mp4</code>, <code>quicktime</code>, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (<code>.</code>).</p>
 
-<p>The syntax for the value of <code>codecs</code> varies by codec; however, it always starts with the codec's four-character identifier, a period separator (<code>.</code>), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC (H.264)</a>.</p>
+<p>The syntax for the value of <code>codecs</code> varies by codec; however, it always starts with the codec's four-character identifier, a period separator (<code>.</code>), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for <a href="/en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)">AVC (H.264)</a>.</p>
 
 <p>Thus, the syntaxes for each of the supported codecs look like this:</p>
 
@@ -731,7 +731,7 @@ tags:
 
 <h4 id="ISO_Base_Media_File_Format_syntax">ISO Base Media File Format syntax</h4>
 
-<p>As part of a move toward a standardized and powerful format for the <code>codecs</code> parameter, WebM is moving toward describing <em>video</em> content using a syntax based on that defined by the <a href="#ISO-BMFF">ISO Base Media File Format</a>. This syntax is defined in <a href="https://www.webmproject.org/vp9/mp4">VP Codec ISO Media File Format Binding</a>, in the section <a href="https://www.webmproject.org/vp9/mp4/#codecs-parameter-string">Codecs Parameter String</a>. The audio codec continues to be indicated as either <code>vorbis</code> or <code>opus</code>.</p>
+<p>As part of a move toward a standardized and powerful format for the <code>codecs</code> parameter, WebM is moving toward describing <em>video</em> content using a syntax based on that defined by the <a href="#iso-bmff">ISO Base Media File Format</a>. This syntax is defined in <a href="https://www.webmproject.org/vp9/mp4">VP Codec ISO Media File Format Binding</a>, in the section <a href="https://www.webmproject.org/vp9/mp4/#codecs-parameter-string">Codecs Parameter String</a>. The audio codec continues to be indicated as either <code>vorbis</code> or <code>opus</code>.</p>
 
 <p>In this format, the <code>codecs</code> parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (<code>.</code>) separated two-digit values.</p>
 

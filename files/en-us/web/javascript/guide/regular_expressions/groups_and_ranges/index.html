@@ -18,7 +18,6 @@ tags:
 
 <h2 id="Types">Types</h2>
 
-<div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
 <table class="standard-table">
  <thead>
@@ -56,7 +55,7 @@ tags:
     <p>A negated or complemented character class. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character class as a normal character. For example, <code>[^abc]</code> is the same as <code>[^a-c]</code>. They initially match "o" in "bacon" and "h" in "chop".</p>
 
     <div class="notecard note">
-    <p>The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">beginning of input</a>.</p>
+    <p><strong>Note:</strong> The ^ character may also indicate the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">beginning of input</a>.</p>
     </div>
    </td>
   </tr>
@@ -86,7 +85,7 @@ tags:
     <p>For example, <code>/(?&lt;title&gt;\w+), yes \k&lt;title&gt;/</code> matches "Sir, yes Sir" in "Do you copy? Sir, yes Sir!".</p>
 
     <div class="notecard note">
-    <p><code>\k</code> is used literally here to indicate the beginning of a back reference to a Named capture group.</p>
+    <p><strong>Note:</strong> <code>\k</code> is used literally here to indicate the beginning of a back reference to a Named capture group.</p>
     </div>
    </td>
   </tr>
@@ -139,25 +138,8 @@ do {
 } while((match = regexpNames.exec(personList)) !== null);</pre>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Not all browsers support this feature; refer to the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">compatibility table</a>.</p>
+<p><strong>Note:</strong> Not all browsers support this feature; refer to the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#browser_compatibility">compatibility table</a>.</p>
 </div>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-classranges', 'RegExp: Ranges')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>For browser compatibility information, check out the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -172,4 +154,5 @@ do {
   </ul>
  </li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">The <code>RegExp()</code> constructor</a></li>
+ <li><a href="https://tc39.es/ecma262/#sec-classranges">ClassRanges in the ECMAScript specification</a></li>
 </ul>

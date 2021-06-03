@@ -1,0 +1,50 @@
+---
+title: color-contrast()
+slug: Web/CSS/color_value/color-contrast()
+tags:
+  - CSS
+  - CSS Data Type
+  - Data Type
+  - Reference
+  - Web
+  - color-contrast
+browser-compat: css.types.color.color-contrast
+---
+<div>{{CSSRef}}</div>
+
+<p>The <strong><code>color-contrast()</code></strong> functional notation takes a {{cssxref("color_value","color")}} value and compares it to a list of other {{cssxref("color_value","color")}} values, selecting the one with the highest contrast from the list.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: css">color-contrast(wheat vs tan, sienna, #d2691e)
+color-contrast(#008080 vs olive, var(--myColor), #d2691e)
+</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+  <dt>Functional notation: <code>color-contrast( &lt;color&gt; vs &lt;color&gt;#{2,}  )</code></dt>
+  <dd><code>&lt;color&gt;</code> is any valid {{cssxref("color_value","color")}}.</dd>
+  <dd><code>&lt;color&gt;#{2,}</code> is a comma-separated list of color values to compare with the first value.</dd>
+</dl>
+
+ <table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>{{SpecName('CSS5 Colors', '#colorcontrast')}}</td>
+    <td>{{Spec2('CSS5 Colors')}}</td>
+    <td>Initial definition</td>
+   </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

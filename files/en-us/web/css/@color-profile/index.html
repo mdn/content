@@ -1,0 +1,81 @@
+---
+title: '@color-profile'
+slug: Web/CSS/@color-profile
+tags:
+  - At-rule
+  - CSS
+  - Reference
+  - Web
+  - Property
+  - Color
+  - color-profile
+browser-compat: css.at-rules.color-profile
+---
+<div>{{CSSRef}}</div>
+
+<p>The <strong><code>@color-profile</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("at-rule")}} defines and names a color profile which can later be used in the {{cssxref("color_value/color()", "color()")}} function to specify a color.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: css no-line-numbers">@color-profile --swop5c {
+  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+}</pre>
+
+<h3>Descriptors</h3>
+
+<dl>
+  <dt><code>src</code></dt>
+  <dd>Specifies the URL to retrieve the color-profile information from.</dd>
+  <dt><code>rendering-intent</code></dt>
+  <dd><p>If the color profile contains more than one rendering intent, this descriptor allows one to be selected as the one to use to define how to map the color to smaller gamuts than this profile is defined over.</p>
+    <p>If used, it must be one of the following keywords:</p>
+    <dl>
+      <dt><code>relative-colorimetric</code></dt>
+      <dd>Media-relative colorimetric is required to leave source colors that fall inside the destination medium gamut unchanged relative to the respective media white points. Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods.</dd>
+      <dt><code>absolute-colorimetric</code></dt>
+      <dd>ICC-absolute colorimetric is required to leave source colors that fall inside the destination medium gamut unchanged relative to the adopted white (a perfect reflecting diffuser). Source colors that are out of the destination medium gamut are mapped to colors on the gamut boundary using a variety of different methods. </dd>
+      <dt><code>perceptual</code></dt>
+      <dd>This method is often the preferred choice for images, especially when there are substantial differences between the source and destination (such as a screen display image reproduced on a reflection print). It takes the colors of the source image and re-optimizes the appearance for the destination medium using proprietary methods. </dd>
+      <dt><code>saturation</code></dt>
+      <dd>This option was created to preserve the relative saturation (chroma) of the original, and to keep solid colors pure. However, it experienced interoperability problems like the perceptual intent.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>This example is from the specification and demonstrates using offset printing to ISO 12647-2:2004 using the CGATS/SWOP TR005 2007 characterisation data on grade 5 paper with an ink limit of 300% Total Area Coverage, and medium gray component replacement (GCR).</p>
+
+<p>The <code>src</code> descriptor specifies the URL to retrieve the color-profile information from. </p>
+
+<pre class="brush: css">@color-profile --swop5c {
+  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+}
+.header {
+  background-color:   color(--swop5c 0% 70% 20% 0%);
+}</pre>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
+
+{{csssyntax}}
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS4 Color', '#at-profile')}}</td>
+   <td>{{Spec2('CSS4 Color')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

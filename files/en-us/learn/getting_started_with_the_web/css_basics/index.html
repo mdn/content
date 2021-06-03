@@ -46,7 +46,7 @@ tags:
 
 <p><img alt="CSS p declaration color red" src="css-declaration-small.png"></p>
 
-<p>The whole structure is called a <strong>ruleset. </strong>(The term <em>ruleset</em> is often referred to as just <em>rule.)</em> Note the names of the individual parts:</p>
+<p>The whole structure is called a <strong>ruleset</strong>. (The term <em>ruleset</em> is often referred to as just <em>rule</em>.) Note the names of the individual parts:</p>
 
 <dl>
  <dt>Selector</dt>
@@ -148,7 +148,7 @@ tags:
 }</pre>
 
   <div class="note">
-  <p><strong>Note</strong>: Anything in CSS  between <code>/*</code> and <code>*/</code> is a <strong>CSS comment</strong>. The browser ignores comments as it renders the code. CSS comments are a way for you to write helpful notes about your code or logic.</p>
+  <p><strong>Note</strong>: Anything in CSS between <code>/*</code> and <code>*/</code> is a <strong>CSS comment</strong>. The browser ignores comments as it renders the code. CSS comments are a way for you to write helpful notes about your code or logic.</p>
   </div>
  </li>
  <li>Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("h1")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
@@ -221,7 +221,7 @@ p, li {
  <li><code>width: 600px;</code> This forces the body to always be 600 pixels wide.</li>
  <li><code>margin: 0 auto;</code> When you set two values on a property like <code>margin</code> or <code>padding</code>, the first value affects the element's top <em>and</em> bottom side (setting it to <code>0</code> in this case); the second value affects the left <em>and</em> right side. (Here, <code>auto</code> is a special value that divides the available horizontal space evenly between left and right). You can also use one, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/margin#syntax">Margin Syntax</a>.</li>
  <li><code>background-color: #FF9500;</code> This sets the element's background color. This project uses a reddish orange for the body background color, as opposed to dark blue for the {{htmlelement("html")}} element. (Feel free to experiment.)</li>
- <li><code>padding: 0 20px 20px 20px;</code> This sets four values for padding. The goal is to put  some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with <code>margin</code>, you can use one, two, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/padding#syntax">Padding Syntax</a>.</li>
+ <li><code>padding: 0 20px 20px 20px;</code> This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with <code>margin</code>, you can use one, two, three, or four values, as documented in <a href="/en-US/docs/Web/CSS/padding#syntax">Padding Syntax</a>.</li>
  <li><code>border: 5px solid black;</code> This sets values for the width, style and color of the border. In this case, it's a five-pixel–wide, solid black border, on all sides of the body.</li>
 </ul>
 
@@ -263,7 +263,7 @@ p, li {
 <p>The {{htmlelement("body")}} is a <strong>block</strong> element, meaning it takes up space on the page. A block element can have margin and other spacing values applied to it. In contrast, images are <strong>inline</strong> elements. It is not possible to apply margin or spacing values to inline elements. So to apply margins to the image, we must give the image block-level behavior using <code>display: block;</code>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a <a href="https://en.wikipedia.org/wiki/Raster_graphics_editor">graphics editor</a>, or 2)  use CSS to size the image by setting the {{cssxref("width")}} property on the <code>&lt;img&gt;</code> element with a smaller value.</p>
+<p><strong>Note</strong>: The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a <a href="https://en.wikipedia.org/wiki/Raster_graphics_editor">graphics editor</a>, or 2) use CSS to size the image by setting the {{cssxref("width")}} property on the <code>&lt;img&gt;</code> element with a smaller value.</p>
 </div>
 
 <div class="note">

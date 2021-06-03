@@ -1,0 +1,67 @@
+---
+title: USBConnectionEvent.USBConnectionEvent()
+slug: Web/API/USBConnectionEvent/USBConnectionEvent
+tags:
+  - API
+  - Constructor
+  - Reference
+  - USBConnectionEvent
+browser-compat: api.USBConnectionEvent.USBConnectionEvent
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+
+<p class="summary">The <strong><code>USBConnectionEvent()</code></strong> constructor creates a new {{domxref("USBConnectionEvent")}} object which is passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}}. This constructor is not typically used, it is created by the browser in response to the connection and disconnection of a USB device.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">new USBConnectionEvent(type, USBConnectionEventInit);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>type</code></dt>
+  <dd>A {{domxref("DOMString","string")}} representing the name of the event. One of:
+    <ul>
+      <li><code>connect</code></li>
+      <li><code>disconnect</code></li>
+    </ul>
+  </dd>
+  <dt><code>USBConnectionEventInit</code></dt>
+  <dd>An object including the following:
+    <dl>
+      <dt>A {{domxref("USBDevice")}}</dt>
+      <dd>An object representing the USB device being connected or disconnected.</dd>
+      <dt><code>bubbles</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
+        <code>false</code>.</dd>
+      <dt><code>cancelable</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
+        default is <code>false</code>.</dd>
+      <dt><code>composed</code> {{optional_inline}}</dt>
+      <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
+        outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
+        default is <code>false</code>.</dd>
+    </dl>
+  </dd>
+</dl>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Web USB','#dom-usbconnectionevent-usbconnectionevent','USBConnectionEvent()')}}</td>
+			<td>{{Spec2('Web USB')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

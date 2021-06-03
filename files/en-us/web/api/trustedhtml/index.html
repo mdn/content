@@ -1,0 +1,69 @@
+---
+title: TrustedHTML
+slug: Web/API/TrustedHTML
+tags:
+  - API
+  - Interface
+  - Reference
+  - TrustedHTML
+browser-compat: api.TrustedHTML
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>TrustedHTML</code></strong> interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a> that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML", "TrustedTypePolicy.createHTML()")}} and therefore have no constructor.</p>
+
+<p>The value of a <strong>TrustedHTML</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</p>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("TrustedHTML.toJSON()")}}</dt>
+  <dd>Returns a JSON representation of the stored data.</dd>
+  <dt>{{domxref("TrustedHTML.toString()")}}</dt>
+  <dd>A {{domxref("DOMString","string")}} containing the sanitized HTML.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.</p>
+
+<p>The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.</p>
+
+<pre class="brush: html">&lt;div id="myDiv"&gt;&lt;/div&gt;</pre>
+
+<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+});
+
+let el = document.getElementById("myDiv");
+const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+console.log(escaped instanceof TrustedHTML); // true
+el.innerHTML = escaped;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#trusted-html','TrustedHTML')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
+</ul>

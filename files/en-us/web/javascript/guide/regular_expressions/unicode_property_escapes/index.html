@@ -16,7 +16,7 @@ tags:
 <div>{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}</div>
 
 <div class="notecard note">
-<p><strong>Note:</strong> For Unicode property escapes to work, a regular expression must use <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags">the <code>u</code> flag</a> which indicates a string must be considered as a series of Unicode code points. See also <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">RegExp.prototype.unicode</a></code>.</p>
+<p><strong>Note:</strong> For Unicode property escapes to work, a regular expression must use <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">the <code>u</code> flag</a> which indicates a string must be considered as a series of Unicode code points. See also <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">RegExp.prototype.unicode</a></code>.</p>
 </div>
 
 <div class="notecard note">
@@ -25,7 +25,6 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<div class="hidden">The following section is also duplicated on <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">this cheatsheet</a>. Do not forget to edit it as well, thanks!</div>
 
 <pre class="brush: js">// Non-binary values
 \p{<em>UnicodePropertyValue</em>}
@@ -123,7 +122,7 @@ mixedCharacters.match(/\p{Sc=Cyrillic}/u); // Л
 
 <h3 id="Unicode_property_escapes_vs._character_classes">Unicode property escapes vs. character classes</h3>
 
-<p>With JavaScript regular expressions, it is also possible to use <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character classes</a> and especially <code>\w</code> or <code>\d</code> to match letters or digits. However, such forms only match characters from the <em>Latin</em> script (in other words, <code>a</code> to <code>z</code> and <code>A</code> to <code>Z</code> for <code>\w</code> and <code>0</code> to <code>9</code> for <code>\d</code>). As shown in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes#Looking_for_a_word_from_Unicode_characters">this example</a>, it might be a bit clumsy to work with non Latin texts.</p>
+<p>With JavaScript regular expressions, it is also possible to use <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character classes</a> and especially <code>\w</code> or <code>\d</code> to match letters or digits. However, such forms only match characters from the <em>Latin</em> script (in other words, <code>a</code> to <code>z</code> and <code>A</code> to <code>Z</code> for <code>\w</code> and <code>0</code> to <code>9</code> for <code>\d</code>). As shown in <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes#looking_for_a_word_from_unicode_characters">this example</a>, it might be a bit clumsy to work with non Latin texts.</p>
 
 <p>Unicode property escapes categories encompass much more characters and <code>\p{Letter}</code> or <code>\p{Number}</code> will work for any script.</p>
 
@@ -139,23 +138,6 @@ console.table(nonEnglishText.match(regexpBMPWord));
 const regexpUPE = /\p{L}+/gu;
 console.table(nonEnglishText.match(regexpUPE));
 </pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-runtime-semantics-unicodematchproperty-p', 'RegExp: Unicode property escapes')}}</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>For browser compatibility information, check out the <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -174,4 +156,5 @@ console.table(nonEnglishText.match(regexpUPE));
  <li><a href="https://en.wikipedia.org/wiki/Unicode_character_property">Unicode character property — Wikipedia</a></li>
  <li><a href="https://2ality.com/2017/07/regexp-unicode-property-escapes.html">A blog post from Axel Rauschmayer about Unicode property escapes</a></li>
  <li><a href="https://unicode.org/reports/tr18/#Categories">The Unicode document for Unicode properties</a></li>
+ <li><a href="https://tc39.es/ecma262/#sec-runtime-semantics-unicodematchproperty-p">UnicodeMatchProperty in the ECMAScript specification</a></li>
 </ul>

@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - Locale
   - Reference
+browser-compat: javascript.builtins.Intl.Locale
 ---
 <div>{{JSRef}}</div>
 
@@ -25,43 +26,43 @@ tags:
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
- <dt>{{jsxref("Locale/Locale", "Intl.Locale()")}}</dt>
+ <dt>{{jsxref("Intl/Locale/Locale", "Intl.Locale()")}}</dt>
  <dd>Creates a new <code>Locale</code> object.</dd>
 </dl>
 
 <h2 id="Instance_properties">Instance properties</h2>
 
 <dl>
- <dt>{{jsxref("Locale.baseName", "Intl.Locale.prototype.baseName")}}</dt>
+ <dt>{{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}</dt>
  <dd>Returns basic, core information about the <code>Locale</code> in the form of a substring of the complete data string.</dd>
- <dt>{{jsxref("Locale.calendar", "Intl.Locale.prototype.calendar")}}</dt>
+ <dt>{{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}</dt>
  <dd>Returns the part of the <code>Locale</code> that indicates the Locale's calendar era.</dd>
- <dt>{{jsxref("Locale.caseFirst", "Intl.Locale.prototype.caseFirst")}}</dt>
+ <dt>{{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}</dt>
  <dd>Returns whether case is taken into account for the locale's collation rules.</dd>
- <dt>{{jsxref("Locale.collation", "Intl.Locale.prototype.collation")}}</dt>
+ <dt>{{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}</dt>
  <dd>Returns the collation type for the <code>Locale</code>, which is used to order strings according to the locale's rules.</dd>
- <dt>{{jsxref("Locale.hourCycle", "Intl.Locale.prototype.hourCycle")}}</dt>
+ <dt>{{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}</dt>
  <dd>Returns the time keeping format convention used by the locale.</dd>
- <dt>{{jsxref("Locale.language", "Intl.Locale.prototype.language")}}</dt>
+ <dt>{{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}</dt>
  <dd>Returns the language associated with the locale.</dd>
- <dt>{{jsxref("Locale.numberingSystem", "Intl.Locale.prototype.numberingSystem")}}</dt>
+ <dt>{{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}</dt>
  <dd>Returns the numeral system used by the locale.</dd>
- <dt>{{jsxref("Locale.numeric", "Intl.Locale.prototype.numeric")}}</dt>
+ <dt>{{jsxref("Intl/Locale/numeric", "Intl.Locale.prototype.numeric")}}</dt>
  <dd>Returns whether the locale has special collation handling for numeric characters.</dd>
- <dt>{{jsxref("Locale.region", "Intl.Locale.prototype.region")}}</dt>
+ <dt>{{jsxref("Intl/Locale/region", "Intl.Locale.prototype.region")}}</dt>
  <dd>Returns the region of the world (usually a country) associated with the locale.</dd>
- <dt>{{jsxref("Locale.script", "Intl.Locale.prototype.script")}}</dt>
+ <dt>{{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}</dt>
  <dd>Returns the script used for writing the particular language used in the locale.</dd>
 </dl>
 
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
- <dt>{{jsxref("Locale.maximize", "Intl.Locale.prototype.maximize()")}}</dt>
+ <dt>{{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}</dt>
  <dd>Gets the most likely values for the language, script, and region of the locale based on existing values.</dd>
- <dt>{{jsxref("Locale.minimize", "Intl.Locale.prototype.minimize()")}}</dt>
+ <dt>{{jsxref("Intl/Locale/minimize", "Intl.Locale.prototype.minimize()")}}</dt>
  <dd>Gets the most likely values for the language, script, and region of the locale based on existing values.</dd>
- <dt>{{jsxref("Locale.toString", "Intl.Locale.prototype.toString()")}}</dt>
+ <dt>{{jsxref("Intl/Locale/toString", "Intl.Locale.prototype.toString()")}}</dt>
  <dd>Returns the Locale's full locale identifier string.</dd>
 </dl>
 
@@ -69,7 +70,7 @@ tags:
 
 <h3 id="Basic_usage">Basic usage</h3>
 
-<p>At its very simplest, the {{jsxref("Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:</p>
+<p>At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} constructor takes a locale identifier string as its argument:</p>
 
 <pre class="brush: js">let us = new Intl.Locale('en-US');</pre>
 
@@ -82,22 +83,11 @@ console.log(us12hour.hourCycle); // Prints "h12"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#locale-objects')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.Locale")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

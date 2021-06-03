@@ -6,18 +6,21 @@ tags:
   - JavaScript
   - Method
   - Reference
+browser-compat: javascript.builtins.Function.apply
 ---
 <div>{{JSRef}}</div>
 
-<p>The <code><strong>apply()</strong></code> method calls a function with a given <code>this</code> value, and <code>arguments</code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+<p>The <code><strong>apply()</strong></code> method calls a function with a given <code>this</code> value, and <code>arguments</code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects">array-like object</a>).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-apply.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code><var>func</var></code>.apply(<var>thisArg,</var> [ <var>argsArray</var>])</pre>
+<pre class="brush: js">
+apply(thisArg)
+apply(thisArg, argsArray)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,7 +59,7 @@ tags:
 
 <p>You can also use {{jsxref("Functions/arguments", "arguments")}} for the <code><var>argsArray</var></code> parameter. {{jsxref("Functions/arguments", "arguments")}} is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the <code>apply</code> method. You can use <code>arguments</code> to pass all the arguments to the called object. The called object is then responsible for handling the arguments.</p>
 
-<p>Since ECMAScript 5<sup>th</sup> Edition, you can also use any kind of object which is array-like. In practice, this means it's going to have a <code>length</code> property, and integer ("index") properties in the range <code>(0..length - 1)</code>. For example, you could use a {{domxref("NodeList")}}, or a custom object like <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }</code>.</p>
+<p>Since ECMAScript 5th Edition, you can also use any kind of object which is array-like. In practice, this means it's going to have a <code>length</code> property, and integer ("index") properties in the range <code>(0..length - 1)</code>. For example, you could use a {{domxref("NodeList")}}, or a custom object like <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }</code>.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Many older browsers—including Chrome &lt;17 and Internet Explorer &lt;9—don't accept array-like objects, and will throw an exception.</p>
@@ -146,41 +149,6 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 };
 </pre>
 
-<div class="note" style="height: 250px; overflow: auto;">
-<p><strong>Note:</strong> The <code>Object.create()</code> method used above is relatively new. For alternative methods, please consider one of the following approaches:</p>
-
-<p>Using {{jsxref("Object/__proto__", "Object.__proto__")}}:</p>
-
-<pre class="brush: js">Function.prototype.construct = function (aArgs) {
-  let oNew = {};
-  oNew.__proto__ = this.prototype;
-  this.apply(oNew, aArgs);
-  return oNew;
-};
-</pre>
-
-<p>Using <a href="/en-US/docs/Web/JavaScript/Closures">closures</a>:</p>
-
-<pre class="brush: js">Function.prototype.construct = function(aArgs) {
-  let fConstructor = this, fNewConstr = function() {
-    fConstructor.apply(this, aArgs);
-  };
-  fNewConstr.prototype = fConstructor.prototype;
-  return new fNewConstr();
-};</pre>
-
-<p>Using the {{jsxref("Function")}} constructor:</p>
-
-<pre class="brush: js">Function.prototype.construct = function (aArgs) {
-  let fNewConstr = new Function("");
-  fNewConstr.prototype = this.prototype;
-  let oNew = new fNewConstr();
-  this.apply(oNew, aArgs);
-  return oNew;
-};
-</pre>
-</div>
-
 <p>Example usage:</p>
 
 <pre class="brush: js">function MyConstructor() {
@@ -207,22 +175,11 @@ console.log(myInstance.constructor);              // logs 'MyConstructor'
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.apply")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

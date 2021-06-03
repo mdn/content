@@ -136,10 +136,9 @@ tags:
 
 <ol>
  <li>Search for the <code>randomNumber</code> variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 44:
-
   <pre class="brush: js">let randomNumber = Math.floor(Math.random()) + 1;</pre>
-  And the one that generates the random number before each subsequent game is around line 113:</li>
- <li>
+ </li>
+ <li>And the one that generates the random number before each subsequent game is around line 113:
   <pre class="brush: js">randomNumber = Math.floor(Math.random()) + 1;</pre>
  </li>
  <li>To check whether these lines are indeed the problem, let's turn to our friend <code>console.log()</code> again — insert the following line directly below each of the above two lines:
@@ -156,7 +155,7 @@ tags:
 
 <p>Next, we pass the result of invoking <code>Math.random()</code> through <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></code>, which rounds the number passed to it down to the nearest whole number. We then add 1 to that result:</p>
 
-<pre>Math.floor(Math.random()) + 1</pre>
+<pre class="brush: js">Math.floor(Math.random()) + 1</pre>
 
 <p>Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1.  We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:</p>
 
@@ -176,11 +175,11 @@ tags:
 
 <p>This error generally means that you have missed a semicolon at the end of one of your lines of code, but it can sometimes be more cryptic. For example, if we change this line inside the <code>checkGuess()</code> function:</p>
 
-<pre class="brush: js">var userGuess = Number(guessField.value);</pre>
+<pre class="brush: js">let userGuess = Number(guessField.value);</pre>
 
 <p>to</p>
 
-<pre class="brush: js">var userGuess === Number(guessField.value);</pre>
+<pre class="brush: js">let userGuess === Number(guessField.value);</pre>
 
 <p>It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (<code>=</code>) — which sets a variable to be equal to a value — with the strict equality operator (<code>===</code>), which tests whether one value is equal to another, and returns a <code>true</code>/<code>false</code> result.</p>
 

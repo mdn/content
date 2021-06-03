@@ -13,6 +13,7 @@ tags:
   - Reference
   - font-display
   - web fonts
+browser-compat: css.at-rules.font-face.font-display
 ---
 <div>{{CSSRef}}</div>
 
@@ -42,6 +43,12 @@ font-display: optional;</pre>
  <dd>Gives the font face an extremely small block period and no swap period.</dd>
 </dl>
 
+<div class="notecard note">
+<h4>Note</h4>
+<p>In Firefox, the preferences <code>gfx.downloadable_fonts.fallback_delay</code>
+and <code>gfx.downloadable_fonts.fallback_delay_short</code> provide the duration
+of the "short" and "extremely small" periods, respectively.</p>
+</div>
 <h2 id="Description">Description</h2>
 
 <h3 id="The_font_display_timeline">The font display timeline</h3>
@@ -63,7 +70,7 @@ font-display: optional;</pre>
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{csssyntax}}</pre>
+{{csssyntax}}
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Specifying_fallback_font-display">Specifying fallback font-display</h3>
@@ -98,7 +105,7 @@ font-display: optional;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.font-face.font-display")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

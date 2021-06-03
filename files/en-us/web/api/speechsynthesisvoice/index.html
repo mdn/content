@@ -10,6 +10,7 @@ tags:
   - Web Speech API
   - speech
   - synthesis
+browser-compat: api.SpeechSynthesisVoice
 ---
 <p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
@@ -34,7 +35,8 @@ tags:
 
 <p>The following snippet is excerpted from our <a class="external external-icon" href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>.</p>
 
-<pre class="brush: js">function populateVoiceList() {
+<pre class="brush: js">var synth = window.speechSynthesis;
+function populateVoiceList() {
   voices = synth.getVoices();
 
   for(i = 0; i &lt; voices.length ; i++) {
@@ -98,7 +100,7 @@ inputForm.onsubmit = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechSynthesisVoice")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

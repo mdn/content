@@ -1,0 +1,51 @@
+---
+title: TrustedScriptURL.toString()
+slug: Web/API/TrustedScriptURL/toString
+tags:
+  - API
+  - Method
+  - Reference
+  - toString
+  - TrustedScriptURL
+browser-compat: api.TrustedScriptURL.toString
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>toString()</code></strong> method of the {{domxref("TrustedScriptURL")}} interface returns a string which may safely inserted into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a>.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>str</var> = <var>TrustedScriptURL</var>.toString();</pre>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{domxref("DOMString","string")}} containing the sanitized URL</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy. The <code>toString()</code> method returns a string to safely use to load a third party script.</p>
+
+<pre class="brush: js">const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
+console.log(sanitized.toString());
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#trustedscripturl-stringification-behavior','TrustedScriptURL.toString()')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

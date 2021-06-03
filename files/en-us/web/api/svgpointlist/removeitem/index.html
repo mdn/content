@@ -1,0 +1,58 @@
+---
+title: SVGPointList.removeItem()
+slug: Web/API/SVGPointList/removeItem
+tags:
+  - API
+  - Method
+  - Reference
+  - removeItem
+  - SVGPointList
+browser-compat: api.SVGPointList.removeItem
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p class="summary">The <strong><code>removeItem()</code></strong> method of the {{domxref("SVGPointList")}} interface removes a {{domxref("SVGPoint","point")}} from the list.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">SVGPointList.removeItem(index);</pre>
+
+<dl>
+  <dt><code>index</code></dt>
+  <dd>The index of the item to remove.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>The removed {{domxref("SVGPoint")}} object.</p>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<dl>
+  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
+  <dd>Thrown if the list is read-only.</dd>
+  <dt>{{domxref("DOMException")}} <code>IndexSizeError</code></dt>
+  <dd>Thrown if the index passed in is greater than the number of items in the list.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The item at index <code>2</code> is removed.</p>
+
+<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+</svg></pre>
+
+<pre class="brush: js">let example = document.getElementById("example");
+console.log(example.points.removeItem(2));</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat}}</p>

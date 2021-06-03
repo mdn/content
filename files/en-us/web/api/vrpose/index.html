@@ -10,6 +10,7 @@ tags:
   - VRPose
   - Virtual Reality
   - WebVR
+browser-compat: api.VRPose
 ---
 <div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
@@ -37,7 +38,7 @@ tags:
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occurred in. <strong>This version of <code>timestamp</code> has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.</strong></dd>
 </dl>
 
@@ -64,7 +65,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VRPose")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

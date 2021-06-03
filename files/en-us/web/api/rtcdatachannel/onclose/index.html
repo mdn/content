@@ -2,18 +2,19 @@
 title: RTCDataChannel.onclose
 slug: Web/API/RTCDataChannel/onclose
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCDataChannel
-- Reference
-- WebRTC
-- onclose
+  - Event Handler
+  - Experimental
+  - Property
+  - RTCDataChannel
+  - Reference
+  - WebRTC
+  - onclose
+browser-compat: api.RTCDataChannel.onclose
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
 <p>The <code><strong>RTCDataChannel.onclose</strong></code> property is an
-  {{domxref("EventHandler")}} which specifies a function to be called by the browser when
+  {{event("Event_handlers", "event handler")}} which specifies a function to be called by the browser when
   the {{event("close")}} event is received by the {{domxref("RTCDataChannel")}}. This is a
   simple {{domxref("Event")}} which indicates that the data channel has closed down.</p>
 
@@ -73,12 +74,12 @@ dc.onclose = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onclose")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>The {{event("close")}} event and its type, {{domxref("Event")}}.</li>
   <li>{{domxref("RTCDataChannel.onopen")}}</li>
   <li>The {{event("open")}} event and its type, {{domxref("Event")}}.</li>

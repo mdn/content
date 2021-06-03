@@ -119,7 +119,7 @@ tags:
  <li>{{domxref("Document.getElementsByTagName()")}}, which returns an array-like object containing all the elements on the page of a given type, for example <code>&lt;p&gt;</code>s, <code>&lt;a&gt;</code>s, etc. The element type is passed to the function as a parameter, i.e. <code>const elementRefArray = document.getElementsByTagName('p')</code>.</li>
 </ul>
 
-<p>These two work in older browsers than the modern methods like <code>querySelector()</code>, but are not as convenient. Have a look and see what others you can find!</p>
+<p>These two work better in older browsers than the modern methods like <code>querySelector()</code>, but are not as convenient. Have a look and see what others you can find!</p>
 
 <h3 id="Creating_and_placing_new_nodes">Creating and placing new nodes</h3>
 
@@ -161,7 +161,7 @@ linkPara.appendChild(text);</pre>
 
 <pre class="brush: js">sect.removeChild(linkPara);</pre>
 
-<p>When you want to remove a node based only on a reference to itself, which is fairly common, you can use {{domxref("ChildNode.remove()")}}:</p>
+<p>When you want to remove a node based only on a reference to itself, which is fairly common, you can use {{domxref("Element.remove()")}}:</p>
 
 <pre class="brush: js">linkPara.remove();</pre>
 

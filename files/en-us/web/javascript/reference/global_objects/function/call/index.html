@@ -2,9 +2,10 @@
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 tags:
-- Function
-- JavaScript
-- Method
+  - Function
+  - JavaScript
+  - Method
+browser-compat: javascript.builtins.Function.call
 ---
 <div>{{JSRef}}</div>
 
@@ -16,8 +17,13 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>func</var>.call([<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>]])</pre>
+<pre class="brush: js">
+call()
+call(thisArg)
+call(thisArg, arg1)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, ... , argN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -28,7 +34,7 @@ tags:
     </p>
 
     <div class="notecard note">
-      <p><strong>Caution:</strong> In certain cases, <code><var>thisArg</var></code> may
+      <p><strong>Note:</strong> In certain cases, <code><var>thisArg</var></code> may
         not be the actual value seen by the method.</p>
 
       <p>If the method is a function in {{jsxref("Strict_mode", "non-strict mode", "",
@@ -110,7 +116,7 @@ const fun = new Toy('robot', 40);
 </p>
 
 <div class="notecard note">
-  <p>Passing the object as <code>this</code> value is not strictly necessary, but is done
+  <p><strong>Note:</strong> Passing the object as <code>this</code> value is not strictly necessary, but is done
     for explanatory purpose.</p>
 </div>
 
@@ -165,7 +171,7 @@ function display() {
 display.call();  // sData value is Wisen</pre>
 
 <div class="note">
-  <p><strong>Caution:</strong> In strict mode, the value of <code>this</code> will be
+  <p><strong>Note:</strong> In strict mode, the value of <code>this</code> will be
     <code>undefined</code>. See below.</p>
 </div>
 
@@ -181,23 +187,11 @@ display.call(); // Cannot read the property of 'sData' of undefined</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-function.prototype.call',
-        'Function.prototype.call')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Function.call")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -206,7 +200,7 @@ display.call(); // Cannot read the property of 'sData' of undefined</pre>
   <li>{{jsxref("Function.prototype.apply()")}}</li>
   <li>
     <p><a
-        href="/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">Introduction
+        href="/en-US/docs/Learn/JavaScript/Objects">Introduction
         to Object-Oriented JavaScript</a></p>
   </li>
 </ul>

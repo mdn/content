@@ -8,10 +8,11 @@ tags:
   - HTTP
   - Reference
   - WebVR
+browser-compat: http.headers.Feature-Policy.vr
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<p class="warning">The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has been replced with the <a href="/en-US/docs/Web/API/WebXR_API">WebXR Device API</a> and is currently being removed from the web platform. Use the feature identifier {{HTTPHeader("Feature-Policy/xr-spatial-tracking","xr-spatial-tracking")}} for WebXR Device API instead.</p>
+<p class="warning">The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has been replaced with the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> and is currently being removed from the web platform. Use the feature identifier {{HTTPHeader("Feature-Policy/xr-spatial-tracking","xr-spatial-tracking")}} for WebXR Device API instead.</p>
 
 <p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>vr</code> directive controls whether the current document is allowed to use the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>. When this policy is enabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getVRDisplays","Navigator.getVRDisplays()")}} will reject with a {{DOMxRef("DOMException")}}.</span></p>
 
@@ -54,7 +55,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.vr")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

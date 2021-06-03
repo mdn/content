@@ -24,7 +24,7 @@ tags:
 
 <p>During drag operations, several event types are fired, and some events might fire many times, such as the {{domxref('Document/drag_event', 'drag')}} and {{domxref('Document/dragover_event', 'dragover')}} events.</p>
 
-<p>Each <a href="/en-US/docs/Web/API/DragEvent#Event_types">drag event type</a> has an associated <a href="/en-US/docs/Web/API/DragEvent#GlobalEventHandlers">global event handler</a>:</p>
+<p>Each <a href="/en-US/docs/Web/API/DragEvent#event_types">drag event type</a> has an associated <a href="/en-US/docs/Web/API/DragEvent#globaleventhandlers">global event handler</a>:</p>
 
 <table class="standard-table">
  <thead>
@@ -100,7 +100,7 @@ tags:
 
 <h3 id="Gecko-specific_interfaces">Gecko-specific interfaces</h3>
 
-<p>Mozilla and Firefox support some features not in the standard drag-and-drop model. These are <em>convenience functions</em> to help with dragging multiple items or non-string data (such as files). For more information, see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a>. Additionally, see the {{domxref("DataTransfer")}} reference page for all of the <a href="/en-US/docs/Web/API/DataTransfer#Gecko_properties">Gecko-specific properties</a> and <a href="/en-US/docs/Web/API/DataTransfer#Gecko_methods">Gecko-specific methods</a>.</p>
+<p>Mozilla and Firefox support some features not in the standard drag-and-drop model. These are <em>convenience functions</em> to help with dragging multiple items or non-string data (such as files). For more information, see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a>. Additionally, see the {{domxref("DataTransfer")}} reference page for all of the <a href="/en-US/docs/Web/API/DataTransfer#gecko_properties">Gecko-specific properties</a> and <a href="/en-US/docs/Web/API/DataTransfer#gecko_methods">Gecko-specific methods</a>.</p>
 
 <h2 id="The_basics">The basics</h2>
 
@@ -148,8 +148,8 @@ tags:
 </pre>
 
 <ul>
- <li>For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types" title="Recommended Drag Types">Recommended Drag Types</a>.</li>
- <li>For more information about drag data, see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata" title="Drag Data">Drag Data</a>.</li>
+ <li>For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a>.</li>
+ <li>For more information about drag data, see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata">Drag Data</a>.</li>
 </ul>
 
 <h3 id="Define_the_drag_image">Define the drag image</h3>
@@ -279,7 +279,7 @@ function drop_handler(ev) {
 
 <h2 id="Interoperability">Interoperability</h2>
 
-<p>As can be seen in the <a href="/en-US/docs/Web/API/DataTransferItem#Browser_compatibility">DataTransferItem interface's Browser Compatibility table</a>, drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag-and-drop support among mobile browsers is very low.</p>
+<p>As can be seen in the <a href="/en-US/docs/Web/API/DataTransferItem#browser_compatibility">DataTransferItem interface's Browser Compatibility table</a>, drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag-and-drop support among mobile browsers is very low.</p>
 
 <h2 id="Examples_and_demos">Examples and demos</h2>
 
@@ -315,9 +315,9 @@ function drop_handler(ev) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations" title="Drag Operations">Drag Operations</a></li>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
- <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types" title="Recommended Drag Types">Recommended Drag Types</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
  <li><a href="https://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Drag and Drop interoperability data from CanIUse</a></li>
 </ul>

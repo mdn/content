@@ -6,6 +6,7 @@ tags:
   - DOM
   - Interface
   - Reference
+browser-compat: api.Text
 ---
 <div>{{ApiRef("DOM")}}</div>
 
@@ -31,7 +32,7 @@ tags:
 <dl>
  <dt>{{domxref("Text.assignedSlot")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
- <dt>{{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}</dt>
+ <dt>{{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{deprecated_inline}}</dt>
  <dd>
  <p>Returns a {{domxref("Boolean")}} flag indicating whether or not the text node contains only whitespace.</p>
  </dd>
@@ -44,7 +45,9 @@ tags:
 <p><em>Inherits methods from its parent, {{domxref("CharacterData")}}.</em></p>
 
 <dl>
- <dt>{{domxref("Text.replaceWholeText")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Text.getBoxQuads()")}} {{experimental_inline}}</dt>
+ <dd>Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.</dd>
+ <dt>{{domxref("Text.replaceWholeText")}} {{deprecated_inline}}</dt>
  <dd>Replaces the text of the current node and all logically adjacent nodes with the specified text.</dd>
  <dt><span class="internal">{{domxref("Text.splitText")}}</span></dt>
  <dd>Breaks the node into two nodes at a specified offset.</dd>
@@ -90,7 +93,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Text")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

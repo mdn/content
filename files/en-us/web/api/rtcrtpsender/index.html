@@ -16,6 +16,7 @@ tags:
   - WebRTC
   - WebRTC API
   - WebRTC Device API
+browser-compat: api.RTCRtpSender
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -37,7 +38,7 @@ tags:
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt><code>rtcpTransport</code> {{obsolete_inline}}</dt>
+ <dt><code>rtcpTransport</code> {{deprecated_inline}}</dt>
  <dd>This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpSender.transport", "transport")}} property instead.</dd>
 </dl>
 
@@ -82,7 +83,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpSender")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

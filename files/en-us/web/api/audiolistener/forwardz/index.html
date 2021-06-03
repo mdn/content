@@ -9,13 +9,15 @@ tags:
   - Reference
   - Web Audio API
   - forwardZ
+browser-compat: api.AudioListener.forwardZ
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <p>The <code>forwardZ</code> read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the z value of the direction vector defining the forward direction the listener is pointing in.</p>
 
-<div class="note">
-<p><strong>Note</strong>: The parameter is <em>a-rate</em> when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or <em>k-rate</em> otherwise.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The parameter is <em>a-rate</em> when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or <em>k-rate</em> otherwise.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -31,7 +33,7 @@ myListener.forwardZ.value = 0;
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioListener","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -52,7 +54,7 @@ myListener.forwardZ.value = 0;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioListener.forwardZ")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,55 @@
+---
+title: TrustedTypePolicyFactory.defaultPolicy
+slug: Web/API/TrustedTypePolicyFactory/defaultPolicy
+tags:
+  - API
+  - Property
+  - Reference
+  - defaultPolicy
+  - TrustedTypePolicyFactory
+browser-compat: api.TrustedTypePolicyFactory.defaultPolicy
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>defaultPolicy</code></strong> read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>Information about the creation and use of default policies can be found in the <code><a href="/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#default_policy">createPolicy()</a></code> documentation.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>defaultPolicy</var> = <var>TrustedTypePolicyFactory</var>.defaultPolicy;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("TrustedTypePolicy")}} or null.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The first line below returns null as no default policy has been created. Once a default policy is created, calling <code>defaultPolicy</code> returns that policy object.</p>
+
+<pre class="brush: js">console.log(trustedTypes.defaultPolicy); // null
+const dp = trustedTypes.createPolicy('default', {});
+console.log(trustedTypes.defaultPolicy); // a TrustedTypePolicy object</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedtypepolicyfactory-defaultpolicy','TrustedTypePolicyFactory.defaultPolicy')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

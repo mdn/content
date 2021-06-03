@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - Proxy
   - Reflect
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}</div>
 
@@ -21,7 +21,7 @@ tags:
 
 <pre class="brush: js">let <var>handler</var> = {
   get: function(<var>target</var>, name) {
-    return name in <var>target</var>? <var>target</var>[name] : 42
+    return name in <var>target</var> ? <var>target</var>[name] : 42
   }
 }
 
@@ -39,7 +39,7 @@ console.log(p.a, p.b) // 1, 42
 <p>The following terms are used when talking about the functionality of proxies.</p>
 
 <dl>
- <dt>{{jsxref("Global_Objects/Proxy/handler","handler","","true")}}</dt>
+ <dt>{{jsxref("Global_Objects/Proxy/Proxy","handler","","true")}}</dt>
  <dd>Placeholder object which contains traps.</dd>
  <dt>traps</dt>
  <dd>The methods that provide property access. (This is analogous to the concept of <em>traps</em> in operating systems.)</dd>
@@ -51,7 +51,7 @@ console.log(p.a, p.b) // 1, 42
 
 <h2 id="Handlers_and_traps">Handlers and traps</h2>
 
-<p>The following table summarizes the available traps available to <code>Proxy</code> objects. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">reference pages</a> for detailed explanations and examples.</p>
+<p>The following table summarizes the available traps available to <code>Proxy</code> objects. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy">reference pages</a> for detailed explanations and examples.</p>
 
 <table class="standard-table">
  <thead>
@@ -63,7 +63,7 @@ console.log(p.a, p.b) // 1, 42
  </thead>
  <tbody>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}</td>
    <td>{{jsxref("Object.getPrototypeOf()")}}<br>
     {{jsxref("Reflect.getPrototypeOf()")}}<br>
     {{jsxref("Object/proto", "__proto__")}}<br>
@@ -77,25 +77,25 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
    <td>{{jsxref("Object.setPrototypeOf()")}}<br>
     {{jsxref("Reflect.setPrototypeOf()")}}</td>
    <td>If <code><var>target</var></code> is not extensible, the <code>prototype</code> parameter must be the same value as <code>Object.getPrototypeOf(<var>target</var>)</code>.</td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}</td>
    <td>{{jsxref("Object.isExtensible()")}}<br>
     {{jsxref("Reflect.isExtensible()")}}</td>
    <td><code>Object.isExtensible(<var>proxy</var>)</code> must return the same value as <code>Object.isExtensible(<var>target</var>)</code>.</td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}</td>
    <td>{{jsxref("Object.preventExtensions()")}}<br>
     {{jsxref("Reflect.preventExtensions()")}}</td>
    <td><code>Object.preventExtensions(<var>proxy</var>)</code> only returns <code>true</code> if <code>Object.isExtensible(<var>proxy</var>)</code> is <code>false</code>.</td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
    <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}<br>
     {{jsxref("Reflect.getOwnPropertyDescriptor()")}}</td>
    <td>
@@ -110,7 +110,7 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}</td>
    <td>{{jsxref("Object.defineProperty()")}}<br>
     {{jsxref("Reflect.defineProperty()")}}</td>
    <td>
@@ -124,7 +124,7 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/has", "handler.has()")}}</td>
    <td>
     <dl>
      <dt>Property query</dt>
@@ -142,7 +142,7 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/get", "handler.get()")}}</td>
    <td>
     <dl>
      <dt>Property access</dt>
@@ -161,7 +161,7 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/set", "handler.set()")}}</td>
    <td>
     <dl>
      <dt>Property assignment</dt>
@@ -181,7 +181,7 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}</td>
    <td>
     <dl>
      <dt>Property deletion</dt>
@@ -204,7 +204,7 @@ console.log(p.a, p.b) // 1, 42
    <td>The <code>enumerate</code> method must return an object.</td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}</td>
    <td>{{jsxref("Object.getOwnPropertyNames()")}}<br>
     {{jsxref("Object.getOwnPropertySymbols()")}}<br>
     {{jsxref("Object.keys()")}}<br>
@@ -219,14 +219,14 @@ console.log(p.a, p.b) // 1, 42
    </td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}</td>
    <td><code>proxy(..args)</code><br>
     {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}}<br>
     {{jsxref("Reflect.apply()")}}</td>
    <td>There are no invariants for the <code><var>handler</var>.apply</code> method.</td>
   </tr>
   <tr>
-   <td>{{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}</td>
+   <td>{{jsxref("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}</td>
    <td><code>new proxy(...args)</code><br>
     {{jsxref("Reflect.construct()")}}</td>
    <td>The result must be an <code>Object</code>.</td>
@@ -258,7 +258,7 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 
 <h2 id="Reflection">Reflection</h2>
 
-<p>{{jsxref("Reflect")}} is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of the {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}.</p>
+<p>{{jsxref("Reflect")}} is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of the {{jsxref("Global_Objects/Proxy/Proxy","proxy handlers","","true")}}.</p>
 
 <p><code>Reflect</code> is not a function object.</p>
 
@@ -271,7 +271,7 @@ typeof proxy            // "object", typeof doesn't trigger any trap
 
 <h3 id="A_better_apply_function">A better <code>apply</code> function</h3>
 
-<p>In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given <code>this</code> value and <code><var>arguments</var></code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">array-like object</a>).</p>
+<p>In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given <code>this</code> value and <code><var>arguments</var></code> provided as an array (or an <a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects">array-like object</a>).</p>
 
 <pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75])
 </pre>

@@ -35,8 +35,8 @@ tags:
   </tr>
   <tr>
    <td>A simple image</td>
-   <td><code>&lt;img src="/static/img/beast-404.ce38fcf80386.png" width="25" /&gt;</code></td>
-   <td><img src="/static/img/beast-404.ce38fcf80386.png"></td>
+   <td><code>&lt;img src="/static/img/beast.png" width="25" /&gt;</code></td>
+   <td><img src="beast.png"></td>
   </tr>
   <tr>
    <td>A generic inline container</td>
@@ -171,9 +171,12 @@ This text is in predefined format.</pre>
   </tr>
   <tr>
    <td>Embedded Video</td>
-   <td>&lt;video controls src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4"&gt;The &lt;code&gt;video&lt;/code&gt; element is unsupported.&lt;/video&gt;</td>
+   <td>&lt;video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"&gt;The &lt;code&gt;video&lt;/code&gt; element is unsupported.&lt;/video&gt;</td>
    <td>
-    <video controls src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4">The <code>video</code> element is unsupported.</video>
+    <div class="hidden" id="sampleVideo">
+      <pre class="brush: html">&lt;video controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" style="width: 100%;" &gt;The &lt;code&gt;video&lt;/code&gt; element is unsupported.&lt;/video&gt;</pre>
+    </div>
+    {{EmbedLiveSample("sampleVideo",300,180,"","", "nobutton")}}
    </td>
   </tr>
  </tbody>

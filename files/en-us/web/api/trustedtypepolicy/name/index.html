@@ -1,0 +1,52 @@
+---
+title: TrustedTypePolicy.name
+slug: Web/API/TrustedTypePolicy/name
+tags:
+  - API
+  - Property
+  - Reference
+  - name
+  - TrustedTypePolicy
+browser-compat: api.TrustedTypePolicy.name
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>name</code></strong> read-only property of the {{domxref("TrustedTypePolicy")}} interface returns the name of the policy.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>name</var> = <var>TrustedTypePolicy</var>.name;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("DOMString")}} containing the name of the policy.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the below example a policy called <code>myEscapePolicy</code> is created using {{domxref("TrustedTypePolicyFactory.createPolicy()")}} and is represented by the object <code>escapeHTMLPolicy</code>. Calling <code>name</code> on this object returns the string "myEscapePolicy".</p>
+
+<pre class="brush:js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+});
+
+console.log(escapeHTMLPolicy.name); /* "myEscapePolicy" */</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedtypepolicy-name',"TrustedTypePolicy.name")}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

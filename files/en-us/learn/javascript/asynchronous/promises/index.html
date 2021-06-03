@@ -487,7 +487,7 @@ document.body.appendChild(para);</pre>
 <p>Let's have a look at a simple example to get you started — here we wrap a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call with a promise — this runs a function after two seconds that resolves the promise (using the passed <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code> call) with a string of "Success!".</p>
 
 <pre class="brush: js">let timeoutPromise = new Promise((resolve, reject) =&gt; {
-  setTimeout(function(){
+  setTimeout(() =&gt; {
     resolve('Success!');
   }, 2000);
 });</pre>
@@ -529,7 +529,7 @@ document.body.appendChild(para);</pre>
     } else if (interval &lt; 0 || typeof interval !== 'number') {
       reject('Interval is negative or not a number');
     } else {
-      setTimeout(function(){
+      setTimeout(() =&gt; {
         resolve(message);
       }, interval);
     }

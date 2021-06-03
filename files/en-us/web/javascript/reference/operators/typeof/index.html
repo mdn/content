@@ -7,6 +7,7 @@ tags:
 - Operator
 - Reference
 - Unary
+browser-compat: javascript.operators.typeof
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
@@ -208,8 +209,8 @@ typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1</pre>
   <code>typeof</code> will return <code>'undefined'</code>. Using <code>typeof</code>
   could never generate an error.</p>
 
-<p>But with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
-  {{JSxRef("Statements/const")}} using <code>typeof</code> on <code>let</code> and
+<p>However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} and
+  {{JSxRef("Statements/const", "const")}}, using <code>typeof</code> on <code>let</code> and
   <code>const</code> variables (or using <code>typeof</code> on a <code>class</code>) in a
   block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
   variables are in a "<a
@@ -251,24 +252,23 @@ class newClass{};</pre>
 <p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in
   production-level code would be as follows (provided <code>obj</code> exists):</p>
 
-<pre class="brush: js">  function type(obj, fullClass) {
+<pre class="brush: js">  function type(obj, showFullClass) {
 
     // get toPrototypeString() of obj (handles all types)
-    // Early JS environments return '[object Object]' for null, so it's best to directly check for it.
-    if (fullClass) {
-        return (obj === null) ? '[object Null]' : Object.prototype.toString.call(obj);
-    }
+    if (showFullClass && typeof obj === "object") {
+        return Object.prototype.toString.call(obj);
+    }
     if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
 
     var deepType = Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
-    if (deepType === 'generatorfunction') { return 'function' }
+    if (deepType === 'generatorfunction') { return 'function' }
 
     // Prevent overspecificity (for example, [object HTMLDivElement], etc).
     // Account for functionish Regexp (Android &lt;=2.3), functionish &lt;object&gt; element (Chrome &lt;=57, Firefox &lt;=52), etc.
     // String.prototype.match is universally supported.
 
     return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
-       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+       (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
   }</pre>
 
 <p>For checking non-existent variables that would otherwise throw
@@ -277,22 +277,11 @@ class newClass{};</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-typeof-operator', 'The typeof Operator')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.typeof")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="IE-specific_notes">IE-specific notes</h3>
 

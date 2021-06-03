@@ -5,6 +5,7 @@ tags:
   - Add-ons
   - Extensions
   - WebExtensions
+browser-compat: webextensions.manifest.content_security_policy
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -28,7 +29,7 @@ tags:
  </tbody>
 </table>
 
-<p>Extensions have a content security policy applied to them by default. The default policy restricts the sources from which they can load<a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> and <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> resources, and disallows potentially unsafe practices such as the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy">Default content security policy</a> to learn more about the implications of this.</p>
+<p>Extensions have a content security policy applied to them by default. The default policy restricts the sources from which they can load <a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> and <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> resources, and disallows potentially unsafe practices such as the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy">Default content security policy</a> to learn more about the implications of this.</p>
 
 <p>You can use the <code>"content_security_policy"</code> manifest key to loosen or tighten the default policy. This key is specified in just the same way as the Content-Security-Policy HTTP header. See <a href="/en-US/docs/Web/HTTP/CSP">Using Content Security Policy</a> for a general description of CSP syntax.</p>
 
@@ -37,18 +38,18 @@ tags:
 <ul>
  <li>Allow the extension to load scripts and objects from outside its package, by supplying their URL in the {{CSP("script-src")}} or {{CSP("object-src")}} directives.</li>
  <li>Allow the extension to execute inline scripts, by <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">supplying the hash of the script in the <code>"script-src"</code> directive</a>.</li>
- <li>Allow the extension to use <code>eval()</code> and similar features, by including <code>'unsafe-eval'</code> in the {{CSP("script-src")}} directive.</li>
+ <li>Allow the extension to use <code>eval()</code> and similar features, by including <code>'unsafe-eval'</code> in the {{CSP("script-src")}} directive.</li>
  <li>Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">policy directive</a>.</li>
 </ul>
 
 <p>There are restrictions on the policy you can specify here:</p>
 
 <ul>
- <li>The policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword <code>'self'</code>.</li>
+ <li>The policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword <code>'self'</code>.</li>
  <li>Remote sources must use <code>https:</code> schemes.</li>
  <li>Remote sources must not use wildcards for any domains in the <a href="https://publicsuffix.org/list/">public suffix list</a> (so "*.co.uk" and "*.blogspot.com" are not allowed, although "*.foo.blogspot.com" is allowed).</li>
  <li>All sources must specify a host.</li>
- <li>The only permitted schemes for sources are: <code>blob:</code>, <code>filesystem:</code>, <code>moz-extension:</code>, and <code>https:</code>.</li>
+ <li>The only permitted schemes for sources are: <code>blob:</code>, <code>filesystem:</code>, <code>moz-extension:</code>, <code>https:</code>, and <code>wss:</code>.</li>
  <li>The only permitted <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#sources">keywords</a> are: <code>'none'</code>, <code>'self'</code>, and <code>'unsafe-eval'</code>.</li>
 </ul>
 
@@ -111,6 +112,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.content_security_policy")}}</p>
+<p>{{Compat}}</p>

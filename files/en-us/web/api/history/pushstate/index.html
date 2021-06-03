@@ -13,6 +13,7 @@ tags:
 - URL
 - Web
 - pushState
+browser-compat: api.History.pushState
 ---
 <div>{{APIRef("History API")}}</div>
 
@@ -46,7 +47,7 @@ tags:
   <dd><a href="https://github.com/whatwg/html/issues/2174">Most browsers currently ignore
       this parameter</a>, although they may use it in the future. Passing the empty string
     here should be safe against future changes to the method. Alternatively, you could
-    pass a short title for the state to which you're moving. If you need the title to be
+    pass a short title for the state to which you're moving. If you don't need the title to be
     changed you could use {{domxref("Document.title", "document.title")}}.</dd>
   <dt><code>url</code> {{optional_inline}}</dt>
   <dd>The new history entry's URL is given by this parameter. Note that the browser won't
@@ -125,7 +126,7 @@ window.history.pushState({}, '', url);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.History.pushState")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

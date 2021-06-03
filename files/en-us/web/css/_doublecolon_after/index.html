@@ -1,6 +1,6 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
+slug: Web/CSS/::after
 tags:
   - CSS
   - Layout
@@ -8,6 +8,7 @@ tags:
   - Reference
   - Selector
   - Web
+browser-compat: css.selectors.after
 ---
 <p>{{CSSRef}}</p>
 
@@ -24,7 +25,7 @@ a::after {
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <div class="note">
 <p><strong>Note:</strong> CSS3 introduced the <code>::after</code> notation (with two colons) to distinguish <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> from <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>. Browsers also accept <code>:after</code>, introduced in CSS2.</p>
@@ -85,7 +86,7 @@ a::after {
 
 <h3 id="Tooltips">Tooltips</h3>
 
-<p>This example uses <code>::after</code>, in conjunction with the <a href="/en-US/docs/Web/CSS/attr"><code>attr()</code></a> CSS expression and a <code>data-descr</code> <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attribute</a>, to create tooltips. No JavaScript is required!</p>
+<p>This example uses <code>::after</code>, in conjunction with the <a href="/en-US/docs/Web/CSS/attr()"><code>attr()</code></a> CSS expression and a <code>data-descr</code> <a href="/en-US/docs/Web/HTML/Global_attributes/data-*">custom data attribute</a>, to create tooltips. No JavaScript is required!</p>
 
 <p>We can also support keyboard users with this technique, by adding a <code>tabindex</code> of <code>0</code> to make each <code>span</code> keyboard focusable, and using a CSS <code>:focus</code> selector. This shows how flexible <code>::before</code> and <code>::after</code> can be, though for the most accessible experience a semantic disclosure widget created in some other way (such as with <a href="/en-US/docs/Web/HTML/Element/details">details and summary</a> elements) is likely to be more appropriate.</p>
 
@@ -162,7 +163,7 @@ span[data-descr]:focus::after {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.selectors.after")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

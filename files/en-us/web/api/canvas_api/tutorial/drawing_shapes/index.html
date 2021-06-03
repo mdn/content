@@ -243,13 +243,13 @@ tags:
 <p>To draw arcs or circles, we use the <code>arc()</code> or <code>arcTo()</code> methods.</p>
 
 <dl>
- <dt>{{domxref("CanvasRenderingContext2D.arc", "arc(x, y, radius, startAngle, endAngle, anticlockwise)")}}</dt>
- <dd>Draws an arc which is centered at <em>(x, y)</em> position with radius <em>r</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction indicated by <em>anticlockwise</em> (defaulting to clockwise).</dd>
+ <dt>{{domxref("CanvasRenderingContext2D.arc", "arc(x, y, radius, startAngle, endAngle, counterclockwise)")}}</dt>
+ <dd>Draws an arc which is centered at <em>(x, y)</em> position with radius <em>r</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction indicated by <em>counterclockwise</em> (defaulting to clockwise).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arcTo", "arcTo(x1, y1, x2, y2, radius)")}}</dt>
  <dd>Draws an arc with the given control points and radius, connected to the previous point by a straight line.</dd>
 </dl>
 
-<p>Let's have a more detailed look at the <code>arc</code> method, which takes six parameters: <code>x</code> and <code>y</code> are the coordinates of the center of the circle on which the arc should be drawn. <code>radius</code> is self-explanatory. The <code>startAngle</code> and <code>endAngle</code> parameters define the start and end points of the arc in radians, along the curve of the circle. These are measured from the x axis. The <code>anticlockwise</code> parameter is a Boolean value which, when <code>true</code>, draws the arc anticlockwise; otherwise, the arc is drawn clockwise.</p>
+<p>Let's have a more detailed look at the <code>arc</code> method, which takes six parameters: <code>x</code> and <code>y</code> are the coordinates of the center of the circle on which the arc should be drawn. <code>radius</code> is self-explanatory. The <code>startAngle</code> and <code>endAngle</code> parameters define the start and end points of the arc in radians, along the curve of the circle. These are measured from the x axis. The <code>counterclockwise</code> parameter is a Boolean value which, when <code>true</code>, draws the arc counterclockwise; otherwise, the arc is drawn clockwise.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Angles in the <code>arc</code> function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: <code>radians = (Math.PI/180)*degrees</code>.</p>
@@ -289,9 +289,9 @@ tags:
         var radius = 20; // Arc radius
         var startAngle = 0; // Starting point on circle
         var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
-        var anticlockwise = i % 2 !== 0; // clockwise or anticlockwise
+        var counterclockwise = i % 2 !== 0; // clockwise or counterclockwise
 
-        ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+        ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
         if (i &gt; 1) {
           ctx.fill();

@@ -234,7 +234,7 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <h2 id="Getting_information_out_of_animations">Getting information out of animations</h2>
 
-<p>Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That’s impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("DocumentOrShadowRoot.getAnimations")}} method to loop over each animation on the page and halve their <code>playbackRate</code>s, like so:</p>
+<p>Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That’s impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("Document.getAnimations")}} method to loop over each animation on the page and halve their <code>playbackRate</code>s, like so:</p>
 
 <pre class="brush: js">document.getAnimations().forEach(
   function (animation) {

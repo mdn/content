@@ -6,6 +6,7 @@ tags:
   - FinalizationRegistry
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.FinalizationRegistry
 ---
 <div>{{JSRef}}</div>
 
@@ -71,7 +72,7 @@ registry.unregister(tokenObject);
 
 <p>Correct use of <code>FinalizationRegistry</code> takes careful thought, and it's best avoided if possible. It's also important to avoid relying on any specific behaviors not guaranteed by the specification. When, how, and whether garbage collection occurs is down to the implementation of any given JavaScript engine. Any behavior you observe in one engine may be different in another engine, in another version of the same engine, or even in a slightly different situation with the same version of the same engine. Garbage collection is a hard problem that JavaScript engine implementers are constantly refining and improving their solutions to.</p>
 
-<p>Here are some specific points that the authors of the WeakRef proposal that FinalizationRegistry is part of included in its <a href="https://github.com/tc39/proposal-FinalizationRegistrys/blob/master/README.md">explainer document</a>:</p>
+<p>Here are some specific points that the authors of the WeakRef proposal that FinalizationRegistry is part of included in its <a href="https://github.com/tc39/proposal-weakrefs/blob/master/reference.md">explainer document</a>:</p>
 
 <blockquote>
 <p><a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">Garbage collectors</a> are complicated. If an application or library depends on GC cleaning up a FinalizationRegistry or calling a finalizer [cleanup callback] in a timely, predictable manner, it's likely to be disappointed: the cleanup may happen much later than expected, or not at all. Sources of variability include:</p>
@@ -121,22 +122,11 @@ registry.unregister(tokenObject);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WeakRefs', '#sec-finalization-registry-objects', 'FinalizationRegistry')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.FinalizationRegistry")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

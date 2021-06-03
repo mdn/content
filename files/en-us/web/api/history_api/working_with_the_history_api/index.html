@@ -7,11 +7,9 @@ tags:
   - History API
   - History API Tutorial
 ---
-<p>HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("Window.onpopstate","onpopstate")}} event.</p>
+<p>HTML5 introduced the {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods for add and modifying history entries, respectively. These methods work in conjunction with the {{domxref("WindowEventHandlers/onpopstate","onpopstate")}} event.</p>
 
 <h2 id="Adding_and_modifying_history_entries">Adding and modifying history entries</h2>
-
-<p>{{ gecko_minversion_header("2") }}</p>
 
 <p>Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that gets used in the HTTP header for {{domxref("XMLHttpRequest")}} objects created after you change the state. The referrer will be the URL of the document whose window is <code>this</code> at the time of creation of the {{domxref("XMLHttpRequest")}} object.</p>
 
@@ -48,7 +46,7 @@ The state object can be anything that can be serialized. Because Firefox saves s
  <dd>The new history entry's URL is given by this parameter. Note that the browser won't attempt to load this URL after a call to <code>pushState()</code>, but it might attempt to load the URL later, for instance after the user restarts the browser. The new URL does not need to be absolute; if it's relative, it's resolved relative to the current URL. The new URL must be of the same origin as the current URL; otherwise, <code>pushState()</code> will throw an exception. This parameter is optional; if it isn't specified, it's set to the document's current URL.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using <a href="/en-US/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a>. This allows a wider variety of objects to be safely passed.</div>
+<div class="note"><strong>Note:</strong> In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>. This allows a wider variety of objects to be safely passed.</div>
 
 <p>In a sense, calling <code>pushState()</code> is similar to setting <code>window.location = "#foo"</code>, in that both will also create and activate another history entry associated with the current document.</p>
 
@@ -73,7 +71,7 @@ The state object can be anything that can be serialized. Because Firefox saves s
 
 <p><code>replaceState()</code> is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.</p>
 
-<div class="note"><strong>Note:</strong> In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using <a href="/en-US/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a>. This allows a wider variety of objects to be safely passed.</div>
+<div class="note"><strong>Note:</strong> In Gecko 2.0 {{ geckoRelease("2.0") }} through Gecko 5.0 {{ geckoRelease("5.0") }}, the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>. This allows a wider variety of objects to be safely passed.</div>
 
 <h3 id="Example_of_replaceState_method">Example of replaceState() method</h3>
 
@@ -98,7 +96,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>A <code>popstate</code> event is dispatched to the window every time the active history entry changes. If the history entry being activated was created by a call to {{DOMxRef("History.pushState","pushState")}} or affected by a call to {{DOMxRef("History.replaceState","replaceState")}}, the <code>popstate</code> event's <code>state</code> property contains a copy of the history entry's state object.</p>
 
-<p>See {{ domxref("Window.onpopstate") }} for sample usage.</p>
+<p>See {{ domxref("WindowEventHandlers.onpopstate") }} for sample usage.</p>
 
 <h3 id="Reading_the_current_state">Reading the current state</h3>
 

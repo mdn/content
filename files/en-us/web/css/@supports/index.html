@@ -8,10 +8,11 @@ tags:
   - Reference
   - Web
   - supports
+browser-compat: css.at-rules.supports
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a <em>feature query</em>. The rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#Conditional_group_rules">conditional group at-rule</a>.</p>
+<p>The <strong><code>@supports</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a <em>feature query</em>. The rule may be placed at the top level of your code or nested inside any other <a href="/en-US/docs/Web/CSS/At-rule#conditional_group_rules">conditional group at-rule</a>.</p>
 
 <pre class="brush: css; no-line-numbers">@supports (display: grid) {
   div {
@@ -70,8 +71,8 @@ tags:
 
 <p>Multiple conjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:</p>
 
-<pre class="brush: css">@supports (display: table-cell) and (display: list-item) and (display:run-in) {}
-@supports (display: table-cell) and ((display: list-item) and (display:run-in)) {}</pre>
+<pre class="brush: css">@supports (display: table-cell) and (display: list-item) and (display:contents) {}
+@supports (display: table-cell) and ((display: list-item) and (display:contents)) {}</pre>
 
 <h3 id="The_or_operator">The or operator</h3>
 
@@ -94,7 +95,7 @@ tags:
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="brush: css">{{CSSSyntax}}</pre>
+{{CSSSyntax}}
 
 <h2 id="Examples">Examples</h2>
 
@@ -188,7 +189,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.at-rules.supports")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

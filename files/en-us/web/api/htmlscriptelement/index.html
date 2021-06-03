@@ -7,6 +7,7 @@ tags:
   - Interface
   - NeedsNewLayout
   - Reference
+browser-compat: api.HTMLScriptElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -27,14 +28,13 @@ tags:
  <dt>{{domxref("HTMLScriptElement.src")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the URL of an external script. It reflects the {{htmlattrxref("src","script")}} attribute.</dd>
 
- <dt>{{domxref("HTMLScriptElement.event")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}}; an obsolete way of registering event handlers on elements in an HTML document.</dd>
 
- <dt>{{domxref("HTMLScriptElement.charset")}}</dt>
+ <dt>{{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the character encoding of an external script. It reflects the {{htmlattrxref("charset","script")}} attribute.</dd>
 
- <dt>{{domxref("HTMLScriptElement.async")}}</dt>
- <dt>{{domxref("HTMLScriptElement.defer")}}</dt>
+ <dt>{{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}</dt>
  <dd>
   <p>The <code>async</code> and <code>defer</code> attributes are {{domxref("Boolean")}} attributes that control how the script should be executed. <strong>The <code>defer</code> and <code>async</code> attributes must not be specified if the <code>src</code> attribute is absent.</strong></p>
 
@@ -148,7 +148,7 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLScriptElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

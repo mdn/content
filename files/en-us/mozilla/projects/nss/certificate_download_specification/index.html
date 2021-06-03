@@ -17,22 +17,22 @@ tags:
 <ul>
  <li><strong>DER encoded certificate:</strong> This is a single binary DER encoded certificate.</li>
  <li><strong>PKCS#7 certificate chain:</strong> This is a single <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>SignedData</code> object. The only significant field in the <code>SignedData</code> object is the <code>certificates</code> field, which may contain multiple certificates to be imported together. The contents of the <code>version</code>, <code>digestAlgorithms</code>, <code>contentInfo</code>, <code>crls</code>, and <code>signerInfos</code> fields are ignored.</li>
- <li><strong>Netscape Certificate Sequence:</strong> This is another <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> object format, and like the <code>SignedData</code> format, it allows multiple certificates to be imported together. This format is simpler than the <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>SignedData</code> object format. It consists of a <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>ContentInfo</code> structure, wrapping a sequence of certificates. The <code>contentType</code> field OID must be <code>netscape-cert-sequence</code> (see <a href="/en-US/NSS_Certificate_Download_Specification#Object_Identifiers">Object Identifiers</a>). The <code>content</code> field is the following ASN.1 structure:</li>
+ <li><strong>Netscape Certificate Sequence:</strong> This is another <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> object format, and like the <code>SignedData</code> format, it allows multiple certificates to be imported together. This format is simpler than the <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>SignedData</code> object format. It consists of a <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc2315.txt">PKCS#7</a> <code>ContentInfo</code> structure, wrapping a sequence of certificates. The <code>contentType</code> field OID must be <code>netscape-cert-sequence</code> (see <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#object_identifiers">Object Identifiers</a>). The <code>content</code> field is the following ASN.1 structure:</li>
 </ul>
 
 <pre class="eval">   CertificateSequence ::= SEQUENCE OF Certificate
 </pre>
 
-<p>See the section below on <a href="/en-US/NSS_Certificate_Download_Specification#Importing_Certificate_Chains">Certificate Chains</a> for more information about how multiple certificates are handled.</p>
+<p>See the section below on <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#importing_certificate_chains">Certificate Chains</a> for more information about how multiple certificates are handled.</p>
 
 <h3 id="Text_Formats">Text Formats</h3>
 
-<p>Any of the above <a href="/en-US/NSS_Certificate_Download_Specification#Binary_Formats">binary formats</a> can also be imported in text form. The text form begins with the following line:</p>
+<p>Any of the above <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#binary_formats">binary formats</a> can also be imported in text form. The text form begins with the following line:</p>
 
 <pre class="eval">   -----BEGIN CERTIFICATE-----
 </pre>
 
-<p>Following this line should be the certificate data, which can be in any of the <a href="/en-US/NSS_Certificate_Download_Specification#Binary_Formats">binary formats</a> described above. This data must be base64 encoded as described by <a class="external" href="https://tools.ietf.org/html/rfc1113">RFC 1113</a>. Following the data should be the following line:</p>
+<p>Following this line should be the certificate data, which can be in any of the <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#binary_formats">binary formats</a> described above. This data must be base64 encoded as described by <a class="external" href="https://datatracker.ietf.org/doc/html/rfc1113">RFC 1113</a>. Following the data should be the following line:</p>
 
 <pre class="eval">   -----END CERTIFICATE-----
 </pre>
@@ -67,7 +67,7 @@ tags:
 
 <p>Consult your server's administration guide for the most accurate information. For some NSS-base servers, the following information is correct.</p>
 
-<p>Server certificates are imported via the server admin interface. Certificates are pasted into a text input field in an HTML form, and then the form is submitted to the admin server. Since the certificates are pasted into text fields, only the <a href="/en-US/NSS_Certificate_Download_Specification#Text_Formats">text formats</a> described above are supported for servers. The type of certificate being imported (e.g. server or CA or cert chain) is specified by the server administrator by selections made on the admin pages. If a certificate chain is being imported then the first certificate in the chain must be the server or CA certificate, and any subsequent certificates will be added as untrusted CA certificates to the local database.</p>
+<p>Server certificates are imported via the server admin interface. Certificates are pasted into a text input field in an HTML form, and then the form is submitted to the admin server. Since the certificates are pasted into text fields, only the <a href="/en-US/docs/Mozilla/Projects/NSS/Certificate_Download_Specification#text_formats">text formats</a> described above are supported for servers. The type of certificate being imported (e.g. server or CA or cert chain) is specified by the server administrator by selections made on the admin pages. If a certificate chain is being imported then the first certificate in the chain must be the server or CA certificate, and any subsequent certificates will be added as untrusted CA certificates to the local database.</p>
 
 <h2 id="Object_Identifiers">Object Identifiers</h2>
 

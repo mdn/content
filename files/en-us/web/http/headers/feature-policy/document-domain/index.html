@@ -10,12 +10,13 @@ tags:
 - Reference
 - document-domain
 - header
+browser-compat: http.headers.Feature-Policy.document-domain
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
 <p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header
     <code>document-domain</code> directive controls whether the current document is
-    allowed to set {{domxref("document.domain")}}. When this policy is enabled, attempting
+    allowed to set {{domxref("document.domain")}}. When this policy is disabled, attempting
     to set {{domxref("document.domain")}} will fail and cause a <code>SecurityError</code>
     {{domxref("DOMException")}} to be thrown.</span></p>
 
@@ -54,7 +55,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.document-domain")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

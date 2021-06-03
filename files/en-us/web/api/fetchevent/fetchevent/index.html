@@ -11,6 +11,7 @@ tags:
 - Reference
 - Service Workers
 - ServiceWorker
+browser-compat: api.FetchEvent.FetchEvent
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -36,7 +37,7 @@ tags:
     <dl>
       <dt><code>clientId</code> {{ReadOnlyInline}}</dt>
       <dd>The {{domxref("Client")}} that the current service worker is controlling.</dd>
-      <dt><code>isReload</code> {{obsolete_inline}} {{ReadOnlyInline}}</dt>
+      <dt><code>isReload</code> {{deprecated_inline}} {{ReadOnlyInline}}</dt>
       <dd>A {{jsxref("Boolean")}} that signifies whether the page was reloaded or not when
         the event was dispatched. <code>true</code> if yes, and <code>false</code> if not.
         Typically, pressing the refresh button in a browser is a reload, while clicking a
@@ -78,7 +79,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FetchEvent.FetchEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

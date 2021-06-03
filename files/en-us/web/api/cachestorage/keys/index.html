@@ -11,6 +11,7 @@ tags:
   - Service worker API
   - ServiceWorker
   - keys
+browser-compat: api.CacheStorage.keys
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
@@ -52,7 +53,7 @@ tags:
   <code>keys()</code>, then check each key to see if it is in the whitelist. If not, we
   delete it using {{domxref("CacheStorage.delete()")}}.</p>
 
-<pre class="brush: js">then.addEventListener('activate', function(event) {
+<pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(
@@ -86,7 +87,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CacheStorage.keys")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,10 +10,11 @@ tags:
   - Server Sent Events
   - Server-sent events
   - messaging
+browser-compat: api.EventSource
 ---
 <div>{{APIRef("Server Sent Events")}}</div>
 
-<p><span class="seoSummary">The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>. An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Web/API/Document_Object_Model/Events">events</a> in <code>text/event-stream</code> format.</span> The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
+<p><span class="seoSummary">The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>. An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> in <code>text/event-stream</code> format.</span> The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
 
 <p>Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.</p>
 
@@ -47,11 +48,11 @@ tags:
 
 <dl>
  <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
  <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
  <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -147,7 +148,7 @@ evtSource.onmessage = function(e) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

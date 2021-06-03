@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <code><strong>EcdsaParams</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a> algorithm.</p>
+<p>The <code><strong>EcdsaParams</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> algorithm.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -20,13 +20,13 @@ tags:
  <dt><code>hash</code></dt>
  <dd>A {{domxref("DOMString")}}. An identifier for the <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest algorithm</a> to use. This should be one of the following:
  <ul>
-  <li><code>SHA-256</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#SHA-256">SHA-256</a> algorithm.</li>
-  <li><code>SHA-384</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#SHA-384">SHA-384</a> algorithm.</li>
-  <li><code>SHA-512</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#SHA-512">SHA-512</a> algorithm.</li>
+  <li><code>SHA-256</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-256">SHA-256</a> algorithm.</li>
+  <li><code>SHA-384</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-384">SHA-384</a> algorithm.</li>
+  <li><code>SHA-512</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-512">SHA-512</a> algorithm.</li>
  </ul>
 
  <div class="notecard warning">
- <p><strong>Warning</strong>: <code>SHA-1</code> is also supported here but the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#SHA-1">SHA-1</a> algorithm is considered vulnerable and should no longer be used.</p>
+ <p><strong>Warning</strong>: <code>SHA-1</code> is also supported here but the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-1">SHA-1</a> algorithm is considered vulnerable and should no longer be used.</p>
  </div>
  </dd>
 </dl>

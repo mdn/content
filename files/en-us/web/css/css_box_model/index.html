@@ -1,5 +1,5 @@
 ---
-title: CSS Basic Box Model
+title: CSS Box Model
 slug: Web/CSS/CSS_Box_Model
 tags:
   - CSS
@@ -10,36 +10,43 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong>CSS Basic Box Model</strong> is a module of CSS that defines the rectangular boxes—including their padding and margin—that are generated for elements and laid out according to the <a href="/en-US/docs/Web/CSS/Visual_formatting_model">visual formatting model</a>.</p>
+<p><strong>CSS Box Model</strong> is a module of CSS that defines the rectangular boxes—including their padding and margin—that are generated for elements and laid out according to the <a href="/en-US/docs/Web/CSS/Visual_formatting_model">visual formatting model</a>.</p>
+
+<h2>The Box Model</h2>
+
+<p>A box in CSS consists of a content area, which is where any text, images, or other HTML elements are displayed. This is optionally surrounded by padding, a border, and a margin, on one or more sides. The box model describes how these elements work together to create a box as displayed by CSS. To learn more about it read <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS Box Model</a></p>
+
+<h3>Box-edge keywords</h3>
+
+<p>The Box Model specification defines a set of keywords that refer to the edges of each part of the box, these are used as keyword values in CSS including as a value for the {{cssxref("box-sizing")}} property, to control how the box model calculates its size.</p>
+
+<dl>
+  <dt><code>content-box</code></dt>
+  <dd>The edge of the content area of the box.</dd>
+  <dt><code>padding-box</code></dt>
+  <dd>The edge of the padding of the box, if there is no padding on a side then this is the same as <code>content-box</code>.</dd>
+  <dt><code>border-box</code></dt>
+  <dd>The edge of the border of the box, if there is no border on a side then this is the same as <code>padding-box</code>.</dd>
+  <dt><code>margin-box</code></dt>
+  <dd>The edge of the margin of the box, if there is no margin on a side then this is the same as <code>border-box</code>.</dd>
+  <dt><code>stroke-box</code></dt>
+  <dd>In SVG refers to the stroke bounding box, in CSS treated as <code>content-box</code>.</dd>
+  <dt><code>view-box</code></dt>
+  <dd>In SVG refers to the nearest SVG viewport element’s origin box, which is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. In CSS treated as <code>border-box</code>.</dd>
+</dl>
 
 <h2 id="Reference">Reference</h2>
 
 <h3 id="Properties">Properties</h3>
 
-<h4 id="Properties_controlling_the_flow_of_content_in_a_box">Properties controlling the flow of content in a box</h4>
-
-<div class="index">
-<ul>
- <li>{{CSSxRef("overflow")}}</li>
- <li>{{CSSxRef("overflow-x")}}</li>
- <li>{{CSSxRef("overflow-y")}}</li>
-</ul>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This specification defines the physical padding and margin properties. Flow-relative properties, which relate to text direction, are defined in <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">Logical Properties and Values</a>.</p>
 </div>
 
-<h4 id="Properties_controlling_the_size_of_a_box">Properties controlling the size of a box</h4>
+<h4 id="margins">Properties controlling the margins of a box</h4>
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("height")}}</li>
- <li>{{CSSxRef("width")}}</li>
- <li>{{CSSxRef("max-height")}}</li>
- <li>{{CSSxRef("max-width")}}</li>
- <li>{{CSSxRef("min-height")}}</li>
- <li>{{CSSxRef("min-width")}}</li>
-</ul>
-</div>
-
-<h4 id="Properties_controlling_the_margins_of_a_box">Properties controlling the margins of a box</h4>
+<p>Margins surround the border edge of a box, and provide spacing between boxes.</p>
 
 <div class="index">
 <ul>
@@ -52,7 +59,9 @@ tags:
 </ul>
 </div>
 
-<h4 id="Properties_controlling_the_paddings_of_a_box">Properties controlling the paddings of a box</h4>
+<h4 id="padding">Properties controlling the paddings of a box</h4>
+
+<p>Padding in inserted between the content edge and border edge of a box.</p>
 
 <div class="index">
 <ul>
@@ -66,11 +75,15 @@ tags:
 
 <h4 id="Other_properties">Other properties</h4>
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("visibility")}}</li>
-</ul>
-</div>
+<p>There are other properties that relate to the box model, that are defined elsewhere.</p>
+
+<dl>
+<dt><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders">Borders</a> </dt>
+<dd>The border properties specify the thickness of the border, drawing style and color.</dd>
+<dt><a href="/en-US/docs/Web/CSS/overflow">Overflow</a></dt>
+<dd>Controls what happens when there is too much content to fit into a box.</dd>
+</dl>
+
 
 <h2 id="Guides">Guides</h2>
 
@@ -97,7 +110,7 @@ tags:
   <tr>
    <td>{{SpecName("CSS3 Box")}}</td>
    <td>{{Spec2("CSS3 Box")}}</td>
-   <td>Added <code style="white-space: nowrap;">margin-trim</code></td>
+   <td>Added <code>margin-trim</code></td>
   </tr>
   <tr>
    <td>{{SpecName("CSS2.1", "box.html")}}</td>

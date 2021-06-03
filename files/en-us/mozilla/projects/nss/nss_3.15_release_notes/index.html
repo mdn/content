@@ -14,7 +14,7 @@ slug: Mozilla/Projects/NSS/NSS_3.15_release_notes
 <h2 id="New_in_NSS_3.15">New in NSS 3.15</h2>
 <h3 id="New_Functionality">New Functionality</h3>
 <ul>
-  <li>Support for OCSP Stapling (<a href="https://tools.ietf.org/html/rfc6066">RFC 6066</a>, Certificate Status Request) has been added for both client and server sockets. TLS client applications may enable this via a call to <code>SSL_OptionSetDefault(SSL_ENABLE_OCSP_STAPLING, PR_TRUE);</code></li>
+  <li>Support for OCSP Stapling (<a href="https://datatracker.ietf.org/doc/html/rfc6066">RFC 6066</a>, Certificate Status Request) has been added for both client and server sockets. TLS client applications may enable this via a call to <code>SSL_OptionSetDefault(SSL_ENABLE_OCSP_STAPLING, PR_TRUE);</code></li>
   <li>Added function SECITEM_ReallocItemV2. It replaces function SECITEM_ReallocItem, which is now declared as obsolete.</li>
   <li>Support for single-operation (eg: not multi-part) symmetric key encryption and decryption, via <em>PK11_Encrypt</em> and <em>PK11_Decrypt</em>.</li>
   <li>certutil has been updated to support creating name constraints extensions.</li>

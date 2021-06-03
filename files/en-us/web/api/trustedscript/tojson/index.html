@@ -1,0 +1,51 @@
+---
+title: TrustedScript.toJSON()
+slug: Web/API/TrustedScript/toJSON
+tags:
+  - API
+  - Method
+  - Reference
+  - toJSON
+  - TrustedScript
+browser-compat: api.TrustedScript.toJSON
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>toJSON()</code></strong> method of the {{domxref("TrustedScript")}} interface returns a JSON representation of the stored data.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>json</var> = <var>TrustedScript</var>.toJSON();</pre>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy. The <code>toString()</code> method returns a string to safely execute as a script.</p>
+
+<pre class="brush: js">const sanitized = scriptPolicy.createScript("eval('2 + 2')");
+  console.log(sanitized.toJSON());
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedscript-tojson','TrustedScript.toJSON()')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

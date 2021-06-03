@@ -5,13 +5,14 @@ tags:
 - Deprecated
 - JavaScript
 - Method
+browser-compat: javascript.builtins.unescape
 ---
 <p>{{jsSidebar("Objects")}}</p>
 
-<div class="warning">Warning: Although <code>unescape()</code> is not strictly deprecated
+<div class="warning"><p><strong>Warning:</strong> Although <code>unescape()</code> is not strictly deprecated
   (as in "removed from the Web standards"), it is defined in <a
     href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">Annex
-    B</a> of the ECMA-262 standard, whose introduction states:
+    B</a> of the ECMA-262 standard, whose introduction states:</p>
   <blockquote>… All of the language features and behaviors specified in this annex have
     one or more undesirable characteristics and in the absence of legacy usage would be
     removed from this specification. …<br>
@@ -25,8 +26,8 @@ tags:
   {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}} are preferred over
   <code>unescape</code>.</p>
 
-<div class="note"><strong>Note:</strong> Do not use <code>unescape</code> to decode URIs,
-  use <code>decodeURI</code> instead.</div>
+<div class="note"><p><strong>Note:</strong> Do not use <code>unescape</code> to decode URIs,
+  use <code>decodeURI</code> instead.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -58,22 +59,11 @@ unescape('%u0107');     // "ć"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.unescape")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

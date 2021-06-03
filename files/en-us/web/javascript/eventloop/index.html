@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p><span class="seoSummary">JavaScript has a concurrency model based on an <strong>event loop</strong>, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.</span> This model is quite different from models in other languages like C and Java.</p>
+<p>JavaScript has a concurrency model based on an <strong>event loop</strong>, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.</p>
 
 <h2 id="Runtime_concepts">Runtime concepts</h2>
 
@@ -21,7 +21,7 @@ tags:
 
 <h3 id="Visual_representation">Visual representation</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg"></p>
+<p><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg"></p>
 
 <h3 id="Stack">Stack</h3>
 
@@ -97,7 +97,7 @@ while (true) {
 
 <h3 id="Zero_delays">Zero delays</h3>
 
-<p>Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout</code></a> with a delay of <code>0</code> (zero) milliseconds doesn't execute the callback function after the given interval.</p>
+<p>Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout</code></a> with a delay of <code>0</code> (zero) milliseconds doesn't execute the callback function after the given interval.</p>
 
 <p>The execution depends on the number of waiting tasks in the queue. In the example below, the message <code>''this is just a message''</code> will be written to the console before the message in the callback gets processed, because the delay is the <em>minimum</em> time required for the runtime to process the request (not a <em>guaranteed</em> time).</p>
 
@@ -138,18 +138,9 @@ while (true) {
 
 <p>Legacy exceptions exist like <code>alert</code> or synchronous XHR, but it is considered a good practice to avoid them. Beware: <a href="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">exceptions to the exception do exist</a> (but are usually implementation bugs, rather than anything else).</p>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="See_also">See also</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#event-loops', 'Event loops')}}</td>
-  </tr>
-  <tr>
-   <td><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop">Node.js Event Loop</a></td>
-  </tr>
- </tbody>
-</table>
+<ul>
+  <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loops">Event loops in the HTML standard</a></li>
+  <li><a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop">Node.js Event Loop</a></li>
+</ul>

@@ -8,6 +8,7 @@ tags:
   - ShadowRoot
   - Web Components
   - shadow dom
+browser-compat: api.ShadowRoot
 ---
 <div>{{APIRef('Shadow DOM')}}</div>
 
@@ -20,7 +21,7 @@ tags:
 <dl>
  <dt>{{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref('Element')}} within the shadow tree that has focus.</dd>
- <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}}</dt>
+ <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</dd>
  <dt>{{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}</dt>
  <dd>The element that's currently in full screen mode for this shadow tree.</dd>
@@ -40,17 +41,15 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>ShadowRoot</code> interface includes the following methods defined on the {{domxref("DocumentOrShadowRoot")}} mixin. Note that this is currently only implemented by Chrome; other browsers still implement them on the {{domxref("Document")}} interface.</em></p>
-
 <dl>
- <dt>{{domxref("DocumentOrShadowRoot.getSelection()")}}</dt>
+ <dt>{{DOMxRef("ShadowRoot.getAnimations()")}}</dt>
+ <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.</dd>
+ <dt>{{domxref("ShadowRoot.getSelection()")}}</dt>
  <dd>Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.elementFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.elementFromPoint()")}}</dt>
  <dd>Returns the topmost element at the specified coordinates.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}</dt>
+ <dt>{{domxref("ShadowRoot.elementsFromPoint()")}}</dt>
  <dd>Returns an array of all elements at the specified coordinates.</dd>
- <dt>{{domxref("DocumentOrShadowRoot.caretPositionFromPoint()")}}</dt>
- <dd>Returns a {{domxref('CaretPosition')}} object containing the DOM node containing the caret, and caret's character offset within that node.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -107,4 +106,4 @@ attributeChangedCallback(name, oldValue, newValue) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ShadowRoot")}}</p>
+<p>{{Compat}}</p>

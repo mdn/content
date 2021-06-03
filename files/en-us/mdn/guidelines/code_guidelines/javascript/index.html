@@ -22,7 +22,7 @@ tags:
   <ul>
    <li><a href="#use_expanded_syntax">Use expanded syntax</a></li>
    <li><a href="#javascript_comments">JavaScript comments</a></li>
-   <li><a href="#use_es6_features">Use ES6 features</a></li>
+   <li><a href="#use_modern_js_features">Use modern JS features</a></li>
   </ul>
  </li>
  <li><a href="#variables">Variables</a>
@@ -128,14 +128,13 @@ tags:
 
 <p>Also note that you should leave a space between the slashes and the comment, in each case.</p>
 
-<h3 id="Use_ES6_features">Use ES6 features</h3>
+<h3 id="Use_modern_JS_features">Use modern JS features</h3>
 
-<p>For general usage*, you can use common ES6 features (such as <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a>) in MDN examples. We include them in many places in these guidelines, as we believe the web industry has generally gotten to the point where such features are familiar enough to be understandable. And for those that don't use them yet, we'd like to play our part in helping people to evolve their skills.</p>
-
-<p>However, we don't yet recommend the general use of newer ES features such as <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a>/<a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a>, trailing commas on argument lists, etc. We’d prefer you not to use those unless strictly necessary, and if you do use them, include explanation in your example to say what they are doing, with a link to appropriate reference material.</p>
+<p>For general usage*, you can use modern well-supported JS features (such as <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>, and <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a>) in MDN examples. We include them in many places in these guidelines, as we believe the web industry has generally gotten to the point where such features are familiar enough to be understandable. And for those that don't use them yet, we'd like to play our part in helping people to evolve their skills.</p>
 
 <div class="notecard note">
-<p>* By "general usage", we mean general example writing. Reference pages covering specific modern ES features obviously need to use the features they are documenting!</p>
+  <h4>Note</h4>
+  <p>* By "general usage", we mean general example writing. Reference pages covering specific JS features obviously need to use the features they are documenting!</p>
 </div>
 
 <h2 id="Variables">Variables</h2>
@@ -158,7 +157,8 @@ let s = d/t;
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
+  <h4>Note</h4>
+  <p>The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
 </div>
 
 <h3 id="Declaring_variables">Declaring variables</h3>
@@ -326,7 +326,7 @@ switch(expr) {
     // expected output: "Mangoes and papayas are $2.79 a pound."
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log(`Sorry, we are out of ${expr}`);
 }</pre>
 
 <h2 id="Functions_and_objects">Functions and objects</h2>
@@ -353,7 +353,8 @@ function notVeryObviousName() {
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
+  <h4>Note</h4>
+  <p>The only place where it is OK to not use human-readable semantic names is where a very common recognized convention exists, such as using <code>i</code>, <code>j</code>, etc. for loop iterators.</p>
 </div>
 
 <h3 id="Defining_functions">Defining functions</h3>

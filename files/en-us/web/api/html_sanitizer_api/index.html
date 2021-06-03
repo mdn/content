@@ -37,7 +37,7 @@ const stringToClean = 'Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;
 
 const result = new Sanitizer().sanitizeToString(stringToClean);
 console.log(result);
-// Logs: "Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;blink&gt;tags&lt;/blink&gt;, including a rogue script def."
+// Logs: "Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt;, including a rogue script def."
 </pre>
 
 <p>The other method available is the {{domxref('Sanitizer.sanitize()')}} method. Which is very similar to above, however returns a {{domxref('DocumentFragment')}} with disallowed <code>script</code> and <code>blink</code> elements removed.</p>

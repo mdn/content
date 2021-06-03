@@ -13,7 +13,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var reader = new FileReader();</pre>
+<pre class="brush: js">const reader = new FileReader();</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -24,7 +24,7 @@ tags:
 <p>The following code snippet shows creation of a <code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code> object using the <code>FileReader()</code> constructor and subsequent usage of the object:</p>
 
 <pre class="brush: js">function printFile(file) {
-  var reader = new FileReader();
+  const reader = new FileReader();
   reader.onload = function(evt) {
     console.log(evt.target.result);
   };

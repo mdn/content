@@ -6,6 +6,7 @@ tags:
 - CSSOM
 - Interface
 - Reference
+browser-compat: api.CSSSupportsRule
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -24,7 +25,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>
-  The CSS includes a CSS feature query using the {{cssxref("@supports")}} {{cssxref("at-rule")}}, containing one style rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>. 
+  The CSS includes a CSS feature query using the {{cssxref("@supports")}} {{cssxref("at-rule")}}, containing one style rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>.
   <code>myRules[0]</code> therefore returns a {{domxref("CSSSupportsRule")}} object.
 </p>
 
@@ -59,7 +60,7 @@ console.log(myRules[0]); // a CSSSupportsRule representing the feature query.</p
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSSupportsRule")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

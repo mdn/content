@@ -1,0 +1,55 @@
+---
+title: TrustedHTML.toString()
+slug: Web/API/TrustedHTML/toString
+tags:
+  - API
+  - Method
+  - Reference
+  - toString
+  - TrustedHTML
+browser-compat: api.TrustedHTML.toString
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>toString()</code></strong> method of the {{domxref("TrustedHTML")}} interface returns a string which may safely inserted into an injection sink.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>str</var> = <var>TrustedHTML</var>.toString();</pre>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{domxref("DOMString","string")}} containing the sanitized HTML.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The constant <code>escaped</code> is an object created via the Trusted Types policy escapeHTMLPolicy. The <code>toString()</code> method returns a string to safely insert into a document.</p>
+
+<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+});
+
+const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+console.log(escaped.toString());
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#trustedhtml-stringification-behavior','TrustedHTML.toString()')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -2,18 +2,19 @@
 title: RTCDataChannel.onopen
 slug: Web/API/RTCDataChannel/onopen
 tags:
-- Event Handler
-- Experimental
-- Property
-- RTCDataChannel
-- Reference
-- WebRTC
-- onopen
+  - Event Handler
+  - Experimental
+  - Property
+  - RTCDataChannel
+  - Reference
+  - WebRTC
+  - onopen
+browser-compat: api.RTCDataChannel.onopen
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
 <p>The <code><strong>RTCDataChannel.onopen</strong></code> property is an
-  {{domxref("EventHandler")}} which specifies a function to be called when the
+  {{event("Event_handlers", "event handler")}} which specifies a function to be called when the
   {{event("open")}} event is fired; this is a simple {{domxref("Event")}} which is sent
   when the data channel's underlying data transport—the link over which the
   {{domxref("RTCDataChannel")}}'s messages flow—is established or re-established.</p>
@@ -70,12 +71,12 @@ dc.onopen = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.onopen")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>The {{event("open")}} event and its type, {{domxref("Event")}}.</li>
   <li>{{domxref("RTCDataChannel.onclose")}}</li>
   <li>The {{event("close")}} event and its type, {{domxref("Event")}}.</li>

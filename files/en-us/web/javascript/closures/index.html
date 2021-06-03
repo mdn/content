@@ -208,7 +208,7 @@ alert(counter2.value()); // 0.
 <p>Notice how the two counters maintain their independence from one another. Each closure references a different version of the <code>privateCounter</code> variable through its own closure. Each time one of the counters is called, its lexical environment changes by changing the value of this variable. Changes to the variable value in one closure don't affect the value in the other closure.</p>
 
 <div class="note">
-<p>Using closures in this way provides benefits that are normally associated with object-oriented programming. In particular, <em>data hiding</em> and <em>encapsulation</em>.</p>
+<p><strong>Note:</strong> Using closures in this way provides benefits that are normally associated with object-oriented programming. In particular, <em>data hiding</em> and <em>encapsulation</em>.</p>
 </div>
 
 <h2 id="Closure_Scope_Chain">Closure Scope Chain</h2>

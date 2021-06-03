@@ -1,0 +1,53 @@
+---
+title: TrustedTypePolicyFactory.emptyScript
+slug: Web/API/TrustedTypePolicyFactory/emptyScript
+tags:
+  - API
+  - Property
+  - Reference
+  - emptyScript
+  - TrustedTypePolicyFactory
+browser-compat: api.TrustedTypePolicyFactory.emptyScript
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>emptyScript</code></strong> read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedScript")}} object containing an empty string.</p>
+
+<p>This object can be used when the application requires an empty string to be inserted into an injection sink which is expecting a <code>TrustedScript</code> object.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>emptyScript</var> = <var>TrustedTypePolicyFactory</var>.emptyScript;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("TrustedScript")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The <a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyscript">specification</a> explains that the <code>emptyScript</code> object can be used to detect support for dynamic code compilation.</p>
+
+<p>Native Trusted Types implementations can support <code>eval(TrustedScript)</code>, therefore in the below example a native implementation will return false for <code>eval(trustedTypes.emptyScript)</code>. A polyfill will return a truthy object.</p>
+
+<pre class="brush: js">const supportsTS = !eval(trustedTypes.emptyScript);
+eval(supportsTS ? myTrustedScriptObj : myTrustedScriptObj.toString());</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedtypepolicyfactory-emptyscript','TrustedTypePolicyFactory.emptyScript')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

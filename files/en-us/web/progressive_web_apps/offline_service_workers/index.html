@@ -177,11 +177,10 @@ self.addEventListener('install', (e) =&gt; {
 <p>Remember the <code>activate</code> event we skipped? It can be used to clear out the old cache we don't need anymore:</p>
 
 <pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
-  e.waitUntil((async () =&gt; {
-    const keyList = await caches.keys();
-    await Promise.all(keyList.map((key) =&gt; {
+  e.waitUntil(caches.keys().then((keyList) =&gt; {
+    Promise.all(keyList.map((key) =&gt; {
       if (key === cacheName) { return; }
-      await caches.delete(key);
+      caches.delete(key);
     }))
   })());
 });</pre>

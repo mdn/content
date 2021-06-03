@@ -6,28 +6,30 @@ tags:
 - Date
 - JavaScript
 - Reference
+browser-compat: javascript.builtins.Date.Date
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">Creates a JavaScript <strong><code>Date</code></strong>
+<p>Creates a JavaScript <strong><code>Date</code></strong>
     instance that represents a single moment in time in a platform-independent
-    format.</span> <code>Date</code> objects contain a <code>Number</code> that represents
+    format.<code>Date</code> objects contain a <code>Number</code> that represents
   milliseconds since 1 January 1970 UTC.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-constructor.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">new Date()
-new Date(<var>value</var>)
-new Date(<var>dateString</var>)
-new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]])
+new Date(value)
+new Date(dateString)
+
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 </pre>
 
 <div class="notecard note">
@@ -67,7 +69,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
       <dt><code><var>dateString</var></code></dt>
       <dd>A string value representing a date, specified in a format recognized by the
         {{jsxref("Date.parse()")}} method. (These formats are <a
-          href="https://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822
+          href="https://datatracker.ietf.org/doc/html/rfc2822#page-14">IETF-compliant RFC 2822
           timestamps</a>, and also strings in a <a
           href="https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse">version
           of ISO8601</a>.)
@@ -78,7 +80,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
           </p>
 
           <ul>
-            <li>Support for <a href="https://tools.ietf.org/html/rfc2822">RFC 2822</a>
+            <li>Support for <a href="https://datatracker.ietf.org/doc/html/rfc2822">RFC 2822</a>
               format strings is by convention only.</li>
             <li>Support for ISO 8601 formats differs in that date-only strings (e.g.
               <code>"1970-01-01"</code>) are treated as UTC, not local.</li>
@@ -151,22 +153,11 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date-constructor', 'Date')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.Date")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

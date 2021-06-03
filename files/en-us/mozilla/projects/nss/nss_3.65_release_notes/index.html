@@ -1,0 +1,51 @@
+---
+title: NSS 3.65 release notes
+slug: Mozilla/Projects/NSS/NSS_3.65_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>Network Security Services (NSS) 3.65 was released on <strong>13 May 2021</strong>.</p>
+
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_65_RTM. NSS 3.65 requires NSPR 4.30 or newer.</p>
+
+<p>NSS 3.65 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_65_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_65_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.65">Bugs fixed in NSS 3.65</h2>
+
+<ul>
+  <li> Bug 1709654 - Update for NetBSD configuration.</li>
+  <li> Bug 1709750 - Disable HPKE test when fuzzing.</li>
+  <li> Bug 1566124 - Optimize AES-GCM for ppc64le.</li>
+  <li> Bug 1699021 - Add AES-256-GCM to HPKE.</li>
+  <li> Bug 1698419 - ECH -10 updates.</li>
+  <li> Bug 1692930 - Update HPKE to final version.</li>
+  <li> Bug 1707130 - NSS should use modern algorithms in PKCS#12 files by default.</li>
+  <li> Bug 1703936 - New coverity/cpp scanner errors.</li>
+  <li> Bug 1697303 - NSS needs to update it's csp clearing to FIPS 180-3 standards.</li>
+  <li> Bug 1702663 - Need to support RSA PSS with Hashing PKCS #11 Mechanisms.</li>
+  <li> Bug 1705119 - Deadlock when using GCM and non-thread safe tokens.</li>
+</ul>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.65 shared libraries are backwards-compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.65 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS">bugzilla.mozilla.org</a> (product NSS).</p>
+
+<h2 id="Notes">Notes</h2>
+
+<p>This version of NSS contains a number of contributions for "unsupported platforms". We would like to thank the authors and the reviewers for their contributions to NSS.</p>
+
+<p>Discussions about moving the documentation are still ongoing. (See discussion in the 3.62 release notes.)</p>

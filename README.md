@@ -12,29 +12,6 @@ hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
 
-<!-- You can quickly regenerate this TOC by running:
-  npx markdown-toc@1.2.0 --bullets='-' --no-firsth1 README.md -->
-
-- [Code of Conduct](#code-of-conduct)
-- [License](#license)
-- [Making contributions](#making-contributions)
-  - [Setup](#setup)
-  - [Fundamental concepts](#fundamental-concepts)
-  - [Simple changes](#simple-changes)
-  - [More substantial changes](#more-substantial-changes)
-  - [Pull request etiquette](#pull-request-etiquette)
-  - [Adding a new document](#adding-a-new-document)
-  - [Moving one or more documents](#moving-one-or-more-documents)
-  - [Deleting a document](#deleting-a-document)
-  - [Adding images](#adding-images)
-  - [Updating a browser compatibility table](#updating-a-browser-compatibility-table)
-  - [Adding code examples](#adding-code-examples)
-  - [Archiving and unarchiving pages](#archiving-and-unarchiving-pages)
-  - [Making a change that depends on a macro update](#making-a-change-that-depends-on-a-macro-update)
-- [Frequently asked questions (FAQ)](#frequently-asked-questions-faq)
-  - [When will my change show up on the production MDN site?](#when-will-my-change-show-up-on-the-production-mdn-site)
-  - [Can I copy content from other places to put on MDN?](#can-i-copy-content-from-other-sources-to-put-on-MDN)
-
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow our
@@ -52,6 +29,25 @@ A good place to learn about general guidelines for contributing to
 [Guidelines document](https://developer.mozilla.org/en-US/docs/MDN/Guidelines).
 For example, you can find out more about MDN's writing-style guidelines via the
 [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).
+
+### Prerequisite knowledge
+
+We expect contributors to MDN to have a certain amount of prerequisite knowledge
+before they start working on the content. If you are new to the following
+topics, we'd advise you to look at the provided links to help you get up to
+speed:
+
+- Web technologies: If you are new to HTML, CSS, JavaScript, etc., check out our
+  [Learn web development](https://developer.mozilla.org/en-US/docs/Learn) tutorials.
+- Open source: If you've never contributed to an open source project before,
+  have a read of [Basic etiquette for open source projects](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Open_source_etiquette).
+- Git and GitHub: If you are unfamiliar with these tools, [GitHub for complete
+  beginners](https://developer.mozilla.org/en-US/docs/MDN/Contribute/GitHub_beginners)
+  will get you started.
+- MDN's repo structures: If you are not sure what repos to edit to make changes
+  to the different parts of MDN's content,
+  [Where is everything on MDN?](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Where_is_everything)
+  will point you towards the correct places.
 
 ### Setup
 
@@ -483,7 +479,7 @@ necessary changes such as updating the `_wikihistory.json` file.**
 For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
-1. First, as we've outlined above, you'll start a fresh branch to work within:
+1. First, as we've outlined above, you'll start a fresh branch to work in:
 
     ```sh
     cd ~/repos/mdn/content
@@ -501,6 +497,7 @@ entire `/en-US/Learn/Accessibility` tree:
     yarn content delete Learn/Accessibility --recursive
     ```
 
+1. [Add a redirect](#redirecting-a-document) (if needed).
 1. Add and commit all of the deleted files, as well as
 push your branch to your fork:
 
@@ -510,6 +507,42 @@ push your branch to your fork:
     ```
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+### Redirecting a document
+
+If you are [moving a document](#moving-one-or-more-documents) as shown
+above you don't need to create a redirect. However, you may need to when
+[deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
+
+The best way to do this is to use the `yarn content add-redirect` command:
+
+1. Start a fresh branch to work in:
+
+    ```sh
+    cd ~/repos/mdn/content
+    git checkout main
+    git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
+    git checkout -b my-delete
+    ```
+
+1. Perform the redirect:
+
+    ```sh
+    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
+    ```
+
+    Note that the target page can be an external URL or another page.
+
+1. Commit all of the changed files, as well as
+pushing your branch to your fork:
+
+    ```sh
+    git commit -a
+    git push -u origin my-delete
+    ```
 
 ### Adding images
 
@@ -687,7 +720,7 @@ In such situations:
 
 ## Frequently asked questions (FAQ)
 
-### When will my change show up on the production MDN site
+### When will my change show up on the production MDN site?
 
 After your pull request is merged, it may take up to 48 hours before the
 change goes live on the production <https://developer.mozilla.org/> site,
@@ -701,8 +734,10 @@ but it will usually be quicker.
 
 You can use <https://whatsdeployed.io/s/DLi/mdn/content> to see if your change
 has been deployed to the production site.
+And use <https://whatsdeployed.io/s/16d/mdn/translated-content> for changes
+to the <https://github.com/mdn/translated-content> repo.
 
-### Can I copy content from other sources to put on MDN
+### Can I copy content from other sources to put on MDN?
 
 In general, we do not approve of copying content from other sources and putting
 it on MDN. MDN should be made up of original content wherever possible. If we

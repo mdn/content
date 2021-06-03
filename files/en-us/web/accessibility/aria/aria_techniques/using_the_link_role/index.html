@@ -5,7 +5,7 @@ tags:
   - ARIA
   - Accessibility
 ---
-<p class="p1">This technique demonstrates how to use the <a href="https://www.w3.org/WAI/PF/aria-1.1/roles#link">link</a> role and describes the effect it has on browsers and assistive technology.</p>
+<p class="p1">This article explains how to use the <a href="https://www.w3.org/WAI/PF/aria-1.1/roles#link">link</a> role and describes the effect it has on browsers and assistive technology.</p>
 
 <p class="p1">The link role is used to identify an element that creates a hyperlink to a resource that is in the application or external. When this role is added to an element, tab can be used to change focus to the link, and enter used to execute the link.</p>
 
@@ -15,7 +15,7 @@ tags:
 
 <h2 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h2>
 
-<p class="p1">When the link role is added to an element, or such an element becomes visible, the user agent should do the following:</p>
+<p class="p1">When the link role is added to an element, or when such an element becomes visible, the user agent should do the following:</p>
 
 <ul class="ul1">
  <li class="li2">Expose the element as having a link role in the operating system's accessibility API.</li>
@@ -25,7 +25,7 @@ tags:
 <p class="p1">Assistive technology products should listen for such an event and notify the user accordingly:</p>
 
 <ul class="ul1">
- <li class="li2">Screen readers should announce the text of the link or its label when it is focused, along with the fact that it is a link. ARIA links should be included in the screen reader's “List Links” function just like ordinary links, and actions in this dialogue list, such as “Activate Link” or “Move to Link”, should perform the same as they do with ordinary links. </li>
+ <li class="li2">Screen readers should announce the text of a link &mdash; or the link's label &mdash; when the link is focused. A screen reader should also identify the link as a link. ARIA links should be included in the screen reader's <em>List Links</em> function with ordinary links. Actions in the screen reader's dialog list (such as <em>Activate Link</em> or <em>Move to Link</em>) should perform the same as ordinary links.</li>
  <li class="li2">Screen magnifiers may enlarge links.</li>
 </ul>
 
@@ -37,13 +37,13 @@ tags:
 
 <p>This example shows how to implement a fake link using a <code>&lt;span&gt;</code> element. This includes JavaScript to grab the location and handle navigating to the new location using <code>window.open()</code> via clicking, and using keyboard, CSS to give the desired visuals of a link, the <code>tabindex="0"</code> attribute to make it keyboard-focussable, and <code>role="link"</code> to make it recognized as a link by assistive technology.</p>
 
-<p>This is a huge amount of work just to recreate something you've get for free using the <code>&lt;a&gt;</code> element, so you should really use that if possible. But this shows that it can be done.</p>
+<p>This is a lot of work just to recreate something you get for free using the <code>&lt;a&gt;</code> element, so use that if possible. But this shows that it can be done.</p>
 
-<p>You should however note that there are still problems with this approach:</p>
+<p>However, there are still problems with this approach:</p>
 
 <ul>
- <li>It is very difficult to detect whether the target of the fake link has been visited before, and therefore use <code>:visited</code> styles (e.g. the default purple color for visited links).</li>
- <li>Opening a page using the <code>open()</code> method counts as being a popup, and certain browsers may issue a warning when you try to activate it, or make you explicitly agree to allowing popups form the domain it exists on.</li>
+ <li>It is difficult to detect whether the target of the fake link has been visited before, and therefore use <code>:visited</code> styles (e.g. the default purple color for visited links).</li>
+ <li>Opening a page using the <code>open()</code> method counts as being a popup, and certain browsers may issue a warning when you try to activate it, or make you explicitly agree to allowing popups form for the domain.</li>
 </ul>
 
 <h3 id="HTML">HTML</h3>

@@ -8,11 +8,12 @@ tags:
 - Property
 - Reference
 - Window
+browser-compat: api.WindowEventHandlers.onbeforeunload
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onbeforeunload</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("beforeunload")}} events. These events fire when a window is about to
   {{event("unload")}} its resources. At this point, the document is still visible and the
   event is still cancelable.</p>
@@ -106,7 +107,7 @@ window.onbeforeunload = function(event) { ... };</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onbeforeunload")}}</p>
+<p>{{Compat}}</p>
 
 <p>The HTML specification states that authors should use the
   {{domxref("Event.preventDefault()")}} method instead of using

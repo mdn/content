@@ -1,0 +1,102 @@
+---
+title: Web MIDI API
+slug: Web/API/Web_MIDI_API
+tags:
+  - API
+  - MIDI
+  - Overview
+  - Reference
+  - Web MIDI API
+---
+<p>{{DefaultAPISidebar("Web MIDI API")}}</p>
+
+<p class="summary">The Web MIDI API connects to and interacts with with Musical Instrument Digital Interface (MIDI) Devices.</p>
+
+<p>The interfaces deal with the practical aspects of sending and receiving MIDI messages. Therefore, the API can be used for musical and non-musical uses, with any MIDI device connected to your computer.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<dl>
+ <dt>{{domxref("MIDIInputMap")}}</dt>
+ <dd>Represents all of the available MIDI input ports.</dd>
+ <dt>{{domxref("MIDIOutputMap")}}</dt>
+ <dd>Represents all of the available MIDI output ports.</dd>
+ <dt>{{domxref("MIDIAccess")}}</dt>
+ <dd>Provides the methods to list input and output devices, and to access an individual device.</dd>
+ <dt>{{domxref("MIDIPort")}}</dt>
+ <dd>Represents an individual MIDI port.</dd>
+ <dt>{{domxref("MIDIInput")}}</dt>
+ <dd>Provides a method for dealing with MIDI messages from an input port.</dd>
+ <dt>{{domxref("MIDIOutput")}}</dt>
+ <dd>Queues messages to the linked MIDI port. Messages can be sent immediately or after a specified delay.</dd>
+ <dt>{{domxref("MIDIMessageEvent")}}</dt>
+ <dd>The event passed to {{domxref("MIDIInput.onmidimessage")}}.</dd>
+ <dt>{{domxref("MIDIConnectionEvent")}}</dt>
+ <dd>The event passed to the {{domxref("MIDIAccess.onstatechange")}} and {{domxref("MIDIPort.onstatechange")}} event handlers, when a port becomes available or unavailable.</dd>
+</dl>
+
+<h2>Examples</h2>
+
+<h3>Gaining access to the MIDI port</h3>
+
+<p>In the following example the {{domxref("MIDIAccess")}} interface is used to gain access to a MIDI device.</p>
+
+<pre class="brush: js">var midi = null;  // global MIDIAccess object
+function onMIDISuccess( midiAccess ) {
+  console.log( "MIDI ready!" );
+  midi = midiAccess;  // store in the global (in real usage, would probably keep in an object instance)
+}
+
+function onMIDIFailure(msg) {
+  console.log( "Failed to get MIDI access - " + msg );
+}
+
+navigator.requestMIDIAccess().then( onMIDISuccess, onMIDIFailure );</pre>
+
+<h3>Listing inputs and outputs</h3>
+
+<p>In this example the list of input and output ports are retrieved and printed to the console.</p>
+
+<pre class="brush: js">function listInputsAndOutputs( midiAccess ) {
+  for (var entry of midiAccess.inputs) {
+    var input = entry[1];
+    console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
+      "' manufacturer:'" + input.manufacturer + "' name:'" + input.name +
+      "' version:'" + input.version + "'" );
+  }
+
+  for (var entry of midiAccess.outputs) {
+    var output = entry[1];
+    console.log( "Output port [type:'" + output.type + "'] id:'" + output.id +
+      "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
+      "' version:'" + output.version + "'" );
+  }
+}</pre>
+
+<h3>Handling MIDI Input</h3>
+
+<p>This example prints incoming MIDI messages on a single port to the console.</p>
+
+<pre class="brush: js">function onMIDIMessage( event ) {
+  var str = "MIDI message received at timestamp " + event.timestamp + "[" + event.data.length + " bytes]: ";
+  for (var i=0; i&lt;event.data.length; i++) {
+    str += "0x" + event.data[i].toString(16) + " ";
+  }
+  console.log( str );
+}
+
+function startLoggingMIDIInput( midiAccess, indexOfPort ) {
+  midiAccess.inputs.forEach( function(entry) {entry.onmidimessage = onMIDIMessage;});
+}</pre>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+ <h2>See also</h2>
+
+ <ul>
+   <li><a href="https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220">Introduction to Web MIDI</a></li>
+   <li><a href="https://www.keithmcmillen.com/blog/making-music-in-the-browser-web-midi-api/">Making Music in the Browser</a></li>
+ </ul>

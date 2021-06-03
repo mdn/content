@@ -85,14 +85,9 @@ tags:
    <li><code>text/plain</code></li>
   </ul>
  </li>
- <li>No event listeners are registered on any {{domxref("XMLHttpRequest.upload")}} object used in the request; these are accessed using the {{domxref("XMLHttpRequest.upload")}} property.</li>
+ <li>If the request is made using an {{domxref("XMLHttpRequest")}} object, no event listeners are registered on the object returned by the {{domxref("XMLHttpRequest.upload")}} property used in the request; that is, given an {{domxref("XMLHttpRequest")}} instance <code>xhr</code>, no code has called <code>xhr.upload.addEventListener()</code> to add an event listener to monitor the upload.</li>
  <li>No {{domxref("ReadableStream")}} object is used in the request.</li>
 </ul>
-
-<div class="notecard note">
-  <h4>Note</h4>
-  <p>These are the same kinds of cross-site requests that web content can already issue, and no response data is released to the requester unless the server sends an appropriate header. Therefore, sites that prevent cross-site request forgery have nothing new to fear from HTTP access control.</p>
-</div>
 
 <div class="notecard note">
   <h4>Note</h4>
@@ -502,8 +497,6 @@ Vary: Origin</pre>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
 

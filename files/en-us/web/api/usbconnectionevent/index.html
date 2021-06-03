@@ -1,0 +1,60 @@
+---
+title: USBConnectionEvent
+slug: Web/API/USBConnectionEvent
+tags:
+  - API
+  - Interface
+  - Reference
+  - USBConnectionEvent
+browser-compat: api.USBConnectionEvent
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+
+<p class="summary">The <strong><code>USBConnectionEvent</code></strong> interface of the {{domxref('WebUSB API','','',' ')}} is the event type passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}} when the user agent detects that a new USB device has been connected or disconnected.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+  <dt>{{domxref("USBConnectionEvent.USBConnectionEvent()")}}</dt>
+  <dd>Returns a <code>USBConnectionEvent</code> object.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("USBConnectionEvent.device")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns a {{domxref("USBDevice")}} object representing the current device.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the following example listening for connect and disconnect events is used to add and remove the devices from the user interface of an application.</p>
+
+<pre class="brush: js">navigator.usb.addEventListener('connect', event => {
+  // Add event.device to the UI.
+});
+
+navigator.usb.addEventListener('disconnect', event => {
+  // Remove event.device from the UI.
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Web USB','#usbconnectionevent','USBConnectionEvent')}}</td>
+			<td>{{Spec2('Web USB')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Language feature
 - Reference
+browser-compat: javascript.builtins.undefined
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
@@ -16,11 +17,6 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -42,7 +38,7 @@ tags:
   a value was not {{jsxref("Statements/return", "returned")}}.</p>
 
 <div class="note">
-  <p><strong>Be careful.</strong> While it is possible to use it as an
+  <p><strong>Note:</strong> While you can use <code>undefined</code> as an
     {{Glossary("identifier")}} (variable name) in any scope other than the global scope
     (because <code>undefined</code> is not a {{jsxref("Reserved_Words", "reserved word",
     "", 1)}}), doing so is a very bad idea that will make your code difficult to maintain
@@ -145,22 +141,11 @@ if (y === void 0) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-undefined', 'undefined')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.undefined")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

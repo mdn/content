@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Grammar_and_types
 tags:
   - Guide
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}</div>
 
@@ -25,7 +25,7 @@ tags:
 <p>A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they <em>must</em> be separated by semicolons.</p>
 
 <div class="notecard note">
-<p>ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
+<p><strong>Note:</strong> ECMAScript also has rules for automatic insertion of semicolons (<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">ASI</a>) to end statements. (For more information, see the detailed reference about JavaScript's <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">lexical grammar</a>.)</p>
 </div>
 
 <p>It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.</p>
@@ -48,9 +48,9 @@ tags:
 <p>Comments behave like whitespace, and are discarded during script execution.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: <code>#!/usr/bin/env node</code>.</p>
+<p><strong>Note:</strong> You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: <code>#!/usr/bin/env node</code>.</p>
 
-<p>This is called <strong>hashbang comment</strong> syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments">Hashbang comments</a> for more details.</p>
+<p>This is called <strong>hashbang comment</strong> syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments">Hashbang comments</a> for more details.</p>
 </div>
 
 <h2 id="Declarations">Declarations</h2>
@@ -74,7 +74,7 @@ tags:
 
 <p>Because JavaScript is case sensitive, letters include the characters "<code>A</code>" through "<code>Z</code>" (uppercase) as well as "<code>a</code>" through "<code>z</code>" (lowercase).</p>
 
-<p>You can use most of ISO 8859-1 or Unicode letters such as <code>å</code> and <code>ü</code> in identifiers. (For more details, see <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">this blog post</a>.) You can also use the <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a> as characters in identifiers.</p>
+<p>You can use most of ISO 8859-1 or Unicode letters such as <code>å</code> and <code>ü</code> in identifiers. (For more details, see <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">this blog post</a>.) You can also use the <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals">Unicode escape sequences</a> as characters in identifiers.</p>
 
 <p>Some examples of legal names are <code>Number_hits</code>, <code>temp99</code>, <code>$credit</code>, and <code>_name</code>.</p>
 
@@ -87,9 +87,9 @@ tags:
  <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#variable_scope">Variable scope</a> below.)</li>
 </ul>
 
-<p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
+<p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
 
-<p>You can also assign a value to a variable For example, <code>x = 42</code>. This form creates an <strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#Description">undeclared global</a></strong> variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.</p>
+<p>You can also assign a value to a variable For example, <code>x = 42</code>. This form creates an <strong><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#description">undeclared global</a></strong> variable. It also generates a strict JavaScript warning. Undeclared global variables can often lead to unexpected behavior. Thus, it is discouraged to use undeclared global variables.</p>
 
 <h3 id="Evaluating_variables">Evaluating variables</h3>
 
@@ -143,7 +143,7 @@ console.log(n * 32); // Will log 0 to the console
 
 <p>When you declare a variable outside of any function, it is called a <em>global</em> variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a <em>local</em> variable, because it is available only within that function.</p>
 
-<p>JavaScript before ECMAScript 2015 does not have <a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement">block statement</a> scope. Rather, a variable declared within a block is local to the <em>function (or global scope)</em> that the block resides within.</p>
+<p>JavaScript before ECMAScript 2015 does not have <a href="/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement">block statement</a> scope. Rather, a variable declared within a block is local to the <em>function (or global scope)</em> that the block resides within.</p>
 
 <p>For example, the following code will log <code>5</code>, because the scope of <code>x</code> is the global context (or the function context if the code is part of a function). The scope of <code>x</code> is not limited to the immediate <code>if</code> statement block.</p>
 
@@ -340,14 +340,14 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>In the case that a value representing a number is in memory as a string, there are methods for conversion.</p>
 
 <ul>
- <li id="parseInt()_and_parseFloat()">{{jsxref("parseInt", "parseInt()")}}</li>
+ <li>{{jsxref("parseInt", "parseInt()")}}</li>
  <li>{{jsxref("parseFloat", "parseFloat()")}}</li>
 </ul>
 
 <p><code>parseInt</code> only returns whole numbers, so its use is diminished for decimals.</p>
 
 <div class="notecard note">
-<p>Additionally, a best practice for <code>parseInt</code> is to always include the <em>radix</em> parameter. The radix parameter is used to specify which numerical system is to be used.</p>
+<p><strong>Note:</strong> Additionally, a best practice for <code>parseInt</code> is to always include the <em>radix</em> parameter. The radix parameter is used to specify which numerical system is to be used.</p>
 </div>
 
 <pre class="brush: js">parseInt('101', 2) // 5</pre>
@@ -382,7 +382,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 </pre>
 
 <div class="note">
-<p><strong>Note :</strong> An array literal is a type of <em>object initializer</em>. See <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers">Using Object Initializers</a>.</p>
+<p><strong>Note:</strong> An array literal is a type of <em>object initializer</em>. See <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">Using Object Initializers</a>.</p>
 </div>
 
 <p>If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.</p>
@@ -411,7 +411,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>In the following example, the <code>length</code> of the array is three. There is no <code>myList[3]</code>. All other commas in the list indicate a new element.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Trailing commas can create errors in older browser versions and it is a best practice to remove them.</p>
+<p><strong>Note:</strong> Trailing commas can create errors in older browser versions and it is a best practice to remove them.</p>
 </div>
 
 <pre class="brush: js">let myList = ['home', , 'school', ];
@@ -436,7 +436,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>The Boolean type has two literal values: <code>true</code> and <code>false</code>.</p>
 
 <div class="notecard note">
-<p><strong>Be careful:</strong> Do not confuse the primitive Boolean values <code>true</code> and <code>false</code> with the true and false values of the {{jsxref("Boolean")}} object.</p>
+<p><strong>Note:</strong> Do not confuse the primitive Boolean values <code>true</code> and <code>false</code> with the true and false values of the {{jsxref("Boolean")}} object.</p>
 
 <p>The Boolean object is a wrapper around the primitive Boolean data type. See {{jsxref("Boolean")}} for more information.</p>
 </div>
@@ -462,7 +462,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 0b11, 0b0011, -0b11, 0b11101001010101010101n  (binary, base 2)
 </pre>
 
-<p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
+<p>For more information, see <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals">Numeric literals in the Lexical grammar reference</a>.</p>
 
 <h3 id="Floating-point_literals">Floating-point literals</h3>
 
@@ -495,7 +495,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p>An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
 
 <div class="notecard warning">
-<p><strong>Do not use an object literal at the beginning of a statement!</strong> This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
+<p><strong>Warning:</strong> Do not use an object literal at the beginning of a statement! This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
 </div>
 
 <p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Saturn</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>(carTypes("Honda"))</code>; the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>
@@ -578,17 +578,17 @@ console.log(unusualPropertyNames['!']); // Bang!</pre>
 "John's cat"
 </pre>
 
+<p>You should use string literals unless you specifically need to use a <code>String</code> object. See {{jsxref("String")}} for details on <code>String</code> objects.</p>
+
 <p>You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the <code>String.length</code> property with a string literal:</p>
 
 <pre class="brush: js">// Will print the number of symbols in the string including whitespace.
 console.log("John's cat".length)  // In this case, 10.
 </pre>
 
-<p>In ES2015, <em>template literals</em> are also available. Template literals are enclosed by the back-tick (<code>`</code>) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent" rel="noopener">grave accent</a>) character instead of double or single quotes.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a> are also available. Template literals are enclosed by the back-tick (<code>`</code>) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent" rel="noopener">grave accent</a>) character instead of double or single quotes.</p>
 
-<p>Template strings provide syntactic sugar for constructing strings. (This is similar to string interpolation features in Perl, Python, and more.)</p>
-
-<p>Optionally, a tag can be added to allow the string construction to be customized, avoiding injection attacks, or constructing higher-level data structures from string contents.</p>
+<p>Template literals provide syntactic sugar for constructing strings. (This is similar to string interpolation features in Perl, Python, and more.)</p>
 
 <pre class="brush: js">// Basic literal string creation
 `In JavaScript '\n' is a line-feed.`
@@ -600,16 +600,15 @@ console.log("John's cat".length)  // In this case, 10.
 
 // String interpolation
 var name = 'Bob', time = 'today';
-`Hello ${name}, how are you ${time}?`
+`Hello ${name}, how are you ${time}?`</pre>
 
-// Construct an HTTP request prefix used to interpret the replacements and construction
-POST`http://foo.org/bar?a=${a}&amp;b=${b}
-     Content-Type: application/json
-     X-Credentials: ${credentials}
-     { "foo": ${foo},
-       "bar": ${bar}}`(myOnReadyStateChangeHandler);</pre>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_template">Tagged templates</a> are a compact syntax for specifying a template literal along with a call to a “tag” function for parsing it; the name of the template tag function precedes the template literal — as in the following example, where the template tag function is named "<code>myTag</code>":</p>
 
-<p>You should use string literals unless you specifically need to use a <code>String</code> object. See {{jsxref("String")}} for details on <code>String</code> objects.</p>
+<pre class="brush: js">let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;
+let [name, age] = ['Mika', 28];
+myTag`Participant "${ name }" is ${ age } years old.`;
+// Participant "Mika" is 28 years old.
+</pre>
 
 <h4 id="Using_special_characters_in_strings">Using special characters in strings</h4>
 
@@ -684,7 +683,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
   <tr>
    <td><code>\u<em>XXXX</em></code></td>
    <td>The Unicode character specified by the four hexadecimal digits <em>XXXX</em>.<br>
-    For example, <code>\u00A9</code> is the Unicode sequence for the copyright symbol. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">Unicode escape sequences</a>.</td>
+    For example, <code>\u00A9</code> is the Unicode sequence for the copyright symbol. See <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals">Unicode escape sequences</a>.</td>
   </tr>
   <tr>
    <td><code>\u<em>{XXXXX}</em></code></td>
@@ -732,7 +731,7 @@ Sugar is sweet,\n\
 and so is foo.'
 </pre>
 
-<p>ECMAScript 2015 introduces a new type of literal, namely <a href="/en-US/docs/Web/JavaScript/Reference/template_strings"><strong>template literals</strong></a>. This allows for many new features, including multiline strings!</p>
+<p>ECMAScript 2015 introduces a new type of literal, namely <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals"><strong>template literals</strong></a>. This allows for many new features, including multiline strings!</p>
 
 <pre class="brush: js">var poem =
 `Roses are red,

@@ -147,7 +147,7 @@ let recordingTimeMS = 5000;
 }
 </pre>
 
-<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("window.setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
+<p>The <code>wait()</code> function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> which calls {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.</p>
 
 <h3 id="Starting_media_recording">Starting media recording</h3>
 
@@ -238,7 +238,7 @@ let recordingTimeMS = 5000;
 
 <dl>
  <dt>Lines 2-4</dt>
- <dd>{{domxref("navigator.mediaDevices.getUserMedia()")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.</dd>
+ <dd>{{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.</dd>
  <dt>Lines 5-9</dt>
  <dd>When the Promise returned by <code>getUserMedia()</code> is resolved, the preview {{HTMLElement("video")}} element's {{domxref("HTMLMediaElement.srcObject","srcObject")}} property is set to be the input stream, which causes the video being captured by the user's camera to be displayed in the preview box. Since the <code>&lt;video&gt;</code> element is muted, the audio won't play. The "Download" button's link is then set to refer to the stream as well. Then, in line 8, we arrange for <code>preview.captureStream()</code> to call <code>preview.mozCaptureStream()</code> so that our code will work on Firefox, on which the {{domxref("MediaRecorder.captureStream()")}} method is prefixed. Then a new {{jsxref("Promise")}} which resolves when the preview video starts to play is created and returned.</dd>
  <dt>Line 10</dt>
@@ -270,7 +270,7 @@ let recordingTimeMS = 5000;
 
 <p>{{ EmbedLiveSample('Example', 600, 440, "", "", "", "camera;microphone") }}</p>
 
-<p>You can {{LiveSampleLink("Example", "take a look at all the code")}}, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.</p>
+<p>You can {{LiveSampleLink("Example", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.</p>
 
 <h2 id="See_also">See also</h2>
 

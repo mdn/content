@@ -1,0 +1,72 @@
+---
+title: TrustedTypePolicy
+slug: Web/API/TrustedTypePolicy
+tags:
+  - API
+  - Interface
+  - Reference
+  - TrustedTypePolicy
+browser-compat: api.TrustedTypePolicy
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>TrustedTypePolicy</code></strong> interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.</p>
+
+<p>A <code>TrustedTypePolicy</code> object is created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}} to define a policy for enforcing security rules on input. Therefore, <code>TrustedTypePolicy</code> has no constructor.</p>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+  <dt>{{domxref("TrustedTypePolicy.name")}}{{ReadOnlyInline}}</dt>
+  <dd>A {{domxref("DOMString")}} containing the name of the policy.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref("TrustedTypePolicy.createHTML","TrustedTypePolicy.createHTML()")}}</dt>
+  <dd>Creates a {{domxref("TrustedHTML")}} object.</dd>
+  <dt>{{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}}</dt>
+  <dd>Creates a {{domxref("TrustedScript")}} object.</dd>
+  <dt>{{domxref("TrustedTypePolicy.createScriptURL","TrustedTypePolicy.createScriptURL()")}}</dt>
+  <dd>Creates a {{domxref("TrustedScriptURL")}} object.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.</p>
+
+<p>The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.</p>
+
+<pre class="brush: html">&lt;div id="myDiv"&gt;&lt;/div&gt;</pre>
+
+<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+});
+
+let el = document.getElementById("myDiv");
+const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+console.log(escaped instanceof TrustedHTML); // true
+el.innerHTML = escaped;
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#trustedtypepolicy',"TrustedTypePolicy")}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

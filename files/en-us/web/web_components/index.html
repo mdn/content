@@ -63,7 +63,7 @@ tags:
  <dd>Contains functionality related to custom elements, most notably the {{domxref("CustomElementRegistry.define()")}} method used to register new custom elements so they can then be used in your document.</dd>
  <dt>{{domxref("Window.customElements")}}</dt>
  <dd>Returns a reference to the <code>CustomElementRegistry</code> object.</dd>
- <dt><a href="/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">Life cycle callbacks</a></dt>
+ <dt><a href="/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks">Life cycle callbacks</a></dt>
  <dd>Special callback functions defined inside the custom element's class definition, which affect its behavior:
  <ul>
   <li><code>connectedCallback</code>: Invoked when the custom element is first connected to the document's DOM.</li>
@@ -101,8 +101,6 @@ tags:
 <dl>
  <dt>{{domxref("ShadowRoot")}}</dt>
  <dd>Represents the root node of a shadow DOM subtree.</dd>
- <dt>{{domxref("DocumentOrShadowRoot")}}</dt>
- <dd>A mixin defining features that are available across document and shadow roots.</dd>
  <dt>{{domxref("Element")}} extensions</dt>
  <dd>Extensions to the <code>Element</code> interface related to shadow DOM:
  <ul>
@@ -135,8 +133,10 @@ tags:
  <dd>A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.</dd>
  <dt>The <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> global HTML attribute</dt>
  <dd>Assigns a slot in a shadow DOM shadow tree to an element.</dd>
- <dt>{{domxref("Slotable")}}</dt>
- <dd>A mixin implemented by both {{domxref("Element")}} and {{domxref("Text")}} nodes, defining features that allow them to become the contents of an {{htmlelement("slot")}} element. The mixin defines one attribute, {{domxref("Slotable.assignedSlot")}}, which returns a reference to the slot the node is inserted in.</dd>
+ <dt>{{domxref("Element.assignedSlot")}}</dt>
+ <dd>A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this element is inserted.</dd>
+<dt>{{domxref("Text.assignedSlot")}}</dt>
+ <dd>A read-only attribute which returns a reference to the {{htmlelement("slot")}} in which this text node is inserted.</dd>
  <dt>{{domxref("Element")}} extensions</dt>
  <dd>Extensions to the <code>Element</code> interface related to slots:
  <ul>
@@ -199,9 +199,8 @@ tags:
 <p>In general:</p>
 
 <ul>
- <li>Web components are supported by default in Firefox (version 63), Chrome, and Opera.</li>
+ <li>Web components are supported by default in Firefox (version 63), Chrome, Opera, and Edge (version 79).</li>
  <li>Safari supports a number of web component features, but less than the above browsers.</li>
- <li>Edge is working on an implementation.</li>
 </ul>
 
 <p>For detailed browser support of specific features, you'll have to consult the reference pages listed above.</p>
