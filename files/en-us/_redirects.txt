@@ -1648,7 +1648,7 @@
 /en-US/docs/DOM/SVGAnimatedLengthList	/en-US/docs/Web/API/SVGAnimatedLengthList
 /en-US/docs/DOM/SVGAnimatedNumber	/en-US/docs/Web/API/SVGAnimatedNumber
 /en-US/docs/DOM/SVGAnimatedNumberList	/en-US/docs/Web/API/SVGAnimatedNumberList
-/en-US/docs/DOM/SVGAnimatedPoints	/en-US/docs/Web/API/SVGAnimatedPoints
+/en-US/docs/DOM/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/DOM/SVGAnimatedPreserveAspectRatio	/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio
 /en-US/docs/DOM/SVGAnimatedRect	/en-US/docs/Web/API/SVGAnimatedRect
 /en-US/docs/DOM/SVGAnimatedString	/en-US/docs/Web/API/SVGAnimatedString
@@ -3020,7 +3020,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedLengthList	/en-US/docs/Web/API/SVGAnimatedLengthList
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedNumber	/en-US/docs/Web/API/SVGAnimatedNumber
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedNumberList	/en-US/docs/Web/API/SVGAnimatedNumberList
-/en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedPoints	/en-US/docs/Web/API/SVGAnimatedPoints
+/en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedPreserveAspectRatio	/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedRect	/en-US/docs/Web/API/SVGAnimatedRect
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedString	/en-US/docs/Web/API/SVGAnimatedString
@@ -8442,6 +8442,7 @@
 /en-US/docs/Web/API/RotationRate.beta	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
+/en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
