@@ -46,6 +46,11 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <p>{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}</p>
 
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>In the above example the <code>-webkit</code> prefixed version is also used to support Chrome and Safari. In Firefox 90 support was added for <code>-webkit-image-set()</code> as an alias to <code>image-set()</code> in order to provide compat where developers had not added the standard property.</p>
+</div>
+
 <h3 id="Using_image-set_to_provide_alternative_formats">Using image-set() to provide alternative image formats</h3>
 
 <p>In the next example the <code>type()</code> function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.</p>
