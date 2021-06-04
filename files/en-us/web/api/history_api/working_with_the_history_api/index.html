@@ -100,7 +100,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <h3 id="Reading_the_current_state">Reading the current state</h3>
 
-<p>When your page loads, it might have a non-null state object.  This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an <code>onload</code><span style="font-family: helvetica;"> event, but no </span><code>popstate</code> <span style="font-family: helvetica;">event.</span> However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a <code>popstate</code> had fired.</p>
+<p>When your page loads, it might have a non-null state object.  This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an <code>onload</code> event, but no <code>popstate</code> event. However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a <code>popstate</code> had fired.</p>
 
 <p>You can read the state of the current history entry without waiting for a <code>popstate</code> event using the {{DOMxRef("History.state","history.state")}} property like this:</p>
 

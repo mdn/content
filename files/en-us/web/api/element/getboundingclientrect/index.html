@@ -45,8 +45,7 @@ browser-compat: api.Element.getBoundingClientRect
   <code>width</code> and <code>height</code> are relative to the top-left of the viewport.
 </p>
 
-<p style="display: block;"><img alt=""
-    src="element-box-diagram.png"></p>
+<p><img alt="" src="element-box-diagram.png"></p>
 
 <p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}}
   object returned by the method include the <code>padding</code> and
@@ -152,7 +151,7 @@ p { margin: 0; }</pre>
   const container = document.getElementById("controls");
   const elem = document.querySelector('div');
   const rect = elem.getBoundingClientRect();
-  
+
   container.innerHTML = '';
   for (let key in rect) {
     if(typeof rect[key] !== 'function') {
