@@ -28188,12 +28188,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioContextLatencyCategory": {
-    "modified": "2020-10-15T22:05:15.929Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/AudioContextOptions": {
     "modified": "2020-10-15T22:05:16.322Z",
     "contributors": [

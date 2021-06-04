@@ -6943,6 +6943,7 @@
 /en-US/docs/Web/API/AudioContext/sampleRate	/en-US/docs/Web/API/BaseAudioContext/sampleRate
 /en-US/docs/Web/API/AudioContext/state	/en-US/docs/Web/API/BaseAudioContext/state
 /en-US/docs/Web/API/AudioContext/suspend_event	/en-US/docs/Web/API/HTMLMediaElement/suspend_event
+/en-US/docs/Web/API/AudioContextLatencyCategory	/en-US/docs/Web/API/AudioContextOptions/latencyHint
 /en-US/docs/Web/API/AudioContextOptions/AudioContextOptions.sampleRate	/en-US/docs/Web/API/AudioContextOptions/sampleRate
 /en-US/docs/Web/API/AudioDestinationNode.maxChannelCount	/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount
 /en-US/docs/Web/API/AudioListener.dopplerFactor	/en-US/docs/Web/API/AudioListener/dopplerFactor
