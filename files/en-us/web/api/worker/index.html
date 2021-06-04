@@ -35,9 +35,9 @@ browser-compat: api.Worker
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> bubbles through to the worker. This is inherited from {{domxref("AbstractWorker")}}.</dd>
+ <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs. This is inherited from {{domxref("AbstractWorker")}}.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> bubbles through the worker — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
+ <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> occurs — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
  <dt>{{domxref("Worker.onmessageerror")}}</dt>
  <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
 </dl>
