@@ -332,15 +332,17 @@ tags:
 
 <h3 id="Fetch_metadata_request_headers">Fetch metadata request headers</h3>
 
+<p>{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provides information about the context from which the request originated. This allows a server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.</p>
+
 <dl>
  <dt>{{HTTPHeader("Sec-Fetch-Site")}}</dt>
  <dd>It is a request header that indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values <code>cross-site</code>, <code>same-origin</code>, <code>same-site</code>, and <code>none</code>.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-Mode")}}</dt>
- <dd>It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values <code>cors</code>, <code>navigate</code>, <code>nested-navigate</code>, <code>no-cors</code>, <code>same-origin</code>, and <code>websocket</code>.</dd>
+ <dd>It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values <code>cors</code>, <code>navigate</code>, <code>no-cors</code>, <code>same-origin</code>, and <code>websocket</code>.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-User")}}</dt>
  <dd>It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are <code>?0</code> for false and <code>?1</code> for true.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-Dest")}}</dt>
- <dd>It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values <code>audio</code>, <code>audioworklet</code>, <code>document</code>, <code>embed</code>, <code>empty</code>, <code>font</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>serviceworker</code>, <code>sharedworker</code>, <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>, <code>xslt</code>, and <code>nested-document</code>.</dd>
+ <dd>It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values <code>audio</code>, <code>audioworklet</code>, <code>document</code>, <code>embed</code>, <code>empty</code>, <code>font</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>serviceworker</code>, <code>sharedworker</code>, <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>, and <code>xslt</code>.</dd>
 </dl>
 
 <h2 id="Server-sent_events">Server-sent events</h2>
