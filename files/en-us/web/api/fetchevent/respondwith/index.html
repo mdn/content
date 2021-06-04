@@ -93,28 +93,16 @@ browser-compat: api.FetchEvent.respondWith
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table" style="height: 140px; width: 1236px;">
-	<thead>
-		<tr>
-			<th scope="col">Exception</th>
-			<th scope="col">Notes</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>NetworkError</code></td>
-			<td>A network error is triggered on certain combinations of
-				{{domxref("Request.mode","FetchEvent.request.mode")}} and
-				{{domxref("Response.type")}}  values, as hinted at in the "global rules"
-				listed above.</td>
-		</tr>
-		<tr>
-			<td><code>InvalidStateError</code></td>
-			<td>The event has not been dispatched or <code>respondWith()</code> has
-				already been invoked.</td>
-		</tr>
-	</tbody>
-</table>
+<dl>
+  <dt><code>NetworkError</code></dt>
+  <dd>A network error is triggered on certain combinations of
+    {{domxref("Request.mode","FetchEvent.request.mode")}} and
+    {{domxref("Response.type")}}  values, as hinted at in the "global rules"
+    listed above.</dd>
+  <dt><code>InvalidStateError</code></dt>
+  <dd>The event has not been dispatched or <code>respondWith()</code> has
+    already been invoked.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
