@@ -14,14 +14,14 @@ tags:
 ---
 <div>{{APIRef("Websockets API")}}</div>
 
-<p><span class="seoSummary">A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.</span></p>
+<p>A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.</p>
 
 <p>A WebSocket server can be written in any server-side programming language that is capable of <a href="https://en.wikipedia.org/wiki/Berkeley_sockets">Berkeley sockets</a>, such as C(++), Python, {{Glossary("PHP")}}, or <a href="/en-US/docs/Web/JavaScript/Server-Side_JavaScript">server-side JavaScript</a>. This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.</p>
 
 <p>This article assumes you're already familiar with how {{Glossary("HTTP")}} works, and that you have a moderate level of programming experience. Depending on language support, knowledge of TCP sockets may be required. The scope of this guide is to present the minimum knowledge you need to write a WebSocket server.</p>
 
-<div class="note">
-<p><strong>Note:</strong> Read the latest official WebSockets specification, <a href="http://datatracker.ietf.org/doc/rfc6455/?include_text=1">RFC 6455</a>. Sections 1 and 4-7 are especially interesting to server implementors. Section 10 discusses security and you should definitely peruse it before exposing your server.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Read the latest official WebSockets specification, <a href="https://datatracker.ietf.org/doc/rfc6455/?include_text=1">RFC 6455</a>. Sections 1 and 4-7 are especially interesting to server implementors. Section 10 discusses security and you should definitely peruse it before exposing your server.</p>
 </div>
 
 <p>A WebSocket server is explained on a very low level here. WebSocket servers are often separate and specialized servers (for load-balancing or other practical reasons), so you will often use a <a href="https://en.wikipedia.org/wiki/Reverse_proxy">reverse proxy</a> (such as a regular HTTP server) to detect WebSocket handshakes, pre-process them, and send those clients to a real WebSocket server. This means that you don't have to bloat your server code with cookie and authentication handlers (for example).</p>
@@ -78,7 +78,7 @@ Connection: Upgrade
 
 </strong></pre>
 
-<p>Additionally, the server can decide on extension/subprotocol requests here; see <a href="#miscellaneous">Miscellaneous</a> for details. The <code>Sec-WebSocket-Accept</code> header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, c<span style="line-height: 1.5em;">oncatenate the client's </span><code style="font-size: 14px;">Sec-WebSocket-Key</code><span style="line-height: 1.5em;"> and the string "</span><code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code><span style="line-height: 1.5em;">" together (it's a "</span><a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">magic string</a><span style="line-height: 1.5em;">"), </span><span style="line-height: 1.5em;">take the </span><a href="https://en.wikipedia.org/wiki/SHA-1" style="line-height: 1.5em;">SHA-1 hash</a><span style="line-height: 1.5em;"> of the result, and </span><span style="line-height: 1.5em;">return the </span><a href="https://en.wikipedia.org/wiki/Base64" style="line-height: 1.5em;">base64</a><span style="line-height: 1.5em;"> encoding of that hash.</span></p>
+<p>Additionally, the server can decide on extension/subprotocol requests here; see <a href="#miscellaneous">Miscellaneous</a> for details. The <code>Sec-WebSocket-Accept</code> header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's <code>Sec-WebSocket-Key</code> and the string "<code>258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code>" together (it's a "<a href="https://en.wikipedia.org/wiki/Magic_string">magic string</a>"), take the <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1 hash</a> of the result, and return the <a href="https://en.wikipedia.org/wiki/Base64">base64</a> encoding of that hash.</p>
 
 <div class="note">
 <p><strong>Note:</strong> This seemingly overcomplicated process exists so that it's obvious to the client whether the server supports WebSockets. This is important because security issues might arise if the server accepts a WebSockets connection but interprets the data as a HTTP request.</p>
@@ -127,7 +127,7 @@ Connection: Upgrade
 
 <p>The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, <a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.1">section 5.1 of the spec</a> says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. <em>Note: You must mask messages even when using a secure socket.</em> RSV1-3 can be ignored, they are for extensions.</p>
 
-<p>The opcode field defines how to interpret the payload data: <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><code>0x0</code> </span><span style="line-height: 1.5;">for continuation,</span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">0x1</code><span style="line-height: 1.5;"> for text (which is always encoded in UTF-8), </span><code style="font-style: normal; line-height: 1.5;">0x2</code><span style="line-height: 1.5;"> for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, <code>0x3</code> to <code>0x7</code> and <code>0xB</code> to <code>0xF</code> have no meaning.</span></p>
+<p>The opcode field defines how to interpret the payload data: <code>0x0</code> for continuation, 0x1 for text (which is always encoded in UTF-8), <code>0x2</code> for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, <code>0x3</code> to <code>0x7</code> and <code>0xB</code> to <code>0xF</code> have no meaning.</p>
 
 <p>The FIN bit tells whether this is the last message in a series. If it's 0, then the server keeps listening for more parts of the message; otherwise, the server should consider the message delivered. More on this later.</p>
 
@@ -143,22 +143,22 @@ Connection: Upgrade
 
 <h3 id="Reading_and_Unmasking_the_Data">Reading and Unmasking the Data</h3>
 
-<p>If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. <span style="line-height: 1.5;">Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data <strong>ENCODED</strong>, and the key <strong>MASK</strong>. To get <strong>DECODED</strong>, loop through the octets (bytes a.k.a. characters for text data) of <strong>ENCODED</strong> and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):</span></p>
+<p>If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data <strong>ENCODED</strong>, and the key <strong>MASK</strong>. To get <strong>DECODED</strong>, loop through the octets (bytes a.k.a. characters for text data) of <strong>ENCODED</strong> and XOR the octet with the (i modulo 4)th octet of MASK. In pseudo-code (that happens to be valid JavaScript):</p>
 
 <pre class="brush: js">var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
-<span style="line-height: 1.5;">}</span></pre>
+</pre>
 
-<p><span style="line-height: 1.5;">Now you can figure out what <strong>DECODED</strong> means depending on your application.</span></p>
+<p>Now you can figure out what <strong>DECODED</strong> means depending on your application.</p>
 
 <h3 id="Message_Fragmentation">Message Fragmentation</h3>
 
 <p>The FIN and opcode fields work together to send a message split up into separate frames.  This is called message fragmentation. Fragmentation is only available on opcodes <code>0x0</code> to <code>0x2</code>.</p>
 
-<p><span style="line-height: 1.5;">Recall that the opcode tells what a frame is meant to do. If it's <code>0x1</code>, the payload is text. If it's <code>0x2</code>, the payload is binary data.</span><span style="line-height: 1.5;"> However, if it's </span><code style="font-style: normal; line-height: 1.5;">0x0,</code><span style="line-height: 1.5;"> the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.</span><span style="line-height: 1.5;"> Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:</span></p>
+<p>Recall that the opcode tells what a frame is meant to do. If it's <code>0x1</code>, the payload is text. If it's <code>0x2</code>, the payload is binary data. However, if it's <code>0x0,</code> the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:</p>
 
-<pre style="font-size: 14px;"><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
+<pre><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
 <strong>Server:</strong> <em>(process complete message immediately)</em> Hi.
 <strong>Client:</strong> FIN=0, opcode=0x1, msg="and a"
 <strong>Server:</strong> <em>(listening, new message containing text started)</em>
@@ -186,7 +186,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 <h2 id="Miscellaneous">Miscellaneous</h2>
 
 <div class="note">
-<p>WebSocket codes, extensions, subprotocols, etc. are registered at the <a href="http://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.</p>
+<p>WebSocket codes, extensions, subprotocols, etc. are registered at the <a href="https://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.</p>
 </div>
 
 <p>WebSocket extensions and subprotocols are negotiated via headers during <a href="#handshake">the handshake</a>. Sometimes extensions and subprotocols very similar, but there is a clear distinction. Extensions control the WebSocket <em>frame</em> and <em>modify</em> the payload, while subprotocols structure the WebSocket <em>payload</em> and <em>never modify</em> anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).</p>
@@ -236,8 +236,7 @@ Sec-WebSocket-Protocol: wamp
 </pre>
 
 <div class="warning">
-<p>The server can't send more than one <code>Sec-Websocket-Protocol</code> header.<br>
- <span style="line-height: 1.5;">If the server doesn't want to use a</span><span style="line-height: 1.5;">ny subprotocol, </span><em><strong style="line-height: 1.5;">it shouldn't send any <code>Sec-WebSocket-Protocol</code> header</strong></em><span style="line-height: 1.5;">. Sending a blank header is incorrect. The client may close the connection if it doesn't get the subprotocol it wants.</span></p>
+<p>The server can't send more than one <code>Sec-Websocket-Protocol</code> header.<br> If the server doesn't want to use any subprotocol, <em><strong>it shouldn't send any <code>Sec-WebSocket-Protocol</code> header</strong></em>. Sending a blank header is incorrect. The client may close the connection if it doesn't get the subprotocol it wants.</p>
 </div>
 
 <p>If you want your server to obey certain subprotocols, then naturally you'll need extra code on the server. Let's imagine we're using a subprotocol <code>json</code>. In this subprotocol, all data is passed as <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>. If the client solicits this protocol and the server wants to use it, the server needs to have a JSON parser. Practically speaking, this will be part of a library, but the server needs to pass the data around.</p>

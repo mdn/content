@@ -22,9 +22,9 @@ tags:
 
 <p><span class="seoSummary">In this article, we'll make use of information introduced in the previous articles in our <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> tutorial series to construct an example which animates a rotating cube around which the user can move freely using a VR headset, keyboard, and/or mouse.</span> This will help to solidify your understanding of how the geometry of 3D graphics and VR work, as well as to help ensure you understand the way the functions and data that are used during XR rendering work together.</p>
 
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 30em; margin-bottom: 1em; margin-right: 2em;">
-<figcaption><strong>Screenshot of this example in action</strong></figcaption>
-<img alt="Screenshot of example showing a textured cube the user can move around" src="xr-sample.png"></figure>
+<strong>Figure: Screenshot of this example in action</strong>
+  
+<img alt="Screenshot of example showing a textured cube the user can move around" src="xr-sample.png">
 
 <p>The core of this example—the spinning, textured, lighted cube—is taken from our WebGL tutorial series; namely, the penultimate article in the series, covering <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">lighting in WebGL</a>.</p>
 
@@ -36,7 +36,7 @@ tags:
 
 <h2 id="Dependencies">Dependencies</h2>
 
-<p>While we will not rely upon any 3D graphics frameworks such as <code><a href="https://threejs.org/">three.js</a></code> or the like for this example, we do use the <code><a href="http://glmatrix.net/">glMatrix</a></code> library for matrix math, which we've used in other examples in the past. This example also imports the <a href="https://github.com/immersive-web/webxr-polyfill/">WebXR polyfill</a> maintained by the Immersive Web Working Group, which is the team responsible for the WebXR API's specification. By importing this polyfill, we allow the example to work on many browsers that don't yet have WebXR implementations in place, and we smooth out any transient deviations from the specification that occur during these still somewhat experimental days of the WebXR specification.</p>
+<p>While we will not rely upon any 3D graphics frameworks such as <code><a href="https://threejs.org/">three.js</a></code> or the like for this example, we do use the <code><a href="https://glmatrix.net/">glMatrix</a></code> library for matrix math, which we've used in other examples in the past. This example also imports the <a href="https://github.com/immersive-web/webxr-polyfill/">WebXR polyfill</a> maintained by the Immersive Web Working Group, which is the team responsible for the WebXR API's specification. By importing this polyfill, we allow the example to work on many browsers that don't yet have WebXR implementations in place, and we smooth out any transient deviations from the specification that occur during these still somewhat experimental days of the WebXR specification.</p>
 
 <h2 id="Options">Options</h2>
 
@@ -662,6 +662,6 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
 
 <ul>
  <li><a href="http://learnwebgl.brown37.net/#">Learn WebGL</a> (includes some great visualizations of the camera and how it relates to the virtual world)</li>
- <li><a href="http://webglfundamentals.org">WebGL Fundamentals</a></li>
+ <li><a href="https://webglfundamentals.org">WebGL Fundamentals</a></li>
  <li><a href="https://learnopengl.com/">Learn OpenGL</a></li>
 </ul>
