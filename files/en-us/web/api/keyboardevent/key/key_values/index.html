@@ -79,6 +79,8 @@ tags:
    <th scope="col" style="text-align: left;">Linux</th>
    <th scope="col" style="text-align: left;">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"Alt"</code> [5]</td>
    <td>The <kbd>Alt</kbd> (Alternative) key.</td>
@@ -231,7 +233,7 @@ tags:
    <td></td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as <code>"OS"</code> instead of as <code>"Meta"</code>. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as <code>"OS"</code> by Firefox: <code>VK_LWIN</code> (0x5B) and <code>VK_RWIN</code> (0x5C) on Windows, and <code>GDK_KEY_Super_L</code> (0xFFEB), <code>GDK_KEY_Super_R</code> (0xFFEC), <code>GDK_KEY_Hyper_L</code> (0xFFED), and <code>GDK_KEY_Hyper_R</code> (0xFFEE) on Linux.</p>
@@ -1045,6 +1047,8 @@ tags:
    <th scope="col" style="text-align: left;">Linux</th>
    <th scope="col" style="text-align: left;">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"HangulMode"</code></td>
    <td>The <kbd>Hangul</kbd> (Korean character set) mode key, which toggles between Hangul and English entry modes.</td>
@@ -1072,7 +1076,7 @@ tags:
     <code>Qt::Key_Hangul_Jeonja</code> (0x01001138)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] <code>VK_HANGUL</code> and <code>VK_KANA</code> share the same numeric key value on Windows, as do <code>VK_HANJA</code> and <code>VK_KANJI</code>.</p>
@@ -1094,6 +1098,8 @@ tags:
    <th scope="col" style="text-align: left;">Linux</th>
    <th scope="col" style="text-align: left;">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"Eisu"</code> [1]</td>
    <td>The <kbd>Eisu</kbd> key. This key's purpose is defined by the IME, but may be used to close the IME.</td>
@@ -1189,7 +1195,7 @@ tags:
     <p><code>KEYCODE_ZENKAKU_HANKAKU</code> (211)</p>
    </td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Prior to Firefox 37, the <kbd>Eisu</kbd> key was mapped to <code>"RomanCharacters"</code> by mistake.</p>
