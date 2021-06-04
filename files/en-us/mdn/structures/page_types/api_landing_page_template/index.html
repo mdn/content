@@ -54,9 +54,20 @@ tags:
 
 <h3 id="Browser_compatibility">Browser compatibility</h3>
 
-<p>To fill in the browser compatibility section, you may first need to create/update an entry for the API in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p>
+<p>API landing pages optionally have a browser compatibility section that shows compatibility tables for one or more of the most important interfaces in the API. If the compatibility is similar for most interfaces in the API then often just one compatibility table is needed. If compatibility across the API is complicated/impossible to capture in a few tables, this sections should be omitted.</p>
 
-<p>Insert the query string key for the API (the path to the API in the browser compatibility data) as an argument into the <code>\{{Compat("path.to.feature.NameOfAPI")}}</code> macro.</p>
+<p>To fill in the browser compatibility section, you may first need to create/update entries for the API interfaces in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p>
+
+<p>Add the <code>\{{Compat("path.to.feature.Interface")}}</code> macro for each interface for which compatibility information is required, replacing the "path.to.feature.Interface" argument with the path to the desired interface in the browser compatibility data.</p>
+
+<h3 id="Specifications">Specifications</h3>
+
+<p>API landing pages optionally have a specifications section that lists the relevant specification(s) for each interface. Often there is just one specification covering all interfaces in the API.</p>
+
+<p>To fill in the specifications section, you may first need to create/update entries for interfaces in the <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> to include specification data — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p>
+
+<p>Use the <code>\{{specifications("path.to.feature.Interface")}}</code> macro to add tables for the main specifications.</p>
+
 </div>
 
 <div>{{draft}}{{securecontext_header}}{{APIRef("GroupDataName")}}</div>
@@ -116,31 +127,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("NameOfOtherSpecificationfromSpecName")}}</td>
-			<td>{{Spec2("NameOfOtherSpecificationFromSpec2")}}</td>
-			<td>Defines blah blah feature. If no other specs define extensions of this API, you can delete this table row.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('NameOfSpecificationFromSpecName')}}</td>
-			<td>{{Spec2('NameOfSpecificationFromSpec2')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications("path.to.feature.Interface_1")}}</p>
+
+<p>{{Specifications("path.to.feature.Interface_2")}}</p>
+
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<p>{{Compat("path.to.feature.NameOfAPI")}}</p>
+<p>{{Compat("path.to.feature.Interface_1")}}</p>
+
+<p>{{Compat("path.to.feature.Interface_2")}}</p>
 
 <h2 id="See_also">See also</h2>
 
