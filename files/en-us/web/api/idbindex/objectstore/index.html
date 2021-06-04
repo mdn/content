@@ -51,7 +51,7 @@ browser-compat: api.IDBIndex.objectStore
     demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
     example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;">function displayDataByIndex() {
+<pre class="brush: js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
