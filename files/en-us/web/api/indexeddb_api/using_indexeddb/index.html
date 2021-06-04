@@ -19,7 +19,7 @@ tags:
 
 <h2 id="About_this_document">About this document</h2>
 
-<p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</p>
+<p>This tutorial walks you through using the asynchronous API of IndexedDB. If you are not familiar with IndexedDB, you should first read the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</p>
 
 <p>For the reference documentation on the IndexedDB API, see the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> article and its subpages. This article documents the types of objects used by IndexedDB, as well as the methods of the asynchronous API (the synchronous API was removed from spec).  </p>
 
@@ -144,7 +144,7 @@ request.onupgradeneeded = function(event) {
 
 <h3 id="Structuring_the_database">Structuring the database</h3>
 
-<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">key generator</a>.</p>
+<p>Now to structure the database. IndexedDB uses object stores rather than tables, and a single database can contain any number of object stores. Whenever a value is stored in an object store, it is associated with a key. There are several different ways that a key can be supplied depending on whether the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath">key path</a> or a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keygenerator">key generator</a>.</p>
 
 <p>The following table shows the different ways the keys are supplied:</p>
 
@@ -285,7 +285,7 @@ request.onupgradeneeded = function (event) {
 
 <ul>
  <li>When defining the scope, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
+ <li>Only specify a <code>readwrite</code> transaction mode when necessary. You can concurrently run multiple <code>readonly</code> transactions with overlapping scopes, but you can have only one <code>readwrite</code> transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
 </ul>
 
 <h3 id="Adding_data_to_the_database">Adding data to the database</h3>
@@ -362,7 +362,7 @@ request.onsuccess = function(event) {
 
 <ul>
  <li>When defining the <a href="#scope">scope</a>, specify only the object stores you need. This way, you can run multiple transactions with non-overlapping scopes concurrently.</li>
- <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB">Basic Concepts</a> article.</li>
+ <li>Only specify a readwrite transaction mode when necessary. You can concurrently run multiple readonly transactions with overlapping scopes, but you can have only one readwrite transaction for an object store. To learn more, see the definition for <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction">transaction</a> in the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology">IndexedDB key characteristics and basic terminology</a> article.</li>
 </ul>
 
 <h3 id="Updating_an_entry_in_the_database">Updating an entry in the database</h3>
