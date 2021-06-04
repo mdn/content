@@ -7936,7 +7936,7 @@
 /en-US/docs/Web/API/LinearAccelerationSensor/y	/en-US/docs/Web/API/Accelerometer/y
 /en-US/docs/Web/API/LinearAccelerationSensor/z	/en-US/docs/Web/API/Accelerometer/z
 /en-US/docs/Web/API/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
-/en-US/docs/Web/API/LinkStyle/sheet	/en-US/docs/Web/API/HTMLLinkElement/sheet
+/en-US/docs/Web/API/LinkStyle/sheet	/en-US/docs/Web/API/HTMLLinkElement
 /en-US/docs/Web/API/LocalStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Location.assign	/en-US/docs/Web/API/Location/assign
 /en-US/docs/Web/API/Location.reload	/en-US/docs/Web/API/Location/reload
