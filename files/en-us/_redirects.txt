@@ -4114,7 +4114,7 @@
 /en-US/docs/Inbox/Writing_a_WebSocket_server_in_Java	/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 /en-US/docs/Incorrect_MIME_Type_for_CSS_Files	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
 /en-US/docs/IndexedDB	/en-US/docs/Web/API/IndexedDB_API
-/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /en-US/docs/IndexedDB/Cursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/IndexedDB/CursorSync/IDBCursorSync	/en-US/docs/Web/API/IDBCursorSync
 /en-US/docs/IndexedDB/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
@@ -7879,6 +7879,7 @@
 /en-US/docs/Web/API/ImageData.width	/en-US/docs/Web/API/ImageData/width
 /en-US/docs/Web/API/IndexSync	/en-US/docs/Web/API/IDBIndexSync
 /en-US/docs/Web/API/IndexedDB	/en-US/docs/Web/API/IndexedDB_API
+/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /en-US/docs/Web/API/IndexedDB_API/Cursor	/en-US/docs/Web/API/IDBCursor
 /en-US/docs/Web/API/IndexedDB_API/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/Web/API/IndexedDB_API/DatabaseSync	/en-US/docs/Web/API/IDBDatabaseSync

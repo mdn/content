@@ -1,42 +1,32 @@
 ---
-title: Basic concepts
-slug: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+title: IndexedDB key characteristics and basic terminology
+slug: Web/API/IndexedDB_API/Basic_Terminology
 tags:
   - Advanced
   - IndexedDB
-  - concepts
+  - terminology
 ---
 <p>{{DefaultAPISidebar("IndexedDB")}}</p>
 
 <div class="summary">
-<p><strong>IndexedDB</strong> is a way for you to persistently store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability, these applications can work both online and offline. IndexedDB is useful for applications that store a large amount of data (for example, a catalog of DVDs in a lending library) and applications that don't need persistent internet connectivity to work (for example, mail clients, to-do lists, and notepads).</p>
+<p>This article describes the key characteristics of IndexedDB, and introduces some essential terminology relevant to understanding the IndexedDB API.</p>
 </div>
 
-<h2 id="About_this_document">About this document</h2>
-
-<p>This introduction discusses essential concepts and terminology in IndexedDB. It gives you the big picture and explains key concepts.</p>
-
-<p>You'll find the following useful:</p>
+<p>You'll also find the following articles useful:</p>
 
 <ul>
- <li>For an overview of the design and structure of IndexedDB, see <a href="#concepts">Big Concepts</a>.</li>
- <li>To learn more about IndexedDB terms, see the <a href="#definitions">Definitions</a> section.</li>
  <li>For a detailed tutorial on how to use the API, see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a>.</li>
  <li>For the reference documentation on the IndexedDB API, refer back to the main <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> article and its subpages, which document the types of objects used by IndexedDB.</li>
  <li>For more information on how the browser handles storing your data in the background, read <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser storage limits and eviction criteria</a>.</li>
 </ul>
 
-<h2 id="Overview_of_IndexedDB">Overview of IndexedDB</h2>
+<h2 id="key_characteristics">Key characteristics</h2>
+
+<p>IndexedDB is a way for you to persistently store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability, these applications can work both online and offline. IndexedDB is useful for applications that store a large amount of data (for example, a catalog of DVDs in a lending library) and applications that don't need persistent internet connectivity to work (for example, mail clients, to-do lists, and notepads).</p>
 
 <p>IndexedDB lets you store and retrieve objects that are indexed with a "key." All changes that you make to the database happen within transactions. Like most web storage solutions, IndexedDB follows a <a href="https://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. So while you can access stored data within a domain, you cannot access data across different domains.</p>
 
-<p>IndexedDB is an <a href="/en-US/docs/Web/API/IndexedDB_API#asynchronous_api">asynchronous</a> API that can be used in most contexts, including <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>. It used to include a <a href="/en-US/docs/Web/API/IndexedDB_API#synchronous_api">synchronous</a> version also, for use in web workers, but this was removed from the spec due to lack of interest by the web community.</p>
-
-<p>IndexedDB used to have a competing spec, WebSQL Database, but the W3C deprecated it on November 18, 2010. While both IndexedDB and WebSQL are solutions for storage, they do not offer the same functionalities. WebSQL Database is a relational database access system, whereas IndexedDB is an indexed table system.</p>
-
-<h2 id="concepts">Big concepts</h2>
-
-<p>If you have assumptions from working with other types of databases, you might get thrown off when working with IndexedDB. So keep the following important concepts in mind:</p>
+<p>If you have assumptions from working with other types of databases, you might get thrown off when working with IndexedDB. So the following key characteristics of IndexedDB are important to keep in mind:</p>
 
 <ul>
  <li>
@@ -67,15 +57,37 @@ tags:
  <li>
   <p><a name="origin"><strong>IndexedDB adheres to a same-origin policy</strong></a>. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.</p>
 
-  <p>The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in <a href="http://www.example.com/app/">http://www.example.com/app/</a> can retrieve data from <a href="http://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve data from <a href="http://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a class="link-https" href="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol), because they have different origins.</p>
+  <p>The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in <a href="https://www.example.com/app/">http://www.example.com/app/</a> can retrieve data from <a href="https://www.example.com/dir/">http://www.example.com/dir/</a>, because they have the same origin, it cannot retrieve data from <a href="https://www.example.com:8080/dir/">http://www.example.com:8080/dir/</a> (different port) or <a class="link-https" href="https://www.example.com/dir/">https://www.example.com/dir/</a> (different protocol), because they have different origins.</p>
 
   <div class="note"><strong>Note</strong>: Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">never accept third party cookies</a> (see {{bug("1147821")}}.)</div>
  </li>
 </ul>
 
-<h2 id="definitions">Definitions</h2>
+<h3 id="limitations">Limitations</h3>
 
-<p>This section defines and explains terms used in the IndexedDB API.</p>
+<p>IndexedDB is designed to cover most cases that need client-side storage. However, it is not designed for a few cases like the following:</p>
+
+<ul>
+ <li>Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale-aware sorting</a> has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.</li>
+ <li>Synchronizing. The API is not designed to take care of synchronizing with a server-side database. You have to write code that synchronizes a client-side indexedDB database with a server-side database.</li>
+ <li>Full text searching. The API<span style="direction: ltr;"> does not have an</span><span style="direction: ltr;"> equivalent of the <code>LIKE</code> operator in SQL. </span></li>
+</ul>
+
+<p>In addition, be aware that browsers can wipe out the database, such as in the following conditions:</p>
+
+<ul>
+ <li>The user requests a wipe out. Many browsers have settings that let users wipe all data stored for a given website, including cookies, bookmarks, stored passwords, and IndexedDB data.</li>
+ <li>The browser is in private browsing mode. Some browsers, have "private browsing" (Firefox) or "incognito" (Chrome) modes. At the end of the session, the browser wipes out the database.</li>
+ <li>The disk or quota limit has been reached.</li>
+ <li>The data is corrupt.</li>
+ <li>An incompatible change is made to the feature.</li>
+</ul>
+
+<p>The exact circumstances and browser capabilities change over time, but the general philosophy of the browser vendors is to make the best effort to keep the data when possible.</p>
+
+<h2 id="core_terminology">Core terminology</h2>
+
+<p>This section defines and explains core terminology relevant to understanding the IndexedDB API.</p>
 
 <h3 id="database">Database</h3>
 
@@ -108,8 +120,7 @@ tags:
  <p>For the reference documentation on object store, see {{domxref("IDBObjectStore")}}.</p>
  </dd>
  <dt><a name="gloss_version">version</a></dt>
- <dd>When a database is first created, its version is the integer 1. Each database has one version at a time; a database can't exist in multiple versions at once. The only way to change the version is by opening it with a greater version than the current one. This will start a <a href="/en-US/docs/Web/API/IDBVersionChangeRequest"><code>versionchange</code></a> <em>transaction</em> and fire an <a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event"><code>upgradeneeded</code></a> event. The only place where the schema of the database can be updated is inside the handler of that event.</dd>
- <dd>Note: This definition describes the <a href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/Web/API/IDBDatabase#setversion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
+ <dd>When a database is first created, its version is the integer 1. Each database has one version at a time; a database can't exist in multiple versions at once. The only way to change the version is by opening it with a greater version than the current one.</dd>
  <dt><a name="gloss_database_connection">database connection</a></dt>
  <dd>An operation created by opening a <em><a href="#gloss_database">database</a></em>. A given database can have multiple connections at the same time.</dd>
  <dt><a name="gloss_transaction">transaction</a></dt>
@@ -161,7 +172,7 @@ tags:
 
  <p>When an object or array is stored, the properties and values in that object or array can also be anything that is a valid value.</p>
 
- <p><a href="/en-US/docs/Web/API/Blob">Blobs</a> and files can be stored, cf. <a href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">specification</a>.</p>
+ <p><a href="/en-US/docs/Web/API/Blob">Blobs</a> and files can be stored, cf. <a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">specification</a>.</p>
  </dd>
 </dl>
 
@@ -204,7 +215,7 @@ tags:
 
 <h2 id="next">Next steps</h2>
 
-<p>With these big concepts under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a>.</p>
+<p>With an understanding of IndexedDB’s key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a>.</p>
 
 <h2 id="See_also">See also</h2>
 
