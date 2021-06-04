@@ -19,17 +19,17 @@ tags:
 
 <pre class="brush: js example-bad">
 class PublicCounter {
-   constructor(start = 0) {
-      let _count = start;
-      let _init = start;
-      this.increase = (x = 1) => _count += x;
-      this.decrease = (x = 1) => _count -= x;
-      this.reset = (x = _init) => _count = x;
-      this.getCount = () => _count;
-   }
-   get current() {
-      return this.getCount();
-   }
+  constructor(start = 0) {
+    let _count = start;
+    let _init = start;
+    this.increase = (x = 1) => _count += x;
+    this.decrease = (x = 1) => _count -= x;
+    this.reset = (x = _init) => _count = x;
+    this.getCount = () => _count;
+  }
+  get current() {
+    return this.getCount();
+  }
 }
 </pre>
 
@@ -41,18 +41,18 @@ class PublicCounter {
 
 <pre class="brush: js">
 class PrivateCounter {
-   #count;
-   #init;
-   constructor(start = 0) {
-      this.#init = start;
-      this.reset(start);
-   }
-   increase(x = 1) {this.#count += x;}
-   decrease(x = 1) {this.#count -= x;}
-   reset(x = this.#init) {this.#count = x;}
-   get current() {
-      return this.#count;
-   }
+  #count;
+  #init;
+  constructor(start = 0) {
+    this.#init = start;
+    this.reset(start);
+  }
+  increase(x = 1) { this.#count += x; }
+  decrease(x = 1) { this.#count -= x; }
+  reset(x = this.#init) { this.#count = x; }
+  get current() {
+     return this.#count;
+  }
 }
 
 let total = new PrivateCounter(7);
@@ -65,7 +65,7 @@ total.reset();               // #count now = 7
 
 <p>The “hash mark” (<code>#</code>) is what marks a field as being private.  It also prevents private fields and property names from ever being in conflict: private names <strong>must</strong> start with <code>#</code>, whereas property names can <strong>never</strong> start that way.</p>
 
-<p>Having established the private fields, they act as we saw in the public example.  The only way to change the <code>#count</code> value is via the publicly available methods like <code>decrease()</code>, and because (in this example) there are no defined ways to alter it, the <code>#init</code> value is immutable.  It’s set when a new <code>PrivateCounter</code> is constructed, and can never be changed thereafter.</p>
+<p>Having declared the private fields, they act as we saw in the public example.  The only way to change the <code>#count</code> value is via the publicly available methods like <code>decrease()</code>, and because (in this example) there are no defined ways to alter it, the <code>#init</code> value is immutable.  It’s set when a new <code>PrivateCounter</code> is constructed, and can never be changed thereafter.</p>
 
 <p>It’s also the case that you <strong>cannot</strong> read a private value directly from code outside the class object.  Consider:</p>
 
@@ -73,13 +73,13 @@ total.reset();               // #count now = 7
 let score = new PrivateCounter(); // #count and #init are now both 0
 score.increase(100);
 console.log(score.current);
- // output: 100
+  // output: 100
 console.log(score.#count);
- // output:
- // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
+  // output:
+  // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
 </pre>
 
-<p>If you wish to read private data from a class, you must first invent a method to return it.  We had already done that with the <code>current()</code> getter that returns the current value of <code>#count</code>, but <code>#init</code> is locked away.  Unless we add something like a <code>getInit()</code> method to the class, we can’t even see the initial value from outside the class, let alone alter it, and the compiler will throw a fit if we try.</p>
+<p>If you wish to read private data from outside a class, you must first invent a method or other function to return it.  We had already done that with the <code>current()</code> getter that returns the current value of <code>#count</code>, but <code>#init</code> is locked away.  Unless we add something like a <code>getInit()</code> method to the class, we can’t even see the initial value from outside the class, let alone alter it, and the compiler will throw a fit if we try.</p>
 
 <p>What are the other restrictions around private fields?  For one, you can’t refer to a private field you didn’t previously define.  You might be used to inventing new fields on the fly in JavaScript, but that just won’t fly with private fields.
 
@@ -195,6 +195,14 @@ customElements.define('num-counter', Counter);
 </pre>
 
 <p>In this case, pretty much every field and method is private to the class.  Thus, it presents an interface to the rest of the code that’s essentially just like a built-in HTML element.  No other part of the JavaScript has the power to affect any of its internals.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+<li><a href="https://github.com/tc39/proposal-class-fields/blob/master/PRIVATE_SYNTAX_FAQ.md">Private Syntax FAQ</a></li>
+<li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
+</ul>
+
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
