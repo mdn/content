@@ -8549,6 +8549,7 @@
 /en-US/docs/Web/API/ServiceWorkerRegistration.update	/en-US/docs/Web/API/ServiceWorkerRegistration/update
 /en-US/docs/Web/API/ServiceWorkerRegistration.waiting	/en-US/docs/Web/API/ServiceWorkerRegistration/waiting
 /en-US/docs/Web/API/ServiceWorkerRegistration/unregister()	/en-US/docs/Web/API/ServiceWorkerRegistration/unregister
+/en-US/docs/Web/API/ServiceWorkerState	/en-US/docs/Web/API/ServiceWorker/state
 /en-US/docs/Web/API/ServiceWorker_API	/en-US/docs/Web/API/Service_Worker_API
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers:_The_Basics	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
