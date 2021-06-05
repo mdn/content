@@ -44294,17 +44294,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/Element/runtimeStyle": {
-    "modified": "2020-10-15T21:45:10.353Z",
-    "contributors": [
-      "myf",
-      "fscholz",
-      "david_ross",
-      "valtlai",
-      "PushpitaPikuDey",
-      "cvrebert"
-    ]
-  },
   "Web/API/Element/scroll": {
     "modified": "2020-10-15T22:11:18.035Z",
     "contributors": [
