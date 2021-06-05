@@ -12,7 +12,8 @@ browser-compat: css.properties.mask-image
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>mask-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the image that is used as mask layer for an element.</p>
+<p>The <strong><code>mask-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the image that is used as mask layer for an element.
+By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element. This can be controlled with the {{cssxref("mask-mode")}} property.</p>
 
 <pre class="brush:css no-line-numbers">/* Keyword value */
 mask-image: none;
