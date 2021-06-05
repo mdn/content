@@ -552,7 +552,6 @@
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
 /en-US/docs/CSS/Tools	/en-US/docs/Web/CSS/Tools
-/en-US/docs/CSS/Tools/Cubic_Bezier_Generator	/en-US/docs/Web/CSS/Tools/Cubic_Bezier_Generator
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Tutorials	/en-US/docs/Web/CSS/Tutorials
 /en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations

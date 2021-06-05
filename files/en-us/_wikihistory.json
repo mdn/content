@@ -105676,14 +105676,6 @@
       "ethertank"
     ]
   },
-  "Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2020-07-07T12:39:28.196Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/Tools/Linear-gradient_Generator": {
     "modified": "2020-07-07T12:40:33.079Z",
     "contributors": [
