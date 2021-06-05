@@ -42797,20 +42797,6 @@
       "Sebastianz"
     ]
   },
-  "Web/API/Element/currentStyle": {
-    "modified": "2020-10-15T21:38:36.195Z",
-    "contributors": [
-      "ambersz",
-      "ExE-Boss",
-      "fscholz",
-      "franciscop",
-      "sideshowbarker",
-      "jimwmg",
-      "valtlai",
-      "cvrebert",
-      "rolfedh"
-    ]
-  },
   "Web/API/Element/cut_event": {
     "modified": "2020-10-15T21:20:35.273Z",
     "contributors": [
