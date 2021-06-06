@@ -6274,7 +6274,6 @@
 /en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
 /en-US/docs/SVG/Other_Resources	/en-US/docs/Web/SVG/Other_Resources
-/en-US/docs/SVG/Replaced_Element	/en-US/docs/Web/SVG/Replaced_Element
 /en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
 /en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
