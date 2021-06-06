@@ -255,11 +255,11 @@ function sum(a){
   }
 }
 
-var s = sum(1);
-var s1 = s(2);
-var s2 = s1(3);
-var s3 = s2(4);
-console.log(s3) //log 20
+var sum2 = sum(1);
+var sum3 = sum2(2);
+var sum4 = sum3(3);
+var result = sum4(4);
+console.log(result) //log 20
 </pre>
 
 <p>In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to <em>all</em> outer function scopes.</p>
