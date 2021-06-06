@@ -50,7 +50,7 @@ tags:
 
 <p>Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
-<div style="overflow: hidden;">
+<div>
 <pre class="brush: js">var myWorker = new Worker('worker.js');
 </pre>
 </div>
@@ -703,7 +703,7 @@ onmessage = function(event) {
 
 <p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a>, just like code running in the main thread.</p>
 
-<p><img src="worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img src="worker-source.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
@@ -711,7 +711,7 @@ onmessage = function(event) {
 
 <p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">call stack</a>, etc., just as you'd expect.</p>
 
-<p><img src="worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img src="worker-breakpoints-callstack.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
