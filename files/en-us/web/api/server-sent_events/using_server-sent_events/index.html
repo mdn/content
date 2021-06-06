@@ -44,6 +44,7 @@ tags:
 
 <pre class="brush: js">evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
+  const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
   newElement.textContent = "ping at " + time;
   eventList.appendChild(newElement);
