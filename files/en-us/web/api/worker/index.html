@@ -10,6 +10,7 @@ tags:
   - Web Workers
   - Worker
   - Workers
+browser-compat: api.Worker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
@@ -34,9 +35,9 @@ tags:
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> bubbles through to the worker. This is inherited from {{domxref("AbstractWorker")}}.</dd>
+ <dd>An {{ domxref("EventListener") }} called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs. This is inherited from {{domxref("AbstractWorker")}}.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> bubbles through the worker — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
+ <dd>An {{ domxref("EventListener") }} called whenever a {{domxref("MessageEvent")}} of type <code>message</code> occurs — i.e. when a message is sent to the parent document from the worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. The message is stored in the event's {{domxref("MessageEvent.data", "data")}} property.</dd>
  <dt>{{domxref("Worker.onmessageerror")}}</dt>
  <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
 </dl>
@@ -105,7 +106,7 @@ first.onchange = function() {
 
 <p>Support varies for different types of workers. See each worker type's page for specifics.</p>
 
-<p>{{Compat("api.Worker")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Cross-origin_worker_error_behavior">Cross-origin worker error behavior</h3>
 

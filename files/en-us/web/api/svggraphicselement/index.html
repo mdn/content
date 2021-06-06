@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG OM
+browser-compat: api.SVGGraphicsElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -19,6 +20,10 @@ tags:
 <p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
 
 <dl>
+ <dt>{{domxref("SVGGraphicsElement.requiredExtensions")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.</dd>
+ <dt>{{domxref("SVGGraphicsElement.systemLanguage")}} {{ReadOnlyInline}}</dt>
+ <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.</dd>
  <dt>{{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}</dt>
  <dd>An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.</dd>
 </dl>
@@ -72,4 +77,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGGraphicsElement")}}</p>
+<p>{{Compat}}</p>

@@ -8,6 +8,7 @@ tags:
   - SharedWorker
   - Web Workers
   - Workers
+browser-compat: api.SharedWorker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
@@ -30,7 +31,7 @@ tags:
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> bubbles through the worker.</dd>
+ <dd>Is an {{domxref("EventListener")}} that is called whenever an {{domxref("ErrorEvent")}} of type <code>error</code> event occurs.</dd>
  <dt>{{domxref("SharedWorker.port")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.</dd>
 </dl>
@@ -101,7 +102,7 @@ myWorker.port.onmessage = function(e) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SharedWorker")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

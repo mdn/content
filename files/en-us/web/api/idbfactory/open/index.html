@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
   - open
+browser-compat: api.IDBFactory.open
 ---
   <p>{{APIRef("IndexedDB")}}</p>
   <p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}}
@@ -99,8 +100,7 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
 <p>Example of calling <code>open</code> with the current specification's
   <code>version</code> parameter:</p>
 
-<pre class="brush: js"
-  style="font-size: 14px;">var request = window.indexedDB.open("toDoList", 4);</pre>
+<pre class="brush: js">var request = window.indexedDB.open("toDoList", 4);</pre>
 
 <p>In the following code snippet, we make a request to open a database, and include
   handlers for the success and error cases. For a full working example, see our <a
@@ -163,7 +163,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBFactory.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

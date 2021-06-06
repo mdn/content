@@ -43,20 +43,21 @@ slice(beginIndex, endIndex)
     <p>The zero-based index <em>before</em> which to end extraction. The character at this
       index will not be included.</p>
 
-    <p>If <code><var>endIndex</var></code> is omitted or undefined, or greater than
-      <code><var>str</var>.length</code>, <code>slice()</code> extracts to the end of the
-      string. If negative, it is treated as
-      <code><var>str</var>.length + <var>endIndex</var></code>. (For example, if
-      <code><var>endIndex</var></code> is <code>-3</code>, it is treated as
-      <code><var>str</var>.length - 3</code>.) If it is not undefined, and
-      <code>Number(<var>endIndex</var>)</code> is not positive,
-      an empty string is returned.</p>
+    <p>If <code><var>endIndex</var></code> is omitted or undefined, <code>slice()</code> extracts
+      to the end of the string. (E.g. <code>"test".slice(2)</code> returns <code>"st"</code>)</p>
 
-    <p>If <code><var>endIndex</var></code> is specified,
-      <code><var>endIndex</var></code> should be greater than
-      <code><var>beginIndex</var></code>, otherwise an empty string is returned. (For
-      example, <code>slice(-3, 0)</code>, <code>slice(-1, -3)</code>, or <code>slice(3, 1)</code>
-      returns <code>""</code>.)</p>
+    <p>If <code><var>endIndex</var></code> is greater than <code><var>str</var>.length</code>,
+      <code>slice()</code> also extracts to the end of the string.
+      (E.g. <code>"test".slice(2, 10)</code> returns <code>"st"</code>)</p>
+
+    <p>If <code><var>endIndex</var></code> is negative, <code>slice()</code> is treated as
+      <code><var>str</var>.length + <var>endIndex</var></code>. (E.g, if
+      <code><var>endIndex</var></code> is <code>-2</code>, it is treated as
+      <code><var>str</var>.length - 2</code> and <code>"test".slice(1, -2)</code> returns <code>"e"</code>) .</p>
+
+    <p>If <code><var>endIndex</var></code> represents a position that is before the one represented
+      by <code><var>startIndex</var></code>, <code>slice()</code> returns <code>""</code>.
+      (E.g <code>"test".slice(2, -10)</code>, <code>"test".slice(-1, -2)</code> or <code>"test".slice(3, 2)</code>).
   </dd>
 </dl>
 

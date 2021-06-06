@@ -314,7 +314,7 @@ rect.move(1, 1); // Outputs, 'Shape moved.'
 // inherit one class
 MyClass.prototype = Object.create(SuperClass.prototype);
 // mixin another
-Object.assign(MyClass.prototype, OtherSuperClass.prototype);
+Object.assign(Object.getPrototypeOf(MyClass.prototype), OtherSuperClass.prototype);
 // re-assign constructor
 MyClass.prototype.constructor = MyClass;
 

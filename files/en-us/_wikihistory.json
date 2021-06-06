@@ -2862,15 +2862,6 @@
       "chrisdavidmills"
     ]
   },
-  "Glossary/Gaia": {
-    "modified": "2019-03-23T23:09:38.393Z",
-    "contributors": [
-      "Andrew_Pfeiffer",
-      "hbloomer",
-      "klez",
-      "chrisdavidmills"
-    ]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-23T22:37:56.867Z",
     "contributors": [
@@ -2961,14 +2952,6 @@
     "modified": "2019-07-21T18:37:34.888Z",
     "contributors": [
       "Sebastianz"
-    ]
-  },
-  "Glossary/Gonk": {
-    "modified": "2019-03-23T23:09:39.202Z",
-    "contributors": [
-      "Andrew_Pfeiffer",
-      "klez",
-      "chrisdavidmills"
     ]
   },
   "Glossary/Google_Chrome": {
@@ -28188,12 +28171,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioContextLatencyCategory": {
-    "modified": "2020-10-15T22:05:15.929Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/AudioContextOptions": {
     "modified": "2020-10-15T22:05:16.322Z",
     "contributors": [
@@ -44317,17 +44294,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/Element/runtimeStyle": {
-    "modified": "2020-10-15T21:45:10.353Z",
-    "contributors": [
-      "myf",
-      "fscholz",
-      "david_ross",
-      "valtlai",
-      "PushpitaPikuDey",
-      "cvrebert"
-    ]
-  },
   "Web/API/Element/scroll": {
     "modified": "2020-10-15T22:11:18.035Z",
     "contributors": [
@@ -49102,13 +49068,6 @@
       "mfuji09",
       "alattalatta",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/GeometryUtils": {
-    "modified": "2020-10-15T22:00:19.133Z",
-    "contributors": [
-      "fscholz",
-      "Sebastianz"
     ]
   },
   "Web/API/GestureEvent": {
@@ -67718,14 +67677,6 @@
       "adria"
     ]
   },
-  "Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T21:42:33.846Z",
-    "contributors": [
-      "kebo",
-      "some-body",
-      "fscholz"
-    ]
-  },
   "Web/API/OffscreenCanvas/transferToImageBitmap": {
     "modified": "2020-10-15T21:42:31.163Z",
     "contributors": [
@@ -73512,12 +73463,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:26:32.623Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
   "Web/API/RTCPeerConnection/getIdentityAssertion": {
     "modified": "2020-10-15T21:28:58.062Z",
     "contributors": [
@@ -74056,15 +74001,6 @@
       "fscholz",
       "jpmedley",
       "abbycar",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection_idpvalidationerror_event": {
-    "modified": "2020-10-15T21:28:53.407Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "mfluehr",
       "teoli"
     ]
   },
@@ -76404,16 +76340,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGAnimatedPoints": {
-    "modified": "2020-10-15T21:10:58.964Z",
-    "contributors": [
-      "fscholz",
-      "abbycar",
-      "kscarfone",
-      "Sheppy",
-      "Jeremie"
-    ]
-  },
   "Web/API/SVGAnimatedPreserveAspectRatio": {
     "modified": "2020-10-15T21:09:36.896Z",
     "contributors": [
@@ -77605,20 +77531,6 @@
       "kscarfone",
       "Sheppy",
       "Jeremie"
-    ]
-  },
-  "Web/API/SVGTests": {
-    "modified": "2020-10-15T21:09:43.330Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sebastianz",
-      "mattwojo",
-      "kscarfone",
-      "Sheppy",
-      "kohei.yoshino",
-      "Jeremie",
-      "Longsonr"
     ]
   },
   "Web/API/SVGTextContentElement": {
@@ -79764,15 +79676,6 @@
       "chrisdavidmills",
       "fscholz",
       "kscarfone"
-    ]
-  },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-08-13T12:39:07.760Z",
-    "contributors": [
-      "jpmedley",
-      "ExE-Boss",
-      "rolfedh",
-      "g0ne"
     ]
   },
   "Web/API/Service_Worker_API": {
@@ -105762,14 +105665,6 @@
       "ethertank"
     ]
   },
-  "Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2020-07-07T12:39:28.196Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/Tools/Linear-gradient_Generator": {
     "modified": "2020-07-07T12:40:33.079Z",
     "contributors": [
@@ -119635,15 +119530,6 @@
       "pauldefoe",
       "fantasticfears",
       "limomo"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2019-03-23T23:33:41.607Z",
-    "contributors": [
-      "scop",
-      "Sheppy",
-      "teoli",
-      "Hsivonen"
     ]
   },
   "Web/Guide/Mobile": {

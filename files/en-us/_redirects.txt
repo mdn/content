@@ -552,7 +552,6 @@
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
 /en-US/docs/CSS/Tools	/en-US/docs/Web/CSS/Tools
-/en-US/docs/CSS/Tools/Cubic_Bezier_Generator	/en-US/docs/Web/CSS/Tools/Cubic_Bezier_Generator
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Tutorials	/en-US/docs/Web/CSS/Tutorials
 /en-US/docs/CSS/Tutorials/Using_CSS_animations	/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
@@ -1648,7 +1647,7 @@
 /en-US/docs/DOM/SVGAnimatedLengthList	/en-US/docs/Web/API/SVGAnimatedLengthList
 /en-US/docs/DOM/SVGAnimatedNumber	/en-US/docs/Web/API/SVGAnimatedNumber
 /en-US/docs/DOM/SVGAnimatedNumberList	/en-US/docs/Web/API/SVGAnimatedNumberList
-/en-US/docs/DOM/SVGAnimatedPoints	/en-US/docs/Web/API/SVGAnimatedPoints
+/en-US/docs/DOM/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/DOM/SVGAnimatedPreserveAspectRatio	/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio
 /en-US/docs/DOM/SVGAnimatedRect	/en-US/docs/Web/API/SVGAnimatedRect
 /en-US/docs/DOM/SVGAnimatedString	/en-US/docs/Web/API/SVGAnimatedString
@@ -1704,7 +1703,6 @@
 /en-US/docs/DOM/SVGSymbolElement	/en-US/docs/Web/API/SVGSymbolElement
 /en-US/docs/DOM/SVGTRefElement	/en-US/docs/Web/API/SVGTRefElement
 /en-US/docs/DOM/SVGTSpanElement	/en-US/docs/Web/API/SVGTSpanElement
-/en-US/docs/DOM/SVGTests	/en-US/docs/Web/API/SVGTests
 /en-US/docs/DOM/SVGTextElement	/en-US/docs/Web/API/SVGTextElement
 /en-US/docs/DOM/SVGTextPositioningElement	/en-US/docs/Web/API/SVGTextPositioningElement
 /en-US/docs/DOM/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
@@ -3021,7 +3019,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedLengthList	/en-US/docs/Web/API/SVGAnimatedLengthList
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedNumber	/en-US/docs/Web/API/SVGAnimatedNumber
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedNumberList	/en-US/docs/Web/API/SVGAnimatedNumberList
-/en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedPoints	/en-US/docs/Web/API/SVGAnimatedPoints
+/en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedPreserveAspectRatio	/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedRect	/en-US/docs/Web/API/SVGAnimatedRect
 /en-US/docs/Document_Object_Model_(DOM)/SVGAnimatedString	/en-US/docs/Web/API/SVGAnimatedString
@@ -3075,7 +3073,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/SVGSymbolElement	/en-US/docs/Web/API/SVGSymbolElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTRefElement	/en-US/docs/Web/API/SVGTRefElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTSpanElement	/en-US/docs/Web/API/SVGTSpanElement
-/en-US/docs/Document_Object_Model_(DOM)/SVGTests	/en-US/docs/Web/API/SVGTests
 /en-US/docs/Document_Object_Model_(DOM)/SVGTextElement	/en-US/docs/Web/API/SVGTextElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTextPositioningElement	/en-US/docs/Web/API/SVGTextPositioningElement
 /en-US/docs/Document_Object_Model_(DOM)/SVGTitleElement	/en-US/docs/Web/API/SVGTitleElement
@@ -5498,7 +5495,6 @@
 /en-US/docs/Liberty!_Equality!_Validity!	/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML
 /en-US/docs/Link_prefetching_FAQ	/en-US/docs/Web/HTTP/Link_prefetching_FAQ
 /en-US/docs/Localization	/en-US/docs/Glossary/Localization
-/en-US/docs/Localizations_and_character_encodings	/en-US/docs/Web/Guide/Localizations_and_character_encodings
 /en-US/docs/MDC:How_to_Help	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
@@ -6946,6 +6942,7 @@
 /en-US/docs/Web/API/AudioContext/sampleRate	/en-US/docs/Web/API/BaseAudioContext/sampleRate
 /en-US/docs/Web/API/AudioContext/state	/en-US/docs/Web/API/BaseAudioContext/state
 /en-US/docs/Web/API/AudioContext/suspend_event	/en-US/docs/Web/API/HTMLMediaElement/suspend_event
+/en-US/docs/Web/API/AudioContextLatencyCategory	/en-US/docs/Web/API/AudioContextOptions/latencyHint
 /en-US/docs/Web/API/AudioContextOptions/AudioContextOptions.sampleRate	/en-US/docs/Web/API/AudioContextOptions/sampleRate
 /en-US/docs/Web/API/AudioDestinationNode.maxChannelCount	/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount
 /en-US/docs/Web/API/AudioListener.dopplerFactor	/en-US/docs/Web/API/AudioListener/dopplerFactor
@@ -6994,6 +6991,8 @@
 /en-US/docs/Web/API/Blob.type	/en-US/docs/Web/API/Blob/type
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
+/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliar	/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
+/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutRespponse	/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
 /en-US/docs/Web/API/BluetoothDevice.name	/en-US/docs/Web/API/BluetoothDevice/name
 /en-US/docs/Web/API/BluetoothDevice.paired	/en-US/docs/Web/API/BluetoothDevice/paired
 /en-US/docs/Web/API/BluetoothDevice.uuids	/en-US/docs/Web/API/BluetoothDevice/uuids
@@ -8205,6 +8204,7 @@
 /en-US/docs/Web/API/OfflineAudioContext/complete	/en-US/docs/Web/API/OfflineAudioContext/complete_event
 /en-US/docs/Web/API/OfflineAudioContext/startRendering(promise)	/en-US/docs/Web/API/OfflineAudioContext/startRendering
 /en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas.convertToBlob()	/en-US/docs/Web/API/OffscreenCanvas/convertToBlob
+/en-US/docs/Web/API/OffscreenCanvas/toBlob	/en-US/docs/Web/API/OffscreenCanvas/convertToBlob
 /en-US/docs/Web/API/OnMSVideoFormatChanged	/en-US/docs/Web/API/HTMLVideoElement/onMSVideoFormatChanged
 /en-US/docs/Web/API/OnMSVideoFrameStepCompleted	/en-US/docs/Web/API/HTMLVideoElement/onMSVideoFrameStepCompleted
 /en-US/docs/Web/API/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
@@ -8394,7 +8394,6 @@
 /en-US/docs/Web/API/RTCPeerConnection.signalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
 /en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection.createAnswer()	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCPeerConnection/addTransceiver()	/en-US/docs/Web/API/RTCPeerConnection/addTransceiver
-/en-US/docs/Web/API/RTCPeerConnection/defaultIceServers	/en-US/docs/Web/API/RTCPeerConnection/getDefaultIceServers
 /en-US/docs/Web/API/RTCPeerConnection/getLocalStreams	/en-US/docs/Web/API/RTCPeerConnection/getSenders
 /en-US/docs/Web/API/RTCPeerConnection/getRemoteStreams	/en-US/docs/Web/API/RTCPeerConnection/getReceivers
 /en-US/docs/Web/API/RTCPeerConnection/icecandidate	/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event
@@ -8406,6 +8405,7 @@
 /en-US/docs/Web/API/RTCPeerConnectionIdentityErrorEvent	/en-US/docs/Web/API/RTCIdentityErrorEvent
 /en-US/docs/Web/API/RTCPeerConnectionIdentityEvent	/en-US/docs/Web/API/RTCIdentityEvent
 /en-US/docs/Web/API/RTCPeerConnectionIdentityEvent.assertion	/en-US/docs/Web/API/RTCIdentityEvent/assertion
+/en-US/docs/Web/API/RTCPeerConnection_idpvalidationerror_event	/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
@@ -8442,6 +8442,7 @@
 /en-US/docs/Web/API/RotationRate.beta	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/RotationRate.gamma	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
 /en-US/docs/Web/API/SVGAElement/SVGAlement.target	/en-US/docs/Web/API/SVGAElement/target
+/en-US/docs/Web/API/SVGAnimatedPoints	/en-US/docs/Web/API/SVGPolygonElement
 /en-US/docs/Web/API/SVGElement/dataset	/en-US/docs/Web/API/HTMLOrForeignElement/dataset
 /en-US/docs/Web/API/SVGElement/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/SVGElement/onblur	/en-US/docs/Web/API/GlobalEventHandlers/onblur
@@ -8548,6 +8549,7 @@
 /en-US/docs/Web/API/ServiceWorkerRegistration.update	/en-US/docs/Web/API/ServiceWorkerRegistration/update
 /en-US/docs/Web/API/ServiceWorkerRegistration.waiting	/en-US/docs/Web/API/ServiceWorkerRegistration/waiting
 /en-US/docs/Web/API/ServiceWorkerRegistration/unregister()	/en-US/docs/Web/API/ServiceWorkerRegistration/unregister
+/en-US/docs/Web/API/ServiceWorkerState	/en-US/docs/Web/API/ServiceWorker/state
 /en-US/docs/Web/API/ServiceWorker_API	/en-US/docs/Web/API/Service_Worker_API
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers:_The_Basics	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
@@ -10304,7 +10306,7 @@
 /en-US/docs/Web/Events/icegatheringstatechange_event	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
 /en-US/docs/Web/Events/identityresult	/en-US/docs/Web/API/RTCPeerConnection/identityresult_event
 /en-US/docs/Web/Events/idpassertionerror	/en-US/docs/Web/API/RTCPeerConnection/idpassertionerror_event
-/en-US/docs/Web/Events/idpvalidationerror	/en-US/docs/Web/API/RTCPeerConnection_idpvalidationerror_event
+/en-US/docs/Web/Events/idpvalidationerror	/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event
 /en-US/docs/Web/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/Events/install	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event

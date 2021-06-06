@@ -10,6 +10,7 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBCursorWithValue
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
@@ -38,9 +39,9 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="https://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In this example we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="https://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;"><span style="line-height: 1.5;">function displayData() {</span>
+<pre class="brush: js">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -82,7 +83,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursorWithValue")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

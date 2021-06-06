@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - openCursor
+browser-compat: api.IDBObjectStore.openCursor
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -72,7 +73,7 @@ var <em>request</em> = <em>ObjectStore</em>.openCursor(<em>query</em>, <em>direc
       <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
     </tr>
     <tr>
-      <td><code><span style="line-height: normal;">DataError</span></code></td>
+      <td><code>DataError</code></td>
       <td>The specified key or key range is invalid.<br>
          </td>
     </tr>
@@ -124,7 +125,7 @@ request.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.openCursor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

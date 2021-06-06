@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
   - keyPath
+browser-compat: api.IDBIndex.keyPath
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -31,8 +32,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">Any data type that can be used as a key path.</span>
-</p>
+<p>Any data type that can be used as a key path.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -52,7 +52,7 @@ tags:
     demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
     example live</a>.)</p>
 
-<pre style="font-size: 14px;">function displayDataByIndex() {
+<pre class="brush:js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -105,7 +105,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.keyPath")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

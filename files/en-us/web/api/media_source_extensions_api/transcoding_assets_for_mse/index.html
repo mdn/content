@@ -16,7 +16,7 @@ tags:
 <ol>
  <li>The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.</li>
  <li>Depending on the codec, you might need to fragment the file to comply with the <a href="https://www.w3.org/TR/mse-byte-stream-format-isobmff/">ISO BMFF spec</a>.</li>
- <li>(Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) <span style="background-color: #f5f6f5;">for adaptive bitrate streaming</span>, you need to<span style="background-color: #f5f6f5;"> transcode your assets into multiple resolutions</span>. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.</li>
+ <li>(Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.</li>
 </ol>
 
 <p>Below we'll cover all of these steps, but first let's look at a toolchain we can use to do this fairly easily.</p>
