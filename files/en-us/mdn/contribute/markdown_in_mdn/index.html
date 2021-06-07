@@ -360,6 +360,134 @@ cell 4    | cell 5    | cell 6
 
 <h2>Live samples</h2>
 
+<p>In MDN writers can create "live samples" in which code blocks (HTML, CSS, JavaScript) in the page are built into a document that's displayed in the page in an iframe. In this way authors can show code and its output together, and the displayed code is the code used to generate the output so there's no risk of the code and the output getting out of sync.</p>
+
+<p>To create a live sample, writers use the <code>\{{EmbedLiveSample}}</code> KumaScript macro.</p>
+
+<p>To find the code blocks that should belong to a live sample, we consider that page headings (H2-H6) implicitly divide up the document into nested sections. So, for example:</p>
+
+<pre>
+                 H2#Syntax   H3#Params   H3#Return   H2#Examples   H3#Example1
+H2 Syntax           |
+                    |
+Some content        |
+                    |
+H3 Params           |           |
+                    |           |
+More content        |           |
+                    |           |
+H3 Return           |                       |
+                    |                       |
+Yet more content    |                       |
+                    |                       |
+H2 Examples                                           |
+                                                      |
+H3 Example1                                           |            |
+                                                      |            |
+An example                                            |            |
+</pre>
+
+<p>In this example there are five sections, one for each heading, and the sections defined by the H3 headings are nested inside the section defined by the H2 headings above them.</p>
+
+<p>Given this model, the rule for finding the code blocks to include in a live sample is:</p>
+
+<ol>
+  <li>Define the <em>immediate section</em> as the most-nested section that directly contains the macro call itself.</li>
+  <li>Look for any code blocks in the immediate section. If you find any, they are the code blocks to use. Stop looking.</li>
+  <li>If you don't find any, go to the next level up, and look for any code blocks in that section. If you find any, they are the code blocks to use. Stop looking.</li>
+  <li>If you don't find any, repeat (3) until you find code blocks or until you reach the top-level of the document.</li>
+  <li>If you reached the top level and didn't find any code blocks, this is an error.</li>
+  <li>If you did find code blocks, build the document and insert the iframe where the macro call was found.</li>
+</ol>
+
+<p>For example, in the case above, if the macro call was in <code>H3#Example1</code>, we would look in: <code>H3#Example1</code>, then (if no code blocks were found there) in <code>H2#Examples</code>.</p>
+
+<h3>Examples</h3>
+
+<p>The simplest example is where the code blocks and the macro call all live in the same immediate section. For example:</p>
+
+<pre class="brush: html">
+&lt;h2&gt;Examples&lt;/h2&gt;
+
+   &lt;h3&gt;Example1&lt;/h3&gt;
+
+       JS-code-block-1
+       CSS-code-block-1
+       \{{EmbedLiveSample}}
+
+   &lt;h3&gt;Example2&lt;/h3&gt;
+
+       JS-code-block-2
+       CSS-code-block-2
+       \{{EmbedLiveSample}}
+</pre>
+
+<p>In this page we have 2 live samples:</p>
+
+<ul>
+  <li>the one under <code>H3#Example1</code> contains <code>JS-code-block-1</code> and <code>CSS-code-block-1</code></li>
+  <li>the one under <code>H3#Example2</code> contains <code>JS-code-block-2</code> and <code>CSS-code-block-2</code></li>
+</ul>
+
+<p>Another common pattern is where the macro call wants to use code blocks in a sibling section:</p>
+
+<pre class="brush: html">
+&lt;h2&gt;Examples&lt;/h2&gt;
+
+   &lt;h3&gt;Example1&lt;/h3&gt;
+
+       &lt;h4&gt;JavaScript&lt;/h4&gt;
+
+           JS-code-block-1
+
+       &lt;h4&gt;CSS&lt;/h4&gt;
+
+           CSS-code-block-1
+
+       &lt;h4&gt;Result&lt;/h4&gt;
+
+           \{{EmbedLiveSample}}
+
+   &lt;h3&gt;Example2&lt;/h3&gt;
+
+       &lt;h4&gt;JavaScript&lt;/h4&gt;
+
+           JS-code-block-2
+
+       &lt;h4&gt;CSS&lt;/h4&gt;
+
+           CSS-code-block-2
+
+       &lt;h4&gt;Result&lt;/h4&gt;
+
+           \{{EmbedLiveSample}}
+</pre>
+
+<p>This also produces 2 live samples:</p>
+
+<ul>
+  <li>the one under <code>H3#Example1&gt;H4#Result</code> contains <code>JS-code-block-1</code> and <code>CSS-code-block-1</code></li>
+  <li>the one under <code>H3#Example2&gt;H4#Result</code> contains <code>JS-code-block-2</code> and <code>CSS-code-block-2</code></li>
+</ul>
+
+<p>This model also means that certain arrangements are not possible. For example:</p>
+
+<pre class="brush: html example-bad">
+&lt;h2&gt;Examples&lt;/h2&gt;
+
+   JS-code-block-1
+   CSS-code-block-1
+   \{{EmbedLiveSample}}
+
+   &lt;h3&gt;Example2&lt;/h3&gt;
+
+       JS-code-block-2
+       CSS-code-block-2
+       \{{EmbedLiveSample}}
+</pre>
+
+<p>This will give unexpected results, because the <code>\{{EmbedLiveSample}}</code> call directly under <code>H2#Examples</code> will try to include the code blocks under <code>H3#Example2</code>.</p>
+
 <h2>Inline styles</h2>
 
 <h2>Superscript and subscript</h2>
