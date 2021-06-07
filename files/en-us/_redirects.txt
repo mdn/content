@@ -8428,6 +8428,7 @@
 /en-US/docs/Web/API/Request/arrayBuffer	/en-US/docs/Web/API/Body/arrayBuffer
 /en-US/docs/Web/API/Request/blob	/en-US/docs/Web/API/Body/blob
 /en-US/docs/Web/API/Request/bodyUsed	/en-US/docs/Web/API/Body/bodyUsed
+/en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/Request/json	/en-US/docs/Web/API/Body/json
 /en-US/docs/Web/API/Request/text	/en-US/docs/Web/API/Body/text
 /en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Resource_Timing_API
