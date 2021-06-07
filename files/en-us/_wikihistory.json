@@ -95662,16 +95662,6 @@
       "Taoja"
     ]
   },
-  "Web/API/XMLHttpRequestResponseType": {
-    "modified": "2020-10-15T22:02:45.282Z",
-    "contributors": [
-      "Powerrr",
-      "kuba-kazimierczak",
-      "cjweigle",
-      "Sheppy",
-      "Rob W"
-    ]
-  },
   "Web/API/XMLSerializer": {
     "modified": "2020-10-15T21:14:30.148Z",
     "contributors": [
