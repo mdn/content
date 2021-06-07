@@ -45,11 +45,11 @@ tags:
  <li>The Service worker will now control pages, but only those opened after the <code>register()</code> is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.</li>
 </ol>
 
-<p><img alt="" src="sw-lifecycle.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="sw-lifecycle.png"></p>
 
 <p>The below graphic shows a summary of the available service worker events:</p>
 
-<p><img alt="install, activate, message, fetch, sync, push" src="sw-events.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="install, activate, message, fetch, sync, push" src="sw-events.png"></p>
 
 <h3 id="Promises">Promises</h3>
 
@@ -142,7 +142,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called <a href="https://github.com/mdn/sw-test">sw-test</a>, which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We’ve kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!</p>
 
-<p><img alt="" src="demo-screenshot.png" style="display: block; margin: 0px auto;"><br>
+<p><img alt="" src="demo-screenshot.png"><br>
  <br>
  <br>
  You can see the <a href="https://github.com/mdn/sw-test/">source code on GitHub</a>, and <a href="https://mdn.github.io/sw-test/">view the example live</a>. The one bit we’ll call out here is the promise (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js lines 22-47</a>), which is a modified version of what you read about above, in the <a href="https://mdn.github.io/js-examples/promises-test/">Promises test demo</a>. It is different in the following ways:</p>
@@ -204,7 +204,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  <li>It is also not allowed to point to a service worker of a different origin than that of your app.</li>
 </ol>
 
-<p><img alt="" src="important-notes.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="important-notes.png"></p>
 
 <p>Also note:</p>
 
@@ -261,7 +261,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>Now you’ve got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the <code>fetch</code> event.</p>
 
-<p><img alt="" src="sw-fetch.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="sw-fetch.png"></p>
 
 <p>A <code>fetch</code> event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if <code>index.html</code> makes a cross origin request to embed an image, that still goes through its service worker.)</p>
 
