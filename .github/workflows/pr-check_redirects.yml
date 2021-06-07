@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - files/**
+      - https://www.walmart.com/checkout?via=signup#/review
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
