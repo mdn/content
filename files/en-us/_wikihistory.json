@@ -26823,32 +26823,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:24:56.106Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "nmve",
-      "erikadoyle",
-      "teoli",
-      "Sebastianz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T21:24:57.038Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills",
-      "nmve",
-      "erikadoyle",
-      "teoli",
-      "tregagnon"
-    ]
-  },
   "Web/API/Accelerometer": {
     "modified": "2020-10-15T22:08:42.556Z",
     "contributors": [
@@ -94086,6 +94060,18 @@
     "modified": "2020-10-15T22:17:02.572Z",
     "contributors": [
       "wbamberg"
+    ]
+  },
+  "Web/API/Worker/onerror": {
+    "modified": "2020-10-15T21:24:57.038Z",
+    "contributors": [
+      "sideshowbarker",
+      "fscholz",
+      "chrisdavidmills",
+      "nmve",
+      "erikadoyle",
+      "teoli",
+      "tregagnon"
     ]
   },
   "Web/API/Worker/onmessage": {
