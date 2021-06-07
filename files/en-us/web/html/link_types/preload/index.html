@@ -112,11 +112,11 @@ before browsers' main rendering machinery kicks in. This ensures they are availa
   &lt;/video&gt;
 &lt;/body&gt;</pre>
 
-<p>The code in the example above causes the <code>video/mp4</code> video to be preloaded — and for users who have <code>video/mp4</code> support in their browsers, causes the <code>video/mp4</code> video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have <code>video/mp4</code> support in their browsers.</p>
+<p>The code in the example above causes the <code>video/mp4</code> video to be preloaded only in supporting browsers — and for users who have <code>video/mp4</code> support in their browsers, causes the <code>video/mp4</code> video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have <code>video/mp4</code> support in their browsers.</p>
 
 <p>Note that for users whose browsers have both <code>video/mp4</code> and <code>video/webm</code> support, if in that code a <code>&lt;link rel="preload" href="sintel-short.webm" as="video" type="video/webm"&gt;</code> element were also specified, then <em>both</em> the <code>video/mp4</code> and <code>video/webm</code> videos would be preloaded — even though only one of them would actually be used.</p>
 
-<p>Therefore, it’s not a best practice to specify preloading for multiple types of the same resource in the case where the majority of your users have browsers that support all the types. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That’s why the code in the example above doesn’t specify preloading for the <code>video/webm</code> video.</p>
+<p>Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That’s why the code in the example above doesn’t specify preloading for the <code>video/webm</code> video.</p>
 
 <p>However, the lack of preloading doesn’t prevent the <code>video/webm</code> video from actually being used by those who need it: for users whose browsers don’t have <code>video/mp4</code> support but do have <code>video/webm</code> support, the code in the example above does still cause the <code>video/webm</code> video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.</p>
 
