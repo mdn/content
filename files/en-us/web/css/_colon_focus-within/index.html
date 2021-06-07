@@ -14,7 +14,7 @@ browser-compat: css.selectors.focus-within
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>:focus-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents an element that has received focus or <em>contains</em> an element that has received focus. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by <code>:focus</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow trees</a>.)</p>
+<p>The <strong><code>:focus-within</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> is a selector for an element which has focus or <em>contains</em> a child that has received focus. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by <code>:focus</code>. (This includes descendants in <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow trees</a>.)</p>
 
 <pre class="brush: css no-line-numbers">/* Selects a &lt;div&gt; when one of its descendants is focused */
 div:focus-within {
