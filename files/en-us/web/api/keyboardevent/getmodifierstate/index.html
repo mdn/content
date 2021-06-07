@@ -13,7 +13,7 @@ browser-compat: api.KeyboardEvent.getModifierState
 <p>{{APIRef("DOM Events")}}</p>
 
 <p>The <code><strong>KeyboardEvent.getModifierState()</strong></code> method returns the
-  current state of the specified modifier key: <code>true</code> if the modifier is active
+  current state of the specified modifier key: <code>true</code> if the modifier is active
   (that is the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -21,7 +21,7 @@ browser-compat: api.KeyboardEvent.getModifierState
 <pre
   class="brush: js">var active = event.getModifierState(keyArg);</pre>
 
-<h3 id="Returns">Returns </h3>
+<h3 id="Returns">Returns </h3>
 
 <p>A {{jsxref("Boolean")}}</p>
 
@@ -74,7 +74,7 @@ browser-compat: api.KeyboardEvent.getModifierState
     </tr>
     <tr>
       <th scope="row"><code>"CapsLock"</code></th>
-      <td colspan="3" style="text-align: center;">During LED for <kbd>⇪ Caps Lock</kbd>
+      <td colspan="3" style="text-align: center;">During LED for <kbd>⇪ Caps Lock</kbd>
         turned on</td>
       <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
           supported</em></td>
@@ -111,7 +111,7 @@ browser-compat: api.KeyboardEvent.getModifierState
       <td style="background-color: rgb(204, 204, 204); text-align: center;"><em>Not
           supported</em></td>
       <td style="text-align: center;"><kbd>Meta</kbd> key pressed</td>
-      <td><kbd>⌘ Command</kbd> key pressed</td>
+      <td><kbd>⌘ Command</kbd> key pressed</td>
       <td style="text-align: center; background-color: rgb(204, 204, 204);"><em>Not
           supported</em></td>
       <td><kbd>⊞ Windows Logo</kbd> key or <kbd>command</kbd> key pressed</td>
@@ -259,10 +259,10 @@ if ((event.getModifierState("ScrollLock") ||
 </pre>
 
 <div class="note">
-  <p>Although this example uses <code>.getModifierState()</code> with <code>"Alt"</code>,
+  <p>Although this example uses <code>.getModifierState()</code> with <code>"Alt"</code>,
     <code>"Control"</code>, <code>"Meta"</code> and <code>"Shift"</code>, using
     <code>event.altKey</code>, <code>event.ctrlKey</code>, <code>event.metaKey</code> and
-    <code>event.shiftKey</code> may be more preferable.</p>
+    <code>event.shiftKey</code> may be more preferable.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
