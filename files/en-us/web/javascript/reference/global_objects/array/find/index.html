@@ -36,20 +36,22 @@ browser-compat: javascript.builtins.Array.find
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">
+const array = [...]
+
 // Arrow function
-find((element) => { ... } )
-find((element, index) => { ... } )
-find((element, index, array) => { ... } )
+array.find((element) => { ... } )
+array.find((element, index) => { ... } )
+array.find((element, index, array) => { ... } )
 
 // Callback function
-find(callbackFn)
-find(callbackFn, thisArg)
+array.find(callbackFn)
+array.find(callbackFn, thisArg)
 
 // Inline callback function
-find(function callbackFn(element) { ... })
-find(function callbackFn(element, index) { ... })
-find(function callbackFn(element, index, array){ ... })
-find(function callbackFn(element, index, array) { ... }, thisArg)
+array.find(function callbackFn(element) { ... })
+array.find(function callbackFn(element, index) { ... })
+array.find(function callbackFn(element, index, array){ ... })
+array.find(function callbackFn(element, index, array) { ... }, thisArg)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
