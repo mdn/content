@@ -18,9 +18,11 @@ tags:
 
 <h2 id="The_grid">The grid</h2>
 
-<p>Before we can start drawing, we need to talk about the canvas grid or <strong>coordinate space</strong>. Our HTML skeleton from the previous page had a canvas element 150 pixels wide and 150 pixels high.
-  <img alt="" class="internal" src="canvas_default_grid.png">
-Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of this grid is positioned in the <em>top left</em> corner at coordinate (0,0). All elements are placed relative to this origin. So the position of the top left corner of the blue square becomes x pixels from the left and y pixels from the top, at coordinate (x,y). Later in this tutorial we'll see how we can translate the origin to a different position, rotate the grid and even scale it, but for now we'll stick to the default.</p>
+<p>Before we can start drawing, we need to talk about the canvas grid or <strong>coordinate space</strong>. Our HTML skeleton from the previous page had a canvas element 150 pixels wide and 150 pixels high.</p>
+
+<img alt="" src="canvas_default_grid.png">
+
+<p>Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of this grid is positioned in the <em>top left</em> corner at coordinate (0,0). All elements are placed relative to this origin. So the position of the top left corner of the blue square becomes x pixels from the left and y pixels from the top, at coordinate (x,y). Later in this tutorial we'll see how we can translate the origin to a different position, rotate the grid and even scale it, but for now we'll stick to the default.</p>
 
 <h2 id="Drawing_rectangles">Drawing rectangles</h2>
 
@@ -320,7 +322,7 @@ Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of 
 </dl>
 
 <p>The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one <strong>control point</strong> (indicated by the red dot) while a cubic Bézier curve uses two control points.
-  <img alt="" class="internal" src="canvas_curves.png">
+  <img alt="" src="canvas_curves.png">
 </p>
 
 <p>The <code>x</code> and <code>y</code> parameters in both of these methods are the coordinates of the end point. <code>cp1x</code> and <code>cp1y</code> are the coordinates of the first control point, and <code>cp2x</code> and <code>cp2y</code> are the coordinates of the second control point.</p>

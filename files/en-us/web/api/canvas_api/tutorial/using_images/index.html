@@ -208,7 +208,9 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
  <dd>Given an <code>image</code>, this function takes the area of the source image specified by the rectangle whose top-left corner is (<code>sx</code>, <code>sy</code>) and whose width and height are <code>sWidth</code> and <code>sHeight</code> and draws it into the canvas, placing it on the canvas at (<code>dx</code>, <code>dy</code>) and scaling it to the size specified by <code>dWidth</code> and <code>dHeight</code>.</dd>
 </dl>
 
-<p>To really understand what this does, it may help to look at this image: <img alt="" class="internal" src="canvas_drawimage.jpg"> The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.</p>
+<p>To really understand what this does, it may help to look at this image: </p>
+<img alt="" src="canvas_drawimage.jpg">
+<p>The first four parameters define the location and size of the slice on the source image. The last four parameters define the rectangle into which to draw the image on the destination canvas.</p>
 
 <p>Slicing can be a useful tool when you want to make compositions. You could have all elements in a single image file and use this method to composite a complete drawing. For instance, if you want to make a chart you could have a PNG image containing all the necessary text in a single file and depending on your data could change the scale of your chart fairly easily. Another advantage is that you don't need to load every image individually, which can improve load performance.</p>
 
