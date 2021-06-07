@@ -96,7 +96,7 @@ before browsers' main rendering machinery kicks in. This ensures they are availa
 
 <p><code>&lt;link&gt;</code> elements can accept a {{htmlattrxref("type", "link")}} attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the <code>type</code> attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.</p>
 
-<p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>):</p>
+<p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>), a code snippet from which is shown below. And while this code won’t actually cause preloading in any browsers — because video preloading isn’t yet supported in any browsers — it still illustrates the core behavior behind preloading in general.</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
