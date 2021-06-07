@@ -8,9 +8,11 @@ tags:
   - Reference
   - Vibration API
   - Experimental
+  - Deprecated
+  - Non-standard
 browser-compat: http.headers.Feature-Policy.vibrate
 ---
-<p>{{HTTPSidebar}}{{SeeCompatTable}}</p>
+<p>{{HTTPSidebar}} {{Deprecated_Header}}</p>
 
 <p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>vibrate</code> {{deprecated_inline}} directive controls whether the current document is allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of <a href="/en-US/docs/Web/API/Vibration_API">Vibration API</a>.</span></p>
 
@@ -19,24 +21,13 @@ browser-compat: http.headers.Feature-Policy.vibrate
 <pre>Feature-Policy: vibrate &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd><p>An <code>allowlist</code> is a list of origins that takes one or more of the following values, separated by spaces:</p>
-
-  <ul>
-   <li><code>*</code>: The feature will be allowed in this document, and all nested browsing contexts (iframes) regardless of their origin.</li>
-   <li><code>'self'</code>: The feature will be allowed in this document, and in all nested browsing contexts (iframes) in the same origin. The feature is not allowed in cross-origin documents in nested browsing contexts.</li>
-   <li><code>'src'</code>: (In an iframe <code>allow</code> attribute only) The feature will be allowed in this iframe, as long as the document loaded into it comes from the same origin as the URL in the iframe's {{HTMLElement('iframe','src','#Attributes')}} attribute.
-    <div class="note">The <code>'src'</code> origin is used in the iframe <code>allow</code> attribute only, and is the <em>default</em> <code>allowlist</code> value. </div>
-   </li>
-   <li><code>'none'</code>: The feature is disabled in top-level and nested browsing contexts.</li>
-   <li>&lt;origin(s)&gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</li>
-  </ul>
-  
-  <p>The values <code>*</code> (enable for all origins) or <code>'none'</code> (disable for all origins) may only be used alone, while <code>'self'</code> and <code>'src'</code> may be used with one or more origins.</p>
-  </dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
-<p>The default value is <code>'self'</code>.</p>
+<h2 id="Default_policy">Default policy</h2>
+
+<p>Default allow list for <code>vibrate</code> is <code>'self'</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
