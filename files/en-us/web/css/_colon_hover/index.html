@@ -19,7 +19,7 @@ a:hover {
   color: orange;
 }</pre>
 
-<p>Styles defined by the <code>:active</code> pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the <code>:hover</code> rule after the <code>:link</code> and <code>:visited</code> rules but before the <code>:active</code> one, as defined by the <em>LVHA-order</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+<p>Styles defined by the <code>:hover</code> pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the <code>:hover</code> rule after the <code>:link</code> and <code>:visited</code> rules but before the <code>:active</code> one, as defined by the <em>LVHA-order</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
 
 <div class="note"><strong>Note</strong>: The <code>:hover</code> pseudo-class is problematic on touchscreens. Depending on the browser, the <code>:hover</code> pseudo-class might never match, match only for a moment after touching an element, or continue to match even after the user has stopped touching and until the user touches another element. Web developers should make sure that content is accessible on devices with limited or non-existent hovering capabilities.</div>
 
