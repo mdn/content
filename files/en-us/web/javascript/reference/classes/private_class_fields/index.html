@@ -6,6 +6,7 @@ tags:
 - Private
 - JavaScript
 - Language feature
+browser-compat: javascript.classes.private_class_fields
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
@@ -15,7 +16,7 @@ tags:
   <code>#</code> prefix. The privacy encapsulation of these class features is
   enforced by JavaScript itself.</p>
 
-<h2 id="Syntax">Basic Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">class ClassWithPrivateField {
   #privateField;
@@ -54,7 +55,7 @@ class ClassWithPrivateStaticMethod {
   that were not declared before they were called, or to attempt to remove
   declared fields with <code>delete</code>.</p>
 
-<pre class="brush: js">class ClassWithPrivateField {
+<pre class="brush: js example-bad">class ClassWithPrivateField {
   #privateField;
 
   constructor() {
@@ -111,7 +112,7 @@ console.log(ClassWithPrivateStaticField.publicStaticMethod() === 42);
 </pre>
 
 
-<p>There is a provenance restriction on private static fields: Only the class which
+<p>There is a restriction on private static fields: Only the class which
   defines the private static field can access the field. This can lead to unexpected behavior when using <strong><code>this</code></strong>.
   In the following example, <code>this</code> refers to the <code>SubClass</code> class (not
   the <code>BaseClassWithPrivateStaticField</code> class) when we try to call
@@ -215,7 +216,7 @@ console.log(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
 
 <p>Private static methods may be generator, async, and async generator functions.</p>
 
-<p>The same provenance restriction previously mentioned for private static fields holds
+<p>The same restriction previously mentioned for private static fields holds
   for private static methods, and similarly can lead to unexpected behavior when using
   <strong><code>this</code></strong>.
   In the following example, when we try to call <code>Derived.publicStaticMethod2()</code>,
@@ -246,23 +247,11 @@ console.log(Derived.publicStaticMethod2());
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition',
-        'FieldDefinition')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

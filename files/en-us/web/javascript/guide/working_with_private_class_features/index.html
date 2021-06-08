@@ -5,6 +5,7 @@ tags:
   - Document
   - Guide
   - JavaScript
+browser-compat: javascript.classes.private_class_fields
 ---
 <div>{{jsSidebar("JavaScript Guide")}}</div>
 
@@ -13,7 +14,7 @@ tags:
 <p>Private class features deliver truly private fields and methods, with that privacy enforced by the language instead of convention.  This confers benefits such as avoiding naming collisions between class features and the rest of the code base, and allowing classes to expose a very small interface to the rest of the code.</p>
 
 
-<h2>Private Fields</h2>
+<h2>Private fields</h2>
 
 <p>To understand how private fields work, let’s first consider a class that has only public fields, but uses the constructor to encapsulate data—a somewhat common technique, even if it is a bit of a hack.  The following class creates a basic count that accepts a starting number, allows that number to be increased or decreased, and can be reset to the original starting value or any other value.</p>
 
@@ -79,7 +80,7 @@ console.log(score.#count);
   // "Uncaught SyntaxError: Private field '#count' must be declared in an enclosing class"
 </pre>
 
-<p>If you wish to read private data from outside a class, you must first invent a method or other function to return it.  We had already done that with the <code>current()</code> getter that returns the current value of <code>#count</code>, but <code>#init</code> is locked away.  Unless we add something like a <code>getInit()</code> method to the class, we can’t even see the initial value from outside the class, let alone alter it, and the compiler will throw a fit if we try.</p>
+<p>If you wish to read private data from outside a class, you must first invent a method or other function to return it.  We had already done that with the <code>current()</code> getter that returns the current value of <code>#count</code>, but <code>#init</code> is locked away.  Unless we add something like a <code>getInit()</code> method to the class, we can’t even see the initial value from outside the class, let alone alter it, and the compiler will throw errors if we try.</p>
 
 <p>What are the other restrictions around private fields?  For one, you can’t refer to a private field you didn’t previously define.  You might be used to inventing new fields on the fly in JavaScript, but that just won’t fly with private fields.
 
@@ -145,11 +146,11 @@ var planet = {
 
 
 
-<h2>Private Methods</h2>
+<h2>Private methods</h2>
 
 <p>Just like private fields, private methods are marked with a leading <code>#</code> and cannot be accessed from outside their class.  They’re useful when you have something complex that the class needs to do internally, but it’s something that no other part of the code should be allowed to call.</p>
 
-<p>For example, imagine creating HTML custom elements that should do something somewhat complicated when clicked/tapped/otherwise activated.  Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.  Therefore, something like:</p>
+<p>For example, imagine creating <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">HTML custom elements</a> that should do something somewhat complicated when clicked/tapped/otherwise activated.  Furthermore, the somewhat complicated things that happen when the element is clicked should be restricted to this class, because no other part of the JavaScript will (or should) ever access it.  Therefore, something like:</p>
 
 <pre class="brush: js">
 class CustomClick extends HTMLElement {
@@ -206,5 +207,5 @@ customElements.define('num-counter', Counter);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
+<p>{{Compat}}</p>
 
