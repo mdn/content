@@ -16,6 +16,23 @@ browser-compat: http.headers.Save-Data
   requests, indicates the client's preference for reduced data usage. This could be for
   reasons such as high transfer costs, slow connection speeds, etc.</p>
 
+  <table class="properties">
+    <tbody>
+     <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+     </tr>
+     <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+     </tr>
+     <tr>
+      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <td>no</td>
+     </tr>
+    </tbody>
+   </table>
+
 <p>A value of <code>On</code> indicates explicit user opt-in into a reduced data usage
   mode on the client, and when communicated to origins allows them to deliver alternative
   content to reduce the data downloaded such as smaller image and video resources,
@@ -28,7 +45,7 @@ browser-compat: http.headers.Save-Data
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Save-Data: &lt;sd-token&gt;</pre>
+<pre class="brush: http">Save-Data: &lt;sd-token&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -56,7 +73,7 @@ Save-Data: on</pre>
 
 <p>Response:</p>
 
-<pre>HTTP/1.0 200 OK
+<pre class="brush: http">HTTP/1.0 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -69,13 +86,13 @@ Content-Type: image/jpeg
 
 <p>Request:</p>
 
-<pre>GET /image.jpg HTTP/1.0
+<pre class="brush: http">GET /image.jpg HTTP/1.0
 Host: example.com
 </pre>
 
 <p>Response:</p>
 
-<pre>HTTP/1.0 200 OK
+<pre class="brush: http">HTTP/1.0 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -86,20 +103,7 @@ Content-Type: image/jpeg
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-    <tr>
-      <td><a
-          href="https://datatracker.ietf.org/doc/html/draft-grigorik-http-client-hints-03#section-7">draft-grigorik-http-client-hints-03,
-          section 7: Save-Data</a></td>
-      <td>HTTP Client Hints</td>
-    </tr>
-  </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
