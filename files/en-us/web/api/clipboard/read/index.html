@@ -48,9 +48,7 @@ browser-compat: api.Clipboard.read
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("DataTransfer")}} object
-  containing the clipboard's contents. The promise is rejected if permission to access the
-  clipboard is not granted.</p>
+<p>A Promise that resolves with an array of {{domxref("ClipboardItem")}} objects, representing the clipboard's contents. The promise is rejected if permission to access the clipboard is not granted.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -68,14 +66,20 @@ navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
   // be prompted to allow it, we proceed.
 
   if (result.state == "granted" || result.state == "prompt") {
-    navigator.clipboard.read().then(data =&gt; {
-      for (let i=0; i&lt;data.items.length; i++) {
-        if (data.items[i].type != "image/png") {
-          alert("Clipboard contains non-image data. Unable to access it.");
-        } else {
-          const blob = data.items[i].getType("image/png");
-          imgElem.src = URL.createObjectURL(blob);
-        }
+    navigator.clipboard.read().then(clipboardItemsArray =&gt; {
+      for (let i = 0; i &lt; clipboardItemsArray.length; i++) {
+        clipboardItemsArray[i].getType("image/png")
+        .then(blob =&gt; {
+          imgElem.src = URL.createObjectURL(blob);
+        })
+        .catch(err =&gt; {
+          if (err.name === "NotFoundError") {
+            console.error("Clipboard contains non-image data." +
+                        " Unable to access it.");
+          } else {
+            console.error(err.name, err.message);
+          }
+        });
       }
     });
   }
