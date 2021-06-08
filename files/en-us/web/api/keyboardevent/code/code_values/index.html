@@ -10,6 +10,9 @@ slug: Web/API/KeyboardEvent/code/code_values
 
 <p>This table shows the Windows scan codes representing keys and the <code>KeyboardEvent.code</code> values which correspond to those hardware keys. Only keys which generate scan codes on Windows are listed.</p>
 
+<p>In the cells, "(❌ Missing)" means that this code value cannot be detected on this browser;
+  "(⚠ Not the same on xyz)" means that this string represents a different code value on the browser xyz and that special care has to be done
+when using it. </p>
 <table class="standard-table">
  <thead>
   <tr>
@@ -448,13 +451,11 @@ slug: Web/API/KeyboardEvent/code/code_values
   <tr>
    <th scope="row"><code>0x0054 (<kbd>Alt</kbd> + <kbd>PrintScreen</kbd>)</code></th>
    <td><code>"PrintScreen"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0055</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -475,201 +476,171 @@ slug: Web/API/KeyboardEvent/code/code_values
   <tr>
    <th scope="row"><code>0x0059</code></th>
    <td><code>"NumpadEqual"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x005A</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x005B</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F13"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"F13"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x005C</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F14"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"F14"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x005D</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F15"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"F15"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x005E</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x005F</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0060</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0061</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0062</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0063</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F16"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"F16"</code (⚠ Not the same on Firefox)></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0064</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F13"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F17"</code></td>
+   <td><code>"F13"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F17"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0065</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F14"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F18"</code></td>
+   <td><code>"F14"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F18"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0066</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F15"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F19"</code></td>
+   <td><code>"F15"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F19"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0067</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F16"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F20"</code></td>
+   <td><code>"F16"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F20"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0068</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F17"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F21"</code></td>
+   <td><code>"F17"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F21"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0069</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F18"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F22"</code></td>
+   <td><code>"F18"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F22"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x006A</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F19"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F23"</code></td>
+   <td><code>"F19"</code> (⚠ Not the same on Chrome)</td>
+   <td ><code>"F23"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x006B</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F20"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F24"</code></td>
+   <td><code>"F20"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>"F24"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x006C</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F21"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F21"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x006D</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F22"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F22"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x006E</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F23"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F23"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x006F</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0070</code></th>
    <td><code>"KanaMode"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0071</code> (<kbd>Hanja</kbd> key without Korean keyboard layout)</th>
    <td><code>"Lang2"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0072</code> (<kbd>Han/Yeong</kbd> key without Korean keyboard layout)</th>
    <td><code>"Lang1"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0073</code></th>
    <td><code>"IntlRo"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0074</code>, <code>0x0075</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0076</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F24"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F24"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0077</code>, <code>0x0078</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x0079</code></th>
    <td><code>"Convert"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x007A</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x007B</code></th>
    <td><code>"NonConvert"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x007C</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -680,40 +651,32 @@ slug: Web/API/KeyboardEvent/code/code_values
   <tr>
    <th scope="row"><code>0x007E</code></th>
    <td><code>"NumpadComma"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x007F</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE000</code> ～ <code>0xE007</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE008</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Undo"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"Undo"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE009</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE00A</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Paste"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
+   <td><code>"Paste"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE00B</code> ～ <code>0xE00F</code></th>
@@ -732,17 +695,13 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE017</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Cut"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"Cut"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE018</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Copy"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"Copy"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE019</code></th>
@@ -751,9 +710,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE01A, 0xE01B</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -768,16 +725,12 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE01E</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"LaunchMail"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"LaunchMail"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE01F</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -788,7 +741,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   <tr>
    <th scope="row"><code>0xE021</code></th>
    <td><code>"LaunchApp2"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE022</code></th>
@@ -797,9 +750,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE023</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -809,51 +760,37 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE025</code> ～ <code>0xE02B</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE02C</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Eject"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"Eject"</code> (⚠ Not the same on Firefox)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE02D</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE02E</code></th>
-   <td>
-    <p><code>"AudioVolumeDown"</code></p>
-   </td>
-   <td><code>"VolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeDown"</code></td>
+   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE02F</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE030</code></th>
-   <td>
-    <p><code>"AudioVolumeUp"</code></p>
-   </td>
-   <td><code>"VolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeUp"</code></td>
+   <td><code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE031</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -863,9 +800,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE033</code>, <code>0xE034</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -875,9 +810,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE036</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -892,23 +825,17 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE039</code>, <code>0xE03A</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE03B</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Help"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"Help"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE03C</code>～ <code>0xE044</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -938,9 +865,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE04A</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -950,9 +875,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE04C</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -962,9 +885,7 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE04E</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -994,23 +915,17 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row"><code>0xE054</code> ～ <code>0xE05A</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE05B</code></th>
-   <td>
-    <p><code>"MetaLeft"</code></p>
-   </td>
+   <td><code>"MetaLeft"</code></td>
    <td><code>"OSLeft"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE05C</code></th>
-   <td>
-    <p><code>"MetaRight"</code></p>
-   </td>
+   <td><code>"MetaRight"</code></td>
    <td><code>"OSRight"</code></td>
   </tr>
   <tr>
@@ -1021,13 +936,11 @@ slug: Web/API/KeyboardEvent/code/code_values
   <tr>
    <th scope="row"><code>0xE05E</code></th>
    <td><code>"Power"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE05F</code> ～ <code>0xE064</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
@@ -1063,34 +976,32 @@ slug: Web/API/KeyboardEvent/code/code_values
   <tr>
    <th scope="row"><code>0xE06B</code></th>
    <td><code>"LaunchApp1"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE06C</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"LaunchMail"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"LaunchMail"</code> (⚠ Not the same on Chrome)</td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE06D</code></th>
    <td><code>"LaunchMediaPlayer"</code> (<code>"MediaSelect"</code> prior to Firefox 49)</td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE06E ～ 0xE0F0</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0xE0F1</code> (<kbd>Hanja</kbd> key with Korean keyboard layout)</th>
    <td><code>"Lang2"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE0F2</code> (<kbd>Han/Yeong</kbd> key with Korean keyboard layout)</th>
    <td><code>"Lang1"</code></td>
-   <td style="background-color: rgb(220, 199, 255);"><code>""</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
  </tbody>
 </table>
@@ -1370,8 +1281,8 @@ slug: Web/API/KeyboardEvent/code/code_values
   </tr>
   <tr>
    <th scope="row">Enter key on keypad of PowerBook (<code>0x34</code>)</th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"NumpadEnter"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"NumpadEnter"</code>(⚠ Same string for <code>0x4C</code>)</td>
+   <td><code>""</code>  (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_Escape (0x35)</code></th>
