@@ -2004,7 +2004,7 @@
 /en-US/docs/DOM/element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/DOM/element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/DOM/element.setCapture	/en-US/docs/Web/API/Element/setCapture
-/en-US/docs/DOM/element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM/element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/DOM/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/DOM/element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -2507,7 +2507,7 @@
 /en-US/docs/DOM:element.setAttributeNS	/en-US/docs/Web/API/Element/setAttributeNS
 /en-US/docs/DOM:element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/DOM:element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
-/en-US/docs/DOM:element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM:element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM:element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/DOM:element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/DOM:element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -2765,13 +2765,13 @@
 /en-US/docs/DOM_Client_Object_Cross-Reference/location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM_Client_Object_Cross-Reference/navigator	/en-US/docs/Web/API/Navigator
 /en-US/docs/DOM_Client_Object_Cross-Reference/screen	/en-US/docs/Web/API/Window/screen
-/en-US/docs/DOM_Client_Object_Cross-Reference/style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM_Client_Object_Cross-Reference/style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM_Client_Object_Cross-Reference/window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM_Client_Object_Cross-Reference:document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM_Client_Object_Cross-Reference:location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM_Client_Object_Cross-Reference:navigator	/en-US/docs/Web/API/Navigator
 /en-US/docs/DOM_Client_Object_Cross-Reference:screen	/en-US/docs/Web/API/Window/screen
-/en-US/docs/DOM_Client_Object_Cross-Reference:style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM_Client_Object_Cross-Reference:style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM_Client_Object_Cross-Reference:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM_Events	/en-US/docs/Web/Events
 /en-US/docs/DOM_Implementation_and_Scriptability	/en-US/docs/Web/API/Document_Object_Model
@@ -3278,7 +3278,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/Document_Object_Model_(DOM)/element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/Document_Object_Model_(DOM)/element.setCapture	/en-US/docs/Web/API/Element/setCapture
-/en-US/docs/Document_Object_Model_(DOM)/element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/Document_Object_Model_(DOM)/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Document_Object_Model_(DOM)/element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/Document_Object_Model_(DOM)/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Document_Object_Model_(DOM)/element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -7403,6 +7403,8 @@
 /en-US/docs/Web/API/Element/pointerup_event	/en-US/docs/Web/API/HTMLElement/pointerup_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Element/tabStop	/en-US/docs/Web/API/ShadowRoot/delegatesFocus
+/en-US/docs/Web/API/ElementCSSInlineStyle	/en-US/docs/Web/API/HTMLElement/style
+/en-US/docs/Web/API/ElementCSSInlineStyle/style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
@@ -7620,7 +7622,7 @@
 /en-US/docs/Web/API/HTMLElement.oncopy	/en-US/docs/Web/API/HTMLElement/oncopy
 /en-US/docs/Web/API/HTMLElement.oncut	/en-US/docs/Web/API/HTMLElement/oncut
 /en-US/docs/Web/API/HTMLElement.onpaste	/en-US/docs/Web/API/HTMLElement/onpaste
-/en-US/docs/Web/API/HTMLElement.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/Web/API/HTMLElement.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/HTMLElement.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/HTMLElement.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
@@ -7652,7 +7654,6 @@
 /en-US/docs/Web/API/HTMLElement/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/HTMLElement/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/HTMLElement/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
-/en-US/docs/Web/API/HTMLElement/style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
 /en-US/docs/Web/API/HTMLElement/tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/HTMLFormControlsCollection.namedItem	/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem
 /en-US/docs/Web/API/HTMLFormElement.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
@@ -9208,7 +9209,7 @@
 /en-US/docs/Web/API/element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/Web/API/element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/Web/API/element.setCapture	/en-US/docs/Web/API/Element/setCapture
-/en-US/docs/Web/API/element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/Web/API/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/Web/API/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/element.tagName	/en-US/docs/Web/API/Element/tagName
