@@ -11,6 +11,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 ---
 <p>{{MDNSidebar}}</p>
 
+<!-- Remove div below here before publishing -->
 <div class="notecard note">
 <h2 id="Remove_before_publishing">Remove before publishing</h2>
 
@@ -32,7 +33,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 
 <dl>
 <dt><strong>Title</strong></dt>
-<dd>Title heading displayed at top of page. Format as <em>NameOfTheParentInterface</em><strong>.</strong><em>NameOfTheMethod</em><strong>()</strong>. For example, the <a href="/en-US/docs/Web/API/IDBIndex/count">count()</a> method of the <a href="/en-US/docs/Web/API/IDBIndex">IDBIndex</a> interface has a <em>title</em> of "IDBIndex.count()".</dd>
+<dd>Title heading displayed at top of page. Format as <em>NameOfTheParentInterface</em><strong>.</strong><em>NameOfTheMethod</em><strong>()</strong>. For example, the <a href="/en-US/docs/Web/API/IDBIndex/count">count()</a> method of the <a href="/en-US/docs/Web/API/IDBIndex">IDBIndex</a> interface has a <em>title</em> of <code>IDBIndex.count()</code>.</dd>
 <dt>slug</dt>
 <dd>The end of the URL path after <code>https://developer.mozilla.org/en-US/docs/</code>). This will be formatted like <code>Web/API/NameOfTheParentInterface/NameOfTheMethod</code>. Note that the name of the method in the slug omits the parenthesis (it ends in "NameOfTheMethod" not "NameOfTheMethod()").</dd>
 <dt>tags</dt>
@@ -51,14 +52,14 @@ browser-compat: path.to.feature.NameOfTheMethod
 <p>There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
 
 <ul>
- <li><code>\{{APIRef("<em>GroupDataName</em>")}}</code> — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</li>
- <li><code>\{{Draft}}</code> — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
- <li><code>\{{SeeCompatTable}}</code> — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
- <li><code>\{{SecureContext_Header}}</code> — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
- <li><code>\{{Deprecated_Header}}</code> — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
+  <li><code>\{{APIRef("<em>GroupDataName</em>")}}</code> — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</li>
+  <li><code>\{{Draft}}</code> — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
+  <li><code>\{{SeeCompatTable}}</code> — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
+  <li><code>\{{SecureContext_Header}}</code> — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
+  <li><code>\{{Deprecated_Header}}</code> — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
 </ul>
-
 </div>
+<!-- Remove div above here before publishing -->
 
 <p>{{APIRef("GroupDataName")}}{{Draft}}{{SeeCompatTable}}{{SecureContext_header}}{{Deprecated_Header}}</p>
 
