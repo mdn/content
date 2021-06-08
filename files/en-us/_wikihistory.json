@@ -75640,19 +75640,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/Request/context": {
-    "modified": "2020-10-15T21:33:26.207Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley",
-      "Sebastianz",
-      "mathiasbynens",
-      "kscarfone"
-    ]
-  },
   "Web/API/Request/credentials": {
     "modified": "2020-10-15T21:33:25.687Z",
     "contributors": [
