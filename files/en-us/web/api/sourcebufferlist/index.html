@@ -45,9 +45,7 @@ browser-compat: api.SourceBufferList
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example shows how to use drag and drop.</p>
-
-<p>The following simple example loads a video chunk by chunk as fast as possible, playing it as soon as it can. This example was written by Nick Desaulniers and can be <a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">viewed live here</a> (you can also <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+<p>This example shows how to access the active source buffers of the {{domxref("MediaSource")}} connected to an already playing {{domxref("HTMLVideoElement")}}.
 
 <pre class="brush: js">// Video is an already playing video using a MediaSource srcObject
 var video = document.querySelector('video');
