@@ -58,7 +58,6 @@ tags:
 
 <p>We can use line-based placement to control where these items sit on the grid. I would like the first item to start on the far left of the grid and span a single column track. It should also start on the first row line, at the top of the grid and span to the fourth row line.</p>
 
-<div id="Line_Number">
 <pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
@@ -127,10 +126,8 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Line_Number', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Positioning_items_by_line_number', '300', '330') }}</p>
 
-<div id="Grid_Shorthands">
 <h2 id="The_grid-column_and_grid-row_shorthands">The <code>grid-column</code> and <code>grid-row</code> shorthands</h2>
 
 <p>We have quite a lot of code here to position each item. It should come as no surprise to know there is a {{glossary("shorthand properties", "shorthand")}}. The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}.</p>
@@ -183,14 +180,17 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('Grid_Shorthands', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('The_grid-column_and_grid-row_shorthands', '300', '330') }}</p>
 </div>
 
-<h3 id="Default_spans">Default spans</h3>
+<h2 id="Default_spans">Default spans</h2>
 
-<p>In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the <code>grid-column-end</code> or <code>grid-row-end</code> value. Grid defaults to spanning one track. This means that our initial, long-hand, example would look like this:</p>
+<p>In the above examples I specified every end row and column line, in order to demonstrate the properties, however in practice if an item only spans one track you can omit the <code>grid-column-end</code> or <code>grid-row-end</code> value. Grid defaults to spanning one track.</p>
 
-<div id="End_Lines">
+<h3 id="Default_spans_with_longhand_placement">Default spans with longhand placement</h3>
+
+<p>This means that our initial, long-hand, example would look like this:</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -242,12 +242,12 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('End_Lines', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Default_spans_with_longhand_placement', '300', '330') }}</p>
+
+<h3 id="Default_spans_with_shorthand_placement">Default spans with shorthand placement</h3>
 
 <p>Our shorthand would look like the following code, with no forward slash and second value for the items spanning one track only.</p>
 
-<div id="New_Shorthand">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -296,8 +296,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('New_Shorthand', '300', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Default_spans_with_shorthand_placement', '300', '330') }}</p>
 
 <h2 id="The_grid-area_property">The <code>grid-area</code> property</h2>
 
