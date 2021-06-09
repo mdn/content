@@ -37029,19 +37029,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/DataTransferItemList/DataTransferItem": {
-    "modified": "2020-10-15T21:40:13.605Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "connorshea",
-      "P5ych0",
-      "enishina",
-      "Sheppy",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/DataTransferItemList/add": {
     "modified": "2020-10-15T21:40:13.690Z",
     "contributors": [
@@ -80034,15 +80021,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/SourceBufferList/SourceBuffer": {
-    "modified": "2020-10-15T21:39:15.040Z",
-    "contributors": [
-      "sideshowbarker",
-      "Wind1808",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SourceBufferList/length": {
     "modified": "2020-10-15T21:39:14.902Z",
     "contributors": [
@@ -83132,14 +83110,6 @@
   },
   "Web/API/TrackDefaultList": {
     "modified": "2020-10-15T21:39:26.888Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/TrackDefaultList/TrackDefault": {
-    "modified": "2020-10-15T21:39:30.528Z",
     "contributors": [
       "sideshowbarker",
       "fscholz",
