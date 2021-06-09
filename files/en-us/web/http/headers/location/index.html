@@ -6,6 +6,7 @@ tags:
 - HTTP Header
 - Reference
 - Response Header
+browser-compat: http.headers.Location
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -22,7 +23,7 @@ tags:
     {{HTTPMethod("GET")}} method, {{HTTPStatus("307")}} (Temporary Redirect) and
     {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the
     original request;</li>
-  <li>{{HTTPStatus("301")}} (Permanent Redirect) and {{HTTPStatus("302")}} (Found) doesn't
+  <li>{{HTTPStatus("301")}} (Moved Permanently) and {{HTTPStatus("302")}} (Found) doesn't
     change the method most of the time, though older user-agents may (so you basically
     don't know).</li>
 </ul>
@@ -86,12 +87,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Location")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

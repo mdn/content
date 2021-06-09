@@ -64,9 +64,9 @@ new IntersectionObserver(callback, options);
 <p>Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.</p>
 
 <p>Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:</p>
-<pre class="brush: js">Array slice();
-Array slice(begin);
-Array slice(begin, end);</pre>
+<pre class="brush: js">slice();
+slice(begin);
+slice(begin, end);</pre>
 
 <p>Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:</p>
 
@@ -90,7 +90,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <p>Formal syntax notation (using <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">BNF</a>) should not be used in the Syntax section — instead use the expanded multiple-line format <a href="#multiple_lines">described above</a>.</p>
 
-<p>While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can <em>conflict</em> with valid syntax for particular programming languages. For example, <code>[ ]</code> indictes both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:</p>
+<p>While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can <em>conflict</em> with valid syntax for particular programming languages. For example, "<code>[&nbsp;]</code>" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:</p>
 
 <pre class="brush: js">arr.slice([begin[, end]])</pre>
 
@@ -108,6 +108,37 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 <p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
 
 <pre class="brush: js">match(request, options);</pre>
+
+<h5 id="Callback_syntax_blocks">Callback syntax blocks</h5>
+
+<p>For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:</p>
+
+<pre class="brush: js">
+// Arrow function
+filter((currentValue) => { ... } )
+filter((currentValue, index) => { ... } )
+filter((currentValue, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(currentValue) { ... })
+filter(function callbackFn(currentValue, index) { ... })
+filter(function callbackFn(currentValue, index, array){ ... })
+filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
+
+<h5 id="Syntax_for_arbitrary_number_of_parameters">Syntax for arbitrary number of parameters</h5>
+
+<p>For methods that accept an arbitrary number of parameters, the syntax block is written like this:</p>
+
+<pre class="brush: js">
+unshift(element0)
+unshift(element0, element1)
+unshift(element0, element1, ... , elementN)
+</pre>
 
 <h4 id="Parameters_section">Parameters section</h4>
 
@@ -220,7 +251,7 @@ gainNode.gain.value = 0;</pre>
 
 <h2 id="HTML_reference_syntax">HTML reference syntax</h2>
 
-<p>HTML reference pages don't have "Syntax" sections — the syntax is always just the element name surrounded by angle brackets, so it isn't needed. the main thing you need to know about HTML elements is what attributes they take and what their values can be, and this is covered in a separate "Attributes" section. See {{htmlelement("ol")}} and {{htmlelement("video")}} for examples.</p>
+<p>HTML reference pages don't have "Syntax" sections — the syntax is always just the element name surrounded by angle brackets, so it isn't needed. The main thing you need to know about HTML elements is what attributes they take and what their values can be, and this is covered in a separate "Attributes" section. See {{htmlelement("ol")}} and {{htmlelement("video")}} for examples.</p>
 
 <h2 id="HTTP_reference_syntax">HTTP reference syntax</h2>
 

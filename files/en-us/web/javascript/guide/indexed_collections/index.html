@@ -58,7 +58,7 @@ obj.prop = [element0, element1, ..., elementN]
 let obj = {prop: [element0, element1, ...., elementN]}
 </pre>
 
-<p>If you wish to initialize an array with a single element, and the element happens to be a <code>Number</code>, you must use the bracket syntax. When a single <code>Number</code> value is passed to the <code>Array()</code> constructor or function, it is interpreted as an <code>arrayLength</code>, not as a single element.</p>
+<p>If you wish to initialize an array with a single element, and the element happens to be a <code>Number</code>, you must use the bracket syntax. When a single <code>Number</code> value is passed to the <code>Array()</code> constructor or function, it is interpreted as an <code><var>arrayLength</var></code>, not as a single element.</p>
 
 <pre class="brush: js">let arr = [42]       // Creates an array with only one element:
                      // the number 42.
@@ -561,7 +561,7 @@ console.log(arr.property);  // Logs &quot;value&quot;
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code>×<code>10<sup>-38</sup></code> to <code>3.4</code>×<code>10<sup>38</sup></code></td>
+   <td><code>1.2E-38</code> to <code>3.4E38</code></td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.1234567</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -569,7 +569,7 @@ console.log(arr.property);  // Logs &quot;value&quot;
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code>×<code>10<sup>-324</sup></code> to <code>1.8</code>×<code>10<sup>308</sup></code></td>
+   <td><code>5E-324</code> to <code>1.8E308</code></td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -577,7 +577,7 @@ console.log(arr.property);  // Logs &quot;value&quot;
   </tr>
   <tr>
    <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+   <td><code>-2^63</code> to <code>2^63 - 1</code></td>
    <td>8</td>
    <td>64-bit two's complement signed integer</td>
    <td><code>bigint</code></td>
@@ -585,7 +585,7 @@ console.log(arr.property);  // Logs &quot;value&quot;
   </tr>
   <tr>
    <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+   <td><code>0</code> to <code>2^64 - 1</code></td>
    <td>8</td>
    <td>64-bit unsigned integer</td>
    <td><code>bigint</code></td>

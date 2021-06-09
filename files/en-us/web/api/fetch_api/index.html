@@ -24,7 +24,7 @@ tags:
 
 <p>For making a request and fetching a resource, use the {{DOMxRef("WindowOrWorkerGlobalScope.fetch()")}} method. It is implemented in multiple interfaces, specifically {{DOMxRef("Window")}} and {{DOMxRef("WorkerGlobalScope")}}. This makes it available in pretty much any context you might want to fetch resources in.</p>
 
-<p>The <code>fetch()</code> method takes one mandatory argument, the path to the resource you want to fetch. It returns a {{JSxRef("Promise")}} that resolves to the {{DOMxRef("Response")}} to that request, whether it is successful or not. You can also optionally pass in an <code>init</code> options object as the second argument (see {{DOMxRef("Request")}}).</p>
+<p>The <code>fetch()</code> method takes one mandatory argument, the path to the resource you want to fetch. It returns a {{JSxRef("Promise")}} that resolves to the {{DOMxRef("Response")}} to that request — as soon as the server responds with headers — <strong>even if the server response is an HTTP error status</strong>. You can also optionally pass in an <code>init</code> options object as the second argument (see {{DOMxRef("Request")}}).</p>
 
 <p>Once a {{DOMxRef("Response")}} is retrieved, there are a number of methods available to define what the body content is and how it should be handled (see {{DOMxRef("Body")}}).</p>
 

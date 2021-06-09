@@ -10,14 +10,13 @@ tags:
   - Web
   - Web Performance
   - metadata
+browser-compat: html.elements.link
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong>HTML External Resource Link element (<code>&lt;link&gt;</code>)</strong> specifies relationships between the current document and an external resource. This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.</p>
+<p>The <strong><code>&lt;link&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies relationships between the current document and an external resource. This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/link.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>To link an external stylesheet, you'd include a <code>&lt;link&gt;</code> element inside your {{HTMLElement("head")}} like this:</p>
 
@@ -46,7 +45,7 @@ tags:
 <pre class="brush: html no-line-numbers">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
-<p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
+<p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
 
 <p>Other usage notes:</p>
 
@@ -210,11 +209,11 @@ tags:
 <h3 id="Obsolete_attributes">Obsolete attributes</h3>
 
 <dl>
- <dt>{{HTMLAttrDef("charset")}} {{Obsolete_Inline}}</dt>
+ <dt>{{HTMLAttrDef("charset")}} {{deprecated_inline}}</dt>
  <dd>This attribute defines the character encoding of the linked resource. The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}. The default value is <code>iso-8859-1</code>.
  <div class="note"><strong>Usage note:</strong> To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.</div>
  </dd>
- <dt>{{HTMLAttrDef("rev")}} {{Obsolete_Inline}}</dt>
+ <dt>{{HTMLAttrDef("rev")}} {{deprecated_inline}}</dt>
  <dd>The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{HTMLAttrxRef("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the <code>rel</code> attribute. <a href="/en-US/docs/Web/HTML/Link_types">Link type values</a> for the attribute are similar to the possible values for {{HTMLAttrxRef("rel", "link")}}.</dd>
  <dd>
  <div class="notecard note">
@@ -295,7 +294,7 @@ myStylesheet.onerror = function() {
 
 <h3 id="Preload_examples">Preload examples</h3>
 
-<p>You can find a number of <code>&lt;link rel="preload"&gt;</code> examples in <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with <code>rel="preload"</code></a>.</p>
+<p>You can find a number of <code>&lt;link rel="preload"&gt;</code> examples in <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with <code>rel="preload"</code></a>.</p>
 
 <h2 id="Technical_summary">Technical summary</h2>
 
@@ -334,36 +333,11 @@ myStylesheet.onerror = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "semantics.html#the-link-element", "&lt;link&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Added <code>imagesizes</code> and <code>imagesrcset</code> attributes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "document-metadata.html#the-link-element", "&lt;link&gt;")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Added <code>crossorigin</code> and <code>sizes</code> attributes; extended values of <code>media</code> to any media queries; added numerous new values for <code>rel</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "struct/links.html#h-12.3", "&lt;link&gt;")}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.link", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

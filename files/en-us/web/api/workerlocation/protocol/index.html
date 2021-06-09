@@ -1,0 +1,52 @@
+---
+title: WorkerLocation.protocol
+slug: Web/API/WorkerLocation/protocol
+tags:
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - WorkerLocation
+browser-compat: api.WorkerLocation.protocol
+---
+<p>{{ApiRef("WorkerLocation")}}</p>
+
+<p>The <strong><code>protocol</code></strong> property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.protocol", "protocol")}} part of the worker’s location.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre
+	class="brush: js"><em>string</em> = <em>object</em>.protocol;</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">// In a Web worker, on the page https://developer.mozilla.org/en-US/WorkerLocation.href
+var result = window.self.protocol; // Returns:'https:'
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('HTML WHATWG', 'workers.html#dom-workerlocation-protocol', 'WorkerLocation.protocol')}}</td>
+			<td>{{Spec2('HTML WHATWG')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li>The {{domxref("WorkerLocation")}} interface it belongs to.</li>
+</ul>

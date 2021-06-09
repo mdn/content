@@ -8,10 +8,12 @@ tags:
   - global
   - globalThis
   - this
+  - Polyfill
+browser-compat: javascript.builtins.globalThis
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><span class="seoSummary">The global <code><strong>globalThis</strong></code> property contains the global <code>this</code> value, which is akin to the global object.</span></p>
+<p><span class="seoSummary">The global <code><strong>globalThis</strong></code> property contains the global <code>this</code> value, which is akin to the <a href="/en-US/docs/Glossary/Global_object">global object</a>.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}</div>
 
@@ -60,25 +62,15 @@ if (typeof globals.setTimeout !== 'function') {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("ESDraft", "#sec-globalthis", "globalThis")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.globalThis")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{jsxref("this")}}</li>
+ <li>A polyfill of <code>globalThis</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-globalthis"><code>core-js</code></a></li>
+ <li>{{jsxref("Operators/this", "this")}}</li>
 </ul>

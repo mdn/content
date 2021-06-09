@@ -14,18 +14,13 @@ tags:
   - Selecting Elements
   - Selectors
   - querySelectorAll
+browser-compat: api.Document.querySelectorAll
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p>The {{domxref("Document")}} method <code><strong>querySelectorAll()</strong></code>
   returns a static (not live) {{domxref("NodeList")}} representing a list of the
   document's elements that match the specified group of selectors.</p>
-
-<div class="note">
-  <p><strong>Note:</strong> This method is implemented based on the
-    {{domxref("ParentNode")}} mixin's {{domxref("ParentNode.querySelectorAll",
-    "querySelectorAll()")}} method.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -201,7 +196,7 @@ inner.length; // 0
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.querySelectorAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -218,8 +213,6 @@ inner.length; // 0
   <li>{{domxref("Document.querySelector()")}}</li>
   <li>{{domxref("DocumentFragment.querySelector()")}} and
     {{domxref("DocumentFragment.querySelectorAll()")}}</li>
-  <li>{{domxref("ParentNode.querySelector()")}} and
-    {{domxref("ParentNode.querySelectorAll()")}}</li>
   <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for
       <code>querySelector()</code></a></li>
 </ul>

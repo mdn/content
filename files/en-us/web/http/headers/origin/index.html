@@ -7,6 +7,7 @@ tags:
   - Request header
   - header
   - origin
+browser-compat: http.headers.Origin
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -19,7 +20,7 @@ tags:
     <li>all {{Glossary("CORS", "cross origin")}} requests.</li>
     <li><a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin</a> requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).</li>
   </ul>
-  <p>There are some exceptions to the above rules; for example if a cross-origin request is made in <a href="/en-US/docs/Web/API/Request/mode#value">no-cors mode</a> the <code>Origin</code> header will not be added.</p>
+  <p>There are some exceptions to the above rules; for example if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in <a href="/en-US/docs/Web/API/Request/mode#value">no-cors mode</a> the <code>Origin</code> header will not be added.</p>
 </div>
 
 <table class="properties">
@@ -79,7 +80,7 @@ Origin: &lt;scheme&gt; "://" &lt;hostname&gt; [ ":" &lt;port&gt; ]
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("http.headers.Origin")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
@@ -87,4 +88,5 @@ Origin: &lt;scheme&gt; "://" &lt;hostname&gt; [ ":" &lt;port&gt; ]
  <li>{{HTTPHeader("Host")}}</li>
  <li>{{HTTPHeader("Referer")}}</li>
  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
+ <li>Stack Overflow: <a href="https://stackoverflow.com/a/42242802/">When do browsers send the Origin header? When do browsers set the origin to null?</a></li>
 </ul>

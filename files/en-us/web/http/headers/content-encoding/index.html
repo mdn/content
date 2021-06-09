@@ -2,27 +2,26 @@
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
 tags:
-- HTTP
-- Headers
-- Reference
+  - HTTP
+  - Headers
+  - Reference
+browser-compat: http.headers.Content-Encoding
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Content-Encoding</code></strong> entity header is used to compress
-  the media-type. When present, its value indicates which encodings were applied to the
-  entity-body. It lets the client know how to decode in order to obtain the media-type
-  referenced by the <code>Content-Type</code> header.</p>
+<p>The <strong><code>Content-Encoding</code></strong> {{Glossary("representation header")}} lists any encodings that have been applied to the representation (message payload), and in what order.
+  This lets the recipient know how to decode the representation in order to obtain the original payload format.
+  Content encoding is mainly used to compress the message data without losing information about the origin media type.</p>
 
-<p>The recommendation is to compress data as much as possible and therefore to use this
-  field, but some types of resources, such as jpeg images, are already compressed.
-  Sometimes, using additional compression doesn't reduce payload size and can even make
-  the payload longer.</p>
+<p>Note that the original media/content type is specified in the {{HTTPHeader("Content-Type")}} header, and that the <code>Content-Encoding</code> applies to the representation, or "coded form", of the data. If the original media is encoded in some way (e.g. a zip file) then this information would not be included in the <code>Content-Encoding</code> header.</p>
+
+<p>Servers are encouraged to compress data as much as possible, and should use content encoding where appropriate. Compressing a compressed media type such as a zip or jpeg may not be appropriate, as this can make the payload larger.</p>
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Entity header")}}</td>
+      <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -59,7 +58,7 @@ Content-Encoding: deflate, gzip
     because of a patent issue (it expired in 2003).</dd>
   <dt><code>deflate</code></dt>
   <dd>Using the <a href="https://en.wikipedia.org/wiki/Zlib">zlib</a>
-    structure (defined in <a       href="http://tools.ietf.org/html/rfc1950">RFC 1950</a>) with the <a       href="https://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> compression
+    structure (defined in <a       href="https://tools.ietf.org/html/rfc1950">RFC 1950</a>) with the <a       href="https://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> compression
     algorithm (defined in <a       href="https://datatracker.ietf.org/doc/html/rfc1951">RFC 1951</a>).</dd>
   <dt><code>br</code></dt>
   <dd>A format using the <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a>
@@ -95,10 +94,6 @@ Content-Encoding: deflate, gzip
   </thead>
   <tbody>
     <tr>
-      <td>{{RFC("7932", "Brotli Compressed Data Format")}}</td>
-      <td>Brotli Compressed Data Format</td>
-    </tr>
-    <tr>
       <td>{{RFC("7231", "Content-Encoding", "3.1.2.2")}}</td>
       <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
     </tr>
@@ -106,17 +101,16 @@ Content-Encoding: deflate, gzip
       <td>{{RFC("2616", "Content-Encoding", "14.11")}}</td>
       <td>Content-Encoding</td>
     </tr>
+    <tr>
+      <td>{{RFC("7932", "Brotli Compressed Data Format")}}</td>
+      <td>Brotli Compressed Data Format</td>
+    </tr>
   </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Content-Encoding")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

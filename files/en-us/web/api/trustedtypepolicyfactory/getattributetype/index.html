@@ -1,0 +1,69 @@
+---
+title: TrustedTypePolicyFactory.getAttributeType()
+slug: Web/API/TrustedTypePolicyFactory/getAttributeType
+tags:
+  - API
+  - Method
+  - Reference
+  - getAttributeType
+  - TrustedTypePolicyFactory
+browser-compat: api.TrustedTypePolicyFactory.getAttributeType
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>getAttributeType()</code></strong> method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>attributeType</var> = <var>TrustedTypePolicyFactory</var>.getAttributeType(<var>tagName</var>,<var>attribute</var>[,<var>elementNs</var>,<var>attrNs</var>]);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>tagName</code></dt>
+  <dd>A {{domxref("DOMString","string")}} containing the name of an HTML tag.</dd>
+  <dt><code>attribute</code></dt>
+  <dd>A {{domxref("DOMString","string")}} containing an attribute.</dd>
+  <dt><code>elementNs</code>{{optional_inline}}</dt>
+  <dd>A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.</dd>
+  <dt><code>attrNs</code>{{optional_inline}}</dt>
+  <dd>A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to null.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{domxref("DOMString","string")}} with one of:</p>
+<ul>
+  <li><code>"TrustedHTML"</code></li>
+  <li><code>"TrustedScript"</code></li>
+  <li><code>"TrustedScriptURL"</code></li>
+</ul>
+
+<p>Or, null.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In this example, passing the {{htmlelement("script")}} element and {{htmlattrxref("src")}} attribute to <code>getAttributeType</code> returns "TrustedScriptURL".</p>
+
+<pre class="brush: js">console.log(trustedTypes.getAttributeType('script', 'src')); // "TrustedScriptURL"</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedtypepolicyfactory-getattributetype','TrustedTypePolicyFactory.getAttributeType()')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

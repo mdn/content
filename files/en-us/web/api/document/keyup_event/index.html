@@ -8,6 +8,7 @@ tags:
   - KeyboardEvent
   - Reference
   - keyup
+browser-compat: api.Document.keyup_event
 ---
 <div>{{APIRef}}</div>
 
@@ -40,16 +41,6 @@ tags:
 <p><strong>Note:</strong> If you're looking for a way to react to changes in an input's value, you should use the <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> event</a>. Some changes are not detectable by <code>keyup</code>, for example pasting text from the context menu in a text input.</p>
 </div>
 
-<p>Since Firefox 65, the {{domxref("Document/keydown_event", "keydown")}} and <code>keyup</code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}, also see <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> for more useful details). To ignore all <code>keyup</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
-
-<pre class="brush: js">eventTarget.addEventListener("keyup", event =&gt; {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
-  }
-  // do something
-});
-</pre>
-
 <h2 id="Examples">Examples</h2>
 
 <p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you release a key.</p>
@@ -73,26 +64,30 @@ function logKey(e) {
 
 <pre class="brush: js">document.onkeyup = logKey;</pre>
 
+
+<h3 id="Ignoring_keyup_during_ime_composition">Ignoring keyup during IME composition</h3>
+
+<p>An <em>Input Method Editor (IME)</em> is a program that enables users to enter characters that are not supported by their keyboard using some other key combination.</p>
+
+<p>Since Firefox 65, the {{domxref("Document/keydown_event", "keydown")}} and <code>keyup</code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}, also see <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> for more useful details). To ignore all <code>keyup</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
+
+<pre class="brush: js">eventTarget.addEventListener("keyup", event =&gt; {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // do something
+});
+</pre>
+
+
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#event-type-keyup")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.keyup_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

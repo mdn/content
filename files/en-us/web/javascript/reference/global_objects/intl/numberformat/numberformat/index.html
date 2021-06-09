@@ -2,18 +2,19 @@
 title: Intl.NumberFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 tags:
-- Constructor
-- Internationalization
-- Intl
-- JavaScript
-- Localization
-- NumberFormat
-- Reference
+  - Constructor
+  - Internationalization
+  - Intl
+  - JavaScript
+  - Localization
+  - NumberFormat
+  - Reference
+browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>Intl.NumberFormat()</code></strong> constructor creates
-	{{jsxref("NumberFormat", "Intl.NumberFormat")}} objects that enable language-sensitive
+	{{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}} objects that enable language-sensitive
 	number formatting.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}</div>
@@ -21,7 +22,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">new Intl.NumberFormat([<var>locales</var>[, <var>options</var>]])
+<pre class="brush: js">
+new Intl.NumberFormat()
+new Intl.NumberFormat(locales)
+new Intl.NumberFormat(locales, options)
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -331,23 +335,11 @@ new Intl.NumberFormat('en-GB', {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('ES Int Draft', '#sec-intl-numberformat-constructor',
-				'Intl.NumberFormat constructor')}}</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("javascript.builtins.Intl.NumberFormat.NumberFormat")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

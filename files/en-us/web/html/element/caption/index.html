@@ -12,10 +12,11 @@ tags:
   - Tables
   - Web
   - caption
+browser-compat: html.elements.caption
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;caption&gt;</code> element</strong> specifies the caption (or title) of a table.</span></p>
+<p>The <strong><code>&lt;caption&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies the caption (or title) of a table.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}</div>
 
@@ -84,6 +85,8 @@ tags:
 
 <p>When the <code>&lt;table&gt;</code> element that contains the <code>&lt;caption&gt;</code> is the only descendant of a {{HTMLElement("figure")}} element, you should use the {{HTMLElement("figcaption")}} element instead of <code>&lt;caption&gt;</code>.</p>
 
+<p>A {{cssxref("background-color")}} on the table will not include the caption. Add a <code>background-color</code> to the <code>&lt;caption&gt;</code> element as well if you want the same color to be behind both.</p>
+
 <h2 id="Example">Example</h2>
 
 <p>This simple example presents a table that includes a caption.</p>
@@ -107,7 +110,6 @@ tags:
 <div class="hidden">
 <pre class="brush: css">caption {
   caption-side: top;
-  align: right;
 }
 table {
   border-collapse: collapse;
@@ -121,40 +123,13 @@ table, th, td {
 
 <p>{{EmbedLiveSample('Example', 650, 100)}}</p>
 
-<p><code>table {background: red;}</code> do not alter caption. For that you need <code>display: block</code>.</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'tables.html#the-caption-element', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'tabular-data.html#the-caption-element', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/tables.html#h-11.2.2', '&lt;caption&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.caption")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

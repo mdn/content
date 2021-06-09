@@ -5,11 +5,13 @@ tags:
   - Fetch Metadata Request Headers
   - Glossary
 ---
-<p>A <strong>fetch metadata request header</strong> is a {{Glossary("Request header", "HTTP request header")}} that provides additional information about the context the request originated from. These header names are prefixed with <code>Sec-</code> and thus they are {{Glossary("Forbidden header name", "forbidden header names")}} so headers can not be modified from JavaScript.</p>
+<p>A <strong>fetch metadata request header</strong> is an {{Glossary("Request header", "HTTP request header")}} that provides additional information about the context from which the request originated. This allows the server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.</p>
 
-<p>Fetch metadata request headers provide the server with additional information about where the request originated from, enabling it to ignore potentially malicious requests.</p>
+<p>With this information a server can implement a {{Glossary("resource isolation policy")}}, allowing external sites to request only those resources that are intended for sharing, and that are used appropriately. This approach can help mitigate common cross-site web vulnerabilities such as {{Glossary("CSRF")}}, {{Glossary("Cross-site_scripting","Cross-site scripting ('XSSI') attacks")}}, timing attacks, and cross-origin information leaks.</p>
 
-<p>The following are fetch metadata request headers:</p>
+<p>These headers are prefixed with <code>Sec-</code>, and hence have {{Glossary("Forbidden header name", "forbidden header names")}}. As such, they cannot be modified from JavaScript.</p>
+
+<p>The fetch metadata request headers are:</p>
 
 <ul>
  <li>{{HTTPHeader("Sec-Fetch-Site")}}</li>
@@ -18,17 +20,25 @@ tags:
  <li>{{HTTPHeader("Sec-Fetch-Dest")}}</li>
 </ul>
 
+<h2 id="see_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/fetch-metadata/">Protect your resources from web attacks with Fetch Metadata</a> (web.dev)</li> 
+  <li><a href="https://secmetadata.appspot.com/">Fetch Metadata Request Headers playground</a> (secmetadata.appspot.com)</li>
+ </ul>
+
 <section id="Quick_links">
 <ol>
  <li>Fetch Me
   <ol>
    <li><a href="/en-US/docs/Web/HTTP/Headers">List of all HTTP headers</a></li>
+   <li><a href="/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers">List of all HTTP headers > Fetch metadata request headers</a></li>
   </ol>
  </li>
  <li><a href="/en-US/docs/Glossary">Glossary</a>
   <ol>
-   <li>{{Glossary("Entity header")}}</li>
-   <li>{{Glossary("Header")}}</li>
+   <li>{{Glossary("Representation header")}}</li>
+   <li>{{Glossary("HTTP_header","HTTP header")}}</li>
    <li>{{Glossary("Response header")}}</li>
    <li>{{Glossary("Request header")}}</li>
   </ol>

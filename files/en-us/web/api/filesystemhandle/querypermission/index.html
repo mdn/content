@@ -7,6 +7,7 @@ tags:
   - File System Access API
   - FileSystemHandle
   - Method
+browser-compat: api.FileSystemHandle.queryPermission
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
@@ -46,7 +47,11 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<p>None.</p>
+<dl>
+  <dt><code>TypeError</code></dt>
+  <dd>If <code>mode</code> is specified with a value other than
+    <code>'read'</code> or <code>'readwrite'</code></dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -96,7 +101,7 @@ async function verifyPermission(fileHandle, withWrite) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemHandle.queryPermission")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

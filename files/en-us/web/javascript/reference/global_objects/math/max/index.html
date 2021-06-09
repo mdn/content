@@ -2,17 +2,18 @@
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
 tags:
-- JavaScript
-- Largest Number
-- Largest Value
-- Math
-- Method
-- Maximum
-- Reference
-- Largest
-- Largest Number
-- Largest Value
-- max
+  - JavaScript
+  - Largest Number
+  - Largest Value
+  - Math
+  - Method
+  - Maximum
+  - Reference
+  - Largest
+  - Largest Number
+  - Largest Value
+  - max
+browser-compat: javascript.builtins.Math.max
 ---
 <div>{{JSRef}}</div>
 
@@ -22,16 +23,15 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">Math.max([<var>value1</var>[, <var>value2</var>[, ...]]])</pre>
+<pre class="brush: js">
+Math.max()
+Math.max(value0)
+Math.max(value0, value1)
+Math.max(value0, value1, ... , valueN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -88,7 +88,7 @@ var max = arr.reduce(function(a, b) {
   return Math.max.apply(null, numArray);
 }</pre>
 
-<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread
+<p>The new <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread
     operator</a> is a shorter way of writing the <code>apply</code> solution to get the
   maximum of an array:</p>
 
@@ -99,28 +99,17 @@ var max = Math.max(...arr);
 <p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or
   return the wrong result if the array has too many elements, because they try to pass the
   array elements as function parameters. See <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#using_apply_and_built-in_functions">Using
     apply and built-in functions</a> for more details. The <code>reduce</code> solution
   does not have this problem.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Math.max")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,11 +9,12 @@ tags:
 - WebUSB
 - WebUSB API
 - ondisconnect
+browser-compat: api.USB.ondisconnect
 ---
 <p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
 
 <p>The <strong><code>ondisconnect</code></strong> property of the {{domxref("USB")}} is an
-  event handler called whenever a paired device is disconnected.</p>
+  event handler called whenever a paired device is disconnected. It is passed an instance of {{domxref("USBConnectionEvent")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -39,4 +40,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.USB.ondisconnect")}}</p>
+<p>{{Compat}}</p>

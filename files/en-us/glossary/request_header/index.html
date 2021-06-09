@@ -5,9 +5,9 @@ tags:
   - Glossary
   - WebMechanics
 ---
-<p>A <strong>request header</strong> is an {{glossary("header", "HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g.  {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc. </p>
+<p>A <strong>request header</strong> is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g.  {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc. </p>
 
-<p>Not all headers appearing in a request are referred to as <em>request headers</em> by the specification. For example, the {{HTTPHeader("Content-Length")}} header (which indicates the size of the message body) is referred to as an {{glossary("entity header")}} in older versions of the specification and as representational metadata in more recent versions.</p>
+<p>Not all headers that can appear in a request are referred to as <em>request headers</em> by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.</p>
 
 <p>In addition, <a href="/en-US/docs/Glossary/CORS">CORS</a> defines a subset of request headers as {{glossary('simple header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.</p>
 

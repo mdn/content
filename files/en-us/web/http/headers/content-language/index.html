@@ -5,10 +5,11 @@ tags:
   - HTTP
   - Headers
   - Reference
+browser-compat: http.headers.Content-Language
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Content-Language</code></strong> {{Glossary("entity header")}} is used to <strong>describe the language(s) intended for the audience</strong>, so that it allows a user to differentiate according to the users' own preferred language.</p>
+<p>The <strong><code>Content-Language</code></strong> {{Glossary("representation header")}} is used to <strong>describe the language(s) intended for the audience</strong>, so that it allows a user to differentiate according to the users' own preferred language.</p>
 
 <p>For example, if "<code>Content-Language: de-DE</code>" is set, it says that the document is intended for German language speakers (however, it doesn't indicate the document is written in German. For example, it might be written in English as part of a language course for German speakers. If you want to indicate which language the document is written in, use the <a href="/en-US/docs/Web/HTML/Global_attributes/lang"><code>lang</code> attribute</a> instead).</p>
 
@@ -18,7 +19,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Header type</th>
-   <td>{{Glossary("Entity header")}}</td>
+   <td>{{Glossary("Representation header")}}</td>
   </tr>
   <tr>
    <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -91,9 +92,7 @@ Content-Language: de-DE, en-CA
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Content-Language")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -14,14 +14,13 @@ tags:
   - Web
   - a11y
   - track
+browser-compat: html.elements.track
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;track&gt;</code> element</strong> is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles.</span> The tracks are formatted in <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT format</a> (<code>.vtt</code> files) — Web Video Text Tracks.</p>
+<p>The <strong><code>&lt;track&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT format</a> (<code>.vtt</code> files) — Web Video Text Tracks.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -113,7 +112,7 @@ tags:
 
 <p>The type of data that <code>track</code> adds to the media is set in the <code>kind</code> attribute, which can take values of <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code> or <code>metadata</code>. The element points to a source file containing timed text that the browser exposes when the user requests additional data.</p>
 
-<p>A <code>media</code> element cannot have more than one <code>track</code> with the same <code>kind</code>, <code>srclang</code>, and <code>label</code>.</p>
+<p>A media element cannot have more than one <code>track</code> with the same <code>kind</code>, <code>srclang</code>, and <code>label</code>.</p>
 
 <h3 id="Detecting_cue_changes">Detecting cue changes</h3>
 
@@ -145,33 +144,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','embedded-content.html#the-track-element','track element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "semantics-embedded-content.html#the-track-element", "track element")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.track")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

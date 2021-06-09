@@ -32,10 +32,10 @@ tags:
 <p>The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the Web. Of course, as a practical matter, the code must contribute to the point of the page that contains it; random stuff running on MDN will be removed by the editor community.</p>
 
 <div class="note notecard">
-<p><strong>Note:</strong> You <strong>must</strong> use the macro for presenting the live sample's output. MDN's editor will strip out any direct use of the <code>&lt;iframe&gt;</code> element in order to ensure security.</p>
+<p><strong>Note:</strong> You <strong>must</strong> use the macro for presenting the live sample's output.</p>
 </div>
 
-<p>Each {{HTMLElement("pre")}} block containing code for the sample has a class on it that indicates whether it's HTML, CSS, or JavaScript code; these are "brush: html", "brush: css", and "brush: js". These classes must be on the corresponding blocks of code so that the wiki can use them correctly; fortunately, these are added for you automatically when you use the syntax highlighter features in the editor's toolbar.</p>
+<p>Each {{HTMLElement("pre")}} block containing code for the sample has a class on it that indicates whether it's HTML, CSS, or JavaScript code; these are "brush: html", "brush: css", and "brush: js". These classes must be on the corresponding blocks of code.</p>
 
 <p>The live sample system has lots of options available, and we'll try to break things down to look at them a bit at a time.</p>
 
@@ -54,13 +54,9 @@ tags:
 
 <pre class="brush: js"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
 
-<div class="note notecard">
-<p><strong>Note</strong>: If the heading is translated, its ID is automatically updated to match the translated text. Therefore, you must change the value of <em>block_ID</em> in the macro call in the translated article, in order for the macro to work properly.</p>
-</div>
-
 <dl>
  <dt>block_ID</dt>
- <dd>Required: The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page (by clicking the "Source" button in the editor toolbar). <strong>Note:</strong> In a translated page, if the heading has been translated, the ID is automatically translated, too, and you must <em>use the translated ID</em> in order for the macro to work properly.</dd>
+ <dd>Required: The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page.</dd>
  <dt>width</dt>
  <dd>The width of the {{HTMLElement("iframe")}} to create, specified in <code>px</code>. This is optional; a reasonable default width will be used if you omit this. Note that if you want to use a specific width, you <em>must</em> also specify the height parameter.</dd>
  <dt>height</dt>
@@ -82,7 +78,7 @@ tags:
 
 <dl>
  <dt>block_ID</dt>
- <dd>The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page (by clicking the "Source" button in the editor toolbar). <strong>Note:</strong> In a translated page, if the heading has been translated, the ID is automatically translated, too, and you must <em>use the translated ID</em> in order for the macro to work properly.</dd>
+ <dd>The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page.</dd>
  <dt>link_text</dt>
  <dd>A string to use as the link text.</dd>
 </dl>

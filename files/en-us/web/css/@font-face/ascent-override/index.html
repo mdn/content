@@ -1,0 +1,95 @@
+---
+title: ascent-override
+slug: Web/CSS/@font-face/ascent-override
+tags:
+  - '@font-face'
+  - At-rule descriptor
+  - CSS
+  - Reference
+  - descriptor
+  - ascent-override
+browser-compat: css.at-rules.font-face.ascent-override
+---
+<p>{{CSSRef}}</p>
+
+<p>The <strong><code>ascent-override</code></strong> CSS descriptor defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: css">ascent-override: normal;
+ascent-override: 90%;</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt><code>normal</code></dt>
+ <dd>The default value. When used the metric value is obtained from the font file.</dd>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>A {{cssxref("&lt;percentage&gt;")}} value.</dd>
+</dl>
+
+<h2 id="Formal_definition">Formal definition</h2>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
+
+{{csssyntax}}
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Overriding_metrics_of_a_fallback_font">Overriding metrics of a fallback font</h3>
+
+<p>The <code>ascent-override</code> property can help when overriding the metrics of a fallback font to better match those of a primary web font.</p>
+
+<pre class="brush: css">@font-face {
+  font-family: web-font;
+  src: url("https://example.com/font.woff");
+}
+
+@font-face {
+  font-family: local-font;
+  src: local(Local Font);
+  ascent-override: 125%;
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Fonts', '#descdef-font-face-ascent-override', 'ascent-override')}}</td>
+   <td>{{Spec2('CSS4 Fonts')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("@font-face/descent-override", "descent-override")}}</li>
+ <li>{{cssxref("@font-face/font-display", "font-display")}}</li>
+ <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
+ <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
+ <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
+ <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
+ <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
+ <li>{{cssxref("font-feature-settings", "font-feature-settings")}}</li>
+ <li>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</li>
+ <li>{{cssxref("@font-face/line-gap-override", "line-gap-override")}}</li>
+ <li>{{cssxref("@font-face/src", "src")}}</li>
+ <li>{{cssxref("@font-face/size-adjust", "size-adjust")}}</li>
+ <li>{{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}</li>
+</ul>

@@ -3,9 +3,12 @@ title: Connection
 slug: Web/HTTP/Headers/Connection
 tags:
 - HTTP
-- Headers
+- HTTP Header
+- Request header
+- Response header
 - Reference
 - Web
+browser-compat: http.headers.Connection
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -15,6 +18,7 @@ tags:
   subsequent requests to the same server to be done.</p>
 
 <div class="notecard warning">
+  <h4>Warning</h4>
   <p>Connection-specific header fields such as {{HTTPHeader("Connection")}} and
     {{HTTPHeader("Keep-Alive")}} are <a
       href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">prohibited in HTTP/2</a>.
@@ -34,7 +38,7 @@ tags:
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("General header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -65,9 +69,4 @@ Connection: close
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Connection")}}</p>
+<p>{{Compat}}</p>

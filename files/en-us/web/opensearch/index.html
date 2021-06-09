@@ -16,7 +16,7 @@ tags:
 
 <p>Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the <code>&lt;SearchForm&gt;</code> element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.</p>
 
-<p>OpenSearch description files can be advertised as described in <a href="#autodiscovery_of_search_plugins">Autodiscovery of search plugins</a>, and can be installed programmatically as described in <a href="/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages">Adding search engines from web pages</a>.</p>
+<p>OpenSearch description files can be advertised as described in <a href="#autodiscovery_of_search_plugins">Autodiscovery of search plugins</a>, and can be installed programmatically as described in <a href="/en-US/docs/Web/OpenSearch">Adding search engines from web pages</a>.</p>
 
 <h2 id="OpenSearch_description_file">OpenSearch description file</h2>
 
@@ -48,7 +48,7 @@ tags:
  <dd>
  <p>URI of an icon for the search engine. When possible, include a 16×16 image of type <code>image/x-icon</code> (such as <code>/favicon.ico</code>) and a 64×64 image of type <code>image/jpeg</code> or <code>image/png</code>.</p>
 
- <p>The URI may also use the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URI scheme</a>. (You can generate a <code>data:</code> URI from an icon file at <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.)</p>
+ <p>The URI may also use the <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URI scheme</a>. (You can generate a <code>data:</code> URI from an icon file at <a class="external" href="https://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.)</p>
 
  <pre class="brush: xml">&lt;Image height="16" width="16" type="image/x-icon"&gt;https://example.com/favicon.ico&lt;/Image&gt;
   &lt;!-- or --&gt;
@@ -70,7 +70,7 @@ tags:
   <li><code>type="application/x-moz-keywordsearch"</code> specifies the URL used when a keyword search is entered in the location bar. This is supported only in Firefox.</li>
  </ul>
 
- <p>For these URL types, you can use <code>{searchTerms}</code> to substitute the search terms entered by the user in the search bar or location bar. Other supported dynamic search parameters are described in <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters">OpenSearch 1.1 parameters</a>.</p>
+ <p>For these URL types, you can use <code>{searchTerms}</code> to substitute the search terms entered by the user in the search bar or location bar. Other supported dynamic search parameters are described in <a class="external" href="https://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters">OpenSearch 1.1 parameters</a>.</p>
 
  <p>For search suggestions, the <code>application/x-suggestions+json</code> URL template is used to fetch a suggestion list in <a href="/en-US/docs/Glossary/JSON">JSON</a> format. For details on how to implement search suggestion support on a server, see <a href="/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins">Supporting search suggestions in search plugins</a>.</p>
  </dd>
@@ -154,6 +154,5 @@ tags:
  <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser-features/search-provider-discovery">Microsoft Edge Dev Guide: Search provider discovery</a></li>
  <li><a href="https://www.chromium.org/tab-to-search">The Chromium Projects: Tab to Search</a></li>
  <li>imdb.com has a <a class="external" href="https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml">working <code>osd.xml</code></a></li>
- <li><a class="external" href="http://www.7is7.com/software/firefox/opensearch.html">OpenSearch Plugin Generator</a></li>
- <li><a class="external" href="http://ready.to/search/en">Ready2Search</a> - create OpenSearch plugins. <a class="external" href="http://ready.to/search/make/en_make_plugin.htm">Customized Search through Ready2Search</a></li>
+ <li><a class="external" href="https://ready.to/search/en">Ready2Search</a> - create OpenSearch plugins. <a class="external" href="https://ready.to/search/make/en_make_plugin.htm">Customized Search through Ready2Search</a></li>
 </ul>

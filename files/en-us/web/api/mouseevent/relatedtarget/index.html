@@ -2,20 +2,21 @@
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 tags:
-- API
-- DOM
-- DOM Events
-- MouseEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - DOM Events
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
+browser-compat: api.MouseEvent.relatedTarget
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
 <p>The <strong><code>MouseEvent.relatedTarget</code></strong> read-only property is the
   secondary target for the mouse event, if there is one. That is:</p>
 
-<table class="standard-table" style="width: auto;">
+<table class="standard-table">
   <tbody>
     <tr>
       <td class="header">Event name</td>
@@ -48,7 +49,7 @@ tags:
       <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
     </tr>
     <tr>
-      <td>{{Event("dragexit")}}</td>
+      <td>{{Event("dragleave")}}</td>
       <td>The {{domxref("EventTarget")}} the pointing device exited from</td>
       <td>The {{domxref("EventTarget")}} the pointing device entered to</td>
     </tr>
@@ -163,12 +164,12 @@ function overListener(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MouseEvent.relatedTarget")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{ domxref("MouseEvent") }}</li>
-  <li><a href="/en-US/docs/DOM/event/Comparison_of_Event_Targets">Comparison of Event
+  <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event
       Targets</a></li>
 </ul>

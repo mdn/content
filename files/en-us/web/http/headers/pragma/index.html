@@ -2,18 +2,20 @@
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
 tags:
-- Caching
-- Deprecated
-- HTTP
-- header
-- request
+  - Caching
+  - Deprecated
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
+browser-compat: http.headers.Pragma
 ---
 <div>{{HTTPSidebar}}</div>
 
 <p>The <code><strong>Pragma</strong></code> HTTP/1.0 general header is an
   implementation-specific header that may have various effects along the request-response
   chain. It is used for backwards compatibility with HTTP/1.0 caches where the
-  <code>Cache-Control</code> HTTP/1.1 header is not yet present.</p>
+  {{HTTPHeader("Cache-Control")}} HTTP/1.1 header is not yet present.</p>
 
 <div class="note">
   <p><strong>Note</strong>: <code>Pragma</code> is not specified for HTTP responses and is
@@ -28,8 +30,7 @@ tags:
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("General header")}}, but response behavior is not specified and thus
-        implementation-specific.</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}} (response behavior is not specified and thus implementation-specific).</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -78,12 +79,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Pragma")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - DOM Events
   - EventTarget
   - Interface
+browser-compat: api.EventTarget
 ---
 <p>{{ApiRef("DOM Events")}}</p>
 
@@ -14,7 +15,7 @@ tags:
 
 <p>{{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}} are the most common event targets, but other objects can be event targets, too. For example {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, and others.</p>
 
-<p>Many event targets (including elements, documents, and windows) also support setting <a href="/en-US/docs/Web/Guide/Events/Event_handlers">event handlers</a> via <code>on<var>event</var></code> properties and attributes.</p>
+<p>Many event targets (including elements, documents, and windows) also support setting <a href="/en-US/docs/Web/Events/Event_handlers">event handlers</a> via <code>on<var>event</var></code> properties and attributes.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -110,12 +111,12 @@ EventTarget.prototype.dispatchEvent = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventTarget")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
 	<li><a href="/en-US/docs/Web/Events">Event reference</a> - the events available in the platform.</li>
-	<li><a href="/en-US/docs/Web/Guide/Events">Event developer guide</a></li>
+	<li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
 	<li>{{domxref("Event")}} interface</li>
 </ul>

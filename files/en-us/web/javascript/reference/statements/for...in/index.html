@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Language feature
 - Statement
+browser-compat: javascript.statements.for_in
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
@@ -18,8 +19,10 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">for (<var>variable</var> in <var>object</var>)
-  statement</pre>
+<pre class="brush: js">for (<var>variable</var> in <var>object</var>) {
+  <var>statement</var>
+}
+</pre>
 
 <dl>
   <dt><code><var>variable</var></code></dt>
@@ -147,21 +150,11 @@ for (const prop in obj) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in
-        statement')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.statements.for_in")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Compatibility_Initializer_expressions_in_strict_mode">Compatibility: Initializer
   expressions in strict mode</h3>

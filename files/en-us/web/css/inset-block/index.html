@@ -8,26 +8,27 @@ tags:
   - Experimental
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.inset-block
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>inset-block</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}} and {{cssxref("bottom")}}, or {{cssxref("right")}} and {{cssxref("left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
 
 <pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
-inset-inline: 3px 10px;
-inset-inline: 2.4em 3em;
-inset-inline: 10px; /* value applied to start and end */
+inset-block: 3px 10px;
+inset-block: 2.4em 3em;
+inset-block: 10px; /* value applied to start and end */
 
 /* &lt;percentage&gt;s of the width or height of the containing block */
-inset-inline: 10% 5%;
+inset-block: 10% 5%;
 
 /* Keyword value */
-inset-inline: auto;
+inset-block: auto;
 
 /* Global values */
-inset-inline: inherit;
-inset-inline: initial;
-inset-inline: unset;
+inset-block: inherit;
+inset-block: initial;
+inset-block: unset;
 </pre>
 
 <h2 id="Constituent_properties">Constituent properties</h2>
@@ -104,7 +105,7 @@ inset-inline: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.inset-block")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

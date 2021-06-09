@@ -7,6 +7,7 @@ tags:
   - Reference
   - SharedWorkerGlobalScope
   - Web Workers
+browser-compat: api.SharedWorkerGlobalScope
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
@@ -44,7 +45,7 @@ tags:
 
 <dl>
  <dt>{{domxref("SharedWorkerGlobalScope.onconnect")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("connect")}} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("connect")}} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -115,7 +116,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SharedWorkerGlobalScope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

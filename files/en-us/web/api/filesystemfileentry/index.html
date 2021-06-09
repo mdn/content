@@ -11,6 +11,7 @@ tags:
   - Interface
   - Offline
   - Reference
+browser-compat: api.FileSystemFileEntry
 ---
 <div>{{APIRef("File System API")}}{{SeeCompatTable}}</div>
 
@@ -30,7 +31,7 @@ tags:
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
-	<dt>{{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} {{obsolete_inline}}</dt>
+	<dt>{{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} {{deprecated_inline}}</dt>
 	<dd>Creates a new {{domxref("FileWriter")}} object which allows writing to the file represented by the file system entry.</dd>
 </dl>
 
@@ -89,7 +90,7 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, onInitFs, errorHandler);</
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemFileEntry")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

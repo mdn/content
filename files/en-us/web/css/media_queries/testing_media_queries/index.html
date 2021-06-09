@@ -56,7 +56,7 @@ handleOrientationChange(mediaQueryList);
 mediaQueryList.addListener(handleOrientationChange);
 </pre>
 
-<p>This code creates the orientation-testing media query list, then adds an event listener to it. After adding the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.</p>
+<p>This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.</p>
 
 <p>The <code>handleOrientationChange()</code> function would look at the result of the query and handle whatever we need to do on an orientation change:</p>
 
@@ -69,7 +69,7 @@ mediaQueryList.addListener(handleOrientationChange);
 }
 </pre>
 
-<p>Above, we define the parameter as <code>evt</code> — an event object. This makes sense because <a href="/en-US/docs/Web/API/MediaQueryList#Browser_compatibility">newer implementations of <code>MediaQueryList</code></a> handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an <a href="/en-US/docs/Web/API/Event">event object</a> of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.</p>
+<p>Above, we define the parameter as <code>evt</code> — an event object. This makes sense because <a href="/en-US/docs/Web/API/MediaQueryList#browser_compatibility">newer implementations of <code>MediaQueryList</code></a> handle event listeners in a standard way. They no longer use the unusual {{domxref("MediaQueryListListener")}} mechanism, but a standard event listener setup, passing an <a href="/en-US/docs/Web/API/Event">event object</a> of type {{domxref("MediaQueryListEvent")}} as the argument to the callback function.</p>
 
 <p>This event object also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the <code>MediaQueryList</code> by directly accessing it, or accessing the event object.</p>
 
@@ -89,7 +89,7 @@ mediaQueryList.addListener(handleOrientationChange);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+ <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
  <li>{{domxref("window.matchMedia()")}}</li>
  <li>{{domxref("MediaQueryList")}}</li>
  <li>{{domxref("MediaQueryListEvent")}}</li>

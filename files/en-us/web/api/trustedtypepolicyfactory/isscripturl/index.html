@@ -1,0 +1,67 @@
+---
+title: TrustedTypePolicyFactory.isScriptURL()
+slug: Web/API/TrustedTypePolicyFactory/isScriptURL
+tags:
+  - API
+  - Method
+  - Reference
+  - isScriptURL
+  - TrustedTypePolicyFactory
+browser-compat: api.TrustedTypePolicyFactory.isScriptURL
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>isScriptURL()</code></strong> method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScriptURL")}} object.</p>
+
+<div class="notecard note">
+  <h4>Note:</h4>
+  <p>The purpose of the functions <code>isScriptURL()</code>, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScript","isScript()")}} is to check if the object is a valid TrustedType object, created by a configured policy.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>isScriptURL</var> = <var>TrustedTypePolicyFactory</var>.isScriptURL(<var>value</var>);</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>value</code></dt>
+  <dd>A {{domxref("TrustedScriptURL")}} object.</dd>
+</dl>
+
+<h3 id="Returns">Return value</h3>
+
+<p>A {{jsxref("boolean")}}that is true if the object is a valid {{domxref("TrustedScriptURL")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the below example the constant <code>url</code> was created by a policy, and therefore <code>isScriptURL()</code> returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to <code>isScriptURL()</code>.</p>
+
+<pre class="brush: js">const url = policy.createScriptURL('https://example.com/myscript.js');
+console.log(trustedTypes.isScriptURL(url)) // true;
+
+const fake = Object.create(TrustedScriptURL.prototype);
+console.log(trustedTypes.isScriptURL(fake)); // false
+
+console.log(trustedTypes.isScriptURL("https://example.com/myscript.js")); // false</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedtypepolicyfactory-isscripturl','TrustedTypePolicyFactory.isScriptURL()')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

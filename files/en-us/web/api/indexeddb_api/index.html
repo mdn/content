@@ -17,7 +17,7 @@ tags:
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: IndexedDB API is powerful, but may seem too complicated for simple cases. If you'd prefer a simple API, try libraries such as <a href="https://localforage.github.io/localForage/">localForage</a>, <a href="https://dexie.org/">dexie.js</a>, <a href="https://github.com/erikolson186/zangodb">ZangoDB</a>, <a href="https://pouchdb.com/">PouchDB</a>, <a href="https://www.npmjs.com/package/idb">idb</a>, <a href="https://www.npmjs.com/package/idb-keyval">idb-keyval</a>, <a href="https://jsstore.net/">JsStore</a> and <a href="https://github.com/google/lovefield">lovefield</a> that make IndexedDB more programmer-friendly.</p>
+<p><strong>Note</strong>: IndexedDB API is powerful, but may seem too complicated for simple cases. If you'd prefer a simple API, try libraries in <a href="#see_also">See also</a> section that make IndexedDB more programmer-friendly.</p>
 </div>
 
 <h2 id="Key_concepts_and_usage">Key concepts and usage</h2>
@@ -36,7 +36,7 @@ tags:
 
 <h3 id="Synchronous_and_asynchronous">Synchronous and asynchronous</h3>
 
-<p>Operations performed using IndexedDB are done asynchronously, so as not to block applications. IndexedDB originally included both synchronous and asynchronous APIs. The synchronous API was intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> but was removed from the spec because it was unclear whether it was needed. However, the synchronous API may be reintroduced if there is enough demand from web developers.</p>
+<p>Operations performed using IndexedDB are done asynchronously, so as not to block applications. IndexedDB originally included both synchronous and asynchronous APIs. The synchronous API was intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a> but was removed from the spec because it was unclear whether it was needed. However, the synchronous API may be reintroduced if there is enough demand from web developers.</p>
 
 <h3 id="Storage_limits_and_eviction_criteria">Storage limits and eviction criteria</h3>
 
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Interfaces">Interfaces</h2>
 
-<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory.open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/IDBEnvironment.indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/DOM/window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
+<p>To get access to a database, call <a href="/en-US/docs/Web/API/IDBFactory/open"><code>open()</code></a> on the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB"><code>indexedDB</code></a> attribute of a <a href="/en-US/docs/Web/API/Window">window</a> object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.</p>
 
 <h3 id="Connecting_to_a_database">Connecting to a database</h3>
 
@@ -77,7 +77,7 @@ tags:
  <dt>{{domxref("IDBKeyRange")}}</dt>
  <dd>Defines a key range that can be used to retrieve data from a database in a certain range.</dd>
  <dt>{{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}</dt>
- <dd>Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see <a href="/en-US/docs/Web/API/IDBObjectStore/createIndex#Parameters"><code>createIndex()</code>'s optionalParameters</a>.). This interface isn't part of the 2.0 specification.</dd>
+ <dd>Defines a key range that can be used to retrieve data from a database in a certain range, sorted according to the rules of the locale specified for a certain index (see <a href="/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters"><code>createIndex()</code>'s optionalParameters</a>.). This interface isn't part of the 2.0 specification.</dd>
 </dl>
 
 <h3 id="Custom_event_interfaces">Custom event interfaces</h3>
@@ -94,23 +94,23 @@ tags:
 <p>An early version of the specification also defined the following, now removed, interfaces. They are still documented in case you need to update previously written code:</p>
 
 <dl>
- <dt>{{domxref("IDBVersionChangeRequest")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBVersionChangeRequest")}} {{deprecated_inline}}</dt>
  <dd>Represents a request to change the version of a database. The way to change the version of the database has since changed (by calling {{domxref("IDBFactory.open")}} without also calling {{domxref("IDBDatabase.setVersion")}}), and the interface {{domxref("IDBOpenDBRequest")}} now has the functionality of the removed {{domxref("IDBVersionChangeRequest")}}.</dd>
- <dt>{{domxref("IDBDatabaseException")}}  {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBDatabaseException")}}  {{deprecated_inline}}</dt>
  <dd>Represents exception conditions that can be encountered while performing database operations.</dd>
- <dt>{{domxref("IDBTransactionSync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBTransactionSync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBTransaction")}}.</dd>
- <dt>{{domxref("IDBObjectStoreSync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBObjectStoreSync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBObjectStore")}}.</dd>
- <dt>{{domxref("IDBIndexSync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBIndexSync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBIndex")}}.</dd>
- <dt>{{domxref("IDBFactorySync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBFactorySync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBFactory")}}.</dd>
- <dt>{{domxref("IDBEnvironmentSync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBEnvironmentSync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBEnvironment")}}.</dd>
- <dt>{{domxref("IDBDatabaseSync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBDatabaseSync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBDatabase")}}.</dd>
- <dt>{{domxref("IDBCursorSync")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("IDBCursorSync")}} {{deprecated_inline}}</dt>
  <dd>Sync version of {{domxref("IDBCursor")}}.</dd>
 </dl>
 

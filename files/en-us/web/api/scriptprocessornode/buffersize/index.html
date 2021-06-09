@@ -5,18 +5,18 @@ tags:
   - API
   - Property
   - Reference
-  - Référence(2)
   - ScriptProcessorNode
   - Web Audio API
   - bufferSize
+browser-compat: api.ScriptProcessorNode.bufferSize
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by <a href="/en-US/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>.</p>
+<div class="notecard note">
+  <p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by <a href="/en-US/docs/Web/API/Web_Audio_API#audio_workers">Audio Workers</a>.</p>
 </div>
 
-<div>
+
 <p>The <code>bufferSize</code> property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range <code>256</code>–<code>16384</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -28,11 +28,10 @@ console.log(scriptNode.bufferSize);</pre>
 <h3 id="Value">Value</h3>
 
 <p>An integer.</p>
-</div>
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example"><code>BaseAudioContext.createScriptProcessor()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -53,7 +52,7 @@ console.log(scriptNode.bufferSize);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ScriptProcessorNode.bufferSize")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

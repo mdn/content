@@ -104,7 +104,7 @@ setTimeout(event =&gt; {
     let menu = document.getElementById("inputdevices");
     if (device.kind == "audioinput") {
       let item = document.createElement("option");
-      item.innerHTML = device.label;
+      item.innerText = device.label;
       item.value = device.deviceId;
       menu.appendChild(item);
     }
@@ -157,7 +157,7 @@ setTimeout(event =&gt; {
  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a></li>
  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a></li>
  <li><a href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a></li>
- <li>{{domxref("navigator.mediaDevices.getUserMedia()")}}</li>
+ <li>{{domxref("MediaDevices.getUserMedia")}}</li>
  <li><a href="https://addpipe.com/blog/mediarecorder-api/">HTML5’s Media Recorder API in Action on Chrome and Firefox</a></li>
  <li><a href="https://github.com/ai/audio-recorder-polyfill">MediaRecorder polyfill</a> for Safari and Edge</li>
  <li><a href="https://github.com/chrisjohndigital/TutorRoom">TutorRoom</a>: HTML5 video capture/playback/download using getUserMedia and the MediaRecorder API (<a href="https://github.com/chrisjohndigital/TutorRoom">source on GitHub</a>)</li>

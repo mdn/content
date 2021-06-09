@@ -9,6 +9,7 @@ tags:
   - Inheritance
   - Intermediate
   - JavaScript
+browser-compat: javascript.classes
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
@@ -64,8 +65,7 @@ console.log(Rectangle.name);
 </pre>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
+<p><strong>Note:</strong> Class <strong>expressions</strong> are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.</p>
 </div>
 
 <h2 id="Class_body_and_method_definitions">Class body and method definitions</h2>
@@ -217,7 +217,7 @@ Rectangle.prototype.prototypeWidth = 25;
 <h3 id="Field_declarations">Field declarations</h3>
 
 <div class="warning">
-<p>Public and private field declarations are an <a href="https://github.com/tc39/proposal-class-fields">experimental feature (stage 3)</a> proposed at <a href="https://tc39.es">TC39</a>, the JavaScript standards committee. Support in browsers is limited, but the feature can be used through a build step with systems like <a href="https://babeljs.io/">Babel</a>.</p>
+<p><strong>Warning:</strong> Public and private field declarations are an <a href="https://github.com/tc39/proposal-class-fields">experimental feature (stage 3)</a> proposed at <a href="https://tc39.es">TC39</a>, the JavaScript standards committee. Support in browsers is limited, but the feature can be used through a build step with systems like <a href="https://babeljs.io/">Babel</a>.</p>
 </div>
 
 <h4 id="Public_field_declarations">Public field declarations</h4>
@@ -257,8 +257,7 @@ Rectangle.prototype.prototypeWidth = 25;
 <p>It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.</p>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-<p>Private fields can only be declared up-front in a field declaration.</p>
+<p><strong>Note:</strong> Private fields can only be declared up-front in a field declaration.</p>
 </div>
 
 <p>Private fields cannot be created later through assigning to them, the way that normal properties can.</p>
@@ -410,20 +409,11 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.classes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

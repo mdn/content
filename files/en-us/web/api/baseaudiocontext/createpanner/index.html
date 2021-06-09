@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createPanner
+browser-compat: api.BaseAudioContext.createPanner
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -23,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">baseAudioCtx.createPanner();</pre>
+<pre class="brush: js">createPanner();</pre>
 
 <h3 id="Returns">Returns</h3>
 
@@ -138,8 +139,9 @@ function positionPanner() {
   pannerData.textContent = `Panner data: X ${xPos} Y ${yPos} Z ${zPos}`;
 }</pre>
 
-<div class="note">
-  <p><strong>Note</strong>: In terms of working out what position values to apply to the
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>In terms of working out what position values to apply to the
     listener and panner, to make the sound appropriate to what the visuals are doing on
     screen, there is quite a bit of math involved, but you will soon get used to it with a
     bit of experimentation.</p>
@@ -165,7 +167,7 @@ function positionPanner() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createPanner")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

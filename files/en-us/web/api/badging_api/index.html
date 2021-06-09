@@ -1,0 +1,117 @@
+---
+title: Badging API
+slug: Web/API/Badging_API
+tags:
+  - API
+  - Overview
+  - Reference
+  - Badging API
+---
+<div>{{DefaultAPISidebar("Badging API")}}</div>
+
+<p class="summary">The <strong>Badging API</strong> gives web developers a method of setting a badge on a document or application, to act as a notification that state has changed without displaying a more distracting notification. A common use case for this would be an application with a messaging feature displaying a badge on the app icon to show that new messages have arrived.</p>
+
+<h2>Concepts and Usage</h2>
+
+<p>Web developers frequently update document favicons or titles in order to indicate status. The Badging API provides a more elegant way to show status, by providing a method which has meaning to the user agent and can therefore be displayed in a way that matches the rest of the UI.</p>
+
+<h3>Types of badges</h3>
+
+<p>There are two types of badges:</p>
+
+<ul>
+  <li>Document badges, which are typically shown in the browser tab near or on the page icon.</li>
+  <li>App badges, which are associated with the icon of an installed web app. These may display on the app icon in the dock, shelf, or home screen depending on the device in use.</li>
+</ul>
+
+<h3>Badge states</h3>
+
+<p>A badge can have one of three possible values, which are set internally:</p>
+
+<dl>
+  <dt><code>nothing</code></dt>
+  <dd>Indicating that no badge is currently set. A badge can be in this state due to it being cleared by the application, or being reset by the user agent.</dd>
+  <dt><code>flag</code></dt>
+  <dd>Indicating that the badge is set, but has no specific data to display. A badge will be in this state if the application has set a badge, but has not passed any value to the method.</dd>
+  <dt><code>an integer</code></dt>
+  <dd>A value passed when setting the badge. This value will never be <code>0</code>, passing a value of <code>0</code> when setting a badge will cause the user agent to clear the badge by setting it to <code>nothing</code>.</dd>
+</dl>
+
+<h3>Setting badges</h3>
+
+<p>A badge is set with the methods <code>setAppBadge()</code> (for installed apps), or <code>setClientBadge()</code> (for documents). If no parameters are passed to these methods then the badge value is flag. The user agent will display its notification badge, for example, a colored circle on the icon.</p>
+
+<p>These methods can also be passed a parameter <code>contents</code>, which should be a number. This will then be displayed as part of the badge. User agents may change this value in some way. For example, if you pass a very large number such as 4000, the user agent may display this as 99+ in the badge. User agents may also ignore this data and display a marker instead.</p>
+
+<h3>Clearing badges</h3>
+
+<p>Badges are cleared with the <code>clearAppBadge()</code> and <code>clearClientBadge()</code> methods. These do not take any parameters and set the badge to the value <code>nothing</code>. Additionally, passing a value of <code>0</code> to <code>setAppBadge()</code> or <code>setClientBadge()</code> will set the badge to <code>nothing</code> and clear the badge.</p>
+
+<h2 id="Interfaces">Interfaces</h2>
+
+<p>None.</p>
+
+<h3>Extensions to the Navigator interface</h3>
+
+<dl>
+  <dt>{{domxref("Navigator.setAppBadge()")}}</dt>
+  <dd>Sets a badge on the icon associated with this app.</dd>
+  <dt>{{domxref("Navigator.clearAppBadge()")}}</dt>
+  <dd>Clears the badge on the icon associated with this app.</dd>
+  <dt>{{domxref("Navigator.setClientBadge()")}}</dt>
+  <dd>Sets a badge on the icon associated with the current document.</dd>
+  <dt>{{domxref("Navigator.clearClearClientBadge()")}}</dt>
+  <dd>Clears the badge on the icon associated with the current document.</dd>
+</dl>
+
+<h3>Extensions to the WorkerNavigator interface</h3>
+
+<dl>
+  <dt>{{domxref("WorkerNavigator.setAppBadge()")}}</dt>
+  <dd>Sets a badge on the icon associated with this app.</dd>
+  <dt>{{domxref("WorkerNavigator.clearAppBadge()")}}</dt>
+  <dd>Clears the badge on the icon associated with this app.</dd>
+  <dt>{{domxref("WorkerNavigator.setClientBadge()")}}</dt>
+  <dd>Sets a badge on the icon associated with the current document.</dd>
+  <dt>{{domxref("WorkerNavigator.clearClearClientBadge()")}}</dt>
+  <dd>Clears the badge on the icon associated with the current document.</dd>
+</dl>
+
+
+<h2 id="Examples">Examples</h2>
+
+<p>To set a notification badge on the current document with no value:</p>
+
+<pre class="brush: js">navigator.setClientBadge()</pre>
+
+<p>To clear a notification badge on the current document:</p>
+
+<pre class="brush: js">navigator.clearClientBadge()</pre>
+
+<p>To set a notification badge on the current app with a value of 12:</p>
+
+<pre class="brush: js">navigator.setAppBadge(12)</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Badging API','','')}}</td>
+    <td>{{Spec2('Badging API')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li><a href="https://web.dev/badging-api/">Badging for app icons</a></li>
+  <li><a href="https://github.com/w3c/badging/blob/main/explainer.md">Badging API Explainer</a></li>
+</ul>

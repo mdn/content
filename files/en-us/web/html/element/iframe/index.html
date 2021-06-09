@@ -14,14 +14,13 @@ tags:
   - Web
   - embedded
   - iframe
+browser-compat: html.elements.iframe
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML Inline Frame element (<code>&lt;iframe&gt;</code>)</strong> represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.</span></p>
+<p>The <strong><code>&lt;iframe&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <p>Each embedded browsing context has its own <a href="/en-US/docs/Web/API/History">session history</a> and <a href="/en-US/docs/Web/API/Document">document</a>. The browsing context that embeds the others is called the <em><dfn>parent</dfn> browsing context</em>. The <em>topmost</em> browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.</p>
 
@@ -196,11 +195,11 @@ tags:
 
 <h3 id="Example1">A simple &lt;iframe&gt;</h3>
 
-<p>An <code>&lt;iframe&gt;</code> in action. After creating the frame, when the user clicks a button, its title is displayed in an alert.</p>
+<p>This example embeds the page at <a href="https://example.org">https://example.org</a> in an iframe.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html"
+<pre class="brush: html">&lt;iframe src="https://example.org"
             title="iframe Example 1" width="400" height="300"&gt;
 &lt;/iframe&gt;</pre>
 
@@ -218,46 +217,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Added the <code>referrerpolicy</code> attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-iframe-element', '&lt;iframe&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Screen Orientation')}}</td>
-   <td>{{Spec2('Screen Orientation')}}</td>
-   <td>Adds <code>allow-orientation-lock</code> to the <code>sandbox</code> attribute.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.iframe", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

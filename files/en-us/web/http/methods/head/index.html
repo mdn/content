@@ -5,13 +5,15 @@ tags:
   - HTTP
   - Reference
   - Request method
+browser-compat: http.methods.HEAD
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">The <strong>HTTP <code>HEAD</code> method</strong> requests the <a href="/en-US/docs/Web/HTTP/Headers">headers</a> that would be returned if the <code>HEAD</code> request's URL was instead requested with the HTTP {{HTTPMethod("GET")}} method.</span> For example, if a URL might produce a large download, a <code>HEAD</code> request could read its {{HTTPHeader("Content-Length")}} header to check the filesize without actually downloading the file.</p>
+<p>The <strong>HTTP <code>HEAD</code> method</strong> requests the <a href="/en-US/docs/Web/HTTP/Headers">headers</a> that would be returned if the <code>HEAD</code> request's URL was instead requested with the HTTP {{HTTPMethod("GET")}} method. For example, if a URL might produce a large download, a <code>HEAD</code> request could read its {{HTTPHeader("Content-Length")}} header to check the filesize without actually downloading the file.</p>
 
 <div class="notecard warning">
-<p>A response to a <code>HEAD</code> method <em>should not</em> have a body. If it has one anyway, that body <strong>must be</strong> ignored: any {{glossary("Entity header", "entity headers")}} that might describe the erroneous body are instead assumed to describe the response which a similar <code>GET</code> request would have received.</p>
+  <h4>Warning</h4>
+  <p>A response to a <code>HEAD</code> method <em>should not</em> have a body. If it has one anyway, that body <strong>must be</strong> ignored: any {{glossary("Representation header", "representation headers")}} that might describe the erroneous body are instead assumed to describe the response which a similar <code>GET</code> request would have received.</p>
 </div>
 
 <p>If the response to a <code>HEAD</code> request shows that a cached URL response is now outdated, the cached copy is invalidated even if no <code>GET</code> request was made.</p>
@@ -69,7 +71,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.methods.HEAD")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

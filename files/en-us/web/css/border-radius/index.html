@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-shorthand-property
+browser-compat: css.properties.border-radius
 ---
 <div>{{CSSRef}}</div>
 
@@ -79,39 +80,39 @@ border-radius: unset;
 <table>
  <tbody>
   <tr>
-   <td style="vertical-align: top;"><em>radius</em></td>
+   <td><em>radius</em></td>
    <td><img alt="all-corner.png" class="default internal" src="all-corner.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in each corner of the border. It is used only in the one-value syntax.</td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in each corner of the border. It is used only in the one-value syntax.</td>
   </tr>
   <tr>
-   <td style="vertical-align: top;"><em>top-left-and-bottom-right</em></td>
+   <td><em>top-left-and-bottom-right</em></td>
    <td><img alt="top-left-bottom-right.png" class="default internal" src="top-left-bottom-right.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left and bottom-right corners of the element's box. It is used only in the two-value syntax.</td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left and bottom-right corners of the element's box. It is used only in the two-value syntax.</td>
   </tr>
   <tr>
-   <td style="vertical-align: top;"><em>top-right-and-bottom-left</em></td>
+   <td><em>top-right-and-bottom-left</em></td>
    <td><img alt="top-right-bottom-left.png" class="default internal" src="top-right-bottom-left.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right and bottom-left corners of the element's box. It is used only in the two- and three-value syntaxes.</td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right and bottom-left corners of the element's box. It is used only in the two- and three-value syntaxes.</td>
   </tr>
   <tr>
-   <td style="vertical-align: top;"><em>top-left</em></td>
+   <td><em>top-left</em></td>
    <td><img alt="top-left.png" class="default internal" src="top-left.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-left corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
   </tr>
   <tr>
-   <td style="vertical-align: top;"><em>top-right</em></td>
-   <td style="margin-left: 2px;"><img alt="top-right.png" class="default internal" src="top-right.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right corner of the element's box. It is used only in the four-value syntax.</td>
+   <td><em>top-right</em></td>
+   <td><img alt="top-right.png" class="default internal" src="top-right.png"></td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the top-right corner of the element's box. It is used only in the four-value syntax.</td>
   </tr>
   <tr>
-   <td style="vertical-align: top;"><em>bottom-right</em></td>
-   <td style="margin-left: 2px;"><img alt="bottom-rigth.png" class="default internal" src="bottom-rigth.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-right corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
+   <td><em>bottom-right</em></td>
+   <td><img alt="bottom-rigth.png" class="default internal" src="bottom-rigth.png"></td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-right corner of the element's box. It is used only in the three- and four-value syntaxes.</td>
   </tr>
   <tr>
-   <td style="vertical-align: top;"><em>bottom-left</em></td>
+   <td><em>bottom-left</em></td>
    <td><img alt="bottom-left.png" class="default internal" src="bottom-left.png"></td>
-   <td style="vertical-align: top;">Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-left corner of the element's box. It is used only in the four-value syntax.</td>
+   <td>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting a radius to use for the border in the bottom-left corner of the element's box. It is used only in the four-value syntax.</td>
   </tr>
  </tbody>
 </table>
@@ -151,39 +152,94 @@ border-bottom-left-radius:  3px 4px;
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+<h2 id="examples">Examples</h2>
 
-<pre style="display: inline-block; margin: 10px; border: solid 10px !important; border-radius: 10px 40px 40px 10px; width: 90%;">  border: solid 10px;
-  /* the border will curve into a 'D' */
+<pre class="brush: html hidden">
+  &lt;pre id="example-1"&gt;
+border: solid 10px;
+border-radius: 10px 40px 40px 10px;
+  &lt;/pre&gt;
+  &lt;pre id="example-2"&gt;
+border: groove 1em red;
+border-radius: 2em;
+  &lt;/pre&gt;
+  &lt;pre id="example-3"&gt;
+background: gold;
+border: ridge gold;
+border-radius: 13em/3em;
+  &lt;/pre&gt;
+  &lt;pre id="example-4"&gt;
+border: none;
+border-radius: 40px 10px;
+background: gold;
+  &lt;/pre&gt;
+  &lt;pre id="example-5"&gt;
+border: none;
+border-radius: 50%;
+background: burlywood;
+  &lt;/pre&gt;
+  &lt;pre id="example-6"&gt;
+border: dotted;
+border-width: 10px 4px;
+border-radius: 10px 40px;
+  &lt;/pre&gt;
+  &lt;pre id="example-7"&gt;
+border: dashed;
+border-width: 2px 4px;
+border-radius: 40px;
+  &lt;/pre&gt;
+</pre>
+
+<pre class="brush: css hidden">
+pre {
+  margin: 20px;
+  padding: 20px;
+  width: 80%;
+  height: 80px;
+}
+
+pre#example-1 {
+  border: solid 10px;
   border-radius: 10px 40px 40px 10px;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; border: groove 1em red  !important; border-radius: 2em; width: 90%;">  border: groove 1em red;
+pre#example-2 {
+  border: groove 1em red;
   border-radius: 2em;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; background: gold; border: ridge gold  !important; border-radius: 13em/3em; width: 90%;">  background: gold;
+pre#example-3 {
+  background: gold;
   border: ridge gold;
   border-radius: 13em/3em;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; background: gold; border: none  !important; border-radius: 40px 10px; width: 90%;">  border: none;
+pre#example-4 {
+  border: none;
   border-radius: 40px 10px;
-</pre>
+  background: gold;
+}
 
-<pre style="display: inline-block; margin: 10px; background: burlywood; border: none  !important; border-radius: 50%; width: 90%;">  border: none;
+pre#example-5 {
+  border: none;
   border-radius: 50%;
-</pre>
+  background: burlywood;
+}
 
-<pre style="display: inline-block; margin: 10px; border: dotted; border-width: 10px 4px  !important; border-radius: 10px 40px; width: 90%;">  border: dotted;
+pre#example-6 {
+  border: dotted;
   border-width: 10px 4px;
   border-radius: 10px 40px;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; border: dashed; border-width: 2px 4px  !important; border-radius: 40px; width: 90%;">  border: dashed;
+pre#example-7 {
+  border: dashed;
   border-width: 2px 4px;
   border-radius: 40px;
+}
 </pre>
+
+{{EmbedLiveSample("examples", "200", "1150")}}
 
 <h3 id="Live_Samples">Live Samples</h3>
 
@@ -216,7 +272,7 @@ border-bottom-left-radius:  3px 4px;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.border-radius")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

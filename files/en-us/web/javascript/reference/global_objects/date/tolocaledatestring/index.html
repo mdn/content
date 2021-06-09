@@ -9,6 +9,7 @@ tags:
 - Method
 - Prototype
 - Reference
+browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
 <div>{{JSRef}}</div>
 
@@ -22,16 +23,14 @@ tags:
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub
-  repository. If you'd like to contribute to the interactive examples project, please
-  clone <a
-    href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>
-  and send us a pull request.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>dateObj</var>.toLocaleDateString([<var>locales</var>[, <var>options</var>]])</pre>
+<pre class="brush: js">
+toLocaleDateString()
+toLocaleDateString(locales)
+toLocaleDateString(locales, options)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -158,27 +157,11 @@ console.log(date.toLocaleDateString('en-US', options));
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-date.prototype.tolocaledatestring',
-        'Date.prototype.toLocaleDateString')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('ES Int Draft', '#sup-date.prototype.tolocaledatestring',
-        'Date.prototype.toLocaleDateString')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.Date.toLocaleDateString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

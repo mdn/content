@@ -7,6 +7,7 @@ tags:
   - CSS Shapes
   - Data Type
   - Reference
+browser-compat: css.types.basic-shape
 ---
 <div>{{CSSRef}}</div>
 
@@ -20,12 +21,16 @@ tags:
 
 <p>When creating a shape, the reference box is defined by each property that uses <code>&lt;basic-shape&gt;</code> values. The coordinate system for the shape has its origin at the top-left corner of the reference box, with the x-axis running to the right and the y-axis running downwards. All the lengths expressed in percentages are resolved from the used dimensions of the reference box.</p>
 
+<p>The default reference box is the <code>margin-box</code>, as demonstrated in the below image which shows a circle created using <code>shape-outside: circle(50%)</code>. The shape is being defined with reference to the margin box.</p>
+
+<p><img alt="An image showing a circle inspected with the Firefox DevTools Shape Inspector. The different parts of the box model are highlighted." src="shapes-reference-box.png"></p>
+
 <h3 id="Shape_functions">Shape functions</h3>
 
 <p>The following shapes are supported. All <code>&lt;basic-shape&gt;</code> values use functional notation and are defined here using the <a href="/en-US/docs/Web/CSS/Value_definition_syntax">value definition syntax</a>.</p>
 
 <dl>
- <dt><code><a id="inset()"></a>inset()</code></dt>
+ <dt><code><a id="inset()"></a>{{cssxref("basic-shape/inset()","inset()")}}</code></dt>
  <dd>
  <pre class="brush: css">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
 
@@ -37,7 +42,7 @@ tags:
 
  <p>A pair of insets in either dimension that add up to more than the used dimension (such as left and right insets of 75% apiece) define a shape enclosing no area. For this specification, this results in an empty float area.</p>
  </dd>
- <dt><code><a id="circle()"></a>circle()</code></dt>
+ <dt><code><a id="circle()"></a>{{cssxref("basic-shape/circle()","circle()")}}</code></dt>
  <dd>
  <pre class="brush: css">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
 
@@ -45,7 +50,7 @@ tags:
 
  <p>The {{cssxref("&lt;position&gt;")}} argument defines the center of the circle. This defaults to center if omitted.</p>
  </dd>
- <dt><code><a id="ellipse()"></a>ellipse()</code></dt>
+ <dt><code><a id="ellipse()"></a>{{cssxref("basic-shape/ellipse()","ellipse()")}}</code></dt>
  <dd>
  <pre class="brush: css">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
 
@@ -53,7 +58,7 @@ tags:
 
  <p>The position argument defines the center of the ellipse. This defaults to center if omitted.</p>
  </dd>
- <dt><code><a id="polygon()"></a>polygon()</code></dt>
+ <dt><code><a id="polygon()"></a>{{cssxref("basic-shape/polygon()","polygon()")}}</code></dt>
  <dd>
  <pre class="brush: css">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
 
@@ -67,7 +72,7 @@ tags:
 
  <p>The optional <code>&lt;fill-rule&gt;</code> represents the <a href="/en-US/docs/Web/SVG/Attribute/fill-rule">filling rule</a> used to determine the interior of the path. Possible values are <code>nonzero</code> and <code>evenodd</code>. Default value when omitted is <code>nonzero</code>.</p>
 
- <p>The required &lt;string&gt; is an <a href="/en-US/docs/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
+ <p>The required &lt;string&gt; is an <a href="/en-US/docs/Web/SVG/Attribute/d">SVG Path</a> string encompassed in quotes</p>
  </dd>
 </dl>
 
@@ -163,11 +168,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.types.basic-shape")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}</li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Edit Shape Paths in CSS — Firefox Developer Tools</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Overview of CSS Shapes</a></li>
 </ul>

@@ -28,9 +28,9 @@ tags:
 <p>The general technique is to:</p>
 
 <ol>
- <li>Write a frame from the {{htmlelement("video")}} element to an intermediary {{htmlelement("canvas")}} element.</li>
- <li>Read the data from the intermediary <code>&lt;canvas&gt;</code> element and manipulate it.</li>
- <li>Write the manipulated data to your "display" <code>&lt;canvas&gt;</code>.</li>
+ <li>Write a frame from the {{htmlelement("video")}} element to the {{htmlelement("canvas")}} element.</li>
+ <li>Read the data from the <code>&lt;canvas&gt;</code> element and manipulate it.</li>
+ <li>Write the manipulated data to your "display" <code>&lt;canvas&gt;</code> (which effectively can be the same element).</li>
  <li>Pause and repeat.</li>
 </ol>
 
@@ -103,6 +103,8 @@ tags:
 <p>{{EmbedLiveSample("Video_and_canvas", '100%', 580)}}</p>
 
 <p>This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of <code>setTimeout()</code> when running on browsers that support it.</p>
+
+<p>You can achieve the same result by applying the {{cssxref("filter-function/grayscale()", "grayscale()")}} CSS function to the source <code>&lt;video&gt;</code> element.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Due to potential security issues if your video is on a different domain than your code, you'll need to enable <a href="/en-US/docs/Web/HTTP/CORS">CORS (Cross Origin Resource Sharing)</a> on your video server.</p>

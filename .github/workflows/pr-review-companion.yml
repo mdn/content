@@ -29,14 +29,26 @@ jobs:
                repo: context.repo.repo,
                run_id: ${{github.event.workflow_run.id }},
             });
-            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+            var matchArtifacts = artifacts.data.artifacts.filter((artifact) => {
               return artifact.name == "build"
-            })[0];
+            });
+            if (matchArtifacts.length === 0) {
+              console.warn(
+                'No artifacts to download probably just means nothing ' +
+                'was built in the "PR test" workflow. That\'s OK. ' +
+                'This is actually not a genuine CI error.'
+              );
+              throw new Error(
+                'No matched build artifacts. ' +
+                'Perhaps nothing built in the "PR test" workflow'
+              );
+            }
+            var matchArtifact = matchArtifacts[0];
             var download = await github.actions.downloadArtifact({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               artifact_id: matchArtifact.id,
-               archive_format: 'zip',
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                artifact_id: matchArtifact.id,
+                archive_format: 'zip',
             });
             var fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
@@ -56,23 +68,28 @@ jobs:
           python-version: "3.8"
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.1.1
+        uses: snok/install-poetry@v1.1.6
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.6
         with:
           path: yari/deployer/.venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
 
-      - name: Install deployer
+      - name: Install poetry dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           cd yari/deployer
-          poetry install
+          poetry install --no-interaction --no-root
+
+      - name: Install Deployer
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
 
       - name: Deploy and analyze built content
         env:
@@ -86,12 +103,23 @@ jobs:
         run: |
           PR_NUMBER=`cat build/NR`
 
+          echo "Pull request:"
+          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
+
           cd yari/deployer
-          poetry run deployer upload --prefix="pr$PR_NUMBER" --no-redirects "$BUILD_OUT_ROOT"
+
+          poetry run deployer upload \
+            --prefix="pr$PR_NUMBER" \
+            --no-redirects \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
+
           poetry run deployer analyze-pr-build \
             --prefix="pr$PR_NUMBER" \
-            --analyze-flaws --analyze-dangerous-content \
+            --analyze-flaws \
+            --analyze-dangerous-content \
             --github-token="${{secrets.GITHUB_TOKEN}}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number=$PR_NUMBER \
+            --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Property
   - arguments
+browser-compat: javascript.functions.arguments.callee
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
@@ -16,7 +17,7 @@ tags:
 
 <p><code>callee</code> is a property of the <code>arguments</code> object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, such as within a function expression with no name (also called "anonymous functions").</p>
 
-<div class="warning"><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</div>
+<div class="warning"><p><strong>Warning:</strong> The 5th edition of ECMAScript (ES5) forbids use of <code>arguments.callee()</code> in <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>. Avoid using <code>arguments.callee()</code> by either giving function expressions a name or use a function declaration where a function must call itself.</p></div>
 
 <h3 id="Why_was_arguments.callee_removed_from_ES5_strict_mode">Why was <code>arguments.callee</code> removed from ES5 strict mode?</h3>
 
@@ -113,20 +114,11 @@ john();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.functions.arguments.callee")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

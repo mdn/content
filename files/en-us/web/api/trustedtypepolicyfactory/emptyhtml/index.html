@@ -1,0 +1,50 @@
+---
+title: TrustedTypePolicyFactory.emptyHTML
+slug: Web/API/TrustedTypePolicyFactory/emptyHTML
+tags:
+  - API
+  - Property
+  - Reference
+  - emptyHTML
+  - TrustedTypePolicyFactory
+browser-compat: api.TrustedTypePolicyFactory.emptyHTML
+---
+<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+
+<p class="summary">The <strong><code>emptyHTML</code></strong> read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedHTML")}} object containing an empty string.</p>
+
+<p>This object can be used when the application requires an empty string to be inserted into an injection sink.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <var>emptyHTML</var> = <var>TrustedTypePolicyFactory</var>.emptyHTML;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("TrustedHTML")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>In the below example an empty string is to be inserted into the element. Therefore there is no need to create a policy, and the <code>emptyHTML</code> property can be used to insert the empty element when a Trusted Types object is expected.</p>
+
+<pre class="brush: js">el.innerHTML = trustedTypes.emptyHTML;</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Trusted Types','#dom-trustedtypepolicyfactory-emptyhtml','TrustedTypePolicyFactory.emptyHTML')}}</td>
+    <td>{{Spec2('Trusted Types')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

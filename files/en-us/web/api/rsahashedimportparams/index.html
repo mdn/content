@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <strong><code>RsaHashedImportParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when importing any RSA-based key pair: that is, when the algorithm is identified as any of <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>.</p>
+<p>The <strong><code>RsaHashedImportParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when importing any RSA-based key pair: that is, when the algorithm is identified as any of <a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -19,7 +19,7 @@ tags:
  <dd>A {{domxref("DOMString")}}. This should be set to <code>RSASSA-PKCS1-v1_5</code>, <code>RSA-PSS</code>, or <code>RSA-OAEP</code>, depending on the algorithm you want to use.</dd>
  <dt><code>hash</code></dt>
  <dd>
- <p>A {{domxref("DOMString")}} representing the name of the <a href="/en-US/docs/Web/API/Web_Crypto_API/Supported_algorithms#Digest_algorithms">digest function</a> to use. This can be one of <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code>.</p>
+ <p>A {{domxref("DOMString")}} representing the name of the <a href="/en-US/docs/Web/API/SubtleCrypto#digest_algorithms">digest function</a> to use. This can be one of <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code>.</p>
 
  <div class="notecard warning">
  <p><strong>Warning</strong>: Although you can technically pass <code>SHA-1</code> here, this is strongly discouraged as it is considered vulnerable.</p>

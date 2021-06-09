@@ -1,0 +1,46 @@
+---
+title: BackgroundFetchRegistration.recordsAvailable
+slug: Web/API/BackgroundFetchRegistration/recordsAvailable
+tags:
+  - API
+  - Property
+  - Reference
+  - recordsAvailable
+  - BackgroundFetchRegistration
+browser-compat: api.BackgroundFetchRegistration.recordsAvailable
+---
+<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+
+<p class="summary">The <strong><code>recordsAvailable</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns <code>true</code> if there are requests and responses to be accessed. If this returns false then {{domxref("BackgroundFetchRegistration.match()","match()")}} and {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} can't be used.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let recordsAvailable = BackgroundFetchRegistration.recordsAvailable;</pre>
+
+<h3>Value</h3>
+<p>A {{jsxref("boolean")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Logging {{domxref("BackgroundFetchRegistration.recordsAvailable")}} to the console returns <code>true</code> or <code>false</code> to indicate if there are records.</p>
+
+<pre class="brush: js">console.log(bgFetch.recordsAvailable);</pre>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+     <td>{{SpecName('Background Fetch','#dom-backgroundfetchregistration-recordsavailable','BackgroundFetchRegistration.recordsAvailable')}}</td>
+     <td>{{Spec2('Background Fetch')}}</td>
+     <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

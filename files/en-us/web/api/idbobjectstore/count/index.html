@@ -10,6 +10,7 @@ tags:
   - Reference
   - count
   - data
+browser-compat: api.IDBObjectStore.count
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -63,7 +64,7 @@ var request = ObjectStore.count(query);
       <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
     </tr>
     <tr>
-      <td><code><span style="line-height: normal;">DataError</span></code></td>
+      <td><code>DataError</code></td>
       <td>The specified key or key range is invalid.</td>
     </tr>
   </tbody>
@@ -108,7 +109,7 @@ countRequest.onsuccess = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.count")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

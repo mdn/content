@@ -10,7 +10,8 @@ tags:
 
 <p>When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are <a href="#list-of-capabilities">standard and shared between all browsers</a>, but the set may also contain <a href="#vendor-specific-capabilities">browser-specific capabilities</a> and these are always prefixed.</p>
 
-<h2 id="Capabilities_negotiation"><a id="capabilities-negotiation">Capabilities negotiation</a></h2>
+<a id="capabilities-negotiation"></a>
+<h2 id="Capabilities_negotiation">Capabilities negotiation</h2>
 
 <p>Capabilities can be used to require a driver that supports a certain subset of features. This can be used to require certain browser features, such as the <a href="/en-US/docs/Web/WebDriver/Capabilities/setWindowRect">ability to resize the window dimensions</a>, but is also used in distributed environments to select a particular browser configuration from a matrix of choices.</p>
 
@@ -98,7 +99,8 @@ tags:
   }
 }</pre>
 
-<h2 id="List_of_capabilities"><a id="list-of-capabilities">List of capabilities</a></h2>
+<a id="list-of-capabilities"></a>
+<h2 id="List_of_capabilities">List of capabilities</h2>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/WebDriver/Capabilities/browserName" id="browserName">browserName</a></code></dt>
@@ -121,7 +123,8 @@ tags:
  <dd></dd>
 </dl>
 
-<h2 id="Vendor-specific_capabilities"><a id="vendor-specific-capabilities">Vendor-specific capabilities</a></h2>
+<a id="vendor-specific-capabilities"></a>
+<h2 id="Vendor-specific_capabilities">Vendor-specific capabilities</h2>
 
 <p>In addition to the <a href="#list-of-capabilities">standard capabilities</a> WebDriver allows third-parties to <em>extend</em> the set of capabilities to match their needs. Browser vendors and suppliers of drivers typically use extension capabilities to provide configuration to the browser, but they can also be used by intermediaries for arbitrary blobs of information.</p>
 
@@ -130,7 +133,8 @@ tags:
  <li><a href="/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions">Chrome capabilities</a> (<code>goog:chromeOptions</code>)</li>
 </ul>
 
-<h2 id="Legacy_capabilities"><a id="Legacy">Legacy capabilities</a></h2>
+<a id="Legacy"></a>
+<h2 id="Legacy_capabilities">Legacy capabilities</h2>
 
 <p>The majority of Selenium clients use <code>desiredCapabilities</code> and <code>requiredCapabilities</code> to configure the new session. These are very similar to <code>firstMatch</code> and <code>alwaysMatch</code> described above. Some drivers support these legacy capabilities, but they are deprecated and should be avoided.</p>
 

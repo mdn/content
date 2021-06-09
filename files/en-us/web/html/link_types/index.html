@@ -7,6 +7,7 @@ tags:
   - Link
   - Link types
   - Reference
+browser-compat: html.elements.link.rel
 ---
 <div>{{HTMLSidebar}}</div>
 
@@ -27,7 +28,7 @@ tags:
    <td><code>alternate</code></td>
    <td>
     <ul>
-     <li>If the element is {{HTMLElement("link")}} and the {{HTMLAttrxRef("rel", "link")}} attribute also contains the <code>stylesheet</code> type, the link defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</li>
+     <li>If the element is {{HTMLElement("link")}} and the {{HTMLAttrxRef("rel", "link")}} attribute also contains the <code>stylesheet</code> type, the link defines an <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</li>
      <li>If the {{HTMLAttrxRef("type","link")}} is set to <code>application/rss+xml</code> or <code>application/atom+xml</code>, the link defines a <a href="/en-US/docs/Archive/RSS/Getting_Started/Syndicating">syndication feed</a>. The first one defined on the page is the default.</li>
      <li>Otherwise, the link defines an alternative page, of one of these types:
       <ul>
@@ -43,7 +44,7 @@ tags:
    <td>{{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code>archives</code> {{Obsolete_Inline}}</td>
+   <td><code>archives</code> {{deprecated_inline}}</td>
    <td>Defines a hyperlink to a document that contains an archive link to this one. For example, a blog entry could link to a monthly index page this way.<br>
     <br>
     <strong>Note:</strong> Although recognized, the singular <code>archive</code> is incorrect and must be avoided.</td>
@@ -62,7 +63,7 @@ tags:
   </tr>
   <tr>
    <td><code>bookmark</code></td>
-   <td>Indicates that the hyperlink is a <a href="/en-US/docs/Permalink">permalink</a> for the nearest ancestor {{HTMLElement("article")}} element. If none, it is a permalink for the <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document">section</a> that the element is most closely associated to.<br>
+   <td>Indicates that the hyperlink is a <a href="/en-US/docs/Permalink">permalink</a> for the nearest ancestor {{HTMLElement("article")}} element. If none, it is a permalink for the <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">section</a> that the element is most closely associated to.<br>
     <br>
     This allows for bookmarking a single article in a page containing multiple articles, such as on a monthly summary blog page, or a blog aggregator.</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
@@ -88,7 +89,7 @@ tags:
    <td>{{HTMLElement("link")}}</td>
   </tr>
   <tr>
-   <td><code>first</code> {{Obsolete_Inline}}</td>
+   <td><code>first</code> {{deprecated_inline}}</td>
    <td>Indicates that the hyperlink leads to the first resource of the <em>sequence</em> the current page is in.<br>
     <br>
     <strong>Note:</strong> Other link types related to linking resources in the same sequence are <code>last</code>, <code>prev</code>, <code>next</code>.<br>
@@ -127,7 +128,7 @@ tags:
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code>index</code> {{Obsolete_Inline("HTML5")}}</td>
+   <td><code>index</code> {{deprecated_inline}}</td>
    <td>Indicates that the page is part of a <em>hierarchical</em> structure and that the hyperlink leads to the top level resource of that structure.<br>
     <br>
     If one or several <code>up</code> link types are also present, the number of these <code>up</code> indicates the depth of the current page in the hierarchy.</td>
@@ -135,7 +136,7 @@ tags:
    <td>{{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code>last</code> {{Obsolete_Inline}}</td>
+   <td><code>last</code> {{deprecated_inline}}</td>
    <td>Indicates that the hyperlink leads to the <em>last</em> resource of the <em>sequence</em> the current page is in.<br>
     <br>
     <strong>Note:</strong> Other link types related to linking resources in the same sequence are <code>first</code>, <code>prev</code>, <code>next</code>.<br>
@@ -191,7 +192,7 @@ tags:
    <td>{{HTMLElement("link")}}</td>
   </tr>
   <tr>
-   <td><code>noreferrer</code></td>
+   <td><code><a href="/en-US/docs/Web/HTML/Link_types/noreferrer">noreferrer</a></code></td>
    <td>
     <p>Prevents the browser, when navigating to another page, to send this page address, or any other value, as referrer via the <code>Referer:</code> HTTP header.<br>
      (In Firefox, before Firefox 37, this worked only in links found in pages. Links clicked in the UI, like "Open in a new tab" via the contextual menu, ignored this).</p>
@@ -209,7 +210,7 @@ tags:
   </tr>
   <tr>
    <td><code>pingback</code></td>
-   <td>Defines an external resource URI to call if one wishes to make a comment or a citation about the webpage. The protocol used to make such a call is defined in the <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a> specification.<br>
+   <td>Defines an external resource URI to call if one wishes to make a comment or a citation about the webpage. The protocol used to make such a call is defined in the <a href="https://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a> specification.<br>
     <br>
     <strong>Note:</strong> if the <code>X-Pingback:</code> HTTP header is also present, it supersedes the {{HTMLElement("link")}} element with this link type.</td>
    <td>{{HTMLElement("link")}}</td>
@@ -225,13 +226,13 @@ tags:
    <td><code><a href="/en-US/docs/Web/HTML/Link_types/prefetch">prefetch</a></code></td>
    <td>Suggests that the browser fetch the linked resource in advance, as it is likely to be requested by the user. Starting with Firefox 44, the value of the {{HTMLAttrxRef("crossorigin", "link")}} attribute is taken into consideration, making it possible to make anonymous prefetches.<br>
     <br>
-    <strong>Note:</strong> The <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
+    <strong>Note:</strong> The <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Link_types/preload">preload</a></code></td>
-   <td>Tells the browser to download a resource because this resource will be needed later during the current navigation. See <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details.</td>
+   <td>Tells the browser to download a resource because this resource will be needed later during the current navigation. See <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with rel="preload"</a> for more details.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
@@ -255,7 +256,7 @@ tags:
    <td><code>search</code></td>
    <td>Indicates that the hyperlink references a document whose interface is specially designed for searching in this document, or site, and its resources.<br>
     <br>
-    If the {{HTMLAttrxRef("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
+    If the {{HTMLAttrxRef("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Web/OpenSearch">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}, {{HTMLElement("form")}}</td>
    <td><em>None.</em></td>
   </tr>
@@ -268,7 +269,7 @@ tags:
    <td>???</td>
   </tr>
   <tr>
-   <td><code>sidebar</code> {{Non-standard_Inline}}{{Obsolete_Inline("Gecko63")}}</td>
+   <td><code>sidebar</code> {{Non-standard_Inline}}{{deprecated_inline}}</td>
    <td>Indicates that the hyperlink leads to a resource that would be better suited for a secondary browsing context, like a <em>sidebar</em>. Browsers, that don't have such a context will ignore this keyword.<br>
     <br>
     While once part of the HTML specification, this has been removed from the spec and is only implemented by versions of Firefox prior to Firefox 63.</td>
@@ -279,7 +280,7 @@ tags:
    <td><code>stylesheet</code></td>
    <td>Defines an external resource to be used as a stylesheet. If the <code>type</code> is not set, the browser should assume it is a <code>text/css</code> stylesheet until further inspection.<br>
     <br>
-    If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</td>
+    If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">alternative style sheet</a>; in that case the {{HTMLAttrxRef("title", "link")}} attribute must be present and not be the empty string.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
@@ -292,7 +293,7 @@ tags:
    <td>{{HTMLElement("link")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
-   <td><code>up</code> {{Obsolete_Inline}}</td>
+   <td><code>up</code> {{deprecated_inline}}</td>
    <td>Indicates that the page is part of a <em>hierarchical</em> structure and that the hyperlink leads to the higher level resource of that structure.<br>
     <br>
     The number of <code>up</code> link types indicates the depth difference between the current page and the linked resource.</td>
@@ -304,57 +305,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Preload", "#x2.link-type-preload", "preload")}}</td>
-   <td>{{Spec2("Preload")}}</td>
-   <td>Added <code>preload</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Resource Hints", "#dfn-preconnect", "preconnect")}}</td>
-   <td>{{Spec2("Resource Hints")}}</td>
-   <td>Added <code>dns-prefetch</code>, <code>preconnect</code>, and <code>prerender</code> values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "links.html#linkTypes", "link types")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Added <code>opener</code> and made <code>noopener</code> the default behavior for <code>target="_blank"</code> links.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "links.html#linkTypes", "link types")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Added <code>tag</code>, <code>search</code>, <code>prefetch</code>, <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code>, and <code>author</code>.<br>
-    Renamed <code>copyright</code> to <code>license</code>.<br>
-    Removed <code>start</code>, <code>chapter</code>, <code>section</code>, <code>subsection</code>, and <code>appendix</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "types.html#type-links", "link types")}}</td>
-   <td>{{Spec2("HTML4.01")}}</td>
-   <td>Added <code>alternate</code>, <code>stylesheet</code>, <code>start</code>, <code>chapter</code>, <code>section</code>, <code>subsection</code>, <code>appendix</code>, and <code>bookmark</code>.<br>
-    Renamed <code>previous</code> to <code>prev</code>.<br>
-    Removed <code>top</code>, and <code>search</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-   <td>Obsolete</td>
-   <td>Added <code>top</code>, <code>contents</code>, <code>index</code>, <code>glossary</code>, <code>copyright</code>, <code>next</code>, <code>previous</code>, <code>help</code>, and <code>search</code>.</td>
-  </tr>
-  <tr>
-   <td>{{RFC(1866, "HTML 2.0")}}</td>
-   <td>Obsolete</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.link.rel")}}</p>
+<p>{{Compat}}</p>

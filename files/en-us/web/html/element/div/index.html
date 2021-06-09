@@ -11,14 +11,13 @@ tags:
   - Reference
   - Web
   - div
+browser-compat: html.elements.div
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML Content Division element</strong> (<strong><code>&lt;div&gt;</code></strong>) is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> is applied to its parent element).</span></p>
+<p>The <strong><code>&lt;div&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> is applied to its parent element).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}</div>
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <p>As a "pure" container, the <code>&lt;div&gt;</code> element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes, marking a section of a document as being written in a different language (using the {{htmlattrxref("lang")}} attribute), and so on.</p>
 
@@ -71,6 +70,10 @@ tags:
  <li>The <code>&lt;div&gt;</code> element should be used only when no other semantic element (such as {{HTMLElement("article")}} or {{HTMLElement("nav")}}) is appropriate.</li>
 </ul>
 
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+The <code>&lt;div&gt;</code> element has <a href="https://www.w3.org/TR/wai-aria-1.2/#generic">an implicit role of <code>generic</code></a>, and not none. This may affect certain ARIA combination declarations that expect a direct descendant element with a certain role to function properly.
+
 <h2 id="Examples">Examples</h2>
 
 <h3 id="A_simple_example">A simple example</h3>
@@ -111,36 +114,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No changes since the latest snapshot</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Obsoleted <code>align</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.4', '&lt;div&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.div")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

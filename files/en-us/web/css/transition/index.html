@@ -6,11 +6,12 @@ tags:
   - CSS Property
   - CSS Transitions
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
+browser-compat: css.properties.transition
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>transition</code></strong> <a href="/en-US/docs/CSS">CSS </a>property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.</p>
+<p>The <strong><code>transition</code></strong> <a href="/en-US/docs/Web/CSS">CSS </a>property is a <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/transition.html")}}</div>
 
@@ -70,7 +71,7 @@ transition: unset;
 	<li>zero, one, or two {{cssxref("&lt;time&gt;")}} values. The first value that can be parsed as a time is assigned to the {{cssxref("transition-duration")}}, and the second value that can be parsed as a time is assigned to {{cssxref("transition-delay")}}.</li>
 </ul>
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths">how things are handled</a> when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.</p>
+<p>See <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#when_property_value_lists_are_of_different_lengths">how things are handled</a> when lists of property values aren't the same length. In short, extra transition descriptions beyond the number of properties actually being animated are ignored.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -127,11 +128,11 @@ transition: unset;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.transition")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li><a href="/en-US/docs/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
+	<li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
 	<li>{{ domxref("TransitionEvent") }}</li>
 </ul>

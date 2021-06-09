@@ -1,0 +1,50 @@
+---
+title: USBConnectionEvent.device
+slug: Web/API/USBConnectionEvent/device
+tags:
+  - API
+  - Property
+  - Reference
+  - device
+  - USBConnectionEvent
+browser-compat: api.USBConnectionEvent.device
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+
+<p class="summary">The <strong><code>device</code></strong> read-only property of the {{domxref("USBConnectionEvent")}} interface returns a {{domxref("USBDevice")}} object representing the device being connected or disconnected.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let device = USBConnectionEvent.device;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("USBDevice")}} object.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Connecting a USB device fires the <code>connect</code> event. The current {{domxref("USBDevice")}} is returned by calling <code>event.device</code>.</p>
+
+<pre class="brush: js">navigator.usb.addEventListener('connect', event => {
+  console.log(event.device);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+		<tr>
+			<td>{{SpecName('Web USB','#dom-usbconnectionevent-device','USBConnectionEvent.device')}}</td>
+			<td>{{Spec2('Web USB')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

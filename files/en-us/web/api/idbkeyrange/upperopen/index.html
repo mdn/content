@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - upperOpen
+browser-compat: api.IDBKeyRange.upperOpen
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -27,7 +28,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">A {{ domxref("boolean") }}:</span></p>
+<p>A {{ domxref("boolean") }}:</p>
 
 <table class="standard-table">
   <thead>
@@ -71,7 +72,7 @@ tags:
   </p>
 </div>
 
-<pre class="brush: js" style="font-size: 14px;">function displayData() {
+<pre class="brush: js">function displayData() {
   var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upperOpen);
 
@@ -117,7 +118,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBKeyRange.upperOpen")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

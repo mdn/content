@@ -74,7 +74,8 @@ tags:
   </tbody>
 </table>
 
-<h5 id="args_array_of_strings"><a id="args"><code>args</code></a> (array of strings)</h5>
+<a id="args"></a>
+<h5 id="args_array_of_strings"><code>args</code> (array of strings)</h5>
 
 <p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where
   required, e.g. <code>["<a href="/en-US/docs/Mozilla/Firefox/Headless_mode">-headless</a>"]</code>.</p>
@@ -83,7 +84,8 @@ tags:
   <code>["-profile", "/path/to/profile"]</code>. But if a profile has to be transferred to a target machine it is
   recommended to use the <code>profile</code> entry.</p>
 
-<h5 id="profile_string"><a id="profile"><code>profile</code></a> (string)</h5>
+<a id="profile"></a>
+<h5 id="profile_string"><code>profile</code> (string)</h5>
 
 <p>Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
   extensions or custom certificates, but for setting custom preferences we recommend using the <code>prefs</code> (<a
@@ -98,45 +100,48 @@ tags:
   <code>{"args": ["-profile", "/path/to/your/profile"]}</code>. Note that if you use a remote client targeting a server
   on a different system, the profile must already exist on the target system.</p>
 
-<h5 id="log_Log_object"><a id="log"><code>log</code></a> (<a href="#log">Log object</a>)</h5>
+<a id="log"></a>
+<h5 id="log_Log_object"><code>log</code> (Log object)</h5>
 
 <p>To increase the logging verbosity of geckodriver and Firefox, you may pass a <code><a href="#log">log</a></code>
   object that may look like <code>{"log": {"level": "trace"}}</code> to include all trace-level logs and above</p>
 
-<h5 id="prefs_Preferences_object"><a id="prefs"><code>prefs</code></a> (<a href="#prefs">Preferences object</a>)</h5>
+<a id="prefs"></a>
+<h5 id="prefs_Preferences_object"><code>prefs</code> (Preferences object)</h5>
 
 <p>Map of preference name to preference value, which can be a string, a boolean or an integer.</p>
 
-<h5 id="env_Env_object"><a id="env"><code>env</code> (</a><a href="#env">Env object</a><a name="env">)</a></h5>
+<a id="env"></a>
+<h5 id="env_Env_object"><code>env</code> (Env object)</h5>
 
 <p>Map of environment variable name to environment variable value, both of which must be strings.</p>
 
-<h3 id="Android"><a id="android">Android</a></h3>
+<a id="android"></a>
+<h3 id="Android">Android</h3>
 
-<p>Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding <a
-    href="https://wiki.mozilla.org/Mobile/GeckoView">GeckoView</a> has to be controlled on Android:</p>
+<p>Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding <a href="https://wiki.mozilla.org/Mobile/GeckoView">GeckoView</a> has to be controlled on Android:</p>
 
-<h5 id="androidPackage_string_required"><a id="androidPackage"><code>androidPackage</code></a> (string, required)</h5>
+<a id="androidPackage"></a>
+<h5 id="androidPackage_string_required"><code>androidPackage</code> (string, required)</h5>
 
 <p>The package name of Firefox, e.g. <span class="message"><span class="content"><code>org.mozilla.firefox</code>,
       <code>org.mozilla.firefox_beta,</code> or <code>org.mozilla.fennec</code></span></span> depending on the release
-  channel, or the package name of the application embedding GeckoView, e.g. <code>org.mozilla.geckoview_example</code>.
-</p>
+  channel, or the package name of the application embedding GeckoView, e.g. <code>org.mozilla.geckoview_example</code>.</p>
 
-<h5 id="androidActivity_string_optional"><a id="androidActivity"><code>androidActivity</code> (string, optional)</a>
-</h5>
+<a id="androidActivity"></a>
+<h5 id="androidActivity_string_optional"><code>androidActivity</code> (string, optional)</h5>
 
 <p>The fully qualified class name of the activity to be launched, e.g. <code>.GeckoViewActivity</code>. If not
   specified, the package’s default activity will be used.</p>
 
-<h5 id="androidDeviceSerial_string_optional"><a id="androidDeviceSerial"><code>androidDeviceSerial</code> (string,
-    optional)</a></h5>
+<a id="androidDeviceSerial"></a>
+<h5 id="androidDeviceSerial_string_optional"><code>androidDeviceSerial</code> (string, optional)</h5>
 
 <p>The serial number of the device on which to launch the application. If not specified and multiple devices are
   attached, an error will be returned.</p>
 
-<h5 id="androidIntentArguments_array_of_strings_optional"><a
-    name="androidIntentArguments"><code>androidIntentArguments</code> (array of strings, optional)</a></h5>
+<a id="androidIntentArguments"></a>
+<h5 id="androidIntentArguments_array_of_strings_optional"><code>androidIntentArguments</code> (array of strings, optional)</h5>
 
 <p>Arguments to launch the intent with.  Under the hood, geckodriver uses <a
     href="https://developer.android.com/studio/command-line/adb#am">Android am </a>to start the Android application
@@ -146,12 +151,12 @@ tags:
   disabling features.  For example, to launch with the view action and a specified URL before navigating as part of a
   test, include:</p>
 
-<pre class="brush: json"><span class="s2">{
+<pre class="brush: json">{
   "androidIntentArguments": [
     "-a", "android.intent.action.VIEW",
     "-d", "https://example.com"
   ]
-</span><span class="mi">}</span>
+}
 </pre>
 
 <p>For example, to specify a boolean extra that can be processed with <a href="https://developer.android.com/reference/android/content/Intent#getBooleanExtra(java.lang.String,%20boolean)">android.content.Intent.getBooleanExtra</a>, include:</p>
@@ -162,17 +167,20 @@ tags:
 }
 </pre>
 
-<h3 id="Log_object"><a id="Log">Log object</a></h3>
+<a id="Log"></a>
+<h3 id="Log_object">Log object</h3>
 
 <p>A JSON Object that may have any of these fields:</p>
 
-<h5 id="level_string"><code><a id="level">level</a></code> (string)</h5>
+<a id="level"></a>
+<h5 id="level_string"><code>level</code> (string)</h5>
 
 <p>Set the level of verbosity of geckodriver and Firefox. Available levels are <code>trace</code>, <code>debug</code>,
   <code>config</code>, <code>info</code>, <code>warn</code>, <code>error</code>, and <code>fatal</code>. If left
   undefined the default is <code>info</code>. The value is treated case-insensitively.</p>
 
-<h3 id="Preferences_object"><a id="Prefs">Preferences object</a></h3>
+<a id="Prefs"></a>
+<h3 id="Preferences_object">Preferences object</h3>
 
 <p>A JSON Object with one entry per preference to set. The preference will be written to the <a
     href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting
@@ -181,13 +189,14 @@ tags:
 
 <p>An example of a preference object:</p>
 
-<pre class="brush: json"><span class="s2">{
-  "dom.ipc.processCount"</span><span class="p">:</span> <span class="mi">8,
-  "</span>javascript.options.showInConsol<span class="mi">e": false
-}</span>
+<pre class="brush: json">{
+  "dom.ipc.processCount": 8,
+  "javascript.options.showInConsole": false
+}
 </pre>
 
-<h3 id="Env_object"><a id="Env">Env object</a></h3>
+<a id="Env"></a>
+<h3 id="Env_object">Env object</h3>
 
 <p>A JSON Object with one entry per environment variable to set. On Desktop, the Firefox under test will launch with
   given variable in its environment.  On Android, the GeckoView-based App will have the given variable added to the
@@ -195,10 +204,10 @@ tags:
 
 <p>An example of an env object:</p>
 
-<pre class="brush: json"><span class="s2">{
-  "MOZ_LOG"</span><span class="p">:</span> <span class="mi">"nsHttp:5",
-  "</span>MOZ_LOG_FILE<span class="mi">": "/mnt/sdcard/log"
-}</span>
+<pre class="brush: json">{
+  "MOZ_LOG": "nsHttp:5",
+  "MOZ_LOG_FILE": "/mnt/sdcard/log"
+}
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -208,25 +217,26 @@ tags:
     href="/en-US/docs/Mozilla/Firefox/Headless_mode">headless mode</a>. It also increases the number of IPC processes
   through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:</p>
 
-<pre class="brush: json"><span class="p">{</span>
-  <span class="s2">"capabilities"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"alwaysMatch"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"<a href="#firefoxoptions">moz:firefoxOptions</a>"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"<a href="#binary">binary</a>"</span><span class="p">:</span> <span class="s2">"/usr/local/firefox/bin/firefox"</span><span class="p">,</span>
-        <span class="s2">"<a href="#args">args</a>"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"-headless"</span><span class="p">,</span> <span class="s2">"-profile"</span><span class="p">,</span> <span class="s2">"/path/to/my/profile"</span><span class="p">],</span>
-        <span class="s2">"<a href="#prefs">prefs</a>"</span><span class="p">:</span> <span class="p">{</span>
-          <span class="s2">"dom.ipc.processCount"</span><span class="p">:</span> <span class="mi">8</span>,
-<span class="mi">          "</span>javascript.options.showInConsol<span class="mi">e": false</span>
-      <span class="p">  },</span>
-      <span class="s2">  "<a href="#log">log</a>"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"level"</span><span class="p">:</span> <span class="s2">"trace"</span><span class="p">}</span>,
-      <span class="s2">  "<a href="#env">env</a>"</span><span class="p">:</span> <span class="p">{</span>
-          <span class="s2">"MOZ_LOG"</span><span class="p">:</span> <span class="mi">"nsHttp:5"</span>,
-          <span class="s2">"MOZ_LOG_FILE"</span><span class="p">:</span> <span class="mi">"/path/to/my/profile/log"</span>,
-      <span class="p">  },</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span></pre>
+<pre class="brush: json">{
+  "capabilities": {
+    "alwaysMatch": {
+      "moz:firefoxOptions": {
+        "binary": "/usr/local/firefox/bin/firefox",
+        "args": ["-headless", "-profile", "/path/to/my/profile"],
+        "prefs": {
+          "dom.ipc.processCount": 8,
+          "javascript.options.showInConsole": false
+        },
+        "log": {"level": "trace"},
+        "env": {
+          "MOZ_LOG": "nsHttp:5",
+          "MOZ_LOG_FILE": "/path/to/my/profile/log",
+        },
+      }
+    }
+  }
+}
+</pre>
 
 <p><span class="p">The <code><a href="#firefoxoptions">moz:firefoxOptions</a></code> must be placed—as above—inside
     <code><a href="/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch">alwaysMatch</a></code>, or in one of the
@@ -273,7 +283,7 @@ tags:
   <li><a
       href="https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example">geckodriver’s
       documentation on supported Firefox capabilities</a></li>
-  <li><a href="/en-US/docs/Web/WebDriver/Capabiliites/goog/chromeOptions">Chrome-specific WebDriver capabilities</a>
+  <li><a href="/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions">Chrome-specific WebDriver capabilities</a>
     (<code>goog:chromeOptions)</code></li>
   <li><a href="/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</a></li>
   <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>

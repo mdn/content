@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-shorthand-property'
+browser-compat: css.properties.flex
 ---
 <div>{{CSSRef}}</div>
 
@@ -33,7 +34,8 @@ flex: auto;
 flex: initial;
 flex: none;
 
-/* One value, unitless number: flex-grow */
+/* One value, unitless number: flex-grow
+flex-basis is then equal to 0. */
 flex: 2;
 
 /* One value, width/height: flex-basis */
@@ -111,7 +113,6 @@ flex: unset;
 
 <p>For most purposes, authors should set <code>flex</code> to one of the following values: <code>auto</code>, <code>initial</code>, <code>none</code>, or a positive unitless number. To see the effect of these values, try resizing the flex containers below:</p>
 
-<div id="flex">
 <pre class="hidden brush: html">&lt;div class="flex-container"&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
   &lt;div class="item auto"&gt;auto&lt;/div&gt;
@@ -191,10 +192,9 @@ flex: unset;
 }
 </pre>
 
-<p>{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}</p>
+<p>{{EmbedLiveSample("Description", 1200, 400, "", "", "example-outcome-frame")}}</p>
 
 <p>By default flex items don't shrink below their minimum content size. To change this, set the item's {{cssxref("min-width")}} or {{cssxref("min-height")}}.</p>
-</div>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -258,7 +258,7 @@ flex.addEventListener("click", function() {
 
 <h4 id="Result">Result</h4>
 
-<p>{{EmbedLiveSample('Setting_flex_auto','100%','60')}}</p>
+<p>{{EmbedLiveSample('Setting_flex_auto','100%','100')}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -281,9 +281,7 @@ flex.addEventListener("click", function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("css.properties.flex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

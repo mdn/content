@@ -10,7 +10,7 @@ tags:
 
 <p>The <strong>Performance Timeline</strong> API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define <em>{{anch("Performance_Observers","performance observer", '', 'true')}}</em> callbacks that are notified when specific performance events are added to the browser's <em>performance timeline</em>.</p>
 
-<p>This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and <a href="/Web/API/Performance_Timeline/Using_Performance_Timeline">Using Performance Timeline</a>.</p>
+<p>This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and <a href="/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline">Using Performance Timeline</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -20,7 +20,7 @@ tags:
 
 <dl>
  <dt>{{domxref("Performance.getEntries","getEntries()")}}</dt>
- <dd>Returns all recorded {{domxref("PerformanceEntry","performance entries")}} or, optionally, the entries based on the specified {{domxref("PerformanceEntry.name","name")}}, {{domxref("PerformanceEntry.entryType","performance type")}} and/or the {{domxref("PerformanceEntry.initiatorType","initiatorType")}} (such as an HTML element).</dd>
+ <dd>Returns all recorded {{domxref("PerformanceEntry","performance entries")}} or, optionally, the entries based on the specified {{domxref("PerformanceEntry.name","name")}}, {{domxref("PerformanceEntry.entryType","performance type")}} and/or the {{domxref("PerformanceResourceTiming/initiatorType","initiatorType")}} (such as an HTML element).</dd>
  <dt>{{domxref("Performance.getEntriesByName","getEntriesByName()")}}</dt>
  <dd>Returns the recorded {{domxref("PerformanceEntry","performance entries")}} based on the specified {{domxref("PerformanceEntry.name","name")}} and optionally the {{domxref("PerformanceEntry.entryType","performance type")}}.</dd>
  <dt>{{domxref("Performance.getEntriesByType","getEntriesByType()")}}</dt>
@@ -61,9 +61,9 @@ tags:
 <p>A summary of the interfaces' implementation status is provided below, including a link to more detailed information.</p>
 
 <ul>
- <li>Performance interface extensions: As shown in the {{domxref("Performance")}} interface's <a href="/Web/API/Performance#Browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.</li>
- <li>PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's <a href="/Web/API/PerformanceEntry#Browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.</li>
- <li>Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's <a href="/Web/API/PerformanceObserver#Browser_compatibility">Browser Compatibility</a> table, this interface has no shipping implementations.</li>
+ <li>Performance interface extensions: As shown in the {{domxref("Performance")}} interface's <a href="/en-US/docs/Web/API/Performance#browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.</li>
+ <li>PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's <a href="/en-US/docs/Web/API/PerformanceEntry#browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.</li>
+ <li>Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's <a href="/en-US/docs/Web/API/PerformanceObserver#browser_compatibility">Browser Compatibility</a> table, this interface has no shipping implementations.</li>
 </ul>
 
 <p>To test your browser's support for these interfaces, run the <code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code> application.</p>

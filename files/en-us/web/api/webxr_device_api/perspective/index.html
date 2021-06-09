@@ -27,11 +27,11 @@ tags:
 
 <p>Every WebXR session, represented by an {{domxref("XRSession")}} object, offers a set of options that can be configured by creating a new {{domxref("XRRenderState")}} object and activating the updated state by calling the session's {{domxref("XRSession.updateRenderState", "updateRenderState()")}} method to replace the current configuration.</p>
 
-<p>The majority of these values define the XR device's <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#The_viewing_frustum">viewing frustum</a>; that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the aspect ratio of the rendered image, and the distances to the near and far clipping planes.</p>
+<p>The majority of these values define the XR device's <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#the_viewing_frustum">viewing frustum</a>; that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the aspect ratio of the rendered image, and the distances to the near and far clipping planes.</p>
 
 <h3 id="Welcome_to_the_projection_matrix">Welcome to the projection matrix</h3>
 
-<p>Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#Perspective_projection_matrix">perspective projection matrix</a></strong>. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.</p>
+<p>Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#perspective_projection_matrix">perspective projection matrix</a></strong>. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.</p>
 
 <p>Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the <code>XRView</code> are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause {{interwiki("wikipedia", "virtual reality sickness")}} in at least some of your users.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 <p>Although normally you should avoid manually building or altering the projection matrix provided by the view, you can do so in some situations. The most common reason it may make sense to do this is to alter the near and far clipping plane distances to increase or reduce the number of polygons to be rendered, for performance reasons. When games offer preferences to adjust the viewing distance, that is done by changing these plane distance values.</p>
 
-<p>In immersive mode, the WebXR system obtains the default <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#The_viewing_frustum">viewing frustum</a> from the software provided by the hardware vendor. This viewing frustum is based on some combination of the device's lenses, display hardware, and cameras. Everything from the size of the imaging sensor to the focal length of the lens is involved in this calculation.</p>
+<p>In immersive mode, the WebXR system obtains the default <a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#the_viewing_frustum">viewing frustum</a> from the software provided by the hardware vendor. This viewing frustum is based on some combination of the device's lenses, display hardware, and cameras. Everything from the size of the imaging sensor to the focal length of the lens is involved in this calculation.</p>
 
 <p>Immersive experiences use hardware-defined fields of view, focal lengths, and so forth, so when using an immersive session, you can only change the near and far clipping distances. This is done by setting the values of the <code>XRRenderState</code> properties {{domxref("XRRenderState.depthNear", "depthNear")}} and {{domxref("XRRenderState.depthFar", "depthFar")}}.</p>
 

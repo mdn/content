@@ -9,6 +9,7 @@ tags:
   - Method
   - Reference
   - get
+browser-compat: api.Headers.get
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -61,6 +62,7 @@ myHeaders.get('Content-Type'); // Returns "image/jpeg"
 <pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
+myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
 </pre>
 
 <div class="note">
@@ -89,7 +91,7 @@ myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Headers.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

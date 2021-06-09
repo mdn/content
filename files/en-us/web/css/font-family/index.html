@@ -7,6 +7,7 @@ tags:
   - CSS Property
   - Reference
   - 'recipe:css-property'
+browser-compat: css.properties.font-family
 ---
 <div>{{CSSRef}}</div>
 
@@ -25,7 +26,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: css; no-line-numbers">/* A font family name and a generic family name */
-font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
 /* A generic family name only */
@@ -53,49 +54,74 @@ font-family: unset;
 
 <p>The example below lists two font families, the first with a <code>&lt;family-name&gt;</code> and the second with a <code>&lt;generic-name&gt;</code>:</p>
 
-<pre class="brush: css;">font-family: Gill Sans Extrabold, sans-serif;</pre>
+<pre class="brush: css;">font-family: "Gill Sans Extrabold", sans-serif;</pre>
 
 <h3 id="Values">Values</h3>
 
 <dl>
  <dt><a id="family-name"><code>&lt;family-name&gt;</code></a></dt>
- <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.</dd>
+ <dd>The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted. For example: "Comic Sans MS".</dd>
  <dt><a id="generic-name"><code>&lt;generic-name&gt;</code></a></dt>
  <dd>
  <p>Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:</p>
-
  <dl>
   <dt><code>serif</code></dt>
-  <dd style="font-family: serif;">Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.<br>
-  E.g. <span style="font-family: lucida bright,serif;">Lucida Bright</span>, <span style="font-family: lucida fax,serif;">Lucida Fax</span>, <span style="font-family: palatino,serif;">Palatino</span>, <span style="font-family: palatino linotype,serif;">"Palatino Linotype"</span>, <span style="font-family: palladio,serif;">Palladio</span>, <span style="font-family: urw palladio,serif;">"URW Palladio"</span>, <span style="font-family: serif;">serif</span>.</dd>
+  <dd>
+    <p>Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.</p>
+    <p>For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.</p>
+  </dd>
   <dt><code>sans-serif</code></dt>
-  <dd style="font-family: sans-serif;">Glyphs have stroke endings that are plain.<br>
-  E.g. <span style="font-family: open sans,sans-serif;">"Open Sans"</span>, <span style="font-family: fira sans,sans-serif;">"Fira Sans"</span>, <span style="font-family: lucida sans,sans-serif;">"Lucida Sans"</span>, <span style="font-family: lucida sans unicode,sans-serif;">"Lucida Sans Unicode"</span>, <span style="font-family: trebuchet ms,sans-serif;">"Trebuchet MS"</span>, <span style="font-family: liberation sans,sans-serif;">"Liberation Sans"</span>, <span style="font-family: nimbus sans l,sans-serif;">"Nimbus Sans L"</span>, <span style="font-family: sans-serif;">sans-serif</span>.</dd>
+  <dd>
+    <p>Glyphs have stroke endings that are plain.</p>
+    <p>For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.</p>
+  </dd>
   <dt><code>monospace</code></dt>
-  <dd style="font-family: monospace;">All glyphs have the same fixed width.<br>
-  E.g. <span style="font-family: fira mono,monospace;">"Fira Mono"</span>, <span style="font-family: dejavu sans mono,monospace;">"DejaVu Sans Mono"</span>, <span style="font-family: menlo,monospace;">Menlo</span>, <span style="font-family: consolas,monospace;">Consolas</span>, <span style="font-family: liberation mono,monospace;">"Liberation Mono"</span>, <span style="font-family: monaco,monospace;">Monaco</span>, <span style="font-family: lucida console,monospace;">"Lucida Console"</span>, <span style="font-family: monospace;">monospace</span>.</dd>
+  <dd>
+    <p>All glyphs have the same fixed width.</p>
+    <p>For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.</p>
+  </dd>
   <dt><code>cursive</code></dt>
-  <dd style="font-family: cursive;">Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.<br>
-  E.g. <span style="font-family: brush script mt,cursive;">"Brush Script MT</span>", <span style="font-family: brush script std,cursive;">"Brush Script Std</span>", "Lucida Calligraphy", "Lucida Handwriting", <span style="font-family: apple chancery,cursive;">"Apple Chancery"</span>, <span style="font-family: cursive;">cursive</span>.</dd>
+  <dd>
+    <p>Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.</p>
+    <p>For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.</p>
+  </dd>
   <dt><code>fantasy</code></dt>
-  <dd style="font-family: fantasy;">Fantasy fonts are primarily decorative fonts that contain playful representations of characters.<br>
-  E.g. <span style="font-family: papyrus,fantasy;">Papyrus</span>, <span style="font-family: herculanum,fantasy;">Herculanum</span>, <span style="font-family: party let,fantasy;">Party LET</span>, <span style="font-family: curlz mt,fantasy;">Curlz MT</span>, <span style="font-family: harrington,fantasy;">Harrington</span>, <span style="font-family: fantasy;">fantasy</span>.</dd>
+  <dd>
+    <p>Fantasy fonts are primarily decorative fonts that contain playful representations of characters.</p>
+    <p>For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.</p>
+  </dd>
   <dt><code>system-ui</code></dt>
-  <dd>Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics. <span style="font-family: system-ui;">This is example system-ui text.</span></dd>
+  <dd>
+    <p>Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.</p>
+  </dd>
   <dt><code>ui-serif</code></dt>
-  <dd>The default user interface serif font. <span style="font-family: ui-serif;">This is example ui-serif text.</span></dd>
+  <dd>
+    <p>The default user interface serif font.</p>
+  </dd>
   <dt><code>ui-sans-serif</code></dt>
-  <dd>The default user interface sans-serif font. <span style="font-family: ui-sans-serif;">This is example ui-sans-serif text.</span></dd>
+  <dd>
+    <p>The default user interface sans-serif font.</p>
+  </dd>
   <dt><code>ui-monospace</code></dt>
-  <dd>The default user interface monospace font. <span style="font-family: ui-monospace;">This is example ui-monospace text.</span></dd>
+  <dd>
+    <p>The default user interface monospace font.</p>
+  </dd>
   <dt><code>ui-rounded</code></dt>
-  <dd>The default user interface font that has rounded features. <span style="font-family: ui-rounded;">This is example ui-rounded text.</span></dd>
+  <dd>
+    <p>The default user interface font that has rounded features.</p>
+  </dd>
   <dt><code>math</code></dt>
-  <dd>This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings. This is some example math text: <span style="font-family: math;">ax² + bx + c = 0</span>.</dd>
+  <dd>
+    <p>This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.</p>
+  </dd>
   <dt><code>emoji</code></dt>
-  <dd>Fonts that are specifically designed to render emoji. This is some example emoji text: <span style="font-family: emoji;">✝♾</span>.</dd>
+  <dd>
+    <p>Fonts that are specifically designed to render emoji.</p>
+  </dd>
   <dt><code>fangsong</code></dt>
-  <dd>A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents. This is some example fangsong text with the Chinese characters for "fangsong" in traditional and simple forms, respectively: <span style="font-family: fangsong;">仿宋體 仿宋体</span>.</dd>
+  <dd>
+    <p>A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.</p>
+  </dd>
  </dl>
  </dd>
 </dl>
@@ -104,9 +130,11 @@ font-family: unset;
 
 <p>Font family names must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means that punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
 
+<p>It is a <strong>good practice</strong> to quote font family names that contain white space, digits, or punctuation characters other than hyphens.</p>
+
 <p>For example, the following declarations are valid:</p>
 
-<pre class="brush: css; example-good">font-family: Gill Sans Extrabold, sans-serif;
+<pre class="brush: css; example-good">
 font-family: "Goudy Bookletter 1911", sans-serif;</pre>
 
 <p>The following declarations are <strong>invalid</strong>:</p>
@@ -118,6 +146,12 @@ font-family: Ahem!, sans-serif;
 font-family: test@foo, sans-serif;
 font-family: #POUND, sans-serif;
 font-family: Hawaii 5-0, sans-serif;</pre>
+
+<p>The following example is technically <strong>valid</strong> but is not recommended:</p>
+
+<pre class="brush: css;">
+font-family: Gill Sans Extrabold, sans-serif;
+</pre>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -132,7 +166,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 <h3 id="Some_common_font_families">Some common font families</h3>
 
 <pre class="brush: css;">.serif {
-  font-family: Times, Times New Roman, Georgia, serif;
+  font-family: Times, "Times New Roman", Georgia, serif;
 }
 
 .sansserif {
@@ -140,7 +174,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 }
 
 .monospace {
-  font-family: Lucida Console, Courier, monospace;
+  font-family: "Lucida Console", Courier, monospace;
 }
 
 .cursive {
@@ -198,7 +232,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 &lt;/div&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample("Some_common_font_families", 600, 120)}}</p>
+<p>{{EmbedLiveSample("Some_common_font_families", 600, 220)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -236,7 +270,7 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.font-family")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,14 +2,15 @@
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
 tags:
-- API
-- Database
-- IDBKeyRange
-- IndexedDB
-- Method
-- Reference
-- Storage
-- includes
+  - API
+  - Database
+  - IDBKeyRange
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - includes
+browser-compat: api.IDBKeyRange.includes
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -44,7 +45,7 @@ tags:
       <th scope="col">Description</th>
     </tr>
     <tr>
-      <td><a href="/en-US/docs/DOM/DOMError"><code>DataError</code></a></td>
+      <td><a href="/en-US/docs/Web/API/DOMError"><code>DataError</code></a></td>
       <td>The supplied key was not a valid key.</td>
     </tr>
   </thead>
@@ -52,7 +53,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js" style="font-size: 14px;">var keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
+<pre class="brush: js">var keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
 
 var myResult = keyRangeValue.includes('F');
 // Returns true
@@ -107,7 +108,7 @@ var myResult = keyRangeValue.includes('W');
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBKeyRange.includes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

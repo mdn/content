@@ -6,6 +6,7 @@ tags:
 - JavaScript
 - Reference
 - ReferenceError
+browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
 <div>{{JSRef}}</div>
 
@@ -14,8 +15,12 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+<pre class="brush: js">
+new ReferenceError()
+new ReferenceError(message)
+new ReferenceError(message, fileName)
+new ReferenceError(message, fileName, lineNumber)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -62,23 +67,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError
-        constructor')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.ReferenceError.ReferenceError")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,8 +1,16 @@
 ---
 title: 'Feature-Policy: display-capture'
 slug: Web/HTTP/Headers/Feature-Policy/display-capture
+tags:
+  - Directive
+  - Feature Policy
+  - HTTP
+  - Reference
+  - display-capture
+  - Experimental
+browser-compat: http.headers.Feature-Policy.display-capture
 ---
-<div>{{HTTPSidebar}}</div>
+<div>{{HTTPSidebar}} {{SeeCompatTable}} </div>
 
 <p><span class="seoSummary">The HTTP {{HTTPHeader("Feature-Policy")}} header <code>display-capture</code> directive controls whether or not the document is permitted to use <a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a>, i.e.,{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to capture the screen's contents.</span></p>
 
@@ -10,38 +18,25 @@ slug: Web/HTTP/Headers/Feature-Policy/display-capture
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Feature-Policy: display-capture &lt;allowlist&gt;;</pre>
+<pre class="brush: http">Feature-Policy: display-capture &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}</dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
 
-<p>The default alowlist is <code>'self'</code>.</p>
+<p>Default allow list for <code>display-capture</code> is <code>'self'</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/mediacapture-screen-share/#feature-policy-integration">Screen Capture</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/permissions/#dom-permissionname-display-capture">Permissions</a></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
+
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.Feature-Policy.display-capture")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

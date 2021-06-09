@@ -1,0 +1,47 @@
+---
+title: DecompressionStream.writable
+slug: Web/API/DecompressionStream/writable
+tags:
+  - API
+  - Property
+  - Reference
+  - writable
+  - DecompressionStream
+browser-compat: api.DecompressionStream.writable
+---
+<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+
+<p class="summary">The <strong><code>writable</code></strong> read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let writableStream = DecompressionStream.writable;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("WritableStream")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example returns a {{domxref("WritableStream")}} from a <code>DecompressionStream</code>.</p>
+
+<pre class="brush:js">let stream = new DecompressionStream('gzip');
+console.log(stream.writeable); //a WritableStream</pre>
+
+<table class="standard-table">
+  <tbody>
+   <tr>
+    <th scope="col">Specification</th>
+    <th scope="col">Status</th>
+    <th scope="col">Comment</th>
+   </tr>
+   <tr>
+    <td>{{SpecName('Streams','#dom-generictransformstream-writable','writable')}}</td>
+    <td>{{Spec2('Streams')}}</td>
+    <td>Initial definition.</td>
+   </tr>
+  </tbody>
+ </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

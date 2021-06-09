@@ -15,14 +15,13 @@ tags:
   - Reference
   - Web
   - sound
+browser-compat: html.elements.audio
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;audio&gt;</code> element</strong> is used to embed sound content in documents. It may contain one or more audio sources, represented using the <code>src</code> attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.</span></p>
+<p>The <strong><code>&lt;audio&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to embed sound content in documents. It may contain one or more audio sources, represented using the <code>src</code> attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>The above example shows simple usage of the <code>&lt;audio&gt;</code> element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the <code>src</code> attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.</p>
 
@@ -51,21 +50,13 @@ tags:
   <dd>Sends a cross-origin request with a credential. In other words, it sends the <code>Origin:</code> HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code>Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
  </dl>
  When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for additional information.</dd>
- <dt>{{htmlattrdef("currentTime")}}</dt>
- <dd>
- <p>Reading <code>currentTime</code> returns a double-precision floating-point value indicating the current playback position, in seconds, of the audio. If the audio's metadata isn't available yet—thereby preventing you from knowing the media's start time or duration—<code>currentTime</code> instead indicates, and can be used to change, the time at which playback will begin. Otherwise, setting <code>currentTime</code> sets the current playback position to the given time and seeks the media to that position if the media is currently loaded.</p>
-
- <p>If the audio is being streamed, it's possible that the {{Glossary("user agent")}} may not be able to obtain some parts of the resource if that data has expired from the media buffer. Other audio may have a media timeline that doesn't start at 0 seconds, so setting <code>currentTime</code> to a time before that would fail. For example, if the audio's media timeline starts at 12 hours, setting <code>currentTime</code> to 3600 would be an attempt to set the current playback position well before the beginning of the media, and would fail. The {{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} method can be used to determine the beginning point of the media timeline's reference frame.</p>
- </dd>
- <dt>{{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}</dt>
+ <dt>{{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}</dt>
  <dd>A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See <a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">this proposed specification</a> for more information.
    <div class="notecard note">
      <h4>Note</h4>
      <p>In Safari, you can use <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> as a fallback.</p>
    </div>
  </dd>
- <dt>{{htmlattrdef("duration")}} {{ReadOnlyInline}}</dt>
- <dd>A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.</dd>
  <dt>{{htmlattrdef("muted")}}</dt>
@@ -125,7 +116,7 @@ tags:
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.emptied_event", 'emptied')}}</td>
-   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
+   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load")}} method is called to reload it.</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.ended_event", 'ended')}}</td>
@@ -194,7 +185,7 @@ tags:
   &lt;source src="myAudio.mp3" type="audio/mpeg"&gt;
   &lt;source src="myAudio.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Your browser doesn't support HTML5 audio. Here is
-     a &lt;a href="myAudio.mp4"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
+     a &lt;a href="myAudio.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/audio&gt;</pre>
 
 <p>We offer a substantive and thorough <a href="/en-US/docs/Web/Media/Formats">guide to media file types</a> and the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">audio codecs that can be used within them</a>. Also available is <a href="/en-US/docs/Web/Media/Formats/Video_codecs">a guide to the codecs supported for video</a>.</p>
@@ -323,7 +314,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
   &lt;source src="myAudio.ogg" type="audio/ogg"&gt;
   &lt;p&gt;
     Your browser doesn't support HTML5 audio.
-    Here is a &lt;a href="myAudio.mp4"&gt;link to download the audio&lt;/a&gt; instead.
+    Here is a &lt;a href="myAudio.mp3"&gt;link to download the audio&lt;/a&gt; instead.
   &lt;/p&gt;
 &lt;/audio&gt;
 
@@ -376,31 +367,11 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-audio-element', '&lt;audio&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-audio-element', '&lt;audio&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.audio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - Left-hand-side expressions
   - Operator
   - Reference
+browser-compat: javascript.operators.new
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -39,7 +40,7 @@ tags:
   <li>Creates a blank, plain JavaScript object.</li>
   <li>Adds a property to the new object (<code>__proto__</code>) that links to the constructor function's prototype object
     <div class="notecard note">
-      <p>Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using <code>new</code>).</p>
+      <p><strong>Note:</strong> Properties/objects added to the construction function prototype are therefore accessible to all instances created from the constructor function (using <code>new</code>).</p>
       </div>
   </li>
   <li>Binds the newly created object instance as the <code>this</code> context
@@ -63,7 +64,7 @@ tags:
 </ol>
 
 <div class="notecard note">
-<p>An object can have a property that is itself another object. See the
+<p><strong>Note:</strong> An object can have a property that is itself another object. See the
   examples below.</p>
 </div>
 
@@ -121,7 +122,7 @@ console.log(car2.color);   // 'original color'
 </pre>
 
 <div class="notecard note">
-  <p>While the constructor function can be invoked like any regular function (i.e. without the <code>new</code> operator),
+  <p><strong>Note:</strong> While the constructor function can be invoked like any regular function (i.e. without the <code>new</code> operator),
     in this case a new Object is not created and the value of <code>this</code> is also different.</p>
 </div>
 
@@ -200,22 +201,11 @@ var car2 = new Car('Nissan', '300ZX', 1992, ken);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-new-operator', 'The new Operator')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.operators.new")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

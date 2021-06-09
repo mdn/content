@@ -1,0 +1,84 @@
+---
+title: CSS Container Queries
+slug: Web/CSS/CSS_Container_Queries
+tags:
+  - CSS
+  - CSS Containment
+  - CSS Container Queries
+  - Guide
+  - Paint
+  - Responsive Design
+---
+<p>{{CSSRef}}</p>
+
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This document is an explanation of an early stage specification that is attracting a lot of interest from web developers. The examples and syntax below should be seen as an explainer to an evolving specification, in order to encourage experimentation and feedback. Once the specification matures, this will be the location of the full MDN documentation for container queries.</p>
+</div>
+
+<h2>What problem do container queries solve?</h2>
+
+<p>When creating <a href="/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">a responsive design</a> you often use a media query to change the document layout based on the size of the viewport.</p>
+
+<p>However, many designs have common components that change layout depending on the available width of their container. This may not always relate to the size of the viewport, but instead relate to where in the layout the component is placed.</p>
+
+<p>For example, the following component might be displayed in a narrow or wide column in the site layout. If there is space it displays as two columns, if not we want to display it stacked.</p>
+
+<img src="demo.jpg" alt="Image of two card components one displayed in two columns, the other stacked">
+
+<p>It's the same component, doing the same job, however to achieve the different layouts we currently would need to identify the component in some way&mdash;perhaps by adding a class or targeting the element with a selector which looks at where it is in the document structure.</p>
+
+<p>This doesn't quite achieve what media queries do for our entire layout however. Media queries give us the ability to size things based on ranges. When we add a class or target the element we decide that when the object is in the sidebar it <em>must</em> use the stacked layout. In terms of available space however, it may well be that on large screens the object in the sidebar would have enough space to display in the side-by-side layout.</p>
+
+<p>It is this situation that container queries would solve. Instead of looking at the viewport size, we can look at the container size and make our layout adjustments according to the space in the container. And, it looks as if this most frequently requested of web features, is becoming a possibility.</p>
+
+<h2>The container queries proposal</h2>
+
+<p>The container queries specification is to become part of {{cssxref("CSS_Containment", "CSS Containment")}}, and add new values to the {{cssxref("contain")}} property. The <code>contain</code> property was initially designed to allow for performance optimizations. It provides a way for web developers to isolate parts of the DOM and declare to the browser these are independent from the rest of the document.</p>
+
+<p>Using <code>contain: size</code> indicates to the browser that the size of this area is known in both dimensions. A container that knows how big it is, is exactly what we need for container queries!</p>
+
+<p>However, we don't often know how big things are in both dimensions. When we use media queries, most of the time we care about the available width (or inline size). We define columns as a percentage or fraction of the space in that dimension. Therefore, container queries extend the contain property by allowing size to be indicated in one dimension only. This is described as single-axis containment.</p>
+<p>The following CSS creates a container with containment on the inline axis only. The content can grow to as large as it needs to be on the block axis.</p>
+
+<pre class="brush: css">.sidebar {
+  contain: layout inline-size;
+}</pre>
+
+<p>Adding the contain property with layout and a size value creates a <strong>containment context</strong> on that element. This means that the browser knows we might want to query this container later. You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.</p>
+
+<p>A container query is created using <code>@container</code>. This will query the nearest containment context. To cause the card to display as two columns only if the sidebar is wider than 700px, we use the following CSS:</p>
+
+<pre class="brush: css">@container (min-width: 700px){
+  .card {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}</pre>
+
+<p>If other areas of the layout are also containment contexts then we can drop the component into those areas and it will respond to the relevant containment context. This makes the various components that we might create in our pattern library truly reusable, without us needing to know the context that they are in.</p>
+
+<p>There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome Canary. <a href="https://www.google.com/intl/en_uk/chrome/canary/">Download Canary</a>, then go to <kbd>chrome://flags</kbd>, search for Container Queries and enable that flag.</p>
+
+<p>You can then take a look at <a href="https://codepen.io/rachelandrew/pen/NWdaxde">my demo</a> showing the above scenario, or <a href="https://codepen.io/collection/XQrgJo">this growing collection of container queries demos</a>.</p>
+
+<h2>Share your feedback</h2>
+
+<p>This early stage of development is the perfect time to share your feedback on the specification as it develops. Specification author Miriam Suzanne is keeping <a href="https://css.oddbird.net/rwd/query/explainer/">a list of open questions</a>. Issues raised against the feature can be found in <a href="https://github.com/w3c/csswg-drafts/projects/18">a project</a> on the CSS Working Group Github. If you have thoughts on any of these questions, or want to raise something new, please do!</p>
+
+<p>It is always helpful to see use cases, particularly those that might not be solved by the current proposal. Any feedback will be very welcome and will help make the feature even better once in lands in release versions of browsers.</p>
+
+<h2>Alternatives to container queries</h2>
+
+<p>Many container query cases can be solved, or at least partially solved, with existing technology. These solutions will remain important even as container queries make it into browsers, as fallbacks for those browsers that don't yet support the spec.</p>
+
+<p>As already discussed, one solution for components that may occupy different locations, is to use a class or a selector that targets them based on document location.</p>
+
+<p>Another solution is to rely on grid or flex layout. The component used in my demo could be laid out using flexbox, which would give it some ability to display as one or two columns based on available width. You don't have the ability to make larger layout changes using this method, however in many cases you can achieve an acceptable result. As container queries become available you could maintain the grid or flex version as the fallback for non-supporting browsers.</p>
+
+<h2>See also</h2>
+
+<ul>
+  <li><a href="https://www.oddbird.net/2021/04/05/containerqueries/">Container Queries: a Quick Start Guide</a></li>
+  <li><a href="https://github.com/sturobson/Awesome-Container-Queries">Collection of Container Queries articles</a></li>
+</ul>

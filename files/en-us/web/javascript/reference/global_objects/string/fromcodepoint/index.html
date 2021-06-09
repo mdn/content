@@ -9,6 +9,8 @@ tags:
 - String
 - UTF-32
 - Unicode
+- Polyfill
+browser-compat: javascript.builtins.String.fromCodePoint
 ---
 <div>{{JSRef}}</div>
 
@@ -19,8 +21,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js">String<code>.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+<pre class="brush: js">
+String.fromCodePoint(num1)
+String.fromCodePoint(num1, num2)
+String.fromCodePoint(num1, num2, ..., numN)
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -137,32 +142,17 @@ String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('ESDraft', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
 
-<p>{{Compat("javascript.builtins.String.fromCodePoint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>String.fromCodePoint</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li>{{jsxref("String.fromCharCode()")}}</li>
   <li>{{jsxref("String.prototype.charAt()")}}</li>
   <li>{{jsxref("String.prototype.codePointAt()")}}</li>

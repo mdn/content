@@ -8,10 +8,13 @@ tags:
   - Reference
   - image-rendering
   - 'recipe:css-property'
+browser-compat: css.properties.image-rendering
 ---
 <div>{{CSSRef}}</div>
 
 <p>The <strong><code>image-rendering</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/image-rendering.html")}}</div>
 
 <p>The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is <code>100×100px</code><em>,</em> but its actual dimensions are <code>200×200px</code> (or <code>50×50px</code>), then the image will be upscaled (or downscaled) using the algorithm specified by <code>image-rendering</code>. This property has no effect on non-scaled images.</p>
 
@@ -34,9 +37,9 @@ image-rendering: unset;</pre>
  <dd>The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses <em>bilinear</em> resampling (high quality).</dd>
  <dt><code>smooth</code> {{Experimental_Inline}}</dt>
  <dd>The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.</dd>
- <dt><code style="white-space: nowrap;">high-quality</code> {{Experimental_Inline}}</dt>
- <dd>Identical to <code>smooth</code>, but with a preference for higher-quality scaling. If system resources are constrained, images with <code style="white-space: nowrap;">high-quality</code> should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.</dd>
- <dt><code style="white-space: nowrap;">crisp-edges</code></dt>
+ <dt><code>high-quality</code> {{Experimental_Inline}}</dt>
+ <dd>Identical to <code>smooth</code>, but with a preference for higher-quality scaling. If system resources are constrained, images with <code>high-quality</code> should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.</dd>
+ <dt><code>crisp-edges</code></dt>
  <dd>The image must be scaled with an algorithm that preserves contrast and edges in the image, and which does not smooth colors or introduce blur to the image in the process. Suitable algorithms include nearest-neighbor and <a href="https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms">other non-smoothing scaling algorithms</a> such as 2×SaI and <a href="https://en.wikipedia.org/wiki/Hqx">hqx-family</a> algorithms. This value is intended for pixel-art images, such as in browser games.</dd>
  <dt><code>pixelated</code></dt>
  <dd>When scaling the image up, the nearest-neighbor algorithm must be used, so that the image appears to be composed of large pixels. When scaling down, this is the same as <code>auto</code>.</dd>
@@ -118,7 +121,7 @@ image-rendering: unset;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.image-rendering")}}</p>
+<p>{{Compat}}</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> Although <code>crisp-edges</code> is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) does so. <a href="https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727">In Firefox</a>, <code>crisp-edges</code> is interpreted as nearest-neighbor, <code>pixelated</code> is not supported, and <code>auto</code> is interpolated as trilinear or linear.</p>

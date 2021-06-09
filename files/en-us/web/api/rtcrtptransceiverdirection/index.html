@@ -17,6 +17,7 @@ tags:
   - recvonly
   - sendonly
   - sendrecv
+browser-compat: api.RTCRtpTransceiverDirection
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
@@ -29,31 +30,31 @@ tags:
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="row" style="vertical-align: top;">Value</th>
-   <th scope="col" style="vertical-align: top;"><code>RTCRtpSender</code> behavior</th>
-   <th scope="col" style="vertical-align: top;"><code>RTCRtpReceiver</code> behavior</th>
+   <th scope="row">Value</th>
+   <th scope="col"><code>RTCRtpSender</code> behavior</th>
+   <th scope="col"><code>RTCRtpReceiver</code> behavior</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="sendrecv"><code>"sendrecv"</code></a></th>
-   <td style="vertical-align: top;">Offers to send {{Glossary("RTP")}} data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active<sup>1</sup>.</td>
-   <td style="vertical-align: top;">Offers to receive RTP data, and does so if the other peer accepts.</td>
+   <th scope="row"><a id="sendrecv"><code>"sendrecv"</code></a></th>
+   <td>Offers to send {{Glossary("RTP")}} data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active<sup>1</sup>.</td>
+   <td>Offers to receive RTP data, and does so if the other peer accepts.</td>
   </tr>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="sendonly"><code>"sendonly"</code></a></th>
-   <td style="vertical-align: top;">Offers to send RTP data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active<sup>1</sup>.</td>
-   <td style="vertical-align: top;">Does <em>not</em> offer to receive RTP data and will not do so.</td>
+   <th scope="row"><a id="sendonly"><code>"sendonly"</code></a></th>
+   <td>Offers to send RTP data, and will do so if the other peer accepts the connection and at least one of the sender's encodings is active<sup>1</sup>.</td>
+   <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
   </tr>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="recvonly"><code>"recvonly"</code></a></th>
-   <td style="vertical-align: top;">Does <em>not</em> offer to send RTP data, and will not do so.</td>
-   <td style="vertical-align: top;">Offers to receive RTP data, and will do so if the other peer offers.</td>
+   <th scope="row"><a id="recvonly"><code>"recvonly"</code></a></th>
+   <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
+   <td>Offers to receive RTP data, and will do so if the other peer offers.</td>
   </tr>
   <tr>
-   <th scope="row" style="vertical-align: top;"><a id="inactive"><code>"inactive"</code></a></th>
-   <td style="vertical-align: top;">Does <em>not</em> offer to send RTP data, and will not do so.</td>
-   <td style="vertical-align: top;">Does <em>not</em> offer to receive RTP data and will not do so.</td>
+   <th scope="row"><a id="inactive"><code>"inactive"</code></a></th>
+   <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
+   <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
   </tr>
  </tbody>
 </table>
@@ -79,7 +80,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpTransceiverDirection")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

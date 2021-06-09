@@ -9,6 +9,8 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+  - Polyfill
+browser-compat: javascript.builtins.RegExp.sticky
 ---
 <div>{{JSRef}}</div>
 
@@ -61,24 +63,16 @@ regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}</td>
-  </tr>
-
-</thead></table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("javascript.builtins.RegExp.sticky")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>sticky</code> <code>RegExp</code> flag is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
  <li>{{jsxref("RegExp.lastIndex")}}</li>
  <li>{{JSxRef("RegExp.prototype.dotAll")}}</li>
  <li>{{JSxRef("RegExp.prototype.global")}}</li>

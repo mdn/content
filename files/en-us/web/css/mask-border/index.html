@@ -5,12 +5,11 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
-  - NeedsCompatTable
   - Reference
   - recipe:css-shorthand-property
+browser-compat: css.properties.mask-border
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong><code>mask-border</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> lets you create a mask along the edge of an element's border.</p>
 
@@ -75,48 +74,9 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 
 <p><img alt="" src="mask-border-diamonds.png"></p>
 
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based mask border! Pretty neat, isn't it?&lt;/div&gt;</pre>
-
-<h4 id="CSS">CSS</h4>
-
 <p>To match the size of a single diamond, we will use a value of 90 divided by 3, or <code>30</code>, for slicing the image into corner and edge regions. A repeat value of <code>round</code> will make the mask slices fit evenly, i.e., without clipping or gaps.</p>
 
-<pre class="brush: css">div {
-  width: 200px;
-  background-color: lavender;
-  border: 18px solid salmon;
-  padding: 10px;
-
-  /* Prefixed longhand properties currently supported in Chromium
-    -webkit-mask-box-image-source: url(https://mdn.mozillademos.org/files/15836/mask-border-diamonds.png);
-    -webkit-mask-box-image-slice: 30 fill;
-    -webkit-mask-box-image-width: 20px;
-    -webkit-mask-box-image-repeat: round;
-    -webkit-mask-box-image-outset: 1px;
-  */
-
-  /* Prefixed shorthand property currently supported in Chromium */
-  -webkit-mask-box-image: url("https://mdn.mozillademos.org/files/15836/mask-border-diamonds.png") /* source */
-  30 fill /          /* slice */
-  20px /             /* width */
-  1px                /* outset */
-  round;             /* repeat */
-
-  /* Updated standard shorthand property, not supported anywhere yet */
-  mask-border:
-    url("https://mdn.mozillademos.org/files/15836/mask-border-diamonds.png")  /* source */
-    30 fill /        /* slice */
-    20px /           /* width */
-    1px              /* outset */
-    round;           /* repeat */
-}
-</pre>
-
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Setting_a_bitmap-based_mask_border")}}</p>
+<p>{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -139,7 +99,7 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("css.properties.mask-border")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

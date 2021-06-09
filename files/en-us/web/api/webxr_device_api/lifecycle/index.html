@@ -28,11 +28,11 @@ tags:
  <li>Check to see if the user's device and browser are both capable of presenting the XR experience you want to provide.
   <ol>
    <li>Make sure the WebXR API is available; if {{domxref("navigator.xr")}} is undefined, you can assume the user's browser and/or device doesn't support WebXR. If it's not supported, disable any user interface used to activate XR features and abort any attempts to enter XR mode.</li>
-   <li>Call {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, specifying the WebXR experience mode you want to provide: <code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>, in order to determine whether or not the type of session you wish to provide is available.</li>
+   <li>Call {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}}, specifying the WebXR experience mode you want to provide: <code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>, in order to determine whether or not the type of session you wish to provide is available.</li>
    <li>If the session type you want to use is available, provide the appropriate interface to the user to allow them to activate it.</li>
   </ol>
  </li>
- <li>When the user requests the activation of WebXR functionality by engaging with the user interface enabled above, request an {{DOMxRef("XRSession")}} using the desired mode. This is done by calling {{DOMxRef("XR.requestSession","navigator.xr.requestSession()")}}, again specifying the string indicating the mode you want to enable: <code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>.</li>
+ <li>When the user requests the activation of WebXR functionality by engaging with the user interface enabled above, request an {{DOMxRef("XRSession")}} using the desired mode. This is done by calling {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}}, again specifying the string indicating the mode you want to enable: <code>inline</code>, <code>immersive-vr</code>, or <code>immersive-ar</code>.</li>
  <li>If the promise returned by <code>requestSession()</code> resolves, use the new {{domxref("XRSession")}} to manage the WebXR session for the duration of the WebXR experience. This will involve managing inputs, animations, and rendering.
   <ol>
    <li>Call the {{domxref("XRSession")}} method {{DOMxRef("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} to schedule the first frame render for the XR device.</li>

@@ -7,6 +7,7 @@ tags:
 - Reference
 - Web Performance
 - Web Workers
+browser-compat: api.Performance.measure
 ---
 <div>{{APIRef("User Timing API")}}</div>
 
@@ -87,7 +88,7 @@ setTimeout(function() {
     performance.measure("measure a to b", markerNameA, markerNameB);
     performance.measure("measure a to now", markerNameA);
     performance.measure("measure from navigation start to b", undefined, markerNameB);
-    performance.measure("measure from the start of navigation to now");
+    performance.measure("measure from navigation start to now");
 
     // Pull out all of the measurements.
     console.log(performance.getEntriesByType("measure"));
@@ -124,4 +125,4 @@ setTimeout(function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Performance.measure")}}</p>
+<p>{{Compat}}</p>
