@@ -4,9 +4,7 @@ slug: Web/API/KeyboardEvent/code/code_values
 ---
 <p>The following tables show what code values are used for each native scancode or virtual keycode on major platforms. The reason is that some browsers choose to interpret physical keys differently, there are some differences in which keys map to which codes. These tables show those variations when known.</p>
 
-<h2 id="Code_values">Code values</h2>
-
-<h3 id="Code_values_on_Windows">Code values on Windows</h3>
+<h2 id="Code_values_on_Windows">Code values on Windows</h2>
 
 <p>This table shows the Windows scan codes representing keys and the <code>KeyboardEvent.code</code> values which correspond to those hardware keys. Only keys which generate scan codes on Windows are listed.</p>
 
@@ -17,7 +15,7 @@ when using it. </p>
  <thead>
   <tr>
    <th scope="row"></th>
-   <th colspan="2" scope="col" style="text-align: center;"><strong><code>KeyboardEvent.code</code></strong> value</th>
+   <th colspan="2" scope="col"><strong><code>KeyboardEvent.code</code></strong> value</th>
   </tr>
   <tr>
    <th scope="row">Code</th>
@@ -1006,16 +1004,25 @@ when using it. </p>
  </tbody>
 </table>
 
-<h3 id="Code_values_on_Mac">Code values on Mac</h3>
+<h2 id="Code_values_on_Mac">Code values on Mac</h2>
 
 <p>On Mac OS X, it's hard to get scancode or something which can distinguish a physical key from a key event. Therefore, Gecko always maps <code>code</code> value from the virtual keycode.</p>
 
+<p>In the cells, </p>
+  <ul>
+    <li>"(❌ Missing)" means that this code value cannot be detected on this browser;</li>
+    <li>"(⚠ Not the same on xyz)" means that this string represents a different code value on the browser xyz and that special care has to be done
+when using it;</li>
+    <li>"(⚠ Same string for <code>0xab</code>)" means that you cannot distinguished this key with the one matching <code>0xab</code>;</li>
+    <li>"(⚠ No events fired actually)" means that even if technically you have a specific string for this code, no event will be dispatched;</li>
+    <li>"(⚠ Different string on xyz)" means that the same key will have a different name on browser xyz.</li>
+</ul>
 <table class="standard-table" id="keyname_table_mac">
  <thead>
   <tr>
    <th scope="row">Virtual keycode</th>
    <th scope="col">Gecko</th>
-   <th scope="col">Chromium (48)</th>
+   <th scope="col">Chromium</th>
   </tr>
  </thead>
  <tbody>
@@ -1336,8 +1343,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>kVK_Function (0x3F)</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Fn"</code><em> (no events fired actually)</em></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code><em> (no events fired actually)</em></td>
+   <td><code>"Fn"</code> (⚠ No events fired actually)</td>
+   <td><code>""</code> (❌ Missing) (⚠ No events fired actually)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_F17 (0x40)</code></th>
@@ -1511,10 +1518,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>kVK_JIS_Eisu (0x66)</code></th>
-   <td style="background-color: rgb(255, 255, 204);">
-    <p><code>"Lang2"</code></p>
-   </td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code><em> (no events fired actually)</em></td>
+   <td><code>"Lang2"</code></td>
+   <td><code>""</code> (❌ Missing) (⚠ No events fired actually)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_F11 (0x67)</code></th>
@@ -1523,8 +1528,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>kVK_JIS_Kana (0x68)</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Lang1"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"KanaMode"</code><em> (no events fired actually)</em></td>
+   <td><code>"Lang1"</code> (⚠ Different string on Chromium)</td>
+   <td><code>"KanaMode"</code> (⚠ No events fired actually)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_F13 (0x69)</code></th>
@@ -1558,8 +1563,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>kVK_Help (0x72)</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Help"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Insert"</code></td>
+   <td><code>"Help"</code> (⚠ Different string on Chromium)</td>
+   <td><code>"Insert"</code> (⚠ Different string on Gecko)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_Home (0x73)</code></th>
@@ -1624,16 +1629,16 @@ when using it. </p>
  </tbody>
 </table>
 
-<h3 id="Code_values_on_Linux_X11_When_scancode_is_available">Code values on Linux (X11) (When scancode is available)</h3>
+<h2 id="Code_values_on_Linux_X11_When_scancode_is_available">Code values on Linux (X11) (When scancode is available)</h2>
 
 <p>Note that X has too many keys and some of them are not testable with usual keyboard. So, following table is created from source code which maps from scancode to code value.</p>
-
+<p>In the cells, "(❌ Missing)" means that this code value cannot be detected on this browser.</p>
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="row">scancode (hardware_keycode)</th>
    <th scope="col">Gecko</th>
-   <th scope="col">Chromium (44)</th>
+   <th scope="col">Chromium</th>
   </tr>
  </thead>
  <tbody>
@@ -2204,8 +2209,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x007C</code></th>
-   <td style="background-color: rgb(204, 255, 255);"><code>"Unidentified"</code></td>
-   <td style="background-color: rgb(204, 255, 255);"><code>"Power"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"Power"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x007D</code></th>
@@ -2214,8 +2219,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x007E</code></th>
-   <td style="background-color: rgb(204, 255, 255);"><code>"Unidentified"</code></td>
-   <td style="background-color: rgb(204, 255, 255);"><code>"NumpadChangeSign"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"NumpadChangeSign"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x007F</code></th>
@@ -2234,13 +2239,13 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x0082</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Lang1"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"HangulMode"</code></td>
+   <td><code>"Lang1"</code> (⚠ Different string on Chromium)</td>
+   <td><code>"HangulMode"</code> (⚠ Different string on Gecko)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0083</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Lang2"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Hanja"</code></td>
+   <td><code>"Lang2"</code> (⚠ Different string on Chromium)</td>
+   <td><code>"Hanja"</code> (⚠ Different string on Gecko)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0084</code></th>
@@ -2264,18 +2269,18 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x0088</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"BrowserStop"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Cancel"</code></td>
+   <td><code>"BrowserStop"</code> (⚠ Different string on Chromium)</td>
+   <td><code>"Cancel"</code> (⚠ Different string on Gecko)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0089</code></th>
-   <td style="background-color: rgb(255, 255, 204);">"Again"</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"Again"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x008A</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Props"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"Props"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x008B</code></th>
@@ -2284,8 +2289,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x008C</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Select"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"Select"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x008D</code></th>
@@ -2294,8 +2299,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x008E</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Open"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"Open"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x008F</code></th>
@@ -2304,8 +2309,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x0090</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Find"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"Find"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0091</code></th>
@@ -2324,8 +2329,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x0094</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"LaunchApp2"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"LaunchApp2"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0095</code>, <code>0x0096</code></th>
@@ -2334,13 +2339,13 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x0097</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"WakeUp"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"WakeUp"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0098</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"LaunchApp1"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"LaunchApp1"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x0099</code> ～ <code>0x00A2</code></th>
@@ -2349,13 +2354,13 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x00A3</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"LaunchMail"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"LaunchMail"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00A4</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"BrowserFavorites"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"BrowserFavorites"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00A5</code></th>
@@ -2379,8 +2384,8 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x00A9</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"Eject"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"Eject"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00AA</code></th>
@@ -2389,23 +2394,23 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x00AB</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"MediaTrackNext"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"MediaTrackNext"</code></td>
+   <td><code>""</code (❌ Missing)></td>
   </tr>
   <tr>
    <th scope="row"><code>0x00AC</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"MediaPlayPause"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"MediaPlayPause"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00AD</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"MediaTrackPrevious"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"MediaTrackPrevious"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00AE</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"MediaStop"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"MediaStop"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00AF</code> ～ <code>0x00B2</code></th>
@@ -2414,13 +2419,13 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x00B3</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"LaunchMediaPlayer"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"LaunchMediaPlayer"</code></td>
+   <td><code>""</code (❌ Missing)></td>
   </tr>
   <tr>
    <th scope="row"><code>0x00B4</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"BrowserHome"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"BrowserHome"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00B5</code></th>
@@ -2434,84 +2439,78 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x00BB</code></th>
-   <td style="background-color: rgb(204, 255, 255);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(204, 255, 255);"><code>"NumpadParenLeft"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"NumpadParenLeft"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x00BC</code></th>
-   <td style="background-color: rgb(204, 255, 255);">
-    <p><code>"Unidentified"</code></p>
-   </td>
-   <td style="background-color: rgb(204, 255, 255);"><code>"NumpadParenRight"</code></td>
+   <td><code>"Unidentified"</code> (❌ Missing)</td>
+   <td><code>"NumpadParenRight"</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x00BD</code>, <code>0x00BE</code></th>
-   <td>
-    <p><code>"Unidentified"</code></p>
-   </td>
+   <td><code>"Unidentified"</code></td>
    <td><code>""</code></td>
   </tr>
   <tr>
    <th scope="row"><code>0x00BF</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F13"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F13"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C0</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F14"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F14"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C1</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F15"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F15"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C2</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F16"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F16"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C3</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F17"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F17"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C4</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F18"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F18"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C5</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F19"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F19"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C6</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F20"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F20"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C7</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F21"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F21"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C8</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F22"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F22"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00C9</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F23"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F23"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00CA</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"F24"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"F24"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x00CB ～ 0x00E0</code></th>
@@ -2522,13 +2521,13 @@ when using it. </p>
   </tr>
   <tr>
    <th scope="row"><code>0x00E1</code></th>
-   <td style="background-color: rgb(255, 255, 204);"><code>"BrowserSearch"</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>""</code></td>
+   <td><code>"BrowserSearch"</code></td>
+   <td><code>""</code> (❌ Missing)</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="Code_values_on_Android_and_Firefox_OS_When_scancode_is_available">Code values on Android and Firefox OS (When scancode is available)</h3>
+<h2 id="Code_values_on_Android_and_Firefox_OS_When_scancode_is_available">Code values on Android and Firefox OS (When scancode is available)</h2>
 
 <table class="standard-table">
  <thead>
