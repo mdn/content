@@ -7230,7 +7230,8 @@
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
 /en-US/docs/Web/API/DataTransfer/setData()	/en-US/docs/Web/API/DataTransfer/setData
 /en-US/docs/Web/API/DataTransferItem/getAsEntry	/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry
-/en-US/docs/Web/API/DataTransferItemList/DataTransferItemList	/en-US/docs/Web/API/DataTransferItemList/DataTransferItem
+/en-US/docs/Web/API/DataTransferItemList/DataTransferItem	/en-US/docs/Web/API/DataTransferItemList
+/en-US/docs/Web/API/DataTransferItemList/DataTransferItemList	/en-US/docs/Web/API/DataTransferItemList
 /en-US/docs/Web/API/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
 /en-US/docs/Web/API/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/Web/API/DatabaseSync	/en-US/docs/Web/API/IDBDatabaseSync
@@ -8564,6 +8565,7 @@
 /en-US/docs/Web/API/Slotable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/Slottable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slottable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
+/en-US/docs/Web/API/SourceBufferList/SourceBuffer	/en-US/docs/Web/API/SourceBufferList
 /en-US/docs/Web/API/SpeechRecognition/SpeechRecognition.serviceURI	/en-US/docs/Web/API/SpeechRecognition/serviceURI
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
@@ -8645,6 +8647,7 @@
 /en-US/docs/Web/API/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
+/en-US/docs/Web/API/TrackDefaultList/TrackDefault	/en-US/docs/Web/API/TrackDefaultList
 /en-US/docs/Web/API/TrackDefaultList/TrackDefaultList.length	/en-US/docs/Web/API/TrackDefaultList/length
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
