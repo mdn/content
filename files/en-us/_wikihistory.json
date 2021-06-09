@@ -59702,22 +59702,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/LinkStyle": {
-    "modified": "2020-10-15T21:23:03.854Z",
-    "contributors": [
-      "Bludator",
-      "mfluehr",
-      "fscholz",
-      "libbymc",
-      "Sebastianz",
-      "teoli",
-      "Krinkle",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "Brettz9"
-    ]
-  },
   "Web/API/LocalFileSystem": {
     "modified": "2020-10-15T21:07:55.186Z",
     "contributors": [

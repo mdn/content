@@ -1419,7 +1419,7 @@
 /en-US/docs/DOM/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/DOM/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/DOM/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/LinkStyle
+/en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
 /en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Example
@@ -7938,6 +7938,8 @@
 /en-US/docs/Web/API/LinearAccelerationSensor/x	/en-US/docs/Web/API/Accelerometer/x
 /en-US/docs/Web/API/LinearAccelerationSensor/y	/en-US/docs/Web/API/Accelerometer/y
 /en-US/docs/Web/API/LinearAccelerationSensor/z	/en-US/docs/Web/API/Accelerometer/z
+/en-US/docs/Web/API/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
+/en-US/docs/Web/API/LinkStyle/sheet	/en-US/docs/Web/API/HTMLLinkElement
 /en-US/docs/Web/API/LocalStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Location.assign	/en-US/docs/Web/API/Location/assign
 /en-US/docs/Web/API/Location.reload	/en-US/docs/Web/API/Location/reload
