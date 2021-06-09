@@ -106,20 +106,6 @@ class BadIdeas {
 }
 </pre>
 
-<p>And you can have static private fields, for things you want to be both private and set in stone at construction.</p>
-
-<pre class="brush: js">
-class colorMixer {
-  static #red   = "rgba(1,0,0,1)";
-  static #green = "rgba(0,1,0,1)";
-  static #blue  = "rgba(0,0,1,1)";
-  #mixedColor;
-  constructor() {
-    …
-  }
-}
-</pre>
-
 <p>There is another limitation: you can’t declare private fields or methods via <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers">object literals</a>.  You might be used to something like this:</p>
 
 <pre class="brush: js">
@@ -142,6 +128,20 @@ var planet = {
 };
 // result:
 // "Uncaught SyntaxError: Unexpected identifier"
+</pre>
+
+<p>On the other hand, you <em>can</em> have static private fields, for things you want to be both private and set in stone at construction.</p>
+
+<pre class="brush: js">
+class colorMixer {
+  static #red   = "rgba(1,0,0,1)";
+  static #green = "rgba(0,1,0,1)";
+  static #blue  = "rgba(0,0,1,1)";
+  #mixedColor;
+  constructor() {
+    …
+  }
+}
 </pre>
 
 
@@ -200,6 +200,7 @@ customElements.define('num-counter', Counter);
 <h2 id="See_also">See also</h2>
 
 <ul>
+<li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private class features</a></li>
 <li><a href="https://github.com/tc39/proposal-class-fields/blob/master/PRIVATE_SYNTAX_FAQ.md">Private Syntax FAQ</a></li>
 <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
 </ul>
