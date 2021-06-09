@@ -1419,7 +1419,7 @@
 /en-US/docs/DOM/Input.select	/en-US/docs/Web/API/HTMLInputElement/select
 /en-US/docs/DOM/Input.setSelectionRange	/en-US/docs/Web/API/HTMLInputElement/setSelectionRange
 /en-US/docs/DOM/KeyboardEvent	/en-US/docs/Web/API/KeyboardEvent
-/en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/LinkStyle
+/en-US/docs/DOM/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
 /en-US/docs/DOM/Locating_DOM_elements_using_selectors	/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /en-US/docs/DOM/Manipulating_the_browser_history	/en-US/docs/Web/API/History_API
 /en-US/docs/DOM/Manipulating_the_browser_history/Example	/en-US/docs/Web/API/History_API/Example
@@ -2004,7 +2004,7 @@
 /en-US/docs/DOM/element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/DOM/element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/DOM/element.setCapture	/en-US/docs/Web/API/Element/setCapture
-/en-US/docs/DOM/element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM/element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/DOM/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/DOM/element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -2507,7 +2507,7 @@
 /en-US/docs/DOM:element.setAttributeNS	/en-US/docs/Web/API/Element/setAttributeNS
 /en-US/docs/DOM:element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/DOM:element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
-/en-US/docs/DOM:element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM:element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM:element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/DOM:element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/DOM:element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -2765,13 +2765,13 @@
 /en-US/docs/DOM_Client_Object_Cross-Reference/location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM_Client_Object_Cross-Reference/navigator	/en-US/docs/Web/API/Navigator
 /en-US/docs/DOM_Client_Object_Cross-Reference/screen	/en-US/docs/Web/API/Window/screen
-/en-US/docs/DOM_Client_Object_Cross-Reference/style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM_Client_Object_Cross-Reference/style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM_Client_Object_Cross-Reference/window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM_Client_Object_Cross-Reference:document	/en-US/docs/Web/API/Document
 /en-US/docs/DOM_Client_Object_Cross-Reference:location	/en-US/docs/Web/API/Document/location
 /en-US/docs/DOM_Client_Object_Cross-Reference:navigator	/en-US/docs/Web/API/Navigator
 /en-US/docs/DOM_Client_Object_Cross-Reference:screen	/en-US/docs/Web/API/Window/screen
-/en-US/docs/DOM_Client_Object_Cross-Reference:style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/DOM_Client_Object_Cross-Reference:style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/DOM_Client_Object_Cross-Reference:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM_Events	/en-US/docs/Web/Events
 /en-US/docs/DOM_Implementation_and_Scriptability	/en-US/docs/Web/API/Document_Object_Model
@@ -3278,7 +3278,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/Document_Object_Model_(DOM)/element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/Document_Object_Model_(DOM)/element.setCapture	/en-US/docs/Web/API/Element/setCapture
-/en-US/docs/Document_Object_Model_(DOM)/element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/Document_Object_Model_(DOM)/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Document_Object_Model_(DOM)/element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/Document_Object_Model_(DOM)/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Document_Object_Model_(DOM)/element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -7230,7 +7230,8 @@
 /en-US/docs/Web/API/DataTransfer/getData()	/en-US/docs/Web/API/DataTransfer/getData
 /en-US/docs/Web/API/DataTransfer/setData()	/en-US/docs/Web/API/DataTransfer/setData
 /en-US/docs/Web/API/DataTransferItem/getAsEntry	/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry
-/en-US/docs/Web/API/DataTransferItemList/DataTransferItemList	/en-US/docs/Web/API/DataTransferItemList/DataTransferItem
+/en-US/docs/Web/API/DataTransferItemList/DataTransferItem	/en-US/docs/Web/API/DataTransferItemList
+/en-US/docs/Web/API/DataTransferItemList/DataTransferItemList	/en-US/docs/Web/API/DataTransferItemList
 /en-US/docs/Web/API/DataView	/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView
 /en-US/docs/Web/API/DatabaseException	/en-US/docs/Web/API/IDBDatabaseException
 /en-US/docs/Web/API/DatabaseSync	/en-US/docs/Web/API/IDBDatabaseSync
@@ -7403,6 +7404,8 @@
 /en-US/docs/Web/API/Element/pointerup_event	/en-US/docs/Web/API/HTMLElement/pointerup_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Element/tabStop	/en-US/docs/Web/API/ShadowRoot/delegatesFocus
+/en-US/docs/Web/API/ElementCSSInlineStyle	/en-US/docs/Web/API/HTMLElement/style
+/en-US/docs/Web/API/ElementCSSInlineStyle/style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/ElementTraversal.childElementCount	/en-US/docs/Web/API/Element/childElementCount
 /en-US/docs/Web/API/ElementTraversal.firstElementChild	/en-US/docs/Web/API/Element/firstElementChild
 /en-US/docs/Web/API/ElementTraversal.lastElementChild	/en-US/docs/Web/API/Element/lastElementChild
@@ -7620,7 +7623,7 @@
 /en-US/docs/Web/API/HTMLElement.oncopy	/en-US/docs/Web/API/HTMLElement/oncopy
 /en-US/docs/Web/API/HTMLElement.oncut	/en-US/docs/Web/API/HTMLElement/oncut
 /en-US/docs/Web/API/HTMLElement.onpaste	/en-US/docs/Web/API/HTMLElement/onpaste
-/en-US/docs/Web/API/HTMLElement.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/Web/API/HTMLElement.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/HTMLElement.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/HTMLElement.title	/en-US/docs/Web/API/HTMLElement/title
 /en-US/docs/Web/API/HTMLElement/HTMLElement.accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
@@ -7652,7 +7655,6 @@
 /en-US/docs/Web/API/HTMLElement/onscroll	/en-US/docs/Web/API/GlobalEventHandlers/onscroll
 /en-US/docs/Web/API/HTMLElement/onselect	/en-US/docs/Web/API/GlobalEventHandlers/onselect
 /en-US/docs/Web/API/HTMLElement/onsubmit	/en-US/docs/Web/API/GlobalEventHandlers/onsubmit
-/en-US/docs/Web/API/HTMLElement/style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
 /en-US/docs/Web/API/HTMLElement/tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/HTMLFormControlsCollection.namedItem	/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem
 /en-US/docs/Web/API/HTMLFormElement.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
@@ -7936,6 +7938,8 @@
 /en-US/docs/Web/API/LinearAccelerationSensor/x	/en-US/docs/Web/API/Accelerometer/x
 /en-US/docs/Web/API/LinearAccelerationSensor/y	/en-US/docs/Web/API/Accelerometer/y
 /en-US/docs/Web/API/LinearAccelerationSensor/z	/en-US/docs/Web/API/Accelerometer/z
+/en-US/docs/Web/API/LinkStyle	/en-US/docs/Web/API/HTMLLinkElement
+/en-US/docs/Web/API/LinkStyle/sheet	/en-US/docs/Web/API/HTMLLinkElement
 /en-US/docs/Web/API/LocalStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Location.assign	/en-US/docs/Web/API/Location/assign
 /en-US/docs/Web/API/Location.reload	/en-US/docs/Web/API/Location/reload
@@ -8428,6 +8432,7 @@
 /en-US/docs/Web/API/Request/arrayBuffer	/en-US/docs/Web/API/Body/arrayBuffer
 /en-US/docs/Web/API/Request/blob	/en-US/docs/Web/API/Body/blob
 /en-US/docs/Web/API/Request/bodyUsed	/en-US/docs/Web/API/Body/bodyUsed
+/en-US/docs/Web/API/Request/context	/en-US/docs/Web/API/Request/destination
 /en-US/docs/Web/API/Request/json	/en-US/docs/Web/API/Body/json
 /en-US/docs/Web/API/Request/text	/en-US/docs/Web/API/Body/text
 /en-US/docs/Web/API/Resource_Timing	/en-US/docs/Web/API/Resource_Timing_API
@@ -8562,6 +8567,7 @@
 /en-US/docs/Web/API/Slotable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
 /en-US/docs/Web/API/Slottable	/en-US/docs/Web/API/Element
 /en-US/docs/Web/API/Slottable/assignedSlot	/en-US/docs/Web/API/Element/assignedSlot
+/en-US/docs/Web/API/SourceBufferList/SourceBuffer	/en-US/docs/Web/API/SourceBufferList
 /en-US/docs/Web/API/SpeechRecognition/SpeechRecognition.serviceURI	/en-US/docs/Web/API/SpeechRecognition/serviceURI
 /en-US/docs/Web/API/SpeechRecognition/start()	/en-US/docs/Web/API/SpeechRecognition/start
 /en-US/docs/Web/API/SpeechRecognitionEvent/SpeechRecognitionEvent.resultIndex	/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex
@@ -8643,6 +8649,7 @@
 /en-US/docs/Web/API/TouchList.identifiedTouch	/en-US/docs/Web/API/TouchList/identifiedTouch
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
+/en-US/docs/Web/API/TrackDefaultList/TrackDefault	/en-US/docs/Web/API/TrackDefaultList
 /en-US/docs/Web/API/TrackDefaultList/TrackDefaultList.length	/en-US/docs/Web/API/TrackDefaultList/length
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
@@ -9207,7 +9214,7 @@
 /en-US/docs/Web/API/element.setAttributeNode	/en-US/docs/Web/API/Element/setAttributeNode
 /en-US/docs/Web/API/element.setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/Web/API/element.setCapture	/en-US/docs/Web/API/Element/setCapture
-/en-US/docs/Web/API/element.style	/en-US/docs/Web/API/ElementCSSInlineStyle/style
+/en-US/docs/Web/API/element.style	/en-US/docs/Web/API/HTMLElement/style
 /en-US/docs/Web/API/element.supports	/en-US/docs/Web/API/CSS/supports
 /en-US/docs/Web/API/element.tabIndex	/en-US/docs/Web/API/HTMLOrForeignElement/tabIndex
 /en-US/docs/Web/API/element.tagName	/en-US/docs/Web/API/Element/tagName
@@ -11045,6 +11052,8 @@
 /en-US/docs/Web/Progressive_web_apps/Re-engageable	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Progressive_web_apps/Responsive	/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 /en-US/docs/Web/Progressive_web_apps/Safe	/en-US/docs/Web/Progressive_web_apps
+/en-US/docs/Web/Reference	/en-US/docs/Web
+/en-US/docs/Web/Reference/API	/en-US/docs/Web/API
 /en-US/docs/Web/Reference/Events	/en-US/docs/Web/Events
 /en-US/docs/Web/Reference/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Web/Reference/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event

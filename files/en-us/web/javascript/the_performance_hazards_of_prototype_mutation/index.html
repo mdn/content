@@ -127,13 +127,3 @@ arr2[0].x; // pessimized
 <p>(Only code that runs many times is optimized, so this doesn't trigger <em>all</em> these bad behaviors.  But every breakdown could happen if it appeared in "hot" code.)</p>
 
 <p>Recognizing exactly where a mutated-<code>[[Prototype]]</code> object flows, often across multiple scripts, is extraordinarily difficult.  It depends on careful textual analysis of the code and particular runtime behaviors.  Far-distant changes, that trigger subtly different control flow, can taint previously-optimal code paths with pessimal behavior.  <em>It's impossible to recognize all the places that will become slower, <strong>even for a JavaScript language implementer</strong>.</em></p>
-
-<p>remaining constant.Mutation must, in addition to changing other objects' shapes,</p>
-
-<p>  But this requires storing <em>cross-object</em> information.</p>
-
-<p>Cross-object information is different from shape, in that it can't easily be checked.  One modification to this information may affect many locations, none obviously connected to it: where to look to verify assumptions?  So instead of checking the assumptions before use, <em>all</em> code making assumptions is <em>invalidated</em> when a modification happens.  When a <code>[[Prototype]]</code> changes, <em>all</em> code depending on it must be thrown away.  The operation <code>obj.__proto__ = ...</code> is thus inherently slow.  And by throwing away already-optimized code, it makes that code much slower when it runs later.</p>
-
-<p>But it's worse than that.  When evaluating <code>obj.prop</code> sees an object whose <code>[[Prototype]]</code> has been mutated, so much previously-known information about the object becomes useless that SpiderMonkey considers the object to have wholly-unknown characteristics.  Any code path that touches such an object in the future will assume the worst.  Optimizing JIT engines assume that <em>future execution is like past execution</em>.  If an object with mutated <code>[[Prototype]]</code> is observed by some code, that code will likely observe more such objects.  Therefore, <strong>operations that interact with an object with mutated <code>[[Prototype]]</code>, anywhere, in any scripts, are un-optimizable</strong>.</p>
-
-<p>The un-optimizability of objects with mutated <code>[[Prototype]]</code> is not</p>

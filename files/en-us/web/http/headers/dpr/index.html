@@ -12,24 +12,26 @@ tags:
   - Exerimental
 browser-compat: http.headers.DPR
 ---
-<div>{{deprecated_header}}{{Non-standard_header}}</div>
-
-<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
+<div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
 
 <p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> header which represents the client device pixel ratio, which is the number of physical device pixels corresponding to every CSS pixel.</p>
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>?</td>
-  </tr>
- </tbody>
-</table>
+  <tbody>
+   <tr>
+    <th scope="row">Header type</th>
+    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <td>no</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+    <td>no</td>
+   </tr>
+  </tbody>
+ </table>
 
 <div class="notecard note">
 <p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive <code>DPR</code> header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.</p>
@@ -37,21 +39,23 @@ browser-compat: http.headers.DPR
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">DPR: &lt;number&gt;
-</pre>
+<pre class="brush: http">DPR: &lt;number&gt;</pre>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Server first needs to opt in to receive <code>DPR</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>DPR</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
 
-<pre>Accept-CH: DPR
+<pre class="brush: http">Accept-CH: DPR
 Accept-CH-Lifetime: 86400
 </pre>
 
 <p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
 
-<pre>DPR: 1.0
-</pre>
+<pre class="brush: http">DPR: 1.0</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
