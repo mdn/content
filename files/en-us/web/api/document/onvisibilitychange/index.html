@@ -17,15 +17,6 @@ browser-compat: api.Document.onvisibilitychange
   event handler that is called when a {{event("visibilitychange")}} event reaches this
   object.</p>
 
-<div class="notecard warning">
-  <p>Safari doesn’t fire the
-    <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code>
-    event as expected when <code>visibilityState</code> transitions to
-    <code>hidden</code>; so for that case, you need to also include code to listen for the
-    <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> event.
-  </p>
-</div>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js"><em>obj</em>.onvisibilitychange = <em>function</em>;
