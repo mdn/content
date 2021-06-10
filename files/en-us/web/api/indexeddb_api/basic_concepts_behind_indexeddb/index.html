@@ -51,10 +51,10 @@ tags:
   <p><strong>The IndexedDB API is mostly asynchronous.</strong> The API doesn't give you data by returning values; instead, you have to pass a callback function. You don't "store" a value into the database, or "retrieve" a value out of the database through synchronous means. Instead, you "request" that a database operation happens. You get notified by a DOM event when the operation finishes, and the type of event you get lets you know if the operation succeeded or failed. This sounds a little complicated at first, but there are sanity measures baked in. It's not that different from the way that <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> works.</p>
  </li>
  <li>
-  <p><strong>IndexedDB uses a lot of requests. </strong>Requests are objects that receive the success or failure DOM events that were mentioned previously. They have <code style="font-size: 14px;">onsuccess</code> and <code style="font-size: 14px;">onerror</code> properties, and you can call <code style="font-size: 14px;">addEventListener()</code> and <code style="font-size: 14px;">removeEventListener()</code> on them. They also have <code style="font-size: 14px;">readyState</code>, <code style="font-size: 14px;">result</code>, and <code style="font-size: 14px;">errorCode</code> properties that tell you the status of the request. The <code style="font-size: 14px;">result</code> property is particularly magical, as it can be many different things, depending on how the request was generated (for example, an <code style="font-size: 14px;">IDBCursor</code> instance, or the key for a value that you just inserted into the database).</p>
+  <p><strong>IndexedDB uses a lot of requests. </strong>Requests are objects that receive the success or failure DOM events that were mentioned previously. They have <code>onsuccess</code> and <code>onerror</code> properties, and you can call <code>addEventListener()</code> and <code>removeEventListener()</code> on them. They also have <code>readyState</code>, <code>result</code>, and <code>errorCode</code> properties that tell you the status of the request. The <code>result</code> property is particularly magical, as it can be many different things, depending on how the request was generated (for example, an <code>IDBCursor</code> instance, or the key for a value that you just inserted into the database).</p>
  </li>
  <li>
-  <p><strong>IndexedDB uses DOM events to notify you when results are available.</strong> DOM events always have a <code style="font-size: 14px;">type</code> property (in IndexedDB, it is most commonly set to <code style="font-size: 14px;">"success"</code> or <code style="font-size: 14px;">"error"</code>). DOM events also have a <code style="font-size: 14px;">target</code> property that indicates where the event is headed. In most cases, the <code style="font-size: 14px;">target</code> of an event is the <code style="font-size: 14px;">IDBRequest</code> object that was generated as a result of doing some database operation. Success events don't bubble up and they can't be canceled. Error events, on the other hand, do bubble, and can be cancelled. This is quite important, as error events abort whatever transactions they're running in, unless they are cancelled.</p>
+  <p><strong>IndexedDB uses DOM events to notify you when results are available.</strong> DOM events always have a <code>type</code> property (in IndexedDB, it is most commonly set to <code>"success"</code> or <code>"error"</code>). DOM events also have a <code>target</code> property that indicates where the event is headed. In most cases, the <code>target</code> of an event is the <code>IDBRequest</code> object that was generated as a result of doing some database operation. Success events don't bubble up and they can't be canceled. Error events, on the other hand, do bubble, and can be cancelled. This is quite important, as error events abort whatever transactions they're running in, unless they are cancelled.</p>
  </li>
  <li>
   <p><strong>IndexedDB is object-oriented.</strong> IndexedDB is not a relational database with tables representing collections of rows and columns. This important and fundamental difference affects the way you design and build your applications.</p>
@@ -187,7 +187,7 @@ tags:
 <ul>
  <li>Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale-aware sorting</a> has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.</li>
  <li>Synchronizing. The API is not designed to take care of synchronizing with a server-side database. You have to write code that synchronizes a client-side indexedDB database with a server-side database.</li>
- <li>Full text searching. The API<span style="direction: ltr;"> does not have an</span><span style="direction: ltr;"> equivalent of the <code>LIKE</code> operator in SQL. </span></li>
+ <li>Full text searching. The API does not have an equivalent of the <code>LIKE</code> operator in SQL.</li>
 </ul>
 
 <p>In addition, be aware that browsers can wipe out the database, such as in the following conditions:</p>
@@ -209,7 +209,7 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://www.w3.org/TR/IndexedDB/"><span style="direction: ltr;">Indexed Database API Specification</span></a></li>
+ <li><a href="https://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API Reference</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
  <li><a href="https://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
