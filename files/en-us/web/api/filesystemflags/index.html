@@ -39,6 +39,7 @@ browser-compat: api.FileSystemFlags
 <h3 id="Values_and_results">Values and results</h3>
 
 <p>The table below describes the result of each possible combination of these flags depending on whether or not the target file or directory path already exists.</p>
+<p>Note that, when <code>create</code> is <code>false</code>, the value of <code>exclusive</code> is irrelevant and ignored.</p>
 
 <table class="standard-table">
  <thead>
@@ -55,13 +56,13 @@ browser-compat: api.FileSystemFlags
  <tbody>
   <tr>
    <td><code>false</code></td>
-   <td>n/a<sup>[1]</sup></td>
+   <td>n/a</td>
    <td>Path exists and matches the desired type (depending on whether the function called is <code>getFile()</code> or <code>getDirectory()</code></td>
    <td>The <code>successCallback</code> is called with a {{domxref("FileSystemFileEntry")}} if <code>getFile()</code> was called or a {{domxref("FileSystemDirectoryEntry")}} if <code>getDirectory()</code> was called.</td>
   </tr>
   <tr>
    <td><code>false</code></td>
-   <td>n/a<sup>[1]</sup></td>
+   <td>n/a</td>
    <td>Path exists but doesn't match the desired type</td>
    <td>The <code>errorCallback</code> is called with an appropriate error code (if the callback was provided).</td>
   </tr>
@@ -91,8 +92,6 @@ browser-compat: api.FileSystemFlags
   </tr>
  </tbody>
 </table>
-
-<p>[1] When <code>create</code> is <code>false</code>, the value of <code>exclusive</code> is irrelevant and ignored.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

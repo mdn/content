@@ -25,7 +25,7 @@ tags:
  <dd>
  <p>A {{domxref("BufferSource")}}. This contains additional data that will not be encrypted but will be authenticated along with the encrypted data. If <code>additionalData</code> is given here then the same data must be given in the corresponding call to <code><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></code>:  if the data given to the <code>decrypt()</code> call does not match the original data, the decryption will throw an exception. This gives you a way to authenticate associated data without having to encrypt it.</p>
 
- <p>The bit length of <code>additionalData</code> must be <code>≤ 2<sup>64</sup>-1</code>.</p>
+ <p>The bit length of <code>additionalData</code> must be smaller than <code>2^64 - 1</code>.</p>
 
  <p>The <code>additionalData</code> property is optional and may be omitted without compromising the security of the encryption operation.</p>
  </dd>
