@@ -411,8 +411,8 @@ Object.freeze(i8);
 
 <h3 id="ByteLength_must_be_aligned">ByteLength must be aligned</h3>
 
-<p>Like the <code>byteOffset</code> parameter, the <code>byteLength</code> property of a
-  <code>ArrayBuffer</code> passed to a <code><var>TypedArray</var></code>s constructor
+<p>Like the <code>byteOffset</code> parameter, the <code>byteLength</code> property of an
+  <code>ArrayBuffer</code> passed to a <code><var>TypedArray</var></code>'s constructor
   must be a multiple of the constructor's <code>BYTES_PER_ELEMENT</code>.</p>
 
 <pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(3));
