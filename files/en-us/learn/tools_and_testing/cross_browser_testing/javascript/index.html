@@ -121,7 +121,7 @@ tags:
 
 <p>Make a local copy of our <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/broken-ajax.html">broken-ajax.html</a> example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/broken-ajax.html">source code</a> also).</p>
 
-<p>If you look at the console, you'll see the error message "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Uncaught <span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">can't access property "length", heroes is undefined</span></span></span></span></span>", and the referenced line number is 49. If we look at the source code, the relevant code section is this:</p>
+<p>If you look at the console, you'll see the error message "Uncaught TypeError: can't access property "length", heroes is undefined", and the referenced line number is 49. If we look at the source code, the relevant code section is this:</p>
 
 <pre class="brush: js">function showHeroes(jsonObj) {
   let heroes = jsonObj['members'];
