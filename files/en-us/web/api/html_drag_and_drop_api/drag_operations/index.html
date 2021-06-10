@@ -299,15 +299,13 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <h2 id="dragend">Finishing a Drag</h2>
 
-<p>Once the drag is complete, a <code>{{event("dragend")}}</code> event is fired at the source of the drag (the same element that received the <code>{{event("dragstart")}}</code> event). This event will fire if the drag was successful (See <a href="#note1">[1]</a>) or if it was cancelled. However, you can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drop operation occurred.</p>
+<p>Once the drag is complete, a <code>{{event("dragend")}}</code> event is fired at the source of the drag (the same element that received the <code>{{event("dragstart")}}</code> event). This event will fire if the drag was successful or if it was cancelled. However, you can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drop operation occurred.</p>
 
 <p>If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value <code>none</code> during a <code>{{event("dragend")}}</code>, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a <code>move</code> operation to remove the dragged item from the old location. The {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} property will be set to <code>true</code> if the user cancelled the drag (by pressing <kbd>Escape</kbd>), and <code>false</code> if the drag was cancelled for other reasons such as an invalid drop target, or if it was successful.</p>
 
 <p>A drop can occur inside the same window or over another application. The <code>{{event("dragend")}}</code> event will always fire regardless. The event's {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}} properties will be set to the screen coordinates where the drop occurred.</p>
 
 <p>After the <code>{{event("dragend")}}</code> event has finished propagating, the drag and drop operation is complete.</p>
-
-<p id="note1">[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">Bug 460801</a></p>
 
 <h2 id="See_also">See also</h2>
 
