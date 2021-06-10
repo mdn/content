@@ -401,9 +401,9 @@ Object.freeze(i8);
 
 <h3 id="ByteOffset_must_be_aligned">ByteOffset must be aligned</h3>
 
-<p>When constructing a <code><var>TypedArray</var></code>s as a view onto an
-  <code>ArrayBuffer</code>, the <code>byteOffset</code> argument must be aligned to it's
-  element size, in other words, the offset must be a multiple of
+<p>When constructing a <code><var>TypedArray</var></code> as a view onto an
+  <code>ArrayBuffer</code>, the <code>byteOffset</code> argument must be aligned to its
+  element size; in other words, the offset must be a multiple of
   <code>BYTES_PER_ELEMENT</code>.</p>
 
 <pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(4), 1);
