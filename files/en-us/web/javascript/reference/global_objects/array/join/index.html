@@ -73,7 +73,7 @@ a.join('');    // 'WindWaterFire'</pre>
 
 <pre class="brush: js">function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
-  console.log(s); // '<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">1,a,true'</span></span></span></span>
+  console.log(s); // '1,a,true'
 }
 f(1, 'a', true);
 //expected output: "1,a,true"
