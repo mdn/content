@@ -9,21 +9,9 @@ browser-compat: javascript.classes.public_class_fields
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<div class="note">
-  <p><strong>Note:</strong> This page describes experimental features.</p>
-
-  <p>Both public and private field declarations are an <a
-      href="https://github.com/tc39/proposal-class-fields">experimental feature (stage
-      3)</a> proposed at <a href="https://tc39.es/">TC39</a>, the JavaScript
-    standards committee.</p>
-
-  <p>Support in browsers is limited, but the feature can be used through a build step with
-    systems like <a href="https://babeljs.io/">Babel</a>. See the <a
-      href="#browser_compatibility">compat information</a> below.</p>
-</div>
 
 <p>Both static and instance public fields are writable, enumerable, and configurable
-  properties. As such, unlike their private counterparts, they participate in prototype
+  properties. As such, unlike their {{ jsxref('Classes/Private_class_fields','private counterparts') }}, they participate in prototype
   inheritance.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -275,7 +263,7 @@ console.log(instance.msg)
 
 <h2 id="Specifications">Specifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
