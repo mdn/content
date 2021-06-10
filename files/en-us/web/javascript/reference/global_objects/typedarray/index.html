@@ -392,7 +392,7 @@ Int8Array.prototype.foo = 'bar';
 
 <p><code><var>TypedArray</var></code>s that aren't empty cannot be frozen, as their
   underlying <code>ArrayBuffer</code> could be mutated through another another
-  <code><var>TypedArray</var></code>s view of the buffer. This would mean that the object
+  <code><var>TypedArray</var></code> view of the buffer. This would mean that the object
   would never genuinely be frozen.</p>
 
 <pre class="brush: js example-bad">const i8 = Int8Array.of(1, 2, 3);
