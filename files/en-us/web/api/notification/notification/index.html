@@ -121,6 +121,12 @@ browser-compat: api.Notification.Notification
 
 <p>Starting in Chrome 49, notifications don't work in incognito mode.</p>
 
+<p>Chrome for Android will throw a <code>TypeError</code> when calling the
+  <code>Notification</code> constructor. It only supports creating
+  notifications from a service worker. See the
+  <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=481856">
+  Chromium issue tracker</a> for more details.</p>
+
 <h3 id="Internet_Explorer_notes">Internet Explorer notes</h3>
 
 <p>Version 38.14352 and higher of MS Edge Notification API is supported. <a
