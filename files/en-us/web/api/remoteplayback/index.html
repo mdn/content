@@ -10,7 +10,7 @@ browser-compat: api.RemotePlayback
 ---
 <div>{{DefaultAPISidebar("Remote Playback API")}}</div>
 
-<p class="summary">The <strong><code>RemotePlayback</code></strong> interface of the {{domxref('Remote Playback API','','',' ')}} </p>
+<p class="summary">The <strong><code>RemotePlayback</code></strong> interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -32,26 +32,46 @@ browser-compat: api.RemotePlayback
 
 <dl>
   <dt>{{domxref("RemotePlayback.onconnecting")}}</dt>
-  <dd></dd>
+  <dd>Fired when the user agent initiates remote playback.</dd>
   <dt>{{domxref("RemotePlayback.onconnect")}}</dt>
-  <dd></dd>
+  <dd>Fired when the user agent successfully connects to the remote device.</dd>
   <dt>{{domxref("RemotePlayback.ondisconnect")}}</dt>
-  <dd></dd>
+  <dd>Fired when the user agent disconnects from the remote device.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
   <dt>{{domxref("RemotePlayback.watchAvailability()")}}</dt>
-  <dd></dd>
+  <dd>A {{jsxref("Promise")}} that resolves with a <code>callbackId</code> of an available remote playback device.</dd>
   <dt>{{domxref("RemotePlayback.cancelWatchAvailability()")}}</dt>
-  <dd></dd>
+  <dd>Cancels the request to monitor the availability of remote playback devices.</dd>
   <dt>{{domxref("RemotePlayback.prompt()")}}</dt>
-  <dd></dd>
+  <dd>Prompts the user to select and give permission to connect to a remote playbabk device.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
+<p>The following example demonstrates a player with custom controls that support remote playback. Initially the button used to select a device is hidden:</p>
+
+<pre class="brush: html">&lt;video id="videoElement" src="https://example.org/media.ext"&gt;
+&lt;button id="deviceBtn" style="display: none;"&gt;Pick device&lt;/button&gt;</pre>
+
+<p>The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.</p>
+
+<pre class="brush: js">const deviceBtn = document.getElementById("deviceBtn");
+const videoElem = document.getElementById("videoElement");
+
+function availabilityCallback(available) {
+  // Show or hide the device picker button depending on device availability.
+  deviceBtn.style.display = available ? "inline" : "none";
+}
+
+videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
+  /* If the device cannot continuously watch available,
+  show the button to allow the user to try to prompt for a connection.*/
+  deviceBtn.style.display = "inline";
+});</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -59,8 +79,4 @@ browser-compat: api.RemotePlayback
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
 <p>{{Compat}}</p>
-
-

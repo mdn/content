@@ -11,7 +11,11 @@ browser-compat: api.RemotePlayback.prompt
 ---
 <div>{{DefaultAPISidebar("Remote Playback API")}}</div>
 
-<p class="summary">The <strong><code>prompt()</code></strong> method of the {{domxref("RemotePlayback")}} interface  </p>
+<p class="summary">The <strong><code>prompt()</code></strong> method of the {{domxref("RemotePlayback")}} interface is used to promot the user to select an available remote playback device and give permission for the current media to be played using that device.</p>
+
+<p>If the user gives permission, the {{domxref("RemotePlayback.state","state")}} will be set to <code>connecting</code> and the user agent will connect to the device to initiate playback.</p>
+
+<p>If the user chooses to instead disconnect from the device, the {{domxref("RemotePlayback.state","state")}} will be set to <code>disconnected</code> and user agent should disconnect from this device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,32 +23,40 @@ browser-compat: api.RemotePlayback.prompt
 
 <h3 id="Parameters">Parameters</h3>
 
-
+<p>None.</p>
 
 <h3 id="Returns">Return value</h3>
 
-<p></p>
+<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code>.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
+<p>The promise may be rejected with one of the following exceptions:</p>
 
+<dl>
+  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
+  <dd>Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is <code>true</code> for the media element.</dd>
+  <dt>{{domxref("DOMException")}} <code>OperationError</code></dt>
+  <dd>User agents <em>may</em> throw this error if there is already an unsettled promise for this media element, or even this browsing context.</dd>
+  <dt>{{domxref("DOMException")}} <code>InvalidAccessError</code></dt>
+  <dd>Thrown if the user has not interacted with this device recently.</dd>
+  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
+  <dd>An optional error to be used if the user agent knows that remote playment of this particular media is not feasible.</dd>
+  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
+  <dd>Thrown if remote playback is unavailable.</dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>Fill in a simple example that nicely shows a typical usage of the API, then perhaps some more complex examples (see our guide on how to add <a href="/en-US/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+<p>In the following example the user is prompted to select a remote playback device to play a video.</p>
 
-<p>This text should be replaced with a brief description of what the example demonstrates.</p>
-
-<pre class="brush: js">
-my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
-	<li>x</li>
-	<li>y</li>
-	<li>z</li>
-</ul>
+<pre class="brush: js">devicesBtn.onclick = () => {
+  // Request the user to select a remote playback device.
+  videoElem.remote.prompt()
+    // Update the UI and monitor the connected state.
+    .then(updateRemotePlaybackState);
+    // Otherwise, the user cancelled the selection UI or no screens were found.
+};</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -52,8 +64,4 @@ my code block</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
 <p>{{Compat}}</p>
-
-
