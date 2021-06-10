@@ -409,6 +409,8 @@ Object.freeze(i8);
 <pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(4), 1);
 // RangeError: attempting to construct out-of-bounds TypedArray on ArrayBuffer</pre>
 
+<pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4), 0);</pre>
+
 <h3 id="ByteLength_must_be_aligned">ByteLength must be aligned</h3>
 
 <p>Like the <code>byteOffset</code> parameter, the <code>byteLength</code> property of an
@@ -417,6 +419,8 @@ Object.freeze(i8);
 
 <pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(3));
 // RangeError: attempting to construct out-of-bounds TypedArray on ArrayBuffer</pre>
+
+<pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
