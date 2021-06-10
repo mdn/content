@@ -247,7 +247,7 @@ console.log("all done");</pre>
 
 <p>You should now get an error in your console instead of the third message:</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
+<pre>TypeError: image is undefined; can't access its "src" property</pre>
 
 <p>This is because at the time the browser tries to run the third <code>console.log()</code> statement, the <code>fetch()</code> block has not finished running so the <code>image</code> variable has not been given a value.</p>
 
