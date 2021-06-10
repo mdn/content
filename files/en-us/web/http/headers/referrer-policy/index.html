@@ -105,7 +105,7 @@ Referrer-Policy: unsafe-url
 
 <ul>
  <li>External CSS stylesheets use the default policy (<code>strict-origin-when-cross-origin</code>), unless it's overwritten via a <code>Referrer-Policy</code> HTTP header on the CSS stylesheet’s response.</li>
- <li>For {{HTMLElement("style")}} elements or <a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style"><code>style</code> attributes</a>, the owner document's referrer policy is used.</li>
+ <li>For {{HTMLElement("style")}} elements or <a href="/en-US/docs/Web/API/HTMLElement/style"><code>style</code> attributes</a>, the owner document's referrer policy is used.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -137,7 +137,7 @@ Referrer-Policy: unsafe-url
    <td>https://example.com/page</td>
   </tr>
   <tr>
-   <td><strong>http</strong>://example.org</td>
+   <td><strong>http</strong>://example.com</td>
    <td><em>(no referrer)</em></td>
   </tr>
   <tr>
@@ -177,7 +177,7 @@ Referrer-Policy: unsafe-url
    <td>https://example.com/</td>
   </tr>
   <tr>
-   <td><strong>http</strong>://example.org</td>
+   <td><strong>http</strong>://example.com</td>
    <td><em>(no referrer)</em></td>
   </tr>
   <tr>
@@ -196,7 +196,7 @@ Referrer-Policy: unsafe-url
    <td>https://example.com/</td>
   </tr>
   <tr>
-   <td><strong>http</strong>://example.org</td>
+   <td><strong>http</strong>://example.com</td>
    <td><em>(no referrer)</em></td>
   </tr>
   <tr>

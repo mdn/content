@@ -40,7 +40,7 @@ tags:
 
 <p>Here’s a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif"></a></p>
 
 <p>Notice that the background moves, Alice spins, and her color changes at an offset from her spinning. We’re going to focus on just Alice for this tutorial. Here’s the simplified CSS that controls Alice’s animation:</p>
 
@@ -143,7 +143,7 @@ tags:
 
 <p>While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation’s playback. The Web Animations API provides several useful methods for controlling playback. Let’s take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="growing-shrinking_article_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="growing-shrinking_article_optimized.gif"></a></p>
 
 <p>In this game, Alice has an animation that causes her to go from small to big which we control via a bottle and a cupcake. Both of these have their own animations.</p>
 
@@ -208,7 +208,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
 <p>In <a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>, Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen’s Race example, Alice and the Red Queen are running to stay in place (check out the <a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="red-queen-race_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
+<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="red-queen-race_optimized.gif"></a></p>
 
 <p>Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation’s <code>playbackRate</code>. We use <code>updatePlaybackRate()</code> instead of setting the playbackRate directly since that produces a smooth update:</p>
 

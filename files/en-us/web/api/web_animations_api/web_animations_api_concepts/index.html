@@ -23,7 +23,7 @@ tags:
 
 <p>The Internet Explorer team requested an animations API to consolidate and normalize animation functionality across all browsers, and thus efforts began in earnest among Mozilla Firefox and Google Chrome developers to create the one animation spec to rule them all: the Web Animations API. Now we’ve got the WAAPI for future animation specifications to piggyback on, allowing them to remain consistent and play well together. It also provides a point of reference all browsers can adhere to with the currently available specs.</p>
 
-<p><img alt="An illustration showing the Web Animations API ruling over CSS Transitions and Animations as well as a third category representing future animation specs with a question mark." src="waapi_diagram_white.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="An illustration showing the Web Animations API ruling over CSS Transitions and Animations as well as a third category representing future animation specs with a question mark." src="waapi_diagram_white.png"></p>
 
 <h2 id="The_Two_Models_Timing_and_Animation">The Two Models: Timing and Animation</h2>
 
@@ -39,7 +39,7 @@ tags:
 
 <p>The animation model can be thought of as an array of snapshots of what the animation could look like at any given time, lined up along the duration of the animation.</p>
 
-<p><img alt="An illustration showing how the animation model can be visualized as a series of snapshots arranged along a timeline. In this case, pictures of the cheshire cat going from 0 (there) to 8 seconds (not all there—only his smile is left)." src="waapi_timing_diagram_white.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="An illustration showing how the animation model can be visualized as a series of snapshots arranged along a timeline. In this case, pictures of the cheshire cat going from 0 (there) to 8 seconds (not all there—only his smile is left)." src="waapi_timing_diagram_white.png"></p>
 
 <h2 id="Core_Concepts">Core Concepts</h2>
 
@@ -53,7 +53,7 @@ tags:
 
 <p><a href="/en-US/docs/Web/API/Animation">Animation objects</a> can be imagined as DVD players: they’re used for controlling media playback, but without media to play, they don’t do anything. Animation objects accept media in the form of Animation Effects, specifically Keyframe Effects (we’ll get to those in a moment). Like a DVD player, we can use the Animation Object’s methods to <a href="/en-US/docs/Web/API/Animation/play">play</a>, <a href="/en-US/docs/Web/API/Animation/pause">pause</a>, <a href="/en-US/docs/Web/API/Animation/currentTime">seek</a>, and <a href="/en-US/docs/Web/API/Animation/reverse">control the animation’s playback direction</a> and <a href="/en-US/docs/Web/API/Animation/playbackRate">speed</a>.</p>
 
-<p><img alt="An illustration likening how an Animation plays a KeyframeEffect like a DVD player plays a DVD." src="waapi_player_diagram_white.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="An illustration likening how an Animation plays a KeyframeEffect like a DVD player plays a DVD." src="waapi_player_diagram_white.png"></p>
 
 <h3 id="Animation_Effect">Animation Effect</h3>
 

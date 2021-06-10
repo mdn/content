@@ -25,16 +25,16 @@ tags:
 <p class="summary">This article starts the module off with a good look at what accessibility is — this overview includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML and CSS.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To gain familiarity with accessibility, including what it is, and how it affects you as a web developer.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>Basic computer literacy, a basic understanding of HTML and CSS.</td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>To gain familiarity with accessibility, including what it is, and how it affects you as a web developer.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="So_what_is_accessibility">So what is accessibility?</h2>
@@ -48,17 +48,17 @@ tags:
 <p>Building accessible sites benefit everyone:</p>
 
 <ul>
- <li>Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.</li>
- <li>Caring about accessibility demonstrates good ethics and morals, which improves your public image.</li>
- <li>Other good practices that improve accessibility also make your site more usable by other groups, such as mobile phone users or those on low network speed. In fact, everyone can benefit from many such improvements.</li>
- <li>Did we mention it is also the law in some places?</li>
+  <li>Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.</li>
+  <li>Caring about accessibility demonstrates good ethics and morals, which improves your public image.</li>
+  <li>Other good practices that improve accessibility also make your site more usable by other groups, such as mobile phone users or those on low network speed. In fact, everyone can benefit from many such improvements.</li>
+  <li>Did we mention it is also the law in some places?</li>
 </ul>
 
 <h2 id="What_kinds_of_disability_are_we_looking_at">What kinds of disability are we looking at?</h2>
 
 <p>People with disabilities are just as diverse as people without disabilities, and so are their disabilities. The key lesson here is to think beyond your own computer and how you use the web, and start learning about how others use it — <em>you are not your users</em>. The main types of disability to consider are explained below, along with any special tools they use to access web content (known as <strong>assistive technologies</strong>, or <strong>ATs</strong>).</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: The World Health Organization's <a href="https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health">Disability and health</a> fact sheet states that "Over a billion people, about 15% of the world's population, have some form of disability", and "Between 110 million and 190 million adults have significant difficulties in functioning."</p>
 </div>
 
@@ -67,9 +67,9 @@ tags:
 <p>People with visual impairments include people with blindness, low-level vision, and color blindness. Many people with visual impairments use screen magnifiers that are either physical magnifiers or software zoom capabilities. Most browsers and operating systems these days have zoom capabilities. Some users will rely on screen readers, which is software that reads digital text aloud. Some screen reader examples include:</p>
 
 <ul>
- <li>Paid commercial products, like <a class="external external-icon" href="https://www.freedomscientific.com/Products/software/JAWS/">JAWS</a> (Windows) and <a href="https://yourdolphin.com/screenreader">Dolphin Screen Reader</a> (Windows).</li>
- <li>Free products, like <a class="external external-icon" href="https://www.nvaccess.org/">NVDA</a> (Windows), <a class="external external-icon" href="https://www.chromevox.com/">ChromeVox</a> (Chrome), and <a class="external external-icon" href="https://wiki.gnome.org/Projects/Orca">Orca</a> (Linux).</li>
- <li>Software built into the operating system, like <a class="external external-icon" href="https://www.apple.com/accessibility/mac/vision/">VoiceOver</a> (macOS, iPadOS, iOS), <a class="external external-icon" href="https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started">Narrator</a> (Windows), <a class="external external-icon" href="https://www.chromevox.com/">ChromeVox</a> (on Chrome OS), and <a class="external external-icon" href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">TalkBack</a> (Android).</li>
+  <li>Paid commercial products, like <a class="external external-icon" href="https://www.freedomscientific.com/Products/software/JAWS/">JAWS</a> (Windows) and <a href="https://yourdolphin.com/screenreader">Dolphin Screen Reader</a> (Windows).</li>
+  <li>Free products, like <a class="external external-icon" href="https://www.nvaccess.org/">NVDA</a> (Windows), <a class="external external-icon" href="https://www.chromevox.com/">ChromeVox</a> (Chrome), and <a class="external external-icon" href="https://wiki.gnome.org/Projects/Orca">Orca</a> (Linux).</li>
+  <li>Software built into the operating system, like <a class="external external-icon" href="https://www.apple.com/accessibility/mac/vision/">VoiceOver</a> (macOS, iPadOS, iOS), <a class="external external-icon" href="https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started">Narrator</a> (Windows), <a class="external external-icon" href="https://www.chromevox.com/">ChromeVox</a> (on Chrome OS), and <a class="external external-icon" href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback">TalkBack</a> (Android).</li>
 </ul>
 
 <p>It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and have a play around with it, to get an idea of how it works. See our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">cross-browser testing screen readers guide</a> for more details on using them. The below video also provides a brief example of what the experience is like.</p>
@@ -80,11 +80,11 @@ tags:
 
 <h3 id="People_with_hearing_impairments">People with hearing impairments</h3>
 
-<p>Otherwise known as people with auditory impairments or deaf people, this group of people has either low hearing levels or no hearing at all. Hearing-impaired people do use ATs (see <a href="https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders">Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders</a>), but there are not really special ATs specific for computer/web use.</p>
+<p><a href="https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/">Deaf and hard-of-hearing (DHH)</a> people have various levels of hearing loss ranging from mild to profound. Although some do use AT (see <a href="https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders">Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders</a>), they are not widespread.</p>.
 
-<p>There are, however, specific techniques for providing textual alternatives to audio content which range from simple text transcripts to text tracks (i.e., captions) that can be displayed along with video. An article, later on, will discuss these.</p>
+<p>To provide access, textual alternatives must be provided. Videos should be manually captioned, and transcripts should be provided for audio content. Furthermore, due to high levels of <a href="https://therapytravelers.com/language-deprivation/#:~:text=Language%20deprivation%20is%20the%20term,therefore%20not%20exposed%20to%20language.">language deprivation</a> in DHH populations, <a href="https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/">text simplification should be considered</a>.</p>
 
-<p>Hearing-impaired people also represent a significant userbase — "466 million people worldwide have disabling hearing loss", says the World Health Organization's <a href="https://www.who.int/mediacentre/factsheets/fs300/en/">Deafness and hearing loss</a> fact sheet.</p>
+<p>Deaf and hard-of-hearing people also represent a significant userbase — "466 million people worldwide have disabling hearing loss", says the World Health Organization's <a href="https://www.who.int/mediacentre/factsheets/fs300/en/">Deafness and hearing loss</a> fact sheet.</p>
 
 <h3 id="People_with_mobility_impairments">People with mobility impairments</h3>
 
@@ -103,27 +103,27 @@ tags:
 <p>A good foundation of accessibility for people with cognitive impairments includes:</p>
 
 <ul>
- <li>Delivering content in more than one way, such as by text-to-speech or by video.</li>
- <li>Easily understood content, such as text written using plain-language standards.</li>
- <li>Focusing attention on important content.</li>
- <li>Minimizing distractions, such as unnecessary content or advertisements.</li>
- <li>Consistent webpage layout and navigation.</li>
- <li>Familiar elements, such as underlined links blue when not visited and purple when visited.</li>
- <li>Dividing processes into logical, essential steps with progress indicators.</li>
- <li>Website authentication as easy as possible without compromising security.</li>
- <li>Making forms easy to complete, such as with clear error messages and simple error recovery.</li>
+  <li>Delivering content in more than one way, such as by text-to-speech or by video.</li>
+  <li>Easily understood content, such as text written using plain-language standards.</li>
+  <li>Focusing attention on important content.</li>
+  <li>Minimizing distractions, such as unnecessary content or advertisements.</li>
+  <li>Consistent webpage layout and navigation.</li>
+  <li>Familiar elements, such as underlined links blue when not visited and purple when visited.</li>
+  <li>Dividing processes into logical, essential steps with progress indicators.</li>
+  <li>Website authentication as easy as possible without compromising security.</li>
+  <li>Making forms easy to complete, such as with clear error messages and simple error recovery.</li>
 </ul>
 
 <h3 id="Notes">Notes</h3>
 
 <ul>
- <li>Designing with <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility">cognitive accessibility</a> will lead to good design practices. They will benefit everyone.</li>
- <li>Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines">cognitive accessibility guidelines</a>.</li>
- <li>The W3C’s <a href="https://www.w3.org/WAI/GL/task-forces/coga/">Cognitive and Learning Disabilities Accessibility Task Force</a> produces web accessibility guidelines for people with cognitive impairments.</li>
- <li>WebAIM has a <a href="https://webaim.org/articles/cognitive/">Cognitive page</a> of relevant information and resources<a name="_GoBack"></a>.</li>
- <li>The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 US citizens have a disability and, of them, <a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html">cognitive impairment is the most common for young people</a>.</li>
- <li>In the US, some intellectual disabilities have historically been referred to as "mental retardation." Many now consider this term disparaging, so its use should be avoided.</li>
- <li>In the UK, some intellectual disabilities are referred to as "learning disabilities" or "learning difficulties".</li>
+  <li>Designing with <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility">cognitive accessibility</a> will lead to good design practices. They will benefit everyone.</li>
+  <li>Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C’s <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a>, including <a href="/en-US/docs/Web/Accessibility/Cognitive_accessibility#guidelines">cognitive accessibility guidelines</a>.</li>
+  <li>The W3C’s <a href="https://www.w3.org/WAI/GL/task-forces/coga/">Cognitive and Learning Disabilities Accessibility Task Force</a> produces web accessibility guidelines for people with cognitive impairments.</li>
+  <li>WebAIM has a <a href="https://webaim.org/articles/cognitive/">Cognitive page</a> of relevant information and resources<a name="_GoBack"></a>.</li>
+  <li>The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 US citizens have a disability and, of them, <a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html">cognitive impairment is the most common for young people</a>.</li>
+  <li>In the US, some intellectual disabilities have historically been referred to as "mental retardation." Many now consider this term disparaging, so its use should be avoided.</li>
+  <li>In the UK, some intellectual disabilities are referred to as "learning disabilities" or "learning difficulties".</li>
 </ul>
 
 <h2 id="Implementing_accessibility_into_your_project">Implementing accessibility into your project</h2>
@@ -131,8 +131,8 @@ tags:
 <p>A common accessibility myth is that accessibility is an expensive "added extra" to implement on a project. This myth actually <em>can</em> be true if either:</p>
 
 <ul>
- <li>You are trying to "retrofit" accessibility onto an existing website that has significant accessibility issues.</li>
- <li>You have only started to consider accessibility and uncovered related issues in the late stages of a project.</li>
+  <li>You are trying to "retrofit" accessibility onto an existing website that has significant accessibility issues.</li>
+  <li>You have only started to consider accessibility and uncovered related issues in the late stages of a project.</li>
 </ul>
 
 <p>If however, you consider accessibility from the start of a project, the cost of making most content accessible should be fairly minimal.</p>
@@ -140,9 +140,9 @@ tags:
 <p>When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives">alternative text</a> or bad link text — see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context">Element relationships and context</a>) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:</p>
 
 <ul>
- <li>Is my date picker widget usable by people using screen readers?</li>
- <li>If content updates dynamically, do visually impaired people know about it?</li>
- <li>Are my UI buttons accessible using the keyboard and on touch interfaces?</li>
+  <li>Is my date picker widget usable by people using screen readers?</li>
+  <li>If content updates dynamically, do visually impaired people know about it?</li>
+  <li>Are my UI buttons accessible using the keyboard and on touch interfaces?</li>
 </ul>
 
 <p>You can and should keep a note of potential problem areas in your content that will need work to make it accessible, make sure it is tested thoroughly, and think about solutions/alternatives. Text content (as you'll see in the next article) is easy, but what about your multimedia content, and your whizzy 3D graphics? You should look at your project budget and think about what solutions you have available to make such content accessible. Having all your multimedia content transcribed is one option which, while expensive, is possible.</p>
@@ -153,16 +153,16 @@ tags:
 
 <p>To show that you care and have thought about accessibility, publish an accessibility statement on your site that details what your policy is toward accessibility, and what steps you have taken toward making the site accessible. If someone does notify you that your site has an accessibility problem, start a dialog with them, be empathetic, and take reasonable steps to try to fix the problem.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: Our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems article</a> covers accessibility specifics that should be tested in more detail.</p>
 </div>
 
 <p>To summarize:</p>
 
 <ul>
- <li>Consider accessibility from the start of a project, and test early and often. Just like any other bug, an accessibility problem becomes more expensive to fix the later it is discovered.</li>
- <li>Bear in mind that a lot of accessibility best practices benefit everyone, not just users with disabilities. For example, lean semantic markup is not only good for screen readers, but it is also fast to load and performant. This benefits everyone, especially those on mobile devices and/or slow connections.</li>
- <li>Publish an accessibility statement on your site and engage with people having problems.</li>
+  <li>Consider accessibility from the start of a project, and test early and often. Just like any other bug, an accessibility problem becomes more expensive to fix the later it is discovered.</li>
+  <li>Bear in mind that a lot of accessibility best practices benefit everyone, not just users with disabilities. For example, lean semantic markup is not only good for screen readers, but it is also fast to load and performant. This benefits everyone, especially those on mobile devices and/or slow connections.</li>
+  <li>Publish an accessibility statement on your site and engage with people having problems.</li>
 </ul>
 
 <h2 id="Accessibility_guidelines_and_the_law">Accessibility guidelines and the law</h2>
@@ -170,8 +170,8 @@ tags:
 <p>There are numerous checklists and sets of guidelines available for basing accessibility tests on, which might seem overwhelming at first glance. Our advice is to familiarize yourself with the basic areas in which you need to take care, as well as understanding the high-level structures of the guidelines that are most relevant to you.</p>
 
 <ul>
- <li>For a start, the W3C has published a large and very detailed document that includes very precise, technology-agnostic criteria for accessibility conformance. These are called the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a> (WCAG), and they are not a short read by any means. The criteria are split up into four main categories, which specify how implementations can be made perceivable, operable, understandable, and robust. The best place to get a light introduction and start learning is <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG at a Glance</a>. There is no need to learn all of the WCAG criteria — be aware of the major areas of concern, and use a variety of techniques and tools to highlight any areas that don't conform to the WCAG criteria (see below for more).</li>
- <li>Your country may also have specific legislation governing the need for websites serving their population to be accessible — for example <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN 301 549</a> in the EU, <a href="https://www.section508.gov/training">Section 508 of the Rehabilitation Act</a> in the US, <a href="https://www.einfach-fuer-alle.de/artikel/bitv_english/">Federal Ordinance on Barrier-Free Information Technology</a> in Germany, the <a href="https://www.legislation.gov.uk/uksi/2018/952/introduction/made">Accessibility Regulations 2018</a> in the UK, <a href="https://www.agid.gov.it/it/design-servizi/accessibilita-siti-web">Accessibilità</a> in Italy, the <a href="https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014">Disability Discrimination Act</a> in Australia, etc. The W3C keeps a list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> by country.</li>
+  <li>For a start, the W3C has published a large and very detailed document that includes very precise, technology-agnostic criteria for accessibility conformance. These are called the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines</a> (WCAG), and they are not a short read by any means. The criteria are split up into four main categories, which specify how implementations can be made perceivable, operable, understandable, and robust. The best place to get a light introduction and start learning is <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG at a Glance</a>. There is no need to learn all of the WCAG criteria — be aware of the major areas of concern, and use a variety of techniques and tools to highlight any areas that don't conform to the WCAG criteria (see below for more).</li>
+  <li>Your country may also have specific legislation governing the need for websites serving their population to be accessible — for example <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN 301 549</a> in the EU, <a href="https://www.section508.gov/training">Section 508 of the Rehabilitation Act</a> in the US, <a href="https://www.einfach-fuer-alle.de/artikel/bitv_english/">Federal Ordinance on Barrier-Free Information Technology</a> in Germany, the <a href="https://www.legislation.gov.uk/uksi/2018/952/introduction/made">Accessibility Regulations 2018</a> in the UK, <a href="https://www.agid.gov.it/it/design-servizi/accessibilita-siti-web">Accessibilità</a> in Italy, the <a href="https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014">Disability Discrimination Act</a> in Australia, etc. The W3C keeps a list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> by country.</li>
 </ul>
 
 <p>So while the WCAG is a set of guidelines, your country will probably have laws governing web accessibility, or at least the accessibility of services available to the public (which could include websites, television, physical spaces, etc.) It is a good idea to find out what your laws are. If you make no effort to check that your content is accessible, you could be legally liable if people complain.</p>
@@ -185,11 +185,11 @@ tags:
 <p>Different operating systems have different accessibility APIs available :</p>
 
 <ul>
- <li>Windows: MSAA/IAccessible, UIAExpress, IAccessible2</li>
- <li>Mac OS X: NSAccessibility</li>
- <li>Linux: AT-SPI</li>
- <li>Android: Accessibility framework</li>
- <li>iOS: UIAccessibility</li>
+  <li>Windows: MSAA/IAccessible, UIAExpress, IAccessible2</li>
+  <li>Mac OS X: NSAccessibility</li>
+  <li>Linux: AT-SPI</li>
+  <li>Android: Accessibility framework</li>
+  <li>iOS: UIAccessibility</li>
 </ul>
 
 <p>Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the <a href="https://www.w3.org/TR/wai-aria/">WAI-ARIA specification</a>, which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a> article.</p>
@@ -203,25 +203,26 @@ tags:
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
- <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
+  <li><a href="/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Accessibility troubleshooting</a></li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG">WCAG</a>
+  <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG">WCAG</a>
 
-  <ul>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable">Perceivable</a></li>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable">Operable</a></li>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable">Understandable</a></li>
-   <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust">Robust</a></li>
-  </ul>
- </li>
+    <ul>
+      <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable">Perceivable</a></li>
+      <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable">Operable</a></li>
+      <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable">Understandable</a></li>
+      <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust">Robust</a></li>
+    </ul>
+  </li>
+  <li><a href="https://blog.google/products/chrome/live-caption-chrome/">Google Chrome released an auto-captioning extension</a></li>
 </ul>

@@ -20,7 +20,6 @@ tags:
 
 <p>My mark-up is a container with elements inside for a header, footer, main content, navigation, sidebar, and a block into which I am intending to place advertising.</p>
 
-<div id="layout_1">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -142,8 +141,7 @@ tags:
 
 <p>In this layout I am displaying the <code>nav</code> in the left column, alongside the <code>content</code>. In the right column we have the <code>sidebar</code> and underneath it the advertisements (<code>ad</code>). The <code>footer</code> now spans right across the bottom of the layout. I then use a flexbox to display the navigation as a column.</p>
 
-<p>{{ EmbedLiveSample('layout_1', '800', '500') }}</p>
-</div>
+<p>{{ EmbedLiveSample('A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas', '800', '500') }}</p>
 
 <p>This is a simple example but demonstrates how we can use a grid layout to rearrange our layout for different breakpoints. In particular I am changing the location of that <code>ad</code> block, as appropriate in my different column setups. I find this named areas method very helpful at a prototyping stage, it is easy to play around with the location of elements. You could always begin to use grid in this way for prototyping, even if you can’t rely on it fully in production due to the browsers that visit your site.</p>
 
@@ -151,7 +149,6 @@ tags:
 
 <p>If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS Grid Layout. As a simple example, I am creating a 12-column flexible grid that has 12 <code>1fr</code>-unit column tracks, they all have a start line named <code>col-start</code>. This means that we will have twelve grid lines named <code>col-start</code>.</p>
 
-<div id="layout_2">
 <div class="hidden">
 <pre class="brush: css">.wrapper {
   max-width: 1024px;
@@ -203,8 +200,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('layout_2', '800', '400') }}</p>
-</div>
+<p>{{ EmbedLiveSample('A_flexible_12-column_layout', '800', '400') }}</p>
 
 <p>As described in the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">guide to named lines</a>, we are using the named line to place our item. As we have 12 lines all with the same name we use the name, and then the index of the line. You could also use the line index itself if you prefer and avoid using named lines at all.</p>
 
@@ -214,11 +210,10 @@ tags:
 
 <p>There are some key differences with how a grid layout works over the grid systems you may have used previously. As you can see, we do not need to add any markup to create a row, grid systems need to do this to stop elements popping up into the row above. With CSS Grid Layout, we can place things into rows, with no danger of them rising up into the row above if it is left empty. Due to this <em>strict</em> column and row placement we can also easily leave white space in our layout. We also don’t need special classes to pull or push things, to indent them into the grid. All we need to do is specify the start and end line for the item.</p>
 
-<h3 id="Building_a_layout_using_the_12-column_system">Building a layout using the 12-column system</h3>
+<h2 id="Building_a_layout_using_the_12-column_system">Building a layout using the 12-column system</h2>
 
 <p>To see how this layout method works in practice, we can create the same layout that we created with {{cssxref("grid-template-areas")}}, this time using the 12-column grid system. I am starting with the same markup as used for the grid template areas example.</p>
 
-<div id="layout_3">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -330,8 +325,7 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('layout_3', '800', '450') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '450') }}</p>
 
 <p>Once again the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> is useful to help us see how our layout has taken shape.</p>
 
@@ -345,7 +339,6 @@ tags:
 
 <p>The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.</p>
 
-<div id="layout_4">
 <pre class="brush: html">&lt;ul class="listing"&gt;
   &lt;li&gt;
     &lt;h2&gt;Item One&lt;/h2&gt;
@@ -433,8 +426,9 @@ tags:
 
 <p>This is really one of the key reasons I would use flexbox rather than grid, if I am just aligning or distributing something in a single dimension, that’s a flexbox use case. </p>
 
-<p>{{ EmbedLiveSample('layout_4', '800', '900') }}</p>
-</div>
+<p>{{ EmbedLiveSample('A_product_listing_with_auto-placement', '800', '900') }}</p>
+
+<h2 id="preventing_gaps_with_the_dense_keyword">Preventing gaps with the dense keyword</h2>
 
 <p>This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won’t be so tall. I have a class of <code>wide</code> on my larger item, and I add a rule {{cssxref("grid-column-end")}} with a value of <code>span 2</code>. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn’t space to lay out a two-track item.</p>
 
@@ -442,7 +436,6 @@ tags:
 
 <p>I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}<code>: dense </code> on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#visual_not_logical_re-ordering">issues</a> of the tab order following the source and not your reordered display.</p>
 
-<div id="layout_5">
 <div class="hidden">
 <pre class="brush: html">&lt;ul class="listing"&gt;
   &lt;li&gt;
@@ -525,10 +518,9 @@ tags:
 }
 </pre>
 
-<p>{{ EmbedLiveSample('layout_5', '800', '900') }}</p>
+<p>{{ EmbedLiveSample('preventing_gaps_with_the_dense_keyword', '800', '900') }}</p>
 
 <p>This technique of using auto-placement with some rules applied to certain items is very useful, and can help you to deal with content that is being output by a CMS for example, where you have repeated items and can perhaps add a class to certain ones as they are rendered into the HTML.</p>
-</div>
 
 <h2 id="Further_exploration">Further exploration</h2>
 

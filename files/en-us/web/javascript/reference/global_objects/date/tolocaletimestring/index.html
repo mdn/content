@@ -13,12 +13,14 @@ browser-compat: javascript.builtins.Date.toLocaleTimeString
 <div>{{JSRef}}</div>
 
 <p>The <strong><code>toLocaleTimeString()</code></strong> method returns a string with a
-  language sensitive representation of the time portion of this date. The new
+  language-sensitive representation of the time portion of the date. The newer
   <code>locales</code> and <code>options</code> arguments let applications specify the
-  language whose formatting conventions should be used and customize the behavior of the
-  function. In older implementations, which ignore the <code>locales</code> and
-  <code>options</code> arguments, the locale used and the form of the string returned are
-  entirely implementation dependent.</p>
+  language formatting conventions to use. These arguments can also customize the behavior of the
+  function.</p> 
+  
+  <p>More dated implementations ignore the <code>locales</code> and
+  <code>options</code> arguments. In these circumstances, the form of the string returned is
+  entirely implementation-dependent.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}</div>
 
@@ -34,10 +36,10 @@ toLocaleTimeString(locales, options)
 <h3 id="Parameters">Parameters</h3>
 
 <p>The <code>locales</code> and <code>options</code> arguments customize the behavior of
-  the function and let applications specify the language whose formatting conventions
-  should be used. In implementations, which ignore the <code>locales</code> and
-  <code>options</code> arguments, the locale used and the form of the string returned are
-  entirely implementation dependent.</p>
+  the function and let applications specify which language formatting conventions
+  should be used. In older implementations that ignore the <code>locales</code> and
+  <code>options</code> arguments, the <code>locales</code> and the form of the string returned will be
+  entirely implementation-dependent.</p>
 
 <p>See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
   constructor for details on these parameters and how to use them.</p>
@@ -63,8 +65,8 @@ toLocaleTimeString(locales, options)
 
 <h3 id="Using_toLocaleTimeString">Using toLocaleTimeString()</h3>
 
-<p>In basic use without specifying a locale, a formatted string in the default locale and
-  with default options is returned.</p>
+<p>Basic use of this method without specifying a <code>locale</code> returns a formatted string in the default locale and
+  with default options.</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
@@ -72,24 +74,6 @@ toLocaleTimeString(locales, options)
 // the default locale, and the default time zone
 console.log(date.toLocaleTimeString());
 // → "7:00:00 PM" if run in en-US locale with time zone America/Los_Angeles
-</pre>
-
-<h3 id="Checking_for_support_for_locales_and_options_arguments">Checking for support for
-  locales and options arguments</h3>
-
-<p>The <code>locales</code> and <code>options</code> arguments are not supported in all
-  browsers yet. To check whether an implementation supports them already, you can use the
-  requirement that illegal language tags are rejected with a {{jsxref("RangeError")}}
-  exception:</p>
-
-<pre class="brush: js">function toLocaleTimeStringSupportsLocales() {
-  try {
-    new Date().toLocaleTimeString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
-  }
-  return false;
-}
 </pre>
 
 <h3 id="Using_locales">Using locales</h3>
