@@ -60,13 +60,13 @@ console.log('theTree.constructor is ' + theTree.constructor)
 <p>One can assign the <code>constructor</code> property for any value except <code>null</code> and <code>undefined</code> since those don't have a corresponding constructor function (like <code>String</code>, <code>Number</code>, <code>Boolean</code> etc.), but values which are primitives won't keep the change (with no exception thrown). This is due to the same mechanism, which allows one to set any property on primitive values (except <code>null</code> and <code>undefined</code>) with no effect. Namely whenever one uses such a primitive as an object an instance of the corresponding constructor is created and discarded right after the statement was executed.</p>
 
 <pre class="brush: js">let val = null;
-val.constructor = 1; //<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">var is null</span></span></span></span></span>
+val.constructor = 1; //TypeError: var is null
 
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val = 'abc';</span></span></span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val.constructor = Number; //val.constructor === String</span></span></span></span></span>
+val = 'abc';
+val.constructor = Number; //val.constructor === String
 
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val.foo = 'bar';</span></span></span></span></span> //An implicit instance of <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">String('abc') was created and assigned the prop foo</span></span></span></span></span>
-<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format"><span class="objectBox objectBox-string">val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property</span></span></span></span></span></pre>
+val.foo = 'bar'; //An implicit instance of String('abc') was created and assigned the prop foo
+val.foo === undefined; //true, since a new instance of String('abc') was created for this comparison, which doesn't have the foo property</pre>
 
 <p>So basically one can change the value of the <code>constructor</code> property for anything, except the primitives mentioned above, <strong>note that changing the </strong><code>constructor</code><strong> property does not affect the instanceof operator</strong>:</p>
 
