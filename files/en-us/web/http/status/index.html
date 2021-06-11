@@ -168,7 +168,7 @@ tags:
  <dt>{{HTTPStatus(502, "502 Bad Gateway")}}</dt>
  <dd>This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.</dd>
  <dt>{{HTTPStatus(503, "503 Service Unavailable")}}</dt>
- <dd>The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the <code>Retry-After:</code> HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.</dd>
+ <dd>The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This response should be used for temporary conditions and the <code>Retry-After:</code> HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached.</dd>
  <dt>{{HTTPStatus(504, "504 Gateway Timeout")}}</dt>
  <dd>This error response is given when the server is acting as a gateway and cannot get a response in time.</dd>
  <dt>{{HTTPStatus(505, "505 HTTP Version Not Supported")}}</dt>
