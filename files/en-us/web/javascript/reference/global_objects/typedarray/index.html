@@ -397,7 +397,7 @@ Int8Array.prototype.foo = 'bar';
 
 <pre class="brush: js example-bad">const i8 = Int8Array.of(1, 2, 3);
 Object.freeze(i8);
-// TypeError: can't redefine non-configurable property 0</pre>
+// TypeError: Cannot freeze array buffer views with elements</pre>
 
 <h3 id="ByteOffset_must_be_aligned">ByteOffset must be aligned</h3>
 
@@ -407,7 +407,7 @@ Object.freeze(i8);
   <code>BYTES_PER_ELEMENT</code>.</p>
 
 <pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(4), 1);
-// RangeError: attempting to construct out-of-bounds TypedArray on ArrayBuffer</pre>
+// RangeError: start offset of Int32Array should be a multiple of 4</pre>
 
 <pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4), 0);</pre>
 
@@ -418,7 +418,7 @@ Object.freeze(i8);
   must be a multiple of the constructor's <code>BYTES_PER_ELEMENT</code>.</p>
 
 <pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(3));
-// RangeError: attempting to construct out-of-bounds TypedArray on ArrayBuffer</pre>
+// RangeError: byte length of Int32Array should be a multiple of 4</pre>
 
 <pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4);</pre>
 
