@@ -85,9 +85,11 @@ tags:
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}</dt>
  <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://datatracker.ietf.org/doc/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
- <dd>Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.</dd>
+ <dd>Approximate amount of available client RAM memory. Technically a part of <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</dd>
  <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
  <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
+ <dt>{{HTTPHeader("RTT")}}</dt>
+ <dd>Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is technically part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
  <dd>A boolean that indicates the user agent's preference for reduced data usage.</dd>
  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>

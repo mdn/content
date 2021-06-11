@@ -1,0 +1,69 @@
+---
+title: RTT
+slug: Web/HTTP/Headers/RTT
+tags:
+  - RTT
+  - Client hints
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Client hints
+  - Experimental
+browser-compat: http.headers.rtt
+---
+<div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
+
+<p>The <strong><code>RTT</code></strong> {{Glossary("Client hints","network client hint")}} request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.</p>
+
+<table class="properties">
+  <tbody>
+   <tr>
+    <th scope="row">Header type</th>
+    <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <td>no</td>
+   </tr>
+   <tr>
+    <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+    <td>no</td>
+   </tr>
+  </tbody>
+ </table>
+
+ <p>The hint allows a server to choose what information is sent based on the network responsiveness/latency. For example, it might choose not to respond to some requests.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The RTT value is rounded to the nearest 25 milliseconds to prevent fingerprinting; There are many other mechanisms an attacker might use to obtain similar round-trip information.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: http">RTT: &lt;number&gt;</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Server first needs to opt in to receive the <code>RTT</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>RTT</code>.</p>
+
+<pre class="brush: http">Accept-CH: RTT</pre>
+
+<p>Then on subsequent requests the client might send <code>RTT</code> header back:</p>
+
+<pre class="brush: http">RTT: 125</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("Accept-CH")}}</li>
+ <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
+ <li>{{domxref("NetworkInformation.rtt")}}</li>
+</ul>
