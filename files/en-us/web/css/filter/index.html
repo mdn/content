@@ -170,6 +170,8 @@ table.standard-table td {
 
 <p>The {{cssxref("filter-function/brightness()", "brightness()")}} function applies a linear multiplier to the input image, making it appear more or less bright. A value of <code>0%</code> will create an image that is completely black. A value of <code>100%</code> leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over <code>100%</code> are allowed, providing brighter results. The lacuna value for interpolation is <code>1</code>.</p>
 
+<pre class="brush: css">filter: brightness(2)</pre>
+
 <pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="brightness"&gt;
     &lt;feComponentTransfer&gt;
@@ -252,8 +254,6 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-
-<pre class="brush: css">filter: brightness(2)</pre>
 
 <p>{{EmbedLiveSample('brightness','100%','231px','','', 'no-codepen')}}</p>
 
