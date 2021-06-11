@@ -42,8 +42,9 @@ toLocaleString(locales, options)
   locale used and the form of the string returned are entirely implementation dependent.
 </p>
 
-<p>See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-  constructor for details on these parameters and how to use them.</p>
+<div class="notecard note">
+<p>For details about the <var>locales</var> and <var>options</var> parameters and how to use them, see the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters"><strong>Parameters</strong> section of the <code>Intl.DateTimeFormat()</code> constructor</a> article.</p>
+</div>
 
 <p>The default value for each date-time component property is {{jsxref("undefined")}}.
   But, if the <code>weekday</code>, <code>year</code>, <code>month</code>, and
@@ -89,6 +90,10 @@ console.log(date.toLocaleString());
 
 <h3 id="Using_locales">Using locales</h3>
 
+<div class="notecard note">
+<p>For details about the <var>locales</var> parameter and how to use it, see the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters"><strong>Parameters</strong> section of the <code>Intl.DateTimeFormat()</code> constructor</a> article.</p>
+</div>
+
 <p>This example shows some of the variations in localized date and time formats. In order
   to get the format of the language used in the user interface of your application, make
   sure to specify that language (and possibly some fallback languages) using the
@@ -127,6 +132,10 @@ console.log(date.toLocaleString(['ban', 'id']));
 </pre>
 
 <h3 id="Using_options">Using options</h3>
+
+<div class="notecard note">
+<p>For details about the <var>options</var> parameter and how to use it, see the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters"><strong>Parameters</strong> section of the <code>Intl.DateTimeFormat()</code> constructor</a> article.</p>
+</div>
 
 <p>The results provided by <code>toLocaleString()</code> can be customized using the
   <code><var>options</var></code> argument:</p>
