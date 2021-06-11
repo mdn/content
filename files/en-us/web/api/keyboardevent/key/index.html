@@ -57,7 +57,7 @@ browser-compat: api.KeyboardEvent.key
 <pre class="brush: html">&lt;div class="fx"&gt;
   &lt;div&gt;
     &lt;textarea rows="5" name="test-target" id="test-target"&gt;&lt;/textarea&gt;
-    &lt;button type="button" name="btn-clear-console" id="btn-clear-console"&gt;clear console&lt;/button&gt;
+    &lt;button type="button" name="btn-reset" id="btn-reset"&gt;Reset&lt;/button&gt;
   &lt;/div&gt;
   &lt;div class="flex"&gt;
     &lt;pre id="console-log"&gt;&lt;/pre&gt;
@@ -99,10 +99,10 @@ browser-compat: api.KeyboardEvent.key
 
 <pre class="brush: js">let textarea = document.getElementById('test-target'),
 consoleLog = document.getElementById('console-log'),
-btnClearConsole = document.getElementById('btn-clear-console');
+btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  document.getElementById("console-log").innerHTML += message + "&lt;br&gt;";
+  consoleLog.innerHTML += message + "&lt;br&gt;";
 }
 
 textarea.addEventListener('keydown', (e) =&gt; {
@@ -124,12 +124,13 @@ textarea.addEventListener('keyup', (e) =&gt; {
   logMessage(`Key "${e.key}" released  [event: keyup]`);
 });
 
-btnClearConsole.addEventListener('click', (e) =&gt; {
+btnReset.addEventListener('click', (e) =&gt; {
   let child = consoleLog.firstChild;
   while (child) {
    consoleLog.removeChild(child);
    child = consoleLog.firstChild;
   }
+  textarea.value = ''
 });</pre>
 
 <h3 id="Result">Result</h3>
