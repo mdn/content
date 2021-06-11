@@ -63,8 +63,20 @@ browser-compat: html.elements.h1
  <li>Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.</li>
  <li>Avoid skipping heading levels: always start from <code>&lt;h1&gt;</code>, followed by <code>&lt;h2&gt;</code> and so on.</li>
  <li>Use only one <code>&lt;h1&gt;</code> per page or view. It should concisely describe the overall purpose of the content.</li>
- <li>Using more than one <code>&lt;h1&gt;</code> will not result in an error, but is not considered a best practice. Using only one <code>&lt;h1&gt;</code> is beneficial for screenreader users, and {{glossary("SEO")}}.</li>
- <li>While HTML5 allows a <code>&lt;h1&gt;</code> per <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#section_elements_in_html5">sectioning element</a>, it is not considered best practice, and may subvert the expectations of how screen reader users navigate.</li>
+</ul>
+
+<h3 id="multiple_h1">Multiple <code>&lt;h1&gt;</code> elements on one page</h3>
+
+<p>Using more than one <code>&lt;h1&gt;</code> is allowed by the HTML specification, but is not considered a best practice. Using only one <code>&lt;h1&gt;</code> is beneficial for screenreader users.</p>
+
+<p>The HTML specification includes the concept of an <em>outline</em> formed by the use of {{htmlelement("section")}} elements.
+  If this were implemented it would enable the use of multiple <code>&lt;h1&gt;</code> elements, giving user agents—including screen readers—a way to understand that an &lt;h1&gt; nested inside a defined section is a subheading. This functionality has never been implemented, therefore it is important to use your headings to describe the outline of your document.</p>
+
+<p>The following articles give more information about the status of outlines:</p>
+
+<ul>
+  <li><a href="https://html5doctor.com/computer-says-no-to-html5-document-outline/">Computer says no the the HTML5 outline</a></li>
+  <li><a href="https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/">A decade + a year of heading backwards</a></li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
