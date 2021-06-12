@@ -31362,12 +31362,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/CSSNumericValue/sum": {
-    "modified": "2020-10-15T22:19:16.684Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
   "Web/API/CSSNumericValue/to": {
     "modified": "2020-10-15T22:19:14.742Z",
     "contributors": [
