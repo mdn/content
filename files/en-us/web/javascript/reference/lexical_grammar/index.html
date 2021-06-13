@@ -227,7 +227,7 @@ console.log("Hello world");
 </div>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> Although <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a> before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.</p>
+<p><strong>Warning:</strong> If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a <a href="https://en.wikipedia.org/wiki/Byte_order_mark">BOM</a>. Although a BOM  will not cause any problems for code running in a browser, it is not advised to use a BOM with a hashbang in a script — because the BOM will prevent the script from working when you try to run it in a Unix/Linux shell environment. So if you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM.</p>
 </div>
 
 <p>You must only use the <code>#!</code> comment style to specify a JavaScript interpreter. In all other cases just use a <code>//</code> comment (or mulitiline comment).</p>
