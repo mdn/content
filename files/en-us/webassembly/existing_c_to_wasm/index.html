@@ -101,6 +101,10 @@ void destroy_buffer(uint8_t* p) {
   version: Module.cwrap('version', 'number', []),
   create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
   destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
+  encode: Module.cwrap("encode", "", ["number","number","number","number",]),
+  free_result: Module.cwrap("free_result", "", ["number"]),
+  get_result_pointer: Module.cwrap("get_result_pointer", "number", []),
+  get_result_size: Module.cwrap("get_result_size", "number", []),
 };
 
 const image = await loadImage('./image.jpg');
@@ -141,19 +145,6 @@ EMSCRIPTEN_KEEPALIVE
 int get_result_size() {
   return result[1];
 }</pre>
-
-<p>Now add the new functions to the api object. The updated api object will be:</p>
-
-<pre class="brush: js">const api = {
-  version: Module.cwrap('version', 'number', []),
-  create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
-  destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
-  encode: Module.cwrap("encode", "", ["number","number","number","number",]),
-  free_result: Module.cwrap("free_result", "", ["number"]),
-  get_result_pointer: Module.cwrap("get_result_pointer", "number", []),
-  get_result_size: Module.cwrap("get_result_size", "number", []),
-};
-</pre>
 
 <p>Now with all of that in place, you can call the encoding function, grab the pointer and image size, put it in a JavaScript buffer of your own, and release all the wasm buffers allocated in the process:</p>
 
