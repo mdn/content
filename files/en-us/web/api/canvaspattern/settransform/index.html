@@ -56,7 +56,7 @@ var svg1 = document.getElementById('svg1');
 var matrix = svg1.createSVGMatrix();
 
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
@@ -86,7 +86,7 @@ img.onload = function() {
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code" style="height:120px"&gt;
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
