@@ -62,8 +62,7 @@ slice(start, end)
 
 <h2 id="Description">Description</h2>
 
-<p>The <code>slice</code> method does not alter. It returns a shallow copy of elements
-  from the original typed array.</p>
+<p>The <code>slice</code> method does not alter the original typed array, but instead returns a copy of a portion of the original typed array. As typed arrays only store primitive values, the copy the <code>slice</code> method returns is always a shallow copy.</p>
 
 <p>If a new element is added to either typed array, the other typed array is not affected.
 </p>
