@@ -34,7 +34,7 @@ browser-compat: api.WheelEvent
 
 <p><em>This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}.</em></p>
 
-<dl id="raw_prop">
+<dl>
  <dt>{{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}</dt>
  <dd>Returns a <code>double</code> representing the horizontal scroll amount.</dd>
  <dt>{{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}</dt>
@@ -60,17 +60,16 @@ browser-compat: api.WheelEvent
    <tr>
     <td><code>WheelEvent.DOM_DELTA_LINE</code></td>
     <td><code>0x01</code></td>
-    <td>The <code>delta*</code> values are specified in lines.</td>
+    <td>The <code>delta*</code> values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent.</td>
    </tr>
    <tr>
     <td><code>WheelEvent.DOM_DELTA_PAGE</code></td>
     <td><code>0x02</code></td>
-    <td>The <code>delta*</code> values are specified in pages.</td>
+    <td>The <code>delta*</code> values are specified in pages. Each mouse click scrolls a page of content.</td>
    </tr>
   </tbody>
  </table>
  </dd>
-
 
  <dt>{{DOMxRef("WheelEvent.wheelDelta")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns an integer (32-bit) representing the distance in pixels.</dd>
