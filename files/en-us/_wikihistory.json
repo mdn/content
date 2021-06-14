@@ -133813,12 +133813,6 @@
       "HBomb"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-05-06T09:57:01.950Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-06-04T08:11:57.239Z",
     "contributors": [
