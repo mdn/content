@@ -91,8 +91,11 @@ var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
     href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
     (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js">// Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+<pre class="brush: js">
+// create an instance of a db object to store the IDB data in
+const db = DBOpenRequest.result;
+// Let us open our database
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
