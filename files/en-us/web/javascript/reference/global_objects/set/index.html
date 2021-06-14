@@ -16,6 +16,9 @@ browser-compat: javascript.builtins.Set
 
 <p><span class="seoSummary">The <strong><code>Set</code></strong> object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.</span></p>
 
+<h2 id="performance">Performance</h2>
+<p>The <code>Set</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has"><code>has</code></a> method checks if a value is in a <code>Set</code> object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the <code>Set</code> object. In particular, it is, on average, faster than the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"><code>Array.prototype.includes</code></a> method when an <code>Array</code> object has a <code>length</code> equal to a <code>Set</code> object’s <code>size</code>.</p>
+
 <h2 id="Description">Description</h2>
 
 <p><code>Set</code> objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the <code>Set</code> <strong>may only occur once</strong>; it is unique in the <code>Set</code>'s collection.</p>
@@ -65,7 +68,7 @@ browser-compat: javascript.builtins.Set
 <dl>
  <dt>{{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}</dt>
  <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order.</dd>
- <dt>{{jsxref("Set.prototype.keys()")}}</dt>
+ <dt>{{jsxref("Set/values")}}</dt>
  <dd>Returns a new iterator object that yields the values for each element in the <code>Set</code> object in insertion order. (For Sets, this is the same as the <strong><code>values()</code></strong> method.)</dd>
  <dt>{{jsxref("Set.prototype.values()")}}</dt>
  <dd>Returns a new iterator object that yields the <strong>values</strong> for each element in the <code>Set</code> object in insertion order. (For Sets, this is the same as the <strong><code>keys()</code></strong> method.)</dd>
