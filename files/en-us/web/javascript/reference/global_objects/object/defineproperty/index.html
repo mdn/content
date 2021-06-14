@@ -212,8 +212,8 @@ Object.defineProperty(o, 'conflict', {
   modify the property according to the values in the descriptor and the object's current
   configuration. If the old descriptor had its <code>configurable</code> attribute set to
   <code>false</code> the property is said to be “non-configurable”. It is not possible to
-  change any attribute of a non-configurable accessor property. For data properties, it is
-  possible to modify the value if the property is writable, and it is possible to change
+  change any attribute of a non-configurable accessor property. For data properties which are configurable, it is
+  possible to modify the value if the property is writable, and it is possible to change the
   <code>writable</code> attribute from <code>true</code> to <code>false</code>. It is not
   possible to switch between data and accessor property types when the property is
   non-configurable.</p>
