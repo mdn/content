@@ -2,11 +2,11 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 tags:
-- Class
-- JavaScript
-- TypedArray
-- TypedArrays
-- Polyfill
+  - Class
+  - JavaScript
+  - TypedArray
+  - TypedArrays
+  - Polyfill
 browser-compat: javascript.builtins.TypedArray
 ---
 <div>{{JSRef}}</div>
@@ -218,7 +218,7 @@ new TypedArray(buffer, byteOffset, length)
   </dd>
   <dt>{{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}</dt>
   <dd>The constructor function used to create derived objects.</dd>
-  <dt>{{jsxref("TypedArray.prototype")}}</dt>
+  <dt>{{jsxref("TypedArray")}}</dt>
   <dd>Prototype for <code><var>TypedArray</var></code> objects.</dd>
 </dl>
 
@@ -387,6 +387,40 @@ Int8Array.prototype[-1] = 'foo';
 // Named properties are allowed, though (Fx 30)
 Int8Array.prototype.foo = 'bar';
 (new Int8Array(32)).foo; // "bar"</pre>
+
+<h3 id="Cannot_be_frozen">Cannot be frozen</h3>
+
+<p><code><var>TypedArray</var></code>s that aren't empty cannot be frozen, as their
+  underlying <code>ArrayBuffer</code> could be mutated through another
+  <code><var>TypedArray</var></code> view of the buffer. This would mean that the object
+  would never genuinely be frozen.</p>
+
+<pre class="brush: js example-bad">const i8 = Int8Array.of(1, 2, 3);
+Object.freeze(i8);
+// TypeError: Cannot freeze array buffer views with elements</pre>
+
+<h3 id="ByteOffset_must_be_aligned">ByteOffset must be aligned</h3>
+
+<p>When constructing a <code><var>TypedArray</var></code> as a view onto an
+  <code>ArrayBuffer</code>, the <code>byteOffset</code> argument must be aligned to its
+  element size; in other words, the offset must be a multiple of
+  <code>BYTES_PER_ELEMENT</code>.</p>
+
+<pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(4), 1);
+// RangeError: start offset of Int32Array should be a multiple of 4</pre>
+
+<pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4), 0);</pre>
+
+<h3 id="ByteLength_must_be_aligned">ByteLength must be aligned</h3>
+
+<p>Like the <code>byteOffset</code> parameter, the <code>byteLength</code> property of an
+  <code>ArrayBuffer</code> passed to a <code><var>TypedArray</var></code>'s constructor
+  must be a multiple of the constructor's <code>BYTES_PER_ELEMENT</code>.</p>
+
+<pre class="brush: js example-bad">const i32 = new Int32Array(new ArrayBuffer(3));
+// RangeError: byte length of Int32Array should be a multiple of 4</pre>
+
+<pre class="brush: js example-good">const i32 = new Int32Array(new ArrayBuffer(4);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

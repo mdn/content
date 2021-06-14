@@ -20,7 +20,7 @@ tags:
 
 <p><strong>The iterable protocol</strong> allows JavaScript objects to define or customize their iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types are <a href="#built-in_iterables">built-in iterables</a> with a default iteration behavior, such as {{jsxref("Array")}} or {{jsxref("Map")}}, while other types (such as {{jsxref("Object")}}) are not.</p>
 
-<p>In order to be <strong>iterable</strong>, an object must implement the <strong><code>@@iterator</code></strong> method, meaning that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a <code>@@iterator</code> key which is available via constant {{jsxref("Symbol.iterator")}}:</p>
+<p>In order to be <strong>iterable</strong>, an object must implement the <strong><code>@@iterator</code></strong> method, meaning that the object (or one of the objects up its <a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">prototype chain</a>) must have a property with a <code>@@iterator</code> key which is available via constant {{jsxref("Symbol.iterator")}}:</p>
 
 <table class="standard-table">
  <thead>
@@ -60,7 +60,7 @@ tags:
   <tr>
    <td><code>next()</code></td>
    <td>
-    <p>A zero-argument function that returns an object with at least the following two properties:</p>
+    <p>A function, with either zero arguments or one argument, that returns an object with at least the following two properties. If the <code>next()</code> method is called with one argument, that argument will be available to the <code>next()</code> method being invoked.</p>
 
     <dl>
      <dt><code>done</code> (boolean)</dt>
@@ -115,7 +115,7 @@ console.log(iterator.next()); // { value: "h", done: false }
 console.log(iterator.next()); // { value: "i", done: false }
 console.log(iterator.next()); // { value: undefined, done: true }</pre>
 
-<p>Some built-in constructs—such as the {{jsxref("Operators/Spread_operator", "spread syntax", "", 1)}}—use the same iteration protocol under the hood:</p>
+<p>Some built-in constructs—such as the {{jsxref("Operators/Spread_syntax", "spread syntax", "", 1)}}—use the same iteration protocol under the hood:</p>
 
 <pre class="brush: js">console.log([...someString]); // ["h", "i"]</pre>
 

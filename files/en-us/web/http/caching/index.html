@@ -171,8 +171,8 @@ if (req.http.Accept-Encoding) {
     set req.http.Accept-Encoding = "gzip";
   }
   // elsif other encoding types to check
-else {
-  unset req.http.Accept-Encoding;
+  else {
+    unset req.http.Accept-Encoding;
   }
 }
 </pre>

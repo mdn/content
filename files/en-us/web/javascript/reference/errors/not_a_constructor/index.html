@@ -69,7 +69,7 @@ var obj = new f;
 <h3 id="A_car_constructor">A car constructor</h3>
 
 <p>Suppose you want to create an object type for cars. You want this type of object to be
-  called <code>car</code>, and you want it to have properties for make, model, and year.
+  called <code>Car</code>, and you want it to have properties for make, model, and year.
   To do this, you would write the following function:</p>
 
 <pre class="brush: js">function Car(make, model, year) {
@@ -89,17 +89,17 @@ var obj = new f;
   to create a <em>new Promise(...)</em> and act on it.</p>
 
 <p>This is not legal (the <a
-    href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor">Promise
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise">Promise
     constructor</a> is not being called correctly) and will throw a
   <code>TypeError: this is not a constructor</code> exception:</p>
 
 <pre class="brush: js example-bad">return new Promise.resolve(true);
 </pre>
 
-<p>Instead, use the<a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve"> Promise.resolve()</a> or
+<p>Instead, use the <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve()</a> or
   <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a> <a
+    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a> <a
     href="https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods">static
     methods</a>:</p>
 
