@@ -164,9 +164,11 @@ JSON.parse('{"foo" : 1, }');
 <pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4 ]');
 JSON.parse('{"foo" : 1 }');</pre>
 
-<h3 id="Trailing_commas_in_named_imports">Trailing commas in Named Imports</h3>
+<h3 id="Trailing_commas_in_named_imports_and_named_exports">Trailing commas in named imports and named exports</h3>
 
-<p>As per ECMA-262 trailing commas are vaild in Named Imports</p>
+<p>As per ECMA-262 trailing commas are vaild in named imports and named exports</p>
+
+<h4 id="named_imports">named imports</h4>
 
 <pre class="brush: js">
   import {
@@ -176,6 +178,22 @@ JSON.parse('{"foo" : 1 }');</pre>
   } from 'D'
 
   import { X, Y, Z } from 'W'
+
+  import { A as B, C as D, E as F } from 'Z'; //Renaming imports
+</pre>
+
+<h4 id="named_exports">named exports</h4>
+
+<pre class="brush: js">
+  export {
+    A,
+    B,
+    C
+  }
+
+  export { A, B, C };
+
+  export { A as B, C as D, E as F }; // Renaming exports
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
