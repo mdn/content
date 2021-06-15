@@ -39,7 +39,7 @@ browser-compat: api.RemotePlayback.watchAvailability
 
 <h2 id="Examples">Examples</h2>
 
-<p>In the following example, after checking that there is no currently connected device, <code>watchAvailability</code> is used to watch for remote devices becoming available. <a href="https://beaufortfrancois.github.io/sandbox/media/remote-playback.html">See the working example</a> (Requires a supported device and a connected remote playback device).</p>
+<p>In the following example, after checking that there is no currently connected device, <code>watchAvailability()</code> is used to watch for remote devices becoming available. <a href="https://beaufortfrancois.github.io/sandbox/media/remote-playback.html">See the working example</a> (Requires a supported device and a connected remote playback device).</p>
 
 <pre class="brush: js"> if (video.remote.state == 'disconnected') {
   video.remote.watchAvailability(handleAvailabilityChange)
