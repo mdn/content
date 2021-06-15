@@ -150,9 +150,9 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
  <dd>An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.</dd>
 </dl>
 
-<pre class="brush: js">//startSimulation and pauseSimulation defined elsewhere
+<pre class="brush: js">// startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
-  if (document.hidden) {
+  if (document.visibilityState === "hidden") {
     pauseSimulation();
   } else  {
     startSimulation();
