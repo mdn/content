@@ -114,7 +114,7 @@ btn.onclick = function() {
   document.body.style.backgroundColor = rndCol;
 }</pre>
 
-<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
+<p>The <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> property is the event handler property being used in this situation. It is essentially a property like any other available on the button (e.g. <code><a href="/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code>, or <code><a href="/en-US/docs/Web/API/HTMLElement/style">btn.style</a></code>), but it is a special type — when you set it to be equal to some code, that code is run when the event fires on the button.</p>
 
 <p>You could also set the handler property to be equal to a named function name (like we saw in <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a>). The following works just the same:</p>
 
@@ -534,7 +534,7 @@ video.onclick = function() {
  <li>Then it moves on to the next immediate ancestor element and does the same thing, then the next one, and so on until it reaches the <code>&lt;html&gt;</code> element.</li>
 </ul>
 
-<p><a href="https://mdn.mozillademos.org/files/14075/bubbling-capturing.png"><img alt="" src="bubbling-capturing.png" style="display: block; margin: 0px auto;"></a></p>
+<p><a href="bubbling-capturing.png"><img alt="" src="bubbling-capturing.png" style="display: block; margin: 0px auto;"></a></p>
 
 <p>(Select the image for a bigger diagram)</p>
 

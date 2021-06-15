@@ -17,11 +17,12 @@ tags:
 - animationiteration
 - onanimationiteration
 - web animations api
+browser-compat: api.GlobalEventHandlers.onanimationiteration
 ---
 <div>{{APIRef("CSS3 Animations")}} {{Draft}}</div>
 
 <p>The <code><strong>onanimationiteration</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("animationiteration")}} events.</p>
 
 <p>The <code>animationiteration</code> event is sent when a <a
@@ -186,25 +187,11 @@ box.onanimationiteration = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationiteration','onanimationiteration')}}
-      </td>
-      <td>{{Spec2('CSS3 Animations')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onanimationiteration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

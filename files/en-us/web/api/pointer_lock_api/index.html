@@ -96,7 +96,7 @@ function lockChangeAlert() {
 <p>When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{event("pointerlockerror")}} event is dispatched to the <code>document</code>. This is a simple event and contains no extra data.</p>
 
 <pre class="brush: js">document.addEventListener('pointerlockerror', lockError, false);
-document.addEventListener('mozpointerlock<span style="font-size: 1rem;">error</span><span style="font-size: 1rem;">', lockError, false);</span>
+document.addEventListener('mozpointerlockerror', lockError, false);</span>
 
 function lockError(e) {
   alert("Pointer lock failed");
@@ -122,7 +122,7 @@ function lockError(e) {
 
 <p>We've written a <a href="https://mdn.github.io/dom-examples/pointer-lock/">simple pointer lock demo</a> to show you how to use it to set up a simple control system (<a href="https://github.com/mdn/dom-examples/tree/master/pointer-lock">see source code</a>). The demo looks like this:</p>
 
-<p><img alt="A red circle on top of a black background." src="pointer-lock.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="A red circle on top of a black background." src="pointer-lock.png"></p>
 
 <p>This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }} element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse. Let's see how this works.</p>
 

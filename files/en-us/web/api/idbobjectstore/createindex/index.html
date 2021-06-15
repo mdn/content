@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
   - createIndex
+browser-compat: api.IDBObjectStore.createIndex
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -96,13 +97,11 @@ var <em>myIDBIndex</em> = <em>objectStore</em>.createIndex(<em>indexName</em>, <
 
 <h3 id="Return_value">Return value</h3>
 
-<p><span style="line-height: 1.5;">An {{domxref("IDBIndex")}} object: the newly created
-    index.</span></p>
+<p>An {{domxref("IDBIndex")}} object: the newly created index.</p>
 
-<h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
+<h3 id="Exceptions">Exceptions</h3>
 
-<p><span style="line-height: 1.5;">This method may raise a {{domxref("DOMException")}} of
-    one of the following types:</span></p>
+<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
 <table class="standard-table">
   <thead>
@@ -210,31 +209,11 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-createindex', 'createIndex()')}}
-      </td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-createindex", "createIndex()")}}
-      </td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.createIndex")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

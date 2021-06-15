@@ -8,6 +8,7 @@ tags:
   - MediaStream
   - Reference
   - WebRTC
+browser-compat: api.MediaStream
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
@@ -42,9 +43,9 @@ tags:
 
 <dl>
  <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>An {{domxref("EventHandler")}} containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.</dd>
+ <dd>An {{event("Event_handlers", "event handler")}} containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.</dd>
  <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>An {{domxref("EventHandler")}} containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.</dd>
+ <dd>An {{event("Event_handlers", "event handler")}} containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -106,26 +107,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediastream', 'MediaStream')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

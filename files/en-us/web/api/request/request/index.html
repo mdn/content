@@ -8,6 +8,7 @@ tags:
   - Fetch
   - Reference
   - request
+browser-compat: api.Request.Request
 ---
 <div>{{APIRef("Fetch API")}}</div>
 
@@ -162,10 +163,7 @@ var myRequest = new Request('flowers.jpg', myInit);
   constructor to create a copy of the Request (This is similar to calling the
   {{domxref("Request.clone","clone()")}} method.)</p>
 
-<div class="codehilite" style="background: #f0f3f3;">
-  <pre style="line-height: 125%;">var copy = new Request(myRequest);
-</pre>
-</div>
+<pre class="brush: js">var copy = new Request(myRequest);</pre>
 
 <div class="note">
   <p><strong>Note</strong>: This last usage is probably only useful in <a
@@ -174,32 +172,16 @@ var myRequest = new Request('flowers.jpg', myInit);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-request','Request()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Request.Request")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

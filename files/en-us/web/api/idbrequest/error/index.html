@@ -10,6 +10,7 @@ tags:
 - Property
 - Reference
 - Storage
+browser-compat: api.IDBRequest.error
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -77,23 +78,18 @@ tags:
   asynchronous operations can also raise exceptions. The list describes problems that
   could occur when the request is being executed, but you might also encounter other
   problems when the request is being made. For example, if the request failed and the
-  result is not available, the <span
-    style="font-family: courier new,andale mono,monospace; line-height: normal;">InvalidStateError</span> exception
+  result is not available, the <code>InvalidStateError</code> exception
   is thrown.</p>
 
 <h2 id="Example">Example</h2>
 
 <p>The following example requests a given record title, <code>onsuccess</code> gets the
-  associated record from the {{domxref("IDBObjectStore")}} (made available as <code
-    style="font-style: normal;">objectStoreTitleRequest.result</code><span
-    style="line-height: 1.5;">), updates one property of the record, and then puts the
-    updated record back into the object store. Also included at the bottom is an
-    <code>onerror</code> function that reports what the error was if the request fails.
-    For a full working example, see our </span><a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+  associated record from the {{domxref("IDBObjectStore")}} (made available as 
+  <code>objectStoreTitleRequest.result</code>, updates one property of the record, and then puts the
+  updated record back into the object store. Also included at the bottom is an
+  <code>onerror</code> function that reports what the error was if the request fails.
+  For a full working example, see our <ahref="https://github.com/mdn/to-do-notifications/">To-do
+   Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">var title = "Walk dog";
 
@@ -121,36 +117,18 @@ objectStoreTitleRequest.onsuccess = function() {
   };
 };
 
-<span style="font-size: 1rem;">objectStoreTitleRequest</span>.onerror = function() {
+objectStoreTitleRequest.onerror = function() {
   // If an error occurs with the request, log what it is
-  console.log("There has been an error with retrieving your data: " + <span style="font-size: 1rem;">objectStoreTitleRequest</span><span style="font-size: 1rem;">.error);</span>
+  console.log("There has been an error with retrieving your data: " + objectStoreTitleRequest.error);
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbrequest-error', 'error')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbrequest-error", "error")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBRequest.error")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

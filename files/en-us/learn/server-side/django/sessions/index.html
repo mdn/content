@@ -126,7 +126,7 @@ request.session.modified = True
     num_authors = Author.objects.count()  # The 'all()' is implied by default.
 
     # Number of visits to this view, as counted in the session variable.
-    num_visits = request.session.get('num_visits', 1)
+    num_visits = request.session.get('num_visits', 0)
     request.session['num_visits'] = num_visits + 1
 
     context = {
@@ -141,7 +141,7 @@ request.session.modified = True
     return render(request, 'index.html', context=context)</pre>
 
 
-<p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 1 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
+<p>Here we first get the value of the <code>'num_visits'</code> session key, setting the value to 0 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The <code>num_visits</code> variable is then passed to the template in our context variable.</p>
 
 <div class="notecard note">
     <h4>Note</h4>

@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web
   - Web Performance
+browser-compat: api.Navigator
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -134,6 +135,8 @@ tags:
  <dd>Returns <code>true</code> if a call to <code>Navigator.share()</code> would succeed.</dd>
  <dt>{{domxref("Navigator.clearAppBadge()")}}</dt>
  <dd>Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</dd>
+ <dt>{{domxref("Navigator.getBattery()")}}</dt>
+ <dd>Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.</dd>
  <dt>{{domxref("Navigator.registerProtocolHandler()")}}</dt>
  <dd>Allows web sites to register themselves as a possible handler for a given protocol.</dd>
  <dt>{{domxref("Navigator.requestMediaKeySystemAccess()")}}</dt>
@@ -163,25 +166,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#the-navigator-object', 'the Navigator object')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<div>{{Compat("api.Navigator")}}</div>
+<div>{{Compat}}</div>

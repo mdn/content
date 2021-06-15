@@ -7,12 +7,13 @@ tags:
   - Structures
   - browser compat
   - compatibility tables
+browser-compat: api.AbortController
 ---
 <div>{{MDNSidebar}}</div>
 
 <p><span class="seoSummary">MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers.</span> This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.</p>
 
-<p>For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md">contributor guide</a> as well as the <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md">data guidelines guide</a>.</p>
+<p>For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's <a href="https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md">contributor guide</a> as well as the <a href="https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md">data guidelines guide</a>.</p>
 
 <p>If you have questions or discover problems, you are welcome to <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">ask for help</a>.</p>
 
@@ -42,9 +43,9 @@ tags:
 
 <ol>
  <li>
-  <p>Making sure you are in the master branch:</p>
+  <p>Making sure you are in the main branch:</p>
 
-  <pre class="brush: bash">git checkout master</pre>
+  <pre class="brush: bash">git checkout main</pre>
  </li>
  <li>
   <p>fetching the up-to-date repo contents using the following:</p>
@@ -52,9 +53,9 @@ tags:
   <pre class="brush: bash">git fetch upstream</pre>
  </li>
  <li>
-  <p>rebasing the contents of your master with the main repo's contents:</p>
+  <p>rebasing the contents of your main branch with the official repo's contents:</p>
 
-  <pre class="brush: bash">git rebase upstream/master</pre>
+  <pre class="brush: bash">git rebase upstream/main</pre>
  </li>
  <li>
   <p>pushing these updates back to your remote fork using this:</p>
@@ -68,9 +69,9 @@ tags:
 <p>Next, go to your remote fork (it will be at <code>https://github.com/<em>your-username</em>/browser-compat-data</code>) and create a new branch to store your changes for this data addition. This can be done by:</p>
 
 <ol>
- <li>Clicking on the "Branch: Master" button.</li>
+ <li>Clicking on the "Branch: Main" button.</li>
  <li>Entering a new branch name into the "Find or create a branch..." text field.</li>
- <li>Pressing the resulting "Create branch <em>name-of-branch</em> from Master" button.</li>
+ <li>Pressing the resulting "Create branch <em>name-of-branch</em> from Main" button.</li>
 </ol>
 
 <p>For example, if you were wanting to add data for the WebVR API, you'd create a branch called something like "webvr".</p>
@@ -92,13 +93,13 @@ tags:
 <p>To add the data, you need to create a new file or files to store your compat data in. The files you need to create differ, depending on what technology you are working on:</p>
 
 <ul>
- <li><strong><a href="/en-US/docs/Web/HTML">HTML</a>:</strong> One file per HTML element, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/html/elements">browser-compat-data/html/elements</a>. The file should be called the name of the element, all in lower case, e.g. <code>div.json</code>.</li>
- <li><strong><a href="/en-US/docs/Web/CSS">CSS</a>:</strong> One file per CSS property or selector, contained in the appropriate directory (see <a href="https://github.com/mdn/browser-compat-data/tree/master/css">browser-compat-data/css</a>). The file should be called the name of the feature, all in lower case, e.g. <code>background-color.json</code>, or <code>hover.json</code>.</li>
- <li><strong><a href="/en-US/docs/Web/JavaScript">JS</a>:</strong> One file per JS object, contained in <a href="https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins">browser-compat-data/javascript/builtins</a>. The file should be called the exact name of the object, with the casing preserved, e.g. <code>Date.json</code> or <code>InternalError.json</code>.</li>
- <li><strong><a href="/en-US/docs/Web/API">APIs</a>:</strong> One file per interface contained in the API, put in <a href="https://github.com/mdn/browser-compat-data/tree/master/api">browser-compat-data/api</a>. Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has <code>VRDisplay.json</code>, <code>VRDisplayCapabilities.json</code>, etc.</li>
+ <li><strong><a href="/en-US/docs/Web/HTML">HTML</a>:</strong> One file per HTML element, contained in <a href="https://github.com/mdn/browser-compat-data/tree/main/html/elements">browser-compat-data/html/elements</a>. The file should be called the name of the element, all in lower case, e.g. <code>div.json</code>.</li>
+ <li><strong><a href="/en-US/docs/Web/CSS">CSS</a>:</strong> One file per CSS property or selector, contained in the appropriate directory (see <a href="https://github.com/mdn/browser-compat-data/tree/main/css">browser-compat-data/css</a>). The file should be called the name of the feature, all in lower case, e.g. <code>background-color.json</code>, or <code>hover.json</code>.</li>
+ <li><strong><a href="/en-US/docs/Web/JavaScript">JS</a>:</strong> One file per JS object, contained in <a href="https://github.com/mdn/browser-compat-data/tree/main/javascript/builtins">browser-compat-data/javascript/builtins</a>. The file should be called the exact name of the object, with the casing preserved, e.g. <code>Date.json</code> or <code>InternalError.json</code>.</li>
+ <li><strong><a href="/en-US/docs/Web/API">APIs</a>:</strong> One file per interface contained in the API, put in <a href="https://github.com/mdn/browser-compat-data/tree/main/api">browser-compat-data/api</a>. Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has <code>VRDisplay.json</code>, <code>VRDisplayCapabilities.json</code>, etc.</li>
 </ul>
 
-<p>Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md">detailed schema description here</a>.</p>
+<p>Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the <a href="https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md">detailed schema description here</a>.</p>
 
 <h3 id="Basic_compat_data_structure">Basic compat data structure</h3>
 
@@ -118,14 +119,14 @@ tags:
 
 <p>You have the <code>css</code> object, inside of which is a <code>properties</code> object. Inside the <code>properties</code> object, you need one member for each of the specific features you want to define the compat data for. Each of these members has a <code>__compat</code> member, inside of which the actual data goes.</p>
 
-<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">rendered border-width support table on MDN</a>.</p>
+<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">rendered border-width support table on MDN</a>.</p>
 
 <p>Other types of features work in the same way, but with different object names:</p>
 
 <ul>
- <li>CSS selectors work in basically the same way as CSS properties, except that the top-level object structure is <code>css.selectors</code> instead of <code>css.properties</code>. See <a href="https://github.com/mdn/browser-compat-data/blob/master/css/selectors/cue.json">cue.json</a> for an example.</li>
- <li>HTML data works in basically the same way, except that the top-level object structure is <code>html.elements</code>. See <a href="https://github.com/mdn/browser-compat-data/blob/master/html/elements/article.json">article.json</a> for an example.</li>
- <li>The top level object structure for JS built-in objects is <code>javascript.builtins</code>; see <a href="https://github.com/mdn/browser-compat-data/blob/master/javascript/builtins/Array.json">Array.json</a> for an example.</li>
+ <li>CSS selectors work in basically the same way as CSS properties, except that the top-level object structure is <code>css.selectors</code> instead of <code>css.properties</code>. See <a href="https://github.com/mdn/browser-compat-data/blob/main/css/selectors/cue.json">cue.json</a> for an example.</li>
+ <li>HTML data works in basically the same way, except that the top-level object structure is <code>html.elements</code>. See <a href="https://github.com/mdn/browser-compat-data/blob/main/html/elements/article.json">article.json</a> for an example.</li>
+ <li>The top level object structure for JS built-in objects is <code>javascript.builtins</code>; see <a href="https://github.com/mdn/browser-compat-data/blob/main/javascript/builtins/Array.json">Array.json</a> for an example.</li>
 </ul>
 
 <p>In HTML, CSS, and JS pages, you'll normally only need one feature. API interfaces work slightly differently — they always have multiple sub-features (see {{anch("Sub-features")}}, below).</p>
@@ -136,11 +137,12 @@ tags:
 
 <ul>
  <li><code>mdn_url</code>: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. <code>/docs/...</code> not <code>/en-US/docs/...</code>. This is added in by the macro when the data is put on the page, for localization purposes.</li>
+ <li><code>spec_url</code>: URL or array of URLs to specification(s) in which this feature is defined.</li>
  <li><code>support</code>: Contains members representing the browser support information for this feature in all the different browsers we want to report.</li>
  <li><code>status</code>: Contains members reporting the standards track status of this feature.</li>
 </ul>
 
-<p>The names of the browser members are defined in the schema (see <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">Browser identifiers</a>). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.</p>
+<p>The names of the browser members are defined in the schema (see <a href="https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#browser-identifiers">Browser identifiers</a>). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.</p>
 
 <p>In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover {{anch("Adding_data_Advanced_cases", "Adding data: Advanced cases")}} later on). The different values you might want to include are as follows:</p>
 
@@ -159,10 +161,11 @@ tags:
  <li><code>deprecated</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
 </ul>
 
-<p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
+<p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
 
 <pre class="brush: json">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",
+  "spec_url": "https://drafts.csswg.org/css-backgrounds/#the-border-width",
   "support": {
     "chrome": {
       "version_added": "1"
@@ -237,7 +240,7 @@ tags:
 
 <p>In a page where the compat table has more than one row, you'll need multiple subfeatures inside each feature to define the information for each row. This can happen, for example, when you've got the basic support for a feature stored in one row, but then the feature also has a new property or value type that was addded much later in the specification's life and is only supported in a couple of browsers.</p>
 
-<p>As an example, see the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/background-color.json">compat data</a> and <a href="/en-US/docs/Web/CSS/background-color">corresponding MDN page</a> for the <code>background-color</code> property. The basic support exists inside the <code>__compat</code> object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own <code>__compat</code> object.</p>
+<p>As an example, see the <a href="https://github.com/mdn/browser-compat-data/blob/main/css/properties/background-color.json">compat data</a> and <a href="/en-US/docs/Web/CSS/background-color">corresponding MDN page</a> for the <code>background-color</code> property. The basic support exists inside the <code>__compat</code> object as explained above, then you have an additional row for browsers' support for "alpha channel for hex values", which contains its own <code>__compat</code> object.</p>
 
 <pre class="brush: json">{
   "css": {
@@ -281,7 +284,7 @@ tags:
   }
 }</pre>
 
-<p>See <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a> for a full example.</p>
+<p>See <a href="https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json">VRDisplay.json</a> for a full example.</p>
 
 <h2 id="Adding_data_Advanced_cases">Adding data: Advanced cases</h2>
 
@@ -289,7 +292,7 @@ tags:
 
 <h3 id="Including_a_footnote">Including a footnote</h3>
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>) (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
+<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json">VRDisplay.json</a>) (at the time of writing) had a footnote "Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</p>
 
 <pre class="brush: json">"chrome_android": {
   "version_added": true,
@@ -361,7 +364,7 @@ tags:
 
 <p>Sometimes you'll want to add multiple support data points for the same browser inside the same feature.</p>
 
-<p>As an example, the {{cssxref("text-align-last")}} property (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/text-align-last.json">text-align-last.json</a>) was added to Chrome in version 35, supported behind a pref.</p>
+<p>As an example, the {{cssxref("text-align-last")}} property (see also <a href="https://github.com/mdn/browser-compat-data/blob/main/css/properties/text-align-last.json">text-align-last.json</a>) was added to Chrome in version 35, supported behind a pref.</p>
 
 <p>The support mentioned above was then removed in version 47; also in version 47, support was added for <code>text-align-last</code> enabled by default.</p>
 
@@ -446,26 +449,38 @@ git push</pre>
 
 <h2 id="Inserting_the_data_into_MDN_pages">Inserting the data into MDN pages</h2>
 
-<p>Once your new data has been included in the main repo, you can start dynamically generating browser compat tables based on that data on MDN pages using the {{TemplateLink("Compat")}} macro. This takes a single parameter, the dot notation required to walk down the JSON data and find the object representing the feature you want to generate the compat table for.</p>
+<p>Once your new compatibility data has been included in the main <a href="https://github.com/mdn/browser-compat-data">browser-compat-data</a> repo, you can start dynamically generating browser compatibility and specification tables based on that data on MDN pages.</p>
 
-<p>Above the macro call, to help other contributors finding their way, you should add a hidden text that is only visible in MDN contributors in edit mode:</p>
+<p>First you need to find the query string for the relevant compatibility data you wish to include. This can be determined by inspecting its source file. For example:</p>
+<ul>
+  <li>{{domxref("AbortController")}} compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json">AbortController.json</a> and can be queried using <code>api.AbortController</code>.</li>
+  <li>{{HTTPHeader("Content-Type")}} HTTP header compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> and the query is <code>http.headers.Content-Type</code>.</li>
+  <li>{{domxref("VRDisplay.capabilities")}} property compatibility data is defined in <a href="https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json">VRDisplay.json</a> and its query is <code>api.VRDisplay.capabilities</code>.</li>
+</ul>
 
-<pre class="brush: html">&lt;div class="hidden"&gt;
-The compatibility table on this page is generated from structured data.
-If you'd like to contribute to the data, please check out
-&lt;a href="https://github.com/mdn/browser-compat-data"&gt;https://github.com/mdn/browser-compat-data&lt;/a&gt;
-and send us a pull request.
-&lt;/div&gt;</pre>
+<p>The compatibility data query should be specified in the page front-matter using the <code>browser-compat</code> key.
+  For example, for the {{domxref("AbortController")}} this would be added as shown below:</p>
+  
+<pre>---
+title: AbortController
+slug: Web/API/AbortController
 
-<p>As an example, on the {{HTTPHeader("Content-Type")}} HTTP header page, the macro call looks like this: <code>\{{Compat("http.headers.Content-Type")}}</code>. If you look at the <a href="https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json">content-type.json</a> file in the repo, you'll see how this is reflected in the JSON data.</p>
+...
 
-<p>As another example, The compat table for the {{domxref("VRDisplay.capabilities")}} property is generated using <code>\{{Compat("api.VRDisplay.capabilities")}}</code>. The macro call generates the following table (and corresponding set of notes):</p>
+browser-compat: api.AbortController
+---</pre>
 
-<hr>
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+<p>The compatibility and specification tables corresponding to the key are then automatically rendered in place of the <code>\{{Compat}}</code> and <code>\{{Specifications}}</code> macros in the source.</p>
 
-<p>{{Compat("api.VRDisplay.capabilities")}}</p>
+<p>You can also specify the desired API as the first argument to the macro as shown: <code>\{{Compat("api.AbortController")}}</code>. This can be useful if multiple compatibility tables are required on the same page.</p>
 
-<div class="notecard note">
-<p><strong>Note:</strong> The filenames often match the labels given to the interfaces inside the JSON structures, but it is not always the case. When the macro calls generate the tables, they walk through all the files until they find the relevant JSON to use, so the filenames are not critical. Saying that, you should always name them as intuitively as possible.</p>
-</div>
+<p>The macro calls generate the following tables (and corresponding set of notes):</p>
+
+
+<h4 id="Compatibility_table_example">Compatibility table example</h4>
+
+<p>{{Compat}}</p>
+
+<h4 id="Specifications_table_example">Specifications table examples</h4>
+
+<p>{{Specifications}}</p>

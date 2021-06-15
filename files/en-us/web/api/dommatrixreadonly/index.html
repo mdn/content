@@ -24,6 +24,7 @@ tags:
   - camera
   - matrix
   - transform
+browser-compat: api.DOMMatrixReadOnly
 ---
 <p>{{APIRef("Geometry Interfaces")}}</p>
 
@@ -95,7 +96,7 @@ tags:
  <dt>{{domxref("DOMMatrixReadOnly.inverse()")}}</dt>
  <dd>Returns a new {{domxref("DOMMatrix")}} created by inverting the source matrix. If the matrix cannot be inverted, the new matrix's components are all set to <code>NaN</code> and its <code>is2D</code> property is set to <code>false</code>. The original matrix is not altered.</dd>
  <dt>{{domxref("DOMMatrixReadOnly.multiply()")}}</dt>
- <dd>Returns a new {{domxref("DOMMatrix")}} created by computing the dot product of the source matrix and the specified matrix: <code><var>A</var>⋅<var>B</var></code>. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is <code>0</code> <em>except</em> the bottom-right corner and the element immediately above and to its left: <code>m<sub>33</sub></code> and <code>m<sub>34</sub></code>. These have the default value of <code>1</code>. The original matrix is not modified.</dd>
+ <dd>Returns a new {{domxref("DOMMatrix")}} created by computing the dot product of the source matrix and the specified matrix: <code><var>A</var>⋅<var>B</var></code>. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is <code>0</code> <em>except</em> the bottom-right corner and the element immediately above and to its left: <code>m33</code> and <code>m34</code>. These have the default value of <code>1</code>. The original matrix is not modified.</dd>
  <dt>{{domxref("DOMMatrixReadOnly.rotateAxisAngle()")}}</dt>
  <dd>Returns a new {{domxref("DOMMatrix")}} created by rotating the source matrix by the given angle around the specified vector. The original matrix is not modified.</dd>
  <dt>{{domxref("DOMMatrixReadOnly.rotate()")}}</dt>
@@ -124,7 +125,7 @@ tags:
 
  <p>For a 2D matrix, the elements <code><var>a</var></code> through <code><var>f</var></code> are listed, for a total of six values and the form <code>matrix(<var>a</var>, <var>b</var>, <var>c</var>, <var>d</var>, <var>e</var>, <var>f</var>)</code>.</p>
 
- <p>For a 3D matrix, the returned string contains all 16 elements and takes the form <code>matrix3d(<var>m<sub>11</sub></var>, <var>m<sub>12</sub></var>, <var>m<sub>13</sub></var>, <var>m<sub>14</sub></var>, <var>m<sub>21</sub></var>, <var>m<sub>22</sub></var>, <var>m<sub>23</sub></var>, <var>m<sub>24</sub></var>, <var>m<sub>31</sub></var>, <var>m<sub>32</sub></var>, <var>m<sub>33</sub></var>, <var>m<sub>34</sub></var>, <var>m<sub>41</sub></var>, <var>m<sub>42</sub></var>, <var>m<sub>43</sub></var>, <var>m<sub>44</sub></var>)</code>. See the CSS {{cssxref("matrix3d()")}} function for details on the 3D notation's syntax.</p>
+ <p>For a 3D matrix, the returned string contains all 16 elements and takes the form <code>matrix3d(<var>m11</var>, <var>m12</var>, <var>m13</var>, <var>m14</var>, <var>m21</var>, <var>m22</var>, <var>m23</var>, <var>m24</var>, <var>m31</var>, <var>m32</var>, <var>m33</var>, <var>m34</var>, <var>m41</var>, <var>m42</var>, <var>m43</var>, <var>m44</var>)</code>. See the CSS {{cssxref("matrix3d()")}} function for details on the 3D notation's syntax.</p>
 
  <p>Throws an <code>InvalidStateError</code> exception if any of the elements in the matrix are non-finite (even if, in the case of a 2D matrix, the non-finite values are in elements not used by the 2D matrix representation).</p>
  </dd>
@@ -144,31 +145,16 @@ tags:
  <dt>{{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}</dt>
  <dd>Creates a new mutable <code>DOMMatrix</code> object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a <code>TypeError</code> exception is thrown.</dd>
  <dt>{{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}</dt>
- <dd>Creates a new mutable <code>DOMMatrix</code> object given an existing matrix or a {{domxref("DOMMatrixInit")}} dictionary which provides the values for its properties. If no matrix is specified, the matrix is initialized with every element set to <code>0</code> <em>except</em> the bottom-right corner and the element immediately above and to its left: <code>m<sub>33</sub></code> and <code>m<sub>34</sub></code>. These have the default value of <code>1</code>.</dd>
+ <dd>Creates a new mutable <code>DOMMatrix</code> object given an existing matrix or a {{domxref("DOMMatrixInit")}} dictionary which provides the values for its properties. If no matrix is specified, the matrix is initialized with every element set to <code>0</code> <em>except</em> the bottom-right corner and the element immediately above and to its left: <code>m33</code> and <code>m34</code>. These have the default value of <code>1</code>.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Geometry Interfaces', '#dommatrixreadonly', 'DOMMatrixReadOnly') }}</td>
-   <td>{{ Spec2('Geometry Interfaces') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMMatrixReadOnly")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

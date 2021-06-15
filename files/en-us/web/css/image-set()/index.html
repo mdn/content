@@ -12,7 +12,7 @@ browser-compat: css.types.image.image-set
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">The <strong><code>image-set()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">function</a> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.</p>
+<p>The <strong><code>image-set()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Functions">functional</a> notation is a method of letting the browser pick the most appropriate CSS image from a given set, primarily for high pixel density screens.</p>
 
 <p>Resolution and bandwidth differ by device and network access. The <code>image-set()</code> function delivers the most appropriate image resolution for a user’s device, providing a set of image options — each with an associated resolution declaration — from which the browser picks the most appropriate for the device and settings. Resolution can be used as a proxy for filesize — a user agent on a slow mobile connection with a high-resolution screen may prefer to receive lower-resolution images rather than waiting for a higher resolution image to load.</p>
 
@@ -46,11 +46,27 @@ where &lt;image-set-option&gt; = [ &lt;image&gt; | &lt;string&gt; ] &lt;resoluti
 
 <p>{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}</p>
 
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>In the above example, the <code>-webkit</code> prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for <code>-webkit-image-set()</code> as an alias to <code>image-set()</code> (in order to provide compat where developers had not added the standard property).</p>
+</div>
+
 <h3 id="Using_image-set_to_provide_alternative_formats">Using image-set() to provide alternative image formats</h3>
 
 <p>In the next example the <code>type()</code> function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}</p>
+
+<h4>Providing a fallback</h4>
+<p>There is no inbuilt fallback for <code>image-set()</code>; therefore to include a {{cssxref("background-image")}} for those browsers that do not support the function, a separate declaration is required before the line using <code>image-set()</code>.</p>
+
+<pre class="brush: css">.box {
+  background-image: url("large-balloons.jpg");
+  background-image: image-set(
+    url("large-balloons.avif") type("image/avif"),
+    url("large-balloons.jpg") type("image/jpeg"));
+}</pre>
+
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 

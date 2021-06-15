@@ -58,7 +58,7 @@ console.log(newString); // Should print "The weather is warm"
 
 <p>If you look at the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code> function MDN reference page, you'll see a section called <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value">return value</a>. It is very useful to know and understand what values are returned by functions, so we try to include this information wherever possible.</p>
 
-<p>Some functions don't return any value. (In these cases,  our reference pages list the return value as <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code> or <code><a href="/en-US/docs/Glossary/undefined">undefined</a></code>.) For example, in the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50"><code>displayMessage()</code></a> function we built in the previous article, no specific value is returned when the function is invoked. It just makes a box appear somewhere on the screen — that's it!</p>
+<p>Some functions don't return any value. (In these cases, our reference pages list the return value as <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code> or <code><a href="/en-US/docs/Glossary/undefined">undefined</a></code>.) For example, in the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50"><code>displayMessage()</code></a> function we built in the previous article, no specific value is returned when the function is invoked. It just makes a box appear somewhere on the screen — that's it!</p>
 
 <p>Generally, a return value is used where the function is an intermediate step in a calculation of some kind. You want to get to a final result, which involves some values that need to be calculated by a function. After the function calculates the value, it can return the result so it can be stored in a variable; and you can use this variable in the next stage of the calculation.</p>
 
@@ -131,7 +131,7 @@ function factorial(num) {
   The <code>squared()</code> and <code>cubed()</code> functions are fairly obvious — they return the square or cube of the number that was given as a parameter. The <code>factorial()</code> function returns the <a href="https://en.wikipedia.org/wiki/Factorial">factorial</a> of the given number.</li>
  <li>Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
   <pre class="brush: js">input.onchange = function() {
-  const num = input.value;
+  const num = parseFloat(input.value);
   if (isNaN(num)) {
     para.textContent = 'You need to enter a number!';
   } else {
@@ -191,7 +191,7 @@ function factorial(num) {
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — reusable blocks of code</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
+ <li><strong>Function return values</strong></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
 </ul>

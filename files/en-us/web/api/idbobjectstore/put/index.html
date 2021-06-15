@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
   - put
+browser-compat: api.IDBObjectStore.put
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -116,14 +117,11 @@ let <em>request</em> = <em>objectStore</em>.put(<em>item</em>, <em>key</em>);</p
 <p>The following example requests a given record title; when that request is successful
   the <code>onsuccess</code> function gets the associated record from the
   {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates
+  as <code>objectStoreTitleRequest.result</code>), updates
     one property of the record, and then puts the updated record back into the object
     store in another request with <code>put()</code>. For a full working example, see
-    our </span><a href="https://github.com/mdn/to-do-notifications/"
-    style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app
-    (</span><a href="https://mdn.github.io/to-do-notifications/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+    our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
+    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">const title = "Walk dog";
 
@@ -143,7 +141,7 @@ objectStoreTitleRequest.onsuccess = () =&gt; {
   // Create another request that inserts the item back into the database
   const updateTitleRequest = objectStore.put(data);
 
-  <span style="font-size: 1rem;">// Log the transaction that originated this request</span>
+  // Log the transaction that originated this request
   console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
 
   // When this new request succeeds, run the displayData() function again to update the display
@@ -154,29 +152,11 @@ objectStoreTitleRequest.onsuccess = () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-put', 'put()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-put", "put()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.put")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

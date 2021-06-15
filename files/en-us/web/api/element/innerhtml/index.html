@@ -10,6 +10,7 @@ tags:
   - Property
   - Reference
   - innerHTML
+browser-compat: api.Element.innerHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -152,8 +153,7 @@ el.innerHTML = name; // shows the alert</pre>
       href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation">if
       you use <code>innerHTML</code></a> in a <a
       href="/en-US/docs/Mozilla/Add-ons/WebExtensions">browser extension</a> and submit
-    the extension to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, it will
-    not pass the automated review process.</p>
+    the extension to <a href="https://addons.mozilla.org/">addons.mozilla.org</a>, it may be rejected in the review process. Please see <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Safely inserting external content into a page</a> for alternative methods.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -241,27 +241,11 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM Parsing', '#dom-innerhtml-innerhtml', 'Element.innerHTML')}}
-      </td>
-      <td>{{Spec2('DOM Parsing')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.innerHTML")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

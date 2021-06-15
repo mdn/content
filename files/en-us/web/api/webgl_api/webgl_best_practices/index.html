@@ -17,23 +17,17 @@ tags:
 
 <p>WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details <em>why</em>. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.</p>
 
-<h2 id="General_Topics">General Topics</h2>
-
-<h3 id="Address_and_eliminate_WebGL_errors">Address and eliminate WebGL errors</h3>
+<h2 id="Address_and_eliminate_WebGL_errors">Address and eliminate WebGL errors</h2>
 
 <p>Your application should run without generating any WebGL errors (as returned by <code>getError</code>). Every WebGL error is reported in the Web Console as a JavaScript warning with a descriptive message. After too many errors (32 in Firefox), WebGL stops generating descriptive messages, which really hinders debugging.</p>
 
 <p>The <em>only</em> errors a well-formed page generates are <code>OUT_OF_MEMORY</code> and <code>CONTEXT_LOST</code>.</p>
 
-<h3 id="Know_your_limits_and_extensions">Know your limits (and extensions)</h3>
+<h2 id="Understand_extension_availability">Understand extension availability</h2>
 
 <p>The availability of most WebGL extensions depends on the client system. When using WebGL extensions, if possible, try to make them optional by gracefully adapting to the case there they are not supported.</p>
 
-<p>Likewise the limits of your system will be different than your clients' systems! Don't assume you can use thirty texture samplers per shader just because it works on your machine!</p>
-
-<h4 id="Take_advantage_of_universally_supported_WebGL_1_extensions">Take advantage of universally supported WebGL 1 extensions</h4>
-
-<p>These WebGL 1 extensions are universally supported:</p>
+<p>These WebGL 1 extensions are universally supported, and can be relied upon to be present:</p>
 
 <ul>
  <li>ANGLE_instanced_arrays</li>
@@ -49,7 +43,9 @@ tags:
 
 <p>Consider polyfilling these into WebGLRenderingContext, like: <a href="https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js">https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js</a></p>
 
-<h4 id="Universally_supported_limits">Universally supported limits</h4>
+<h2 id="Understand_system_limits">Understand system limits</h2>
+
+<p>Similarly to extensions, the limits of your system will be different than your clients' systems! Don't assume you can use thirty texture samplers per shader just because it works on your machine!</p>
 
 <p>The minimum requirements for WebGL are quite low. In practice, effectively all systems support at least the following:</p>
 
@@ -69,23 +65,27 @@ tags:
 
 <p>Your desktop may support 16k textures, or maybe 16 texture units in the vertex shader, but most other systems don't, and content that works for you will not work for them!</p>
 
-<h3 id="Avoid_invalidating_FBO_attachment_bindings">Avoid invalidating FBO attachment bindings</h3>
+<h2 id="Avoid_invalidating_FBO_attachment_bindings">Avoid invalidating FBO attachment bindings</h2>
 
 <p>Almost any change to an FBO's attachment bindings will invalidate its framebuffer completeness. Set up your hot framebuffers ahead of time.</p>
 
 <p>In Firefox, setting the pref <code>webgl.perf.max-warnings</code> to <code>-1</code> in about:config will enable performance warnings that include warnings about FB completeness invalidations.</p>
 
-<h4 id="And_to_a_lesser_degree_VAO_attachments_vertexAttribPointer_disableenableVertexAttribArray">And to a lesser degree, VAO attachments (vertexAttribPointer, disable/enableVertexAttribArray)</h4>
+<h3 id="Avoid_changing_VAO_attachments">Avoid changing VAO attachments (vertexAttribPointer, disable/enableVertexAttribArray)</h3>
 
 <p>Drawing from static, unchanging VAOs is faster than mutating the same VAO for every draw call. For unchanged VAOs, browsers can cache the fetch limits, whereas when VAOs change, browsers must revalidate and recalculate limits. The overhead for this is relatively low, but re-using VAOs means fewer <code>vertexAttribPointer</code> calls too, so it's worth doing wherever it's easy.</p>
 
-<h3 id="Delete_objects_eagerly">Delete objects eagerly</h3>
+<h2 id="Delete_objects_eagerly">Delete objects eagerly</h2>
 
 <p>Don't wait for the garbage collector/cycle collector to realize objects are orphaned and destroy them. Implementations track the liveness of objects, so 'deleting' them at the API level only releases the handle that refers to the actual object. (conceptually releasing the handle's ref-pointer to the object) Only once the object is unused in the implementation is it actually freed. For example, if you never want to access your shader objects directly again, just delete their handles after attaching them to a program object.</p>
 
-<h4 id="Eagerly_lose_contexts_too">Eagerly lose contexts too</h4>
+<h2 id="Eagerly_lose_contexts">Lose contexts eagerly</h2>
 
-<h3 id="Flush_when_expecting_results_like_queries_or_rendering_frame_completion">Flush when expecting results (like queries or rendering frame completion)</h3>
+<p>Consider also eagerly losing WebGL contexts via the <code>WEBGL_lose_context</code> extension when you're definitely done with them and no longer need the target canvas's rendering results. Note that this is not necessary to do when navigating away from a page - don't add an unload event handler just for this purpose.</p>
+
+<h2 id="Flush_when_expecting_results">Flush when expecting results</h2>
+
+<p>Call <code>flush()</code> when expecting results such as queries, or at completion of a rendering frame.</p>
 
 <p>Flush tells the implementation to push all pending commands out for execution, flushing them out of the queue, instead of waiting for more commands to enqueue before sending for execution.</p>
 
@@ -97,15 +97,15 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>WebGL doesn't have a SwapBuffers call by default, so a flush can help fill the gap, as well.</p>
 
-<h4 id="Use_webgl.flush_when_not_using_requestAnimationFrame">Use <code>webgl.flush()</code> when not using requestAnimationFrame</h4>
+<h3 id="Use_webgl.flush_when_not_using_requestAnimationFrame">Use <code>webgl.flush()</code> when not using requestAnimationFrame</h3>
 
 <p>When not using RAF, (such as when using RPAF; see below) use <code>webgl.flush()</code> to encourage eager execution of enqueued commands.</p>
 
 <p>Because RAF is directly followed by the frame boundary, an explicit <code>webgl.flush()</code> isn't really needed with RAF.</p>
 
-<h3 id="Avoid_blocking_API_calls_in_production_e.g._getError_getParameter">Avoid blocking API calls in production (e.g. <code>getError</code>, <code>getParameter</code>)</h3>
+<h2 id="Avoid_blocking_API_calls_in_production">Avoid blocking API calls in production</h2>
 
-<p>Certain WebGL entry points cause synchronous stalls on the calling thread. Even basic requests can take as long as 1ms, but they can take even longer if they need to wait for all graphics work to be completed (with an effect similar to <code>glFinish()</code> in native OpenGL).</p>
+<p>Certain WebGL entry points - including <code>getError</code> and <code>getParameter</code> - cause synchronous stalls on the calling thread. Even basic requests can take as long as 1ms, but they can take even longer if they need to wait for all graphics work to be completed (with an effect similar to <code>glFinish()</code> in native OpenGL).</p>
 
 <p>In production code, avoid such entry points, especially on the browser main thread where they can cause the entire page to jank (often including scrolling or even the whole browser).</p>
 
@@ -132,11 +132,11 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
  </li>
 </ul>
 
-<h3 id="Always_keep_vertex_attrib_0_array-enabled">Always keep vertex attrib 0 array-enabled</h3>
+<h2 id="Always_enable_vertex_attrib_0_as_an_array">Always enable vertex attrib 0 as an array</h2>
 
-<p>If you draw with vertex attrib 0 array disabled, you will force the browser to do complicated emulation when running on desktop OpenGL (such as on macOS). This is because in desktop OpenGL, nothing gets drawn if vertex attrib 0 is not array-enabled. You can use <code>bindAttribLocation</code> to force a vertex attribute to use location 0, and use <code>enableVertexAttribArray(0)</code> to make it array-enabled.</p>
+<p>If you draw without vertex attrib 0 enabled as an array, you will force the browser to do complicated emulation when running on desktop OpenGL (such as on macOS). This is because in desktop OpenGL, nothing gets drawn if vertex attrib 0 is not array-enabled. You can use <code>bindAttribLocation</code> to force a vertex attribute to use location 0, and use <code>enableVertexAttribArray(0)</code> to make it array-enabled.</p>
 
-<h3 id="Estimate_a_per-pixel_VRAM_Budget">Estimate a per-pixel VRAM Budget</h3>
+<h2 id="Estimate_a_per-pixel_VRAM_Budget">Estimate a per-pixel VRAM Budget</h2>
 
 <p>WebGL doesn't offer APIs to query the maximum amount of video memory on the system because such queries are not portable. Still, applications must be conscious of VRAM usage and not just allocate as much as possible.</p>
 
@@ -150,27 +150,25 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>Keeping the application's VRAM usage under this cap will help to avoid out-of-memory errors and associated instability.</p>
 
-<h3 id="Consider_rendering_to_a_smaller_backbuffer_size">Consider rendering to a smaller backbuffer size</h3>
+<h2 id="Consider_rendering_to_a_smaller_back_buffer">Consider rendering to a smaller back buffer</h2>
 
-<p>A common (and easy) way to trade off quality for speed is rendering into a smaller backbuffer, and upscaling the result. Consider reducing canvas.width and height and keeping canvas.style.width and height at a constant size.</p>
+<p>A common (and easy) way to trade off quality for speed is rendering into a smaller back buffer, and upscaling the result. Consider reducing canvas.width and height and keeping canvas.style.width and height at a constant size.</p>
 
-<h3 id="Batch_draw_calls_prefer_fewer-but-larger_draw_calls">Batch draw calls (prefer fewer-but-larger draw calls)</h3>
+<h2 id="Batch_draw_calls">Batch draw calls</h2>
 
-<p>Fewer, larger draw operations will generally improve performance. If you have 1000 sprites to paint, try to do it as a single drawArrays() or drawElements() call.</p>
+<p>"Batching" draw calls into fewer, larger draw calls will generally improve performance. If you have 1000 sprites to paint, try to do it as a single drawArrays() or drawElements() call.</p>
 
 <p>It's common to use "degenerate triangles" if you need to draw discontinuous objects as a single drawArrays(TRIANGLE_STRIP) call. Degenerate triangles are triangles with no area, therefore any triangle where more than one point is in the same exact location. These triangles are effectively skipped, which lets you start a new triangle strip unattached to your previous one, without having to split into multiple draw calls.</p>
 
-<p>Another important method for batching is texture atlasing, where multiple images are placed into a single texture, often like a checkerboard. Since you need to split draw call batches to change textures, texture atlasing lets you combine more draw calls into fewer, bigger batches.</p>
+<p>Another important method for batching is texture atlasing, where multiple images are placed into a single texture, often like a checkerboard. Since you need to split draw call batches to change textures, texture atlasing lets you combine more draw calls into fewer, bigger batches. See <a href="https://webglsamples.org/sprites/readme.html">this example</a> demonstrating how to combine even sprites referencing multiple texture atlases into a single draw call.</p>
 
-<h2 id="Shaders_Programs_and_GLSL">Shaders, Programs, and GLSL</h2>
+<h2 id="Avoid_ifdef_GL_ES">Avoid "#ifdef GL_ES"</h2>
 
-<h3 id="Avoid_ifdef_GL_ES_which_is_always_true">Avoid "#ifdef GL_ES", which is always true</h3>
+<p>You should never use <code>#ifdef GL_ES</code> in your WebGL shaders; this condition is always true in WebGL. Although some early examples used this, it's not necessary.</p>
 
-<p>You should never use <code>#ifdef GL_ES</code> in your WebGL shaders; although some early examples used this, it's not necessary, since this condition is always true in WebGL shaders.</p>
+<h2 id="Prefer_doing_work_in_the_vertex_shader">Prefer doing work in the vertex shader</h2>
 
-<h3 id="Prefer_doing_more_work_in_vertex_not_fragment_shaders">Prefer doing more work in vertex (not fragment) shaders</h3>
-
-<p>Do as much as you can in the vertex shader, rather than in the fragment shader. This is because per draw call, fragment shaders generally run many more times than vertex shaders. Any calculation that can be done on the vertices and then just interpolated among fragments (via <code>varying</code>s) is a performance boon. (The interpolation of varyings is very cheap, and is done automatically for you through the fixed functionality rasterization phase of the graphics pipeline)</p>
+<p>Do as much work as you can in the vertex shader, rather than in the fragment shader. This is because per draw call, fragment shaders generally run many more times than vertex shaders. Any calculation that can be done on the vertices and then just interpolated among fragments (via <code>varying</code>s) is a performance boon. (The interpolation of varyings is very cheap, and is done automatically for you through the fixed functionality rasterization phase of the graphics pipeline.)</p>
 
 <p>For example, a simple animation of a textured surface can be achieved through a time-dependent transformation of texture coordinates. (The simplest case being adding a uniform vector to the texture coordinates attribute vector) If visually acceptable, one can transform the texture coordinates in the vertex shader rather than in the fragment shader, to get better performance.</p>
 
@@ -178,7 +176,7 @@ glClientWaitSync(sync, 0, GL_TIMEOUT_IGNORED);
 
 <p>The inversion of this is if a model has more vertices than pixels in the rendered output. However, LOD meshes is usually the answer to this problem, rarely moving work from the vertex <em>to</em> the fragment shader.</p>
 
-<h3 id="Compile_Shaders_and_Link_Programs_in_parallel">Compile Shaders and Link Programs in parallel</h3>
+<h2 id="Compile_Shaders_and_Link_Programs_in_parallel">Compile Shaders and Link Programs in parallel</h2>
 
 <p>It's tempting to compile shaders and link programs serially, but many browsers can compile and link in parallel on background threads.</p>
 
@@ -224,9 +222,9 @@ for (const [vs, fs, prog] of programs) {
 }
 </pre>
 
-<h3 id="KHR_parallel_shader_compile_for_non-blocking_compilelink_status">KHR_parallel_shader_compile for non-blocking compile/link status</h3>
+<h2 id="Prefer_KHR_parallel_shader_compile">Prefer KHR_parallel_shader_compile</h2>
 
-<p>While we've described a pattern to allow browsers to compile and link in parallel, normally checking <code>COMPILE_STATUS</code> or <code>LINK_STATUS</code> blocks until the compile or link completes. In browsers where it's available, the <a href="https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/">KHR_parallel_shader_compile</a> extension provides a <em>non-blocking</em> <code>COMPLETION_STATUS</code> query.</p>
+<p>While we've described a pattern to allow browsers to compile and link in parallel, normally checking <code>COMPILE_STATUS</code> or <code>LINK_STATUS</code> blocks until the compile or link completes. In browsers where it's available, the <a href="https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/">KHR_parallel_shader_compile</a> extension provides a <em>non-blocking</em> <code>COMPLETION_STATUS</code> query. Prefer to enable and use this extension.</p>
 
 <p>Example usage:</p>
 
@@ -252,7 +250,7 @@ if (ext) {
 
 <p>This technique may not work in all applications, for example those which require programs to be immediately available for rendering. Still, consider how variations may work.</p>
 
-<h3 id="Dont_check_shader_compile_status_until_linking_fails">Don't check shader compile status until linking fails</h3>
+<h2 id="Dont_check_shader_compile_status_unless_linking_fails">Don't check shader compile status unless linking fails</h2>
 
 <p>There are very few errors that are guaranteed to cause shader compilation failure, but cannot be deferred to link time. The <a href="https://www.khronos.org/registry/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf">ESSL3 spec</a> says this under "Error Handling":</p>
 
@@ -301,13 +299,13 @@ if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
 }
 </pre>
 
-<h3 id="Be_precise_with_GLSL_variable_precision_annotations">Be precise with GLSL variable precision annotations</h3>
+<h2 id="Be_precise_with_GLSL_precision_annotations">Be precise with GLSL precision annotations</h2>
 
 <p>If you expect to pass an essl300 <code>int</code> between shaders, and you need it to have 32-bits, you <em>must</em> use <code>highp</code> or you will have portability problems. (Works on Desktop, not on Android)</p>
 
 <p>If you have a float texture, iOS requires that you use <code>highp sampler2D foo;</code>, or it will very painfully give you <code>lowp</code> texture samples! (+/-2.0 max is probably not good enough for you)</p>
 
-<h4 id="Implicit_defaults">Implicit defaults</h4>
+<h3 id="Implicit_defaults">Implicit defaults</h3>
 
 <p>The vertex language has the following predeclared globally scoped default precision statements:</p>
 
@@ -324,7 +322,7 @@ precision lowp sampler2D;
 precision lowp samplerCube;
 </code></pre>
 
-<h4 id="In_WebGL_1_highp_float_support_is_optional_in_fragment_shaders">In WebGL 1, "highp float" support is optional in fragment shaders</h4>
+<h3 id="In_WebGL_1_highp_float_support_is_optional_in_fragment_shaders">In WebGL 1, "highp float" support is optional in fragment shaders</h3>
 
 <p>Using <code>highp</code> precision unconditionally in fragment shaders will prevent your content from working on some older mobile hardware.</p>
 
@@ -343,7 +341,7 @@ precision mediump float;
 #endif
 </code></pre>
 
-<h4 id="ESSL100_minimum_requirements_WebGL_1">ESSL100 minimum requirements (WebGL 1)</h4>
+<h3 id="ESSL100_minimum_requirements_WebGL_1">ESSL100 minimum requirements (WebGL 1)</h3>
 
 <table>
  <thead>
@@ -409,7 +407,7 @@ precision mediump float;
 
 <p><em>*float24: sign bit, 7-bit for exponent, 16-bit for mantissa</em></p>
 
-<h4 id="ESSL300_minimum_requirements_WebGL_2">ESSL300 minimum requirements (WebGL 2)</h4>
+<h3 id="ESSL300_minimum_requirements_WebGL_2">ESSL300 minimum requirements (WebGL 2)</h3>
 
 <table>
  <thead>
@@ -477,13 +475,11 @@ precision mediump float;
  </tbody>
 </table>
 
-<h3 id="Prefer_builtins_like_dot_mix_and_normalize_instead_of_buiding_your_own">Prefer builtins like <code>dot</code>, <code>mix</code>, and <code>normalize</code> instead of buiding your own</h3>
+<h2 id="Prefer_builtins_instead_of_building_your_own">Prefer builtins instead of building your own</h2>
 
-<p>At best, custom implementations of builtins might run as fast as the builtins they replace, but don't expect them to. Hardware often has hyper-optimized or even specialized instructions for builtins, and the compiler can't reliably replace your custom builtin-replacements with the special builtin codepaths.</p>
+<p>Prefer builtins like <code>dot</code>, <code>mix</code>, and <code>normalize</code>. At best, custom implementations might run as fast as the builtins they replace, but don't expect them to. Hardware often has hyper-optimized or even specialized instructions for builtins, and the compiler can't reliably replace your custom builtin-replacements with the special builtin codepaths.</p>
 
-<h2 id="Textures">Textures</h2>
-
-<h3 id="Use_mipmaps_for_any_texture_youll_see_in_3d!">Use mipmaps for any texture you'll see in 3d!</h3>
+<h2 id="Use_mipmaps_for_any_texture_youll_see_in_3d">Use mipmaps for any texture you'll see in 3d</h2>
 
 <p>When in doubt, call <code>generateMipmaps()</code> after texture uploads. Mipmaps are cheap on memory (only 30% overhead) while providing often-large performance advantages when textures are "zoomed out" or generally downscaled in the distance in 3d, or even for cube-maps!</p>
 
@@ -500,25 +496,31 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>One caveat: <code>generateMipmaps</code> only works if you would be able to render into the texture if you attached it to a framebuffer. (The spec calls this "color-renderable formats") For example, if a system supports float-textures but not render-to-float, <code>generateMipmaps</code> will fail for float formats.</p>
 
-<h3 id="Support_for_float_textures_doesnt_mean_you_can_render_into_them!">Support for float textures doesn't mean you can render into them!</h3>
+<h2 id="Dont_assume_you_can_render_into_float_textures">Don't assume you can render into float textures</h2>
 
 <p>There are many, many systems that support RGBA32F textures, but if you attach one to a framebuffer you'll get <code>FRAMEBUFFER_INCOMPLETE_ATTACHMENT</code> from <code>checkFramebufferStatus()</code>. It may work on your system, but <em>most</em> mobile systems will not support it!</p>
 
-<p>On WebGL 1, use the <code>EXT_color_buffer_half_float</code> and <code>WEBGL_color_buffer_float</code> extensions to check for render-to-float-texture support for float32 and float16 respectively.</p>
+<p>On WebGL 1, use the <code>EXT_color_buffer_half_float</code> and <code>WEBGL_color_buffer_float</code> extensions to check for render-to-float-texture support for float16 and float32 respectively.</p>
 
-<p>On WebGL 2, <code>EXT_color_buffer_float</code> is your check for render-to-float-texture support for both float32 and float16.</p>
+<p>On WebGL 2, <code>EXT_color_buffer_float</code> checks for render-to-float-texture support for both float32 and float16. <code>EXT_color_buffer_half_float</code> is present on systems which only support rendering to float16 textures.</p>
 
-<h4 id="Render-to-float32_doesnt_imply_float32-blending!">Render-to-float32 doesn't imply float32-blending!</h4>
+<h3 id="Render-to-float32_doesnt_imply_float32-blending">Render-to-float32 doesn't imply float32-blending!</h3>
 
-<p>If may work on your system, but on many others it wont. Avoid it if you can. Check for the <code>EXT_float_blend</code> extension to check for support.</p>
+<p>It may work on your system, but on many others it won't. Avoid it if you can. Check for the <code>EXT_float_blend</code> extension to check for support.</p>
 
 <p>Float16-blending is always supported.</p>
 
-<h3 id="Some_formats_e.g._RGB_on_some_systems_are_emulated">Some formats (e.g. RGB) on some systems are emulated</h3>
+<h2 id="Some_formats_e.g._RGB_may_be_emulated">Some formats (e.g. RGB) may be emulated</h2>
 
 <p>A number of formats (particularly three-channel formats) are emulated. For example, RGB32F is often actually RGBA32F, and Luminance8 may actually be RGBA8. RGB8 in particular is often surprisingly slow, as masking out the alpha channel and/or patching blend functions has fairly high overhead. Prefer to use RGBA8 and ignore the alpha yourself for better performance.</p>
 
-<h3 id="Consider_compressed_texture_formats">Consider compressed texture formats</h3>
+<h2 id="Alpha_false_can_be_expensive">Avoid alpha:false, which can be expensive</h2>
+
+<p>Specifying <code>alpha:false</code> during context creation causes the browser to composite the WebGL-rendered canvas as though it were opaque, ignoring any alpha values the application writes in its fragment shader. On some platforms, this capability unfortunately comes at a significant performance cost. The RGB back buffer may have to be emulated on top of an RGBA surface, and there are relatively few techniques available in the OpenGL API for making it appear to the application that an RGBA surface has no alpha channel. <a href="https://crbug.com/1045643">It has been found</a> that all of these techniques have approximately equal performance impact on affected platforms.</p>
+
+<p>Most applications, even those requiring alpha blending, can be structured to produce <code>1.0</code> for the alpha channel. The primary exception is any application requiring destination alpha in the blending function. If feasible, it is recommended to do this rather than using <code>alpha:false</code>.</p>
+
+<h2 id="Consider_compressed_texture_formats">Consider compressed texture formats</h2>
 
 <p>While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller on in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g. normals or coordinates).</p>
 
@@ -539,17 +541,17 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
 
 <p>WEBGL_compressed_texture_astc has both higher quality and/or higher compression, but is only supported on newer hardware.</p>
 
-<h4 id="Basis_Universal_texture_compression_formatlibrary">Basis Universal texture compression format/library</h4>
+<h3 id="Basis_Universal_texture_compression_formatlibrary">Basis Universal texture compression format/library</h3>
 
 <p>Basis Universal solves several of the issues mentioned above. It offers a way to support all common compressed texture formats with a single compressed texture file, through a JavaScript library that efficiently converts formats at load time. It also adds additional compression that makes Basis Universal compressed texture files much smaller than regular compressed textures over-the-wire, more comparable to JPEG.</p>
 
 <p><a href="https://github.com/BinomialLLC/basis_universal/blob/master/webgl/README.md">https://github.com/BinomialLLC/basis_universal/blob/master/webgl/README.md</a></p>
 
-<h3 id="Memory_usage_of_depth_and_stencil_formats">Memory usage of depth and stencil formats</h3>
+<h2 id="Memory_usage_of_depth_and_stencil_formats">Memory usage of depth and stencil formats</h2>
 
 <p>Depth and stencil attachments and formats are actually inseparable on many devices. You may ask for DEPTH_COMPONENT24 or STENCIL_INDEX8, but you're often getting D24X8 and X24S8 32bpp formats behind the scenes. Assume that the memory usage of depth and stencil formats is rounded up to the nearest four bytes.</p>
 
-<h3 id="texImagetexSubImage_uploads_particularly_with_videos_can_cause_pipeline_flushes">texImage/texSubImage uploads (particularly with videos) can cause pipeline flushes</h3>
+<h2 id="texImagetexSubImage_uploads_esp_videos_can_cause_pipeline_flushes">texImage/texSubImage uploads (esp. videos) can cause pipeline flushes</h2>
 
 <p>Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Progams internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan[<a href="https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo">1</a>] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)</p>
 
@@ -625,23 +627,21 @@ gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); // Defaults t
     ...
 </code></pre>
 
-<h2 id="WebGL_2">WebGL 2</h2>
+<h2 id="Use_texStorage_to_create_textures">Use texStorage to create textures</h2>
 
-<h3 id="Use_texStorage_to_create_textures">Use texStorage to create textures</h3>
-
-<p>The <code>texImage*</code> API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.</p>
+<p>The WebGL 2.0 <code>texImage*</code> API lets you define each mip level independently and at any size, even the mis-matching mips sizes are not an error until draw time which means there is no way the driver can actually prepare the texture in GPU memory until the first time the texture is drawn.</p>
 
 <p>Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.</p>
 
 <p>So, prefer <code>texStorage</code>+<code>texSubImage</code> for textures in WebGL 2</p>
 
-<h3 id="invalidateFramebuffer">invalidateFramebuffer</h3>
+<h2 id="Use_invalidateFramebuffer">Use invalidateFramebuffer</h2>
 
-<p>Storing data that you won't use again can have high cost, particularly on tiled-rendering GPUs common on mobile. When you're done with the contents of a framebuffer attachment, use invalidateFramebuffer to discard the data, instead of leaving the driver to waste time storing the data for later use. DEPTH/STENCIL and/or multisampled attachments in particular are great candidates for <code>invalidateFramebuffer</code>.</p>
+<p>Storing data that you won't use again can have high cost, particularly on tiled-rendering GPUs common on mobile. When you're done with the contents of a framebuffer attachment, use WebGL 2.0's <code>invalidateFramebuffer</code> to discard the data, instead of leaving the driver to waste time storing the data for later use. DEPTH/STENCIL and/or multisampled attachments in particular are great candidates for <code>invalidateFramebuffer</code>.</p>
 
-<h3 id="Non-blocking_async_data_downloadreadback">Non-blocking async data download/readback</h3>
+<h2 id="Use_non_blocking_async_data_readback">Use non-blocking async data readback</h2>
 
-<p>The approach in WebGL 2 is analogous to the approach in OpenGL: <a href="https://jdashg.github.io/misc/async-gpu-downloads.html">https://jdashg.github.io/misc/async-gpu-downloads.html</a></p>
+<p>Operations like <code>readPixels</code> and <code>getBufferSubData</code> are typically synchronous, but using the same APIs, non-blocking, asynchronous data readback can be achieved. The approach in WebGL 2 is analogous to the approach in OpenGL: <a href="https://jdashg.github.io/misc/async-gpu-downloads.html">https://jdashg.github.io/misc/async-gpu-downloads.html</a></p>
 
 <pre class="brush: js">function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) =&gt; {
@@ -691,11 +691,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 }
 </pre>
 
-<h2 id="Canvas_and_WebGL-Related">Canvas and WebGL-Related</h2>
-
-<p>Some tips are relevent to WebGL, but deal with other APIs.</p>
-
-<h3 id="Use_requestPostAnimationFrame_not_requestAnimationFrame">Use <code>requestPostAnimationFrame</code> not <code>requestAnimationFrame</code></h3>
+<h3 id="Consider_requestPostAnimationFrame_not_requestAnimationFrame">Consider <code>requestPostAnimationFrame</code> not <code>requestAnimationFrame</code></h3>
 
 <p>While it's well-known that apps should use <code>requestAnimationFrame</code> ("RAF") instead of <code>setTimeout</code> (et al) to redraw on-demand, what's less well-known is that non-trivial WebGL apps should often <em>not</em> render within a RAF callback.</p>
 
@@ -705,6 +701,19 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 <p>This allows as much time as possible for rendering each frame.</p>
 
+<p><em>Note</em> that <code>requestPostAnimationFrame</code> is still under development as of this writing. Polyfills of this API are recommended in Firefox, but not in Chrome, due to <a href="https://crbug.com/1199005">undesirable performance characteristics</a>. Here is one possible polyfill:
+
+<pre>
+if (!window.requestPostAnimationFrame) {
+   window.requestPostAnimationFrame = function(task) {
+      requestAnimationFrame(() => {
+         setTimeout(task, 0);
+      });
+   }
+}
+</pre>
+</p>
+
 <h3 id="devicePixelRatio_and_high-dpi_rendering"><code>devicePixelRatio</code> and high-dpi rendering</h3>
 
 <p>Handling <code>devicePixelRatio != 1.0</code> is tricky. While the common approach is to set <code>canvas.width = width * devicePixelRatio</code>, this will cause moire artifacts with non-integer values of <code>devicePixelRatio</code>, as is common with UI scaling on Windows, as well as zooming on all platforms.</p>
@@ -713,7 +722,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 <p>Demo: <a href="https://jdashg.github.io/misc/webgl/device-pixel-presnap.html">https://jdashg.github.io/misc/webgl/device-pixel-presnap.html</a></p>
 
-<h4 id="ResizeObserver_and_device-pixel-content-box">ResizeObserver and 'device-pixel-content-box'</h4>
+<h3 id="ResizeObserver_and_device-pixel-content-box">ResizeObserver and 'device-pixel-content-box'</h3>
 
 <p>On supporting browsers (Chromium?), <code>ResizeObserver</code> can be used with <code>'device-pixel-content-box'</code> to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:</p>
 
@@ -739,7 +748,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 <p>Please refer to <a href="https://www.w3.org/TR/resize-observer/#resize-observer-interface">the specification</a> for more details.</p>
 
-<h3 id="ImageBitmap_creation">ImageBitmap creation</h3>
+<h2 id="ImageBitmap_creation">ImageBitmap creation</h2>
 
 <p>Using the <a href="https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmapoptions">ImageBitmapOptions dictionary</a> is essential for properly preparing textures for upload to WebGL, but unfortunately there's no obvious way to query exactly which dictionary members are supported by a given browser.</p>
 

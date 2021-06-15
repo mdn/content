@@ -8,10 +8,11 @@ tags:
   - Reference
   - Web Workers
   - onmessage
+browser-compat: api.DedicatedWorkerGlobalScope.onmessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <strong><code>onmessage</code></strong> property of the {{domxref("DedicatedWorkerGlobalScope")}} interface represents an {{domxref("EventHandler")}} to be called when the {{event("message")}} event occurs and bubbles through the {{domxref("Worker")}} — i.e. when a message is sent to the worker using the {{domxref("Worker.postMessage")}} method.</p>
+<p>The <strong><code>onmessage</code></strong> property of the {{domxref("DedicatedWorkerGlobalScope")}} interface represents an {{event("Event_handlers", "event handler")}} to be called when the {{event("message")}} event occurs — i.e. when a message is sent to the worker using the {{domxref("Worker.postMessage")}} method.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -49,24 +50,11 @@ myWorker.onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#handler-dedicatedworkerglobalscope-onmessage", "DedicatedWorkerGlobalScope.onmessage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DedicatedWorkerGlobalScope.onmessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

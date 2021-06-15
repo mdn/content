@@ -1,6 +1,7 @@
 ---
 title: FileReaderSync.readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
+browser-compat: api.FileReaderSync.readAsArrayBuffer
 ---
 <div>{{APIRef("File API")}}</div>
 
@@ -33,7 +34,7 @@ slug: Web/API/FileReaderSync/readAsArrayBuffer
  <dd>is raised when the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.</dd>
  <dt><code>SecurityError</code></dt>
  <dd>is raised when one of the following problematic situation is detected:
- <ul style="margin-left: 40px;">
+ <ul>
   <li>the resource has been modified by a third party;</li>
   <li>too many read are performed simultaneously;</li>
   <li>the file pointed by the resource is unsafe for a use from the Web (like it is a system file).</li>
@@ -47,24 +48,11 @@ slug: Web/API/FileReaderSync/readAsArrayBuffer
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API","#dfn-readAsArrayBufferSync","readAsArrayBufferSync")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileReaderSync.readAsArrayBuffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

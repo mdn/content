@@ -37,7 +37,7 @@ tags:
 
 <p><img alt="A 3d graph showing clip space in WebGL." src="clip-space-graph.svg"></p>
 
-<p>The above graphic is a visualization of the clip space that all of the points must fit into. It is a cube two units on each side, with one corner at (-1,-1,-1) and the opposite corner at (1,1,1). The center of the cube is the point (0,0,0). This 8 cubic meter coordinate system used by clip space is known as normalized device coordinates (NDC). You may encouter that term from time to time while researching and working with WebGL code.</p>
+<p>The above graphic is a visualization of the clip space that all of the points must fit into. It is a cube two units on each side, with one corner at (-1,-1,-1) and the opposite corner at (1,1,1). The center of the cube is the point (0,0,0). This 8 cubic meter coordinate system used by clip space is known as normalized device coordinates (NDC). You may encounter that term from time to time while researching and working with WebGL code.</p>
 
 <p>For this section we will put our data into the clip space coordinate system directly. Normally model data is used that is in some arbitrary coordinate system, and is then transformed using a matrix, converting the model coordinates into the clip space coordinate system. For this example, it's easiest to illustrate how clip space works by using model coordinate values ranging from (-1,-1,-1) to (1,1,1). The code below will create 2 triangles that will draw a square on the screen. The Z depth in the squares determines what gets drawn on top when the squares share the same space. The smaller Z values are rendered on top of the larger Z values.</p>
 
@@ -523,7 +523,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>A {{interwiki("wikipedia", "frustum")}} is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:</p>
 
-<div style="width: 42em; margin-bottom: 1em;"><img alt="A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance." src="fullcamerafov.svg" style="display: block; margin: 0 auto;"></div>
+<img alt="A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance." src="fullcamerafov.svg">
 
 <p>If we used this to determine the polygons to be rendered each frame, our renderer would need to render every polygon within this pyramid, all the way off into infinity, including also polygons that are very close to the lens—likely too close to be useful (and certainly including things that are so close that a real human wouldn't be able to focus on them in the same setting).</p>
 
@@ -531,7 +531,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:</p>
 
-<div style="width: 42em; margin-bottom: 1em;"><img alt="A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count." src="cameraviewfustum.svg" style="display: block; margin: 0 auto;"></div>
+<img alt="A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count." src="cameraviewfustum.svg">
 
 <p>The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are <em>entirely</em> outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.</p>
 

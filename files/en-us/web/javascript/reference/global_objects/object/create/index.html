@@ -8,7 +8,7 @@ tags:
   - 'Null'
   - Object
   - Reference
-  - polyfill
+  - Polyfill
 browser-compat: javascript.builtins.Object.create
 ---
 <p>{{JSRef}}</p>
@@ -314,7 +314,7 @@ rect.move(1, 1); // Outputs, 'Shape moved.'
 // inherit one class
 MyClass.prototype = Object.create(SuperClass.prototype);
 // mixin another
-Object.assign(MyClass.prototype, OtherSuperClass.prototype);
+Object.assign(Object.getPrototypeOf(MyClass.prototype), OtherSuperClass.prototype);
 // re-assign constructor
 MyClass.prototype.constructor = MyClass;
 
@@ -420,6 +420,7 @@ o2 = Object.create({p: 42}) */
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Object.create</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li>{{jsxref("Object.defineProperty()")}}</li>
   <li>{{jsxref("Object.defineProperties()")}}</li>
   <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>

@@ -2,18 +2,36 @@
 title: Save-Data
 slug: Web/HTTP/Headers/Save-Data
 tags:
-- HTTP
-- HTTP Header
-- Reference
-- Request header
-- Save-Data
-- header
+  - Save-Data
+  - Client hints
+  - HTTP
+  - HTTP Header
+  - Reference
+  - Request header
+browser-compat: http.headers.Save-Data
 ---
 <p>{{HTTPSidebar}}</p>
 
 <p>The <strong><code>Save-Data</code></strong> header field is a boolean which, in
   requests, indicates the client's preference for reduced data usage. This could be for
   reasons such as high transfer costs, slow connection speeds, etc.</p>
+
+  <table class="properties">
+    <tbody>
+     <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}, {{Glossary("Client hints","Client hint")}}</td>
+     </tr>
+     <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+     </tr>
+     <tr>
+      <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
+      <td>no</td>
+     </tr>
+    </tbody>
+   </table>
 
 <p>A value of <code>On</code> indicates explicit user opt-in into a reduced data usage
   mode on the client, and when communicated to origins allows them to deliver alternative
@@ -27,7 +45,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: html">Save-Data: &lt;sd-token&gt;</pre>
+<pre class="brush: http">Save-Data: &lt;sd-token&gt;</pre>
 
 <h2 id="Directives">Directives</h2>
 
@@ -55,7 +73,7 @@ Save-Data: on</pre>
 
 <p>Response:</p>
 
-<pre>HTTP/1.0 200 OK
+<pre class="brush: http">HTTP/1.0 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -68,13 +86,13 @@ Content-Type: image/jpeg
 
 <p>Request:</p>
 
-<pre>GET /image.jpg HTTP/1.0
+<pre class="brush: http">GET /image.jpg HTTP/1.0
 Host: example.com
 </pre>
 
 <p>Response:</p>
 
-<pre>HTTP/1.0 200 OK
+<pre class="brush: http">HTTP/1.0 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data
 Cache-Control: public, max-age=31536000
@@ -85,29 +103,11 @@ Content-Type: image/jpeg
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Title</th>
-    </tr>
-    <tr>
-      <td><a
-          href="https://datatracker.ietf.org/doc/html/draft-grigorik-http-client-hints-03#section-7">draft-grigorik-http-client-hints-03,
-          section 7: Save-Data</a></td>
-      <td>HTTP Client Hints</td>
-    </tr>
-  </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.Save-Data")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

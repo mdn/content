@@ -12,13 +12,10 @@ tags:
 <h2>Strict Mode Overview</h2>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> Sometimes you'll see the default, non-strict mode referred to as <strong>"<a
-      href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode">
-      sloppy mode</a>"</strong>. This isn't an official term, but be
-  aware of it, just in case.</p>
+  <p><strong>Note:</strong> Sometimes you'll see the default, non-strict mode referred to as <strong>"<a href="/en-US/docs/Glossary/Sloppy_mode">sloppy mode</a>"</strong>. This isn't an official term, but be aware of it, just in case.</p>
 </div>
 
-<p>JavaScript's strict mode, introduced in ECMAScript 5, is a way to <em>opt in</em> to a restricted variant of JavaScript, thereby implicitly opting-out of "<a href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode">sloppy mode</a>". Strict mode isn't just a subset: it <em>intentionally</em> has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.</p>
+<p>JavaScript's strict mode, introduced in ECMAScript 5, is a way to <em>opt in</em> to a restricted variant of JavaScript, thereby implicitly opting-out of "<a href="/en-US/docs/Glossary/Sloppy_mode">sloppy mode</a>". Strict mode isn't just a subset: it <em>intentionally</em> has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.</p>
 
 <p>Strict mode makes several changes to normal JavaScript semantics:</p>
 
@@ -32,7 +29,7 @@ tags:
 
 <h2 id="Invoking_strict_mode">Invoking strict mode</h2>
 
-<p>Strict mode applies to <em>entire scripts</em> or to <em>individual functions</em>. It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <a href="/en-US/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowTimers.setTimeout()</code></a>, and related functions are entire scripts, and invoking strict mode in them works as expected.</p>
+<p>Strict mode applies to <em>entire scripts</em> or to <em>individual functions</em>. It doesn't apply to block statements enclosed in <code>{}</code> braces; attempting to apply it to such contexts does nothing. <code>eval</code> code, <code>Function</code> code, event handler attributes, strings passed to <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowTimers.setTimeout()</code></a>, and related functions are entire scripts, and invoking strict mode in them works as expected.</p>
 
 <h3 id="Strict_mode_for_scripts">Strict mode for scripts</h3>
 
@@ -69,6 +66,10 @@ function notStrict() { return "I'm not strict."; }
 }
 export default strict;
 </pre>
+
+<h3 id="strict_mode_for_classes">Strict mode for classes</h3>
+
+<p>All parts of ECMAScript <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> are strict mode code, including both <a href="/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations">class declarations</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions">class expressions</a> — and so also including all parts of class bodies.</p>
 
 <h2 id="Changes_in_strict_mode">Changes in strict mode</h2>
 
@@ -138,7 +139,7 @@ var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 </pre>
 
-<p>Sixth, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
+<p>Sixth, strict mode in ECMAScript 2015 forbids setting properties on <a href="/en-US/docs/Glossary/Primitive">primitive</a> values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.</p>
 
 <pre class="brush: js">(function() {
 'use strict';
@@ -174,7 +175,7 @@ with (obj) { // !!! syntax error
 
 <p>The simple alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace <code>with</code>.</p>
 
-<p>Second, <a href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>eval</code> of strict mode code does not introduce new variables into the surrounding scope</a>. In normal code <code>eval("var x;")</code> introduces a variable <code>x</code> into the surrounding function or the global scope. This means that, in general, in a function containing a call to <code>eval</code> every name not referring to an argument or local variable must be mapped to a particular definition at runtime (because that <code>eval</code> might have introduced a new variable that would hide the outer variable). In strict mode <code>eval</code> creates variables only for the code being evaluated, so <code>eval</code> can't affect whether a name refers to an outer variable or some local variable:</p>
+<p>Second, <a href="https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>eval</code> of strict mode code does not introduce new variables into the surrounding scope</a>. In normal code <code>eval("var x;")</code> introduces a variable <code>x</code> into the surrounding function or the global scope. This means that, in general, in a function containing a call to <code>eval</code> every name not referring to an argument or local variable must be mapped to a particular definition at runtime (because that <code>eval</code> might have introduced a new variable that would hide the outer variable). In strict mode <code>eval</code> creates variables only for the code being evaluated, so <code>eval</code> can't affect whether a name refers to an outer variable or some local variable:</p>
 
 <pre class="brush: js">var x = 17;
 var evalX = eval("'use strict'; var x = 42; x;");
@@ -285,7 +286,7 @@ function privilegedInvoker() {
 privilegedInvoker();
 </pre>
 
-<p>Third, <code>arguments</code> for strict mode functions no longer provide access to the corresponding function call's variables. In some old ECMAScript implementations <code>arguments.caller</code> was an object whose properties aliased variables in that function. This is a <a href="http://stuff.mit.edu/iap/2008/facebook/">security hazard</a> because it breaks the ability to hide privileged values via function abstraction; it also precludes most optimizations. For these reasons no recent browsers implement it. Yet because of its historical functionality, <code>arguments.caller</code> for a strict mode function is also a non-deletable property which throws when set or retrieved:</p>
+<p>Third, <code>arguments</code> for strict mode functions no longer provide access to the corresponding function call's variables. In some old ECMAScript implementations <code>arguments.caller</code> was an object whose properties aliased variables in that function. This is a <a href="https://stuff.mit.edu/iap/2008/facebook/">security hazard</a> because it breaks the ability to hide privileged values via function abstraction; it also precludes most optimizations. For these reasons no recent browsers implement it. Yet because of its historical functionality, <code>arguments.caller</code> for a strict mode function is also a non-deletable property which throws when set or retrieved:</p>
 
 <pre class="brush: js">'use strict';
 function fun(a, b) {
@@ -319,7 +320,7 @@ function fun(static) { 'use strict'; } // !!!
 
 <p>Two Mozilla-specific caveats: First, if your code is JavaScript 1.7 or greater (for example in chrome code or when using the right <code>&lt;script type=""&gt;</code>) and is strict mode code, <code>let</code> and <code>yield</code> have the functionality they've had since those keywords were first introduced. But strict mode code on the web, loaded with <code>&lt;script src=""&gt;</code> or <code>&lt;script&gt;...&lt;/script&gt;</code>, won't be able to use <code>let</code>/<code>yield</code> as identifiers. Second, while ES5 unconditionally reserves the words <code>class</code>, <code>enum</code>, <code>export</code>, <code>extends</code>, <code>import</code>, and <code>super</code>, before Firefox 5 Mozilla reserved them only in strict mode.</p>
 
-<p>Second, <a href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">strict mode prohibits function statements that are not at the top level of a script or function</a>. In normal mode in browsers, function statements are permitted "everywhere". <em>This is not part of ES5 (or even ES3)!</em> It's an extension with incompatible semantics in different browsers. Note that function statements outside top level are permitted in ES2015.</p>
+<p>Second, <a href="https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">strict mode prohibits function statements that are not at the top level of a script or function</a>. In normal mode in browsers, function statements are permitted "everywhere". <em>This is not part of ES5 (or even ES3)!</em> It's an extension with incompatible semantics in different browsers. Note that function statements outside top level are permitted in ES2015.</p>
 
 <pre class="brush: js">'use strict';
 if (true) {
@@ -347,9 +348,9 @@ function baz() { // kosher
 
 <ul>
  <li><a href="https://tc39.es/ecma262/#sec-strict-mode-code">Strict Mode Code in the ECMAScript specification</a></li>
- <li><a href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
- <li><a href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
- <li><a href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
+ <li><a href="https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
+ <li><a href="https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
+ <li><a href="https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
  <li><a href="http://qnimate.com/javascript-strict-mode-in-nutshell/">JavaScript "use strict" tutorial for beginners.</a></li>
  <li><a href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
  <li><a href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>

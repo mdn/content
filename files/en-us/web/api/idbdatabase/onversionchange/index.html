@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - onversionchange
+browser-compat: api.IDBDatabase.onversionchange
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -34,9 +35,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
-  creates a new object store; it also includes <code
-    style="font-style: normal;">onerror</code> and <code
-    style="font-style: normal;">onabort</code> functions to handle non-success cases, and
+  creates a new object store; it also includes <code>onerror</code> and <code>onabort</code> functions to handle non-success cases, and
   an onversionchange function to notify when a database structure change has occurred.</p>
 
 <pre class="brush: js;highlight:[28,29,30,31,32]">request.onupgradeneeded = function(event) {
@@ -75,31 +74,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-onversionchange', 'onversionchange')}}
-      </td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-onversionchange",
-        "onversionchange")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBDatabase.onversionchange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

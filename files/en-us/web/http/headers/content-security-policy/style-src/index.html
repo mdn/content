@@ -12,6 +12,7 @@ tags:
   - Style
   - source
   - style-src
+browser-compat: http.headers.csp.Content-Security-Policy.style-src
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -80,7 +81,7 @@ Content-Security-Policy: style-src &lt;source&gt; &lt;source&gt;;
 <pre class="brush: js">document.querySelector('div').setAttribute('style', 'display:none;');
 document.querySelector('div').style.cssText = 'display:none;';</pre>
 
-<p>However, styles properties that are set directly on the element's {{domxref("ElementCSSInlineStyle/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:</p>
+<p>However, styles properties that are set directly on the element's {{domxref("HTMLElement/style", "style")}} property will not be blocked, allowing users to safely manipulate styles via JavaScript:</p>
 
 <pre class="brush: js">document.querySelector('div').style.display = 'none';</pre>
 
@@ -165,7 +166,7 @@ document.querySelector('div').style.cssText = 'display:none;';</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.style-src")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

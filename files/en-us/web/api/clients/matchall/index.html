@@ -9,13 +9,13 @@ tags:
 - Reference
 - Service Workers
 - ServiceWorker
+browser-compat: api.Clients.matchAll
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
 <p>The <strong><code>matchAll()</code></strong> method of the {{domxref("Clients")}}
   interface returns a {{jsxref("Promise")}} for a list of service worker
-  {{domxref("Client")}} objects. Include the <code
-    style="font-style: normal;">options</code> parameter to return all service worker
+  {{domxref("Client")}} objects. Include the <code>options</code> parameter to return all service worker
   clients whose origin is the same as the associated service worker's origin. If options
   are not included, the method returns only the service worker clients controlled by the
   service worker.</p>
@@ -64,21 +64,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#clients-matchall', 'Clients: matchall')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Clients.matchAll")}}</p>
+<p>{{Compat}}</p>

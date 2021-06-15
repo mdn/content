@@ -8,6 +8,7 @@ tags:
 - Prototype
 - Reference
 - finally
+- Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
 <div>{{JSRef}}</div>
@@ -20,6 +21,8 @@ browser-compat: javascript.builtins.Promise.finally
 
 <p>This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then",
   "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -108,6 +111,7 @@ fetch(myRequest).then(function(response) {
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>Promise.prototype.finally</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-promise"><code>core-js</code></a></li>
   <li>{{jsxref("Promise")}}</li>
   <li>{{jsxref("Promise.prototype.then()")}}</li>
   <li>{{jsxref("Promise.prototype.catch()")}}</li>

@@ -18,14 +18,13 @@ tags:
   - form
   - radio
   - radio button
+browser-compat: html.elements.input.input-radio
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{htmlelement("input")}} elements of type <strong><code>radio</code></strong> are generally used in <strong>radio groups</strong>—collections of radio buttons describing a set of related options.</span> Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <div id="Basic_example">
 <p>They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.</p>
@@ -49,11 +48,11 @@ tags:
   </tr>
   <tr>
    <td><strong>Supported common attributes</strong></td>
-   <td><code>{{anch("checked")}}</code>, <code>{{anch("value")}}</code> and <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code></td>
+   <td><code><a href="#attr-checked">checked</a></code>, <code><a href="#attr-value">value</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code></td>
   </tr>
   <tr>
    <td><strong>IDL attributes</strong></td>
-   <td><code>{{anch("checked")}}</code> and <code>{{anch("value")}}</code></td>
+   <td><code>checked</code> and <code>value</code></td>
   </tr>
   <tr>
    <td><strong>Methods</strong></td>
@@ -72,7 +71,7 @@ tags:
 
 <p>You can have as many radio groups on a page as you like, as long as each has its own unique <code>name</code>.</p>
 
-<p>For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the <code>name</code> property set to <code>contact</code> but one with the {{htmlattrxref("value", "input")}} <code>email</code>, one with the value <code>phone</code>, and one with the value <code>mail</code>. The user never sees the <code>value</code> or the <code>name</code> (unless you expressly add code to display it).</p>
+<p>For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the <code>name</code> property set to <code>contact</code> but one with the value <code>email</code>, one with the value <code>phone</code>, and one with the value <code>mail</code>. The user never sees the <code>value</code> or the <code>name</code> (unless you expressly add code to display it).</p>
 
 <p>The resulting HTML looks like this:</p>
 
@@ -169,23 +168,23 @@ form.addEventListener("submit", function(event) {
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("checked")}}</code></td>
+   <td><code><a href="#attr-checked">checked</a></td>
    <td>A Boolean indicating whether or not this radio button is the default-selected item in the group</td>
   </tr>
   <tr>
-   <td><code>{{anch("value")}}</code></td>
+   <td><code><a href="#attr-value">value</a></code></td>
    <td>The string to use as the value of the radio when submitting the form, if the radio is currently toggled on</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefchecked">{{htmlattrdef("checked")}}</h3>
+<h3 id="attr-checked"><code>checked</code></h3>
 
 <p>A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.</p>
 
 <p>Unlike other browsers, Firefox by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic checked state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</p>
 
-<h3 id="htmlattrdefvalue">{{htmlattrdef("value")}}</h3>
+<h3 id="attr-value"><code>value</code></h3>
 
 <p>The <code>value</code> attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type <code>radio</code>: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the <code>value</code> attribute. If the <code>value</code> is not otherwise specified, it is the string <code>on</code> by default. This is demonstrated in the section {{anch("Value")}} above.</p>
 
@@ -334,31 +333,11 @@ button:active {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-radio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

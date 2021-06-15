@@ -9,6 +9,7 @@ tags:
   - Reference
   - Storage
   - databases
+browser-compat: api.IDBFactory.databases
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -31,17 +32,16 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A promise that resolves either to an error or a list of dictionaries, each with two elements, <code>name</code> and <code>version</code>.</p>
+<p>A promise that resolves either to an error or a list of dictionaries, each with two elements, <code>name</code> and <code>version</code>:
 
-<h4 id="name"><code>name</code></h4>
-
-<p>The database name.</p>
-
-<h4 id="version"><code>version</code></h4>
-
-<p>The database version.</p>
-
-<p><span style='background-color: #333333; color: #ffffff; font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 1.44444rem; letter-spacing: -0.00278rem;'>Exceptions</span></p>
+<dl>
+  <dt><code>name</code></dt>
+  <dd>The database name.</dd>
+  <dt><code>version</code></dt>
+  <dd>The database version.</dd>
+</dl>
+</p>
+<h3>Exceptions</h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
 
@@ -72,28 +72,11 @@ promise.then(databases =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#dom-idbfactory-databases", "databases()")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.IDBFactory.databases")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

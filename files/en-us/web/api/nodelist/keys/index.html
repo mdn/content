@@ -8,6 +8,8 @@ tags:
 - NodeList
 - Reference
 - Web
+- Polyfill
+browser-compat: api.NodeList.keys
 ---
 <p>{{APIRef("DOM")}}</p>
 
@@ -51,11 +53,12 @@ for(var key of list.keys()) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeList.keys")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>NodeList.prototype.keys</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
   <li>{{domxref("Node")}}</li>
   <li>{{domxref("NodeList")}}</li>
 </ul>

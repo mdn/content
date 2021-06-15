@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.stencilFuncSeparate
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -56,7 +57,7 @@ tags:
   </dd>
   <dt><code>ref</code></dt>
   <dd>A {{domxref("GLint")}} specifying the reference value for the stencil test. This
-    value is clamped to the range 0 to 2<sup>n</sup> -1 where n is the number of bitplanes
+    value is clamped to the range 0 to 2^n - 1 where n is the number of bitplanes
     in the stencil buffer. The default value is 0.</dd>
   <dt><code>mask</code></dt>
   <dd>A {{domxref("GLuint")}} specifying a bit-wise mask that is used to AND the reference
@@ -117,12 +118,7 @@ gl.getParameter(gl.STENCIL_BITS);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.stencilFuncSeparate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

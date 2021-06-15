@@ -7,6 +7,7 @@ tags:
 - DOMImplementation
 - Method
 - Reference
+browser-compat: api.DOMImplementation.createDocument
 ---
 <p>{{ApiRef("DOM")}}</p>
 
@@ -45,40 +46,11 @@ alert(doc.getElementById('abc')); // [object HTMLBodyElement]
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-domimplementation-createdocument',
-        'DOMImplementation.createDocument')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Modified the return type of <code>createDocument()</code> from
-        {{domxref("Document")}} to {{domxref("XMLDocument")}}.<br>
-        The third argument of <code>createDocument()</code>, <em>doctype</em>, is now
-        optional and default to <code>null</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Core', 'core.html#Level-2-Core-DOM-createDocument',
-        'DOMImplementation.createDocument')}}</td>
-      <td>{{Spec2('DOM3 Core')}}</td>
-      <td>No change from {{SpecName("DOM2 Core")}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Core', 'core.html#Level-2-Core-DOM-createDocument',
-        'DOMImplementation.createDocument')}}</td>
-      <td>{{Spec2('DOM2 Core')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMImplementation.createDocument")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

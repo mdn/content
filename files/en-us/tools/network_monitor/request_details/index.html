@@ -29,7 +29,6 @@ tags:
 <ul>
  <li><strong><a href="#headers_tab">Headers</a></strong></li>
  <li><strong>Messages</strong> (only for WebSocket items)</li>
- <li><strong><a href="#params_tab">Params</a></strong></li>
  <li><strong><a href="#request_tab">Request</a></strong></li>
  <li><strong><a href="#response_tab">Response</a></strong></li>
  <li><strong><a href="#cache_tab">Cache</a></strong></li>
@@ -288,12 +287,6 @@ tags:
 
 <p>The <code>samesite</code> attribute has been shown since Firefox 62 ({{bug("1452715")}}).</p>
 
-<h3 id="Params_tab">Params tab</h3>
-
-<p>This tab displays the GET parameters and POST data of a request:</p>
-
-<p><img alt="" src="params.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
-
 <h3 id="Request_tab">Request tab</h3>
 
 <p>Request shows the complete request parameters, by default, in a formatted view:</p>
@@ -325,6 +318,10 @@ tags:
 <p>If the response is an image, the tab displays a preview:</p>
 
 <p><img alt="" src="response_pane_image.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>If the response is a web font, the tab also displays a preview:</p>
+
+<p><img alt="" src="response_font.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>For network responses that are initiated by a <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection, the details pane shows any associated messages. For more information, see <a href="/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets">Inspecting web sockets</a>.</p>
 

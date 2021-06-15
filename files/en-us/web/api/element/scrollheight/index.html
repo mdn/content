@@ -7,6 +7,7 @@ tags:
 - NeedsDHTMLRemovalInExample
 - Property
 - Reference
+browser-compat: api.Element.scrollHeight
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -89,7 +90,10 @@ window.getComputedStyle(element).overflowY !== 'hidden'
 <p>Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this
   equivalence can be useful to determine whether a user has read a text or not (see also
   the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
-  properties). For example:</p>
+  properties).</p>
+
+  <p>The checkbox in the demo below is disabled, and so cannot be checked to show agreement
+    until the content of the textarea has been scrolled through.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -171,27 +175,11 @@ onload = function () {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}}
-      </td>
-      <td>{{Spec2("CSSOM View")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.scrollHeight")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

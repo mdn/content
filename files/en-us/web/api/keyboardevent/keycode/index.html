@@ -11,6 +11,7 @@ tags:
   - Read-only
   - Reference
   - keyCode
+browser-compat: api.KeyboardEvent.keyCode
 ---
 <p>{{APIRef("DOM Events")}}{{Deprecated_Header}}</p>
 
@@ -45,26 +46,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-keyCode','KeyboardEvent.keyCode')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition; specified as deprecated</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.KeyboardEvent.keyCode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Value_of_keyCode">Value of keyCode</h2>
 
@@ -128,14 +114,15 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by printable keys in standard position</caption>
  <thead>
   <tr>
-   <th rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th colspan="3" scope="col">Internet Explorer 11</th>
+   <th scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th colspan="3" scope="col">IE 11</th>
    <th colspan="6" scope="col">Google Chrome 34</th>
    <th colspan="3" scope="col">Chromium 34</th>
    <th colspan="3" scope="col">Safari 7</th>
    <th colspan="9" scope="col">Gecko 29</th>
   </tr>
   <tr>
+  <th></th>
    <th colspan="3" scope="col">Windows</th>
    <th colspan="3" scope="col">Windows</th>
    <th colspan="3" scope="col">Mac (10.9)</th>
@@ -146,6 +133,7 @@ tags:
    <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
   </tr>
   <tr>
+  <th></th>
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
@@ -465,17 +453,17 @@ tags:
    <td colspan="3"><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td><code>0xBA (186)⚠️ </code></td>
    <td><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td><code>0xBA (186)⚠️ </code></td>
    <td><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td><code>0xBA (186)⚠️ </code></td>
    <td colspan="3"><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
    <td><code>0x51 (81)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td><code>0xBA (186)⚠️ </code></td>
    <td colspan="3"><code>0x51 (81)</code></td>
   </tr>
   <tr>
@@ -630,14 +618,15 @@ tags:
  <caption>keyCode values of each browser's keydown event caused by printable keys in standard position (punctuations in US layout):</caption>
  <thead>
   <tr>
-   <th rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th colspan="3" scope="col">Internet Explorer 11</th>
+   <th scope="row">{{domxref("KeyboardEvent.code")}}</th>
+   <th colspan="3" scope="col">IE 11</th>
    <th colspan="6" scope="col">Google Chrome 34</th>
    <th colspan="3" scope="col">Chromium 34</th>
    <th colspan="3" scope="col">Safari 7</th>
    <th colspan="9" scope="col">Gecko 29</th>
   </tr>
   <tr>
+   <th></th>
    <th colspan="3" scope="col">Windows</th>
    <th colspan="3" scope="col">Windows</th>
    <th colspan="3" scope="col">Mac (10.9)</th>
@@ -648,6 +637,7 @@ tags:
    <th colspan="3" scope="col">Linux (Ubuntu 14.04)</th>
   </tr>
   <tr>
+   <th></th>
    <th scope="col">US</th>
    <th scope="col">Japanese</th>
    <th scope="col">Greek</th>
@@ -706,127 +696,127 @@ tags:
   <tr>
    <th scope="row"><code>"Semicolon"</code></th>
    <td rowspan="2"><code>0xBA (186)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code>⚠️ </td>
    <td rowspan="2"><code>0xBA (186)</code></td>
    <td rowspan="2"><code>0xBA (186)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
+   <td rowspan="2"><code>0xBB (187)</code>⚠️ </td>
    <td rowspan="2"><code>0xBA (186)</code></td>
    <td rowspan="2"><code>0xBA (186)</code></td>
-   <td><code>0xBA (186)</code> *1</td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 (229) *2</code></td>
+   <td><code>0xBA (186)</code> [1]</td>
+   <td rowspan="2"><code>0xE5 (229)</code>⚠️ [2]</td>
    <td rowspan="2"><code>0xBA (186)</code></td>
    <td><code>0xBA (186)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 (229) *3</code></td>
+   <td rowspan="2"><code>0xE5 (229)</code>⚠️ [3]</td>
    <td rowspan="2"><code>0xBA (186)</code></td>
-   <td><code>0xBA (186)</code> *1</td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 (229) *2</code></td>
+   <td><code>0xBA (186)</code> [1]</td>
+   <td rowspan="2"><code>0xE5 (229)</code>⚠️  [2]</td>
    <td rowspan="2"><code>0x3B (59)</code></td>
    <td rowspan="2"><code>0x3B (59)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
    <td rowspan="2"><code>0x3B (59)</code></td>
-   <td rowspan="2"><code>0x3B (59)</code> *1</td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x3B (59)</code> [1]</td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
    <td rowspan="2"><code>0x3B (59)</code></td>
    <td rowspan="2"><code>0x3B (59)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"Semicolon"</code> with <kbd>Shift</kbd></th>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBB (187) </code>*1</td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBB (187)</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBB (187)</code> *1</td>
+   <td><code>0xBB (187)</code>⚠️ [1]</td>
+   <td><code>0xBB (187)</code>⚠️ </td>
+   <td><code>0xBB (187)</code>⚠️ [1]</td>
   </tr>
   <tr>
    <th scope="row"><code>"Quote"</code></th>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code>⚠️ </td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td rowspan="2"><code>0xBA (186)</code>⚠️ </td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186) *1</code></td>
+   <td><code>0xBA (186)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
+   <td><code>0xBA (186)</code>⚠️ </td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code>  *1</td>
+   <td><code>0xBA (186)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
+   <td rowspan="2"><code>0x3A (58)</code>⚠️ </td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code> *1</td>
+   <td rowspan="2"><code>0x3A (58)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDE (222)</code></td>
    <td rowspan="2"><code>0xDE (222)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
+   <td rowspan="2"><code>0x3A (58)</code>⚠️ </td>
    <td rowspan="2"><code>0xDE (222)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Quote"</code> with Shift</th>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xDE (222)</code> *1</td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0x38 (56)</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xDE (222)</code> *1</td>
+   <td><code>0xDE (222)</code>⚠️ [1]</td>
+   <td><code>0x38 (56)</code>⚠️ </td>
+   <td><code>0xDE (222)</code>⚠️ [1]</td>
   </tr>
   <tr>
    <th scope="row"><code>"BracketLeft"</code></th>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xC0(192)</code></td>
+   <td rowspan="2"><code>0xC0(192)</code>⚠️ </td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xC0(192)</code></td>
+   <td rowspan="2"><code>0xC0(192)</code>⚠️ </td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td><code>0xDB (219)</code> *1</td>
+   <td><code>0xDB (219)</code> [1]</td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x32 (50)</code></td>
+   <td><code>0x32 (50)</code>⚠️ </td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td><code>0xDB (219) *1 </code></td>
+   <td><code>0xDB (219)</code> [1]</td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code></td>
+   <td rowspan="2"><code>0x40 (64)</code>⚠️ </td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code> *1</td>
+   <td rowspan="2"><code>0x40 (64)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDB (219)</code></td>
    <td rowspan="2"><code>0xDB (219)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x40 (64)</code></td>
+   <td rowspan="2"><code>0x40 (64)</code>⚠️ </td>
    <td rowspan="2"><code>0xDB (219)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"BracketLeft"</code> with <kbd>Shift</kbd></th>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xC0 (192) *1</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xC0 (192)</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xC0 (192) *1</code></td>
+   <td><code>0xC0 (192)</code>⚠️ [1]</td>
+   <td><code>0xC0 (192)</code>⚠️ </td>
+   <td><code>0xC0 (192)</code>⚠️ [1]</td>
   </tr>
   <tr>
    <th scope="row"><code>"BracketRight"</code></th>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ </td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ </td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219) *1</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ </td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219) *1</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ </td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code> *1</td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0xDD (221)</code></td>
    <td rowspan="2"><code>0xDD (221)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDB (219)</code></td>
+   <td rowspan="2"><code>0xDB (219)</code>⚠️ </td>
    <td rowspan="2"><code>0xDD (221)</code></td>
   </tr>
   <tr>
@@ -835,18 +825,18 @@ tags:
   <tr>
    <th scope="row"><code>"Backquote"</code></th>
    <td rowspan="2"><code>0xC0 (192)</code></td>
-   <td rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
+   <td rowspan="2"><code>❌&nbsp;N/A</code></td>
    <td rowspan="2"><code>0xC0 (192)</code></td>
    <td rowspan="2"><code>0xC0 (192)</code></td>
-   <td rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
-   <td rowspan="2"><code>0xC0 (192)</code></td>
-   <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
-   <td rowspan="2"><code>0xC0 (192)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xF4 (244)</code></td>
+   <td rowspan="2"><code>❌&nbsp;N/A</code></td>
    <td rowspan="2"><code>0xC0 (192)</code></td>
    <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
    <td rowspan="2"><code>0xC0 (192)</code></td>
-   <td rowspan="2" style="background-color: rgb(153, 153, 153);"><code>N/A</code></td>
+   <td rowspan="2"><code>0xF4 (244)</code>⚠️ </td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>0xC0 (192)</code></td>
+   <td rowspan="2"><code>❌&nbsp;N/A</code></td>
    <td rowspan="2"><code>0xC0 (192)</code></td>
    <td colspan="3" rowspan="2"><code>0xC0 (192)</code></td>
    <td rowspan="2"><code>0xC0 (192)</code></td>
@@ -859,22 +849,22 @@ tags:
   <tr>
    <th scope="row"><code>"Backslash"</code></th>
    <td rowspan="2"><code>0xDC (220)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code>⚠️ </td>
    <td rowspan="2"><code>0xDC (220)</code></td>
    <td rowspan="2"><code>0xDC (220)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
-   <td rowspan="2"><code>0xDC (220)</code></td>
-   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
-   <td rowspan="2"><code>0xDC (220)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code>⚠️ </td>
    <td rowspan="2"><code>0xDC (220)</code></td>
    <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
    <td rowspan="2"><code>0xDC (220)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code>⚠️ </td>
    <td rowspan="2"><code>0xDC (220)</code></td>
    <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
    <td rowspan="2"><code>0xDC (220)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDD (221)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code>⚠️ </td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td colspan="3" rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDD (221)</code>⚠️ </td>
    <td rowspan="2"><code>0xDC (220)</code></td>
   </tr>
   <tr>
@@ -885,89 +875,88 @@ tags:
    <td colspan="3" rowspan="2"><code>0xBD (189)</code></td>
    <td colspan="3" rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
-   <td><code>0xBD (189)</code> *1</td>
+   <td><code>0xBD (189)</code> [1]</td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td><code>0xBD (189)</code></td>
-   <td><code>0xBD (189) *1</code></td>
+   <td><code>0xBD (189)</code> [1]</td>
    <td><code>0xBD (189)</code></td>
    <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
    <td rowspan="2"><code>0xAD (173)</code></td>
-   <td rowspan="2"><code>0xAD (173) *1</code></td>
+   <td rowspan="2"><code>0xAD (173)</code>[1]</td>
    <td rowspan="2"><code>0xAD (173)</code></td>
    <td colspan="3" rowspan="2"><code>0xAD (173)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Minus"</code> with <kbd>Shift</kbd></th>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBB (187)</code> *1</td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBB (187)</code></td>
+   <td><code>0xBB (187)</code>⚠️ [1]</td>
+   <td><code>0xBB (187)</code>⚠️ </td>
    <td><code>0xBD (189)</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBB (187) *1</code></td>
+   <td><code>0xBB (187)</code>⚠️ [1]</td>
    <td><code>0xBD (189)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Equal"</code></th>
    <td rowspan="2"><code>0xBB (187)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code>⚠️ </td>
    <td rowspan="2"><code>0xBB (187)</code></td>
    <td rowspan="2"><code>0xBB (187)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDE (222)</code></td>
+   <td rowspan="2"><code>0xDE (222)</code>⚠️ </td>
    <td rowspan="2"><code>0xBB (187)</code></td>
    <td rowspan="2"><code>0xBB (187)</code></td>
-   <td><code>0xBB (187) *1</code></td>
+   <td><code>0xBB (187)</code> [1]</td>
    <td rowspan="2"><code>0xBB (187)</code></td>
    <td rowspan="2"><code>0xBB (187)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x36 (54)</code></td>
+   <td><code>0x36 (54)</code>⚠️ </td>
    <td rowspan="2"><code>0xBB (187)</code></td>
    <td><code>0xBB (187)</code></td>
-   <td><code>0xBB (187) *1</code></td>
+   <td><code>0xBB (187)</code>[1]</td>
    <td><code>0xBB (187)</code></td>
    <td rowspan="2"><code>0x3D (61)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code></td>
+   <td rowspan="2"><code>0xA0 (160)</code>⚠️ </td>
    <td rowspan="2"><code>0x3D (61)</code></td>
    <td rowspan="2"><code>0x3D (61)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code> *1</td>
+   <td rowspan="2"><code>0xA0 (160)</code>⚠️ [1]</td>
    <td rowspan="2"><code>0x3D (61)</code></td>
    <td rowspan="2"><code>0x3D (61)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xA0 (160)</code></td>
+   <td rowspan="2"><code>0xA0 (160)</code>⚠️ </td>
    <td rowspan="2"><code>0x3D (61)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Equal"</code> with <kbd>Shift</kbd></th>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xC0 (192) *1</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xC0 (192)</code></td>
+   <td><code>0xC0 (192)</code>⚠️ [1]</td>
+   <td><code>0xC0 (192)</code>⚠️ </td>
    <td><code>0xBB (187)</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xC0 (192) *1</code></td>
+   <td><code>0xC0 (192)</code>⚠️ [1]</td>
    <td><code>0xBB (187)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"IntlRo"</code></th>
    <td rowspan="2"><code>0xC1 (193)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE2 (226)</code></td>
+   <td rowspan="2"><code>0xE2 (226)</code>⚠️ </td>
    <td rowspan="2"><code>0xC1 (193)</code></td>
    <td rowspan="2"><code>0xC1 (193)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE2 (226)</code></td>
+   <td rowspan="2"><code>0xE2 (226)</code>⚠️ </td>
    <td rowspan="2"><code>0xC1 (193)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td rowspan="2">*4</td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code><br>
-     </td>
-   <td rowspan="2">*4</td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2">[4]</td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
+   <td rowspan="2">[4]</td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 </code>(229) *5</td>
+   <td rowspan="2"><code>0xE5 (229)</code>⚠️ [5]</td>
    <td rowspan="2"><code>0x00 (0)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
    <td rowspan="2"><code>0x00 (0)</code></td>
    <td rowspan="2"><code>0xA7 (167)</code></td>
    <td rowspan="2"><code>0xA7 (167)</code></td>
    <td rowspan="2"><code>0x00 (0)</code></td>
    <td rowspan="2"><code>0x00 (0)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
    <td rowspan="2"><code>0x00 (0)</code></td>
   </tr>
   <tr>
@@ -976,35 +965,35 @@ tags:
   <tr>
    <th scope="row"><code>"IntlYen"</code></th>
    <td rowspan="2"><code>0xFF (255)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
    <td rowspan="2"><code>0xFF (255)</code></td>
    <td rowspan="2"><code>0xFF (255)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
    <td rowspan="2"><code>0xFF (255)</code></td>
-   <td><code>0x00 (0)</code></td>
-   <td><code>0x00 (0)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td rowspan="2">*4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td rowspan="2">*4</td>
-   <td><code>0x00 (0)</code></td>
-   <td><code>0x00 (0)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xE5 </code>(229) *5</td>
-   <td rowspan="2"><code>0x00 (0)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC </code>(220)</td>
-   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td><code>0x00 (0)</code>⚠️ </td>
+   <td><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2">[4]</td>
+   <td><code>0xDC (220)</code>⚠️ </td>
+   <td rowspan="2">[4]</td>
+   <td><code>0x00 (0)</code>⚠️ </td>
+   <td><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2"><code>0xE5 (229)</code>⚠️ [5]</td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
    <td rowspan="2"><code>0xDC </code>(220)</td>
    <td rowspan="2"><code>0xDC </code>(220)</td>
-   <td rowspan="2"><code>0x00 (0)</code></td>
-   <td rowspan="2"><code>0x00 (0)</code></td>
-   <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code></td>
-   <td rowspan="2"><code>0x00 (0)</code></td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
+   <td rowspan="2"><code>0xDC (220)</code>⚠️ </td>
+   <td rowspan="2"><code>0x00 (0)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"IntlYen"</code> with <kbd>Shift</kbd></th>
    <td><code>0xDC (220)</code></td>
    <td><code>0xDC (220)</code></td>
-   <td style="background-color: rgb(255, 204, 255);"><code>0xBD (189)</code></td>
+   <td><code>0xBD (189)</code>⚠️ </td>
    <td><code>0xDC (220)</code></td>
    <td><code>0xDC (220)</code></td>
   </tr>
@@ -1057,15 +1046,15 @@ tags:
  </tfoot>
 </table>
 
-<p>*1 The value is input from JIS keyboard. When you use ANSI keyboard, the keyCode value and inputted character are what you select from the US keyboard layout.</p>
+<p>[1] The value is input from JIS keyboard. When you use ANSI keyboard, the keyCode value and inputted character are what you select from the US keyboard layout.</p>
 
-<p>*2 The key is a dead key. The value of <code>keyup</code> event is <code>0xBA (186)</code>.</p>
+<p>[2] The key is a dead key. The value of <code>keyup</code> event is <code>0xBA (186)</code>.</p>
 
-<p>*3 The key is a dead key. The value of <code>keyup</code> event is <code>0x10 (16)</code>.</p>
+<p>[3] The key is a dead key. The value of <code>keyup</code> event is <code>0x10 (16)</code>.</p>
 
-<p>*4 No key events are fired.</p>
+<p>[4] No key events are fired.</p>
 
-<p>*5 The key isn't available with Greek keyboard layout (does not input any character). The value of <code>keyup</code> event is <code>0x00 (0)</code>.</p>
+<p>[5] The key isn't available with Greek keyboard layout (does not input any character). The value of <code>keyup</code> event is <code>0x00 (0)</code>.</p>
 
 <h3 id="Non-printable_keys_function_keys">Non-printable keys (function keys)</h3>
 
@@ -1074,7 +1063,7 @@ tags:
  <thead>
   <tr>
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1083,12 +1072,12 @@ tags:
   <tr>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
  </thead>
  <tbody>
@@ -1116,25 +1105,25 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"AltRight"</code> when it's <code>"AltGraph"</code> key</th>
-   <td>*1</td>
-   <td>*1</td>
-   <td style="background-color: rgb(153, 153, 153);">N/A</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xE1 (225)</code></td>
-   <td style="background-color: rgb(153, 153, 153);">N/A</td>
-   <td>*1</td>
-   <td style="background-color: rgb(153, 153, 153);">N/A</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xE1 (225)</code></td>
+   <td>[1]</td>
+   <td>[1]</td>
+   <td>❌&nbsp;N/A</td>
+   <td>&nbsp;<code>0xE1 (225)</code>⚠️ </td>
+   <td>❌&nbsp;N/A</td>
+   <td>[1]</td>
+   <td>❌&nbsp;N/A</td>
+   <td><code>0xE1 (225)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"CapsLock"</code></th>
-   <td><code>0x14 (20)</code> *2</td>
-   <td><code>0x14 (20)</code> *2</td>
+   <td><code>0x14 (20)</code> [2]</td>
+   <td><code>0x14 (20)</code> [2]</td>
    <td><code>0x14 (20)</code></td>
    <td><code>0x14 (20)</code></td>
    <td><code>0x14 (20)</code></td>
-   <td><code>0x14 (20)</code> *2</td>
+   <td><code>0x14 (20)</code> [2]</td>
    <td><code>0x14 (20)</code></td>
-   <td><code>0x14 (20)</code> *3</td>
+   <td><code>0x14 (20)</code> [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"ControlLeft"</code></th>
@@ -1166,19 +1155,19 @@ tags:
    <td><code>0x5B (91)</code></td>
    <td><code>0x5B (91)</code></td>
    <td><code>0x5B (91)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xE0 (224)</code></td>
+   <td><code>0xE0 (224)</code>⚠️ </td>
    <td><code>0x5B (91)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"OSRight"</code></th>
    <td><code>0x5C (92)</code></td>
    <td><code>0x5C (92)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x5D (93)</code></td>
+   <td><code>0x5D (93)</code>⚠️ </td>
    <td><code>0x5C (92)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x5D (93)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x5B (91)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xE0 (224)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x5B (91)</code></td>
+   <td><code>0x5D (93)</code>⚠️ </td>
+   <td><code>0x5B (91)</code>⚠️ </td>
+   <td><code>0xE0 (224)</code>⚠️ </td>
+   <td><code>0x5B (91)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"ShiftLeft"</code></th>
@@ -1208,15 +1197,15 @@ tags:
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
   <tr>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1225,18 +1214,18 @@ tags:
  </tfoot>
 </table>
 
-<p>*1 On Windows, <code>"AltGraph"</code> key causes <code>"ControlLeft"</code> key event and <code>"AltRight"</code> key event.</p>
+<p>[1] On Windows, pressing the <kbd>AltGraph</kbd> key raises both the <code>"ControlLeft"</code> and the <code>"AltRight"</code> key events.</p>
 
-<p>*2 When Japanese keyboard layout is active, <code>"CapsLock"</code> key without <kbd>Shift</kbd> causes <code>0xF0 (240)</code>. The key works as <code>"Alphanumeric"</code> key whose label is "英数".</p>
+<p>[2] When the Japanese keyboard layout is active, pressing the <kbd>CapsLock</kbd> key without pressing <kbd>Shift</kbd> raises <code>0xF0 (240)</code>. The key works as the <kbd>Alphanumeric</kbd> key whose label is <code>"英数"</code>.</p>
 
-<p>*3 When Japanese keyboard layout is active, <code>"CapsLock"</code> key without <kbd>Shift</kbd> causes <code>0x00 (0)</code>. The key works as <code>"Alphanumeric"</code> key whose label is <code>"英数"</code>.</p>
+<p>[3] When the Japanese keyboard layout is active, pressing the <kbd>"CapsLock"</kbd> key without pressing <kbd>Shift</kbd> raises <code>0x00 (0)</code>. The key works as the <kbd>"Alphanumeric"</kbd> key whose label is <code>"英数"</code>.</p>
 
 <table class="standard-table">
  <caption>keyCode values of each browser's keydown event caused by non-printable keys:</caption>
  <thead>
   <tr>
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1245,12 +1234,12 @@ tags:
   <tr>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
  </thead>
  <tbody>
@@ -1258,9 +1247,9 @@ tags:
    <th scope="row"><code>"ContextMenu"</code></th>
    <td><code>0x5D (93)</code></td>
    <td><code>0x5D (93)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *1</td>
+   <td><code>0x00 (0)</code>⚠️ [1]</td>
    <td><code>0x5D (93)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *1</td>
+   <td><code>0x00 (0)</code>⚠️ [1]</td>
    <td><code>0x5D (93)</code></td>
    <td><code>0x5D (93)</code></td>
    <td><code>0x5D (93)</code></td>
@@ -1322,14 +1311,14 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"Help"</code></th>
-   <td style="background-color: rgb(153, 153, 153);">N/A</td>
-   <td style="background-color: rgb(153, 153, 153);">N/A</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2D (45)</code> *2</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2F (47)</code> *3</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2D (45)</code> *2</td>
-   <td style="background-color: rgb(153, 153, 153);">N/A</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2D (45)</code> *2</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x06 (6)</code> *3</td>
+   <td>❌&nbsp;N/A</td>
+   <td>❌&nbsp;N/A</td>
+   <td><code>0x2D (45)</code><br/>⚠️ [2]</td>
+   <td><code>0x2F (47)</code><br/>⚠️ [3]</td>
+   <td><code>0x2D (45)</code><br/>⚠️ [2]</td>
+   <td>❌&nbsp;N/A</td>
+   <td><code>0x2D (45)</code><br/>⚠️ [2]</td>
+   <td><code>0x06 (6)</code><br/>⚠️ [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"Home"</code></th>
@@ -1432,34 +1421,34 @@ tags:
   </tr>
   <tr>
    <th scope="row"><code>"PrintScreen"</code></th>
-   <td><code>0x2C (44)</code> *4</td>
-   <td><code>0x2C (44)</code> *4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x7C (124)</code>*5</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2A (42)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x7C (124)</code>*5</td>
-   <td><code>0x2C (44)</code> *4</td>
+   <td><code>0x2C (44)</code> [4]</td>
+   <td><code>0x2C (44)</code> [4]</td>
+   <td><code>0x7C (124)</code><br/>⚠️ [5]</td>
+   <td><code>0x2A (42)</code>⚠️ </td>
+   <td><code>0x7C (124)</code><br/>⚠️ [5]</td>
+   <td><code>0x2C (44)</code> [4]</td>
    <td><code>0x2C (44)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2A (42)</code></td>
+   <td><code>0x2A (42)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"ScrollLock"</code></th>
    <td><code>0x91 (145)</code></td>
    <td><code>0x91 (145)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x7D (125)</code>*5</td>
+   <td><code>0x7D (125)</code><br/>⚠️ [5]</td>
    <td><code>0x91 (145)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x7D (125)</code>*5</td>
+   <td><code>0x7D (125)</code><br/>⚠️ [5]</td>
    <td><code>0x91 (145)</code></td>
    <td><code>0x91 (145)</code></td>
    <td><code>0x91 (145)</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"Pause"</code></th>
-   <td><code>0x13 (19)</code> *6</td>
-   <td><code>0x13 (19)</code> *6</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x7E (126)</code>*5</td>
+   <td><code>0x13 (19)</code> [6]</td>
+   <td><code>0x13 (19)</code> [6]</td>
+   <td><code>0x7E (126)</code><br/>⚠️ [5]</td>
    <td><code>0x13 (19)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x7E (126)</code>*5</td>
-   <td><code>0x13 (19)</code> *6</td>
+   <td><code>0x7E (126)</code><br/>⚠️ [5]</td>
+   <td><code>0x13 (19)</code> [6]</td>
    <td><code>0x13 (19)</code></td>
    <td><code>0x13 (19)</code></td>
   </tr>
@@ -1469,15 +1458,15 @@ tags:
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
   <tr>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1486,24 +1475,24 @@ tags:
  </tfoot>
 </table>
 
-<p>*1 keypress event is fired whose <code>keyCode</code> and <code>charCode</code> are <code>0x10 (16)</code> but text isn't inputted into editor.</p>
+<p>[1] A <code>keypress</code> event is fired and its <code>keyCode</code> and <code>charCode</code> are <code>0x10 (16)</code> but the text isn't actually entered into the editor.</p>
 
-<p>*2 On Mac, <code>"Help"</code> key is mapped to <code>"Insert"</code> key of PC keyboard. These <code>keyCode</code> values are the same as the <code>"Insert"</code> key's <code>keyCode</code> value.</p>
+<p>[2] On Mac, the <kbd>Help</kbd> key is mapped to the <kbd>Insert</kbd> key of PC keyboards. These <code>keyCode</code> values are the same as the <kbd>Insert</kbd> key's <code>keyCode</code> values.</p>
 
-<p>*3 Tested on Fedora 20.</p>
+<p >[3] Tested on Fedora 20.</p>
 
-<p>*4 Only <code>keyup</code> event is fired.</p>
+<p >[4] Only a <code>keyup</code> event is fired.</p>
 
-<p>*5 PC's <code>"PrintScreen"</code>, <code>"ScrollLock"</code> and <code>"Pause"</code> are mapped to Mac's <code>"F13"</code>, <code>"F14"</code> and <code>"F15"</code>. Chrome and Safari map same <code>keyCode</code> values with Mac's keys.</p>
+<p >[5] PC's <kbd>PrintScreen</kbd>, <kbd>ScrollLock</kbd> and <kbd>Pause</kbd> are mapped to Mac's <kbd>F13</kbd>, <kbd>F14</kbd> and <kbd>F15</kbd>, respectively. Chrome and Safari map them to the same <code>keyCode</code> values as Mac's keys.</p>
 
-<p>*6 <code>"Pause"</code> key with <kbd>Control</kbd> causes <code>0x03 (3)</code>.</p>
+<p >[6] <kbd>Pause</kbd> key with <kbd>Control</kbd> generates <code>0x03 (3)</code>.</p>
 
 <table class="standard-table">
  <caption>keyCode values of each browser's keydown event caused by function keys:</caption>
  <thead>
   <tr>
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1512,12 +1501,12 @@ tags:
   <tr>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
  </thead>
  <tbody>
@@ -1658,132 +1647,132 @@ tags:
    <td><code>0x7C (124)</code></td>
    <td><code>0x7C (124)</code></td>
    <td><code>0x7C (124)</code></td>
-   <td><code>0x7C (124)</code> *1</td>
+   <td><code>0x7C (124)</code> [1]</td>
    <td><code>0x7C (124)</code></td>
    <td><code>0x7C (124)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x2C (44)</code> *2</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x2C (44)</code> ⚠️ [2]</td>
+   <td><code>0x00 (0)</code>⚠️ [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F14"</code></th>
    <td><code>0x7D (125)</code></td>
    <td><code>0x7D (125)</code></td>
    <td><code>0x7D (125)</code></td>
-   <td><code>0x7D (125)</code> *1</td>
+   <td><code>0x7D (125)</code> [1]</td>
    <td><code>0x7D (125)</code></td>
    <td><code>0x7D (125)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x91 (145)</code> *2</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x91 (145)</code> ⚠️ [2]</td>
+   <td><code>0x00 (0)</code>⚠️ [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F15"</code></th>
    <td><code>0x7E (126)</code></td>
    <td><code>0x7E (126)</code></td>
    <td><code>0x7E (126)</code></td>
-   <td><code>0x7E (126)</code> *1</td>
+   <td><code>0x7E (126)</code> [1]</td>
    <td><code>0x7E (126)</code></td>
    <td><code>0x7E (126)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x13 (19)</code> *2</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x13 (19)</code> ⚠️ [2]</td>
+   <td><code>0x00 (0)</code>⚠️ [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F16"</code></th>
    <td><code>0x7F (127)</code></td>
    <td><code>0x7F (127)</code></td>
    <td><code>0x7F (127)</code></td>
-   <td><code>0x7F (127)</code> *1</td>
+   <td><code>0x7F (127)</code> [1]</td>
    <td><code>0x7F (127)</code></td>
    <td><code>0x7F (127)</code></td>
    <td><code>0x7F (127)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x00 (0)</code>⚠️  [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F17"</code></th>
    <td><code>0x80 (128)</code></td>
    <td><code>0x80 (128)</code></td>
    <td><code>0x80 (128)</code></td>
-   <td><code>0x80 (128)</code> *1</td>
+   <td><code>0x80 (128)</code> [1]</td>
    <td><code>0x80 (128)</code></td>
    <td><code>0x80 (128)</code></td>
    <td><code>0x80 (128)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x00 (0)</code>⚠️  [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F18"</code></th>
    <td><code>0x81 (129)</code></td>
    <td><code>0x81 (129)</code></td>
    <td><code>0x81 (129)</code></td>
-   <td><code>0x81 (129)</code> *1</td>
+   <td><code>0x81 (129)</code> [1]</td>
    <td><code>0x81 (129)</code></td>
    <td><code>0x81 (129)</code></td>
    <td><code>0x81 (129)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x00 (0)</code>⚠️  [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F19"</code></th>
    <td><code>0x82 (130)</code></td>
    <td><code>0x82 (130)</code></td>
    <td><code>0x82 (130)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *4</td>
+   <td>❌&nbsp;<code>N/A</code> [4]</td>
    <td><code>0x82 (130)</code></td>
    <td><code>0x82 (130)</code></td>
    <td><code>0x82 (130)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td><code>0x00 (0)</code>⚠️  [3]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F20"</code></th>
    <td><code>0x83 (131)</code></td>
    <td><code>0x83 (131)</code></td>
    <td><code>0x83 (131)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xE5 (229)</code> *5</td>
+   <td>❌&nbsp;<code>N/A</code> [4]</td>
+   <td><code>0xE5 (229)</code>⚠️  [5]</td>
    <td><code>0x83 (131)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *6</td>
+   <td><code>0x00 (0)</code>⚠️ </td>
+   <td>❌&nbsp;<code>N/A</code> [6]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F21"</code></th>
    <td><code>0x84 (132)</code></td>
    <td><code>0x84 (132)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
+   <td>❌&nbsp;<code>N/A</code> [4]</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
    <td><code>0x84 (132)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *8</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *6</td>
+   <td>❌&nbsp;<code>N/A</code> [8]</td>
+   <td>❌&nbsp;<code>N/A</code> [6]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F22"</code></th>
    <td><code>0x85 (133)</code></td>
    <td><code>0x85 (133)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
+   <td>❌&nbsp;<code>N/A</code> [4]</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
    <td><code>0x85 (133)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *8</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *6</td>
+   <td>❌&nbsp;<code>N/A</code> [8]</td>
+   <td>❌&nbsp;<code>N/A</code> [6]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F23"</code></th>
    <td><code>0x86 (134)</code></td>
    <td><code>0x86 (134)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
+   <td>❌&nbsp;<code>N/A</code> [4]</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
    <td><code>0x86 (134)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *8</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *6</td>
+   <td>❌&nbsp;<code>N/A</code> [8]</td>
+   <td>❌&nbsp;<code>N/A</code> [6]</td>
   </tr>
   <tr>
    <th scope="row"><code>"F24"</code></th>
    <td><code>0x87 (135)</code></td>
    <td><code>0x87 (135)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *4</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *7</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
+   <td>❌&nbsp;<code>N/A</code> [4]</td>
+   <td><code>0x00 (0)</code>⚠️  [7]</td>
    <td><code>0x87 (135)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>N/A</code> *8</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code> *3</td>
+   <td>❌&nbsp;<code>N/A</code> [8]</td>
+   <td><code>0x00 (0)</code>⚠️  [3]</td>
   </tr>
  </tbody>
  <tfoot>
@@ -1791,15 +1780,15 @@ tags:
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
   <tr>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1808,21 +1797,21 @@ tags:
  </tfoot>
 </table>
 
-<p>*1 Tested on Fedora 20.</p>
+<p >[1] Tested on Fedora 20.</p>
 
-<p>*2 PC's <code>"PrintScreen"</code>, <code>"ScrollLock"</code> and <code>"Pause"</code> are mapped to <code>Mac's "F13"</code>, <code>"F14"</code> and <code>"F15"</code>. Firefox maps same <code>keyCode</code> values with PC's keys.</p>
+<p >[2] On PCs, <kbd>PrintScreen</kbd>, <kbd>ScrollLock</kbd> and <kbd>Pause</kbd> are mapped to the Mac's <kbd>F13</kbd>, <kbd>F14</kbd> and <kbd>F15</kbd>, respectively. Firefox sets for them the same <code>keyCode</code> values as the PC's keys.</p>
 
-<p>*3 Tested on Fedora 20. The keys don't cause <code>GDK_Fxx</code> keysyms. If the keys cause proper keysyms, these values must be same as IE.</p>
+<p >[3] Tested on Fedora 20. The keys don't cause <code>GDK_Fxx</code> keysyms. If the keys cause proper keysyms, these values must be same as IE.</p>
 
-<p>*4 Tested on Fedora 20. The keys don't cause DOM key events on Chromium.</p>
+<p >[4] Tested on Fedora 20. The keys don't cause DOM key events on Chromium.</p>
 
-<p>*5 <code>keyUp</code> event's keyCode value is <code>0x83 (131)</code>.</p>
+<p >[5] The <code>keyCode</code> value of a <code>keyUp</code> event is <code>0x83 (131)</code>.</p>
 
-<p>*6 Tested on Fedora 20. The keys don't cause DOM key events on Firefox.</p>
+<p >[6] Tested on Fedora 20. The keys don't cause DOM key events on Firefox.</p>
 
-<p>*7 Only <code>keydown</code> event is fired.</p>
+<p >[7] Only the <code>keydown</code> event is fired.</p>
 
-<p>*8 No DOM key events are fired on Firefox.</p>
+<p >[8] No DOM key events are fired on Firefox.</p>
 
 <h3 id="Numpad_keys">Numpad keys</h3>
 
@@ -1831,7 +1820,7 @@ tags:
  <thead>
   <tr>
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -1840,12 +1829,12 @@ tags:
   <tr>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
  </thead>
  <tbody>
@@ -1853,11 +1842,11 @@ tags:
    <th scope="row"><code>"NumLock"</code></th>
    <td><code>0x90 (144)</code></td>
    <td><code>0x90 (144)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x0C (12)</code> *1</td>
+   <td><code>0x0C (12)</code>⚠️  [1]</td>
    <td><code>0x90 (144)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x0C (12)</code> *1</td>
+   <td><code>0x0C (12)</code>⚠️  [1]</td>
    <td><code>0x90 (144)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x0C (12)</code> *1</td>
+   <td><code>0x0C (12)</code>⚠️  [1]</td>
    <td><code>0x90 (144)</code></td>
   </tr>
   <tr>
@@ -1985,23 +1974,23 @@ tags:
    <th scope="row"><code>"NumpadComma"</code> inputting <code>","</code></th>
    <td><code>0xC2 (194)</code></td>
    <td><code>0xC2 (194)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBC (188)</code></td>
-   <td style="background-color: rgb(153, 153, 153);"><code>Always inputs </code>"."</td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBC (188)</code></td>
+   <td><code>0xBC (188)</code>⚠️ </td>
+   <td>❌&nbsp;<em>Always inputs </em><code>"."</code></td>
+   <td><code>0xBC (188)</code>⚠️ </td>
    <td><code>0xC2 (194)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x6C (108)</code></td>
-   <td style="background-color: rgb(153, 153, 153);"><code>Always inputs </code>"."</td>
+   <td><code>0x6C (108)</code>⚠️ </td>
+   <td>❌&nbsp;<em>Always inputs </em><code>"."</code></td>
   </tr>
   <tr>
    <th scope="row"><code>"NumpadComma"</code> inputting <code>"."</code> or empty string</th>
    <td><code>0xC2 (194)</code></td>
    <td><code>0xC2 (194)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBE (190)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x6E (110)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBE (190)</code></td>
+   <td><code>0xBE (190)</code>⚠️ </td>
+   <td><code>0x6E (110)</code>⚠️ </td>
+   <td><code>0xBE (190)</code>⚠️ </td>
    <td><code>0xC2 (194)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x6C (108)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x6E (110)</code></td>
+   <td><code>0x6C (108)</code>⚠️ </td>
+   <td><code>0x6E (110)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"NumpadDecimal"</code> inputting <code>"."</code></th>
@@ -2019,11 +2008,11 @@ tags:
    <td><code>0x6E (110)</code></td>
    <td><code>0x6E (110)</code></td>
    <td><code>0x6E (110)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x6C (108)</code></td>
+   <td><code>0x6C (108)</code>⚠️ </td>
    <td><code>0x6E (110)</code></td>
    <td><code>0x6E (110)</code></td>
    <td><code>0x6E (110)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x6C (108)</code></td>
+   <td><code>0x6C (108)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"NumpadDivide"</code></th>
@@ -2051,12 +2040,12 @@ tags:
    <th scope="row"><code>"NumpadEqual"</code></th>
    <td><code>0x0C (12)</code></td>
    <td><code>0x0C (12)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBB (187)</code></td>
+   <td><code>0xBB (187)</code>⚠️ </td>
+   <td><code>0xBB (187)</code>⚠️ </td>
+   <td><code>0xBB (187)</code>⚠️ </td>
    <td><code>0x0C (12)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x3D (61)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0x3D (61)</code></td>
+   <td><code>0x3D (61)</code>⚠️ </td>
+   <td><code>0x3D (61)</code>⚠️ </td>
   </tr>
   <tr>
    <th scope="row"><code>"NumpadMultiply"</code></th>
@@ -2086,15 +2075,15 @@ tags:
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
-   <th scope="col">Mac (10.9)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Mac (10.9)</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Mac&nbsp;(10.9)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
   <tr>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th colspan="2" scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th scope="col">Safari 7</th>
@@ -2103,14 +2092,14 @@ tags:
  </tfoot>
 </table>
 
-<p>*1 <code>"NumLock"</code> key works as <code>"Clear"</code> key on Mac.</p>
+<p >[1] <code>"NumLock"</code> key works as <code>"Clear"</code> key on Mac.</p>
 
 <table class="standard-table">
  <caption>keyCode values of each browser's keydown event caused by keys in numpad without NumLock state</caption>
  <thead>
   <tr>
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th colspan="2" scope="col">Gecko 29</th>
@@ -2118,9 +2107,9 @@ tags:
   <tr>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
  </thead>
  <tbody>
@@ -2218,12 +2207,12 @@ tags:
    <th rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
    <th scope="col">Windows</th>
    <th scope="col">Windows</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
    <th scope="col">Windows</th>
-   <th scope="col">Linux (Ubuntu 14.04)</th>
+   <th scope="col">Linux (Ubuntu&nbsp;14.04)</th>
   </tr>
   <tr>
-   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">IE 11</th>
    <th scope="col">Google Chrome 34</th>
    <th scope="col">Chromium 34</th>
    <th colspan="2" scope="col">Gecko 29</th>
@@ -2231,947 +2220,949 @@ tags:
  </tfoot>
 </table>
 
-<p>* Recent Mac doesn't have <code>"NumLock"</code> key and state. Therefore, unlocked state isn't available.</p>
+<p><strong>Note:</strong> Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.</p>
 
 <h2 id="Constants_for_keyCode_value">Constants for keyCode value</h2>
 
 <p>Gecko defines a lot of <code>keyCode</code> values in <code>KeyboardEvent</code> for making the mapping table explicitly. These values are useful for add-on developers of Firefox, but not so useful in public web pages.</p>
 
-<table class="standard-table" style="width: auto;">
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Constant</th>
+   <th>Value</th>
+   <th>Description</th>
+  </tr>
+ </thead>
  <tbody>
   <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
    <td><code>DOM_VK_CANCEL</code></td>
-   <td style="white-space: nowrap;">0x03 (3)</td>
+   <td >0x03 (3)</td>
    <td>Cancel key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_HELP</code></td>
-   <td style="white-space: nowrap;">0x06 (6)</td>
+   <td >0x06 (6)</td>
    <td>Help key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_BACK_SPACE</code></td>
-   <td style="white-space: nowrap;">0x08 (8)</td>
+   <td >0x08 (8)</td>
    <td>Backspace key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_TAB</code></td>
-   <td style="white-space: nowrap;">0x09 (9)</td>
+   <td >0x09 (9)</td>
    <td>Tab key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CLEAR</code></td>
-   <td style="white-space: nowrap;">0x0C (12)</td>
+   <td >0x0C (12)</td>
    <td>"5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_RETURN</code></td>
-   <td style="white-space: nowrap;">0x0D (13)</td>
+   <td >0x0D (13)</td>
    <td>Return/enter key on the main keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ENTER</code></td>
-   <td style="white-space: nowrap;">0x0E (14)</td>
+   <td >0x0E (14)</td>
    <td>Reserved, but not used. {{deprecated_inline}} (Dropped, see {{bug(969247)}}.)</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SHIFT</code></td>
-   <td style="white-space: nowrap;">0x10 (16)</td>
+   <td >0x10 (16)</td>
    <td>Shift key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CONTROL</code></td>
-   <td style="white-space: nowrap;">0x11 (17)</td>
+   <td >0x11 (17)</td>
    <td>Control key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ALT</code></td>
-   <td style="white-space: nowrap;">0x12 (18)</td>
+   <td >0x12 (18)</td>
    <td>Alt (Option on Mac) key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PAUSE</code></td>
-   <td style="white-space: nowrap;">0x13 (19)</td>
+   <td >0x13 (19)</td>
    <td>Pause key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CAPS_LOCK</code></td>
-   <td style="white-space: nowrap;">0x14 (20)</td>
+   <td >0x14 (20)</td>
    <td>Caps lock.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_KANA</code></td>
-   <td style="white-space: nowrap;">0x15 (21)</td>
+   <td >0x15 (21)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_HANGUL</code></td>
-   <td style="white-space: nowrap;">0x15 (21)</td>
+   <td >0x15 (21)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_EISU</code></td>
-   <td style="white-space: nowrap;">0x 16 (22)</td>
+   <td >0x 16 (22)</td>
    <td>"英数" key on Japanese Mac keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_JUNJA</code></td>
-   <td style="white-space: nowrap;">0x17 (23)</td>
+   <td >0x17 (23)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_FINAL</code></td>
-   <td style="white-space: nowrap;">0x18 (24)</td>
+   <td >0x18 (24)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_HANJA</code></td>
-   <td style="white-space: nowrap;">0x19 (25)</td>
+   <td >0x19 (25)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_KANJI</code></td>
-   <td style="white-space: nowrap;">0x19 (25)</td>
+   <td >0x19 (25)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ESCAPE</code></td>
-   <td style="white-space: nowrap;">0x1B (27)</td>
+   <td >0x1B (27)</td>
    <td>Escape key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CONVERT</code></td>
-   <td style="white-space: nowrap;">0x1C (28)</td>
+   <td >0x1C (28)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NONCONVERT</code></td>
-   <td style="white-space: nowrap;">0x1D (29)</td>
+   <td >0x1D (29)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ACCEPT</code></td>
-   <td style="white-space: nowrap;">0x1E (30)</td>
+   <td >0x1E (30)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_MODECHANGE</code></td>
-   <td style="white-space: nowrap;">0x1F (31)</td>
+   <td >0x1F (31)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SPACE</code></td>
-   <td style="white-space: nowrap;">0x20 (32)</td>
+   <td >0x20 (32)</td>
    <td>Space bar.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PAGE_UP</code></td>
-   <td style="white-space: nowrap;">0x21 (33)</td>
+   <td >0x21 (33)</td>
    <td>Page Up key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PAGE_DOWN</code></td>
-   <td style="white-space: nowrap;">0x22 (34)</td>
+   <td >0x22 (34)</td>
    <td>Page Down key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_END</code></td>
-   <td style="white-space: nowrap;">0x23 (35)</td>
+   <td >0x23 (35)</td>
    <td>End key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_HOME</code></td>
-   <td style="white-space: nowrap;">0x24 (36)</td>
+   <td >0x24 (36)</td>
    <td>Home key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_LEFT</code></td>
-   <td style="white-space: nowrap;">0x25 (37)</td>
+   <td >0x25 (37)</td>
    <td>Left arrow.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_UP</code></td>
-   <td style="white-space: nowrap;">0x26 (38)</td>
+   <td >0x26 (38)</td>
    <td>Up arrow.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_RIGHT</code></td>
-   <td style="white-space: nowrap;">0x27 (39)</td>
+   <td >0x27 (39)</td>
    <td>Right arrow.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_DOWN</code></td>
-   <td style="white-space: nowrap;">0x28 (40)</td>
+   <td >0x28 (40)</td>
    <td>Down arrow.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SELECT</code></td>
-   <td style="white-space: nowrap;">0x29 (41)</td>
+   <td >0x29 (41)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PRINT</code></td>
-   <td style="white-space: nowrap;">0x2A (42)</td>
+   <td >0x2A (42)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_EXECUTE</code></td>
-   <td style="white-space: nowrap;">0x2B (43)</td>
+   <td >0x2B (43)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PRINTSCREEN</code></td>
-   <td style="white-space: nowrap;">0x2C (44)</td>
+   <td >0x2C (44)</td>
    <td>Print Screen key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_INSERT</code></td>
-   <td style="white-space: nowrap;">0x2D (45)</td>
+   <td >0x2D (45)</td>
    <td>Ins(ert) key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_DELETE</code></td>
-   <td style="white-space: nowrap;">0x2E (46)</td>
+   <td >0x2E (46)</td>
    <td>Del(ete) key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_0</code></td>
-   <td style="white-space: nowrap;">0x30 (48)</td>
+   <td >0x30 (48)</td>
    <td>"0" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_1</code></td>
-   <td style="white-space: nowrap;">0x31 (49)</td>
+   <td >0x31 (49)</td>
    <td>"1" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_2</code></td>
-   <td style="white-space: nowrap;">0x32 (50)</td>
+   <td >0x32 (50)</td>
    <td>"2" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_3</code></td>
-   <td style="white-space: nowrap;">0x33 (51)</td>
+   <td >0x33 (51)</td>
    <td>"3" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_4</code></td>
-   <td style="white-space: nowrap;">0x34 (52)</td>
+   <td >0x34 (52)</td>
    <td>"4" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_5</code></td>
-   <td style="white-space: nowrap;">0x35 (53)</td>
+   <td >0x35 (53)</td>
    <td>"5" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_6</code></td>
-   <td style="white-space: nowrap;">0x36 (54)</td>
+   <td >0x36 (54)</td>
    <td>"6" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_7</code></td>
-   <td style="white-space: nowrap;">0x37 (55)</td>
+   <td >0x37 (55)</td>
    <td>"7" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_8</code></td>
-   <td style="white-space: nowrap;">0x38 (56)</td>
+   <td >0x38 (56)</td>
    <td>"8" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_9</code></td>
-   <td style="white-space: nowrap;">0x39 (57)</td>
+   <td >0x39 (57)</td>
    <td>"9" key in standard key location.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_COLON</code></td>
-   <td style="white-space: nowrap;">0x3A (58)</td>
+   <td >0x3A (58)</td>
    <td>Colon (":") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SEMICOLON</code></td>
-   <td style="white-space: nowrap;">0x3B (59)</td>
+   <td >0x3B (59)</td>
    <td>Semicolon (";") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_LESS_THAN</code></td>
-   <td style="white-space: nowrap;">0x3C (60)</td>
+   <td >0x3C (60)</td>
    <td>Less-than ("&lt;") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_EQUALS</code></td>
-   <td style="white-space: nowrap;">0x3D (61)</td>
+   <td >0x3D (61)</td>
    <td>Equals ("=") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_GREATER_THAN</code></td>
-   <td style="white-space: nowrap;">0x3E (62)</td>
+   <td >0x3E (62)</td>
    <td>Greater-than ("&gt;") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_QUESTION_MARK</code></td>
-   <td style="white-space: nowrap;">0x3F (63)</td>
+   <td >0x3F (63)</td>
    <td>Question mark ("?") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_AT</code></td>
-   <td style="white-space: nowrap;">0x40 (64)</td>
+   <td >0x40 (64)</td>
    <td>Atmark ("@") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_A</code></td>
-   <td style="white-space: nowrap;">0x41 (65)</td>
+   <td >0x41 (65)</td>
    <td>"A" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_B</code></td>
-   <td style="white-space: nowrap;">0x42 (66)</td>
+   <td >0x42 (66)</td>
    <td>"B" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_C</code></td>
-   <td style="white-space: nowrap;">0x43 (67)</td>
+   <td >0x43 (67)</td>
    <td>"C" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_D</code></td>
-   <td style="white-space: nowrap;">0x44 (68)</td>
+   <td >0x44 (68)</td>
    <td>"D" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_E</code></td>
-   <td style="white-space: nowrap;">0x45 (69)</td>
+   <td >0x45 (69)</td>
    <td>"E" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F</code></td>
-   <td style="white-space: nowrap;">0x46 (70)</td>
+   <td >0x46 (70)</td>
    <td>"F" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_G</code></td>
-   <td style="white-space: nowrap;">0x47 (71)</td>
+   <td >0x47 (71)</td>
    <td>"G" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_H</code></td>
-   <td style="white-space: nowrap;">0x48 (72)</td>
+   <td >0x48 (72)</td>
    <td>"H" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_I</code></td>
-   <td style="white-space: nowrap;">0x49 (73)</td>
+   <td >0x49 (73)</td>
    <td>"I" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_J</code></td>
-   <td style="white-space: nowrap;">0x4A (74)</td>
+   <td >0x4A (74)</td>
    <td>"J" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_K</code></td>
-   <td style="white-space: nowrap;">0x4B (75)</td>
+   <td >0x4B (75)</td>
    <td>"K" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_L</code></td>
-   <td style="white-space: nowrap;">0x4C (76)</td>
+   <td >0x4C (76)</td>
    <td>"L" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_M</code></td>
-   <td style="white-space: nowrap;">0x4D (77)</td>
+   <td >0x4D (77)</td>
    <td>"M" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_N</code></td>
-   <td style="white-space: nowrap;">0x4E (78)</td>
+   <td >0x4E (78)</td>
    <td>"N" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_O</code></td>
-   <td style="white-space: nowrap;">0x4F (79)</td>
+   <td >0x4F (79)</td>
    <td>"O" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_P</code></td>
-   <td style="white-space: nowrap;">0x50 (80)</td>
+   <td >0x50 (80)</td>
    <td>"P" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_Q</code></td>
-   <td style="white-space: nowrap;">0x51 (81)</td>
+   <td >0x51 (81)</td>
    <td>"Q" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_R</code></td>
-   <td style="white-space: nowrap;">0x52 (82)</td>
+   <td >0x52 (82)</td>
    <td>"R" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_S</code></td>
-   <td style="white-space: nowrap;">0x53 (83)</td>
+   <td >0x53 (83)</td>
    <td>"S" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_T</code></td>
-   <td style="white-space: nowrap;">0x54 (84)</td>
+   <td >0x54 (84)</td>
    <td>"T" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_U</code></td>
-   <td style="white-space: nowrap;">0x55 (85)</td>
+   <td >0x55 (85)</td>
    <td>"U" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_V</code></td>
-   <td style="white-space: nowrap;">0x56 (86)</td>
+   <td >0x56 (86)</td>
    <td>"V" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_W</code></td>
-   <td style="white-space: nowrap;">0x57 (87)</td>
+   <td >0x57 (87)</td>
    <td>"W" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_X</code></td>
-   <td style="white-space: nowrap;">0x58 (88)</td>
+   <td >0x58 (88)</td>
    <td>"X" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_Y</code></td>
-   <td style="white-space: nowrap;">0x59 (89)</td>
+   <td >0x59 (89)</td>
    <td>"Y" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_Z</code></td>
-   <td style="white-space: nowrap;">0x5A (90)</td>
+   <td >0x5A (90)</td>
    <td>"Z" key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN</code></td>
-   <td style="white-space: nowrap;">0x5B (91)</td>
+   <td >0x5B (91)</td>
    <td>Windows logo key on Windows. Or Super or Hyper key on Linux.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CONTEXT_MENU</code></td>
-   <td style="white-space: nowrap;">0x5D (93)</td>
+   <td >0x5D (93)</td>
    <td>Opening context menu key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SLEEP</code></td>
-   <td style="white-space: nowrap;">0x5F (95)</td>
+   <td >0x5F (95)</td>
    <td>Linux support for this keycode was added in Gecko 4.0.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD0</code></td>
-   <td style="white-space: nowrap;">0x60 (96)</td>
+   <td >0x60 (96)</td>
    <td>"0" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD1</code></td>
-   <td style="white-space: nowrap;">0x61 (97)</td>
+   <td >0x61 (97)</td>
    <td>"1" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD2</code></td>
-   <td style="white-space: nowrap;">0x62 (98)</td>
+   <td >0x62 (98)</td>
    <td>"2" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD3</code></td>
-   <td style="white-space: nowrap;">0x63 (99)</td>
+   <td >0x63 (99)</td>
    <td>"3" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD4</code></td>
-   <td style="white-space: nowrap;">0x64 (100)</td>
+   <td >0x64 (100)</td>
    <td>"4" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD5</code></td>
-   <td style="white-space: nowrap;">0x65 (101)</td>
+   <td >0x65 (101)</td>
    <td>"5" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD6</code></td>
-   <td style="white-space: nowrap;">0x66 (102)</td>
+   <td >0x66 (102)</td>
    <td>"6" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD7</code></td>
-   <td style="white-space: nowrap;">0x67 (103)</td>
+   <td >0x67 (103)</td>
    <td>"7" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD8</code></td>
-   <td style="white-space: nowrap;">0x68 (104)</td>
+   <td >0x68 (104)</td>
    <td>"8" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUMPAD9</code></td>
-   <td style="white-space: nowrap;">0x69 (105)</td>
+   <td >0x69 (105)</td>
    <td>"9" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_MULTIPLY</code></td>
-   <td style="white-space: nowrap;">0x6A (106)</td>
+   <td >0x6A (106)</td>
    <td>"*" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ADD</code></td>
-   <td style="white-space: nowrap;">0x6B (107)</td>
+   <td >0x6B (107)</td>
    <td>"+" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SEPARATOR</code></td>
-   <td style="white-space: nowrap;">0x6C (108)</td>
+   <td >0x6C (108)</td>
    <td></td>
   </tr>
   <tr>
    <td><code>DOM_VK_SUBTRACT</code></td>
-   <td style="white-space: nowrap;">0x6D (109)</td>
+   <td >0x6D (109)</td>
    <td>"-" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_DECIMAL</code></td>
-   <td style="white-space: nowrap;">0x6E (110)</td>
+   <td >0x6E (110)</td>
    <td>Decimal point on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_DIVIDE</code></td>
-   <td style="white-space: nowrap;">0x6F (111)</td>
+   <td >0x6F (111)</td>
    <td>"/" on the numeric keypad.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F1</code></td>
-   <td style="white-space: nowrap;">0x70 (112)</td>
+   <td >0x70 (112)</td>
    <td>F1 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F2</code></td>
-   <td style="white-space: nowrap;">0x71 (113)</td>
+   <td >0x71 (113)</td>
    <td>F2 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F3</code></td>
-   <td style="white-space: nowrap;">0x72 (114)</td>
+   <td >0x72 (114)</td>
    <td>F3 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F4</code></td>
-   <td style="white-space: nowrap;">0x73 (115)</td>
+   <td >0x73 (115)</td>
    <td>F4 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F5</code></td>
-   <td style="white-space: nowrap;">0x74 (116)</td>
+   <td >0x74 (116)</td>
    <td>F5 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F6</code></td>
-   <td style="white-space: nowrap;">0x75 (117)</td>
+   <td >0x75 (117)</td>
    <td>F6 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F7</code></td>
-   <td style="white-space: nowrap;">0x76 (118)</td>
+   <td >0x76 (118)</td>
    <td>F7 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F8</code></td>
-   <td style="white-space: nowrap;">0x77 (119)</td>
+   <td >0x77 (119)</td>
    <td>F8 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F9</code></td>
-   <td style="white-space: nowrap;">0x78 (120)</td>
+   <td >0x78 (120)</td>
    <td>F9 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F10</code></td>
-   <td style="white-space: nowrap;">0x79 (121)</td>
+   <td >0x79 (121)</td>
    <td>F10 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F11</code></td>
-   <td style="white-space: nowrap;">0x7A (122)</td>
+   <td >0x7A (122)</td>
    <td>F11 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F12</code></td>
-   <td style="white-space: nowrap;">0x7B (123)</td>
+   <td >0x7B (123)</td>
    <td>F12 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F13</code></td>
-   <td style="white-space: nowrap;">0x7C (124)</td>
+   <td >0x7C (124)</td>
    <td>F13 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F14</code></td>
-   <td style="white-space: nowrap;">0x7D (125)</td>
+   <td >0x7D (125)</td>
    <td>F14 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F15</code></td>
-   <td style="white-space: nowrap;">0x7E (126)</td>
+   <td >0x7E (126)</td>
    <td>F15 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F16</code></td>
-   <td style="white-space: nowrap;">0x7F (127)</td>
+   <td >0x7F (127)</td>
    <td>F16 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F17</code></td>
-   <td style="white-space: nowrap;">0x80 (128)</td>
+   <td >0x80 (128)</td>
    <td>F17 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F18</code></td>
-   <td style="white-space: nowrap;">0x81 (129)</td>
+   <td >0x81 (129)</td>
    <td>F18 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F19</code></td>
-   <td style="white-space: nowrap;">0x82 (130)</td>
+   <td >0x82 (130)</td>
    <td>F19 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F20</code></td>
-   <td style="white-space: nowrap;">0x83 (131)</td>
+   <td >0x83 (131)</td>
    <td>F20 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F21</code></td>
-   <td style="white-space: nowrap;">0x84 (132)</td>
+   <td >0x84 (132)</td>
    <td>F21 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F22</code></td>
-   <td style="white-space: nowrap;">0x85 (133)</td>
+   <td >0x85 (133)</td>
    <td>F22 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F23</code></td>
-   <td style="white-space: nowrap;">0x86 (134)</td>
+   <td >0x86 (134)</td>
    <td>F23 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_F24</code></td>
-   <td style="white-space: nowrap;">0x87 (135)</td>
+   <td >0x87 (135)</td>
    <td>F24 key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_NUM_LOCK</code></td>
-   <td style="white-space: nowrap;">0x90 (144)</td>
+   <td >0x90 (144)</td>
    <td>Num Lock key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SCROLL_LOCK</code></td>
-   <td style="white-space: nowrap;">0x91 (145)</td>
+   <td >0x91 (145)</td>
    <td>Scroll Lock key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_JISHO</code></td>
-   <td style="white-space: nowrap;">0x92 (146)</td>
+   <td >0x92 (146)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for "Dictionary" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_MASSHOU</code></td>
-   <td style="white-space: nowrap;">0x93 (147)</td>
+   <td >0x93 (147)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for "Unregister word" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_TOUROKU</code></td>
-   <td style="white-space: nowrap;">0x94 (148)</td>
+   <td >0x94 (148)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for "Register word" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_LOYA</code></td>
-   <td style="white-space: nowrap;">0x95 (149)</td>
+   <td >0x95 (149)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for "Left OYAYUBI" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_ROYA</code></td>
-   <td style="white-space: nowrap;">0x96 (150)</td>
+   <td >0x96 (150)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for "Right OYAYUBI" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CIRCUMFLEX</code></td>
-   <td style="white-space: nowrap;">0xA0 (160)</td>
+   <td >0xA0 (160)</td>
    <td>Circumflex ("^") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_EXCLAMATION</code></td>
-   <td style="white-space: nowrap;">0xA1 (161)</td>
+   <td >0xA1 (161)</td>
    <td>Exclamation ("!") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_DOUBLE_QUOTE</code></td>
-   <td style="white-space: nowrap;">0xA3 (162)</td>
+   <td >0xA3 (162)</td>
    <td>Double quote (""") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_HASH</code></td>
-   <td style="white-space: nowrap;">0xA3 (163)</td>
+   <td >0xA3 (163)</td>
    <td>Hash ("#") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_DOLLAR</code></td>
-   <td style="white-space: nowrap;">0xA4 (164)</td>
+   <td >0xA4 (164)</td>
    <td>Dollar sign ("$") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PERCENT</code></td>
-   <td style="white-space: nowrap;">0xA5 (165)</td>
+   <td >0xA5 (165)</td>
    <td>Percent ("%") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_AMPERSAND</code></td>
-   <td style="white-space: nowrap;">0xA6 (166)</td>
+   <td >0xA6 (166)</td>
    <td>Ampersand ("&amp;") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_UNDERSCORE</code></td>
-   <td style="white-space: nowrap;">0xA7 (167)</td>
+   <td >0xA7 (167)</td>
    <td>Underscore ("_") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_OPEN_PAREN</code></td>
-   <td style="white-space: nowrap;">0xA8 (168)</td>
+   <td >0xA8 (168)</td>
    <td>Open parenthesis ("(") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CLOSE_PAREN</code></td>
-   <td style="white-space: nowrap;">0xA9 (169)</td>
+   <td >0xA9 (169)</td>
    <td>Close parenthesis (")") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ASTERISK</code></td>
-   <td style="white-space: nowrap;">0xAA (170)</td>
+   <td >0xAA (170)</td>
    <td>Asterisk ("*") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PLUS</code></td>
-   <td style="white-space: nowrap;">0xAB (171)</td>
+   <td >0xAB (171)</td>
    <td>Plus ("+") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PIPE</code></td>
-   <td style="white-space: nowrap;">0xAC (172)</td>
+   <td >0xAC (172)</td>
    <td>Pipe ("|") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_HYPHEN_MINUS</code></td>
-   <td style="white-space: nowrap;">0xAD (173)</td>
+   <td >0xAD (173)</td>
    <td>Hyphen-US/docs/Minus ("-") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_OPEN_CURLY_BRACKET</code></td>
-   <td style="white-space: nowrap;">0xAE (174)</td>
+   <td >0xAE (174)</td>
    <td>Open curly bracket ("{") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CLOSE_CURLY_BRACKET</code></td>
-   <td style="white-space: nowrap;">0xAF (175)</td>
+   <td >0xAF (175)</td>
    <td>Close curly bracket ("}") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_TILDE</code></td>
-   <td style="white-space: nowrap;">0xB0 (176)</td>
+   <td >0xB0 (176)</td>
    <td>Tilde ("~") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_VOLUME_MUTE</code></td>
-   <td style="white-space: nowrap;">0xB5 (181)</td>
+   <td >0xB5 (181)</td>
    <td>Audio mute key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_VOLUME_DOWN</code></td>
-   <td style="white-space: nowrap;">0xB6 (182)</td>
+   <td >0xB6 (182)</td>
    <td>Audio volume down key </td>
   </tr>
   <tr>
    <td><code>DOM_VK_VOLUME_UP</code></td>
-   <td style="white-space: nowrap;">0xB7 (183)</td>
+   <td >0xB7 (183)</td>
    <td>Audio volume up key </td>
   </tr>
   <tr>
    <td><code>DOM_VK_COMMA</code></td>
-   <td style="white-space: nowrap;">0xBC (188)</td>
+   <td >0xBC (188)</td>
    <td>Comma (",") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PERIOD</code></td>
-   <td style="white-space: nowrap;">0xBE (190)</td>
+   <td >0xBE (190)</td>
    <td>Period (".") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SLASH</code></td>
-   <td style="white-space: nowrap;">0xBF (191)</td>
+   <td >0xBF (191)</td>
    <td>Slash ("/") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_BACK_QUOTE</code></td>
-   <td style="white-space: nowrap;">0xC0 (192)</td>
+   <td >0xC0 (192)</td>
    <td>Back tick ("`") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_OPEN_BRACKET</code></td>
-   <td style="white-space: nowrap;">0xDB (219)</td>
+   <td >0xDB (219)</td>
    <td>Open square bracket ("[") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_BACK_SLASH</code></td>
-   <td style="white-space: nowrap;">0xDC (220)</td>
+   <td >0xDC (220)</td>
    <td>Back slash ("\") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CLOSE_BRACKET</code></td>
-   <td style="white-space: nowrap;">0xDD (221)</td>
+   <td >0xDD (221)</td>
    <td>Close square bracket ("]") key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_QUOTE</code></td>
-   <td style="white-space: nowrap;">0xDE (222)</td>
+   <td >0xDE (222)</td>
    <td>Quote (''') key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_META</code></td>
-   <td style="white-space: nowrap;">0xE0 (224)</td>
+   <td >0xE0 (224)</td>
    <td>Meta key on Linux, Command key on Mac.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ALTGR</code></td>
-   <td style="white-space: nowrap;">0xE1 (225)</td>
+   <td >0xE1 (225)</td>
    <td>AltGr key (Level 3 Shift key or Level 5 Shift key) on Linux.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_ICO_HELP</code></td>
-   <td style="white-space: nowrap;">0xE3 (227)</td>
+   <td >0xE3 (227)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_ICO_00</code></td>
-   <td style="white-space: nowrap;">0xE4 (228)</td>
+   <td >0xE4 (228)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_ICO_CLEAR</code></td>
-   <td style="white-space: nowrap;">0xE6 (230)</td>
+   <td >0xE6 (230)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_RESET</code></td>
-   <td style="white-space: nowrap;">0xE9 (233)</td>
+   <td >0xE9 (233)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_JUMP</code></td>
-   <td style="white-space: nowrap;">0xEA (234)</td>
+   <td >0xEA (234)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_PA1</code></td>
-   <td style="white-space: nowrap;">0xEB (235)</td>
+   <td >0xEB (235)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_PA2</code></td>
-   <td style="white-space: nowrap;">0xEC (236)</td>
+   <td >0xEC (236)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_PA3</code></td>
-   <td style="white-space: nowrap;">0xED (237)</td>
+   <td >0xED (237)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_WSCTRL</code></td>
-   <td style="white-space: nowrap;">0xEE (238)</td>
+   <td >0xEE (238)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_CUSEL</code></td>
-   <td style="white-space: nowrap;">0xEF (239)</td>
+   <td >0xEF (239)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_ATTN</code></td>
-   <td style="white-space: nowrap;">0xF0 (240)</td>
+   <td >0xF0 (240)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FINISH</code></td>
-   <td style="white-space: nowrap;">0xF1 (241)</td>
+   <td >0xF1 (241)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_COPY</code></td>
-   <td style="white-space: nowrap;">0xF2 (242)</td>
+   <td >0xF2 (242)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_AUTO</code></td>
-   <td style="white-space: nowrap;">0xF3 (243)</td>
+   <td >0xF3 (243)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_ENLW</code></td>
-   <td style="white-space: nowrap;">0xF4 (244)</td>
+   <td >0xF4 (244)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_BACKTAB</code></td>
-   <td style="white-space: nowrap;">0xF5 (245)</td>
+   <td >0xF5 (245)</td>
    <td>An <a href="#oem_specific_keys_on_windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ATTN</code></td>
-   <td style="white-space: nowrap;">0xF6 (246)</td>
+   <td >0xF6 (246)</td>
    <td>Attn (Attention) key of IBM midrange computers, e.g., AS/400.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CRSEL</code></td>
-   <td style="white-space: nowrap;">0xF7 (247)</td>
+   <td >0xF7 (247)</td>
    <td>CrSel (Cursor Selection) key of IBM 3270 keyboard layout.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_EXSEL</code></td>
-   <td style="white-space: nowrap;">0xF8 (248)</td>
+   <td >0xF8 (248)</td>
    <td>ExSel (Extend Selection) key of IBM 3270 keyboard layout.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_EREOF</code></td>
-   <td style="white-space: nowrap;">0xF9 (249)</td>
+   <td >0xF9 (249)</td>
    <td>Erase EOF key of IBM 3270 keyboard layout.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PLAY</code></td>
-   <td style="white-space: nowrap;">0xFA (250)</td>
+   <td >0xFA (250)</td>
    <td>Play key of IBM 3270 keyboard layout.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ZOOM</code></td>
-   <td style="white-space: nowrap;">0xFB (251)</td>
+   <td >0xFB (251)</td>
    <td>Zoom key.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_PA1</code></td>
-   <td style="white-space: nowrap;">0xFD (253)</td>
+   <td >0xFD (253)</td>
    <td>PA1 key of IBM 3270 keyboard layout.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_CLEAR</code></td>
-   <td style="white-space: nowrap;">0xFE (254)</td>
+   <td >0xFE (254)</td>
    <td>Clear key, but we're not sure the meaning difference from <code>DOM_VK_CLEAR</code>.</td>
   </tr>
  </tbody>

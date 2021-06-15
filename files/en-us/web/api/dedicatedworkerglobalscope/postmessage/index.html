@@ -8,10 +8,11 @@ tags:
   - Reference
   - Web Workers
   - postMessage
+browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
+<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send from the worker to the main thread. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
 
 <p>The main scope that spawned the worker can send back information to the thread that spawned it using the {{domxref("Worker.postMessage")}} method.</p>
 
@@ -54,24 +55,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-dedicatedworkerglobalscope-postmessage", "DedicatedWorkerGlobalScope.postMessage()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DedicatedWorkerGlobalScope.postMessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

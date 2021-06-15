@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - value
+browser-compat: api.IDBCursorWithValue.value
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -35,17 +36,13 @@ tags:
   iterate through all the records in the object store. Within each iteration we log the
   value of the cursor with <code>cursor.value</code>.</p>
 
-<p>T<span style="line-height: 1.5;">he cursor does not require us to select the data based
+<p>The cursor does not require us to select the data based
     on a key; we can just grab all of it. Also note that in each iteration of the loop,
-    you can grab data from the current record under the cursor object using </span><code
-    style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span
-    style="line-height: 1.5;">. For a complete working example, see our <a
-      href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span
-    style="line-height: 1.5;"> (</span><a href="https://mdn.github.io/IDBcursor-example/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+    you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>.
+     For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> 
+     (<a href="https://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;"><span style="line-height: 1.5;">function displayData() {</span>
+<pre class="brush: js">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -66,29 +63,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbcursorwithvalue-value', 'source')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbcursorwithvalue-value", "IDBDatabase")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursorWithValue.value")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,6 +8,7 @@ tags:
 - Objects
 - Reference
 - stringify
+- Polyfill
 browser-compat: javascript.builtins.JSON.stringify
 ---
 <div>{{JSRef}}</div>
@@ -42,7 +43,7 @@ JSON.stringify(value, replacer, space)
   <dd>A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white
     space into the output JSON string for readability purposes.
     <p>If this is a <code>Number</code>, it indicates the number of space characters to
-      use as white space; this number is capped at 10 (if it is greater, the value is just
+      use as white space for indenting purposes; this number is capped at 10 (if it is greater, the value is just
       <code>10</code>). Values less than 1 indicate that no space should be used.</p>
 
     <p>If this is a <code>String</code>, the string (or the first 10 characters of the
@@ -433,5 +434,6 @@ console.log(restoredSession);
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of modern <code>JSON.stringify</code> behavior (symbol and well-formed unicode) is available in <a href="https://github.com/zloirock/core-js#ecmascript-function"><code>core-js</code></a></li>
   <li>{{JSxRef("JSON.parse()")}}</li>
 </ul>

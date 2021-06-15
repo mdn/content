@@ -10,6 +10,7 @@ tags:
   - Server Sent Events
   - Server-sent events
   - messaging
+browser-compat: api.EventSource
 ---
 <div>{{APIRef("Server Sent Events")}}</div>
 
@@ -47,11 +48,11 @@ tags:
 
 <dl>
  <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
  <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
  <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -132,22 +133,11 @@ evtSource.onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "server-sent-events.html#the-eventsource-interface", "EventSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,6 +8,7 @@ tags:
   - HTTP
   - Reference
   - Security
+browser-compat: http.headers.csp.Content-Security-Policy.worker-src
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -33,11 +34,6 @@ tags:
           {{CSP("child-src")}} directive, then the {{CSP("script-src")}} directive, then
           finally for the {{CSP("default-src")}} directive, when governing worker
           execution.</p>
-
-        <p>Chrome 59 and higher skips the {{CSP("child-src")}} directive.</p>
-
-        <p>Edge 17 skips the {{CSP("script-src")}} directive (<a
-            href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17415478/">bug</a>).
         </p>
       </td>
     </tr>
@@ -94,12 +90,7 @@ Content-Security-Policy: worker-src &lt;source&gt; &lt;source&gt;;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("http.headers.csp.Content-Security-Policy.worker-src")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

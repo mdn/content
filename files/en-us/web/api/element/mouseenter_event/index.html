@@ -13,6 +13,7 @@ tags:
   - mouse
   - mouseenter
   - pointer
+browser-compat: api.Element.mouseenter_event
 ---
 <div>{{APIRef}}</div>
 
@@ -43,11 +44,14 @@ tags:
 
 <p>Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, <code>mouseenter</code> differs in that it doesn't <a href="/en-US/docs/Web/API/Event/bubbles">bubble</a> and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.</p>
 
-<div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img class="default internal" src="mouseenter.png"></div>
+<h4>Behavior of <code>mouseenter</code> events:</h4>
+
+<img class="default internal" src="mouseenter.png">
 One <code>mouseenter</code> event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
-<div style="text-align: center;"><img class="default internal" src="mouseover.png"></div>
+<h4>Behavior of <code>mouseover</code> events:</h4>
+
+<img class="default internal" src="mouseover.png">
 A single <code>mouseover</code> event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.</div>
 
 <p>With deep hierarchies, the number of <code>mouseenter</code> events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for <code>mouseover</code> events.</p>
@@ -119,28 +123,11 @@ function addListItem(text) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-mouseenter', 'mouseenter')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events', '#event-type-mouseenter', 'mouseenter')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.mouseenter_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

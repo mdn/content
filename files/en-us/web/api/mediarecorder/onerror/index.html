@@ -11,6 +11,7 @@ tags:
   - Reference
   - Video
   - onerror
+browser-compat: api.MediaRecorder.onerror
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
@@ -44,11 +45,7 @@ tags:
   <dt><code>SecurityError</code></dt>
   <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device.  This also
-    happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as
-    {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the
-    {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the
-    source stream.</dd>
+    "getUserMedia()")}} when the user denies permission to use an input device.</dd>
   <dt><code>NotSupportedError</code></dt>
   <dd>An attempt was made to instantiate a <code>MediaRecorder</code> using a MIME type
     that isn't supported on the user's device; one or more of the requested container,
@@ -120,25 +117,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-onerror",
-        "MediaRecorder.onerror")}}</td>
-      <td>{{Spec2("MediaStream Recording")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.onerror")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

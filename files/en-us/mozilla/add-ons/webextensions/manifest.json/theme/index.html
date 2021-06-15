@@ -11,6 +11,7 @@ tags:
   - Themes
   - colors
   - theme manifest
+browser-compat: webextensions.manifest.theme
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -135,7 +136,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code>headerURL </code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>headerURL </code> {{Deprecated_Inline}}</td>
    <td><code>String</code></td>
    <td>
     <div class="notecard warning">
@@ -225,7 +226,7 @@ tags:
  <tbody>
   <tr>
    <td>
-    <p><code>accentcolor</code><code> {{Deprecated_Inline}}</code></p>
+    <p><code>accentcolor</code> {{Deprecated_Inline}}</p>
    </td>
    <td>
     <div class="notecard warning">
@@ -669,10 +670,10 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>tab_background_separator</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>tab_background_separator</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
-    <p><code>tab_background_separator</code> is not supported starting with Firefox 89. 
+    <p><code>tab_background_separator</code> is not supported starting with Firefox 89.
     </div>
     <p>The color of the vertical separator of the background tabs.</p>
 
@@ -809,7 +810,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>textcolor {{Deprecated_Inline}}</code></td>
+   <td><code>textcolor</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
     <p><code>textcolor</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use <code>tab_background_text</code> instead.</p>
@@ -1015,7 +1016,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>toolbar_field_separator</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>toolbar_field_separator</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
     <p><code>toolbar_field_separator</code> is not supported starting with Firefox 89.
@@ -1185,15 +1186,15 @@ tags:
   </tr>
   <tr>
    <td><code>frame</code></td>
-   <td><code>accentcolor</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
   </tr>
   <tr>
    <td><code>frame_inactive</code></td>
-   <td><code>accentcolor</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
   </tr>
   <tr>
    <td><code>tab_background_text</code></td>
-   <td><code>textcolor</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>textcolor</code> {{Deprecated_Inline}}</td>
   </tr>
  </tbody>
 </table>
@@ -1337,21 +1338,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.theme")}}</p>
-
-<h3 id="Colors">Colors</h3>
-
-<p>{{Compat("webextensions.manifest.theme.colors", 10)}}</p>
-
-<h3 id="Images">Images</h3>
-
-<p>{{Compat("webextensions.manifest.theme.images", 10)}}</p>
-
-<h3 id="Properties">Properties</h3>
-
-<p>{{Compat("webextensions.manifest.theme.properties", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Chrome_compatibility">Chrome compatibility</h3>
 

@@ -9,14 +9,13 @@ tags:
   - Input Type
   - Reference
   - Search
+browser-compat: html.elements.input.input-search
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>search</strong></code> are text fields designed for the user to enter search queries into. These are functionally identical to <code><a href="/en-US/docs/Web/HTML/Element/input/text">text</a></code> inputs, but may be styled differently by the {{Glossary("user agent")}}. </span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -99,33 +98,33 @@ tags:
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdeflist", 0, 1, 2)}}</p>
+<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+<h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the search field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the search input has no minimum length.</p>
 
-<p>The search field will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+<p>The search field will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
 
 <p>See the section {{anch("Specifying a pattern")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefplaceholder", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefreadonly", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefsize", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-size", 0, 1, 2)}}</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "htmlattrdefspellcheck", 0, 1, 2)}}</p>
+<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-spellcheck", 0, 1, 2)}}</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -158,11 +157,11 @@ tags:
  </tbody>
 </table>
 
-<h3 id="htmlattrdefautocorrect_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
+<h3 id="attr-autocorrect"><code id="autocorrect">autocorrect</code>> {{non-standard_inline}}</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</p>
 
-<h3 id="htmlattrdefincremental_non-standard_inline">{{htmlattrdef("incremental")}} {{non-standard_inline}}</h3>
+<h3 id="attr-incremental"><code id="incremental">incremental</code> {{non-standard_inline}}</h3>
 
 <div id="incremental-include">
 <p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
@@ -172,11 +171,11 @@ tags:
 <p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
 </div>
 
-<h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
+<h3 id="attr-mozactionhint"><code id="mozactionhint">mozactionhint</code> {{non-standard_inline}}</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</p>
 
-<h3 id="htmlattrdefresults_non-standard_inline">{{htmlattrdef("results")}} {{non-standard_inline}}</h3>
+<h3 id="attr-results"><code id="results">results</code> {{non-standard_inline}}</h3>
 
 <div id="results-include">
 <p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
@@ -434,31 +433,11 @@ input:valid ~ span:after {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="search"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="search"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.input.input-search")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

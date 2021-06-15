@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - onerror
+browser-compat: api.IDBDatabase.onerror
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -32,9 +33,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
-  creates a new object store; it also includes <code
-    style="font-style: normal;">onerror</code> and <code
-    style="font-style: normal;">onabort</code> functions to handle non-success cases.</p>
+  creates a new object store; it also includes <code>onerror</code> and <code>onabort</code> functions to handle non-success cases.</p>
 
 <pre class="brush: js;highlight:[4,5,6]">DBOpenRequest.onupgradeneeded = function(event) {
   var db = this.result;
@@ -66,29 +65,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-onerror', 'onerror')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-onerror", "onerror")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBDatabase.onerror")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

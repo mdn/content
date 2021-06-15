@@ -173,7 +173,7 @@ dist/index.html                    354 B    944ms</pre>
  <li>
   <p>Now we're ready to push our code to GitHub; run the following command now:</p>
 
-  <pre class="brush: bash">git push github master</pre>
+  <pre class="brush: bash">git push github main</pre>
 
   <p>At this point you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this you need your Github username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". Github help pages has an <a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">excellent and simple walkthrough covering how to get one</a>.</p>
  </li>
@@ -183,7 +183,11 @@ dist/index.html                    354 B    944ms</pre>
 <p><strong>Note</strong>: If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, <a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">this tutorial walks you through how</a>.</p>
 </div>
 
-<p>This final command instructs git to push the code (aka publish) to the "remote" location that we called <code>github</code> (that's the repository hosted on github.com — we could have called it anything we like) using the branch <code>master</code>. We've not encountered branches at all, but the (terribly named) "master" branch is the default place for our work and it's what git starts on. It's also the default branch that Netlify will look for, which is convenient.</p>
+<p>This final command instructs git to push the code (aka publish) to the "remote" location that we called <code>github</code> (that's the repository hosted on github.com — we could have called it anything we like) using the branch <code>main</code>. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. It's also the default branch that Netlify will look for, which is convenient.</p>
+
+<div class="notecard note">
+<p><strong>Note</strong>: Until October 2020 the default branch on GitHub was <code>master</code>, which for various social reasons was switched to <code>main</code>. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using <code>main</code> for your own projects.</p>
+</div>
 
 <p>So with our project committed in git and pushed to our GitHub repository, the next step in the toolchain is to connect GitHub to Netlify so our project can be deployed live on the web!</p>
 
@@ -232,7 +236,7 @@ dist/index.html                    354 B    944ms</pre>
 
   <pre class="brush: bash">git add .
 git commit -m ‘simple netlify test’
-git push github master</pre>
+git push github main</pre>
 
   <p>You should see your published site update with the change — this might take a few minutes to publish, so have a little patience.</p>
  </li>
@@ -317,7 +321,7 @@ touch nasa-feed.test.js  </pre>
 
   <pre class="brush: bash">git add .
 git commit -m ‘adding test’
-git push github master</pre>
+git push github main</pre>
 
   <p>In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You’ll need to consider all these individual aspects whilst you're working on your own projects.</p>
  </li>
@@ -335,7 +339,7 @@ git push github master</pre>
  <li>Code quality and maintenance are performed by eslint and prettier. These tools are added as <code>devDependencies</code> to the project via <code>npm install --dev eslint prettier eslint-plugin-react</code> (the eslint plugin is needed because this particular project uses React).</li>
  <li>There are two configuration files that the code quality tools read: <code>.eslintrc</code> and <code>.prettierrc</code>.</li>
  <li>During development, we use Parcel to handle our dependencies. <code>parcel src/index.html</code> is running in the background to watch for changes and to automatically build our source.</li>
- <li>Deployment is handled by pushing our changes to Github (on the "master" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is <a href="near-misses.netlify.com">near-misses.netlify.com</a>; you will have your own unique URL.</li>
+ <li>Deployment is handled by pushing our changes to Github (on the "main" branch), which triggers a build and deployment on Netlify to publish the project. For our instance this URL is <a href="https://near-misses.netlify.com">near-misses.netlify.com</a>; you will have your own unique URL.</li>
  <li>We also have a simple test that blocks the building and deployment of the site if the NASA API feed isn't giving us the correct data format.</li>
 </ul>
 

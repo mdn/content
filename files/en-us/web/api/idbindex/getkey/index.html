@@ -9,6 +9,7 @@ tags:
 - Method
 - Reference
 - Storage
+browser-compat: api.IDBIndex.getKey
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -43,7 +44,7 @@ tags:
 <p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
   operation are fired.</p>
 
-<h3 id="Exceptions"><span style="line-height: 1.5;">Exceptions</span></h3>
+<h3 id="Exceptions">Exceptions</h3>
 
 <p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
 
@@ -97,7 +98,7 @@ tags:
   var objectStore = transaction.objectStore('contactsList');
 
   var myIndex = objectStore.index('lName');
-  <span style="font-size: 1rem;">var getKeyRequest = myIndex.getKey('Bungle');</span>
+  var getKeyRequest = myIndex.getKey('Bungle');
   getKeyRequest.onsuccess = function() {
     console.log(getKeyRequest.result);
   }
@@ -125,29 +126,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbindex-getkey', 'getKey()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-getkey", "getKey()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.getKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

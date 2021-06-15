@@ -8,6 +8,7 @@ tags:
 - Property
 - Reference
 - mediaText
+browser-compat: api.MediaList.mediaText
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
@@ -25,23 +26,19 @@ mediaListInstance.mediaText = <em>string</em>;</pre>
 
 <p>A {{domxref("DOMString")}} representing the media queries of a stylesheet. Each one is
   separated by a comma, for example
-  <code><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">screen and (min-width: 480px), print</span></span></span></span></code>.
+  <code>screen and (min-width: 480px), print</code>.
 </p>
 
 <p>If you wish to set new media queries on the document, the string value must have the
-  different queries separated by commas, e.g. <span class="message-body-wrapper"><span
-      class="message-flex-body"><span class="devtools-monospace message-body"><span
-          class="objectBox objectBox-string"><code>screen, print</code>. Note that the
+  different queries separated by commas, e.g. <code>screen, print</code>. Note that the
           <code>MediaList</code> is a live list; updating the list via
           <code>mediaText</code> will immediately update the behavior of the
-          document.</span></span></span></span></p>
+          document.</p>
 
-<p><span class="message-body-wrapper"><span class="message-flex-body"><span
-        class="devtools-monospace message-body"><span
-          class="objectBox objectBox-string">Also note that is you try to set
+<p>Also note that is you try to set
           <code>mediaText</code> to <code>null</code>, it will be treated as an empty
           string, i.e. the value will be set to
-          <code>""</code>.</span></span></span></span></p>
+          <code>""</code>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -54,21 +51,8 @@ console.log(stylesheet.media.mediaText);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSSOM', '#dom-medialist-mediatext', 'mediaText')}}</td>
-      <td>{{Spec2('CSSOM')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaList.mediaText")}}</p>
+<p>{{Compat}}</p>

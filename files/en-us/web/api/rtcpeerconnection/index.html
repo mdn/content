@@ -15,6 +15,7 @@ tags:
   - Video
   - WebRTC
   - WebRTC API
+browser-compat: api.RTCPeerConnection
 ---
 <p>{{APIRef('WebRTC')}}</p>
 
@@ -56,9 +57,6 @@ tags:
  <dt>{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when the ICE layer's gathering state, reflected by {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, changes. This indicates whether ICE negotiation has not yet begun (<code>new</code>), has begun gathering candidates (<code>gathering</code>), or has completed (<code>complete</code>).<br>
  Also available using the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.isolationchange_event", "isolationchange")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when the {{domxref("MediaStreamTrack.isolated", "isolated")}} property on one of the {{domxref("MediaStreamTrack")}} objects associated with the connection changes value. A track is {{domxref("MediaStreamTrack.isolated", "isolated")}} if its content cannot be accessed by the owning document due to lack of authentication or if the track comes from a cross-origin source.<br>
- Also available through the {{domxref("RTCPeerConnection.onisolationchange", "onisolationchange")}} event handler property.</dd>
  <dt>{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}</dt>
  <dd>Sent to the <code>RTCPeerConnection</code> when negotiation or renegotiation of the ICE connection needs to be performed; this can happen both when first opening a connection as well as when it's neccessary to adapt to changing network conditions. The receiver should respond by creating an offer and sending it to the other peer.<br>
  Also available as the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler property.</dd>
@@ -356,7 +354,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

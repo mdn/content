@@ -8,11 +8,12 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.GlobalEventHandlers.onblur
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
 <p>The <code><strong>onblur</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for
   processing {{event("blur")}} events. It's available on {{domxref("Element")}},
   {{domxref("Document")}}, and {{domxref("Window")}}.</p>
 
@@ -69,24 +70,11 @@ function inputFocus() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onblur")}}</p>
+<p>{{Compat}}</p>
 
 <p>In contrast to IE, in which almost all kinds of elements receive the <code>blur</code>
   event, only a few kinds of elements on Gecko browsers work with this event.</p>

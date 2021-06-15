@@ -9,13 +9,15 @@ tags:
 ---
 <p>{{FirefoxSidebar}}{{draft}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">June 29, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">July 13, 2021</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
 <h3 id="Developer_Tools">Developer Tools</h3>
 
-<h4 id="removals_devtools">Removals</h4>
+<ul>
+  <li>The response view now shows a <a href="/en-US/docs/Tools/Network_Monitor/request_details#response_tab">preview for web fonts</a> ({{bug(872078)}}).</li>
+</ul>
 
 <h3 id="HTML">HTML</h3>
 
@@ -23,15 +25,32 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
+<ul>
+  <li><code>-webkit-image-set()</code> has been implemented as an alias of the standard {{cssxref("image-set()")}} function ({{bug(1709415)}}).</li>
+</ul>
+
 <h4 id="removals_css">Removals</h4>
 
 <h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">Private class fields and methods</a> are now supported by default ({{bug(1708235)}} and {{bug(1708236)}}).</li>
+  <li>Custom date/time formats specified as options to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>dayPeriod</code> — a value indicating that the approximate time of day (e.g. "in the morning", "at night", etc.) should be included as a <code>narrow</code>, <code>short</code>, or <code>long</code> string ({{bug(1645115)}}).</li>
+ </ul>
 
 <h4 id="removals_js">Removals</h4>
 
 <h3 id="HTTP">HTTP</h3>
 
+<ul>
+  <li>The HTTP {{Glossary("Fetch metadata request header", "fetch metadata request headers")}} (<code>Sec-Fetch-*</code>) are now supported. These headers provide servers with additional context about requests, including whether they are same-origin, cross-origin, same-site, or user-intiated, and where/how the requested data is to be used. This allows servers to mitigate against several types of cross-origin attacks ({{bug(1695911)}}).</li>
+</ul>
+
 <h4 id="removals_http">Removals</h4>
+
+<ul>
+  <li>FTP has now been removed from Firefox ({{bug(1574475)}}). This follows <a href="/en-US/docs/Mozilla/Firefox/Releases/88#http">deprecation in Firefox 88</a>. Note that web extensions can still register themselves as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers">FTP protocol handlers</a>.</li>
+</ul>
 
 <h3 id="Security">Security</h3>
 
@@ -40,6 +59,10 @@ tags:
 <h3 id="APIs">APIs</h3>
 
 <h4 id="DOM">DOM</h4>
+
+<ul>
+  <li>Support was added for the deprecated {{DOMxref("WheelEvent")}} properties: <code>WheelEvent.wheelDelta</code>, <code>WheelEvent.wheelDeltaX</code>, and <code>WheelEvent.wheelDeltaY</code>. This allows Firefox to work with a small subset of pages that were broken by recent compatibility improvements to <code>WheelEvent</code> ({{bug(1708829)}}).</li>
+</ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
 

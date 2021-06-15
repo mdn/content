@@ -8,11 +8,12 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.GlobalEventHandlers.oncontextmenu
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
 <p>The <strong><code>oncontextmenu</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an {{event("Event_handlers", "event handler")}} that
   processes {{event("contextmenu")}} events.</p>
 
 <p>The <code>contextmenu</code> event typically fires when the right mouse button is
@@ -122,26 +123,13 @@ window.onpointerdown = play;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-  <p>{{Compat("api.GlobalEventHandlers.oncontextmenu")}}</p>
+  <p>{{Compat}}</p>
 
   <p>Unless the default behavior is prevented, the browser context menu will activate upon
     right-click. However, IE8 has a bug with this and will not activate the context menu

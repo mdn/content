@@ -8,6 +8,7 @@ tags:
 - Reference
 - Read-only
 - Deprecated
+browser-compat: api.CSSRule.type
 ---
 <div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
 
@@ -34,7 +35,7 @@ tags:
     </tr>
     <tr>
       <td><code>CSSRule.STYLE_RULE</code></td>
-      <td style="text-align: center;"><code>1</code></td>
+      <td><code>1</code></td>
       <td>{{domxref("CSSStyleRule")}}</td>
       <td>The most common kind of rule:<br>
         <code>selector { prop1: val1; prop2: val2; }</code>
@@ -42,7 +43,7 @@ tags:
     </tr>
     <tr>
       <td><code>CSSRule.IMPORT_RULE</code></td>
-      <td style="text-align: center;"><code>3</code></td>
+      <td><code>3</code></td>
       <td>{{domxref("CSSImportRule")}}</td>
       <td>An {{cssxref("@import")}} rule. (Until the documentation is completed, see the
         interface definition in the Mozilla source code: <a
@@ -51,91 +52,91 @@ tags:
     </tr>
     <tr>
       <td><code>CSSRule.MEDIA_RULE</code></td>
-      <td style="text-align: center;"><code>4</code></td>
+      <td><code>4</code></td>
       <td>{{domxref("CSSMediaRule")}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.FONT_FACE_RULE</code></td>
-      <td style="text-align: center;"><code>5</code></td>
+      <td><code>5</code></td>
       <td>{{domxref("CSSFontFaceRule")}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.PAGE_RULE</code></td>
-      <td style="text-align: center;"><code>6</code></td>
+      <td><code>6</code></td>
       <td>{{domxref("CSSPageRule")}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.KEYFRAMES_RULE</code></td>
-      <td style="text-align: center;"><code>7</code></td>
+      <td><code>7</code></td>
       <td>{{domxref("CSSKeyframesRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.KEYFRAME_RULE</code></td>
-      <td style="text-align: center;"><code>8</code></td>
+      <td><code>8</code></td>
       <td>{{domxref("CSSKeyframeRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><em>Reserved for future use</em></td>
-      <td style="text-align: center;"><code>9</code></td>
+      <td><code>9</code></td>
       <td></td>
       <td>Should be used to define color profiles in the future</td>
     </tr>
     <tr>
       <td><code>CSSRule.NAMESPACE_RULE</code></td>
-      <td style="text-align: center;"><code>10</code></td>
+      <td><code>10</code></td>
       <td>{{domxref("CSSNamespaceRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
-      <td style="text-align: center;"><code>11</code></td>
+      <td><code>11</code></td>
       <td>{{domxref("CSSCounterStyleRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.SUPPORTS_RULE</code></td>
-      <td style="text-align: center;"><code>12</code></td>
+      <td><code>12</code></td>
       <td>{{domxref("CSSSupportsRule")}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.DOCUMENT_RULE</code></td>
-      <td style="text-align: center;"><code>13</code></td>
+      <td><code>13</code></td>
       <td>{{domxref("CSSDocumentRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
-      <td style="text-align: center;"><code>14</code></td>
+      <td><code>14</code></td>
       <td>{{domxref("CSSFontFeatureValuesRule")}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.VIEWPORT_RULE</code></td>
-      <td style="text-align: center;"><code>15</code></td>
+      <td><code>15</code></td>
       <td>{{domxref("CSSViewportRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.REGION_STYLE_RULE</code></td>
-      <td style="text-align: center;"><code>16</code></td>
+      <td><code>16</code></td>
       <td>{{domxref("CSSRegionStyleRule")}} {{experimental_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.UNKNOWN_RULE</code></td>
-      <td style="text-align: center;"><code>0</code></td>
+      <td><code>0</code></td>
       <td>{{domxref("CSSUnknownRule")}} {{deprecated_inline}}</td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.CHARSET_RULE</code></td>
-      <td style="text-align: center;"><code>2</code></td>
+      <td><code>2</code></td>
       <td><code>CSSCharsetRule</code> {{deprecated_inline}}</td>
       <td>(Removed in most browsers.)</td>
     </tr>
@@ -149,27 +150,8 @@ console.log(myRules[0].type);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSSOM', '#concept-css-rule-type', 'CSSRule.type')}}</td>
-      <td>{{Spec2('CSSOM')}}</td>
-      <td>Obsoleted values <code>CHARSET_RULE</code> and <code>UNKNOWN_RULE</code>. Added
-        value <code>NAMESPACE_RULE</code>. Deprecates <code>CSSRule.type</code>.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSRule', 'CSSRule.type')}}</td>
-      <td>{{Spec2('DOM2 Style')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</div>
-
-<p>{{Compat("api.CSSRule.type")}}</p>
+<p>{{Compat}}</p>

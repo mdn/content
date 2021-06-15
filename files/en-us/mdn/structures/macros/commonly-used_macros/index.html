@@ -9,60 +9,125 @@ tags:
 ---
 <p>{{MDNSidebar}}</p>
 
-<p><span class="seoSummary">This page lists many of the general-purpose macros created for use on MDN. For how-to information on using these macros, see <a href="/en-US/docs/MDN/Structures/Macros">Using macros</a>.</span> See <a href="/en-US/docs/MDN/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated.</p>
+<p>This page lists many of the general-purpose macros created for use on MDN. For additional how-to information on using these macros, see <a href="/en-US/docs/MDN/Structures/Macros">Using macros</a>.</p>
 
-<p>See also the <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
+<p>See <a href="/en-US/docs/MDN/Structures/Macros/Other">Other macros</a> for information on macros that are infrequently used, are used only in special contexts, or are deprecated. See the <a href="/en-US/docs/MDN/Guidelines/CSS_style_guide">CSS style guide</a> for styles available for your use.</p>
 
 <h2 id="Linking">Linking</h2>
 
-<h3 id="Creating_a_single_hyperlink">Creating a single hyperlink</h3>
+<p>MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.</p>
 
-<p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">In general, you don't need to use macros for creating arbitrary links. Use the <strong>Link</strong> button in the Editor interface to create links. </p>
+<p>Link macros are recommended over normal HTML links because they are succint and translation-friendly. For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.</p>
 
-<ul>
- <li>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Glossary.ejs">Glossary</a></code> macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required and two optional parameters:
 
-  <p>Examples:</p>
+<h3 id="Glossary_links">Glossary links</h3>
 
-  <ol>
-   <li>The term's name (such as "HTML").</li>
-   <li>The text to display in the article instead of the term name (this should be used rarely).{{Optional_Inline}}</li>
-   <li>If this parameter is specified and is non-zero, the custom styling normally applied to glossary links is not applied.{{Optional_Inline}}</li>
-  </ol>
+<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Glossary.ejs">Glossary</a></code> macro creates a link to a specified term's entry in the MDN <a href="/en-US/docs/Glossary">glossary</a>. This macro accepts one required parameter and one optional parameter:</p>
+
+<ol>
+  <li>The term's name (such as "HTML").
+    <ul>
+      <li><code>\{{Glossary("HTML")}}</code> yields {{Glossary("HTML")}}</li>
+     </ul>
+  </li>
+  <li>Optional: The text to display in the article instead of the term name.</li>
+  <ul>
+    <li><code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code> yields {{Glossary("CSS", "Cascading Style Sheets")}}</li>
+   </ul>
+ </ol>
+
+  <h3 id="Links_to_in-page_sections">Links to in-page sections</h3>
+
+  <p><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:</p>
 
   <ul>
-   <li><code>\{{Glossary("HTML")}}</code> yields {{Glossary("HTML")}}</li>
-   <li><code>\{{Glossary("CSS", "Cascading Style Sheets")}}</code> yields {{Glossary("CSS", "Cascading Style Sheets")}}</li>
-   <li><code>\{{Glossary("HTML", "", 1)}}</code> yields {{Glossary("HTML", "", 1)}}</li>
-  </ul>
- </li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/anch.ejs">anch</a></code> - creates link to in-page section:
-  <ul>
-   <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
-   <li>
-    <p>Demo: {{anch("Linking to pages in references")}}</p>
-   </li>
-  </ul>
- </li>
-</ul>
+    <li><code>\{{anch("Linking to pages in references")}}</code>;</li>
+    <li>
+     <p>Demo: {{anch("Linking to pages in references")}}</p>
+    </li>
+   </ul>
 
 <h3 id="Linking_to_pages_in_references">Linking to pages in references</h3>
 
-<p>There are various macros for linking to pages in specific reference areas of MDN.</p>
+<p>There are macros for locale-independent linking to pages in specific reference areas of MDN: Javascript, CSS, HTML elements, SVG etc.</p>
 
-<ul>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/cssxref.ejs">cssxref</a></code> links to a page in the <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a>.<br>
-  Example: <code>\{{CSSxRef("cursor")}}</code>, results in: {{CSSxRef("cursor")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/DOMxRef.ejs">domxref</a></code> links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, <code>\{{DOMxRef("document.getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()")}} while <code>\{{DOMxRef("Node")}}</code> results in {{DOMxRef("Node")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code> links to an HTML element in the HTML Reference.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/htmlattrxref.ejs">htmlattrxref</a></code> links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, <code>\{{HTMLAttrxRef("lang")}} </code>will create this link: {{HTMLAttrxRef("lang")}}. <code>\{{HTMLAttrxRef("type","input")}}</code> will create this link: {{htmlattrxref("type","input")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/jsxref.ejs">jsxref</a></code> links to a page in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGAttr.ejs">SVGAttr</a></code> links to a specific SVG attribute. For example, <code>\{{SVGAttr("d")}}</code> creates this link: {{SVGAttr("d")}}.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGElement.ejs">SVGElement</a></code> links to an SVG element in the SVG Reference.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code> links to an <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a>.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a></code> links to an <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a>.</li>
- <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a></code> links to an <a href="/en-US/docs/Web/HTTP/Status">HTTP response status code</a>.</li>
-</ul>
+<p>The macros are easy to use. Minimally all you need to do is specify the name of the item to link to in the first argument. Most macros will also take a second argument allowing you to change the display text (documentation can be found at the links in the left-most column below).</p>
+
+<table class="standard-table">
+    <thead>
+      <tr>
+        <th>Macro</th>
+        <th>Links to page under</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/cssxref.ejs">CSSxRef</a></td>
+        <td><a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> (/Web/CSS/Reference)</td>
+        <td><code>\{{CSSxRef("cursor")}}</code> results in {{CSSxRef("cursor")}}.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/DOMxRef.ejs">DOMxRef</a></td>
+        <td><a href="/en-US/docs/Web/API">DOM Reference</a> (/Web/API)</td>
+        <td><code>\{{DOMxRef("Document")}}</code> or <code>\{{DOMxRef("document")}}</code> results in {{DOMxRef("Document")}},<br>
+            <code>\{{DOMxRef("document.getElementsByName()")}}</code> result in {{DOMxRef("document.getElementsByName()")}}<br/>
+            <code>\{{DOMxRef("Node")}}</code> result in {{DOMxRef("Node")}}. <br/>
+            You can change the display text using a second parameter: <code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code> results in {{DOMxRef("document.getElementsByName()","getElementsByName()")}}.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code></td>
+        <td><a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)</td>
+        <td><code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/htmlattrxref.ejs">HTMLAttrxRef</a></td>
+        <td><a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attribute description</a> if you only specify the attribute name.<br/>Attribute associated with a specific HTML element if you specify an attribute name and an element name.</td>
+        <td><code>\{{HTMLAttrxRef("lang")}} </code> links to the global attribute description {{HTMLAttrxRef("lang")}}.<br/><code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).</td>
+      </tr>
+      <tr>
+        <td> <a href="https://github.com/mdn/yari/tree/master/kumascript/macros/jsxref.ejs">JSxRef</a></td>
+        <td><a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference).</td>
+        <td><code>\{{JSxRef("Promise")}}</code> results in {{JSxRef("Promise")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGAttr.ejs">SVGAttr</a></td>
+        <td><a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).</td>
+        <td><code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SVGElement.ejs">SVGElement</a></td>
+        <td><a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).</td>
+        <td><code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}</td>
+      </tr>
+      <tr>
+        <td><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></td>
+        <td><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> (/Web/HTTP/Headers).</td>
+        <td><code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a></td>
+        <td><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).</td>
+        <td><code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a></td>
+        <td><a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)</td>
+        <td><code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.</td>
+        <td><a href="/en-US/docs/Web/Events">Events reference</a> (/Web/Events)</td>
+        <td><code>\{{Event("Event_handlers", "Event handlders")}}</code> results in {{Event("Event_handlers", "Event handlers")}}
+        <div class="notecard note">
+            <h4>Note</h4>
+            <p>This macro is not particularly useful because events are now under their associated DOM element. So to link to the wheel event you would use <code>\{{DOMxRef("Document.wheel_event")}}</code>: {{DOMxRef("Document.wheel_event")}}</p>
+        </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 
 <h3 id="Linking_to_bugs">Linking to bugs</h3>
 
@@ -176,6 +241,15 @@ tags:
 
 <h3 id="Indicating_that_a_feature_is_available_in_web_workers">Indicating that a feature is available in web workers</h3>
 
-<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/AvailableInWorkers.ejs">AvailableInWorkers</a></code> macro inserts a localised note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context.</p>
+<p>The <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/AvailableInWorkers.ejs">AvailableInWorkers</a></code> macro inserts a localized note box indicating that a feature is available in a <a href="/en-US/docs/Web/API/Web_Workers_API">Web worker</a> context. You can use the argument <code>notservice</code> to indicate that a feature works in web workers except for service workers.</p>
 
-<p>{{AvailableInWorkers}}</p>
+<h5 id="Syntax">Syntax</h5>
+
+<pre>\{{AvailableInWorkers}}
+\{{AvailableInWorkers("notservice")}}</pre>
+
+<h5 id="Examples">Examples</h5>
+
+<div>{{AvailableInWorkers}}
+  {{AvailableInWorkers("notservice")}}
+</div>

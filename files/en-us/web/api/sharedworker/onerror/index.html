@@ -1,0 +1,52 @@
+---
+title: SharedWorker.onerror
+slug: Web/API/SharedWorker/onerror
+tags:
+  - API
+  - SharedWorker
+  - EventHandler
+  - Property
+  - Reference
+  - Web Workers
+  - Workers
+  - onerror
+browser-compat: api.SharedWorker.onerror
+---
+<div>{{APIRef("Web Workers API")}}</div>
+
+<p>The <code><strong>onerror</strong></code> property of the {{domxref("SharedWorker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">mySharedWorker.onerror = function(event) { ... };</pre>
+
+<h2 id="Example">Example</h2>
+
+<p>The following code snippet creates a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor and sets up an <code>onerror</code> handler on the resulting object:</p>
+
+<pre class="brush: js">var mySharedWorker = new SharedWorker('shared-worker.js');
+
+mySharedWorker.onerror = function(event) {
+  console.log('There is an error with your worker!');
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#handler-abstractworker-onerror", "onerror")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

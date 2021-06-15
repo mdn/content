@@ -25,7 +25,7 @@ tags:
 
 <p>Our boombox looks like this:</p>
 
-<p><img alt="A boombox with play, pan, and volume controls" src="boombox.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="A boombox with play, pan, and volume controls" src="boombox.png"></p>
 
 <p>Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.</p>
 
@@ -107,7 +107,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>A good way to visualise these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:</p>
 
-<p><img alt="an audio graph with an audio element source connected to the default destination" src="graph1.jpg" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="an audio graph with an audio element source connected to the default destination" src="graph1.jpg"></p>
 
 <p>Now we can add the play and pause functionality.</p>
 
@@ -156,7 +156,7 @@ playButton.addEventListener('click', function() {
 
 <p>This will make our audio graph look like this:</p>
 
-<p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="graph2.jpg" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination" src="graph2.jpg"></p>
 
 <p>The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4 and a max of about 3.4. Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).</p>
 
@@ -194,7 +194,7 @@ volumeControl.addEventListener('input', function() {
 
 <p>To visualise it, we will be making our audio graph look like this:</p>
 
-<p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="graphpan.jpg" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node." src="graphpan.jpg"></p>
 
 <p>Let's use the constructor method of creating a node this time. When we do it this way, we have to pass in the context and any options that the particular node may take:</p>
 
@@ -239,10 +239,10 @@ pannerControl.addEventListener('input', function() {
 
 <p>The <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-matic</a> is a fun voice manipulator and sound visualization web app that allows you to choose different effects and visualizations. The application is fairly rudimentary, but it demonstrates the simultaneous use of multiple Web Audio API features. (<a href="https://mdn.github.io/voice-change-o-matic/">run the Voice-change-O-matic live</a>).</p>
 
-<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="voice-change-o-matic.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="voice-change-o-matic.png"></p>
 
 <p>Another application developed specifically to demonstrate the Web Audio API is the <a href="https://mdn.github.io/violent-theremin/">Violent Theremin</a>, a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow (<a href="https://github.com/mdn/violent-theremin">see Violent Theremin source code</a>).</p>
 
-<p><img alt="A page full of rainbow colors, with two buttons labeled Clear screen and mute." src="violent-theremin.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="A page full of rainbow colors, with two buttons labeled Clear screen and mute." src="violent-theremin.png"></p>
 
 <p>Also see our <a href="https://github.com/mdn/webaudio-examples">webaudio-examples repo</a> for more examples.</p>

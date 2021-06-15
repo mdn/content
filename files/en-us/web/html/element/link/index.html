@@ -10,14 +10,13 @@ tags:
   - Web
   - Web Performance
   - metadata
+browser-compat: html.elements.link
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong>HTML External Resource Link element (<code>&lt;link&gt;</code>)</strong> specifies relationships between the current document and an external resource. This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.</p>
+<p>The <strong><code>&lt;link&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies relationships between the current document and an external resource. This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/link.html")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <p>To link an external stylesheet, you'd include a <code>&lt;link&gt;</code> element inside your {{HTMLElement("head")}} like this:</p>
 
@@ -46,7 +45,7 @@ tags:
 <pre class="brush: html no-line-numbers">&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</pre>
 
-<p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
+<p>A <code>rel</code> value of <code>preload</code> indicates that the browser should preload this resource (see <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with rel="preload"</a> for more details), with the <code>as</code> attribute indicating the specific class of content being fetched. The <code>crossorigin</code> attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.</p>
 
 <p>Other usage notes:</p>
 
@@ -193,7 +192,7 @@ tags:
  </div>
  </dd>
  <dt>{{HTMLAttrDef("title")}}</dt>
- <dd>The <code>title</code> attribute has special semantics on the <code>&lt;link&gt;</code> element. When used on a <code>&lt;link rel="stylesheet"&gt;</code> it defines a <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">preferred or an alternate stylesheet</a>. Incorrectly using it may <a href="/en-US/docs/Correctly_Using_Titles_With_External_Stylesheets">cause the stylesheet to be ignored</a>.</dd>
+ <dd>The <code>title</code> attribute has special semantics on the <code>&lt;link&gt;</code> element. When used on a <code>&lt;link rel="stylesheet"&gt;</code> it defines a <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">preferred or an alternate stylesheet</a>. Incorrectly using it may <a href="/en-US/docs/Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets">cause the stylesheet to be ignored</a>.</dd>
  <dt>{{HTMLAttrDef("type")}}</dt>
  <dd>This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as <strong>text/html</strong>, <strong>text/css</strong>, and so on. The common use of this attribute is to define the type of stylesheet being referenced (such as <strong>text/css</strong>), but given that CSS is the only stylesheet language used on the web, not only is it possible to omit the <code>type</code> attribute, but is actually now recommended practice. It is also used on <code>rel="preload"</code> link types, to make sure the browser only downloads file types that it supports.</dd>
 </dl>
@@ -295,7 +294,7 @@ myStylesheet.onerror = function() {
 
 <h3 id="Preload_examples">Preload examples</h3>
 
-<p>You can find a number of <code>&lt;link rel="preload"&gt;</code> examples in <a href="/en-US/docs/Web/HTML/Preloading_content">Preloading content with <code>rel="preload"</code></a>.</p>
+<p>You can find a number of <code>&lt;link rel="preload"&gt;</code> examples in <a href="/en-US/docs/Web/HTML/Link_types/preload">Preloading content with <code>rel="preload"</code></a>.</p>
 
 <h2 id="Technical_summary">Technical summary</h2>
 
@@ -334,36 +333,11 @@ myStylesheet.onerror = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "semantics.html#the-link-element", "&lt;link&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Added <code>imagesizes</code> and <code>imagesrcset</code> attributes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "document-metadata.html#the-link-element", "&lt;link&gt;")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Added <code>crossorigin</code> and <code>sizes</code> attributes; extended values of <code>media</code> to any media queries; added numerous new values for <code>rel</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "struct/links.html#h-12.3", "&lt;link&gt;")}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.link", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

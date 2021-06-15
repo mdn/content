@@ -7,6 +7,7 @@ tags:
   - HTMLLinkElement
   - Interface
   - Reference
+browser-compat: api.HTMLLinkElement
 ---
 <div>
 <div>{{ APIRef("HTML DOM") }}</div>
@@ -18,7 +19,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}, and {{domxref("LinkStyle")}}.</em></p>
+<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <dl>
  <dt>{{domxref("HTMLLinkElement.as")}}</dt>
@@ -41,7 +42,7 @@ tags:
  <dd>Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.</dd>
  <dt>{{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}</dt>
  <dd>Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.</dd>
- <dt>{{domxref("LinkStyle.sheet")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref("StyleSheet")}} object associated with the given element, or <code>null</code> if there is none.</dd>
  <dt>{{domxref("HTMLLinkElement.type")}}</dt>
  <dd>Is a {{domxref("DOMString")}} representing the MIME type of the linked resource.</dd>
@@ -62,54 +63,15 @@ tags:
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}, and {{domxref("LinkStyle")}}.</em></p>
+<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Preload")}}</td>
-   <td>{{Spec2("Preload")}}</td>
-   <td>Defines <code>&lt;link rel="preload"&gt;</code>, and the <code>as</code> property. Note that currently Firefox only supports preloading of cacheable resources.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmllinkelement", "HTMLLinkElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Adds the following properties: <code>crossOrigin</code>, <code>referrerPolicy</code>, and <code>as</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "document-metadata.html#the-link-element", "HTMLLinkElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "document-metadata.html#the-link-element", "HTMLLinkElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following properties are now obsolete: <code>charset</code>, <code>rev</code>, and <code>shape</code>.<br>
-    The following properties have been added: <code>relList</code>, and <code>sizes</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-35143001', 'HTMLLinkElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>Added a second inheritence, the {{domxref("LinkStyle")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-35143001', 'HTMLLinkElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLLinkElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

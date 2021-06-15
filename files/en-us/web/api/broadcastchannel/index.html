@@ -8,6 +8,7 @@ tags:
   - HTML API
   - Interface
   - Reference
+browser-compat: api.BroadcastChannel
 ---
 <p>{{APIRef("Broadcast Channel API")}}</p>
 
@@ -37,9 +38,9 @@ tags:
 
 <dl>
  <dt>{{domxref("BroadcastChannel.onmessage")}}</dt>
- <dd>An {{domxref("EventHandler")}} property that specifies the function to execute when a {{event("message")}} event is fired on this object.</dd>
+ <dd>An {{event("Event_handlers", "event handler")}} property that specifies the function to execute when a {{event("message")}} event is fired on this object.</dd>
  <dt>{{domxref("BroadcastChannel.onmessageerror")}}</dt>
- <dd>An {{domxref("EventHandler")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.</dd>
+ <dd>An {{event("Event_handlers", "event handler")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -66,24 +67,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#broadcastchannel", "BroadcastChannel")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BroadcastChannel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

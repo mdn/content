@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web Workers
   - Workers
+browser-compat: api.DedicatedWorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
@@ -43,9 +44,9 @@ tags:
 
 <dl>
  <dt>{{domxref("DedicatedWorkerGlobalScope.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)</dd>
  <dt>{{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
+ <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -98,24 +99,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dedicatedworkerglobalscope', 'DedicatedWorkerGlobalScope')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DedicatedWorkerGlobalScope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -790,13 +790,13 @@ interface <dfn>VTTRegion</dfn> {
 
 <p>The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:</p>
 
-<ul style="list-style-type: circle;">
+<ul>
  <li>
   <h3 id="VTTCue">VTTCue</h3>
 
   <ul>
    <li>The methods which are available in this interface are:
-    <ul style="list-style-type: circle;">
+    <ul>
      <li>GetCueAsHTML to get the HTML of that Cue.</li>
      <li>VTT Constructor for creating new objects of Cues.</li>
      <li>Autokeyword.</li>
@@ -812,7 +812,7 @@ interface <dfn>VTTRegion</dfn> {
 
   <ul>
    <li>The methods used for region are listed below along with description of their functionality:
-    <ul style="list-style-type: circle;">
+    <ul>
      <li>ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.</li>
      <li>VTT Region Constructor: for construction of new VTT Regions.</li>
     </ul>
@@ -837,7 +837,7 @@ interface <dfn>VTTRegion</dfn> {
 <pre class="brush: plain">00:01.000 --&gt; 00:05.000</pre>
 
 <ol>
- <li>On the next line you can write the caption for this cue which will run from 1<sup>st</sup> second to the 5<sup>th</sup> second, inclusive.</li>
+ <li>On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.</li>
  <li>Following the similar steps, a complete WebVTT file for specific video or audio file can be made.</li>
 </ol>
 
@@ -892,8 +892,6 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 <p>{{Compat("api.VTTCue", 0)}}</p>
 
 <h3 id="TextTrack_interface"><code>TextTrack</code> interface</h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
 
 <p>{{Compat("api.TextTrack", 0)}}</p>
 

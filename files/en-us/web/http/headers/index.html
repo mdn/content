@@ -21,6 +21,7 @@ tags:
  <li>{{Glossary("Request header", "Request headers")}} contain more information about the resource to be fetched, or about the client requesting the resource.</li>
  <li>{{Glossary("Response header", "Response headers")}} hold additional information about the response, like its location or about the server providing it.</li>
  <li>{{Glossary("Representation header", "Representation headers")}} contain information about the body of the resource, like its <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, or encoding/compression applied.</li>
+ <li>{{Glossary("Payload header","Payload headers")}} contain representation-independent information about payload data, including content length and the encoding used for transport.</li>
 </ul>
 
 <p>Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies")}} handle them:</p>
@@ -81,12 +82,12 @@ tags:
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
  <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"><cite>[HTML]</cite></a>).</dd>
- <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
+ <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}</dt>
  <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://datatracker.ietf.org/doc/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
- <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
- <dd>Indicates that the request has been conveyed in early data.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
  <dd>Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.</dd>
+ <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
+ <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
  <dd>A boolean that indicates the user agent's preference for reduced data usage.</dd>
  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
@@ -321,7 +322,7 @@ tags:
 
 <h3 id="HTTP_Public_Key_Pinning_GlossaryHPKP">HTTP Public Key Pinning (HPKP)</h3>
 
-<p>{{Glossary("HPKP", "HTTP Public Key Pinning (HPKP)")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.</p>
+<p>{{Glossary("HPKP", "HTTP Public Key Pinning")}} has been deprecated and removed in favor of Certificate Transparency and {{HTTPHeader("Expect-CT")}}.</p>
 
 <dl>
  <dt>{{HTTPHeader("Public-Key-Pins")}}</dt>
@@ -332,15 +333,17 @@ tags:
 
 <h3 id="Fetch_metadata_request_headers">Fetch metadata request headers</h3>
 
+<p>{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provides information about the context from which the request originated. This allows a server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.</p>
+
 <dl>
  <dt>{{HTTPHeader("Sec-Fetch-Site")}}</dt>
  <dd>It is a request header that indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values <code>cross-site</code>, <code>same-origin</code>, <code>same-site</code>, and <code>none</code>.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-Mode")}}</dt>
- <dd>It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values <code>cors</code>, <code>navigate</code>, <code>nested-navigate</code>, <code>no-cors</code>, <code>same-origin</code>, and <code>websocket</code>.</dd>
+ <dd>It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values <code>cors</code>, <code>navigate</code>, <code>no-cors</code>, <code>same-origin</code>, and <code>websocket</code>.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-User")}}</dt>
  <dd>It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are <code>?0</code> for false and <code>?1</code> for true.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-Dest")}}</dt>
- <dd>It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values <code>audio</code>, <code>audioworklet</code>, <code>document</code>, <code>embed</code>, <code>empty</code>, <code>font</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>serviceworker</code>, <code>sharedworker</code>, <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>, <code>xslt</code>, and <code>nested-document</code>.</dd>
+ <dd>It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values <code>audio</code>, <code>audioworklet</code>, <code>document</code>, <code>embed</code>, <code>empty</code>, <code>font</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>serviceworker</code>, <code>sharedworker</code>, <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>, and <code>xslt</code>.</dd>
 </dl>
 
 <h2 id="Server-sent_events">Server-sent events</h2>
@@ -395,6 +398,8 @@ tags:
  <dd>Used to list alternate ways to reach this service.</dd>
  <dt>{{HTTPHeader("Date")}}</dt>
  <dd>Contains the date and time at which the message was originated.</dd>
+ <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
+ <dd>Indicates that the request has been conveyed in TLS early data.</dd>
  <dt>{{HTTPHeader("Large-Allocation")}}</dt>
  <dd>Tells the browser that the page being loaded is going to want to perform a large allocation.</dd>
  <dt>{{HTTPHeader("Link")}}</dt>

@@ -1,0 +1,52 @@
+---
+title: Worker.onerror
+slug: Web/API/Worker/onerror
+tags:
+  - API
+  - Worker
+  - EventHandler
+  - Property
+  - Reference
+  - Web Workers
+  - Workers
+  - onerror
+browser-compat: api.Worker.onerror
+---
+<div>{{APIRef("Web Workers API")}}</div>
+
+<p>The <code><strong>onerror</strong></code> property of the {{domxref("Worker")}} interface represents an {{event("Event_handlers", "event handler")}}, that is a function to be called when the {{event("error")}} event occurs.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">myWorker.onerror = function(event) { ... };</pre>
+
+<h2 id="Example">Example</h2>
+
+<p>The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor and sets up an <code>onerror</code> handler on the resulting object:</p>
+
+<pre class="brush: js">var myWorker = new Worker('worker.js');
+
+myWorker.onerror = function(event) {
+  console.log('There is an error with your worker!');
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#handler-abstractworker-onerror", "onerror")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

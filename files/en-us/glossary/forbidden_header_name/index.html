@@ -8,13 +8,13 @@ tags:
   - Headers
   - forbidden
 ---
-<p>A <dfn>forbidden header name</dfn> is the name of any <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> that cannot be modified programmatically; specifically, an HTTP <strong>request</strong> header name (in contrast with a {{Glossary("Forbidden response header name")}}).</p>
+<p>A <strong>forbidden header name</strong> is the name of any <a href="/en-US/docs/Web/HTTP/Headers">HTTP header</a> that cannot be modified programmatically; specifically, an HTTP <strong>request</strong> header name (in contrast with a {{Glossary("Forbidden response header name")}}).</p>
 
 <p>Modifying such headers is forbidden because the user agent retains full control over them. Names starting with `<code>Sec-</code>` are reserved for creating new headers safe from {{glossary("API","APIs")}} using <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> that grant developers control over headers, such as {{domxref("XMLHttpRequest")}}.</p>
 
 <p>Forbidden header names start with <code>Proxy-</code> or <code>Sec-</code>, or are one of the following names:</p>
 
-<ul class="brief">
+<ul>
  <li><code>Accept-Charset</code></li>
  <li><code>Accept-Encoding</code></li>
  <li><code>Access-Control-Request-Headers</code></li>
@@ -26,7 +26,7 @@ tags:
  <li><code>Date</code></li>
  <li><code>DNT</code></li>
  <li><code>Expect</code></li>
- <li><code>Feature-Policy</code></li>
+ <li><code>Feature-Policy</code></li> 
  <li><code>Host</code></li>
  <li><code>Keep-Alive</code></li>
  <li><code>Origin</code></li>
@@ -40,8 +40,9 @@ tags:
  <li><code>Via</code></li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: The <code>User-Agent</code> header is no longer forbidden, <a href="https://fetch.spec.whatwg.org/#terminology-headers">as per spec</a> — see forbidden header name list (this was implemented in Firefox 43) — it can now be set in a Fetch <a href="/en-US/docs/Web/API/Headers">Headers</a> object, or via XHR <a href="/en-US/docs/Web/API/XMLHttpRequest#setrequestheader%28%29">setRequestHeader()</a>.  However, Chrome will silently drop the header from Fetch requests (see <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=571722">Chromium bug 571722</a>).</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>The <code>User-Agent</code> header is no longer forbidden, <a href="https://fetch.spec.whatwg.org/#terminology-headers">as per spec</a> — see forbidden header name list (this was implemented in Firefox 43) — it can now be set in a Fetch <a href="/en-US/docs/Web/API/Headers">Headers</a> object, or via XHR <a href="/en-US/docs/Web/API/XMLHttpRequest#setrequestheader%28%29">setRequestHeader()</a>.  However, Chrome will silently drop the header from Fetch requests (see <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=571722">Chromium bug 571722</a>).</p>
 </div>
 
 <section id="Quick_links">

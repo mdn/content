@@ -9,7 +9,7 @@ tags:
 ---
 <p>The <strong><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></strong> exposes CSS values as typed JavaScript objects to allow their performant manipulation.</p>
 
-<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} can incur a significant performance overhead.</p>
+<p>Converting <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a> value strings into meaningfully-typed JavaScript representations and back (via {{domxref("HTMLElement.style")}} can incur a significant performance overhead.</p>
 
 <p>The CSS Typed OM makes CSS manipulation more logical and performant by providing object features (rather than CSSOM string manipulation), providing access to types, methods, and an object model for CSS values.</p>
 
@@ -184,7 +184,7 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
 
 <p>For those of you using a non-supporting browser, the above output should looks something like this:</p>
 
-<table id="regurgitation" style="height: 424px; width: 1336px;">
+<table id="regurgitation">
  <thead>
   <tr>
    <th>Property</th>
@@ -194,44 +194,44 @@ for ( let i = 0; i &lt; ofInterest.length; i++ ) {
  </thead>
  <tbody>
   <tr>
-   <td>padding-top</td>
+   <td>{{cssxref("padding-top")}}</td>
    <td>0</td>
-   <td>px</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>margin-bottom</td>
+   <td>{{cssxref("margin-bottom")}}</td>
    <td>16</td>
-   <td>px</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>font-size</td>
+   <td>{{cssxref("font-size")}}</td>
    <td>16</td>
-   <td>px</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>font-stretch</td>
+   <td>{{cssxref("font-stretch")}}</td>
    <td>100</td>
-   <td>percent</td>
+   <td><code>%</code></td>
   </tr>
   <tr>
-   <td>animation-duration</td>
+   <td>{{cssxref("animation-duration")}}</td>
    <td>0</td>
-   <td>s</td>
+   <td><code>px</code></td>
   </tr>
   <tr>
-   <td>animation-iteration-count</td>
+   <td>{{cssxref("animation-iteration-count")}}</td>
    <td>1</td>
-   <td>number</td>
+   <td><em>number</em></td>
   </tr>
   <tr>
-   <td>width</td>
+   <td>{{cssxref("width")}}</td>
    <td>auto</td>
-   <td>undefined</td>
+   <td><em>undefined</em></td>
   </tr>
   <tr>
-   <td>height</td>
+   <td>{{cssxref("height")}}</td>
    <td>auto</td>
-   <td>undefined</td>
+   <td><em>undefined</em></td>
   </tr>
  </tbody>
 </table>
@@ -285,7 +285,7 @@ button {
 	display: inline-block;
 	padding: var(--unit) calc(var(--unit)*2);
 	width: calc(30% + 20px);
-	background: no-repeat 5% center url(https://mdn.mozillademos.org/files/16793/magicwand.png) var(--mainColor);
+	background: no-repeat 5% center url(magicwand.png) var(--mainColor);
 	border: 4px solid var(--mainColor);
 	border-radius: 2px;
 	font-size: calc(var(--unit)*2); color: var(--white);
@@ -327,7 +327,7 @@ console.log( transform.is2D );   // true
 let bgImage = allComputedStyles.get('background-image');
 
 console.log( bgImage );             // CSSImageValue
-console.log( bgImage.toString() ); // url("https://mdn.mozillademos.org/files/16793/magicwand.png")
+console.log( bgImage.toString() ); // url("magicwand.png")
 
 // CSSUnparsedValue
 let unit = allComputedStyles.get('--unit');
@@ -411,9 +411,9 @@ console.log( transform.is2D );   // true</pre>
 <pre class="brush: js">let bgImage = allComputedStyles.get('background-image');
 
 console.log( bgImage );             // CSSImageValue
-console.log( bgImage.toString() );  // url("https://mdn.mozillademos.org/files/16793/magicwand.png")</pre>
+console.log( bgImage.toString() );  // url("magicwand.png")</pre>
 
-<p>When we <code>get()</code> the <code>'background-image'</code>, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '<code>url("https://mdn.mozillademos.org/files/16793/magicwand.png")'</code>.</p>
+<p>When we <code>get()</code> the <code>'background-image'</code>, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{domxref('Object.prototype.toString()')}} method, shows we returned only the image, '<code>url("magicwand.png")'</code>.</p>
 
 <p>Notice that the value returned is the absolute path to the image — this is returned even if the original <code>url()</code> value was relative. Had the background image been a gradient or multiple background images,  <code>.get('background-image') </code>would have returned a <code>CSSStyleValue</code>. The <code>CSSImageValue</code> is returned only if there is a single image, and only if that single image declaration is a URL.</p>
 

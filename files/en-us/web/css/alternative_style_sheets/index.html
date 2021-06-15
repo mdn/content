@@ -5,15 +5,18 @@ tags:
   - CSS
   - Guide
   - HTML
-  - NeedsCompatTable
-  - NeedsUpdate
   - Reference
 ---
 <div>{{CSSRef}}</div>
 
 <p>Specifying <strong>alternative style sheets</strong> in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.</p>
 
-<p>Firefox lets the user select the stylesheet using the <em>View &gt; Page Style</em> submenu. Internet Explorer also supports this feature (beginning with IE 8), also accessed from <em>View &gt; Page Style</em>. Chrome requires an extension to use the feature (as of version 48). The web page can also provide its own user interface to let the user switch styles.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+  <p>This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">media features</a> {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.</p>
+</div>
+
+<p>Firefox lets the user select the stylesheet using the <em>View &gt; Page Style</em> submenu. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let the user switch styles.</p>
 
 <h2 id="An_example_specifying_the_alternative_stylesheets">An example: specifying the alternative stylesheets</h2>
 
@@ -32,7 +35,7 @@ tags:
 
 <h3 id="Try_it_out">Try it out</h3>
 
-<p><a href="/samples/cssref/altstyles/index.html">Click here</a> for a working example you can try out.</p>
+<p><a href="https://mdn.github.io/css-examples/alt-style-sheets/">Try a working example here</a>.</p>
 
 <h2 id="Details">Details</h2>
 
@@ -40,7 +43,7 @@ tags:
 
 <ul>
  <li><strong>Persistent</strong> (no <code>rel="alternate"</code>, no <code>title=""</code>): always applies to the document.</li>
- <li><strong>Preferred</strong> (no <code>rel="alternate"</code>, with <code>title="..."</code> specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. <strong>There can only be one preferred stylesheet</strong>, so providing stylesheets with different title attributes will cause some of them to be ignored. See <a href="/en-US/docs/Correctly_Using_Titles_With_External_Stylesheets">Correctly Using Titles With External Stylesheets</a> for a more detailed discussion.</li>
+ <li><strong>Preferred</strong> (no <code>rel="alternate"</code>, with <code>title="..."</code> specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. <strong>There can only be one preferred stylesheet</strong>, so providing stylesheets with different title attributes will cause some of them to be ignored.</li>
  <li><strong>Alternate</strong> (<code>rel="alternate stylesheet"</code>, <code>title="..."</code> must be specified): disabled by default, can be selected.</li>
 </ul>
 

@@ -19,14 +19,13 @@ tags:
   - Pictures
   - Reference
   - Web
+browser-compat: html.elements.img
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;img&gt;</code> element</strong> embeds an image into the document.</span></p>
+<p>The <strong><code>&lt;img&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element embeds an image into the document.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <p>The above example shows usage of the <code>&lt;img&gt;</code> element:</p>
 
@@ -95,7 +94,7 @@ tags:
 
 	<p>If the <code>crossorigin</code> attribute is <em>not</em> specified, then a non-CORS request is sent (without the {{httpheader("Origin")}} request header), and the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.</p>
 
-	<p>If the <code>crossorigin</code> attribute <em>is</em> specified, then a CORS request is sent (with the {{httpheader("Origin")}} request header); but if the server does not opt into allowing cross-origin access to the image data by the origin site (by not sending any {{httpheader("Access-Control-Allow-Origin")}} response header, or by not including the site's origin in any {{httpheader("Access-Control-Allow-Origin")}} response header it does send), then the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.</p>
+	<p>If the <code>crossorigin</code> attribute <em>is</em> specified, then a CORS request is sent (with the {{httpheader("Origin")}} request header); but if the server does not opt into allowing cross-origin access to the image data by the origin site (by not sending any {{httpheader("Access-Control-Allow-Origin")}} response header, or by not including the site's origin in any {{httpheader("Access-Control-Allow-Origin")}} response header it does send), then the browser blocks the image from loading, and logs a CORS error to the devtools console.</p>
 
 	<p>Allowed values:</p>
 
@@ -150,7 +149,7 @@ tags:
 	<ul>
 		<li><code>no-referrer</code>: The {{httpheader("Referer")}} header will not be sent.</li>
 		<li><code>no-referrer-when-downgrade</code>: No <code>Referer</code> header is sent when navigating to an origin without {{glossary("HTTPS")}}. This is the default if no policy is otherwise specified.</li>
-		<li><code>origin</code>: The <code>Referer</code> header will include the page's origin ({{glossary("scheme")}}, {{glossary("host")}}, and {{glossary("port")}}).</li>
+		<li><code>origin</code>: The <code>Referer</code> header will include the page's origin scheme, {{glossary("host")}}, and {{glossary("port")}}).</li>
 		<li><code>origin-when-cross-origin</code>: Navigating to other origins will limit the included referral data to the scheme, host, and port, while navigating from the same origin will include the full path and query string.</li>
 		<li><code>unsafe-url</code>: The <code>Referer</code> header will always include the origin, path and query string, but not the fragment, password, or username. <strong>This is unsafe</strong> because it can leak information from TLS-protected resources to insecure origins.</li>
 	</ul>
@@ -400,41 +399,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
-			<td>{{Spec2('Referrer Policy')}}</td>
-			<td>Added the <code>referrerpolicy</code> attribute.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}</td>
-			<td>{{Spec2('HTML WHATWG')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-img-element', '&lt;img&gt;')}}</td>
-			<td>{{Spec2('HTML5 W3C')}}</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>{{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}</td>
-			<td>{{Spec2('HTML4.01')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.img")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

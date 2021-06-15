@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. <span class="seoSummary">For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</span></p>
+<p>In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.</span></p>
 
 <h2 id="Logical_and_physical_properties_and_values">Logical and physical properties and values</h2>
 
@@ -67,7 +67,6 @@ tags:
 
 <p>The value <code>horizontal-tb</code> is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see <a href="https://24ways.org/2016/css-writing-modes/">Jen’s article</a>. As a simple example, I have two paragraphs below. The first uses the default <code>horizontal-tb</code>, and the second uses <code>vertical-rl</code>. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.</p>
 
-<div id="writing_1">
 <div class="hidden">
 <pre class="brush: css">.wrapper &gt; p {
     border: 2px solid #ffa94d;
@@ -87,16 +86,16 @@ tags:
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_1', '500', '420') }}</p>
-</div>
+<p>{{ EmbedLiveSample('writing-mode', '500', '500') }}</p>
 
 <h2 id="Writing_modes_in_grid_layouts">Writing modes in grid layouts</h2>
 
 <p>If we now take a look at a grid layout example, we can see how changing the writing mode means changing our idea of where the Block and Inline Axis are.</p>
 
-<p>The grid in my next example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:</p>
+<h3 id="default_writing_mode">Default writing mode</h3>
 
-<div id="writing_2">
+<p>The grid in this example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:</p>
+
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -133,12 +132,12 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_2', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('default_writing_mode', '500', '330') }}</p>
+
+<h3 id="setting_writing_mode">Setting writing mode</h3>
 
 <p>If we add <code>writing-mode: vertical-lr</code> to the grid container, we can see that the block and inline Axis are now running in a different direction. The block or <em>column</em> axis now runs across the page from left to right, Inline runs down the page, creating rows from top to bottom.</p>
 
-<div id="writing_3">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -176,8 +175,7 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_3', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('setting_writing_mode', '500', '330') }}</p>
 
 <p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
@@ -187,7 +185,6 @@ gap: 10px;
 
 <p>In this next example, I am using alignment to align items inside a grid that is set to <code>writing-mode: vertical-lr</code>. The <code>start</code> and <code>end</code> properties work in exactly the same way that they do in the default writing mode, and remain logical in a way that using left and right, top and bottom to align items would not do. This occurs once we've flipped the grid onto the side, like this:</p>
 
-<div id="writing_4">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -241,8 +238,7 @@ gap: 10px;
 &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_4', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Logical_values_for_alignment', '500', '330') }}</p>
 
 <p>If you want to see how these work, with a right to left as well as top to bottom writing mode, switch <code>vertical-lr</code> to <code>vertical-rl</code>, which is a vertical writing mode running from right to left.</p>
 
@@ -254,6 +250,8 @@ gap: 10px;
 
 <p>The key thing to remember when placing items by line number, is that line 1 is the start line, no matter which writing mode you are in. Line -1 is the end line, no matter which writing mode you are in.</p>
 
+<h3 id="line-based_placement_with_left_to_right_text">Line-based placement with left to right text</h3>
+
 <p>In this next example, I have a grid which is in the default <code>ltr</code> direction. I have positioned three items using line-based placement.</p>
 
 <ul>
@@ -262,7 +260,6 @@ gap: 10px;
  <li>Item 3 starts at column line 1, spanning to column line 3.</li>
 </ul>
 
-<div id="writing_5">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -307,12 +304,12 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_5', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('line-based_placement_with_left_to_right_text', '500', '330') }}</p>
+
+<h3 id="line-based_placement_with_right_to_left_text">Line-based placement with right to left text</h3>
 
 <p>If I now add the {{cssxref("direction")}} property with a value of <code>rtl</code> to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.</p>
 
-<div id="writing_6">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 
@@ -358,8 +355,7 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_6', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('line-based_placement_with_right_to_left_text', '500', '330') }}</p>
 
 <p>What this demonstrates, is that if you are switching the direction of your text, either for entire pages or for parts of pages, and are using lines: you may want to name your lines, if you do not want the layout to completely switch direction. For some things, for example, where a grid contains text content, this switching may be exactly what you want. For other usage it may not.</p>
 
@@ -391,7 +387,6 @@ gap: 10px;
 
 <p>In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise <code>ltr</code>. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:</p>
 
-<div id="writing_7">
 <pre class="brush: css">.wrapper {
     display: grid;
     grid-gap: 20px;
@@ -428,8 +423,7 @@ gap: 10px;
     &lt;/div&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('writing_7', '500', '330') }}</p>
-</div>
+<p>{{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '330') }}</p>
 
 <h2 id="Physical_values_and_grid_layout">Physical values and grid layout</h2>
 

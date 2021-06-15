@@ -9,6 +9,7 @@ tags:
 - Prototype
 - Reference
 - String
+- Polyfill
 browser-compat: javascript.builtins.String.fontsize
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
@@ -59,7 +60,7 @@ console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
 console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/fontsize&gt;
 </pre>
 
-<p>With the {{domxref("ElementCSSInlineStyle/style", "element.style")}} object you can get
+<p>With the {{domxref("HTMLElement/style", "element.style")}} object you can get
   the element's <code>style</code> attribute and manipulate it more generically, for
   example:</p>
 
@@ -77,6 +78,7 @@ console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/f
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>String.prototype.fontsize</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a></li>
   <li>{{jsxref("String.prototype.big()")}}</li>
   <li>{{jsxref("String.prototype.small()")}}</li>
 </ul>

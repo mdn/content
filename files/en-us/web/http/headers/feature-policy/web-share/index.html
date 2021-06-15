@@ -5,6 +5,8 @@ tags:
   - Feature-Policy
   - HTTP
   - Web Share
+  - Experimental
+browser-compat: http.headers.Feature-Policy.web-share
 ---
 <p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
 
@@ -15,8 +17,8 @@ tags:
 <pre>Feature-Policy: web-share &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page('Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}</dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
@@ -25,35 +27,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Share API','#permissions-policy','')}}</td>
-   <td>{{Spec2('Web Share API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
-<p>{{Compat('http.headers.Feature-Policy.web-share')}}</p>
+<p>{{Compat}}</p>
 
 <p>Browser implementation is being discussed in <a href="https://github.com/w3c/web-share/issues/169">https://github.com/w3c/web-share/issues/169</a>.</p>
 

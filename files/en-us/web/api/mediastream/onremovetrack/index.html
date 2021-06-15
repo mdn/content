@@ -9,11 +9,12 @@ tags:
 - Property
 - Reference
 - onremovetrack
+browser-compat: api.MediaStream.onremovetrack
 ---
 <p>{{APIRef("Media Streams API")}}</p>
 
 <p><span class="seoSummary">The <strong><code>MediaStream.onremovetrack</code></strong>
-    property is an {{domxref("EventHandler")}} which specifies a function to be called
+    property is an {{event("Event_handlers", "event handler")}} which specifies a function to be called
     when the {{event("removetrack")}} event occurs on a {{domxref("MediaStream")}}
     instance. This happens when a track of any kind is removed from the media
     stream.</span> This event is fired when the browser removes a track from the stream
@@ -54,27 +55,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediastream-onremovetrack',
-        'MediaStream.onremovetrack') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStream.onremovetrack")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

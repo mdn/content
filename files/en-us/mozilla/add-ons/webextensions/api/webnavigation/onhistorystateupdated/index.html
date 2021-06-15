@@ -11,10 +11,11 @@ tags:
   - WebExtensions
   - onHistoryStateUpdated
   - webNavigation
+browser-compat: webextensions.api.webNavigation.onHistoryStateUpdated
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Fired when the page used the <a href="http://diveintohtml5.info/history.html">history API</a> to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.</p>
+<p>Fired when the page used the <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">>history API</a> to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -71,7 +72,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(<var>listener</var>)
 	<dt><code>frameId</code></dt>
 	<dd><code>integer</code>. Frame in which the navigation will occur. <code>0</code> indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.</dd>
 	<dt><code>timeStamp</code></dt>
-	<dd><code>number</code>. The time that the navigation was committed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
+	<dd><code>number</code>. The time that the URL was changed by the history API, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
 	<dt><code>transitionType</code></dt>
 	<dd><code>{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}</code>. The reason for the navigation: for example, <code>"link"</code> if the user clicked a link.</dd>
 	<dt><code>transitionQualifiers</code></dt>
@@ -80,7 +81,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(<var>listener</var>)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.webNavigation.onHistoryStateUpdated")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 

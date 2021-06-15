@@ -50,10 +50,7 @@ tags:
 
 <p>Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var myWorker = new Worker('worker.js');
-</pre>
-</div>
+<pre class="brush: js">var myWorker = new Worker('worker.js');</pre>
 
 <h3 id="Sending_messages_to_and_from_a_dedicated_worker">Sending messages to and from a dedicated worker</h3>
 
@@ -662,11 +659,11 @@ onmessage = function(event) {
 
     worker.onmessage = function(event) {
       document.getElementById('result').textContent = event.data;
-      dump('Got: ' + event.data + '\n');
+      console.log('Got: ' + event.data + '\n');
     };
 
     worker.onerror = function(error) {
-      dump('Worker error: ' + error.message + '\n');
+      console.log('Worker error: ' + error.message + '\n');
       throw error;
     };
 
@@ -677,15 +674,11 @@ onmessage = function(event) {
 &lt;/html&gt;
 </pre>
 
-<p>The web page creates a <code>div</code> element with the ID <code>result</code> , which gets used to display the result, then spawns the worker. After spawning the worker, the <code>onmessage</code> handler is configured to display the results by setting the contents of the <code>div</code> element, and the <code>onerror</code> handler is set to <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">dump</a> the error message.</p>
+<p>The web page creates a <code>div</code> element with the ID <code>result</code> , which gets used to display the result, then spawns the worker. After spawning the worker, the <code>onmessage</code> handler is configured to display the results by setting the contents of the <code>div</code> element, and the <code>onerror</code> handler is set to log the error message to the devtools console.</p>
 
 <p>Finally, a message is sent to the worker to start it.</p>
 
 <p><a href="https://mdn.github.io/fibonacci-worker/">Try this example live</a>.</p>
-
-<h3 id="Performing_web_IO_in_the_background">Performing web I/O in the background</h3>
-
-<p>You can find an example of this in the article <a class="internal" href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> .</p>
 
 <h3 id="Dividing_tasks_among_multiple_workers">Dividing tasks among multiple workers</h3>
 
@@ -697,7 +690,7 @@ onmessage = function(event) {
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a> essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.</li>
- <li>Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to <a href="/en-US/js-ctypes">js-ctypes</a> in your worker. See {{domxref("ChromeWorker")}} for more details.</li>
+
  <li><a href="/en-US/docs/Web/API/Web_Audio_API#audio_processing_in_javascript">Audio Worklet</a> provide the ability for direct scripted audio processing to be done in a worklet (a lightweight version of worker) context.</li>
 </ul>
 
@@ -707,7 +700,7 @@ onmessage = function(event) {
 
 <p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a>, just like code running in the main thread.</p>
 
-<p><img src="worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img src="worker-source.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
@@ -715,7 +708,7 @@ onmessage = function(event) {
 
 <p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">call stack</a>, etc., just as you'd expect.</p>
 
-<p><img src="worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img src="worker-breakpoints-callstack.png"></p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>

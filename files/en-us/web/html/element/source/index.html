@@ -9,14 +9,13 @@ tags:
   - Reference
   - Web
   - Web Performance
+browser-compat: html.elements.source
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;source&gt;</code> element</strong> specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element.</span> It is an empty element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for <a href="/en-US/docs/Web/Media/Formats/Image_types">image file formats</a> and <a href="/en-US/docs/Web/Media/Formats">media file formats</a>.</p>
+<p>The <strong><code>&lt;source&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element specifies multiple media resources for the {{HTMLElement("picture")}}, the {{HTMLElement("audio")}} element, or the {{HTMLElement("video")}} element. It is an empty element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for <a href="/en-US/docs/Web/Media/Formats/Image_types">image file formats</a> and <a href="/en-US/docs/Web/Media/Formats">media file formats</a>.</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}</p>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -61,7 +60,7 @@ tags:
 
 <dl>
  <dt>{{htmlattrdef("media")}}</dt>
- <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_Queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
+ <dd><a class="internal" href="/en-US/docs/Web/CSS/Media_Queries">Media query</a> of the resource's intended media.</dd>
  <dt>{{htmlattrdef("sizes")}}</dt>
  <dd>
  <p>Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that <code>sizes</code> will have its effect only if width dimension descriptors are provided with <code>srcset</code> instead of pixel ratio values (200w instead of 2x for example).</p>
@@ -129,26 +128,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("html.elements.source")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

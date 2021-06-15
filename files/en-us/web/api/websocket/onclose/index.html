@@ -7,11 +7,12 @@ tags:
 - Reference
 - Web API
 - WebSocket
+browser-compat: api.WebSocket.onclose
 ---
 <p>{{APIRef("Web Sockets API")}}</p>
 
 <p>The <code><strong>WebSocket.onclose</strong></code> property is
-  an {{domxref("EventHandler")}} that is called when the WebSocket connection's
+  an {{event("Event_handlers", "event handler")}} that is called when the WebSocket connection's
   {{domxref("WebSocket.readyState","readyState")}} changes
   to {{domxref("WebSocket.readyState","CLOSED")}}. It is called with a
   {{domxref("CloseEvent")}}.</p>
@@ -45,3 +46,7 @@ tags:
     </tr>
   </tbody>
 </table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

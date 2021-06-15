@@ -378,14 +378,14 @@ function notVeryObviousName() {
 <p>So instead of this:</p>
 
 <pre class="brush: js example-good">const array1 = [1, 2, 3, 4];
-let sum = array.reduce(function(a, b) {
+let sum = array1.reduce(function(a, b) {
   return a + b;
 });</pre>
 
 <p>you could write this:</p>
 
-<pre class="brush: js example-good">const array = [1, 2, 3, 4];
-let sum = array.reduce((a, b) =&gt;
+<pre class="brush: js example-good">const array1 = [1, 2, 3, 4];
+let sum = array1.reduce((a, b) =&gt;
   a + b
 );</pre>
 

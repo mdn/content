@@ -1,0 +1,108 @@
+---
+title: HTMLElement.style
+slug: Web/API/HTMLElement/style
+tags:
+  - API
+  - CSSOM
+  - HTMLElement
+  - Property
+  - Reference
+  - Style
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p>The <code><strong>style</strong></code> read-only property returns the <em>inline</em> style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline <a href="/en-US/docs/Web/HTML/Global_attributes/style"><code>style</code> attribute</a>.</p>
+
+<div class="notecard note">
+<p>See the <a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a> for a list of the CSS properties accessible via <code>style</code>. The <code>style</code> property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the <code>style</code> attribute.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js"><var>style</var> = <var>element</var>.style</pre>
+
+<h2 id="value">Value</h2>
+
+<p>A {{domxref("CSSStyleDeclaration")}} object, with the following properties:</p>
+
+<dl>
+  <dt>computed flag</dt>
+  <dd>Unset.</dd>
+  <dt>parent CSS rule</dt>
+  <dd>Null.</dd>
+  <dt>owner node</dt>
+  <dd><code>this</code></dd>
+</dl>
+
+<h2 id="Setting_styles">Setting styles</h2>
+
+<p>While this property is considered read-only, it is possible to set an inline style by assigning a string directly to the <code>style</code> property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using <code>style</code> in this manner will completely overwrite all inline styles on the element.</p>
+
+<p>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, <code>element.style.backgroundColor = "red"</code>.</p>
+
+<p>A style declaration is reset by setting it to <code>null</code> or an empty string, e.g., <code>elt.style.color = null</code>. Internet Explorer requires setting it to an empty string, and does not do anything when setting it to <code>null</code>.</p>
+
+<h3 id="Getting_style_information">Getting style information</h3>
+
+<p>The <code>style</code> property is not useful for completely learning about the styles applied on the element, since it represents only the CSS declarations set in the element's inline <code>style</code> attribute, not those that come from style rules elsewhere, such as style rules in the {{HTMLElement("head")}} section, or external style sheets. To get the values of all CSS properties for an element you should use {{domxref("Window.getComputedStyle()")}} instead.</p>
+
+<p>The following code snippet demonstrates the difference between the values obtained using the element's <code>style</code> property and that obtained using the <code>getComputedStyle()</code> method:</p>
+
+<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;body style="font-weight:bold;"&gt;
+    &lt;div style="color:red" id="myElement"&gt;..&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<pre class="brush:js">var element = document.getElementById("myElement");
+var out = "";
+var elementStyle = element.style;
+var computedStyle = window.getComputedStyle(element, null);
+
+for (prop in elementStyle) {
+  if (elementStyle.hasOwnProperty(prop)) {
+    out += "  " + prop + " = '" + elementStyle[prop] + "' &gt; '" + computedStyle[prop] + "'\n";
+  }
+}
+console.log(out)
+</pre>
+
+<p>The output would be something like:</p>
+
+<pre>...
+fontWeight = '' &gt; 'bold'
+color = 'red' &gt; 'rgb(255, 0, 0)'
+...</pre>
+
+<p>Note the presence of the value <code>bold</code> for <code>font-weight</code> in the computed style and the absence of it in the element's <code>style</code> property</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM', '#dom-elementcssinlinestyle-style', 'the <code>style</code> attribute')}}</td>
+   <td>{{Spec2('CSSOM')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat("api.HTMLElement.style")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
+</ul>

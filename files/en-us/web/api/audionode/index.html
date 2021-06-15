@@ -7,6 +7,7 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.AudioNode
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
@@ -29,7 +30,7 @@ tags:
 
 <h3 id="The_audio_routing_graph">The audio routing graph</h3>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="webaudiobasics.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="webaudiobasics.png"></p>
 
 <p>Each <code>AudioNode</code> has inputs and outputs, and multiple audio nodes are connected to build a <em>processing graph</em>. This graph is contained in an {{domxref("AudioContext")}}, and each audio node can only belong to one audio context.</p>
 
@@ -119,24 +120,11 @@ oscillator.channelCount;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#audionode', 'AudioNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
