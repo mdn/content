@@ -12,9 +12,7 @@ browser-compat: http.headers.Save-Data
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p>The <strong><code>Save-Data</code></strong> header field is a boolean which, in
-  requests, indicates the client's preference for reduced data usage. This could be for
-  reasons such as high transfer costs, slow connection speeds, etc.</p>
+<p>The <strong><code>Save-Data</code></strong> {{Glossary("Client hints","network client hint")}} request header field is a boolean which indicates the client's preference for reduced data usage. This could be for reasons such as high transfer costs, slow connection speeds, etc.</p>
 
   <table class="properties">
     <tbody>
@@ -39,8 +37,12 @@ browser-compat: http.headers.Save-Data
   different markup and styling, disabled polling and automatic updates, and so on.</p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push",
+  <p><strong>Note:</strong> Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push",
     "8.2")}}) might be desirable too for reducing data downloads.</p>
+</div>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The <strong><code>Save-Data</code></strong> {{Glossary("Client hints","network client hint")}} should be used to reduce data set to the client irrespective of the values of other client client hints that indicate network capability, like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -112,14 +114,18 @@ Content-Type: image/jpeg
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="https://css-tricks.com/help-users-save-data/">Help Your Users `Save-Data` -
-      CSS Tricks</a></li>
-  <li><a
-      href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/">Delivering
-      Fast and Light Applications with Save-Data - Google Developers</a></li>
-  <li>Header to indicate that the content served varies by <code>Save-Data</code>:
-    {{HTTPHeader("Vary")}}</li>
-  <li>CSS @media feature
-    <code><a href="/en-US/docs/Web/CSS/@media/prefers-reduced-data">prefers-reduced-data</a></code>
-    {{experimental_inline}}</li>
+  <li><a href="https://css-tricks.com/help-users-save-data/">Help Your Users `Save-Data` - CSS Tricks</a></li>
+  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/">Delivering Fast and Light Applications with Save-Data - Google Developers</a></li>
+  <li>{{HTTPHeader("Vary")}} header which indicate that the content served varies by <code>Save-Data</code> (see <a href="/en-US/docs/Web/HTTP/Caching#varying_responses">HTTP Caching > Varying responses</a>)</li>
+  <li>CSS @media feature <code><a href="/en-US/docs/Web/CSS/@media/prefers-reduced-data">prefers-reduced-data</a></code> {{experimental_inline}}</li>
+  <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
+    <li>Network client hints
+      <ul>
+       <li>{{HTTPHeader("Downlink")}}</li>
+       <li>{{HTTPHeader("RTT")}}</li>
+       <li>{{HTTPHeader("ECT")}}</li>
+       <li>{{HTTPHeader("Save-Data")}}</li>
+      </ul>
+  </li>
+  <li>{{domxref("NetworkInformation.saveData")}}</li>
 </ul>
