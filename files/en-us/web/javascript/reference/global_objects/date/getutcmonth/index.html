@@ -24,8 +24,14 @@ browser-compat: javascript.builtins.Date.getUTCMonth
 
 <h3 id="Return_value">Return value</h3>
 
-<p>An integer number, between 0 and 11, corresponding to the month of the given date
-  according to universal time. 0 for January, 1 for February, 2 for March, and so on.</p>
+<p>
+  One of the following:
+  <ul>
+    <li>An integer number, between 0 and 11, corresponding to the month of the given date
+  according to universal time. 0 for January, 1 for February, 2 for March, and so on.</li>
+    <li><code>NaN</code> if the date is <code>NaN</code></li>
+  </ul> 
+</p>
 
 <h2 id="Examples">Examples</h2>
 
