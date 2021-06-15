@@ -4019,7 +4019,6 @@
 /en-US/docs/HTML/Link_types	/en-US/docs/Web/HTML/Link_types
 /en-US/docs/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
-/en-US/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /en-US/docs/HTML/Supported_media_formats	/en-US/docs/Web/Media/Formats
 /en-US/docs/HTML/The_Importance_of_Correct_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -6343,7 +6342,6 @@
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Scripting_plugins	/en-US/docs/Plugins/Guide/Scripting_plugins
 /en-US/docs/Secciones_y_contornos_de_un_documento_HTML5	/es/docs/Sections_and_Outlines_of_an_HTML5_document
-/en-US/docs/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /en-US/docs/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -10619,10 +10617,10 @@
 /en-US/docs/Web/Guide/HTML/Introduction	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/Web/Guide/HTML/Recommended_Drag_Types	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
-/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /en-US/docs/Web/Guide/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Performance/Using_web_workers	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -10690,7 +10688,6 @@
 /en-US/docs/Web/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Web/HTML/Preloading_content	/en-US/docs/Web/HTML/Link_types/preload
-/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#HTML_comments
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
