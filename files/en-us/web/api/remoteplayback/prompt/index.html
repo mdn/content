@@ -15,7 +15,7 @@ browser-compat: api.RemotePlayback.prompt
 
 <p>If the user gives permission, the {{domxref("RemotePlayback.state","state")}} will be set to <code>connecting</code> and the user agent will connect to the device to initiate playback.</p>
 
-<p>If the user chooses to instead disconnect from the device, the {{domxref("RemotePlayback.state","state")}} will be set to <code>disconnected</code> and user agent should disconnect from this device.</p>
+<p>If the user chooses to instead disconnect from the device, the {{domxref("RemotePlayback.state","state")}} will be set to <code>disconnected</code> and user agent will disconnect from this device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,7 +37,7 @@ browser-compat: api.RemotePlayback.prompt
   <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
   <dd>Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is <code>true</code> for the media element.</dd>
   <dt>{{domxref("DOMException")}} <code>OperationError</code></dt>
-  <dd>User agents <em>may</em> throw this error if there is already an unsettled promise for this media element, or even this browsing context.</dd>
+  <dd>Thrown if there is already an unsettled promise for this media element, or browsing context.</dd>
   <dt>{{domxref("DOMException")}} <code>InvalidAccessError</code></dt>
   <dd>Thrown if the user has not interacted with this device recently.</dd>
   <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
