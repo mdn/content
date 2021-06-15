@@ -76,43 +76,63 @@ tags:
 
 <h2 id="Client_hints">Client hints</h2>
 
-<p>HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow the server to optimize what it serves for those conditions
-  (<a href="https://datatracker.ietf.org/doc/html/rfc8942"><cite>[RFC8942]</cite></a>).</p>
+<p>HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is serves for those conditions.</p>
+
+<p>Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.</p>
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"><cite>[HTML]</cite></a>).</dd>
+ <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv"><code>http-equi</code>v</a> attribute.</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}</dt>
- <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://datatracker.ietf.org/doc/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
- <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
- <dd>Approximate amount of available client RAM memory. Technically a part of <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</dd>
- <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
- <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
- <dt>{{HTTPHeader("RTT")}}</dt>
- <dd>Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is technically part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
- <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
- <dd>A boolean that indicates the user agent's preference for reduced data usage.</dd>
- <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
- <dd>
- <div id="rfc.section.3.3.p.1">
- <p>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
- </div>
-
- <div id="rfc.section.3.3.p.2">
- <p>If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</p>
- </div>
- </dd>
- <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
- <dd>
- <div id="rfc.section.3.2.p.1">
- <p>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
- </div>
-
- <div id="rfc.section.3.2.p.2">
- <p>If the desired resource width is not known at the time of the request or the resource does not have a display width, the <code>Width</code> header field can be omitted. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences</p>
- </div>
- </dd>
+ <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin.</dd>
 </dl>
+
+<p>The different categories of client hints are listed below.</p>
+
+<h3 id="device_client_hints">Device client hints</h3>
+
+<dl>
+  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
+  <dd>Approximate amount of available client RAM memory. Technically a part of <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</dd>
+  <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
+  <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
+  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
+  <dd>
+  <div>
+  <p>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
+  </div>
+ 
+  <div>
+  <p>If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</p>
+  </div>
+  </dd>
+  <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
+  <dd>
+  <div>
+  <p>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
+  </div>
+ 
+  <div>
+  <p>If the desired resource width is not known at the time of the request or the resource does not have a display width, the <code>Width</code> header field can be omitted. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences</p>
+  </div>
+  </dd>
+ </dl>
+
+
+<h3 id="network_client_hints">Network client hints</h3>
+
+<p>Network client hints allow a server to choose what information is sent based on the user choice and network bandwidth and latency.</p>
+
+<dl>
+  <dt>{{HTTPHeader("Downlink")}}</dt>
+  <dd>Approximate bandwidth of the client's connection to the server, in Mbps. This is part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
+  <dt>{{HTTPHeader("ECT")}}</dt>
+  <dd>The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
+  <dt>{{HTTPHeader("RTT")}}</dt>
+  <dd>Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
+  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
+  <dd>A boolean that indicates the user agent's preference for reduced data usage. This is part of the <a href="/en-US/docs/Web/API/Save_Data_API">Save Data API</a>.</dd>
+ </dl>
 
 <h2 id="Conditionals">Conditionals</h2>
 
