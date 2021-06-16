@@ -150,9 +150,9 @@ if (typeof document.addEventListener === "undefined" || hidden === undefined) {
  <dd>An {{domxref("EventListener")}} providing the code to be called when the {{event("visibilitychange")}} event is fired.</dd>
 </dl>
 
-<pre class="brush: js">//startSimulation and pauseSimulation defined elsewhere
+<pre class="brush: js">// startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
-  if (document.hidden) {
+  if (document.visibilityState === "hidden") {
     pauseSimulation();
   } else  {
     startSimulation();
@@ -195,6 +195,6 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Description of the <a href="http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">Page Visibility API</a> on the IEBlog.</li>
- <li>Description of the <a href="http://code.google.com/chrome/whitepapers/pagevisibility.html" title="Page Visibility API by Google">Page Visibility API</a> by Google</li>
+ <li>Description of the <a href="https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">Page Visibility API</a> on the IEBlog.</li>
+ <li>Description of the <a href="https://code.google.com/chrome/whitepapers/pagevisibility.html" title="Page Visibility API by Google">Page Visibility API</a> by Google</li>
 </ul>
