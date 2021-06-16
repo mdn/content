@@ -39,7 +39,7 @@ browser-compat: api.RemotePlayback
 <pre class="brush: html">&lt;video id="videoElement" src="https://example.org/media.ext"&gt;
 &lt;button id="deviceBtn" style="display: none;"&gt;Pick device&lt;/button&gt;</pre>
 
-<p>The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.</p>
+<p>The {{domxref("RemotePlayback.watchAvailability()")}} method is watches for available remote playback devices. If a device is available, use the callback to show the button.</p>
 
 <pre class="brush: js">const deviceBtn = document.getElementById("deviceBtn");
 const videoElem = document.getElementById("videoElement");
@@ -62,4 +62,3 @@ videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
