@@ -20,8 +20,8 @@ browser-compat: javascript.grammar.trailing_commas
   code might be less troublesome.</p>
 
 <p>JavaScript has allowed trailing commas in array literals since the beginning, and later
-  added them to object literals (ECMAScript 5) and most recently (ECMAScript 2017) to
-  function parameters.</p>
+  added them to object literals, and more recently, to
+  function parameters and to named imports and named exports.</p>
 
 <p><a href="/en-US/docs/Glossary/JSON">JSON</a>, however, disallows trailing commas.</p>
 
@@ -163,6 +163,47 @@ JSON.parse('{"foo" : 1, }');
 
 <pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4 ]');
 JSON.parse('{"foo" : 1 }');</pre>
+
+<h3 id="Trailing_commas_in_named_imports_and_named_exports">Trailing commas in named imports and named exports</h3>
+
+<p>Trailing commas are valid in named imports and named exports.</p>
+
+<h4 id="named_imports">named imports</h4>
+
+<pre class="brush: js">
+  import {
+    A,
+    B,
+    C,
+  } from 'D'
+
+  import { X, Y, Z } from 'W'
+
+  import { A as B, C as D, E as F } from 'Z'; //Renaming imports
+</pre>
+
+<h4 id="named_exports">named exports</h4>
+
+<pre class="brush: js">
+  export {
+    A,
+    B,
+    C
+  }
+
+  export { A, B, C };
+
+  export { A as B, C as D, E as F }; // Renaming exports
+</pre>
+
+<h3 id="Quantifier_prefix">Quantifier prefix</h3>
+
+<pre class="brush: js">
+  //{ DecimalDigits[~Sep], DecimalDigits[~Sep] }
+  x{n,}
+  x{n,m}
+  x{n,m}?
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
