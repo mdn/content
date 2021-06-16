@@ -28,6 +28,10 @@ browser-compat: api.MediaTrackConstraints
 
 <p>To learn more about how constraints work, see <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>.</p>
 
+<h3 id="ConstrainDouble">ConstrainDouble</h3>
+
+<p>To be written...</p>
+
 <h2 id="Properties">Properties</h2>
 
 <p>Some combination—but not necessarily all—of the following properties will exist on the object. This may be because a given browser doesn't support the property, or because it doesn't apply. For example, because {{Glossary("RTP")}} doesn't provide some of these values during negotiation of a WebRTC connection, a track associated with a {{domxref("RTCPeerConnection")}} will not include certain values, such as {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} or {{domxref("MediaTrackConstraints.groupId", "groupId")}}.</p>
@@ -51,7 +55,7 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} object specifying whether or not echo cancellation is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.latency", "latency")}}</dt>
- <dd>A {{domxref("ConstrainDouble")}} specifying the latency or range of latencies which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the latency or range of latencies which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}</dt>
  <dd>A {{domxref("ConstrainBoolean")}} which specifies whether noise suppression is preferred and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}}</dt>
@@ -59,7 +63,7 @@ browser-compat: api.MediaTrackConstraints
  <dt>{{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}</dt>
  <dd>A {{domxref("ConstrainULong")}} specifying the sample size or range of sample sizes which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.volume", "volume")}}</dt>
- <dd>A {{domxref("ConstrainDouble")}} specifying the volume or range of volumes which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the volume or range of volumes which are acceptable and/or required.</dd>
 </dl>
 
 <h3 id="Properties_of_image_tracks">Properties of image tracks</h3>
@@ -74,23 +78,23 @@ browser-compat: api.MediaTrackConstraints
  <dt><span id="pointsofinterest">pointsOfInterest</span></dt>
  <dd>The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:<em>value</em>, y:<em>value</em> } or an array of such objects, where <em>value</em> is a double-precision integer.</dd>
  <dt><span id="exposurecompensation">exposureCompensation</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying f-stop adjustment by up to ±3. </dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying f-stop adjustment by up to ±3. </dd>
  <dt><span id="colortemperature">colorTemperature</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired color temperature in degrees kelvin.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying a desired color temperature in degrees kelvin.</dd>
  <dt><span id="iso">iso</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired iso setting.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying a desired iso setting.</dd>
  <dt><span id="brightness">brightness</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired brightness setting.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying a desired brightness setting.</dd>
  <dt><span id="contrast">contrast</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the degree of difference between light and dark.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying the degree of difference between light and dark.</dd>
  <dt><span id="saturation">saturation</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the degree of color intensity.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying the degree of color intensity.</dd>
  <dt><span id="sharpness">sharpness</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the intensity of edges.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying the intensity of edges.</dd>
  <dt><span id="focusdistance">focusDistance</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying distance to a focused object.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying distance to a focused object.</dd>
  <dt><span id="zoom">zoom</span></dt>
- <dd>A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the desired focal length.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> (a double-precision integer) specifying the desired focal length.</dd>
  <dt><span id="torch">torch</span></dt>
  <dd>A {{jsxref("Boolean")}} defining whether the fill light is continuously connected, meaning it stays on as long as the track is active.</dd>
 </dl>
@@ -99,11 +103,11 @@ browser-compat: api.MediaTrackConstraints
 
 <dl>
  <dt>{{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}}</dt>
- <dd>A {{domxref("ConstrainDouble")}} specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.facingMode", "facingMode")}}</dt>
  <dd>A {{domxref("ConstrainDOMString")}} object specifying a facing or an array of facings which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.frameRate", "frameRate")}}</dt>
- <dd>A {{domxref("ConstrainDouble")}} specifying the frame rate or range of frame rates which are acceptable and/or required.</dd>
+ <dd>A <a href="#ConstrainDouble"><code>ConstrainDouble</code></a> specifying the frame rate or range of frame rates which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.height", "height")}}</dt>
  <dd>A {{domxref("ConstrainULong")}} specifying the video height or range of heights which are acceptable and/or required.</dd>
  <dt>{{domxref("MediaTrackConstraints.width", "width")}}</dt>
