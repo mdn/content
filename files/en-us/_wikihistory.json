@@ -35247,14 +35247,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/ConstrainDouble": {
-    "modified": "2020-10-15T21:49:41.625Z",
-    "contributors": [
-      "sideshowbarker",
-      "lucian95",
-      "Sheppy"
-    ]
-  },
   "Web/API/ConstrainULong": {
     "modified": "2020-10-15T22:26:33.190Z",
     "contributors": [
