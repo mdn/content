@@ -22,7 +22,9 @@ browser-compat: api.MediaTrackConstraints
 
 <p>The <strong><code>MediaTrackConstraints</code></strong> dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.</p>
 
-<p>For each constraint, you can typically specify an exact value you need, an ideal value you want, a range of acceptable values, and/or a value which you'd like to be as close to as possible. The specifics vary somewhat depending on the type of the constrainable property.</p>
+<h2 id="Constraints">Constraints</h2>
+
+<p>The following types are used to specify a constraint for a property. They allow you to specify one or more <code>exact</code> values from which one must be the parameter's value, or a set of <code>ideal</code> values which should be used if possible. You can also specify a single value (or an array of values) which the user agent will do its best to match once all more stringent constraints have been applied.</p>
 
 <p>To learn more about how constraints work, see <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>.</p>
 
