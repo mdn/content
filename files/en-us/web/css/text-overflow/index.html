@@ -27,7 +27,15 @@ white-space: nowrap;</pre>
 
 <p>The <code>text-overflow</code> property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.</p>
 
-<p>Each value is specified as one of:</p>
+<pre class="brush: css">text-overflow: clip;
+text-overflow: ellipsis ellipsis;
+text-overflow: ellipsis " [..]";
+
+/* Global values */
+text-overflow: inherit;
+text-overflow: initial;
+text-overflow: revert;
+text-overflow: unset;</pre>
 
 <ul>
  <li>one of the keyword values: <code><a href="#clip">clip</a></code>, <code><a href="#ellipsis">ellipsis</a></code>, <code><a href="#fade">fade</a></code></li>
