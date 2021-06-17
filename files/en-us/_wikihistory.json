@@ -74365,16 +74365,6 @@
       "teoli"
     ]
   },
-  "Web/API/RTCSessionDescriptionCallback": {
-    "modified": "2020-10-15T21:25:44.514Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "tocretpa",
-      "teoli",
-      "wesj"
-    ]
-  },
   "Web/API/RTCStats": {
     "modified": "2020-10-15T22:09:08.133Z",
     "contributors": [
