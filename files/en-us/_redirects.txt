@@ -1434,12 +1434,8 @@
 /en-US/docs/DOM/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/DOM/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/DOM/Mozilla_event_reference/SVGAbort	/en-US/docs/Web/API/SVGElement/abort_event
 /en-US/docs/DOM/Mozilla_event_reference/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/DOM/Mozilla_event_reference/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
-/en-US/docs/DOM/Mozilla_event_reference/SVGResize	/en-US/docs/Web/API/SVGElement/resize_event
-/en-US/docs/DOM/Mozilla_event_reference/SVGScroll	/en-US/docs/Web/API/SVGElement/scroll_event
-/en-US/docs/DOM/Mozilla_event_reference/SVGUnload	/en-US/docs/Web/API/SVGElement/unload_event
 /en-US/docs/DOM/Mozilla_event_reference/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/DOM/Mozilla_event_reference/abort_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/abort_event
 /en-US/docs/DOM/Mozilla_event_reference/abort_indexedDB	/en-US/docs/Web/API/IDBTransaction/abort_event
@@ -5801,12 +5797,8 @@
 /en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
-/en-US/docs/Mozilla_event_reference/SVGAbort	/en-US/docs/Web/API/SVGElement/abort_event
 /en-US/docs/Mozilla_event_reference/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/Mozilla_event_reference/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
-/en-US/docs/Mozilla_event_reference/SVGResize	/en-US/docs/Web/API/SVGElement/resize_event
-/en-US/docs/Mozilla_event_reference/SVGScroll	/en-US/docs/Web/API/SVGElement/scroll_event
-/en-US/docs/Mozilla_event_reference/SVGUnload	/en-US/docs/Web/API/SVGElement/unload_event
 /en-US/docs/Mozilla_event_reference/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Mozilla_event_reference/abort_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/abort_event
 /en-US/docs/Mozilla_event_reference/abort_(ProgressEvent)-redirect-1	/en-US/docs/Web/API/XMLHttpRequest/abort_event
@@ -10207,12 +10199,8 @@
 /en-US/docs/Web/Events/MSInertiaStart	/en-US/docs/Web/API/Element/MSInertiaStart_event
 /en-US/docs/Web/Events/MSManipulationStateChanged	/en-US/docs/Web/API/Element/MSManipulationStateChanged_event
 /en-US/docs/Web/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll
-/en-US/docs/Web/Events/SVGAbort	/en-US/docs/Web/API/SVGElement/abort_event
 /en-US/docs/Web/Events/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/Web/Events/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
-/en-US/docs/Web/Events/SVGResize	/en-US/docs/Web/API/SVGElement/resize_event
-/en-US/docs/Web/Events/SVGScroll	/en-US/docs/Web/API/SVGElement/scroll_event
-/en-US/docs/Web/Events/SVGUnload	/en-US/docs/Web/API/SVGElement/unload_event
 /en-US/docs/Web/Events/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/Events/abort_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/abort_event
 /en-US/docs/Web/Events/abort_(cancellable_fetch)	/en-US/docs/Web/API/AbortSignal/abort_event
@@ -11056,12 +11044,8 @@
 /en-US/docs/Web/Reference/Events/DOMContentLoaded	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Web/Reference/Events/DOMMouseScroll	/en-US/docs/Web/API/Element/DOMMouseScroll_event
 /en-US/docs/Web/Reference/Events/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll
-/en-US/docs/Web/Reference/Events/SVGAbort	/en-US/docs/Web/API/SVGElement/abort_event
 /en-US/docs/Web/Reference/Events/SVGError	/en-US/docs/Web/API/SVGElement/error_event
 /en-US/docs/Web/Reference/Events/SVGLoad	/en-US/docs/Web/API/SVGElement/load_event
-/en-US/docs/Web/Reference/Events/SVGResize	/en-US/docs/Web/API/SVGElement/resize_event
-/en-US/docs/Web/Reference/Events/SVGScroll	/en-US/docs/Web/API/SVGElement/scroll_event
-/en-US/docs/Web/Reference/Events/SVGUnload	/en-US/docs/Web/API/SVGElement/unload_event
 /en-US/docs/Web/Reference/Events/abort	/en-US/docs/Web/API/HTMLMediaElement/abort_event
 /en-US/docs/Web/Reference/Events/abort_(ProgressEvent)	/en-US/docs/Web/API/XMLHttpRequest/abort_event
 /en-US/docs/Web/Reference/Events/abort_indexedDB	/en-US/docs/Web/API/IDBTransaction/abort_event

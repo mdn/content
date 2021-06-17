@@ -76429,17 +76429,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGElement/abort_event": {
-    "modified": "2020-10-15T21:19:36.652Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/SVGElement/error_event": {
     "modified": "2020-10-15T21:19:40.512Z",
     "contributors": [
@@ -76453,39 +76442,6 @@
   },
   "Web/API/SVGElement/load_event": {
     "modified": "2020-10-15T21:19:37.173Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/SVGElement/resize_event": {
-    "modified": "2020-10-15T21:19:42.898Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/SVGElement/scroll_event": {
-    "modified": "2020-10-15T21:19:36.810Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/SVGElement/unload_event": {
-    "modified": "2020-10-15T21:19:36.688Z",
     "contributors": [
       "chrisdavidmills",
       "fscholz",
