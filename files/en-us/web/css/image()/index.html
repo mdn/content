@@ -84,7 +84,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 &lt;/ul&gt;</pre>
 
 <pre class="brush: css;">ul {
-  list-style-image: image(ltr 'https://mdn.mozillademos.org/files/16412/rightarrow.png');
+  list-style-image: image(ltr 'rightarrow.png');
 }</pre>
 
 <p>In the left-to-right list items — those with <code>dir="ltr"</code> set on the element itself or inheriting the directionality from an ancestor or default value for the page — the image will be used as-is. List items with <code>dir="rtl"</code> set on the <code>&lt;li&gt;</code> or inheriting the right-to-left directionality from an ancestor, such as documents set to Arabic or Hebrew, will have the bullet display on the right, horizontally flipped, as if <code>transform: scalex(-1)</code> had been set. The text will also be displayed left-to-right.</p>
@@ -97,7 +97,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 </pre>
 
 <pre class="brush: css;">.box:hover {
-  cursor: image("https://mdn.mozillademos.org/files/16411/sprite.png#xywh=32,64,16,16");
+  cursor: image("sprite.png#xywh=32,64,16,16");
 }</pre>
 
 <p>When the user hovers over the box, the cursor will change to display the 16x16 px section of the sprite image, starting at x=32 and y=64.</p>
@@ -113,7 +113,7 @@ xywh=percent:25,25,50,50    /* results in a 50%x50% image at x=25% and y=25% */<
 <pre class="brush: css;">.quarterlogo {
   background-image:
     image(rgba(0, 0, 0, 0.25)),
-    url("https://mdn.mozillademos.org/files/12053/firefox.png");
+    url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }</pre>
