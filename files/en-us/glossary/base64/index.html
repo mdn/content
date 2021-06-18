@@ -34,3 +34,19 @@ tags:
 <p>Each Base64 digit represents exactly 6 bits of data. So, three 8-bits bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).</p>
 
 <p>This means that the Base64 version of a string or file will be at least 133% the size of its source (a ~33% increase). The increase may be larger if the encoded data is small. For example, the string <code>"a"</code> with <code>length === 1</code> gets encoded to <code>"YQ=="</code> with <code>length === 4</code> — a 300% increase.</p>
+
+<h4 id="appendix_to_solution_1_decode_a_base64_string_to_uint8array_or_arraybuffer">Appendix to Solution: Decode a <em>Base64</em> string to <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></h4>
+
+<p>The functions above let us also create <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">uint8Arrays</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">arrayBuffers</a> from <em>base64</em>-encoded strings:</p>
+
+<div ><pre><code><span>var</span> myArray <span >=</span> <span >base64DecToArr</span><span >(</span><span >"QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="</span><span >)</span><span >;</span> <span >// "Base 64 \u2014 Mozilla Developer Network" (as UTF-8)</span>
+
+  <span>var</span> myBuffer <span >=</span> <span >base64DecToArr</span><span >(</span><span >"QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="</span><span >)</span><span >.</span>buffer<span >;</span> <span >// "Base 64 \u2014 Mozilla Developer Network" (as UTF-8)</span>
+
+  <span >alert</span><span >(</span>myBuffer<span >.</span>byteLength<span >)</span><span >;</span></code></pre><button><span >Copy to Clipboard</span></button>
+
+</div>
+
+<div><strong>Note:</strong> The function <code>base64DecToArr(sBase64[, <em>nBlockSize</em>])</code> returns an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>uint8Array</code></a> of bytes. If your aim is to build a buffer of 16-bit / 32-bit / 64-bit raw data, use the <code>nBlockSize</code> argument, which is the number of bytes which the <code>uint8Array.buffer.bytesLength</code> property must result to be a multiple of (<code>1</code> or omitted for ASCII, binary content, <a href="/en-US/docs/Web/API/DOMString/Binary">binary strings</a>, UTF-8-encoded strings; <code>2</code> for UTF-16 strings; <code>4</code> for UTF-32 strings).</div>
+
+<p>For a more complete library, see <a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a> (source code <a href="https://github.com/madmurphy/stringview.js">available on GitHub</a>).</p>
