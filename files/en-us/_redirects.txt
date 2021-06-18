@@ -8355,10 +8355,6 @@
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
 /en-US/docs/Web/API/RTCIceConnectionState	/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState
 /en-US/docs/Web/API/RTCIceGatheringState	/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState
-/en-US/docs/Web/API/RTCIdentityErrorEvent.idp	/en-US/docs/Web/API/RTCIdentityErrorEvent/idp
-/en-US/docs/Web/API/RTCIdentityErrorEvent.loginUrl	/en-US/docs/Web/API/RTCIdentityErrorEvent/loginUrl
-/en-US/docs/Web/API/RTCIdentityErrorEvent.protocol	/en-US/docs/Web/API/RTCIdentityErrorEvent/protocol
-/en-US/docs/Web/API/RTCIdentityEvent.assertion	/en-US/docs/Web/API/RTCIdentityEvent/assertion
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream
@@ -8374,11 +8370,7 @@
 /en-US/docs/Web/API/RTCPeerConnection.ondatachannel	/en-US/docs/Web/API/RTCPeerConnection/ondatachannel
 /en-US/docs/Web/API/RTCPeerConnection.onicecandidate	/en-US/docs/Web/API/RTCPeerConnection/onicecandidate
 /en-US/docs/Web/API/RTCPeerConnection.oniceconnectionstatechange	/en-US/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange
-/en-US/docs/Web/API/RTCPeerConnection.onidentityresult	/en-US/docs/Web/API/RTCPeerConnection/onidentityresult
-/en-US/docs/Web/API/RTCPeerConnection.onidpassertionerror	/en-US/docs/Web/API/RTCPeerConnection/onidpassertionerror
-/en-US/docs/Web/API/RTCPeerConnection.onidpvalidationerror	/en-US/docs/Web/API/RTCPeerConnection/onidpvalidationerror
 /en-US/docs/Web/API/RTCPeerConnection.onnegotiationneeded	/en-US/docs/Web/API/RTCPeerConnection/onnegotiationneeded
-/en-US/docs/Web/API/RTCPeerConnection.onpeeridentity	/en-US/docs/Web/API/RTCPeerConnection/onpeeridentity
 /en-US/docs/Web/API/RTCPeerConnection.onremovestream	/en-US/docs/Web/API/RTCPeerConnection/onremovestream
 /en-US/docs/Web/API/RTCPeerConnection.onsignalingstatechange	/en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange
 /en-US/docs/Web/API/RTCPeerConnection.peerIdentity	/en-US/docs/Web/API/RTCPeerConnection/peerIdentity
@@ -8398,10 +8390,6 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEven	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
-/en-US/docs/Web/API/RTCPeerConnectionIdentityErrorEvent	/en-US/docs/Web/API/RTCIdentityErrorEvent
-/en-US/docs/Web/API/RTCPeerConnectionIdentityEvent	/en-US/docs/Web/API/RTCIdentityEvent
-/en-US/docs/Web/API/RTCPeerConnectionIdentityEvent.assertion	/en-US/docs/Web/API/RTCIdentityEvent/assertion
-/en-US/docs/Web/API/RTCPeerConnection_idpvalidationerror_event	/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
@@ -10297,9 +10285,6 @@
 /en-US/docs/Web/Events/iceconnectionstatechange	/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event
 /en-US/docs/Web/Events/icegatheringstatechange	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
 /en-US/docs/Web/Events/icegatheringstatechange_event	/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event
-/en-US/docs/Web/Events/identityresult	/en-US/docs/Web/API/RTCPeerConnection/identityresult_event
-/en-US/docs/Web/Events/idpassertionerror	/en-US/docs/Web/API/RTCPeerConnection/idpassertionerror_event
-/en-US/docs/Web/Events/idpvalidationerror	/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event
 /en-US/docs/Web/Events/input	/en-US/docs/Web/API/HTMLElement/input_event
 /en-US/docs/Web/Events/install	/en-US/docs/Web/API/Window/appinstalled_event
 /en-US/docs/Web/Events/invalid	/en-US/docs/Web/API/HTMLInputElement/invalid_event
@@ -10349,7 +10334,6 @@
 /en-US/docs/Web/Events/pause_(SpeechSynthesis)	/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event
 /en-US/docs/Web/Events/payerdetailchange	/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event
 /en-US/docs/Web/Events/paymentmethodchange	/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event
-/en-US/docs/Web/Events/peeridentity	/en-US/docs/Web/API/RTCPeerConnection/peeridentity_event
 /en-US/docs/Web/Events/periodicsync	/en-US/docs/Web/API/ServiceWorkerGlobalScope/periodicsync_event
 /en-US/docs/Web/Events/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/Web/Events/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event

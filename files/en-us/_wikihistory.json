@@ -72836,56 +72836,6 @@
       "teoli"
     ]
   },
-  "Web/API/RTCIdentityErrorEvent": {
-    "modified": "2020-10-15T21:28:54.447Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCIdentityErrorEvent/idp": {
-    "modified": "2020-10-15T21:28:55.306Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCIdentityErrorEvent/loginUrl": {
-    "modified": "2020-10-15T21:28:55.177Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCIdentityErrorEvent/protocol": {
-    "modified": "2020-10-15T21:28:56.722Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCIdentityEvent": {
-    "modified": "2020-10-15T21:28:54.334Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCIdentityEvent/assertion": {
-    "modified": "2020-10-15T21:28:55.465Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/API/RTCInboundRtpStreamStats": {
     "modified": "2020-10-15T22:17:09.938Z",
     "contributors": [
@@ -73447,29 +73397,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCPeerConnection/identityresult_event": {
-    "modified": "2020-10-15T21:28:54.142Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy",
-      "mfluehr",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection/idpassertionerror_event": {
-    "modified": "2020-10-15T21:28:55.685Z",
-    "contributors": [
-      "Sheppy",
-      "mfluehr",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection/idpvalidationerror_event": {
-    "modified": "2020-10-15T22:15:17.579Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCPeerConnection/localDescription": {
     "modified": "2020-10-15T21:28:59.774Z",
     "contributors": [
@@ -73572,35 +73499,6 @@
       "abbycar"
     ]
   },
-  "Web/API/RTCPeerConnection/onidentityresult": {
-    "modified": "2020-10-15T21:28:52.357Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onidpassertionerror": {
-    "modified": "2020-10-15T21:28:52.993Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onidpvalidationerror": {
-    "modified": "2020-10-15T21:28:53.447Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
-      "teoli"
-    ]
-  },
   "Web/API/RTCPeerConnection/onnegotiationneeded": {
     "modified": "2020-10-15T21:28:52.037Z",
     "contributors": [
@@ -73611,16 +73509,6 @@
       "jpmedley",
       "abbycar",
       "Jib",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onpeeridentity": {
-    "modified": "2020-10-15T21:28:53.098Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz",
-      "jpmedley",
       "teoli"
     ]
   },
@@ -73665,16 +73553,6 @@
       "Sheppy",
       "fscholz",
       "jpmedley",
-      "teoli"
-    ]
-  },
-  "Web/API/RTCPeerConnection/peeridentity_event": {
-    "modified": "2020-10-15T21:28:53.887Z",
-    "contributors": [
-      "fscholz",
-      "chrisdavidmills",
-      "Sheppy",
-      "mfluehr",
       "teoli"
     ]
   },
