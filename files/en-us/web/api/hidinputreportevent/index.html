@@ -1,0 +1,60 @@
+---
+title: HIDInputReportEvent
+slug: Web/API/HIDInputReportEvent
+tags:
+  - API
+  - Interface
+  - Reference
+  - HIDInputReportEvent
+browser-compat: api.HIDInputReportEvent
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+
+<p class="summary">The <strong><code>HIDInputReportEvent</code></strong> interface of the {{domxref('WebHID API')}} represents HID input report events, and is the event type passed to {{domxref("HIDDevice.oninputreport")}} when an input report is received.</p>
+
+<h2 id="Constructor">Constructor</h2>
+
+<dl>
+	<dt>{{domxref("HIDInputReportEvent.HIDInputReportEvent()")}}</dt>
+	<dd>Returns a new <code>HIDInputReportEvent</code> object.</dd>
+</dl>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>This interface also inherits properties from {{domxref("Event")}}.</em></p>
+
+<dl>
+  <dt>{{domxref("HIDInputReportEvent.data")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the a {{jsxref("DataView")}} object containing the input report.</dd>
+  <dt>{{domxref("HIDInputReportEvent.device")}}{{ReadOnlyInline}}</dt>
+  <dd>Returns the {{domxref("HIDDevice")}} instance representing the device that sent the input report.</dd>
+  <dt>{{domxref("HIDInputReportEvent.reportId")}}{{ReadOnlyInline}}</dt>
+  <dd>An 8-bit reportId. If the HID device does not use report IDs, will be <code>0</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example demonstrates listening for an inputreport that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
+
+<pre class="brush: js">device.addEventListener("inputreport", event => {
+  const { data, device, reportId } = event;
+
+  // Handle only the Joy-Con Right device and a specific report ID.
+  if (device.productId !== 0x2007 && reportId !== 0x3f) return;
+
+  const value = data.getUint8(0);
+  if (value === 0) return;
+
+  const someButtons = { 1: "A", 2: "X", 4: "B", 8: "Y" };
+  console.log(`User pressed button ${someButtons[value]}.`);
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+
