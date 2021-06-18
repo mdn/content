@@ -19,7 +19,10 @@ browser-compat: html.global_attributes.lang
 
 <p>If the attribute value is the <em>empty string</em> (<code>lang=""</code>), the language is set to <em>unknown</em>; if the language tag is not valid according to BCP47, it is set to <em>invalid</em>.</p>
 
-<div class="note">
+<p>Even if the <strong>lang</strong> attribute is set, it may not be taken into account, as the <a href="/en-US/docs/Web/HTML/Global_attributes#attr-xml:lang"><strong>xml:lang</strong></a> attribute has priority.</p>
+
+<p>For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while <code>:lang(es)</code> matches both <code>lang="es-ES"</code> and <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> would <em>not</em> match <code>lang="xyzzy-Zorp!"</code>.</p>
+
 <h2 id="Language_tag_syntax">Language tag syntax</h2>
 
 <p>The full BCP47 syntax is in-depth enough to mark extremely specific language dialects, but most usage is much simpler.</p>
@@ -38,11 +41,6 @@ browser-compat: html.global_attributes.lang
 <p>The script subtag precedes the region subtag if both are present — <code>ru-Cyrl-BY</code> is Russian, written in the Cyrillic alphabet, as spoken in Belarus.</p>
 
 <p>To find the correct subtag codes for a language, try <a href="https://r12a.github.io/app-subtags/" rel="external">the Language Subtag Lookup</a>.</p>
-</div>
-
-<p>Even if the <strong>lang</strong> attribute is set, it may not be taken into account, as the <a href="/en-US/docs/Web/HTML/Global_attributes#attr-xml:lang"><strong>xml:lang</strong></a> attribute has priority.</p>
-
-<p>For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while <code>:lang(es)</code> matches both <code>lang="es-ES"</code> and <code>lang="es-419"</code>, <code>:lang(xyzzy)</code> would <em>not</em> match <code>lang="xyzzy-Zorp!"</code>.</p>
 
 <h2 id="Accessibility">Accessibility</h2>
 
