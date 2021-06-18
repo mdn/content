@@ -1,0 +1,42 @@
+---
+title: HIDDevice.opened
+slug: Web/API/HIDDevice/opened
+tags:
+  - API
+  - Property
+  - Reference
+  - opened
+  - HIDDevice
+browser-compat: api.HIDDevice.opened
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+
+<p class="summary">The <strong><code>opened</code></strong> read-only property of the {{domxref("HIDDevice")}} interface returns true if the connection to the {{domxref("HIDDevice")}} is open and ready to transfer data.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let opened = HIDDevice.opened;</pre>
+
+<h3>Value</h3>
+<p>A {{jsxref("Boolean")}}, true if the connection is open.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of <code>opened</code> to the console.</p>
+
+<pre class="brush: js">document.addEventListener('DOMContentLoaded', async () => {
+  let devices = await navigator.hid.getDevices();
+  devices.forEach(device => {
+    console.log(`HID: ${device.opened}`);
+  });
+});</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+

@@ -1,0 +1,81 @@
+---
+title: HIDDevice.collections
+slug: Web/API/HIDDevice/collections
+tags:
+  - API
+  - Property
+  - Reference
+  - collections
+  - HIDDevice
+browser-compat: api.HIDDevice.collections
+---
+<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+
+<p class="summary">The <strong><code>collections</code></strong> read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats </p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">let collections = HIDDevice.collections;
+</pre>
+
+<h3>Value</h3>
+<p>An array of report formats. Each entry containing the following:</p>
+
+<dl>
+  <dt><code>usagePage</code></dt>
+  <dd><p>An integer representing the Usage Page component of the HID usage associated with this collection. The Usage for a top level collection is used to identify the device type.</p>
+  <p>Standard HID Usage values can be found in the <a href="https://usb.org/document-library/hid-usage-tables-122">HID Usage Tables</a> document</p>
+  </dd>
+  <dt><code>usage</code></dt>
+  <dd>An integer representing the Usage ID component of the HID usage associated with this collection.</dd>
+  <dt><code>type</code></dt>
+  <dd>An 8-bit value representing the collection type. One of:
+    <dl>
+      <dt><code>0x00</code></dt>
+      <dd>Physical</dd>
+    </dl>
+  </dd>
+  <dt><code>children</code></dt>
+  <dd>An array of sub-collections which take the same format as a top-level collection.</dd>
+  <dt><code>inputReports</code></dt>
+  <dd>An array of <code>inputReport</code> items.</dd>
+  <dt><code>outputReports</code></dt>
+  <dd>An array of <code>outputReport</code> items.</dd>
+  <dt><code>featureReports</code></dt>
+  <dd>An array of <code>featureReport</code> items.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example demonstrates how to access the various elements once the <code>collections</code> property has been returned. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
+
+<pre class="brush: js">for (let collection of device.collections) {
+  // A HID collection includes usage, usage page, reports, and subcollections.
+  console.log(`Usage: ${collection.usage}`);
+  console.log(`Usage page: ${collection.usagePage}`);
+
+  for (let inputReport of collection.inputReports) {
+    console.log(`Input report: ${inputReport.reportId}`);
+    // Loop through inputReport.items
+  }
+
+  for (let outputReport of collection.outputReports) {
+    console.log(`Output report: ${outputReport.reportId}`);
+    // Loop through outputReport.items
+  }
+
+  for (let featureReport of collection.featureReports) {
+    console.log(`Feature report: ${featureReport.reportId}`);
+    // Loop through featureReport.items
+  }
+
+  // Loop through subcollections with collection.children
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
