@@ -19,15 +19,15 @@ browser-compat: api.HIDDevice.collections
 </pre>
 
 <h3>Value</h3>
-<p>An array of report formats. Each entry containing the following:</p>
+<p>An array of report formats. Each entry contains the following:</p>
 
 <dl>
   <dt><code>usagePage</code></dt>
-  <dd><p>An integer representing the Usage Page component of the HID usage associated with this collection. The Usage for a top level collection is used to identify the device type.</p>
-  <p>Standard HID Usage values can be found in the <a href="https://usb.org/document-library/hid-usage-tables-122">HID Usage Tables</a> document</p>
+  <dd><p>An integer representing the usage page component of the HID usage associated with this collection. The usage for a top level collection is used to identify the device type.</p>
+  <p>Standard HID usage values can be found in the <a href="https://usb.org/document-library/hid-usage-tables-122">HID Usage Tables</a> document</p>
   </dd>
   <dt><code>usage</code></dt>
-  <dd>An integer representing the Usage ID component of the HID usage associated with this collection.</dd>
+  <dd>An integer representing the usage ID component of the HID usage associated with this collection.</dd>
   <dt><code>type</code></dt>
   <dd>An 8-bit value representing the collection type. One of:
     <dl>
@@ -36,7 +36,7 @@ browser-compat: api.HIDDevice.collections
     </dl>
   </dd>
   <dt><code>children</code></dt>
-  <dd>An array of sub-collections which take the same format as a top-level collection.</dd>
+  <dd>An array of sub-collections which takes the same format as a top-level collection.</dd>
   <dt><code>inputReports</code></dt>
   <dd>An array of <code>inputReport</code> items.</dd>
   <dt><code>outputReports</code></dt>

@@ -23,7 +23,7 @@ browser-compat: api.HIDDevice.sendReport
 
 <dl>
   <dt><code>reportId</code></dt>
-  <dd>An 8-bit reportId. If the HID device does not use report IDs, send <code>0</code>.</dd>
+  <dd>An 8-bit report ID. If the HID device does not use report IDs, send <code>0</code>.</dd>
   <dt><code>data</code></dt>
   <dd>Bytes as a {{domxref("BufferSource")}}.</dd>
 </dl>
@@ -60,5 +60,4 @@ await device.sendReport(0x10, new Uint8Array(rumbleData));</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p>{{Compat}}</p>
-
 
