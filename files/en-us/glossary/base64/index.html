@@ -33,4 +33,4 @@ tags:
 
 <p>Each Base64 digit represents exactly 6 bits of data. So, three 8-bits bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).</p>
 
-<p>This means that the Base64 version of a string or file will be at most 133% the size of its source (a ~33% increase). The increase may be larger if the encoded data is small. For example, the string <code>"a"</code> with <code>length === 1</code> gets encoded to <code>"YQ=="</code> with <code>length === 4</code> — a 300% increase.</p>
+<p>This means that the Base64 version of a string or file will be at least 133% the size of its source (a ~33% increase). The increase may be larger if the encoded data is small. For example, the string <code>"a"</code> with <code>length === 1</code> gets encoded to <code>"YQ=="</code> with <code>length === 4</code> — a 300% increase.</p>
