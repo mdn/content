@@ -22,7 +22,7 @@ HIDDevice.addEventListener('inputreport', function);</pre>
 
 <h2>Example</h2>
 
-<p>The following example demonstrates listening for an inputreport that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
+<p>The following example demonstrates listening for an <code>inputreport</code> event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
 
 <pre class="brush: js">device.addEventListener("inputreport", event => {
   const { data, device, reportId } = event;

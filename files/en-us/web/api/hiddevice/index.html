@@ -57,7 +57,7 @@ browser-compat: api.HIDDevice
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example demonstrates listening for an inputreport that will allow the application to detect which button is pressed on a Joy-Con Right device.</p>
+<p>The following example demonstrates listening for an <code>inputreport</code> event that will allow the application to detect which button is pressed on a Joy-Con Right device.</p>
 
 <pre class="brush: js">device.addEventListener("inputreport", event => {
   const { data, device, reportId } = event;
