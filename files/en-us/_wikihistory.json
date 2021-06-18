@@ -46220,19 +46220,6 @@
       "keerthanak17"
     ]
   },
-  "Web/API/FetchEvent/client": {
-    "modified": "2020-10-15T21:33:01.658Z",
-    "contributors": [
-      "sideshowbarker",
-      "mfluehr",
-      "fscholz",
-      "chrisdavidmills",
-      "jpmedley",
-      "Sebastianz",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/FetchEvent/clientId": {
     "modified": "2020-10-15T21:41:08.218Z",
     "contributors": [
@@ -46253,13 +46240,6 @@
       "chrisdavidmills",
       "Sebastianz",
       "kscarfone",
-      "jpmedley"
-    ]
-  },
-  "Web/API/FetchEvent/navigationPreload": {
-    "modified": "2020-10-15T21:55:37.883Z",
-    "contributors": [
-      "fscholz",
       "jpmedley"
     ]
   },
