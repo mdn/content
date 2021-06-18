@@ -7436,6 +7436,8 @@
 /en-US/docs/Web/API/FetchEvent.request	/en-US/docs/Web/API/FetchEvent/request
 /en-US/docs/Web/API/FetchEvent.respondWith	/en-US/docs/Web/API/FetchEvent/respondWith
 /en-US/docs/Web/API/FetchEvent.respondWith(any_value)	/en-US/docs/Web/API/FetchEvent/respondWith
+/en-US/docs/Web/API/FetchEvent/client	/en-US/docs/Web/API/FetchEvent/clientId
+/en-US/docs/Web/API/FetchEvent/navigationPreload	/en-US/docs/Web/API/FetchEvent/preloadResponse
 /en-US/docs/Web/API/FetchEvent_clone	/en-US/docs/Web/API/FetchEvent
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
