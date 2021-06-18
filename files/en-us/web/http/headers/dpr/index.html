@@ -14,7 +14,7 @@ browser-compat: http.headers.DPR
 ---
 <div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
 
-<p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> header which represents the client device pixel ratio, which is the number of physical device pixels corresponding to every CSS pixel.</p>
+<p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">client hint</a> header that provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every CSS pixel.</p>
 
 <table class="properties">
   <tbody>
@@ -26,32 +26,42 @@ browser-compat: http.headers.DPR
     <th scope="row">{{Glossary("Forbidden header name")}}</th>
     <td>no</td>
    </tr>
-   <tr>
-    <th scope="row">{{Glossary("CORS-safelisted response header")}}</th>
-    <td>no</td>
-   </tr>
   </tbody>
  </table>
 
+ <p>If the DPR header appears more than once in a message the last occurence is used.</p>
+ 
+<p>The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by <code>x</code> descriptors in the <code>&lt;img&gt;</code> <a href="/en-US/docs/Web/HTML/Element/img#attr-srcset">srcset</a> attribute to allow user agents to select a preferred image.</p>
+ 
 <div class="notecard note">
-<p><strong>Note:</strong> Client Hints are accessible only on secure origins (via TLS). Server has to opt in to receive <code>DPR</code> header from the client by sending {{HTTPHeader("Accept-CH")}} and {{HTTPHeader("Accept-CH-Lifetime")}} response headers.</p>
+  <p><strong>Note:</strong></p>
+    <ul>
+      <li>Client Hints are accessible only on secure origins (via TLS).</li>
+      <li>As for all client hints, a server has to opt in to receive <code>DPR</code> header from the client by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
+      <li>Servers that opt in to the <code>DPR</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
+    </ul>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: http">DPR: &lt;number&gt;</pre>
 
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt><code> &lt;number&gt;</code></dt>
+ <dd>The client device pixel ratio.</dd>
+</dl>
+
 <h2 id="Examples">Examples</h2>
 
-<p>Server first needs to opt in to receive <code>DPR</code> header by sending the response headers {{HTTPHeader("Accept-CH")}} containing <code>DPR</code> and {{HTTPHeader("Accept-CH-Lifetime")}}.</p>
+<p>A server must first opt in to receive the <code>DPR</code> header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive <code>DPR</code>.</p>
 
-<pre class="brush: http">Accept-CH: DPR
-Accept-CH-Lifetime: 86400
-</pre>
+<pre class="brush: http">Accept-CH: DPR</pre>
 
 <p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
 
-<pre class="brush: http">DPR: 1.0</pre>
+<pre class="brush: http">DPR: 2.0</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -65,6 +75,5 @@ Accept-CH-Lifetime: 86400
 
 <ul>
  <li>{{HTTPHeader("Accept-CH")}}</li>
- <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
  <li>{{HTTPHeader("Vary")}}</li>
 </ul>
