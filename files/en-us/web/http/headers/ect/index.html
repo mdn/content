@@ -40,6 +40,13 @@ browser-compat: http.headers.ect
 
 <pre class="brush: http">ECT: &lt;value&gt;</pre>
 
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt>&lt;value&gt;</dt>
+ <dd>A value indicating {{Glossary("effective connection type")}}. This is one of: <code>slow-2g</code>, <code>2g</code>, <code>3g</code>, or <code>4g</code>.</dd>
+</dl>
+
 <h2 id="Examples">Examples</h2>
 
 <p>A server first needs to opt in to receive the <code>ECT</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>ECT</code>.</p>

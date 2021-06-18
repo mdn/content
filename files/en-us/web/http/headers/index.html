@@ -97,25 +97,9 @@ tags:
   <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
   <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
   <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
-  <dd>
-  <div>
-  <p>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
-  </div>
- 
-  <div>
-  <p>If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</p>
-  </div>
-  </dd>
+  <dd>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</dd>
   <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
-  <dd>
-  <div>
-  <p>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
-  </div>
- 
-  <div>
-  <p>If the desired resource width is not known at the time of the request or the resource does not have a display width, the <code>Width</code> header field can be omitted. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences</p>
-  </div>
-  </dd>
+  <dd>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). The <code>Width</code> header field can be omitted if the desired resource width is not known at the time of the request or the resource does not have a display width. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</dd>
  </dl>
 
 

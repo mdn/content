@@ -40,6 +40,13 @@ browser-compat: http.headers.rtt
 
 <pre class="brush: http">RTT: &lt;number&gt;</pre>
 
+<h2 id="Directives">Directives</h2>
+
+<dl>
+ <dt>&lt;number&gt;</dt>
+ <dd>The approximate round trip time in milliseconds, rounded to the nearest 25 milliseconds.</dd>
+</dl>
+
 <h2 id="Examples">Examples</h2>
 
 <p>A server first needs to opt in to receive the <code>RTT</code> header by sending the {{HTTPHeader("Accept-CH")}} response header containing <code>RTT</code>.</p>
