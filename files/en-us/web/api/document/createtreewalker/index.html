@@ -16,7 +16,7 @@ browser-compat: api.Document.createTreeWalker
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>entityReferenceExpansion</em>]]]);
+<pre class="brush: js"><em>document</em>.createTreeWalker(<em>root</em>[, <em>whatToShow</em>[, <em>filter</em>[, <em>expandEntityReferences</em>]]]);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -123,7 +123,7 @@ browser-compat: api.Document.createTreeWalker
     <code>acceptNode</code>, which is called by the {{domxref("TreeWalker")}} to determine
     whether or not to accept a node that has passed the <code>whatToShow</code> check.
   </dd>
-  <dt><code>entityReferenceExpansion</code> {{optional_inline}} {{deprecated_inline}}</dt>
+  <dt><code>expandEntityReferences</code> {{optional_inline}} {{deprecated_inline}}</dt>
   <dd>A {{domxref("Boolean")}} flag indicating if when discarding an
     {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
   </dd>
