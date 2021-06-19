@@ -26998,27 +26998,6 @@
       "david_ross"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2020-12-14T04:39:00.087Z",
-    "contributors": [
-      "hamishwillee",
-      "sideshowbarker",
-      "agent255",
-      "rzr",
-      "mfuji09",
-      "fscholz",
-      "RockoDev",
-      "chrisdavidmills",
-      "teoli",
-      "a-chepugov",
-      "mantou",
-      "Sebastianz",
-      "riju",
-      "SpencerG",
-      "Jeremie",
-      "daviddoran"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:22:20.042Z",
     "contributors": [
@@ -37185,39 +37164,6 @@
     "modified": "2020-10-15T22:16:17.596Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/DeviceLightEvent": {
-    "modified": "2020-10-15T21:19:58.928Z",
-    "contributors": [
-      "Ms2ger",
-      "mfuji09",
-      "connorshea",
-      "chrisdavidmills",
-      "ivan.p",
-      "jpmedley",
-      "erikadoyle",
-      "Sebastianz",
-      "fscholz",
-      "kollishivagangadhar",
-      "teoli",
-      "tregagnon",
-      "Sheppy",
-      "Jeremie",
-      "Seta00",
-      "jswisher"
-    ]
-  },
-  "Web/API/DeviceLightEvent/Using_light_sensors": {
-    "modified": "2020-10-15T21:25:00.550Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "wblock",
-      "jgw96",
-      "wrakky",
-      "teoli",
-      "scaledrop"
     ]
   },
   "Web/API/DeviceMotionEvent": {
