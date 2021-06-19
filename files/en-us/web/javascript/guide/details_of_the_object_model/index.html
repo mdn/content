@@ -306,19 +306,13 @@ mark.projects = ['navigator'];</pre>
 
 <p>As soon as JavaScript executes this statement, the <code>mark</code> object also has the <code>specialty</code> property with the value of <code>"none"</code>. The following figure shows the effect of adding this property to the <code>Employee</code> prototype and then overriding it for the <code>Engineer</code> prototype.</p>
 
-<figure>
-  <img alt="" class="internal" src="figure8.4.png">
-  <figcaption>Adding properties</figcaption>
-</figure>
+<img alt="Adding properties" src="figure8.4.png">
 
 <h2 id="More_flexible_constructors">More flexible constructors</h2>
 
 <p>The constructor functions shown so far do not let you specify property values when you create an instance. As with Java, you can provide arguments to constructors to initialize property values for instances. The following figure shows one way to do this.</p>
 
-<figure>
-  <img alt="" class="internal" src="figure8.5.png">
-  <figcaption>Specifying properties in a constructor, take 1</figcaption>
-</figure>
+<img alt="Specifying properties in a constructor, take 1" src="figure8.5.png">
 
 <p>The following pairs of examples show the Java and JavaScript definitions for these objects.</p>
 
@@ -410,10 +404,7 @@ jane.machine == 'belau';
 
 <p>So far, the constructor function has created a generic object and then specified local properties and values for the new object. You can have the constructor add more properties by directly calling the constructor function for an object higher in the prototype chain. The following figure shows these new definitions.</p>
 
-<figure>
-  <img alt="" class="internal" src="figure8.6.png">
-  <figcaption>Specifying properties in a constructor, take 2</figcaption>
-</figure>
+<img alt="Specifying properties in a constructor, take 2" src="figure8.6.png">
 
 <p>Let's look at one of these definitions in detail. Here's the new definition for the <code>Engineer</code> constructor:</p>
 
