@@ -383,7 +383,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
   /**
    * Listen for messages from the background script.
-   * Call "beastify()" or "reset()".
+   * Call "insertBeast()" or "removeExistingBeasts()".
   */
   browser.runtime.onMessage.addListener((message) =&gt; {
     if (message.command === "beastify") {
