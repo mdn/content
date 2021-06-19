@@ -1266,7 +1266,6 @@
 /en-US/docs/DOM/DeviceAcceleration.x	/en-US/docs/Web/API/DeviceMotionEventAcceleration/x
 /en-US/docs/DOM/DeviceAcceleration.y	/en-US/docs/Web/API/DeviceMotionEventAcceleration/y
 /en-US/docs/DOM/DeviceAcceleration.z	/en-US/docs/Web/API/DeviceMotionEventAcceleration/z
-/en-US/docs/DOM/DeviceLightEvent	/en-US/docs/Web/API/DeviceLightEvent
 /en-US/docs/DOM/DeviceMotionEvent	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/DeviceMotionEvent.acceleration	/en-US/docs/Web/API/DeviceMotionEvent/acceleration
 /en-US/docs/DOM/DeviceMotionEvent.accelerationIncludingGravity	/en-US/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity
@@ -7236,8 +7235,6 @@
 /en-US/docs/Web/API/DeviceAcceleration/x	/en-US/docs/Web/API/DeviceMotionEventAcceleration/x
 /en-US/docs/Web/API/DeviceAcceleration/y	/en-US/docs/Web/API/DeviceMotionEventAcceleration/y
 /en-US/docs/Web/API/DeviceAcceleration/z	/en-US/docs/Web/API/DeviceMotionEventAcceleration/z
-/en-US/docs/Web/API/DeviceLightEvent/Using_light_events	/en-US/docs/Web/API/Ambient_Light_Events
-/en-US/docs/Web/API/DeviceLightEvent/value	/en-US/docs/Web/API/DeviceLightEvent
 /en-US/docs/Web/API/DeviceMotionEvent.acceleration	/en-US/docs/Web/API/DeviceMotionEvent/acceleration
 /en-US/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity	/en-US/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity
 /en-US/docs/Web/API/DeviceMotionEvent.interval	/en-US/docs/Web/API/DeviceMotionEvent/interval
@@ -8884,7 +8881,6 @@
 /en-US/docs/Web/API/Window/onclick	/en-US/docs/Web/API/GlobalEventHandlers/onclick
 /en-US/docs/Web/API/Window/oncontextmenu	/en-US/docs/Web/API/GlobalEventHandlers/oncontextmenu
 /en-US/docs/Web/API/Window/ondblclick	/en-US/docs/Web/API/GlobalEventHandlers/ondblclick
-/en-US/docs/Web/API/Window/ondevicelight	/en-US/docs/Web/API/DeviceLightEvent
 /en-US/docs/Web/API/Window/ondeviceproximity	/en-US/docs/Web/API/DeviceProximityEvent
 /en-US/docs/Web/API/Window/onfocus	/en-US/docs/Web/API/GlobalEventHandlers/onfocus
 /en-US/docs/Web/API/Window/onhashchange	/en-US/docs/Web/API/WindowEventHandlers/onhashchange
@@ -11308,7 +11304,6 @@
 /en-US/docs/WebAPI/Permissions	/en-US/docs/Web/API/Permissions_API
 /en-US/docs/WebAPI/Pointer_Lock	/en-US/docs/Web/API/Pointer_Lock_API
 /en-US/docs/WebAPI/Proximity	/en-US/docs/Web/API/Proximity_Events
-/en-US/docs/WebAPI/Using_Light_Events	/en-US/docs/Web/API/Ambient_Light_Events
 /en-US/docs/WebAPI/Using_Web_Notifications	/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /en-US/docs/WebAPI/Using_geolocation	/en-US/docs/Web/API/Geolocation_API
 /en-US/docs/WebAPI/Vibration	/en-US/docs/Web/API/Vibration_API
@@ -11699,7 +11694,6 @@
 /en-US/docs/deleteTFoot	/en-US/docs/Web/API/HTMLTableElement/deleteTFoot
 /en-US/docs/deleteTHead	/en-US/docs/Web/API/HTMLTableElement/deleteTHead
 /en-US/docs/detail	/en-US/docs/Web/API/UIEvent/detail
-/en-US/docs/devicelightevent	/en-US/docs/Web/API/DeviceLightEvent/Using_light_sensors
 /en-US/docs/disabled	/en-US/docs/Web/API/StyleSheet/disabled
 /en-US/docs/dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/dnt_temp	/en-US/docs/Web/API/Navigator/doNotTrack
