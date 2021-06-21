@@ -28838,14 +28838,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioWorkletNodeOptions": {
-    "modified": "2020-10-15T22:20:39.417Z",
-    "contributors": [
-      "Sheppy",
-      "chrisdavidmills",
-      "1valdis"
-    ]
-  },
   "Web/API/AudioWorkletProcessor": {
     "modified": "2020-10-15T22:20:46.279Z",
     "contributors": [
