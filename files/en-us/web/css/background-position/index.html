@@ -44,15 +44,16 @@ background-position: top right 10px;
 /* Global values */
 background-position: inherit;
 background-position: initial;
+background-position: revert;
 background-position: unset;
 </pre>
 
-<p>The <code>background-position</code> property is specified as one or more <code><a href="#position">&lt;position&gt;</a></code> values, separated by commas.</p>
+<p>The <code>background-position</code> property is specified as one or more <code>&lt;position&gt;</code> values, separated by commas.</p>
 
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="position"><code>&lt;position&gt;</code></dt>
+ <dt><code>&lt;position&gt;</code></dt>
  <dd>A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be <code>center</code>. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s).</dd>
  <dd>
  <p><strong>1-value syntax:</strong> the value may be:</p>
@@ -157,17 +158,17 @@ div {
 
 /* These examples use the `background` shorthand property */
 .exampleone {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 left 4em bottom 1em no-repeat;
+  background: url("startransparent.gif") #FFEE99 left 4em bottom 1em no-repeat;
 }
 
 /* Multiple background images: Each image is matched with the
    corresponding position, from first specified to last. */
 .examplethree {
-  background-image:    url("https://mdn.mozillademos.org/files/11987/startransparent.gif"),
-                       url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image:    url("startransparent.gif"),
+                       url("catfront.png");
   background-position: 0px 0px,
                        right 3em bottom 2em;
 }</pre>

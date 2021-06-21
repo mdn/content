@@ -67,6 +67,7 @@ transform-origin: bottom right 2cm;
 /* Global values */
 transform-origin: inherit;
 transform-origin: initial;
+transform-origin: revert;
 transform-origin: unset;
 </pre>
 
@@ -162,314 +163,187 @@ transform-origin: unset;
 
 <h3 id="A_demonstration_of_various_transform_values">A demonstration of various transform values</h3>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Code</th>
-   <th>Sample</th>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: none;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_none">
-    <pre class="brush: html">
-&lt;div class="box1"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+<p>This example shows the effect of choosing different <code>transform-origin</code> values for a variety of transformation functions.</p>
 
-    <pre class="brush: css">
-.box1 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<pre class="brush: html hidden">
+&lt;div class="container"&gt;
+
+&lt;div class="example"&gt;
+  &lt;div class="box box1"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;
 transform: none;
--webkit-transform: none;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_none', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_only">
-    <pre class="brush: html">
-&lt;div class="box2"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box2"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box2 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_rotate_only', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate">
-    <pre class="brush: html">
-&lt;div class="box3"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box3"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box3 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
+transform: rotate(30deg);
 transform-origin: 0 0;
--webkit-transform-origin: 0 0;
+&lt;/pre&gt;
+
+&lt;div class="example"&gt;
+  &lt;div class="box box4"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_rotate', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 100% 100%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_percentage">
-    <pre class="brush: html">
-&lt;div class="box4"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css">
-.box4 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: 100% 100%;
--webkit-transform-origin: 100% 100%;
+&lt;/pre&gt;
+
+&lt;div class="example"&gt;
+  &lt;div class="box box5"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_rotate_with_percentage', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: -1em -3em;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_em">
-    <pre class="brush: html">
-&lt;div class="box5"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css">
-.box5 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: -1em -3em;
--webkit-transform-origin: -1em -3em;
-transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_rotate_with_em', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_only">
-    <pre class="brush: html">
-&lt;div class="box6"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box6"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box6 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
-}
-</pre>
-    </div>
+&lt;pre&gt;
+transform: scale(1.7);
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_scale_only', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_without_origin">
-    <pre class="brush: html">
-&lt;div class="box7"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box7"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box7 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+&lt;pre&gt;
+transform: scale(1.7);
 transform-origin: 0 0;
--webkit-transform-origin: 0 0;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_scale_without_origin', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale">
-    <pre class="brush: html">
-&lt;div class="box8"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box8"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box8 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+&lt;pre&gt;
+transform: scale(1.7);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_scale', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewX(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_x">
-    <pre class="brush: html">
-&lt;div class="box9"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box9"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box9 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
 transform: skewX(50deg);
--webkit-transform: skewX(50deg);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <div>{{EmbedLiveSample('transform_skew_x', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewY(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_y">
-    <pre class="brush: html">
-&lt;div class="box10"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box10"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box10 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
 transform: skewY(50deg);
--webkit-transform: skewY(50deg);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
+&lt;/pre&gt;
+
+&lt;/div&gt;
 </pre>
-    </div>
 
-    <div>{{EmbedLiveSample('transform_skew_y', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
- </tbody>
-</table>
+<pre class="brush: css hidden">
+.container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  gap: 20px;
+}
 
-<h2 id="Specifications">Specifications</h2>
+.example {
+  position: relative;
+  margin: 0 2em 4em 5em;
+}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin') }}</td>
-   <td>{{ Spec2('CSS3 Transforms') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: solid 1px;
+  background-color: palegreen;
+}
+
+.original {
+  position: absolute;
+  left: 0;
+  opacity: 20%;
+}
+
+.box1 {
+  transform: none;
+}
+
+.box2 {
+  transform: rotate(30deg);
+}
+
+.box3 {
+  transform: rotate(30deg);
+  transform-origin: 0 0;
+}
+
+.box4 {
+  transform: rotate(30deg);
+  transform-origin: 100% 100%;
+}
+
+.box5 {
+  transform: rotate(30deg);
+  transform-origin: -1em -3em;
+}
+
+.box6 {
+  transform: scale(1.7);
+}
+
+.box7  {
+  transform: scale(1.7);
+  transform-origin: 0 0;
+}
+
+.box8 {
+  transform: scale(1.7);
+  transform-origin: 100% -30%;
+}
+
+.box9 {
+  transform: skewX(50deg);
+  transform-origin: 100% -30%;
+}
+
+.box10 {
+  transform: skewY(50deg);
+  transform-origin: 100% -30%;
+}
+
+</pre>
+
+{{EmbedLiveSample('A_demonstration_of_various_transform_values', '', 1350) }}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

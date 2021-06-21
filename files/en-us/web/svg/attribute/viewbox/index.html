@@ -11,6 +11,16 @@ tags:
 
 <p>The value of the <code>viewBox</code> attribute is a list of four numbers: <code><var>min-x</var></code>, <code><var>min-y</var></code>, <code><var>width</var></code> and <code><var>height</var></code>. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the <a href="/en-US/docs/Glossary/Viewport">browser viewport</a>).</p>
 
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("marker")}}</li>
+  <li>{{SVGElement("pattern")}}</li>
+  <li>{{ SVGElement("svg") }}</li>
+  <li>{{ SVGElement("symbol") }}</li>
+  <li>{{ SVGElement("view") }}.</li>
+</ul>
+
 <div id="topExample">
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }
@@ -35,7 +45,7 @@ svg:not(:root) { display: inline-block; }</pre>
 &lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
   with relative unit such as percentage, the visual size
-  of the square looks unchanged regardless of the viewBox`
+  of the square looks unchanged regardless of the viewBox
   --&gt;
   &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
 
@@ -69,8 +79,6 @@ svg:not(:root) { display: inline-block; }</pre>
 <p>The exact effect of this attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.</p>
 
 <p class="note"><strong>Note:</strong> Values for <code><var>width</var></code> or <code><var>height</var></code> lower or equal to <code>0</code> disable rendering of the element.</p>
-
-<p>Five elements are using this attribute: {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, and {{ SVGElement("view") }}.</p>
 
 <h2 id="marker">marker</h2>
 

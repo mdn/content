@@ -44,7 +44,12 @@ border-image: linear-gradient(red, blue) 27 / 35px;
 
 /* source | slice | width | outset | repeat */
 border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
-</pre>
+
+/* Global values */
+border-image: inherit;
+border-image: initial;
+border-image: revert;
+border-image: unset;</pre>
 
 <p>The <code>border-image</code> property may be specified with anywhere from one to five of the values listed below.</p>
 
@@ -109,7 +114,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
   padding: 10px;
 
   border-image:
-      url("https://mdn.mozillademos.org/files/4127/border.png")  /* source */
+      url("border.png")  /* source */
       27 /                    /* slice */
       36px 28px 18px 8px /    /* width */
       18px 14px 9px 4px       /* outset */

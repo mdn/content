@@ -21,6 +21,7 @@ tags:
  <li>{{Glossary("Request header", "Request headers")}} contain more information about the resource to be fetched, or about the client requesting the resource.</li>
  <li>{{Glossary("Response header", "Response headers")}} hold additional information about the response, like its location or about the server providing it.</li>
  <li>{{Glossary("Representation header", "Representation headers")}} contain information about the body of the resource, like its <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, or encoding/compression applied.</li>
+ <li>{{Glossary("Payload header","Payload headers")}} contain representation-independent information about payload data, including content length and the encoding used for transport.</li>
 </ul>
 
 <p>Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies")}} handle them:</p>
@@ -75,41 +76,47 @@ tags:
 
 <h2 id="Client_hints">Client hints</h2>
 
-<p>HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow the server to optimize what it serves for those conditions
-  (<a href="https://datatracker.ietf.org/doc/html/rfc8942"><cite>[RFC8942]</cite></a>).</p>
+<p>HTTP {{Glossary("Client_hints", "Client hints")}} are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.</p>
+
+<p>Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.</p>
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <code>http-equiv</code> attribute (<a href="https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv"><cite>[HTML]</cite></a>).</dd>
+ <dd>Servers can advertise support for Client Hints using the <code>Accept-CH</code> header field or an equivalent HTML <code>&lt;meta&gt;</code> element with <a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv"><code>http-equi</code>v</a> attribute.</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}</dt>
- <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin (<a href="https://datatracker.ietf.org/doc/html/rfc6454"><cite>[RFC6454]</cite></a>).</dd>
- <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
- <dd>Technically a part of Device Memory API, this header represents an approximate amount of RAM client has.</dd>
- <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
- <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
- <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
- <dd>A boolean that indicates the user agent's preference for reduced data usage.</dd>
- <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
- <dd>
- <div id="rfc.section.3.3.p.1">
- <p>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
- </div>
-
- <div id="rfc.section.3.3.p.2">
- <p>If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</p>
- </div>
- </dd>
- <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
- <dd>
- <div id="rfc.section.3.2.p.1">
- <p>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
- </div>
-
- <div id="rfc.section.3.2.p.2">
- <p>If the desired resource width is not known at the time of the request or the resource does not have a display width, the <code>Width</code> header field can be omitted. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences</p>
- </div>
- </dd>
+ <dd>Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin.</dd>
 </dl>
+
+<p>The different categories of client hints are listed below.</p>
+
+<h3 id="device_client_hints">Device client hints</h3>
+
+<dl>
+  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
+  <dd>Approximate amount of available client RAM memory. Technically a part of <a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a>.</dd>
+  <dt>{{HTTPHeader("DPR")}} {{deprecated_inline}}</dt>
+  <dd>Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.</dd>
+  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
+  <dd>A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). If <code>Viewport-Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</dd>
+  <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
+  <dd>The <code>Width</code> request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value). The <code>Width</code> header field can be omitted if the desired resource width is not known at the time of the request or the resource does not have a display width. If <code>Width</code> occurs in a message more than once, the last value overrides all previous occurrences.</dd>
+ </dl>
+
+
+<h3 id="network_client_hints">Network client hints</h3>
+
+<p>Network client hints allow a server to choose what information is sent based on the user choice and network bandwidth and latency.</p>
+
+<dl>
+  <dt>{{HTTPHeader("Downlink")}}</dt>
+  <dd>Approximate bandwidth of the client's connection to the server, in Mbps. This is part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
+  <dt>{{HTTPHeader("ECT")}}</dt>
+  <dd>The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
+  <dt>{{HTTPHeader("RTT")}}</dt>
+  <dd>Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is part of the <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>.</dd>
+  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
+  <dd>A boolean that indicates the user agent's preference for reduced data usage. This is part of the <a href="/en-US/docs/Web/API/Save_Data_API">Save Data API</a>.</dd>
+ </dl>
 
 <h2 id="Conditionals">Conditionals</h2>
 
@@ -332,15 +339,17 @@ tags:
 
 <h3 id="Fetch_metadata_request_headers">Fetch metadata request headers</h3>
 
+<p>{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provides information about the context from which the request originated. This allows a server to make decisions about whether a request should be allowed based on where the request came from and how the resource will be used.</p>
+
 <dl>
  <dt>{{HTTPHeader("Sec-Fetch-Site")}}</dt>
  <dd>It is a request header that indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values <code>cross-site</code>, <code>same-origin</code>, <code>same-site</code>, and <code>none</code>.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-Mode")}}</dt>
- <dd>It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values <code>cors</code>, <code>navigate</code>, <code>nested-navigate</code>, <code>no-cors</code>, <code>same-origin</code>, and <code>websocket</code>.</dd>
+ <dd>It is a request header that indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values <code>cors</code>, <code>navigate</code>, <code>no-cors</code>, <code>same-origin</code>, and <code>websocket</code>.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-User")}}</dt>
  <dd>It is a request header that indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are <code>?0</code> for false and <code>?1</code> for true.</dd>
  <dt>{{HTTPHeader("Sec-Fetch-Dest")}}</dt>
- <dd>It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values <code>audio</code>, <code>audioworklet</code>, <code>document</code>, <code>embed</code>, <code>empty</code>, <code>font</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>serviceworker</code>, <code>sharedworker</code>, <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>, <code>xslt</code>, and <code>nested-document</code>.</dd>
+ <dd>It is a request header that indicates the request's destination to a server. It is a Structured Header whose value is a token with possible values <code>audio</code>, <code>audioworklet</code>, <code>document</code>, <code>embed</code>, <code>empty</code>, <code>font</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>serviceworker</code>, <code>sharedworker</code>, <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>, and <code>xslt</code>.</dd>
 </dl>
 
 <h2 id="Server-sent_events">Server-sent events</h2>

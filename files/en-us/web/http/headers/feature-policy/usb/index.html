@@ -8,6 +8,7 @@ tags:
   - Reference
   - Vibration API
   - Web USB
+  - Experimental
 browser-compat: http.headers.Feature-Policy.usb
 ---
 <p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
@@ -19,8 +20,8 @@ browser-compat: http.headers.Feature-Policy.usb
 <pre>Feature-Policy: usb &lt;allowlist&gt;;</pre>
 
 <dl>
- <dt>&lt;allowlist&gt;</dt>
- <dd>{{page('Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}</dd>
+  <dt>&lt;allowlist&gt;</dt>
+  <dd>A list of origins for which the feature is allowed. See <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy#syntax"><code>Feature-Policy</code></a>.</dd>
 </dl>
 
 <h2 id="Default_policy">Default policy</h2>
@@ -29,27 +30,7 @@ browser-compat: http.headers.Feature-Policy.usb
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web USB','#feature-policy','Feature-Policy integration')}}</td>
-   <td>{{Spec2('Web USB')}}</td>
-   <td>Default allow list is <code>'self'</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

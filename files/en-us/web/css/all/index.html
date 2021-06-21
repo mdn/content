@@ -11,7 +11,7 @@ browser-compat: css.properties.all
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>all</strong></code> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom Properties</a>.</span> It can set properties to their initial or inherited values, or to the values specified in another stylesheet origin.</p>
+<p>The <code><strong>all</strong></code> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/Web/CSS">CSS</a> property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom Properties</a>. It can set properties to their initial or inherited values, or to the values specified in another stylesheet origin.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/all.html")}}</div>
 
@@ -20,10 +20,8 @@ browser-compat: css.properties.all
 <pre class="brush:css no-line-numbers">/* Global values */
 all: initial;
 all: inherit;
-all: unset;
-
-/* CSS Cascading and Inheritance Level 4 */
 all: revert;
+all: unset;
 </pre>
 
 <p>The <code>all</code> property is specified as one of the CSS global keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} and {{cssxref("direction")}} properties.</p>
@@ -73,6 +71,8 @@ Phasellus eget velit sagittis.</pre>
   font-size: small;
   background-color: #F0F0F0;
   color: blue;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote {

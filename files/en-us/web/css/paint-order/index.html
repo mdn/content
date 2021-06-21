@@ -25,7 +25,12 @@ paint-order: markers; /* draw the markers first, then fill and stroke */
 /* Multiple values */
 paint-order: stroke fill; /* draw the stroke first, then the fill, then the markers */
 paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
-</pre>
+
+/* Global values */
+paint-order: inherit;
+paint-order: initial;
+paint-order: revert;
+paint-order: unset;</pre>
 
 <p>If no value is specified, the default paint order is <code>fill</code>, <code>stroke</code>, <code>markers</code>.</p>
 

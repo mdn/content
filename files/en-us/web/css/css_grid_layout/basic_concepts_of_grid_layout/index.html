@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide. </p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide. </p>
 
 <h2 id="What_is_a_grid">What is a grid?</h2>
 
@@ -88,17 +88,18 @@ tags:
 
 <p>If we want to start making this more grid-like we need to add column tracks.</p>
 
-<h2 id="Grid_Tracks">Grid Tracks</h2>
+<h2 id="grid_tracks">Grid tracks</h2>
 
 <p>We define rows and columns on our grid with the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties. These define grid tracks. A <em>grid track</em> is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.</p>
 
 <p><img alt="" src="1_grid_track.png"></p>
 
+<h3 id="basic_example">Basic example</h3>
+
 <p>I can add to our earlier example by adding the <code>grid-template-columns</code> property, then defining the size of the column tracks.</p>
 
 <p>I have now created a grid with three 200-pixel-wide column tracks. The child items will be laid out on this grid one in each grid cell.</p>
 
-<div id="grid_first">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
@@ -133,14 +134,12 @@ tags:
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('grid_first', '610', '140') }}</p>
-</div>
+<p>{{ EmbedLiveSample('basic_example', '610', '140') }}</p>
 
-<h3 id="The_fr_Unit">The fr Unit</h3>
+<h3 id="the_fr_unit">The fr unit</h3>
 
 <p>Tracks can be defined using any length unit. Grid also introduces an additional length unit to help us create flexible grid tracks. The new <code>fr</code> unit represents a fraction of the available space in the grid container. The next grid definition would create three equal width tracks that grow and shrink according to the available space.</p>
 
-<div id="fr_unit_ls">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;One&lt;/div&gt;
   &lt;div&gt;Two&lt;/div&gt;
@@ -176,10 +175,20 @@ tags:
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('fr_unit_ls', '220', '140') }}</p>
-</div>
+<p>{{ EmbedLiveSample('the_fr_unit', '220', '140') }}</p>
+
+<h3 id="unequal_fractions">Unequal fractions</h3>
 
 <p>In this next example, we create a definition with a <code>2fr</code> track then two <code>1fr</code> tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -187,13 +196,68 @@ tags:
 }
 </pre>
 
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+</pre>
+</div>
+
+<p>{{ EmbedLiveSample('unequal_fractions', '220', '140') }}</p>
+
+<h3 id="mixing_fractions_and_absolute_sizes">Mixing fractions and absolute sizes</h3>
+
 <p>In this final example, we mix absolute sized tracks with fraction units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.</p>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: 500px 1fr 2fr;
 }
 </pre>
+
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+
+</pre>
+</div>
+
+<p>{{ EmbedLiveSample('mixing_fractions_and_absolute_sizes', '220', '140') }}</p>
 
 <h3 id="Track_listings_with_repeat_notation">Track listings with repeat() notation</h3>
 
@@ -458,21 +522,9 @@ tags:
 
 <p>A grid item can become a grid container. In the following example, I have the three-column grid that I created earlier, with our two positioned items. In this case the first item has some sub-items. As these items are not direct children of the grid they do not participate in grid layout and so display in a normal document flow.</p>
 
-<div id="nesting">
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="box box1"&gt;
-    &lt;div class="nested"&gt;a&lt;/div&gt;
-    &lt;div class="nested"&gt;b&lt;/div&gt;
-    &lt;div class="nested"&gt;c&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box box4"&gt;Four&lt;/div&gt;
-  &lt;div class="box box5"&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
 <p><img alt="Nested grid in flow" src="1_nested_grids_in_flow.png"></p>
+
+<h3 id="nesting_without_subgrid">Nesting without subgrid</h3>
 
 <p>If I set <code>box1</code> to <code>display: grid</code> I can give it a track definition and it too will become a grid. The items then lay out on this new grid.</p>
 
@@ -487,6 +539,19 @@ tags:
 </pre>
 
 <div class="hidden">
+  <pre class="brush: html">&lt;div class="wrapper"&gt;
+    &lt;div class="box box1"&gt;
+      &lt;div class="nested"&gt;a&lt;/div&gt;
+      &lt;div class="nested"&gt;b&lt;/div&gt;
+      &lt;div class="nested"&gt;c&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="box box2"&gt;Two&lt;/div&gt;
+    &lt;div class="box box3"&gt;Three&lt;/div&gt;
+    &lt;div class="box box4"&gt;Four&lt;/div&gt;
+    &lt;div class="box box5"&gt;Five&lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
@@ -517,9 +582,8 @@ tags:
 }
 </pre>
 </div>
-</div>
 
-<p>{{ EmbedLiveSample('nesting', '600', '340') }}</p>
+<p>{{ EmbedLiveSample('nesting_without_subgrid', '600', '340') }}</p>
 
 <p>In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.</p>
 
@@ -545,9 +609,12 @@ tags:
 
 <h2 id="Layering_items_with_z-index">Layering items with <code>z-index</code></h2>
 
-<p>Grid items can occupy the same cell. If we return to our example with items positioned by line number, we can change this to make two items overlap.</p>
+<p>Grid items can occupy the same cell, and in this case we can use the {{cssxref("z-index")}} property to control the order in which overlapping items stack.</p>
 
-<div id="l_ex">
+<h3 id="overlapping_without_z-index">Overlapping without z-index</h3>
+
+<p>If we return to our example with items positioned by line number, we can change this to make two items overlap.</p>
+
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;One&lt;/div&gt;
   &lt;div class="box box2"&gt;Two&lt;/div&gt;
@@ -595,9 +662,8 @@ tags:
 }
 </pre>
 </div>
-</div>
 
-<p>{{ EmbedLiveSample('l_ex', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('overlapping_without_z-index', '230', '460') }}</p>
 
 <p>The item <code>box2</code> is now overlapping <code>box1</code>, it displays on top as it comes later in the source order.</p>
 
@@ -655,7 +721,7 @@ tags:
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('Controlling_the_order', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Controlling_the_order', '230', '460') }}</p>
 
 <h2 id="Next_Steps">Next Steps</h2>
 

@@ -14,9 +14,9 @@ browser-compat: css.selectors.host-context
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>:host-context()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</span></p>
+<p>The <strong><code>:host-context()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> function selects the shadow host of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.</p>
 
-<p><span class="seoSummary">In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.</span></p>
+<p>In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.</span></p>
 
 <p>One typical use of this is with a descendant selector expression — for example <code>h1</code> — to select only instances of the custom element that are inside an <code>&lt;h1&gt;</code>.  Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a <code>.dark-theme</code> class is applied to <code>&lt;body&gt;</code>.</p>
 

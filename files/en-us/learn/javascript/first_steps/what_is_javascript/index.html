@@ -145,7 +145,7 @@ function updateName() {
 
 <p><img alt="" src="execution.png" style="display: block; margin: 0 auto;"></p>
 
-<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur. You will learn ways around this later in the article, in the <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a> section.</p>
+<p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. Errors may occur if JavaScript is loaded and run before the HTML and CSS that it is intended to modify. You will learn ways around this later in the article, in the <a href="#script_loading_strategies">Script loading strategies</a> section.</p>
 
 <h3 id="Browser_security">Browser security</h3>
 
@@ -335,7 +335,19 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p>There are actually two modern features we can use to bypass the problem of the blocking script — <code>async</code> and <code>defer</code> (which we saw above). Let's look at the difference between these two.</p>
 
-<p>Scripts loaded using the <code>async</code> attribute (see below) will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying. It is best to use <code>async</code> when the scripts in the page run independently from each other and depend on no other script on the page.</p>
+<p>Scripts loaded using the <code>async</code> attribute will download the script without blocking the page while the script is being fetched. However, once the download is complete, the script will execute, which blocks the page from rendering. You get no guarantee that scripts will run in any specific order. It is best to use <code>async</code> when the scripts in the page run independently from each other and depend on no other script on the page.</p>
+
+<p>Scripts loaded with the <code>defer</code> attribute will load in the order they appear on the page. They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).</p>
+
+<p>Here is a visual representation of the different script loading methods and what that means for your page:</p>
+
+<figure>
+  <img src="async-defer.jpg" alt="async vs defer" >
+  <figcaption>Image from the <a href="https://html.spec.whatwg.org/images/asyncdefer.svg" target="_blank" >HTML spec</a>, copied and cropped to a reduced version, under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> license terms.
+  </figcaption>
+</figure>
+
+<br>
 
 <p>For example, if you have the following script elements:</p>
 
@@ -357,12 +369,14 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 &lt;script defer src="js/script3.js"&gt;&lt;/script&gt;</pre>
 
-<p>All the scripts with the <code>defer</code> attribute will load in the order they appear on the page. So in the second example, we can be sure that <code>jquery.js</code> will load before <code>script2.js</code> and <code>script3.js</code> and that <code>script2.js</code> will load before <code>script3.js</code>. They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one of more elements on the page).</p>
+<p>In the second example, we can be sure that <code>jquery.js</code> will load before <code>script2.js</code> and <code>script3.js</code> and that <code>script2.js</code> will load before <code>script3.js</code>. They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one of more elements on the page).</p>
 
 <p>To summarize:</p>
 
 <ul>
- <li><code>async</code> and <code>defer</code> both instruct the browser to download the script(s) in a separate thread, while the rest of the page (the DOM, etc.) is downloading, so the page loading is not blocked by the scripts.</li>
+ <li><code>async</code> and <code>defer</code> both instruct the browser to download the script(s) in a separate thread, while the rest of the page (the DOM, etc.) is downloading, so the page loading is not blocked during the fetch process.</li>
+ <li>scripts with an <code>async</code> attribute will execute as soon the download is done. This blocks the page and does not guarantee any specific execution order.</li>
+ <li>scripts with a <code>defer</code> attribute will load in the order they are in and will only execute once everything has finished loading.</li>
  <li>If your scripts should be run immediately and they don't have any dependencies, then use <code>async</code>.</li>
  <li>If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, load them using <code>defer</code> and put their corresponding <code>&lt;script&gt;</code> elements in the order you want the browser to execute them.</li>
 </ul>

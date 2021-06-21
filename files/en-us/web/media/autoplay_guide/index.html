@@ -29,7 +29,7 @@ tags:
 
 <p>That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:</p>
 
-<pre class="brush: html">&lt;audio src="/music.mp4" autoplay&gt;</pre>
+<pre class="brush: html">&lt;audio src="/music.mp3" autoplay&gt;</pre>
 
 <p>and</p>
 
@@ -82,7 +82,7 @@ tags:
 <p>An {{HTMLElement("audio")}} element using the <code>autoplay</code> attribute might look like this:</p>
 
 <pre class="brush: html">&lt;audio id="musicplayer" autoplay&gt;
-  &lt;source src="/music/chapter1.mp4"&gt;
+  &lt;source src="/music/chapter1.mp3"&gt;
 &lt;/audio&gt;
 </pre>
 
@@ -98,7 +98,7 @@ tags:
 
 <pre class="brush: html">&lt;video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"&gt;</pre>
 
-<p>Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called <code>handleFirstPlay()</code>, which receives as input the <code>play</code> event.</p>
+<p>Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("GlobalEventHandlers.onplay", "onplay")}} event handler set up; the event is handled by a function called <code>handleFirstPlay()</code>, which receives as input the <code>play</code> event.</p>
 
 <p><code>handleFirstPlay()</code> looks like this:</p>
 

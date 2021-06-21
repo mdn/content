@@ -12,7 +12,8 @@ browser-compat: css.properties.mask-image
 ---
 <div>{{CSSRef}}</div>
 
-<p>The <strong><code>mask-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the image that is used as mask layer for an element.</p>
+<p>The <strong><code>mask-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the image that is used as mask layer for an element.
+By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element. This can be controlled with the {{cssxref("mask-mode")}} property.</p>
 
 <pre class="brush:css no-line-numbers">/* Keyword value */
 mask-image: none;
@@ -30,6 +31,7 @@ mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1.0), t
 /* Global values */
 mask-image: inherit;
 mask-image: initial;
+mask-image: revert;
 mask-image: unset;
 </pre>
 
@@ -39,7 +41,7 @@ mask-image: unset;
 
 <dl>
  <dt><code>none</code></dt>
- <dd>This keyword is interpreted as a transparent black image layer.</dd>
+ <dd>This keyword is interpreted as an opaque white image layer.</dd>
  <dt><code>&lt;mask-source&gt;</code></dt>
  <dd>A {{cssxref("url()","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.</dd>
  <dt>{{cssxref("&lt;image&gt;")}}</dt>

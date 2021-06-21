@@ -12,7 +12,7 @@ browser-compat: css.properties.text-combine-upright
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-combine-upright</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the combination of characters into the space of a single character.</span> If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.</p>
+<p>The <strong><code>text-combine-upright</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.</p>
 
 <p>This is used to produce an effect that is known as tate-chū-yoko (<span lang="ja">縦中横</span>) in Japanese, or as <span lang="zh-Hant">直書橫向</span> in Chinese.</p>
 
@@ -27,6 +27,7 @@ text-combine-upright: digits 4;   /* fits up to 4 consecutive digits horizontall
 /* Global values */
 text-combine-upright: inherit;
 text-combine-upright: initial;
+text-combine-upright: revert;
 text-combine-upright: unset;
 </pre>
 
@@ -72,7 +73,7 @@ text-combine-upright: unset;
 
 <h4 id="Results">Results</h4>
 
-<p>{{EmbedLiveSample("Digits", 100, 350, "https://mdn.mozillademos.org/files/12127/tate-chu-yoko.png")}}</p>
+<p>{{EmbedLiveSample("Digits", 100, 350, "tate-chu-yoko.png")}}</p>
 
 <h3 id="All">All</h3>
 
@@ -93,7 +94,7 @@ text-combine-upright: unset;
 
 <h4 id="Results_2">Results</h4>
 
-<p>{{EmbedLiveSample("All", 250, 300, "https://mdn.mozillademos.org/files/13096/text-combine-upright-all.png")}}</p>
+<p>{{EmbedLiveSample("All", 250, 300, "text-combine-upright-all.png")}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

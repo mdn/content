@@ -45,15 +45,16 @@ background-size: 6px, auto, contain;
 /* Global values */
 background-size: inherit;
 background-size: initial;
+background-size: revert;
 background-size: unset;
 </pre>
 
 <p>The <code>background-size</code> property is specified in one of the following ways:</p>
 
 <ul>
- <li>Using the keyword values <code><a href="#contain">contain</a></code> or <code><a href="#cover">cover</a></code>.</li>
- <li>Using a width value only, in which case the height defaults to <code><a href="#auto">auto</a></code><a href="#auto">.</a></li>
- <li>Using both a width and a height value, in which case the first sets the width and the second sets the height. Each value can be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or <code><a href="#auto">auto</a></code>.</li>
+ <li>Using the keyword values <code>contain</code> or <code>cover</code>.</li>
+ <li>Using a width value only, in which case the height defaults to <code>auto</code>.</li>
+ <li>Using both a width and a height value, in which case the first sets the width and the second sets the height. Each value can be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or <code>auto</code>.</li>
 </ul>
 
 <p>To specify the size of multiple background images, separate the value for each one with a comma.</p>
@@ -61,15 +62,15 @@ background-size: unset;
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt id="contain"><code>contain</code></dt>
- <dd>Scales the image as large as possible within its container without cropping or stretching the image. If the container is larger than the image, this will result in image tiling, unless the <code><a href="#contain">background-repeat</a></code> property is set to <code><a href="#contain">no-repeat</a></code>.</dd>
- <dt id="cover"><code>cover</code></dt>
+ <dt><code>contain</code></dt>
+ <dd>Scales the image as large as possible within its container without cropping or stretching the image. If the container is larger than the image, this will result in image tiling, unless the {{cssxref("background-repeat")}} property is set to <code>no-repeat</code>.</dd>
+ <dt><code>cover</code></dt>
  <dd>Scales the image as large as possible to fill the container, stretching the image if necessary. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.</dd>
- <dt id="auto"><code>auto</code></dt>
+ <dt><code>auto</code></dt>
  <dd>Scales the background image in the corresponding direction such that its intrinsic proportions are maintained.</dd>
- <dt id="length">{{cssxref("&lt;length&gt;")}}</dt>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Stretches the image in the corresponding dimension to the specified length. Negative values are not allowed.</dd>
- <dt id="percentage">{{cssxref("&lt;percentage&gt;")}}</dt>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>Stretches the image in the corresponding dimension to the specified percentage of the <em>background positioning area</em>. The background positioning area is determined by the value of {{cssxref("background-origin")}} (by default, the padding box). However, if the background's {{cssxref("background-attachment")}} value is <code>fixed</code>, the positioning area is instead the entire {{glossary("viewport")}}. Negative values are not allowed.</dd>
 </dl>
 

@@ -18,7 +18,7 @@ browser-compat: css.properties.image-orientation
 ---
 <div>{{deprecated_header}}</div>
 
-<p><span class="seoSummary">The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image.</span> It should <em>not</em> be used for any other orientation adjustments; instead, the {{cssxref("transform")}} property should be used with the <code>rotate</code> {{cssxref("&lt;transform-function&gt;")}}.</p>
+<p>The <strong><code>image-orientation</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property specifies a layout-independent correction to the orientation of an image. It should <em>not</em> be used for any other orientation adjustments; instead, the {{cssxref("transform")}} property should be used with the <code>rotate</code> {{cssxref("&lt;transform-function&gt;")}}.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> This property is deprecated in the specification. Its functionality may be moved into properties on the {{HTMLElement("img")}} and/or {{HTMLElement("picture")}} elements, with the possible exception of <code>from-image</code>. The <code>flip</code> and <code>&lt;angle&gt;</code> values were made obsolete in Firefox 63.</p>
@@ -81,7 +81,7 @@ image-orientation: flip; /* No rotation, only applies a horizontal flip */</pre>
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;img id="image" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
+<pre class="brush: html">&lt;img id="image" src="mdn.svg"
     alt="Orientation taken from the image"&gt;
 &lt;select id="imageOrientation"&gt;
   &lt;option value="from-image"&gt;from-image&lt;/option&gt;

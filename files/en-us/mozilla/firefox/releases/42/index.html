@@ -73,7 +73,7 @@ install Firefox Developer Edition</a> Firefox 42 was released on November 3, 201
 <h4 id="Service_Workers">Service Workers</h4>
 
 <ul>
- <li>{{domxref('Request.context')}} has been removed ({{bug(1188062)}}).</li>
+ <li><code>Request.context</code> has been removed ({{bug(1188062)}}).</li>
  <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been activated by default on Firefox for Desktop ({{bug(1153499)}}), but only on the Nightly/Dev Edition/Beta channels. It is being deactivated by default in the Release channel until consumer UX and debugging features have been properly implemented ({{bug(1207875)}}.) You can still activate it by enabling the <code>dom.push.enabled</code> pref in <a>about:config</a>.</li>
  <li>The {{domxref("PushManager.hasPermission()")}} method has been deprecated in the spec, and replaced with the {{domxref("PushManager.permissionState()")}} method. Firefox has updated its implementation to reflect this ({{bug("1183853")}}.)</li>
  <li>Service-worker-related additions to the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> have been implemented ({{bug(1114554)}}), but are disabled in this release.</li>

@@ -18,7 +18,11 @@ tags:
 
 <h2 id="The_grid">The grid</h2>
 
-<p><img alt="" class="internal" src="canvas_default_grid.png" style="float: right;">Before we can start drawing, we need to talk about the canvas grid or <strong>coordinate space</strong>. Our HTML skeleton from the previous page had a canvas element 150 pixels wide and 150 pixels high. To the right, you see this canvas with the default grid overlayed. Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of this grid is positioned in the <em>top left</em> corner at coordinate (0,0). All elements are placed relative to this origin. So the position of the top left corner of the blue square becomes x pixels from the left and y pixels from the top, at coordinate (x,y). Later in this tutorial we'll see how we can translate the origin to a different position, rotate the grid and even scale it, but for now we'll stick to the default.</p>
+<p>Before we can start drawing, we need to talk about the canvas grid or <strong>coordinate space</strong>. Our HTML skeleton from the previous page had a canvas element 150 pixels wide and 150 pixels high.</p>
+
+<img alt="" src="canvas_default_grid.png">
+
+<p>Normally 1 unit in the grid corresponds to 1 pixel on the canvas. The origin of this grid is positioned in the <em>top left</em> corner at coordinate (0,0). All elements are placed relative to this origin. So the position of the top left corner of the blue square becomes x pixels from the left and y pixels from the top, at coordinate (x,y). Later in this tutorial we'll see how we can translate the origin to a different position, rotate the grid and even scale it, but for now we'll stick to the default.</p>
 
 <h2 id="Drawing_rectangles">Drawing rectangles</h2>
 
@@ -63,7 +67,7 @@ tags:
 
 <p>This example's output is shown below.</p>
 
-<p>{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}</p>
+<p>{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}</p>
 
 <p>The <code>fillRect()</code> function draws a large black square 100 pixels on each side. The <code>clearRect()</code> function then erases a 60x60 pixel square from the center, and then <code>strokeRect()</code> is called to create a rectangular outline 50x50 pixels within the cleared square.</p>
 
@@ -135,7 +139,7 @@ tags:
 
 <p>The result looks like this:</p>
 
-<p>{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "https://mdn.mozillademos.org/files/9847/triangle.png")}}</p>
+<p>{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}</p>
 
 <h3 id="Moving_the_pen">Moving the pen</h3>
 
@@ -179,7 +183,7 @@ tags:
 
 <p>The result looks like this:</p>
 
-<p>{{EmbedLiveSample("Moving_the_pen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}</p>
+<p>{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}</p>
 
 <p>If you'd like to see the connecting lines, you can remove the lines that call <code>moveTo()</code>.</p>
 
@@ -234,7 +238,7 @@ tags:
 
 <p>This starts by calling <code>beginPath()</code> to start a new shape path. We then use the <code>moveTo()</code> method to move the starting point to the desired position. Below this, two lines are drawn which make up two sides of the triangle.</p>
 
-<p>{{EmbedLiveSample("Lines", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}</p>
+<p>{{EmbedLiveSample("Lines", 160, 160, "canvas_lineto.png")}}</p>
 
 <p>You'll notice the difference between the filled and stroked triangle. This is, as mentioned above, because shapes are automatically closed when a path is filled, but not when they are stroked. If we left out the <code>closePath()</code> for the stroked triangle, only two lines would have been drawn, not a complete triangle.</p>
 
@@ -304,7 +308,7 @@ tags:
 }
 </pre>
 
-<p>{{EmbedLiveSample("Arcs", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}</p>
+<p>{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}</p>
 
 <h3 id="Bezier_and_quadratic_curves">Bezier and quadratic curves</h3>
 
@@ -317,7 +321,9 @@ tags:
  <dd>Draws a cubic Bézier curve from the current pen position to the end point specified by <code>x</code> and <code>y</code>, using the control points specified by (<code>cp1x</code>, <code>cp1y</code>) and (cp2x, cp2y).</dd>
 </dl>
 
-<p><img alt="" class="internal" src="canvas_curves.png" style="float: right;">The difference between these can best be described using the image on the right. A quadratic Bézier curve has a start and an end point (blue dots) and just one <strong>control point</strong> (indicated by the red dot) while a cubic Bézier curve uses two control points.</p>
+<p>The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one <strong>control point</strong> (indicated by the red dot) while a cubic Bézier curve uses two control points.
+  <img alt="" src="canvas_curves.png">
+</p>
 
 <p>The <code>x</code> and <code>y</code> parameters in both of these methods are the coordinates of the end point. <code>cp1x</code> and <code>cp1y</code> are the coordinates of the first control point, and <code>cp2x</code> and <code>cp2y</code> are the coordinates of the second control point.</p>
 
@@ -357,7 +363,7 @@ tags:
 }
 </pre>
 
-<p>{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}</p>
+<p>{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}</p>
 
 <h4 id="Cubic_Bezier_curves">Cubic Bezier curves</h4>
 
@@ -391,7 +397,7 @@ tags:
 }
 </pre>
 
-<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}</p>
+<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}</p>
 
 <h3 id="Rectangles">Rectangles</h3>
 
@@ -504,7 +510,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 <p>The resulting image looks like this:</p>
 
-<p>{{EmbedLiveSample("Making_combinations", 160, 160, "https://mdn.mozillademos.org/files/9849/combinations.png")}}</p>
+<p>{{EmbedLiveSample("Making_combinations", 160, 160, "combinations.png")}}</p>
 
 <p>We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the <code>fillStyle</code> property on the drawing context, and the use of a utility function (in this case <code>roundedRect()</code>). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.</p>
 
@@ -563,7 +569,7 @@ new Path2D(d);    // path from SVG path data</pre>
 }
 </pre>
 
-<p>{{EmbedLiveSample("Path2D_example", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}</p>
+<p>{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}</p>
 
 <h3 id="Using_SVG_paths">Using SVG paths</h3>
 

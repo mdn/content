@@ -15,7 +15,7 @@ browser-compat: css.properties.overflow
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> — in both directions.</span></p>
+<p>The <strong><code>overflow</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a> sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> — in both directions.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/overflow.html")}}</div>
 
@@ -41,6 +41,7 @@ overflow: hidden visible;
 /* Global values */
 overflow: inherit;
 overflow: initial;
+overflow: revert;
 overflow: unset;
 </pre>
 
@@ -54,7 +55,7 @@ overflow: unset;
  <dt><code>hidden</code></dt>
  <dd>Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content <em>can</em> be scrolled programmatically (for example, by setting the value of a property such as {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}), so the element is still a scroll container.</dd>
  <dt><code>clip</code></dt>
- <dd>Like for <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
+ <dd>Similar to <code>hidden</code>, the content is clipped to the element's padding box. The difference between <code>clip</code> and <code>hidden</code> is that the <code>clip</code> keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use {{cssxref("display", "display: flow-root", "#flow-root")}} to do so.</dd>
  <dt><code>scroll</code></dt>
  <dd>Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.</dd>
  <dt><code>auto</code></dt>

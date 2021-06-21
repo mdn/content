@@ -97,7 +97,8 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2E-38</code> to <code>3.4E38</code></td>
+   <td><code>-3.4E38</code> to <code>3.4E38</code><br/>
+    and <code>1.2E-38</code> is the min positive number</td>
    <td>4</td>
    <td>32-bit IEEE floating point number (7 significant digits e.g., <code>1.123456</code>)</td>
    <td><code>unrestricted float</code></td>
@@ -105,7 +106,8 @@ tags:
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5E-324</code> to <code>1.8E308</code></td>
+   <td><code>-1.8E308</code> to <code>1.8E308</code><br/>
+    and <code>5E-324</code> is the min positive number</td>
    <td>8</td>
    <td>64-bit IEEE floating point number (16 significant digits e.g., <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -248,9 +250,8 @@ const normalArray = Array.prototype.slice.call(typedArray);</pre>
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
- <li><a href="/en-US/docs/Code_snippets/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="/en-US/docs/Glossary/Base64#appendix_decode_a_base64_string_to_uint8array_or_arraybuffer">Getting <code>ArrayBuffer</code>s or typed arrays from Base64-encoded strings</a></li>
  <li><a href="https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays">Faster Canvas Pixel Manipulation with Typed Arrays</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
+ <li><a href="https://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
  <li><a href="/en-US/docs/Glossary/Endianness">Endianness</a></li>
 </ul>

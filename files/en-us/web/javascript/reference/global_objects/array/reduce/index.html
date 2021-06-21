@@ -508,19 +508,19 @@ let allbooks = friends.reduce(function(accumulator, currentValue) {
 <div class="notecard note">
   <p><strong>Note:</strong> If you are using an environment compatible with
     {{jsxref("Set")}} and {{jsxref("Array.from()")}}, you could use
-    <code>let orderedArray = Array.from(new Set(myArray))</code> to get an array where
+    <code>let arrayWithNoDuplicates = Array.from(new Set(myArray))</code> to get an array where
     duplicate items have been removed.</p>
 </div>
 
 <pre class="brush: js">let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
-let myOrderedArray = myArray.reduce(function (accumulator, currentValue) {
+let myArrayWithNoDuplicates = myArray.reduce(function (accumulator, currentValue) {
   if (accumulator.indexOf(currentValue) === -1) {
     accumulator.push(currentValue)
   }
   return accumulator
 }, [])
 
-console.log(myOrderedArray)</pre>
+console.log(myArrayWithNoDuplicates)</pre>
 
 <h3 id="Replace_.filter.map_with_.reduce">Replace .filter().map() with .reduce()</h3>
 
