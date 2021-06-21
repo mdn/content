@@ -1,0 +1,45 @@
+---
+title: How to add a shadow to an element
+slug: Learn/CSS/Howto/Add_a_shadow
+tags:
+  - Basic
+  - Beginner
+  - CSS
+  - CSS:Getting_Started
+  - Guide
+  - Web
+---
+<p>{{LearnSidebar}}</p>
+
+<p class="summary">In this guide you can find out how to add a shadow to any box on your page.</p>
+
+<h2>Adding box shadows</h2>
+
+<p>Shadows are a common design feature that can help elements stand out on your page. In CSS, shadows on the boxes of elements are created using the {{cssxref("box-shadow")}} property (if you want to add a shadow to the text itself, you need {{cssxref("text-shadow")}}).</p>
+
+<p>The <code>box-shadow</code> property takes a number of values:</p>
+
+<ul>
+  <li>The offset on the x-axis</li>
+  <li>The offset on the y-axis</li>
+  <li>A blur radius</li>
+  <li>A spread radius</li>
+  <li>A color</li>
+  <li>The <code>inset</code> keyword</li>
+</ul>
+
+<p>In the example below we have set the X and Y axises to 5px, the blur to 10px and the spread to 2px. I am using a semi-transparent black as my color. Play with the different values to see how they change the shadow.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/howto/box-shadow-button.html", '100%', 500)}}</p>
+
+<div class="notecard note">
+  <h3>Note</h3>
+  <p>We are not using <code>inset</code> in this example, this means that the shadow is the default drop shadow with the box on top of the shadow. Inset shadows appear inside the box as if the content were pushed back into the page.</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>The <a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator">Box shadow generator</a></li>
+  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects">Learn CSS: Advanced styling effects.</a></li>
+</ul>

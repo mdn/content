@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.notifications.onClosed.addListener(listener)
+<pre class="brush:js">browser.notifications.onClosed.addListener(listener)
 browser.notifications.onClosed.removeListener(listener)
 browser.notifications.onClosed.hasListener(listener)
 </pre>
@@ -62,7 +62,7 @@ browser.notifications.onClosed.hasListener(listener)
 
 <p>In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClosed")}} event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.</p>
 
-<pre class="brush: js">browser.notifications.onClosed.addListener(function(notificationId) {
+<pre class="notranslate brush: js">browser.notifications.onClosed.addListener(function(notificationId) {
   console.log('Notification ' + notificationId + ' has closed.');
 });</pre>
 

@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var detecting = browser.tabs.detectLanguage(
+<pre class="brush:js">var detecting = browser.tabs.detectLanguage(
   tabId,                  // optional integer
   callback                // optional function
 )
@@ -43,7 +43,7 @@ tags:
 
 <p>Detect and log the language of the active tab when the user clicks a browser action:</p>
 
-<pre class="brush: js">function onLanguageDetected(lang) {
+<pre class="notranslate brush: js">function onLanguageDetected(lang) {
   console.log(`Language is: ${lang}`);
 }
 
@@ -58,7 +58,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>Detect and log the language of every open tab when the user clicks a browser action (note that this example requires the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>):</p>
 
-<pre class="brush: js">function onLanguageDetected(url, lang) {
+<pre class="notranslate brush: js">function onLanguageDetected(url, lang) {
   console.log(`Language in ${url} is: ${lang}`);
 }
 

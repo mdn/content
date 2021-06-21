@@ -116,7 +116,7 @@ const doAjax = async () =&gt; {
         const jVal = await response.json(); // Get JSON value from the response body
         return Promise.resolve(jVal);
         }
-    else
+    else {
         return Promise.reject('*** PHP file not found');
     }
 }

@@ -5,14 +5,14 @@ slug: Tools/Performance/Allocations
 <div>{{ToolsSidebar}}</div><div class="summary">
 <p>The Allocations view in the Performance tool shows you which functions in your page are allocating the most memory over the course of the profile.</p>
 
-<p>For performance this is important mostly because allocating a lot of memory, or making a lot of allocations, can trigger <a href="/en-US/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">garbage collection</a>. This in turn can hurt the responsiveness of a page.</p>
+<p>For performance this is important mostly because allocating a lot of memory, or making a lot of allocations, can trigger <a href="/en-US/docs/Tools/Performance/Allocations#allocations_and_garbage_collection">garbage collection</a>. This in turn can hurt the responsiveness of a page.</p>
 </div>
 
 <div class="geckoVersionNote">
 <p>The Allocations view is new in Firefox 46.</p>
 </div>
 
-<p>To enable the Allocations view, you must check "Record Allocations" in the Performance tool settings, <em>before</em> recording a profile. Then <a href="/en-US/docs/Tools/Performance/How_to#Record_a_profile">record a profile</a> as usual, and you will see a new tab labeled "Allocations" in the toolbar:</p>
+<p>To enable the Allocations view, you must check "Record Allocations" in the Performance tool settings, <em>before</em> recording a profile. Then <a href="/en-US/docs/Tools/Performance/How_to#record_a_profile">record a profile</a> as usual, and you will see a new tab labeled "Allocations" in the toolbar:</p>
 
 <p>{{EmbedYouTube("Le9tTo7bqts")}}</p>
 
@@ -20,7 +20,7 @@ slug: Tools/Performance/Allocations
 
 <p>The allocations view looks something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12393/allocations-view-1.png" style="display: block; height: 156px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The allocations view periodically samples allocations that are made over the recording. Each row represents a function in which at least one allocation-sample was taken during the recording.</p>
 
@@ -42,7 +42,7 @@ slug: Tools/Performance/Allocations
 
 <p>Next to each function name is a disclosure arrow. Click this to see the places this function was called from:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12397/allocations-view-2.png" style="display: block; height: 155px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Here you can see that <code>signalLater()</code> was called from two places: <code>removeInner()</code> and <code>setSelectionInner()</code>. In this way you can walk back up the call stack, and understand better the context for these allocations.</p>
 
@@ -50,7 +50,7 @@ slug: Tools/Performance/Allocations
 
 <p>You'll see that there are separate sets of columns for "Self" and for "Total". "Self" records samples taken only in this function. "Total" records samples taken in this function or in functions called by this function. At the top level, these are always the same, since the view presents "leaf" functions at the top level (that is, it presents an inverted view of the call stack). But if you start walking back up the call stack, you'll see the difference:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12397/allocations-view-2.png" style="display: block; height: 155px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Here, 8904 samples were taken in <code>signalLater()</code>. But <code>signalLater()</code> was called from two places: <code>removeInner()</code> and <code>setSelectionInner()</code>. Both these functions have 0 in Self Count, meaning that no allocations were seen directly in these functions. However, <code>removeInner()</code> has 8901 in Total Count, while <code>setSelectionInner()</code> has just 3 in Total Count. This is telling us that, of the 8904 allocations seen in <code>signalLater()</code>, all but three came through the <code>removeInner()</code> branch.</p>
 
@@ -58,13 +58,13 @@ slug: Tools/Performance/Allocations
 
 <p>Of course, the memory allocated by a site is in itself useful information to know. But the main connection between the allocation profile of a site and its responsiveness is the cost of garbage collection (GC).</p>
 
-<p>With a garbage-collected language, like JavaScript, the runtime periodically needs to walk the heap looking for objects that are no longer <a href="/en-US/docs/Tools/Memory/Dominators#Reachability">reachable</a>, and then freeing the memory they occupy. While GC events like this are executing, the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
+<p>With a garbage-collected language, like JavaScript, the runtime periodically needs to walk the heap looking for objects that are no longer <a href="/en-US/docs/Tools/Memory/Dominators#reachability">reachable</a>, and then freeing the memory they occupy. While GC events like this are executing, the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
 
 <p>To reduce the impact on responsiveness, <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> (the JavaScript engine in Firefox) can perform GC in small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
 
 <p>GC events are shown as red markers in the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> view, and are a big red flag for responsiveness,  sometimes running for hundreds of milliseconds:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12399/allocations-view-long-gc.png" style="display: block; height: 160px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-long-gc.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>If you're seeing GC events in your site's performance profile, what can you do? SpiderMonkey uses a <a href="https://dxr.mozilla.org/mozilla-central/rev/584870f1cbc5d060a57e147ce249f736956e2b62/js/src/gc/GCRuntime.h#192">complex set of heuristics</a> to decide when to do what sort of garbage collection.</p>
 

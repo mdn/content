@@ -30,7 +30,7 @@ tags:
 <p>The ability to list more than one selector is experimental and not yet widely supported.</p>
 </div>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Description">Description</h2>
 
@@ -42,7 +42,7 @@ tags:
  <li>This pseudo-class can increase the <a href="/en-US/docs/Web/CSS/Specificity">specificity</a> of a rule. For example, <code>#foo:not(#bar)</code> will match the same element as the simpler <code>#foo</code>, but has a higher specificity.</li>
  <li><code>:not(.foo)</code> will match anything that isn't <code>.foo</code>, <em>including {{HTMLElement("html")}} and {{HTMLElement("body")}}.</em></li>
  <li>This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, <code>body :not(table) a</code> will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the <code>:not()</code> part of the selector.</li>
- <li>Using two selectors at the same time will not work. For example, <code>:not(.foo,bar)</code> is invalid. Instead, <code>:not(.foo):not(.bar)</code> should be used.</li>
+ <li>Using two selectors at the same time is not yet supported in all browsers. Example: <code>:not(.foo, .bar)</code>. For wider support you could use, <code>:not(.foo):not(.bar)</code></li>
 </ul>
 
 <h2 id="Examples">Examples</h2>

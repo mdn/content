@@ -157,7 +157,7 @@ tags:
 
 <p>Among the best known camera effects is the <strong>zoom</strong>. Zooming is performed in a physical camera by altering the focal length of the lens; this is the distance between the center of the lens itself and the camera's light sensors. Thus, zooming doesn't actually involve moving the camera at all. Instead, a zoom shot changes the magnification of the camera over time to make the area of focus seem closer to or farther away from the viewer, without actually physically moving the camera. A slow move can bring a sense of movement, ease, or focus to a scene, while a rapid zoom can create a sense of anxiety, surprise, or tension.</p>
 
-<p>Because a zoom does not move the camera's position, the resulting effect is unnatural. The human eye doesn't have a zoom lens on it. We make things smaller or larger by moving away from or toward them. In cinematography, that's called a <a href="#Dolly">dolly shot</a>.</p>
+<p>Because a zoom does not move the camera's position, the resulting effect is unnatural. The human eye doesn't have a zoom lens on it. We make things smaller or larger by moving away from or toward them. In cinematography, that's called a <a href="#dolly">dolly shot</a>.</p>
 
 <p>There are two techniques in 3D graphics that can create similar though not identical results, and whose methods apply more easily in different situations.</p>
 
@@ -292,7 +292,7 @@ vec4.transformMat4(myVector, myVector, createScalingMatrix(2.0));</pre>
 
 <pre class="brush: js notranslate">mat4.translate(viewMatrix, viewMatrix, [-truckDistance, 0, 0]);</pre>
 
-<p>Note the vector <code>[-truckDistance, 0, 0]</code>. This compensates for the fact that the truck operation works by moving the world rather than the camera. By moving the entire world in the opposite direction from the direction indicated by <code>truckDistance</code>, we achieve the effect of moving the camera the expected direction. This way, p<span>ositive values of </span><code>truckDistance</code><span> will move the camera to the right (by moving the world to the left) and negative values of <code>truckDistance</code> will move the camera to the left by moving the world to the right.</span></p>
+<p>Note the vector <code>[-truckDistance, 0, 0]</code>. This compensates for the fact that the truck operation works by moving the world rather than the camera. By moving the entire world in the opposite direction from the direction indicated by <code>truckDistance</code>, we achieve the effect of moving the camera the expected direction. This way, positive values of <code>truckDistance</code> will move the camera to the right (by moving the world to the left) and negative values of <code>truckDistance</code> will move the camera to the left by moving the world to the right.</p>
 
 <h3 id="Pedestaling_Moving_up_or_down">Pedestaling (Moving up or down)</h3>
 

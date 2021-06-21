@@ -48,7 +48,7 @@ tags:
 
 <p>The {{HTTPHeader("Set-Cookie")}} HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:</p>
 
-<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
+<pre class="brush: html notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</pre>
 
 <p>This shows the server sending headers to tell the client to store a pair of cookies:</p>
 
@@ -112,7 +112,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h4 id="Domain_attribute">Domain attribute</h4>
 
-<p>The <code>Domain</code> attribute specifies which hosts are allowed to receive the cookie. If unspecified, it defaults to the same {{Glossary("origin")}} that set the cookie, <em>excluding subdomains</em>. If <code>Domain</code> <em>is</em> specified, then subdomains are always included. Therefore, specifying <code>Domain</code> is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.</p>
+<p>The <code>Domain</code> attribute specifies which hosts are allowed to receive the cookie. If unspecified, it defaults to the same {{Glossary("host")}} that set the cookie, <em>excluding subdomains</em>. If <code>Domain</code> <em>is</em> specified, then subdomains are always included. Therefore, specifying <code>Domain</code> is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.</p>
 
 <p>For example, if <code>Domain=mozilla.org</code> is set, then cookies are available on subdomains like <code>developer.mozilla.org</code>.</p>
 
@@ -153,7 +153,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>A vulnerable application on a sub-domain can set a cookie with the <code>Domain</code> attribute, which gives access to that cookie on all other subdomains. This mechanism can be abused in a <em>session fixation</em> attack. See <a href="/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">session fixation</a> for primary mitigation methods.</p>
 
-<p>As a <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">defence-in-depth measure</a>, however, it is possible to use <em>cookie prefixes</em> to assert specific facts about the cookie. Two prefixes are available:</p>
+<p>As a <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">defense-in-depth measure</a>, however, it is possible to use <em>cookie prefixes</em> to assert specific facts about the cookie. Two prefixes are available:</p>
 
 <dl>
  <dt><code>__Host-</code></dt>
@@ -162,7 +162,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
  <dd>If a cookie name has this prefix, it is accepted in a {{HTTPHeader("Set-Cookie")}} header only if it is marked with the <code>Secure</code> attribute and was sent from a secure origin. This is weaker than the <code>__Host-</code> prefix.</dd>
 </dl>
 
-<p>Cookies with these prefixes that are not compliant with their restrictions are rejected by the browser. Note that this ensures that if a subdomain were to create a cookie with a prefix, it would either be confined to the subdomain or be ignored completely. As the application server checks for a specific cookie name only when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defence measure against session fixation.</p>
+<p>Cookies with these prefixes that are not compliant with their restrictions are rejected by the browser. Note that this ensures that if a subdomain were to create a cookie with a prefix, it would either be confined to the subdomain or be ignored completely. As the application server checks for a specific cookie name only when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against session fixation.</p>
 
 <div class="note">
 <p>On the application server, the web application <em>must</em> check for the full cookie name including the prefix—user agents <em>do not</em> strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.</p>

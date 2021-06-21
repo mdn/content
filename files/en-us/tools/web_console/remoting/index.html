@@ -116,25 +116,25 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <p>When page navigation starts the following packet is sent from the tab actor:</p>
 
-<pre class="brush: json"><code class="brush: json">{
-  "from": tabActor,
-  "type": "tabNavigated",
-  "state": "start",
-  "url": newURL,
-  "nativeConsoleAPI": true
-}</code>
+<pre class="brush: json">{
+  &quot;from&quot;: tabActor,
+  &quot;type&quot;: &quot;tabNavigated&quot;,
+  &quot;state&quot;: &quot;start&quot;,
+  &quot;url&quot;: newURL,
+  &quot;nativeConsoleAPI&quot;: true
+}
 </pre>
 
 <p>The <code>nativeConsoleAPI</code> property tells if the <code>window.console</code> object is native or not for the top level window object for the given tab - this is always <code>true</code> when navigation starts. When navigation stops the following packet is sent:</p>
 
-<pre class="brush: json"><code>{
-  "from": tabActor,
-  "type": "tabNavigated",
-  "state": "stop",
-  "url": newURL,
-  "title": newTitle,
-  "nativeConsoleAPI": true|false
-}</code></pre>
+<pre class="brush: json">{
+  &quot;from&quot;: tabActor,
+  &quot;type&quot;: &quot;tabNavigated&quot;,
+  &quot;state&quot;: &quot;stop&quot;,
+  &quot;url&quot;: newURL,
+  &quot;title&quot;: newTitle,
+  &quot;nativeConsoleAPI&quot;: true|false
+}</pre>
 
 <h3 id="getCachedMessages(types_onResponse)"><code>getCachedMessages(types, onResponse)</code></h3>
 
@@ -296,7 +296,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="Console_API_messages">Console API messages</h2>
 
-<p>The <a href="/en-US/docs/DOM/console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
+<p>The <a href="/en-US/docs/Web/API/Console"><code>window.console</code> API</a> calls send internal messages throughout Gecko which allow us to do whatever we want for each call. The Web Console actor sends these messages to the remote debugging client.</p>
 
 <p>We use the <code>ObjectActor</code> from <a href="https://mxr.mozilla.org/mozilla-central/source/toolkit/devtools/debugger/server/dbg-script-actors.js">dbg-script-actors.js</a> without a <code>ThreadActor</code>, to avoid slowing down the page scripts - the debugger deoptimizes JavaScript execution in the target page. The <a href="https://wiki.mozilla.org/Remote_Debugging_Protocol#Grip_Lifetimes">lifetime of object actors</a> in the Web Console is different than the lifetime of these objects in the debugger - which is usually per pause or per thread. The Web Console manages the lifetime of <code>ObjectActors</code> manually.</p>
 
@@ -304,7 +304,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 <p>Prior to Firefox 23 we used a different actor (<code>WebConsoleObjectActor</code>) for working with JavaScript objects through the protocol. In <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a> we did a number of changes that allowed us to reuse the <code>ObjectActor</code> from the debugger.</p>
 </div>
 
-<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIOb<span style="display: none;"> </span>serverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
+<p>Console API messages come through the <a href="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIObserverService</code></a> - the console object implementation lives in <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a>.</p>
 
 <p>For each console message we receive in the server, we send the following <code>consoleAPICall</code> packet to the client:</p>
 

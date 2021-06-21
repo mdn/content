@@ -150,7 +150,7 @@ exports.default = function(cb) {
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash notranslate"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash notranslate">npm install --save-dev gulp-htmltidy
 </pre>
 
   <div class="note">
@@ -237,12 +237,12 @@ const csslint = require('gulp-csslint');</pre>
  <li>Install using the following lines:
   <pre class="editor editor-colors notranslate">npm install --save-dev gulp-babel @babel/preset-env
 npm install --save-dev @babel/core
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="editor editor-colors notranslate">const babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>const</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span> <span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+  <pre class="brush: js editor editor-colors notranslate">const babel = require('gulp-babel');
+const jshint = require('gulp-jshint');
 </pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
@@ -274,7 +274,7 @@ npm install --save-dev @babel/core
 
 <p>Once this is all set up, you can run the <code>gulp</code> command inside your project directory, and you should get an output like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14227/gulp-output.png" style="display: block; height: 478px; margin: 0px auto; width: 697px;"></p>
+<p><img alt="" src="gulp-output.png" style="display: block; margin: 0px auto;"></p>
 
 <p>You can then try out the files output by your automated tasks by looking at them inside the <code>build</code> directory, and loading <code>build/index.html</code> in your web browser.</p>
 
@@ -340,13 +340,13 @@ npm install --save-dev @babel/core
 
 <ol>
  <li>To start off with manual testing you need to select the <strong>"Real Time Testing"</strong> tab from the left navigation menu.<br>
-  <img alt="LambdaTest Dashboard" src="https://www.lambdatest.com/blog/wp-content/uploads/2019/04/lambdatest-dashboard.png" style="border-style: solid; border-width: 2px; height: 638px; width: 1349px;"></li>
+  <img alt="LambdaTest Dashboard" src="lambdatest-dashboard.png" style="border-style: solid; border-width: 2px;"></li>
  <li>As you click on the <strong>Real Time Testing</strong> you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.<br>
-  <img alt="Real Time Testing" src="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-1.png" style="border-style: solid; border-width: 2px; height: 647px; width: 1360px;"></li>
+  <img alt="Real Time Testing" src="mark-as-bug-1.png" style="border-style: solid; border-width: 2px;"></li>
  <li>As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.<br>
-  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png" style="border-style: solid; border-width: 2px; height: 652px; width: 1338px;"></a><br>
+  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="mark-as-bug-2.png" style="border-style: solid; border-width: 2px;"></a><br>
   If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.</li>
- <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-3.png" style="border-style: solid; border-width: 2px; height: 650px; width: 1335px;"></li>
+ <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png" style="border-style: solid; border-width: 2px;"></li>
  <li>
   <p id="Using_the_mark_as_bug_button_you_can_push_bug_to_numerous_third-party_tools_which_are_integrated_with_LambdaTest_such_as_Jira_asana_trello_and_more._That_way_you_can_log_a_bug_directly_from_the_middle_of_your_test_session_on_LambdaTest_to_your_project_management_instance._Check_out_all_LambdaTest_integrations_with_third-party_tools.">Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the <a href="https://www.lambdatest.com/integrations">third-party LambdaTest integrations</a>.</p>
  </li>
@@ -373,9 +373,9 @@ npm install --save-dev @babel/core
 
 <ol>
  <li>Click <em>Start a new manual session</em>.</li>
- <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="https://mdn.mozillademos.org/files/14229/sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; height: 636px; margin: 0px auto; width: 600px;"></li>
+ <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
  <li>When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
- <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="https://mdn.mozillademos.org/files/14231/sauce-test-running.png" style="display: block; height: 390px; margin: 0px auto; width: 800px;"></li>
+ <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="sauce-test-running.png" style="display: block; margin: 0px auto;"></li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
   <ul>
    <li>Stop the session</li>
@@ -463,11 +463,11 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15377/browserstack-test-choices-sized.png" style="border-style: solid; border-width: 1px; display: block; height: 339px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="browserstack-test-choices-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15379/browserstack-test-device-sized.png" style="border-style: solid; border-width: 1px; display: block; height: 841px; margin: 0px auto; width: 450px;"></p>
+<p><img alt="" src="browserstack-test-device-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
@@ -477,7 +477,7 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>You'll also see a menu that allows you to control the session.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15381/browserstack-test-menu-sized.png" style="border-style: solid; border-width: 1px; display: block; height: 636px; margin: 0px auto; width: 217px;"></p>
+<p><img alt="" src="browserstack-test-menu-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>The features here are as follows:</p>
 
@@ -688,7 +688,7 @@ function getSessionDetails(session){
 <ol>
  <li>Enter the URL of the page you want to test.</li>
  <li>Choose the browser/OS combination you want to test by selecting the combination in the grid.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/16581/Screen_Shot_2019-04-19_at_14.55.33.png" style="height: 586px; width: 1159px;"></li>
+  <img alt="" src="screen_shot_2019-04-19_at_14.55.33.png"></li>
  <li>When you click <em>Start Browser</em>, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
  <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.</li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:

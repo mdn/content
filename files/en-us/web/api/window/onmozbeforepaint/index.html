@@ -11,9 +11,11 @@ tags:
   - Window
   - onmozbeforepaint
 ---
-<p>{{ ApiRef() }}</p>
+<p>{{ApiRef()}}{{deprecated_header}}{{non-standard_header}}</p>
 
-<p>{{ obsolete_header("11") }}{{ non-standard_header() }}</p>
+<div class="note notebox">
+  <p><strong>Note:</strong>This method was removed from Firefox 11 and onward.</p>
+</div>
 
 <h3 id="Summary">Summary</h3>
 
@@ -34,7 +36,7 @@ tags:
 
 <h3 id="Notes">Notes</h3>
 
-<p>This event fires immediately before the browser window is repainted, if the event has been requested by one or more scripts calling {{ domxref("window.mozRequestAnimationFrame()") }}. The event handler receives as an input parameter an event whose <code>timeStamp</code> property is the time, in milliseconds since epoch, that is the "current time" for the current animation frame. This time is the same for all animations being run in the same browser window, including those using the {{ domxref("window.mozRequestAnimationFrame()") }} method, <a href="/en/CSS/CSS_transitions">CSS transitions</a>, and SMIL animations.</p>
+<p>This event fires immediately before the browser window is repainted, if the event has been requested by one or more scripts calling {{ domxref("window.mozRequestAnimationFrame()") }}. The event handler receives as an input parameter an event whose <code>timeStamp</code> property is the time, in milliseconds since epoch, that is the "current time" for the current animation frame. This time is the same for all animations being run in the same browser window, including those using the {{ domxref("window.mozRequestAnimationFrame()") }} method, <a href="/en-US/docs/CSS/CSS_transitions">CSS transitions</a>, and SMIL animations.</p>
 
 <h3 id="Specifications">Specifications</h3>
 

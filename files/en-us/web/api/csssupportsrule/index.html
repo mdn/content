@@ -2,48 +2,59 @@
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
 tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
+- API
+- CSSOM
+- Interface
+- Reference
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p>The <strong><code>CSSSupportsRule</code></strong> interface describes an object representing a single CSS {{cssxref("@supports")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. It implements the {{domxref("CSSConditionRule")}} interface, and therefore the {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}} interfaces with a type value of <code>12</code> (<code>CSSRule.SUPPORTS_RULE</code>).</p>
+<p>The <strong><code>CSSSupportsRule</code></strong> interface represents a single CSS {{cssxref("@supports")}} {{cssxref("at-rule")}}.</p>
 
-<h2 id="Syntax">Syntax</h2>
-
-<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
-
-<pre class="syntaxbox">interface CSSSupportsRule : CSSConditionRule {
-}
-</pre>
+<p>{{InheritanceDiagram}}</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p>As a {{domxref("CSSConditionRule")}} and therefore a {{domxref("CSSRule")}} and a {{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> also implements the properties of these interfaces. It has no specific properties.</p>
+<p><em>Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}.</em></p>
 
 <h2 id="Methods">Methods</h2>
 
-<p>As a {{domxref("CSSConditionRule")}} and therefore a {{domxref("CSSRule")}}and a {{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> also implements the methods of that interface. It has no specific methods.</p>
+<p><em>Inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}.</em></p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>
+  The CSS includes a CSS feature query using the {{cssxref("@supports")}} {{cssxref("at-rule")}}, containing one style rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>. 
+  <code>myRules[0]</code> therefore returns a {{domxref("CSSSupportsRule")}} object.
+</p>
+
+<pre class="brush: css">@supports (display: grid) {
+  body {
+    color: blue;
+  }
+}</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // a CSSSupportsRule representing the feature query.</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#the-csssupportsrule-interface', 'CSSSupportsRule') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('CSS3 Conditional', '#the-csssupportsrule-interface',
+        'CSSSupportsRule') }}</td>
+      <td>{{ Spec2('CSS3 Conditional') }}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -53,5 +64,5 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{cssxref("@supports")}}</li>
+  <li>{{cssxref("@supports")}}</li>
 </ul>

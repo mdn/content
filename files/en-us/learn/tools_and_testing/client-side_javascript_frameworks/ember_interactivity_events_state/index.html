@@ -48,7 +48,7 @@ tags:
 
 <p>We want to be able to capture the text typed into the input. We do this so that our JavaScript code knows what we typed in, and we can save our todo and pass that text along to the todo list component to display.</p>
 
-<p>We can capture the <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> event via the <a href="https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on">on modifier</a>, which is just Ember syntactic sugar around <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener</a></code> (see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#addEventListener_and_removeEventListener">this explanation</a> if needed).</p>
+<p>We can capture the <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> event via the <a href="https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on">on modifier</a>, which is just Ember syntactic sugar around <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener">removeEventListener</a></code> (see <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener_and_removeeventlistener">this explanation</a> if needed).</p>
 
 <p>Add the new line shown below to your <code>header.hbs</code> file:</p>
 
@@ -104,7 +104,7 @@ export default class HeaderComponent extends Component {
 
 <p>Coming back to our browser tab with the app running, we can type whatever we want, and when we hit <kbd>Enter</kbd> we'll be greeted with an alert message telling us exactly what we typed.</p>
 
-<p><img alt="the initial placeholder state of the add function, showing the text entered into the input elements being alerted back to you." src="https://mdn.mozillademos.org/files/17230/todos-hello-there-alert.png" style="height: 676px; width: 739px;"></p>
+<p><img alt="the initial placeholder state of the add function, showing the text entered into the input elements being alerted back to you." src="todos-hello-there-alert.png"></p>
 
 <p>With the interactivity of the header input out of the way, we need a place to store todos so that other components can access them.</p>
 
@@ -191,7 +191,7 @@ export default class TodoDataService extends Service {
 
 <p>If we try this out in the todo app in our browser (<code>npm start</code>, go to <code>localhost:4200</code>), it will look like nothing happens after hitting the <kbd>Enter</kbd> key (although the fact that the app builds without any errors is a good sign). Using the <a href="https://guides.emberjs.com/release/ember-inspector/installation/">Ember Inspector</a> however, we can see that our todo was added:</p>
 
-<p><img alt="The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet" src="https://mdn.mozillademos.org/files/17231/todos-in-ember-inspector.gif" style="border-style: solid; border-width: 1px; height: 606px; width: 736px;"></p>
+<p><img alt="The app being shown in the ember inspector, to prove that added todos are being stored by the service, even if they are not being displayed in the UI yet" src="todos-in-ember-inspector.gif" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Displaying_our_todos">Displaying our todos</h2>
 
@@ -251,7 +251,7 @@ export default class TodoListComponent extends Component {
 
 <p>OK, try it again. You should find that now the text submitted in the <code>&lt;input&gt;</code> is properly reflected in the UI:</p>
 
-<p><img alt="The app being shown in its final state of this article, with entered todo items being shown in the UI" src="https://mdn.mozillademos.org/files/17232/todos-being-appended-with-correct-text.gif" style="border-style: solid; border-width: 1px; height: 662px; width: 849px;"></p>
+<p><img alt="The app being shown in its final state of this article, with entered todo items being shown in the UI" src="todos-being-appended-with-correct-text.gif" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Summary">Summary</h2>
 

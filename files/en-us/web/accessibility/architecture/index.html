@@ -28,7 +28,7 @@ tags:
 </ul>
 <h2 id="Example">Example</h2>
 <p>Take the following HTML code:</p>
-<pre class="eval"> &lt;div&gt;Hello&lt;a href="<a class="external" href="https://www.mozilla.org/access" rel="freelink">http://www.mozilla.org/access</a>"&gt;My link&lt;img src="image.gif"&gt;is cool&lt;/a&gt;Bye&lt;/div&gt;
+<pre class="eval"> &lt;div&gt;Hello&lt;a href="<a class="external" href="https://www.mozilla.org/access">http://www.mozilla.org/access</a>"&gt;My link&lt;img src="image.gif"&gt;is cool&lt;/a&gt;Bye&lt;/div&gt;
 </pre>
 <p>Both the &lt;a&gt; and &lt;img&gt; are hyperlinks Also, both the &lt;div&gt; and &lt;a&gt; are hypertexts So the &lt;a&gt; is both a hypertext and a hyperlink, because it contains text and is contained within text.</p>
 <p>This means that we have an exact mirror to the dom, but text lives in the parents instead of in the leaves, which now don't really provide additional useful information. They are only provided under MSAA/IA2 for backward compatibility.</p>
@@ -94,7 +94,7 @@ tags:
   </li>
 </ol>
 <p>Navigating to the next word follows a similar pattern. Navigating previous requires returning to the embed character in the parent accessible when the point of regard reaches the end of text in the corresponding child accessible for the embed.</p>
-<p>See <a class="external" href="http://svn.gnome.org/viewcvs/lsr/trunk/src/Adapters/ATSPI/HypertextAdapter.py?view=markup" rel="freelink">http://svn.gnome.org/viewcvs/lsr/tru...py?view=markup</a> for a BSD implementation.</p>
+<p>See <a class="external" href="http://svn.gnome.org/viewcvs/lsr/trunk/src/Adapters/ATSPI/HypertextAdapter.py?view=markup">http://svn.gnome.org/viewcvs/lsr/tru...py?view=markup</a> for a BSD implementation.</p>
 <h3 id=".28E.29_To_grab_a_subtree_of_content:">(E) To grab a subtree of content:</h3>
 <p>Although under Windows text content is still exposed in leaf nodes of ROLE_TEXT, it is no longer necessary to visit those nodes. Therefore for parent nodes that support the HyperText interface, it is more performant to grab the text from the AccessibleText interface and then only visit the link children. The HyperLink interface can be used to grab the children. Using this technique is about twice as fast as visiting all nodes in the tree, according to tests run by the developers of NVDA.</p>
 <h3 id=".28F.29_To_get_the_line_of_text_at_the_caret:">(F) To get the line of text at the caret:</h3>

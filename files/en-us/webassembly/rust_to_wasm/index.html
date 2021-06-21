@@ -40,7 +40,7 @@ tags:
 
 <p>To build the package, we need an additional tool, <code>wasm-pack</code>. This helps compile the code to WebAssembly, as well as produce the right packaging for <code>npm</code>. To download and install it, enter the following command into your terminal:</p>
 
-<pre class="brush: bash; no-line-numbers notranslate">$ cargo install wasm-pack</pre>
+<pre class="brush: bash no-line-numbers notranslate">$ cargo install wasm-pack</pre>
 
 <h3 id="Install_Node.js_and_npm">Install Node.js and npm</h3>
 
@@ -52,7 +52,7 @@ tags:
 
 <p>Enough setup; let's create a new package in Rust. Navigate to wherever you keep your personal projects, and type this:</p>
 
-<pre class="brush: bash; no-line-numbers notranslate">$ cargo new --lib hello-wasm
+<pre class="brush: bash no-line-numbers notranslate">$ cargo new --lib hello-wasm
      Created library `hello-wasm` project</pre>
 
 <p>This creates a new library in a subdirectory named <code>hello-wasm</code> with everything you need to get going:</p>
@@ -65,7 +65,7 @@ tags:
 
 <p>Next, Cargo has generated some Rust code for us in <code>src/lib.rs</code>:</p>
 
-<pre class="brush: rust; notranslate">#[cfg(test)]
+<pre class="brush: rust notranslate">#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
@@ -115,7 +115,7 @@ pub fn greet(name: &amp;str) {
 
 <p>The next part looks like this:</p>
 
-<pre class="brush: rust; notranslate">#[wasm_bindgen]
+<pre class="brush: rust notranslate">#[wasm_bindgen]
 extern {
     pub fn alert(s: &amp;str);
 }</pre>
@@ -260,8 +260,7 @@ module.exports = {
 
 <p>Finally, create the <code>index.js</code> referenced in the HTML file and give it these contents:</p>
 
-<pre class="brush: js notranslate">const js = import("./node_modules/hello-wasm/hello_wasm.js");
-js.then(js =&gt; {
+<pre class="brush: js notranslate">import("./node_modules/hello-wasm/hello_wasm.js").then((js) =&gt; {
   js.greet("WebAssembly");
 });</pre>
 

@@ -18,8 +18,9 @@ tags:
 
 <h2 id="What_browsers_support_A2HS">What browsers support A2HS?</h2>
 
-<p>A2HS is supported in all mobile browsers, except iOS webview. It's also supported in some Chromium desktop browsers.<br>
- Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#Other">since v58</a> and is working on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1407202">desktop support</a>.</p>
+<p>A2HS is supported in all mobile browsers, except iOS webview. It's also supported in some Chromium desktop browsers.</p>
+
+<p>Firefox has had mobile support <a href="/en-US/docs/Mozilla/Firefox/Releases/58#Other">since v58</a>.</p>
 
 <p>See <a href="https://caniuse.com/#feat=web-app-manifest">caniuse.com</a> for exact details.</p>
 
@@ -29,15 +30,15 @@ tags:
 
 <p>If you have Firefox for Android available, use it to navigate to our demo at <code>https://mdn.github.io/pwa-examples/a2hs/</code>. You'll see fox pictures, but more important, you'll see a "home" icon with a plus (+) icon inside it — this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15762/add-to-home-screen-icon.png" style="border-style: solid; border-width: 1px; display: block; height: 64px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="add-to-home-screen-icon.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Tapping this will show a confirmation banner — pressing the big + <em>ADD TO HOME SCREEN</em> button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 421px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="fx-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 421px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="chrome-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find out a lot more about Chrome install banners from the article <a href="https://developers.google.com/web/fundamentals/app-install-banners/">Web App Install Banners</a>.</p>
@@ -47,7 +48,7 @@ tags:
 
 <p>Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15770/a2hs-on-home-screen.png" style="border-style: solid; border-width: 1px; display: block; height: 243px; margin: 0px auto; width: 400px;"></p>
+<p><img alt="" src="a2hs-on-home-screen.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.</p>
 
@@ -197,11 +198,11 @@ addBtn.style.display = 'none';</pre>
 
 <p>So when the button is clicked, the install prompt appears.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; height: 163px; margin: 0px auto; width: 300px;"></p>
+<p><img alt="" src="chrome-desktop-a2hs-banner.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If the user selects <em>Install</em>, the app is installed (available as standalone desktop app), and the Install button no longer shows (the <code>onbeforeinstallprompt</code> event no longer fires if the app is already installed). When you open the app, it will appear in its own window:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16280/a2hs-installed-desktop.png" style="border-style: solid; border-width: 1px; display: block; height: 296px; margin: 0px auto; width: 500px;"></p>
+<p><img alt="" src="a2hs-installed-desktop.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>If the user selects <em>Cancel</em>, the state of the app goes back to how it was before the button was clicked.</p>
 

@@ -9,11 +9,11 @@ tags:
   - Responsive Design
   - Tools
   - Web Development
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{ToolsSidebar}}</div>
 
-<p><a href="/en-US/Apps/Progressive/Responsive">Responsive design</a> is the practice of designing a website so it looks and works properly on a range of different devices — particularly mobile phones and tablets as well as desktops and laptops.</p>
+<p><a href="/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks">Responsive design</a> is the practice of designing a website so it looks and works properly on a range of different devices — particularly mobile phones and tablets as well as desktops and laptops.</p>
 
 <p>The most obvious factor here is screen size, but there are other factors as well, including the pixel density of the display and whether it supports touch. Responsive Design Mode gives you a simple way to simulate these factors, to test how your website will look and behave on different devices.</p>
 
@@ -23,7 +23,7 @@ tags:
 
 <ul>
  <li>From the Firefox menu: Select <strong>Responsive Design Mode</strong> from the <strong>Web Developer</strong> submenu in the Firefox Menu (or <strong>Tools</strong> menu if you display the menu bar or are on macOS).</li>
- <li>From the Developer Tools toolbox: Press the <strong>Responsive Design Mode</strong> button in the <a href="/en-US/docs/Tools_Toolbox#Toolbar">Toolbox's toolbar</a>:<img alt="" src="https://mdn.mozillademos.org/files/16318/RDM_button.png" style="display: block; height: 664px; margin-left: auto; margin-right: auto; width: 852px;"></li>
+ <li>From the Developer Tools toolbox: Press the <strong>Responsive Design Mode</strong> button in the <a href="/en-US/docs/Tools/Tools_Toolbox#toolbar">Toolbox's toolbar</a>:<img alt="" src="rdm_button.png" style="display: block; margin-left: auto; margin-right: auto;"></li>
  <li>From the keyboard: Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> (or <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>M</kbd> on macOS).</li>
 </ul>
 
@@ -35,7 +35,7 @@ tags:
 <p><strong>Note:</strong> The device you select when in Responsive Design Mode and the orientation (portrait or landscape) is saved between sessions.</p>
 </div>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16816/responsive_ui.png" style="display: block; height: 893px; margin-left: auto; margin-right: auto; width: 960px;"></p>
+<p><img alt="" src="responsive_ui.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Information for the selected device is centered over the display. From left to right, the display includes:</p>
 
@@ -59,7 +59,7 @@ tags:
  </li>
  <li><em>DPR (pixel ratio)</em> - Beginning with Firefox 68, the DPR is no longer editable; create a custom device in order to change the DPR</li>
  <li><em>Throttling</em> - A drop-down list where you can select the connection throttling to apply, for example 2G, 3G, or LTE</li>
- <li><em>Enable/Disable touch simulation</em> - Toggles whether or not Responsive Design Mode simulates touch events. While touch event simulation is enabled, mouse events are translated into <a href="/en-US/docs/Web/Guide/API/DOM/Events/Touch_events">touch events</a>; this includes (starting in Firefox 79) translating a mouse-drag event into a touch-drag event. (Note that when touch simulation is enabled, this toolbar icon is blue; when simulation is disabled, it is black.</li>
+ <li><em>Enable/Disable touch simulation</em> - Toggles whether or not Responsive Design Mode simulates touch events. While touch event simulation is enabled, mouse events are translated into <a href="/en-US/docs/Web/API/Touch_events">touch events</a>; this includes (starting in Firefox 79) translating a mouse-drag event into a touch-drag event. (Note that when touch simulation is enabled, this toolbar icon is blue; when simulation is disabled, it is black.</li>
 </ul>
 
 <p>On the right end of the screen, three buttons allow you to:</p>
@@ -72,7 +72,7 @@ tags:
 
 <p>The Settings menu includes the following commands:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16818/responsive_setting_menu.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="responsive_setting_menu.png" style="display: block; margin: 0 auto;"></p>
 
 <ul>
  <li><em>Left-align Viewport</em> - when checked moves the RDM viewport to the left side of the browser window</li>
@@ -91,13 +91,13 @@ tags:
 
 <p>Now when you change such settings for the first time, you are given a warning message that tells you these reloads are no longer automatic, and informed about how you can make them automatic. For example:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15840/page-reload-warning.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="page-reload-warning.png" style="display: block; margin: 0 auto;"></p>
 
 <h2 id="Developer_Toolbox_with_RDM">Developer Toolbox with RDM</h2>
 
 <p>You can show or hide the Developer Tools toolbox independently of toggling Responsive Design Mode itself:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16320/RDMdevtools.png" style="display: block; height: 799px; margin-left: auto; margin-right: auto; width: 852px;">While Responsive Design Mode is enabled, you can continue browsing as you normally would in the resized content area.</p>
+<p><img alt="" src="rdmdevtools.png" style="display: block; margin-left: auto; margin-right: auto;">While Responsive Design Mode is enabled, you can continue browsing as you normally would in the resized content area.</p>
 
 <h2 id="Device_selection">Device selection</h2>
 
@@ -208,4 +208,4 @@ tags:
 
 <p>To select a network, click the list box that's initially labeled "No throttling":</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16820/RDM_throttling.png" style="display: block; height: 815px; margin-left: auto; margin-right: auto; width: 500px;"></p>
+<p><img alt="" src="rdm_throttling.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

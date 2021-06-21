@@ -20,7 +20,7 @@ tags:
 
 <p>Here's some code that uses <code>createAudioFileAsync()</code>:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">function successCallback(result) {
+<pre class="brush: js line-numbers notranslate">function successCallback(result) {
   console.log("Audio file ready at URL: " + result);
 }
 
@@ -33,7 +33,7 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback);
 
 <p>If <code>createAudioFileAsync()</code> were rewritten to return a promise, you would attach your callbacks to it instead:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
+<pre class="brush: js line-numbers notranslate">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</pre>
 
 <p>This convention has several advantages. We will explore each one.</p>
 
@@ -131,7 +131,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <p>This will output the following text:</p>
 
-<pre class="notranslate">Initial
+<pre class="brush: plain notranslate">Initial
 Do that
 Do this, no matter what happened before
 </pre>
@@ -303,7 +303,7 @@ console.log("Promise (pending)", promise);
 
 <p>The code above will output:</p>
 
-<pre class="notranslate">Promise callback
+<pre class="brush: plain notranslate">Promise callback
 Promise (pending) Promise {&lt;pending&gt;}
 Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
@@ -312,7 +312,7 @@ event-loop cycle: Promise (fulfilled) Promise {&lt;fulfilled&gt;}</pre>
 
 <h2 id="Nesting">Nesting</h2>
 
-<p>Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition. See <a href="#Common_mistakes">common mistakes</a>.</p>
+<p>Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition. See <a href="#common_mistakes">common mistakes</a>.</p>
 
 <p>Nesting is a control structure to limit the scope of <code>catch</code> statements. Specifically, a nested <code>catch</code> only catches failures in its scope and below, not errors higher up in the chain outside the nested scope. When used correctly, this gives greater precision in error recovery:</p>
 

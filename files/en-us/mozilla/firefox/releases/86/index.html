@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}{{draft}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly">Nightly version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">February 23, 2021</a>.</p>
+<p class="summary">This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">February 23, 2021</a>.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -23,9 +23,25 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
+<ul>
+  <li>The {{cssxref(":autofill")}} pseudo-class is now enabled, with <code>-webkit-autofill</code> as an alias. ({{bug(1685675)}}) and ({{bug(1475316)}}). </li>
+</ul>
+
 <h4 id="Removals_3">Removals</h4>
 
 <h3 id="JavaScript">JavaScript</h3>
+
+<ul>
+  <li>
+    The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames"><code>Intl.DisplayNames</code></a> built-in object has been implemented. This enables the consistent translation of language, region and script display names:
+    <pre class="notranslate brush: js">
+// Get display names of currency code in English
+let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+// Get currency names
+currencyNames.of('USD'); // "US Dollar"
+currencyNames.of('EUR'); // "Euro"</pre>
+  </li>
+ </ul>
 
 <h4 id="Removals_4">Removals</h4>
 

@@ -18,7 +18,7 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 
 <p>The demo website looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11031/js-worker-demo.png" style="display: block; height: 677px; margin-left: auto; margin-right: auto; width: 1000px;">It has three controls:</p>
+<p><img alt="" src="js-worker-demo.png" style="display: block; margin-left: auto; margin-right: auto;">It has three controls:</p>
 
 <ul>
  <li>a radio button group to control how to run the JavaScript: as a single blocking operation in the main thread, as a series of smaller operations in the main thread using <code>requestAnimationFrame()</code>, or in another thread using a worker.</li>
@@ -37,21 +37,21 @@ slug: Tools/Performance/Scenarios/Intensive_JavaScript
 
 <p>Exactly what you see will vary from one machine to another, but it will be something like this:</p>
 
-<p><a id="js-blocking-overview"><img alt="" src="https://mdn.mozillademos.org/files/10891/perf-js-blocking-overview.png" style="display: block; height: 113px; margin-left: auto; margin-right: auto; width: 800px;"></a></p>
+<p><a id="js-blocking-overview"><img alt="" src="perf-js-blocking-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
-<p>The top half of this is the <a href="/en-US/docs/Tools/Performance/UI_Tour#Waterfall_overview">waterfall overview</a>. It gives us a compressed view of the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>, which tells us what kinds of operations the browser is doing during the recording. <a href="/en-US/docs/Tools/Performance/Waterfall#Markers">The pink says that we are mostly performing CSS calculations and possibly reflow</a>: this is the CSS animation that's running throughout the profile. Then there are three solid blocks of orange, representing JavaScript execution, one for each time we pressed the button.</p>
+<p>The top half of this is the <a href="/en-US/docs/Tools/Performance/UI_Tour#waterfall_overview">waterfall overview</a>. It gives us a compressed view of the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a>, which tells us what kinds of operations the browser is doing during the recording. <a href="/en-US/docs/Tools/Performance/Waterfall#markers">The pink says that we are mostly performing CSS calculations and possibly reflow</a>: this is the CSS animation that's running throughout the profile. Then there are three solid blocks of orange, representing JavaScript execution, one for each time we pressed the button.</p>
 
 <p>The bottom half, which is correlated with the timeline summary in time, shows <a href="/en-US/docs/Tools/Performance/Frame_rate">frame rate</a>. We can see that frame rate is pretty healthy for most of the recording, but collapses completely whenever we press the button.</p>
 
 <p>We can select one of these periods and have a closer look at it in the main Waterfall view:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10895/perf-js-blocking-waterfall.png" style="display: block; height: 306px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="perf-js-blocking-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Here, when we pressed the button, the browser ran a JavaScript function, or series of functions, that blocked the main thread for 71.73ms, or more than four times our frame budget.</p>
 
 <p>Which function, though? By switching to the <a href="/en-US/docs/Tools/Performance/Flame_Chart">Flame Chart</a> view we can find out:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10893/perf-js-blocking-flame-chart.png" style="display: block; height: 230px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="perf-js-blocking-flame-chart.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This shows us the JS call stack at this point in the execution. At the top of the stack is a function called <code>calculatePrimes()</code>, and we can see its filename and line number. Here's the code, together with its immediate caller:</p>
 
@@ -128,7 +128,7 @@ function doPointlessComputationsWithBlocking() {
 
 <p>Let's test this version out: select the radio button labeled "Use requestAnimationFrame" and capture another profile. This time, the recording should look something like this:</p>
 
-<p><a id="js-raf-overview"><img alt="" src="https://mdn.mozillademos.org/files/10897/perf-js-raf-overview.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 800px;"></a></p>
+<p><a id="js-raf-overview"><img alt="" src="perf-js-raf-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>This is exactly what we might have expected to see. Instead of <a href="#js-blocking-overview">a single solid orange block</a>, each button-press shows up as a long sequence of very short orange blocks. The orange blocks appear one frame apart, and each one represents one of the functions called from <code>requestAnimationFrame()</code>. Note that there are only two button-presses in this profile.</p>
 
@@ -216,7 +216,7 @@ function calculatePrimes(iterations, multiplier) {
 
 <p>So how does this version perform? Switch the radio button to "Use a worker", and capture a new profile. You should see something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10899/perf-js-worker-overview.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="perf-js-worker-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>In this profile we pushed the button three times. <a href="#js-blocking-overview">Compared with the original</a>, each button-press is visible in the overview as two very short orange markers:</p>
 
@@ -228,4 +228,3 @@ function calculatePrimes(iterations, multiplier) {
 <p>In between, the worker runs all the primality tests, and it doesn't seem to have any effect at all on the responsiveness of the main thread. This might seem unlikely, but because workers run in a separate thread, they can take advantage of multi-core processors, which a single-threaded web site can't.</p>
 
 <p>The main limitation of web workers is that DOM APIs are not available to code running in a worker.</p>
-

@@ -27,9 +27,9 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The element with <code>role="cell"</code> is a cell within a row, optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>, within a  <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></code> within a static tabular structure. Using native <a href="/en-US/docs/Web/HTML/Element/td">HTML <code>&lt;td&gt;</code></a> elements, whenever possible, is strongly encouraged.</p>
+<p>The element with <code>role="cell"</code> is a cell within a row, optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>, within a  <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code>treegrid</code> within a static tabular structure. Using native <a href="/en-US/docs/Web/HTML/Element/td">HTML <code>&lt;td&gt;</code></a> elements, whenever possible, is strongly encouraged.</p>
 
-<p>Each element with <code>role="cell"</code> MUST be nested in a container element with <code>role="row"</code>. That row, in turn, can be nested within an element with <code>role="rowgroup"</code>, and should be nested within a <code>grid</code>, <code>table</code> or <code>treegrid</code>. If a cell contains column or row header information, use the <code>colheader</code> or <code>rowheader</code> roles, respectively. If the cell does not contain header information and is nested in a <code>grid</code> or <code>treegrid</code>, the role of <code>gridcell</code> may be more appropriate. </p>
+<p>Each element with <code>role="cell"</code> MUST be nested in a container element with <code>role="row"</code>. That row, in turn, can be nested within an element with <code>role="rowgroup"</code>, and should be nested within a <code>grid</code>, <code>table</code> or <code>treegrid</code>. If a cell contains column or row header information, use the <code>columnheader</code> or <code>rowheader</code> roles, respectively. If the cell does not contain header information and is nested in a <code>grid</code> or <code>treegrid</code>, the role of <code>gridcell</code> may be more appropriate. </p>
 
 <p>A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-rowindex</code>, and <code>aria-rowspan</code>. </p>
 
@@ -43,21 +43,21 @@ tags:
 
 <dl>
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">role="row"</a></dt>
- <dd>An element with <code>role="row"</code> is a row of cells within a tabular structure. A row contains one or more cells,  grid cells, column headers, or row headers within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role" rel="nofollow">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>.</dd>
+ <dd>An element with <code>role="row"</code> is a row of cells within a tabular structure. A row contains one or more cells,  grid cells, column headers, or row headers within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code>treegrid</code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>.</dd>
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">role="rowgroup"</a></dt>
  <dd><code>Row</code> is a required cell parent. <code>Rowgroup</code> is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the <code><a href="/en-US/docs/Web/HTML/Element/thead">thead</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/tfoot">tfoot</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/tbody">tbody</a></code> elements in an <a href="/en-US/docs/Learn/HTML/Tables/Basics">HTML <code>table</code></a> element.</dd>
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">role="table"</a></dt>
  <dd>One of the three possible contexts (along with <code>grid</code> and <code>treegrid</code>) in which you'll find a row containing cells. Table identifies the cell as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native HTML <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> element. </dd>
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">role="grid"</a></dt>
  <dd>One of the three possible contexts (along with <code>table</code> and <code>treegrid</code>) in which you'll find a row containing <code>cells</code> and <code>gridcells</code>. <code>Grid</code> identifies a cell as being part of a possibly interactive table structure containing data arranged in rows and columns, similar to the native <code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;</a></code> HTML element.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridtree_Role">role="treegrid"</a></dt>
+ <dt>role="treegrid"</dt>
  <dd>Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.</dd>
 </dl>
 
 <h4 id="Subclass_roles">Subclass roles</h4>
 
 <dl>
- <dt><a href="/en-US/docs/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">role="gridcell"</a></dt>
+ <dt>role="gridcell"</dt>
  <dd>A cell in a row within a <code>grid</code> or <code>treegrid.</code></dd>
  <dt>role="columnheader"</dt>
  <dd>A header cell that is the structural equivalent of the HTML <code><a href="/en-US/docs/Web/HTML/Element/th">&lt;th&gt;</a></code> element with a column scope. Unlike a plain cell, the <code>columnheader</code> role establishes a relationship between it and all cells in the corresponding column. </dd>
@@ -126,7 +126,7 @@ tags:
 
 <h2 id="Best_practices">Best practices</h2>
 
-<p>Only use table, tbody, thead, tr, th, td, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by <a href="/en-US/docs/Web/CSS/display#Accessibility_concerns">CSS's display property, such as by display: grid</a>. In this case, you can use the ARIA table roles to add the semantics back in.</p>
+<p>Only use table, tbody, thead, tr, th, td, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by <a href="/en-US/docs/Web/CSS/display#accessibility_concerns">CSS's display property, such as by display: grid</a>. In this case, you can use the ARIA table roles to add the semantics back in.</p>
 
 <pre>&lt;table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
   &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;
@@ -156,7 +156,7 @@ tags:
    &lt;/tbody&gt;
  &lt;/table&gt;</pre>
 
-<p>Above is the semantic way of writing a table. The ARIA roles are not necessary if the native semantics of the table, and therefore the table rows, have not been altered, such as through <a href="/en-US/docs/Web/CSS/display#Accessibility_concerns">the display property</a>.</p>
+<p>Above is the semantic way of writing a table. The ARIA roles are not necessary if the native semantics of the table, and therefore the table rows, have not been altered, such as through <a href="/en-US/docs/Web/CSS/display#accessibility_concerns">the display property</a>.</p>
 
 <h3 id="Added_benefits">Added benefits</h3>
 
@@ -184,9 +184,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">role="gridcell"</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">role="rowheader"</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Colheader_Role">role="colheader"</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role">role="row"</a></li>
  <li><a href="/en-US/docs/Web/HTML/Element/td">HTML&lt;td&gt; element</a></li>
  <li><a href="/en-US/docs/Web/HTML/Element/th">HTML &lt;th&gt; element </a></li>

@@ -40,7 +40,7 @@ tags:
 
 <p>The toolchain that we are creating in this article will be used to build and deploy a mini site that lists data (taken from one of <a href="https://api.nasa.gov/">NASA's open APIs</a>) concerning potentially hazardous space objects that threaten our existence on Earth! It looks like this:</p>
 
-<p><img alt="screenshot of the sample will it miss website" src="https://mdn.mozillademos.org/files/17193/will-it-miss-screenshot.png" style="height: 498px; width: 790px;"></p>
+<p><img alt="screenshot of the sample will it miss website" src="will-it-miss-screenshot.png"></p>
 
 <p>You can see a live version of the site at <a href="https://near-misses.netlify.com/">near-misses.netlify.com</a>.</p>
 
@@ -118,7 +118,7 @@ tags:
 
 <h3 id="Library_installation_tools">Library installation tools</h3>
 
-<p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups">refer back to that section</a>.</p>
+<p>We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">refer back to that section</a>.</p>
 
 <div class="notecard note">
 <p><strong>Note</strong>: Though it's not clear from the install process, installing npm also installs a complimentary tool called npx. We will use npx later on this chapter to help run tools that are installed as local dependencies to the project.</p>
@@ -142,13 +142,13 @@ tags:
 
 <p>You can interact with git in a number of different ways, from using the command line to issue commands, to using a <a href="https://git-scm.com/downloads/guis">git GUI app</a> to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:</p>
 
-<p><img alt="github integration shown in VS Code" src="https://mdn.mozillademos.org/files/17192/vscode-git.png" style="border-style: solid; border-width: 1px; height: 506px; width: 800px;"></p>
+<p><img alt="github integration shown in VS Code" src="vscode-git.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Anyway, installing git is all we need to do for now. Let's move on.</p>
 
 <h3 id="Code_tidying_tools">Code tidying tools</h3>
 
-<p>We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Installing_Prettier">Installing Prettier</a> section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.</p>
+<p>We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier">Installing Prettier</a> section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.</p>
 
 <p>You can check whether you've already got it installed globally using the following command:</p>
 
@@ -218,7 +218,7 @@ tags:
 
 <p>As with other tools, code editor integration support is typically good for eslint, and potentially more useful as it can give us real-time feedback when issues crop up:</p>
 
-<p><img alt="eslint error integration shown in VS Code" src="https://mdn.mozillademos.org/files/17190/eslint-error.png" style="border-style: solid; border-width: 1px; height: 251px; width: 800px;"></p>
+<p><img alt="eslint error integration shown in VS Code" src="eslint-error.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Configuring_the_initial_project">Configuring the initial project</h2>
 
@@ -271,7 +271,7 @@ cd will-it-miss</pre>
  <li>
   <p>To get hold of the code files, visit <a href="https://github.com/remy/mdn-will-it-miss">https://github.com/remy/mdn-will-it-miss</a> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting <em>Clone or download</em> &gt; <em>Download ZIP</em>.</p>
 
-  <p><img alt="The github will it miss repo" src="https://mdn.mozillademos.org/files/17191/github-will-it-miss.png" style="height: 662px; width: 790px;"></p>
+  <p><img alt="The github will it miss repo" src="github-will-it-miss.png"></p>
  </li>
  <li>
   <p>Now copy the contents of the project's <code>src</code> directory to your currently empty <code>src</code> directory.</p>
@@ -385,7 +385,7 @@ cd will-it-miss</pre>
 
 <p>There's a number of choices for transform tools and though WebPack is a particularly popular one, this project is going to use Parcel — specifically because it requires a lot less configuration.</p>
 
-<p>Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#Using_the_package_ecosystem">saw in Chapter 3</a>.</p>
+<p>Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#using_the_package_ecosystem">saw in Chapter 3</a>.</p>
 
 <p>Parcel will take care of installing any transformation tooling and configuration required without us needing to intervene (in most cases).</p>
 

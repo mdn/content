@@ -1146,7 +1146,7 @@ diff -u -r1.14 TestCookie.cpp
        nsCAutoString host;
 -      for (PRInt32 i = 0; i &lt; 1010; ++i) {
 +      for (i = 0; i &lt; 1010; ++i) {
-         host = NS_LITERAL_CSTRING("<span class="nowiki">http://eviction.</span>");
+         host = NS_LITERAL_CSTRING("http://eviction.");
          host.AppendInt(i);
          host += NS_LITERAL_CSTRING(".tests/");
 Index: mozilla/xpcom/tests/TestStrings.cpp

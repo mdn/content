@@ -29,7 +29,7 @@ tags:
    <li>Bit 0, User Presence (UP) - If set, authenticator validated that the user was present through some Test of User Presence (TUP), such as touching a button on the authenticator.</li>
    <li>Bit 2, User Verification (UV) - If set, authenticator verified the actual user, through a biometric, PIN, or other authentication method.</li>
    <li>Bit 6, Attested Credential Data (AT) - If set, attestedCredentialData will immediately follow the first 37 bytes of this authenticatorData.</li>
-   <li>Bit 7, Extension data (ED) - If set, extension data is present. Extension data will follow attestedCredentialData if it is present, or will immediatelly follow the first 37 bytes of the authenticatorData if no attestedCredentialData is present.</li>
+   <li>Bit 7, Extension data (ED) - If set, extension data is present. Extension data will follow attestedCredentialData if it is present, or will immediately follow the first 37 bytes of the authenticatorData if no attestedCredentialData is present.</li>
   </ul>
  </li>
  <li><strong>signCount</strong> (4 bytes) - A signature count from the authenticator. The server will use this counter to detect authenticator cloning.</li>

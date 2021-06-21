@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{ Outdated("It was last updated in 2005.") }}</p>
 
-<p>During the build process, various <em>chrome</em> files are collected into dist/bin/chrome. These files define the user interface of the application, and include <a href="/en/XUL">XUL</a>, <a href="/en/JavaScript">JavaScript</a>, DTDs (for <a href="/en/Localization">localization</a>), CSS, XBL, and images. The build system automates the process of building the chrome files through manifest files named <code>jar.mn</code>.</p>
+<p>During the build process, various <em>chrome</em> files are collected into dist/bin/chrome. These files define the user interface of the application, and include <a href="/en-US/docs/XUL">XUL</a>, <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, DTDs (for <a href="/en-US/docs/Glossary/Localization">localization</a>), CSS, XBL, and images. The build system automates the process of building the chrome files through manifest files named <code>jar.mn</code>.</p>
 
 <h3 id="Chrome_packaging_formats">Chrome packaging formats</h3>
 
@@ -61,19 +61,19 @@ tags:
 <p>Each of these correspond to the 3 forms of chrome URLs:</p>
 
 <ul>
- <li><span class="nowiki"><code>chrome://package-name/content/&lt;path&gt;</code></span></li>
- <li><span class="nowiki"><code>chrome://package-name/skin/&lt;path&gt;</code></span></li>
- <li><span class="nowiki"><code>chrome://package-name/locale/&lt;path&gt;</code></span></li>
+ <li><code>chrome://package-name/content/&lt;path&gt;</code></li>
+ <li><code>chrome://package-name/skin/&lt;path&gt;</code></li>
+ <li><code>chrome://package-name/locale/&lt;path&gt;</code></li>
 </ul>
 
 <h3 id="contents.rdf_and_the_Chrome_Registry">contents.rdf and the Chrome Registry</h3>
 
-<p>Merely putting XUL files into JARs does not mean that these files can be accessed from a <span class="nowiki"><code>chrome://</code></span> URI. You also need to let the chrome registry know about your files. This is done using <a href="/en/RDF">RDF</a> and a special file named <code>contents.rdf</code>. Unfortunately, the RDF schema for <code>contents.rdf</code> is not really documented. The best way to learn it is to copy an existing example:</p>
+<p>Merely putting XUL files into JARs does not mean that these files can be accessed from a <code>chrome://</code> URI. You also need to let the chrome registry know about your files. This is done using <a href="/en-US/docs/RDF">RDF</a> and a special file named <code>contents.rdf</code>. Unfortunately, the RDF schema for <code>contents.rdf</code> is not really documented. The best way to learn it is to copy an existing example:</p>
 
 <pre class="eval"> <strong>Example: mozilla/extensions/venkman/resources/content/contents.rdf</strong>
 
- &lt;RDF:RDF xmlns:RDF="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
-          xmlns:chrome="<span class="nowiki">http://www.mozilla.org/rdf/chrome#</span>"&gt;
+ &lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
 
    <span class="highlightgreen">&lt;!-- list all the packages being supplied by this jar --&gt;</span>
    &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
@@ -90,11 +90,11 @@ tags:
 
    <span class="highlightgreen">&lt;!-- overlay information --&gt;</span>
    &lt;RDF:Seq about="urn:mozilla:overlays"&gt;
-     &lt;RDF:li resource="<span class="nowiki">chrome://communicator/content/tasksOverlay.xul</span>"/&gt;
+     &lt;RDF:li resource="chrome://communicator/content/tasksOverlay.xul"/&gt;
    &lt;/RDF:Seq&gt;
 
-   &lt;RDF:Seq about="<span class="nowiki">chrome://communicator/content/tasksOverlay.xul</span>"&gt;
-     &lt;RDF:li&gt;<span class="nowiki">chrome://venkman/content/venkman-overlay.xul</span>&lt;/RDF:li&gt;
+   &lt;RDF:Seq about="chrome://communicator/content/tasksOverlay.xul"&gt;
+     &lt;RDF:li&gt;chrome://venkman/content/venkman-overlay.xul&lt;/RDF:li&gt;
    &lt;/RDF:Seq&gt;
  &lt;/RDF:RDF&gt;
 </pre>

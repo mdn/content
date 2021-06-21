@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">var gettingFrames = browser.webNavigation.getAllFrames(
+<pre class="brush:js">var gettingFrames = browser.webNavigation.getAllFrames(
   details                // object
 )
 </pre>
@@ -65,7 +65,7 @@ tags:
 
 <p>This code logs the URLs of all frames in the active tab, when the user clicks a browser action:</p>
 
-<pre class="brush: js notranslate">function logFrameInfo(framesInfo) {
+<pre class="notranslate brush: js">function logFrameInfo(framesInfo) {
   for (frameInfo of framesInfo) {
     console.log(frameInfo);
   }

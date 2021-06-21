@@ -10,11 +10,11 @@ slug: Tools/Performance/Waterfall
 <p>So if you see a sign of a performance problem - a drop in the frame rate, for example - you can go to the Waterfall to see what the browser was doing at that point in the recording.</p>
 </div>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10951/perf-waterfall.png" style="display: block; height: 568px; margin-left: auto; margin-right: auto; width: 972px;"></p>
+<p><img alt="" src="perf-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Along the X-axis is time. Recorded operations, called markers, are shown as horizontal bars, laid out in a waterfall to reflect the serial nature of the browser's execution.</p>
 
-<p>When a marker is selected you'll see more information about it in a sidebar on the right. This includes the marker's duration and some more information that's specific to the <a href="/en-US/docs/Tools/Performance/Waterfall#Markers">marker type</a>.</p>
+<p>When a marker is selected you'll see more information about it in a sidebar on the right. This includes the marker's duration and some more information that's specific to the <a href="/en-US/docs/Tools/Performance/Waterfall#markers">marker type</a>.</p>
 
 <h2 id="Markers"><a id="timeline-color-coding"></a>Markers</h2>
 
@@ -35,7 +35,7 @@ slug: Tools/Performance/Waterfall
 
     <p>JavaScript code that's executed in response to a DOM event.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td style="width: 45%;">
     <dl>
      <dt>Event Type</dt>
@@ -62,7 +62,7 @@ slug: Tools/Performance/Waterfall
      JavaScript URI<br>
      Event Handler</strong></p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <dl>
      <dt>Stack</dt>
@@ -76,7 +76,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Time spent parsing the page's HTML.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <dl>
      <dt>Stack</dt>
@@ -90,7 +90,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Time spent parsing the page's XML.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <dl>
      <dt>Stack</dt>
@@ -104,7 +104,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Calculating the computed styles that apply to page elements.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10707/purple.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="purple.png"></td>
    <td>
     <dl>
      <dt>Restyle Hint</dt>
@@ -128,7 +128,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Calculating the position and size of page elements. This operation is sometimes called "reflow".</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10707/purple.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="purple.png"></td>
    <td></td>
   </tr>
   <tr>
@@ -137,16 +137,16 @@ slug: Tools/Performance/Waterfall
 
     <p>Drawing pixels to the screen.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10705/green.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="green.png"></td>
    <td></td>
   </tr>
   <tr>
    <td>
     <p><strong>Garbage Collection</strong></p>
 
-    <p><a href="/en-US/docs/Tools/Performance/Waterfall#Garbage_collection">Garbage collection event</a>. Non-incremental GC events are labeled "(Non-incremental)".</p>
+    <p><a href="/en-US/docs/Tools/Performance/Waterfall#garbage_collection">Garbage collection event</a>. Non-incremental GC events are labeled "(Non-incremental)".</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td>
     <dl>
      <dt>Reason</dt>
@@ -158,7 +158,7 @@ slug: Tools/Performance/Waterfall
     <div class="geckoVersionNote">
     <p>New in Firefox 46: if the GC event was caused by allocation pressure, a link appears, labeled "Show Allocation Triggers". Click the link to see the allocation profile leading up to this GC event.</p>
 
-    <p>See <a href="/en-US/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">Allocations and Garbage Collection</a> for more details.</p>
+    <p>See <a href="/en-US/docs/Tools/Performance/Allocations#allocations_and_garbage_collection">Allocations and Garbage Collection</a> for more details.</p>
     </div>
    </td>
   </tr>
@@ -170,7 +170,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Like garbage collection, but for C++ objects. See <a href="http://blog.kylehuey.com/post/27564411715/cycle-collection">Kyle Huey's blog post about cycle collection</a>.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td>
     <dl>
      <dt>Type</dt>
@@ -184,7 +184,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Preparation/pre-optimization for Cycle Collection.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td>
     <dl>
      <dt>Type</dt>
@@ -198,7 +198,7 @@ slug: Tools/Performance/Waterfall
 
     <p>The period between matching calls to <code>console.time()</code> and <code>console.timeEnd()</code>.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10955/gray.png" style="height: 54px; width: 60px;"></td>
+   <td><img alt="" src="gray.png"></td>
    <td>
     <dl>
      <dt>Timer name</dt>
@@ -206,7 +206,7 @@ slug: Tools/Performance/Waterfall
      <dt>Stack at start</dt>
      <dd>Call stack <code>console.time()</code>, with links to functions.</dd>
      <dt>Stack at End</dt>
-     <dd>(New in Firefox 41). Call stack at <code>console.timeEnd()</code>. If this is inside a callback from a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, this will also show the <a href="/en-US/docs/Tools/Performance/Waterfall#Async_stack">"Async stack"</a>.</dd>
+     <dd>(New in Firefox 41). Call stack at <code>console.timeEnd()</code>. If this is inside a callback from a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, this will also show the <a href="/en-US/docs/Tools/Performance/Waterfall#async_stack">"Async stack"</a>.</dd>
     </dl>
    </td>
   </tr>
@@ -216,7 +216,7 @@ slug: Tools/Performance/Waterfall
 
     <p>A single call to <code><a href="/en-US/docs/Web/API/Console/timeStamp">console.timeStamp()</a></code>.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10953/blue.png" style="height: 54px; width: 60px;"></td>
+   <td><img alt="" src="blue.png"></td>
    <td>
     <dl>
      <dt>Label</dt>
@@ -228,18 +228,18 @@ slug: Tools/Performance/Waterfall
    <td>
     <p><strong>DOMContentLoaded</strong></p>
 
-    <p>The document's <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> event.</p>
+    <p>The document's <code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code> event.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12191/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td></td>
   </tr>
   <tr>
    <td>
     <p><strong>Load</strong></p>
 
-    <p>The document's <code><a href="/en-US/docs/Web/Events/load">load</a></code> event.</p>
+    <p>The document's <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code> event.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12193/blue.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="blue.png"></td>
    <td></td>
   </tr>
   <tr>
@@ -248,7 +248,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Shown when the main thread sends a message to a worker, or receives a message from a worker.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12195/orange2.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <p>One of:</p>
 
@@ -266,7 +266,7 @@ slug: Tools/Performance/Waterfall
 
     <p>Shown when a worker receives a message from the main thread, or sends a message to the main thread.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12197/orange2-hollow.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange2-hollow.png"></td>
    <td>
     <p>One of:</p>
 
@@ -281,13 +281,13 @@ slug: Tools/Performance/Waterfall
  </tbody>
 </table>
 
-<p>The markers, and their colors, are the same in the Waterfall tool as in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Waterfall_overview">Waterfall overview</a>, making is easy to correlate from one to the other.</p>
+<p>The markers, and their colors, are the same in the Waterfall tool as in the <a href="/en-US/docs/Tools/Performance/UI_Tour#waterfall_overview">Waterfall overview</a>, making is easy to correlate from one to the other.</p>
 
 <h3 id="Filtering_markers">Filtering markers</h3>
 
-<p>You can control which markers are displayed using a button in the <a href="/en-US/docs/Tools/Performance/UI_Tour#Toolbar">Toolbar</a>:</p>
+<p>You can control which markers are displayed using a button in the <a href="/en-US/docs/Tools/Performance/UI_Tour#toolbar">Toolbar</a>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13238/perf-markers.png" style="display: block; height: 694px; margin-left: auto; margin-right: auto; width: 799px;"></p>
+<p><img alt="" src="perf-markers.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Waterfall_patterns">Waterfall patterns</h2>
 
@@ -297,7 +297,7 @@ slug: Tools/Performance/Waterfall
 
 <p>One pattern that you'll often see in the Waterfall view is something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10711/perf-timeline-waterfall.png" style="display: block; height: 286px; margin-left: auto; margin-right: auto; width: 727px;"></p>
+<p><img alt="" src="perf-timeline-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>This is a visualization of the basic algorithm the browser uses to update the page in response to some event:</p>
 
@@ -313,7 +313,7 @@ slug: Tools/Performance/Waterfall
 <p>Importantly for responsiveness, the browser doesn't always have to go through every step:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS animations</a> update the page without having to run any JavaScript.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> update the page without having to run any JavaScript.</li>
  <li>Not all CSS property changes cause a reflow. Changing properties that can alter an object's geometry and position, such as <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, <code><a href="/en-US/docs/Web/CSS/display">display</a></code>, <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, or <code><a href="/en-US/docs/Web/CSS/top">top</a></code>, will cause a reflow. However, changing properties that don't alter geometry or position, such as <code><a href="/en-US/docs/Web/CSS/color">color</a></code> or <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, will not.</li>
  <li>Not all CSS property changes cause a repaint. In particular, if you animate an element using the <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code> property, the browser will use a separate layer for the transformed element, and doesn't even have to repaint when the element is moved: the new position of the element is handled in composition.</li>
 </ul>
@@ -326,7 +326,7 @@ slug: Tools/Performance/Waterfall
 
 <p>Using the frame rate tool and the Waterfall together, it's easy to see when long-running JavaScript is causing responsiveness problems. In the screenshot below, we've zoomed in on a JS function that's caused a drop in the frame rate:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10973/perf-js-blocking-waterfall.png" style="display: block; height: 432px; margin-left: auto; margin-right: auto; width: 1128px;"></p>
+<p><img alt="" src="perf-js-blocking-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The <a href="/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript">Intensive JavaScript</a> article shows how the Waterfall can highlight responsiveness problems caused by long JavaScript functions, and how you can use asynchronous methods to keep the main thread responsive.</p>
 
@@ -353,7 +353,7 @@ slug: Tools/Performance/Waterfall
  <li>whether the GC was incremental or not</li>
  <li>the reason the GC was performed</li>
  <li>if the GC was non-incremental, the reason it was non-incremental</li>
- <li>starting in Firefox 46, if the GC event was caused by allocation pressure, a link appears, labeled "Show Allocation Triggers". Click the link to see the allocation profile leading up to this GC event. See <a href="/en-US/docs/Tools/Performance/Allocations#Allocations_and_garbage_collection">Allocations and Garbage Collection</a> for more details.</li>
+ <li>starting in Firefox 46, if the GC event was caused by allocation pressure, a link appears, labeled "Show Allocation Triggers". Click the link to see the allocation profile leading up to this GC event. See <a href="/en-US/docs/Tools/Performance/Allocations#allocations_and_garbage_collection">Allocations and Garbage Collection</a> for more details.</li>
 </ul>
 
 <h2 id="Adding_markers_with_the_console_API">Adding markers with the console API</h2>
@@ -398,7 +398,7 @@ function calculatePrimes() {
 
 <p>The Waterfall's output will look something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10967/perf-console-time.png" style="display: block; height: 430px; margin-left: auto; margin-right: auto; width: 1192px;"></p>
+<p><img alt="" src="perf-console-time.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>The marker is labeled with the argument you passed to <code>console.time()</code>, and when you select the marker, you can see the program stack in the right-hand sidebar.</p>
 
@@ -431,7 +431,7 @@ function runTimer(t) {
 
 <p>The Waterfall will display a marker for the period between <code>time()</code> and <code>timeEnd()</code>, and if you select it, you'll see the async stack in the sidebar:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11179/async-stack.png" style="display: block; height: 378px; margin-left: auto; margin-right: auto; width: 352px;"></p>
+<p><img alt="" src="async-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Timestamp_markers">Timestamp markers</h3>
 
@@ -473,4 +473,4 @@ function calculatePrimes() {
 
 <p>In the Waterfall you'll now see something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10971/perf-timestamp.png" style="display: block; height: 530px; margin-left: auto; margin-right: auto; width: 1192px;"></p>
+<p><img alt="" src="perf-timestamp.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

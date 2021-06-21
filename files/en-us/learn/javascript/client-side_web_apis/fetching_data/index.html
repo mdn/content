@@ -41,7 +41,7 @@ tags:
 
 <p>Originally page loading on the web was simple — you'd send a request for a website to a server, and as long as nothing went wrong, the assets that made the web page would be downloaded and displayed on your computer.</p>
 
-<p><img alt="A basic representation of a web site architecture" src="https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png" style="display: block; height: 134px; margin: 0px auto; width: 484px;"></p>
+<p><img alt="A basic representation of a web site architecture" src="web-site-architechture@2x.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The trouble with this model is that whenever you want to update any part of the page, for example, to display a new set of products or load a new page, you've got to load the entire page again. This is extremely wasteful and results in a poor user experience, especially as pages get larger and more complex.</p>
 
@@ -52,10 +52,10 @@ tags:
 <p>This is achieved by using APIs like {{domxref("XMLHttpRequest")}} or — more recently — the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>. These technologies allow web pages to directly handle making <a href="/en-US/docs/Web/HTTP">HTTP</a> requests for specific resources available on a server and formatting the resulting data as needed before it is displayed.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In the early days, this general technique was known as <a href="/en-US/docs/Glossary/Asynchronous">Asynchronous</a> JavaScript and XML (<a href="/en-US/docs/Glossary/Ajax">Ajax</a>), because it tended to use {{domxref("XMLHttpRequest")}} to request XML data. This is normally not the case these days (you'd be more likely to use <code>XMLHttpRequest</code> or Fetch to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.</p>
+<p><strong>Note</strong>: In the early days, this general technique was known as <a href="/en-US/docs/Glossary/Asynchronous">Asynchronous</a> JavaScript and XML (<a href="/en-US/docs/Glossary/AJAX">Ajax</a>), because it tended to use {{domxref("XMLHttpRequest")}} to request XML data. This is normally not the case these days (you'd be more likely to use <code>XMLHttpRequest</code> or Fetch to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.</p>
 </div>
 
-<p><img alt="A simple modern architecture for web sites" src="https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png" style="display: block; height: 235px; margin: 0px auto; width: 559px;"></p>
+<p><img alt="A simple modern architecture for web sites" src="moderne-web-site-architechture@2x.png" style="display: block; margin: 0px auto;"></p>
 
 <p>The Ajax model involves using a web API as a proxy to more intelligently request data rather than just having the browser reload the entire page. Let's think about the significance of this:</p>
 
@@ -73,7 +73,7 @@ tags:
 
 <p>To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies everytime the page is first loaded. The content is only reloaded from the server when it has been updated.</p>
 
-<p><img alt="A basic web app data flow architecture" src="https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png" style="display: block; height: 383px; margin: 0px auto; width: 562px;"></p>
+<p><img alt="A basic web app data flow architecture" src="web-app-architecture@2x.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="A_basic_Ajax_request">A basic Ajax request</h2>
 
@@ -110,7 +110,7 @@ verseChoose.onchange = function() {
  <li>
   <p>We'll start our function by constructing a relative URL pointing to the text file we want to load, as we'll need it later. The value of the {{htmlelement("select")}} element at any time is the same as the text inside the selected {{htmlelement("option")}} (unless you specify a different value in a value attribute) — so for example "Verse 1". The corresponding verse text file is "verse1.txt", and is in the same directory as the HTML file, therefore just the file name will do.</p>
 
-  <p>However, web servers tend to be case sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and simple <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings">string concatenation</a>. Add the following lines inside your <code>updateDisplay()</code> function:</p>
+  <p>However, web servers tend to be case sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and simple <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings">string concatenation</a>. Add the following lines inside your <code>updateDisplay()</code> function:</p>
 
   <pre class="brush: js  notranslate">verse = verse.replace(" ", "");
 verse = verse.toLowerCase();
@@ -276,7 +276,7 @@ myFetch.then(function(response) {
 
 <p>To round off the article, we'll look at a slightly more complex example that shows some more interesting uses of Fetch. We have created a sample site called The Can Store — it's a fictional supermarket that only sells canned goods. You can find this <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">example live on GitHub</a>, and <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store">see the source code</a>.</p>
 
-<p><img alt="A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column." src="https://mdn.mozillademos.org/files/14779/can-store.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column." src="can-store.png" style="display: block; margin: 0 auto;"></p>
 
 <p>By default, the site displays all the products, but you can use the form controls in the left hand column to filter them by category, or search term, or both.</p>
 
@@ -363,7 +363,7 @@ myFetch.then(function(response) {
 <p>There are however a lot of different subjects discussed in this article, which has only really scratched the surface. For a lot more detail on these subjects, try the following articles:</p>
 
 <ul>
- <li><a href="/en-US/docs/AJAX/Getting_Started">Ajax — Getting started</a></li>
+ <li><a href="/en-US/docs/Web/Guide/AJAX/Getting_Started">Ajax — Getting started</a></li>
  <li><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using Fetch</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>

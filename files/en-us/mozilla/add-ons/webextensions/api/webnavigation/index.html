@@ -19,7 +19,7 @@ tags:
 
 <p>Each event corresponds to a particular stage in the navigation. The sequence of events is like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13374/we-flow.png" style="display: block; height: 562px; margin-left: auto; margin-right: auto; width: 745px;"></p>
+<p><img alt="" src="we-flow.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <ul>
  <li>The primary flow is:
@@ -80,9 +80,9 @@ tags:
  <dt>{{WebExtAPIRef("webNavigation.onCommitted")}}</dt>
  <dd>Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}</dt>
- <dd>Fired when the <a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> event is fired in the page.</dd>
+ <dd>Fired when the <a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a> event is fired in the page.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCompleted")}}</dt>
- <dd>Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM <code><a href="/en-US/docs/Web/Events/load">load</a></code> event.</dd>
+ <dd>Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM <code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code> event.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onErrorOccurred")}}</dt>
  <dd>Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.</dd>
  <dt>{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}</dt>

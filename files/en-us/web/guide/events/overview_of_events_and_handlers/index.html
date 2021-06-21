@@ -76,7 +76,7 @@ buttonDOMElement.addEventListener('click', example_click_handler);</pre>
 document.addEventListener('DOMContentLoaded', funcInit);
 </pre>
 
-<p>so that this code will only be executed after the <code>document</code> object emits the <code>'DOMContentLoaded'</code> event because the HTML has been parsed and Javasript objects created representing each of the nodes of the HTML document. Note that in this example, the code does not even name the event argument to the function because the code never needs to use the data structure describing the event; rather, the code merely needs to wait to run until after then event has happened.</p>
+<p>so that this code will only be executed after the <code>document</code> object emits the <code>'DOMContentLoaded'</code> event because the HTML has been parsed and JavaScript objects created representing each of the nodes of the HTML document. Note that in this example, the code does not even name the event argument to the function because the code never needs to use the data structure describing the event; rather, the code merely needs to wait to run until after then event has happened.</p>
 
 <p>The pattern is therefore easy to learn and implement. The difficulty with events comes from learning the wide variety of events which are generated in modern web browsers. There is also some subtlety in learning how to write the handler functions since such code works asynchronously and potentially will run repeatedly but in slightly different situations.</p>
 

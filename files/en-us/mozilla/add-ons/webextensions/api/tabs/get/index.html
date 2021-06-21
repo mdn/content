@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.tabs.get(
+<pre class="brush:js">var getting = browser.tabs.get(
   tabId              // integer
 )
 </pre>
@@ -40,7 +40,7 @@ tags:
 
 <p>Get information about a tab when it is activated:</p>
 
-<pre class="brush: js">async function logListener(info) {
+<pre class="notranslate brush: js">async function logListener(info) {
   try {
     let tabInfo = await browser.tabs.get(info.tabId);
     console.log(tabInfo);

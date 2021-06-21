@@ -15,11 +15,11 @@ tags:
 
 <p>Enables extensions to get and set cookies, and be notified when they change.</p>
 
-<p>To use this API, you need to include the "cookies" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for the sites whose cookies you need to access. See <a href="/en-US/Add-ons/WebExtensions/API/cookies#Permissions">cookie Permissions</a>.</p>
+<p>To use this API, you need to include the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the sites whose cookies you need to access. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions">cookie Permissions</a>.</p>
 
 <h2 id="Permissions">Permissions</h2>
 
-<p>In order to use this API, an add-on must specify the "cookies" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> in its manifest, along with <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a> for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:</p>
+<p>In order to use this API, an add-on must specify the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in its manifest, along with <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:</p>
 
 <dl>
  <dt><code>http://*.example.com/</code></dt>
@@ -77,7 +77,7 @@ tags:
 
 <p>When first-party isolation is on, cookies are further qualified by the domain of the original page the user visited (essentially, the domain shown to the user in the URL bar, also known as the "first party domain"). This means it's not possible for a tracker to correlate its cookie from <a href="http://bbc.com">bbc.com</a> with its cookie from <a href="http://cnn.com">cnn.com</a>, so the tracker can't track a single user across both sites.</p>
 
-<p>First-party isolation can be enabled directly by the user by adjusting the browser's configuration, and can be set by extensions using the <code><a href="/en-US/Add-ons/WebExtensions/API/privacy/websites#Properties">firstPartyIsolate</a></code> setting in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></code> API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
+<p>First-party isolation can be enabled directly by the user by adjusting the browser's configuration, and can be set by extensions using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#properties">firstPartyIsolate</a></code> setting in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy">privacy</a></code> API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
 
 <p>In the <code>cookies</code> API, the first party domain is represented using the <code>firstPartyDomain</code> attribute. All cookies set while first-party isolation is on will have this attribute set to the domain of the original page. In the example above, this would be "<a href="http://bbc.com">bbc.com</a>" for one cookie and "<a href="http://cnn.com">cnn.com</a>" for the other. All cookies set by websites while first-party isolation is off will have this property set to an empty string.<br>
  <br>

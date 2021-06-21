@@ -2,20 +2,23 @@
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 tags:
-  - API
-  - DOM
-  - NonDocumentTypeChildNode
-  - Property
-  - Read-only
-  - Reference
+- API
+- DOM
+- NonDocumentTypeChildNode
+- Property
+- Read-only
+- Reference
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>The <code><strong>NonDocumentTypeChildNode.previousElementSibling</strong></code> read-only property returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or <code>null</code> if the specified element is the first one in the list.</p>
+<p>The <code><strong>NonDocumentTypeChildNode.previousElementSibling</strong></code>
+  read-only property returns the {{domxref("Element")}} immediately prior to the specified
+  one in its parent's children list, or <code>null</code> if the specified element is the
+  first one in the list.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><var>prevNode</var> = <em>elementNodeReference</em>.previousElementSibling;
+<pre class="brush: js notranslate"><var>prevNode</var> = <em>elementNodeReference</em>.previousElementSibling;
 </pre>
 
 <h2 id="Example">Example</h2>
@@ -51,7 +54,8 @@ tags:
 
 <h3 id="Polyfill_for_Internet_Explorer_8">Polyfill for Internet Explorer 8</h3>
 
-<p>This property is unsupported prior to IE9, so the following snippet can be used to add support to IE8:</p>
+<p>This property is unsupported prior to IE9, so the following snippet can be used to add
+  support to IE8:</p>
 
 <pre class="brush: js">// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
 if(!("previousElementSibling" in document.documentElement)){
@@ -65,7 +69,8 @@ if(!("previousElementSibling" in document.documentElement)){
   });
 }</pre>
 
-<h3 id="Polyfill_for_Internet_Explorer_9_and_Safari">Polyfill for Internet Explorer 9+ and Safari</h3>
+<h3 id="Polyfill_for_Internet_Explorer_9_and_Safari">Polyfill for Internet Explorer 9+ and
+  Safari</h3>
 
 <pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/previousElementSibling/previousElementSibling.md
 (function (arr) {
@@ -93,38 +98,46 @@ if(!("previousElementSibling" in document.documentElement)){
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-previouselementsibling', 'NonDocumentTypeChildNode.previousElementSibling')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Splitted the <code>ElementTraversal</code> interface in {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the former.<br>
-    The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented the new interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#attribute-previousElementSibling', 'ElementTraversal.previousElementSibling')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added its initial definition to the <code>ElementTraversal</code> pure interface and use it on {{domxref("Element")}}.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM WHATWG', '#dom-nondocumenttypechildnode-previouselementsibling',
+        'NonDocumentTypeChildNode.previousElementSibling')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td>Splitted the <code>ElementTraversal</code> interface in
+        {{domxref("ChildNode")}}, {{domxref("ParentNode")}}, and
+        {{domxref("NonDocumentTypeChildNode")}}. This method is now defined on the
+        former.<br>
+        The {{domxref("Element")}} and {{domxref("CharacterData")}} interfaces implemented
+        the new interface.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Element Traversal', '#attribute-previousElementSibling',
+        'ElementTraversal.previousElementSibling')}}</td>
+      <td>{{Spec2('Element Traversal')}}</td>
+      <td>Added its initial definition to the <code>ElementTraversal</code> pure interface
+        and use it on {{domxref("Element")}}.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-<p>{{Compat("api.NonDocumentTypeChildNode.previousElementSibling")}}</p>
+  <p>{{Compat("api.NonDocumentTypeChildNode.previousElementSibling")}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("NonDocumentTypeChildNode")}} pure interface.</li>
- <li>
-  <div class="syntaxbox">Object types implementing this pure interface: {{domxref("CharacterData")}}, and {{domxref("Element")}}.</div>
- </li>
+  <li>The {{domxref("NonDocumentTypeChildNode")}} pure interface.</li>
+  <li>
+    Object types implementing this pure interface:
+    {{domxref("CharacterData")}}, and {{domxref("Element")}}.
+  </li>
 </ul>

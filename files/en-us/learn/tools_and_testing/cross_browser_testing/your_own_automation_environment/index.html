@@ -50,9 +50,9 @@ tags:
 <h3 id="Setting_up_Selenium_in_Node">Setting up Selenium in Node</h3>
 
 <ol>
- <li>To start with, set up a new npm project, as discussed in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#Setting_up_Node_and_npm">Setting up Node and npm</a> in the last chapter. Call it something different, like <code>selenium-test</code>.</li>
+ <li>To start with, set up a new npm project, as discussed in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#setting_up_node_and_npm">Setting up Node and npm</a> in the last chapter. Call it something different, like <code>selenium-test</code>.</li>
  <li>Next, we need to install a framework to allow us to work with Selenium from inside Node. We are going to choose selenium's official <a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a>, as the documentation seems fairly up-to-date and it is well-maintained. If you want different options, <a href="http://webdriver.io/">webdriver.io</a> and <a href="http://nightwatchjs.org/">nightwatch.js</a> are also good choices. To install selenium-webdriver, run the following command, making sure you are inside your project folder:
-  <pre class="brush: bash notranslate"><code>npm install selenium-webdriver</code></pre>
+  <pre class="brush: bash notranslate">npm install selenium-webdriver</pre>
  </li>
 </ol>
 
@@ -214,7 +214,7 @@ function searchTest(driver) {
 
 <p>You could also set these options using an environment variable, for example:</p>
 
-<pre class="brush: bash notranslate"><code>SELENIUM_BROWSER=firefox:46:MAC</code></pre>
+<pre class="brush: bash notranslate">SELENIUM_BROWSER=firefox:46:MAC</pre>
 
 <p>Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called <code>quick_test.js</code>, and add the following code to it:</p>
 
@@ -447,11 +447,11 @@ searchTextOnGoogle();
  </li>
  <li>Visit your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest automation dashboard</a>, to fetch your LambdaTest's username and access key by clicking on the <strong>key </strong>icon on the top-right(see <em>Username and Access Keys</em>). Replace the <code>{username}</code> and <code>{accessKey}</code> placeholders in the code with your actual user name and access key values (and make sure you keep them secure).</li>
  <li>Run the below command in your terminal to execute your test:
-  <pre class="brush: bash notranslate">node <code>lambdatest_google_test</code></pre>
+  <pre class="brush: bash notranslate">node lambdatest_google_test</pre>
   The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.<br>
   If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using <a href="https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/">LambdaTest restful API</a>.</li>
  <li>Now if you go to your <a href="https://www.lambdatest.com/selenium-automation">LambdaTest Automation dashboard</a>, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg" style="border-style: solid; border-width: 2px; height: 758px; width: 1600px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
+  <a href="https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg"><img alt="LambdaTest Automation Dashboard" src="automation-logs-1.jpg" style="border-style: solid; border-width: 2px;"></a>You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.</li>
 </ol>
 
 <div class="note">
@@ -535,7 +535,7 @@ driver.quit();</pre>
   <pre class="brush: bash notranslate">node bstack_google_test</pre>
   The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!</li>
  <li>Now if you go back to the <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a> page, you'll see your test listed:<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/15383/bstack_automated_results.png" style="border-style: solid; border-width: 1px; display: block; height: 189px; margin: 0px auto; width: 700px;"></li>
+  <img alt="" src="bstack_automated_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
 <p>If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.</p>
@@ -587,7 +587,7 @@ driver.session_.then(function(sessionData) {
 
 <p>If you now go back to your <a href="https://www.browserstack.com/automate">BrowserStack automation dashboard</a> page, you should see your test session available, as before, but with the updated data attached to it:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15385/bstack_custom_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="bstack_custom_results.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
 
@@ -643,7 +643,7 @@ driver.quit();</pre>
   <pre class="brush: bash notranslate">node sauce_google_test</pre>
   The test will be sent to Sauce Labs, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!</li>
  <li>Now if you go to your <a href="https://saucelabs.com/beta/dashboard/tests">Sauce Labs Automated Test dashboard</a> page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/14235/sauce_labs_automated_test.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img alt="" src="sauce_labs_automated_test.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
 <div class="note">
@@ -662,7 +662,7 @@ driver.quit();</pre>
 
 <ol>
  <li>Install the Node Sauce Labs wrapper using the following command (if you've not already done it for this project):
-  <pre class="brush: bash notranslate"><code class="language-html">npm install saucelabs --save-dev</code></pre>
+  <pre class="brush: bash notranslate">npm install saucelabs --save-dev</pre>
  </li>
  <li>Require saucelabs — put this at the top of your <code>sauce_google_test.js</code> file, just below the previous variable declarations:
   <pre class="brush: js notranslate">const SauceLabs = require('saucelabs');</pre>
@@ -702,7 +702,7 @@ driver.quit();</pre>
 
 <p>If you now go back to your <a href="https://saucelabs.com/beta/dashboard/tests">Sauce Labs Automated Test dashboard</a> page, you should see your new job now has the updated data attached to it:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14239/sauce_labs_updated_job_info.png" style="border-style: solid; border-width: 1px; display: block; height: 150px; margin: 0px auto; width: 1088px;"></p>
+<p><img alt="" src="sauce_labs_updated_job_info.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Your_own_remote_server">Your own remote server</h3>
 
@@ -712,7 +712,7 @@ driver.quit();</pre>
  <li>The Selenium remote server requires Java to run. Download the latest JDK for your platform from the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE downloads page</a>. Install it when it is downloaded.</li>
  <li>Next, download the latest <a href="http://selenium-release.storage.googleapis.com/index.html">Selenium standalone server</a> — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your <code>PATH</code>, do so now (see the {{anch("Setting up Selenium in Node")}} section).</li>
  <li>Run the standalone server by entering the following into a terminal on your server computer
-  <pre class="brush: bash notranslate"><code>java -jar </code>selenium-server-standalone-3.0.0.jar</pre>
+  <pre class="brush: bash notranslate">java -jar selenium-server-standalone-3.0.0.jar</pre>
   (update the <code>.jar</code> filename) so it matches exactly what file you've got.</li>
  <li>The server will run on <code><a href="http://localhost:4444/wd/hub">http://localhost:4444/wd/hub</a></code> — try going there now to see what you get.</li>
 </ol>

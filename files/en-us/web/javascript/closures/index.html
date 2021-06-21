@@ -173,10 +173,6 @@ console.log(counter.value());  // 1.
 
 <p>Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the <code>privateCounter</code> variable and the <code>changeBy</code> function.</p>
 
-<div class="note">
-<p>Notice that I defined an anonymous function that creates a counter, and then I call it immediately and assign the result to the <code>counter</code> variable. You could store this function in a separate variable <code>makeCounter</code>, and then use it to create several counters.</p>
-</div>
-
 <pre class="brush: js notranslate">var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
@@ -227,7 +223,7 @@ alert(counter2.value()); // 0.
  <li>Global Scope</li>
 </ul>
 
-<p>A common mistake is not realizing that, in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.</p>
+<p>A common mistake is not realizing that in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.</p>
 
 <pre class="brush: js notranslate">// global scope
 var e = 10;

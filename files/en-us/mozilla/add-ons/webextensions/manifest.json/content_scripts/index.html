@@ -89,17 +89,17 @@ tags:
   <tr>
    <td><a id="exclude_globs"><code>exclude_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of strings containing wildcards. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="exclude_matches"><code>exclude_matches</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="include_globs"><code>include_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of strings containing wildcards. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="js"><code>js</code></a></td>
@@ -110,7 +110,7 @@ tags:
     <p>Files are injected in the order given. This means that, for example, if you include jQuery here followed by another content script, like this...</p>
 
     <pre class="brush: json no-line-numbers notranslate">
-<code>"js": ["jquery.js", "my-content-script.js"]</code></pre>
+&quot;js&quot;: [&quot;jquery.js&quot;, &quot;my-content-script.js&quot;]</pre>
 
     <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
 
@@ -121,7 +121,7 @@ tags:
    <td><code><a id="match_about_blank">match_about_blank</a></code></td>
    <td><code>Boolean</code></td>
    <td>
-    <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
+    <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
 
     <p>This is especially useful to run scripts in empty iframes , whose URL is <code>"about:blank"</code>. To do this you should also set the <code>all_frames</code> key.</p>
 
@@ -142,7 +142,7 @@ tags:
     <div class="notecard note">
     <p><strong>Note: </strong><code>match_about_blank</code> is supported in Firefox from version 52. </p>
 
-    <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> .</p>
+    <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> .</p>
     </div>
    </td>
   </tr>
@@ -150,7 +150,7 @@ tags:
    <td><a id="matches"><code>matches</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>An array of <a href="/en-US/Add-ons/WebExtensions/match_patterns">match patterns</a>. See <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts#Matching_URL_patterns">Matching URL patterns</a> below.</p>
+    <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</p>
 
     <p>This is the only mandatory key.</p>
    </td>

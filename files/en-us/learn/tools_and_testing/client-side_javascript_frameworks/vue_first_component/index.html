@@ -105,7 +105,7 @@ export default {
 
 <p>This is the same way that the <code>HelloWorld</code> component was registered by the Vue CLI earlier.</p>
 
-<p>To actually render the <code>ToDoItem</code> component in the app, you need to go up into your <code>&lt;template&gt;</code> element and call it as a <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> element. Note that the component file name and its representation in JavaScript is always in upper camel case (e.g. <code>ToDoList</code>), and the equivalent custom element is always in hyphenated lower case (e.g. <code>&lt;to-do-list&gt;</code>).</p>
+<p>To actually render the <code>ToDoItem</code> component in the app, you need to go up into your <code>&lt;template&gt;</code> element and call it as a <code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code> element. Note that the component file name and its representation in JavaScript is always in PascalCase (e.g. <code>ToDoList</code>), and the equivalent custom element is always in kebab-case (e.g. <code>&lt;to-do-list&gt;</code>).</p>
 
 <ol>
  <li>Underneath the <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code>, create an unordered list (<code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>) containing a single list item (<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>).</li>
@@ -125,7 +125,7 @@ export default {
 
 <p>If you check your rendered app again, you should now see your rendered <code>ToDoItem</code>, consisting of a checkbox and a label.</p>
 
-<p><img alt="The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label" src="https://mdn.mozillademos.org/files/17243/rendered-todoitem.png" style="border-style: solid; border-width: 1px; display: block; height: 142px; margin: 0 auto; width: 385px;"></p>
+<p><img alt="The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label" src="rendered-todoitem.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
 <h2 id="Making_components_dynamic_with_props">Making components dynamic with props</h2>
 

@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var removeContext = browser.contextualIdentities.remove(
+<pre class="brush:js">var removeContext = browser.contextualIdentities.remove(
   cookieStoreId                  // string
 )
 </pre>
@@ -47,7 +47,7 @@ tags:
 
 <p>This example tries to remove the contextual identity whose ID is "firefox-container-1":</p>
 
-<pre class="brush: js">function onRemoved(context) {
+<pre class="notranslate brush: js">function onRemoved(context) {
   if (!context) {
     console.error("Context not found");
   } else {

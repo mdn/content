@@ -10,11 +10,11 @@ tags:
 ---
 <div>{{MDNSidebar}}</div>
 
-<p class="summary"><span class="seoSummary">MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers.</span> This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.</p>
+<p><span class="seoSummary">MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers.</span> This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.</p>
 
-<p class="summary">For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md">contributor guide</a> as well as the <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md">data guidelines guide</a>.</p>
+<p>For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md">contributor guide</a> as well as the <a href="https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md">data guidelines guide</a>.</p>
 
-<p class="summary">If you have questions or discover problems, please share with us on the <a href="https://discourse.mozilla-community.org/c/mdn">MDN discussion forum</a>.</p>
+<p>If you have questions or discover problems, you are welcome to <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">ask for help</a>.</p>
 
 <h2 id="How_to_access_the_data_repository">How to access the data repository</h2>
 
@@ -118,7 +118,7 @@ tags:
 
 <p>You have the <code>css</code> object, inside of which is a <code>properties</code> object. Inside the <code>properties</code> object, you need one member for each of the specific features you want to define the compat data for. Each of these members has a <code>__compat</code> member, inside of which the actual data goes.</p>
 
-<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">rendered border-width support table on MDN</a>.</p>
+<p>The above data is found in the <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a> file — compare this to the <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">rendered border-width support table on MDN</a>.</p>
 
 <p>Other types of features work in the same way, but with different object names:</p>
 
@@ -155,12 +155,12 @@ tags:
 <p>Inside the <code>status</code> member, you'll include three submembers:</p>
 
 <ul>
- <li><code>experimental</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
+ <li><code>experimental</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>, or <code>false</code> otherwise.</li>
  <li><code>standard_track</code>: This should be set to <code>true</code> if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or <code>false</code> otherwise.</li>
- <li><code>deprecated</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
+ <li><code>deprecated</code>: This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
 </ul>
 
-<p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#Browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
+<p>The feature data for <a href="/en-US/docs/Web/CSS/border-width#browser_compatibility">border-width</a> (also see <a href="https://github.com/mdn/browser-compat-data/blob/master/css/properties/border-width.json">border-width.json</a>) is shown below as an example:</p>
 
 <pre class="brush: json notranslate">"__compat": {
   "mdn_url": "https://developer.mozilla.org/docs/Web/CSS/border-width",

@@ -222,14 +222,14 @@ toggleCompletion(todo) {
 &gt;</pre>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: The above snippet uses a new Ember-specific keyword — <code>fn</code>. <code>fn</code> allows for <a href="https://en.wikipedia.org/wiki/Partial_application">partial application</a>, which is similar to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind">bind</a></code>, but it never changes the invocation context; this is equivalent to using <code>bind</code> with a <code>null</code> first argument.</p>
+  <p><strong>Note</strong>: The above snippet uses a new Ember-specific keyword — <code>fn</code>. <code>fn</code> allows for <a href="https://en.wikipedia.org/wiki/Partial_application">partial application</a>, which is similar to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code>, but it never changes the invocation context; this is equivalent to using <code>bind</code> with a <code>null</code> first argument.</p>
   </div>
  </li>
 </ol>
 
 <p>Try restarting the dev server and going to <code>localhost:4200</code> again, and you'll now see that we have a fully-operational <s>battlestation</s> “todos left” counter and Clear button:</p>
 
-<p><img alt="todos being marked as complete, and cleared" src="https://mdn.mozillademos.org/files/17233/todos-being-marked-completed-and-cleared.gif" style="height: 731px; width: 854px;"></p>
+<p><img alt="todos being marked as complete, and cleared" src="todos-being-marked-completed-and-cleared.gif"></p>
 
 <p>If you're asking yourself why we're not just doing the toggle on the component, since the function is entirely self-contained and not at all needing anything from the service, then you are 100% right to ask that question! However, because *eventually*, we'll want to persist or sync all changes to the todos list to <a href="/en-US/docs/Web/API/Window/localStorage">local storage</a> (see the <a href="https://nullvoxpopuli.github.io/ember-todomvc-tutorial/">final version of the app</a>), it makes sense to have all persistent-state-changing operations be in the same place.</p>
 

@@ -2,25 +2,28 @@
 title: 'TypedArray.prototype[@@iterator]()'
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 tags:
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
+- Iterator
+- JavaScript
+- Method
+- Prototype
+- Reference
+- TypedArray
+- TypedArrays
 ---
 <div>{{JSRef}}</div>
 
-<p>The initial value of the <code>@@iterator</code> property is the same function object as the initial value of the {{jsxref("TypedArray.prototype.values()", "values")}} property.</p>
+<p>The initial value of the <code>@@iterator</code> property is the same function object
+  as the initial value of the {{jsxref("TypedArray.prototype.values()", "values")}}
+  property.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate"><var>arr</var>[Symbol.iterator]()</pre>
+<pre class="brush: js notranslate"><var>arr</var>[Symbol.iterator]()</pre>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>The array <strong>iterator</strong> function, which is the {{jsxref("TypedArray.prototype.values()", "values()")}} function by default.</p>
+<p>The array <strong>iterator</strong> function, which is the
+  {{jsxref("TypedArray.prototype.values()", "values()")}} function by default.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -48,31 +51,32 @@ console.log(eArr.next().value); // 50
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator',
+        '%TypedArray%.prototype[@@iterator]()')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div>
 
-<p>{{Compat("javascript.builtins.TypedArray.@@iterator")}}</p>
+  <p>{{Compat("javascript.builtins.TypedArray.@@iterator")}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
- <li>{{jsxref("TypedArray.prototype.keys()")}}</li>
- <li>{{jsxref("TypedArray.prototype.values()")}}</li>
+  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
+  <li>{{jsxref("TypedArray")}}</li>
+  <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.keys()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.values()")}}</li>
 </ul>

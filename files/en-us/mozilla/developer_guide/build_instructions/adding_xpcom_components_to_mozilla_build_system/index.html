@@ -8,8 +8,7 @@ tags:
   - NeedsTechnicalReview
   - XPCOM
 ---
-
-<p>This document describes adding new components to Mozilla, including the build system and component registration. It does not deal with extensions, only core components checked into the main tree. It assumes you already know how to <a href="/en/Creating_XPCOM_Components"> write XPCOM components</a>, and want to integrate them into Mozilla.</p>
+<p>This document describes adding new components to Mozilla, including the build system and component registration. It does not deal with extensions, only core components checked into the main tree. It assumes you already know how to <a href="/en-US/docs/Creating_XPCOM_Components"> write XPCOM components</a>, and want to integrate them into Mozilla.</p>
 
 <h3 id="Where_to_put_your_files">Where to put your files</h3>
 
@@ -31,25 +30,25 @@ tags:
 
 <p>Generally, you will have a top-level directory <code>foo</code> for your component, which will then contain <code>foo/public</code>, <code>foo/src</code>, etc. subdirectories. The makefile in <code>foo</code> will just reference the subdirecories and otherwise just needs the boilerplate:</p>
 
-<pre class="eval">   <a href="/en/DEPTH">DEPTH</a>           = ../..   # &lt;-- SEE BELOW FOR THE MEANING OF THIS
+<pre class="eval">   <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">DEPTH</a>           = ../..   # &lt;-- SEE BELOW FOR THE MEANING OF THIS
    topsrcdir       = @top_srcdir@
    srcdir          = @srcdir@
-   <a href="/en/VPATH">VPATH</a>           = @srcdir@
+   <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">VPATH</a>           = @srcdir@
 
    include $(DEPTH)/config/autoconf.mk
 
-   <a href="/en/DIRS">DIRS</a>            = public src
+   <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">DIRS</a>            = public src
 
    include $(topsrcdir)/config/rules.mk
 </pre>
 
 <p>Your other makefiles will actually include all of your files. In these other makefiles, you should see/add the lines:</p>
 
-<pre class="eval">   <a href="/en/MODULE">MODULE</a> = foo
-   <a href="/en/XPIDL_MODULE">XPIDL_MODULE</a> = foo
+<pre class="eval">   <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">MODULE</a> = foo
+   <a href="/en-US/docs/XPIDL_MODULE">XPIDL_MODULE</a> = foo
 </pre>
 
-<p><code>MODULE = foo</code> means that a directory <code>dist/include/foo</code> will be created and your public files, such as .h files generated from .idl sources, will be placed there. Other modules will then be able to say <code><a href="/en/REQUIRES">REQUIRES</a> = foo</code> to add that directory to their include paths and use your interface files. <code>XPIDL_MODULE</code> controls the name of the .xpt file, which is a compiled version of your IDL files. The exact name of this doesn't matter much, and is generally the same as your <code>MODULE</code> name.</p>
+<p><code>MODULE = foo</code> means that a directory <code>dist/include/foo</code> will be created and your public files, such as .h files generated from .idl sources, will be placed there. Other modules will then be able to say <code><a href="/en-US/docs/REQUIRES">REQUIRES</a> = foo</code> to add that directory to their include paths and use your interface files. <code>XPIDL_MODULE</code> controls the name of the .xpt file, which is a compiled version of your IDL files. The exact name of this doesn't matter much, and is generally the same as your <code>MODULE</code> name.</p>
 
 <p>Other interesting makefile sections:</p>
 
@@ -57,12 +56,12 @@ tags:
  <li><strong>DEPTH:</strong> Near the top of the makefile gives the relative path of your mozilla/ directory from the current makefile. So {{ Source("toolkit/components/history/Makefile.in") }} would contain <code>DEPTH = ../../..</code></li>
  <li><strong>XPIDLSRCS:</strong> This is the list of the IDL files in the current directory that will be processed. Generally, this will only be in makefiles in "public" subdirectories.</li>
  <li><strong>REQUIRES:</strong> This is a list of modules that the files in the current directory include files from. These names correspond to the <code>MODULE=foo</code> line in the other module (which generates a <code>dist/include/foo</code> directory that contains the header files).</li>
- <li><strong><a href="/en/CPPSRCS">CPPSRCS</a>:</strong> A list of the .cpp files in the current directory to be compiled.</li>
- <li><strong><a href="/en/EXPORTS">EXPORTS</a>:</strong> A list of files to be copied to the "dist/include/foo" directory for other components to use. This is not very common, and is generally only seen in "public" subdirectories. It may be used, for example, if you have a helper .h file that is not an integral part of your component (and therefore has no IDL), but would be needed or useful to other C++ modules.</li>
- <li><strong><a href="/en/EXTRA_COMPONENTS">EXTRA_COMPONENTS</a>:</strong> Here is where you list your JavaScript XPCOM files.</li>
- <li><strong><a href="/en/EXTRA_PP_COMPONENTS">EXTRA_PP_COMPONENTS</a>:</strong> Use this to list JavaScript XPCOM components that must be preprocessed before being installed.</li>
- <li><strong><a href="/en/LOCAL_INCLUDES">LOCAL_INCLUDES</a>:</strong> You can manually specify other include directories. Normally, you should use <code>REQUIRES</code> instead which will set up the include path for you. The format is <code>LOCAL_INCLUDES = -Isome_directory/somewhere</code>. For relative paths, use something like <code>-I$(srcdir)/../some_component/src</code> (<code>$srcdir</code> identifies the current directory, which might actually be different than the current directory of the compiler).</li>
- <li><strong><a href="/en/DEFINES">DEFINES</a>:</strong> Additional preprocessor defines for C++. Example: <code>DEFINES = -DSOME_DEFINE -DOTHER_DEFINE=25</code></li>
+ <li><strong><a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">CPPSRCS</a>:</strong> A list of the .cpp files in the current directory to be compiled.</li>
+ <li><strong><a href="/en-US/docs/EXPORTS">EXPORTS</a>:</strong> A list of files to be copied to the "dist/include/foo" directory for other components to use. This is not very common, and is generally only seen in "public" subdirectories. It may be used, for example, if you have a helper .h file that is not an integral part of your component (and therefore has no IDL), but would be needed or useful to other C++ modules.</li>
+ <li><strong><a href="/en-US/docs/EXTRA_COMPONENTS">EXTRA_COMPONENTS</a>:</strong> Here is where you list your JavaScript XPCOM files.</li>
+ <li><strong><a href="/en-US/docs/EXTRA_PP_COMPONENTS">EXTRA_PP_COMPONENTS</a>:</strong> Use this to list JavaScript XPCOM components that must be preprocessed before being installed.</li>
+ <li><strong><a href="/en-US/docs/LOCAL_INCLUDES">LOCAL_INCLUDES</a>:</strong> You can manually specify other include directories. Normally, you should use <code>REQUIRES</code> instead which will set up the include path for you. The format is <code>LOCAL_INCLUDES = -Isome_directory/somewhere</code>. For relative paths, use something like <code>-I$(srcdir)/../some_component/src</code> (<code>$srcdir</code> identifies the current directory, which might actually be different than the current directory of the compiler).</li>
+ <li><strong><a href="/en-US/docs/DEFINES">DEFINES</a>:</strong> Additional preprocessor defines for C++. Example: <code>DEFINES = -DSOME_DEFINE -DOTHER_DEFINE=25</code></li>
 </ul>
 
 <h3 id="Package_manifest">Package manifest</h3>
@@ -82,13 +81,13 @@ tags:
 @BINPATH@/components/DownloadManagerUI.manifest
 </pre>
 
-<p>You can then follow the <a href="/en/Build_and_Install#Installing_Your_Build">package build instructions</a> to create an installer and verify that your new component is included.</p>
+<p>You can then follow the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions#installing_your_build">package build instructions</a> to create an installer and verify that your new component is included.</p>
 
 <h3 id="Adding_new_JavaScript_components_to_Mozilla_core">Adding new JavaScript components to Mozilla core</h3>
 
 <p>Put your JavaScript file in some directory such as <code>foo/src</code> which is for XPCOM components (don't use <code>content</code> which is for interface code). Then add your filename to the <code>EXTRA_COMPONENTS=</code> section of the <code>Makefile.in</code>.</p>
 
-<p>At the bottom of your javascript implementation, you should create a function <code>NSGetModule</code>, which just returns a reference to an <a href="/en/XPCOM_Interface_Reference/nsIModule">nsIModule</a> implementation:</p>
+<p>At the bottom of your javascript implementation, you should create a function <code>NSGetModule</code>, which just returns a reference to an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIModule">nsIModule</a> implementation:</p>
 
 <pre class="eval">function NSGetModule(compMgr, fileSpec) {
    return myModule;

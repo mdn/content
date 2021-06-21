@@ -24,7 +24,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.history.onVisitRemoved.addListener(listener)
+<pre class="brush:js">browser.history.onVisitRemoved.addListener(listener)
 browser.history.onVisitRemoved.removeListener(listener)
 browser.history.onVisitRemoved.hasListener(listener)
 </pre>
@@ -70,7 +70,7 @@ browser.history.onVisitRemoved.hasListener(listener)
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">function onRemoved(removed) {
+<pre class="notranslate brush: js">function onRemoved(removed) {
   if (removed.allHistory) {
     console.log("All history removed");
   } else if (removed.urls.length) {

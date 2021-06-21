@@ -82,8 +82,6 @@ tags:
  <dd>A double-precision floating-point value which indicates the duration (total length) of the media in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is <code>NaN</code>. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>, and so forth), this value is <code>+Infinity</code>.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
  <dd>The height of the video's display area, in <a href="https://drafts.csswg.org/css-values/#px">CSS pixels</a> (absolute values only; <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">no percentages</a>.)</dd>
- <dt>{{htmlattrdef("intrinsicsize")}} {{experimental_inline}}</dt>
- <dd>This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.</dd>
  <dt>{{htmlattrdef("muted")}}</dt>

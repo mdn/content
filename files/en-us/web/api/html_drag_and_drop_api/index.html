@@ -43,16 +43,16 @@ tags:
   <tr>
    <td>{{domxref('Document/dragend_event', 'dragend')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragend','ondragend')}}</td>
-   <td>…a drag operation ends (such as releasing a mouse button or hitting the Esc key; see <a href="/en-US/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">Finishing a Drag</a>.)</td>
+   <td>…a drag operation ends (such as releasing a mouse button or hitting the Esc key; see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend" title="Finishing a Drag">Finishing a Drag</a>.)</td>
   </tr>
   <tr>
    <td>{{domxref('Document/dragenter_event', 'dragenter')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragenter','ondragenter')}}</td>
-   <td>…a dragged item enters a valid drop target. (See <a href="/en-US/docs/DragDrop/Drag_Operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.)</td>
+   <td>…a dragged item enters a valid drop target. (See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.)</td>
   </tr>
   <tr>
    <td>{{domxref('Document/dragexit_event', 'dragexit')}}</td>
-   <td>{{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragleave','ondragexit')}}</td>
    <td>…an element is no longer the drag operation's immediate selection target.</td>
   </tr>
   <tr>
@@ -68,12 +68,12 @@ tags:
   <tr>
    <td>{{domxref('Document/dragstart_event', 'dragstart')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}</td>
-   <td>…the user starts dragging an item. (See <a href="/en-US/docs/DragDrop/Drag_Operations#dragstart" title="Starting a Drag Operation">Starting a Drag Operation</a>.)</td>
+   <td>…the user starts dragging an item. (See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart" title="Starting a Drag Operation">Starting a Drag Operation</a>.)</td>
   </tr>
   <tr>
    <td>{{domxref('Document/drop_event', 'drop')}}</td>
    <td>{{domxref('GlobalEventHandlers.ondrop','ondrop')}}</td>
-   <td>…an item is dropped on a valid drop target. (See <a href="/en-US/docs/DragDrop/Drag_Operations#drop" title="Performing a Drop">Performing a Drop</a>.)</td>
+   <td>…an item is dropped on a valid drop target. (See <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop" title="Performing a Drop">Performing a Drop</a>.)</td>
   </tr>
  </tbody>
 </table>
@@ -100,7 +100,7 @@ tags:
 
 <h3 id="Gecko-specific_interfaces">Gecko-specific interfaces</h3>
 
-<p>Mozilla and Firefox support some features not in the standard drag-and-drop model. These are <em>convenience functions</em> to help with dragging multiple items or non-string data (such as files). For more information, see <a href="/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a>. Additionally, see the {{domxref("DataTransfer")}} reference page for all of the <a href="/en-US/docs/Web/API/DataTransfer#Gecko_properties">Gecko-specific properties</a> and <a href="/en-US/docs/Web/API/DataTransfer#Gecko_methods">Gecko-specific methods</a>.</p>
+<p>Mozilla and Firefox support some features not in the standard drag-and-drop model. These are <em>convenience functions</em> to help with dragging multiple items or non-string data (such as files). For more information, see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a>. Additionally, see the {{domxref("DataTransfer")}} reference page for all of the <a href="/en-US/docs/Web/API/DataTransfer#Gecko_properties">Gecko-specific properties</a> and <a href="/en-US/docs/Web/API/DataTransfer#Gecko_methods">Gecko-specific methods</a>.</p>
 
 <h2 id="The_basics">The basics</h2>
 
@@ -130,7 +130,7 @@ tags:
 
 <ul>
  <li><a href="/en-US/docs/Web/HTML/Global_attributes/draggable" title="draggable global attribute">Draggable attribute reference</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Drag_operations#draggableattribute">Drag operations guide</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute">Drag operations guide</a></li>
 </ul>
 
 <h3 id="Define_the_drags_data">Define the drag's data</h3>
@@ -148,8 +148,8 @@ tags:
 </pre>
 
 <ul>
- <li>For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see <a href="/en-US/docs/DragDrop/Recommended_Drag_Types" title="Recommended Drag Types">Recommended Drag Types</a>.</li>
- <li>For more information about drag data, see <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#dragdata" title="Drag Data">Drag Data</a>.</li>
+ <li>For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types" title="Recommended Drag Types">Recommended Drag Types</a>.</li>
+ <li>For more information about drag data, see <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata" title="Drag Data">Drag Data</a>.</li>
 </ul>
 
 <h3 id="Define_the_drag_image">Define the drag image</h3>
@@ -169,7 +169,7 @@ tags:
 <p>Learn more about drag feedback images in:</p>
 
 <ul>
- <li><a href="/en-US/docs/DragDrop/Drag_Operations#dragfeedback" title="Setting the Drag Feedback Image">Setting the Drag Feedback Image</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback" title="Setting the Drag Feedback Image">Setting the Drag Feedback Image</a></li>
 </ul>
 
 <h3 id="Define_the_drag_effect">Define the drag <em>effect</em></h3>
@@ -196,7 +196,7 @@ tags:
 <p>For more details, see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects" title="Drag Effects">Drag Effects</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects" title="Drag Effects">Drag Effects</a></li>
 </ul>
 
 <h3 id="Define_a_drop_zone">Define a <em>drop zone</em></h3>
@@ -226,7 +226,7 @@ function drop_handler(ev) {
 <p>For more information, see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Drag_operations#droptargets">Specifying Drop Targets</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets">Specifying Drop Targets</a></li>
 </ul>
 
 <h3 id="Handle_the_drop_effect">Handle the drop <em>effect</em></h3>
@@ -262,7 +262,7 @@ function drop_handler(ev) {
 <p>For more information, see:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drop">Performing a Drop</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop">Performing a Drop</a></li>
 </ul>
 
 <h3 id="Drag_end">Drag end</h3>
@@ -274,7 +274,7 @@ function drop_handler(ev) {
 <p>For more information about handling the end of a drag operation, see:</p>
 
 <ul>
- <li><a href="/en-US/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">Finishing a Drag</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend" title="Finishing a Drag">Finishing a Drag</a></li>
 </ul>
 
 <h2 id="Interoperability">Interoperability</h2>
@@ -319,5 +319,5 @@ function drop_handler(ev) {
  <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
  <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types" title="Recommended Drag Types">Recommended Drag Types</a></li>
  <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
- <li><a href="http://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Drag and Drop interoperability data from CanIUse</a></li>
+ <li><a href="https://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Drag and Drop interoperability data from CanIUse</a></li>
 </ul>

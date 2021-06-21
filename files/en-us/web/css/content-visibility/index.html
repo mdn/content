@@ -39,6 +39,12 @@ content-visibility: unset;
  <dd>The element turns on layout containment, style containment, and paint containment. If the element is not relevant to the user, it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.</dd>
 </dl>
 
+<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+<p>Headings and other content will be suppressed by <code>content-visibility</code> if they are considered off-screen. This means that screen reader users may lose the benefit of having a complete page outline read out loud.</p>
+
+<p>For more information read <a href="https://marcysutton.com/content-visibility-accessible-semantics">Content-visibility and Accessible Semantics</a>.</p>
+
 <h2 id="Examples">Examples</h2>
 
 <h3 id="Using_auto_to_reduce_rendering_cost_of_long_pages">Using auto to reduce rendering cost of long pages</h3>

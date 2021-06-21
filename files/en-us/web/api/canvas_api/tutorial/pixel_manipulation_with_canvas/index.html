@@ -109,7 +109,7 @@ const [redIndex, greenIndex, blueIndex, alphaIndex] = colorIndices;
 
 <p>In this example we are using the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData"><code>getImageData()</code> </a>method to display the color under the mouse cursor. For this, we need the current position of the mouse with <code>layerX</code> and <code>layerY</code>, then we look up the pixel data on that position in the pixel array that <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a></code> provides us. Finally, we use the array data to set a background color and a text in the <code>&lt;div&gt;</code> to display the color. Clicking on the image will do the same operation but remember what the selected color was.</p>
 
-<pre class="brush: js; notranslate">var img = new Image();
+<pre class="brush: js notranslate">var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 var canvas = document.getElementById('canvas');

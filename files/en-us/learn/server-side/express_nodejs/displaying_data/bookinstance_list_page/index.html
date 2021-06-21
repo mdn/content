@@ -14,20 +14,20 @@ tags:
 
 <p>The <code>BookInstance</code> list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.</p>
 
-<p>Open <strong>/controllers/bookinstanceController.js</strong>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
+<p>Open <code>/controllers/bookinstanceController.js</code>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">// Display list of all BookInstances.</span>
-exports<span class="punctuation token">.</span>bookinstance_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> <strong>next</strong><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js line-numbers language-js">// Display list of all BookInstances.
+exports.bookinstance_list = function(req, res, next) {
 
-  <strong>BookInstance<span class="punctuation token">.</span><span class="function token">find</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">populate</span><span class="punctuation token">(</span><span class="string token">'book'</span><span class="punctuation token">)</span>
-    <span class="punctuation token">.</span><span class="function token">exec</span><span class="punctuation token">(</span><span class="keyword token">function</span> <span class="punctuation token">(</span>err<span class="punctuation token">,</span> list_bookinstances<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="function token">next</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-      <span class="comment token">// Successful, so render</span>
-      res<span class="punctuation token">.</span><span class="function token">render</span><span class="punctuation token">(</span><span class="string token">'bookinstance_list'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span> title<span class="punctuation token">:</span> <span class="string token">'Book Instance List'</span><span class="punctuation token">,</span> bookinstance_list<span class="punctuation token">:</span> list_bookinstances <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></strong>
+  BookInstance.find()
+    .populate('book')
+    .exec(function (err, list_bookinstances) {
+      if (err) { return next(err); }
+      // Successful, so render
+      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+    });
 
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+};</pre>
 
 <p>The method uses the model's <code>find()</code> function to return all <code>BookInstance</code> objects. It then daisy-chains a call to <code>populate()</code> with the <code>book</code> field—this will replace the book id stored for each <code>BookInstance</code> with a full <code>Book</code> document.</p>
 
@@ -37,26 +37,26 @@ exports<span class="punctuation token">.</span>bookinstance_list <span class="op
 
 <p>Create <strong>/views/bookinstance_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
+<pre class="brush: js line-numbers language-js">extends layout
 
 block content
-  h1<span class="operator token">=</span> title
+  h1= title
 
   ul
-    each val <span class="keyword token">in</span> bookinstance_list
+    each val in bookinstance_list
       li
-        <span class="function token">a</span><span class="punctuation token">(</span>href<span class="operator token">=</span>val<span class="punctuation token">.</span>url<span class="punctuation token">)</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>book<span class="punctuation token">.</span>title<span class="punctuation token">}</span> <span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>imprint<span class="punctuation token">}</span> <span class="operator token">-</span>
-        <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">==</span><span class="string token">'Available'</span>
-          span<span class="punctuation token">.</span>text<span class="operator token">-</span>success #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
-        <span class="keyword token">else</span> <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">==</span><span class="string token">'Maintenance'</span>
-          span<span class="punctuation token">.</span>text<span class="operator token">-</span>danger #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
-        <span class="keyword token">else</span>
-          span<span class="punctuation token">.</span>text<span class="operator token">-</span>warning #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>status<span class="punctuation token">}</span>
-        <span class="keyword token">if</span> val<span class="punctuation token">.</span>status<span class="operator token">!=</span><span class="string token">'Available'</span>
-          span <span class="function token"> </span><span class="punctuation token">(</span>Due<span class="punctuation token">:</span> #<span class="punctuation token">{</span>val<span class="punctuation token">.</span>due_back<span class="punctuation token">}</span> <span class="punctuation token">)</span>
+        a(href=val.url) #{val.book.title} : #{val.imprint} -
+        if val.status=='Available'
+          span.text-success #{val.status}
+        else if val.status=='Maintenance'
+          span.text-danger #{val.status}
+        else
+          span.text-warning #{val.status}
+        if val.status!='Available'
+          span  (Due: #{val.due_back} )
 
-    <span class="keyword token">else</span>
-      li There are no book copies <span class="keyword token">in</span> <span class="keyword token">this</span> library<span class="punctuation token">.</span></code></pre>
+    else
+      li There are no book copies in this library.</pre>
 
 <p>This view is much the same as all the others. It extends the layout, replacing the <em>content</em> block, displays the <code>title</code> passed in from the controller, and iterates through all the book copies in <code>bookinstance_list</code>. For each copy we display its status (color coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So <code>span.text-success</code> will be compiled to <code>&lt;span class="text-success"&gt;</code> (and might also be written in Pug as <code>span(class="text-success")</code>.</p>
 
@@ -64,7 +64,7 @@ block content
 
 <p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="BookInstance List Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png" style="border-style: solid; border-width: 1px; display: block; height: 322px; margin: 0px auto; width: 1200px;"></p>
+<p><img alt="BookInstance List Page - Express Local Library site" src="locallibary_express_bookinstance_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

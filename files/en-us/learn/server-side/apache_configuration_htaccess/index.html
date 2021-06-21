@@ -91,7 +91,7 @@ tags:
   &lt;/IfModule&gt;
 &lt;/IfModule&gt;</pre>
 
-<p class="brush: bash">Google Chrome's <a class="external" href="https://developers.google.com/fonts/docs/troubleshooting">Google Fonts troubleshooting guide</a> tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.<span id="cke_bm_194E" style="display: none;"> </span></p>
+<p class="brush: bash">Google Chrome's <a class="external" href="https://developers.google.com/fonts/docs/troubleshooting">Google Fonts troubleshooting guide</a> tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.</p>
 
 <pre class="brush: bash notranslate">&lt;IfModule mod_headers.c&gt;
   &lt;FilesMatch "\.(eot|otf|tt[cf]|woff2?)$"&gt;
@@ -450,7 +450,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
    <li><strong><code>upgrade-insecure-requests</code> does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the <code>Strict-Transport-Security</code> header</strong></li>
   </ul>
  </li>
- <li>Includes the <code>Content-Security-Policy</code> header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#CSP_in_workers">web workers</a></li>
+ <li>Includes the <code>Content-Security-Policy</code> header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although Javascript files can not execute scripts in a "browsing context", they are included to target <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers">web workers</a></li>
 </ol>
 
 <p>Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.</p>
@@ -503,7 +503,7 @@ ErrorDocument 403 "Sorry, can't allow you access today"
   Header always unset X-Powered-By
 &lt;/IfModule&gt;</pre>
 
-<p>If you can, you should disable the <code>X-Powered-By</code> header from the language/framework level (e.g.: for PHP, you can do that by setting the folowing in <code>php.ini</code>.</p>
+<p>If you can, you should disable the <code>X-Powered-By</code> header from the language/framework level (e.g.: for PHP, you can do that by setting the following in <code>php.ini</code>.</p>
 
 <pre class="brush: php notranslate">expose_php = off;</pre>
 

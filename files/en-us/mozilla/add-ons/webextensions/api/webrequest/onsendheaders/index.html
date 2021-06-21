@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.webRequest.onSendHeaders.addListener(
+<pre class="brush:js">browser.webRequest.onSendHeaders.addListener(
   listener,             // function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
@@ -164,7 +164,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
 
 <p>This code logs all cookies that will be sent in making requests to the target <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>:</p>
 
-<pre class="brush: js">// The target match pattern
+<pre class="notranslate brush: js">// The target match pattern
 var targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request

@@ -46,12 +46,12 @@ tags:
 &lt;input type="button" value="Change this document." onclick="change()"&gt;
 &lt;h2&gt;Header&lt;/h2&gt;
 &lt;p&gt;Paragraph&lt;/p&gt;
-&lt;/body&gt;<span>
-</span></pre>
+&lt;/body&gt;
+</pre>
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js notranslate"><span>  function change() {
+<pre class="brush: js notranslate">function change() {
     // document.getElementsByTagName("H2") returns a NodeList of the &lt;h2&gt;
     // elements in the document, and the first is number 0:
 
@@ -72,7 +72,7 @@ tags:
     // and put the paragraph on the end of the document by appending it to
     // the BODY (which is the parent of para)
     para.parentNode.appendChild(newElement);
-  }</span></pre>
+  }</pre>
 
 <p>{{ EmbedLiveSample('A_simple_example', 800, 300) }}</p>
 

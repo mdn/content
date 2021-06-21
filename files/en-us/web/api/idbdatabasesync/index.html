@@ -15,26 +15,26 @@ tags:
 <p><strong>Important</strong>: The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
 </div>
 
-<p>The <code>DatabaseSync</code> interface in the <a href="/en/IndexedDB">IndexedDB API</a> represents a synchronous <a href="/en/IndexedDB#gloss_database_connection">connection to a database</a>.</p>
+<p>The <code>DatabaseSync</code> interface in the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> represents a synchronous <a href="/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#createObjectStore">createObjectStore</a> (in DOMString name, in DOMString keypath, in optional boolean autoIncrement) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
+   <td><code><a href="/en-US/docs/IndexedDB/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#createobjectstore">createObjectStore</a> (in DOMString name, in DOMString keypath, in optional boolean autoIncrement) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#openObjectStore">openObjectStore</a> (in DOMString name, in optional unsigned short mode) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code><a href="/en-US/docs/IndexedDB/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#openobjectstore">openObjectStore</a> (in DOMString name, in optional unsigned short mode) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#removeObjectStore">removeObjectStore</a> (in DOMString storeName) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code>void <a href="#removeobjectstore">removeObjectStore</a> (in DOMString storeName) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#setVersion">setVersion</a> (in DOMString version);</code></td>
+   <td><code>void <a href="#setversion">setVersion</a> (in DOMString version);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBTransactionSync">IDBTransactionSync</a> <a href="#transaction">transaction</a> (in optional DOMStringList storeNames, in optional unsigned int timeout) raises (<a href="/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
+   <td><code><a href="/en-US/docs/IndexedDB/IDBTransactionSync">IDBTransactionSync</a> <a href="#transaction">transaction</a> (in optional DOMStringList storeNames, in optional unsigned int timeout) raises (<a href="/en-US/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -92,15 +92,15 @@ tags:
  <dt>name</dt>
  <dd>The name of a new object store.</dd>
  <dt>keypath</dt>
- <dd>The <a href="/en/IndexedDB#gloss_key_path">key path</a> used by the new object store. If a null path is specified, then the object store does not have a key path, and uses out-of-line keys.</dd>
+ <dd>The <a href="/en-US/docs/IndexedDB#gloss_key_path">key path</a> used by the new object store. If a null path is specified, then the object store does not have a key path, and uses out-of-line keys.</dd>
  <dt>autoIncrement</dt>
- <dd>If true, the object store uses a <a href="/en/IndexedDB#gloss_key_generator">key generator</a>; if false, it does not use one.</dd>
+ <dd>If true, the object store uses a <a href="/en-US/docs/IndexedDB#gloss_key_generator">key generator</a>; if false, it does not use one.</dd>
 </dl>
 
 <h5 id="Returns">Returns</h5>
 
 <dl>
- <dt><a href="/en/IndexedDB/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
+ <dt><a href="/en-US/docs/IndexedDB/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
  <dd>An object to access the newly created object store.</dd>
 </dl>
 
@@ -109,7 +109,7 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt>
  <dd>If an object store with the same name (based on case-sensitive comparison) already exists in the connected database.</dd>
 </dl>
 
@@ -135,7 +135,7 @@ tags:
 <h5 id="Returns_2">Returns</h5>
 
 <dl>
- <dt><a href="/en/IndexedDB/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
+ <dt><a href="/en-US/docs/IndexedDB/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
  <dd>An object to access the opened object store.</dd>
 </dl>
 
@@ -144,7 +144,7 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If an object store with the given name (based on case-sensitive comparison) already exists in the connected database.</dd>
 </dl>
 
@@ -173,7 +173,7 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt>
  <dd>If the object store with the given name (based on case-sensitive comparison) does not exist in the connected database.</dd>
 </dl>
 
@@ -219,7 +219,7 @@ tags:
 <h5 id="Returns_5">Returns</h5>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBTransactionSync">IDBTransactionSync</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBTransactionSync">IDBTransactionSync</a></code></dt>
  <dd>An object to access the newly created transaction.</dd>
 </dl>
 
@@ -228,6 +228,6 @@ tags:
 <p>This method can raise an IDBDatabaseException with the following code:</p>
 
 <dl>
- <dt><code><a href="/en/IndexedDB/IDBDatabaseException#TIMEOUT_ERR">TIMEOUT_ERR</a></code></dt>
+ <dt><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#TIMEOUT_ERR">TIMEOUT_ERR</a></code></dt>
  <dd>If reserving all the database objects identified in <code>storeNames</code> takes longer than the <code>timeout</code> interval.</dd>
 </dl>

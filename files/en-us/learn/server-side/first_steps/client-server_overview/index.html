@@ -214,7 +214,7 @@ Content-Length: 0
 
 <p>Let's recap on how this works, by looking again at the static site architecture diagram we looked at in the last article.</p>
 
-<p><img alt="A simplified diagram of a static web server." src="https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png"></p>
+<p><img alt="A simplified diagram of a static web server." src="basic_static_app_server.png"></p>
 
 <p>When a user wants to navigate to a page, the browser sends an HTTP <code>GET</code> request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an <a href="/en-US/docs/Web/HTTP/Status">HTTP Response status code</a> of "<code>200 OK</code>" (indicating success). The server might return a different status code, for example "<code>404 Not Found</code>" if the file is not present on the server, or "<code>301 Moved Permanently</code>" if the file exists but has been redirected to a different location.</p>
 
@@ -236,7 +236,7 @@ Content-Length: 0
 
 <p>The diagram below shows the main elements of the "team coach" website, along with numbered labels for the sequence of operations when the coach accesses their "best team" list. The parts of the site that make it dynamic are the <em>Web Application</em> (this is how we will refer to the server-side code that processes HTTP requests and returns HTTP responses), the <em>Database</em>, which contains information about players, teams, coaches and their relationships, and the <em>HTML Templates</em>.</p>
 
-<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png" style="height: 584px; width: 1226px;"></p>
+<p><img alt="This is a diagram of a simple web server with step numbers for each of step of the client-server interaction." src="web_application_with_html_and_steps.png"></p>
 
 <p>After the coach submits the form with the team name and number of players, the sequence of operations is:</p>
 

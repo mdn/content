@@ -14,7 +14,7 @@ tags:
   - Prototype
   - Prototype Chaining
   - create()
-  - 'l10n:priority'
+  - l10n:priority
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -23,14 +23,14 @@ tags:
 <p class="summary">Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain how prototype chains work and look at how the <code>prototype</code> property can be used to add methods to existing constructors.</p>
 
 <div class="notecard note">
-<p class="summary"><strong>Note</strong>: This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ECMAScript 2015 classes</a>.</p>
+<p class="summary"><strong>Note</strong>: This article covers traditional JavaScript constructors and classes. In the next article, we talk about the modern way of doing things, which provides easier syntax to achieve the same things — see <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes">ECMAScript 2015 classes</a>.</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Understanding JavaScript functions, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>), and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>).</td>
+   <td>Understanding JavaScript functions, familiarity with JavaScript basics (see <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>), and OOJS basics (see <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">Introduction to objects</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -50,7 +50,7 @@ tags:
 <div class="note">
 <p><strong>Note:</strong> It's important to understand that there is a distinction between <strong>an object's <code>prototype</code></strong> (available via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code>, or via the deprecated <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> property) and <strong>the <code>prototype</code> property on constructor functions</strong>.</p>
 
-<p>The former is the property on each instance, and the latter is the property on the constructor. That is, <code>Object.getPrototypeOf(new <var>Foobar</var>())</code> refers to the same object as <code><var>Foobar</var>.prototype</code>.</p>
+<p>The former is the property on each instance, and the latter is the property on the constructor. That is, <code>Object.getPrototypeOf(new <var>Foobar</var>())</code> refers to a different object than <code><var>Foobar</var>.prototype</code>.</p>
 </div>
 
 <p>Let's look at an example to make this a bit clearer.</p>
@@ -79,11 +79,11 @@ tags:
 
 <p>If you type "<code>person1.</code>" into your JavaScript console, you should see the browser try to auto-complete this with the member names available on this object:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13853/object-available-members.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="object-available-members.png" style="display: block; margin: 0 auto;"></p>
 
 <p>In this list, you will see the members defined on <code>person1</code>'s constructor — <code>Person()</code> — <code>name</code>, <code>age</code>, <code>gender</code>, <code>interests</code>, <code>bio</code>, and <code>greeting</code>. You will however also see some other members — <code>toString</code>, <code>valueOf</code>, etc — these are defined on <code>person1</code>'s prototype object's prototype object, which is <code>Object.prototype</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png" style="display: block; height: 150px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-person-person-object-2.png" style="display: block; margin: 0px auto;"></p>
 
 <p>What happens if you call a method on <code>person1</code>, which is actually defined on <code>Object.prototype</code>? For example:</p>
 
@@ -146,7 +146,7 @@ tags:
 <p><code>myString</code> immediately has a number of useful methods available on it, like <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code>, etc.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It is worth reading our more in-depth guide to "<a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript">Using prototypes in JavaScript</a>", once you've made sense of this section and wish to know more. This section is intentionally simplified to make these concepts a little easier to understand when you first meet them.</p>
+<p><strong>Note</strong>: It is worth reading our more in-depth guide to "<a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#using_prototypes_in_javascript">Using prototypes in JavaScript</a>", once you've made sense of this section and wish to know more. This section is intentionally simplified to make these concepts a little easier to understand when you first meet them.</p>
 </div>
 
 <div class="warning">

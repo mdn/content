@@ -9,11 +9,11 @@ tags:
 <p>wpcapi.h is a header file to interact with Windows Vista parental controls.</p>
 <p>The error "System header wpcapi.h is not available" indicates that your copy of the Windows SDK is not new enough. There are several ways you can solve this problem:</p>
 <h4 id="Install_the_Windows_Vista_or_Windows_2008_Server_SDK">Install the Windows Vista or Windows 2008 Server SDK</h4>
-<p>Installing a new SDK will provide the wpcapi.h header file. See the <a href="/en/Windows_Build_Prerequisites">Windows Build Prerequisites</a> for details.</p>
+<p>Installing a new SDK will provide the wpcapi.h header file. See the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites">Windows Build Prerequisites</a> for details.</p>
 <p>{{ Warning("The new SDKs currently don\'t work well with the free (express) versions of Visual C++. MozillaBuild 1.3 allows you to use both a new SDK and an older Platform SDK together to avoid this problem.") }}</p>
 <p>{{ Warning("Installing the SDK doesn't remove the build cache so if you've previously built without it, after installing the SDK you will need to manually remove config.cache from your build.") }} </p>
 <h4 id="Disable_Vista_SDK_Requirements">Disable Vista SDK Requirements</h4>
-<p>The following flag disables Mozilla features which depend on Microsoft SDK versions 6.0 and higher. You can add this flag to your <a href="/en/Configuring_Build_Options">mozconfig</a> file:</p>
+<p>The following flag disables Mozilla features which depend on Microsoft SDK versions 6.0 and higher. You can add this flag to your <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options">mozconfig</a> file:</p>
 <pre class="eval">ac_add_options --disable-vista-sdk-requirements
 </pre>
 <div class="note">Builds with --disable-vista-sdk-requirements will have bugs on Windows Vista. The disabled code affects 3rd party application handler registration {{ Bug(397678) }} and default application registration {{ Bug(369465) }}.</div>

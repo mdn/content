@@ -24,7 +24,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 <pre class="brush: css language-css notranslate" id="css">/* Starburst: a blue on blue starburst: the gradient
    is a starburst of lighter and darker blue,
-   centered in the upper left quandrant,
+   centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
 background: repeating-conic-gradient(
     from 3deg at 25% 25%,
@@ -38,14 +38,14 @@ background: repeating-conic-gradient(
 	<dt>{{CSSxRef("&lt;angle&gt;")}}</dt>
 	<dd>Preceded by the <code>from</code> keyterm, and taking an angle as its value, defines the gradient rotation in clockwise direction.</dd>
 	<dt><code>&lt;position&gt;</code></dt>
-	<dd>Using the same length, order and keyterm values as the <a href="/en-US/docs/Web/CSS/background-position">background-position</a> property, the position defines center of the gradient. If omitted, the default value is <code>center</code>, meaing the gradient will be centered, .</dd>
+	<dd>Using the same length, order and keyterm values as the <a href="/en-US/docs/Web/CSS/background-position">background-position</a> property, the position defines center of the gradient. If omitted, the default value is <code>center</code>, meaning the gradient will be centered, .</dd>
 	<dt><code>&lt;angular-color-stop&gt;</code></dt>
 	<dd>A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (an {{CSSxRef("&lt;angle&gt;")}} along the gradient's circumference axis). The last color stop minus the first color-stop angle defines the size of the repeating gradient.</dd>
 	<dt><code>&lt;color-hint&gt;</code></dt>
 	<dd>Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
 	<dd>
 	<div class="note">
-	<p><strong>Note:</strong> Rendering of <a href="#Gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
+	<p><strong>Note:</strong> Rendering of <a href="#gradient_with_multiple_color_stops">color stops in CSS gradients</a> follows the same rules as color stops in <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>.</p>
 	</div>
 	</dd>
 </dl>

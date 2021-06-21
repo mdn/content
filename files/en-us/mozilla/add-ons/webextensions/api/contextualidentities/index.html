@@ -12,7 +12,7 @@ tags:
 
 <p>With the contextual identities feature, each contextual identity has a name, a color, and an icon. New tabs can be assigned to an identity, and the name, icon, and color will appear in the address bar. Internally, each identity gets its own cookie store which is not shared with other tabs.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14719/containers.png" style="display: block; height: 259px; margin-left: auto; margin-right: auto; width: 515px;">Contextual identities are an experimental feature in Firefox and are only enabled by default in Firefox Nightly. To enable them in other versions of Firefox, set the <code>privacy.userContext.enabled</code> preference to <code>true</code>. Note that although contextual identities are available in Firefox for Android, there's no UI to work with them in this version of the browser.</p>
+<p><img alt="" src="containers.png" style="display: block; margin-left: auto; margin-right: auto;">Contextual identities are an experimental feature in Firefox and are only enabled by default in Firefox Nightly. To enable them in other versions of Firefox, set the <code>privacy.userContext.enabled</code> preference to <code>true</code>. Note that although contextual identities are available in Firefox for Android, there's no UI to work with them in this version of the browser.</p>
 
 <p>Before Firefox 57, the <code>contextualIdentities</code> API is only available if the contextual identities feature is itself enabled. If an extension tried to use the <code>contextualIdentities</code> API without the feature being enabled, then method calls would resolve their promises with <code>false</code>.</p>
 

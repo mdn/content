@@ -37,7 +37,7 @@ tags:
 
 <p>The idea behind feature detection is that you can run a test to determine whether a feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that <em>do</em> support the feature, and browsers that <em>don't</em>. If you don't do this, browsers that don't support the features you are using in your code won't display your sites properly and will just fail, creating a bad user experience.</p>
 
-<p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
+<p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
 <pre class="language-js">if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -49,7 +49,7 @@ tags:
 
 <p>It is probably better to use an established feature detection library however, rather than writing your own all the time. Modernizr is the industry standard for feature detection tests, and we'll look at that later on.</p>
 
-<p>Before we move on, we'd like to say one thing upfront — don't confuse feature detection with <strong>browser sniffing</strong> (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_bad_browser_sniffing_code">Using bad browser sniffing code</a> for more details.</p>
+<p>Before we move on, we'd like to say one thing upfront — don't confuse feature detection with <strong>browser sniffing</strong> (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_bad_browser_sniffing_code">Using bad browser sniffing code</a> for more details.</p>
 
 <h2 id="Writing_your_own_feature_detection_tests">Writing your own feature detection tests</h2>
 
@@ -57,7 +57,7 @@ tags:
 
 <h3 id="CSS">CSS</h3>
 
-<p>You can write tests for CSS features by testing for the existence of <em><a href="/en-US/docs/Web/API/HTMLElement/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform</code>) in JavaScript.</p>
+<p>You can write tests for CSS features by testing for the existence of <em><a href="/en-US/docs/Web/API/ElementCSSInlineStyle/style">element.style.property</a></em> (e.g. <code>paragraph.style.transform</code>) in JavaScript.</p>
 
 <p>A classic example might be to test for <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> support in a browser; for browsers that support the newest Flexbox spec, we could use a flexible and robust flex layout. For browsers that don't, we could use a floated layout that works OK, although it is slightly more brittle and hacky, and not as cool-looking.</p>
 
@@ -82,7 +82,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
  </li>
 </ol>
 
-<p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
+<p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("ElementCSSInlineStyle/style", "HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you have trouble getting this to work, you can compare it to our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">css-feature-detect-finished.html</a> code (see also the <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">live version</a>).</p>
@@ -91,12 +91,12 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 <p>When you save everything and try out your example, you should see the flexbox layout applied to the page if the browser supports modern flexbox, and the float layout if not.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behavior">CSS fallback behavior</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">Handling CSS prefixes</a>.</p>
+<p><strong>Note</strong>: Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#css_fallback_behavior">CSS fallback behavior</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes">Handling CSS prefixes</a>.</p>
 </div>
 
 <h4 id="supports">@supports</h4>
 
-<p>In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> (see also <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Responsive design problems</a>) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.</p>
+<p>In recent times, CSS has had its own native feature detection mechanism introduced — the {{cssxref("@supports")}} at-rule. This works in a similar manner to <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> (see also <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems">Responsive design problems</a>) — except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported.</p>
 
 <p>For example, we could rewrite our previous example to use <code>@supports</code> — see <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html">supports-feature-detect.html</a></code> and <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css">supports-styling.css</a></code>. If you look at the latter, you'll see a couple of <code>@supports</code> blocks, for example:</p>
 

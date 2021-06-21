@@ -61,7 +61,7 @@ tags:
 <h2 id="Creating_the_project">Creating the project</h2>
 
 <ol>
- <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">virtual environment</a>. </li>
+ <li>Open a command shell (or a terminal window), and make sure you are in your <a href="/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment">virtual environment</a>. </li>
  <li>Navigate <span style="line-height: 1.5;">to where you want to store your Django apps (make it somewhere easy to find like inside your <em>Documents</em> folder), and create a folder for your new website (in this case: </span><em>django_projects</em>). Then change into your newly-created directory:
  <pre class="brush: bash notranslate">mkdir django_projects
 cd django_projects</pre>
@@ -85,7 +85,7 @@ cd locallibrary</pre>
 
 <p>Our current working directory should look something like this:</p>
 
-<pre class="syntaxbox notranslate">../django_projects/locallibrary/</pre>
+<pre class="brush: python notranslate">../django_projects/locallibrary/</pre>
 
 <p>The <em>locallibrary</em> project sub-folder is the entry point for the website:</p>
 
@@ -350,7 +350,7 @@ python3 manage.py migrate
 
 <p>Once the server is running, you can view the site by navigating to <code>http://127.0.0.1:8000/</code> in your local web browser. You should see a site error page that looks like this:</p>
 
-<p><img alt="Django Debug page for Django 2.0" src="https://mdn.mozillademos.org/files/15729/django_404_debug_page.png"></p>
+<p><img alt="Django Debug page for Django 2.0" src="django_404_debug_page.png"></p>
 
 <p>Don't worry! This error page is expected because we don't have any pages/urls defined in the <code>catalog.urls</code> module (which we're redirected to when we get a URL to the root of the site).</p>
 

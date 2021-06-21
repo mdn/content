@@ -92,7 +92,7 @@ box-shadow: unset;
 
 <h3 id="Interpolation">Interpolation</h3>
 
-<p>Each shadow in the list (treating <code>none</code> as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not <code>inset</code>, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one <code>inset</code> and the other not <code>inset</code>, the entire shadow list is uninterpolable. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is <code>transparent</code>, all lengths are <code>0</code>, and whose <code>inset</code> (or not) matches the longer list.</p>
+<p>Each shadow in the list (treating <code>none</code> as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not <code>inset</code>, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one <code>inset</code> and the other not <code>inset</code>, the entire shadow list is uninterpolated. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is <code>transparent</code>, all lengths are <code>0</code>, and whose <code>inset</code> (or not) matches the longer list.</p>
 
 <h2 id="Formal_definition">Formal definition</h2>
 
@@ -100,7 +100,7 @@ box-shadow: unset;
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 

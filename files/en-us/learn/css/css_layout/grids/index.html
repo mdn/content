@@ -26,7 +26,7 @@ tags:
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)</td>
+   <td>HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -41,7 +41,7 @@ tags:
 
 <p>A grid will typically have <strong>columns</strong>, <strong>rows</strong>, and then gaps between each row and column — commonly referred to as <strong>gutters</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13899/grid.png" style="display: block; height: 553px; margin: 0px auto; width: 1196px;"></p>
+<p><img alt="" src="grid.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Creating_your_grid_in_CSS">Creating your grid in CSS</h2>
 
@@ -173,7 +173,7 @@ tags:
 
 <h3 id="Gaps_between_tracks">Gaps between tracks</h3>
 
-<p>To create gaps between tracks we use the properties {{cssxref("grid-column-gap")}} for gaps between columns, {{cssxref("grid-row-gap")}} for gaps between rows, and {{cssxref("grid-gap")}} to set both at once.</p>
+<p>To create gaps between tracks we use the properties {{cssxref("column-gap")}} for gaps between columns, {{cssxref("row-gap")}} for gaps between rows, and {{cssxref("gap")}} to set both at once.</p>
 
 <pre class="brush: css notranslate">.container {
     display: grid;
@@ -296,7 +296,7 @@ tags:
 
 <p>Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are <em>at least</em> 100 pixels tall and can still expand if more content gets into them. A fairly basic fact about the web is that you never really know how tall something is going to be; additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.</p>
 
-<p>The {{cssxref("minmax")}} function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
+<p>The {{cssxref("minmax()")}} function lets us set a minimum and maximum size for a track, for example <code>minmax(100px, auto)</code>. The minimum size is 100 pixels, but the maximum is <code>auto</code>, which will expand to fit the content. Try changing <code>grid-auto-rows</code> to use a minmax value:</p>
 
 <pre class="brush: css notranslate">.container {
     display: grid;
@@ -309,7 +309,7 @@ tags:
 
 <h3 id="As_many_columns_as_will_fit">As many columns as will fit</h3>
 
-<p>We can combine some of the things we have learned about track listing, repeat notation and {{cssxref("minmax")}} to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using {{cssxref("repeat")}} notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
+<p>We can combine some of the things we have learned about track listing, repeat notation and {{cssxref("minmax()")}} to create a useful pattern. Sometimes it is helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of <code>grid-template-columns</code> using {{cssxref("repeat()")}} notation, but instead of passing in a number, pass in the keyword <code>auto-fill</code>. For the second parameter of the function we use <code>minmax()</code>, with a minimum value equal to the minimum track size that we would like to have, and a maximum of <code>1fr</code>.</p>
 
 <p>Try this in your file now, using the below CSS:</p>
 
@@ -684,7 +684,7 @@ aside {
 
 <p>If you use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Inspector</a> to overlay the grid lines on your design, you can see how our 12 column grid works.</p>
 
-<p><img alt="A 12 column grid overlaid on our design." src="https://mdn.mozillademos.org/files/16045/learn-grids-inspector.png" style="height: 1026px; width: 2028px;"></p>
+<p><img alt="A 12 column grid overlaid on our design." src="learn-grids-inspector.png"></p>
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
@@ -697,7 +697,7 @@ aside {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout#Guides">CSS Grid guides</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout#guides">CSS Grid guides</a></li>
  <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">CSS Grid Inspector: Examine grid layouts</a></li>
 </ul>
 

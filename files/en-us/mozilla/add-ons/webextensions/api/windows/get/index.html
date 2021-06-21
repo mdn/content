@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getting = browser.windows.get(
+<pre class="brush:js">var getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object
 )
@@ -65,7 +65,7 @@ tags:
 <p><strong>Note</strong>: This example is a bit unrealistic: in this situation you would more probably use {{WebExtAPIRef("windows.getCurrent()")}}.</p>
 </div>
 
-<pre class="brush: js">function logTabs(windowInfo) {
+<pre class="notranslate brush: js">function logTabs(windowInfo) {
   for (tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }

@@ -8,19 +8,28 @@ slug: Plugins/Roadmap
 
 <dl>
  <dt>June 2016</dt>
- <dd>Starting with Firefox 47 in June 2016, all plugins other than Adobe Flash are <a href="/en-US/docs/Plugins/Flash_Activation:_Browser_Comparison">click-to-activate</a>. Users choose which sites are allowed to activate each plugin. In addition, the 64-bit version of Firefox for Windows only supports the Flash plugin.</dd>
+ <dd><p>Starting with Firefox 47 in June 2016, all plugins other than Adobe Flash are <a href="/en-US/docs/Plugins/Flash_Activation:_Browser_Comparison">click-to-activate</a>. Users choose which sites are allowed to activate each plugin. In addition, the 64-bit version of Firefox for Windows only supports the Flash plugin.</p></dd>
  <dt>March 2017</dt>
- <dd>Starting with Firefox 52 in March 2017, plugins other than Adobe Flash are no longer supported in Firefox. Firefox <a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">Extended Support Release 52</a> continued to support non-Flash plugins until mid-2018.</dd>
+ <dd><p>Starting with Firefox 52 in March 2017, plugins other than Adobe Flash are no longer supported in Firefox. Firefox <a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">Extended Support Release 52</a> continued to support non-Flash plugins until mid-2018.</p></dd>
  <dt>August 2017</dt>
- <dd>Starting with Firefox 55 in August 2017, users must <a href="/en-US/docs/Plugins/Flash_Activation:_Browser_Comparison">choose</a> which sites are allowed to activate the Flash plugin. Users will have the choice to remember the Flash setting per-site. <em>This change was rolled out progressively during August and September 2017.</em><br>
- <br>
- In order to improve security and performance, Mozilla will <a href="/en-US/docs/Plugins/Blocking_By_Domain">maintain a list of sites</a> which cannot use any plugins.</dd>
+ <dd><p>Starting with Firefox 55 in August 2017, users must <a href="/en-US/docs/Plugins/Flash_Activation:_Browser_Comparison">choose</a> which sites are allowed to activate the Flash plugin. Users will have the choice to remember the Flash setting per-site. <em>This change was rolled out progressively during August and September 2017.</em></p>
+
+ <p>In order to improve security and performance, Mozilla will <a href="/en-US/docs/Plugins/Blocking_By_Domain">maintain a list of sites</a> which cannot use any plugins.</p></dd>
  <dt>September 2017</dt>
- <dd>Starting with Firefox 56 in September 2017, Firefox for Android removed all support for plugins ({{bug(1381916)}}).</dd>
+ <dd><p>Starting with Firefox 56 in September 2017, Firefox for Android removed all support for plugins ({{bug(1381916)}}).</p></dd>
  <dt>2019</dt>
- <dd>In September 2019, Firefox 69 removed the "Always Activate" Flash option so we always ask for user permission before activating Flash on a website.</dd>
+ <dd><p>In September 2019, Firefox 69 removed the "Always Activate" Flash option so Firefox always asks for the user's permission before activating Flash on a website.</p></dd>
  <dt>2021</dt>
- <dd>In January 2021, Firefox 85 will completely remove Flash support. <a href="https://theblog.adobe.com/adobe-flash-update/">Adobe will stop shipping security updates for Flash at the end of 2020</a>.</dd>
+ <dd><p>In January 2021, <a href="/en-US/docs/Mozilla/Firefox/Releases/85">Firefox 85</a> was the first Firefox version to ship without Flash support. Firefox now has new behavior when an attempt is made to embed an external object using the <code><a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a></code> or <code><a href="/en-US/docs/Web/HTML/Element/embed">&lt;embed&gt;</a></code> elements:</p>
+
+ <ul>
+   <li>If the element lists a MIME type other than <code>x-shockwave-flash</code> or <code>x-test</code> then the behavior is unchanged. This means that non-plugin types behave as expected and unknown types are displayed at a size of 0 x 0.</li>
+   <li>If an <code><a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a></code> element has an HTML fallback in the DOM then the fallback is shown as expected.</li>
+   <li>For <code>x-shockwave-flash</code> or <code>x-test</code> types, the element is shown as a transparent region with the size specified in its <code>width</code> and <code>height</code> attributes.</li>
+  </ul>
+
+ <p>See also <a href="https://support.mozilla.org/en-US/kb/end-support-adobe-flash">End of support for Adobe Flash</a>.</p>
+ </dd>
 </dl>
 
 <h3 id="See_also">See also</h3>

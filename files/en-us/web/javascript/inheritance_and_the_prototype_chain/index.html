@@ -300,8 +300,8 @@ console.log(a.a); // print 1
 console.log(b.a); // print 5
 delete b.a;
 console.log(a.a); // print 1
-console.log(b.a); // print 1(b.a value 5 is deleted but it showing value from its prototype chain)
-delete a.a;       // This can also be done via 'delete b.__proto__.a'
+console.log(b.a); // print 1 (b.a value 5 is deleted but it showing value from its prototype chain)
+delete a.a;       // This can also be done via 'delete Object.getPrototypeOf(b).a'
 console.log(a.a); // print undefined
 console.log(b.a); // print undefined</pre>
 
@@ -363,7 +363,7 @@ console.log(g.hasOwnProperty('nope'));
 console.log(g.hasOwnProperty('addVertex'));
 // false
 
-console.log(g.__proto__.hasOwnProperty('addVertex'));
+console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
 // true
 </pre>
 

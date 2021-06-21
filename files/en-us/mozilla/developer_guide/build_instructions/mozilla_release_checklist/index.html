@@ -26,9 +26,9 @@ tags:
 
 <p>If it's a final release (rather than an alpha or beta release), a branch needs to be made. This is done once almost all of the necessary fixes are in. Before deciding that it's really time to release, drivers listen to feedback from people using the builds to make sure that they're good quality, and, before making the final decision, verify that talkback is working and run the smoketests plus a few additional tests.</p>
 
-<p>When it's time to release, drivers let the build team know that it's time to tag the release and make the final builds (usually with some advance warning with some uncertainty). The build team cuts a branch by pulling a tree and <a href="/en/Creating_a_Release_Tag">tagging</a> a base tag and (with <code>cvs tag -b</code>) a branch tag. Note that the minibranch mentioned on the tagging instructions isn't necessary here, since the pull scripts are updated on the branch itself.</p>
+<p>When it's time to release, drivers let the build team know that it's time to tag the release and make the final builds (usually with some advance warning with some uncertainty). The build team cuts a branch by pulling a tree and <a href="/en-US/docs/Creating_a_Release_Tag">tagging</a> a base tag and (with <code>cvs tag -b</code>) a branch tag. Note that the minibranch mentioned on the tagging instructions isn't necessary here, since the pull scripts are updated on the branch itself.</p>
 
-<p>The tagged files are more than just the <a href="/en/Unix_Detailed_Build_Instructions#Get_the_Code">default pull</a> by the build scripts. They should also include <code>mozilla/other-licenses/libart_lgpl/</code>, <code>mozilla/tools/trace-malloc/</code>, <code>mozilla/tools/jprof/</code>, <code>mozilla/tools/codesighs/</code>, <code>mozilla/toolkit/</code>, <code>mozilla/chrome/</code>, <code>mozilla/other-licenses/branding/</code>, <code>mozilla/other-licenses/7zstub/</code>, <code>mozilla/browser/</code>, <code>mozilla/mail/</code>, <code>mozilla/composer/</code> (and probably some other stuff that I missed).</p>
+<p>The tagged files are more than just the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Unix_Detailed_Build_Instructions#get_the_code">default pull</a> by the build scripts. They should also include <code>mozilla/other-licenses/libart_lgpl/</code>, <code>mozilla/tools/trace-malloc/</code>, <code>mozilla/tools/jprof/</code>, <code>mozilla/tools/codesighs/</code>, <code>mozilla/toolkit/</code>, <code>mozilla/chrome/</code>, <code>mozilla/other-licenses/branding/</code>, <code>mozilla/other-licenses/7zstub/</code>, <code>mozilla/browser/</code>, <code>mozilla/mail/</code>, <code>mozilla/composer/</code> (and probably some other stuff that I missed).</p>
 
 <p>The following command will checkout these additional files:</p>
 
@@ -90,7 +90,7 @@ tags:
 
 <h3 id="Make_release_builds">Make release builds</h3>
 
-<p>When it's time to release, drivers let the build team know that it's time to tag the release and make the final builds (usually with some advance warning with some uncertainty). The build team pulls the tree and <a href="/en/Creating_a_Release_Tag">tags the release</a> (see <a href="#what_to_tag">above</a> for comments on tagged files) and makes the necessary builds for the major platforms. (See the <a href="/en/Mozilla_Release_Build_Notes">Mozilla Release Build Notes</a>.) Additional builds will be contributed for other platforms and for specific distributions (i.e., RPMS). Be sure to create a <code>contrib</code> directory under the main release directory so that these builds have a place to go.</p>
+<p>When it's time to release, drivers let the build team know that it's time to tag the release and make the final builds (usually with some advance warning with some uncertainty). The build team pulls the tree and <a href="/en-US/docs/Creating_a_Release_Tag">tags the release</a> (see <a href="#what_to_tag">above</a> for comments on tagged files) and makes the necessary builds for the major platforms. (See the <a href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Mozilla_Release_Build_Notes">Mozilla Release Build Notes</a>.) Additional builds will be contributed for other platforms and for specific distributions (i.e., RPMS). Be sure to create a <code>contrib</code> directory under the main release directory so that these builds have a place to go.</p>
 
 <p>(Often this actually happens in reverse. That is, a certain set of nightly builds, which have already been tested (see above, on deciding when to release) are declared to be the release, and then the corresponding source is tagged. If it doesn't happen this way, then the resulting builds definitely need to be tested before they are declared to be the release.)</p>
 
@@ -109,9 +109,9 @@ tags:
    <li>Update the <a class="external" href="https://www.mozilla.org/news.html"><code>news.html</code></a> with an announcement of the release.</li>
    <li>Update <code>VARIABLES</code> with the new version numbers and URLs.</li>
    <li>For Mozilla releases, update <a class="external" href="https://www.mozilla.org/releases/"><code>releases/index.html</code></a> and <code>releases/&lt;version&gt;/index.html</code></li>
-   <li>For Firefox releases, update <code><a class="external" href="https://www.mozilla.org/products/firefox/releases/" rel="freelink">http://www.mozilla.org/products/firefox/releases/</a>&lt;version&gt;.html</code> and change <code>httpd.conf</code> so that index.html points to it</li>
-   <li>For Thunderbird releases, update <code><a class="external" href="https://www.mozilla.org/products/thunderbird/releases/" rel="freelink">http://www.mozilla.org/products/thunderbird/releases/</a>&lt;version&gt;.html</code> and copy that to <code>index.html</code></li>
-   <li>Update <a href="/en/CVS_Tags">CVS Tags</a> doc to include the newest release tag.</li>
+   <li>For Firefox releases, update <code><a class="external" href="https://www.mozilla.org/products/firefox/releases/">http://www.mozilla.org/products/firefox/releases/</a>&lt;version&gt;.html</code> and change <code>httpd.conf</code> so that index.html points to it</li>
+   <li>For Thunderbird releases, update <code><a class="external" href="https://www.mozilla.org/products/thunderbird/releases/">http://www.mozilla.org/products/thunderbird/releases/</a>&lt;version&gt;.html</code> and copy that to <code>index.html</code></li>
+   <li>Update <a href="/en-US/docs/CVS_Tags">CVS Tags</a> doc to include the newest release tag.</li>
    <li>Update the "actual release" field in <a class="external" href="https://www.mozilla.org/roadmap.html">roadmap.html</a>.</li>
   </ul>
  </li>
@@ -131,4 +131,3 @@ tags:
  <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="https://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
 </ul>
 </div>
-

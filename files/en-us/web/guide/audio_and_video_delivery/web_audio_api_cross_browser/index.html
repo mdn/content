@@ -9,7 +9,7 @@ tags:
 <p><em>What do we do!?</em></p>
 <p>We don't want to maintain two or more separate code bases, and feature detection code is cumbersome! Plus we want to write code that reliably works in the future, or at least, works with a minimum amount of changes. Is there a way to satisfy all these constraints at the same time? <em>Probably!</em></p>
 <h2 id="Writing_for_today_(and_tomorrow)">Writing for today (and tomorrow)</h2>
-<p>First, get a copy of <a href="https://github.com/cwilso/AudioContext-MonkeyPatch/">AudioContext-MonkeyPatch</a> by Chris Wilson. This little library will "normalise" the interfaces for you and make it look as if your code is running in a standards compliant browser, by aliasing prefixed names to the unprefixed versions. And it won't do anything if the unprefixed versions are already present.</p>
+<p>First, get a copy of <a href="https://github.com/cwilso/AudioContext-MonkeyPatch/">AudioContext-MonkeyPatch</a> by Chris Wilson. This little library will "normalize" the interfaces for you and make it look as if your code is running in a standards compliant browser, by aliasing prefixed names to the unprefixed versions. And it won't do anything if the unprefixed versions are already present.</p>
 <p>Once you include it in your page, you can write in "modern Web Audio API" style, and do things such as:</p>
 <pre class="brush: js notranslate">var audioContext = new AudioContext();
 </pre>

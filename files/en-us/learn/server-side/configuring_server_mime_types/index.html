@@ -94,7 +94,7 @@ tags:
    <li>Load the file and go to <strong>View &gt; Developer &gt; Developer Tools</strong> and choose the <em>Network</em> tab. Reload the page and select the resource you want to inspect. Under headers look for <code>Content-Type</code> and it will report the content type of the resource.</li>
   </ul>
  </li>
- <li>Look for a <code>&lt;meta&gt;</code> element in the page source that gives the MIME type, for example <code><span class="nowiki">&lt;meta http-equiv="Content-Type" content="text/html"&gt;</span></code><span class="nowiki">.</span>
+ <li>Look for a <code>&lt;meta&gt;</code> element in the page source that gives the MIME type, for example <code>&lt;meta http-equiv="Content-Type" content="text/html"&gt;</code>.
   <ul>
    <li>According to the standards, the <code>&lt;meta&gt;</code> element that specifies the MIME type should be ignored if there's a Content-Type header available.</li>
   </ul>
@@ -109,7 +109,7 @@ tags:
 
 <ul>
  <li>If you're using the Apache web server, check the <em><strong>Media Types and Character Encodings</strong></em> section of <a href="/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess">Apache Configuration: .htaccess</a> for examples of different document types and their corresponding MIME types.</li>
- <li>If you're using NGINX, look at the <a href="/en/NGINX_configuration_snippets" title="NGINX configuration snipets">NGINX configuration snippets</a>. NGINX does not have a <code>.htaccess</code> equivalent tool, so all changes will go into the main configuration file.</li>
+ <li>If you're using NGINX, look at the <a href="/en-US/NGINX_configuration_snippets">NGINX configuration snippets</a>. NGINX does not have a <code>.htaccess</code> equivalent tool, so all changes will go into the main configuration file.</li>
  <li>If you're using a server-side script or framework to generate content, the way to indicate the content type will depend on the tool you're using. Check the framework or library's documentation.</li>
 </ul>
 

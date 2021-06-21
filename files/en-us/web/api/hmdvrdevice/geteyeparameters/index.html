@@ -14,7 +14,7 @@ tags:
   - Virtual Reality
   - WebVR
 ---
-<div>{{obsolete_header()}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+<div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
 <p>The <strong><code>getEyeParameters()</code></strong> method of the {{domxref("HMDVRDevice")}} interface returns current parameters for the eye specified as its argument ("left" or "right") — stored in a {{domxref("VREyeParameters")}} object.</p>
 
@@ -37,7 +37,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>The following example is taken from the Mozilla VR Team's <a class="external external-icon" href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> code — to be precise, the <a href="https://github.com/MozVR/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js#L28-L29">VREffect.js file</a>. Early on in the code the <code>getEyeParameters()</code> method is used to access information about each eye, which is then used for rendering calulations later on.</p>
+<p>The following example is taken from the Mozilla VR Team's <a class="external external-icon" href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> code — to be precise, the <a href="https://github.com/MozVR/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js#L28-L29">VREffect.js file</a>. Early on in the code the <code>getEyeParameters()</code> method is used to access information about each eye, which is then used for rendering calculations later on.</p>
 
 <pre class="brush: js">if ( vrHMD.getEyeParameters !== undefined ) {
     var eyeParamsL = vrHMD.getEyeParameters( 'left' );

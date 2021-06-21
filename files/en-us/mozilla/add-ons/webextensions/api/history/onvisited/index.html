@@ -18,7 +18,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.history.onVisited.addListener(listener)
+<pre class="brush:js">browser.history.onVisited.addListener(listener)
 browser.history.onVisited.removeListener(listener)
 browser.history.onVisited.hasListener(listener)
 </pre>
@@ -64,7 +64,7 @@ browser.history.onVisited.hasListener(listener)
 
 <p>Listen for visits, and log the URL and visit time.</p>
 
-<pre class="brush: js">function onVisited(historyItem) {
+<pre class="notranslate brush: js">function onVisited(historyItem) {
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
 }

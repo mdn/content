@@ -17,6 +17,7 @@ tags:
 <p>The default array properties that are excluded from <code>with</code> bindings are:</p>
 
 <ul>
+ <li>{{jsxref("Array.prototype.at()", "at()")}}</li>
  <li>{{jsxref("Array.prototype.copyWithin()", "copyWithin()")}}</li>
  <li>{{jsxref("Array.prototype.entries()", "entries()")}}</li>
  <li>{{jsxref("Array.prototype.fill()", "fill()")}}</li>
@@ -44,7 +45,7 @@ with (Array.prototype) {
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
-// ["copyWithin", "entries", "fill", "find", "findIndex",
+// ["at", "copyWithin", "entries", "fill", "find", "findIndex",
 //  "includes", "keys", "values"]</pre>
 
 <h2 id="Specifications">Specifications</h2>

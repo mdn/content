@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var gettingPopup = browser.pageAction.getPopup(
+<pre class="brush:js">var gettingPopup = browser.pageAction.getPopup(
   details               // object
 )
 </pre>
@@ -52,7 +52,7 @@ tags:
 
 <p>Add a context menu item that logs the popup URL for the current tab. Note that you'll need the <code>contextMenus</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest</a> to create context menu items.</p>
 
-<pre class="brush: js">function gotPopup(popupURL) {
+<pre class="notranslate brush: js">function gotPopup(popupURL) {
   console.log(popupURL);
 }
 

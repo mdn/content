@@ -20,7 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var clearing = browser.notifications.clear(
+<pre class="brush:js">var clearing = browser.notifications.clear(
   id                            // string
 )
 </pre>
@@ -46,7 +46,7 @@ tags:
 
 <p>This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification:</p>
 
-<pre class="brush: js">var myNotification = "my-notification";
+<pre class="notranslate brush: js">var myNotification = "my-notification";
 
 function toggleAlarm(all) {
   if (myNotification in all) {

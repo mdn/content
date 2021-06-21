@@ -6,11 +6,11 @@ slug: Tools/Web_Console/Console_messages
 
 <p>Most of the Web Console is occupied by the message display pane:</p>
 
-<p><img alt="Screenshot of the web console, highlighting the messages area" src="https://mdn.mozillademos.org/files/17333/console-messages-Fx79.png" style="display: block; height: 345px; margin-left: auto; margin-right: auto; width: 898px;"></p>
+<p><img alt="Screenshot of the web console, highlighting the messages area" src="console-messages-fx79.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Each message is displayed as a separate row:</p>
 
-<p><img alt="Screenshot of a single console message, with its parts annotated" src="https://mdn.mozillademos.org/files/17334/console-msg-annotated.png" style="display: block; height: 142px; margin-left: auto; margin-right: auto; width: 892px;"></p>
+<p><img alt="Screenshot of a single console message, with its parts annotated" src="console-msg-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <table class="fullwidth-table standard-table">
  <tbody>
@@ -24,10 +24,10 @@ slug: Tools/Web_Console/Console_messages
     <p>Not all console messages contain icons. The following icons may be used:</p>
 
     <ul>
-     <li><img alt='An "i" inside a circle' src="https://mdn.mozillademos.org/files/17328/info-icon.png" style="height: 13px; width: 13px;"> Informational message</li>
-     <li><img alt='A "!" inside a yellow triangle' src="https://mdn.mozillademos.org/files/17329/warning-icon.png" style="height: 14px; width: 15px;"> Warning</li>
-     <li><img alt='A "!" inside a solid red circle' src="https://mdn.mozillademos.org/files/17330/error-icon.png" style="height: 14px; width: 14px;"> Error</li>
-     <li><img alt="A red circle with a slash across it" src="https://mdn.mozillademos.org/files/17331/blocked-icon.png" style="height: 14px; width: 14px;"> Blocked; for network messages</li>
+     <li><img alt='An "i" inside a circle' src="info-icon.png"> Informational message</li>
+     <li><img alt='A "!" inside a yellow triangle' src="warning-icon.png"> Warning</li>
+     <li><img alt='A "!" inside a solid red circle' src="error-icon.png"> Error</li>
+     <li><img alt="A red circle with a slash across it" src="blocked-icon.png"> Blocked; for network messages</li>
     </ul>
 
     <p>In addition, a disclosure triangle indicates that further information is available; clicking it displays or collapses that information.</p>
@@ -70,12 +70,12 @@ slug: Tools/Web_Console/Console_messages
 <h3 id="Network">Network</h3>
 
 <div class="note">
-<p>Network log messages are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">filtering</a> feature to show them.</p>
+<p>Network log messages are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">filtering</a> feature to show them.</p>
 </div>
 
 <p>Network requests are logged with a line that looks like this:</p>
 
-<p><img alt="Screenshot of a network response message, with its parts annotated" src="https://mdn.mozillademos.org/files/17335/response-msg-annotated.png" style="display: block; height: 133px; margin-left: auto; margin-right: auto; width: 891px;"></p>
+<p><img alt="Screenshot of a network response message, with its parts annotated" src="response-msg-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <table class="fullwidth-table standard-table">
  <tbody>
@@ -108,7 +108,7 @@ slug: Tools/Web_Console/Console_messages
 
 <p>The context menu for network messages includes a few extra items in addition the globally-available ones:</p>
 
-<p><img alt="Screenshot showing the context menu for network response messages" src="https://mdn.mozillademos.org/files/17336/response-msg-context-menu.png" style="border: 1px solid black; display: block; height: 249px; margin: 0px auto; width: 481px;"></p>
+<p><img alt="Screenshot showing the context menu for network response messages" src="response-msg-context-menu.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <dl>
  <dt>Copy link location</dt>
@@ -135,17 +135,17 @@ slug: Tools/Web_Console/Console_messages
 
 <p>Stack traces show stack frames for <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async functions</a> separately from those for synchronous functions. When you run code containing an async function, its traces (<a href="/en-US/docs/Web/API/Console/trace">console.trace</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">thrown error</a>) are shown with an <em>Async:</em> prefix.</p>
 
-<p><img alt="Console log showing a trace containing async code" src="https://mdn.mozillademos.org/files/17026/Async-trace.png" style="height: 442px; width: 771px;"></p>
+<p><img alt="Console log showing a trace containing async code" src="async-trace.png"></p>
 
 <h3 id="CSS">CSS</h3>
 
 <div class="note">
-<p><strong>Note</strong>: CSS warnings and reflow messages are not shown by default, for performance reasons (see {{bug(1452143)}}). Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">filtering</a> feature to show them.</p>
+<p><strong>Note</strong>: CSS warnings and reflow messages are not shown by default, for performance reasons (see {{bug(1452143)}}). Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">filtering</a> feature to show them.</p>
 </div>
 
 <p>Some CSS messages contain a disclosure triangle at the left of the message. Click it to view more information about the error, as well as which DOM nodes are affected by the error.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16674/css_warnings.png" style="display: block; height: 346px; margin: 0px auto; width: 918px;"></p>
+<p><img alt="" src="css_warnings.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Security">Security</h3>
 
@@ -161,27 +161,27 @@ slug: Tools/Web_Console/Console_messages
   </tr>
   <tr>
    <td>Blocked loading mixed active content</td>
-   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser blocked this active content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser blocked this active content. See <a href="/en-US/docs/Web/Security/Mixed_content">Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>Blocked loading mixed display content</td>
-   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser blocked this display content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser blocked this display content. See <a href="/en-US/docs/Web/Security/Mixed_content">Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>Loading mixed (insecure) active content on a secure page</td>
-   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser loaded this active content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed active content: that is, the main page was served over HTTPS, but asked the browser to load "active content", such as scripts, over HTTP. The browser loaded this active content. See <a href="/en-US/docs/Web/Security/Mixed_content">Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>Loading mixed (insecure) display content on a secure page</td>
-   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser loaded this display content. See <a href="/en-US/docs/Security/MixedContent">Mixed Content</a> for more details.</td>
+   <td>The page contained mixed display content: that is, the main page was served over HTTPS, but asked the browser to load "display content", such as images, over HTTP. The browser loaded this display content. See <a href="/en-US/docs/Web/Security/Mixed_content">Mixed Content</a> for more details.</td>
   </tr>
   <tr>
    <td>This site specified both an X-Content-Security-Policy/Report-Only header and a Content-Security-Policy/Report-Only header. The X-Content-Security-Policy/Report-Only header(s) will be ignored.</td>
-   <td>See <a href="/en-US/docs/Security/CSP">Content Security Policy</a> for more details.</td>
+   <td>See <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> for more details.</td>
   </tr>
   <tr>
    <td>The X-Content-Security-Policy and X-Content-Security-Report-Only headers will be deprecated in the future. Please use the Content-Security-Policy and Content-Security-Report-Only headers with CSP spec compliant syntax instead.</td>
-   <td>See <a href="/en-US/docs/Security/CSP">Content Security Policy</a> for more details.</td>
+   <td>See <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> for more details.</td>
   </tr>
   <tr>
    <td>Password fields present on an insecure (http://) page. This is a security risk that allows user login credentials to be stolen.</td>
@@ -197,7 +197,7 @@ slug: Tools/Web_Console/Console_messages
   </tr>
   <tr>
    <td>The site specified an invalid Strict-Transport-Security header.</td>
-   <td>See <a href="/en-US/docs/Security/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a> for more details.</td>
+   <td>See <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> for more details.</td>
   </tr>
   <tr>
    <td>
@@ -206,7 +206,7 @@ slug: Tools/Web_Console/Console_messages
    <td>
     <p>The site uses a certificate whose signature uses the SHA-1 hash algorithm.</p>
 
-    <p>SHA-1 is still widely used in certificates, but it is starting to show its age. Web sites and Certification Authorities are encouraged to switch to stronger hash algorithms in future. See the <a href="/en-US/docs/Security/Weak_Signature_Algorithm">Weak Signature Algorithm</a> article for more details.</p>
+    <p>SHA-1 is still widely used in certificates, but it is starting to show its age. Web sites and Certification Authorities are encouraged to switch to stronger hash algorithms in future. See the <a href="/en-US/docs/Web/Security/Weak_Signature_Algorithm">Weak Signature Algorithm</a> article for more details.</p>
 
     <p>Note that the SHA-1 certificate may not be your site's own certificate, but may be the certificate belonging to a Certification Authority that was used to sign your site's certificate.</p>
    </td>
@@ -219,7 +219,7 @@ slug: Tools/Web_Console/Console_messages
 <h3 id="Logging">Logging</h3>
 
 <div class="note">
-<p>Messages logged from <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a>, <a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a>, add-ons, and <a href="/en-US/docs/Mozilla/ChromeWorkers">Chrome Workers</a> are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#Filtering_by_category">filtering</a> feature to show them.</p>
+<p>Messages logged from <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a>, <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>, add-ons, and <a href="/en-US/docs/Mozilla/ChromeWorkers">Chrome Workers</a> are not shown by default. Use the <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">filtering</a> feature to show them.</p>
 </div>
 
 <p>The Logging category includes messages logged using the <a href="/en-US/docs/Web/API/Console">Console</a> API.</p>
@@ -227,22 +227,22 @@ slug: Tools/Web_Console/Console_messages
 <p>The Web console supports the following <a href="/en-US/docs/Web/API/Console">Console API</a> messages:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Console.assert"><code>assert()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/console/assert"><code>assert()</code></a></li>
  <li><code><a href="/en-US/docs/Web/API/Console/clear">clear()</a></code></li>
- <li><a href="/en-US/docs/Web/API/Console.count"><code>count()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.dir"><code>dir()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/count"><code>count()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/dir"><code>dir()</code></a></li>
  <li><a href="/en-US/docs/Web/API/Console.dirxml"><code>dirxml()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.error"><code>error()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/error"><code>error()</code></a></li>
  <li><code>exception()</code></li>
- <li><code><a href="/en-US/docs/Web/API/Console.group">group()</a></code></li>
+ <li><code><a href="/en-US/docs/Web/API/Console/group">group()</a></code></li>
  <li><code><a href="/en-US/docs/Web/API/Console/groupEnd">groupEnd()</a></code></li>
  <li><code>info()</code></li>
- <li><a href="/en-US/docs/Web/API/Console.log"><code>log()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.table"><code>table()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.time"><code>time()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.timeEnd"><code>timeEnd()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.trace"><code>trace()</code></a></li>
- <li><a href="/en-US/docs/Web/API/Console.warn"><code>warn()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/log"><code>log()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/table"><code>table()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/time"><code>time()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/timeEnd"><code>timeEnd()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/trace"><code>trace()</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Console/warn"><code>warn()</code></a></li>
 </ul>
 
 <p>The console prints a stack trace for all error messages, like this:</p>
@@ -261,7 +261,7 @@ function doStuff() {
 
 doStuff();</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11665/error-stack.png" style="display: block; height: 92px; margin-left: auto; margin-right: auto; width: 465px;"></p>
+<p><img alt="" src="error-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Server">Server</h3>
 
@@ -304,7 +304,7 @@ doStuff();</pre>
 
 <p>You can use the toolbar along the top to constrain the results displayed.</p>
 
-<p><img alt="Screenshot showing the web console, with the toolbar highlighted" src="https://mdn.mozillademos.org/files/17337/console-toolbar.png" style="display: block; height: 148px; margin-left: auto; margin-right: auto; width: 968px;">To see only messages of particular categories, click the button labeled with that category (<strong>Errors</strong>, <strong>CSS</strong>, and so on).</p>
+<p><img alt="Screenshot showing the web console, with the toolbar highlighted" src="console-toolbar.png" style="display: block; margin-left: auto; margin-right: auto;">To see only messages of particular categories, click the button labeled with that category (<strong>Errors</strong>, <strong>CSS</strong>, and so on).</p>
 
 <p>For Errors and Warnings, when you turn off display of the category, a number appears next to the button text to indicate how many messages of that type are available. For example, "Warnings (25)".</p>
 
@@ -314,7 +314,7 @@ doStuff();</pre>
 
 <p>To see only messages that contain a specific string, type in the text box labeled "Filter output". For example, if you entered the string img into the text box, you would have a list something like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16621/console_clear_filter.png" style="border: 1px solid black; display: block; height: 169px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="console_clear_filter.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>A small "x" icon appears at the right end of the text box when you have entered a string on which to filter the output. Click the "x" icon to clear the filter and show the entire list again.</p>
 

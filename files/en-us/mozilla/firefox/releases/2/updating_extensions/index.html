@@ -13,12 +13,12 @@ tags:
 
 <p>Find the line indicating the maximum compatible version of Firefox (which, for Firefox 1.5, might look like this):</p>
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;1.5.0.*&lt;/em:maxVersion&gt;</span>
+<pre class="eval"> &lt;em:maxVersion&gt;1.5.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>Change it to indicate compatibility with Firefox 2:</p>
 
-<pre class="eval"> <span class="nowiki">&lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;</span>
+<pre class="eval"> &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
 </pre>
 
 <p>Then reinstall your extension.</p>
@@ -35,6 +35,6 @@ tags:
 
 <h2 id="Step_4:_Release">Step 4: Release</h2>
 
-<p>Update your extension's entry on <a class="external" href="http://addons.mozilla.org" rel="freelink">http://addons.mozilla.org</a>. This will ensure that users can find it.</p>
+<p>Update your extension's entry on <a class="external" href="http://addons.mozilla.org">http://addons.mozilla.org</a>. This will ensure that users can find it.</p>
 
 <p>In addition, if your extension provides an <code><a href="/en-US/Install_Manifests#updateURL">updateURL</a></code> in the install manifest, be sure to update the update manifest so that the new version of your extension can be found automatically by Firefox. By doing this, the first time the user runs your extension after upgrading to Firefox 2, Firefox can offer to automatically install it for them.</p>

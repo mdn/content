@@ -15,7 +15,7 @@ tags:
   - rgba
   - unit
 ---
-<div>{{CSSReF}}</div>
+<div>{{CSSRef}}</div>
 
 <p>The <strong><code>&lt;color&gt;</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">data type</a> represents a color in the <a class="external" href="https://en.wikipedia.org/wiki/SRGB">sRGB color space</a>. A <code>&lt;color&gt;</code> may also include an <a class="external" href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha-channel</a> <em>transparency value</em>, indicating how the color should <a class="external" href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">composite</a> with its background.</p>
 
@@ -964,6 +964,14 @@ tags:
  <dd>
  <p>Text of non-active, non-visited links</p>
  </dd>
+ <dt>Mark</dt>
+ <dd>
+ <p>Background of text that has been specially marked (such as by the HTML <code>mark</code> element)</p>
+ </dd>
+ <dt>MarkText</dt>
+ <dd>
+ <p>Text that has been specially marked (such as by the HTML <code>mark</code> element)</p>
+ </dd>
  <dt>VisitedText</dt>
  <dd>
  <p>Text of visited links</p>
@@ -1331,8 +1339,8 @@ rgba(51, 170, 51, .7)   <span style="background: rgba(51, 170, 51, .7);"> /*  70
 rgba(51, 170, 51,  1)   <span style="background: rgba(51, 170, 51,  1);"> /* full opaque green */ </span>
 
 /* Whitespace syntax */
-rgba(51 170 51 / 0.4)   <span> /*  40% opaque green */ </span>
-rgba(51 170 51 / 40%)   <span> /*  40% opaque green */ </span>
+rgba(51 170 51 / 0.4)    /*  40% opaque green */ 
+rgba(51 170 51 / 40%)    /*  40% opaque green */ 
 
 /* Functional syntax with floats value */
 rgba(255, 0, 153.6, 1)

@@ -23,7 +23,7 @@ tags:
 </div>
 
 <div class="notecard note">
-<p><strong>Note:</strong> “Array-like” means that <code>arguments</code> has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} or {{jsxref("Array.map", "map()")}}. See <a href="#Description">§Description</a> for details.</p>
+<p><strong>Note:</strong> “Array-like” means that <code>arguments</code> has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} or {{jsxref("Array.map", "map()")}}. See <a href="#description">§Description</a> for details.</p>
 </div>
 
 <p>The <code>arguments</code> object is a local variable available within all non-<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow</a> functions. You can refer to a function's arguments inside that function by using its <code>arguments</code> object. It has entries for each argument the function was called with, with the first entry's index at <code>0</code>.</p>
@@ -79,7 +79,7 @@ let args = [...arguments];
 
 <p>The type of individual arguments can be determined by indexing <code>arguments</code>:</p>
 
-<pre class="notranslate">console.log(typeof arguments[0]); // returns the type of the first argument</pre>
+<pre class="brush: js notranslate">console.log(typeof arguments[0]); // returns the type of the first argument</pre>
 
 <h2 id="Properties">Properties</h2>
 
@@ -98,14 +98,14 @@ let args = [...arguments];
 
 <p>This example defines a function that concatenates several strings. The function's only formal argument is a string containing the characters that separate the items to concatenate.</p>
 
-<pre class="brush:js notranslate">function myConcat(separator) {
+<pre class="brush: js notranslate">function myConcat(separator) {
   let args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }</pre>
 
 <p>You can pass as many arguments as you like to this function. It returns a string list using each argument in the list:</p>
 
-<pre class="brush:js notranslate">// returns "red, orange, blue"
+<pre class="brush: js notranslate">// returns "red, orange, blue"
 myConcat(', ', 'red', 'orange', 'blue');
 
 // returns "elephant; giraffe; lion; cheetah"
@@ -118,7 +118,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>This example defines a function that creates a string containing HTML for a list. The only formal argument for the function is a string that is "<code>u</code>" if the list is to be <a href="/en-US/docs/Web/HTML/Element/ul">unordered (bulleted)</a>, or "<code>o</code>" if the list is to be <a href="/en-US/docs/Web/HTML/Element/ol">ordered (numbered)</a>. The function is defined as follows:</p>
 
-<pre class="brush:js notranslate">function list(type) {
+<pre class="brush: js notranslate">function list(type) {
   var html = '&lt;' + type + 'l&gt;&lt;li&gt;';
   var args = Array.prototype.slice.call(arguments, 1);
   html += args.join('&lt;/li&gt;&lt;li&gt;');
@@ -128,7 +128,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');</pre>
 
 <p>You can pass any number of arguments to this function, and it adds each argument as a list item to a list of the type indicated. For example:</p>
 
-<pre class="brush:js notranslate">let listHTML = list('u', 'One', 'Two', 'Three');
+<pre class="brush: js notranslate">let listHTML = list('u', 'One', 'Two', 'Three');
 
 /* listHTML is:
 "&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"

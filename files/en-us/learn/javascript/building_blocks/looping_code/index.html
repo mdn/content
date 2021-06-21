@@ -13,7 +13,7 @@ tags:
   - break
   - continue
   - for
-  - 'l10n:priority'
+  - l10n:priority
   - while
 ---
 <div>{{LearnSidebar}}</div>
@@ -42,7 +42,7 @@ tags:
 <p>Let's consider the case of a farmer who is making sure he has enough food to feed his family for the week. He might use the following loop to achieve this:</p>
 
 <p><br>
- <img alt="" src="https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png" style="display: block; margin: 0 auto;"></p>
+ <img alt="" src="loop_js-02-farm.png" style="display: block; margin: 0 auto;"></p>
 
 <p>A loop usually has one or more of the following features:</p>
 
@@ -322,7 +322,7 @@ btn.addEventListener('click', function() {
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
       break;
-    } else {
+    } else if (i === contacts.length - 1) {
       para.textContent = 'Contact not found.';
     }
   }
@@ -465,7 +465,7 @@ for (let i = 1; i &lt;= num; i++) {
  <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
  <li>Inside the loop, we find the square root of each number using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a> does to the number it is passed).</li>
  <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the <code>continue</code> statement to skip on to the next loop iteration without recording the number anywhere.</li>
- <li>If the square root is an integer, we skip past the if block entirely, so the <code>continue</code> statement is not executed; instead, we concatenate the current <code>i</code> value plus a space on to the end of the paragraph content.</li>
+ <li>If the square root is an integer, we skip past the <code>if</code> block entirely, so the <code>continue</code> statement is not executed; instead, we concatenate the current <code>i</code> value plus a space on to the end of the paragraph content.</li>
 </ol>
 
 <div class="note">
@@ -906,7 +906,7 @@ do {
 
 <p>This article has revealed to you the basic concepts behind, and different options available when looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code and are raring to use them in your own examples!</p>
 
-<p>If there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/docs/Learn#Contact_us">contact us</a> to ask for help.</p>
+<p>If there is anything you didn't understand, feel free to read through the article again, or <a href="/en-US/docs/Learn#contact_us">contact us</a> to ask for help.</p>
 
 <h2 id="See_also">See also</h2>
 

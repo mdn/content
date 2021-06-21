@@ -95,19 +95,19 @@ tags:
   <tr>
    <td><code>x(?!y)</code></td>
    <td>
-    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x"<span> is not followed by </span>"y"<span>.</span> For example, <code>/\d+(?!\.)/</code><span> matches a number only if it is not followed by a decimal point. </span><code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3".</p>
+    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x" is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3".</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;=y)x</code></td>
    <td>
-    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code><span> matches "Sprat" only if it is preceded by "Jack". </span><code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
+    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code> matches "Sprat" only if it is preceded by "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;!y)x</code></td>
    <td>
-    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code><span> matches a number only if it is not preceded by a minus sign. </span><code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
+    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
    </td>
   </tr>
  </tbody>
@@ -150,14 +150,14 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 let fruitsStartsWithA = fruits.filter(fruit =&gt; /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
 
-<p>In the second example <code>^</code> is used both for matching at the beginning of input and for creating negated or complemented character sets when used within <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups</a>.</p>
+<p>In the second example <code>^</code> is used both for matching at the beginning of input and for creating negated or complemented character class when used within <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">groups</a>.</p>
 
 <pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Selecting fruits that dose not start by 'A' by a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
 // 1) Matching begining of the input
-// 2) A negated or complemented character set: [^A]
+// 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 
 let fruitsStartsWithNotA = fruits.filter(fruit =&gt; /^[^A]/.test(fruit));
@@ -187,7 +187,7 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 
 <h3 id="Basic_negative_lookahead_assertion">Basic negative lookahead assertion</h3>
 
-<p>For example, <code>/\d+(?!\.)/</code><span> matches a number only if it is not followed by a decimal point. </span><code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
+<p>For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
 
 <pre class="brush: js">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 </pre>

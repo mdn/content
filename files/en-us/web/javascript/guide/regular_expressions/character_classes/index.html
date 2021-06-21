@@ -36,10 +36,10 @@ tags:
 
     <ul>
      <li>Matches any single character <em>except</em> line terminators: <code>\n</code>, <code>\r</code>, <code>\u2028</code> or <code>\u2029</code>. For example, <code>/.y/</code> matches "my" and "ay", but not "yes", in "yes make my day".</li>
-     <li>Inside a character set, the dot loses its special meaning and matches a literal dot.</li>
+     <li>Inside a character class, the dot loses its special meaning and matches a literal dot.</li>
     </ul>
 
-    <p>Note that the <code>m</code> multiline flag doesn't change the dot behavior. So to match a pattern across multiple lines, the character set <code>[^]</code> can be used — it will match any character including newlines.</p>
+    <p>Note that the <code>m</code> multiline flag doesn't change the dot behavior. So to match a pattern across multiple lines, the character class <code>[^]</code> can be used — it will match any character including newlines.</p>
 
     <p>ES2018 added the <code>s</code> "dotAll" flag, which allows the dot to also match line terminators.</p>
    </td>

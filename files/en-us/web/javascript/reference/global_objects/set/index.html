@@ -20,7 +20,7 @@ tags:
 
 <h3 id="Value_equality">Value equality</h3>
 
-<p>Because each value in the <code>Set</code> has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the <code>===</code> operator. Specifically, for <code>Set</code>s, <code>+0</code> (which is strictly equal to <code>-0</code>) and <code>-0</code> were different values. However, this was changed in the ECMAScript 2015 specification. See <em>"Key equality for -0 and 0"</em> in the <a href="#Browser_compatibility">browser compatibility</a> table for details.</p>
+<p>Because each value in the <code>Set</code> has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the <code>===</code> operator. Specifically, for <code>Set</code>s, <code>+0</code> (which is strictly equal to <code>-0</code>) and <code>-0</code> were different values. However, this was changed in the ECMAScript 2015 specification. See <em>"Key equality for -0 and 0"</em> in the <a href="#browser_compatibility">browser compatibility</a> table for details.</p>
 
 <p>{{jsxref("NaN")}} and {{jsxref("undefined")}} can also be stored in a Set. All <code>NaN</code> values are equated (i.e. <code>NaN</code> is considered the same as <code>NaN</code>, even though <code>NaN !== NaN</code>).</p>
 

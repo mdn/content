@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getContext = browser.contextualIdentities.query(
+<pre class="brush:js">var getContext = browser.contextualIdentities.query(
   details                  // object
 )
 </pre>
@@ -52,7 +52,7 @@ tags:
 
 <p>Retrieve all contextual identities, and log their names:</p>
 
-<pre class="brush: js">function onGot(contexts) {
+<pre class="notranslate brush: js">function onGot(contexts) {
   for (let context of contexts) {
     console.log(`Name: ${context.name}`);
   }
@@ -66,7 +66,7 @@ browser.contextualIdentities.query({}).then(onGot, onError);</pre>
 
 <p>Retrieve all contextual identities whose names are "my-thing", and log their names:</p>
 
-<pre class="brush: js">function onGot(contexts) {
+<pre class="notranslate brush: js">function onGot(contexts) {
   for (let context of contexts) {
     console.log(`Name: ${context.name}`);
   }

@@ -148,7 +148,7 @@ circle2.bind("EnterFrame", function () {
 </pre>
 </div>
 
-<pre class="brush: js notranslate"><code>var circle1 = {radius: 20, x: 5, y: 5};
+<pre class="brush: js notranslate">var circle1 = {radius: 20, x: 5, y: 5};
 var circle2 = {radius: 12, x: 10, y: 5};
 
 var dx = circle1.x - circle2.x;
@@ -157,7 +157,7 @@ var distance = Math.sqrt(dx * dx + dy * dy);
 
 if (distance &lt; circle1.radius + circle2.radius) {
     // collision detected!
-}</code>
+}
 </pre>
 
 <p>{{ EmbedLiveSample('Playable_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}</p>

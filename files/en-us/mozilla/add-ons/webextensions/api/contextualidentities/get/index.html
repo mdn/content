@@ -19,7 +19,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var getContext = browser.contextualIdentities.get(
+<pre class="brush:js">var getContext = browser.contextualIdentities.get(
   cookieStoreId                  // string
 )
 </pre>
@@ -47,7 +47,7 @@ tags:
 
 <p>This example tries to retrieve the contextual identity whose ID is "firefox-container-1":</p>
 
-<pre class="brush: js">function onGot(context) {
+<pre class="notranslate brush: js">function onGot(context) {
   if (!context) {
     console.error("Context not found");
   } else {

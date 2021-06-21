@@ -18,7 +18,7 @@ list will appear to have been leaked. This makes it difficult to tell
 arenas that are truly leaked from those that are merely in the free list.
 </p><p>There is a function named PL_ArenaFinish that really frees all the
 arenas on the free list. See the prototype at
-<a class=" external" href="http://mxr.mozilla.org/nspr/source/nsprpub/lib/ds/plarenas.h" rel="freelink">http://mxr.mozilla.org/nspr/source/n.../ds/plarenas.h</a>
+<a class=" external" href="http://mxr.mozilla.org/nspr/source/nsprpub/lib/ds/plarenas.h">http://mxr.mozilla.org/nspr/source/n.../ds/plarenas.h</a>
 </p><p>A program should call that function at the very end, after having
 shutdown NSS and NSPR, to really free the contents of the free list.
 After that function returns, any arenas that still appear to be leaked

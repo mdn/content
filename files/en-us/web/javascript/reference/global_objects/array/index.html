@@ -279,6 +279,8 @@ const myArray = myRe.exec('cdbBdbsbz')
 <h2 id="Instance_methods">Instance methods</h2>
 
 <dl>
+ <dt>{{jsxref("Array.prototype.at()")}}{{Experimental_Inline}}</dt>
+ <dd>Returns the array item at the given index. Accepts negative integers, which count back from the last item.</dd>
  <dt>{{jsxref("Array.prototype.concat()")}}</dt>
  <dd>Returns a new array that is this array joined with other array(s) and/or value(s).</dd>
  <dt>{{jsxref("Array.prototype.copyWithin()")}}</dt>
@@ -380,7 +382,7 @@ console.log(board.join('\n'))
 
 <p>Here is the output:</p>
 
-<pre class="eval notranslate">R,N,B,Q,K,B,N,R
+<pre class="brush: plain notranslate">R,N,B,Q,K,B,N,R
 P,P,P,P,P,P,P,P
  , , , , , , ,
  , , , , , , ,
@@ -412,7 +414,7 @@ console.table(values)</pre>
 
 <p>Results in</p>
 
-<pre class="eval notranslate">// The first column is the index
+<pre class="brush: plain notranslate">// The first column is the index
 0	1	0
 1	2	2
 2	4	8

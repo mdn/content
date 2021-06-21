@@ -18,9 +18,17 @@ a {
   color: red;
 }</pre>
 
+<p>Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.</p>
+
+<ul>
+  <li><code>ns|h1</code> - matches <code>&lt;h1&gt;</code> elements in namespace <em>ns</em></li>
+  <li><code>*|h1</code> - matches all <code>&lt;h1&gt;</code> elements</li>
+  <li><code>|h1</code> - matches all <code>&lt;h1&gt;</code> elements without any declared namespace</li>
+ </ul>
+
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">element { <em>style properties</em> }
+<pre class="brush: css notranslate">element { <em>style properties</em> }
 </pre>
 
 <h2 id="Examples">Examples</h2>
@@ -42,6 +50,14 @@ a {
 <h3 id="Result">Result</h3>
 
 <p>{{EmbedLiveSample('Examples', '100%', 150)}}</p>
+
+<h3 id="namespacing">Namespaces</h3>
+
+<p>In this example the selector will only match <code>&lt;h1&gt;</code> elements in the example namespace.</p>
+
+<pre class="brush: css notranslate">@namespace example url(http://www.example.com);
+example|h1 { color: blue } 
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -22,7 +22,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.runtime.onConnectExternal.addListener(listener)
+<pre class="brush:js">browser.runtime.onConnectExternal.addListener(listener)
 browser.runtime.onConnectExternal.removeListener(listener)
 browser.runtime.onConnectExternal.hasListener(listener)
 </pre>
@@ -64,7 +64,7 @@ browser.runtime.onConnectExternal.hasListener(listener)
 
 <p>In this example the extension Hansel connects to the extension Gretel:</p>
 
-<pre class="brush: js">console.log("connecting to Gretel");
+<pre class="notranslate brush: js">console.log("connecting to Gretel");
 var myPort = browser.runtime.connect(
   "gretel@mozilla.org"
 );
@@ -79,7 +79,7 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>Gretel listens for the connection and checks that the sender is really Hansel:</p>
 
-<pre class="brush: js">var portFromHansel;
+<pre class="notranslate brush: js">var portFromHansel;
 
 browser.runtime.onConnectExternal.addListener((port) =&gt; {
   console.log(port);

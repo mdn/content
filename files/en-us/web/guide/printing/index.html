@@ -90,16 +90,16 @@ function setPrint () {
 }
 
 function printPage (sURL) {
-  var oHiddFrame = document.createElement("iframe");
-  oHiddFrame.onload = setPrint;
-  oHiddFrame.style.position = "fixed";
-  oHiddFrame.style.right = "0";
-  oHiddFrame.style.bottom = "0";
-  oHiddFrame.style.width = "0";
-  oHiddFrame.style.height = "0";
-  oHiddFrame.style.border = "0";
-  oHiddFrame.src = sURL;
-  document.body.appendChild(oHiddFrame);
+  var oHideFrame = document.createElement("iframe");
+  oHideFrame.onload = setPrint;
+  oHideFrame.style.position = "fixed";
+  oHideFrame.style.right = "0";
+  oHideFrame.style.bottom = "0";
+  oHideFrame.style.width = "0";
+  oHideFrame.style.height = "0";
+  oHideFrame.style.border = "0";
+  oHideFrame.src = sURL;
+  document.body.appendChild(oHideFrame);
 }
 &lt;/script&gt;
 &lt;/head&gt;

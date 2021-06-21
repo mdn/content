@@ -168,7 +168,7 @@ m|math {
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> has an <a href="https://github.com/fred-wang/x-tex">&lt;x-tex&gt;</a> custom element, that can be used to write things like</p>
 
-<pre class="notranslate"><span class="brush: html">&lt;<span class="start-tag">x-tex</span>&gt;</span><span>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</span><span class="brush: html">&lt;/<span class="end-tag">x-tex</span>&gt;</span></pre>
+<pre class="notranslate">&lt;x-tex&gt;\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1&lt;/x-tex&gt;</pre>
 
 <p>and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript parsing of expressions at load time</a> as all the other tools in this section do.</p>
 
@@ -188,17 +188,17 @@ m|math {
 
 <p><a href="http://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> is a similar script that allows to parse more LaTeX commands. The installation is similar: copy <a href="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> and <a href="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, add links in the header of your document and the LaTeX content of your Web page marked by the "LaTeX" class will be automatically parsed and converted to HTML+MathML:</p>
 
-<pre class="brush: html notranslate"><span>&lt;<span class="start-tag">head</span>&gt;</span>
-<span>...
-</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a class="attribute-value">LaTeXMathML.js</a>"&gt;</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
-</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">href</span>="<a class="attribute-value">LaTeXMathML.standardarticle.css</a>" <span>/</span>&gt;</span><span>
+<pre class="brush: html notranslate">&lt;head&gt;
 ...
-</span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+&lt;script type="text/javascript" src="LaTeXMathML.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="LaTeXMathML.standardarticle.css" /&gt;
+...
+&lt;/head&gt;
 
-</span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+&lt;body&gt;
 ...
 
-</span>&lt;div class="LaTeX"&gt;
+&lt;div class="LaTeX"&gt;
 \documentclass[12pt]{article}
 
 \begin{document}
@@ -282,10 +282,10 @@ sudo make install
 <pre class="notranslate">  latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
   latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub</pre>
 
-<p>To handle the case of browsers without MathML support, you can use the <code>--javascript</code> parameter to tell LaTeXML to include one of the <a href="#Fallback_for_Browsers_without_MathML_support">fallback scripts</a>:</p>
+<p>To handle the case of browsers without MathML support, you can use the <code>--javascript</code> parameter to tell LaTeXML to include one of the <a href="#fallback_for_browsers_without_mathml_support">fallback scripts</a>:</p>
 
-<pre class="notranslate">  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">https://fred-wang.github.io/mathml.css/mspace.js</span></span></span></code> foo.tex  # Add the CSS fallback
-  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">https://fred-wang.github.io/mathjax.js/mpadded-min.js</span></span></span></code> foo.tex # Add the MathJax fallback
+<pre class="notranslate">  latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
+  latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 </pre>
 
 <p>If your LaTeX document is big, you might want to split it into several small pages rather than putting everything in a single large page. For example, this will split the pages at the <code>\section</code> level:</p>

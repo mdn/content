@@ -13,15 +13,15 @@ tags:
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions">page action</a> is a clickable icon inside the browser's address bar.</p>
+<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">page action</a> is a clickable icon inside the browser's address bar.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12960/page-action.png" style="display: block; height: 262px; margin-left: auto; margin-right: auto; width: 850px;"></p>
+<p><img alt="" src="page-action.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>You can listen for clicks on the icon, or specify a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Popups">popup</a> that will open when the icon is clicked.</p>
+<p>You can listen for clicks on the icon, or specify a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a> that will open when the icon is clicked.</p>
 
 <p>If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript—just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.</p>
 
-<p>You can define most of a page action's properties declaratively using the <a href="/en-US/Add-ons/WebExtensions/manifest.json/page_action"><code>page_action</code> key</a> in your <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>, but can also redefine them programmatically using this API.</p>
+<p>You can define most of a page action's properties declaratively using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>page_action</code> key</a> in your <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>, but can also redefine them programmatically using this API.</p>
 
 <p>Page actions are for actions that are only relevant to particular pages (such as "bookmark the current tab"). If they are relevant to the browser as a whole (such as "show all bookmarks"), use a browser action instead.</p>
 

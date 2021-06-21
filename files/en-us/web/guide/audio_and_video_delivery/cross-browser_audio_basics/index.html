@@ -39,7 +39,7 @@ tags:
  <li>We do this using the {{ htmlelement("source") }} element, which takes the attributes <code>src</code> and <code>type</code>.
   <ul>
    <li><code>src</code> contains the path to the audio file to be loaded (relative or absolute).</li>
-   <li><code>type</code> is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.<span id="cke_bm_369E" style="display: none;"> </span></li>
+   <li><code>type</code> is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.</li>
   </ul>
  </li>
  <li>If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing <code>&lt;/audio&gt;</code> tag. In this case, we've provided a simple paragraph including a link to download the audio directly.</li>

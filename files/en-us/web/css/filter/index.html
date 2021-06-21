@@ -50,12 +50,12 @@ filter: unset;
 
 <p>With a function, use the following:</p>
 
-<pre class="syntaxbox notranslate">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none
+<pre class="brush: css notranslate">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none
 </pre>
 
 <p>For a reference to an SVG {{SVGElement("filter")}} element, use the following:</p>
 
-<pre class="syntaxbox notranslate">filter: url(file.svg#filter-element-id)
+<pre class="brush: css notranslate">filter: url(file.svg#filter-element-id)
 </pre>
 
 <h3 id="Interpolation">Interpolation</h3>
@@ -85,8 +85,7 @@ filter: unset;
 
 <pre class="brush: css notranslate">filter: blur(5px)
 </pre>
-
-<div id="blur_example" style="display: none;">
+<div id="blur_example" class="hidden">
 <pre class="brush: html notranslate">  &lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -183,7 +182,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div id="brightness_example" style="display: none;">
+<div id="brightness_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -278,7 +277,7 @@ table.standard-table td {
 &lt;/svg&gt;
 </pre>
 
-<div id="contrast_example" style="display: none;">
+<div id="contrast_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -385,7 +384,7 @@ table.standard-table td {
 &lt;/svg&gt;
 </pre>
 
-<div id="shadow_example" style="display: none;">
+<div id="shadow_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -417,8 +416,8 @@ table.standard-table td {
       &lt;td&gt;&lt;img alt="Test_Form_4_s.jpg" id="img4" class="internal default" src="/files/3715/Test_Form_4_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorted border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorted border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class="svg-container"&gt;
           &lt;svg xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewbox="0 0 213 161" color-interpolation-filters="sRGB"&gt;
@@ -437,7 +436,7 @@ table.standard-table td {
           &lt;/svg&gt;
         &lt;/div&gt;
       &lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorted border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -509,7 +508,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: grayscale(100%)</pre>
 
-<div id="grayscale_example" style="display: none;">
+<div id="grayscale_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -592,7 +591,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: hue-rotate(90deg)</pre>
 
-<div id="huerotate_example" style="display: none;">
+<div id="huerotate_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -678,7 +677,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: invert(100%)</pre>
 
-<div id="invert_example" style="display: none;">
+<div id="invert_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -761,7 +760,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: opacity(50%)</pre>
 
-<div id="opacity_example" style="display: none;">
+<div id="opacity_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -842,7 +841,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: saturate(200%)</pre>
 
-<div id="saturate_example" style="display: none;">
+<div id="saturate_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -922,7 +921,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: sepia(100%)</pre>
 
-<div id="sepia_example" style="display: none;">
+<div id="sepia_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -1005,7 +1004,7 @@ table.standard-table td {
 
 <pre class="brush: css notranslate">filter: contrast(175%) brightness(103%)</pre>
 
-<div id="combination_example" style="display: none;">
+<div id="combination_example" class="hidden">
 <pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -1078,7 +1077,7 @@ table.standard-table td {
 
 <h2 id="Formal_syntax">Formal syntax</h2>
 
-<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
 
 <h2 id="Examples">Examples</h2>
 

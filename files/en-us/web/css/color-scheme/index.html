@@ -1,0 +1,94 @@
+---
+title: color-scheme
+slug: Web/CSS/color-scheme
+tags:
+  - CSS
+  - CSS Colors
+  - CSS Property
+  - HTML Colors
+  - HTML Styles
+  - Layout
+  - Reference
+  - Styling HTML
+  - Styling text
+  - Web
+  - color-adjust
+  - 'recipe:css-property'
+---
+<div>{{CSSRef}}</div>
+
+<p><span class="seoSummary">The <strong><code>color-scheme</code></strong> CSS property allows an element to indicate which color schemes is can comfortably be rendered in.</span></p>
+<p>Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes form controls, scrollbars, and the used values of CSS system colors.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: css notranslate">color-scheme: normal;
+color-scheme: light;
+color-scheme: dark;
+color-scheme: light dark;</pre>
+
+<p>The <code>color-scheme</code> property's value must be one of the following keywords.</p>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+	<dt><code>normal</code></dt>
+	<dd>Indicates that the element isn't aware of any color schemes, and so should be rendered using the browser's default color scheme.</dd>
+	<dt><code>light</code></dt>
+  <dd>Indicates that the element can be rendered using the operating system light color scheme.</dd>
+  <dt><code>dark</code></dt>
+	<dd>Indicates that the element can be rendered using the operating system dark color scheme.</dd>
+</dl>
+
+<h2 id="Formal_definition">Formal definition</h2>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Formal_syntax">Formal syntax</h2>
+
+<pre class="brush: css notranslate">{{csssyntax}}</pre>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Adapting_to_color_schemes">Adapting to color schemes</h3>
+
+<p>To opt the entire page into the user's color scheme preferences declare <code>color-scheme</code> on the {{cssxref(":root")}} element.</p>
+
+<pre class="brush: css notranslate">:root {
+  color-scheme: light dark;
+}
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+			<th scope="col">Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('CSS Color Adjust', '#color-scheme-prop', 'color-scheme')}}</td>
+			<td>{{Spec2('CSS Color Adjust')}}</td>
+			<td>Initial definition.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("css.properties.color-scheme")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
+	<li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
+	<li>{{cssxref("background-image")}}</li>
+	<li>{{cssxref("-webkit-print-color-adjust")}}</li>
+</ul>

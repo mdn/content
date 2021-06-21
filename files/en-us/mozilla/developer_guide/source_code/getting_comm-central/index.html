@@ -16,22 +16,22 @@ tags:
 
 <h2 id="Using_Mercurial">Using Mercurial</h2>
 
-<p><a href="/en-US/docs/Mercurial">Mercurial</a> is a source code management tool which enables users to track changes to their source code locally and share their changes with others. The Mozilla project is in transition from using <a href="/en-US/docs/Developer_Guide/Source_Code/CVS" title="Getting Older Mozilla Source Code Using CVS">CVS</a> for Mozilla 1.9 development to Mercurial for Mozilla 1.9.1 development and onwards.</p>
+<p><a href="/en-US/docs/Mercurial">Mercurial</a> is a source code management tool which enables users to track changes to their source code locally and share their changes with others. The Mozilla project is in transition from using <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS" title="Getting Older Mozilla Source Code Using CVS">CVS</a> for Mozilla 1.9 development to Mercurial for Mozilla 1.9.1 development and onwards.</p>
 
-<div class="note"><strong>Note:</strong> If you want to build Thunderbird 2.0, SeaMonkey 1.1, or older versions, use <a href="/en-US/docs/Developer_Guide/Source_Code/CVS" title="Getting Older Mozilla Source Code Using CVS">CVS</a>.</div>
+<div class="note"><strong>Note:</strong> If you want to build Thunderbird 2.0, SeaMonkey 1.1, or older versions, use <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS" title="Getting Older Mozilla Source Code Using CVS">CVS</a>.</div>
 
 <h3 id="Client_settings">Client settings</h3>
 
-<p>The settings are the same as for the core Firefox 3.5/xulrunner 1.9.1 development. See <a href="/en-US/docs/Developer_Guide/Source_Code/Mercurial#Client_settings">Mozilla_Source_Code_(Mercurial)#Client_settings</a>.</p>
+<p>The settings are the same as for the core Firefox 3.5/xulrunner 1.9.1 development. See <a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial#client_settings">Mozilla_Source_Code_(Mercurial)#Client_settings</a>.</p>
 
 <h3 id="Branches">Branches</h3>
 
 <p><a href="/en-US/docs/comm-central">comm-central</a> has various <a href="/en-US/docs/comm-central#Branches">different branches</a> available. Current possibilities are:</p>
 
 <ul>
- <li><code><a class="external" href="http://hg.mozilla.org/comm-central/" rel="freelink">http://hg.mozilla.org/comm-central/</a></code> (trunk builds of Thunderbird, SeaMonkey, and Sunbird)</li>
- <li><code><a class="external" href="http://hg.mozilla.org/releases/mozilla-1.9.1/" rel="freelink">http://hg.mozilla.org/releases/mozilla-1.9.1/</a></code> (Thunderbird 3.0, SeaMonkey 2.0, Sunbird 1.0)</li>
- <li><code><a class="external" href="http://hg.mozilla.org/releases/mozilla-1.9.2/" rel="freelink">http://hg.mozilla.org/releases/mozilla-1.9.2/</a></code> (Thunderbird 3.1)</li>
+ <li><code><a class="external" href="http://hg.mozilla.org/comm-central/">http://hg.mozilla.org/comm-central/</a></code> (trunk builds of Thunderbird, SeaMonkey, and Sunbird)</li>
+ <li><code><a class="external" href="http://hg.mozilla.org/releases/mozilla-1.9.1/">http://hg.mozilla.org/releases/mozilla-1.9.1/</a></code> (Thunderbird 3.0, SeaMonkey 2.0, Sunbird 1.0)</li>
+ <li><code><a class="external" href="http://hg.mozilla.org/releases/mozilla-1.9.2/">http://hg.mozilla.org/releases/mozilla-1.9.2/</a></code> (Thunderbird 3.1)</li>
 </ul>
 
 <p>For more information on these branches, see the <a href="/en-US/docs/comm-central">comm-central</a> page.</p>
@@ -66,7 +66,7 @@ cd src
 
 <ul>
  <li>Pulls any new changesets to the comm-central codebase</li>
- <li>Pulls the <a href="/en-US/docs/mozilla-central">mozilla-central</a> codebase into mozilla/</li>
+ <li>Pulls the <a href="/en-US/docs/Mozilla/Developer_guide/mozilla-central">mozilla-central</a> codebase into mozilla/</li>
  <li>Pulls the following repositories into mozilla/extensions/:
   <ul>
    <li>irc (Chatzilla)</li>
@@ -107,9 +107,9 @@ cd gecko-dev-master</pre>
 <p>For the comm-central apps, see the following links:</p>
 
 <ul>
- <li><a class="internal" href="/en-US/docs/Simple_Thunderbird_build">Simple Thunderbird Build</a></li>
- <li><a class="internal" href="/en-US/docs/Simple_SeaMonkey_build">Simple SeaMonkey Build</a></li>
- <li><a class="internal" href="/en-US/docs/Simple_Sunbird_build">Simple Sunbird Build</a></li>
+ <li><a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Thunderbird_build">Simple Thunderbird Build</a></li>
+ <li><a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_SeaMonkey_build">Simple SeaMonkey Build</a></li>
+ <li><a class="internal" href="/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Sunbird_build">Simple Sunbird Build</a></li>
 </ul>
 
 <h3 id="Example">Example</h3>
@@ -148,5 +148,5 @@ make -f client.mk build
  <li><a href="/en-US/docs/comm-central">comm-central</a></li>
  <li><a href="/en-US/docs/Mercurial">Mercurial</a></li>
  <li><a href="/en-US/docs/Mercurial_FAQ">Mercurial FAQ</a></li>
- <li><a href="/en-US/docs/Developer_Guide/Source_Code/Mercurial">Mozilla_Source_Code_(Mercurial)</a></li>
+ <li><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">Mozilla_Source_Code_(Mercurial)</a></li>
 </ul>

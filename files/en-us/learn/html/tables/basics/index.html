@@ -40,13 +40,13 @@ tags:
 
 <p>A table is a structured set of data made up of rows and columns (<strong>tabular data</strong>). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day of the week, or the timetable for a local swimming pool.</p>
 
-<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="https://mdn.mozillademos.org/files/14583/numbers-table.png" style="display: block; height: 156px; margin: 0px auto; width: 350px;"></p>
+<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="numbers-table.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="A swimming timetable showing a sample data table" src="https://mdn.mozillademos.org/files/14587/swimming-timetable.png" style="display: block; height: 301px; margin: 0px auto; width: 794px;"></p>
+<p><img alt="A swimming timetable showing a sample data table" src="swimming-timetable.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Tables are very commonly used in human society, and have been for a long time, as evidenced by this US Census document from 1800:</p>
 
-<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="https://mdn.mozillademos.org/files/14585/1800-census.jpg" style="display: block; height: 505px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="1800-census.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>It is therefore no wonder that the creators of HTML provided a means by which to structure and present tabular data on the web.</p>
 
@@ -194,18 +194,18 @@ tags:
 
 <p>You can also have a <a href="https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html">look at the live example</a> on GitHub! One thing you'll notice is that the table does look a bit more readable there — this is because the table you see above on this page has minimal styling, whereas the GitHub version has more significant CSS applied.</p>
 
-<p>Be under no illusion; for tables to be effective on the web, you need to provide some styling information with <a href="/en-US/docs/Learn/CSS">CSS</a>, as well as good solid structure with HTML. In this module we are focusing on the HTML part; to find out about the CSS part you should visit our <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling tables</a> article after you've finished here.</p>
+<p>Be under no illusion; for tables to be effective on the web, you need to provide some styling information with <a href="/en-US/docs/Learn/CSS">CSS</a>, as well as good solid structure with HTML. In this module we are focusing on the HTML part; to find out about the CSS part you should visit our <a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a> article after you've finished here.</p>
 
 <p>We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">stylesheet here</a>, and you can also find an <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">HTML template</a> that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.</p>
 
 <h3 id="When_should_you_NOT_use_HTML_tables">When should you NOT use HTML tables?</h3>
 
-<p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href="/en-US/docs/Learn/Accessibility/HTML#Page_layouts">Page Layouts</a> in our <a href="/en-US/docs/Learn/Accessibility">Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
+<p>HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at <a href="/en-US/docs/Learn/Accessibility/HTML#page_layouts">Page Layouts</a> in our <a href="/en-US/docs/Learn/Accessibility">Accessibility Learning Module</a>. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.</p>
 
 <p>In short, using tables for layout rather than <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout techniques</a> is a bad idea. The main reasons are as follows:</p>
 
 <ol>
- <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
+ <li><strong>Layout tables reduce accessibility for visually impaired users</strong>: <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders">Screenreaders</a>, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.</li>
  <li><strong>Tables produce tag soup</strong>: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.</li>
  <li><strong>Tables are not automatically responsive</strong>: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.</li>
 </ol>
@@ -460,10 +460,10 @@ tags:
 
 <h2 id="Providing_common_styling_to_columns">Providing common styling to columns</h2>
 
-<p>There is one last feature we'll tell you about in this article before we move on. HTML has a method of defining styling information for an entire column of data all in one place — the <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong> elements. These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on <em>every</em> <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
+<p>There is one last feature we'll tell you about in this article before we move on. HTML has a method of defining styling information for an entire column of data all in one place — the <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> and <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong> elements. These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on <em>every</em> <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child")}}.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Styling columns like this is <a href="https://www.w3.org/TR/CSS22/tables.html#columns">limited to a few properties</a>: <code><a href="/en-US/docs/Web/CSS/border">border</a></code>, <code><a href="/en-US/docs/Web/CSS/background">background</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, and <code><a href="/en-US/docs/Web/CSS/visibility">visibility</a></code>. To set other properties you'll have to either style every <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
+<p><strong>Note</strong>: Styling columns like this is <a href="https://www.w3.org/TR/CSS22/tables.html#columns">limited to a few properties</a>: <code><a href="/en-US/docs/Web/CSS/border">border</a></code>, <code><a href="/en-US/docs/Web/CSS/background">background</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, and <code><a href="/en-US/docs/Web/CSS/visibility">visibility</a></code>. To set other properties you'll have to either style every <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child")}}.</p>
 </div>
 
 <p>Take the following simple example:</p>

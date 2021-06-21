@@ -15,7 +15,7 @@ int good() {
 }
 </pre>
 <p>The callgraph would be <code>foo() -&gt; good() -&gt; evil()</code>. Given the knowledge that <code>evil()</code> does evil things, one could then determine <code>foo()</code> also does evil things.</p>
-<p>The Callgraph project uses gcc and <a href="/en/Treehydra">Treehydra</a> to generate information about function and method calls at compile time, and aggregates it into a sqlite database.</p>
+<p>The Callgraph project uses gcc and <a href="/en-US/docs/Treehydra">Treehydra</a> to generate information about function and method calls at compile time, and aggregates it into a sqlite database.</p>
 <h2 id="Documentation">Documentation</h2>
-<dl> <dt><a href="/en/Developing_Mozilla/Callgraph/Installing_Callgraph">Installing Callgraph</a></dt> <dd>Download and installation of Callgraph</dd> <dt><a href="/en/Developing_Mozilla/Callgraph/Schema_Reference">Schema Reference</a></dt> <dd>Explanation of the database schema</dd> <dt><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=callgraph">Further details</a></dt> <dd>Implementation ideas for Callgraph</dd>
+<dl> <dt><a href="/en-US/docs/Mozilla/Developer_guide/Callgraph/Installing_Callgraph">Installing Callgraph</a></dt> <dd>Download and installation of Callgraph</dd> <dt><a href="/en-US/docs/Mozilla/Developer_guide/Callgraph/Schema_Reference">Schema Reference</a></dt> <dd>Explanation of the database schema</dd> <dt><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=callgraph">Further details</a></dt> <dd>Implementation ideas for Callgraph</dd>
 </dl>

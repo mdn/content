@@ -213,7 +213,7 @@ tags:
 
 <p>For information about using these methods, see <a href="/en/Gecko_Plugin_API_Reference/URLs">URLs</a>.</p>
 
-<p>Starting in Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7), you can get the origin of the document in a secure, convenient way by calling <a href="/en/NPN_GetValue"><code>NPN_GetValue()</code></a> to retrieve the value of the variable <code>NPNVdocumentOrigin</code>. The returned value is the <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#unicode-serialization-of-an-origin">Unicode serialization</a> of the document's origin converted to NFKC-encoded (that is, normalized) UTF-8. Your plug-in must free the returned string's memory by calling <a href="/en/NPN_MemFree"><code>NPN_MemFree()</code></a> when you're done with it.</p>
+<p>Starting in Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7), you can get the origin of the document in a secure, convenient way by calling <a href="/en/NPN_GetValue"><code>NPN_GetValue()</code></a> to retrieve the value of the variable <code>NPNVdocumentOrigin</code>. The returned value is the <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#unicode-serialization-of-an-origin">Unicode serialization</a> of the document's origin converted to NFKC-encoded (that is, normalized) UTF-8. Your plug-in must free the returned string's memory by calling <a href="/en/NPN_MemFree"><code>NPN_MemFree()</code></a> when you're done with it.</p>
 
 <h3 id="Getting_Version_and_UI_Information">Getting Version and UI Information</h3>
 

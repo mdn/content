@@ -177,33 +177,33 @@ npm run dev                                       # start the app in development
 
 <p>Anyway, assuming you are inside the VS Code application, from the root of your project's folder, type <code>code .</code> (the trailing dot tells VS code to open the current folder) to open the code editor. VS Code will tell you that there are recommended extensions to install.</p>
 
-<p><img alt="dialog box saying this workspace has extension recommendations, with options to install or show a list" src="https://mdn.mozillademos.org/files/17355/01-vscode-extension-recommendations.png" style="display: block; height: 108px; margin: 0 auto; width: 475px;"></p>
+<p><img alt="dialog box saying this workspace has extension recommendations, with options to install or show a list" src="01-vscode-extension-recommendations.png" style="display: block; margin: 0 auto;"></p>
 
 <p>Clicking <em>Install all</em> will install Svelte for VS Code.</p>
 
-<p><img alt="svelte for vs code extension information" src="https://mdn.mozillademos.org/files/17356/02-svelte-for-vscode.png" style="height: 210px; width: 1043px;"></p>
+<p><img alt="svelte for vs code extension information" src="02-svelte-for-vscode.png"></p>
 
 <p>We can also see that the <code>setupTypeScript.js</code> file made a couple of changes to our project. The <code>main.js</code> file has been renamed to <code>main.ts</code>, which means that VS Code can provide hover-information on our svelte components:</p>
 
-<p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="https://mdn.mozillademos.org/files/17357/03-vscode-hints-in-main-ts.png" style="display: block; height: 287px; margin: 0 auto; width: 480px;"></p>
+<p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="03-vscode-hints-in-main-ts.png" style="display: block; margin: 0 auto;"></p>
 
 <p>We also get type-checking for free. If we pass an unknown property in the options parameter of the <code>App</code> constructor (for example a typo like <code>target</code> instead of <code>target</code>) TypeScript will complain:</p>
 
-<p><img alt="type checking in vs code - App object has been given an unknown property target" src="https://mdn.mozillademos.org/files/17358/04-vscode-type-checking-in-main-ts.png" style="height: 277px; width: 895px;"></p>
+<p><img alt="type checking in vs code - App object has been given an unknown property target" src="04-vscode-type-checking-in-main-ts.png"></p>
 
 <p>In the <code>App.svelte</code> component, the <code>setupTypeScript.js</code> script has added the <code>lang="ts"</code> attribute to the <code>&lt;script&gt;</code> tag. Moreover, thanks to type inference, in many cases we won't even need to specify types to get code assistance. For example, if you start adding an <code>ms</code> property to the <code>Alert</code> component call, TypeScript will infer from the default value that the <code>ms</code> property should be a number:</p>
 
-<p><img alt="vs code type inference and code hinting - ms variable should be a number" src="https://mdn.mozillademos.org/files/17359/05-vscode-type-inference-and-code-assistance.png" style="height: 387px; width: 842px;"></p>
+<p><img alt="vs code type inference and code hinting - ms variable should be a number" src="05-vscode-type-inference-and-code-assistance.png"></p>
 
 <p>And if you pass something that is not a number it will complain about it:</p>
 
-<p><img alt="type checking in vs code - App object has been given an unknown property target" src="https://mdn.mozillademos.org/files/17360/06-vscode-type-checking-in-components.png" style="height: 236px; width: 678px;"></p>
+<p><img alt="type checking in vs code - App object has been given an unknown property target" src="06-vscode-type-checking-in-components.png"></p>
 
 <p>The application template has a <code>validate</code> script configured that runs <code>svelte-check</code> against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run <code>npm run validate</code> to check for unused CSS, and return A11y hints and TypeScript compile errors.</p>
 
 <p>In this case, if you run <code>npm run validate</code> (either in the VS Code console or terminal) you will get the following error:</p>
 
-<p><img alt="validate command being run inside vs code showing type error, ms variable should be assigned a number" src="https://mdn.mozillademos.org/files/17361/07-vscode-svelte-check.png" style="height: 480px; width: 753px;"></p>
+<p><img alt="validate command being run inside vs code showing type error, ms variable should be assigned a number" src="07-vscode-svelte-check.png"></p>
 
 <p>Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + clicking on the file name will take you to the line containing the error.</p>
 
@@ -264,7 +264,7 @@ export let todo: TodoType</pre>
 
 	<p>We will get the following error:</p>
 
-	<p><img alt="type error in vscode, Todo Type object requires an id property." src="https://mdn.mozillademos.org/files/17362/08-vscode-structural-typing.png"></p>
+	<p><img alt="type error in vscode, Todo Type object requires an id property." src="08-vscode-structural-typing.png"></p>
 	</li>
 </ol>
 
@@ -298,7 +298,7 @@ svelte-check found no errors and no warnings</pre>
 
 <p>Note that if you are using a supporting code editor like VS Code, a simple way to start porting a Svelte component is to just add the <code>&lt;script lang='ts'&gt;</code> at the top of your component and look for the three-dotted hints:</p>
 
-<p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="https://mdn.mozillademos.org/files/17363/09-vscode-alert-hints.png" style="height: 372px; width: 903px;"></p>
+<p><img alt='vs code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints' src="09-vscode-alert-hints.png"></p>
 
 <h3 id="Alert.svelte">Alert.svelte</h3>
 
@@ -571,7 +571,7 @@ export let todos: TodoType[]</pre>
 	<li>
 	<p>Finally, you'll notice the following error reported, related to where we set the <code>tabindex</code> attribute. That's because TypeScript is type-checking the <code>&lt;h2&gt;</code> element and expects <code>tabindex</code> to be of type <code>number</code>.</p>
 
-	<p><img alt="tabindex hint inside vs code, tabindex expects a type of number, not string" src="https://mdn.mozillademos.org/files/17364/10-vscode-tabindex-hint.png" style="height: 215px; width: 938px;"></p>
+	<p><img alt="tabindex hint inside vs code, tabindex expects a type of number, not string" src="10-vscode-tabindex-hint.png"></p>
 
 	<p>To fix it, replace <code>tabindex="-1"</code> with <code>tabindex={-1}</code>, like this:</p>
 
@@ -768,7 +768,7 @@ export const localStore = (key: string, initial: JsonValue) =&gt; {          // 
 
 <p>Now if we try to create a <code>localStore</code> with something that cannot be converted to JSON via <code>JSON.stringify()</code>, for example an object with a function as a property, VS Code/<code>validate</code> will complain about it:</p>
 
-<p><img alt="vs code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with json stringify" src="https://mdn.mozillademos.org/files/17365/11-vscode-invalid-store.png" style="height: 236px; width: 1314px;"></p>
+<p><img alt="vs code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with json stringify" src="11-vscode-invalid-store.png"></p>
 
 <p>And best of all, it will even work with the <a href="https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values"><code>$store</code> auto-subscription syntax</a>. If we try to save an invalid value to our <code>todos</code> store using the <code>$store</code> syntax, like this:</p>
 
@@ -870,7 +870,7 @@ numberStack.push(1)</pre>
 
 <p>Now TypeScript knows that our stack can only accept numbers, and will issue an error if we try to push anything else:</p>
 
-<p><img alt="Argument of type hello is not assignable to parameter of type number" src="https://mdn.mozillademos.org/files/17366/12-vscode-generic-stack-error.png" style="height: 232px; width: 849px;"></p>
+<p><img alt="Argument of type hello is not assignable to parameter of type number" src="12-vscode-generic-stack-error.png"></p>
 
 <p>TypeScript can also infer generic types by its usage. Generics also support default values and constraints.</p>
 
@@ -882,7 +882,7 @@ numberStack.push(1)</pre>
 
 <p>If you open the file <code>Todos.svelte</code> and assign a <code>number</code> type to our <code>$alert</code> store, you'll get the following error:</p>
 
-<p><img alt="Todo Type object property complete should be completed" src="https://mdn.mozillademos.org/files/17367/13-vscode-generic-alert-error.png" style="height: 203px; width: 808px;"></p>
+<p><img alt="Todo Type object property complete should be completed" src="13-vscode-generic-alert-error.png"></p>
 
 <p>That's because when we defined our alert store in the <code>stores.ts</code> file with:</p>
 
@@ -930,7 +930,7 @@ export const localStore = &lt;T extends JsonValue&gt;(key: string, initial: T) =
 
 <p>And thanks to generic type inference, TypeScript already knows that our <code>$todos</code> store should contain an array of <code>TodoType</code>:</p>
 
-<p><img alt="Todo Type object property complete should be completed" src="https://mdn.mozillademos.org/files/17368/14-vscode-generic-localstore-error.png" style="height: 147px; width: 1415px;"></p>
+<p><img alt="Todo Type object property complete should be completed" src="14-vscode-generic-localstore-error.png"></p>
 
 <p>Once again, if we wanted to be explicit about it, we could do so in the <code>stores.ts</code> file like this:</p>
 

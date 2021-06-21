@@ -74,28 +74,21 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
           <td><b>Description</b></td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSRANDCOUNT"
-              rel="external nofollow" title="http://mxr.mozilla.org/security/search?string=NSRANDCOUNT">NSRANDCOUNT</a>
-          </td>
+          <td>NSRANDCOUNT</td>
           <td>Integer<br>
             (byte count)</td>
           <td>Sets the maximum number of bytes to read from the file named in the environment variable NSRANDFILE (see
             below). Makes NSRANDFILE usable with /dev/urandom.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_ALLOW_WEAK_SIGNATURE_ALG"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_ALLOW_WEAK_SIGNATURE_ALG">NSS_ALLOW_WEAK_SIGNATURE_ALG</a>
-          </td>
+          <td>NSS_ALLOW_WEAK_SIGNATURE_ALG</td>
           <td>Boolean<br>
             (any non-empty value to enable)</td>
           <td>Enables the use of MD2 and MD4 hash algorithms inside signatures. This was allowed by default before NSS
             3.12.3.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_HASH_ALG_SUPPORT"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_HASH_ALG_SUPPORT">NSS_HASH_ALG_SUPPORT</a></td>
+          <td>NSS_HASH_ALG_SUPPORT</td>
           <td>String</td>
           <td>Specifies algorithms allowed to be used in certain applications, such as in signatures on certificates and
             CRLs. See documentation at <a class="link-https"
@@ -103,9 +96,7 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
               title="https://bugzilla.mozilla.org/show_bug.cgi?id=483113#c0">this link</a>.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_STRICT_NOFORK"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_STRICT_NOFORK">NSS_STRICT_NOFORK</a></td>
+          <td>NSS_STRICT_NOFORK</td>
           <td>String<br>
             ("1",<br>
             "DISABLED",<br>
@@ -123,20 +114,14 @@ slug: Mozilla/Projects/NSS/NSS_3.12.3_release_notes
           </td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_USE_DECODED_CKA_EC_POINT"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_USE_DECODED_CKA_EC_POINT">NSS_USE_DECODED_CKA_EC_POINT</a>
-          </td>
+          <td>NSS_USE_DECODED_CKA_EC_POINT</td>
           <td>Boolean<br>
             (any non-empty value to enable)</td>
           <td>Tells NSS to send EC key points across the PKCS#11 interface in the non-standard unencoded format that was
             used by default before NSS 3.12.3. The new key point format is a DER encoded ASN.1 OCTET STRING.</td>
         </tr>
         <tr>
-          <td><a class="external" href="http://mxr.mozilla.org/security/search?string=NSS_USE_SHEXP_IN_CERT_NAME"
-              rel="external nofollow"
-              title="http://mxr.mozilla.org/security/search?string=NSS_USE_SHEXP_IN_CERT_NAME">NSS_USE_SHEXP_IN_CERT_NAME</a>
-          </td>
+          <td>NSS_USE_SHEXP_IN_CERT_NAME</td>
           <td>Boolean<br>
             (any non-empty value to enable)</td>
           <td>Tells NSS to allow shell-style wildcard patterns in certificates to match SSL server host names. This

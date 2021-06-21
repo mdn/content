@@ -84,7 +84,7 @@ tags:
 
 <ul>
  <li>With the keyword {{jsxref("Statements/var", "var")}}. For example, <code>var x = 42</code>. This syntax can be used to declare both <strong>local</strong> and <strong>global</strong> variables, depending on the <em>execution context</em>.</li>
- <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#Variable_scope">Variable scope</a> below.)</li>
+ <li>With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, <code>let y = 13</code>. This syntax can be used to declare a block-scope local variable. (See <a href="#variable_scope">Variable scope</a> below.)</li>
 </ul>
 
 <p>You can declare variables to unpack values from <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals">Object Literals</a> using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a> syntax. For example, <code>let { bar } = foo</code>. This will create a variable named <code>bar</code> and assign to it the value corresponding to the key of the same name from our object <code>foo</code>.  </p>
@@ -363,13 +363,13 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p><em>Literals</em> represent values in JavaScript. These are fixed values—not variables—that you <em>literally</em> provide in your script. This section describes the following types of literals:</p>
 
 <ul>
- <li><a href="#Array_literals">Array literals</a></li>
- <li><a href="#Boolean_literals">Boolean literals</a></li>
- <li><a href="#Floating-point_literals">Floating-point literals</a></li>
- <li><a href="#Numeric_literals">Numeric literals</a></li>
- <li><a href="#Object_literals">Object literals</a></li>
- <li><a href="#RegExp_literals">RegExp literals</a></li>
- <li><a href="#String_literals">String literals</a></li>
+ <li><a href="#array_literals">Array literals</a></li>
+ <li><a href="#boolean_literals">Boolean literals</a></li>
+ <li><a href="#floating-point_literals">Floating-point literals</a></li>
+ <li><a href="#numeric_literals">Numeric literals</a></li>
+ <li><a href="#object_literals">Object literals</a></li>
+ <li><a href="#regexp_literals">RegExp literals</a></li>
+ <li><a href="#string_literals">String literals</a></li>
 </ul>
 
 <h3 id="Array_literals">Array literals</h3>
@@ -498,7 +498,7 @@ y = 42 + ' is the answer' // "42 is the answer"
 <p><strong>Do not use an object literal at the beginning of a statement!</strong> This will lead to an error (or not behave as you expect), because the <code>{</code> will be interpreted as the beginning of a block.</p>
 </div>
 
-<p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Saturn</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>(carTypes("Honda"));</code> the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>
+<p>The following is an example of an object literal. The first element of the <code>car</code> object defines a property, <code>myCar</code>, and assigns to it a new string, "<code>Saturn</code>"; the second element, the <code>getCar</code> property, is immediately assigned the result of invoking the function <code>(carTypes("Honda"))</code>; the third element, the <code>special</code> property, uses an existing variable (<code>sales</code>).</p>
 
 <pre class="brush: js notranslate">var sales = 'Toyota';
 

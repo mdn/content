@@ -17,7 +17,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">function FindProxyForURL(<var>url</var>, <var>host</var>)</pre>
+<pre class="brush: js notranslate">function FindProxyForURL(<var>url</var>, <var>host</var>)</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -80,16 +80,16 @@ tags:
 
 <p id="Saving_the_Auto-Config_File_Setting_the_MIME_Type">The auto-config file should be saved to a file with a .pac filename extension:</p>
 
-<pre class="syntaxbox notranslate">proxy.pac</pre>
+<pre class="brush: html notranslate">proxy.pac</pre>
 
 <p>And the MIME type should be set to:</p>
 
-<pre class="syntaxbox notranslate">application/x-ns-proxy-autoconfig</pre>
+<pre class="brush: html notranslate">application/x-ns-proxy-autoconfig</pre>
 
 <p>Next, you should configure your server to map the .pac filename extension to the MIME type.</p>
 
-<div class="note">
-<p><strong>Notes: </strong></p>
+<div class="notecard note">
+<h4>Notes</h4>
 
 <ul>
  <li>The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.</li>
@@ -104,31 +104,31 @@ tags:
 <ul>
  <li>Hostname based conditions
   <ul>
-   <li><code><a href="#isPlainHostName">isPlainHostName()</a></code></li>
-   <li><code><a href="#dnsDomainIs">dnsDomainIs()</a></code></li>
-   <li><code><a href="#localHostOrDomainIs">localHostOrDomainIs()</a></code></li>
-   <li><code><a href="#isResolvable">isResolvable()</a></code></li>
-   <li><code><a href="#isInNet">isInNet()</a></code></li>
+   <li><code><a href="#isplainhostname">isPlainHostName()</a></code></li>
+   <li><code><a href="#dnsdomainis">dnsDomainIs()</a></code></li>
+   <li><code><a href="#localhostordomainis">localHostOrDomainIs()</a></code></li>
+   <li><code><a href="#isresolvable">isResolvable()</a></code></li>
+   <li><code><a href="#isinnet">isInNet()</a></code></li>
   </ul>
  </li>
  <li>Related utility functions
   <ul>
-   <li><code><a href="#dnsResolve">dnsResolve()</a></code></li>
+   <li><code><a href="#dnsresolve">dnsResolve()</a></code></li>
    <li><code><a href="#convert_addr">convert_addr()</a></code></li>
-   <li><code><a href="#myIpAddress">myIpAddress()</a></code></li>
-   <li><code><a href="#dnsDomainLevels">dnsDomainLevels()</a></code></li>
+   <li><code><a href="#myipaddress">myIpAddress()</a></code></li>
+   <li><code><a href="#dnsdomainlevels">dnsDomainLevels()</a></code></li>
   </ul>
  </li>
  <li>URL/hostname based conditions
   <ul>
-   <li><code><a href="#shExpMatch">shExpMatch()</a></code></li>
+   <li><code><a href="#shexpmatch">shExpMatch()</a></code></li>
   </ul>
  </li>
  <li>Time based conditions
   <ul>
-   <li><code><a href="#weekdayRange">weekdayRange()</a></code></li>
-   <li><code><a href="#dateRange">dateRange()</a></code></li>
-   <li><code><a href="#timeRange">timeRange()</a></code></li>
+   <li><code><a href="#weekdayrange">weekdayRange()</a></code></li>
+   <li><code><a href="#daterange">dateRange()</a></code></li>
+   <li><code><a href="#timerange">timeRange()</a></code></li>
   </ul>
  </li>
  <li>Logging utility
@@ -143,8 +143,9 @@ tags:
  </li>
 </ul>
 
-<div class="note">
-<p><strong>Note:</strong> pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>pactester (part of the <a href="https://github.com/pacparser/pacparser">pacparser </a>package) was used to test the following syntax examples.</p>
 
 <ul>
  <li>The PAC file is named <code>proxy.pac</code></li>
@@ -156,7 +157,7 @@ tags:
 
 <h4 id="Syntax_2">Syntax</h4>
 
-<pre class="syntaxbox notranslate">isPlainHostName(<var>host</var>)</pre>
+<pre class="brush: js notranslate">isPlainHostName(<var>host</var>)</pre>
 
 <h4 id="Parameters_2">Parameters</h4>
 
@@ -179,7 +180,7 @@ isPlainHostName("www") // true
 
 <h4 id="Syntax_3">Syntax</h4>
 
-<pre class="syntaxbox notranslate">dnsDomainIs(<var>host</var>, <var>domain</var>)</pre>
+<pre class="brush: js notranslate">dnsDomainIs(<var>host</var>, <var>domain</var>)</pre>
 
 <h4 id="Parameters_3">Parameters</h4>
 
@@ -204,7 +205,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 
 <h4 id="Syntax_4">Syntax</h4>
 
-<pre class="syntaxbox notranslate">localHostOrDomainIs(<var>host</var>, <var>hostdom</var>)</pre>
+<pre class="brush: js notranslate">localHostOrDomainIs(<var>host</var>, <var>hostdom</var>)</pre>
 
 <h4 id="Parameters_4">Parameters</h4>
 
@@ -230,7 +231,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 
 <h4 id="Syntax_5">Syntax</h4>
 
-<pre class="syntaxbox notranslate">isResolvable(<var>host</var>)</pre>
+<pre class="brush: js notranslate">isResolvable(<var>host</var>)</pre>
 
 <h4 id="Parameters_5">Parameters</h4>
 
@@ -250,7 +251,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 
 <h4 id="Syntax_6">Syntax</h4>
 
-<pre class="syntaxbox notranslate">isInNet(<var>host</var>, <var>pattern</var>, <var>mask</var>)</pre>
+<pre class="brush: js notranslate">isInNet(<var>host</var>, <var>pattern</var>, <var>mask</var>)</pre>
 
 <h4 id="Parameters_6">Parameters</h4>
 
@@ -278,7 +279,7 @@ function FindProxyForURL(url, host) {
 
 <h3 id="dnsResolve">dnsResolve()</h3>
 
-<pre class="syntaxbox notranslate">dnsResolve(<em>host</em>)</pre>
+<pre class="brush: js notranslate">dnsResolve(<em>host</em>)</pre>
 
 <h4 id="Parameters_7">Parameters</h4>
 
@@ -297,7 +298,7 @@ function FindProxyForURL(url, host) {
 
 <h4 id="Syntax_7">Syntax</h4>
 
-<pre class="syntaxbox notranslate">convert_addr(ipaddr)</pre>
+<pre class="brush: js notranslate">convert_addr(ipaddr)</pre>
 
 <h4 id="Parameters_8">Parameters</h4>
 
@@ -316,7 +317,7 @@ function FindProxyForURL(url, host) {
 
 <h4 id="Syntax_8">Syntax</h4>
 
-<pre class="syntaxbox notranslate">myIpAddress()</pre>
+<pre class="brush: js notranslate">myIpAddress()</pre>
 
 <h4 id="Parameters_9">Parameters</h4>
 
@@ -336,7 +337,7 @@ function FindProxyForURL(url, host) {
 
 <h4 id="Syntax_9">Syntax</h4>
 
-<pre class="syntaxbox notranslate">dnsDomainLevels(<var>host</var>)</pre>
+<pre class="brush: js notranslate">dnsDomainLevels(<var>host</var>)</pre>
 
 <h4 id="Parameters_10">Parameters</h4>
 
@@ -358,7 +359,7 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 <h4 id="Syntax_10">Syntax</h4>
 
-<pre class="syntaxbox notranslate">shExpMatch(<var>str</var>, <var>shexp</var>)</pre>
+<pre class="brush: js notranslate">shExpMatch(<var>str</var>, <var>shexp</var>)</pre>
 
 <h4 id="Parameters_11">Parameters</h4>
 
@@ -369,23 +370,31 @@ dnsDomainLevels("www.mozilla.org"); // 2
  <dd>is a shell expression to compare against.</dd>
 </dl>
 
-<p>Returns true if the string matches the specified shell expression.</p>
+<p>Returns <code>true</code> if the string matches the specified shell glob expression.</p>
 
-<p><strong>Note that the patterns are <em>shell</em> glob <em>expressions</em>, not regular expressions. </strong><code>*</code> and <code>?</code> are always supported, while <code>[characters]</code> and <code>[^characters]</code> are supported by some implmentations including Firefox. This is mainly because the expression is translated to a RegExp via subsitution of <code>[.*?]</code>. For a reliable way to use these RegExp syntaxes, just use RegExp instead.</p>
+<p>Support for particular glob expression syntax varies across browsers: 
+  <code>*</code> (match any number of characters) and <code>?</code> (match one character) are always supported, 
+  while <code>[characters]</code> and <code>[^characters]</code> are additionally supported by some implementations (including Firefox). </p>
+
+<div class="notecard note">
+<p>If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).</p>
+</div>
+
 
 <h4 id="Examples_8">Examples</h4>
 
-<pre class="brush: js notranslate">shExpMatch("http://home.netscape.com/people/ari/index.html"     , "*/ari/*"); // returns true
+<pre class="brush: js notranslate">shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
 shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false</pre>
 
 <h3 id="weekdayRange">weekdayRange()</h3>
 
 <h4 id="Syntax_11">Syntax</h4>
 
-<pre class="syntaxbox notranslate">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
+<pre class="brush: js notranslate">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<div class="notecard note">
+  <h4>Notes</h4>
+<p>(Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_12">Parameters</h4>
@@ -394,7 +403,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
  <dt>wd1 and wd2</dt>
  <dd>One of the ordered weekday strings:</dd>
  <dt>
- <pre class="syntaxbox notranslate">"SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"</pre>
+ <pre class="brush: html notranslate">"SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"</pre>
  </dt>
  <dt>gmt</dt>
  <dd>Is either the string "GMT" or is left out.</dd>
@@ -422,7 +431,7 @@ weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note,
 
 <h4 id="Syntax_12">Syntax</h4>
 
-<pre class="syntaxbox notranslate">dateRange(&lt;day&gt; | &lt;month&gt; | &lt;year&gt;, [gmt])  // ambiguity is resolved by assuming year is greater than 31
+<pre class="brush: js notranslate">dateRange(&lt;day&gt; | &lt;month&gt; | &lt;year&gt;, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(&lt;day1&gt;, &lt;day2&gt;, [gmt])
 dateRange(&lt;month1&gt;, &lt;month2&gt;, [gmt])
 dateRange(&lt;year1&gt;, &lt;year2&gt;, [gmt])
@@ -430,8 +439,9 @@ dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;day2&gt;, &lt;month2&gt;, [gmt])
 dateRange(&lt;month1&gt;, &lt;year1&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])
 dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])</pre>
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>(Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_13">Parameters</h4>
@@ -441,14 +451,14 @@ dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&
  <dd>Is the ordered day of the month between 1 and 31 (as an integer).</dd>
 </dl>
 
-<pre class="syntaxbox notranslate">1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31</pre>
+<pre class="brush: html notranslate">1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31</pre>
 
 <dl>
  <dt>month</dt>
  <dd>Is one of the ordered month strings below.</dd>
 </dl>
 
-<pre class="syntaxbox notranslate">"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"</pre>
+<pre class="brush: html notranslate">"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"</pre>
 
 <dl>
  <dt>year</dt>
@@ -459,7 +469,8 @@ dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&
 
 <p>If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
 
-<div class="warning">
+<div class="notecard warning">
+  <h4>Warning</h4>
 <p><strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
 </div>
 
@@ -492,11 +503,12 @@ dateRange(1995, 1997);
 
 <h4 id="Syntax_13">Syntax</h4>
 
-<pre class="syntaxbox notranslate">// The full range of expansions is analogous to dateRange.
+<pre class="brush: html notranslate">// The full range of expansions is analogous to dateRange.
 timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;, &lt;sec2&gt;, [gmt])</pre>
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>(Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="Parameters_14">Parameters</h4>
@@ -514,7 +526,8 @@ timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;
 
 <p>If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
 
-<div class="warning">
+<div class="notecard warning">
+  <h4>Warning</h4>
 <p><strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
 </div>
 
@@ -531,8 +544,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 <h3 id="Use_proxy_for_everything_except_local_hosts">Use proxy for everything except local hosts</h3>
 
-<div class="note">
-<p><strong>Note:</strong> Since all of the examples that follow are very specific, they have not been tested.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>Since all of the examples that follow are very specific, they have not been tested.</p>
 </div>
 
 <p>All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through <code>w3proxy.mozilla.org:8080</code>. If the proxy goes down, connections become direct automatically:</p>
@@ -545,8 +559,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   }
 }</pre>
 
-<div class="note">
-<p><strong>Note:</strong> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
 </div>
 
 <h2 id="Example_2_2">Example 2</h2>
@@ -569,8 +584,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 <p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
 
-<div class="note">
-<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>The order of the above exceptions for efficiency: <code>localHostOrDomainIs()</code> functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the <em>or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behavior.</p>
 </div>
 
 <h2 id="Example_3_2">Example 3</h2>
@@ -703,8 +719,9 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 }</pre>
 
-<div class="note">
-<p><strong>Note:</strong> The same can be accomplished using the <code><a href="#shExpMatch">shExpMatch()</a></code> function described earlier.</p>
+<div class="notecard note">
+  <h4>Note</h4>
+<p>The same can be accomplished using the <code><a href="#shexpmatch">shExpMatch()</a></code> function described earlier.</p>
 </div>
 
 <p>For example:</p>
@@ -715,7 +732,7 @@ if (shExpMatch(url, "http:*")) {
 }
 // ...</pre>
 
-<div class="note">
+<div class="notecard note">
 <p>The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the <code>REMOTE_ADDR</code> environment variable in CGI).</p>
 
 <p>Usage of <code>isInNet()</code>, <code>isResolvable()</code> and <code>dnsResolve()</code> functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</p>
