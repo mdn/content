@@ -31,7 +31,7 @@ browser-compat: http.headers.DPR
  
 <p>The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by <code>x</code> descriptors in the <code>&lt;img&gt;</code> <a href="/en-US/docs/Web/HTML/Element/img#attr-srcset">srcset</a> attribute to allow user agents to select a preferred image.</p>
 
-<p>When <code>DPR</code> is used in to determine what resource is returned in from a request, the server must include the {{HTTPHeader("Content-DPR")}} header in the <em>response</em>. The client must also use the result of this header in any layout calculations rather than the <code>DPR</code> value specified in the request.</p>
+<p>If a server uses the <code>DPR</code> hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header. The client must use the value in <code>Content-DPR</code> for layout if it differs from the value in the request's <code>DPR</code> header.</p>
 
 <p>If the <code>DPR</code> header appears more than once in a message the last occurence is used.</p>
  
