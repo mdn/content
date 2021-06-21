@@ -148,7 +148,7 @@ browser-compat: api.WindowOrWorkerGlobalScope.fetch
     {{domxref("AbortController.abort", "abort()")}} method.</dd>
   <dt><code>TypeError</code></dt>
   <dd>The specified URL string includes user credentials. This information should instead
-    be provided using an {{HTTPHeader("Authorization")}} header.</dd>
+    be provided using an {{HTTPHeader("Authorization")}} header. If the response is a network error, then it rejects the promise with a TypeError.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
