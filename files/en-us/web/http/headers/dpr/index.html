@@ -14,7 +14,7 @@ browser-compat: http.headers.DPR
 ---
 <div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
 
-<p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> header that provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every CSS pixel.</p>
+<p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> header that provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.</p>
 
 <table class="properties">
   <tbody>
@@ -29,11 +29,11 @@ browser-compat: http.headers.DPR
   </tbody>
  </table>
  
-<p>The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by <code>x</code> descriptors in the <code>&lt;img&gt;</code> <a href="/en-US/docs/Web/HTML/Element/img#attr-srcset">srcset</a> attribute to allow user agents to select a preferred image.</p>
+<p>The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by <code>x</code> descriptors in the <code>&lt;img&gt;</code> <a href="/en-US/docs/Web/HTML/Element/img#attr-srcset"><code>srcset</code></a> attribute to allow user agents to select a preferred image.</p>
 
 <p>If a server uses the <code>DPR</code> hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header. The client must use the value in <code>Content-DPR</code> for layout if it differs from the value in the request's <code>DPR</code> header.</p>
 
-<p>If the <code>DPR</code> header appears more than once in a message the last occurence is used.</p>
+<p>If the <code>DPR</code> header appears more than once in a message the last occurrence is used.</p>
  
 <div class="notecard note">
   <p><strong>Note:</strong></p>
