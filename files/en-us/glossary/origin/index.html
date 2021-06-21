@@ -7,7 +7,7 @@ tags:
   - WebMechanics
   - origin
 ---
-<p>Web content's <strong>origin</strong> is defined by the <em>scheme</em> (protocol), <em>host</em> (domain), and <em>port</em> of the {{Glossary("URL")}} used to access it. Two objects have the same origin only when the scheme, host, and port all match.</p>
+<p>Web content's <strong>origin</strong> is defined by the <em>scheme</em> (protocol), <em>hostname</em> (domain), and <em>port</em> of the {{Glossary("URL")}} used to access it. Two objects have the same origin only when the scheme, hostname, and port all match.</p>
 
 <p>Some operations are restricted to same-origin content, and this restriction can be lifted using {{Glossary("CORS")}}.</p>
 
@@ -18,7 +18,7 @@ tags:
   <tr>
    <td style="width: 50%;"><code>http://example.com/app1/index.html</code><br>
     <code>http://example.com/app2/index.html</code></td>
-   <td style="width: 50%;">same origin because same scheme (<code>http</code>) and host (<code>example.com</code>)</td>
+   <td style="width: 50%;">same origin because same scheme (<code>http</code>) and hostname (<code>example.com</code>)</td>
   </tr>
   <tr>
    <td style="width: 50%;"><code>http://Example.com:80</code><br>
@@ -41,7 +41,7 @@ tags:
    <td style="width: 50%;"><code>http://example.com</code><br>
     <code>http://www.example.com</code><br>
     <code>http://myapp.example.com</code></td>
-   <td style="width: 50%;">different hosts</td>
+   <td style="width: 50%;">different hostnames</td>
   </tr>
   <tr>
    <td style="width: 50%;"><code>http://example.com</code><br>
