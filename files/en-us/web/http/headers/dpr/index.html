@@ -28,10 +28,12 @@ browser-compat: http.headers.DPR
    </tr>
   </tbody>
  </table>
-
- <p>If the <code>DPR</code> header appears more than once in a message the last occurence is used.</p>
  
 <p>The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by <code>x</code> descriptors in the <code>&lt;img&gt;</code> <a href="/en-US/docs/Web/HTML/Element/img#attr-srcset">srcset</a> attribute to allow user agents to select a preferred image.</p>
+
+<p>When <code>DPR</code> is used in to determine what resource is returned in from a request, the server must include the {{HTTPHeader("Content-DPR")}} header in the <em>response</em>. The client must also use the result of this header in any layout calculations rather than the <code>DPR</code> value specified in the request.</p>
+
+<p>If the <code>DPR</code> header appears more than once in a message the last occurence is used.</p>
  
 <div class="notecard note">
   <p><strong>Note:</strong></p>
@@ -75,6 +77,7 @@ browser-compat: http.headers.DPR
   <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints">Adapting to Users with Client Hints</a> (developer.google.com)</li>
  <li>Device client hints
   <ul>
+    <li>{{HTTPHeader("Content-DPR")}}</li>
     <li>{{HTTPHeader("Device-Memory")}}</li>
     <li>{{HTTPHeader("Viewport-Width")}}</li>
     <li>{{HTTPHeader("Width")}}</li>
