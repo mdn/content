@@ -39,6 +39,7 @@ browser-compat: http.headers.DPR
       <li>Client Hints are accessible only on secure origins (via TLS).</li>
       <li>As for all client hints, a server has to opt in to receive <code>DPR</code> header from the client by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
       <li>Servers that opt in to the <code>DPR</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
+      <li><code>DPR</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>.</li>
     </ul>
 </div>
 
@@ -62,10 +63,6 @@ browser-compat: http.headers.DPR
 <p>Then on subsequent requests the client might send <code>DPR</code> header back:</p>
 
 <pre class="brush: http">DPR: 2.0</pre>
-
-<h2 id="Specifications">Specifications</h2>
-
-<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
