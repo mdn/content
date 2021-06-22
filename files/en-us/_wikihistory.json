@@ -71413,17 +71413,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/PushRegistrationManager": {
-    "modified": "2020-10-15T21:33:29.485Z",
-    "contributors": [
-      "sideshowbarker",
-      "ExE-Boss",
-      "tocretpa",
-      "Sebastianz",
-      "jpmedley",
-      "kscarfone"
-    ]
-  },
   "Web/API/PushSubscription": {
     "modified": "2020-10-15T21:33:29.971Z",
     "contributors": [
