@@ -115,9 +115,14 @@ browser-compat: html.elements.link.rel
     <br>
     If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their {{HTMLAttrxRef("media","link")}}, {{HTMLAttrxRef("type","link")}}, and {{HTMLAttrxRef("sizes","link")}} attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.<br>
     <br>
-    <strong>Note:</strong> Apple's iOS does not use this link type, nor the {{HTMLAttrxRef("sizes","link")}} attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.<br>
-    <br>
-    The <code>shortcut</code> link type is often seen before <code>icon</code>, but this link type is non-conforming, ignored and <strong>web authors must not use it anymore</strong>.</td>
+    <div class="notecard note">
+      <p><strong>Note:</strong> Apple's iOS does not use this link type, nor the {{HTMLAttrxRef("sizes","link")}} attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
+    </div>
+    
+    <div class="notecard warning">
+      <p><strong>Warning:</strong> The <code>shortcut</code> link type is often seen before <code>icon</code>, but this link type is non-conforming, ignored and <strong>web authors must not use it anymore</strong>.</p>
+    </div>
+    </td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
