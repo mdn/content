@@ -14,7 +14,7 @@ browser-compat: http.headers.DPR
 ---
 <div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
 
-<p>The <strong><code>DPR</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> header that provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.</p>
+<p>The <strong><code>DPR</code></strong> <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.</p>
 
 <table class="properties">
   <tbody>
@@ -39,9 +39,9 @@ browser-compat: http.headers.DPR
   <p><strong>Note:</strong></p>
     <ul>
       <li>Client Hints are accessible only on secure origins (via TLS).</li>
-      <li>As for all client hints, a server has to opt in to receive <code>DPR</code> header from the client by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
+      <li>A server has to opt in to receive the <code>DPR</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
       <li>Servers that opt in to the <code>DPR</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
-      <li><code>DPR</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>.</li>
+      <li><code>DPR</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-dpr"><code>Sec-CH-DPR</code></a> (Responsive Image Client Hints).</li>
     </ul>
 </div>
 

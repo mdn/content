@@ -9,11 +9,12 @@ tags:
   - HTTP Header
   - Request header
   - Experimental
+  - Deprecated
 browser-compat: http.headers.Width
 ---
 <div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
 
-<p>The <strong><code>Width</code></strong> request header field is a {{Glossary("Client hints","device client hint")}} header that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image). The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
+<p>The <strong><code>Width</code></strong> {{Glossary("Client hints","device client hint")}} request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).</p>
 
 <table class="properties">
   <tbody>
@@ -38,9 +39,9 @@ browser-compat: http.headers.Width
   <p><strong>Note:</strong></p>
     <ul>
       <li>Client Hints are accessible only on secure origins (via TLS).</li>
-      <li>As for all client hints, a server has to opt in to receive <code>Width</code> header from the client by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
+      <li>A server has to opt in to receive the <code>Width</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
       <li>Servers that opt in to the <code>Width</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
-      <li><code>Width</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>.</li>
+      <li><code>Width</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-width"><code>Sec-CH-Width</code></a> (Responsive Image Client Hints).</li>
     </ul>
 </div>
 

@@ -14,7 +14,7 @@ browser-compat: http.headers.Viewport-Width
 ---
 <div>{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}</div>
 
-<p>The <strong><code>Viewport-Width</code></strong> header is a <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> header that provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).</p>
+<p>The <strong><code>Viewport-Width</code></strong> <a href="/en-US/docs/Glossary/Client_hints">device client hint</a> request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).</p>
 
 <table class="properties">
   <tbody>
@@ -37,9 +37,9 @@ browser-compat: http.headers.Viewport-Width
   <p><strong>Note:</strong></p>
     <ul>
       <li>Client Hints are accessible only on secure origins (via TLS).</li>
-      <li>As for all client hints, a server has to opt in to receive <code>Viewport-Width</code> header from the client by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
+      <li>A server has to opt in to receive the <code>Viewport-Width</code> header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.</li>
       <li>Servers that opt in to the <code>Viewport-Width</code> client hint will typically also specify it in the {{HTTPHeader("Vary")}} header. This informs caches that the server may send different responses based on the header value in a request.</li>
-      <li><code>Viewport-Width</code> was removed from the client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>.</li>
+      <li><code>Viewport-Width</code> was removed from the original client hints specification in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07">draft-ietf-httpbis-client-hints-07</a>. The proposed replacement is <a href="https://wicg.github.io/responsive-image-client-hints/#sec-ch-viewport-width"><code>Sec-CH-Viewport-Width</code></a> (Responsive Image Client Hints).</li>
     </ul>
 </div>
 
