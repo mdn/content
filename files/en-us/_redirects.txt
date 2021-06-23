@@ -9951,6 +9951,7 @@
 /en-US/docs/Web/CSS/CSS_Grid	/en-US/docs/Web/CSS/CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_In_Grid_Layout	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
+/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry	/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_Concepts_of_Logical_Properties_and_Values	/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
