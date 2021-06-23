@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.3.8.tgz#1d236cc4b127584ece97db593a1b0ba5e4e00fba"
   integrity sha512-0Yb0nvzo9dvb0a3wer907Ouc6vHyt4R2vtRY8rFYVo8WoXlRBsblWxW2cYY9nNRRXrNLq5alBMgcXb22S8fccQ==
 
-"@mdn/yari@0.4.562":
-  version "0.4.562"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.562.tgz#3a6278d4dc6508cb7542e17f7d1e933e082d49c8"
-  integrity sha512-oprD/CxTGdydVgkTKysP+LILC6nwNq8hEJQqyUa+S7ShammNtX/WEe0hqw5Xu2c7wLL/n2dZP3eE/GACp8MsCg==
+"@mdn/yari@0.4.564":
+  version "0.4.564"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.564.tgz#1a0251c4fad73f096c00a3fe13a9e5b83048058a"
+  integrity sha512-q1ACKGJodHPJ+nTP+uaTZU+wnWye2cHZtPK5/HKRoT9OMmnmQwblXG36MLamstGS2Eo1JqQ/IpRNCL/PUbzjaw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -85,6 +85,7 @@
     loglevel "^1.7.1"
     lru-cache "^6.0.0"
     md5-file "5.0.0"
+    mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
     mdn-data "2.0.19"
     open "^8.2.1"
@@ -2930,7 +2931,7 @@ mdast-util-find-and-replace@^1.1.0:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-mdast-util-from-markdown@^0.8.0:
+mdast-util-from-markdown@^0.8.0, mdast-util-from-markdown@^0.8.5:
   version "0.8.5"
   resolved "https://registry.yarnpkg.com/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz#d1ef2ca42bc377ecb0463a987910dae89bd9a28c"
   integrity sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==
